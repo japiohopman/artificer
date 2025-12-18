@@ -1,0 +1,442 @@
+{
+  "sheetName": "Weapons",
+  "remotePath": "public/assets/images/items/weapons.webp",
+  "lastUpdated": "2025-12-18T08:15:37.118Z",
+  "dimensions": "5120x5120",
+  "cellSize": 512,
+  "columns": 10,
+  "index": [
+    {
+      "idx": 0,
+      "id": "short_sword",
+      "name": "Shortsword",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 1,
+      "id": "short_sword_plus_1",
+      "name": "Shortsword +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 2,
+      "id": "short_sword_plus_2",
+      "name": "Shortsword +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 3,
+      "id": "short_sword_plus_3",
+      "name": "Shortsword +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 4,
+      "id": "dagger",
+      "name": "Dagger",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 5,
+      "id": "dagger_plus_1",
+      "name": "Dagger +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 6,
+      "id": "dagger_plus_2",
+      "name": "Dagger +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 7,
+      "id": "dagger_plus_3",
+      "name": "Dagger +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 8,
+      "id": "mace",
+      "name": "Mace",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 9,
+      "id": "mace_plus_1",
+      "name": "Mace +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 10,
+      "id": "mace_plus_2",
+      "name": "Mace +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 11,
+      "id": "mace_plus_3",
+      "name": "Mace +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 12,
+      "id": "longsword",
+      "name": "Longsword",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 13,
+      "id": "longsword_plus_1",
+      "name": "Longsword +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 14,
+      "id": "longsword_plus_2",
+      "name": "Longsword +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 15,
+      "id": "longsword_plus_3",
+      "name": "Longsword +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 17,
+      "id": "battleaxe",
+      "name": "Battleaxe",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 18,
+      "id": "battleaxe_plus_1",
+      "name": "Battleaxe +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 19,
+      "id": "battleaxe_plus_2",
+      "name": "Battleaxe +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 20,
+      "id": "battleaxe_plus_3",
+      "name": "Battleaxe +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 21,
+      "id": "greataxe",
+      "name": "Greataxe",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 22,
+      "id": "greataxe_plus_1",
+      "name": "Greataxe +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 23,
+      "id": "greataxe_plus_2",
+      "name": "Greataxe +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 24,
+      "id": "greataxe_plus_3",
+      "name": "Greataxe +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 26,
+      "id": "javelin",
+      "name": "Javelin",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 27,
+      "id": "javelin_plus_1",
+      "name": "Javelin +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 28,
+      "id": "javelin_plus_2",
+      "name": "Javelin +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 29,
+      "id": "javelin_plus_3",
+      "name": "Javelin +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 30,
+      "id": "handaxe",
+      "name": "Handaxe",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 31,
+      "id": "handaxe_plus_1",
+      "name": "Handaxe +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 32,
+      "id": "handaxe_plus_2",
+      "name": "Handaxe +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 33,
+      "id": "handaxe_plus_3",
+      "name": "Handaxe +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 34,
+      "id": "rapier",
+      "name": "Rapier",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 35,
+      "id": "rapier_plus_1",
+      "name": "Rapier +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 36,
+      "id": "rapier_plus_2",
+      "name": "Rapier +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 37,
+      "id": "rapier_plus_3",
+      "name": "Rapier +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 38,
+      "id": "scimitar",
+      "name": "Scimitar",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 39,
+      "id": "scimitar_plus_1",
+      "name": "Scimitar +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 40,
+      "id": "scimitar_plus_2",
+      "name": "Scimitar +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 41,
+      "id": "scimitar_plus_3",
+      "name": "Scimitar +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 42,
+      "id": "warhammer",
+      "name": "Warhammer",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 43,
+      "id": "warhammer_plus_1",
+      "name": "Warhammer +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 44,
+      "id": "warhammer_plus_2",
+      "name": "Warhammer +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 45,
+      "id": "warhammer_plus_3",
+      "name": "Warhammer +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 46,
+      "id": "quarterstaff",
+      "name": "Quarterstaff",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 47,
+      "id": "quarterstaff_plus_1",
+      "name": "Quarterstaff +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 48,
+      "id": "quarterstaff_plus_2",
+      "name": "Quarterstaff +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 49,
+      "id": "quarterstaff_plus_3",
+      "name": "Quarterstaff +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 50,
+      "id": "shortbow",
+      "name": "Shortbow",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 51,
+      "id": "shortbow_plus_1",
+      "name": "Shortbow +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 52,
+      "id": "shortbow_plus_2",
+      "name": "Shortbow +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 53,
+      "id": "shortbow_plus_3",
+      "name": "Shortbow +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 54,
+      "id": "longbow",
+      "name": "Longbow",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 55,
+      "id": "longbow_plus_1",
+      "name": "Longbow +1",
+      "hasLocalChange": true
+    },
+    {
+      "idx": 56,
+      "id": "longbow_plus_2",
+      "name": "Longbow +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 57,
+      "id": "longbow_plus_3",
+      "name": "Longbow +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 58,
+      "id": "light_crossbow",
+      "name": "Light Crossbow",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 59,
+      "id": "light_crossbow_plus_1",
+      "name": "Light Crossbow +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 60,
+      "id": "light_crossbow_plus_2",
+      "name": "Light Crossbow +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 61,
+      "id": "light_crossbow_plus_3",
+      "name": "Light Crossbow +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 62,
+      "id": "heavy_crossbow",
+      "name": "Heavy Crossbow",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 63,
+      "id": "heavy_crossbow_plus_1",
+      "name": "Heavy Crossbow +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 64,
+      "id": "heavy_crossbow_plus_2",
+      "name": "Heavy Crossbow +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 65,
+      "id": "heavy_crossbow_plus_3",
+      "name": "Heavy Crossbow +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 66,
+      "id": "sling",
+      "name": "Sling",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 67,
+      "id": "sling_plus_1",
+      "name": "Sling +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 68,
+      "id": "sling_plus_2",
+      "name": "Sling +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 69,
+      "id": "sling_plus_3",
+      "name": "Sling +3",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 70,
+      "id": "greatsword",
+      "name": "Greatsword",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 71,
+      "id": "greatsword_plus_1",
+      "name": "Greatsword +1",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 72,
+      "id": "greatsword_plus_2",
+      "name": "Greatsword +2",
+      "hasLocalChange": false
+    },
+    {
+      "idx": 73,
+      "id": "greatsword_plus_3",
+      "name": "Greatsword +3",
+      "hasLocalChange": false
+    }
+  ]
+}
