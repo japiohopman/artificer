@@ -1,0 +1,30 @@
+{
+  "id": "2297a033-57ed-4a76-ac51-9d3eb3af3520",
+  "itemId": "chill-touch",
+  "profile": {
+    "itemId": "chill-touch",
+    "tags": [
+      "ghostly",
+      "cold",
+      "grab"
+    ],
+    "tagWeights": {
+      "ghostly": 2,
+      "cold": 2,
+      "grab": 2
+    },
+    "worldTheme": "high-fantasy",
+    "preset": "spell",
+    "subType": "elemental burst",
+    "intensity": 65,
+    "durationMs": 900,
+    "texture": "ethereal",
+    "pitchBias": 0,
+    "randomnessSeed": 989804
+  },
+  "pcmData": null,
+  "sampleRate": 48000,
+  "createdAt": "2025-12-18T20:08:12.776Z",
+  "prompt": "SPELL: Dark magic, heavy resonance, mystical echoes. \nSOUND: ghostly, cold, grab. \nTEXTURE: ghostly, shimmering, powerful, distinct. \nLOGIC: Arcane spell release (elemental burst). Elemental magic focus.\nDURATION: ~900ms.\nNON-VERBAL: No speech, no words, no vocals.",
+  "wavUrl": null
+}
