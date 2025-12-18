@@ -1,0 +1,507 @@
+{
+  "sheetName": "Magic Gear",
+  "remotePath": "public/assets/images/items/magic_gear.webp",
+  "lastGlobalUpdate": "2025-12-18T10:44:17.917Z",
+  "dimensions": "5120x5120",
+  "cellSize": 512,
+  "columns": 10,
+  "index": [
+    {
+      "idx": 0,
+      "id": "defender",
+      "name": "Defender",
+      "lastUpdated": "2025-12-18T10:44:17.917Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
+    },
+    {
+      "idx": 1,
+      "id": "dragon-slayer",
+      "name": "Dragon Slayer",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 2,
+      "id": "dwarven-thrower",
+      "name": "Dwarven Thrower",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 3,
+      "id": "flame-tongue",
+      "name": "Flame Tongue",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 4,
+      "id": "frost-brand",
+      "name": "Frost Brand",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 5,
+      "id": "giant-slayer",
+      "name": "Giant Slayer",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 6,
+      "id": "hammer-of-thunderbolts",
+      "name": "Hammer of Thunderbolts",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 7,
+      "id": "holy-avenger",
+      "name": "Holy Avenger",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 8,
+      "id": "luck-blade",
+      "name": "Luck Blade",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 9,
+      "id": "nine-lives-stealer",
+      "name": "Nine Lives Stealer",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 10,
+      "id": "scimitar-of-speed",
+      "name": "Scimitar of Speed",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 11,
+      "id": "sun-blade",
+      "name": "Sun Blade",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 12,
+      "id": "ring-of-animal-influence",
+      "name": "Ring of Animal Influence",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 13,
+      "id": "ring-of-djinni-summoning",
+      "name": "Ring of Djinni Summoning",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 14,
+      "id": "ring-of-elemental-command",
+      "name": "Ring of Elemental Command",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 19,
+      "id": "ring-of-evasion",
+      "name": "Ring of Evasion",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 20,
+      "id": "ring-of-feather-falling",
+      "name": "Ring of Feather Falling",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 21,
+      "id": "ring-of-free-action",
+      "name": "Ring of Free Action",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 22,
+      "id": "ring-of-invisibility",
+      "name": "Ring of Invisibility",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 23,
+      "id": "ring-of-jumping",
+      "name": "Ring of Jumping",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 24,
+      "id": "ring-of-protection",
+      "name": "Ring of Protection",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 25,
+      "id": "ring-of-regeneration",
+      "name": "Ring of Regeneration",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 26,
+      "id": "ring-of-resistance",
+      "name": "Ring of Resistance",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 37,
+      "id": "ring-of-shooting-stars",
+      "name": "Ring of Shooting Stars",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 38,
+      "id": "ring-of-spell-storing",
+      "name": "Ring of Spell Storing",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 39,
+      "id": "ring-of-spell-turning",
+      "name": "Ring of Spell Turning",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 40,
+      "id": "ring-of-swimming",
+      "name": "Ring of Swimming",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 41,
+      "id": "ring-of-telekinesis",
+      "name": "Ring of Telekinesis",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 42,
+      "id": "ring-of-the-ram",
+      "name": "Ring of the Ram",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 43,
+      "id": "ring-of-three-wishes",
+      "name": "Ring of Three Wishes",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 44,
+      "id": "ring-of-warmth",
+      "name": "Ring of Warmth",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 45,
+      "id": "ring-of-water-walking",
+      "name": "Ring of Water Walking",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 46,
+      "id": "ring-of-x-ray-vision",
+      "name": "Ring of X-Ray Vision",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 47,
+      "id": "robe-of-eyes",
+      "name": "Robe of Eyes",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 48,
+      "id": "robe-of-scintillating-colors",
+      "name": "Robe of Scintillating Colors",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 49,
+      "id": "robe-of-stars",
+      "name": "Robe of Stars",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 50,
+      "id": "robe-of-the-archmagi",
+      "name": "Robe of the Archmagi",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 51,
+      "id": "robe-of-useful-items",
+      "name": "Robe of Useful Items",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 52,
+      "id": "necklace-of-adaptation",
+      "name": "Necklace of Adaptation",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 53,
+      "id": "necklace-of-fireballs",
+      "name": "Necklace of Fireballs",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 54,
+      "id": "necklace-of-prayer-beads",
+      "name": "Necklace of Prayer Beads",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 55,
+      "id": "hat-of-disguise",
+      "name": "Hat of Disguise",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 56,
+      "id": "headband-of-intellect",
+      "name": "Headband of Intellect",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 57,
+      "id": "helm-of-brilliance",
+      "name": "Helm of Brilliance",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 60,
+      "id": "helm-of-teleportation",
+      "name": "Helm of Teleportation",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 61,
+      "id": "goggles-of-night",
+      "name": "Goggles of Night",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 62,
+      "id": "gloves-of-missile-snaring",
+      "name": "Gloves of Missile Snaring",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 63,
+      "id": "gloves-of-swimming-and-climbing",
+      "name": "Gloves of Swimming and Climbing",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 64,
+      "id": "adamantine-armor",
+      "name": "Adamantine Armor",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 65,
+      "id": "animated-shield",
+      "name": "Animated Shield",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 67,
+      "id": "armor-of-invulnerability",
+      "name": "Armor of Invulnerability",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 68,
+      "id": "armor-of-resistance",
+      "name": "Armor of Resistance",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 71,
+      "id": "demon-armor",
+      "name": "Demon Armor",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 72,
+      "id": "dragon-scale-mail",
+      "name": "Dragon Scale Mail",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 73,
+      "id": "dwarven-plate",
+      "name": "Dwarven Plate",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 74,
+      "id": "elven-chain",
+      "name": "Elven Chain",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 75,
+      "id": "glamoured-studded-leather",
+      "name": "Glamoured Studded Leather",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 76,
+      "id": "mithral-armor",
+      "name": "Mithral Armor",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 77,
+      "id": "plate-armor-of-etherealness",
+      "name": "Plate Armor of Etherealness",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 78,
+      "id": "shield-of-missile-attraction",
+      "name": "Shield of Missile Attraction",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 79,
+      "id": "spellguard-shield",
+      "name": "Spellguard Shield",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 91,
+      "id": "ring-of-mind-shielding",
+      "name": "Ring of Mind Shielding",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    }
+  ]
+}
