@@ -1,0 +1,82 @@
+{
+  "sheetName": "Materials (Raw)",
+  "remotePath": "public/assets/images/items/materials_raw.webp",
+  "lastGlobalUpdate": "2025-12-18T08:50:37.446Z",
+  "dimensions": "5120x5120",
+  "cellSize": 512,
+  "columns": 10,
+  "index": [
+    {
+      "idx": 0,
+      "id": "iron-ore",
+      "name": "Iron Ore",
+      "lastUpdated": "2025-12-18T08:47:52.399Z",
+      "variant": "Rusty",
+      "isStaged": true
+    },
+    {
+      "idx": 1,
+      "id": "copper-ore",
+      "name": "Copper Ore",
+      "lastUpdated": "2025-12-18T08:48:16.842Z",
+      "variant": "Rusty",
+      "isStaged": true
+    },
+    {
+      "idx": 2,
+      "id": "tin-ore",
+      "name": "Tin Ore",
+      "lastUpdated": "2025-12-18T08:48:38.998Z",
+      "variant": "Original",
+      "isStaged": true
+    },
+    {
+      "idx": 3,
+      "id": "silver-ore",
+      "name": "Silver Ore",
+      "lastUpdated": "2025-12-18T08:48:49.780Z",
+      "variant": "Original",
+      "isStaged": true
+    },
+    {
+      "idx": 4,
+      "id": "gold-ore",
+      "name": "Gold Ore",
+      "lastUpdated": "2025-12-18T08:49:05.042Z",
+      "variant": "Original",
+      "isStaged": true
+    },
+    {
+      "idx": 5,
+      "id": "mithral-ore",
+      "name": "Mithral Ore",
+      "lastUpdated": "2025-12-18T08:49:18.563Z",
+      "variant": "Original",
+      "isStaged": true
+    },
+    {
+      "idx": 6,
+      "id": "adamantine-ore",
+      "name": "Adamantine Ore",
+      "lastUpdated": "2025-12-18T08:49:41.626Z",
+      "variant": "Original",
+      "isStaged": true
+    },
+    {
+      "idx": 7,
+      "id": "coal",
+      "name": "Coal",
+      "lastUpdated": "2025-12-18T08:49:53.670Z",
+      "variant": "Original",
+      "isStaged": true
+    },
+    {
+      "idx": 8,
+      "id": "obsidian-shard",
+      "name": "Obsidian Shard",
+      "lastUpdated": "2025-12-18T08:50:37.446Z",
+      "variant": "Original",
+      "isStaged": true
+    }
+  ]
+}
