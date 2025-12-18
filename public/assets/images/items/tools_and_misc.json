@@ -1,0 +1,739 @@
+{
+  "sheetName": "Tools & Misc",
+  "remotePath": "public/assets/images/items/tools_and_misc.webp",
+  "lastGlobalUpdate": "2025-12-18T09:24:36.682Z",
+  "dimensions": "5120x5120",
+  "cellSize": 512,
+  "columns": 10,
+  "index": [
+    {
+      "idx": 0,
+      "id": "burglars-pack",
+      "name": "Burglars Pack",
+      "lastUpdated": "2025-12-18T09:24:36.682Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
+    },
+    {
+      "idx": 1,
+      "id": "diplomats-pack",
+      "name": "Diplomats Pack",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 2,
+      "id": "dungeoneers-pack",
+      "name": "Dungeoneers Pack",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 3,
+      "id": "entertainers-pack",
+      "name": "Entertainers Pack",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 4,
+      "id": "explorers-pack",
+      "name": "Explorers Pack",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 5,
+      "id": "priests-pack",
+      "name": "Priests Pack",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 6,
+      "id": "scholars-pack",
+      "name": "Scholars Pack",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 7,
+      "id": "horse-riding",
+      "name": "Horse Riding",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 8,
+      "id": "horse-draft",
+      "name": "Horse Draft",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 9,
+      "id": "warhorse",
+      "name": "Warhorse",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 10,
+      "id": "pony",
+      "name": "Pony",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 11,
+      "id": "mule",
+      "name": "Mule",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 12,
+      "id": "camel",
+      "name": "Camel",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 13,
+      "id": "elephant",
+      "name": "Elephant",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 14,
+      "id": "mastiff",
+      "name": "Mastiff",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 15,
+      "id": "recipe",
+      "name": "Recipe",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 16,
+      "id": "blueprint",
+      "name": "Blueprint",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 20,
+      "id": "alchemists-supplies",
+      "name": "Alchemists Supplies",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 21,
+      "id": "climbers-kit",
+      "name": "Climbers Kit",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 22,
+      "id": "disguise-kit",
+      "name": "Disguise Kit",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 23,
+      "id": "forgery-kit",
+      "name": "Forgery Kit",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 24,
+      "id": "healers-kit",
+      "name": "Healers Kit",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 25,
+      "id": "herbalism-kit",
+      "name": "Herbalism Kit",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 26,
+      "id": "poisoners-kit",
+      "name": "Poisoners Kit",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 27,
+      "id": "brewers-supplies",
+      "name": "Brewers Supplies",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 40,
+      "id": "calligraphers-supplies",
+      "name": "Calligraphers Supplies",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 41,
+      "id": "carpenters-tools",
+      "name": "Carpenters Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 42,
+      "id": "cartographers-tools",
+      "name": "Cartographers Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 43,
+      "id": "cobblers-tools",
+      "name": "Cobblers Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 44,
+      "id": "cooks-utensils",
+      "name": "Cooks Utensils",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 45,
+      "id": "glassblowers-tools",
+      "name": "Glassblowers Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 46,
+      "id": "jewelers-tools",
+      "name": "Jewelers Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 47,
+      "id": "leatherworkers-tools",
+      "name": "Leatherworkers Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 48,
+      "id": "masons-tools",
+      "name": "Masons Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 49,
+      "id": "navigators-tools",
+      "name": "Navigators Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 50,
+      "id": "painters-supplies",
+      "name": "Painters Supplies",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 51,
+      "id": "potters-tools",
+      "name": "Potters Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 52,
+      "id": "smiths-tools",
+      "name": "Smiths Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 53,
+      "id": "thieves-tools",
+      "name": "Thieves Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 54,
+      "id": "tinkers-tools",
+      "name": "Tinkers Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 55,
+      "id": "weavers-tools",
+      "name": "Weavers Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 56,
+      "id": "woodcarvers-tools",
+      "name": "Woodcarvers Tools",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 57,
+      "id": "cart",
+      "name": "Cart",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 58,
+      "id": "wagon",
+      "name": "Wagon",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 59,
+      "id": "carriage",
+      "name": "Carriage",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 60,
+      "id": "chariot",
+      "name": "Chariot",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 61,
+      "id": "sled",
+      "name": "Sled",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 62,
+      "id": "rowboat",
+      "name": "Rowboat",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 63,
+      "id": "sailing-ship",
+      "name": "Sailing Ship",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 64,
+      "id": "galley",
+      "name": "Galley",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 65,
+      "id": "longship",
+      "name": "Longship",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 66,
+      "id": "warship",
+      "name": "Warship",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 67,
+      "id": "keelboat",
+      "name": "Keelboat",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 70,
+      "id": "bagpipes",
+      "name": "Bagpipes",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 71,
+      "id": "drum",
+      "name": "Drum",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 72,
+      "id": "dulcimer",
+      "name": "Dulcimer",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 73,
+      "id": "flute",
+      "name": "Flute",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 74,
+      "id": "horn",
+      "name": "Horn",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 75,
+      "id": "lute",
+      "name": "Lute",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 76,
+      "id": "lyre",
+      "name": "Lyre",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 77,
+      "id": "pan-flute",
+      "name": "Pan Flute",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 78,
+      "id": "shawm",
+      "name": "Shawm",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 79,
+      "id": "viol",
+      "name": "Viol",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 80,
+      "id": "saddle-riding",
+      "name": "Saddle Riding",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 81,
+      "id": "saddle-military",
+      "name": "Saddle Military",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 82,
+      "id": "saddle-exotic",
+      "name": "Saddle Exotic",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 83,
+      "id": "saddle-pack",
+      "name": "Saddle Pack",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 84,
+      "id": "saddlebags",
+      "name": "Saddlebags",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 85,
+      "id": "bit-and-bridle",
+      "name": "Bit And Bridle",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 86,
+      "id": "barding",
+      "name": "Barding",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 87,
+      "id": "animal-feed",
+      "name": "Animal Feed",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 90,
+      "id": "dice-set",
+      "name": "Dice Set",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 91,
+      "id": "playing-card-set",
+      "name": "Playing Card Set",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 92,
+      "id": "component-pouch",
+      "name": "Component Pouch",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 93,
+      "id": "quill",
+      "name": "Quill",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 94,
+      "id": "parchment",
+      "name": "Parchment",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 95,
+      "id": "tinderbox",
+      "name": "Tinderbox",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 96,
+      "id": "torch",
+      "name": "Torch",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 97,
+      "id": "rope-hempen",
+      "name": "Rope Hempen",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 98,
+      "id": "hooded-lantern",
+      "name": "Hooded Lantern",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    },
+    {
+      "idx": 99,
+      "id": "mess-kit",
+      "name": "Mess Kit",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isStaged": false,
+      "isSynced": false
+    }
+  ]
+}
