@@ -1,0 +1,491 @@
+{
+  "sheetName": "Alchemy & Food",
+  "remotePath": "public/assets/images/items/alchemy_food.webp",
+  "lastGlobalUpdate": "2025-12-18T10:02:10.571Z",
+  "dimensions": "5120x5120",
+  "cellSize": 512,
+  "columns": 10,
+  "index": [
+    {
+      "idx": 0,
+      "id": "kingsfoil",
+      "name": "Kingsfoil",
+      "lastUpdated": "2025-12-18T10:02:10.571Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
+    },
+    {
+      "idx": 1,
+      "id": "peacebloom",
+      "name": "Peacebloom",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 2,
+      "id": "silverleaf",
+      "name": "Silverleaf",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 3,
+      "id": "earthroot",
+      "name": "Earthroot",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 4,
+      "id": "bloodroot",
+      "name": "Bloodroot",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 5,
+      "id": "mandrake-root",
+      "name": "Mandrake Root",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 6,
+      "id": "nightshade",
+      "name": "Nightshade",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 7,
+      "id": "wolfsbane",
+      "name": "Wolfsbane",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 8,
+      "id": "firebloom",
+      "name": "Firebloom",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 9,
+      "id": "sungrass",
+      "name": "Sungrass",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 10,
+      "id": "blindweed",
+      "name": "Blindweed",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 11,
+      "id": "ghost-mushroom",
+      "name": "Ghost Mushroom",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 12,
+      "id": "cave-moss",
+      "name": "Cave Moss",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 13,
+      "id": "black-lotus",
+      "name": "Black Lotus",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 20,
+      "id": "distilled-water",
+      "name": "Distilled Water",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 21,
+      "id": "alcohol",
+      "name": "Alcohol",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 22,
+      "id": "oil",
+      "name": "Oil",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 23,
+      "id": "beeswax",
+      "name": "Beeswax",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 24,
+      "id": "sulfur",
+      "name": "Sulfur",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 25,
+      "id": "salt",
+      "name": "Salt",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 26,
+      "id": "mercury",
+      "name": "Mercury",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 27,
+      "id": "herbal-paste",
+      "name": "Herbal Paste",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 30,
+      "id": "raw-meat",
+      "name": "Raw Meat",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 31,
+      "id": "cooked-meat",
+      "name": "Cooked Meat",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 32,
+      "id": "raw-fish",
+      "name": "Raw Fish",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 33,
+      "id": "fish-cooked",
+      "name": "Cooked Fish",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 34,
+      "id": "apple",
+      "name": "Apple",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 35,
+      "id": "cheese",
+      "name": "Cheese",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 36,
+      "id": "carrot",
+      "name": "Carrot",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 37,
+      "id": "potato",
+      "name": "Potato",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 38,
+      "id": "root-vegetable",
+      "name": "Root Vegetable",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 39,
+      "id": "berries",
+      "name": "Berries",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 40,
+      "id": "flour",
+      "name": "Flour",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 41,
+      "id": "sugar",
+      "name": "Sugar",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 42,
+      "id": "spices",
+      "name": "Spices",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 43,
+      "id": "honey",
+      "name": "Honey",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 44,
+      "id": "egg",
+      "name": "Egg",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 45,
+      "id": "milk",
+      "name": "Milk",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 46,
+      "id": "pumpkin",
+      "name": "Pumpkin",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 47,
+      "id": "melon",
+      "name": "Melon",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 48,
+      "id": "bread",
+      "name": "Bread",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 49,
+      "id": "dried-ration",
+      "name": "Dried Ration",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 50,
+      "id": "roast-chicken",
+      "name": "Roast Chicken",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 51,
+      "id": "vegetable-soup",
+      "name": "Vegetable Soup",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 52,
+      "id": "hearty-stew",
+      "name": "Hearty Stew",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 53,
+      "id": "meat-pie",
+      "name": "Meat Pie",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 54,
+      "id": "sweet-cake",
+      "name": "Sweet Cake",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 55,
+      "id": "ale",
+      "name": "Ale",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 56,
+      "id": "wine",
+      "name": "Wine",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 57,
+      "id": "water-skin",
+      "name": "Water Skin",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 70,
+      "id": "potion-healing",
+      "name": "Potion of Healing",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 71,
+      "id": "potion-mana",
+      "name": "Potion of Mana",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 72,
+      "id": "potion-stamina",
+      "name": "Potion of Stamina",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 73,
+      "id": "potion-poison",
+      "name": "Potion of Poison",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 74,
+      "id": "potion-fire",
+      "name": "Potion of Fire Breath",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 75,
+      "id": "potion-invis",
+      "name": "Potion of Invisibility",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 76,
+      "id": "potion-strength",
+      "name": "Potion of Strength",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 77,
+      "id": "potion-swiftness",
+      "name": "Potion of Swiftness",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 78,
+      "id": "potion-water",
+      "name": "Potion of Water Breathing",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 79,
+      "id": "potion-flying",
+      "name": "Potion of Flying",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    }
+  ]
+}
