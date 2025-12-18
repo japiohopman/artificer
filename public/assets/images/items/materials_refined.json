@@ -1,0 +1,307 @@
+{
+  "sheetName": "Materials (Refined)",
+  "remotePath": "public/assets/images/items/materials_refined.webp",
+  "lastGlobalUpdate": "2025-12-18T11:01:31.500Z",
+  "dimensions": "5120x5120",
+  "cellSize": 512,
+  "columns": 10,
+  "index": [
+    {
+      "idx": 0,
+      "id": "iron-ingot",
+      "name": "Iron Ingot",
+      "lastUpdated": "2025-12-18T11:01:31.500Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
+    },
+    {
+      "idx": 1,
+      "id": "steel-ingot",
+      "name": "Steel Ingot",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 2,
+      "id": "copper-ingot",
+      "name": "Copper Ingot",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 3,
+      "id": "bronze-ingot",
+      "name": "Bronze Ingot",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 4,
+      "id": "silver-ingot",
+      "name": "Silver Ingot",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 5,
+      "id": "gold-ingot",
+      "name": "Gold Ingot",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 6,
+      "id": "mithral-ingot",
+      "name": "Mithral Ingot",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 7,
+      "id": "adamantine-ingot",
+      "name": "Adamantine Ingot",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 8,
+      "id": "darksteel-ingot",
+      "name": "Darksteel Ingot",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 10,
+      "id": "softwood-plank",
+      "name": "Softwood Plank",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 11,
+      "id": "hardwood-plank",
+      "name": "Hardwood Plank",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 12,
+      "id": "darkwood-plank",
+      "name": "Darkwood Plank",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 13,
+      "id": "elderwood-plank",
+      "name": "Elderwood Plank",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 20,
+      "id": "cured-leather",
+      "name": "Cured Leather",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 21,
+      "id": "leather-straps",
+      "name": "Leather Straps",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 22,
+      "id": "thick-fur-refined",
+      "name": "Prepared Fur",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 24,
+      "id": "linen-cloth",
+      "name": "Linen Cloth",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 25,
+      "id": "wool-cloth",
+      "name": "Wool Cloth",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 26,
+      "id": "silk-thread",
+      "name": "Silk Thread",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 27,
+      "id": "velvet",
+      "name": "Velvet",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 28,
+      "id": "elemental-shard",
+      "name": "Elemental Shard",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 30,
+      "id": "glass-shard",
+      "name": "Glass Shard",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 31,
+      "id": "empty-vial",
+      "name": "Empty Vial",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 32,
+      "id": "crystal-vial",
+      "name": "Crystal Vial",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 33,
+      "id": "flux",
+      "name": "Flux",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 34,
+      "id": "wax-seal",
+      "name": "Wax Seal",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 35,
+      "id": "parchment-sheet",
+      "name": "Parchment",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 36,
+      "id": "enchanted-ink",
+      "name": "Enchanted Ink",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 37,
+      "id": "arcane-dust",
+      "name": "Arcane Dust",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 38,
+      "id": "void-essence",
+      "name": "Void Essence",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 39,
+      "id": "elemental-core",
+      "name": "Elemental Core",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 40,
+      "id": "ruby",
+      "name": "Cut Ruby",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 41,
+      "id": "sapphire",
+      "name": "Cut Sapphire",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 42,
+      "id": "emerald",
+      "name": "Cut Emerald",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 43,
+      "id": "diamond",
+      "name": "Cut Diamond",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 48,
+      "id": "soul-gem-empty",
+      "name": "Empty Soul Gem",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 49,
+      "id": "soul-gem-filled",
+      "name": "Filled Soul Gem",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    }
+  ]
+}
