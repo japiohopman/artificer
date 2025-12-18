@@ -1,7 +1,7 @@
 {
   "sheetName": "Materials (Refined)",
   "remotePath": "public/assets/images/items/materials_refined.webp",
-  "lastGlobalUpdate": "2025-12-18T11:01:31.500Z",
+  "lastGlobalUpdate": "2025-12-18T13:51:17.825Z",
   "dimensions": "5120x5120",
   "cellSize": 512,
   "columns": 10,
@@ -13,294 +13,330 @@
       "lastUpdated": "2025-12-18T11:01:31.500Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 1,
       "id": "steel-ingot",
       "name": "Steel Ingot",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:51:17.825Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 2,
       "id": "copper-ingot",
       "name": "Copper Ingot",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:51:03.339Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 3,
       "id": "bronze-ingot",
       "name": "Bronze Ingot",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:50:48.779Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 4,
       "id": "silver-ingot",
       "name": "Silver Ingot",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:50:38.420Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 5,
       "id": "gold-ingot",
       "name": "Gold Ingot",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:50:27.346Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 6,
       "id": "mithral-ingot",
       "name": "Mithral Ingot",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:50:11.460Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 7,
       "id": "adamantine-ingot",
       "name": "Adamantine Ingot",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:49:57.394Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 8,
       "id": "darksteel-ingot",
       "name": "Darksteel Ingot",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:49:42.629Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 10,
       "id": "softwood-plank",
       "name": "Softwood Plank",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:49:27.479Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 11,
       "id": "hardwood-plank",
       "name": "Hardwood Plank",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:49:13.202Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 12,
       "id": "darkwood-plank",
       "name": "Darkwood Plank",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:48:58.415Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 13,
       "id": "elderwood-plank",
       "name": "Elderwood Plank",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:48:39.274Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 20,
       "id": "cured-leather",
       "name": "Cured Leather",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:48:15.679Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 21,
       "id": "leather-straps",
       "name": "Leather Straps",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:47:55.708Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 22,
       "id": "thick-fur-refined",
       "name": "Prepared Fur",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:47:41.077Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 24,
       "id": "linen-cloth",
       "name": "Linen Cloth",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:46:40.206Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 25,
       "id": "wool-cloth",
       "name": "Wool Cloth",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:46:21.756Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 26,
       "id": "silk-thread",
       "name": "Silk Thread",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:46:02.531Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 27,
       "id": "velvet",
       "name": "Velvet",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:45:47.779Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 28,
       "id": "elemental-shard",
       "name": "Elemental Shard",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:45:20.978Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 30,
       "id": "glass-shard",
       "name": "Glass Shard",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:45:06.571Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 31,
       "id": "empty-vial",
       "name": "Empty Vial",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:44:45.089Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 32,
       "id": "crystal-vial",
       "name": "Crystal Vial",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:44:19.040Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 33,
       "id": "flux",
       "name": "Flux",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:44:02.516Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 34,
       "id": "wax-seal",
       "name": "Wax Seal",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:43:49.448Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 35,
       "id": "parchment-sheet",
       "name": "Parchment",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:43:34.026Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 36,
       "id": "enchanted-ink",
       "name": "Enchanted Ink",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:43:15.671Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 37,
       "id": "arcane-dust",
       "name": "Arcane Dust",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-18T13:42:56.871Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 38,
       "id": "void-essence",
       "name": "Void Essence",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-18T13:42:33.445Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 39,
       "id": "elemental-core",
       "name": "Elemental Core",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-18T13:42:13.177Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 40,
       "id": "ruby",
       "name": "Cut Ruby",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-18T13:41:58.066Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 41,
       "id": "sapphire",
       "name": "Cut Sapphire",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-18T13:41:44.030Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 42,
       "id": "emerald",
       "name": "Cut Emerald",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:40:59.506Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 43,
       "id": "diamond",
       "name": "Cut Diamond",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-18T13:41:25.601Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 48,
       "id": "soul-gem-empty",
       "name": "Empty Soul Gem",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:39:34.377Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 49,
       "id": "soul-gem-filled",
       "name": "Filled Soul Gem",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T13:38:31.320Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     }
   ]
