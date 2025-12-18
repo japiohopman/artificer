@@ -1,7 +1,7 @@
 {
   "sheetName": "Weapons",
   "remotePath": "public/assets/images/items/weapons.webp",
-  "lastGlobalUpdate": "2025-12-18T08:43:53.271Z",
+  "lastGlobalUpdate": "2025-12-18T08:57:00.573Z",
   "dimensions": "5120x5120",
   "cellSize": 512,
   "columns": 10,
@@ -234,8 +234,8 @@
       "idx": 30,
       "id": "handaxe",
       "name": "Handaxe",
-      "lastUpdated": "2025-12-18T08:43:22.292Z",
-      "variant": "Rusty",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
       "isStaged": true
     },
     {
@@ -370,7 +370,7 @@
       "idx": 47,
       "id": "quarterstaff_plus_1",
       "name": "Quarterstaff +1",
-      "lastUpdated": "2025-12-18T08:43:53.271Z",
+      "lastUpdated": "Unknown",
       "variant": "Original",
       "isStaged": true
     },
@@ -554,33 +554,33 @@
       "idx": 70,
       "id": "greatsword",
       "name": "Greatsword",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isStaged": false
+      "lastUpdated": "2025-12-18T08:57:00.573Z",
+      "variant": "Rusty",
+      "isStaged": true
     },
     {
       "idx": 71,
       "id": "greatsword_plus_1",
       "name": "Greatsword +1",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T08:55:58.355Z",
       "variant": "Original",
-      "isStaged": false
+      "isStaged": true
     },
     {
       "idx": 72,
       "id": "greatsword_plus_2",
       "name": "Greatsword +2",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isStaged": false
+      "lastUpdated": "2025-12-18T08:56:24.161Z",
+      "variant": "Shiny",
+      "isStaged": true
     },
     {
       "idx": 73,
       "id": "greatsword_plus_3",
       "name": "Greatsword +3",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isStaged": false
+      "lastUpdated": "2025-12-18T08:56:39.889Z",
+      "variant": "Shiny",
+      "isStaged": true
     }
   ]
 }
