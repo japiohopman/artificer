@@ -1,7 +1,7 @@
 {
   "sheetName": "Weapons",
   "remotePath": "public/assets/images/items/weapons.webp",
-  "lastGlobalUpdate": "2025-12-18T08:32:43.377Z",
+  "lastGlobalUpdate": "2025-12-18T08:43:53.271Z",
   "dimensions": "5120x5120",
   "cellSize": 512,
   "columns": 10,
@@ -90,8 +90,8 @@
       "idx": 10,
       "id": "mace_plus_2",
       "name": "Mace +2",
-      "lastUpdated": "2025-12-18T08:32:43.377Z",
-      "variant": "Shiny",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
       "isStaged": true
     },
     {
@@ -234,9 +234,9 @@
       "idx": 30,
       "id": "handaxe",
       "name": "Handaxe",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isStaged": false
+      "lastUpdated": "2025-12-18T08:43:22.292Z",
+      "variant": "Rusty",
+      "isStaged": true
     },
     {
       "idx": 31,
@@ -370,9 +370,9 @@
       "idx": 47,
       "id": "quarterstaff_plus_1",
       "name": "Quarterstaff +1",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-18T08:43:53.271Z",
       "variant": "Original",
-      "isStaged": false
+      "isStaged": true
     },
     {
       "idx": 48,
