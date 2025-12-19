@@ -1,7 +1,7 @@
 {
   "sheetName": "Materials (Raw)",
   "remotePath": "public/assets/images/items/materials_raw.webp",
-  "lastGlobalUpdate": "2025-12-19T17:18:49.639Z",
+  "lastGlobalUpdate": "2025-12-19T17:36:21.600Z",
   "dimensions": "5120x5120",
   "thumbDimensions": "1024x1024",
   "cellSize": 512,
@@ -102,296 +102,333 @@
       "idx": 10,
       "id": "softwood-log",
       "name": "Softwood Log",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:20:10.065Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 11,
       "id": "hardwood-log",
       "name": "Hardwood Log",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:20:27.504Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 12,
       "id": "darkwood-log",
       "name": "Darkwood Log",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:20:40.284Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 13,
       "id": "elderwood-log",
       "name": "Elderwood Log",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:20:53.174Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 14,
       "id": "ironwood-log",
       "name": "Ironwood Log",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:21:02.164Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 15,
       "id": "stick",
       "name": "Stick",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:21:10.450Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 16,
       "id": "yew-branch",
       "name": "Yew Branch",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:21:23.999Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 17,
       "id": "ash-branch",
       "name": "Ash Branch",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:21:33.619Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 18,
       "id": "charcoal",
       "name": "Charcoal",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:21:43.021Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 19,
       "id": "bark",
       "name": "Tree Bark",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:21:52.657Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 20,
       "id": "resin",
       "name": "Resin",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:22:07.000Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 21,
       "id": "raw-hide",
       "name": "Raw Hide",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:22:21.663Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 22,
       "id": "wolf-pelt",
       "name": "Wolf Pelt",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:22:33.063Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 23,
       "id": "bear-pelt",
       "name": "Bear Pelt",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:22:49.168Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 24,
       "id": "bone-fragment",
       "name": "Bone Fragment",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:22:59.716Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 25,
       "id": "skull",
       "name": "Animal Skull",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:23:35.669Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 26,
       "id": "beast-fang",
       "name": "Beast Fang",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:23:51.369Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 27,
       "id": "sharp-claw",
       "name": "Sharp Claw",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:24:06.989Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 28,
       "id": "feather",
       "name": "Feather",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:24:21.742Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 29,
       "id": "griffin-feather",
       "name": "Griffin Feather",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:24:54.725Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 30,
       "id": "dragon-scale-red",
       "name": "Red Dragon Scale",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:25:48.258Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 31,
       "id": "dragon-scale-black",
       "name": "Black Dragon Scale",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:26:11.615Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 32,
       "id": "chitin-plate",
       "name": "Chitin Plate",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:26:35.081Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 33,
       "id": "monster-guts",
       "name": "Monster Guts",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:27:04.217Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 34,
       "id": "sinew",
       "name": "Sinew",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:27:18.968Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 36,
       "id": "troll-blood",
       "name": "Troll Blood",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:28:18.875Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 37,
       "id": "slime-glob",
       "name": "Slime Glob",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:29:19.480Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 38,
       "id": "spider-silk",
       "name": "Spider Silk",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:29:39.813Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 39,
       "id": "basilisk-eye",
       "name": "Basilisk Eye",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:29:50.985Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 40,
       "id": "sand",
       "name": "Sand",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:30:05.381Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 41,
       "id": "clay",
       "name": "Clay",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:30:17.205Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 42,
       "id": "rusty-scrap",
       "name": "Rusty Scrap",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:30:26.621Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 43,
       "id": "ectoplasm",
       "name": "Ectoplasm",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:30:45.247Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 50,
       "id": "rough-ruby",
       "name": "Rough Ruby",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:31:17.916Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 51,
       "id": "rough-sapphire",
       "name": "Rough Sapphire",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:32:26.336Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 52,
       "id": "rough-emerald",
       "name": "Rough Emerald",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:35:55.018Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 53,
       "id": "rough-diamond",
       "name": "Rough Diamond",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T17:36:21.600Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     }
   ]
