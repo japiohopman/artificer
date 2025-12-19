@@ -1,9 +1,11 @@
 {
   "sheetName": "Weapon Components",
   "remotePath": "public/assets/images/items/weapon_components.webp",
-  "lastGlobalUpdate": "2025-12-18T10:58:55.227Z",
+  "lastGlobalUpdate": "2025-12-19T22:27:15.385Z",
   "dimensions": "5120x5120",
+  "thumbDimensions": "1024x1024",
   "cellSize": 512,
+  "thumbCellSize": 102.4,
   "columns": 10,
   "index": [
     {
@@ -13,190 +15,213 @@
       "lastUpdated": "2025-12-18T10:58:55.227Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 1,
       "id": "steel-blade-straight",
       "name": "Steel Sword Blade",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:21:11.775Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 2,
       "id": "mithral-blade-straight",
       "name": "Mithral Sword Blade",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:21:26.736Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 3,
       "id": "adamantine-blade-straight",
       "name": "Adamantine Blade",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:21:41.009Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 4,
       "id": "iron-blade-heavy",
       "name": "Iron Heavy Head",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:23:00.016Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 5,
       "id": "steel-blade-heavy",
       "name": "Steel Heavy Head",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:23:17.275Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 6,
       "id": "mithral-blade-heavy",
       "name": "Mithral Heavy Head",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:23:28.211Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 7,
       "id": "adamantine-blade-heavy",
       "name": "Adamantine Heavy Head",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:23:39.208Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 8,
       "id": "iron-blade-dagger",
       "name": "Iron Dagger Blade",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:23:47.801Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 9,
       "id": "steel-blade-dagger",
       "name": "Steel Dagger Blade",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:23:59.778Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 10,
       "id": "iron-guard-cross",
       "name": "Iron Crossguard",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:24:23.898Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 11,
       "id": "steel-guard-cross",
       "name": "Steel Crossguard",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:24:39.038Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 12,
       "id": "mithral-guard-cross",
       "name": "Mithral Crossguard",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:24:59.132Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 13,
       "id": "adamantine-guard",
       "name": "Adamantine Guard",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:26:50.895Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 20,
       "id": "wood-grip-straight",
       "name": "Wooden Handle",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:27:02.650Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 21,
       "id": "wood-grip-curved",
       "name": "Curved Handle",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:27:15.385Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 22,
       "id": "leather-wrapped-grip",
       "name": "Leather Handle",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:25:53.626Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 23,
       "id": "wood-haft-short",
       "name": "Short Stick",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:25:39.622Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 24,
       "id": "wood-haft-long",
       "name": "Long Staff",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:25:24.097Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 25,
       "id": "yew-bowstave",
       "name": "Unstrung Bow",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:25:13.609Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 26,
       "id": "sinew-string",
       "name": "String Coil",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:26:28.770Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 30,
       "id": "iron-pommel",
       "name": "Iron Knob",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:22:35.650Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 31,
       "id": "steel-pommel",
       "name": "Steel Knob",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:22:19.177Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 32,
       "id": "mithral-pommel",
       "name": "Mithral Knob",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-19T22:21:53.941Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     }
   ]
