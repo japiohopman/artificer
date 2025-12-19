@@ -1,9 +1,11 @@
 {
   "sheetName": "Materials (Raw)",
   "remotePath": "public/assets/images/items/materials_raw.webp",
-  "lastGlobalUpdate": "2025-12-18T08:50:37.446Z",
+  "lastGlobalUpdate": "2025-12-19T17:18:49.639Z",
   "dimensions": "5120x5120",
+  "thumbDimensions": "1024x1024",
   "cellSize": 512,
+  "thumbCellSize": 102.4,
   "columns": 10,
   "index": [
     {
@@ -12,7 +14,8 @@
       "name": "Iron Ore",
       "lastUpdated": "2025-12-18T08:47:52.399Z",
       "variant": "Rusty",
-      "isStaged": true
+      "isStaged": true,
+      "isSynced": true
     },
     {
       "idx": 1,
@@ -20,7 +23,8 @@
       "name": "Copper Ore",
       "lastUpdated": "2025-12-18T08:48:16.842Z",
       "variant": "Rusty",
-      "isStaged": true
+      "isStaged": true,
+      "isSynced": true
     },
     {
       "idx": 2,
@@ -28,7 +32,8 @@
       "name": "Tin Ore",
       "lastUpdated": "2025-12-18T08:48:38.998Z",
       "variant": "Original",
-      "isStaged": true
+      "isStaged": true,
+      "isSynced": true
     },
     {
       "idx": 3,
@@ -36,7 +41,8 @@
       "name": "Silver Ore",
       "lastUpdated": "2025-12-18T08:48:49.780Z",
       "variant": "Original",
-      "isStaged": true
+      "isStaged": true,
+      "isSynced": true
     },
     {
       "idx": 4,
@@ -44,7 +50,8 @@
       "name": "Gold Ore",
       "lastUpdated": "2025-12-18T08:49:05.042Z",
       "variant": "Original",
-      "isStaged": true
+      "isStaged": true,
+      "isSynced": true
     },
     {
       "idx": 5,
@@ -52,7 +59,8 @@
       "name": "Mithral Ore",
       "lastUpdated": "2025-12-18T08:49:18.563Z",
       "variant": "Original",
-      "isStaged": true
+      "isStaged": true,
+      "isSynced": true
     },
     {
       "idx": 6,
@@ -60,7 +68,8 @@
       "name": "Adamantine Ore",
       "lastUpdated": "2025-12-18T08:49:41.626Z",
       "variant": "Original",
-      "isStaged": true
+      "isStaged": true,
+      "isSynced": true
     },
     {
       "idx": 7,
@@ -68,7 +77,8 @@
       "name": "Coal",
       "lastUpdated": "2025-12-18T08:49:53.670Z",
       "variant": "Original",
-      "isStaged": true
+      "isStaged": true,
+      "isSynced": true
     },
     {
       "idx": 8,
@@ -76,7 +86,313 @@
       "name": "Obsidian Shard",
       "lastUpdated": "2025-12-18T08:50:37.446Z",
       "variant": "Original",
-      "isStaged": true
+      "isStaged": true,
+      "isSynced": true
+    },
+    {
+      "idx": 9,
+      "id": "meteorite-ore",
+      "name": "Meteorite Ore",
+      "lastUpdated": "2025-12-19T17:18:49.639Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
+    },
+    {
+      "idx": 10,
+      "id": "softwood-log",
+      "name": "Softwood Log",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 11,
+      "id": "hardwood-log",
+      "name": "Hardwood Log",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 12,
+      "id": "darkwood-log",
+      "name": "Darkwood Log",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 13,
+      "id": "elderwood-log",
+      "name": "Elderwood Log",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 14,
+      "id": "ironwood-log",
+      "name": "Ironwood Log",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 15,
+      "id": "stick",
+      "name": "Stick",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 16,
+      "id": "yew-branch",
+      "name": "Yew Branch",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 17,
+      "id": "ash-branch",
+      "name": "Ash Branch",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 18,
+      "id": "charcoal",
+      "name": "Charcoal",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 19,
+      "id": "bark",
+      "name": "Tree Bark",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 20,
+      "id": "resin",
+      "name": "Resin",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 21,
+      "id": "raw-hide",
+      "name": "Raw Hide",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 22,
+      "id": "wolf-pelt",
+      "name": "Wolf Pelt",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 23,
+      "id": "bear-pelt",
+      "name": "Bear Pelt",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 24,
+      "id": "bone-fragment",
+      "name": "Bone Fragment",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 25,
+      "id": "skull",
+      "name": "Animal Skull",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 26,
+      "id": "beast-fang",
+      "name": "Beast Fang",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 27,
+      "id": "sharp-claw",
+      "name": "Sharp Claw",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 28,
+      "id": "feather",
+      "name": "Feather",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 29,
+      "id": "griffin-feather",
+      "name": "Griffin Feather",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 30,
+      "id": "dragon-scale-red",
+      "name": "Red Dragon Scale",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 31,
+      "id": "dragon-scale-black",
+      "name": "Black Dragon Scale",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 32,
+      "id": "chitin-plate",
+      "name": "Chitin Plate",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 33,
+      "id": "monster-guts",
+      "name": "Monster Guts",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 34,
+      "id": "sinew",
+      "name": "Sinew",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 36,
+      "id": "troll-blood",
+      "name": "Troll Blood",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 37,
+      "id": "slime-glob",
+      "name": "Slime Glob",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 38,
+      "id": "spider-silk",
+      "name": "Spider Silk",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 39,
+      "id": "basilisk-eye",
+      "name": "Basilisk Eye",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 40,
+      "id": "sand",
+      "name": "Sand",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 41,
+      "id": "clay",
+      "name": "Clay",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 42,
+      "id": "rusty-scrap",
+      "name": "Rusty Scrap",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 43,
+      "id": "ectoplasm",
+      "name": "Ectoplasm",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 50,
+      "id": "rough-ruby",
+      "name": "Rough Ruby",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 51,
+      "id": "rough-sapphire",
+      "name": "Rough Sapphire",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 52,
+      "id": "rough-emerald",
+      "name": "Rough Emerald",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
+    },
+    {
+      "idx": 53,
+      "id": "rough-diamond",
+      "name": "Rough Diamond",
+      "lastUpdated": "Unknown",
+      "variant": "Original",
+      "isSynced": false
     }
   ]
 }
