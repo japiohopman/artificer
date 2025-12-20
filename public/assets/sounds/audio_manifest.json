@@ -59,6 +59,54 @@
         "sfx"
       ],
       "timestamp": "2025-12-20T10:50:20.839Z"
+    },
+    {
+      "id": "a4436b44-6cca-4253-ad79-4cf6f4b6afaf",
+      "name": "leave",
+      "category": "Character / Voice",
+      "path": "voices/alchemist/leave.wav",
+      "duration": "4.891",
+      "tags": [
+        "gemini",
+        "kits"
+      ],
+      "timestamp": "2025-12-20T11:20:28.853Z"
+    },
+    {
+      "id": "9bf8bbe3-91c6-4b6a-b65a-c8572577c7f6",
+      "name": "trade_no",
+      "category": "Character / Voice",
+      "path": "voices/alchemist/trade_no.wav",
+      "duration": "3.851",
+      "tags": [
+        "gemini",
+        "kits"
+      ],
+      "timestamp": "2025-12-20T11:20:30.544Z"
+    },
+    {
+      "id": "67ad9ac0-a356-46b8-8a06-84460b317a61",
+      "name": "trade_ok",
+      "category": "Character / Voice",
+      "path": "voices/alchemist/trade_ok.wav",
+      "duration": "3.251",
+      "tags": [
+        "gemini",
+        "kits"
+      ],
+      "timestamp": "2025-12-20T11:20:32.000Z"
+    },
+    {
+      "id": "de41c1e1-24da-44db-b16e-f05d1dbc6bad",
+      "name": "greet",
+      "category": "Character / Voice",
+      "path": "voices/alchemist/greet.wav",
+      "duration": "4.771",
+      "tags": [
+        "gemini",
+        "kits"
+      ],
+      "timestamp": "2025-12-20T11:20:33.630Z"
     }
   ]
 }
