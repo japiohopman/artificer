@@ -1,9 +1,11 @@
 {
   "sheetName": "Armor",
   "remotePath": "public/assets/images/items/armor.webp",
-  "lastGlobalUpdate": "2025-12-18T11:03:46.492Z",
+  "lastGlobalUpdate": "2025-12-20T17:14:23.130Z",
   "dimensions": "5120x5120",
+  "thumbDimensions": "1024x1024",
   "cellSize": 512,
+  "thumbCellSize": 102.4,
   "columns": 10,
   "index": [
     {
@@ -13,126 +15,141 @@
       "lastUpdated": "2025-12-18T11:03:46.492Z",
       "variant": "Rusty",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 1,
       "id": "padded_armor_plus_1",
       "name": "Padded Armor +1",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-20T15:51:14.725Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 2,
       "id": "padded_armor_plus_2",
       "name": "Padded Armor +2",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T15:51:31.938Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 3,
       "id": "padded_armor_plus_3",
       "name": "Padded Armor +3",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T15:51:47.164Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 4,
       "id": "leather_armor",
       "name": "Leather Armor",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T15:53:20.011Z",
+      "variant": "Rusty",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 5,
       "id": "leather_armor_plus_1",
       "name": "Leather Armor +1",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-20T15:52:59.410Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 6,
       "id": "leather_armor_plus_2",
       "name": "Leather Armor +2",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T15:54:10.858Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 7,
       "id": "leather_armor_plus_3",
       "name": "Leather Armor +3",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T15:54:26.109Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 8,
       "id": "studded_leather_armor",
       "name": "Studded Leather",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:04:09.933Z",
+      "variant": "Rusty",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 9,
       "id": "studded_leather_armor_plus_1",
       "name": "Studded Leather +1",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-20T15:54:51.752Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 10,
       "id": "studded_leather_armor_plus_2",
       "name": "Studded Leather +2",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:03:31.575Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 11,
       "id": "studded_leather_armor_plus_3",
       "name": "Studded Leather +3",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:03:52.036Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 12,
       "id": "hide_armor",
       "name": "Hide Armor",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-20T17:05:43.638Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 13,
       "id": "hide_armor_plus_1",
       "name": "Hide Armor +1",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-20T17:06:11.159Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 14,
       "id": "hide_armor_plus_2",
       "name": "Hide Armor +2",
-      "lastUpdated": "Unknown",
+      "lastUpdated": "2025-12-20T17:06:40.645Z",
       "variant": "Original",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 15,
       "id": "hide_armor_plus_3",
       "name": "Hide Armor +3",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:07:02.277Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
@@ -140,463 +157,449 @@
       "id": "chain_shirt",
       "name": "Chain Shirt",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 17,
       "id": "chain_shirt_plus_1",
       "name": "Chain Shirt +1",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 18,
       "id": "chain_shirt_plus_2",
       "name": "Chain Shirt +2",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 19,
       "id": "chain_shirt_plus_3",
       "name": "Chain Shirt +3",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 20,
       "id": "scale_mail",
       "name": "Scale Mail",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 21,
       "id": "scale_mail_plus_1",
       "name": "Scale Mail +1",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 22,
       "id": "scale_mail_plus_2",
       "name": "Scale Mail +2",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 23,
       "id": "scale_mail_plus_3",
       "name": "Scale Mail +3",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 24,
       "id": "breastplate",
       "name": "Breastplate",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 25,
       "id": "breastplate_plus_1",
       "name": "Breastplate +1",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 26,
       "id": "breastplate_plus_2",
       "name": "Breastplate +2",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 27,
       "id": "breastplate_plus_3",
       "name": "Breastplate +3",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 28,
       "id": "half_plate_armor",
       "name": "Half Plate",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 29,
       "id": "half_plate_armor_plus_1",
       "name": "Half Plate +1",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 30,
       "id": "half_plate_armor_plus_2",
       "name": "Half Plate +2",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 31,
       "id": "half_plate_armor_plus_3",
       "name": "Half Plate +3",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 32,
       "id": "ring_mail",
       "name": "Ring Mail",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 33,
       "id": "ring_mail_plus_1",
       "name": "Ring Mail +1",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 34,
       "id": "ring_mail_plus_2",
       "name": "Ring Mail +2",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 35,
       "id": "ring_mail_plus_3",
       "name": "Ring Mail +3",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 36,
       "id": "chain_mail",
       "name": "Chain Mail",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 37,
       "id": "chain_mail_plus_1",
       "name": "Chain Mail +1",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 38,
       "id": "chain_mail_plus_2",
       "name": "Chain Mail +2",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 39,
       "id": "chain_mail_plus_3",
       "name": "Chain Mail +3",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 40,
       "id": "splint_armor",
       "name": "Splint Armor",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 41,
       "id": "splint_armor_plus_1",
       "name": "Splint Armor +1",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 42,
       "id": "splint_armor_plus_2",
       "name": "Splint Armor +2",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 43,
       "id": "splint_armor_plus_3",
       "name": "Splint Armor +3",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 44,
       "id": "plate_armor",
       "name": "Plate Armor",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 45,
       "id": "plate_armor_plus_1",
       "name": "Plate Armor +1",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 46,
       "id": "plate_armor_plus_2",
       "name": "Plate Armor +2",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 47,
       "id": "plate_armor_plus_3",
       "name": "Plate Armor +3",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 48,
       "id": "shield",
       "name": "Shield",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 49,
       "id": "shield_plus_1",
       "name": "Shield +1",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 50,
       "id": "shield_plus_2",
       "name": "Shield +2",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 51,
       "id": "shield_plus_3",
       "name": "Shield +3",
       "lastUpdated": "Unknown",
-      "variant": "Original",
-      "isSynced": false
+      "variant": "Original"
     },
     {
       "idx": 52,
       "id": "boots_of_speed",
       "name": "Boots of Speed",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:14:23.130Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 53,
       "id": "boots_of_elvenkind",
       "name": "Boots of Elvenkind",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:14:10.176Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 54,
       "id": "slippers_of_spider_climbing",
       "name": "Slippers of Spider Climbing",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:13:53.493Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 55,
       "id": "amulet_of_health",
       "name": "Amulet of Health",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:13:34.980Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 56,
       "id": "vestments",
       "name": "Cleric Vestments",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:13:09.246Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 57,
       "id": "vestments_plus_1",
       "name": "Cleric Vestments +1",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:12:55.377Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 58,
       "id": "vestments_plus_2",
       "name": "Cleric Vestments +2",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:12:41.966Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 59,
       "id": "vestments_plus_3",
       "name": "Cleric Vestments +3",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:12:19.954Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 60,
       "id": "berserker-axe",
       "name": "Berserker Axe",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:12:02.241Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 61,
       "id": "dagger-of-venom",
       "name": "Dagger of Venom",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:11:26.197Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 62,
       "id": "dancing-sword",
       "name": "Dancing Sword",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:11:03.425Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 63,
       "id": "javelin-of-lightning",
       "name": "Javelin of Lightning",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:10:33.318Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 64,
       "id": "mace-of-disruption",
       "name": "Mace of Disruption",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:10:16.007Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 65,
       "id": "mace-of-smiting",
       "name": "Mace of Smitting",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:10:03.035Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 66,
       "id": "mace-of-terror",
       "name": "Mace of Terror",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:09:49.095Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 67,
       "id": "oathbow",
       "name": "Oathbow",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:09:23.669Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 68,
       "id": "sword-of-life-stealing",
       "name": "Sword of Life Stealing",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:09:08.704Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 69,
       "id": "sword-of-sharpness",
       "name": "Sword of Sharpness",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:08:50.854Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 70,
       "id": "sword-of-wounding",
       "name": "Sword of Wounding",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:08:14.153Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 71,
       "id": "trident-of-fish-command",
       "name": "Trident of Fish Command",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:07:52.769Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 72,
       "id": "vicious-weapon",
       "name": "Vicious Blade",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:07:38.664Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     },
     {
       "idx": 73,
       "id": "vorpal-sword",
       "name": "Vorpal Sword",
-      "lastUpdated": "Unknown",
-      "variant": "Original",
+      "lastUpdated": "2025-12-20T17:07:18.890Z",
+      "variant": "Shiny",
+      "isStaged": true,
       "isSynced": false
     }
   ]
