@@ -107,6 +107,54 @@
         "kits"
       ],
       "timestamp": "2025-12-20T11:20:33.630Z"
+    },
+    {
+      "id": "7d46147f-0abb-45d7-9c44-e8e588a3513f",
+      "name": "leave",
+      "category": "Character / Voice",
+      "path": "voices/general/leave.wav",
+      "duration": "3.011",
+      "tags": [
+        "gemini",
+        "kits"
+      ],
+      "timestamp": "2025-12-20T11:24:23.360Z"
+    },
+    {
+      "id": "4e7e279d-6a39-4c24-8f22-60fd042926a7",
+      "name": "trade_no",
+      "category": "Character / Voice",
+      "path": "voices/general/trade_no.wav",
+      "duration": "2.371",
+      "tags": [
+        "gemini",
+        "kits"
+      ],
+      "timestamp": "2025-12-20T11:24:24.895Z"
+    },
+    {
+      "id": "e6ce3e56-3cbe-46e7-9dd8-3c1290281693",
+      "name": "trade_ok",
+      "category": "Character / Voice",
+      "path": "voices/general/trade_ok.wav",
+      "duration": "2.691",
+      "tags": [
+        "gemini",
+        "kits"
+      ],
+      "timestamp": "2025-12-20T11:24:26.346Z"
+    },
+    {
+      "id": "05b7de1e-b83c-4c1a-84ac-08d8e3bc26fd",
+      "name": "greet",
+      "category": "Character / Voice",
+      "path": "voices/general/greet.wav",
+      "duration": "2.811",
+      "tags": [
+        "gemini",
+        "kits"
+      ],
+      "timestamp": "2025-12-20T11:24:27.815Z"
     }
   ]
 }
