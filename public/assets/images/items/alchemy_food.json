@@ -1,9 +1,11 @@
 {
   "sheetName": "Alchemy & Food",
   "remotePath": "public/assets/images/items/alchemy_food.webp",
-  "lastGlobalUpdate": "2025-12-18T21:25:37.940Z",
+  "lastGlobalUpdate": "2025-12-20T12:59:49.970Z",
   "dimensions": "5120x5120",
+  "thumbDimensions": "1024x1024",
   "cellSize": 512,
+  "thumbCellSize": 102.4,
   "columns": 10,
   "index": [
     {
@@ -19,218 +21,280 @@
       "idx": 1,
       "id": "peacebloom",
       "name": "Peacebloom",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:47:24.870Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 2,
       "id": "silverleaf",
       "name": "Silverleaf",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:47:54.777Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 3,
       "id": "earthroot",
       "name": "Earthroot",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:48:24.029Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 4,
       "id": "bloodroot",
       "name": "Bloodroot",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:48:35.874Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 5,
       "id": "mandrake-root",
       "name": "Mandrake Root",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:52:18.979Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 6,
       "id": "nightshade",
       "name": "Nightshade",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:53:04.162Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 7,
       "id": "wolfsbane",
       "name": "Wolfsbane",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:53:16.176Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 8,
       "id": "firebloom",
       "name": "Firebloom",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:53:26.629Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 9,
       "id": "sungrass",
       "name": "Sungrass",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:53:36.347Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 10,
       "id": "blindweed",
       "name": "Blindweed",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:53:47.905Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 11,
       "id": "ghost-mushroom",
       "name": "Ghost Mushroom",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:54:01.609Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 12,
       "id": "cave-moss",
       "name": "Cave Moss",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:54:19.556Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 13,
       "id": "black-lotus",
       "name": "Black Lotus",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:54:31.834Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 20,
       "id": "distilled-water",
       "name": "Distilled Water",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:54:41.848Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 21,
       "id": "alcohol",
       "name": "Alcohol",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:54:56.021Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 22,
       "id": "oil",
       "name": "Oil",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:56:41.530Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 23,
       "id": "beeswax",
       "name": "Beeswax",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:56:59.191Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 24,
       "id": "sulfur",
       "name": "Sulfur",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:57:12.518Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 25,
       "id": "salt",
       "name": "Salt",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:57:23.910Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 26,
       "id": "mercury",
       "name": "Mercury",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:57:34.418Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 27,
       "id": "herbal-paste",
       "name": "Herbal Paste",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:57:46.965Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 30,
       "id": "raw-meat",
       "name": "Raw Meat",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:58:39.105Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 31,
       "id": "cooked-meat",
       "name": "Cooked Meat",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:58:49.234Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 32,
       "id": "raw-fish",
       "name": "Raw Fish",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:58:58.823Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 33,
       "id": "fish-cooked",
       "name": "Cooked Fish",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:59:10.790Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 34,
       "id": "apple",
       "name": "Apple",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:59:49.970Z",
+      "variant": "Shiny",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 35,
       "id": "cheese",
       "name": "Cheese",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:50:48.657Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 36,
       "id": "carrot",
       "name": "Carrot",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:50:37.587Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 37,
       "id": "potato",
       "name": "Potato",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:50:24.907Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 38,
       "id": "root-vegetable",
       "name": "Root Vegetable",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:50:08.784Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 39,
       "id": "berries",
       "name": "Berries",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:49:52.214Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 40,
@@ -239,7 +303,7 @@
       "lastUpdated": "2025-12-18T21:16:16.956Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 41,
@@ -248,7 +312,7 @@
       "lastUpdated": "2025-12-18T21:17:44.495Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 42,
@@ -257,7 +321,7 @@
       "lastUpdated": "2025-12-18T21:17:57.259Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 43,
@@ -266,7 +330,7 @@
       "lastUpdated": "2025-12-18T21:18:15.725Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 44,
@@ -275,7 +339,7 @@
       "lastUpdated": "2025-12-18T21:19:10.630Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 45,
@@ -284,7 +348,7 @@
       "lastUpdated": "2025-12-18T21:20:15.412Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 46,
@@ -293,7 +357,7 @@
       "lastUpdated": "2025-12-18T21:21:30.967Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 47,
@@ -302,7 +366,7 @@
       "lastUpdated": "2025-12-18T21:22:20.995Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 48,
@@ -311,7 +375,7 @@
       "lastUpdated": "2025-12-18T21:22:54.002Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 49,
@@ -320,7 +384,7 @@
       "lastUpdated": "2025-12-18T21:23:18.185Z",
       "variant": "Shiny",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 50,
@@ -329,7 +393,7 @@
       "lastUpdated": "2025-12-18T21:23:39.825Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 51,
@@ -338,7 +402,7 @@
       "lastUpdated": "2025-12-18T21:23:53.352Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 52,
@@ -347,7 +411,7 @@
       "lastUpdated": "2025-12-18T21:24:06.764Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 53,
@@ -356,7 +420,7 @@
       "lastUpdated": "2025-12-18T21:24:22.221Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 54,
@@ -365,7 +429,7 @@
       "lastUpdated": "2025-12-18T21:25:25.628Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 55,
@@ -374,91 +438,115 @@
       "lastUpdated": "2025-12-18T21:25:37.940Z",
       "variant": "Original",
       "isStaged": true,
-      "isSynced": false
+      "isSynced": true
     },
     {
       "idx": 56,
       "id": "wine",
       "name": "Wine",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:49:30.666Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 57,
       "id": "water-skin",
       "name": "Water Skin",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:49:21.497Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 70,
       "id": "potion-healing",
       "name": "Potion of Healing",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:49:12.568Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 71,
       "id": "potion-mana",
       "name": "Potion of Mana",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:49:03.266Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 72,
       "id": "potion-stamina",
       "name": "Potion of Stamina",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:48:53.316Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 73,
       "id": "potion-poison",
       "name": "Potion of Poison",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:48:44.105Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 74,
       "id": "potion-fire",
       "name": "Potion of Fire",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:47:08.862Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 75,
       "id": "potion-invis",
       "name": "Potion of Invisibility",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:46:44.701Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 76,
       "id": "potion-strength",
       "name": "Potion of Strength",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:46:23.626Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 77,
       "id": "potion-swiftness",
       "name": "Potion of Swiftness",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:46:11.987Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 78,
       "id": "potion-water",
       "name": "Potion of Water Breathing",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:46:01.367Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     },
     {
       "idx": 79,
       "id": "potion-flying",
       "name": "Potion of Flying",
-      "lastUpdated": "Unknown",
-      "variant": "Original"
+      "lastUpdated": "2025-12-20T12:45:45.154Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
     }
   ]
 }
