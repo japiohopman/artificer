@@ -1,0 +1,101 @@
+{
+  "playerCharacter": {
+    "name": "anne",
+    "pronouns": "She/Her",
+    "species": "Elf",
+    "characterClass": "Druid",
+    "gender": "Male",
+    "alignment": "True Neutral",
+    "gold": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "str": 17,
+      "dex": 20,
+      "con": 18,
+      "int": 18,
+      "wis": 19,
+      "cha": 17
+    },
+    "skills": [
+      "Religion",
+      "Survival",
+      "Athletics",
+      "Intimidation"
+    ],
+    "proficiencies": [
+      "Simple Weapons",
+      "Light Armor"
+    ],
+    "vesselResonance": 37,
+    "neuralScars": [
+      "void_resonance"
+    ],
+    "alliances": [],
+    "appearance": {
+      "eyeColor": "Amber",
+      "hairColor": "Silver",
+      "skinColor": "Fair",
+      "build": "Athletic",
+      "age": 25,
+      "height": "5'10\"",
+      "weight": "160 lbs"
+    },
+    "personalityTraits": "",
+    "ideals": "",
+    "bonds": "",
+    "flaws": "",
+    "dmVoice": "Zephyr",
+    "dmStyle": "Epic & Serious",
+    "traits": [],
+    "spells": [
+      "goodberry",
+      "cure-wounds",
+      "detect-magic"
+    ],
+    "startingGearIds": [],
+    "personaMatrixUrl": "persona_c895cc51-1a7c-4871-b6ce-92e0bc4427e3",
+    "portraitUrl": "persona_c895cc51-1a7c-4871-b6ce-92e0bc4427e3",
+    "backstory": "Anne was once the preeminent Weaver of the Aethelgard Wilds, an elf whose spirit was so tightly knit to the emerald pulse of the world that she could command the seasons with a whisper. Yet, when the Great Rifts tore open during the Age of Star-Fall, she did the unthinkable: she reached into the howling maw of the nothingness to prevent her forest from being consumed. She succeeded in sealing the breach, but the cost was etched into the very architecture of her mind. The *void_resonance* took root within her psyche—a psychic scar that hums with the terrifying frequency of a dead universe—shattering her connection to the exuberant joy of life and replacing it with the cold, absolute clarity of the cosmos.\n\nNow, Anne wanders the shifting borders of civilization and wilderness, a silent sentinel of the Great Balance. She is no longer moved by the petty tragedies of mortals or the grand ambitions of empires; to her, the birth of a forest and the collapse of a star are of equal consequence. Her neutrality is not born of indecision, but of a soul that has felt the crushing weight of the vacuum and emerged indifferent to the concepts of \"good\" and \"evil.\" She serves only the equilibrium, guided by the haunting vibration of the void in her veins, ensuring that neither the blinding light of creation nor the absolute dark of the abyss ever tips the scales too far."
+  },
+  "gold": 1000,
+  "world": {
+    "time": 480,
+    "day": 1
+  },
+  "inventory": [],
+  "equipment": {},
+  "craftingMastery": {
+    "anvil": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "alchemy": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "workbench": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "enchanter": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "cooking": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "furnace": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    }
+  },
+  "unlockedBlueprints": [],
+  "timestamp": "2025-12-27T17:15:58.113Z"
+}
