@@ -1,0 +1,95 @@
+{
+  "playerCharacter": {
+    "name": "gfb",
+    "pronouns": "They/Them",
+    "species": "Human",
+    "characterClass": "Fighter",
+    "gender": "Male",
+    "alignment": "True Neutral",
+    "gold": 15,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "str": 0,
+      "dex": 0,
+      "con": 0,
+      "int": 0,
+      "wis": 0,
+      "cha": 0
+    },
+    "skills": [
+      "Insight",
+      "Persuasion"
+    ],
+    "proficiencies": [
+      "Simple Weapons",
+      "Light Armor"
+    ],
+    "vesselResonance": 72,
+    "neuralScars": [
+      "void_resonance"
+    ],
+    "alliances": [],
+    "appearance": {
+      "eyeColor": "Amber",
+      "hairColor": "Silver",
+      "skinColor": "Fair",
+      "build": "Athletic",
+      "age": 25,
+      "height": "5'10\"",
+      "weight": "160 lbs"
+    },
+    "personalityTraits": "",
+    "ideals": "",
+    "bonds": "",
+    "flaws": "",
+    "dmVoice": "Zephyr",
+    "dmStyle": "Mysterious & Cryptic",
+    "traits": [],
+    "spells": [],
+    "startingGearIds": [],
+    "personaMatrixUrl": "persona_2deaacd2-5df2-4936-b7a1-8bf043555076",
+    "portraitUrl": "persona_2deaacd2-5df2-4936-b7a1-8bf043555076",
+    "backstory": "They found him in the wake of the Great Burn, a silhouette standing amidst the cooling slag where a fortress once stood. He wore no heraldry, only a battered breastplate etched with three fading letters—*G.F.B.*—and he held a longsword that hummed with the low, unsettling vibration of a tuning fork struck in a tomb. No one knows which side he fought for that day, or if he fought at all; he simply stepped out of the smoke as if he had been waiting for the fire to finish its work. He does not speak of a home, a lineage, or a lord, moving through the world like a ghost tethered to cold steel, a human remnant whose history has been meticulously erased by his own hand or by some cosmic decree.\n\nGFB moves with the clinical grace of a man who sees the world as a set of scales perpetually out of alignment. His spirit is True Neutral, an anchor cast into the churning sea of morality; he will offer a hand to a beggar today and ignore a falling king tomorrow, guided not by cruelty or kindness, but by a hidden geometry known only to himself. To him, the struggle between Light and Dark is a cacophony that requires a silent conductor. He strikes only when the equilibrium falters, his blade serving as the heavy weight that resets the balance, indifferent to the blood it spills or the lives it saves.\n\nHis personality is defined by a profound, haunting detachment, a stoicism so deep it borders on the void. He observes the world with eyes like polished obsidian—reflective, yet impossible to see into—and speaks in fractured, cryptic sentences that feel less like conversation and more like echoes from a distant cave. He is a man who has replaced his desires with a singular, quiet purpose, finding comfort only in the rhythmic maintenance of his gear and the steady pulse of the march. GFB is not a hero to be cheered, nor a villain to be feared; he is the cold, iron reality that remains when the stories end and the dust finally settles."
+  },
+  "gold": 50000,
+  "world": {
+    "time": 480,
+    "day": 1
+  },
+  "inventory": [],
+  "equipment": {},
+  "craftingMastery": {
+    "anvil": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "alchemy": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "workbench": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "enchanter": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "cooking": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "furnace": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    }
+  },
+  "unlockedBlueprints": [],
+  "timestamp": "2025-12-27T13:05:42.027Z"
+}
