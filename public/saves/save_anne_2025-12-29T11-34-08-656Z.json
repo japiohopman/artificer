@@ -1,0 +1,1037 @@
+{
+  "playerCharacter": {
+    "name": "anne",
+    "pronouns": "She/Her",
+    "species": "Elf",
+    "characterClass": "Druid",
+    "gender": "Male",
+    "alignment": "True Neutral",
+    "gold": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "str": 17,
+      "dex": 20,
+      "con": 18,
+      "int": 18,
+      "wis": 19,
+      "cha": 17
+    },
+    "skills": [
+      "Religion",
+      "Survival",
+      "Athletics",
+      "Intimidation"
+    ],
+    "proficiencies": [
+      "Simple Weapons",
+      "Light Armor"
+    ],
+    "vesselResonance": 37,
+    "neuralScars": [
+      "void_resonance"
+    ],
+    "alliances": [],
+    "appearance": {
+      "eyeColor": "Amber",
+      "hairColor": "Silver",
+      "skinColor": "Fair",
+      "build": "Athletic",
+      "age": 25,
+      "height": "5'10\"",
+      "weight": "160 lbs"
+    },
+    "personalityTraits": "",
+    "ideals": "",
+    "bonds": "",
+    "flaws": "",
+    "dmVoice": "Zephyr",
+    "dmStyle": "Epic & Serious",
+    "traits": [],
+    "spells": [
+      "goodberry",
+      "cure-wounds",
+      "detect-magic"
+    ],
+    "startingGearIds": [],
+    "personaMatrixUrl": "persona_c895cc51-1a7c-4871-b6ce-92e0bc4427e3",
+    "portraitUrl": "persona_c895cc51-1a7c-4871-b6ce-92e0bc4427e3",
+    "backstory": "Anne was once the preeminent Weaver of the Aethelgard Wilds, an elf whose spirit was so tightly knit to the emerald pulse of the world that she could command the seasons with a whisper. Yet, when the Great Rifts tore open during the Age of Star-Fall, she did the unthinkable: she reached into the howling maw of the nothingness to prevent her forest from being consumed. She succeeded in sealing the breach, but the cost was etched into the very architecture of her mind. The *void_resonance* took root within her psyche—a psychic scar that hums with the terrifying frequency of a dead universe—shattering her connection to the exuberant joy of life and replacing it with the cold, absolute clarity of the cosmos.\n\nNow, Anne wanders the shifting borders of civilization and wilderness, a silent sentinel of the Great Balance. She is no longer moved by the petty tragedies of mortals or the grand ambitions of empires; to her, the birth of a forest and the collapse of a star are of equal consequence. Her neutrality is not born of indecision, but of a soul that has felt the crushing weight of the vacuum and emerged indifferent to the concepts of \"good\" and \"evil.\" She serves only the equilibrium, guided by the haunting vibration of the void in her veins, ensuring that neither the blinding light of creation nor the absolute dark of the abyss ever tips the scales too far."
+  },
+  "gold": 1000,
+  "world": {
+    "time": 480,
+    "day": 1
+  },
+  "inventory": [
+    {
+      "id": "08d4cd81-b2da-4701-a0a7-d4f3f01abed0",
+      "itemId": "iron-ore",
+      "sourceId": "iron-ore",
+      "type": "misc",
+      "name": "Iron Ore",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Grey/Rust rock.",
+      "quantity": 1,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 0,
+      "tags": [
+        "ore",
+        "metal"
+      ],
+      "stats": {
+        "weight": 1,
+        "value": 5
+      }
+    },
+    {
+      "id": "f2e0ef77-2d32-449d-afaf-5e447c21175f",
+      "itemId": "copper-ore",
+      "sourceId": "copper-ore",
+      "type": "misc",
+      "name": "Copper Ore",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Orange/Green rock.",
+      "quantity": 1,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 1,
+      "tags": [
+        "ore",
+        "metal",
+        "conductive"
+      ],
+      "stats": {
+        "weight": 1,
+        "value": 5
+      }
+    },
+    {
+      "id": "b1eed0c4-e048-442d-92e6-2099735b319b",
+      "itemId": "tin-ore",
+      "sourceId": "tin-ore",
+      "type": "misc",
+      "name": "Tin Ore",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Silver/Grey rock.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 2,
+      "tags": [
+        "ore",
+        "metal"
+      ],
+      "stats": {
+        "weight": 1,
+        "value": 5
+      }
+    },
+    {
+      "id": "31f0bb86-19a6-4d31-b4eb-75fdae4a5410",
+      "itemId": "silver-ore",
+      "sourceId": "silver-ore",
+      "type": "misc",
+      "name": "Silver Ore",
+      "category": "material-raw",
+      "rarity": "uncommon",
+      "description": "Shiny white rock.",
+      "quantity": 1,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 3,
+      "tags": [
+        "ore",
+        "metal",
+        "magic",
+        "conductive"
+      ],
+      "stats": {
+        "weight": 1,
+        "value": 20
+      }
+    },
+    {
+      "id": "95fdb84e-9247-44ae-8808-5c5611cacb26",
+      "itemId": "gold-ore",
+      "sourceId": "gold-ore",
+      "type": "misc",
+      "name": "Gold Ore",
+      "category": "material-raw",
+      "rarity": "rare",
+      "description": "Yellow shiny rock.",
+      "quantity": 1,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 4,
+      "tags": [
+        "ore",
+        "metal",
+        "magic",
+        "precious"
+      ],
+      "stats": {
+        "weight": 1,
+        "value": 50
+      }
+    },
+    {
+      "id": "eec01ee4-9986-476b-9ea9-9695232f56a7",
+      "itemId": "mithral-ore",
+      "sourceId": "mithral-ore",
+      "type": "misc",
+      "name": "Mithral Ore",
+      "category": "material-raw",
+      "rarity": "rare",
+      "description": "Blue/Silver rock.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 5,
+      "tags": [
+        "ore",
+        "metal",
+        "magic"
+      ],
+      "stats": {
+        "weight": 0.5,
+        "value": 100
+      }
+    },
+    {
+      "id": "cf424ee3-8dde-405f-b408-de2d5fb5f49d",
+      "itemId": "hardwood-log",
+      "sourceId": "hardwood-log",
+      "type": "misc",
+      "name": "Hardwood Log",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Oak log.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 11,
+      "tags": [
+        "log",
+        "wood"
+      ],
+      "stats": {
+        "weight": 3,
+        "value": 5
+      }
+    },
+    {
+      "id": "fa38ec4f-4cb7-44ac-9802-8ffae1e5b8de",
+      "itemId": "softwood-log",
+      "sourceId": "softwood-log",
+      "type": "misc",
+      "name": "Softwood Log",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Pine log.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 10,
+      "tags": [
+        "log",
+        "wood"
+      ],
+      "stats": {
+        "weight": 2,
+        "value": 2
+      }
+    },
+    {
+      "id": "06fa73b7-6743-4989-a661-47d2f4ab56e0",
+      "itemId": "meteorite-ore",
+      "sourceId": "meteorite-ore",
+      "type": "misc",
+      "name": "Meteorite Ore",
+      "category": "material-raw",
+      "rarity": "epic",
+      "description": "Glowing/Cracked rock.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 9,
+      "tags": [
+        "ore",
+        "metal",
+        "magic",
+        "void"
+      ],
+      "stats": {
+        "weight": 1.5,
+        "value": 300
+      }
+    },
+    {
+      "id": "ff9a750e-9b8f-4105-9f60-84d423670655",
+      "itemId": "obsidian-shard",
+      "sourceId": "obsidian-shard",
+      "type": "misc",
+      "name": "Obsidian Shard",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Black sharp glass.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 8,
+      "tags": [
+        "stone",
+        "blade_dagger"
+      ],
+      "stats": {
+        "weight": 0.5,
+        "value": 5
+      }
+    },
+    {
+      "id": "f6ac2332-59fb-4ca8-b014-53df0c43d8a4",
+      "itemId": "coal",
+      "sourceId": "coal",
+      "type": "misc",
+      "name": "Coal",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Black rock fuel.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 7,
+      "tags": [
+        "fuel",
+        "stone"
+      ],
+      "stats": {
+        "weight": 1,
+        "value": 2
+      }
+    },
+    {
+      "id": "0cb4e841-29be-426f-bd3c-8d39c71e01a9",
+      "itemId": "adamantine-ore",
+      "sourceId": "adamantine-ore",
+      "type": "misc",
+      "name": "Adamantine Ore",
+      "category": "material-raw",
+      "rarity": "epic",
+      "description": "Black/Green rock.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 6,
+      "tags": [
+        "ore",
+        "metal"
+      ],
+      "stats": {
+        "weight": 2,
+        "value": 200
+      }
+    },
+    {
+      "id": "f8b02f7f-8c75-44c2-8cc0-3091a3383472",
+      "itemId": "darkwood-log",
+      "sourceId": "darkwood-log",
+      "type": "misc",
+      "name": "Darkwood Log",
+      "category": "material-raw",
+      "rarity": "uncommon",
+      "description": "Black log.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 12,
+      "tags": [
+        "log",
+        "wood"
+      ],
+      "stats": {
+        "weight": 2,
+        "value": 20
+      }
+    },
+    {
+      "id": "62bc0ae7-b6ac-466b-adc6-961f05c8c9ec",
+      "itemId": "elderwood-log",
+      "sourceId": "elderwood-log",
+      "type": "misc",
+      "name": "Elderwood Log",
+      "category": "material-raw",
+      "rarity": "rare",
+      "description": "White/Glowing log.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 13,
+      "tags": [
+        "log",
+        "wood",
+        "magic"
+      ],
+      "stats": {
+        "weight": 2,
+        "value": 50
+      }
+    },
+    {
+      "id": "c06d3e23-78d6-431d-a9c5-7aed167ff2b9",
+      "itemId": "ironwood-log",
+      "sourceId": "ironwood-log",
+      "type": "misc",
+      "name": "Ironwood Log",
+      "category": "material-raw",
+      "rarity": "uncommon",
+      "description": "Grey metallic log.",
+      "quantity": 1,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 14,
+      "tags": [
+        "log",
+        "wood"
+      ],
+      "stats": {
+        "weight": 4,
+        "value": 15
+      }
+    },
+    {
+      "id": "a8eea38c-572d-4299-9d48-d87459b2972e",
+      "itemId": "stick",
+      "sourceId": "stick",
+      "type": "misc",
+      "name": "Stick",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Small branch.",
+      "quantity": 1,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 15,
+      "tags": [
+        "stick",
+        "wood"
+      ],
+      "stats": {
+        "weight": 0.1,
+        "value": 1
+      }
+    },
+    {
+      "id": "f8d4472a-ce5a-4921-ab6c-2f702071a111",
+      "itemId": "yew-branch",
+      "sourceId": "yew-branch",
+      "type": "misc",
+      "name": "Yew Branch",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Flexible branch.",
+      "quantity": 1,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 16,
+      "tags": [
+        "stick",
+        "wood",
+        "bowstave"
+      ],
+      "stats": {
+        "weight": 0.5,
+        "value": 5
+      }
+    },
+    {
+      "id": "2a331fd2-f2fa-4531-bdd6-f14b7d99a881",
+      "itemId": "ash-branch",
+      "sourceId": "ash-branch",
+      "type": "misc",
+      "name": "Ash Branch",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Pale branch.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 17,
+      "tags": [
+        "stick",
+        "wood",
+        "bowstave"
+      ],
+      "stats": {
+        "weight": 0.5,
+        "value": 5
+      }
+    },
+    {
+      "id": "ea2fd3b3-5103-4ff6-ac56-61fa23cd34a6",
+      "itemId": "bear-pelt",
+      "sourceId": "bear-pelt",
+      "type": "misc",
+      "name": "Bear Pelt",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Black/Brown fur.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 23,
+      "tags": [
+        "leather",
+        "organic"
+      ],
+      "stats": {
+        "weight": 3,
+        "value": 20
+      }
+    },
+    {
+      "id": "d0deaddc-642c-4487-ad10-206400b03f90",
+      "itemId": "wolf-pelt",
+      "sourceId": "wolf-pelt",
+      "type": "misc",
+      "name": "Wolf Pelt",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Grey fur.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 22,
+      "tags": [
+        "leather",
+        "organic"
+      ],
+      "stats": {
+        "weight": 1.5,
+        "value": 10
+      }
+    },
+    {
+      "id": "874856c2-69cb-4d49-acee-0a146c399210",
+      "itemId": "raw-hide",
+      "sourceId": "raw-hide",
+      "type": "misc",
+      "name": "Raw Hide",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Brown skin.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 21,
+      "tags": [
+        "leather",
+        "organic"
+      ],
+      "stats": {
+        "weight": 2,
+        "value": 5
+      }
+    },
+    {
+      "id": "43b94f9b-892b-4a1f-bf4c-a85d756f0a07",
+      "itemId": "resin",
+      "sourceId": "resin",
+      "type": "misc",
+      "name": "Resin",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Amber glob.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 20,
+      "tags": [
+        "organic",
+        "glue"
+      ],
+      "stats": {
+        "weight": 0.2,
+        "value": 5
+      }
+    },
+    {
+      "id": "d70e9118-26cf-4243-9610-979c058c1a7a",
+      "itemId": "bark",
+      "sourceId": "bark",
+      "type": "misc",
+      "name": "Tree Bark",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Tree bark.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 19,
+      "tags": [
+        "organic"
+      ],
+      "stats": {
+        "weight": 0.1,
+        "value": 1
+      }
+    },
+    {
+      "id": "28707549-6d95-4bac-aa1f-438f532f06a2",
+      "itemId": "charcoal",
+      "sourceId": "charcoal",
+      "type": "misc",
+      "name": "Charcoal",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Burnt wood.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 18,
+      "tags": [
+        "fuel"
+      ],
+      "stats": {
+        "weight": 0.5,
+        "value": 3
+      }
+    },
+    {
+      "id": "a213da76-4d41-4e37-8c9f-a5680185031d",
+      "itemId": "bone-fragment",
+      "sourceId": "bone-fragment",
+      "type": "misc",
+      "name": "Bone Fragment",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "White bone piece.",
+      "quantity": 1,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 24,
+      "tags": [
+        "bone"
+      ],
+      "stats": {
+        "weight": 0.1,
+        "value": 1
+      }
+    },
+    {
+      "id": "5f4d0572-3956-4d69-9cf1-7cba5431a991",
+      "itemId": "skull",
+      "sourceId": "skull",
+      "type": "misc",
+      "name": "Animal Skull",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Animal skull.",
+      "quantity": 1,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 25,
+      "tags": [
+        "bone"
+      ],
+      "stats": {
+        "weight": 2,
+        "value": 10
+      }
+    },
+    {
+      "id": "f8eb1b4e-8323-442e-9589-bfdb073cfa2c",
+      "itemId": "beast-fang",
+      "sourceId": "beast-fang",
+      "type": "misc",
+      "name": "Beast Fang",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Large tooth.",
+      "quantity": 1,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 26,
+      "tags": [
+        "bone",
+        "blade_dagger"
+      ],
+      "stats": {
+        "weight": 0.1,
+        "value": 5
+      }
+    },
+    {
+      "id": "2441bc03-2003-487b-9b0c-0a3474c7aa00",
+      "itemId": "sharp-claw",
+      "sourceId": "sharp-claw",
+      "type": "misc",
+      "name": "Sharp Claw",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Curved claw.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 27,
+      "tags": [
+        "bone",
+        "blade_dagger"
+      ],
+      "stats": {
+        "weight": 0.1,
+        "value": 5
+      }
+    },
+    {
+      "id": "95331099-4f86-4e83-8b2b-10e69c4a3e83",
+      "itemId": "feather",
+      "sourceId": "feather",
+      "type": "misc",
+      "name": "Feather",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "White feather.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 28,
+      "tags": [
+        "organic",
+        "fletching"
+      ],
+      "stats": {
+        "weight": 0,
+        "value": 1
+      }
+    },
+    {
+      "id": "3b49ec33-3767-4708-a34a-fd50b5c4cd77",
+      "itemId": "griffin-feather",
+      "sourceId": "griffin-feather",
+      "type": "misc",
+      "name": "Griffin Feather",
+      "category": "material-raw",
+      "rarity": "rare",
+      "description": "Gold/Brown feather.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 29,
+      "tags": [
+        "organic",
+        "fletching",
+        "magic"
+      ],
+      "stats": {
+        "weight": 0,
+        "value": 50
+      }
+    },
+    {
+      "id": "21104b0d-9f0e-4002-a3f6-42ea720175c3",
+      "itemId": "horn",
+      "sourceId": "horn",
+      "type": "misc",
+      "name": "Horn",
+      "category": "musical-instruments",
+      "rarity": "common",
+      "description": "Animal horn",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/tools_and_misc.webp",
+      "spriteIndex": 74,
+      "stats": {
+        "weight": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "b21fcfc2-5852-42ed-8287-4edecd516de7",
+      "itemId": "sinew",
+      "sourceId": "sinew",
+      "type": "misc",
+      "name": "Sinew",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Stringy meat.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 34,
+      "tags": [
+        "binding",
+        "string",
+        "organic"
+      ],
+      "stats": {
+        "weight": 0.1,
+        "value": 2
+      }
+    },
+    {
+      "id": "b9d541d4-bb2c-43fd-ade0-7f63406e80f2",
+      "itemId": "monster-guts",
+      "sourceId": "monster-guts",
+      "type": "misc",
+      "name": "Monster Guts",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Gross pile.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 33,
+      "tags": [
+        "organic",
+        "viscera"
+      ],
+      "stats": {
+        "weight": 1,
+        "value": 5
+      }
+    },
+    {
+      "id": "7b5b0c4b-1a15-4c82-ad44-2a6acdbd39d8",
+      "itemId": "chitin-plate",
+      "sourceId": "chitin-plate",
+      "type": "misc",
+      "name": "Chitin Plate",
+      "category": "material-raw",
+      "rarity": "uncommon",
+      "description": "Bug shell piece.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 32,
+      "tags": [
+        "chitin",
+        "armor_plate",
+        "organic"
+      ],
+      "stats": {
+        "weight": 0.5,
+        "value": 20
+      }
+    },
+    {
+      "id": "7b00ce42-c4ec-4872-aca4-f69822d10251",
+      "itemId": "dragon-scale-black",
+      "sourceId": "dragon-scale-black",
+      "type": "misc",
+      "name": "Black Dragon Scale",
+      "category": "material-raw",
+      "rarity": "rare",
+      "description": "Black scale.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 31,
+      "tags": [
+        "scale",
+        "armor_plate",
+        "poison"
+      ],
+      "stats": {
+        "weight": 0.5,
+        "value": 500
+      }
+    },
+    {
+      "id": "1982c274-2bd9-4f12-97ee-d067948d76dd",
+      "itemId": "dragon-scale-red",
+      "sourceId": "dragon-scale-red",
+      "type": "misc",
+      "name": "Red Dragon Scale",
+      "category": "material-raw",
+      "rarity": "rare",
+      "description": "Red scale.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 30,
+      "tags": [
+        "scale",
+        "armor_plate",
+        "fire"
+      ],
+      "stats": {
+        "weight": 0.5,
+        "value": 500
+      }
+    },
+    {
+      "id": "f1ddd11a-af5e-4df2-abbc-3e1b647caff8",
+      "itemId": "troll-blood",
+      "sourceId": "troll-blood",
+      "type": "misc",
+      "name": "Troll Blood",
+      "category": "material-raw",
+      "rarity": "uncommon",
+      "description": "Green blood vial.",
+      "quantity": 3,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 36,
+      "tags": [
+        "liquid",
+        "organic",
+        "life"
+      ],
+      "stats": {
+        "weight": 0.5,
+        "value": 30
+      }
+    },
+    {
+      "id": "e8f96735-a282-4fc7-bf1d-e03f69493d6d",
+      "itemId": "slime-glob",
+      "sourceId": "slime-glob",
+      "type": "misc",
+      "name": "Slime Glob",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Green goo.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 37,
+      "tags": [
+        "liquid",
+        "poison"
+      ],
+      "stats": {
+        "weight": 0.5,
+        "value": 5
+      }
+    },
+    {
+      "id": "1446fce7-74f0-463e-a512-c41c4ad8664d",
+      "itemId": "spider-silk",
+      "sourceId": "spider-silk",
+      "type": "misc",
+      "name": "Spider Silk",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "White web clump.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 38,
+      "tags": [
+        "binding",
+        "string",
+        "cloth"
+      ],
+      "stats": {
+        "weight": 0.1,
+        "value": 8
+      }
+    },
+    {
+      "id": "966162eb-9377-4f99-8fc3-ac78d22f1bf7",
+      "itemId": "basilisk-eye",
+      "sourceId": "basilisk-eye",
+      "type": "misc",
+      "name": "Basilisk Eye",
+      "category": "material-raw",
+      "rarity": "rare",
+      "description": "Stone-like eye.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/materials_raw.webp",
+      "spriteIndex": 39,
+      "tags": [
+        "eye",
+        "organic",
+        "magic"
+      ],
+      "stats": {
+        "weight": 0.5,
+        "value": 200
+      }
+    },
+    {
+      "id": "8ee85361-5f96-4882-bfb7-c76f6ad3f45a",
+      "itemId": "raw-fish",
+      "sourceId": "raw-fish",
+      "type": "misc",
+      "name": "Raw Fish",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "Blue/Silver fish.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/alchemy_food.webp",
+      "spriteIndex": 32,
+      "tags": [
+        "raw_meat",
+        "organic"
+      ],
+      "stats": {
+        "weight": 1,
+        "value": 5
+      }
+    },
+    {
+      "id": "cb27d54b-fd3c-45ee-9078-0a667648c6d0",
+      "itemId": "sugar",
+      "sourceId": "sugar",
+      "type": "misc",
+      "name": "Sugar",
+      "category": "material-raw",
+      "rarity": "common",
+      "description": "White crystals.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/alchemy_food.webp",
+      "spriteIndex": 41,
+      "tags": [
+        "spice",
+        "dust"
+      ],
+      "stats": {
+        "weight": 1,
+        "value": 3
+      }
+    },
+    {
+      "id": "1578abed-24e9-4058-9688-d82e0ea11a2b",
+      "itemId": "berries",
+      "sourceId": "berries",
+      "type": "misc",
+      "name": "Berries",
+      "category": "food",
+      "rarity": "common",
+      "description": "Blue/Red berries.",
+      "quantity": 2,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/alchemy_food.webp",
+      "spriteIndex": 39,
+      "tags": [
+        "edible",
+        "fruit"
+      ],
+      "stats": {
+        "weight": 0.1,
+        "value": 1
+      }
+    },
+    {
+      "id": "d2d05af1-d3c7-4bbf-8bae-b2f2bca0c48f",
+      "itemId": "potato",
+      "sourceId": "potato",
+      "type": "misc",
+      "name": "Potato",
+      "category": "food",
+      "rarity": "common",
+      "description": "Brown potato.",
+      "quantity": 1,
+      "spriteSheet": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/images/items/alchemy_food.webp",
+      "spriteIndex": 37,
+      "tags": [
+        "edible",
+        "vegetable"
+      ],
+      "stats": {
+        "weight": 0.2,
+        "value": 1
+      }
+    }
+  ],
+  "equipment": {},
+  "craftingMastery": {
+    "anvil": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "alchemy": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "workbench": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "enchanter": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "cooking": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    },
+    "furnace": {
+      "level": 1,
+      "mastery": 0,
+      "nextLevelMastery": 100
+    }
+  },
+  "unlockedBlueprints": [],
+  "timestamp": "2025-12-29T11:34:08.656Z"
+}
