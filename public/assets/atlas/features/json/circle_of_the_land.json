@@ -1,0 +1,90 @@
+{
+  "index": "circle_of_the_land",
+  "class": {
+    "index": "druid",
+    "name": "druid",
+    "url": "public/assets/atlas/classes/druid"
+  },
+  "subclass": {
+    "index": "land",
+    "name": "land",
+    "url": "public/assets/atlas/subclasses/land"
+  },
+  "name": "circle of the land",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites."
+  ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "feature",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "circle_of_the_land_arctic",
+              "name": "circle of the land: arctic",
+              "url": "public/assets/atlas/features/circle_of_the_land_arctic"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "circle_of_the_land_coast",
+              "name": "circle of the land: coast",
+              "url": "public/assets/atlas/features/circle_of_the_land_coast"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "circle_of_the_land_desert",
+              "name": "circle of the land: desert",
+              "url": "public/assets/atlas/features/circle_of_the_land_desert"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "circle_of_the_land_forest",
+              "name": "circle of the land: forest",
+              "url": "public/assets/atlas/features/circle_of_the_land_forest"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "circle_of_the_land_grassland",
+              "name": "circle of the land: grassland",
+              "url": "public/assets/atlas/features/circle_of_the_land_grassland"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "circle_of_the_land_mountain",
+              "name": "circle of the land: mountain",
+              "url": "public/assets/atlas/features/circle_of_the_land_mountain"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "circle_of_the_land_swamp",
+              "name": "circle of the land: swamp",
+              "url": "public/assets/atlas/features/circle_of_the_land_swamp"
+            }
+          }
+        ]
+      }
+    },
+    "invocations": []
+  },
+  "url": "public/assets/atlas/features/json/circle_of_the_land.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/circle_of_the_land.webp"
+}

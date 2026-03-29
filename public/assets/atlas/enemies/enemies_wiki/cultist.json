@@ -1,0 +1,97 @@
+{
+  "index": "cultist",
+  "name": "cultist",
+  "desc": "Cultists swear allegiance to dark powers such as elemental princes, demon lords, or archdevils. Most conceal their loyalties to avoid being ostracized, imprisoned, or executed for their beliefs. Unlike evil acolytes, cultists often show signs of insanity in their beliefs and practices.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any non-good alignment",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 12,
+      "armor": [
+        {
+          "index": "leather_armor",
+          "name": "leather armor",
+          "url": "public/assets/atlas/equipment/leather_armor"
+        }
+      ]
+    }
+  ],
+  "hit_points": 9,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 12,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_deception",
+        "name": "skill: deception",
+        "url": "public/assets/atlas/proficiencies/skill_deception"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_religion",
+        "name": "skill: religion",
+        "url": "public/assets/atlas/proficiencies/skill_religion"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [
+    {
+      "name": "dark devotion",
+      "desc": "The cultist has advantage on saving throws against being charmed or frightened.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "scimitar",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 4 (1d6 + 1) slashing damage.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/cultist.png",
+  "url": "public/assets/atlas/monsters/cultist",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The Cultist is a parasite of the spirit, thriving equally in the damp rot of forgotten ruins and the velvet shadows of urban sprawl. Unlike the common beast, the Cultist does not hunt with claw or fang, but with the insidious weaponry of whispers and false hope. They are apex predators of the psyche, seeking out the disenfranchised and the grieving to draw them into a web of ritualistic devotion.\n\nTheir predation is a slow erosion; they consume a victim\u2019s identity and kinships long before the physical sacrifice begins. They are the \"Hollow Folk\" of local folklore\u2014those whose shadows are said to stretch longer than their bodies, reaching for things unseen. Villagers speak of them in hushed tones as the \"Rot within the Apple,\" a cautionary reminder that the most terrifying monsters often wear the faces of our neighbors.\n\nTo encounter a Cultist is to witness a soul hollowed out to serve a master that demands everything and grants only ruin. They are not driven by hunger, but by a terrifying, ecstatic certainty that the world must burn to appease the silence between the stars.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/cultist.webp",
+  "bakedAt": 1770276821790
+}

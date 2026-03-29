@@ -1,0 +1,37 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "flail",
+  "name": "flail",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "public/assets/atlas/damage_types/bludgeoning"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 2,
+  "properties": [],
+  "url": "public/assets/atlas/equipment/json/flail.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "public/assets/atlas/equipment/flail.webp",
+  "sprite_index": 12,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+}

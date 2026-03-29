@@ -1,0 +1,21 @@
+{
+  "index": "boots_of_levitation",
+  "name": "boots of levitation",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, rare (requires attunement)",
+    "While you wear these boots, you can use an action to cast the levitate spell on yourself at will."
+  ],
+  "image": "public/assets/atlas/magic_items/boots_of_levitation.webp",
+  "url": "public/assets/atlas/magic_items/json/boots_of_levitation.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

@@ -1,0 +1,64 @@
+{
+  "index": "planar_binding",
+  "name": "planar binding",
+  "desc": [
+    "With this spell, you attempt to bind a celestial, an elemental, a fey, or a fiend to your service. The creature must be within range for the entire casting of the spell. (Typically, the creature is first summoned into the center of an inverted magic circle in order to keep it trapped while this spell is cast.) At the completion of the casting, the target must make a charisma saving throw. On a failed save, it is bound to serve you for the duration. If the creature was summoned or created by another spell, that spell's duration is extended to match the duration of this spell.",
+    "A bound creature must follow your instructions to the best of its ability. You might command the creature to accompany you on an adventure, to guard a location, or to deliver a message. The creature obeys the letter of your instructions, but if the creature is hostile to you, it strives to twist your words to achieve its own objectives. If the creature carries out your instructions completely before the spell ends, it travels to you to report this fact if you are on the same plane of existence. If you are on a different plane of existence, it returns to the place where you bound it and remains there until the spell ends."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of a higher level, the duration increases to 10 days with a 6th-level slot, to 30 days with a 7th-level slot, to 180 days with an 8th-level slot, and to a year and a day with a 9th-level spell slot."
+  ],
+  "range": "60 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A jewel worth at least 1,000 gp, which the spell consumes.",
+  "ritual": false,
+  "duration": "24 hours",
+  "concentration": false,
+  "casting_time": "1 hour",
+  "level": 5,
+  "dc": {
+    "dc_type": {
+      "index": "cha",
+      "name": "cha",
+      "url": "public/assets/atlas/ability_scores/charisma"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "abjuration",
+    "name": "abjuration",
+    "url": "public/assets/atlas/magic_schools/abjuration"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "public/assets/atlas/spell/json/planar_binding.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/planar_binding.webp",
+  "sprite_index": 18,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet9.webp"
+}

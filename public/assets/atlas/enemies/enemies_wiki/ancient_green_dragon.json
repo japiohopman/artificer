@@ -1,0 +1,307 @@
+{
+  "index": "ancient_green_dragon",
+  "name": "ancient green dragon",
+  "size": "Gargantuan",
+  "type": "dragon",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 21
+    }
+  ],
+  "hit_points": 385,
+  "hit_dice": "22d20",
+  "hit_points_roll": "22d20+154",
+  "speed": {
+    "walk": "40 ft.",
+    "fly": "80 ft.",
+    "swim": "40 ft."
+  },
+  "strength": 27,
+  "dexterity": 12,
+  "constitution": 25,
+  "intelligence": 20,
+  "wisdom": 17,
+  "charisma": 19,
+  "proficiencies": [
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+      }
+    },
+    {
+      "value": 14,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "skill_deception",
+        "name": "skill: deception",
+        "url": "public/assets/atlas/proficiencies/skill_deception"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "skill_insight",
+        "name": "skill: insight",
+        "url": "public/assets/atlas/proficiencies/skill_insight"
+      }
+    },
+    {
+      "value": 17,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "skill_persuasion",
+        "name": "skill: persuasion",
+        "url": "public/assets/atlas/proficiencies/skill_persuasion"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "blindsight": "60 ft.",
+    "darkvision": "120 ft.",
+    "passive_perception": 27
+  },
+  "languages": "Common, Draconic",
+  "challenge_rating": 22,
+  "proficiency_bonus": 7,
+  "xp": 41000,
+  "special_abilities": [
+    {
+      "name": "amphibious",
+      "desc": "The dragon can breathe air and water.",
+      "damage": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the dragon fails a saving throw, it can choose to succeed instead.",
+      "usage": {
+        "type": "per day",
+        "times": 3,
+        "rest_types": []
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.",
+      "actions": [
+        {
+          "action_name": "Frightful Presence",
+          "count": "1",
+          "type": "ability"
+        },
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +15 to hit, reach 15 ft., one target. Hit: 19 (2d10 + 8) piercing damage plus 10 (3d6) poison damage.",
+      "attack_bonus": 15,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "2d10+8"
+        },
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "poison",
+            "url": "public/assets/atlas/damage_types/poison"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +15 to hit, reach 10 ft., one target. Hit: 22 (4d6 + 8) slashing damage.",
+      "attack_bonus": 15,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "4d6+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "Melee Weapon Attack: +15 to hit, reach 20 ft., one target. Hit: 17 (2d8 + 8) bludgeoning damage.",
+      "attack_bonus": 15,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d8+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "frightful presence",
+      "desc": "Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.",
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        "dc_value": 19,
+        "success_type": "none"
+      },
+      "actions": []
+    },
+    {
+      "name": "poison breath",
+      "desc": "The dragon exhales poisonous gas in a 90-foot cone. Each creature in that area must make a DC 22 Constitution saving throw, taking 77 (22d6) poison damage on a failed save, or half as much damage on a successful one.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "con",
+          "url": "public/assets/atlas/ability_scores/constitution"
+        },
+        "dc_value": 22,
+        "success_type": "half"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "poison",
+            "url": "public/assets/atlas/damage_types/poison"
+          },
+          "damage_dice": "22d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "detect",
+      "desc": "The dragon makes a Wisdom (Perception) check.",
+      "damage": []
+    },
+    {
+      "name": "tail attack",
+      "desc": "The dragon makes a tail attack.",
+      "damage": []
+    },
+    {
+      "name": "wing attack (costs 2 actions)",
+      "desc": "The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 23 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.",
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "public/assets/atlas/ability_scores/dexterity"
+        },
+        "dc_value": 23,
+        "success_type": "none"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d6+8"
+        }
+      ]
+    }
+  ],
+  "image": "/api/images/monsters/ancient_green_dragon.png",
+  "url": "public/assets/atlas/monsters/ancient_green_dragon",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "reactions": [],
+  "lore": "The Ancient Green Dragon, often dubbed the **Viridian Tyrant**, claims the most suffocating reaches of primeval forests as its sovereign domain. These are not merely woods, but living cathedrals of rot and shadow where the dragon\u2019s presence twists the flora into a labyrinth of strangling thorns.\n\nUnlike their more volatile kin, the Green is a master of the long game. Their predatory behavior is a chilling blend of psychological manipulation and chemical warfare. They do not merely strike; they orchestrate. A Green prefers to break a victim\u2019s mind with whispered lies before exhaling a cloud of corrosive, emerald vapor that melts both lung and leaf. They hunt through deceit, often masquerading as benign spirits to lure the unwary into a fatal bargain.\n\nIn local folklore, they are the **Emerald Architects**. Borderland villagers speak of the \"Whispering Wood,\" where the wind carries the dragon\u2019s voice, offering forbidden secrets for the price of one's soul. To the common folk, the dragon is a god of cruel growth\u2014a reminder that nature is not kind, but cold and infinitely calculating. To encounter one is to realize you are not just prey, but a pawn.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/ancient-green-dragon.webp",
+  "bakedAt": 1774400297943
+}

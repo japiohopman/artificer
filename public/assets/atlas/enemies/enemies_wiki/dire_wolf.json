@@ -1,0 +1,93 @@
+{
+  "index": "dire_wolf",
+  "name": "dire wolf",
+  "size": "Large",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 37,
+  "hit_dice": "5d10",
+  "hit_points_roll": "5d10+10",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 17,
+  "dexterity": 15,
+  "constitution": 15,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 7,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "keen hearing and smell",
+      "desc": "The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "damage": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 ft. of the creature and the ally isn't incapacitated.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/dire_wolf.png",
+  "url": "public/assets/atlas/monsters/dire_wolf",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The *Canis atrox*, or Dire Wolf, is a primordial echo of a colder age. Standing as tall as a mountain pony, these beasts are not merely oversized kin to the common wolf; they are the winter\u2019s hunger given form. They haunt the frost-rimed taigas and the jagged mists of the High Peaks, where the air is thin and mercy thinner.\n\nTheir predatory brilliance lies in \"The Long Stalk.\" Unlike the frantic chase of lesser hounds, the Dire Wolf pack employs a chilling, silent coordination. They maneuver their quarry into natural dead-ends\u2014box canyons or treacherous ice-sheets\u2014with the tactical precision of a veteran legion. A single howl is rarely a call for aid; it is a death knell for a hunt already won.\n\nIn local folklore, they are the \"Heralds of the Eternal Frost.\" Mountain folk whisper that the Dire Wolf does not eat to satisfy hunger, but to swallow the sun. To see one\u2019s reflection in their golden, unblinking eyes is to see the moment of your own passing. They remain the grim wardens of the high passes, ensuring that what enters the deep snows seldom returns.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/dire-wolf.webp",
+  "bakedAt": 1767621927941
+}

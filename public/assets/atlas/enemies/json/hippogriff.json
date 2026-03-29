@@ -1,0 +1,114 @@
+{
+  "index": "hippogriff",
+  "name": "hippogriff",
+  "size": "Large",
+  "type": "monstrosity",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 11
+    }
+  ],
+  "hit_points": 19,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10+3",
+  "speed": {
+    "walk": "40 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 17,
+  "dexterity": 13,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 8,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 15
+  },
+  "languages": "",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "keen sight",
+      "desc": "The hippogriff has advantage on Wisdom (Perception) checks that rely on sight.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The hippogriff makes two attacks: one with its beak and one with its claws.",
+      "actions": [
+        {
+          "action_name": "Beak",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claws",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "beak",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 8 (1d10 + 3) piercing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/hippogriff.webp",
+  "url": "public/assets/atlas/enemies/json/hippogriff.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 14,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet7.webp"
+}

@@ -1,0 +1,143 @@
+{
+  "index": "fire_giant",
+  "name": "fire giant",
+  "size": "Huge",
+  "type": "giant",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 18,
+      "armor": [
+        {
+          "index": "plate_armor",
+          "name": "plate armor",
+          "url": "public/assets/atlas/equipment/plate_armor"
+        }
+      ]
+    }
+  ],
+  "hit_points": 162,
+  "hit_dice": "13d12",
+  "hit_points_roll": "13d12+78",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 25,
+  "dexterity": 9,
+  "constitution": 23,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 13,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "skill_athletics",
+        "name": "skill: athletics",
+        "url": "public/assets/atlas/proficiencies/skill_athletics"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 16
+  },
+  "languages": "Giant",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The giant makes two greatsword attacks.",
+      "actions": [
+        {
+          "action_name": "Greatsword",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "greatsword",
+      "desc": "Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 28 (6d6 + 7) slashing damage.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "6d6+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "rock",
+      "desc": "Ranged Weapon Attack: +11 to hit, range 60/240 ft., one target. Hit: 29 (4d10 + 7) bludgeoning damage.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "4d10+7"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/fire_giant.webp",
+  "url": "public/assets/atlas/enemies/json/fire_giant.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "sprite_index": 1,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp"
+}

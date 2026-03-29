@@ -1,0 +1,17 @@
+{
+  "index": "font_of_inspiration",
+  "class": {
+    "index": "bard",
+    "name": "bard",
+    "url": "public/assets/atlas/classes/bard"
+  },
+  "name": "font of inspiration",
+  "level": 5,
+  "prerequisites": [],
+  "desc": [
+    "Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest."
+  ],
+  "url": "public/assets/atlas/features/json/font_of_inspiration.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/font_of_inspiration.webp"
+}

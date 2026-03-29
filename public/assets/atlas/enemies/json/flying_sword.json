@@ -1,0 +1,126 @@
+{
+  "index": "flying_sword",
+  "name": "flying sword",
+  "size": "Small",
+  "type": "construct",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 17,
+  "hit_dice": "5d6",
+  "hit_points_roll": "5d6",
+  "speed": {
+    "walk": "0 ft.",
+    "fly": "50 ft.",
+    "hover": true
+  },
+  "strength": 12,
+  "dexterity": 15,
+  "constitution": 11,
+  "intelligence": 1,
+  "wisdom": 5,
+  "charisma": 1,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison",
+    "psychic"
+  ],
+  "condition_immunities": [
+    {
+      "index": "blinded",
+      "name": "blinded",
+      "url": "public/assets/atlas/constitutionditions/blinded"
+    },
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "blinded",
+      "name": "blinded",
+      "url": "public/assets/atlas/constitutionditions/blinded"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "public/assets/atlas/constitutionditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "petrified",
+      "url": "public/assets/atlas/constitutionditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "blindsight": "60 ft. (blind beyond this radius)",
+    "passive_perception": 7
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "antimagic susceptibility",
+      "desc": "The sword is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the sword must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute.",
+      "damage": []
+    },
+    {
+      "name": "false appearance",
+      "desc": "While the sword remains motionless and isn't flying, it is indistinguishable from a normal sword.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "longsword",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) slashing damage.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "1d8+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/flying_sword.webp",
+  "url": "public/assets/atlas/enemies/json/flying_sword.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 4,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp"
+}

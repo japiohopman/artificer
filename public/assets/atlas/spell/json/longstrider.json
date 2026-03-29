@@ -1,0 +1,61 @@
+{
+  "index": "longstrider",
+  "name": "longstrider",
+  "desc": [
+    "You touch a creature. The target's speed increases by 10 feet until the spell ends."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each spell slot above 1st."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A pinch of dirt.",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "transmutation",
+    "name": "transmutation",
+    "url": "public/assets/atlas/magic_schools/transmutation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "public/assets/atlas/classes/ranger"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/longstrider.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/longstrider.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet8.webp"
+}

@@ -1,0 +1,49 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "shortbow",
+  "name": "shortbow",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Ranged",
+  "category_range": "Simple Ranged",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "public/assets/atlas/damage_types/piercing"
+    }
+  },
+  "range": {
+    "normal": 80,
+    "long": 320
+  },
+  "weight": 2,
+  "properties": [
+    {
+      "index": "ammunition",
+      "name": "ammunition",
+      "url": "public/assets/atlas/weapon_properties/ammunition"
+    },
+    {
+      "index": "two_handed",
+      "name": "two_handed",
+      "url": "public/assets/atlas/weapon_properties/two_handed"
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/shortbow.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "public/assets/atlas/equipment/shortbow.webp",
+  "sprite_index": 17,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+}

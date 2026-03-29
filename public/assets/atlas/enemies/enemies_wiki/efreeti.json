@@ -1,0 +1,262 @@
+{
+  "index": "efreeti",
+  "name": "efreeti",
+  "size": "Large",
+  "type": "elemental",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 200,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10+112",
+  "speed": {
+    "walk": "40 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 22,
+  "dexterity": 12,
+  "constitution": 24,
+  "intelligence": 16,
+  "wisdom": 15,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_int",
+        "name": "saving throw: int",
+        "url": "public/assets/atlas/proficiencies/saving_throw_int"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 12
+  },
+  "languages": "Ignan",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [
+    {
+      "name": "elemental demise",
+      "desc": "If the efreeti dies, its body disintegrates in a flash of fire and puff of smoke, leaving behind only equipment the djinni was wearing or carrying.",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The efreeti's innate spell casting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\n\nAt will: detect magic\n3/day: enlarge/reduce, tongues\n1/day each: conjure elemental (fire elemental only), gaseous form, invisibility, major image, plane shift, wall of fire",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        },
+        "dc": 15,
+        "modifier": 7,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "detect magic",
+            "level": 1,
+            "url": "public/assets/atlas/spells/detect_magic",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "enlarge/reduce",
+            "level": 2,
+            "url": "public/assets/atlas/spells/enlarge_reduce",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "tongues",
+            "level": 3,
+            "url": "public/assets/atlas/spells/tongues",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "conjure elemental",
+            "level": 5,
+            "notes": "Fire Elemental only",
+            "url": "public/assets/atlas/spells/constitutionjure_elemental",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "gaseous form",
+            "level": 3,
+            "url": "public/assets/atlas/spells/gaseous_form",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "invisibility",
+            "level": 2,
+            "url": "public/assets/atlas/spells/invisibility",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "major image",
+            "level": 3,
+            "url": "public/assets/atlas/spells/major_image",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "plane shift",
+            "level": 7,
+            "url": "public/assets/atlas/spells/plane_shift",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "wall of fire",
+            "level": 4,
+            "url": "public/assets/atlas/spells/wall_of_fire",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "action_options",
+      "desc": "The efreeti makes two scimitar attacks or uses its Hurl Flame twice.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "action",
+              "action_name": "Scimitar",
+              "count": 2,
+              "type": "melee"
+            },
+            {
+              "option_type": "action",
+              "action_name": "Hurl Flame",
+              "count": 2,
+              "type": "ranged"
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "scimitar",
+      "desc": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage plus 7 (2d6) fire damage.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "2d6+6"
+        },
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "public/assets/atlas/damage_types/fire"
+          },
+          "damage_dice": "2d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "hurl flame",
+      "desc": "Ranged Spell Attack: +7 to hit, range 120 ft., one target. Hit: 17 (5d6) fire damage.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "public/assets/atlas/damage_types/fire"
+          },
+          "damage_dice": "5d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/efreeti.png",
+  "url": "public/assets/atlas/monsters/efreeti",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "To gaze upon an Efreeti is to witness the desert\u2019s cruelty given form. These towering scions of the Elemental Plane of Fire hail from the legendary City of Brass, though they frequently manifest within our world\u2019s deepest volcanic calderas or the most desolate, sun-scorched wastes. \n\nUnlike the mindless beasts of the wild, the Efreeti\u2019s predation is a sophisticated exercise in malice. They do not merely hunt for sustenance; they hunt for dominion. Their \"prey\" is often lured through the promise of power or the twisted fulfillment of a wish, only to find themselves shackled in brass, their spirits slowly incinerated by the Efreeti's oppressive aura. \n\nIn the folklore of the southern reaches, they are the \"Sultans of the Smoldering Breath.\" Legends warn that an Efreeti\u2019s shadow never falls upon the sand, for they are composed of a heat so intense it consumes even the darkness. To the nomadic tribes, they are symbols of the unforgiving sun\u2014majestic, absolute, and utterly devoid of mercy. Adventurers are cautioned: to bargain with such a creature is to invite the fire into one's very soul.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/efreeti.webp",
+  "bakedAt": 1770276598638
+}

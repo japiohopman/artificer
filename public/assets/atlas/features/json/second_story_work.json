@@ -1,0 +1,23 @@
+{
+  "index": "second_story_work",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "public/assets/atlas/classes/rogue"
+  },
+  "subclass": {
+    "index": "thief",
+    "name": "thief",
+    "url": "public/assets/atlas/subclasses/thief"
+  },
+  "name": "second_story work",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "When you choose this archetype at 3rd level, you gain the ability to climb faster than normal; climbing no longer costs you extra movement.",
+    "In addition, when you make a running jump, the distance you cover increases by a number of feet equal to your Dexterity modifier."
+  ],
+  "url": "public/assets/atlas/features/json/second_story_work.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/second_story_work.webp"
+}

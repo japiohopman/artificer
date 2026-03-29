@@ -1,0 +1,148 @@
+{
+  "index": "mummy",
+  "name": "mummy",
+  "size": "Medium",
+  "type": "undead",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 58,
+  "hit_dice": "9d8",
+  "hit_points_roll": "9d8+18",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 16,
+  "dexterity": 8,
+  "constitution": 15,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 12,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "damage_resistances": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "public/assets/atlas/constitutionditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "public/assets/atlas/constitutionditions/paralyzed"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "the languages it knew in life",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The mummy can use its Dreadful Glare and makes one attack with its rotting fist.",
+      "actions": [
+        {
+          "action_name": "Dreadful Glare",
+          "count": "1",
+          "type": "ability"
+        },
+        {
+          "action_name": "Rotting Fist",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "rotting fist",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage plus 10 (3d6) necrotic damage. If the target is a creature, it must succeed on a DC 12 Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 (3d6) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the remove curse spell or other magic.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d6+3"
+        },
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "public/assets/atlas/damage_types/necrotic"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "dreadful glare",
+      "desc": "The mummy targets one creature it can see within 60 ft. of it. If the target can see the mummy, it must succeed on a DC 11 Wisdom saving throw against this magic or become frightened until the end of the mummy's next turn. If the target fails the saving throw by 5 or more, it is also paralyzed for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies (but not mummy lords) for the next 24 hours.",
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        "dc_value": 11,
+        "success_type": "none"
+      },
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/mummy.webp",
+  "url": "public/assets/atlas/enemies/json/mummy.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "sprite_index": 2,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp"
+}

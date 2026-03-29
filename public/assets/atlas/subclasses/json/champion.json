@@ -1,0 +1,18 @@
+{
+  "index": "champion",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "public/assets/atlas/classes/fighter"
+  },
+  "name": "champion",
+  "subclass_flavor": "Martial Archetype",
+  "desc": [
+    "The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows."
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/charismampion/levels",
+  "url": "public/assets/atlas/subclasses/json/charismampion.json",
+  "updated_at": "2025-10-24T20:42:14.748Z",
+  "spells": [],
+  "image": "public/assets/atlas/subclasses/charismampion.webp"
+}

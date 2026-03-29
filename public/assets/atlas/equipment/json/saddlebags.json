@@ -1,0 +1,24 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "saddlebags",
+  "name": "saddlebags",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 4,
+    "unit": "gp"
+  },
+  "weight": 8,
+  "url": "public/assets/atlas/equipment/json/saddlebags.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/saddlebags.webp",
+  "sprite_index": 8,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+}

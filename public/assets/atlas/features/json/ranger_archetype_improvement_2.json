@@ -1,0 +1,17 @@
+{
+  "index": "ranger_archetype_improvement_2",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "public/assets/atlas/classes/ranger"
+  },
+  "name": "ranger archetype feature",
+  "level": 11,
+  "prerequisites": [],
+  "desc": [
+    "At 3rd level, you choose an archetype that you strive to emulate, such as the Hunter. Your choice grants you features at 3rd level and again at 7th, 11th, and 15th level."
+  ],
+  "url": "public/assets/atlas/features/json/ranger_archetype_improvement_2.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/ranger_archetype_improvement_2.webp"
+}

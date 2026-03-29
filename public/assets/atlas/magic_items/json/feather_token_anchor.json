@@ -1,0 +1,22 @@
+{
+  "index": "feather_token_anchor",
+  "name": "anchor feather token",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Wondrous item, rare",
+    "This tiny object looks like a feather.",
+    "You can use an action to touch the token to a boat or ship. For the next 24 hours, the vessel can't be moved by any means. Touching the token to the vessel again ends the effect. When the effect ends, the token disappears."
+  ],
+  "url": "public/assets/atlas/magic_items/json/feather_token_anchor.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/feather_token_anchor.webp"
+}

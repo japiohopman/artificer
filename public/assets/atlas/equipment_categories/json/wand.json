@@ -1,0 +1,89 @@
+{
+  "index": "wand",
+  "name": "wand",
+  "equipment": [
+    {
+      "index": "wand_of_binding",
+      "name": "wand of binding",
+      "url": "public/assets/atlas/magic_items/wand_of_binding"
+    },
+    {
+      "index": "wand_of_enemy_detection",
+      "name": "wand of enemy detection",
+      "url": "public/assets/atlas/magic_items/wand_of_enemy_detection"
+    },
+    {
+      "index": "wand_of_fear",
+      "name": "wand of fear",
+      "url": "public/assets/atlas/magic_items/wand_of_fear"
+    },
+    {
+      "index": "wand_of_fireballs",
+      "name": "wand of fireballs",
+      "url": "public/assets/atlas/magic_items/wand_of_fireballs"
+    },
+    {
+      "index": "wand_of_lightning_bolts",
+      "name": "wand of lightning bolts",
+      "url": "public/assets/atlas/magic_items/wand_of_lightning_bolts"
+    },
+    {
+      "index": "wand_of_magic_detection",
+      "name": "wand of magic detection",
+      "url": "public/assets/atlas/magic_items/wand_of_magic_detection"
+    },
+    {
+      "index": "wand_of_magic_missiles",
+      "name": "wand of magic missiles",
+      "url": "public/assets/atlas/magic_items/wand_of_magic_missiles"
+    },
+    {
+      "index": "wand_of_paralysis",
+      "name": "wand of paralysis",
+      "url": "public/assets/atlas/magic_items/wand_of_paralysis"
+    },
+    {
+      "index": "wand_of_polymorph",
+      "name": "wand of polymorph",
+      "url": "public/assets/atlas/magic_items/wand_of_polymorph"
+    },
+    {
+      "index": "wand_of_secrets",
+      "name": "wand of secrets",
+      "url": "public/assets/atlas/magic_items/wand_of_secrets"
+    },
+    {
+      "index": "wand_of_the_war_mage",
+      "name": "wand of the war mage, +1, +2, or +3",
+      "url": "public/assets/atlas/magic_items/wand_of_the_war_mage"
+    },
+    {
+      "index": "wand_of_web",
+      "name": "wand of web",
+      "url": "public/assets/atlas/magic_items/wand_of_web"
+    },
+    {
+      "index": "wand_of_wonder",
+      "name": "wand of wonder",
+      "url": "public/assets/atlas/magic_items/wand_of_wonder"
+    },
+    {
+      "index": "wand_of_the_war_mage_1",
+      "name": "wand of the war mage, +1",
+      "url": "public/assets/atlas/magic_items/wand_of_the_war_mage_1"
+    },
+    {
+      "index": "wand_of_the_war_mage_2",
+      "name": "wand of the war mage, +2",
+      "url": "public/assets/atlas/magic_items/wand_of_the_war_mage_2"
+    },
+    {
+      "index": "wand_of_the_war_mage_3",
+      "name": "wand of the war mage, +3",
+      "url": "public/assets/atlas/magic_items/wand_of_the_war_mage_3"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/wand.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/wand.webp"
+}

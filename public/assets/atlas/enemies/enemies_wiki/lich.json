@@ -1,0 +1,389 @@
+{
+  "index": "lich",
+  "name": "lich",
+  "size": "Medium",
+  "type": "undead",
+  "alignment": "any evil alignment",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 135,
+  "hit_dice": "18d8",
+  "hit_points_roll": "18d8+54",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 16,
+  "constitution": 16,
+  "intelligence": 20,
+  "wisdom": 14,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "saving_throw_int",
+        "name": "saving throw: int",
+        "url": "public/assets/atlas/proficiencies/saving_throw_int"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 18,
+      "proficiency": {
+        "index": "skill_arcana",
+        "name": "skill: arcana",
+        "url": "public/assets/atlas/proficiencies/skill_arcana"
+      }
+    },
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "skill_history",
+        "name": "skill: history",
+        "url": "public/assets/atlas/proficiencies/skill_history"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill_insight",
+        "name": "skill: insight",
+        "url": "public/assets/atlas/proficiencies/skill_insight"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "lightning",
+    "necrotic"
+  ],
+  "damage_immunities": [
+    "poison",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "public/assets/atlas/constitutionditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "public/assets/atlas/constitutionditions/paralyzed"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "truesight": "120 ft.",
+    "passive_perception": 19
+  },
+  "languages": "Common plus up to five other languages",
+  "challenge_rating": 21,
+  "proficiency_bonus": 7,
+  "xp": 33000,
+  "special_abilities": [
+    {
+      "name": "legendary resistance",
+      "desc": "If the lich fails a saving throw, it can choose to succeed instead.",
+      "usage": {
+        "type": "per day",
+        "times": 3,
+        "rest_types": []
+      },
+      "damage": []
+    },
+    {
+      "name": "rejuvenation",
+      "desc": "If it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery.",
+      "damage": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). The lich has the following wizard spells prepared:\n\n- Cantrips (at will): mage hand, prestidigitation, ray of frost\n- 1st level (4 slots): detect magic, magic missile, shield, thunderwave\n- 2nd level (3 slots): acid arrow, detect thoughts, invisibility, mirror image\n- 3rd level (3 slots): animate dead, counterspell, dispel magic, fireball\n- 4th level (3 slots): blight, dimension door\n- 5th level (3 slots): cloudkill, scrying\n- 6th level (1 slot): disintegrate, globe of invulnerability\n- 7th level (1 slot): finger of death, plane shift\n- 8th level (1 slot): dominate monster, power word stun\n- 9th level (1 slot): power word kill",
+      "spellcasting": {
+        "level": 18,
+        "ability": {
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/intelligence"
+        },
+        "dc": 20,
+        "modifier": 12,
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "school": "wizard",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 1,
+          "7": 1,
+          "8": 1,
+          "9": 1
+        },
+        "spells": [
+          {
+            "name": "mage hand",
+            "level": 0,
+            "url": "public/assets/atlas/spells/mage_hand"
+          },
+          {
+            "name": "prestidigitation",
+            "level": 0,
+            "url": "public/assets/atlas/spells/prestidigitation"
+          },
+          {
+            "name": "ray of frost",
+            "level": 0,
+            "url": "public/assets/atlas/spells/ray_of_frost"
+          },
+          {
+            "name": "detect magic",
+            "level": 1,
+            "url": "public/assets/atlas/spells/detect_magic"
+          },
+          {
+            "name": "magic missile",
+            "level": 1,
+            "url": "public/assets/atlas/spells/magic_missile"
+          },
+          {
+            "name": "shield",
+            "level": 1,
+            "url": "public/assets/atlas/spells/shield"
+          },
+          {
+            "name": "thunderwave",
+            "level": 1,
+            "url": "public/assets/atlas/spells/thunderwave"
+          },
+          {
+            "name": "acid arrow",
+            "level": 2,
+            "url": "public/assets/atlas/spells/acid_arrow"
+          },
+          {
+            "name": "detect thoughts",
+            "level": 2,
+            "url": "public/assets/atlas/spells/detect_thoughts"
+          },
+          {
+            "name": "invisibility",
+            "level": 2,
+            "url": "public/assets/atlas/spells/invisibility"
+          },
+          {
+            "name": "mirror image",
+            "level": 2,
+            "url": "public/assets/atlas/spells/mirror_image"
+          },
+          {
+            "name": "animate dead",
+            "level": 3,
+            "url": "public/assets/atlas/spells/animate_dead"
+          },
+          {
+            "name": "counterspell",
+            "level": 3,
+            "url": "public/assets/atlas/spells/counterspell"
+          },
+          {
+            "name": "dispel magic",
+            "level": 3,
+            "url": "public/assets/atlas/spells/dispel_magic"
+          },
+          {
+            "name": "fireball",
+            "level": 3,
+            "url": "public/assets/atlas/spells/fireball"
+          },
+          {
+            "name": "blight",
+            "level": 4,
+            "url": "public/assets/atlas/spells/blight"
+          },
+          {
+            "name": "dimension door",
+            "level": 4,
+            "url": "public/assets/atlas/spells/dimension_door"
+          },
+          {
+            "name": "cloudkill",
+            "level": 5,
+            "url": "public/assets/atlas/spells/cloudkill"
+          },
+          {
+            "name": "scrying",
+            "level": 5,
+            "url": "public/assets/atlas/spells/scrying"
+          },
+          {
+            "name": "disintegrate",
+            "level": 6,
+            "url": "public/assets/atlas/spells/disintegrate"
+          },
+          {
+            "name": "globe of invulnerability",
+            "level": 6,
+            "url": "public/assets/atlas/spells/globe_of_invulnerability"
+          },
+          {
+            "name": "finger of death",
+            "level": 7,
+            "url": "public/assets/atlas/spells/finger_of_death"
+          },
+          {
+            "name": "plane shift",
+            "level": 7,
+            "url": "public/assets/atlas/spells/plane_shift"
+          },
+          {
+            "name": "dominate monster",
+            "level": 8,
+            "url": "public/assets/atlas/spells/dominate_monster"
+          },
+          {
+            "name": "power word stun",
+            "level": 8,
+            "url": "public/assets/atlas/spells/power_word_stun"
+          },
+          {
+            "name": "power word kill",
+            "level": 9,
+            "url": "public/assets/atlas/spells/power_word_kill"
+          }
+        ]
+      },
+      "damage": []
+    },
+    {
+      "name": "turn resistance",
+      "desc": "The lich has advantage on saving throws against any effect that turns undead.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "paralyzing touch",
+      "desc": "Melee Spell Attack: +12 to hit, reach 5 ft., one creature. Hit: 10 (3d6) cold damage. The target must succeed on a DC 18 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "cold",
+            "url": "public/assets/atlas/damage_types/cold"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "cantrip",
+      "desc": "The lich casts a cantrip.",
+      "damage": []
+    },
+    {
+      "name": "paralyzing touch (costs 2 actions)",
+      "desc": "The lich uses its Paralyzing Touch.",
+      "damage": []
+    },
+    {
+      "name": "frightening gaze (costs 2 actions)",
+      "desc": "The lich fixes its gaze on one creature it can see within 10 feet of it. The target must succeed on a DC 18 Wisdom saving throw against this magic or become frightened for 1 minute. The frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the lich's gaze for the next 24 hours.",
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        "dc_value": 18,
+        "success_type": "none"
+      },
+      "damage": []
+    },
+    {
+      "name": "disrupt life (costs 3 actions)",
+      "desc": "Each living creature within 20 feet of the lich must make a DC 18 Constitution saving throw against this magic, taking 21 (6d6) necrotic damage on a failed save, or half as much damage on a successful one.",
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "con",
+          "url": "public/assets/atlas/ability_scores/constitution"
+        },
+        "dc_value": 18,
+        "success_type": "none"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "public/assets/atlas/damage_types/necrotic"
+          },
+          "damage_dice": "6d6"
+        }
+      ]
+    }
+  ],
+  "image": "/api/images/monsters/lich.png",
+  "url": "public/assets/atlas/monsters/lich",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "reactions": [],
+  "lore": "The Lich is no mere revenant, but a monument to the ultimate hubris. These dread sovereigns dwell in sites of profound stagnation\u2014sunless archives, collapsed citadels, or ossuaries where the air tastes of copper and ancient parchment. They do not haunt; they rule.\n\nAs predators, they are uniquely patient. A Lich does not hunger for flesh, but for the metaphysical currency of life and lore. They are soul-parasites, siphoning the vitality of the unwary to nourish their hidden phylacteries. Their \"hunt\" may span generations, subtly manipulating bloodlines until a specific soul is ripe for harvest to fuel their necromantic engines.\n\nIn the tapestries of local folklore, they are the \"Whisperers in the Dust.\" Peasants speak of the Pale Scholar who offers forbidden secrets, neglecting to mention the price is one\u2019s very essence. To the commoner, a Lich is a ghost story; to the scholar, it is a chilling reminder that death is a mercy many fools try to outwit. To encounter one is to stand before a mind that has forgotten the warmth of the sun, replaced by a cold, calculating infinity.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/lich.webp",
+  "bakedAt": 1767614569880
+}

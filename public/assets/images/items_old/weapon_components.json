@@ -1,0 +1,608 @@
+{
+  "id": "weapon_components",
+  "label": "Weapon Components",
+  "lastUpdated": "2026-01-18T08:41:24.731Z",
+  "grid": 10,
+  "items": [
+    {
+      "index": 0,
+      "id": "iron-blade-straight",
+      "name": "Iron Sword Blade",
+      "category": "material-component"
+    },
+    {
+      "index": 1,
+      "id": "steel-blade-straight",
+      "name": "Steel Sword Blade",
+      "category": "material-component"
+    },
+    {
+      "index": 2,
+      "id": "mithral-blade-straight",
+      "name": "Mithral Sword Blade",
+      "category": "material-component"
+    },
+    {
+      "index": 3,
+      "id": "adamantine-blade-straight",
+      "name": "Adamantine Blade",
+      "category": "material-component"
+    },
+    {
+      "index": 4,
+      "id": "iron-blade-heavy",
+      "name": "Iron Heavy Head",
+      "category": "material-component"
+    },
+    {
+      "index": 5,
+      "id": "steel-blade-heavy",
+      "name": "Steel Heavy Head",
+      "category": "material-component"
+    },
+    {
+      "index": 6,
+      "id": "mithral-blade-heavy",
+      "name": "Mithral Heavy Head",
+      "category": "material-component"
+    },
+    {
+      "index": 7,
+      "id": "adamantine-blade-heavy",
+      "name": "Adamantine Heavy Head",
+      "category": "material-component"
+    },
+    {
+      "index": 8,
+      "id": "iron-blade-dagger",
+      "name": "Iron Dagger Blade",
+      "category": "material-component"
+    },
+    {
+      "index": 9,
+      "id": "steel-blade-dagger",
+      "name": "Steel Dagger Blade",
+      "category": "material-component"
+    },
+    {
+      "index": 10,
+      "id": "iron-guard-cross",
+      "name": "Iron Crossguard",
+      "category": "material-component"
+    },
+    {
+      "index": 11,
+      "id": "steel-guard-cross",
+      "name": "Steel Crossguard",
+      "category": "material-component"
+    },
+    {
+      "index": 12,
+      "id": "mithral-guard-cross",
+      "name": "Mithral Crossguard",
+      "category": "material-component"
+    },
+    {
+      "index": 13,
+      "id": "adamantine-guard",
+      "name": "Adamantine Guard",
+      "category": "material-component"
+    },
+    {
+      "index": 14,
+      "id": "shield-boss-iron",
+      "name": "Iron Shield Boss",
+      "category": "material-component"
+    },
+    {
+      "index": 15,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 16,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 17,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 18,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 19,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 20,
+      "id": "wood-grip-straight",
+      "name": "Wooden Handle",
+      "category": "material-component"
+    },
+    {
+      "index": 21,
+      "id": "wood-grip-curved",
+      "name": "Curved Handle",
+      "category": "material-component"
+    },
+    {
+      "index": 22,
+      "id": "leather-wrapped-grip",
+      "name": "Leather Handle",
+      "category": "material-component"
+    },
+    {
+      "index": 23,
+      "id": "wood-haft-short",
+      "name": "Short Stick",
+      "category": "material-component"
+    },
+    {
+      "index": 24,
+      "id": "wood-haft-long",
+      "name": "Long Staff",
+      "category": "material-component"
+    },
+    {
+      "index": 25,
+      "id": "yew-bowstave",
+      "name": "Unstrung Bow",
+      "category": "material-component"
+    },
+    {
+      "index": 26,
+      "id": "sinew-string",
+      "name": "String Coil",
+      "category": "material-component"
+    },
+    {
+      "index": 27,
+      "id": "iron-grip-straight",
+      "name": "Iron Handle",
+      "category": "material-component"
+    },
+    {
+      "index": 28,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 29,
+      "id": "leather-straps",
+      "name": "Leather Straps",
+      "category": "material-component"
+    },
+    {
+      "index": 30,
+      "id": "iron-pommel",
+      "name": "Iron Knob",
+      "category": "material-component"
+    },
+    {
+      "index": 31,
+      "id": "steel-pommel",
+      "name": "Steel Knob",
+      "category": "material-component"
+    },
+    {
+      "index": 32,
+      "id": "mithral-pommel",
+      "name": "Mithral Knob",
+      "category": "material-component"
+    },
+    {
+      "index": 33,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 34,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 35,
+      "id": "rivet-bundle",
+      "name": "Forged Rivets",
+      "category": "material-component"
+    },
+    {
+      "index": 36,
+      "id": "brass-buckle",
+      "name": "Brass Buckle",
+      "category": "material-component"
+    },
+    {
+      "index": 37,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 38,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 39,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 40,
+      "id": "plate-section-iron",
+      "name": "Iron Armor Plate",
+      "category": "material-component"
+    },
+    {
+      "index": 41,
+      "id": "plate-section-steel",
+      "name": "Steel Armor Plate",
+      "category": "material-component"
+    },
+    {
+      "index": 42,
+      "id": "mail-links-iron",
+      "name": "Iron Chain Links",
+      "category": "material-component"
+    },
+    {
+      "index": 43,
+      "id": "leather-padding",
+      "name": "Reinforced Padding",
+      "category": "material-component"
+    },
+    {
+      "index": 44,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 45,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 46,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 47,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 48,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 49,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 50,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 51,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 52,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 53,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 54,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 55,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 56,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 57,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 58,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 59,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 60,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 61,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 62,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 63,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 64,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 65,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 66,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 67,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 68,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 69,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 70,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 71,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 72,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 73,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 74,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 75,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 76,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 77,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 78,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 79,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 80,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 81,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 82,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 83,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 84,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 85,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 86,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 87,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 88,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 89,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 90,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 91,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 92,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 93,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 94,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 95,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 96,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 97,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 98,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    },
+    {
+      "index": 99,
+      "id": null,
+      "name": "VOID",
+      "category": null
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "glaive",
+  "name": "glaive",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 20,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d10",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "public/assets/atlas/damage_types/slashing"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 6,
+  "properties": [
+    {
+      "index": "heavy",
+      "name": "heavy",
+      "url": "public/assets/atlas/weapon_properties/heavy"
+    },
+    {
+      "index": "reach",
+      "name": "reach",
+      "url": "public/assets/atlas/weapon_properties/reach"
+    },
+    {
+      "index": "two_handed",
+      "name": "two_handed",
+      "url": "public/assets/atlas/weapon_properties/two_handed"
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/glaive.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "public/assets/atlas/equipment/glaive.webp",
+  "sprite_index": 17,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+}

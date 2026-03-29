@@ -1,0 +1,157 @@
+{
+  "index": "dust_mephit",
+  "name": "dust mephit",
+  "size": "Small",
+  "type": "elemental",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "hit_points": 17,
+  "hit_dice": "5d6",
+  "hit_points_roll": "5d6",
+  "speed": {
+    "walk": "30 ft.",
+    "fly": "30 ft."
+  },
+  "strength": 5,
+  "dexterity": 14,
+  "constitution": 10,
+  "intelligence": 9,
+  "wisdom": 11,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 12
+  },
+  "languages": "Auran, Terran",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "death burst",
+      "desc": "When the mephit dies, it explodes in a burst of dust. Each creature within 5 ft. of it must then succeed on a DC 10 Constitution saving throw or be blinded for 1 minute. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.",
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "con",
+          "url": "public/assets/atlas/ability_scores/constitution"
+        },
+        "dc_value": 10,
+        "success_type": "none"
+      },
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The mephit can innately cast sleep, requiring no material components. Its innate spellcasting ability is Charisma.",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        },
+        "dc": 10,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "sleep",
+            "level": 1,
+            "url": "public/assets/atlas/spells/sleep",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "claws",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) slashing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "blinding breath",
+      "desc": "The mephit exhales a 15-foot cone of blinding dust. Each creature in that area must succeed on a DC 10 Dexterity saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 6
+      },
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "public/assets/atlas/ability_scores/dexterity"
+        },
+        "dc_value": 10,
+        "success_type": "none"
+      },
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/dust_mephit.webp",
+  "url": "public/assets/atlas/enemies/json/dust_mephit.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 16,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet4.webp"
+}

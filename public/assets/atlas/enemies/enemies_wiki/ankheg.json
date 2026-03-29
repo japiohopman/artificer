@@ -1,0 +1,114 @@
+{
+  "index": "ankheg",
+  "name": "ankheg",
+  "size": "Large",
+  "type": "monstrosity",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    },
+    {
+      "type": "condition",
+      "value": 11,
+      "condition": {
+        "index": "prone",
+        "name": "prone",
+        "url": "public/assets/atlas/constitutionditions/prone"
+      }
+    }
+  ],
+  "hit_points": 39,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10+6",
+  "speed": {
+    "walk": "30 ft.",
+    "burrow": "10 ft."
+  },
+  "strength": 17,
+  "dexterity": 11,
+  "constitution": 13,
+  "intelligence": 1,
+  "wisdom": 13,
+  "charisma": 6,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "tremorsense": "60 ft.",
+    "passive_perception": 11
+  },
+  "languages": "",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 250,
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage plus 3 (1d6) acid damage. If the target is a Large or smaller creature, it is grappled (escape DC 13). Until this grapple ends, the ankheg can bite only the grappled creature and has advantage on attack rolls to do so.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "2d6+3"
+        },
+        {
+          "damage_type": {
+            "index": "acid",
+            "name": "acid",
+            "url": "public/assets/atlas/damage_types/acid"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "acid spray",
+      "desc": "The ankheg spits acid in a line that is 30 ft. long and 5 ft. wide, provided that it has no creature grappled. Each creature in that line must make a DC 13 Dexterity saving throw, taking 10 (3d6) acid damage on a failed save, or half as much damage on a successful one.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 6
+      },
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "public/assets/atlas/ability_scores/dexterity"
+        },
+        "dc_value": 13,
+        "success_type": "half"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "acid",
+            "name": "acid",
+            "url": "public/assets/atlas/damage_types/acid"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/ankheg.png",
+  "url": "public/assets/atlas/monsters/ankheg",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "lore": "The Ankheg, or \"Earth-Stalker\" as the borderland farmers call it, is a creature of chitin and insatiable hunger. It haunts the soft loams of the countryside, preferring the rich, tilled soil of cultivated fields. To the unwary, the ground is solid; to the Ankheg, it is merely a veil.\n\nThis apex predator lies in wait beneath the surface, sensing the rhythmic vibrations of footsteps above. When the moment is right, it erupts in a violent shower of dirt and gore, its massive mandibles snapping shut with the force of a falling portcullis. Should its prey resist, the beast vents a corrosive bile that melts plate and flesh alike.\n\nIn local folklore, the Ankheg is a symbol of the earth's hidden resentment. Elders tell of \"The Great Maw\" that punishes those who till too deep or too greedily. To hear the dry, rhythmic chittering beneath one's floorboards is considered a funeral dirge. Travelers are warned: if the birds go silent and the soil begins to ripple like water, do not run. To run is merely to ring the dinner bell.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/ankheg.webp",
+  "bakedAt": 1768760742046
+}

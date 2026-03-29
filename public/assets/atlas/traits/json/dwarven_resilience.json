@@ -1,0 +1,19 @@
+{
+  "index": "dwarven_resilience",
+  "races": [
+    {
+      "index": "dwarf",
+      "name": "dwarf",
+      "url": "public/assets/atlas/races/dwarf"
+    }
+  ],
+  "subraces": [],
+  "name": "dwarven resilience",
+  "desc": [
+    "You have advantage on saving throws against poison, and you have resistance against poison damage."
+  ],
+  "proficiencies": [],
+  "url": "public/assets/atlas/traits/json/dwarven_resilience.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "public/assets/atlas/traits/dwarven_resilience.webp"
+}

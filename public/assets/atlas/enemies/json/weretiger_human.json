@@ -1,0 +1,151 @@
+{
+  "index": "weretiger_human",
+  "name": "weretiger, human form",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "human",
+  "alignment": "neutral",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "hit_points": 120,
+  "hit_dice": "16d8",
+  "forms": [
+    {
+      "index": "weretiger_hybrid",
+      "name": "weretiger, hybrid form",
+      "url": "public/assets/atlas/monsters/weretiger_hybrid"
+    },
+    {
+      "index": "weretiger_tiger",
+      "name": "weretiger, tiger form",
+      "url": "public/assets/atlas/monsters/weretiger_tiger"
+    }
+  ],
+  "hit_points_roll": "16d8+48",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 15
+  },
+  "languages": "Common",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [
+    {
+      "name": "shapechanger",
+      "desc": "The weretiger can use its action to polymorph into a tiger-humanoid hybrid or into a tiger, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "damage": []
+    },
+    {
+      "name": "keen hearing and smell",
+      "desc": "The weretiger has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "action_options",
+      "desc": "In humanoid form, the weretiger makes two scimitar attacks or two longbow attacks. In hybrid form, it can attack like a humanoid or make two claw attacks.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "action",
+              "action_name": "Scimitar",
+              "count": 2,
+              "type": "melee"
+            },
+            {
+              "option_type": "action",
+              "action_name": "Longbow",
+              "count": 2,
+              "type": "ranged"
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "scimitar",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longbow",
+      "desc": "Ranged Weapon Attack: +4 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/weretiger_human.webp",
+  "url": "public/assets/atlas/enemies/json/weretiger_human.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 8,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet13.webp"
+}

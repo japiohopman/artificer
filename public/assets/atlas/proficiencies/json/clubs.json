@@ -1,0 +1,21 @@
+{
+  "index": "clubs",
+  "type": "Weapons",
+  "name": "clubs",
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    }
+  ],
+  "races": [],
+  "url": "public/assets/atlas/proficiencies/json/clubs.json",
+  "reference": {
+    "index": "club",
+    "name": "club",
+    "url": "public/assets/atlas/equipment/club"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/clubs.webp"
+}

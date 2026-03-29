@@ -1,0 +1,25 @@
+{
+  "index": "keen_senses",
+  "races": [
+    {
+      "index": "elf",
+      "name": "elf",
+      "url": "public/assets/atlas/races/elf"
+    }
+  ],
+  "subraces": [],
+  "name": "keen senses",
+  "desc": [
+    "You have proficiency in the Perception skill."
+  ],
+  "proficiencies": [
+    {
+      "index": "skill_perception",
+      "name": "skill: perception",
+      "url": "public/assets/atlas/proficiencies/skill_perception"
+    }
+  ],
+  "url": "public/assets/atlas/traits/json/keen_senses.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "public/assets/atlas/traits/keen_senses.webp"
+}

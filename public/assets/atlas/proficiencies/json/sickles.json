@@ -1,0 +1,21 @@
+{
+  "index": "sickles",
+  "type": "Weapons",
+  "name": "sickles",
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    }
+  ],
+  "races": [],
+  "url": "public/assets/atlas/proficiencies/json/sickles.json",
+  "reference": {
+    "index": "sickle",
+    "name": "sickle",
+    "url": "public/assets/atlas/equipment/sickle"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/sickles.webp"
+}

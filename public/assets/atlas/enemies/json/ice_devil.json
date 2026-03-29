@@ -1,0 +1,207 @@
+{
+  "index": "ice_devil",
+  "name": "ice devil",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "devil",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 180,
+  "hit_dice": "19d10",
+  "hit_points_roll": "19d10+76",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 21,
+  "dexterity": 14,
+  "constitution": 18,
+  "intelligence": 18,
+  "wisdom": 15,
+  "charisma": 18,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "blindsight": "60 ft.",
+    "darkvision": "120 ft.",
+    "passive_perception": 12
+  },
+  "languages": "Infernal, telepathy 120 ft.",
+  "challenge_rating": 14,
+  "proficiency_bonus": 5,
+  "xp": 11500,
+  "special_abilities": [
+    {
+      "name": "devil's sight",
+      "desc": "Magical darkness doesn't impede the devil's darkvision.",
+      "damage": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The devil has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The devil makes three attacks: one with its bite, one with its claws, and one with its tail.",
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claws",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Tail",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) piercing damage plus 10 (3d6) cold damage.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "2d6+5"
+        },
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "cold",
+            "url": "public/assets/atlas/damage_types/cold"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 10 (2d4 + 5) slashing damage plus 10 (3d6) cold damage.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "2d4+5"
+        },
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "cold",
+            "url": "public/assets/atlas/damage_types/cold"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit: 12 (2d6 + 5) bludgeoning damage plus 10 (3d6) cold damage.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d6+5"
+        },
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "cold",
+            "url": "public/assets/atlas/damage_types/cold"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "wall of ice",
+      "desc": "The devil magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter.\nWhen the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is incapacitated. The creature then makes a DC 17 Dexterity saving throw, taking 35 (10d6) cold damage on a failed save, or half as much damage on a successful one.\nThe wall lasts for 1 minute or until the devil is incapacitated or dies. The wall can be damaged and breached; each 10-foot section has AC 5, 30 hit points, vulnerability to fire damage, and immunity to acid, cold, necrotic, poison, and psychic damage. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a DC 17 Constitution saving throw, taking 17 (5d6) cold damage on a failed save, or half as much damage on a successful one. The frigid air dissipates when the rest of the wall vanishes.",
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/ice_devil.webp",
+  "url": "public/assets/atlas/enemies/json/ice_devil.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 21,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet7.webp"
+}

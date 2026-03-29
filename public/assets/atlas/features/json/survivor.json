@@ -1,0 +1,22 @@
+{
+  "index": "survivor",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "public/assets/atlas/classes/fighter"
+  },
+  "subclass": {
+    "index": "champion",
+    "name": "champion",
+    "url": "public/assets/atlas/subclasses/charismampion"
+  },
+  "name": "survivor",
+  "level": 18,
+  "prerequisites": [],
+  "desc": [
+    "At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don't gain this benefit if you have 0 hit points."
+  ],
+  "url": "public/assets/atlas/features/json/survivor.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/survivor.webp"
+}

@@ -1,0 +1,34 @@
+{
+  "index": "arcane_foci",
+  "name": "arcane foci",
+  "equipment": [
+    {
+      "index": "crystal",
+      "name": "crystal",
+      "url": "public/assets/atlas/equipment/crystal"
+    },
+    {
+      "index": "orb",
+      "name": "orb",
+      "url": "public/assets/atlas/equipment/orb"
+    },
+    {
+      "index": "rod",
+      "name": "rod",
+      "url": "public/assets/atlas/equipment/rod"
+    },
+    {
+      "index": "staff",
+      "name": "staff",
+      "url": "public/assets/atlas/equipment/staff"
+    },
+    {
+      "index": "wand",
+      "name": "wand",
+      "url": "public/assets/atlas/equipment/wand"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/arcane_foci.webp"
+}

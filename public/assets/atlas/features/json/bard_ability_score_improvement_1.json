@@ -1,0 +1,17 @@
+{
+  "index": "bard_ability_score_improvement_1",
+  "class": {
+    "index": "bard",
+    "name": "bard",
+    "url": "public/assets/atlas/classes/bard"
+  },
+  "name": "ability score improvement",
+  "level": 4,
+  "prerequisites": [],
+  "desc": [
+    "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+  ],
+  "url": "public/assets/atlas/features/json/bard_ability_score_improvement_1.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/bard_ability_score_improvement_1.webp"
+}

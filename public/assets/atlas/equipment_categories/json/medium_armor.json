@@ -1,0 +1,34 @@
+{
+  "index": "medium_armor",
+  "name": "medium armor",
+  "equipment": [
+    {
+      "index": "hide_armor",
+      "name": "hide armor",
+      "url": "public/assets/atlas/equipment/hide_armor"
+    },
+    {
+      "index": "chain_shirt",
+      "name": "chain shirt",
+      "url": "public/assets/atlas/equipment/charismain_shirt"
+    },
+    {
+      "index": "scale_mail",
+      "name": "scale mail",
+      "url": "public/assets/atlas/equipment/scale_mail"
+    },
+    {
+      "index": "breastplate",
+      "name": "breastplate",
+      "url": "public/assets/atlas/equipment/breastplate"
+    },
+    {
+      "index": "half_plate_armor",
+      "name": "half plate armor",
+      "url": "public/assets/atlas/equipment/half_plate_armor"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/medium_armor.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/medium_armor.webp"
+}

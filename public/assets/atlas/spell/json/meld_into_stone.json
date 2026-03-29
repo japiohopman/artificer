@@ -1,0 +1,49 @@
+{
+  "higher_level": [],
+  "index": "meld_into_stone",
+  "name": "meld into stone",
+  "desc": [
+    "You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration. Using your movement, you step into the stone at a point you can touch. Nothing of your presence remains visible or otherwise detectable by nonmagical senses.",
+    "While merged with the stone, you can't see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use your movement to leave the stone where you entered it, which ends the spell. You otherwise can't move.",
+    "Minor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals 6d6 bludgeoning damage to you. The stone's complete destruction (or transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall prone in an unoccupied space closest to where you first entered."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": true,
+  "duration": "8 hours",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "transmutation",
+    "name": "transmutation",
+    "url": "public/assets/atlas/magic_schools/transmutation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "land",
+      "url": "public/assets/atlas/subclasses/land"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/meld_into_stone.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/meld_into_stone.webp",
+  "sprite_index": 24,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet8.webp"
+}

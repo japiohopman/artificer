@@ -1,0 +1,50 @@
+{
+  "name": "adventuring",
+  "index": "adventuring",
+  "desc": "# Adventuring\n",
+  "subsections": [
+    {
+      "name": "time",
+      "index": "time",
+      "url": "public/assets/atlas/rule_sections/time"
+    },
+    {
+      "name": "movement",
+      "index": "movement",
+      "url": "public/assets/atlas/rule_sections/movement"
+    },
+    {
+      "name": "the environment",
+      "index": "the_environment",
+      "url": "public/assets/atlas/rule_sections/the_environment"
+    },
+    {
+      "name": "traps",
+      "index": "traps",
+      "url": "public/assets/atlas/rule_sections/traps"
+    },
+    {
+      "name": "diseases",
+      "index": "diseases",
+      "url": "public/assets/atlas/rule_sections/diseases"
+    },
+    {
+      "name": "madness",
+      "index": "madness",
+      "url": "public/assets/atlas/rule_sections/madness"
+    },
+    {
+      "name": "resting",
+      "index": "resting",
+      "url": "public/assets/atlas/rule_sections/resting"
+    },
+    {
+      "name": "between adventures",
+      "index": "between_adventures",
+      "url": "public/assets/atlas/rule_sections/between_adventures"
+    }
+  ],
+  "url": "public/assets/atlas/rules/json/adventuring.json",
+  "updated_at": "2025-10-24T20:42:14.409Z",
+  "image": "public/assets/atlas/rules/adventuring.webp"
+}

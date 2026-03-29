@@ -1,0 +1,275 @@
+{
+  "index": "lizardfolk",
+  "name": "lizardfolk",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "lizardfolk",
+  "alignment": "neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    },
+    {
+      "type": "armor",
+      "value": 15,
+      "armor": [
+        {
+          "index": "shield",
+          "name": "shield",
+          "url": "public/assets/atlas/equipment/shield"
+        }
+      ]
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "4d8",
+  "hit_points_roll": "4d8+4",
+  "speed": {
+    "walk": "30 ft.",
+    "swim": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 10,
+  "constitution": 13,
+  "intelligence": 7,
+  "wisdom": 12,
+  "charisma": 7,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill_survival",
+        "name": "skill: survival",
+        "url": "public/assets/atlas/proficiencies/skill_survival"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "Draconic",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "hold breath",
+      "desc": "The lizardfolk can hold its breath for 15 minutes.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "action_options",
+      "desc": "The lizardfolk makes two melee attacks, each one with a different weapon.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Bite",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Heavy Club",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Bite",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Javelin",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Bite",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Spiked Shield",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Javelin",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Heavy Club",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Spiked Shield",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Javelin",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Spiked Shield",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Heavy Club",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "heavy club",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "javelin",
+      "desc": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spiked shield",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/lizardfolk.png",
+  "url": "public/assets/atlas/monsters/lizardfolk",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The Lizardfolk, or *Saurian Primus*, are the silent masters of the sunless marshes. They dwell where the water is thick with peat and the air heavy with rot, weaving villages of bone and reed amidst the gnarled cypress roots.\n\nTheir predation is a study in unnatural stillness. A traveler may stare directly at a submerged hunter, mistaking unblinking yellow eyes for floating algae, until the water explodes in a blur of scales and jagged flint. They do not hunt for sport, but with a cold, rhythmic efficiency that mirrors the pulse of the swamp itself. They are masters of the ambush, capable of slowing their breath until they become part of the mire.\n\nIn local folklore, they are the \"Keepers of the First Mud.\" Peasant tales warn that they are older than the gods, born from the primordial slime left behind when the world was forged. To the villagers on the marsh-edge, they are living relics\u2014unmoved by gold or mercy, loyal only to the ancient hunger of the swamp. Treat them with the same caution you would a sleeping viper; to wake them is to invite the teeth of history.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/lizardfolk.webp",
+  "bakedAt": 1767721649497
+}

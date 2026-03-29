@@ -1,0 +1,52 @@
+{
+  "higher_level": [],
+  "index": "expeditious_retreat",
+  "name": "expeditious retreat",
+  "desc": [
+    "This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action."
+  ],
+  "range": "Self",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Up to 10 minutes",
+  "concentration": true,
+  "casting_time": "1 bonus action",
+  "level": 1,
+  "school": {
+    "index": "transmutation",
+    "name": "transmutation",
+    "url": "public/assets/atlas/magic_schools/transmutation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "public/assets/atlas/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/expeditious_retreat.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/expeditious_retreat.webp",
+  "sprite_index": 1,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet5.webp"
+}

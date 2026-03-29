@@ -1,0 +1,82 @@
+{
+  "index": "giant_crab",
+  "name": "giant crab",
+  "size": "Medium",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8",
+  "speed": {
+    "walk": "30 ft.",
+    "swim": "30 ft."
+  },
+  "strength": 13,
+  "dexterity": 15,
+  "constitution": 11,
+  "intelligence": 1,
+  "wisdom": 9,
+  "charisma": 3,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "passive_perception": 9
+  },
+  "languages": "",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [
+    {
+      "name": "amphibious",
+      "desc": "The crab can breathe air and water.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage, and the target is grappled (escape DC 11). The crab has two claws, each of which can grapple only one target.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/giant_crab.png",
+  "url": "public/assets/atlas/monsters/giant_crab",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The *Decapodus Giganteus*, or the Common Giant Crab, haunts the jagged littoral zones where the surf meets the stone. These are not merely oversized scavengers; they are masters of the patient ambush. Often encrusted with living coral or kelp, they remain motionless for days, indistinguishable from a salt-stained boulder until a traveler steps within reach of their chitinous embrace.\n\nTheir predatory method is one of singular, crushing finality. Unlike the nimble hunters of the wood, the crab relies on a relentless, hydraulic grip. Once the primary pincer secures a limb, the creature retreats into the frothing tide, dragging its prize into the suffocating depths to be consumed at leisure.\n\nLocal mariners speak of the \"Old Sunder-Shell,\" a legendary specimen said to be as large as a longboat. In coastal folklore, these behemoths are regarded as the silent jailers of the drowned, guarding the treasures of broken ships. To see one scuttling shoreward under a blood-red moon is considered a dire omen, signaling that the sea is hungry and the tide will soon demand a tithe of bone.",
+  "imageUrl": null,
+  "bakedAt": 1770277060579
+}

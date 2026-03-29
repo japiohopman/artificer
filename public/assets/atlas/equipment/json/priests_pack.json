@@ -1,0 +1,108 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "priests_pack",
+  "name": "priest's pack",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "equipment_packs",
+    "name": "equipment packs",
+    "url": "public/assets/atlas/equipment_categories/equipment_packs"
+  },
+  "cost": {
+    "quantity": 19,
+    "unit": "gp"
+  },
+  "contents": [
+    {
+      "item": {
+        "index": "backpack",
+        "name": "backpack",
+        "url": "public/assets/atlas/equipment/backpack"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "blanket",
+        "name": "blanket",
+        "url": "public/assets/atlas/equipment/blanket"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "candle",
+        "name": "candle",
+        "url": "public/assets/atlas/equipment/candle"
+      },
+      "quantity": 10
+    },
+    {
+      "item": {
+        "index": "tinderbox",
+        "name": "tinderbox",
+        "url": "public/assets/atlas/equipment/tinderbox"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "rations_1_day",
+        "name": "rations (1 day)",
+        "url": "public/assets/atlas/equipment/rations_1_day"
+      },
+      "quantity": 2
+    },
+    {
+      "item": {
+        "index": "waterskin",
+        "name": "waterskin",
+        "url": "public/assets/atlas/equipment/waterskin"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "alms_box",
+        "name": "alms box",
+        "url": "public/assets/atlas/equipment/alms_box"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "block_of_incense",
+        "name": "block of incense",
+        "url": "public/assets/atlas/equipment/block_of_incense"
+      },
+      "quantity": 2
+    },
+    {
+      "item": {
+        "index": "censer",
+        "name": "censer",
+        "url": "public/assets/atlas/equipment/censer"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "vestments",
+        "name": "vestments",
+        "url": "public/assets/atlas/equipment/vestments"
+      },
+      "quantity": 1
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/priests_pack.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "properties": [],
+  "image": "public/assets/atlas/equipment/priests_pack.webp",
+  "sprite_index": 15,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+}

@@ -1,0 +1,100 @@
+{
+  "index": "violet_fungus",
+  "name": "violet fungus",
+  "size": "Medium",
+  "type": "plant",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 5
+    }
+  ],
+  "hit_points": 18,
+  "hit_dice": "4d8",
+  "hit_points_roll": "4d8",
+  "speed": {
+    "walk": "5 ft."
+  },
+  "strength": 3,
+  "dexterity": 1,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 3,
+  "charisma": 1,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "blinded",
+      "name": "blinded",
+      "url": "public/assets/atlas/constitutionditions/blinded"
+    },
+    {
+      "index": "blinded",
+      "name": "blinded",
+      "url": "public/assets/atlas/constitutionditions/blinded"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    }
+  ],
+  "senses": {
+    "blindsight": "30 ft. (blind beyond this radius)",
+    "passive_perception": 6
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "false appearance",
+      "desc": "While the violet fungus remains motionless, it is indistinguishable from an ordinary fungus.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The fungus makes 1d4 Rotting Touch attacks.",
+      "actions": [
+        {
+          "action_name": "Rotting Touch",
+          "count": "1d4",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "rotting touch",
+      "desc": "Melee Weapon Attack: +2 to hit, reach 10 ft., one creature. Hit: 4 (1d8) necrotic damage.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "public/assets/atlas/damage_types/necrotic"
+          },
+          "damage_dice": "1d8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/violet_fungus.webp",
+  "url": "public/assets/atlas/enemies/json/violet_fungus.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 17,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet12.webp"
+}

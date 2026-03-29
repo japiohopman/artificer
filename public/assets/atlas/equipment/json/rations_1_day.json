@@ -1,0 +1,30 @@
+{
+  "special": [],
+  "index": "rations_1_day",
+  "name": "rations (1 day)",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "public/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 5,
+    "unit": "sp"
+  },
+  "weight": 2,
+  "desc": [
+    "Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts."
+  ],
+  "url": "public/assets/atlas/equipment/json/rations_1_day.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/rations_1_day.webp",
+  "sprite_index": 20,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+}

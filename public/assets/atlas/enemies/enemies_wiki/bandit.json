@@ -1,0 +1,90 @@
+{
+  "index": "bandit",
+  "name": "bandit",
+  "desc": "**Bandits** rove in gangs and are sometimes led by thugs, veterans, or spellcasters. Not all bandits are evil. Oppression, drought, disease, or famine can often drive otherwise honest folk to a life of banditry.\n\n**Pirates** are bandits of the high seas. They might be freebooters interested only in treasure and murder, or they might be privateers sanctioned by the crown to attack and plunder an enemy nation\u2019s vessels.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any non-lawful alignment",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 12,
+      "armor": [
+        {
+          "index": "leather_armor",
+          "name": "leather armor",
+          "url": "public/assets/atlas/equipment/leather_armor"
+        }
+      ]
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8+2",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 12,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 10,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "actions": [
+    {
+      "name": "scimitar",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) slashing damage.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "light crossbow",
+      "desc": "Ranged Weapon Attack: +3 to hit, range 80 ft./320 ft., one target. Hit: 5 (1d8 + 1) piercing damage.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d8+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/bandit.png",
+  "url": "public/assets/atlas/monsters/bandit",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "lore": "The *Homo predatoris*, or the Common Bandit, is perhaps the most persistent blight upon our kingdom\u2019s arteries. Unlike the mindless beast, the bandit haunts the liminal spaces\u2014forgotten mountain passes, the choked thickets of the King\u2019s Wood, and the crumbling shells of ancient watchtowers. They are creatures of the threshold, thriving where law dissolves into the mud.\n\nTheir predation is a masterclass in psychological attrition. They do not merely hunt; they orchestrate. A traveler may encounter a \"wounded\" merchant weeping by a ditch, only to find it a lure for a dozen hidden blades. They utilize the silence of the forest as a weapon, letting the traveler\u2019s own mounting dread do the work of a whetstone.\n\nIn local folklore, they are whispered of as the \"Hollowed Men\"\u2014souls who traded their names for the anonymity of the mask. Mothers warn children that to stray from the path is to become a \"Shadow on the Road,\" a creature that eats only what it steals. They represent the terrifying truth that the most dangerous monster in the wilds is often the one that wears a human face.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/bandit.webp",
+  "bakedAt": 1767622147830
+}

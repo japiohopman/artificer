@@ -1,0 +1,151 @@
+{
+  "index": "clay_golem",
+  "name": "clay golem",
+  "size": "Large",
+  "type": "construct",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 133,
+  "hit_dice": "14d10",
+  "hit_points_roll": "14d10+56",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 20,
+  "dexterity": 9,
+  "constitution": 18,
+  "intelligence": 3,
+  "wisdom": 8,
+  "charisma": 1,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid",
+    "poison",
+    "psychic",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "public/assets/atlas/constitutionditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "public/assets/atlas/constitutionditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "petrified",
+      "url": "public/assets/atlas/constitutionditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 9
+  },
+  "languages": "understands the languages of its creator but can't speak",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [
+    {
+      "name": "acid absorption",
+      "desc": "Whenever the golem is subjected to acid damage, it takes no damage and instead regains a number of hit points equal to the acid damage dealt.",
+      "damage": []
+    },
+    {
+      "name": "berserk",
+      "desc": "Whenever the golem starts its turn with 60 hit points or fewer, roll a d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object, with preference for an object smaller than itself. Once the golem goes berserk, it continues to do so until it is destroyed or regains all its hit points.",
+      "damage": []
+    },
+    {
+      "name": "immutable form",
+      "desc": "The golem is immune to any spell or effect that would alter its form.",
+      "damage": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The golem has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The golem's weapon attacks are magical.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The golem makes two slam attacks.",
+      "actions": [
+        {
+          "action_name": "Slam",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "slam",
+      "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 16 (2d10 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 15 Constitution saving throw or have its hit point maximum reduced by an amount equal to the damage taken. The target dies if this attack reduces its hit point maximum to 0. The reduction lasts until removed by the greater restoration spell or other magic.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d10+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "haste",
+      "desc": "Until the end of its next turn, the golem magically gains a +2 bonus to its AC, has advantage on Dexterity saving throws, and can use its slam attack as a bonus action.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/clay_golem.webp",
+  "url": "public/assets/atlas/enemies/json/clay_golem.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 13,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet3.webp"
+}

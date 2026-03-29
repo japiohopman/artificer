@@ -1,0 +1,17 @@
+{
+  "index": "indomitable_might",
+  "class": {
+    "index": "barbarian",
+    "name": "barbarian",
+    "url": "public/assets/atlas/classes/barbarian"
+  },
+  "name": "indomitable might",
+  "level": 18,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total."
+  ],
+  "url": "public/assets/atlas/features/json/indomitable_might.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/indomitable_might.webp"
+}

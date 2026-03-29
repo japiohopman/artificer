@@ -1,0 +1,55 @@
+{
+  "higher_level": [],
+  "index": "dancing_lights",
+  "name": "dancing lights",
+  "desc": [
+    "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.",
+    "As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range."
+  ],
+  "range": "120 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A bit of phosphorus or wychwood, or a glowworm.",
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "public/assets/atlas/magic_schools/evocation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/dancing_lights.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/dancing_lights.webp",
+  "sprite_index": 20,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet3.webp"
+}

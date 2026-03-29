@@ -1,0 +1,281 @@
+{
+  "index": "storm_giant",
+  "name": "storm giant",
+  "size": "Huge",
+  "type": "giant",
+  "alignment": "chaotic good",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 16,
+      "armor": [
+        {
+          "index": "scale_mail",
+          "name": "scale mail",
+          "url": "public/assets/atlas/equipment/scale_mail"
+        }
+      ]
+    }
+  ],
+  "hit_points": 230,
+  "hit_dice": "20d12",
+  "hit_points_roll": "20d12+100",
+  "speed": {
+    "walk": "50 ft.",
+    "swim": "50 ft."
+  },
+  "strength": 29,
+  "dexterity": 14,
+  "constitution": 20,
+  "intelligence": 16,
+  "wisdom": 18,
+  "charisma": 18,
+  "proficiencies": [
+    {
+      "value": 14,
+      "proficiency": {
+        "index": "saving_throw_str",
+        "name": "saving throw: str",
+        "url": "public/assets/atlas/proficiencies/saving_throw_str"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill_arcana",
+        "name": "skill: arcana",
+        "url": "public/assets/atlas/proficiencies/skill_arcana"
+      }
+    },
+    {
+      "value": 14,
+      "proficiency": {
+        "index": "skill_athletics",
+        "name": "skill: athletics",
+        "url": "public/assets/atlas/proficiencies/skill_athletics"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill_history",
+        "name": "skill: history",
+        "url": "public/assets/atlas/proficiencies/skill_history"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold"
+  ],
+  "damage_immunities": [
+    "lightning",
+    "thunder"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 19
+  },
+  "languages": "Common, Giant",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [
+    {
+      "name": "amphibious",
+      "desc": "The giant can breathe air and water.",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The giant's innate spellcasting ability is Charisma (spell save DC 17). It can innately cast the following spells, requiring no material components:\n\nAt will: detect magic, feather fall, levitate, light\n3/day each: control weather, water breathing",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        },
+        "dc": 17,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "detect magic",
+            "level": 1,
+            "url": "public/assets/atlas/spells/detect_magic",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "feather fall",
+            "level": 1,
+            "url": "public/assets/atlas/spells/feather_fall",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "levitate",
+            "level": 2,
+            "url": "public/assets/atlas/spells/levitate",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "light",
+            "level": 0,
+            "url": "public/assets/atlas/spells/light",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "control weather",
+            "level": 8,
+            "url": "public/assets/atlas/spells/constitutiontrol_weather",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "water breathing",
+            "level": 3,
+            "url": "public/assets/atlas/spells/water_breathing",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The giant makes two greatsword attacks.",
+      "actions": [
+        {
+          "action_name": "Greatsword",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "greatsword",
+      "desc": "Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 30 (6d6 + 9) slashing damage.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "6d6+9"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "rock",
+      "desc": "Ranged Weapon Attack: +14 to hit, range 60/240 ft., one target. Hit: 35 (4d12 + 9) bludgeoning damage.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "4d12+9"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "lightning strike",
+      "desc": "The giant hurls a magical lightning bolt at a point it can see within 500 feet of it. Each creature within 10 feet of that point must make a DC 17 Dexterity saving throw, taking 54 (12d8) lightning damage on a failed save, or half as much damage on a successful one.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "public/assets/atlas/ability_scores/dexterity"
+        },
+        "dc_value": 17,
+        "success_type": "half"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "lightning",
+            "name": "lightning",
+            "url": "public/assets/atlas/damage_types/lightning"
+          },
+          "damage_dice": "12d8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/storm_giant.webp",
+  "url": "public/assets/atlas/enemies/json/storm_giant.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 16,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+}

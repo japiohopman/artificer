@@ -1,0 +1,79 @@
+{
+  "index": "frog",
+  "name": "frog",
+  "desc": "A frog has no effective attacks. It feeds on small insects and typically dwells near water, in trees, or underground. The frog\u2019s statistics can also be used to represent a toad.",
+  "size": "Tiny",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 11
+    }
+  ],
+  "hit_points": 1,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4-1",
+  "speed": {
+    "walk": "20 ft.",
+    "swim": "20 ft."
+  },
+  "strength": 1,
+  "dexterity": 13,
+  "constitution": 8,
+  "intelligence": 1,
+  "wisdom": 8,
+  "charisma": 3,
+  "proficiencies": [
+    {
+      "value": 1,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "30 ft.",
+    "passive_perception": 11
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 0,
+  "special_abilities": [
+    {
+      "name": "amphibious",
+      "desc": "The frog can breathe air and water",
+      "damage": []
+    },
+    {
+      "name": "standing leap",
+      "desc": "The frog's long jump is up to 10 ft. and its high jump is up to 5 ft., with or without a running start.",
+      "damage": []
+    }
+  ],
+  "image": "/api/images/monsters/frog.png",
+  "url": "public/assets/atlas/monsters/frog",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "actions": [],
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The common frog, though often overlooked by the novice traveler, is a master of the marshlands and shaded fens. These amphibians dwell where the veil between water and earth is thinnest, finding sanctuary in stagnant pools and the moss-slicked grottos of our world.\n\nThough seemingly passive, the frog is a predator of startling precision. They are sit-and-wait hunters, camouflaged against the emerald muck until a victim draws near. With a lash of a prehensile, adhesive tongue\u2014faster than a weary eye can blink\u2014they snare their prey, dragging it into a maw that expands with unsettling elasticity to swallow the struggling catch whole.\n\nIn local lore, the frog is a creature of duality. To the peat-cutters of the Lowlands, their rhythmic chorus is a herald of coming storms, a collective prayer to the sky. Old wives\u2019 tales suggest a frog upon one\u2019s doorstep is a silent witness sent by the Hidden Folk to gather secrets. Some even whisper of \"The Croaking King,\" a bog-spirit who demands a copper coin tossed into the reeds, lest he pull the unwary beneath the dark waters. Respect the silence of the pond, traveler.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/frog.webp",
+  "bakedAt": 1767611507709
+}

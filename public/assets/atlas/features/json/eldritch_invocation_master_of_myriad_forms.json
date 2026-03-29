@@ -1,0 +1,27 @@
+{
+  "index": "eldritch_invocation_master_of_myriad_forms",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "public/assets/atlas/classes/warlock"
+  },
+  "name": "eldritch invocation: master of myriad forms",
+  "level": 15,
+  "prerequisites": [
+    {
+      "type": "level",
+      "level": 15
+    }
+  ],
+  "desc": [
+    "You can cast alter self at will, without expending a spell slot."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "public/assets/atlas/features/eldritch_invocations"
+  },
+  "url": "public/assets/atlas/features/json/eldritch_invocation_master_of_myriad_forms.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/eldritch_invocation_master_of_myriad_forms.webp"
+}

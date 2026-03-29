@@ -1,0 +1,18 @@
+{
+  "index": "evocation",
+  "class": {
+    "index": "wizard",
+    "name": "wizard",
+    "url": "public/assets/atlas/classes/wizard"
+  },
+  "name": "evocation",
+  "subclass_flavor": "Arcane Tradition",
+  "desc": [
+    "You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants."
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/evocation/levels",
+  "url": "public/assets/atlas/subclasses/json/evocation.json",
+  "updated_at": "2025-10-24T20:42:14.748Z",
+  "spells": [],
+  "image": "public/assets/atlas/subclasses/evocation.webp"
+}

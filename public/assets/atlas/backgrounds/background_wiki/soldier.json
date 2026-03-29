@@ -1,0 +1,36 @@
+{
+  "index": "soldier",
+  "name": "soldier",
+  "starting_proficiencies": [
+    {
+      "index": "skill_athletics",
+      "name": "athletics",
+      "url": ""
+    },
+    {
+      "index": "skill_intimidation",
+      "name": "intimidation",
+      "url": ""
+    }
+  ],
+  "tool_proficiencies": [
+    "One gaming set",
+    "Vehicles (land)"
+  ],
+  "equipment": [
+    "Insignia of rank",
+    "Fallen enemy trophy",
+    "Bone dice or deck of cards",
+    "Common clothes",
+    "Pouch (10 gp)"
+  ],
+  "feature": {
+    "name": "military rank",
+    "desc": [
+      "You have a military rank from your career as a soldier. Soldiers loyal to your former organization still recognize your authority."
+    ]
+  },
+  "lore": "The Soldier is a creature of hardened utility, forged in the crucible of statecraft and strife. They are most commonly observed in the borderlands or the shadowed corners of bustling garrisons, distinguished by a gait that retains the rhythmic cadence of the march even in repose. Their \"ecology\" is one of structured survival; they treat the wilderness not as a wonder, but as a series of tactical advantages and sightlines.\n\nBehaviorally, the Soldier is defined by a vigilant restlessness. Their eyes seldom linger on a face, instead scanning for the glint of concealed steel or the nearest exit. They possess a peculiar affinity for routine\u2014the rhythmic scrape of a whetstone or the meticulous oiling of leather serves as a meditative balm against the ghosts of the front. Though they may shed their tabard, the iron of the soul remains, manifesting as a fierce, quiet loyalty to the squad they now call kin.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/background/soldier.webp",
+  "bakedAt": 1768740050800
+}

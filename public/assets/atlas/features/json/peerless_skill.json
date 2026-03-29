@@ -1,0 +1,22 @@
+{
+  "index": "peerless_skill",
+  "class": {
+    "index": "bard",
+    "name": "bard",
+    "url": "public/assets/atlas/classes/bard"
+  },
+  "subclass": {
+    "index": "lore",
+    "name": "lore",
+    "url": "public/assets/atlas/subclasses/lore"
+  },
+  "name": "peerless skill",
+  "level": 14,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 14th level, when you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roll the die for the ability check, but before the GM tells you whether you succeed or fail."
+  ],
+  "url": "public/assets/atlas/features/json/peerless_skill.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/peerless_skill.webp"
+}

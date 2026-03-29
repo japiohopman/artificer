@@ -1,0 +1,30 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "leather_armor",
+  "name": "leather armor",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "public/assets/atlas/equipment_categories/armor"
+  },
+  "armor_category": "Light",
+  "armor_class": {
+    "base": 11,
+    "dex_bonus": true
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false,
+  "weight": 10,
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "url": "public/assets/atlas/equipment/json/leather_armor.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/leather_armor.webp",
+  "sprite_index": 23,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp"
+}

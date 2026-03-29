@@ -1,0 +1,22 @@
+{
+  "index": "fast_hands",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "public/assets/atlas/classes/rogue"
+  },
+  "subclass": {
+    "index": "thief",
+    "name": "thief",
+    "url": "public/assets/atlas/subclasses/thief"
+  },
+  "name": "fast hands",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 3rd level, you can use the bonus action granted by your Cunning Action to make a Dexterity (Sleight of Hand) check, use your thieves' tools to disarm a trap or open a lock, or take the Use an Object action."
+  ],
+  "url": "public/assets/atlas/features/json/fast_hands.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/fast_hands.webp"
+}

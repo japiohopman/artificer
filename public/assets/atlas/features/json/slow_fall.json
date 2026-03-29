@@ -1,0 +1,17 @@
+{
+  "index": "slow_fall",
+  "class": {
+    "index": "monk",
+    "name": "monk",
+    "url": "public/assets/atlas/classes/monk"
+  },
+  "name": "slow fall",
+  "level": 4,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 4th level, you can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your monk level."
+  ],
+  "url": "public/assets/atlas/features/json/slow_fall.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/slow_fall.webp"
+}

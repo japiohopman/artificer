@@ -1,0 +1,17 @@
+{
+  "index": "destroy_undead_cr_1_2_or_below",
+  "class": {
+    "index": "cleric",
+    "name": "cleric",
+    "url": "public/assets/atlas/classes/cleric"
+  },
+  "name": "destroy undead (cr 1/2 or below)",
+  "level": 5,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold."
+  ],
+  "url": "public/assets/atlas/features/json/destroy_undead_cr_1_2_or_below.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/destroy_undead_cr_1_2_or_below.webp"
+}

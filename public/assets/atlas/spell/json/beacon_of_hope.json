@@ -1,0 +1,52 @@
+{
+  "higher_level": [],
+  "index": "beacon_of_hope",
+  "name": "beacon of hope",
+  "desc": [
+    "This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing."
+  ],
+  "range": "30 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "abjuration",
+    "name": "abjuration",
+    "url": "public/assets/atlas/magic_schools/abjuration"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    },
+    {
+      "index": "life",
+      "name": "life",
+      "url": "public/assets/atlas/subclasses/life"
+    },
+    {
+      "index": "devotion",
+      "name": "devotion",
+      "url": "public/assets/atlas/subclasses/devotion"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/beacon_of_hope.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/beacon_of_hope.webp",
+  "sprite_index": 24,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet1.webp"
+}

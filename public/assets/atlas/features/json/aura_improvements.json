@@ -1,0 +1,17 @@
+{
+  "index": "aura_improvements",
+  "class": {
+    "index": "paladin",
+    "name": "paladin",
+    "url": "public/assets/atlas/classes/paladin"
+  },
+  "name": "aura improvements",
+  "level": 18,
+  "prerequisites": [],
+  "desc": [
+    "At 18th level, the range of your auras increase to 30 feet."
+  ],
+  "url": "public/assets/atlas/features/json/aura_improvements.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/aura_improvements.webp"
+}

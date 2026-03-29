@@ -1,0 +1,154 @@
+{
+  "index": "life",
+  "class": {
+    "index": "cleric",
+    "name": "cleric",
+    "url": "public/assets/atlas/classes/cleric"
+  },
+  "name": "life",
+  "subclass_flavor": "Divine Domain",
+  "desc": [
+    "The Life domain focuses on the vibrant positive energy--one of the fundamental forces of the universe--that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities, sun gods, gods of healing or endurance, and gods of home and community."
+  ],
+  "spells": [
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_1",
+          "type": "level",
+          "name": "cleric 1",
+          "url": "public/assets/atlas/classes/cleric/levels/1"
+        }
+      ],
+      "spell": {
+        "index": "bless",
+        "name": "bless",
+        "url": "public/assets/atlas/spells/bless"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_1",
+          "type": "level",
+          "name": "cleric 1",
+          "url": "public/assets/atlas/classes/cleric/levels/1"
+        }
+      ],
+      "spell": {
+        "index": "cure_wounds",
+        "name": "cure wounds",
+        "url": "public/assets/atlas/spells/cure_wounds"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_3",
+          "type": "level",
+          "name": "cleric 3",
+          "url": "public/assets/atlas/classes/cleric/levels/3"
+        }
+      ],
+      "spell": {
+        "index": "lesser_restoration",
+        "name": "lesser restoration",
+        "url": "public/assets/atlas/spells/lesser_restoration"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_3",
+          "type": "level",
+          "name": "cleric 3",
+          "url": "public/assets/atlas/classes/cleric/levels/3"
+        }
+      ],
+      "spell": {
+        "index": "spiritual_weapon",
+        "name": "spiritual weapon",
+        "url": "public/assets/atlas/spells/spiritual_weapon"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_5",
+          "type": "level",
+          "name": "cleric 5",
+          "url": "public/assets/atlas/classes/cleric/levels/5"
+        }
+      ],
+      "spell": {
+        "index": "beacon_of_hope",
+        "name": "beacon of hope",
+        "url": "public/assets/atlas/spells/beacon_of_hope"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_5",
+          "type": "level",
+          "name": "cleric 5",
+          "url": "public/assets/atlas/classes/cleric/levels/5"
+        }
+      ],
+      "spell": {
+        "index": "revivify",
+        "name": "revivify",
+        "url": "public/assets/atlas/spells/revivify"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_7",
+          "type": "level",
+          "name": "cleric 7",
+          "url": "public/assets/atlas/classes/cleric/levels/7"
+        }
+      ],
+      "spell": {
+        "index": "death_ward",
+        "name": "death ward",
+        "url": "public/assets/atlas/spells/death_ward"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_9",
+          "type": "level",
+          "name": "cleric 9",
+          "url": "public/assets/atlas/classes/cleric/levels/9"
+        }
+      ],
+      "spell": {
+        "index": "mass_cure_wounds",
+        "name": "mass cure wounds",
+        "url": "public/assets/atlas/spells/mass_cure_wounds"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_9",
+          "type": "level",
+          "name": "cleric 9",
+          "url": "public/assets/atlas/classes/cleric/levels/9"
+        }
+      ],
+      "spell": {
+        "index": "raise_dead",
+        "name": "raise dead",
+        "url": "public/assets/atlas/spells/raise_dead"
+      }
+    }
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/life/levels",
+  "url": "public/assets/atlas/subclasses/json/life.json",
+  "updated_at": "2025-10-24T20:42:14.748Z",
+  "image": "public/assets/atlas/subclasses/life.webp"
+}

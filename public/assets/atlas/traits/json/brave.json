@@ -1,0 +1,19 @@
+{
+  "index": "brave",
+  "races": [
+    {
+      "index": "halfling",
+      "name": "halfling",
+      "url": "public/assets/atlas/races/halfling"
+    }
+  ],
+  "subraces": [],
+  "name": "brave",
+  "desc": [
+    "You have advantage on saving throw against being frightened."
+  ],
+  "proficiencies": [],
+  "url": "public/assets/atlas/traits/json/brave.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "public/assets/atlas/traits/brave.webp"
+}

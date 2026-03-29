@@ -1,0 +1,24 @@
+{
+  "index": "channel_divinity_preserve_life",
+  "class": {
+    "index": "cleric",
+    "name": "cleric",
+    "url": "public/assets/atlas/classes/cleric"
+  },
+  "subclass": {
+    "index": "life",
+    "name": "life",
+    "url": "public/assets/atlas/subclasses/life"
+  },
+  "name": "channel divinity: preserve life",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.",
+    "As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level.",
+    "Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct."
+  ],
+  "url": "public/assets/atlas/features/json/charismannel_divinity_preserve_life.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/charismannel_divinity_preserve_life.webp"
+}

@@ -1,0 +1,483 @@
+[
+  {
+    "name": "Shortsword",
+    "description": "A simple, well-balanced blade, favored by rogues and soldiers.",
+    "cost": {
+      "pp": 0,
+      "gp": 10,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "2 lb.",
+    "rarity": "Common",
+    "category": "Simple Melee Weapons",
+    "damage": {
+      "damage_dice": "1d6",
+      "damage_type": "Piercing"
+    },
+    "properties": [
+      "Finesse",
+      "Light"
+    ],
+    "range": {
+      "normal": 5,
+      "long": 5
+    },
+    "idx": 0
+  },
+  {
+    "name": "Dagger",
+    "description": "A small, easily concealed blade, perfect for quick strikes or throwing.",
+    "cost": {
+      "pp": 0,
+      "gp": 2,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "1 lb.",
+    "rarity": "Common",
+    "category": "Simple Melee Weapons",
+    "damage": {
+      "damage_dice": "1d4",
+      "damage_type": "Piercing"
+    },
+    "properties": [
+      "Finesse",
+      "Light",
+      "Thrown (range 20/60)"
+    ],
+    "range": {
+      "normal": 20,
+      "long": 60
+    },
+    "idx": 4
+  },
+  {
+    "name": "Mace",
+    "description": "A simple, blunt weapon designed to crush armor and bone.",
+    "cost": {
+      "pp": 0,
+      "gp": 5,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "4 lb.",
+    "rarity": "Common",
+    "category": "Simple Melee Weapons",
+    "damage": {
+      "damage_dice": "1d6",
+      "damage_type": "Bludgeoning"
+    },
+    "properties": [],
+    "range": {
+      "normal": 5,
+      "long": 5
+    },
+    "idx": 8
+  },
+  {
+    "name": "Longsword",
+    "description": "A versatile martial weapon, favored by knights and soldiers alike.",
+    "cost": {
+      "pp": 0,
+      "gp": 15,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "3 lb.",
+    "rarity": "Common",
+    "category": "Martial Melee Weapons",
+    "damage": {
+      "damage_dice": "1d8",
+      "damage_type": "Slashing"
+    },
+    "properties": [
+      "Versatile (1d10)"
+    ],
+    "range": {
+      "normal": 5,
+      "long": 5
+    },
+    "idx": 12
+  },
+  {
+    "name": "Battleaxe",
+    "description": "A heavy, versatile axe capable of delivering powerful blows.",
+    "cost": {
+      "pp": 0,
+      "gp": 10,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "4 lb.",
+    "rarity": "Common",
+    "category": "Martial Melee Weapons",
+    "damage": {
+      "damage_dice": "1d8",
+      "damage_type": "Slashing"
+    },
+    "properties": [
+      "Versatile (1d10)"
+    ],
+    "range": {
+      "normal": 5,
+      "long": 5
+    },
+    "idx": 17
+  },
+  {
+    "name": "Greataxe",
+    "description": "A massive, two-handed axe capable of delivering devastating blows.",
+    "cost": {
+      "pp": 0,
+      "gp": 30,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "7 lb.",
+    "rarity": "Common",
+    "category": "Martial Melee Weapons",
+    "damage": {
+      "damage_dice": "1d12",
+      "damage_type": "Slashing"
+    },
+    "properties": [
+      "Heavy",
+      "Two-Handed"
+    ],
+    "range": {
+      "normal": 5,
+      "long": 5
+    },
+    "idx": 21
+  },
+  {
+    "name": "Javelin",
+    "description": "A simple throwing spear, effective at short to medium distances.",
+    "cost": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 5,
+      "cp": 0
+    },
+    "weight": "2 lb.",
+    "rarity": "Common",
+    "category": "Simple Melee Weapons",
+    "damage": {
+      "damage_dice": "1d6",
+      "damage_type": "Piercing"
+    },
+    "properties": [
+      "Thrown (range 30/120)"
+    ],
+    "range": {
+      "normal": 30,
+      "long": 120
+    },
+    "idx": 26
+  },
+  {
+    "name": "Handaxe",
+    "description": "A small, light axe that can be used in melee or thrown.",
+    "cost": {
+      "pp": 0,
+      "gp": 5,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "2 lb.",
+    "rarity": "Common",
+    "category": "Simple Melee Weapons",
+    "damage": {
+      "damage_dice": "1d6",
+      "damage_type": "Slashing"
+    },
+    "properties": [
+      "Light",
+      "Thrown (range 20/60)"
+    ],
+    "range": {
+      "normal": 20,
+      "long": 60
+    },
+    "idx": 30
+  },
+  {
+    "name": "Rapier",
+    "description": "A slender, sharp blade designed for precise thrusts and parries.",
+    "cost": {
+      "pp": 0,
+      "gp": 25,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "2 lb.",
+    "rarity": "Common",
+    "category": "Martial Melee Weapons",
+    "damage": {
+      "damage_dice": "1d8",
+      "damage_type": "Piercing"
+    },
+    "properties": [
+      "Finesse"
+    ],
+    "range": {
+      "normal": 5,
+      "long": 5
+    },
+    "idx": 34
+  },
+  {
+    "name": "Scimitar",
+    "description": "A curved, light blade designed for quick, slashing strikes.",
+    "cost": {
+      "pp": 0,
+      "gp": 25,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "3 lb.",
+    "rarity": "Common",
+    "category": "Martial Melee Weapons",
+    "damage": {
+      "damage_dice": "1d6",
+      "damage_type": "Slashing"
+    },
+    "properties": [
+      "Finesse",
+      "Light"
+    ],
+    "range": {
+      "normal": 5,
+      "long": 5
+    },
+    "idx": 38
+  },
+  {
+    "name": "Warhammer",
+    "description": "A heavy, blunt weapon designed to crush armor and bone.",
+    "cost": {
+      "pp": 0,
+      "gp": 15,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "2 lb.",
+    "rarity": "Common",
+    "category": "Martial Melee Weapons",
+    "damage": {
+      "damage_dice": "1d8",
+      "damage_type": "Bludgeoning"
+    },
+    "properties": [
+      "Versatile (1d10)"
+    ],
+    "range": {
+      "normal": 5,
+      "long": 5
+    },
+    "idx": 42
+  },
+  {
+    "name": "Quarterstaff",
+    "description": "A simple, versatile wooden staff, effective in one or two hands.",
+    "cost": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 2,
+      "cp": 0
+    },
+    "weight": "4 lb.",
+    "rarity": "Common",
+    "category": "Simple Melee Weapons",
+    "damage": {
+      "damage_dice": "1d6",
+      "damage_type": "Bludgeoning"
+    },
+    "properties": [
+      "Versatile (1d8)"
+    ],
+    "range": {
+      "normal": 5,
+      "long": 5
+    },
+    "idx": 46
+  },
+  {
+    "name": "Shortbow",
+    "description": "A simple ranged weapon, easy to use and effective at medium distances.",
+    "cost": {
+      "pp": 0,
+      "gp": 25,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "2 lb.",
+    "rarity": "Common",
+    "category": "Simple Ranged Weapons",
+    "damage": {
+      "damage_dice": "1d6",
+      "damage_type": "Piercing"
+    },
+    "properties": [
+      "Ammunition (range 80/320)",
+      "Two-Handed"
+    ],
+    "range": {
+      "normal": 80,
+      "long": 320
+    },
+    "idx": 50
+  },
+  {
+    "name": "Longbow",
+    "description": "A powerful martial ranged weapon, capable of hitting targets at great distances.",
+    "cost": {
+      "pp": 0,
+      "gp": 50,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "2 lb.",
+    "rarity": "Common",
+    "category": "Martial Ranged Weapons",
+    "damage": {
+      "damage_dice": "1d8",
+      "damage_type": "Piercing"
+    },
+    "properties": [
+      "Ammunition (range 150/600)",
+      "Heavy",
+      "Two-Handed"
+    ],
+    "range": {
+      "normal": 150,
+      "long": 600
+    },
+    "idx": 54
+  },
+  {
+    "name": "Light Crossbow",
+    "description": "A simple ranged weapon that uses a mechanical trigger to fire bolts.",
+    "cost": {
+      "pp": 0,
+      "gp": 25,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "5 lb.",
+    "rarity": "Common",
+    "category": "Simple Ranged Weapons",
+    "damage": {
+      "damage_dice": "1d8",
+      "damage_type": "Piercing"
+    },
+    "properties": [
+      "Ammunition (range 80/320)",
+      "Loading",
+      "Two-Handed"
+    ],
+    "range": {
+      "normal": 80,
+      "long": 320
+    },
+    "idx": 58
+  },
+  {
+    "name": "Heavy Crossbow",
+    "description": "A powerful martial ranged weapon that uses a mechanical trigger to fire heavy bolts.",
+    "cost": {
+      "pp": 0,
+      "gp": 50,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "18 lb.",
+    "rarity": "Common",
+    "category": "Martial Ranged Weapons",
+    "damage": {
+      "damage_dice": "1d10",
+      "damage_type": "Piercing"
+    },
+    "properties": [
+      "Ammunition (range 100/400)",
+      "Heavy",
+      "Loading",
+      "Two-Handed"
+    ],
+    "range": {
+      "normal": 100,
+      "long": 400
+    },
+    "idx": 62
+  },
+  {
+    "name": "Sling",
+    "description": "A simple, inexpensive ranged weapon that uses stones or bullets.",
+    "cost": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 1,
+      "cp": 0
+    },
+    "weight": "0 lb.",
+    "rarity": "Common",
+    "category": "Simple Ranged Weapons",
+    "damage": {
+      "damage_dice": "1d4",
+      "damage_type": "Bludgeoning"
+    },
+    "properties": [
+      "Ammunition (range 30/120)"
+    ],
+    "range": {
+      "normal": 30,
+      "long": 120
+    },
+    "idx": 66
+  },
+  {
+    "name": "Greatsword",
+    "description": "A massive, two-handed sword capable of delivering powerful, sweeping strikes.",
+    "cost": {
+      "pp": 0,
+      "gp": 50,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "weight": "6 lb.",
+    "rarity": "Common",
+    "category": "Martial Melee Weapons",
+    "damage": {
+      "damage_dice": "2d6",
+      "damage_type": "Slashing"
+    },
+    "properties": [
+      "Heavy",
+      "Two-Handed"
+    ],
+    "range": {
+      "normal": 5,
+      "long": 5
+    },
+    "idx": 70
+  }
+]

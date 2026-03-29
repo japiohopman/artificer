@@ -1,0 +1,82 @@
+{
+  "index": "crab",
+  "name": "crab",
+  "size": "Tiny",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 2,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4",
+  "speed": {
+    "walk": "20 ft.",
+    "swim": "20 ft."
+  },
+  "strength": 2,
+  "dexterity": 11,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 8,
+  "charisma": 2,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "passive_perception": 9
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "amphibious",
+      "desc": "The crab can breathe air and water.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: 1 bludgeoning damage.",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/crab.png",
+  "url": "public/assets/atlas/monsters/crab",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The Common Shore-Crab, or *Brachyura Maritimus*, is a marvel of calcified armor. These sentinels haunt the liminal spaces where salt spray meets jagged stone, thriving in tidal pools and sun-bleached reefs. \n\nUnlike the swift hunters of the open blue, the crab is a master of patient, lateral ambush. It remains motionless, a mere stone among stones, until its obsidian eyes detect the rhythmic vibrations of prey. With an explosive snap of its asymmetric pincers\u2014limbs capable of exerting pressure that shatters bone and nautilus shell alike\u2014it drags its meal into the churning surf.\n\nTo the coastal folk of the Iron Reach, the crab is a creature of grim portents. Sailors whisper that they are the \"Grave-Keepers of the Depths,\" tasked by the Sea Mother to pick clean the bones of the fallen so their spirits may float free. It is considered a dire omen to disturb a crab feasting upon wreckage, for they are the silent witnesses to the ocean\u2019s eternal hunger, forever scuttling between the worlds of air and brine.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/crab.webp",
+  "bakedAt": 1767721978729
+}

@@ -1,0 +1,21 @@
+{
+  "index": "ring_of_resistance_acid",
+  "name": "ring of acid resistance",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "public/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Ring, rare (requires attunement)",
+    "You have resistance to acid damage while wearing this pearl ring."
+  ],
+  "url": "public/assets/atlas/magic_items/json/ring_of_resistance_acid.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/ring_of_resistance_acid.webp"
+}

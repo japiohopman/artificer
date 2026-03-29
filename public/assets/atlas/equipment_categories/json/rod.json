@@ -1,0 +1,39 @@
+{
+  "index": "rod",
+  "name": "rod",
+  "equipment": [
+    {
+      "index": "immovable_rod",
+      "name": "immovable rod",
+      "url": "public/assets/atlas/magic_items/immovable_rod"
+    },
+    {
+      "index": "rod_of_absorption",
+      "name": "rod of absorption",
+      "url": "public/assets/atlas/magic_items/rod_of_absorption"
+    },
+    {
+      "index": "rod_of_alertness",
+      "name": "rod of alertness",
+      "url": "public/assets/atlas/magic_items/rod_of_alertness"
+    },
+    {
+      "index": "rod_of_lordly_might",
+      "name": "rod of lordly might",
+      "url": "public/assets/atlas/magic_items/rod_of_lordly_might"
+    },
+    {
+      "index": "rod_of_rulership",
+      "name": "rod of rulership",
+      "url": "public/assets/atlas/magic_items/rod_of_rulership"
+    },
+    {
+      "index": "rod_of_security",
+      "name": "rod of security",
+      "url": "public/assets/atlas/magic_items/rod_of_security"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/rod.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/rod.webp"
+}

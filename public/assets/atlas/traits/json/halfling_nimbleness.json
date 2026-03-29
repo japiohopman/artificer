@@ -1,0 +1,19 @@
+{
+  "index": "halfling_nimbleness",
+  "races": [
+    {
+      "index": "halfling",
+      "name": "halfling",
+      "url": "public/assets/atlas/races/halfling"
+    }
+  ],
+  "subraces": [],
+  "name": "halfling nimbleness",
+  "desc": [
+    "You can move through the space of any creature that is of a size larger than yours."
+  ],
+  "proficiencies": [],
+  "url": "public/assets/atlas/traits/json/halfling_nimbleness.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "public/assets/atlas/traits/halfling_nimbleness.webp"
+}

@@ -1,0 +1,36 @@
+{
+  "index": "hermit",
+  "name": "hermit",
+  "starting_proficiencies": [
+    {
+      "index": "skill_medicine",
+      "name": "medicine",
+      "url": ""
+    },
+    {
+      "index": "skill_religion",
+      "name": "religion",
+      "url": ""
+    }
+  ],
+  "tool_proficiencies": [
+    "Herbalism kit"
+  ],
+  "languages": "One of your choice",
+  "equipment": [
+    "A scroll case stuffed full of notes from your studies",
+    "A winter blanket",
+    "Set of common clothes",
+    "Herbalism kit",
+    "5 gp"
+  ],
+  "feature": {
+    "name": "discovery",
+    "desc": [
+      "The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature."
+    ]
+  },
+  "lore": "To find a hermit, one must seek where the map\u2019s ink fades. These recluses dwell in the world\u2019s untamed margins\u2014clinging to mist-shrouded crags or nesting within the hollowed roots of elder oaks. They are ecological chameleons; their skin takes the hue of the local earth, and their breath slows to match the sighing wind.\n\nBehaviorally, they are creatures of profound stillness. While common folk fear the silence, the hermit mines it for truth. They do not merely survive; they observe the migration of spirits and the hidden pulse of the ley lines. They speak seldom, for their tongues have grown unaccustomed to the clatter of commerce, preferring the honest language of the storm. Each carries a \"Discovery\"\u2014a singular, earth-shaking insight\u2014that weighs heavier than any traveler's pack. Treat them with reverence, for they have looked into the sun and seen the shadow it casts.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/background/hermit.webp",
+  "bakedAt": 1767703951213
+}

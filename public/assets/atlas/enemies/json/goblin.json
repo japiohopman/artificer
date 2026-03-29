@@ -1,0 +1,109 @@
+{
+  "index": "goblin",
+  "name": "goblin",
+  "size": "Small",
+  "type": "humanoid",
+  "subtype": "goblinoid",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 15,
+      "armor": [
+        {
+          "index": "leather_armor",
+          "name": "leather armor",
+          "url": "public/assets/atlas/equipment/leather_armor"
+        },
+        {
+          "index": "shield",
+          "name": "shield",
+          "url": "public/assets/atlas/equipment/shield"
+        }
+      ]
+    }
+  ],
+  "hit_points": 7,
+  "hit_dice": "2d6",
+  "hit_points_roll": "2d6",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "dexterity": 14,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 8,
+  "charisma": 8,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 9
+  },
+  "languages": "Common, Goblin",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "nimble escape",
+      "desc": "The goblin can take the Disengage or Hide action as a bonus action on each of its turns.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "scimitar",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "shortbow",
+      "desc": "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/goblin.webp",
+  "url": "public/assets/atlas/enemies/json/goblin.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 21,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.webp"
+}

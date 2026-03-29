@@ -1,0 +1,25 @@
+{
+  "index": "open_hand_technique",
+  "class": {
+    "index": "monk",
+    "name": "monk",
+    "url": "public/assets/atlas/classes/monk"
+  },
+  "subclass": {
+    "index": "open_hand",
+    "name": "open hand",
+    "url": "public/assets/atlas/subclasses/open_hand"
+  },
+  "name": "open hand technique",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "Starting when you choose this tradition at 3rd level, you can manipulate your enemy's ki when you harness your own. Whenever you hit a creature with one of the attacks granted by your Flurry of Blows, you can impose one of the following effects on that target:",
+    "- It must succeed on a Dexterity saving throw or be knocked prone.",
+    "- It must make a Strength saving throw. If it fails, you can push it up to 15 feet away from you.",
+    "- It can't take reactions until the end of your next turn."
+  ],
+  "url": "public/assets/atlas/features/json/open_hand_technique.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/open_hand_technique.webp"
+}

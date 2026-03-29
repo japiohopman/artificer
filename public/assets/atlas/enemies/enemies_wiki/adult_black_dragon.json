@@ -1,0 +1,277 @@
+{
+  "index": "adult_black_dragon",
+  "name": "adult black dragon",
+  "size": "Huge",
+  "type": "dragon",
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 195,
+  "hit_dice": "17d12",
+  "hit_points_roll": "17d12+85",
+  "speed": {
+    "walk": "40 ft.",
+    "fly": "80 ft.",
+    "swim": "40 ft."
+  },
+  "strength": 23,
+  "dexterity": 14,
+  "constitution": 21,
+  "intelligence": 14,
+  "wisdom": 13,
+  "charisma": 17,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "60 ft.",
+    "darkvision": "120 ft.",
+    "passive_perception": 21
+  },
+  "languages": "Common, Draconic",
+  "challenge_rating": 14,
+  "proficiency_bonus": 5,
+  "xp": 11500,
+  "special_abilities": [
+    {
+      "name": "amphibious",
+      "desc": "The dragon can breathe air and water.",
+      "damage": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the dragon fails a saving throw, it can choose to succeed instead.",
+      "usage": {
+        "type": "per day",
+        "times": 3,
+        "rest_types": []
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.",
+      "actions": [
+        {
+          "action_name": "Frightful Presence",
+          "count": "1",
+          "type": "ability"
+        },
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage plus 4 (1d8) acid damage.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "2d10+6"
+        },
+        {
+          "damage_type": {
+            "index": "acid",
+            "name": "acid",
+            "url": "public/assets/atlas/damage_types/acid"
+          },
+          "damage_dice": "1d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +11 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "2d6+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "Melee Weapon Attack: +11 to hit, reach 15 ft., one target. Hit: 15 (2d8 + 6) bludgeoning damage.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "frightful presence",
+      "desc": "Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.",
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        "dc_value": 16,
+        "success_type": "none"
+      },
+      "actions": []
+    },
+    {
+      "name": "acid breath",
+      "desc": "The dragon exhales acid in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 18 Dexterity saving throw, taking 54 (12d8) acid damage on a failed save, or half as much damage on a successful one.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "public/assets/atlas/ability_scores/dexterity"
+        },
+        "dc_value": 18,
+        "success_type": "half"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "acid",
+            "name": "acid",
+            "url": "public/assets/atlas/damage_types/acid"
+          },
+          "damage_dice": "12d8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "detect",
+      "desc": "The dragon makes a Wisdom (Perception) check.",
+      "damage": []
+    },
+    {
+      "name": "tail attack",
+      "desc": "The dragon makes a tail attack.",
+      "damage": []
+    },
+    {
+      "name": "wing attack (costs 2 actions)",
+      "desc": "The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 19 Dexterity saving throw or take 13 (2d6 + 6) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.",
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "public/assets/atlas/ability_scores/dexterity"
+        },
+        "dc_value": 19,
+        "success_type": "none"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d6+6"
+        }
+      ]
+    }
+  ],
+  "image": "/api/images/monsters/adult_black_dragon.png",
+  "url": "public/assets/atlas/monsters/adult_black_dragon",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "reactions": [],
+  "lore": "The Adult Black Dragon, known to marsh-dwellers as the \"Rot-King,\" is the living embodiment of stagnation and spite. These wyrms claim the world\u2019s most fetid reaches\u2014sunken ruins and lightless peat bogs where the air tastes of copper and sulfur. \n\nUnlike their kin who claim the open skies, the Black Dragon is a master of the mire. It lies submerged for days, its obsidian scales indistinguishable from waterlogged timber, eyes gleaming like balefires just beneath the surface. It does not merely hunt; it exerts a cruel patience, preferring to watch its quarry dissolve in caustic sprays before dragging the remains into lightless, underwater larders to \"tenderize\" in the silt.\n\nLocal folklore paints them as the vengeful ghosts of fallen empires. Peasants whisper that their presence sours the very earth, turning sweet wells to vinegar and healthy cattle to bone. To see those distinctive, skull-like facial horns cresting the swamp-scum is to look upon the inevitable end of all things. They are not just predators; they are the slow, corrosive rot that eventually claims every kingdom of man.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/adult-black-dragon.webp",
+  "bakedAt": 1767606704990
+}

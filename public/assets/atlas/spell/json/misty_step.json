@@ -1,0 +1,56 @@
+{
+  "higher_level": [],
+  "index": "misty_step",
+  "name": "misty step",
+  "desc": [
+    "Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see."
+  ],
+  "range": "Self",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 bonus action",
+  "level": 2,
+  "school": {
+    "index": "conjuration",
+    "name": "conjuration",
+    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "public/assets/atlas/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "land",
+      "url": "public/assets/atlas/subclasses/land"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/misty_step.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/misty_step.webp",
+  "sprite_index": 8,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet9.webp"
+}

@@ -1,0 +1,49 @@
+{
+  "higher_level": [],
+  "index": "shield_of_faith",
+  "name": "shield of faith",
+  "desc": [
+    "A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration."
+  ],
+  "range": "60 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A small parchment with a bit of holy text written on it.",
+  "ritual": false,
+  "duration": "Up to 10 minutes",
+  "concentration": true,
+  "casting_time": "1 bonus action",
+  "level": 1,
+  "school": {
+    "index": "abjuration",
+    "name": "abjuration",
+    "url": "public/assets/atlas/magic_schools/abjuration"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "paladin",
+      "name": "paladin",
+      "url": "public/assets/atlas/classes/paladin"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/shield_of_faith.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/shield_of_faith.webp",
+  "sprite_index": 10,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet11.webp"
+}

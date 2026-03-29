@@ -1,0 +1,27 @@
+{
+  "index": "multiattack_volley",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "public/assets/atlas/classes/ranger"
+  },
+  "subclass": {
+    "index": "hunter",
+    "name": "hunter",
+    "url": "public/assets/atlas/subclasses/hunter"
+  },
+  "name": "multiattack: volley",
+  "level": 11,
+  "prerequisites": [],
+  "desc": [
+    "You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon's range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target."
+  ],
+  "parent": {
+    "index": "multiattack",
+    "name": "multiattack",
+    "url": "public/assets/atlas/features/multiattack"
+  },
+  "url": "public/assets/atlas/features/json/multiattack_volley.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/multiattack_volley.webp"
+}

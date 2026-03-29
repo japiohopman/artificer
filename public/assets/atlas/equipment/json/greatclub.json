@@ -1,0 +1,43 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "greatclub",
+  "name": "greatclub",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "cost": {
+    "quantity": 2,
+    "unit": "sp"
+  },
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "public/assets/atlas/damage_types/bludgeoning"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 10,
+  "properties": [
+    {
+      "index": "two_handed",
+      "name": "two_handed",
+      "url": "public/assets/atlas/weapon_properties/two_handed"
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/greatclub.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "public/assets/atlas/equipment/greatclub.webp",
+  "sprite_index": 21,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+}

@@ -1,0 +1,342 @@
+{
+  "index": "solar",
+  "name": "solar",
+  "size": "Large",
+  "type": "celestial",
+  "alignment": "lawful good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 21
+    }
+  ],
+  "hit_points": 243,
+  "hit_dice": "18d10",
+  "hit_points_roll": "18d10+144",
+  "speed": {
+    "walk": "50 ft.",
+    "fly": "150 ft."
+  },
+  "strength": 26,
+  "dexterity": 22,
+  "constitution": 26,
+  "intelligence": 25,
+  "wisdom": 25,
+  "charisma": 30,
+  "proficiencies": [
+    {
+      "value": 14,
+      "proficiency": {
+        "index": "saving_throw_int",
+        "name": "saving throw: int",
+        "url": "public/assets/atlas/proficiencies/saving_throw_int"
+      }
+    },
+    {
+      "value": 14,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 17,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 14,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "radiant",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "public/assets/atlas/constitutionditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "truesight": "120 ft.",
+    "passive_perception": 24
+  },
+  "languages": "all, telepathy 120 ft.",
+  "challenge_rating": 21,
+  "proficiency_bonus": 7,
+  "xp": 33000,
+  "special_abilities": [
+    {
+      "name": "angelic weapons",
+      "desc": "The solar's weapon attacks are magical. When the solar hits with any weapon, the weapon deals an extra 6d8 radiant damage (included in the attack).",
+      "damage": []
+    },
+    {
+      "name": "divine awareness",
+      "desc": "The solar knows if it hears a lie.",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The solar's spell casting ability is Charisma (spell save DC 25). It can innately cast the following spells, requiring no material components:\nAt will: detect evil and good, invisibility (self only)\n3/day each: blade barrier, dispel evil and good, resurrection\n1/day each: commune, control weather",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        },
+        "dc": 25,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "detect evil and good",
+            "level": 1,
+            "url": "public/assets/atlas/spells/detect_evil_and_good",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "invisibility",
+            "level": 2,
+            "notes": "Self Only",
+            "url": "public/assets/atlas/spells/invisibility",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "blade barrier",
+            "level": 6,
+            "url": "public/assets/atlas/spells/blade_barrier",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "dispel evil and good",
+            "level": 5,
+            "url": "public/assets/atlas/spells/dispel_evil_and_good",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "resurrection",
+            "level": 7,
+            "url": "public/assets/atlas/spells/resurrection",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "commune",
+            "level": 5,
+            "url": "public/assets/atlas/spells/commune",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "control weather",
+            "level": 8,
+            "url": "public/assets/atlas/spells/constitutiontrol_weather",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The solar has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The solar makes two greatsword attacks.",
+      "actions": [
+        {
+          "action_name": "Greatsword",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "greatsword",
+      "desc": "Melee Weapon Attack: +15 to hit, reach 5 ft., one target. Hit: 22 (4d6 + 8) slashing damage plus 27 (6d8) radiant damage.",
+      "attack_bonus": 15,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "radiant",
+            "name": "radiant",
+            "url": "public/assets/atlas/damage_types/radiant"
+          },
+          "damage_dice": "4d6+8"
+        },
+        {
+          "damage_type": {
+            "index": "radiant",
+            "name": "radiant",
+            "url": "public/assets/atlas/damage_types/radiant"
+          },
+          "damage_dice": "6d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "slaying longbow",
+      "desc": "Ranged Weapon Attack: +13 to hit, range 150/600 ft., one target. Hit: 15 (2d8 + 6) piercing damage plus 27 (6d8) radiant damage. If the target is a creature that has 190 hit points or fewer, it must succeed on a DC 15 Constitution saving throw or die.",
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "2d8+6"
+        },
+        {
+          "damage_type": {
+            "index": "radiant",
+            "name": "radiant",
+            "url": "public/assets/atlas/damage_types/radiant"
+          },
+          "damage_dice": "6d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "flying sword",
+      "desc": "The solar releases its greatsword to hover magically in an unoccupied space within 5 ft. of it. If the solar can see the sword, the solar can mentally command it as a bonus action to fly up to 50 ft. and either make one attack against a target or return to the solar's hands. If the hovering sword is targeted by any effect, the solar is considered to be holding it. The hovering sword falls if the solar dies.",
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "healing touch",
+      "desc": "The solar touches another creature. The target magically regains 40 (8d8 + 4) hit points and is freed from any curse, disease, poison, blindness, or deafness.",
+      "usage": {
+        "type": "per day",
+        "times": 4
+      },
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "teleport",
+      "desc": "The solar magically teleports, along with any equipment it is wearing or carrying, up to 120 ft. to an unoccupied space it can see.",
+      "damage": []
+    },
+    {
+      "name": "searing burst (costs 2 actions)",
+      "desc": "The solar emits magical, divine energy. Each creature of its choice in a 10 -foot radius must make a DC 23 Dexterity saving throw, taking 14 (4d6) fire damage plus 14 (4d6) radiant damage on a failed save, or half as much damage on a successful one.",
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "public/assets/atlas/ability_scores/dexterity"
+        },
+        "dc_value": 23,
+        "success_type": "half"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "public/assets/atlas/damage_types/fire"
+          },
+          "damage_dice": "4d6"
+        },
+        {
+          "damage_type": {
+            "index": "radiant",
+            "name": "radiant",
+            "url": "public/assets/atlas/damage_types/radiant"
+          },
+          "damage_dice": "4d6"
+        }
+      ]
+    },
+    {
+      "name": "blinding gaze (costs 3 actions)",
+      "desc": "The solar targets one creature it can see within 30 ft. of it. If the target can see it, the target must succeed on a DC 15 Constitution saving throw or be blinded until magic such as the lesser restoration spell removes the blindness.",
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "con",
+          "url": "public/assets/atlas/ability_scores/constitution"
+        },
+        "dc_value": 15,
+        "success_type": "none"
+      },
+      "damage": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/solar.webp",
+  "url": "public/assets/atlas/enemies/json/solar.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "reactions": [],
+  "sprite_index": 6,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+}

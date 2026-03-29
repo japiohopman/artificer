@@ -1,0 +1,30 @@
+{
+  "special": [],
+  "index": "scale_merchants",
+  "name": "scale, merchant's",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "public/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "desc": [
+    "A scale includes a small balance, pans, and a suitable assortment of weights up to 2 pounds. With it, you can measure the exact weight of small objects, such as raw precious metals or trade goods, to help determine their worth."
+  ],
+  "url": "public/assets/atlas/equipment/json/scale_merchants.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/scale_merchants.webp",
+  "sprite_index": 11,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+}

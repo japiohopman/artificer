@@ -1,0 +1,44 @@
+{
+  "index": "kits",
+  "name": "kits",
+  "equipment": [
+    {
+      "index": "climbers_kit",
+      "name": "climber's kit",
+      "url": "public/assets/atlas/equipment/climbers_kit"
+    },
+    {
+      "index": "disguise_kit",
+      "name": "disguise kit",
+      "url": "public/assets/atlas/equipment/disguise_kit"
+    },
+    {
+      "index": "forgery_kit",
+      "name": "forgery kit",
+      "url": "public/assets/atlas/equipment/forgery_kit"
+    },
+    {
+      "index": "herbalism_kit",
+      "name": "herbalism kit",
+      "url": "public/assets/atlas/equipment/herbalism_kit"
+    },
+    {
+      "index": "healers_kit",
+      "name": "healer's kit",
+      "url": "public/assets/atlas/equipment/healers_kit"
+    },
+    {
+      "index": "mess_kit",
+      "name": "mess kit",
+      "url": "public/assets/atlas/equipment/mess_kit"
+    },
+    {
+      "index": "poisoners_kit",
+      "name": "poisoner's kit",
+      "url": "public/assets/atlas/equipment/poisoners_kit"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/kits.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/kits.webp"
+}

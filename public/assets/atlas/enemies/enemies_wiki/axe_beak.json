@@ -1,0 +1,66 @@
+{
+  "index": "axe_beak",
+  "name": "axe beak",
+  "desc": "An axe beak is a tall flightless bird with strong legs and a heavy, wedge-shaped beak. It has a nasty disposition and tends to attack any unfamiliar creature that wanders too close.",
+  "size": "Large",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 11
+    }
+  ],
+  "hit_points": 19,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10+3",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 14,
+  "dexterity": 12,
+  "constitution": 12,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 5,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "actions": [
+    {
+      "name": "beak",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) slashing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/axe_beak.png",
+  "url": "public/assets/atlas/monsters/axe_beak",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "lore": "The Axe Beak, or *Struthio securis*, is a primal terror of the sun-drenched veldt. Standing nearly eight feet tall, these flightless avians are defined by a singular, terrifying feature: a massive, wedge-shaped beak of reinforced keratin, honed to a razor\u2019s edge. While they prefer the swaying cover of tallgrass, their hunting method is anything but subtle. \n\nAn Axe Beak does not peck; it hews. Utilizing powerful, digitigrade legs, it charges with the momentum of a falling boulder, swinging its heavy cranium in a vertical arc to cleave through hide and mail alike. In the folklore of the borderlands, they are whispered of as \"The Harvesters of the Plain.\" Legends speak of them as vengeful spirits of the earth, sent to punish those who wander too far from the path. To hear the rhythmic, metallic *clack* of their mandibles echoing across the savanna is to hear the tolling of a funeral bell. Local tribes view the bird as an omen of relentless pursuit\u2014once an Axe Beak marks its quarry, it will run until the sun sets or the prey is felled.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/axe-beak.webp",
+  "bakedAt": 1770276323469
+}

@@ -1,0 +1,43 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "rapier",
+  "name": "rapier",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "public/assets/atlas/damage_types/piercing"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 2,
+  "properties": [
+    {
+      "index": "finesse",
+      "name": "finesse",
+      "url": "public/assets/atlas/weapon_properties/finesse"
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/rapier.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "public/assets/atlas/equipment/rapier.webp",
+  "sprite_index": 19,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+}

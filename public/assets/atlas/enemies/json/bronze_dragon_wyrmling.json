@@ -1,0 +1,181 @@
+{
+  "index": "bronze_dragon_wyrmling",
+  "name": "bronze dragon wyrmling",
+  "size": "Medium",
+  "type": "dragon",
+  "alignment": "lawful good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 32,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8+10",
+  "speed": {
+    "walk": "30 ft.",
+    "fly": "60 ft.",
+    "swim": "30 ft."
+  },
+  "strength": 17,
+  "dexterity": 10,
+  "constitution": 15,
+  "intelligence": 12,
+  "wisdom": 11,
+  "charisma": 15,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "languages": "Draconic",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "amphibious",
+      "desc": "The dragon can breathe air and water.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 8 (1d10 + 3) piercing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "breath weapons",
+      "desc": "The dragon uses one of the following breath weapons.\nLightning Breath. The dragon exhales lightning in a 40-foot line that is 5 feet wide. Each creature in that line must make a DC 12 Dexterity saving throw, taking 16 (3d10) lightning damage on a failed save, or half as much damage on a successful one.\nRepulsion Breath. The dragon exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a DC 12 Strength saving throw. On a failed save, the creature is pushed 30 feet away from the dragon.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "options": {
+        "choose": 1,
+        "type": "attack",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "breath",
+              "name": "lightning breath",
+              "dc": {
+                "dc_type": {
+                  "index": "dex",
+                  "name": "dex",
+                  "url": "public/assets/atlas/ability_scores/dexterity"
+                },
+                "dc_value": 12,
+                "success_type": "half"
+              },
+              "damage": [
+                {
+                  "damage_type": {
+                    "index": "lightning",
+                    "name": "lightning",
+                    "url": "public/assets/atlas/damage_types/lightning"
+                  },
+                  "damage_dice": "3d10"
+                }
+              ]
+            },
+            {
+              "option_type": "breath",
+              "name": "repulsion breath",
+              "dc": {
+                "dc_type": {
+                  "index": "str",
+                  "name": "str",
+                  "url": "public/assets/atlas/ability_scores/strength"
+                },
+                "dc_value": 12,
+                "success_type": "none"
+              }
+            }
+          ]
+        }
+      },
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/bronze_dragon_wyrmling.webp",
+  "url": "public/assets/atlas/enemies/json/bronze_dragon_wyrmling.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 3,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet3.webp"
+}

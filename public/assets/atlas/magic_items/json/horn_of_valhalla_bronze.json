@@ -1,0 +1,22 @@
+{
+  "index": "horn_of_valhalla_bronze",
+  "name": "bronze horn of valhalla",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "very rare"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Wondrous item, very rare",
+    "You can use an action to blow this horn. In response, 4d4 + 4 warrior spirits from the Valhalla appear within 60 feet of you. They use the statistics of a berserker. They return to Valhalla after 1 hour or when they drop to 0 hit points. Once you use the horn, it can't be used again until 7 days have passed.",
+    "If you blow the horn without having proficiency with all medium armor, the summoned berserkers attack you. If you meet the requirement, they are friendly to you and your companions and follow your commands."
+  ],
+  "url": "public/assets/atlas/magic_items/json/horn_of_valhalla_bronze.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/horn_of_valhalla_bronze.webp"
+}

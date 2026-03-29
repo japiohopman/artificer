@@ -1,0 +1,26 @@
+{
+  "special": [],
+  "index": "barding_chain_mail",
+  "name": "barding: chain mail",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 300,
+    "unit": "gp"
+  },
+  "weight": 110,
+  "desc": [
+    "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
+  ],
+  "url": "public/assets/atlas/equipment/json/barding_chain_mail.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/barding_chain_mail.webp",
+  "sprite_index": 13,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp"
+}

@@ -1,0 +1,82 @@
+{
+  "index": "additional_fighting_style",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "public/assets/atlas/classes/fighter"
+  },
+  "subclass": {
+    "index": "champion",
+    "name": "champion",
+    "url": "public/assets/atlas/subclasses/charismampion"
+  },
+  "name": "additional fighting style",
+  "level": 10,
+  "prerequisites": [],
+  "desc": [
+    "At 10th level, you can choose a second option from the Fighting Style class feature."
+  ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "feature",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighter_fighting_style_archery",
+              "name": "fighting style: archery",
+              "url": "public/assets/atlas/features/fighter_fighting_style_archery"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighter_fighting_style_defense",
+              "name": "fighting style: defense",
+              "url": "public/assets/atlas/features/fighter_fighting_style_defense"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighter_fighting_style_dueling",
+              "name": "fighting style: dueling",
+              "url": "public/assets/atlas/features/fighter_fighting_style_dueling"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighter_fighting_style_great_weapon_fighting",
+              "name": "fighting style: great weapon fighting",
+              "url": "public/assets/atlas/features/fighter_fighting_style_great_weapon_fighting"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighter_fighting_style_protection",
+              "name": "fighting style: protection",
+              "url": "public/assets/atlas/features/fighter_fighting_style_protection"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighter_fighting_style_two_weapon_fighting",
+              "name": "fighting style: two_weapon fighting",
+              "url": "public/assets/atlas/features/fighter_fighting_style_two_weapon_fighting"
+            }
+          }
+        ]
+      }
+    },
+    "invocations": []
+  },
+  "url": "public/assets/atlas/features/json/additional_fighting_style.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/additional_fighting_style.webp"
+}

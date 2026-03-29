@@ -1,0 +1,21 @@
+{
+  "index": "bracers_of_defense",
+  "name": "bracers of defense",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondous item, rare (requires attunement)",
+    "While wearing these bracers, you gain a +2 bonus to AC if you are wearing no armor and using no shield."
+  ],
+  "image": "public/assets/atlas/magic_items/bracers_of_defense.webp",
+  "url": "public/assets/atlas/magic_items/json/bracers_of_defense.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

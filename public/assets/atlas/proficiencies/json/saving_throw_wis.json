@@ -1,0 +1,41 @@
+{
+  "index": "saving_throw_wis",
+  "type": "Saving Throws",
+  "name": "saving throw: wis",
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    },
+    {
+      "index": "paladin",
+      "name": "paladin",
+      "url": "public/assets/atlas/classes/paladin"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "public/assets/atlas/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "races": [],
+  "url": "public/assets/atlas/proficiencies/json/saving_throw_wis.json",
+  "reference": {
+    "index": "wis",
+    "name": "wis",
+    "url": "public/assets/atlas/ability_scores/wisdom"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/saving_throw_wis.webp"
+}

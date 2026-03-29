@@ -1,0 +1,24 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "bit_and_bridle",
+  "name": "bit and bridle",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "public/assets/atlas/equipment/json/bit_and_bridle.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/bit_and_bridle.webp",
+  "sprite_index": 4,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+}

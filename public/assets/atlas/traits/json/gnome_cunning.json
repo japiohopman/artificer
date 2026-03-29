@@ -1,0 +1,19 @@
+{
+  "index": "gnome_cunning",
+  "races": [
+    {
+      "index": "gnome",
+      "name": "gnome",
+      "url": "public/assets/atlas/races/gnome"
+    }
+  ],
+  "subraces": [],
+  "name": "gnome cunning",
+  "desc": [
+    "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
+  ],
+  "proficiencies": [],
+  "url": "public/assets/atlas/traits/json/gnome_cunning.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "public/assets/atlas/traits/gnome_cunning.webp"
+}

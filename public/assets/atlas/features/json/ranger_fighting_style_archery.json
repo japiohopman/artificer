@@ -1,0 +1,22 @@
+{
+  "index": "ranger_fighting_style_archery",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "public/assets/atlas/classes/ranger"
+  },
+  "name": "fighting style: archery",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "You gain a +2 bonus to attack rolls you make with ranged weapons."
+  ],
+  "parent": {
+    "index": "ranger_fighting_style",
+    "name": "fighting style",
+    "url": "public/assets/atlas/features/ranger_fighting_style"
+  },
+  "url": "public/assets/atlas/features/json/ranger_fighting_style_archery.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/ranger_fighting_style_archery.webp"
+}

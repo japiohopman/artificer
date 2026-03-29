@@ -1,0 +1,37 @@
+{
+  "index": "urchin",
+  "name": "urchin",
+  "starting_proficiencies": [
+    {
+      "index": "skill_sleight_of_hand",
+      "name": "sleight of hand",
+      "url": ""
+    },
+    {
+      "index": "skill_stealth",
+      "name": "stealth",
+      "url": ""
+    }
+  ],
+  "tool_proficiencies": [
+    "Disguise kit",
+    "Thieves' tools"
+  ],
+  "equipment": [
+    "A small knife",
+    "A map of the city you grew up in",
+    "A pet mouse",
+    "A token to remember your parents by",
+    "Set of common clothes",
+    "Pouch with 10 gp"
+  ],
+  "feature": {
+    "name": "city secrets",
+    "desc": [
+      "You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would normally allow."
+    ]
+  },
+  "lore": "To the unobservant, the city is a hive of commerce; to the Urchin, it is a treacherous wilderness. These resilient souls occupy the urban niche of the scavenger, thriving in the lightless veins of the metropolis. They treat rooftops as highways and sewers as sanctuaries, navigating a world of verticality invisible to the high-born.\n\nBehaviorally, the Urchin is a study in calculated invisibility. They possess a preternatural stillness, blending into soot-stained brickwork to evade the gaze of the Law. While solitary by necessity, they often form loose \"clutches,\" communicating through a cryptic lexicon of whistles and chalk-marks. They do not seek glory, only the next meal or a dry alcove. To survive the streets is to become a ghost in the machine of civilization\u2014always watching, never seen, and possessed of a feral instinct that no library can teach.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/background/urchin.webp",
+  "bakedAt": 1767702892577
+}

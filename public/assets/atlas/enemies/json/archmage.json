@@ -1,0 +1,297 @@
+{
+  "index": "archmage",
+  "name": "archmage",
+  "desc": "Archmages are powerful (and usually quite old) spellcasters dedicated to the study of the arcane arts. Benevolent ones counsel kings and queens, while evil ones rule as tyrants and pursue lichdom. Those who are neither good nor evil sequester themselves in remote towers to practice their magic without interruption. \n\nAn archmage typically has one or more apprentice mages, and an archmage\u2019s abode has numerous magical wards and guardians to discourage interlopers.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    },
+    {
+      "type": "spell",
+      "value": 15,
+      "spell": {
+        "index": "mage_armor",
+        "name": "mage armor",
+        "url": "public/assets/atlas/spells/mage_armor"
+      }
+    }
+  ],
+  "hit_points": 99,
+  "hit_dice": "18d8",
+  "hit_points_roll": "18d8+18",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 20,
+  "wisdom": 15,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_int",
+        "name": "saving throw: int",
+        "url": "public/assets/atlas/proficiencies/saving_throw_int"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 13,
+      "proficiency": {
+        "index": "skill_arcana",
+        "name": "skill: arcana",
+        "url": "public/assets/atlas/proficiencies/skill_arcana"
+      }
+    },
+    {
+      "value": 13,
+      "proficiency": {
+        "index": "skill_history",
+        "name": "skill: history",
+        "url": "public/assets/atlas/proficiencies/skill_history"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "damage from spells",
+    "bludgeoning, piercing, and slashing from nonmagical attacks (from stoneskin)"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any six languages",
+  "challenge_rating": 12,
+  "proficiency_bonus": 4,
+  "xp": 8400,
+  "special_abilities": [
+    {
+      "name": "magic resistance",
+      "desc": "The archmage has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The archmage can cast disguise self and invisibility at will and has the following wizard spells prepared:\n\n- Cantrips (at will): fire bolt, light, mage hand, prestidigitation, shocking grasp\n- 1st level (4 slots): detect magic, identify, mage armor*, magic missile\n- 2nd level (3 slots): detect thoughts, mirror image, misty step\n- 3rd level (3 slots): counterspell, fly, lightning bolt\n- 4th level (3 slots): banishment, fire shield, stoneskin*\n- 5th level (3 slots): cone of cold, scrying, wall of force\n- 6th level (1 slot): globe of invulnerability\n- 7th level (1 slot): teleport\n- 8th level (1 slot): mind blank*\n- 9th level (1 slot): time stop\n* The archmage casts these spells on itself before combat.",
+      "spellcasting": {
+        "level": 18,
+        "ability": {
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/intelligence"
+        },
+        "dc": 17,
+        "modifier": 9,
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "school": "wizard",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 1,
+          "7": 1,
+          "8": 1,
+          "9": 1
+        },
+        "spells": [
+          {
+            "name": "disguise self",
+            "level": 1,
+            "url": "public/assets/atlas/spells/disguise_self",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "invisibility",
+            "level": 2,
+            "url": "public/assets/atlas/spells/invisibility",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "fire bolt",
+            "level": 0,
+            "url": "public/assets/atlas/spells/fire_bolt"
+          },
+          {
+            "name": "light",
+            "level": 0,
+            "url": "public/assets/atlas/spells/light"
+          },
+          {
+            "name": "mage hand",
+            "level": 0,
+            "url": "public/assets/atlas/spells/mage_hand"
+          },
+          {
+            "name": "prestidigitation",
+            "level": 0,
+            "url": "public/assets/atlas/spells/prestidigitation"
+          },
+          {
+            "name": "shocking grasp",
+            "level": 0,
+            "url": "public/assets/atlas/spells/shocking_grasp"
+          },
+          {
+            "name": "detect magic",
+            "level": 1,
+            "url": "public/assets/atlas/spells/detect_magic"
+          },
+          {
+            "name": "identify",
+            "level": 1,
+            "url": "public/assets/atlas/spells/identify"
+          },
+          {
+            "name": "mage armor",
+            "level": 1,
+            "url": "public/assets/atlas/spells/mage_armor",
+            "notes": "Cast on self before combat"
+          },
+          {
+            "name": "magic missile",
+            "level": 1,
+            "url": "public/assets/atlas/spells/magic_missile"
+          },
+          {
+            "name": "detect thoughts",
+            "level": 2,
+            "url": "public/assets/atlas/spells/detect_thoughts"
+          },
+          {
+            "name": "mirror image",
+            "level": 2,
+            "url": "public/assets/atlas/spells/mirror_image"
+          },
+          {
+            "name": "misty step",
+            "level": 2,
+            "url": "public/assets/atlas/spells/misty_step"
+          },
+          {
+            "name": "counterspell",
+            "level": 3,
+            "url": "public/assets/atlas/spells/counterspell"
+          },
+          {
+            "name": "fly",
+            "level": 3,
+            "url": "public/assets/atlas/spells/fly"
+          },
+          {
+            "name": "lightning bolt",
+            "level": 3,
+            "url": "public/assets/atlas/spells/lightning_bolt"
+          },
+          {
+            "name": "banishment",
+            "level": 4,
+            "url": "public/assets/atlas/spells/banishment"
+          },
+          {
+            "name": "fire shield",
+            "level": 4,
+            "url": "public/assets/atlas/spells/fire_shield"
+          },
+          {
+            "name": "stoneskin",
+            "level": 4,
+            "url": "public/assets/atlas/spells/stoneskin",
+            "notes": "Cast on self before combat"
+          },
+          {
+            "name": "cone of cold",
+            "level": 5,
+            "url": "public/assets/atlas/spells/constitutione_of_cold"
+          },
+          {
+            "name": "scrying",
+            "level": 5,
+            "url": "public/assets/atlas/spells/scrying"
+          },
+          {
+            "name": "wall of force",
+            "level": 5,
+            "url": "public/assets/atlas/spells/wall_of_force"
+          },
+          {
+            "name": "globe of invulnerability",
+            "level": 6,
+            "url": "public/assets/atlas/spells/globe_of_invulnerability"
+          },
+          {
+            "name": "teleport",
+            "level": 7,
+            "url": "public/assets/atlas/spells/teleport"
+          },
+          {
+            "name": "mind blank",
+            "level": 8,
+            "url": "public/assets/atlas/spells/mind_blank",
+            "notes": "Cast on self before combat"
+          },
+          {
+            "name": "time stop",
+            "level": 9,
+            "url": "public/assets/atlas/spells/time_stop"
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "dagger",
+      "desc": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/archmage.webp",
+  "url": "public/assets/atlas/enemies/json/archmage.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 2,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet2.webp"
+}

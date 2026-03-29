@@ -1,0 +1,31 @@
+{
+  "special": [],
+  "index": "manacles",
+  "name": "manacles",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "public/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 6,
+  "desc": [
+    "These metal restraints can bind a Small or Medium creature. Escaping the manacles requires a successful DC 20 Dexterity check. Breaking them requires a successful DC 20 Strength check.",
+    "Each set of manacles comes with one key. Without the key, a creature proficient with thieves' tools can pick the manacles' lock with a successful DC 15 Dexterity check. Manacles have 15 hit points."
+  ],
+  "url": "public/assets/atlas/equipment/json/manacles.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/manacles.webp",
+  "sprite_index": 10,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+}

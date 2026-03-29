@@ -1,0 +1,17 @@
+{
+  "index": "flurry_of_blows",
+  "class": {
+    "index": "monk",
+    "name": "monk",
+    "url": "public/assets/atlas/classes/monk"
+  },
+  "name": "flurry of blows",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action."
+  ],
+  "url": "public/assets/atlas/features/json/flurry_of_blows.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/flurry_of_blows.webp"
+}

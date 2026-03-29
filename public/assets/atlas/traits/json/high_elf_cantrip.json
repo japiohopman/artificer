@@ -1,0 +1,142 @@
+{
+  "index": "high_elf_cantrip",
+  "races": [],
+  "subraces": [
+    {
+      "index": "high_elf",
+      "name": "high elf",
+      "url": "public/assets/atlas/subraces/high_elf"
+    }
+  ],
+  "name": "high elf cantrip",
+  "desc": [
+    "You know one cantrip of your choice form the wizard spell list. Intelligence is your spellcasting ability for it."
+  ],
+  "proficiencies": [],
+  "trait_specific": {
+    "spell_options": {
+      "choose": 1,
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "light",
+              "name": "light",
+              "url": "public/assets/atlas/spells/light"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "mage_hand",
+              "name": "mage hand",
+              "url": "public/assets/atlas/spells/mage_hand"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "mending",
+              "name": "mending",
+              "url": "public/assets/atlas/spells/mending"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "message",
+              "name": "message",
+              "url": "public/assets/atlas/spells/message"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "minor_illusion",
+              "name": "minor illusion",
+              "url": "public/assets/atlas/spells/minor_illusion"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "acid_splash",
+              "name": "acid splash",
+              "url": "public/assets/atlas/spells/acid_splash"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "prestidigitation",
+              "name": "prestidigitation",
+              "url": "public/assets/atlas/spells/prestidigitation"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "ray_of_frost",
+              "name": "ray of frost",
+              "url": "public/assets/atlas/spells/ray_of_frost"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "shocking_grasp",
+              "name": "shocking grasp",
+              "url": "public/assets/atlas/spells/shocking_grasp"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "true_strike",
+              "name": "true strike",
+              "url": "public/assets/atlas/spells/true_strike"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "chill_touch",
+              "name": "chill touch",
+              "url": "public/assets/atlas/spells/chill_touch"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dancing_lights",
+              "name": "dancing lights",
+              "url": "public/assets/atlas/spells/dancing_lights"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fire_bolt",
+              "name": "fire bolt",
+              "url": "public/assets/atlas/spells/fire_bolt"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "poison_spray",
+              "name": "poison spray",
+              "url": "public/assets/atlas/spells/poison_spray"
+            }
+          }
+        ]
+      },
+      "type": "spell"
+    }
+  },
+  "url": "public/assets/atlas/traits/json/high_elf_cantrip.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "public/assets/atlas/traits/high_elf_cantrip.webp"
+}

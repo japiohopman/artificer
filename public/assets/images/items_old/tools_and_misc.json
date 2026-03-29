@@ -1,0 +1,1396 @@
+{
+  "sheetName": "Tools & Misc",
+  "remotePath": "public/assets/images/items/tools_and_misc.webp",
+  "lastGlobalUpdate": "2025-12-18T15:19:09.309Z",
+  "dimensions": "5120x5120",
+  "cellSize": 512,
+  "columns": 10,
+  "index": [
+    {
+      "idx": 0,
+      "id": "burglars-pack",
+      "name": "Burglars Pack",
+      "lastUpdated": "2025-12-18T09:24:36.682Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 16,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 1,
+      "id": "diplomats-pack",
+      "name": "Diplomats Pack",
+      "lastUpdated": "2025-12-18T09:56:11.381Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 39,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 2,
+      "id": "dungeoneers-pack",
+      "name": "Dungeoneers Pack",
+      "lastUpdated": "2025-12-18T13:17:43.743Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 12,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 3,
+      "id": "entertainers-pack",
+      "name": "Entertainers Pack",
+      "lastUpdated": "2025-12-18T13:18:04.644Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 40,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 4,
+      "id": "explorers-pack",
+      "name": "Explorers Pack",
+      "lastUpdated": "2025-12-18T13:18:23.473Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 10,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 5,
+      "id": "priests-pack",
+      "name": "Priests Pack",
+      "lastUpdated": "2025-12-18T13:19:07.693Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 19,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 6,
+      "id": "scholars-pack",
+      "name": "Scholars Pack",
+      "lastUpdated": "2025-12-18T13:19:40.616Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 40,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 7,
+      "id": "horse-riding",
+      "name": "Horse Riding",
+      "lastUpdated": "2025-12-18T15:19:09.309Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 75,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 8,
+      "id": "horse-draft",
+      "name": "Horse Draft",
+      "lastUpdated": "2025-12-18T15:18:37.910Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 50,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 9,
+      "id": "warhorse",
+      "name": "Warhorse",
+      "lastUpdated": "2025-12-18T13:20:53.266Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 400,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 10,
+      "id": "pony",
+      "name": "Pony",
+      "lastUpdated": "2025-12-18T13:21:45.144Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 30,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 11,
+      "id": "mule",
+      "name": "Mule",
+      "lastUpdated": "2025-12-18T15:17:41.309Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 8,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 12,
+      "id": "camel",
+      "name": "Camel",
+      "lastUpdated": "2025-12-18T15:18:05.211Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 50,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 13,
+      "id": "elephant",
+      "name": "Elephant",
+      "lastUpdated": "2025-12-18T15:18:23.973Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 200,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 14,
+      "id": "mastiff",
+      "name": "Mastiff",
+      "lastUpdated": "2025-12-18T15:17:25.497Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 25,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 15,
+      "id": "recipe",
+      "name": "Recipe",
+      "lastUpdated": "2025-12-18T13:22:31.826Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true
+    },
+    {
+      "idx": 16,
+      "id": "blueprint",
+      "name": "Blueprint",
+      "lastUpdated": "2025-12-18T13:22:46.255Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true
+    },
+    {
+      "idx": 20,
+      "id": "alchemists-supplies",
+      "name": "Alchemists Supplies",
+      "lastUpdated": "2025-12-18T13:23:06.812Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "8 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 50,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 21,
+      "id": "climbers-kit",
+      "name": "Climbers Kit",
+      "lastUpdated": "2025-12-18T13:23:32.120Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "12 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 25,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "A climber's kit includes special pitons, boot tips, gloves, and a harness. You can use the climber's kit as an action to anchor yourself; when you do, you can't fall more than 25 feet from the point where you anchored yourself, and you can't climb more than 25 feet away from that point without undoing the anchor."
+    },
+    {
+      "idx": 22,
+      "id": "disguise-kit",
+      "name": "Disguise Kit",
+      "lastUpdated": "2025-12-18T15:16:39.382Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "3 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 25,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise."
+    },
+    {
+      "idx": 23,
+      "id": "forgery-kit",
+      "name": "Forgery Kit",
+      "lastUpdated": "2025-12-18T15:16:26.192Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "5 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 15,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document."
+    },
+    {
+      "idx": 24,
+      "id": "healers-kit",
+      "name": "Healers Kit",
+      "lastUpdated": "2025-12-18T15:15:54.838Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "3 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 5,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "This kit is a leather pouch containing bandages, salves, and splints. The kit has ten uses. As an action, you can expend one use of the kit to stabilize a creature that has 0 hit points, without needing to make a Wisdom (Medicine) check."
+    },
+    {
+      "idx": 25,
+      "id": "herbalism-kit",
+      "name": "Herbalism Kit",
+      "lastUpdated": "2025-12-18T15:15:38.973Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "3 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 5,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing."
+    },
+    {
+      "idx": 26,
+      "id": "poisoners-kit",
+      "name": "Poisoners Kit",
+      "lastUpdated": "2025-12-18T15:15:24.645Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "2 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 50,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "A poisoner's kit includes the vials, chemicals, and other equipment necessary for the creation of poisons. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to craft or use poisons."
+    },
+    {
+      "idx": 27,
+      "id": "brewers-supplies",
+      "name": "Brewers Supplies",
+      "lastUpdated": "2025-12-18T15:15:01.311Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "9 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 20,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 40,
+      "id": "calligraphers-supplies",
+      "name": "Calligraphers Supplies",
+      "lastUpdated": "2025-12-18T15:14:50.167Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "5 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 10,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 41,
+      "id": "carpenters-tools",
+      "name": "Carpenters Tools",
+      "lastUpdated": "2025-12-18T15:14:35.636Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "6 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 8,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 42,
+      "id": "cartographers-tools",
+      "name": "Cartographers Tools",
+      "lastUpdated": "2025-12-18T15:14:20.379Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "6 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 15,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 43,
+      "id": "cobblers-tools",
+      "name": "Cobblers Tools",
+      "lastUpdated": "2025-12-18T15:13:40.038Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "5 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 5,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 44,
+      "id": "cooks-utensils",
+      "name": "Cooks Utensils",
+      "lastUpdated": "2025-12-18T15:13:22.785Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "8 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 1,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 45,
+      "id": "glassblowers-tools",
+      "name": "Glassblowers Tools",
+      "lastUpdated": "2025-12-18T15:13:03.939Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "5 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 30,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 46,
+      "id": "jewelers-tools",
+      "name": "Jewelers Tools",
+      "lastUpdated": "2025-12-18T15:12:48.193Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "2 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 25,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 47,
+      "id": "leatherworkers-tools",
+      "name": "Leatherworkers Tools",
+      "lastUpdated": "2025-12-18T15:12:31.523Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "5 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 5,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 48,
+      "id": "masons-tools",
+      "name": "Masons Tools",
+      "lastUpdated": "2025-12-18T15:12:15.956Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "8 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 10,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 49,
+      "id": "navigators-tools",
+      "name": "Navigators Tools",
+      "lastUpdated": "2025-12-18T15:11:53.886Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "2 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 25,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "This set of instruments is used for navigation at sea. Proficiency with navigator's tools lets you chart a ship's course and follow navigation charts. In addition, these tools allow you to add your proficiency bonus to any ability check you make to avoid getting lost at sea."
+    },
+    {
+      "idx": 50,
+      "id": "painters-supplies",
+      "name": "Painters Supplies",
+      "lastUpdated": "2025-12-18T15:11:38.053Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "5 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 10,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 51,
+      "id": "potters-tools",
+      "name": "Potters Tools",
+      "lastUpdated": "2025-12-18T15:11:11.872Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "3 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 10,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 52,
+      "id": "smiths-tools",
+      "name": "Smiths Tools",
+      "lastUpdated": "2025-12-18T15:10:48.200Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "8 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 20,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 53,
+      "id": "thieves-tools",
+      "name": "Thieves Tools",
+      "lastUpdated": "2025-12-18T15:10:30.404Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "1 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 25,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks."
+    },
+    {
+      "idx": 54,
+      "id": "tinkers-tools",
+      "name": "Tinkers Tools",
+      "lastUpdated": "2025-12-18T15:09:47.821Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "10 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 50,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 55,
+      "id": "weavers-tools",
+      "name": "Weavers Tools",
+      "lastUpdated": "2025-12-18T15:08:25.983Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "5 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 1,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 56,
+      "id": "woodcarvers-tools",
+      "name": "Woodcarvers Tools",
+      "lastUpdated": "2025-12-18T15:08:13.493Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "5 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 1,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+    },
+    {
+      "idx": 57,
+      "id": "cart",
+      "name": "Cart",
+      "lastUpdated": "2025-12-18T15:08:00.595Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "200 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 15,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 58,
+      "id": "wagon",
+      "name": "Wagon",
+      "lastUpdated": "2025-12-18T15:07:46.020Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "400 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 35,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 59,
+      "id": "carriage",
+      "name": "Carriage",
+      "lastUpdated": "2025-12-18T15:07:17.822Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "600 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 100,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 60,
+      "id": "chariot",
+      "name": "Chariot",
+      "lastUpdated": "2025-12-18T15:06:37.235Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "100 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 250,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 61,
+      "id": "sled",
+      "name": "Sled",
+      "lastUpdated": "2025-12-18T15:06:16.017Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "300 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 20,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 62,
+      "id": "rowboat",
+      "name": "Rowboat",
+      "lastUpdated": "2025-12-18T15:05:53.538Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 50,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "Keelboats and rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can't be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A rowboat weighs 100 pounds, in case adventurers carry it over land."
+    },
+    {
+      "idx": 63,
+      "id": "sailing-ship",
+      "name": "Sailing Ship",
+      "lastUpdated": "2025-12-18T15:05:31.102Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 10000,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 64,
+      "id": "galley",
+      "name": "Galley",
+      "lastUpdated": "2025-12-18T15:05:06.471Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 30000,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 65,
+      "id": "longship",
+      "name": "Longship",
+      "lastUpdated": "2025-12-18T15:04:22.465Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 10000,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 66,
+      "id": "warship",
+      "name": "Warship",
+      "lastUpdated": "2025-12-18T15:04:06.892Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 25000,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 67,
+      "id": "keelboat",
+      "name": "Keelboat",
+      "lastUpdated": "2025-12-18T15:03:51.550Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 3000,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "Keelboats and rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can't be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A rowboat weighs 100 pounds, in case adventurers carry it over land."
+    },
+    {
+      "idx": 70,
+      "id": "bagpipes",
+      "name": "Bagpipes",
+      "lastUpdated": "2025-12-18T15:03:36.134Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "6 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 30,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+    },
+    {
+      "idx": 71,
+      "id": "drum",
+      "name": "Drum",
+      "lastUpdated": "2025-12-18T15:03:22.341Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "3 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 6,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+    },
+    {
+      "idx": 72,
+      "id": "dulcimer",
+      "name": "Dulcimer",
+      "lastUpdated": "2025-12-18T15:03:08.330Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "10 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 25,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+    },
+    {
+      "idx": 73,
+      "id": "flute",
+      "name": "Flute",
+      "lastUpdated": "2025-12-18T15:02:48.579Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "1 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 2,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+    },
+    {
+      "idx": 74,
+      "id": "horn",
+      "name": "Horn",
+      "lastUpdated": "2025-12-18T15:02:32.699Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "2 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 3,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+    },
+    {
+      "idx": 75,
+      "id": "lute",
+      "name": "Lute",
+      "lastUpdated": "2025-12-18T15:02:13.166Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "2 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 35,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+    },
+    {
+      "idx": 76,
+      "id": "lyre",
+      "name": "Lyre",
+      "lastUpdated": "2025-12-18T15:01:52.600Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "2 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 30,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+    },
+    {
+      "idx": 77,
+      "id": "pan-flute",
+      "name": "Pan Flute",
+      "lastUpdated": "2025-12-18T15:01:39.263Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "2 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 12,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+    },
+    {
+      "idx": 78,
+      "id": "shawm",
+      "name": "Shawm",
+      "lastUpdated": "2025-12-18T15:01:16.561Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "1 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 2,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+    },
+    {
+      "idx": 79,
+      "id": "viol",
+      "name": "Viol",
+      "lastUpdated": "2025-12-18T15:00:38.979Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "1 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 30,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+    },
+    {
+      "idx": 80,
+      "id": "saddle-riding",
+      "name": "Saddle Riding",
+      "lastUpdated": "2025-12-18T15:00:24.456Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "25 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 10,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 81,
+      "id": "saddle-military",
+      "name": "Saddle Military",
+      "lastUpdated": "2025-12-18T15:00:01.732Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "30 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 20,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted."
+    },
+    {
+      "idx": 82,
+      "id": "saddle-exotic",
+      "name": "Saddle Exotic",
+      "lastUpdated": "2025-12-18T14:59:37.849Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "50 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 60,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "An exotic saddle is required for riding any aquatic or flying mount."
+    },
+    {
+      "idx": 83,
+      "id": "saddle-pack",
+      "name": "Saddle Pack",
+      "lastUpdated": "2025-12-18T14:59:15.231Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "15 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 5,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 84,
+      "id": "saddlebags",
+      "name": "Saddlebags",
+      "lastUpdated": "2025-12-18T14:58:51.367Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "8 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 4,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 85,
+      "id": "bit-and-bridle",
+      "name": "Bit And Bridle",
+      "lastUpdated": "2025-12-18T14:58:26.043Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "1 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 2,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": ""
+    },
+    {
+      "idx": 86,
+      "id": "barding",
+      "name": "Barding",
+      "lastUpdated": "2025-12-18T14:57:59.555Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
+    },
+    {
+      "idx": 87,
+      "id": "animal-feed",
+      "name": "Animal Feed",
+      "lastUpdated": "2025-12-18T14:57:35.945Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false
+    },
+    {
+      "idx": 90,
+      "id": "dice-set",
+      "name": "Dice Set",
+      "lastUpdated": "2025-12-18T13:13:26.060Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 0,
+        "ep": 0,
+        "sp": 1,
+        "cp": 0
+      },
+      "description": "This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). A few common examples appear on the Tools table, but other kinds of gaming sets exist. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency."
+    },
+    {
+      "idx": 91,
+      "id": "playing-card-set",
+      "name": "Playing Card Set",
+      "lastUpdated": "2025-12-18T13:12:59.985Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "0 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 0,
+        "ep": 0,
+        "sp": 5,
+        "cp": 0
+      },
+      "description": "This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). A few common examples appear on the Tools table, but other kinds of gaming sets exist. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency."
+    },
+    {
+      "idx": 92,
+      "id": "component-pouch",
+      "name": "Component Pouch",
+      "lastUpdated": "2025-12-18T13:12:40.989Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "2 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 25,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "description": "A component pouch is a small, watertight leather belt pouch that has compartments to hold all the material components and other special items you need to cast your spells, except for those components that have a specific cost (as indicated in a spell's description)."
+    },
+    {
+      "idx": 93,
+      "id": "quill",
+      "name": "Quill",
+      "lastUpdated": "2025-12-18T13:12:24.415Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true
+    },
+    {
+      "idx": 94,
+      "id": "parchment",
+      "name": "Parchment",
+      "lastUpdated": "2025-12-18T13:12:02.630Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true
+    },
+    {
+      "idx": 95,
+      "id": "tinderbox",
+      "name": "Tinderbox",
+      "lastUpdated": "2025-12-18T13:11:33.755Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "1 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 0,
+        "ep": 0,
+        "sp": 5,
+        "cp": 0
+      },
+      "description": "This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch--or anything else with abundant, exposed fuel--takes an action. Lighting any other fire takes 1 minute."
+    },
+    {
+      "idx": 96,
+      "id": "torch",
+      "name": "Torch",
+      "lastUpdated": "2025-12-18T13:11:05.807Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true,
+      "weight": "1 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 0,
+        "ep": 0,
+        "sp": 0,
+        "cp": 1
+      },
+      "description": "A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
+    },
+    {
+      "idx": 97,
+      "id": "rope-hempen",
+      "name": "Rope Hempen",
+      "lastUpdated": "2025-12-18T13:10:51.044Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true
+    },
+    {
+      "idx": 98,
+      "id": "hooded-lantern",
+      "name": "Hooded Lantern",
+      "lastUpdated": "2025-12-18T13:10:35.577Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": true
+    },
+    {
+      "idx": 99,
+      "id": "mess-kit",
+      "name": "Mess Kit",
+      "lastUpdated": "2025-12-18T14:57:10.078Z",
+      "variant": "Original",
+      "isStaged": true,
+      "isSynced": false,
+      "weight": "1 lb.",
+      "cost": {
+        "pp": 0,
+        "gp": 0,
+        "ep": 0,
+        "sp": 2,
+        "cp": 0
+      },
+      "description": "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "index": "ranger_fighting_style",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "public/assets/atlas/classes/ranger"
+  },
+  "name": "fighting style",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
+  ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "feature",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "ranger_fighting_style_archery",
+              "name": "fighting style: archery",
+              "url": "public/assets/atlas/features/ranger_fighting_style_archery"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "ranger_fighting_style_defense",
+              "name": "fighting style: defense",
+              "url": "public/assets/atlas/features/ranger_fighting_style_defense"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "ranger_fighting_style_dueling",
+              "name": "fighting style: dueling",
+              "url": "public/assets/atlas/features/ranger_fighting_style_dueling"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "ranger_fighting_style_two_weapon_fighting",
+              "name": "fighting style: two_weapon fighting",
+              "url": "public/assets/atlas/features/ranger_fighting_style_two_weapon_fighting"
+            }
+          }
+        ]
+      }
+    },
+    "invocations": []
+  },
+  "url": "public/assets/atlas/features/json/ranger_fighting_style.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/ranger_fighting_style.webp"
+}

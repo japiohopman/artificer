@@ -1,0 +1,58 @@
+{
+  "higher_level": [],
+  "index": "true_seeing",
+  "name": "true seeing",
+  "desc": [
+    "This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has truesight, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 feet."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "An ointment for the eyes that costs 25gp; is made from mushroom powder, saffron, and fat; and is consumed by the spell.",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 6,
+  "school": {
+    "index": "divination",
+    "name": "divination",
+    "url": "public/assets/atlas/magic_schools/divination"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "public/assets/atlas/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "public/assets/atlas/spell/json/true_seeing.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/true_seeing.webp",
+  "sprite_index": 24,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet12.webp"
+}

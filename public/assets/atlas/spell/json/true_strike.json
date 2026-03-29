@@ -1,0 +1,56 @@
+{
+  "higher_level": [],
+  "index": "true_strike",
+  "name": "true strike",
+  "desc": [
+    "You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended."
+  ],
+  "range": "30 feet",
+  "components": [
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Up to 1 round",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "divination",
+    "name": "divination",
+    "url": "public/assets/atlas/magic_schools/divination"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "public/assets/atlas/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/true_strike.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/true_strike.webp",
+  "sprite_index": 0,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet13.webp"
+}

@@ -1,0 +1,91 @@
+{
+  "index": "spider",
+  "name": "spider",
+  "size": "Tiny",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "hit_points": 1,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4-1",
+  "speed": {
+    "walk": "20 ft.",
+    "climb": "20 ft."
+  },
+  "strength": 2,
+  "dexterity": 14,
+  "constitution": 8,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 2,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "30 ft.",
+    "passive_perception": 12
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "spider climb",
+      "desc": "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "damage": []
+    },
+    {
+      "name": "web sense",
+      "desc": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.",
+      "damage": []
+    },
+    {
+      "name": "web walker",
+      "desc": "The spider ignores movement restrictions caused by webbing.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 1 piercing damage, and the target must succeed on a DC 9 Constitution saving throw or take 2 (1d4) poison damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/spider.webp",
+  "url": "public/assets/atlas/enemies/json/spider.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 8,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+}

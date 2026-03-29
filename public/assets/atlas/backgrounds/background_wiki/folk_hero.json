@@ -1,0 +1,36 @@
+{
+  "index": "folk_hero",
+  "name": "folk hero",
+  "starting_proficiencies": [
+    {
+      "index": "skill_animal_handling",
+      "name": "animal handling",
+      "url": ""
+    },
+    {
+      "index": "skill_survival",
+      "name": "survival",
+      "url": ""
+    }
+  ],
+  "tool_proficiencies": [
+    "One type of artisan's tools",
+    "Vehicles (land)"
+  ],
+  "equipment": [
+    "Set of artisan's tools",
+    "A shovel",
+    "An iron pot",
+    "Set of common clothes",
+    "Pouch with 10 gp"
+  ],
+  "feature": {
+    "name": "rustic hospitality",
+    "desc": [
+      "Since you come from the ranks of the common people, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you."
+    ]
+  },
+  "lore": "The Folk Hero is a creature of the common soil, arising not from lineage, but from necessity. They are found where the hearth-fire burns low and the tax-collector\u2019s shadow grows long. In the ecology of the realm, they act as the immune system of the peasantry; when a village is threatened by beast or tyrant, the Folk Hero is the cell that hardens into a blade.\n\nTheir behavior is characterized by a stubborn, quiet dignity. They do not seek the spotlight, yet they occupy it with the weary grace of one who simply did what had to be done. They move through rural landscapes with an innate understanding of the local flora, fauna, and folklore. To the downtrodden, they are a beacon of hope; to the oppressor, they are a weed that refuses to be uprooted, growing stronger the more it is trodden upon.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/background/folk-hero.webp",
+  "bakedAt": 1767703220835
+}

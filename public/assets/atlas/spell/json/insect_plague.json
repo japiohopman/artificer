@@ -1,0 +1,83 @@
+{
+  "index": "insect_plague",
+  "name": "insect plague",
+  "desc": [
+    "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the duration, and its area is lightly obscured. The sphere's area is difficult terrain.",
+    "When the area appears, each creature in it must make a constitution saving throw. A creature takes 4d10 piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th."
+  ],
+  "range": "300 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A few grains of sugar, some kernels of grain, and a smear of fat.",
+  "ritual": false,
+  "duration": "Up to 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 5,
+  "damage": {
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "public/assets/atlas/damage_types/piercing"
+    },
+    "damage_at_slot_level": {
+      "5": "4d10",
+      "6": "5d10",
+      "7": "6d10",
+      "8": "7d10",
+      "9": "8d10"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "con",
+      "name": "con",
+      "url": "public/assets/atlas/ability_scores/constitution"
+    },
+    "dc_success": "half"
+  },
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 20
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "conjuration",
+    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "land",
+      "url": "public/assets/atlas/subclasses/land"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/insect_plague.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/insect_plague.webp",
+  "sprite_index": 20,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet7.webp"
+}

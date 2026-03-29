@@ -1,0 +1,63 @@
+{
+  "index": "hold_monster",
+  "name": "hold monster",
+  "desc": [
+    "Choose a creature you can see and reach. The target must make a saving throw of Wisdom or be paralyzed for the duration of the spell. This spell has no effect against the undead. At the end of each round, the target can make a new saving throw of Wisdom. If successful, the spell ends for the creature."
+  ],
+  "higher_level": [
+    "When you cast this spell using a level 6 or higher location, you can target an additional creature for each level of location beyond the fifth. The creatures must be within 30 feet o f each other when you target them."
+  ],
+  "range": "90 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A small piece of iron.",
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 5,
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "wis",
+      "url": "public/assets/atlas/ability_scores/wisdom"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "enchantment",
+    "name": "enchantment",
+    "url": "public/assets/atlas/magic_schools/enchantment"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "public/assets/atlas/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "public/assets/atlas/spell/json/hold_monster.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/hold_monster.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet7.webp"
+}

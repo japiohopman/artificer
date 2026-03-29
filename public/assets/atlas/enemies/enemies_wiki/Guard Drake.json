@@ -1,0 +1,49 @@
+{
+  "name": "guard drake",
+  "size": "Medium",
+  "type": "dragon",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "value": 14,
+      "type": "natural armor"
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "7d8 + 21",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 11,
+  "constitution": 16,
+  "intelligence": 4,
+  "wisdom": 10,
+  "charisma": 7,
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 12
+  },
+  "languages": "understands Draconic but can\u2019t speak it",
+  "challenge_rating": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The drake makes two attacks: one with its bite and one with its tail."
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage."
+    },
+    {
+      "name": "tail",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage."
+    }
+  ],
+  "index": "guard drake",
+  "lore": "Disruption in the weave detected.",
+  "imageUrl": null,
+  "bakedAt": 1767681007688
+}

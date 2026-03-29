@@ -1,0 +1,18 @@
+{
+  "index": "open_hand",
+  "class": {
+    "index": "monk",
+    "name": "monk",
+    "url": "public/assets/atlas/classes/monk"
+  },
+  "name": "open hand",
+  "subclass_flavor": "Monastic Tradition",
+  "desc": [
+    "Monks of the Way of the Open Hand are the ultimate masters of martial arts combat, whether armed or unarmed. They learn techniques to push and trip their opponents, manipulate ki to heal damage to their bodies, and practice advanced meditation that can protect them from harm."
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/open-hand/levels",
+  "url": "public/assets/atlas/subclasses/json/open_hand.json",
+  "updated_at": "2025-10-24T20:42:14.748Z",
+  "spells": [],
+  "image": "public/assets/atlas/subclasses/open_hand.webp"
+}

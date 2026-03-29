@@ -1,0 +1,55 @@
+{
+  "higher_level": [],
+  "index": "dispel_evil_and_good",
+  "name": "dispel evil and good",
+  "desc": [
+    "Shimmering energy surrounds and protects you from fey, undead, and creatures originating from beyond the Material Plane. For the duration, celestials, elementals, fey, fiends, and undead have disadvantage on attack rolls against you.",
+    "You can end the spell early by using either of the following special functions.",
+    "***Break Enchantment.*** As your action, you touch a creature you can reach that is charmed, frightened, or possessed by a celestial, an elemental, a fey, a fiend, or an undead. The creature you touch is no longer charmed, frightened, or possessed by such creatures.",
+    "***Dismissal.*** As your action, make a melee spell attack against a celestial, an elemental, a fey, a fiend, or an undead you can reach. On a hit, you attempt to drive the creature back to its home plane. The creature must succeed on a charisma saving throw or be sent back to its home plane (if it isn't there already). If they aren't on their home plane, undead are sent to the Shadowfell, and fey are sent to the Feywild."
+  ],
+  "range": "Self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Holy water or powdered silver and iron.",
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 5,
+  "dc": {
+    "dc_type": {
+      "index": "cha",
+      "name": "cha",
+      "url": "public/assets/atlas/ability_scores/charisma"
+    },
+    "dc_success": "other",
+    "desc": "The creature must succeed on a charisma saving throw or be sent back to its home plane (if it isn't there already)"
+  },
+  "school": {
+    "index": "abjuration",
+    "name": "abjuration",
+    "url": "public/assets/atlas/magic_schools/abjuration"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "paladin",
+      "name": "paladin",
+      "url": "public/assets/atlas/classes/paladin"
+    }
+  ],
+  "subclasses": [],
+  "url": "public/assets/atlas/spell/json/dispel_evil_and_good.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/dispel_evil_and_good.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet4.webp"
+}

@@ -1,0 +1,127 @@
+{
+  "index": "swarm_of_quippers",
+  "name": "swarm of quippers",
+  "size": "Medium",
+  "type": "swarm of Tiny beasts",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 13
+    }
+  ],
+  "hit_points": 28,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8-8",
+  "speed": {
+    "walk": "0 ft.",
+    "swim": "40 ft."
+  },
+  "strength": 13,
+  "dexterity": 16,
+  "constitution": 9,
+  "intelligence": 1,
+  "wisdom": 7,
+  "charisma": 2,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    },
+    {
+      "index": "grappled",
+      "name": "grappled",
+      "url": "public/assets/atlas/constitutionditions/grappled"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "public/assets/atlas/constitutionditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "petrified",
+      "url": "public/assets/atlas/constitutionditions/petrified"
+    },
+    {
+      "index": "prone",
+      "name": "prone",
+      "url": "public/assets/atlas/constitutionditions/prone"
+    },
+    {
+      "index": "restrained",
+      "name": "restrained",
+      "url": "public/assets/atlas/constitutionditions/restrained"
+    },
+    {
+      "index": "stunned",
+      "name": "stunned",
+      "url": "public/assets/atlas/constitutionditions/stunned"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 8
+  },
+  "languages": "",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "blood frenzy",
+      "desc": "The swarm has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
+      "damage": []
+    },
+    {
+      "name": "swarm",
+      "desc": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny quipper. The swarm can't regain hit points or gain temporary hit points.",
+      "damage": []
+    },
+    {
+      "name": "water breathing",
+      "desc": "The swarm can breathe only underwater.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bites",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 0 ft., one creature in the swarm's space. Hit: 14 (4d6) piercing damage, or 7 (2d6) piercing damage if the swarm has half of its hit points or fewer.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "4d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/swarm_of_quippers.webp",
+  "url": "public/assets/atlas/enemies/json/swarm_of_quippers.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 23,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+}

@@ -1,0 +1,48 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "whip",
+  "name": "whip",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d4",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "public/assets/atlas/damage_types/slashing"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 3,
+  "properties": [
+    {
+      "index": "finesse",
+      "name": "finesse",
+      "url": "public/assets/atlas/weapon_properties/finesse"
+    },
+    {
+      "index": "reach",
+      "name": "reach",
+      "url": "public/assets/atlas/weapon_properties/reach"
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/whip.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "public/assets/atlas/equipment/whip.webp",
+  "sprite_index": 8,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp"
+}

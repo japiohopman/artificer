@@ -1,0 +1,39 @@
+{
+  "index": "waterborne_vehicles",
+  "name": "waterborne vehicles",
+  "equipment": [
+    {
+      "index": "galley",
+      "name": "galley",
+      "url": "public/assets/atlas/equipment/galley"
+    },
+    {
+      "index": "keelboat",
+      "name": "keelboat",
+      "url": "public/assets/atlas/equipment/keelboat"
+    },
+    {
+      "index": "longship",
+      "name": "longship",
+      "url": "public/assets/atlas/equipment/longship"
+    },
+    {
+      "index": "rowboat",
+      "name": "rowboat",
+      "url": "public/assets/atlas/equipment/rowboat"
+    },
+    {
+      "index": "sailing_ship",
+      "name": "sailing ship",
+      "url": "public/assets/atlas/equipment/sailing_ship"
+    },
+    {
+      "index": "warship",
+      "name": "warship",
+      "url": "public/assets/atlas/equipment/warship"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/waterborne_vehicles.webp"
+}

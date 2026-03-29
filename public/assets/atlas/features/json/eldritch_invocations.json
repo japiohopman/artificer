@@ -1,0 +1,183 @@
+{
+  "index": "eldritch_invocations",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "public/assets/atlas/classes/warlock"
+  },
+  "name": "eldritch invocations",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.",
+    "At 2nd level, you gain two eldritch invocations of your choice. Your invocation options are detailed at the end of the class description. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table.",
+    "Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level."
+  ],
+  "feature_specific": {
+    "invocations": [
+      {
+        "index": "eldritch_invocation_agonizing_blast",
+        "name": "eldritch invocation: agonizing blast",
+        "url": "public/assets/atlas/features/eldritch_invocation_agonizing_blast"
+      },
+      {
+        "index": "eldritch_invocation_armor_of_shadows",
+        "name": "eldritch invocation: armor of shadows",
+        "url": "public/assets/atlas/features/eldritch_invocation_armor_of_shadows"
+      },
+      {
+        "index": "eldritch_invocation_beast_speech",
+        "name": "eldritch invocation: beast speech",
+        "url": "public/assets/atlas/features/eldritch_invocation_beast_speech"
+      },
+      {
+        "index": "eldritch_invocation_beguiling_influence",
+        "name": "eldritch invocation: beguiling influence",
+        "url": "public/assets/atlas/features/eldritch_invocation_beguiling_influence"
+      },
+      {
+        "index": "eldritch_invocation_book_of_ancient_secrets",
+        "name": "eldritch invocation: book of ancient secrets",
+        "url": "public/assets/atlas/features/eldritch_invocation_book_of_ancient_secrets"
+      },
+      {
+        "index": "eldritch_invocation_devils_sight",
+        "name": "eldritch invocation: devil's sight",
+        "url": "public/assets/atlas/features/eldritch_invocation_devils_sight"
+      },
+      {
+        "index": "eldritch_invocation_eldritch_sight",
+        "name": "eldritch invocation: eldritch sight",
+        "url": "public/assets/atlas/features/eldritch_invocation_eldritch_sight"
+      },
+      {
+        "index": "eldritch_invocation_eldritch_spear",
+        "name": "eldritch invocation: eldritch spear",
+        "url": "public/assets/atlas/features/eldritch_invocation_eldritch_spear"
+      },
+      {
+        "index": "eldritch_invocation_eyes_of_the_rune_keeper",
+        "name": "eldritch invocation: eyes of the rune keeper",
+        "url": "public/assets/atlas/features/eldritch_invocation_eyes_of_the_rune_keeper"
+      },
+      {
+        "index": "eldritch_invocation_fiendish_vigor",
+        "name": "eldritch invocation: fiendish vigor",
+        "url": "public/assets/atlas/features/eldritch_invocation_fiendish_vigor"
+      },
+      {
+        "index": "eldritch_invocation_gaze_of_two_minds",
+        "name": "eldritch invocation: gaze of two minds",
+        "url": "public/assets/atlas/features/eldritch_invocation_gaze_of_two_minds"
+      },
+      {
+        "index": "eldritch_invocation_mask_of_many_faces",
+        "name": "eldritch invocation: mask of many faces",
+        "url": "public/assets/atlas/features/eldritch_invocation_mask_of_many_faces"
+      },
+      {
+        "index": "eldritch_invocation_misty_visions",
+        "name": "eldritch invocation: misty visions",
+        "url": "public/assets/atlas/features/eldritch_invocation_misty_visions"
+      },
+      {
+        "index": "eldritch_invocation_repelling_blast",
+        "name": "eldritch invocation: repelling blast",
+        "url": "public/assets/atlas/features/eldritch_invocation_repelling_blast"
+      },
+      {
+        "index": "eldritch_invocation_thief_of_five_fates",
+        "name": "eldritch invocation: thief of five fates",
+        "url": "public/assets/atlas/features/eldritch_invocation_thief_of_five_fates"
+      },
+      {
+        "index": "eldritch_invocation_voice_of_the_chain_master",
+        "name": "eldritch invocation: voice of the chain master",
+        "url": "public/assets/atlas/features/eldritch_invocation_voice_of_the_chain_master"
+      },
+      {
+        "index": "eldritch_invocation_mire_the_mind",
+        "name": "eldritch invocation: mire the mind",
+        "url": "public/assets/atlas/features/eldritch_invocation_mire_the_mind"
+      },
+      {
+        "index": "eldritch_invocation_one_with_shadows",
+        "name": "eldritch invocation: one with shadows",
+        "url": "public/assets/atlas/features/eldritch_invocation_one_with_shadows"
+      },
+      {
+        "index": "eldritch_invocation_sign_of_ill_omen",
+        "name": "eldritch invocation: sign of ill omen",
+        "url": "public/assets/atlas/features/eldritch_invocation_sign_of_ill_omen"
+      },
+      {
+        "index": "eldritch_invocation_thirsting_blade",
+        "name": "eldritch invocation: thirsting blade",
+        "url": "public/assets/atlas/features/eldritch_invocation_thirsting_blade"
+      },
+      {
+        "index": "eldritch_invocation_bewitching_whispers",
+        "name": "eldritch invocation: bewitching whispers",
+        "url": "public/assets/atlas/features/eldritch_invocation_bewitching_whispers"
+      },
+      {
+        "index": "eldritch_invocation_dreadful_word",
+        "name": "eldritch invocation: dreadful word",
+        "url": "public/assets/atlas/features/eldritch_invocation_dreadful_word"
+      },
+      {
+        "index": "eldritch_invocation_sculptor_of_flesh",
+        "name": "eldritch invocation: sculptor of flesh",
+        "url": "public/assets/atlas/features/eldritch_invocation_sculptor_of_flesh"
+      },
+      {
+        "index": "eldritch_invocation_ascendant_step",
+        "name": "eldritch invocation: ascendant step",
+        "url": "public/assets/atlas/features/eldritch_invocation_ascendant_step"
+      },
+      {
+        "index": "eldritch_invocation_minions_of_chaos",
+        "name": "eldritch invocation: minions of chaos",
+        "url": "public/assets/atlas/features/eldritch_invocation_minions_of_chaos"
+      },
+      {
+        "index": "eldritch_invocation_otherworldly_leap",
+        "name": "eldritch invocation: otherworldly leap",
+        "url": "public/assets/atlas/features/eldritch_invocation_otherworldly_leap"
+      },
+      {
+        "index": "eldritch_invocation_whispers_of_the_grave",
+        "name": "eldritch invocation: whispers of the grave",
+        "url": "public/assets/atlas/features/eldritch_invocation_whispers_of_the_grave"
+      },
+      {
+        "index": "eldritch_invocation_lifedrinker",
+        "name": "eldritch invocation: lifedrinker",
+        "url": "public/assets/atlas/features/eldritch_invocation_lifedrinker"
+      },
+      {
+        "index": "eldritch_invocation_chains_of_carceri",
+        "name": "eldritch invocation: chains of carceri",
+        "url": "public/assets/atlas/features/eldritch_invocation_chains_of_carceri"
+      },
+      {
+        "index": "eldritch_invocation_master_of_myriad_forms",
+        "name": "eldritch invocation: master of myriad forms",
+        "url": "public/assets/atlas/features/eldritch_invocation_master_of_myriad_forms"
+      },
+      {
+        "index": "eldritch_invocation_visions_of_distant_realms",
+        "name": "eldritch invocation: visions of distant realms",
+        "url": "public/assets/atlas/features/eldritch_invocation_visions_of_distant_realms"
+      },
+      {
+        "index": "eldritch_invocation_witch_sight",
+        "name": "eldritch invocation: witch sight",
+        "url": "public/assets/atlas/features/eldritch_invocation_witch_sight"
+      }
+    ]
+  },
+  "url": "public/assets/atlas/features/json/eldritch_invocations.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/eldritch_invocations.webp"
+}

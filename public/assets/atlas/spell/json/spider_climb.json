@@ -1,0 +1,59 @@
+{
+  "higher_level": [],
+  "index": "spider_climb",
+  "name": "spider climb",
+  "desc": [
+    "Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving its hands free. The target also gains a climbing speed equal to its walking speed."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A drop of bitumen and a spider.",
+  "ritual": false,
+  "duration": "Up to 1 hour",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "transmutation",
+    "name": "transmutation",
+    "url": "public/assets/atlas/magic_schools/transmutation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "public/assets/atlas/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "land",
+      "url": "public/assets/atlas/subclasses/land"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/spider_climb.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/spider_climb.webp",
+  "sprite_index": 24,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet11.webp"
+}

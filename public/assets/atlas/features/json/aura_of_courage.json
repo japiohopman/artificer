@@ -1,0 +1,18 @@
+{
+  "index": "aura_of_courage",
+  "class": {
+    "index": "paladin",
+    "name": "paladin",
+    "url": "public/assets/atlas/classes/paladin"
+  },
+  "name": "aura of courage",
+  "level": 10,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 10th level, you and friendly creatures within 10 feet of you can't be frightened while you are conscious.",
+    "At 18th level, the range of this aura increases to 30 feet."
+  ],
+  "url": "public/assets/atlas/features/json/aura_of_courage.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/aura_of_courage.webp"
+}

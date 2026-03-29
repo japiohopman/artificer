@@ -1,0 +1,299 @@
+{
+  "index": "adult_copper_dragon",
+  "name": "adult copper dragon",
+  "size": "Huge",
+  "type": "dragon",
+  "alignment": "chaotic good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 184,
+  "hit_dice": "16d12",
+  "hit_points_roll": "16d12+80",
+  "speed": {
+    "walk": "40 ft.",
+    "climb": "40 ft.",
+    "fly": "80 ft."
+  },
+  "strength": 23,
+  "dexterity": 12,
+  "constitution": 21,
+  "intelligence": 18,
+  "wisdom": 15,
+  "charisma": 17,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill_deception",
+        "name": "skill: deception",
+        "url": "public/assets/atlas/proficiencies/skill_deception"
+      }
+    },
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "60 ft.",
+    "darkvision": "120 ft.",
+    "passive_perception": 22
+  },
+  "languages": "Common, Draconic",
+  "challenge_rating": 14,
+  "proficiency_bonus": 5,
+  "xp": 11500,
+  "special_abilities": [
+    {
+      "name": "legendary resistance",
+      "desc": "If the dragon fails a saving throw, it can choose to succeed instead.",
+      "usage": {
+        "type": "per day",
+        "times": 3,
+        "rest_types": []
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.",
+      "actions": [
+        {
+          "action_name": "Frightful Presence",
+          "count": "1",
+          "type": "ability"
+        },
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "2d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +11 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "2d6+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "Melee Weapon Attack: +11 to hit, reach 15 ft., one target. Hit: 15 (2d8 + 6) bludgeoning damage.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "frightful presence",
+      "desc": "Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.",
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        "dc_value": 16,
+        "success_type": "none"
+      },
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "breath weapons",
+      "desc": "The dragon uses one of the following breath weapons.\nAcid Breath. The dragon exhales acid in an 60-foot line that is 5 feet wide. Each creature in that line must make a DC 18 Dexterity saving throw, taking 54 (12d8) acid damage on a failed save, or half as much damage on a successful one.\nSlowing Breath. The dragon exhales gas in a 60-foot cone. Each creature in that area must succeed on a DC 18 Constitution saving throw. On a failed save, the creature can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "options": {
+        "choose": 1,
+        "type": "attack",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "breath",
+              "name": "acid breath",
+              "dc": {
+                "dc_type": {
+                  "index": "dex",
+                  "name": "dex",
+                  "url": "public/assets/atlas/ability_scores/dexterity"
+                },
+                "dc_value": 18,
+                "success_type": "half"
+              },
+              "damage": [
+                {
+                  "damage_type": {
+                    "index": "acid",
+                    "name": "acid",
+                    "url": "public/assets/atlas/damage_types/acid"
+                  },
+                  "damage_dice": "12d8"
+                }
+              ]
+            },
+            {
+              "option_type": "breath",
+              "name": "slowing breath",
+              "dc": {
+                "dc_type": {
+                  "index": "con",
+                  "name": "con",
+                  "url": "public/assets/atlas/ability_scores/constitution"
+                },
+                "dc_value": 18,
+                "success_type": "none"
+              }
+            }
+          ]
+        }
+      },
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "detect",
+      "desc": "The dragon makes a Wisdom (Perception) check.",
+      "damage": []
+    },
+    {
+      "name": "tail attack",
+      "desc": "The dragon makes a tail attack.",
+      "damage": []
+    },
+    {
+      "name": "wing attack (costs 2 actions)",
+      "desc": "The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 19 Dexterity saving throw or take 13 (2d6 + 6) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.",
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "public/assets/atlas/ability_scores/dexterity"
+        },
+        "dc_value": 19,
+        "success_type": "none"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "13d6+6"
+        }
+      ]
+    }
+  ],
+  "image": "/api/images/monsters/adult_copper_dragon.png",
+  "url": "public/assets/atlas/monsters/adult_copper_dragon",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "reactions": [],
+  "lore": "The Copper Dragon, or *Draco Cupreus*, is a master of the vertical world, favoring the sun-drenched crags and labyrinthine canyons of arid uplands. Here, the orange-hued shale mirrors their gleaming scales, providing a natural mantle of invisibility. \n\nUnlike their more dour kin, the Copper is a predator of the mind as much as the flesh. They are ambush artists who utilize the treacherous terrain to their advantage, often pinning interlopers within narrow ravines before bathing them in a heavy, lethargic gas that robs the limbs of their haste. Yet, they rarely kill for sport; they prefer to taunt, using uncanny mimicry to lead trespassers into harmless, albeit humiliating, dead ends.\n\nIn local folklore, these drakes are the \"Giggling Sentinels.\" Hill-folk tell of travelers who, though stripped of their coin, were released in exchange for a truly clever jest. To a Copper, a sharp wit is more precious than gold. They are seen as capricious guardians; if one hears laughter echoing through the canyon winds, it is wise to check one\u2019s purse and sharpen one's tongue, for a duel of riddles surely follows.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/adult-copper-dragon.webp",
+  "bakedAt": 1768740789336
+}

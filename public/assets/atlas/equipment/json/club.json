@@ -1,0 +1,48 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "club",
+  "name": "club",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "cost": {
+    "quantity": 1,
+    "unit": "sp"
+  },
+  "damage": {
+    "damage_dice": "1d4",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "public/assets/atlas/damage_types/bludgeoning"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 2,
+  "properties": [
+    {
+      "index": "light",
+      "name": "light",
+      "url": "public/assets/atlas/weapon_properties/light"
+    },
+    {
+      "index": "monk",
+      "name": "monk",
+      "url": "public/assets/atlas/weapon_properties/monk"
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/club.json",
+  "updated_at": "2025-10-24T20:42:12.925Z",
+  "contents": [],
+  "image": "public/assets/atlas/equipment/club.webp",
+  "sprite_index": 13,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp"
+}

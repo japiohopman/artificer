@@ -1,0 +1,19 @@
+{
+  "index": "hellish_resistance",
+  "races": [
+    {
+      "index": "tiefling",
+      "name": "tiefling",
+      "url": "public/assets/atlas/races/tiefling"
+    }
+  ],
+  "subraces": [],
+  "name": "hellish resistance",
+  "desc": [
+    "You have resistance to fire damage."
+  ],
+  "proficiencies": [],
+  "url": "public/assets/atlas/traits/json/hellish_resistance.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "public/assets/atlas/traits/hellish_resistance.webp"
+}

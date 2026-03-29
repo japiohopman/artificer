@@ -1,0 +1,24 @@
+{
+  "index": "hurl_through_hell",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "public/assets/atlas/classes/warlock"
+  },
+  "subclass": {
+    "index": "fiend",
+    "name": "fiend",
+    "url": "public/assets/atlas/subclasses/fiend"
+  },
+  "name": "hurl through hell",
+  "level": 14,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 14th level, when you hit a creature with an attack, you can use this feature to instantly transport the target through the lower planes. The creature disappears and hurtles through a nightmare landscape.",
+    "At the end of your next turn, the target returns to the space it previously occupied, or the nearest unoccupied space. If the target is not a fiend, it takes 10d10 psychic damage as it reels from its horrific experience.",
+    "Once you use this feature, you can't use it again until you finish a long rest."
+  ],
+  "url": "public/assets/atlas/features/json/hurl_through_hell.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/hurl_through_hell.webp"
+}

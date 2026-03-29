@@ -1,0 +1,37 @@
+# Copilot Instructions: Atlas & Game Data Structure
+
+This document explains the organization and conventions used for the game's Atlas and mechanic data.
+
+## 1. Directory Structure
+All game data is consolidated under `public/assets/atlas/`.
+
+- **Geographical Data (Atlas):** Located in `toril/faerun/[region]/[subregion]/`.
+  - Each location has a `.json` file containing metadata and a `.webp` file for the background image.
+  - Sub-folders are used for highly nested regions (e.g., `sword_coast/waterdeep/`).
+- **Game Mechanics (formerly in /data/):** Now located directly under `public/assets/atlas/`.
+  - Categories include `traits/`, `spells/`, `races/`, `classes/`, `items/`, etc.
+  - JSON files are typically organized within a `json/` subfolder for these categories.
+
+## 2. Naming Conventions
+- **Snake Case:** All filenames, folder names, and JSON identifiers must be `lowercase_with_underscores`.
+- **No Hyphens:** Hyphens (`-`) are strictly forbidden in filenames and internal identifiers (use `_` instead).
+- **No Special Characters:** Remove backticks (`` ` ``) and other non-standard characters from filenames.
+- **Lowercase:** All paths, IDs, and names in JSON should be entirely lowercase.
+
+## 3. JSON Field Standards
+- `id`: Unique identifier, usually the local path from the project root (e.g., `public/assets/atlas/toril/faerun/.../location.json`).
+- `name`: Human-readable name in `lowercase_with_underscores`.
+- `path`: An array of strings representing the navigation hierarchy.
+- `url`: Used for internal linking. All URLs must use the prefix `public/assets/atlas/`.
+- `image` / `bg`: Local path to the asset (e.g., `public/assets/atlas/.../image.webp`). Avoid absolute GitHub URLs.
+- `lore`: Markdown string containing the history and description. Do NOT perform mass-replacements on lore text unless fixing specific technical terms.
+
+## 4. Path & URL Alignment
+Internal paths in JSON files must accurately reflect the filesystem structure. 
+- If a file is moved, all JSON references (`id`, `url`, `image`, `path`) must be updated.
+- Standardize on `public/assets/atlas/` as the root for all game data URLs.
+
+## 5. Maintenance
+- When adding new content, ensure the filename matches the `index` or `id` field in the JSON.
+- Verify that all related files (images, nested locations) are in the same or appropriate subdirectory.
+- Run a consistency check if you rename any major region folders.

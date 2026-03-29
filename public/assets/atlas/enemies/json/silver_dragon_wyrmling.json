@@ -1,0 +1,174 @@
+{
+  "index": "silver_dragon_wyrmling",
+  "name": "silver dragon wyrmling",
+  "size": "Medium",
+  "type": "dragon",
+  "alignment": "lawful good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 45,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8+18",
+  "speed": {
+    "walk": "30 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 19,
+  "dexterity": 10,
+  "constitution": 17,
+  "intelligence": 12,
+  "wisdom": 11,
+  "charisma": 15,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "languages": "Draconic",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 9 (1d10 + 4) piercing damage.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "breath weapons",
+      "desc": "The dragon uses one of the following breath weapons.\nCold Breath. The dragon exhales an icy blast in a 15-foot cone. Each creature in that area must make a DC 13 Constitution saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one.\nParalyzing Breath. The dragon exhales paralyzing gas in a 15-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw or be paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "options": {
+        "choose": 1,
+        "type": "attack",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "breath",
+              "name": "cold breath",
+              "dc": {
+                "dc_type": {
+                  "index": "con",
+                  "name": "con",
+                  "url": "public/assets/atlas/ability_scores/constitution"
+                },
+                "dc_value": 13,
+                "success_type": "half"
+              },
+              "damage": [
+                {
+                  "damage_type": {
+                    "index": "cold",
+                    "name": "cold",
+                    "url": "public/assets/atlas/damage_types/cold"
+                  },
+                  "damage_dice": "4d8"
+                }
+              ]
+            },
+            {
+              "option_type": "breath",
+              "name": "paralyzing breath",
+              "dc": {
+                "dc_type": {
+                  "index": "con",
+                  "name": "con",
+                  "url": "public/assets/atlas/ability_scores/constitution"
+                },
+                "dc_value": 13,
+                "success_type": "none"
+              }
+            }
+          ]
+        }
+      },
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/silver_dragon_wyrmling.webp",
+  "url": "public/assets/atlas/enemies/json/silver_dragon_wyrmling.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "sprite_index": 4,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+}

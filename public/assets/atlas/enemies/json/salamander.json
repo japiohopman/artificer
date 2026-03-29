@@ -1,0 +1,162 @@
+{
+  "index": "salamander",
+  "name": "salamander",
+  "size": "Large",
+  "type": "elemental",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 90,
+  "hit_dice": "12d10",
+  "hit_points_roll": "12d10+24",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 14,
+  "constitution": 15,
+  "intelligence": 11,
+  "wisdom": 10,
+  "charisma": 12,
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "cold"
+  ],
+  "damage_resistances": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "Ignan",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [
+    {
+      "name": "heated body",
+      "desc": "A creature that touches the salamander or hits it with a melee attack while within 5 ft. of it takes 7 (2d6) fire damage.",
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "public/assets/atlas/damage_types/fire"
+          },
+          "damage_dice": "2d6"
+        }
+      ]
+    },
+    {
+      "name": "heated weapons",
+      "desc": "Any metal melee weapon the salamander wields deals an extra 3 (1d6) fire damage on a hit (included in the attack).",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The salamander makes two attacks: one with its spear and one with its tail.",
+      "actions": [
+        {
+          "action_name": "Spear",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Tail",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "spear",
+      "desc": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20 ft./60 ft., one target. Hit: 11 (2d6 + 4) piercing damage, or 13 (2d8 + 4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "notes": "One handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "piercing",
+                  "url": "public/assets/atlas/damage_types/piercing"
+                },
+                "damage_dice": "2d6+4"
+              },
+              {
+                "option_type": "damage",
+                "notes": "Two handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "piercing",
+                  "url": "public/assets/atlas/damage_types/piercing"
+                },
+                "damage_dice": "2d8+4"
+              }
+            ]
+          }
+        },
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "public/assets/atlas/damage_types/fire"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage plus 7 (2d6) fire damage, and the target is grappled (escape DC 14). Until this grapple ends, the target is restrained, the salamander can automatically hit the target with its tail, and the salamander can't make tail attacks against other targets.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d6+4"
+        },
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "public/assets/atlas/damage_types/fire"
+          },
+          "damage_dice": "2d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/salamander.webp",
+  "url": "public/assets/atlas/enemies/json/salamander.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 19,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet10.webp"
+}

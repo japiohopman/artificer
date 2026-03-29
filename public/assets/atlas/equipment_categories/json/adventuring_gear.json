@@ -1,0 +1,589 @@
+{
+  "index": "adventuring_gear",
+  "name": "adventuring gear",
+  "equipment": [
+    {
+      "index": "abacus",
+      "name": "abacus",
+      "url": "public/assets/atlas/equipment/abacus"
+    },
+    {
+      "index": "acid_vial",
+      "name": "acid (vial)",
+      "url": "public/assets/atlas/equipment/acid_vial"
+    },
+    {
+      "index": "alchemists_fire_flask",
+      "name": "alchemist's fire (flask)",
+      "url": "public/assets/atlas/equipment/alchemists_fire_flask"
+    },
+    {
+      "index": "arrow",
+      "name": "arrow",
+      "url": "public/assets/atlas/equipment/arrow"
+    },
+    {
+      "index": "blowgun_needle",
+      "name": "blowgun needle",
+      "url": "public/assets/atlas/equipment/blowgun_needle"
+    },
+    {
+      "index": "crossbow_bolt",
+      "name": "crossbow bolt",
+      "url": "public/assets/atlas/equipment/crossbow_bolt"
+    },
+    {
+      "index": "sling_bullet",
+      "name": "sling bullet",
+      "url": "public/assets/atlas/equipment/sling_bullet"
+    },
+    {
+      "index": "alms_box",
+      "name": "alms box",
+      "url": "public/assets/atlas/equipment/alms_box"
+    },
+    {
+      "index": "amulet",
+      "name": "amulet",
+      "url": "public/assets/atlas/equipment/amulet"
+    },
+    {
+      "index": "antitoxin_vial",
+      "name": "antitoxin (vial)",
+      "url": "public/assets/atlas/equipment/antitoxin_vial"
+    },
+    {
+      "index": "backpack",
+      "name": "backpack",
+      "url": "public/assets/atlas/equipment/backpack"
+    },
+    {
+      "index": "ball_bearings_bag_of_1000",
+      "name": "ball bearings (bag of 1,000)",
+      "url": "public/assets/atlas/equipment/ball_bearings_bag_of_1000"
+    },
+    {
+      "index": "barrel",
+      "name": "barrel",
+      "url": "public/assets/atlas/equipment/barrel"
+    },
+    {
+      "index": "basket",
+      "name": "basket",
+      "url": "public/assets/atlas/equipment/basket"
+    },
+    {
+      "index": "bedroll",
+      "name": "bedroll",
+      "url": "public/assets/atlas/equipment/bedroll"
+    },
+    {
+      "index": "bell",
+      "name": "bell",
+      "url": "public/assets/atlas/equipment/bell"
+    },
+    {
+      "index": "blanket",
+      "name": "blanket",
+      "url": "public/assets/atlas/equipment/blanket"
+    },
+    {
+      "index": "block_and_tackle",
+      "name": "block and tackle",
+      "url": "public/assets/atlas/equipment/block_and_tackle"
+    },
+    {
+      "index": "block_of_incense",
+      "name": "block of incense",
+      "url": "public/assets/atlas/equipment/block_of_incense"
+    },
+    {
+      "index": "book",
+      "name": "book",
+      "url": "public/assets/atlas/equipment/book"
+    },
+    {
+      "index": "bottle_glass",
+      "name": "bottle, glass",
+      "url": "public/assets/atlas/equipment/bottle_glass"
+    },
+    {
+      "index": "bucket",
+      "name": "bucket",
+      "url": "public/assets/atlas/equipment/bucket"
+    },
+    {
+      "index": "caltrops",
+      "name": "caltrops",
+      "url": "public/assets/atlas/equipment/caltrops"
+    },
+    {
+      "index": "candle",
+      "name": "candle",
+      "url": "public/assets/atlas/equipment/candle"
+    },
+    {
+      "index": "case_crossbow_bolt",
+      "name": "case, crossbow bolt",
+      "url": "public/assets/atlas/equipment/case_crossbow_bolt"
+    },
+    {
+      "index": "case_map_or_scroll",
+      "name": "case, map or scroll",
+      "url": "public/assets/atlas/equipment/case_map_or_scroll"
+    },
+    {
+      "index": "censer",
+      "name": "censer",
+      "url": "public/assets/atlas/equipment/censer"
+    },
+    {
+      "index": "chain_10_feet",
+      "name": "chain (10 feet)",
+      "url": "public/assets/atlas/equipment/charismain_10_feet"
+    },
+    {
+      "index": "chalk_1_piece",
+      "name": "chalk (1 piece)",
+      "url": "public/assets/atlas/equipment/charismalk_1_piece"
+    },
+    {
+      "index": "chest",
+      "name": "chest",
+      "url": "public/assets/atlas/equipment/chest"
+    },
+    {
+      "index": "clothes_common",
+      "name": "clothes, common",
+      "url": "public/assets/atlas/equipment/clothes_common"
+    },
+    {
+      "index": "clothes_costume",
+      "name": "clothes, costume",
+      "url": "public/assets/atlas/equipment/clothes_costume"
+    },
+    {
+      "index": "clothes_fine",
+      "name": "clothes, fine",
+      "url": "public/assets/atlas/equipment/clothes_fine"
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "clothes, traveler's",
+      "url": "public/assets/atlas/equipment/clothes_travelers"
+    },
+    {
+      "index": "component_pouch",
+      "name": "component pouch",
+      "url": "public/assets/atlas/equipment/component_pouch"
+    },
+    {
+      "index": "crowbar",
+      "name": "crowbar",
+      "url": "public/assets/atlas/equipment/crowbar"
+    },
+    {
+      "index": "emblem",
+      "name": "emblem",
+      "url": "public/assets/atlas/equipment/emblem"
+    },
+    {
+      "index": "fishing_tackle",
+      "name": "fishing tackle",
+      "url": "public/assets/atlas/equipment/fishing_tackle"
+    },
+    {
+      "index": "flask_or_tankard",
+      "name": "flask or tankard",
+      "url": "public/assets/atlas/equipment/flask_or_tankard"
+    },
+    {
+      "index": "grappling_hook",
+      "name": "grappling hook",
+      "url": "public/assets/atlas/equipment/grappling_hook"
+    },
+    {
+      "index": "hammer",
+      "name": "hammer",
+      "url": "public/assets/atlas/equipment/hammer"
+    },
+    {
+      "index": "hammer_sledge",
+      "name": "hammer, sledge",
+      "url": "public/assets/atlas/equipment/hammer_sledge"
+    },
+    {
+      "index": "holy_water_flask",
+      "name": "holy water (flask)",
+      "url": "public/assets/atlas/equipment/holy_water_flask"
+    },
+    {
+      "index": "hourglass",
+      "name": "hourglass",
+      "url": "public/assets/atlas/equipment/hourglass"
+    },
+    {
+      "index": "hunting_trap",
+      "name": "hunting trap",
+      "url": "public/assets/atlas/equipment/hunting_trap"
+    },
+    {
+      "index": "ink_1_ounce_bottle",
+      "name": "ink (1 ounce bottle)",
+      "url": "public/assets/atlas/equipment/ink_1_ounce_bottle"
+    },
+    {
+      "index": "ink_pen",
+      "name": "ink pen",
+      "url": "public/assets/atlas/equipment/ink_pen"
+    },
+    {
+      "index": "jug_or_pitcher",
+      "name": "jug or pitcher",
+      "url": "public/assets/atlas/equipment/jug_or_pitcher"
+    },
+    {
+      "index": "climbers_kit",
+      "name": "climber's kit",
+      "url": "public/assets/atlas/equipment/climbers_kit"
+    },
+    {
+      "index": "disguise_kit",
+      "name": "disguise kit",
+      "url": "public/assets/atlas/equipment/disguise_kit"
+    },
+    {
+      "index": "forgery_kit",
+      "name": "forgery kit",
+      "url": "public/assets/atlas/equipment/forgery_kit"
+    },
+    {
+      "index": "herbalism_kit",
+      "name": "herbalism kit",
+      "url": "public/assets/atlas/equipment/herbalism_kit"
+    },
+    {
+      "index": "healers_kit",
+      "name": "healer's kit",
+      "url": "public/assets/atlas/equipment/healers_kit"
+    },
+    {
+      "index": "mess_kit",
+      "name": "mess kit",
+      "url": "public/assets/atlas/equipment/mess_kit"
+    },
+    {
+      "index": "poisoners_kit",
+      "name": "poisoner's kit",
+      "url": "public/assets/atlas/equipment/poisoners_kit"
+    },
+    {
+      "index": "ladder_10_foot",
+      "name": "ladder (10_foot)",
+      "url": "public/assets/atlas/equipment/ladder_10_foot"
+    },
+    {
+      "index": "lamp",
+      "name": "lamp",
+      "url": "public/assets/atlas/equipment/lamp"
+    },
+    {
+      "index": "lantern_bullseye",
+      "name": "lantern, bullseye",
+      "url": "public/assets/atlas/equipment/lantern_bullseye"
+    },
+    {
+      "index": "lantern_hooded",
+      "name": "lantern, hooded",
+      "url": "public/assets/atlas/equipment/lantern_hooded"
+    },
+    {
+      "index": "little_bag_of_sand",
+      "name": "little bag of sand",
+      "url": "public/assets/atlas/equipment/little_bag_of_sand"
+    },
+    {
+      "index": "lock",
+      "name": "lock",
+      "url": "public/assets/atlas/equipment/lock"
+    },
+    {
+      "index": "magnifying_glass",
+      "name": "magnifying glass",
+      "url": "public/assets/atlas/equipment/magnifying_glass"
+    },
+    {
+      "index": "manacles",
+      "name": "manacles",
+      "url": "public/assets/atlas/equipment/manacles"
+    },
+    {
+      "index": "mirror_steel",
+      "name": "mirror, steel",
+      "url": "public/assets/atlas/equipment/mirror_steel"
+    },
+    {
+      "index": "oil_flask",
+      "name": "oil (flask)",
+      "url": "public/assets/atlas/equipment/oil_flask"
+    },
+    {
+      "index": "paper_one_sheet",
+      "name": "paper (one sheet)",
+      "url": "public/assets/atlas/equipment/paper_one_sheet"
+    },
+    {
+      "index": "parchment_one_sheet",
+      "name": "parchment (one sheet)",
+      "url": "public/assets/atlas/equipment/parchment_one_sheet"
+    },
+    {
+      "index": "perfume_vial",
+      "name": "perfume (vial)",
+      "url": "public/assets/atlas/equipment/perfume_vial"
+    },
+    {
+      "index": "pick_miners",
+      "name": "pick, miner's",
+      "url": "public/assets/atlas/equipment/pick_miners"
+    },
+    {
+      "index": "piton",
+      "name": "piton",
+      "url": "public/assets/atlas/equipment/piton"
+    },
+    {
+      "index": "poison_basic_vial",
+      "name": "poison, basic (vial)",
+      "url": "public/assets/atlas/equipment/poison_basic_vial"
+    },
+    {
+      "index": "pole_10_foot",
+      "name": "pole (10_foot)",
+      "url": "public/assets/atlas/equipment/pole_10_foot"
+    },
+    {
+      "index": "pot_iron",
+      "name": "pot, iron",
+      "url": "public/assets/atlas/equipment/pot_iron"
+    },
+    {
+      "index": "pouch",
+      "name": "pouch",
+      "url": "public/assets/atlas/equipment/pouch"
+    },
+    {
+      "index": "quiver",
+      "name": "quiver",
+      "url": "public/assets/atlas/equipment/quiver"
+    },
+    {
+      "index": "ram_portable",
+      "name": "ram, portable",
+      "url": "public/assets/atlas/equipment/ram_portable"
+    },
+    {
+      "index": "rations_1_day",
+      "name": "rations (1 day)",
+      "url": "public/assets/atlas/equipment/rations_1_day"
+    },
+    {
+      "index": "reliquary",
+      "name": "reliquary",
+      "url": "public/assets/atlas/equipment/reliquary"
+    },
+    {
+      "index": "robes",
+      "name": "robes",
+      "url": "public/assets/atlas/equipment/robes"
+    },
+    {
+      "index": "rope_hempen_50_feet",
+      "name": "rope, hempen (50 feet)",
+      "url": "public/assets/atlas/equipment/rope_hempen_50_feet"
+    },
+    {
+      "index": "rope_silk_50_feet",
+      "name": "rope, silk (50 feet)",
+      "url": "public/assets/atlas/equipment/rope_silk_50_feet"
+    },
+    {
+      "index": "sack",
+      "name": "sack",
+      "url": "public/assets/atlas/equipment/sack"
+    },
+    {
+      "index": "scale_merchants",
+      "name": "scale, merchant's",
+      "url": "public/assets/atlas/equipment/scale_merchants"
+    },
+    {
+      "index": "sealing_wax",
+      "name": "sealing wax",
+      "url": "public/assets/atlas/equipment/sealing_wax"
+    },
+    {
+      "index": "shovel",
+      "name": "shovel",
+      "url": "public/assets/atlas/equipment/shovel"
+    },
+    {
+      "index": "signal_whistle",
+      "name": "signal whistle",
+      "url": "public/assets/atlas/equipment/signal_whistle"
+    },
+    {
+      "index": "signet_ring",
+      "name": "signet ring",
+      "url": "public/assets/atlas/equipment/signet_ring"
+    },
+    {
+      "index": "small_knife",
+      "name": "small knife",
+      "url": "public/assets/atlas/equipment/small_knife"
+    },
+    {
+      "index": "soap",
+      "name": "soap",
+      "url": "public/assets/atlas/equipment/soap"
+    },
+    {
+      "index": "spellbook",
+      "name": "spellbook",
+      "url": "public/assets/atlas/equipment/spellbook"
+    },
+    {
+      "index": "spike_iron",
+      "name": "spike, iron",
+      "url": "public/assets/atlas/equipment/spike_iron"
+    },
+    {
+      "index": "spyglass",
+      "name": "spyglass",
+      "url": "public/assets/atlas/equipment/spyglass"
+    },
+    {
+      "index": "string_10_feet",
+      "name": "string (10 feet)",
+      "url": "public/assets/atlas/equipment/strengthing_10_feet"
+    },
+    {
+      "index": "tent_two_person",
+      "name": "tent, two_person",
+      "url": "public/assets/atlas/equipment/tent_two_person"
+    },
+    {
+      "index": "tinderbox",
+      "name": "tinderbox",
+      "url": "public/assets/atlas/equipment/tinderbox"
+    },
+    {
+      "index": "torch",
+      "name": "torch",
+      "url": "public/assets/atlas/equipment/torch"
+    },
+    {
+      "index": "vestments",
+      "name": "vestments",
+      "url": "public/assets/atlas/equipment/vestments"
+    },
+    {
+      "index": "vial",
+      "name": "vial",
+      "url": "public/assets/atlas/equipment/vial"
+    },
+    {
+      "index": "waterskin",
+      "name": "waterskin",
+      "url": "public/assets/atlas/equipment/waterskin"
+    },
+    {
+      "index": "whetstone",
+      "name": "whetstone",
+      "url": "public/assets/atlas/equipment/whetstone"
+    },
+    {
+      "index": "burglars_pack",
+      "name": "burglar's pack",
+      "url": "public/assets/atlas/equipment/burglars_pack"
+    },
+    {
+      "index": "diplomats_pack",
+      "name": "diplomat's pack",
+      "url": "public/assets/atlas/equipment/diplomats_pack"
+    },
+    {
+      "index": "dungeoneers_pack",
+      "name": "dungeoneer's pack",
+      "url": "public/assets/atlas/equipment/dungeoneers_pack"
+    },
+    {
+      "index": "entertainers_pack",
+      "name": "entertainer's pack",
+      "url": "public/assets/atlas/equipment/entertainers_pack"
+    },
+    {
+      "index": "explorers_pack",
+      "name": "explorer's pack",
+      "url": "public/assets/atlas/equipment/explorers_pack"
+    },
+    {
+      "index": "priests_pack",
+      "name": "priest's pack",
+      "url": "public/assets/atlas/equipment/priests_pack"
+    },
+    {
+      "index": "scholars_pack",
+      "name": "scholar's pack",
+      "url": "public/assets/atlas/equipment/scholars_pack"
+    },
+    {
+      "index": "crystal",
+      "name": "crystal",
+      "url": "public/assets/atlas/equipment/crystal"
+    },
+    {
+      "index": "orb",
+      "name": "orb",
+      "url": "public/assets/atlas/equipment/orb"
+    },
+    {
+      "index": "rod",
+      "name": "rod",
+      "url": "public/assets/atlas/equipment/rod"
+    },
+    {
+      "index": "staff",
+      "name": "staff",
+      "url": "public/assets/atlas/equipment/staff"
+    },
+    {
+      "index": "wand",
+      "name": "wand",
+      "url": "public/assets/atlas/equipment/wand"
+    },
+    {
+      "index": "sprig_of_mistletoe",
+      "name": "sprig of mistletoe",
+      "url": "public/assets/atlas/equipment/sprig_of_mistletoe"
+    },
+    {
+      "index": "totem",
+      "name": "totem",
+      "url": "public/assets/atlas/equipment/totem"
+    },
+    {
+      "index": "wooden_staff",
+      "name": "wooden staff",
+      "url": "public/assets/atlas/equipment/wooden_staff"
+    },
+    {
+      "index": "yew_wand",
+      "name": "yew wand",
+      "url": "public/assets/atlas/equipment/yew_wand"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/adventuring_gear.webp"
+}

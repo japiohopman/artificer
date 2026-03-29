@@ -1,0 +1,141 @@
+{
+  "index": "acolyte",
+  "name": "acolyte",
+  "desc": "Acolytes are junior members of a clergy, usually answerable to a priest. They perform a variety of functions in a temple and are granted minor spellcasting power by their deities.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 10
+    }
+  ],
+  "hit_points": 9,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_medicine",
+        "name": "skill: medicine",
+        "url": "public/assets/atlas/proficiencies/skill_medicine"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_religion",
+        "name": "skill: religion",
+        "url": "public/assets/atlas/proficiencies/skill_religion"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "spellcasting",
+      "desc": "The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The acolyte has following cleric spells prepared:\n\n- Cantrips (at will): light, sacred flame, thaumaturgy\n- 1st level (3 slots): bless, cure wounds, sanctuary",
+      "spellcasting": {
+        "level": 1,
+        "ability": {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        "dc": 12,
+        "modifier": 4,
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "school": "cleric",
+        "slots": {
+          "1": 3
+        },
+        "spells": [
+          {
+            "name": "light",
+            "level": 0,
+            "url": "public/assets/atlas/spells/light"
+          },
+          {
+            "name": "sacred flame",
+            "level": 0,
+            "url": "public/assets/atlas/spells/sacred_flame"
+          },
+          {
+            "name": "thaumaturgy",
+            "level": 0,
+            "url": "public/assets/atlas/spells/thaumaturgy"
+          },
+          {
+            "name": "bless",
+            "level": 1,
+            "url": "public/assets/atlas/spells/bless"
+          },
+          {
+            "name": "cure wounds",
+            "level": 1,
+            "url": "public/assets/atlas/spells/cure_wounds"
+          },
+          {
+            "name": "sanctuary",
+            "level": 1,
+            "url": "public/assets/atlas/spells/sanctuary"
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "club",
+      "desc": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/acolyte.png",
+  "url": "public/assets/atlas/monsters/acolyte",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The Acolyte is a hollowed vessel, a grim remnant haunting the salt-crusted ruins of the Sunken Cathedrals and sun-bleached cloisters of the High Wastes. Though they appear as stooped, robed figures, do not be deceived by their stillness. They do not breathe; they wait.\n\nTheir predation is a subtle cruelty. They emit a low, harmonic hum that mimics the vibration of ancient liturgy, drawing the weary and the faithful into their orbit. Once a victim kneels in shared supplication, the Acolyte\u2019s jaw unhinges with a sickening crack, siphoning the very spirit from the victim\u2019s lungs. They do not consume flesh, but \"sanctity\"\u2014leaving behind a husk as cold and empty as the stone they inhabit.\n\nLocal folklore names them the *Echoes of the Unanswered*. Mothers warn children that to pray in a ruined house is to invite a guest who will never leave. To encounter an Acolyte is to witness the terrifying persistence of a faith that has outlived its god, transformed into a hunger that knows no end. Such is the fate of those who seek divinity in the dark.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/acolyte.webp",
+  "bakedAt": 1767607730570
+}

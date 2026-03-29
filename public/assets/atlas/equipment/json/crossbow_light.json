@@ -1,0 +1,54 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "crossbow_light",
+  "name": "crossbow, light",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Ranged",
+  "category_range": "Simple Ranged",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "public/assets/atlas/damage_types/piercing"
+    }
+  },
+  "range": {
+    "normal": 80,
+    "long": 320
+  },
+  "weight": 5,
+  "properties": [
+    {
+      "index": "ammunition",
+      "name": "ammunition",
+      "url": "public/assets/atlas/weapon_properties/ammunition"
+    },
+    {
+      "index": "loading",
+      "name": "loading",
+      "url": "public/assets/atlas/weapon_properties/loading"
+    },
+    {
+      "index": "two_handed",
+      "name": "two_handed",
+      "url": "public/assets/atlas/weapon_properties/two_handed"
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/crossbow_light.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "public/assets/atlas/equipment/crossbow_light.webp",
+  "sprite_index": 20,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp"
+}

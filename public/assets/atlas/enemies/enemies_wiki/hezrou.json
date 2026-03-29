@@ -1,0 +1,159 @@
+{
+  "index": "hezrou",
+  "name": "hezrou",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "demon",
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 136,
+  "hit_dice": "13d10",
+  "hit_points_roll": "13d10+65",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 17,
+  "constitution": 20,
+  "intelligence": 5,
+  "wisdom": 12,
+  "charisma": 13,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_str",
+        "name": "saving throw: str",
+        "url": "public/assets/atlas/proficiencies/saving_throw_str"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "lightning",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 11
+  },
+  "languages": "Abyssal, telepathy 120 ft.",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [
+    {
+      "name": "magic resistance",
+      "desc": "The hezrou has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    },
+    {
+      "name": "stench",
+      "desc": "Any creature that starts its turn within 10 feet of the hezrou must succeed on a DC 14 Constitution saving throw or be poisoned until the start of its next turn. On a successful saving throw, the creature is immune to the hezrou's stench for 24 hours.",
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "con",
+          "url": "public/assets/atlas/ability_scores/constitution"
+        },
+        "dc_value": 14,
+        "success_type": "none"
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The hezrou makes three attacks: one with its bite and two with its claws.",
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claws",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 15 (2d10 + 4) piercing damage.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/hezrou.png",
+  "url": "public/assets/atlas/monsters/hezrou",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "**The Hezrou: Scourge of the Stagnant Mires**\n\nDwellers of the Abyssal morass, these batrachian horrors find purchase in our world within the most putrid wetlands. They favor places where the veil is thin and the water chokes with the rot of a thousand seasons. A Hezrou is a mountain of mossy, toad-like flesh, exhaling the very essence of the pit.\n\nIts predatory method is one of atmospheric subjugation. The creature does not merely hunt; it infects. It lies submerged, appearing as a harmless, lichen-covered hillock until prey draws near. Then, it exhales\u2014a nauseating, sulfurous miasma that dissolves the will and liquefies the lungs. Victims are often consumed while still gasping for air that has turned to poison.\n\nIn the riverlands, folk-tales speak of the \"Stench-Lord,\" a demon born from the collective filth of a city\u2019s sins. To hear its deep, vibrating croak in the dead of night is an omen that the land itself has surrendered to corruption. Beware the ripple in the scum, for the Hezrou waits to drag the unwary into the eternal silt.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/hezrou.webp",
+  "bakedAt": 1770276663960
+}

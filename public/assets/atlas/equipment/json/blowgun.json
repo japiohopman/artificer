@@ -1,0 +1,49 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "blowgun",
+  "name": "blowgun",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Ranged",
+  "category_range": "Martial Ranged",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "public/assets/atlas/damage_types/piercing"
+    }
+  },
+  "range": {
+    "normal": 25,
+    "long": 100
+  },
+  "weight": 1,
+  "properties": [
+    {
+      "index": "ammunition",
+      "name": "ammunition",
+      "url": "public/assets/atlas/weapon_properties/ammunition"
+    },
+    {
+      "index": "loading",
+      "name": "loading",
+      "url": "public/assets/atlas/weapon_properties/loading"
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/blowgun.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "public/assets/atlas/equipment/blowgun.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+}

@@ -1,0 +1,114 @@
+{
+  "index": "octopus",
+  "name": "octopus",
+  "size": "Small",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "hit_points": 3,
+  "hit_dice": "1d6",
+  "hit_points_roll": "1d6",
+  "speed": {
+    "walk": "5 ft.",
+    "swim": "30 ft."
+  },
+  "strength": 4,
+  "dexterity": 15,
+  "constitution": 11,
+  "intelligence": 3,
+  "wisdom": 10,
+  "charisma": 4,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "30 ft.",
+    "passive_perception": 12
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "hold breath",
+      "desc": "While out of water, the octopus can hold its breath for 30 minutes.",
+      "damage": []
+    },
+    {
+      "name": "underwater camouflage",
+      "desc": "The octopus has advantage on Dexterity (Stealth) checks made while underwater.",
+      "damage": []
+    },
+    {
+      "name": "water breathing",
+      "desc": "The octopus can breathe only underwater.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "tentacles",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 1 bludgeoning damage, and the target is grappled (escape DC 10). Until this grapple ends, the octopus can't use its tentacles on another target.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "ink cloud",
+      "desc": "A 5-foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action.",
+      "usage": {
+        "type": "recharge after rest",
+        "rest_types": [
+          "short",
+          "long"
+        ]
+      },
+      "attack_bonus": 0,
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/octopus.png",
+  "url": "public/assets/atlas/monsters/octopus",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The Octopus, known to mariners as the \"Shifting Shadow of the Shelf,\" is a marvel of the brine. These creatures haunt the coral labyrinths and obsidian trenches of our southern seas, though smaller kin are often found lurking in the crystalline shallows of tide pools.\n\nThe beast is a master of the unseen. It does not merely hide; it becomes the stone, the kelp, or the very sand, shifting its skin\u2019s hue and texture with a speed that defies the eye. When it strikes, it is a nightmare of fluid grace, enveloping prey in a multi-limbed embrace before delivering a killing blow with its hidden, chitinous beak. Should it be cornered, it vanishes behind a shroud of \"liquid night\"\u2014an ink so dense it chokes the senses of any pursuer.\n\nIn coastal folklore, they are the \"Eight-Fold Watchers.\" Sailors claim these creatures are the silent scribes of the Deep Mother, recording the names of the drowned upon the seafloor. To encounter one in the open is an omen of shifting fortunes; to see its unblinking, horizontal pupil in the dark of a wreck is a sign your soul has been weighed and found wanting.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/octopus.webp",
+  "bakedAt": 1767614502870
+}

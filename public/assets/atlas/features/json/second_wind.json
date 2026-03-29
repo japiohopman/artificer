@@ -1,0 +1,17 @@
+{
+  "index": "second_wind",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "public/assets/atlas/classes/fighter"
+  },
+  "name": "second wind",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again."
+  ],
+  "url": "public/assets/atlas/features/json/second_wind.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/second_wind.webp"
+}

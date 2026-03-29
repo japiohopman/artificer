@@ -1,0 +1,23 @@
+{
+  "index": "natural_recovery",
+  "class": {
+    "index": "druid",
+    "name": "druid",
+    "url": "public/assets/atlas/classes/druid"
+  },
+  "subclass": {
+    "index": "land",
+    "name": "land",
+    "url": "public/assets/atlas/subclasses/land"
+  },
+  "name": "natural recovery",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 2nd level, you can regain some of your magical energy by sitting in meditation and communing with nature. During a short rest, you choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your druid level (rounded up), and none of the slots can be 6th level or higher. You can't use this feature again until you finish a long rest.",
+    "For example, when you are a 4th-level druid, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level slot or two 1st-level slots."
+  ],
+  "url": "public/assets/atlas/features/json/natural_recovery.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/natural_recovery.webp"
+}

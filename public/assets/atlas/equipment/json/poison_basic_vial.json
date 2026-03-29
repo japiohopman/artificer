@@ -1,0 +1,30 @@
+{
+  "special": [],
+  "index": "poison_basic_vial",
+  "name": "poison, basic (vial)",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "public/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "desc": [
+    "You can use the poison in this vial to coat one slashing or piercing weapon or up to three pieces of ammunition. Applying the poison takes an action. A creature hit by the poisoned weapon or ammunition must make a DC 10 Constitution saving throw or take 1d4 poison damage. Once applied, the poison retains potency for 1 minute before drying."
+  ],
+  "url": "public/assets/atlas/equipment/json/poison_basic_vial.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/poison_basic_vial.webp",
+  "sprite_index": 8,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+}

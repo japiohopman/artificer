@@ -1,0 +1,39 @@
+{
+  "index": "int",
+  "name": "int",
+  "full_name": "Intelligence",
+  "desc": [
+    "Intelligence measures mental acuity, accuracy of recall, and the ability to reason.",
+    "An Intelligence check comes into play when you need to draw on logic, education, memory, or deductive reasoning. The Arcana, History, Investigation, Nature, and Religion skills reflect aptitude in certain kinds of Intelligence checks."
+  ],
+  "skills": [
+    {
+      "name": "arcana",
+      "index": "arcana",
+      "url": "public/assets/atlas/skills/arcana"
+    },
+    {
+      "name": "history",
+      "index": "history",
+      "url": "public/assets/atlas/skills/history"
+    },
+    {
+      "name": "investigation",
+      "index": "investigation",
+      "url": "public/assets/atlas/skills/investigation"
+    },
+    {
+      "name": "nature",
+      "index": "nature",
+      "url": "public/assets/atlas/skills/nature"
+    },
+    {
+      "name": "religion",
+      "index": "religion",
+      "url": "public/assets/atlas/skills/religion"
+    }
+  ],
+  "url": "public/assets/atlas/ability_scores/json/intelligenceelligence.json",
+  "updated_at": "2025-10-24T20:42:12.130Z",
+  "image": "public/assets/atlas/ability_scores/intelligence.webp"
+}

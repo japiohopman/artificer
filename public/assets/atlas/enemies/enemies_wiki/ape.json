@@ -1,0 +1,112 @@
+{
+  "index": "ape",
+  "name": "ape",
+  "size": "Medium",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "hit_points": 19,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8+6",
+  "speed": {
+    "walk": "30 ft.",
+    "climb": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 14,
+  "constitution": 14,
+  "intelligence": 6,
+  "wisdom": 12,
+  "charisma": 7,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill_athletics",
+        "name": "skill: athletics",
+        "url": "public/assets/atlas/proficiencies/skill_athletics"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The ape makes two fist attacks.",
+      "actions": [
+        {
+          "action_name": "Fist",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "fist",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "rock",
+      "desc": "Ranged Weapon Attack: +5 to hit, range 25/50 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/ape.png",
+  "url": "public/assets/atlas/monsters/ape",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "lore": "In the emerald shadows of the southern jungles, the Great Ape reigns as a mirror to man, albeit one cast in brute strength and primal cunning. These hirsute behemoths dwell amidst the tangled vines and crumbling masonry of forgotten empires, claiming the high canopy and the moss-choked ruins as their sovereign domain.\n\nUnlike the docile herbivores of common myth, the forest ape is a calculated predator. They exhibit a chilling patience, lurking in the verdant gloom before descending with thunderous force. They are known to use the very environment as a weapon\u2014hurling jagged stones with lethal precision or utilizing heavy branches to snare and crush the skulls of those who trespass.\n\nTo the local tribes, the ape is more than a beast; it is the \"Silent Elder.\" Folklore suggests they were once a race of men who turned their backs on the gods, cursed to lose their speech but gifted with the raw power of the earth. Travelers are warned: to meet the gaze of an ape is to see a reflection of one's own buried savagery, a reminder that beneath the veneer of civilization, the beast still hungers.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/ape.webp",
+  "bakedAt": 1767622752499
+}

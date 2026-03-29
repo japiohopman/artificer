@@ -1,0 +1,245 @@
+{
+  "index": "cloud_giant",
+  "name": "cloud giant",
+  "size": "Huge",
+  "type": "giant",
+  "alignment": "neutral good (50%) or neutral evil (50%)",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 200,
+  "hit_dice": "16d12",
+  "hit_points_roll": "16d12+96",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 27,
+  "dexterity": 10,
+  "constitution": 22,
+  "intelligence": 12,
+  "wisdom": 16,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill_insight",
+        "name": "skill: insight",
+        "url": "public/assets/atlas/proficiencies/skill_insight"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 17
+  },
+  "languages": "Common, Giant",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [
+    {
+      "name": "keen smell",
+      "desc": "The giant has advantage on Wisdom (Perception) checks that rely on smell.",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The giant's innate spellcasting ability is Charisma. It can innately cast the following spells, requiring no material components:\n\nAt will: detect magic, fog cloud, light\n3/day each: feather fall, fly, misty step, telekinesis\n1/day each: control weather, gaseous form",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "detect magic",
+            "level": 1,
+            "url": "public/assets/atlas/spells/detect_magic",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "fog cloud",
+            "level": 1,
+            "url": "public/assets/atlas/spells/fog_cloud",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "light",
+            "level": 0,
+            "url": "public/assets/atlas/spells/light",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "feather fall",
+            "level": 1,
+            "url": "public/assets/atlas/spells/feather_fall",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "fly",
+            "level": 3,
+            "url": "public/assets/atlas/spells/fly",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "misty step",
+            "level": 2,
+            "url": "public/assets/atlas/spells/misty_step",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "telekinesis",
+            "level": 5,
+            "url": "public/assets/atlas/spells/telekinesis",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "control weather",
+            "level": 8,
+            "url": "public/assets/atlas/spells/constitutiontrol_weather",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "gaseous form",
+            "level": 3,
+            "url": "public/assets/atlas/spells/gaseous_form",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The giant makes two morningstar attacks.",
+      "actions": [
+        {
+          "action_name": "Morningstar",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "morningstar",
+      "desc": "Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 21 (3d8 + 8) piercing damage.",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "3d8+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "rock",
+      "desc": "Ranged Weapon Attack: +12 to hit, range 60/240 ft., one target. Hit: 30 (4d10 + 8) bludgeoning damage.",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "4d10+8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/cloud_giant.webp",
+  "url": "public/assets/atlas/enemies/json/cloud_giant.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 15,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet3.webp"
+}

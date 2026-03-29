@@ -1,0 +1,32 @@
+{
+  "special": [],
+  "index": "ball_bearings_bag_of_1000",
+  "name": "ball bearings (bag of 1,000)",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "public/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "desc": [
+    "As an action, you can spill these tiny metal balls from their pouch to cover a level, square area that is 10 feet on a side.",
+    "A creature moving across the covered area must succeed on a DC 10 Dexterity saving throw or fall prone.",
+    "A creature moving through the area at half speed doesn't need to make the save."
+  ],
+  "image": "public/assets/atlas/equipment/ball_bearings_bag_of_1000.webp",
+  "url": "public/assets/atlas/equipment/json/ball_bearings_bag_of_1000.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "sprite_index": 11,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp"
+}

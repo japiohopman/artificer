@@ -1,0 +1,21 @@
+{
+  "index": "potion_of_resistance_cold",
+  "name": "potion of cold resistance",
+  "equipment_category": {
+    "index": "potion",
+    "name": "potion",
+    "url": "public/assets/atlas/equipment_categories/potion"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Potion, uncommon",
+    "When you drink this potion, you gain resistance to cold damage for 1 hour."
+  ],
+  "url": "public/assets/atlas/magic_items/json/potion_of_resistance_cold.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/potion_of_resistance_cold.webp"
+}

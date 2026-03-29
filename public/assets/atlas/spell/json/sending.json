@@ -1,0 +1,55 @@
+{
+  "higher_level": [],
+  "index": "sending",
+  "name": "sending",
+  "desc": [
+    "You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.",
+    "You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive."
+  ],
+  "range": "Unlimited",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A short piece of fine copper wire.",
+  "ritual": false,
+  "duration": "1 round",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "public/assets/atlas/magic_schools/evocation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/sending.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/sending.webp",
+  "sprite_index": 6,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet11.webp"
+}

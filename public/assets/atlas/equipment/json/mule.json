@@ -1,0 +1,28 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "mule",
+  "name": "mule",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 8,
+    "unit": "gp"
+  },
+  "speed": {
+    "quantity": 40,
+    "unit": "ft/round"
+  },
+  "capacity": "420 lb.",
+  "url": "public/assets/atlas/equipment/json/mule.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/mule.webp",
+  "sprite_index": 17,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+}

@@ -1,0 +1,106 @@
+{
+  "index": "minotaur",
+  "name": "minotaur",
+  "size": "Large",
+  "type": "monstrosity",
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 76,
+  "hit_dice": "9d10",
+  "hit_points_roll": "9d10+27",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 11,
+  "constitution": 16,
+  "intelligence": 6,
+  "wisdom": 16,
+  "charisma": 9,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 17
+  },
+  "languages": "Abyssal",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [
+    {
+      "name": "charge",
+      "desc": "If the minotaur moves at least 10 ft. straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be pushed up to 10 ft. away and knocked prone.",
+      "damage": []
+    },
+    {
+      "name": "labyrinthine recall",
+      "desc": "The minotaur can perfectly recall any path it has traveled.",
+      "damage": []
+    },
+    {
+      "name": "reckless",
+      "desc": "At the start of its turn, the minotaur can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "greataxe",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 17 (2d12 + 4) slashing damage.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "2d12+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "gore",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) piercing damage.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/minotaur.webp",
+  "url": "public/assets/atlas/enemies/json/minotaur.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 24,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp"
+}

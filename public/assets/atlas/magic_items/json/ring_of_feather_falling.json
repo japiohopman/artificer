@@ -1,0 +1,21 @@
+{
+  "index": "ring_of_feather_falling",
+  "name": "ring of feather falling",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "public/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Ring, rare (requires attunement)",
+    "When you fall while wearing this ring, you descend 60 feet per round and take no damage from falling."
+  ],
+  "url": "public/assets/atlas/magic_items/json/ring_of_feather_falling.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/ring_of_feather_falling.webp"
+}

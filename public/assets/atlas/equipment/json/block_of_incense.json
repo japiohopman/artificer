@@ -1,0 +1,30 @@
+{
+  "special": [],
+  "index": "block_of_incense",
+  "name": "block of incense",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "public/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 0,
+    "unit": "cp"
+  },
+  "weight": 0,
+  "desc": [
+    "A block of incense, typically found in a priest's pack."
+  ],
+  "url": "public/assets/atlas/equipment/json/block_of_incense.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/block_of_incense.webp",
+  "sprite_index": 7,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+}

@@ -1,0 +1,17 @@
+{
+  "index": "sorcerous_restoration",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "public/assets/atlas/classes/sorcerer"
+  },
+  "name": "sorcerous restoration",
+  "level": 20,
+  "prerequisites": [],
+  "desc": [
+    "At 20th level, you regain 4 expended sorcery points whenever you finish a short rest."
+  ],
+  "url": "public/assets/atlas/features/json/sorcerous_restoration.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/sorcerous_restoration.webp"
+}

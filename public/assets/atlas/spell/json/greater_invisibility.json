@@ -1,0 +1,52 @@
+{
+  "higher_level": [],
+  "index": "greater_invisibility",
+  "name": "greater invisibility",
+  "desc": [
+    "You or a creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 4,
+  "school": {
+    "index": "illusion",
+    "name": "illusion",
+    "url": "public/assets/atlas/magic_schools/illusion"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "land",
+      "url": "public/assets/atlas/subclasses/land"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/greater_invisibility.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/greater_invisibility.webp",
+  "sprite_index": 16,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet6.webp"
+}

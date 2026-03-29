@@ -1,0 +1,128 @@
+{
+  "index": "swarm_of_bats",
+  "name": "swarm of bats",
+  "size": "Medium",
+  "type": "swarm of Tiny beasts",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8",
+  "speed": {
+    "walk": "0 ft.",
+    "fly": "30 ft."
+  },
+  "strength": 5,
+  "dexterity": 15,
+  "constitution": 10,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 4,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    },
+    {
+      "index": "grappled",
+      "name": "grappled",
+      "url": "public/assets/atlas/constitutionditions/grappled"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "public/assets/atlas/constitutionditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "petrified",
+      "url": "public/assets/atlas/constitutionditions/petrified"
+    },
+    {
+      "index": "prone",
+      "name": "prone",
+      "url": "public/assets/atlas/constitutionditions/prone"
+    },
+    {
+      "index": "restrained",
+      "name": "restrained",
+      "url": "public/assets/atlas/constitutionditions/restrained"
+    },
+    {
+      "index": "stunned",
+      "name": "stunned",
+      "url": "public/assets/atlas/constitutionditions/stunned"
+    }
+  ],
+  "senses": {
+    "blindsight": "60 ft.",
+    "passive_perception": 11
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "echolocation",
+      "desc": "The swarm can't use its blindsight while deafened.",
+      "damage": []
+    },
+    {
+      "name": "keen hearing",
+      "desc": "The swarm has advantage on Wisdom (Perception) checks that rely on hearing.",
+      "damage": []
+    },
+    {
+      "name": "swarm",
+      "desc": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny bat. The swarm can't regain hit points or gain temporary hit points.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bites",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 0 ft., one creature in the swarm's space. Hit: 5 (2d4) piercing damage, or 2 (1d4) piercing damage if the swarm has half of its hit points or fewer.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "2d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/swarm_of_bats.png",
+  "url": "public/assets/atlas/monsters/swarm_of_bats",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The *Vespertilio Caterva*, or the common swarm of bats, is a living shadow that haunts the lightless corners of our world. These winged throngs claim the damp maws of limestone caverns and the crumbling eaves of forgotten keeps as their domain. While a single bat is a mere curiosity, the swarm is a singular, undulating entity\u2014a velvet tide that chokes the air with the musk of guano and the frantic rhythm of leathery wings.\n\nTheir predatory genius lies in sensory bombardment. When stirred, the swarm unleashes a cacophonous barrage of ultrasonic shrieks, a wall of sound that renders a traveler\u2019s equilibrium useless. They do not strike with coordinated intent but overwhelm through a thousand needle-sharp bites, draining the strength of their quarry in a whirlwind of fur and claw.\n\nIn the folklore of the Lowlands, a rising swarm is dubbed the \"Breath of the Earth,\" whispered to be the restless souls of the unburied or the vanguard of a lurking vampire. To the seasoned adventurer, the sudden silence of a cavern followed by the rush of wings is more than a nuisance; it is the sound of the darkness itself turning hungry.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/swarm-of-bats.webp",
+  "bakedAt": 1768761925805
+}

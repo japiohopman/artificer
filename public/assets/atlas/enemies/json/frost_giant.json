@@ -1,0 +1,137 @@
+{
+  "index": "frost_giant",
+  "name": "frost giant",
+  "size": "Huge",
+  "type": "giant",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 15,
+      "desc": "patchwork armor"
+    }
+  ],
+  "hit_points": 138,
+  "hit_dice": "12d12",
+  "hit_points_roll": "12d12+60",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 23,
+  "dexterity": 9,
+  "constitution": 21,
+  "intelligence": 9,
+  "wisdom": 10,
+  "charisma": 12,
+  "proficiencies": [
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill_athletics",
+        "name": "skill: athletics",
+        "url": "public/assets/atlas/proficiencies/skill_athletics"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "Giant",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The giant makes two greataxe attacks.",
+      "actions": [
+        {
+          "action_name": "Greataxe",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "greataxe",
+      "desc": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 25 (3d12 + 6) slashing damage.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "3d12+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "rock",
+      "desc": "Ranged Weapon Attack: +9 to hit, range 60/240 ft., one target. Hit: 28 (4d10 + 6) bludgeoning damage.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "4d10+6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/frost_giant.webp",
+  "url": "public/assets/atlas/enemies/json/frost_giant.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "sprite_index": 6,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp"
+}

@@ -1,0 +1,110 @@
+{
+  "index": "draconic_ancestry",
+  "races": [
+    {
+      "index": "dragonborn",
+      "name": "dragonborn",
+      "url": "public/assets/atlas/races/dragonborn"
+    }
+  ],
+  "subraces": [],
+  "name": "draconic ancestry",
+  "desc": [
+    "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table."
+  ],
+  "proficiencies": [],
+  "trait_specific": {
+    "subtrait_options": {
+      "choose": 1,
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "draconic_ancestry_black",
+              "name": "draconic ancestry (black)",
+              "url": "public/assets/atlas/traits/draconic_ancestry_black"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "draconic_ancestry_blue",
+              "name": "draconic ancestry (blue)",
+              "url": "public/assets/atlas/traits/draconic_ancestry_blue"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "draconic_ancestry_brass",
+              "name": "draconic ancestry (brass)",
+              "url": "public/assets/atlas/traits/draconic_ancestry_brass"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "draconic_ancestry_bronze",
+              "name": "draconic ancestry (bronze)",
+              "url": "public/assets/atlas/traits/draconic_ancestry_bronze"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "draconic_ancestry_copper",
+              "name": "draconic ancestry (copper)",
+              "url": "public/assets/atlas/traits/draconic_ancestry_copper"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "draconic_ancestry_gold",
+              "name": "draconic ancestry (gold)",
+              "url": "public/assets/atlas/traits/draconic_ancestry_gold"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "draconic_ancestry_green",
+              "name": "draconic ancestry (green)",
+              "url": "public/assets/atlas/traits/draconic_ancestry_green"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "draconic_ancestry_red",
+              "name": "draconic ancestry (red)",
+              "url": "public/assets/atlas/traits/draconic_ancestry_red"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "draconic_ancestry_silver",
+              "name": "draconic ancestry (silver)",
+              "url": "public/assets/atlas/traits/draconic_ancestry_silver"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "draconic_ancestry_white",
+              "name": "draconic ancestry (white)",
+              "url": "public/assets/atlas/traits/draconic_ancestry_white"
+            }
+          }
+        ]
+      },
+      "type": "trait"
+    }
+  },
+  "url": "public/assets/atlas/traits/json/draconic_ancestry.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "public/assets/atlas/traits/draconic_ancestry.webp"
+}

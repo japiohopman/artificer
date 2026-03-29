@@ -1,0 +1,30 @@
+{
+  "special": [],
+  "index": "string_10_feet",
+  "name": "string (10 feet)",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "public/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 0,
+    "unit": "cp"
+  },
+  "weight": 0,
+  "desc": [
+    "A 10-foot length of string, typically found in a burglar's pack."
+  ],
+  "url": "public/assets/atlas/equipment/json/strengthing_10_feet.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/strengthing_10_feet.webp",
+  "sprite_index": 12,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+}

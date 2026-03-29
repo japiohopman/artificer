@@ -1,0 +1,89 @@
+{
+  "index": "cat",
+  "name": "cat",
+  "size": "Tiny",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "hit_points": 2,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4",
+  "speed": {
+    "walk": "40 ft.",
+    "climb": "30 ft."
+  },
+  "strength": 3,
+  "dexterity": 15,
+  "constitution": 10,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 7,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "keen smell",
+      "desc": "The cat has advantage on Wisdom (Perception) checks that rely on smell.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "claws",
+      "desc": "Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: 1 slashing damage.",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/cat.png",
+  "url": "public/assets/atlas/monsters/cat",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The *Felis domesticus*, or the Common Hearth-Stalker, is a creature of dual nature. They dwell wherever humanity carves out a niche, from the soot-stained rafters of a wharfside tavern to the velvet divans of a queen\u2019s solar. Though small, their predatory grace is peerless. They move like silk across stone, possessing a stillness that borders on the unnatural before erupting into a blur of needle-claws. Unlike the wolf, the cat hunts for more than mere sustenance; they are practitioners of a cruel play, often toying with their quarry to test the limits of the creature\u2019s terror.\n\nIn the lore of the common folk, the cat is a bridge between worlds. It is widely whispered that they see the invisible threads of the ethereal, batting at spirits we cannot perceive. To harm one is to invite a decade of misfortune, for they are said to possess nine souls, each tethered to a different layer of the Great Beyond. Whether curled by a fire or prowling a moonlit battlement, the cat remains a silent observer of our follies\u2014a miniature tiger masquerading as a friend.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/cat.webp",
+  "bakedAt": 1767617866788
+}

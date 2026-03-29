@@ -1,0 +1,17 @@
+{
+  "index": "monk_unarmored_defense",
+  "class": {
+    "index": "monk",
+    "name": "monk",
+    "url": "public/assets/atlas/classes/monk"
+  },
+  "name": "unarmored defense",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier."
+  ],
+  "url": "public/assets/atlas/features/json/monk_unarmored_defense.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/monk_unarmored_defense.webp"
+}

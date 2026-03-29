@@ -1,0 +1,27 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "sailing_ship",
+  "name": "sailing ship",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Waterborne Vehicles",
+  "cost": {
+    "quantity": 10000,
+    "unit": "gp"
+  },
+  "speed": {
+    "quantity": 2,
+    "unit": "mph"
+  },
+  "url": "public/assets/atlas/equipment/json/sailing_ship.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/sailing_ship.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+}

@@ -1,0 +1,167 @@
+{
+  "index": "drow",
+  "name": "drow",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "elf",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 15,
+      "armor": [
+        {
+          "index": "chain_shirt",
+          "name": "chain shirt",
+          "url": "public/assets/atlas/equipment/charismain_shirt"
+        }
+      ]
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 14,
+  "constitution": 10,
+  "intelligence": 11,
+  "wisdom": 11,
+  "charisma": 12,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 12
+  },
+  "languages": "Elvish, Undercommon",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "fey ancestry",
+      "desc": "The drow has advantage on saving throws against being charmed, and magic can't put the drow to sleep.",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The drow's spellcasting ability is Charisma (spell save DC 11). It can innately cast the following spells, requiring no material components:\nAt will: dancing lights\n1/day each: darkness, faerie fire",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        },
+        "dc": 11,
+        "modifier": 0,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "dancing lights",
+            "level": 0,
+            "url": "public/assets/atlas/spells/dancing_lights",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "darkness",
+            "level": 2,
+            "url": "public/assets/atlas/spells/darkness",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "faerie fire",
+            "level": 1,
+            "url": "public/assets/atlas/spells/faerie_fire",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    },
+    {
+      "name": "sunlight sensitivity",
+      "desc": "While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "shortsword",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "hand crossbow",
+      "desc": "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be poisoned for 1 hour. If the saving throw fails by 5 or more, the target is also unconscious while poisoned in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/drow.png",
+  "url": "public/assets/atlas/monsters/drow",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "In the lightless reaches of the world\u2014far beneath the roots of the eldest oaks\u2014dwell the Drow. These obsidian-skinned scions of the deep inhabit sprawling cities carved from living stone, illuminated only by the cold, violet glow of eldritch fungi.\n\nAs predators, the Drow are unparalleled in their patient cruelty. They do not merely kill; they ensnare. Utilizing toxins distilled from the Underdark\u2019s most lethal vermin, they strike from the absolute silence of the void. A traveler may feel only a phantom prick before their limbs turn to lead, leaving them conscious but helpless as the \"Spider\u2019s Children\" descend to claim their prize.\n\nIn surface folklore, they are the *Ebon Wraiths*, the boogeymen of the midnight hour. Legends claim they are the shadows cast by elven pride, severed from the light and driven subterranean by ancient betrayals. To the common folk, they are a mythic terror used to quiet unruly children; to the seasoned explorer, they are the primary reason one never ventures into the deep without a cold iron blade and a prayer to the sun.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/drow.webp",
+  "bakedAt": 1767608059900
+}

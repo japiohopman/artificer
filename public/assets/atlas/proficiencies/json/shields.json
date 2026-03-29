@@ -1,0 +1,46 @@
+{
+  "index": "shields",
+  "type": "Armor",
+  "name": "shields",
+  "classes": [
+    {
+      "index": "barbarian",
+      "name": "barbarian",
+      "url": "public/assets/atlas/classes/barbarian"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    },
+    {
+      "index": "fighter",
+      "name": "fighter",
+      "url": "public/assets/atlas/classes/fighter"
+    },
+    {
+      "index": "paladin",
+      "name": "paladin",
+      "url": "public/assets/atlas/classes/paladin"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "public/assets/atlas/classes/ranger"
+    }
+  ],
+  "races": [],
+  "url": "public/assets/atlas/proficiencies/json/shields.json",
+  "reference": {
+    "index": "shield",
+    "name": "shield",
+    "url": "public/assets/atlas/equipment/shield"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/shields.webp"
+}

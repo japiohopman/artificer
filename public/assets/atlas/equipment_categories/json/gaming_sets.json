@@ -1,0 +1,19 @@
+{
+  "index": "gaming_sets",
+  "name": "gaming sets",
+  "equipment": [
+    {
+      "index": "dice_set",
+      "name": "dice set",
+      "url": "public/assets/atlas/equipment/dice_set"
+    },
+    {
+      "index": "playing_card_set",
+      "name": "playing card set",
+      "url": "public/assets/atlas/equipment/playing_card_set"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/gaming_sets.webp"
+}

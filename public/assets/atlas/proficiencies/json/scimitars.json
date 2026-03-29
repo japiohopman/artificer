@@ -1,0 +1,21 @@
+{
+  "index": "scimitars",
+  "type": "Weapons",
+  "name": "scimitars",
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    }
+  ],
+  "races": [],
+  "url": "public/assets/atlas/proficiencies/json/scimitars.json",
+  "reference": {
+    "index": "scimitar",
+    "name": "scimitar",
+    "url": "public/assets/atlas/equipment/scimitar"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/scimitars.webp"
+}

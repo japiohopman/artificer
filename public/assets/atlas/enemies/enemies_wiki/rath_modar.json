@@ -1,0 +1,68 @@
+{
+  "name": "rath modar",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "human",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "value": 13,
+      "type": "dexterity"
+    },
+    {
+      "value": 16,
+      "type": "spell",
+      "desc": "with mage armor"
+    }
+  ],
+  "hit_points": 71,
+  "hit_dice": "11d8 + 22",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 16,
+  "constitution": 14,
+  "intelligence": 18,
+  "wisdom": 14,
+  "charisma": 10,
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "Common, Draconic, Infernal, Primordial, Thayan",
+  "challenge_rating": 6,
+  "xp": 2300,
+  "special_abilities": [
+    {
+      "name": "special equipment",
+      "desc": "Rath has a staff of fire and three scrolls: dimension door, feather fall, and fireball."
+    },
+    {
+      "name": "spellcasting",
+      "desc": "Rath is an 11th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 15, +7 to hit with spell attacks). He has the following wizard spells prepared:\nCantrips (at will): fire bolt, minor illusion, prestidigitation, shocking grasp\n1st level (4 slots): chromatic orb, color spray, mage armor, magic missile\n2nd level (3 slots): detect thoughts, mirror image, phantasmal force\n3rd level (3 slots): counterspell, fireball, major image\n4th level (3 slots): confusion, greater invisibility\n5th level (2 slots): mislead, seeming\n6th level (1 slot): globe of invulnerability"
+    }
+  ],
+  "actions": [
+    {
+      "name": "quarterstaff",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 3 (1d6) bludgeoning damage, or 4 (1d8) bludgeoning damage when used with two hands."
+    }
+  ],
+  "reactions": [
+    {
+      "name": "illusory self",
+      "desc": "When a creature Rath can see makes an attack roll against him, he can interpose an illusory duplicate between the attacker and himself. The attack automatically misses Rath, then the illusion dissipates.",
+      "usage": {
+        "type": "recharge on rest",
+        "rest_types": [
+          "short",
+          "long"
+        ]
+      }
+    }
+  ],
+  "index": "rath_modar",
+  "lore": "To the unwary, the Rath Modar appears as a mere shimmer of crimson silk amidst the dust of forgotten vaults. It dwells where wisdom has curdled into obsession\u2014ruined libraries and the lightless scriptoriums of fallen kings.\n\nThis entity does not hunger for meat, but for the spark of intellect. It is a predator of the psyche, weaving elaborate illusions of grandeur to lure the ambitious into a catatonic trance. Once ensnared, the victim\u2019s memories are sipped away like vintage wine, leaving behind a hollow shell of a man who can no longer remember his own mother\u2019s face.\n\nLocal folklore speaks of the \"Crimson Scholar,\" a phantom who trades forbidden secrets for the very essence of the seeker. Villagers in the shadow of the jagged peaks claim that to hear its whisper is to lose your name to the wind. If you find a tome bound in red leather that feels warm to the touch, leave it untouched; the Rath Modar has already begun to write your ending.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/rath_modar.webp",
+  "bakedAt": 1767616510603
+}

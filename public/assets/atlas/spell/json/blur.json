@@ -1,0 +1,51 @@
+{
+  "higher_level": [],
+  "index": "blur",
+  "name": "blur",
+  "desc": [
+    "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight."
+  ],
+  "range": "Self",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "illusion",
+    "name": "illusion",
+    "url": "public/assets/atlas/magic_schools/illusion"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "land",
+      "url": "public/assets/atlas/subclasses/land"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/blur.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/blur.webp",
+  "sprite_index": 7,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet2.webp"
+}

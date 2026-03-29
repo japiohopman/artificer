@@ -1,0 +1,40 @@
+{
+  "index": "elf_weapon_training",
+  "races": [],
+  "subraces": [
+    {
+      "index": "high_elf",
+      "name": "high elf",
+      "url": "public/assets/atlas/subraces/high_elf"
+    }
+  ],
+  "name": "elf weapon training",
+  "desc": [
+    "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+  ],
+  "proficiencies": [
+    {
+      "index": "longswords",
+      "name": "longswords",
+      "url": "public/assets/atlas/proficiencies/longswords"
+    },
+    {
+      "index": "shortswords",
+      "name": "shortswords",
+      "url": "public/assets/atlas/proficiencies/shortswords"
+    },
+    {
+      "index": "shortbows",
+      "name": "shortbows",
+      "url": "public/assets/atlas/proficiencies/shortbows"
+    },
+    {
+      "index": "longbows",
+      "name": "longbows",
+      "url": "public/assets/atlas/proficiencies/longbows"
+    }
+  ],
+  "url": "public/assets/atlas/traits/json/elf_weapon_training.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "public/assets/atlas/traits/elf_weapon_training.webp"
+}

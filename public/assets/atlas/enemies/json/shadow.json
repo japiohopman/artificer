@@ -1,0 +1,143 @@
+{
+  "index": "shadow",
+  "name": "shadow",
+  "size": "Medium",
+  "type": "undead",
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "hit_points": 16,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8+3",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 6,
+  "dexterity": 14,
+  "constitution": 13,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 8,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [
+    "radiant"
+  ],
+  "damage_resistances": [
+    "acid",
+    "cold",
+    "fire",
+    "lightning",
+    "thunder",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "public/assets/atlas/constitutionditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    },
+    {
+      "index": "grappled",
+      "name": "grappled",
+      "url": "public/assets/atlas/constitutionditions/grappled"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "public/assets/atlas/constitutionditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "petrified",
+      "url": "public/assets/atlas/constitutionditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    },
+    {
+      "index": "prone",
+      "name": "prone",
+      "url": "public/assets/atlas/constitutionditions/prone"
+    },
+    {
+      "index": "restrained",
+      "name": "restrained",
+      "url": "public/assets/atlas/constitutionditions/restrained"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "amorphous",
+      "desc": "The shadow can move through a space as narrow as 1 inch wide without squeezing.",
+      "damage": []
+    },
+    {
+      "name": "shadow stealth",
+      "desc": "While in dim light or darkness, the shadow can take the Hide action as a bonus action. Its stealth bonus is also improved to +6.",
+      "damage": []
+    },
+    {
+      "name": "sunlight weakness",
+      "desc": "While in sunlight, the shadow has disadvantage on attack rolls, ability checks, and saving throws.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "strength drain",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 9 (2d6 + 2) necrotic damage, and the target's Strength score is reduced by 1d4. The target dies if this reduces its Strength to 0. Otherwise, the reduction lasts until the target finishes a short or long rest.\nIf a non-evil humanoid dies from this attack, a new shadow rises from the corpse 1d4 hours later.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "public/assets/atlas/damage_types/necrotic"
+          },
+          "damage_dice": "2d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/shadow.webp",
+  "url": "public/assets/atlas/enemies/json/shadow.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 0,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+}

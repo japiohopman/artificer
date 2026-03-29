@@ -1,0 +1,21 @@
+{
+  "index": "plate_armor_of_etherealness",
+  "name": "plate armor of etherealness",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "public/assets/atlas/equipment_categories/armor"
+  },
+  "rarity": {
+    "name": "legendary"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Armor (plate), legendary (requires attunement)",
+    "While you're wearing this armor, you can speak its command word as an action to gain the effect of the etherealness spell, which last for 10 minutes or until you remove the armor or use an action to speak the command word again. This property of the armor can't be used again until the next dawn."
+  ],
+  "url": "public/assets/atlas/magic_items/json/plate_armor_of_etherealness.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/plate_armor_of_etherealness.webp"
+}

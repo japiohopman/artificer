@@ -1,0 +1,57 @@
+{
+  "higher_level": [],
+  "index": "vicious_mockery",
+  "name": "vicious mockery",
+  "desc": [
+    "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.",
+    "This spell's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4)."
+  ],
+  "range": "60 feet",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "damage": {
+    "damage_type": {
+      "index": "psychic",
+      "name": "psychic",
+      "url": "public/assets/atlas/damage_types/psychic"
+    },
+    "damage_at_character_level": {
+      "1": "1d4",
+      "5": "2d4",
+      "11": "3d4",
+      "17": "4d4"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "wis",
+      "url": "public/assets/atlas/ability_scores/wisdom"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "enchantment",
+    "name": "enchantment",
+    "url": "public/assets/atlas/magic_schools/enchantment"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    }
+  ],
+  "subclasses": [],
+  "url": "public/assets/atlas/spell/json/vicious_mockery.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/vicious_mockery.webp",
+  "sprite_index": 3,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet13.webp"
+}

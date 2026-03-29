@@ -1,0 +1,26 @@
+{
+  "special": [],
+  "index": "bagpipes",
+  "name": "bagpipes",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "public/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Musical Instrument",
+  "cost": {
+    "quantity": 30,
+    "unit": "gp"
+  },
+  "weight": 6,
+  "desc": [
+    "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+  ],
+  "url": "public/assets/atlas/equipment/json/bagpipes.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/bagpipes.webp",
+  "sprite_index": 10,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp"
+}

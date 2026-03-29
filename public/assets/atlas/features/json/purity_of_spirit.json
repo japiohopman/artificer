@@ -1,0 +1,22 @@
+{
+  "index": "purity_of_spirit",
+  "class": {
+    "index": "paladin",
+    "name": "paladin",
+    "url": "public/assets/atlas/classes/paladin"
+  },
+  "subclass": {
+    "index": "devotion",
+    "name": "devotion",
+    "url": "public/assets/atlas/subclasses/devotion"
+  },
+  "name": "purity of spirit",
+  "level": 15,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 15th level, you are always under the effects of a protection from evil and good spell."
+  ],
+  "url": "public/assets/atlas/features/json/purity_of_spirit.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/purity_of_spirit.webp"
+}

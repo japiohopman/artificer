@@ -1,0 +1,18 @@
+{
+  "index": "diamond_soul",
+  "class": {
+    "index": "monk",
+    "name": "monk",
+    "url": "public/assets/atlas/classes/monk"
+  },
+  "name": "diamond soul",
+  "level": 14,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 14th level, your mastery of ki grants you proficiency in all saving throws.",
+    "Additionally, whenever you make a saving throw and fail, you can spend 1 ki point to reroll it and take the second result."
+  ],
+  "url": "public/assets/atlas/features/json/diamond_soul.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/diamond_soul.webp"
+}

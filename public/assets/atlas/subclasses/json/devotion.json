@@ -1,0 +1,169 @@
+{
+  "index": "devotion",
+  "class": {
+    "index": "paladin",
+    "name": "paladin",
+    "url": "public/assets/atlas/classes/paladin"
+  },
+  "name": "devotion",
+  "subclass_flavor": "Sacred Oath",
+  "desc": [
+    "The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order. Sometimes called cavaliers, white knights, or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good and use their gods' tenets as the measure of their devotion. They hold angels--the perfect servants of good--as their ideals, and incorporate images of angelic wings into their helmets or coats of arms."
+  ],
+  "spells": [
+    {
+      "prerequisites": [
+        {
+          "index": "paladin_3",
+          "type": "level",
+          "name": "paladin 3",
+          "url": "public/assets/atlas/classes/paladin/levels/3"
+        }
+      ],
+      "spell": {
+        "index": "protection_from_evil_and_good",
+        "name": "protection from evil and good",
+        "url": "public/assets/atlas/spells/protection_from_evil_and_good"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "paladin_3",
+          "type": "level",
+          "name": "paladin 3",
+          "url": "public/assets/atlas/classes/paladin/levels/3"
+        }
+      ],
+      "spell": {
+        "index": "sanctuary",
+        "name": "sanctuary",
+        "url": "public/assets/atlas/spells/sanctuary"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "paladin_5",
+          "type": "level",
+          "name": "paladin 5",
+          "url": "public/assets/atlas/classes/paladin/levels/5"
+        }
+      ],
+      "spell": {
+        "index": "lesser_restoration",
+        "name": "lesser restoration",
+        "url": "public/assets/atlas/spells/lesser_restoration"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "paladin_5",
+          "type": "level",
+          "name": "paladin 5",
+          "url": "public/assets/atlas/classes/paladin/levels/5"
+        }
+      ],
+      "spell": {
+        "index": "zone_of_truth",
+        "name": "zone of truth",
+        "url": "public/assets/atlas/spells/zone_of_truth"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "paladin_9",
+          "type": "level",
+          "name": "paladin 9",
+          "url": "public/assets/atlas/classes/paladin/levels/9"
+        }
+      ],
+      "spell": {
+        "index": "beacon_of_hope",
+        "name": "beacon of hope",
+        "url": "public/assets/atlas/spells/beacon_of_hope"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "paladin_9",
+          "type": "level",
+          "name": "paladin 9",
+          "url": "public/assets/atlas/classes/paladin/levels/9"
+        }
+      ],
+      "spell": {
+        "index": "dispel_magic",
+        "name": "dispel magic",
+        "url": "public/assets/atlas/spells/dispel_magic"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "paladin_13",
+          "type": "level",
+          "name": "paladin 13",
+          "url": "public/assets/atlas/classes/paladin/levels/13"
+        }
+      ],
+      "spell": {
+        "index": "freedom_of_movement",
+        "name": "freedom of movement",
+        "url": "public/assets/atlas/spells/freedom_of_movement"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "paladin_13",
+          "type": "level",
+          "name": "paladin 13",
+          "url": "public/assets/atlas/classes/paladin/levels/13"
+        }
+      ],
+      "spell": {
+        "index": "guardian_of_faith",
+        "name": "guardian of faith",
+        "url": "public/assets/atlas/spells/guardian_of_faith"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "paladin_17",
+          "type": "level",
+          "name": "paladin 17",
+          "url": "public/assets/atlas/classes/paladin/levels/17"
+        }
+      ],
+      "spell": {
+        "index": "commune",
+        "name": "commune",
+        "url": "public/assets/atlas/spells/commune"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "paladin_17",
+          "type": "level",
+          "name": "paladin 17",
+          "url": "public/assets/atlas/classes/paladin/levels/17"
+        }
+      ],
+      "spell": {
+        "index": "flame_strike",
+        "name": "flame strike",
+        "url": "public/assets/atlas/spells/flame_strike"
+      }
+    }
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/devotion/levels",
+  "url": "public/assets/atlas/subclasses/json/devotion.json",
+  "updated_at": "2025-10-24T20:42:14.748Z",
+  "image": "public/assets/atlas/subclasses/devotion.webp"
+}

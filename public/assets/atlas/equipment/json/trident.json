@@ -1,0 +1,60 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "trident",
+  "name": "trident",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "public/assets/atlas/damage_types/piercing"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 4,
+  "properties": [
+    {
+      "index": "thrown",
+      "name": "thrown",
+      "url": "public/assets/atlas/weapon_properties/thrown"
+    },
+    {
+      "index": "versatile",
+      "name": "versatile",
+      "url": "public/assets/atlas/weapon_properties/versatile"
+    }
+  ],
+  "throw_range": {
+    "normal": 20,
+    "long": 60
+  },
+  "two_handed_damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "public/assets/atlas/damage_types/piercing"
+    }
+  },
+  "url": "public/assets/atlas/equipment/json/trident.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "public/assets/atlas/equipment/trident.webp",
+  "sprite_index": 20,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+}

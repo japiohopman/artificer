@@ -1,0 +1,76 @@
+{
+  "index": "giant_poisonous_snake",
+  "name": "giant poisonous snake",
+  "size": "Medium",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 14
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8+2",
+  "speed": {
+    "walk": "30 ft.",
+    "swim": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 18,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 3,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "passive_perception": 12
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 10 ft., one target. Hit: 6 (1d4 + 4) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d4+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/giant_poisonous_snake.png",
+  "url": "public/assets/atlas/monsters/giant_poisonous_snake",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "lore": "Known to the marsh-dwellers as the \"Emerald Strangler,\" the Giant Poisonous Snake is a marvel of lethal elegance. These serpents haunt the humid depths of the Elder-Wilds, where their iridescent scales mimic the dappled sunlight filtering through the canopy. Unlike their smaller kin, these behemoths do not merely strike; they haunt.\n\nTheir predatory behavior is a masterclass in patience. Using heat-sensing pits to track the pulse of warm-blooded prey, they remain motionless for days, appearing as nothing more than a moss-slicked log. When they strike, it is with the force of a falling hammer. Their venom is a specialized neurotoxin that does not kill instantly; instead, it induces a waking paralysis, allowing the serpent to follow the staggering victim until they collapse in a silent, helpless heap.\n\nIn local folklore, the serpent is whispered to be the \"Jailer of the Sunken Ruins,\" a guardian spirit bound to protect the gold of forgotten kings. Travelers are warned that to hear the dry rattle of its scales is to hear the tolling of one\u2019s own funeral bell\u2014a sign that the forest has judged you and found you wanting.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/giant-poisonous-snake.webp",
+  "bakedAt": 1767620843028
+}

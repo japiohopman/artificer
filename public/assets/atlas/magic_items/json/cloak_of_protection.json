@@ -1,0 +1,21 @@
+{
+  "index": "cloak_of_protection",
+  "name": "cloak of protection",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, uncommon (requires attunement)",
+    "You gain a +1 bonus to AC and saving throws while you wear this cloak."
+  ],
+  "image": "public/assets/atlas/magic_items/cloak_of_protection.webp",
+  "url": "public/assets/atlas/magic_items/json/cloak_of_protection.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

@@ -1,0 +1,50 @@
+{
+  "name": "combat",
+  "index": "combat",
+  "desc": "# Combat\n",
+  "subsections": [
+    {
+      "name": "the order of combat",
+      "index": "the_order_of_combat",
+      "url": "public/assets/atlas/rule_sections/the_order_of_combat"
+    },
+    {
+      "name": "movement and position",
+      "index": "movement_and_position",
+      "url": "public/assets/atlas/rule_sections/movement_and_position"
+    },
+    {
+      "name": "actions in combat",
+      "index": "actions_in_combat",
+      "url": "public/assets/atlas/rule_sections/actions_in_combat"
+    },
+    {
+      "name": "making an attack",
+      "index": "making_an_attack",
+      "url": "public/assets/atlas/rule_sections/making_an_attack"
+    },
+    {
+      "name": "cover",
+      "index": "cover",
+      "url": "public/assets/atlas/rule_sections/cover"
+    },
+    {
+      "name": "damage and healing",
+      "index": "damage_and_healing",
+      "url": "public/assets/atlas/rule_sections/damage_and_healing"
+    },
+    {
+      "name": "mounted combat",
+      "index": "mounted_combat",
+      "url": "public/assets/atlas/rule_sections/mounted_combat"
+    },
+    {
+      "name": "underwater combat",
+      "index": "underwater_combat",
+      "url": "public/assets/atlas/rule_sections/underwater_combat"
+    }
+  ],
+  "url": "public/assets/atlas/rules/json/combat.json",
+  "updated_at": "2025-10-24T20:42:14.409Z",
+  "image": "public/assets/atlas/rules/combat.webp"
+}

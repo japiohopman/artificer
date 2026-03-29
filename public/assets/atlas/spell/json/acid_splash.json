@@ -1,0 +1,69 @@
+{
+  "higher_level": [],
+  "index": "acid_splash",
+  "name": "acid splash",
+  "desc": [
+    "You hurl a bubble of acid. Choose one creature within range, or choose two creatures within range that are within 5 feet of each other. A target must succeed on a dexterity saving throw or take 1d6 acid damage.",
+    "This spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
+  ],
+  "range": "60 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "damage": {
+    "damage_type": {
+      "index": "acid",
+      "name": "acid",
+      "url": "public/assets/atlas/damage_types/acid"
+    },
+    "damage_at_character_level": {
+      "1": "1d6",
+      "5": "2d6",
+      "11": "3d6",
+      "17": "4d6"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "dex",
+      "url": "public/assets/atlas/ability_scores/dexterity"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "conjuration",
+    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/acid_splash.json",
+  "updated_at": "2025-10-24T20:42:14.618Z",
+  "image": "public/assets/atlas/spell/acid_splash.webp",
+  "sprite_index": 1,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet1.webp"
+}

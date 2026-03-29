@@ -1,0 +1,22 @@
+{
+  "index": "ranger_fighting_style_defense",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "public/assets/atlas/classes/ranger"
+  },
+  "name": "fighting style: defense",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "While you are wearing armor, you gain a +1 bonus to AC."
+  ],
+  "parent": {
+    "index": "ranger_fighting_style",
+    "name": "fighting style",
+    "url": "public/assets/atlas/features/ranger_fighting_style"
+  },
+  "url": "public/assets/atlas/features/json/ranger_fighting_style_defense.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/ranger_fighting_style_defense.webp"
+}

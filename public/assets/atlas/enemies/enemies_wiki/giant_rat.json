@@ -1,0 +1,77 @@
+{
+  "index": "giant_rat",
+  "name": "giant rat",
+  "size": "Small",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "hit_points": 7,
+  "hit_dice": "2d6",
+  "hit_points_roll": "2d6",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 7,
+  "dexterity": 15,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 4,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [
+    {
+      "name": "keen smell",
+      "desc": "The rat has advantage on Wisdom (Perception) checks that rely on smell.",
+      "damage": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The rat has advantage on an attack roll against a creature if at least one of the rat's allies is within 5 ft. of the creature and the ally isn't incapacitated.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/giant_rat.png",
+  "url": "public/assets/atlas/monsters/giant_rat",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The *Rattus Gigantus*, or the Common Scourge, is a testament to nature\u2019s cruel adaptability. These vermin shun the sun, thriving in the damp darkness of city sewers, forgotten catacombs, and the rotting foundations of derelict manors. Where there is filth, they find a feast.\n\nUnlike their smaller kin, the Giant Rat is a bold, pack-oriented predator. They do not merely scavenge; they hunt with a chilling, synchronized patience. An adventurer might hear only a faint skittering before the \"living tide\" emerges\u2014a wave of matted fur and yellowed incisors. They target the hamstrings of the weary, dragging their prey into the shadows to be consumed in a chorus of high-pitched chitters.\n\nLocal folklore paints them as more than mere beasts. Old wives whisper of \"The Piper\u2019s Debt,\" claiming these rats are the vengeful spirits of those forgotten by society. To see one in daylight is a grim omen of impending plague. In the deeper warrens, tales persist of the \"Rat King\"\u2014a multi-headed abomination bound by tangled tails, said to command the swarm with a malevolent, hive-like intelligence. Watch your ankles, traveler; the shadows have teeth.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/giant-rat.webp",
+  "bakedAt": 1767696074926
+}

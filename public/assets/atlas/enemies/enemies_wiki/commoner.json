@@ -1,0 +1,67 @@
+{
+  "index": "commoner",
+  "name": "commoner",
+  "desc": "Commoners include peasants, serfs, slaves, servants, pilgrims, merchants, artisans, and hermits.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 10
+    }
+  ],
+  "hit_points": 4,
+  "hit_dice": "1d8",
+  "hit_points_roll": "1d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 10,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "actions": [
+    {
+      "name": "club",
+      "desc": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/commoner.png",
+  "url": "public/assets/atlas/monsters/commoner",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "lore": "The *Homo Vulgaris*, or \"Commoner,\" is the most pervasive and deceptively resilient organism in the known realms. They thrive in nearly any climate, huddling in thatch-roofed clusters or the soot-stained crevices of urban centers. While individually fragile, their strength lies in their staggering density.\n\nTheir predatory nature is not one of claw or venom, but of slow, environmental consumption. They hunt by \"settlement\"\u2014a relentless siege that strips the land of timber and replaces the wild meadow with the monotonous geometry of grain. However, one must beware the \"Mob-Mind.\" When provoked, these docile creatures undergo a terrifying metamorphosis, merging into a singular, many-headed beast capable of toppling fortresses that dragons would shun.\n\nIn local folklore, they are the \"Salt of the Earth,\" whispered to be the hidden eyes of the gods. Legends warn that to spill the blood of a commoner is to invite the \"Curse of the Hearth,\" for they are the foundation upon which all history is built. Adventurers often overlook them, yet it is the commoner who ultimately consumes the world, one furrow at a time.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/commoner.webp",
+  "bakedAt": 1767622227539
+}

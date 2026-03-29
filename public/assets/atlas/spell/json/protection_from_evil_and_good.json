@@ -1,0 +1,65 @@
+{
+  "higher_level": [],
+  "index": "protection_from_evil_and_good",
+  "name": "protection from evil and good",
+  "desc": [
+    "Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead.",
+    "The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can't be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Holy water or powdered silver and iron, which the spell consumes.",
+  "ritual": false,
+  "duration": "Up to 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "abjuration",
+    "name": "abjuration",
+    "url": "public/assets/atlas/magic_schools/abjuration"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "paladin",
+      "name": "paladin",
+      "url": "public/assets/atlas/classes/paladin"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "public/assets/atlas/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    },
+    {
+      "index": "devotion",
+      "name": "devotion",
+      "url": "public/assets/atlas/subclasses/devotion"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/protection_from_evil_and_good.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/protection_from_evil_and_good.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet10.webp"
+}

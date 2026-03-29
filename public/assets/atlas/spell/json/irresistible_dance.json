@@ -1,0 +1,41 @@
+{
+  "higher_level": [],
+  "index": "irresistible_dance",
+  "name": "irresistible dance",
+  "desc": [
+    "Choose one creature that you can see within range. The target begins a comic dance in place: shuffling, tapping its feet, and capering for the duration. Creatures that can't be charmed are immune to this spell.",
+    "A dancing creature must use all its movement to dance without leaving its space and has disadvantage on dexterity saving throws and attack rolls. While the target is affected by this spell, other creatures have advantage on attack rolls against it. As an action, a dancing creature makes a wisdom saving throw to regain control of itself. On a successful save, the spell ends."
+  ],
+  "range": "30 feet",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 6,
+  "school": {
+    "index": "enchantment",
+    "name": "enchantment",
+    "url": "public/assets/atlas/magic_schools/enchantment"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "public/assets/atlas/spell/json/irresistible_dance.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/irresistible_dance.webp",
+  "sprite_index": 23,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet7.webp"
+}

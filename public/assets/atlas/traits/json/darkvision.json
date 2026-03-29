@@ -1,0 +1,44 @@
+{
+  "index": "darkvision",
+  "races": [
+    {
+      "index": "dwarf",
+      "name": "dwarf",
+      "url": "public/assets/atlas/races/dwarf"
+    },
+    {
+      "index": "elf",
+      "name": "elf",
+      "url": "public/assets/atlas/races/elf"
+    },
+    {
+      "index": "gnome",
+      "name": "gnome",
+      "url": "public/assets/atlas/races/gnome"
+    },
+    {
+      "index": "half_elf",
+      "name": "half_elf",
+      "url": "public/assets/atlas/races/half_elf"
+    },
+    {
+      "index": "half_orc",
+      "name": "half_orc",
+      "url": "public/assets/atlas/races/half_orc"
+    },
+    {
+      "index": "tiefling",
+      "name": "tiefling",
+      "url": "public/assets/atlas/races/tiefling"
+    }
+  ],
+  "subraces": [],
+  "name": "darkvision",
+  "desc": [
+    "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray."
+  ],
+  "proficiencies": [],
+  "url": "public/assets/atlas/traits/json/darkvision.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "public/assets/atlas/traits/darkvision.webp"
+}

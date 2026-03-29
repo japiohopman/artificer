@@ -1,0 +1,35 @@
+{
+  "index": "noble",
+  "name": "noble",
+  "starting_proficiencies": [
+    {
+      "index": "skill_history",
+      "name": "history",
+      "url": ""
+    },
+    {
+      "index": "skill_persuasion",
+      "name": "persuasion",
+      "url": ""
+    }
+  ],
+  "tool_proficiencies": [
+    "One type of gaming set"
+  ],
+  "languages": "One of your choice",
+  "equipment": [
+    "Set of fine clothes",
+    "A signet ring",
+    "A scroll of pedigree",
+    "Pouch with 25 gp"
+  ],
+  "feature": {
+    "name": "position of privilege",
+    "desc": [
+      "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere."
+    ]
+  },
+  "lore": "The Noble is a creature birthed of silken cradles and marbled halls. Their ecology is one of curated refinement, thriving in the rarefied air of high courts where a whispered word cuts deeper than a dagger. Unlike the commoner rooted in the soil, the Noble is rooted in lineage; their territory is defined not by fences, but by heraldry and ancient land-grants.\n\nIn behavior, they are the apex predators of the social strata. They move with a practiced, effortless grace, their voices carrying the resonance of inherited command. Even when treading the muck of an adventuring trail, they carry their environment with them\u2014a shimmering aura of expectation and duty. They are governed by complex rituals of etiquette, viewing the world as a grand chessboard. To a Noble, every soul encountered is either a vassal to be protected, a peer to be outmaneuvered, or a pawn to be placed.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/background/noble.webp",
+  "bakedAt": 1767703994511
+}

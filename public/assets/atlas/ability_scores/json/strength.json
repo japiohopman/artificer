@@ -1,0 +1,19 @@
+{
+  "index": "str",
+  "name": "str",
+  "full_name": "Strength",
+  "desc": [
+    "Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.",
+    "A Strength check can model any attempt to lift, push, pull, or break something, to force your body through a space, or to otherwise apply brute force to a situation. The Athletics skill reflects aptitude in certain kinds of Strength checks."
+  ],
+  "skills": [
+    {
+      "name": "athletics",
+      "index": "athletics",
+      "url": "public/assets/atlas/skills/athletics"
+    }
+  ],
+  "url": "public/assets/atlas/ability_scores/json/strengthength.json",
+  "updated_at": "2025-10-24T20:42:12.129Z",
+  "image": "public/assets/atlas/ability_scores/strength.webp"
+}

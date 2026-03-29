@@ -1,0 +1,41 @@
+{
+  "index": "saving_throw_cha",
+  "type": "Saving Throws",
+  "name": "saving throw: cha",
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "paladin",
+      "name": "paladin",
+      "url": "public/assets/atlas/classes/paladin"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "public/assets/atlas/classes/warlock"
+    }
+  ],
+  "races": [],
+  "url": "public/assets/atlas/proficiencies/json/saving_throw_cha.json",
+  "reference": {
+    "index": "cha",
+    "name": "cha",
+    "url": "public/assets/atlas/ability_scores/charisma"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/saving_throw_cha.webp"
+}

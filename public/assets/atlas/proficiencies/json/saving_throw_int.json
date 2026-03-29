@@ -1,0 +1,31 @@
+{
+  "index": "saving_throw_int",
+  "type": "Saving Throws",
+  "name": "saving throw: int",
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    },
+    {
+      "index": "rogue",
+      "name": "rogue",
+      "url": "public/assets/atlas/classes/rogue"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "races": [],
+  "url": "public/assets/atlas/proficiencies/json/saving_throw_int.json",
+  "reference": {
+    "index": "int",
+    "name": "int",
+    "url": "public/assets/atlas/ability_scores/intelligence"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/saving_throw_int.webp"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "gem_of_seeing",
+  "name": "gem of seeing",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, rare (requires attunement)",
+    "This gem has 3 charges. As an action, you can speak the gem's command word and expend 1 charge. For the next 10 minutes, you have truesight out to 120 feet when you peer through the gem.",
+    "The gem regains 1d3 expended charges daily at dawn."
+  ],
+  "url": "public/assets/atlas/magic_items/json/gem_of_seeing.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/gem_of_seeing.webp"
+}

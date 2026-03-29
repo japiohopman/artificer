@@ -1,0 +1,34 @@
+{
+  "special": [],
+  "index": "oil_flask",
+  "name": "oil (flask)",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "public/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "sp"
+  },
+  "weight": 1,
+  "desc": [
+    "Oil usually comes in a clay flask that holds 1 pint.",
+    "As an action, you can splash the oil in this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. Make a ranged attack against a target creature or object, treating the oil as an improvised weapon.",
+    "On a hit, the target is covered in oil. If the target takes any fire damage before the oil dries (after 1 minute), the target takes an additional 5 fire damage from the burning oil.",
+    "You can also pour a flask of oil on the ground to cover a 5-foot-square area, provided that the surface is level.",
+    "If lit, the oil burns for 2 rounds and deals 5 fire damage to any creature that enters the area or ends its turn in the area. A creature can take this damage only once per turn."
+  ],
+  "url": "public/assets/atlas/equipment/json/oil_flask.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/oil_flask.webp",
+  "sprite_index": 20,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+}

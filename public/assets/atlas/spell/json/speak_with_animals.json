@@ -1,0 +1,52 @@
+{
+  "higher_level": [],
+  "index": "speak_with_animals",
+  "name": "speak with animals",
+  "desc": [
+    "You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at a minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the GM's discretion."
+  ],
+  "range": "Self",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": true,
+  "duration": "10 minutes",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "divination",
+    "name": "divination",
+    "url": "public/assets/atlas/magic_schools/divination"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "public/assets/atlas/classes/ranger"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/speak_with_animals.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/speak_with_animals.webp",
+  "sprite_index": 21,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet11.webp"
+}

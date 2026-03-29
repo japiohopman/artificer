@@ -1,0 +1,24 @@
+{
+  "index": "fey_ancestry",
+  "races": [
+    {
+      "index": "elf",
+      "name": "elf",
+      "url": "public/assets/atlas/races/elf"
+    },
+    {
+      "index": "half_elf",
+      "name": "half_elf",
+      "url": "public/assets/atlas/races/half_elf"
+    }
+  ],
+  "subraces": [],
+  "name": "fey ancestry",
+  "desc": [
+    "You have advantage on saving throws against being charmed, and magic cannot put you to sleep."
+  ],
+  "proficiencies": [],
+  "url": "public/assets/atlas/traits/json/fey_ancestry.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "public/assets/atlas/traits/fey_ancestry.webp"
+}

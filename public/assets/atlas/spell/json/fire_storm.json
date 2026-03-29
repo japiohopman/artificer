@@ -1,0 +1,69 @@
+{
+  "higher_level": [],
+  "index": "fire_storm",
+  "name": "fire storm",
+  "desc": [
+    "A storm made up of sheets of roaring flame appears in a location you choose within range. The area of the storm consists of up to ten 10-foot cubes, which you can arrange as you wish. Each cube must have at least one face adjacent to the face of another cube. Each creature in the area must make a dexterity saving throw. It takes 7d10 fire damage on a failed save, or half as much damage on a successful one.",
+    "The fire damages objects in the area and ignites flammable objects that aren't being worn or carried. If you choose, plant life in the area is unaffected by this spell."
+  ],
+  "range": "150 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 7,
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "fire",
+      "url": "public/assets/atlas/damage_types/fire"
+    },
+    "damage_at_slot_level": {
+      "7": "7d10"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "dex",
+      "url": "public/assets/atlas/ability_scores/dexterity"
+    },
+    "dc_success": "half"
+  },
+  "area_of_effect": {
+    "type": "cube",
+    "size": 100
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "public/assets/atlas/magic_schools/evocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    }
+  ],
+  "subclasses": [],
+  "url": "public/assets/atlas/spell/json/fire_storm.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/fire_storm.webp",
+  "sprite_index": 17,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet5.webp"
+}

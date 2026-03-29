@@ -1,0 +1,28 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "horse_riding",
+  "name": "horse, riding",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 75,
+    "unit": "gp"
+  },
+  "speed": {
+    "quantity": 60,
+    "unit": "ft/round"
+  },
+  "capacity": "480 lb.",
+  "url": "public/assets/atlas/equipment/json/horse_riding.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/horse_riding.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp"
+}

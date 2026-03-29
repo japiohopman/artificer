@@ -1,0 +1,21 @@
+{
+  "index": "weapon_3",
+  "name": "weapon, +3",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "rarity": {
+    "name": "very rare"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Weapon (any), very rare",
+    "You have a +3 bonus to attack and damage rolls made with this magic weapon."
+  ],
+  "url": "public/assets/atlas/magic_items/json/weapon_3.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/weapon_3.webp"
+}

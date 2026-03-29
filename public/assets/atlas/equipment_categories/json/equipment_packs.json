@@ -1,0 +1,44 @@
+{
+  "index": "equipment_packs",
+  "name": "equipment packs",
+  "equipment": [
+    {
+      "index": "burglars_pack",
+      "name": "burglar's pack",
+      "url": "public/assets/atlas/equipment/burglars_pack"
+    },
+    {
+      "index": "diplomats_pack",
+      "name": "diplomat's pack",
+      "url": "public/assets/atlas/equipment/diplomats_pack"
+    },
+    {
+      "index": "dungeoneers_pack",
+      "name": "dungeoneer's pack",
+      "url": "public/assets/atlas/equipment/dungeoneers_pack"
+    },
+    {
+      "index": "entertainers_pack",
+      "name": "entertainer's pack",
+      "url": "public/assets/atlas/equipment/entertainers_pack"
+    },
+    {
+      "index": "explorers_pack",
+      "name": "explorer's pack",
+      "url": "public/assets/atlas/equipment/explorers_pack"
+    },
+    {
+      "index": "priests_pack",
+      "name": "priest's pack",
+      "url": "public/assets/atlas/equipment/priests_pack"
+    },
+    {
+      "index": "scholars_pack",
+      "name": "scholar's pack",
+      "url": "public/assets/atlas/equipment/scholars_pack"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/equipment_packs.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/equipment_packs.webp"
+}

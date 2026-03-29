@@ -1,0 +1,17 @@
+{
+  "id": "myth_drannor",
+  "name": "myth drannor",
+  "terrain": "Elven Forest",
+  "path": "central_faerun/cormanthor/myth_drannor",
+  "bg": "public/assets/atlas/toril/faerun/central_faerun/cormanthor/myth_drannor.webp",
+  "ambient": "fey_forest",
+  "availableShops": [
+    "Elven Shop",
+    "Arcane Shop",
+    "Enchanter",
+    "Alchemist",
+    "Fletcher",
+    "Stable"
+  ],
+  "lastUpdated": "2026-03-23T11:27:01.698Z"
+}

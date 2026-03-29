@@ -1,0 +1,92 @@
+{
+  "index": "boar",
+  "name": "boar",
+  "size": "Medium",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8+2",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 13,
+  "dexterity": 11,
+  "constitution": 12,
+  "intelligence": 2,
+  "wisdom": 9,
+  "charisma": 5,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "charge",
+      "desc": "If the boar moves at least 20 ft. straight toward a target and then hits it with a tusk attack on the same turn, the target takes an extra 3 (1d6) slashing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.",
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "1d6"
+        }
+      ]
+    },
+    {
+      "name": "relentless",
+      "desc": "If the boar takes 7 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.",
+      "usage": {
+        "type": "recharge after rest",
+        "rest_types": [
+          "short",
+          "long"
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "tusk",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) slashing damage.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/boar.png",
+  "url": "public/assets/atlas/monsters/boar",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The Common Boar (*Sus ferus*) is a creature of iron and grit, a squat juggernaut found wherever the brambles grow thick and the earth remains damp. While they frequent the shadowed gulleys and ancient oak groves, they are far from mere foragers. The boar is a predator of opportunity and a master of territorial violence.\n\nUnlike the calculated pack-tactics of the wolf, the boar\u2019s hunt is a display of unyielding momentum. They possess a singular, terrifying malice, charging with the force of a falling boulder to gore the unwary with serrated, upward-curving tusks. A boar does not merely kill for hunger; it strikes to punish the very air you breathe.\n\nIn local folklore, the beast is whispered to be the \"Earth\u2019s Grudge.\" Peasants claim the oldest boars are spirits of the soil itself, risen to strike down those who despoil the deep woods. To face a boar is considered the ultimate test of an adventurer\u2019s mettle\u2014not because the beast is clever, but because it is the only creature in the wild that truly knows no fear and grants no quarter. Beware the red glint in its eye; it is the forest\u2019s fury made flesh.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/boar.webp",
+  "bakedAt": 1767609206289
+}

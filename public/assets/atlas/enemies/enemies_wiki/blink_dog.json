@@ -1,0 +1,100 @@
+{
+  "index": "blink_dog",
+  "name": "blink dog",
+  "desc": "A blink dog takes its name from its ability to blink in and out of existence, a talent it uses to aid its attacks and to avoid harm.",
+  "size": "Medium",
+  "type": "fey",
+  "alignment": "lawful good",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 13
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "4d8",
+  "hit_points_roll": "4d8+4",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 12,
+  "dexterity": 17,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "Blink Dog, understands Sylvan but can't speak it",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "keen hearing and smell",
+      "desc": "The dog has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) piercing damage.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "teleport",
+      "desc": "The dog magically teleports, along with any equipment it is wearing or carrying, up to 40 ft. to an unoccupied space it can see. Before or after teleporting, the dog can make one bite attack.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 4
+      },
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/blink_dog.png",
+  "url": "public/assets/atlas/monsters/blink_dog",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "To the uninitiated, the Blink Dog is a phantom, a golden blur amidst the ancient oaks. Yet, to those who traverse the veil-thin glades of the deep woods, they are the most noble of sentinels. These creatures do not merely run; they slip through the seams of reality, vanishing in a shimmer of silver light only to reappear behind their quarry a heartbeat later.\n\nTheir predatory method is a silent, spatial dance. A pack does not corner its prey with speed alone, but by occupying multiple points in space simultaneously, flickering like guttering candles until the final strike. They possess a keen, near-human intelligence, hunting with a tactical precision that borders on the telepathic.\n\nIn local folklore, the Blink Dog is revered as the \"Hound of the Threshold.\" Peasants leave bowls of cream at the forest\u2019s edge, believing a sighting presages a safe journey. They are seen as the natural antithesis to the shifting horrors of the void\u2014living proof that even the shadows can be policed by light. Should you hear a bark that echoes from nowhere and everywhere at once, know that you are watched by a guardian who walks two worlds.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/blink-dog.webp",
+  "bakedAt": 1768763436196
+}

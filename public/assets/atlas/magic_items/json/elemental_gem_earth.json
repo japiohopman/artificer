@@ -1,0 +1,21 @@
+{
+  "index": "elemental_gem_earth",
+  "name": "earth elemental gem",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Wondrous item, uncommon",
+    "This yellow diamond contains a mote of elemental energy. When you use an action to break the gem, an earth elemental is summoned as if you had cast the conjure elemental spell, and the gem's magic is lost."
+  ],
+  "image": "public/assets/atlas/magic_items/elemental_gem_earth.webp",
+  "url": "public/assets/atlas/magic_items/json/elemental_gem_earth.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

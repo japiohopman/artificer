@@ -1,0 +1,27 @@
+{
+  "index": "belt_of_dwarvenkind",
+  "name": "belt of dwarvenkind",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous Items, rare (requires attunement)",
+    "While wearing this belt, you gain the following benefits:",
+    "Your Constitution score increases by 2, to a maximum of 20.",
+    "You have advantage on Charisma (Persuasion) checks made to interact with Dwarves.",
+    "In addition, while attuned to the belt, you have a 50 percent chance each day at dawn of growing a full beard if you're capable of growing one, or a visibly thicker beard if you already have one.",
+    "If you aren't a dwarf, you gain the following additional benefits while wearing the belt:",
+    "You have advantage on Saving Throws against poison, and you have Resistance against poison damage.",
+    "You can speak, read, and write Dwarvish."
+  ],
+  "image": "public/assets/atlas/magic_items/belt_of_dwarvenkind.webp",
+  "url": "public/assets/atlas/magic_items/json/belt_of_dwarvenkind.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

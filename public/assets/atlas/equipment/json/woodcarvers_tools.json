@@ -1,0 +1,26 @@
+{
+  "special": [],
+  "index": "woodcarvers_tools",
+  "name": "woodcarver's tools",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "public/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Artisan's Tools",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "desc": [
+    "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+  ],
+  "url": "public/assets/atlas/equipment/json/woodcarvers_tools.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/woodcarvers_tools.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp"
+}

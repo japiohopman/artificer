@@ -1,0 +1,24 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "carriage",
+  "name": "carriage",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 600,
+  "url": "public/assets/atlas/equipment/json/carriage.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/carriage.webp",
+  "sprite_index": 21,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+}

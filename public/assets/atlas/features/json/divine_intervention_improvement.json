@@ -1,0 +1,17 @@
+{
+  "index": "divine_intervention_improvement",
+  "class": {
+    "index": "cleric",
+    "name": "cleric",
+    "url": "public/assets/atlas/classes/cleric"
+  },
+  "name": "divine intervention improvement",
+  "level": 20,
+  "prerequisites": [],
+  "desc": [
+    "At 20th level, your call for intervention succeeds automatically, no roll required."
+  ],
+  "url": "public/assets/atlas/features/json/divine_intervention_improvement.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/divine_intervention_improvement.webp"
+}

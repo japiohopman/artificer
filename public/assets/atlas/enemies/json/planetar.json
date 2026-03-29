@@ -1,0 +1,273 @@
+{
+  "index": "planetar",
+  "name": "planetar",
+  "size": "Large",
+  "type": "celestial",
+  "alignment": "lawful good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 200,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10+112",
+  "speed": {
+    "walk": "40 ft.",
+    "fly": "120 ft."
+  },
+  "strength": 24,
+  "dexterity": 20,
+  "constitution": 24,
+  "intelligence": 19,
+  "wisdom": 22,
+  "charisma": 25,
+  "proficiencies": [
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "radiant",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "public/assets/atlas/constitutionditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    }
+  ],
+  "senses": {
+    "truesight": "120 ft.",
+    "passive_perception": 21
+  },
+  "languages": "all, telepathy 120 ft.",
+  "challenge_rating": 16,
+  "proficiency_bonus": 5,
+  "xp": 15000,
+  "special_abilities": [
+    {
+      "name": "angelic weapons",
+      "desc": "The planetar's weapon attacks are magical. When the planetar hits with any weapon, the weapon deals an extra 5d8 radiant damage (included in the attack).",
+      "damage": []
+    },
+    {
+      "name": "divine awareness",
+      "desc": "The planetar knows if it hears a lie.",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The planetar's spellcasting ability is Charisma (spell save DC 20). The planetar can innately cast the following spells, requiring no material components:\nAt will: detect evil and good, invisibility (self only)\n3/day each: blade barrier, dispel evil and good, flame strike, raise dead\n1/day each: commune, control weather, insect plague",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        },
+        "dc": 20,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "detect evil and good",
+            "level": 1,
+            "url": "public/assets/atlas/spells/detect_evil_and_good",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "invisibility",
+            "level": 2,
+            "notes": "Self Only",
+            "url": "public/assets/atlas/spells/invisibility",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "blade barrier",
+            "level": 6,
+            "url": "public/assets/atlas/spells/blade_barrier",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "dispel evil and good",
+            "level": 5,
+            "url": "public/assets/atlas/spells/dispel_evil_and_good",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "flame strike",
+            "level": 5,
+            "url": "public/assets/atlas/spells/flame_strike",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "raise dead",
+            "level": 5,
+            "url": "public/assets/atlas/spells/raise_dead",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "commune",
+            "level": 5,
+            "url": "public/assets/atlas/spells/commune",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "control weather",
+            "level": 8,
+            "url": "public/assets/atlas/spells/constitutiontrol_weather",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "insect plague",
+            "level": 5,
+            "url": "public/assets/atlas/spells/insect_plague",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The planetar has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The planetar makes two melee attacks.",
+      "actions": [
+        {
+          "action_name": "Greatsword",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "greatsword",
+      "desc": "Melee Weapon Attack: +12 to hit, reach 5 ft., one target. Hit: 21 (4d6 + 7) slashing damage plus 22 (5d8) radiant damage.",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "4d6+7"
+        },
+        {
+          "damage_type": {
+            "index": "radiant",
+            "name": "radiant",
+            "url": "public/assets/atlas/damage_types/radiant"
+          },
+          "damage_dice": "5d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "healing touch",
+      "desc": "The planetar touches another creature. The target magically regains 30 (6d8 + 3) hit points and is freed from any curse, disease, poison, blindness, or deafness.",
+      "usage": {
+        "type": "per day",
+        "times": 4
+      },
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/planetar.webp",
+  "url": "public/assets/atlas/enemies/json/planetar.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 20,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp"
+}

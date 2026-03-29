@@ -1,0 +1,28 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "sack",
+  "name": "sack",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "public/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "cp"
+  },
+  "weight": 0.5,
+  "url": "public/assets/atlas/equipment/json/sack.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/sack.webp",
+  "sprite_index": 3,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+}

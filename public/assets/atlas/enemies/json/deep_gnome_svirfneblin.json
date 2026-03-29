@@ -1,0 +1,184 @@
+{
+  "index": "deep_gnome_svirfneblin",
+  "name": "deep gnome (svirfneblin)",
+  "size": "Small",
+  "type": "humanoid",
+  "subtype": "gnome",
+  "alignment": "neutral good",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 15,
+      "armor": [
+        {
+          "index": "chain_shirt",
+          "name": "chain shirt",
+          "url": "public/assets/atlas/equipment/charismain_shirt"
+        }
+      ]
+    }
+  ],
+  "hit_points": 16,
+  "hit_dice": "3d6",
+  "hit_points_roll": "3d6+6",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 15,
+  "dexterity": 14,
+  "constitution": 14,
+  "intelligence": 12,
+  "wisdom": 10,
+  "charisma": 9,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_investigation",
+        "name": "skill: investigation",
+        "url": "public/assets/atlas/proficiencies/skill_investigation"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 12
+  },
+  "languages": "Gnomish, Terran, Undercommon",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "stone camouflage",
+      "desc": "The gnome has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.",
+      "damage": []
+    },
+    {
+      "name": "gnome cunning",
+      "desc": "The gnome has advantage on Intelligence, Wisdom, and Charisma saving throws against magic.",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The gnome's innate spellcasting ability is Intelligence (spell save DC 11). It can innately cast the following spells, requiring no material components:\nAt will: nondetection (self only)\n1/day each: blindness/deafness, blur, disguise self",
+      "spellcasting": {
+        "ability": {
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/intelligence"
+        },
+        "dc": 11,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "nondetection",
+            "level": 3,
+            "notes": "Self only",
+            "url": "public/assets/atlas/spells/nondetection",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "blindness/deafness",
+            "level": 2,
+            "url": "public/assets/atlas/spells/blindness_deafness",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "blur",
+            "level": 2,
+            "url": "public/assets/atlas/spells/blur",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "disguise self",
+            "level": 1,
+            "url": "public/assets/atlas/spells/disguise_self",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "war pick",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "poisoned dart",
+      "desc": "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one creature. Hit: 4 (1d4 + 2) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or be poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/deep_gnome_svirfneblin.webp",
+  "url": "public/assets/atlas/enemies/json/deep_gnome_svirfneblin.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 2,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet4.webp"
+}

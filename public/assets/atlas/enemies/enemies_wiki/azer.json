@@ -1,0 +1,136 @@
+{
+  "index": "azer",
+  "name": "azer",
+  "size": "Medium",
+  "type": "elemental",
+  "alignment": "lawful neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    },
+    {
+      "type": "armor",
+      "value": 17,
+      "armor": [
+        {
+          "index": "shield",
+          "name": "shield",
+          "url": "public/assets/atlas/equipment/shield"
+        }
+      ]
+    }
+  ],
+  "hit_points": 39,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8+12",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "dexterity": 12,
+  "constitution": 15,
+  "intelligence": 12,
+  "wisdom": 13,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "Ignan",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "heated body",
+      "desc": "A creature that touches the azer or hits it with a melee attack while within 5 ft. of it takes 5 (1d10) fire damage.",
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "public/assets/atlas/damage_types/fire"
+          },
+          "damage_dice": "1d10"
+        }
+      ]
+    },
+    {
+      "name": "heated weapons",
+      "desc": "When the azer hits with a metal melee weapon, it deals an extra 3 (1d6) fire damage (included in the attack).",
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "public/assets/atlas/damage_types/fire"
+          },
+          "damage_dice": "1d6"
+        }
+      ]
+    },
+    {
+      "name": "illumination",
+      "desc": "The azer sheds bright light in a 10-foot radius and dim light for an additional 10 ft..",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "warhammer",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage, or 8 (1d10 + 3) bludgeoning damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d8+3"
+        },
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "public/assets/atlas/damage_types/fire"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/azer.png",
+  "url": "public/assets/atlas/monsters/azer",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The Azer are not mere creatures of flesh, but living effigies of brass and burning soul, forged in the heart of the world\u2019s deepest calderas. They dwell where the stone weeps liquid fire, constructing fortresses of obsidian that defy the crushing weight of the earth.\n\nWhile they do not hunt for sustenance\u2014drawing life from the primal heat of the mantle\u2014their \"predation\" is a calculated harvest. They track the scent of rare ores with the tenacity of hounds, treating intruders as impurities to be purged. An Azer\u2019s strike is a masterwork of geometry; they do not merely fight, they deconstruct an opponent with the cold precision of a smith breaking a faulty blade.\n\nIn mountain lore, they are the \"Unquenched Kin.\" Miners whisper that a rhythmic hammering echoing through deep, abandoned shafts is a herald of doom. To glimpse a flickering beard of flame in the dark is to know the mountain has judged you unworthy of its riches. One does not bargain with the Azer; they are as unyielding as the bronze they inhabit, and twice as sharp.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/azer.webp",
+  "bakedAt": 1768762626383
+}

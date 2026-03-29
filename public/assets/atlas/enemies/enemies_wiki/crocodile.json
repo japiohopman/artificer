@@ -1,0 +1,81 @@
+{
+  "index": "crocodile",
+  "name": "crocodile",
+  "size": "Large",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 19,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10+3",
+  "speed": {
+    "walk": "20 ft.",
+    "swim": "20 ft."
+  },
+  "strength": 15,
+  "dexterity": 10,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 5,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "hold breath",
+      "desc": "The crocodile can hold its breath for 15 minutes.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 7 (1d10 + 2) piercing damage, and the target is grappled (escape DC 12). Until this grapple ends, the target is restrained, and the crocodile can't bite another target",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/crocodile.png",
+  "url": "public/assets/atlas/monsters/crocodile",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The crocodile is a living relic of a primordial age, dwelling in silt-choked deltas and shadowed bayous where the boundary between land and water dissolves. To the uninitiated, it appears as naught but a moss-slicked log, yet beneath that armored hide lies a cold, calculating patience. \n\nIts hunt is a masterclass in stillness. A crocodile may remain submerged for hours, only its lidless eyes breaking the surface, before erupting with a violence that shatters the river\u2019s peace. Once its serrated jaws lock, it performs the \"Spiral of the Deep,\" a rhythmic, drowning dance that drags the heaviest prey into the crushing dark.\n\nIn local lore, the beast is whispered of as the \"Keeper of the Silt.\" The river-folk believe these creatures are the reincarnated spirits of ancient, vengeful sentinels. To see one\u2019s reflection in a crocodile\u2019s golden eye is said to forfeit a portion of the soul to the mud. Travelers are warned: when the reeds go silent and the water turns to glass, do not linger to investigate the ripples. The river has teeth, and they are eternally hungry.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/crocodile.webp",
+  "bakedAt": 1768762486816
+}

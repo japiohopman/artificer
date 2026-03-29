@@ -1,0 +1,78 @@
+{
+  "index": "bat",
+  "name": "bat",
+  "size": "Tiny",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "hit_points": 1,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4-1",
+  "speed": {
+    "walk": "5 ft.",
+    "fly": "30 ft."
+  },
+  "strength": 2,
+  "dexterity": 15,
+  "constitution": 8,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 4,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "60 ft.",
+    "passive_perception": 11
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "echolocation",
+      "desc": "The bat can't use its blindsight while deafened.",
+      "damage": []
+    },
+    {
+      "name": "keen hearing",
+      "desc": "The bat has advantage on Wisdom (Perception) checks that rely on hearing.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +0 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/bat.png",
+  "url": "public/assets/atlas/monsters/bat",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The *Vespertilio*, known to the common folk as the bat, is a creature of the liminal hours, flourishing in the damp embrace of limestone grottos and the hollowed ribs of forgotten keeps. While most beasts rely on the treacherous eye, the bat navigates the obsidian dark through a \"sightless vision,\" emitting piercing cries that ripple against the air like stones cast into a still pond, mapping the world in echoes.\n\nTheir predatory grace is unmatched; they are ghosts of the canopy, snatching moths with uncanny precision. In the deeper wilds, larger kin are whispered to feast upon the lifeblood of slumbering livestock, leaving only twin pricks as a grim calling card.\n\nLocal folklore paints them as the \"Shadow\u2019s Messengers.\" In the hamlets of the Weald, it is said that a bat fluttering thrice against a windowpane foretells a lingering sickness, or that they are the wandering souls of those who died without a name. To the scholar, they are marvels of adaptation; to the superstitious, they remain the velvet-winged spies of the night\u2019s more malevolent masters.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/bat.webp",
+  "bakedAt": 1767632127534
+}

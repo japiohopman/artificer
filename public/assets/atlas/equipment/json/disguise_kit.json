@@ -1,0 +1,30 @@
+{
+  "special": [],
+  "index": "disguise_kit",
+  "name": "disguise kit",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "kits",
+    "name": "kits",
+    "url": "public/assets/atlas/equipment_categories/kits"
+  },
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "desc": [
+    "This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise."
+  ],
+  "url": "public/assets/atlas/equipment/json/disguise_kit.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/disguise_kit.webp",
+  "sprite_index": 2,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+}

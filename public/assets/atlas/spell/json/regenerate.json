@@ -1,0 +1,52 @@
+{
+  "higher_level": [],
+  "index": "regenerate",
+  "name": "regenerate",
+  "desc": [
+    "You touch a creature and stimulate its natural healing ability. The target regains 4d8 + 15 hit points. For the duration of the spell, the target regains 1 hit point at the start of each of its turns (10 hit points each minute).",
+    "The target's severed body members (fingers, legs, tails, and so on), if any, are restored after 2 minutes. If you have the severed part and hold it to the stump, the spell instantaneously causes the limb to knit to the stump."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A prayer wheel and holy water.",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 7,
+  "heal_at_slot_level": {
+    "7": "4d8 + 15"
+  },
+  "school": {
+    "index": "transmutation",
+    "name": "transmutation",
+    "url": "public/assets/atlas/magic_schools/transmutation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    }
+  ],
+  "subclasses": [],
+  "url": "public/assets/atlas/spell/json/regenerate.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/regenerate.webp",
+  "sprite_index": 15,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet10.webp"
+}

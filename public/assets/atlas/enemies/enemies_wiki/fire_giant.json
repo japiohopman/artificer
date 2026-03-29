@@ -1,0 +1,144 @@
+{
+  "index": "fire_giant",
+  "name": "fire giant",
+  "size": "Huge",
+  "type": "giant",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 18,
+      "armor": [
+        {
+          "index": "plate_armor",
+          "name": "plate armor",
+          "url": "public/assets/atlas/equipment/plate_armor"
+        }
+      ]
+    }
+  ],
+  "hit_points": 162,
+  "hit_dice": "13d12",
+  "hit_points_roll": "13d12+78",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 25,
+  "dexterity": 9,
+  "constitution": 23,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 13,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "skill_athletics",
+        "name": "skill: athletics",
+        "url": "public/assets/atlas/proficiencies/skill_athletics"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 16
+  },
+  "languages": "Giant",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The giant makes two greatsword attacks.",
+      "actions": [
+        {
+          "action_name": "Greatsword",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "greatsword",
+      "desc": "Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 28 (6d6 + 7) slashing damage.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "6d6+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "rock",
+      "desc": "Ranged Weapon Attack: +11 to hit, range 60/240 ft., one target. Hit: 29 (4d10 + 7) bludgeoning damage.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "4d10+7"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/fire_giant.png",
+  "url": "public/assets/atlas/monsters/fire_giant",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "lore": "Deep within the basalt veins of active calderas and the obsidian spires of the Ember Peaks, the Fire Giant makes its home. These titans crave the crushing weight of the earth and the purifying roar of the magma, building fortresses where the air itself shimmers with lethal heat.\n\nUnlike their more chaotic kin, the Fire Giant hunts with the cold precision of a master smith. They do not merely chase; they orchestrate. By manipulating geothermal vents to drive herds into narrow choke points or flash-melting mountain snow to create impassable mires of mud, they treat the hunt as a tactical exercise. To them, prey is raw material to be harvested for the eternal forge-fires.\n\nLocal folklore speaks of the \"Iron-Sons,\" claiming the rhythmic pounding of their subterranean anvils is what causes the mountains to tremble. To the hill-folk, a Fire Giant\u2019s march is a portent of \"Ash-Winters,\" seasons where the sky bleeds soot and the earth is scorched to glass. They are the grim architects of the world's end, patiently waiting for the spark that will set the firmament ablaze.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/fire-giant.webp",
+  "bakedAt": 1767753559883
+}

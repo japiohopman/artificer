@@ -1,0 +1,85 @@
+{
+  "index": "vulture",
+  "name": "vulture",
+  "size": "Medium",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 10
+    }
+  ],
+  "hit_points": 5,
+  "hit_dice": "1d8",
+  "hit_points_roll": "1d8+1",
+  "speed": {
+    "walk": "10 ft.",
+    "fly": "50 ft."
+  },
+  "strength": 7,
+  "dexterity": 10,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 4,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "keen sight and smell",
+      "desc": "The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell.",
+      "damage": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The vulture has advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 ft. of the creature and the ally isn't incapacitated.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "beak",
+      "desc": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) piercing damage.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/vulture.webp",
+  "url": "public/assets/atlas/enemies/json/vulture.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 19,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet12.webp"
+}

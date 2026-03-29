@@ -1,0 +1,140 @@
+{
+  "index": "extra_language",
+  "races": [],
+  "subraces": [
+    {
+      "index": "high_elf",
+      "name": "high elf",
+      "url": "public/assets/atlas/subraces/high_elf"
+    }
+  ],
+  "name": "extra language",
+  "desc": [
+    "You can speak, read, and write one extra language of your choice."
+  ],
+  "proficiencies": [],
+  "language_options": {
+    "choose": 1,
+    "type": "languages",
+    "from": {
+      "option_set_type": "options_array",
+      "options": [
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "dwarvish",
+            "name": "dwarvish",
+            "url": "public/assets/atlas/languages/dwarvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "giant",
+            "name": "giant",
+            "url": "public/assets/atlas/languages/giant"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "gnomish",
+            "name": "gnomish",
+            "url": "public/assets/atlas/languages/gnomish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "goblin",
+            "name": "goblin",
+            "url": "public/assets/atlas/languages/goblin"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "halfling",
+            "name": "halfling",
+            "url": "public/assets/atlas/languages/halfling"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "orc",
+            "name": "orc",
+            "url": "public/assets/atlas/languages/orc"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "abyssal",
+            "name": "abyssal",
+            "url": "public/assets/atlas/languages/abyssal"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "celestial",
+            "name": "celestial",
+            "url": "public/assets/atlas/languages/celestial"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "draconic",
+            "name": "draconic",
+            "url": "public/assets/atlas/languages/draconic"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "deep_speech",
+            "name": "deep speech",
+            "url": "public/assets/atlas/languages/deep_speech"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "infernal",
+            "name": "infernal",
+            "url": "public/assets/atlas/languages/infernal"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "primordial",
+            "name": "primordial",
+            "url": "public/assets/atlas/languages/primordial"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "sylvan",
+            "name": "sylvan",
+            "url": "public/assets/atlas/languages/sylvan"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "undercommon",
+            "name": "undercommon",
+            "url": "public/assets/atlas/languages/undercommon"
+          }
+        }
+      ]
+    }
+  },
+  "url": "public/assets/atlas/traits/json/extra_language.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "public/assets/atlas/traits/extra_language.webp"
+}

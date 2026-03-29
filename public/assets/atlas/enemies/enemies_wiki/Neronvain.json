@@ -1,0 +1,62 @@
+{
+  "name": "neronvain",
+  "size": "Medium",
+  "type": "humanoid (elf)",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "value": 17,
+      "type": "Draconic Majesty"
+    }
+  ],
+  "hit_points": 117,
+  "hit_dice": "18d8 + 36",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "dexterity": 17,
+  "constitution": 15,
+  "intelligence": 16,
+  "wisdom": 13,
+  "charisma": 18,
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 15
+  },
+  "languages": "Common, Draconic, Elvish, Infernal",
+  "challenge_rating": 9,
+  "xp": 5000,
+  "special_abilities": [
+    {
+      "name": "draconic majesty",
+      "desc": "Neronvain adds his Charisma bonus to his AC (included)."
+    },
+    {
+      "name": "fey ancestry",
+      "desc": "Magic can't put Neronvain to sleep."
+    }
+  ],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "Neronvain makes two attacks, either with his shortsword or Eldritch Arrow."
+    },
+    {
+      "name": "shortsword",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage plus 13 (3d8) poison damage."
+    },
+    {
+      "name": "eldritch arrow",
+      "desc": "Ranged Spell Attack: +7 to hit, range 120 ft., one target. Hit: 11 (2d10) force damage plus 9 (2d8) poison damage."
+    },
+    {
+      "name": "poisonous cloud (2/day)",
+      "desc": "Poison gas fills a 20-foot-radius sphere centered on a point Neronvain can see within 50 feet of him. The gas spreads around corners and remains until the start of Neronvain's next turn. Each creature that starts its turn in the gas must succeed on a DC 16 Constitution saving throw or be poisoned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+    }
+  ],
+  "index": "neronvain",
+  "lore": "The figure known as Neronvain is less a man and more a lingering rot within the heart of the Misty Forest. Once a scion of elven royalty, he has become a phantom of the viridian gloom, inextricably bound to the ancient green wyrm, Chuth. Their habitat is a suffocating tapestry of ancient oaks and eternal fog, where the air itself tastes of pine needles and stagnant bile.\n\nNeronvain\u2019s predation is a masterclass in psychological cruelty. He does not merely hunt; he orchestrates. Using the dragon\u2019s toxic breath as a shroud, he strikes from the emerald canopy with a grace that mocks his noble lineage. He targets the hope of his victims, isolating them through whispers and manufactured shadows before the final, venomous blow.\n\nLocal woodcutters speak of him in hushed tones as the \"Gilded Traitor.\" To the elves, he is a cautionary tale of pride curdled into malice\u2014a prince who traded his crown for a dragon\u2019s leash. Folklore claims that when the mist thickens to the color of bruised moss, Neronvain is near, seeking to reclaim his lost kingdom through blood and blight.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/Neronvain.webp",
+  "bakedAt": 1767616740681
+}

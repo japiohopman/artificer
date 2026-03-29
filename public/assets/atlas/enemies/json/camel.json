@@ -1,0 +1,64 @@
+{
+  "index": "camel",
+  "name": "camel",
+  "size": "Large",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 9
+    }
+  ],
+  "hit_points": 15,
+  "hit_dice": "2d10",
+  "hit_points_roll": "2d10+4",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 16,
+  "dexterity": 8,
+  "constitution": 14,
+  "intelligence": 2,
+  "wisdom": 8,
+  "charisma": 5,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/camel.webp",
+  "url": "public/assets/atlas/enemies/json/camel.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "sprite_index": 7,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet3.webp"
+}

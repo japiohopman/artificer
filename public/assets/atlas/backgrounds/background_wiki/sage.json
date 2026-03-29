@@ -1,0 +1,34 @@
+{
+  "index": "sage",
+  "name": "sage",
+  "starting_proficiencies": [
+    {
+      "index": "skill_arcana",
+      "name": "arcana",
+      "url": ""
+    },
+    {
+      "index": "skill_history",
+      "name": "history",
+      "url": ""
+    }
+  ],
+  "languages": "Two of your choice",
+  "equipment": [
+    "A bottle of black ink",
+    "A quill",
+    "A small knife",
+    "A letter from a dead colleague posing a question you have not yet been able to answer",
+    "Set of common clothes",
+    "Pouch with 10 gp"
+  ],
+  "feature": {
+    "name": "researcher",
+    "desc": [
+      "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place."
+    ]
+  },
+  "lore": "The Sage is a creature of the archive, typically found nesting where the air is thick with dust and the scent of aged vellum. They frequent the lightless corners of great libraries or the moss-choked ruins of fallen empires, scavenging not for gold, but for the marrow of lost truths.\n\nIn the wild, they are easily identified by their ink-stained fingertips and the distracted gaze of those who see the world through the lens of antiquity. Their behavior is often erratic; a Sage might ignore a brewing storm to obsess over the specific lichen patterns on a common milestone. They are driven by an insatiable hunger for \"why,\" perpetually scratching observations into leather-bound journals. To the uninitiated, they seem aloof, yet they carry the weight of forgotten worlds in their minds\u2014a burden that makes them both formidable allies and dangerously unpredictable companions.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/background/sage.webp",
+  "bakedAt": 1767702993498
+}

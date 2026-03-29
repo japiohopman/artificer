@@ -1,0 +1,17 @@
+{
+  "index": "stillness_of_mind",
+  "class": {
+    "index": "monk",
+    "name": "monk",
+    "url": "public/assets/atlas/classes/monk"
+  },
+  "name": "stillness of mind",
+  "level": 7,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be charmed or frightened."
+  ],
+  "url": "public/assets/atlas/features/json/stillness_of_mind.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/stillness_of_mind.webp"
+}

@@ -1,0 +1,259 @@
+{
+  "index": "gynosphinx",
+  "name": "gynosphinx",
+  "size": "Large",
+  "type": "monstrosity",
+  "alignment": "lawful neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 136,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10+48",
+  "speed": {
+    "walk": "40 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 18,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 18,
+  "wisdom": 18,
+  "charisma": 18,
+  "proficiencies": [
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "skill_arcana",
+        "name": "skill: arcana",
+        "url": "public/assets/atlas/proficiencies/skill_arcana"
+      }
+    },
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "skill_history",
+        "name": "skill: history",
+        "url": "public/assets/atlas/proficiencies/skill_history"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill_religion",
+        "name": "skill: religion",
+        "url": "public/assets/atlas/proficiencies/skill_religion"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "psychic"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    }
+  ],
+  "senses": {
+    "truesight": "120 ft.",
+    "passive_perception": 18
+  },
+  "languages": "Common, Sphinx",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [
+    {
+      "name": "inscrutable",
+      "desc": "The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.",
+      "damage": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The sphinx's weapon attacks are magical.",
+      "damage": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The sphinx is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 16, +8 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following wizard spells prepared:\n\n- Cantrips (at will): mage hand, minor illusion, prestidigitation\n- 1st level (4 slots): detect magic, identify, shield\n- 2nd level (3 slots): darkness, locate object, suggestion\n- 3rd level (3 slots): dispel magic, remove curse, tongues\n- 4th level (3 slots): banishment, greater invisibility\n- 5th level (1 slot): legend lore",
+      "spellcasting": {
+        "level": 9,
+        "ability": {
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/intelligence"
+        },
+        "dc": 16,
+        "modifier": 8,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "school": "wizard",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 1
+        },
+        "spells": [
+          {
+            "name": "mage hand",
+            "level": 0,
+            "url": "public/assets/atlas/spells/mage_hand"
+          },
+          {
+            "name": "minor illusion",
+            "level": 0,
+            "url": "public/assets/atlas/spells/minor_illusion"
+          },
+          {
+            "name": "prestidigitation",
+            "level": 0,
+            "url": "public/assets/atlas/spells/prestidigitation"
+          },
+          {
+            "name": "detect magic",
+            "level": 1,
+            "url": "public/assets/atlas/spells/detect_magic"
+          },
+          {
+            "name": "identify",
+            "level": 1,
+            "url": "public/assets/atlas/spells/identify"
+          },
+          {
+            "name": "shield",
+            "level": 1,
+            "url": "public/assets/atlas/spells/shield"
+          },
+          {
+            "name": "darkness",
+            "level": 2,
+            "url": "public/assets/atlas/spells/darkness"
+          },
+          {
+            "name": "locate object",
+            "level": 2,
+            "url": "public/assets/atlas/spells/locate_object"
+          },
+          {
+            "name": "suggestion",
+            "level": 2,
+            "url": "public/assets/atlas/spells/suggestion"
+          },
+          {
+            "name": "dispel magic",
+            "level": 3,
+            "url": "public/assets/atlas/spells/dispel_magic"
+          },
+          {
+            "name": "remove curse",
+            "level": 3,
+            "url": "public/assets/atlas/spells/remove_curse"
+          },
+          {
+            "name": "tongues",
+            "level": 3,
+            "url": "public/assets/atlas/spells/tongues"
+          },
+          {
+            "name": "banishment",
+            "level": 4,
+            "url": "public/assets/atlas/spells/banishment"
+          },
+          {
+            "name": "greater invisibility",
+            "level": 4,
+            "url": "public/assets/atlas/spells/greater_invisibility"
+          },
+          {
+            "name": "legend lore",
+            "level": 5,
+            "url": "public/assets/atlas/spells/legend_lore"
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The sphinx makes two claw attacks.",
+      "actions": [
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "claw attack",
+      "desc": "The sphinx makes one claw attack.",
+      "damage": []
+    },
+    {
+      "name": "teleport (costs 2 actions)",
+      "desc": "The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.",
+      "damage": []
+    },
+    {
+      "name": "cast a spell (costs 3 actions)",
+      "desc": "The sphinx casts a spell from its list of prepared spells, using a spell slot as normal.",
+      "damage": []
+    }
+  ],
+  "image": "/api/images/monsters/gynosphinx.png",
+  "url": "public/assets/atlas/monsters/gynosphinx",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "reactions": [],
+  "lore": "The Gynosphinx is a creature of sand and silence, found primarily within the sun-bleached ruins of the Great Wastes or atop wind-scoured mountain peaks. While her powerful leonine body suggests a physical threat, her true predation is intellectual. She does not hunt for meat alone; she hunts for the resolution of paradoxes.\n\nA traveler who encounters a Gynosphinx finds themselves in a psychological siege. She lures the curious into verbal labyrinths, devouring the sanity\u2014and eventually the lives\u2014of those who fail her tests. She is a patient stalker of the mind, often observing a victim for days before manifesting to pose her lethal inquiries.\n\nIn local folklore, she is whispered of as the \"Mistress of the Unspoken.\" She is rarely depicted as a common monster to be slain, but rather as an inevitable trial\u2014a divine gatekeeper who ensures that the universe\u2019s most dangerous secrets remain hidden from the unworthy. To hear her voice is to stand at the precipice of enlightenment or annihilation; one does not survive a Gynosphinx through strength of steel, but through the clarity of the soul.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/gynosphinx.webp",
+  "bakedAt": 1770276739876
+}

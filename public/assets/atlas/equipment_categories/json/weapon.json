@@ -1,0 +1,344 @@
+{
+  "index": "weapon",
+  "name": "weapon",
+  "equipment": [
+    {
+      "index": "club",
+      "name": "club",
+      "url": "public/assets/atlas/equipment/club"
+    },
+    {
+      "index": "dagger",
+      "name": "dagger",
+      "url": "public/assets/atlas/equipment/dagger"
+    },
+    {
+      "index": "greatclub",
+      "name": "greatclub",
+      "url": "public/assets/atlas/equipment/greatclub"
+    },
+    {
+      "index": "handaxe",
+      "name": "handaxe",
+      "url": "public/assets/atlas/equipment/handaxe"
+    },
+    {
+      "index": "javelin",
+      "name": "javelin",
+      "url": "public/assets/atlas/equipment/javelin"
+    },
+    {
+      "index": "light_hammer",
+      "name": "light hammer",
+      "url": "public/assets/atlas/equipment/light_hammer"
+    },
+    {
+      "index": "mace",
+      "name": "mace",
+      "url": "public/assets/atlas/equipment/mace"
+    },
+    {
+      "index": "quarterstaff",
+      "name": "quarterstaff",
+      "url": "public/assets/atlas/equipment/quarterstaff"
+    },
+    {
+      "index": "sickle",
+      "name": "sickle",
+      "url": "public/assets/atlas/equipment/sickle"
+    },
+    {
+      "index": "spear",
+      "name": "spear",
+      "url": "public/assets/atlas/equipment/spear"
+    },
+    {
+      "index": "crossbow_light",
+      "name": "crossbow, light",
+      "url": "public/assets/atlas/equipment/crossbow_light"
+    },
+    {
+      "index": "dart",
+      "name": "dart",
+      "url": "public/assets/atlas/equipment/dart"
+    },
+    {
+      "index": "shortbow",
+      "name": "shortbow",
+      "url": "public/assets/atlas/equipment/shortbow"
+    },
+    {
+      "index": "sling",
+      "name": "sling",
+      "url": "public/assets/atlas/equipment/sling"
+    },
+    {
+      "index": "battleaxe",
+      "name": "battleaxe",
+      "url": "public/assets/atlas/equipment/battleaxe"
+    },
+    {
+      "index": "flail",
+      "name": "flail",
+      "url": "public/assets/atlas/equipment/flail"
+    },
+    {
+      "index": "glaive",
+      "name": "glaive",
+      "url": "public/assets/atlas/equipment/glaive"
+    },
+    {
+      "index": "greataxe",
+      "name": "greataxe",
+      "url": "public/assets/atlas/equipment/greataxe"
+    },
+    {
+      "index": "greatsword",
+      "name": "greatsword",
+      "url": "public/assets/atlas/equipment/greatsword"
+    },
+    {
+      "index": "halberd",
+      "name": "halberd",
+      "url": "public/assets/atlas/equipment/halberd"
+    },
+    {
+      "index": "lance",
+      "name": "lance",
+      "url": "public/assets/atlas/equipment/lance"
+    },
+    {
+      "index": "longsword",
+      "name": "longsword",
+      "url": "public/assets/atlas/equipment/longsword"
+    },
+    {
+      "index": "maul",
+      "name": "maul",
+      "url": "public/assets/atlas/equipment/maul"
+    },
+    {
+      "index": "morningstar",
+      "name": "morningstar",
+      "url": "public/assets/atlas/equipment/morningstar"
+    },
+    {
+      "index": "pike",
+      "name": "pike",
+      "url": "public/assets/atlas/equipment/pike"
+    },
+    {
+      "index": "rapier",
+      "name": "rapier",
+      "url": "public/assets/atlas/equipment/rapier"
+    },
+    {
+      "index": "scimitar",
+      "name": "scimitar",
+      "url": "public/assets/atlas/equipment/scimitar"
+    },
+    {
+      "index": "shortsword",
+      "name": "shortsword",
+      "url": "public/assets/atlas/equipment/shortsword"
+    },
+    {
+      "index": "trident",
+      "name": "trident",
+      "url": "public/assets/atlas/equipment/trident"
+    },
+    {
+      "index": "war_pick",
+      "name": "war pick",
+      "url": "public/assets/atlas/equipment/war_pick"
+    },
+    {
+      "index": "warhammer",
+      "name": "warhammer",
+      "url": "public/assets/atlas/equipment/warhammer"
+    },
+    {
+      "index": "whip",
+      "name": "whip",
+      "url": "public/assets/atlas/equipment/whip"
+    },
+    {
+      "index": "blowgun",
+      "name": "blowgun",
+      "url": "public/assets/atlas/equipment/blowgun"
+    },
+    {
+      "index": "crossbow_hand",
+      "name": "crossbow, hand",
+      "url": "public/assets/atlas/equipment/crossbow_hand"
+    },
+    {
+      "index": "crossbow_heavy",
+      "name": "crossbow, heavy",
+      "url": "public/assets/atlas/equipment/crossbow_heavy"
+    },
+    {
+      "index": "longbow",
+      "name": "longbow",
+      "url": "public/assets/atlas/equipment/longbow"
+    },
+    {
+      "index": "net",
+      "name": "net",
+      "url": "public/assets/atlas/equipment/net"
+    },
+    {
+      "index": "berserker_axe",
+      "name": "berserker axe",
+      "url": "public/assets/atlas/magic_items/berserker_axe"
+    },
+    {
+      "index": "dagger_of_venom",
+      "name": "dagger of venom",
+      "url": "public/assets/atlas/magic_items/dagger_of_venom"
+    },
+    {
+      "index": "dancing_sword",
+      "name": "dancing sword",
+      "url": "public/assets/atlas/magic_items/dancing_sword"
+    },
+    {
+      "index": "defender",
+      "name": "defender",
+      "url": "public/assets/atlas/magic_items/defender"
+    },
+    {
+      "index": "dragon_slayer",
+      "name": "dragon slayer",
+      "url": "public/assets/atlas/magic_items/dragon_slayer"
+    },
+    {
+      "index": "dwarven_thrower",
+      "name": "dwarven thrower",
+      "url": "public/assets/atlas/magic_items/dwarven_thrower"
+    },
+    {
+      "index": "flame_tongue",
+      "name": "flame tongue",
+      "url": "public/assets/atlas/magic_items/flame_tongue"
+    },
+    {
+      "index": "frost_brand",
+      "name": "frost brand",
+      "url": "public/assets/atlas/magic_items/frost_brand"
+    },
+    {
+      "index": "giant_slayer",
+      "name": "giant slayer",
+      "url": "public/assets/atlas/magic_items/giant_slayer"
+    },
+    {
+      "index": "hammer_of_thunderbolts",
+      "name": "hammer of thunderbolts",
+      "url": "public/assets/atlas/magic_items/hammer_of_thunderbolts"
+    },
+    {
+      "index": "holy_avenger",
+      "name": "holy avenger",
+      "url": "public/assets/atlas/magic_items/holy_avenger"
+    },
+    {
+      "index": "javelin_of_lightning",
+      "name": "javelin of lightning",
+      "url": "public/assets/atlas/magic_items/javelin_of_lightning"
+    },
+    {
+      "index": "luck_blade",
+      "name": "luck blade",
+      "url": "public/assets/atlas/magic_items/luck_blade"
+    },
+    {
+      "index": "mace_of_disruption",
+      "name": "mace of disruption",
+      "url": "public/assets/atlas/magic_items/mace_of_disruption"
+    },
+    {
+      "index": "mace_of_smiting",
+      "name": "mace of smiting",
+      "url": "public/assets/atlas/magic_items/mace_of_smiting"
+    },
+    {
+      "index": "mace_of_terror",
+      "name": "mace of terror",
+      "url": "public/assets/atlas/magic_items/mace_of_terror"
+    },
+    {
+      "index": "nine_lives_stealer",
+      "name": "nine lives stealer",
+      "url": "public/assets/atlas/magic_items/nine_lives_stealer"
+    },
+    {
+      "index": "oathbow",
+      "name": "oathbow",
+      "url": "public/assets/atlas/magic_items/oathbow"
+    },
+    {
+      "index": "scimitar_of_speed",
+      "name": "scimitar of speed",
+      "url": "public/assets/atlas/magic_items/scimitar_of_speed"
+    },
+    {
+      "index": "sun_blade",
+      "name": "sun blade",
+      "url": "public/assets/atlas/magic_items/sun_blade"
+    },
+    {
+      "index": "sword_of_life_stealing",
+      "name": "sword of life stealing",
+      "url": "public/assets/atlas/magic_items/sword_of_life_stealing"
+    },
+    {
+      "index": "sword_of_sharpness",
+      "name": "sword of sharpness",
+      "url": "public/assets/atlas/magic_items/sword_of_sharpness"
+    },
+    {
+      "index": "sword_of_wounding",
+      "name": "sword of wounding",
+      "url": "public/assets/atlas/magic_items/sword_of_wounding"
+    },
+    {
+      "index": "trident_of_fish_command",
+      "name": "trident of fish command",
+      "url": "public/assets/atlas/magic_items/trident_of_fish_command"
+    },
+    {
+      "index": "vicious_weapon",
+      "name": "vicious weapon",
+      "url": "public/assets/atlas/magic_items/vicious_weapon"
+    },
+    {
+      "index": "vorpal_sword",
+      "name": "vorpal sword",
+      "url": "public/assets/atlas/magic_items/vorpal_sword"
+    },
+    {
+      "index": "weapon",
+      "name": "weapon, +1, +2, or +3",
+      "url": "public/assets/atlas/magic_items/weapon"
+    },
+    {
+      "index": "weapon_1",
+      "name": "weapon, +1",
+      "url": "public/assets/atlas/magic_items/weapon_1"
+    },
+    {
+      "index": "weapon_2",
+      "name": "weapon, +2",
+      "url": "public/assets/atlas/magic_items/weapon_2"
+    },
+    {
+      "index": "weapon_3",
+      "name": "weapon, +3",
+      "url": "public/assets/atlas/magic_items/weapon_3"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/weapon.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/weapon.webp"
+}

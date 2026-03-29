@@ -1,0 +1,102 @@
+{
+  "index": "giant_wolf_spider",
+  "name": "giant wolf spider",
+  "desc": "Smaller than a giant spider, a giant wolf spider hunts prey across open ground or hides in a burrow or crevice, or in a hidden cavity beneath debris.",
+  "size": "Medium",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 13
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8+2",
+  "speed": {
+    "walk": "40 ft.",
+    "climb": "40 ft."
+  },
+  "strength": 12,
+  "dexterity": 16,
+  "constitution": 13,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 4,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "darkvision": "60 ft.",
+    "passive_perception": 13
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "spider climb",
+      "desc": "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "damage": []
+    },
+    {
+      "name": "web sense",
+      "desc": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.",
+      "damage": []
+    },
+    {
+      "name": "web walker",
+      "desc": "The spider ignores movement restrictions caused by webbing.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 4 (1d6 + 1) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/giant_wolf_spider.png",
+  "url": "public/assets/atlas/monsters/giant_wolf_spider",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "**Taxonomy:** *Aranea Lupus Gigas*\n\nThe Giant Wolf Spider is a master of the terrestrial hunt, eschewing the intricate webs of its kin for the rugged terrain of ancient woodlands and sun-bleached rocky plateaus. These apex arthropods are nomadic by nature, claiming temporary sanctum within hollowed logs or limestone fissures.\n\nUnlike the sedentary orb-weaver, the Wolf Spider is a relentless cursorial predator. It relies upon keen, multifaceted sight and a heightened sensitivity to the rhythmic tremors of the earth. An adventurer will not find a webbed trap, but rather a sudden, terrifying burst of speed. They strike with a mechanical precision, delivering a potent venom before dragging their quarry into the sub-surface gloom.\n\nIn the hearth-tales of the Borderlands, they are whispered of as \"The Eight-Legged Hounds.\" Local folklore suggests they are the vengeful spirits of scouts who perished in the wilds, forever patrolling the borders of the known world. To hear the dry, rhythmic skittering of chitin against stone is a dire omen\u2014a sign that one is no longer the hunter, but the hounded. Beware the amber glint of their eyes in the brush; they watch the pulse in your throat with cold, calculating hunger.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/giant-wolf-spider.webp",
+  "bakedAt": 1767753846920
+}

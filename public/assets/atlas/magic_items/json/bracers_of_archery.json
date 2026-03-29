@@ -1,0 +1,21 @@
+{
+  "index": "bracers_of_archery",
+  "name": "bracers of archery",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, uncommon (requires attunement)",
+    "While wearing these bracers, you have proficiency with the longbow and shortbow, and you gain a +2 bonus to damage rolls on ranged attacks made with such weapons."
+  ],
+  "image": "public/assets/atlas/magic_items/bracers_of_archery.webp",
+  "url": "public/assets/atlas/magic_items/json/bracers_of_archery.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

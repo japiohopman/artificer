@@ -1,0 +1,123 @@
+{
+  "index": "earth_elemental",
+  "name": "earth elemental",
+  "size": "Large",
+  "type": "elemental",
+  "alignment": "neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 126,
+  "hit_dice": "12d10",
+  "hit_points_roll": "12d10+60",
+  "speed": {
+    "walk": "30 ft.",
+    "burrow": "30 ft."
+  },
+  "strength": 20,
+  "dexterity": 8,
+  "constitution": 20,
+  "intelligence": 5,
+  "wisdom": 10,
+  "charisma": 5,
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "thunder"
+  ],
+  "damage_resistances": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "public/assets/atlas/constitutionditions/exhaustion"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "public/assets/atlas/constitutionditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "petrified",
+      "url": "public/assets/atlas/constitutionditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    },
+    {
+      "index": "unconscious",
+      "name": "unconscious",
+      "url": "public/assets/atlas/constitutionditions/unconscious"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "tremorsense": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "Terran",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [
+    {
+      "name": "earth glide",
+      "desc": "The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through.",
+      "damage": []
+    },
+    {
+      "name": "siege monster",
+      "desc": "The elemental deals double damage to objects and structures.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The elemental makes two slam attacks.",
+      "actions": [
+        {
+          "action_name": "Slam",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "slam",
+      "desc": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 14 (2d8 + 5) bludgeoning damage.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d8+5"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/earth_elemental.webp",
+  "url": "public/assets/atlas/enemies/json/earth_elemental.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 18,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet4.webp"
+}

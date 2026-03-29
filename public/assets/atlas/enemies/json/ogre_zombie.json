@@ -1,0 +1,88 @@
+{
+  "index": "ogre_zombie",
+  "name": "ogre zombie",
+  "size": "Large",
+  "type": "undead",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 8
+    }
+  ],
+  "hit_points": 85,
+  "hit_dice": "9d10",
+  "hit_points_roll": "9d10+36",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 6,
+  "constitution": 18,
+  "intelligence": 3,
+  "wisdom": 6,
+  "charisma": 5,
+  "proficiencies": [
+    {
+      "value": 0,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 8
+  },
+  "languages": "understands Common and Giant but can't speak",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "undead fortitude",
+      "desc": "If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "morningstar",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/ogre_zombie.webp",
+  "url": "public/assets/atlas/enemies/json/ogre_zombie.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 9,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp"
+}

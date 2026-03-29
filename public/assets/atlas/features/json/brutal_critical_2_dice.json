@@ -1,0 +1,17 @@
+{
+  "index": "brutal_critical_2_dice",
+  "class": {
+    "index": "barbarian",
+    "name": "barbarian",
+    "url": "public/assets/atlas/classes/barbarian"
+  },
+  "name": "brutal critical (2 dice)",
+  "level": 13,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level."
+  ],
+  "url": "public/assets/atlas/features/json/brutal_critical_2_dice.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/brutal_critical_2_dice.webp"
+}

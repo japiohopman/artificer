@@ -1,0 +1,121 @@
+{
+  "index": "swarm_of_rats",
+  "name": "swarm of rats",
+  "size": "Medium",
+  "type": "swarm of Tiny beasts",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 10
+    }
+  ],
+  "hit_points": 24,
+  "hit_dice": "7d8",
+  "hit_points_roll": "7d8-7",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 9,
+  "dexterity": 11,
+  "constitution": 9,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 3,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    },
+    {
+      "index": "grappled",
+      "name": "grappled",
+      "url": "public/assets/atlas/constitutionditions/grappled"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "public/assets/atlas/constitutionditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "petrified",
+      "url": "public/assets/atlas/constitutionditions/petrified"
+    },
+    {
+      "index": "prone",
+      "name": "prone",
+      "url": "public/assets/atlas/constitutionditions/prone"
+    },
+    {
+      "index": "restrained",
+      "name": "restrained",
+      "url": "public/assets/atlas/constitutionditions/restrained"
+    },
+    {
+      "index": "stunned",
+      "name": "stunned",
+      "url": "public/assets/atlas/constitutionditions/stunned"
+    }
+  ],
+  "senses": {
+    "darkvision": "30 ft.",
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "keen smell",
+      "desc": "The swarm has advantage on Wisdom (Perception) checks that rely on smell.",
+      "damage": []
+    },
+    {
+      "name": "swarm",
+      "desc": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny rat. The swarm can't regain hit points or gain temporary hit points.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bites",
+      "desc": "Melee Weapon Attack: +2 to hit, reach 0 ft., one target in the swarm's space. Hit: 7 (2d6) piercing damage, or 3 (1d6) piercing damage if the swarm has half of its hit points or fewer.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "2d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/swarm_of_rats.webp",
+  "url": "public/assets/atlas/enemies/json/swarm_of_rats.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 24,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+}

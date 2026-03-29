@@ -1,0 +1,43 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "mace",
+  "name": "mace",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "public/assets/atlas/damage_types/bludgeoning"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 4,
+  "properties": [
+    {
+      "index": "monk",
+      "name": "monk",
+      "url": "public/assets/atlas/weapon_properties/monk"
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/mace.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "public/assets/atlas/equipment/mace.webp",
+  "sprite_index": 8,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+}

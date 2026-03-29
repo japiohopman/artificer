@@ -1,0 +1,35 @@
+{
+  "index": "guild_artisan",
+  "name": "guild artisan",
+  "starting_proficiencies": [
+    {
+      "index": "skill_insight",
+      "name": "insight",
+      "url": ""
+    },
+    {
+      "index": "skill_persuasion",
+      "name": "persuasion",
+      "url": ""
+    }
+  ],
+  "tool_proficiencies": [
+    "One type of artisan's tools"
+  ],
+  "languages": "One of your choice",
+  "equipment": [
+    "Set of artisan's tools",
+    "A letter of introduction from your guild",
+    "Set of traveler's clothes",
+    "Pouch with 15 gp"
+  ],
+  "feature": {
+    "name": "guild membership",
+    "desc": [
+      "As an established and respected member of a guild, you can rely on certain benefits that membership provides. Your fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings."
+    ]
+  },
+  "lore": "The Guild Artisan is a creature of the urban thicket, thriving within the rhythmic pulse of the \"stone hives\" we call cities. Unlike the solitary hermit, the Artisan is a social organism, bound to their kin by the invisible threads of the Ledger and the Oath. They are most often found in the humid warmth of a forge, the dust-moted air of a woodshop, or the vibrant chaos of the marketplace.\n\nTheir behavior is defined by a practiced, deliberate grace\u2014the result of years spent mastering the physical world. They view the wilderness not as a sanctuary, but as a repository of raw materials waiting for refinement. While gregarious over a shared flagon, they remain fiercely territorial regarding their trade secrets. To an Artisan, reputation is a second skin, and gold is the lifeblood that keeps the heart of their guild beating. Respect the craft, and you find a steadfast ally.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/background/guild-artisan.webp",
+  "bakedAt": 1767703898269
+}

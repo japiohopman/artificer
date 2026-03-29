@@ -1,0 +1,24 @@
+{
+  "index": "holy_symbols",
+  "name": "holy symbols",
+  "equipment": [
+    {
+      "index": "amulet",
+      "name": "amulet",
+      "url": "public/assets/atlas/equipment/amulet"
+    },
+    {
+      "index": "emblem",
+      "name": "emblem",
+      "url": "public/assets/atlas/equipment/emblem"
+    },
+    {
+      "index": "reliquary",
+      "name": "reliquary",
+      "url": "public/assets/atlas/equipment/reliquary"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/holy_symbols.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/holy_symbols.webp"
+}

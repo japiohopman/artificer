@@ -1,0 +1,44 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "sling",
+  "name": "sling",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Ranged",
+  "category_range": "Simple Ranged",
+  "cost": {
+    "quantity": 1,
+    "unit": "sp"
+  },
+  "damage": {
+    "damage_dice": "1d4",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "public/assets/atlas/damage_types/bludgeoning"
+    }
+  },
+  "range": {
+    "normal": 30,
+    "long": 120
+  },
+  "weight": 0,
+  "properties": [
+    {
+      "index": "ammunition",
+      "name": "ammunition",
+      "url": "public/assets/atlas/weapon_properties/ammunition"
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/sling.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "public/assets/atlas/equipment/sling.webp",
+  "sprite_index": 0,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+}

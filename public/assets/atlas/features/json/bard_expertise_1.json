@@ -1,0 +1,173 @@
+{
+  "index": "bard_expertise_1",
+  "class": {
+    "index": "bard",
+    "name": "bard",
+    "url": "public/assets/atlas/classes/bard"
+  },
+  "name": "expertise",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "At 3rd level, choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies. At 10th level, you can choose another two skill proficiencies to gain this benefit."
+  ],
+  "feature_specific": {
+    "expertise_options": {
+      "choose": 2,
+      "type": "proficiency",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_acrobatics",
+              "name": "skill: acrobatics",
+              "url": "public/assets/atlas/proficiencies/skill_acrobatics"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_animal_handling",
+              "name": "skill: animal handling",
+              "url": "public/assets/atlas/proficiencies/skill_animal_handling"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_arcana",
+              "name": "skill: arcana",
+              "url": "public/assets/atlas/proficiencies/skill_arcana"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_athletics",
+              "name": "skill: athletics",
+              "url": "public/assets/atlas/proficiencies/skill_athletics"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_deception",
+              "name": "skill: deception",
+              "url": "public/assets/atlas/proficiencies/skill_deception"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_history",
+              "name": "skill: history",
+              "url": "public/assets/atlas/proficiencies/skill_history"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "public/assets/atlas/proficiencies/skill_insight"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_intimidation",
+              "name": "skill: intimidation",
+              "url": "public/assets/atlas/proficiencies/skill_intimidation"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_investigation",
+              "name": "skill: investigation",
+              "url": "public/assets/atlas/proficiencies/skill_investigation"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_medicine",
+              "name": "skill: medicine",
+              "url": "public/assets/atlas/proficiencies/skill_medicine"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_nature",
+              "name": "skill: nature",
+              "url": "public/assets/atlas/proficiencies/skill_nature"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_perception",
+              "name": "skill: perception",
+              "url": "public/assets/atlas/proficiencies/skill_perception"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_performance",
+              "name": "skill: performance",
+              "url": "public/assets/atlas/proficiencies/skill_performance"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_persuasion",
+              "name": "skill: persuasion",
+              "url": "public/assets/atlas/proficiencies/skill_persuasion"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_religion",
+              "name": "skill: religion",
+              "url": "public/assets/atlas/proficiencies/skill_religion"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_sleight_of_hand",
+              "name": "skill: sleight of hand",
+              "url": "public/assets/atlas/proficiencies/skill_sleight_of_hand"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_stealth",
+              "name": "skill: stealth",
+              "url": "public/assets/atlas/proficiencies/skill_stealth"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_survival",
+              "name": "skill: survival",
+              "url": "public/assets/atlas/proficiencies/skill_survival"
+            }
+          }
+        ]
+      }
+    },
+    "invocations": []
+  },
+  "url": "public/assets/atlas/features/json/bard_expertise_1.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/bard_expertise_1.webp"
+}

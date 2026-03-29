@@ -1,0 +1,31 @@
+{
+  "index": "saving_throw_con",
+  "type": "Saving Throws",
+  "name": "saving throw: con",
+  "classes": [
+    {
+      "index": "barbarian",
+      "name": "barbarian",
+      "url": "public/assets/atlas/classes/barbarian"
+    },
+    {
+      "index": "fighter",
+      "name": "fighter",
+      "url": "public/assets/atlas/classes/fighter"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    }
+  ],
+  "races": [],
+  "url": "public/assets/atlas/proficiencies/json/saving_throw_con.json",
+  "reference": {
+    "index": "con",
+    "name": "con",
+    "url": "public/assets/atlas/ability_scores/constitution"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/saving_throw_con.webp"
+}

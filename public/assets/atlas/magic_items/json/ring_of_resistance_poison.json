@@ -1,0 +1,21 @@
+{
+  "index": "ring_of_resistance_poison",
+  "name": "ring of poison resistance",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "public/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Ring, rare (requires attunement)",
+    "You have resistance to poison damage while wearing this amethyst ring."
+  ],
+  "url": "public/assets/atlas/magic_items/json/ring_of_resistance_poison.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/ring_of_resistance_poison.webp"
+}

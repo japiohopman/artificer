@@ -1,0 +1,175 @@
+{
+  "index": "bandit_captain",
+  "name": "bandit captain",
+  "desc": "It takes a strong personality, ruthless cunning, and a silver tongue to keep a gang of bandits in line. The **bandit captain** has these qualities in spades.\n\nIn addition to managing a crew of selfish malcontents, the **pirate captain** is a variation of the bandit captain, with a ship to protect and command. To keep the crew in line, the captain must mete out rewards and punishment on a regular basis.\n\nMore than treasure, a bandit captain or pirate captain craves infamy. A prisoner who appeals to the captain\u2019s vanity or ego is more likely to be treated fairly than a prisoner who does not or claims not to know anything of the captain\u2019s colorful reputation.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any non-lawful alignment",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 15,
+      "armor": [
+        {
+          "index": "studded_leather_armor",
+          "name": "studded leather armor",
+          "url": "public/assets/atlas/equipment/studded_leather_armor"
+        }
+      ]
+    }
+  ],
+  "hit_points": 65,
+  "hit_dice": "10d8",
+  "hit_points_roll": "10d8+20",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 16,
+  "constitution": 14,
+  "intelligence": 14,
+  "wisdom": 11,
+  "charisma": 14,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_str",
+        "name": "saving throw: str",
+        "url": "public/assets/atlas/proficiencies/saving_throw_str"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_athletics",
+        "name": "skill: athletics",
+        "url": "public/assets/atlas/proficiencies/skill_athletics"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_deception",
+        "name": "skill: deception",
+        "url": "public/assets/atlas/proficiencies/skill_deception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any two languages",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "action_options",
+      "desc": "The captain makes three melee attacks: two with its scimitar and one with its dagger. Or the captain makes two ranged attacks with its daggers.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Scimitar",
+                  "count": 2,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Dagger",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            },
+            {
+              "option_type": "action",
+              "action_name": "Dagger",
+              "count": 2,
+              "type": "ranged"
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "scimitar",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "dagger",
+      "desc": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4 + 3) piercing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d4+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "reactions": [
+    {
+      "name": "parry",
+      "desc": "The captain adds 2 to its AC against one melee attack that would hit it. To do so, the captain must see the attacker and be wielding a melee weapon."
+    }
+  ],
+  "image": "/api/images/monsters/bandit_captain.png",
+  "url": "public/assets/atlas/monsters/bandit_captain",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "special_abilities": [],
+  "lore": "The Bandit Captain is a creature of the borders, found wherever the law\u2019s reach falters. Unlike the common cutthroat, the Captain is a social apex predator, haunting ruined watchtowers and choked mountain passes. They do not merely steal; they harvest.\n\nTheir predatory behavior is marked by a cruel patience. They orchestrate ambushes not with mindless violence, but with the precision of a shepherd herding sheep into a slaughter-pen. A Captain commands through a synthesis of charisma and terror, turning a rabble into a singular, lethal organism. They study their prey from the treeline, identifying the weakest link long before a single blade is drawn.\n\nIn local folklore, they are often depicted as \"The Shadowed King\" or \"The Toll-Gatherer of Graves.\" Peasants whisper that a Captain is born when a soldier loses his soul but keeps his sword. To encounter one is to face the dark reflection of civilization\u2014a leader who has traded the crown for the noose, ruling over a kingdom of mud and blood. Beware the glint of polished steel in the brush; it is the eye of the wolf watching the fold.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/bandit-captain.webp",
+  "bakedAt": 1767631933093
+}

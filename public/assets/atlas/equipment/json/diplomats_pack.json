@@ -1,0 +1,116 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "diplomats_pack",
+  "name": "diplomat's pack",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "equipment_packs",
+    "name": "equipment packs",
+    "url": "public/assets/atlas/equipment_categories/equipment_packs"
+  },
+  "cost": {
+    "quantity": 39,
+    "unit": "gp"
+  },
+  "contents": [
+    {
+      "item": {
+        "index": "chest",
+        "name": "chest",
+        "url": "public/assets/atlas/equipment/chest"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "case_map_or_scroll",
+        "name": "case, map or scroll",
+        "url": "public/assets/atlas/equipment/case_map_or_scroll"
+      },
+      "quantity": 2
+    },
+    {
+      "item": {
+        "index": "clothes_fine",
+        "name": "clothes, fine",
+        "url": "public/assets/atlas/equipment/clothes_fine"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "ink_1_ounce_bottle",
+        "name": "ink (1 ounce bottle)",
+        "url": "public/assets/atlas/equipment/ink_1_ounce_bottle"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "ink_pen",
+        "name": "ink pen",
+        "url": "public/assets/atlas/equipment/ink_pen"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "lamp",
+        "name": "lamp",
+        "url": "public/assets/atlas/equipment/lamp"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "oil_flask",
+        "name": "oil (flask)",
+        "url": "public/assets/atlas/equipment/oil_flask"
+      },
+      "quantity": 2
+    },
+    {
+      "item": {
+        "index": "paper_one_sheet",
+        "name": "paper (one sheet)",
+        "url": "public/assets/atlas/equipment/paper_one_sheet"
+      },
+      "quantity": 5
+    },
+    {
+      "item": {
+        "index": "perfume_vial",
+        "name": "perfume (vial)",
+        "url": "public/assets/atlas/equipment/perfume_vial"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "sealing_wax",
+        "name": "sealing wax",
+        "url": "public/assets/atlas/equipment/sealing_wax"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "soap",
+        "name": "soap",
+        "url": "public/assets/atlas/equipment/soap"
+      },
+      "quantity": 1
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/diplomats_pack.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "properties": [],
+  "image": "public/assets/atlas/equipment/diplomats_pack.webp",
+  "sprite_index": 1,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+}

@@ -1,0 +1,124 @@
+{
+  "index": "hell_hound",
+  "name": "hell hound",
+  "size": "Medium",
+  "type": "fiend",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 45,
+  "hit_dice": "7d8",
+  "hit_points_roll": "7d8+14",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 17,
+  "dexterity": 12,
+  "constitution": 14,
+  "intelligence": 6,
+  "wisdom": 13,
+  "charisma": 6,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 15
+  },
+  "languages": "understands Infernal but can't speak it",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [
+    {
+      "name": "keen hearing and smell",
+      "desc": "The hound has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "damage": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The hound has advantage on an attack roll against a creature if at least one of the hound's allies is within 5 ft. of the creature and the ally isn't incapacitated.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 7 (2d6) fire damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d8+3"
+        },
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "public/assets/atlas/damage_types/fire"
+          },
+          "damage_dice": "2d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fire breath",
+      "desc": "The hound exhales fire in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 21 (6d6) fire damage on a failed save, or half as much damage on a successful one.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "public/assets/atlas/ability_scores/dexterity"
+        },
+        "dc_value": 12,
+        "success_type": "half"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "public/assets/atlas/damage_types/fire"
+          },
+          "damage_dice": "6d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/hell_hound.webp",
+  "url": "public/assets/atlas/enemies/json/hell_hound.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 11,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet7.webp"
+}

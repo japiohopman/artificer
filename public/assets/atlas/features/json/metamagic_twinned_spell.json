@@ -1,0 +1,18 @@
+{
+  "index": "metamagic_twinned_spell",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "public/assets/atlas/classes/sorcerer"
+  },
+  "name": "metamagic: twinned spell",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "When you cast a spell that targets only one creature and doesn't have a range of self, you can spend a number of sorcery points equal to the spell's level to target a second creature in range with the same spell (1 sorcery point if the spell is a cantrip).",
+    "To be eligible, a spell must be incapable of targeting more than one creature at the spell's current level. For example, magic missile and scorching ray aren't eligible, but ray of frost is."
+  ],
+  "url": "public/assets/atlas/features/json/metamagic_twinned_spell.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/metamagic_twinned_spell.webp"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "mindless_rage",
+  "class": {
+    "index": "barbarian",
+    "name": "barbarian",
+    "url": "public/assets/atlas/classes/barbarian"
+  },
+  "subclass": {
+    "index": "berserker",
+    "name": "berserker",
+    "url": "public/assets/atlas/subclasses/berserker"
+  },
+  "name": "mindless rage",
+  "level": 6,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 6th level, you can't be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage."
+  ],
+  "url": "public/assets/atlas/features/json/mindless_rage.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/mindless_rage.webp"
+}

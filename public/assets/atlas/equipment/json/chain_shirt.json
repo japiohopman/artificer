@@ -1,0 +1,31 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "chain_shirt",
+  "name": "chain shirt",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "public/assets/atlas/equipment_categories/armor"
+  },
+  "armor_category": "Medium",
+  "armor_class": {
+    "base": 13,
+    "dex_bonus": true,
+    "max_bonus": 2
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false,
+  "weight": 20,
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "url": "public/assets/atlas/equipment/json/charismain_shirt.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/charismain_shirt.webp",
+  "sprite_index": 4,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp"
+}

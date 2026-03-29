@@ -1,0 +1,345 @@
+{
+  "index": "paladin",
+  "name": "paladin",
+  "hit_die": 10,
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_athletics",
+              "name": "skill: athletics",
+              "url": "public/assets/atlas/proficiencies/skill_athletics"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "public/assets/atlas/proficiencies/skill_insight"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_intimidation",
+              "name": "skill: intimidation",
+              "url": "public/assets/atlas/proficiencies/skill_intimidation"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_medicine",
+              "name": "skill: medicine",
+              "url": "public/assets/atlas/proficiencies/skill_medicine"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_persuasion",
+              "name": "skill: persuasion",
+              "url": "public/assets/atlas/proficiencies/skill_persuasion"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_religion",
+              "name": "skill: religion",
+              "url": "public/assets/atlas/proficiencies/skill_religion"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "all_armor",
+      "name": "all armor",
+      "url": "public/assets/atlas/proficiencies/all_armor"
+    },
+    {
+      "index": "shields",
+      "name": "shields",
+      "url": "public/assets/atlas/proficiencies/shields"
+    },
+    {
+      "index": "simple_weapons",
+      "name": "simple weapons",
+      "url": "public/assets/atlas/proficiencies/simple_weapons"
+    },
+    {
+      "index": "martial_weapons",
+      "name": "martial weapons",
+      "url": "public/assets/atlas/proficiencies/martial_weapons"
+    },
+    {
+      "index": "saving_throw_wis",
+      "name": "saving throw: wis",
+      "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+    },
+    {
+      "index": "saving_throw_cha",
+      "name": "saving throw: cha",
+      "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "wis",
+      "name": "wis",
+      "url": "public/assets/atlas/ability_scores/wisdom"
+    },
+    {
+      "index": "cha",
+      "name": "cha",
+      "url": "public/assets/atlas/ability_scores/charisma"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "chain_mail",
+        "name": "chain mail",
+        "url": "public/assets/atlas/equipment/charismain_mail"
+      },
+      "quantity": 1
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) a martial weapon and a shield or (b) two martial weapons",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "a martial weapon",
+                  "choose": 1,
+                  "type": "equipment",
+                  "from": {
+                    "option_set_type": "equipment_category",
+                    "equipment_category": {
+                      "name": "martial weapons",
+                      "index": "martial_weapons",
+                      "url": "public/assets/atlas/equipment_categories/martial_weapons"
+                    }
+                  }
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "shield",
+                  "name": "shield",
+                  "url": "public/assets/atlas/equipment/shield"
+                }
+              }
+            ]
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "two martial weapons",
+              "choose": 2,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "martial_weapons",
+                  "name": "martial weapons",
+                  "url": "public/assets/atlas/equipment_categories/martial_weapons"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) five javelins or (b) any simple melee weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 5,
+            "of": {
+              "index": "javelin",
+              "name": "javelin",
+              "url": "public/assets/atlas/equipment/javelin"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any simple weapon",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "simple_weapons",
+                  "name": "simple weapons",
+                  "url": "public/assets/atlas/equipment_categories/simple_weapons"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a priest\u2019s pack or (b) an explorer\u2019s pack",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "priests_pack",
+              "name": "priest's pack",
+              "url": "public/assets/atlas/equipment/priests_pack"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "explorers_pack",
+              "name": "explorer's pack",
+              "url": "public/assets/atlas/equipment/explorers_pack"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "holy symbol",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "equipment_category",
+        "equipment_category": {
+          "index": "holy_symbols",
+          "name": "holy symbols",
+          "url": "public/assets/atlas/equipment_categories/holy_symbols"
+        }
+      }
+    }
+  ],
+  "class_levels": "public/assets/atlas/classes/paladin/levels",
+  "multi_classing": {
+    "prerequisites": [
+      {
+        "ability_score": {
+          "index": "str",
+          "name": "str",
+          "url": "public/assets/atlas/ability_scores/strength"
+        },
+        "minimum_score": 13
+      },
+      {
+        "ability_score": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        },
+        "minimum_score": 13
+      }
+    ],
+    "proficiencies": [
+      {
+        "index": "light_armor",
+        "name": "light armor",
+        "url": "public/assets/atlas/proficiencies/light_armor"
+      },
+      {
+        "index": "medium_armor",
+        "name": "medium armor",
+        "url": "public/assets/atlas/proficiencies/medium_armor"
+      },
+      {
+        "index": "shields",
+        "name": "shields",
+        "url": "public/assets/atlas/proficiencies/shields"
+      },
+      {
+        "index": "simple_weapons",
+        "name": "simple weapons",
+        "url": "public/assets/atlas/proficiencies/simple_weapons"
+      },
+      {
+        "index": "martial_weapons",
+        "name": "martial weapons",
+        "url": "public/assets/atlas/proficiencies/martial_weapons"
+      }
+    ]
+  },
+  "subclasses": [
+    {
+      "index": "devotion",
+      "name": "devotion",
+      "url": "public/assets/atlas/subclasses/devotion"
+    }
+  ],
+  "spellcasting": {
+    "level": 2,
+    "spellcasting_ability": {
+      "index": "cha",
+      "name": "cha",
+      "url": "public/assets/atlas/ability_scores/charisma"
+    },
+    "info": [
+      {
+        "name": "preparing and casting spells",
+        "desc": [
+          "The Paladin table shows how many spell slots you have to cast your spells. To cast one of your paladin spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+          "You prepare the list of paladin spells that are available for you to cast, choosing from the paladin spell list. When you do so, choose a number of paladin spells equal to your Charisma modifier + half your paladin level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.",
+          "For example, if you are a 5th-level paladin, you have four 1st-level and two 2nd-level spell slots. With a Charisma of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or a 2nd- level slot. Casting the spell doesn't remove it from your list of prepared spells.",
+          "You can change your list of prepared spells when you finish a long rest. Preparing a new list of paladin spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
+        ]
+      },
+      {
+        "name": "spellcasting ability",
+        "desc": [
+          "Charisma is your spellcasting ability for your paladin spells, since their power derives from the strength of your convictions. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a paladin spell you cast and when making an attack roll with one.",
+          "Spell save DC = 8 + your proficiency bonus + your Charisma modifier.",
+          "Spell attack modifier = your proficiency bonus + your Charisma modifier."
+        ]
+      },
+      {
+        "name": "spellcasting focus",
+        "desc": [
+          "You can use a holy symbol as a spellcasting focus for your paladin spells."
+        ]
+      }
+    ]
+  },
+  "spells": "public/assets/atlas/classes/paladin/spells",
+  "url": "public/assets/atlas/classes/json/paladin.json",
+  "updated_at": "2025-10-24T20:42:12.459Z",
+  "image": "public/assets/atlas/classes/paladin.webp"
+}

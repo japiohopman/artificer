@@ -1,0 +1,21 @@
+{
+  "index": "skill_perception",
+  "type": "Skills",
+  "name": "skill: perception",
+  "classes": [],
+  "races": [
+    {
+      "index": "elf",
+      "name": "elf",
+      "url": "public/assets/atlas/races/elf"
+    }
+  ],
+  "url": "public/assets/atlas/proficiencies/json/skill_perception.json",
+  "reference": {
+    "index": "perception",
+    "name": "perception",
+    "url": "public/assets/atlas/skills/perception"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/skill_perception.webp"
+}

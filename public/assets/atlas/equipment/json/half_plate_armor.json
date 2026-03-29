@@ -1,0 +1,31 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "half_plate_armor",
+  "name": "half plate armor",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "public/assets/atlas/equipment_categories/armor"
+  },
+  "armor_category": "Medium",
+  "armor_class": {
+    "base": 15,
+    "dex_bonus": true,
+    "max_bonus": 2
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": true,
+  "weight": 40,
+  "cost": {
+    "quantity": 750,
+    "unit": "gp"
+  },
+  "url": "public/assets/atlas/equipment/json/half_plate_armor.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/half_plate_armor.webp",
+  "sprite_index": 24,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+}

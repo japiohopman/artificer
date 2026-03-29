@@ -1,0 +1,36 @@
+{
+  "index": "medium_armor",
+  "type": "Armor",
+  "name": "medium armor",
+  "classes": [
+    {
+      "index": "barbarian",
+      "name": "barbarian",
+      "url": "public/assets/atlas/classes/barbarian"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "public/assets/atlas/classes/ranger"
+    }
+  ],
+  "races": [],
+  "url": "public/assets/atlas/proficiencies/json/medium_armor.json",
+  "reference": {
+    "index": "medium_armor",
+    "name": "medium armor",
+    "url": "public/assets/atlas/equipment_categories/medium_armor"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/medium_armor.webp"
+}

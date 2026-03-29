@@ -1,0 +1,81 @@
+{
+  "index": "warhorse_skeleton",
+  "name": "warhorse skeleton",
+  "size": "Large",
+  "type": "undead",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 13,
+      "desc": "barding scraps"
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10+6",
+  "speed": {
+    "walk": "60 ft."
+  },
+  "strength": 18,
+  "dexterity": 12,
+  "constitution": 15,
+  "intelligence": 2,
+  "wisdom": 8,
+  "charisma": 5,
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "bludgeoning"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "public/assets/atlas/constitutionditions/exhaustion"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 9
+  },
+  "languages": "",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "actions": [
+    {
+      "name": "hooves",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/warhorse_skeleton.webp",
+  "url": "public/assets/atlas/enemies/json/warhorse_skeleton.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "sprite_index": 20,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet12.webp"
+}

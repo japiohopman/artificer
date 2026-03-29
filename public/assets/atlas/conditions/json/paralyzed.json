@@ -1,0 +1,13 @@
+{
+  "index": "paralyzed",
+  "name": "paralyzed",
+  "desc": [
+    "- A paralyzed creature is incapacitated (see the condition) and can't move or speak.",
+    "- The creature automatically fails Strength and Dexterity saving throws.",
+    "- Attack rolls against the creature have advantage.",
+    "- Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature."
+  ],
+  "url": "public/assets/atlas/constitutionditions/json/paralyzed.json",
+  "updated_at": "2025-10-24T20:42:12.637Z",
+  "image": "public/assets/atlas/constitutionditions/paralyzed.webp"
+}

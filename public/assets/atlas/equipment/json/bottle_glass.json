@@ -1,0 +1,28 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "bottle_glass",
+  "name": "bottle, glass",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "public/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "public/assets/atlas/equipment/json/bottle_glass.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/bottle_glass.webp",
+  "sprite_index": 11,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+}

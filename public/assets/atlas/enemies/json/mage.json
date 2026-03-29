@@ -1,0 +1,219 @@
+{
+  "index": "mage",
+  "name": "mage",
+  "desc": "Mages spend their lives in the study and practice of magic. Good-aligned mages offer counsel to nobles and others in power, while evil mages dwell in isolated sites to perform unspeakable experiments without interference.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    },
+    {
+      "type": "spell",
+      "value": 15,
+      "spell": {
+        "index": "mage_armor",
+        "name": "mage armor",
+        "url": "public/assets/atlas/spells/mage_armor"
+      }
+    }
+  ],
+  "hit_points": 40,
+  "hit_dice": "9d8",
+  "hit_points_roll": "9d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 9,
+  "dexterity": 14,
+  "constitution": 11,
+  "intelligence": 17,
+  "wisdom": 12,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_int",
+        "name": "saving throw: int",
+        "url": "public/assets/atlas/proficiencies/saving_throw_int"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_arcana",
+        "name": "skill: arcana",
+        "url": "public/assets/atlas/proficiencies/skill_arcana"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_history",
+        "name": "skill: history",
+        "url": "public/assets/atlas/proficiencies/skill_history"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any four languages",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [
+    {
+      "name": "spellcasting",
+      "desc": "The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The mage has the following wizard spells prepared:\n\n- Cantrips (at will): fire bolt, light, mage hand, prestidigitation\n- 1st level (4 slots): detect magic, mage armor, magic missile, shield\n- 2nd level (3 slots): misty step, suggestion\n- 3rd level (3 slots): counterspell, fireball, fly\n- 4th level (3 slots): greater invisibility, ice storm\n- 5th level (1 slot): cone of cold",
+      "spellcasting": {
+        "level": 9,
+        "ability": {
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/intelligence"
+        },
+        "dc": 14,
+        "modifier": 6,
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "school": "wizard",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 1
+        },
+        "spells": [
+          {
+            "name": "fire bolt",
+            "level": 0,
+            "url": "public/assets/atlas/spells/fire_bolt"
+          },
+          {
+            "name": "light",
+            "level": 0,
+            "url": "public/assets/atlas/spells/light"
+          },
+          {
+            "name": "mage hand",
+            "level": 0,
+            "url": "public/assets/atlas/spells/mage_hand"
+          },
+          {
+            "name": "prestidigitation",
+            "level": 0,
+            "url": "public/assets/atlas/spells/prestidigitation"
+          },
+          {
+            "name": "detect magic",
+            "level": 1,
+            "url": "public/assets/atlas/spells/detect_magic"
+          },
+          {
+            "name": "mage armor",
+            "level": 1,
+            "url": "public/assets/atlas/spells/mage_armor"
+          },
+          {
+            "name": "magic missile",
+            "level": 1,
+            "url": "public/assets/atlas/spells/magic_missile"
+          },
+          {
+            "name": "shield",
+            "level": 1,
+            "url": "public/assets/atlas/spells/shield"
+          },
+          {
+            "name": "misty step",
+            "level": 2,
+            "url": "public/assets/atlas/spells/misty_step"
+          },
+          {
+            "name": "suggestion",
+            "level": 2,
+            "url": "public/assets/atlas/spells/suggestion"
+          },
+          {
+            "name": "counterspell",
+            "level": 3,
+            "url": "public/assets/atlas/spells/counterspell"
+          },
+          {
+            "name": "fireball",
+            "level": 3,
+            "url": "public/assets/atlas/spells/fireball"
+          },
+          {
+            "name": "fly",
+            "level": 3,
+            "url": "public/assets/atlas/spells/fly"
+          },
+          {
+            "name": "greater invisibility",
+            "level": 4,
+            "url": "public/assets/atlas/spells/greater_invisibility"
+          },
+          {
+            "name": "ice storm",
+            "level": 4,
+            "url": "public/assets/atlas/spells/ice_storm"
+          },
+          {
+            "name": "cone of cold",
+            "level": 5,
+            "url": "public/assets/atlas/spells/constitutione_of_cold"
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "dagger",
+      "desc": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/mage.webp",
+  "url": "public/assets/atlas/enemies/json/mage.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 12,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp"
+}

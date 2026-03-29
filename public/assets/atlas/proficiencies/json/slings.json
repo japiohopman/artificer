@@ -1,0 +1,31 @@
+{
+  "index": "slings",
+  "type": "Weapons",
+  "name": "slings",
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "races": [],
+  "url": "public/assets/atlas/proficiencies/json/slings.json",
+  "reference": {
+    "index": "sling",
+    "name": "sling",
+    "url": "public/assets/atlas/equipment/sling"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/slings.webp"
+}

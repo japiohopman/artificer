@@ -1,0 +1,894 @@
+{
+  "index": "wondrous_items",
+  "name": "wondrous items",
+  "equipment": [
+    {
+      "index": "amulet_of_health",
+      "name": "amulet of health",
+      "url": "public/assets/atlas/magic_items/amulet_of_health"
+    },
+    {
+      "index": "amulet_of_proof_against_detection_and_location",
+      "name": "amulet of proof against detection and location",
+      "url": "public/assets/atlas/magic_items/amulet_of_proof_against_detection_and_location"
+    },
+    {
+      "index": "amulet_of_the_planes",
+      "name": "amulet of the planes",
+      "url": "public/assets/atlas/magic_items/amulet_of_the_planes"
+    },
+    {
+      "index": "apparatus_of_the_crab",
+      "name": "apparatus of the crab",
+      "url": "public/assets/atlas/magic_items/apparatus_of_the_crab"
+    },
+    {
+      "index": "bag_of_beans",
+      "name": "bag of beans",
+      "url": "public/assets/atlas/magic_items/bag_of_beans"
+    },
+    {
+      "index": "bag_of_devouring",
+      "name": "bag of devouring",
+      "url": "public/assets/atlas/magic_items/bag_of_devouring"
+    },
+    {
+      "index": "bag_of_holding",
+      "name": "bag of holding",
+      "url": "public/assets/atlas/magic_items/bag_of_holding"
+    },
+    {
+      "index": "bag_of_tricks",
+      "name": "bag of tricks",
+      "url": "public/assets/atlas/magic_items/bag_of_tricks"
+    },
+    {
+      "index": "bead_of_force",
+      "name": "bead of force",
+      "url": "public/assets/atlas/magic_items/bead_of_force"
+    },
+    {
+      "index": "belt_of_dwarvenkind",
+      "name": "belt of dwarvenkind",
+      "url": "public/assets/atlas/magic_items/belt_of_dwarvenkind"
+    },
+    {
+      "index": "belt_of_giant_strength",
+      "name": "belt of giant strength",
+      "url": "public/assets/atlas/magic_items/belt_of_giant_strength"
+    },
+    {
+      "index": "boots_of_elvenkind",
+      "name": "boots of elvenkind",
+      "url": "public/assets/atlas/magic_items/boots_of_elvenkind"
+    },
+    {
+      "index": "boots_of_levitation",
+      "name": "boots of levitation",
+      "url": "public/assets/atlas/magic_items/boots_of_levitation"
+    },
+    {
+      "index": "boots_of_speed",
+      "name": "boots of speed",
+      "url": "public/assets/atlas/magic_items/boots_of_speed"
+    },
+    {
+      "index": "boots_of_striding_and_springing",
+      "name": "boots of striding and springing",
+      "url": "public/assets/atlas/magic_items/boots_of_striding_and_springing"
+    },
+    {
+      "index": "boots_of_the_winterlands",
+      "name": "boots of the winterlands",
+      "url": "public/assets/atlas/magic_items/boots_of_the_winterlands"
+    },
+    {
+      "index": "bowl_of_commanding_water_elementals",
+      "name": "bowl of commanding water elementals",
+      "url": "public/assets/atlas/magic_items/bowl_of_commanding_water_elementals"
+    },
+    {
+      "index": "bracers_of_archery",
+      "name": "bracers of archery",
+      "url": "public/assets/atlas/magic_items/bracers_of_archery"
+    },
+    {
+      "index": "bracers_of_defense",
+      "name": "bracers of defense",
+      "url": "public/assets/atlas/magic_items/bracers_of_defense"
+    },
+    {
+      "index": "brazier_of_commanding_fire_elementals",
+      "name": "brazier of commanding fire elementals",
+      "url": "public/assets/atlas/magic_items/brazier_of_commanding_fire_elementals"
+    },
+    {
+      "index": "brooch_of_shielding",
+      "name": "brooch of shielding",
+      "url": "public/assets/atlas/magic_items/brooch_of_shielding"
+    },
+    {
+      "index": "broom_of_flying",
+      "name": "broom of flying",
+      "url": "public/assets/atlas/magic_items/broom_of_flying"
+    },
+    {
+      "index": "candle_of_invocation",
+      "name": "candle of invocation",
+      "url": "public/assets/atlas/magic_items/candle_of_invocation"
+    },
+    {
+      "index": "cape_of_the_mountebank",
+      "name": "cape of the mountebank",
+      "url": "public/assets/atlas/magic_items/cape_of_the_mountebank"
+    },
+    {
+      "index": "carpet_of_flying",
+      "name": "carpet of flying",
+      "url": "public/assets/atlas/magic_items/carpet_of_flying"
+    },
+    {
+      "index": "censer_of_controlling_air_elementals",
+      "name": "censer of controlling air elementals",
+      "url": "public/assets/atlas/magic_items/censer_of_controlling_air_elementals"
+    },
+    {
+      "index": "chime_of_opening",
+      "name": "chime of opening",
+      "url": "public/assets/atlas/magic_items/chime_of_opening"
+    },
+    {
+      "index": "circlet_of_blasting",
+      "name": "circlet of blasting",
+      "url": "public/assets/atlas/magic_items/circlet_of_blasting"
+    },
+    {
+      "index": "cloak_of_arachnida",
+      "name": "cloak of arachnida",
+      "url": "public/assets/atlas/magic_items/cloak_of_arachnida"
+    },
+    {
+      "index": "cloak_of_displacement",
+      "name": "cloak of displacement",
+      "url": "public/assets/atlas/magic_items/cloak_of_displacement"
+    },
+    {
+      "index": "cloak_of_elvenkind",
+      "name": "cloak of elvenkind",
+      "url": "public/assets/atlas/magic_items/cloak_of_elvenkind"
+    },
+    {
+      "index": "cloak_of_protection",
+      "name": "cloak of protection",
+      "url": "public/assets/atlas/magic_items/cloak_of_protection"
+    },
+    {
+      "index": "cloak_of_the_bat",
+      "name": "cloak of the bat",
+      "url": "public/assets/atlas/magic_items/cloak_of_the_bat"
+    },
+    {
+      "index": "cloak_of_the_manta_ray",
+      "name": "cloak of the manta ray",
+      "url": "public/assets/atlas/magic_items/cloak_of_the_manta_ray"
+    },
+    {
+      "index": "crystal_ball",
+      "name": "crystal ball",
+      "url": "public/assets/atlas/magic_items/crystal_ball"
+    },
+    {
+      "index": "cube_of_force",
+      "name": "cube of force",
+      "url": "public/assets/atlas/magic_items/cube_of_force"
+    },
+    {
+      "index": "cubic_gate",
+      "name": "cubic gate",
+      "url": "public/assets/atlas/magic_items/cubic_gate"
+    },
+    {
+      "index": "decanter_of_endless_water",
+      "name": "decanter of endless water",
+      "url": "public/assets/atlas/magic_items/decanter_of_endless_water"
+    },
+    {
+      "index": "deck_of_illusions",
+      "name": "deck of illusions",
+      "url": "public/assets/atlas/magic_items/deck_of_illusions"
+    },
+    {
+      "index": "deck_of_many_things",
+      "name": "deck of many things",
+      "url": "public/assets/atlas/magic_items/deck_of_many_things"
+    },
+    {
+      "index": "dimensional_shackles",
+      "name": "dimensional shackles",
+      "url": "public/assets/atlas/magic_items/dimensional_shackles"
+    },
+    {
+      "index": "dust_of_disappearance",
+      "name": "dust of disappearance",
+      "url": "public/assets/atlas/magic_items/dust_of_disappearance"
+    },
+    {
+      "index": "dust_of_dryness",
+      "name": "dust of dryness",
+      "url": "public/assets/atlas/magic_items/dust_of_dryness"
+    },
+    {
+      "index": "dust_of_sneezing_and_choking",
+      "name": "dust of sneezing and choking",
+      "url": "public/assets/atlas/magic_items/dust_of_sneezing_and_choking"
+    },
+    {
+      "index": "efficient_quiver",
+      "name": "efficient quiver",
+      "url": "public/assets/atlas/magic_items/efficient_quiver"
+    },
+    {
+      "index": "efreeti_bottle",
+      "name": "efreeti bottle",
+      "url": "public/assets/atlas/magic_items/efreeti_bottle"
+    },
+    {
+      "index": "elemental_gem",
+      "name": "elemental gem",
+      "url": "public/assets/atlas/magic_items/elemental_gem"
+    },
+    {
+      "index": "eversmoking_bottle",
+      "name": "eversmoking bottle",
+      "url": "public/assets/atlas/magic_items/eversmoking_bottle"
+    },
+    {
+      "index": "eyes_of_charming",
+      "name": "eyes of charming",
+      "url": "public/assets/atlas/magic_items/eyes_of_charming"
+    },
+    {
+      "index": "eyes_of_minute_seeing",
+      "name": "eyes of minute seeing",
+      "url": "public/assets/atlas/magic_items/eyes_of_minute_seeing"
+    },
+    {
+      "index": "eyes_of_the_eagle",
+      "name": "eyes of the eagle",
+      "url": "public/assets/atlas/magic_items/eyes_of_the_eagle"
+    },
+    {
+      "index": "feather_token",
+      "name": "feather token",
+      "url": "public/assets/atlas/magic_items/feather_token"
+    },
+    {
+      "index": "figurine_of_wondrous_power",
+      "name": "figurine of wondrous power",
+      "url": "public/assets/atlas/magic_items/figurine_of_wondrous_power"
+    },
+    {
+      "index": "folding_boat",
+      "name": "folding boat",
+      "url": "public/assets/atlas/magic_items/folding_boat"
+    },
+    {
+      "index": "gauntlets_of_ogre_power",
+      "name": "gauntlets of ogre power",
+      "url": "public/assets/atlas/magic_items/gauntlets_of_ogre_power"
+    },
+    {
+      "index": "gem_of_brightness",
+      "name": "gem of brightness",
+      "url": "public/assets/atlas/magic_items/gem_of_brightness"
+    },
+    {
+      "index": "gem_of_seeing",
+      "name": "gem of seeing",
+      "url": "public/assets/atlas/magic_items/gem_of_seeing"
+    },
+    {
+      "index": "gloves_of_missile_snaring",
+      "name": "gloves of missile snaring",
+      "url": "public/assets/atlas/magic_items/gloves_of_missile_snaring"
+    },
+    {
+      "index": "gloves_of_swimming_and_climbing",
+      "name": "gloves of swimming and climbing",
+      "url": "public/assets/atlas/magic_items/gloves_of_swimming_and_climbing"
+    },
+    {
+      "index": "goggles_of_night",
+      "name": "goggles of night",
+      "url": "public/assets/atlas/magic_items/goggles_of_night"
+    },
+    {
+      "index": "handy_haversack",
+      "name": "handy haversack",
+      "url": "public/assets/atlas/magic_items/handy_haversack"
+    },
+    {
+      "index": "hat_of_disguise",
+      "name": "hat of disguise",
+      "url": "public/assets/atlas/magic_items/hat_of_disguise"
+    },
+    {
+      "index": "headband_of_intellect",
+      "name": "headband of intellect",
+      "url": "public/assets/atlas/magic_items/headband_of_intellect"
+    },
+    {
+      "index": "helm_of_brilliance",
+      "name": "helm of brilliance",
+      "url": "public/assets/atlas/magic_items/helm_of_brilliance"
+    },
+    {
+      "index": "helm_of_comprehending_languages",
+      "name": "helm of comprehending languages",
+      "url": "public/assets/atlas/magic_items/helm_of_comprehending_languages"
+    },
+    {
+      "index": "helm_of_telepathy",
+      "name": "helm of telepathy",
+      "url": "public/assets/atlas/magic_items/helm_of_telepathy"
+    },
+    {
+      "index": "helm_of_teleportation",
+      "name": "helm of teleportation",
+      "url": "public/assets/atlas/magic_items/helm_of_teleportation"
+    },
+    {
+      "index": "horn_of_blasting",
+      "name": "horn of blasting",
+      "url": "public/assets/atlas/magic_items/horn_of_blasting"
+    },
+    {
+      "index": "horn_of_valhalla",
+      "name": "horn of valhalla",
+      "url": "public/assets/atlas/magic_items/horn_of_valhalla"
+    },
+    {
+      "index": "horseshoes_of_a_zephyr",
+      "name": "horseshoes of a zephyr",
+      "url": "public/assets/atlas/magic_items/horseshoes_of_a_zephyr"
+    },
+    {
+      "index": "horseshoes_of_speed",
+      "name": "horseshoes of speed",
+      "url": "public/assets/atlas/magic_items/horseshoes_of_speed"
+    },
+    {
+      "index": "instant_fortress",
+      "name": "instant fortress",
+      "url": "public/assets/atlas/magic_items/instant_fortress"
+    },
+    {
+      "index": "ioun_stone",
+      "name": "ioun stone",
+      "url": "public/assets/atlas/magic_items/ioun_stone"
+    },
+    {
+      "index": "iron_bands_of_binding",
+      "name": "iron bands of binding",
+      "url": "public/assets/atlas/magic_items/iron_bands_of_binding"
+    },
+    {
+      "index": "iron_flask",
+      "name": "iron flask",
+      "url": "public/assets/atlas/magic_items/iron_flask"
+    },
+    {
+      "index": "lantern_of_revealing",
+      "name": "lantern of revealing",
+      "url": "public/assets/atlas/magic_items/lantern_of_revealing"
+    },
+    {
+      "index": "mantle_of_spell_resistance",
+      "name": "mantle of spell resistance",
+      "url": "public/assets/atlas/magic_items/mantle_of_spell_resistance"
+    },
+    {
+      "index": "manual_of_bodily_health",
+      "name": "manual of bodily health",
+      "url": "public/assets/atlas/magic_items/manual_of_bodily_health"
+    },
+    {
+      "index": "manual_of_gainful_exercise",
+      "name": "manual of gainful exercise",
+      "url": "public/assets/atlas/magic_items/manual_of_gainful_exercise"
+    },
+    {
+      "index": "manual_of_golems",
+      "name": "manual of golems",
+      "url": "public/assets/atlas/magic_items/manual_of_golems"
+    },
+    {
+      "index": "manual_of_quickness_of_action",
+      "name": "manual of quickness of action",
+      "url": "public/assets/atlas/magic_items/manual_of_quickness_of_action"
+    },
+    {
+      "index": "marvelous_pigments",
+      "name": "marvelous pigments",
+      "url": "public/assets/atlas/magic_items/marvelous_pigments"
+    },
+    {
+      "index": "medallion_of_thoughts",
+      "name": "medallion of thoughts",
+      "url": "public/assets/atlas/magic_items/medallion_of_thoughts"
+    },
+    {
+      "index": "mirror_of_life_trapping",
+      "name": "mirror of life trapping",
+      "url": "public/assets/atlas/magic_items/mirror_of_life_trapping"
+    },
+    {
+      "index": "necklace_of_adaptation",
+      "name": "necklace of adaptation",
+      "url": "public/assets/atlas/magic_items/necklace_of_adaptation"
+    },
+    {
+      "index": "necklace_of_fireballs",
+      "name": "necklace of fireballs",
+      "url": "public/assets/atlas/magic_items/necklace_of_fireballs"
+    },
+    {
+      "index": "necklace_of_prayer_beads",
+      "name": "necklace of prayer beads",
+      "url": "public/assets/atlas/magic_items/necklace_of_prayer_beads"
+    },
+    {
+      "index": "pearl_of_power",
+      "name": "pearl of power",
+      "url": "public/assets/atlas/magic_items/pearl_of_power"
+    },
+    {
+      "index": "periapt_of_health",
+      "name": "periapt of health",
+      "url": "public/assets/atlas/magic_items/periapt_of_health"
+    },
+    {
+      "index": "periapt_of_proof_against_poison",
+      "name": "periapt of proof against poison",
+      "url": "public/assets/atlas/magic_items/periapt_of_proof_against_poison"
+    },
+    {
+      "index": "periapt_of_wound_closure",
+      "name": "periapt of wound closure",
+      "url": "public/assets/atlas/magic_items/periapt_of_wound_closure"
+    },
+    {
+      "index": "pipes_of_haunting",
+      "name": "pipes of haunting",
+      "url": "public/assets/atlas/magic_items/pipes_of_haunting"
+    },
+    {
+      "index": "pipes_of_the_sewers",
+      "name": "pipes of the sewers",
+      "url": "public/assets/atlas/magic_items/pipes_of_the_sewers"
+    },
+    {
+      "index": "portable_hole",
+      "name": "portable hole",
+      "url": "public/assets/atlas/magic_items/portable_hole"
+    },
+    {
+      "index": "restorative_ointment",
+      "name": "restorative ointment",
+      "url": "public/assets/atlas/magic_items/restorative_ointment"
+    },
+    {
+      "index": "robe_of_eyes",
+      "name": "robe of eyes",
+      "url": "public/assets/atlas/magic_items/robe_of_eyes"
+    },
+    {
+      "index": "robe_of_scintillating_colors",
+      "name": "robe of scintillating colors",
+      "url": "public/assets/atlas/magic_items/robe_of_scintillating_colors"
+    },
+    {
+      "index": "robe_of_stars",
+      "name": "robe of stars",
+      "url": "public/assets/atlas/magic_items/robe_of_stars"
+    },
+    {
+      "index": "robe_of_the_archmagi",
+      "name": "robe of the archmagi",
+      "url": "public/assets/atlas/magic_items/robe_of_the_archmagi"
+    },
+    {
+      "index": "robe_of_useful_items",
+      "name": "robe of useful items",
+      "url": "public/assets/atlas/magic_items/robe_of_useful_items"
+    },
+    {
+      "index": "rope_of_climbing",
+      "name": "rope of climbing",
+      "url": "public/assets/atlas/magic_items/rope_of_climbing"
+    },
+    {
+      "index": "rope_of_entanglement",
+      "name": "rope of entanglement",
+      "url": "public/assets/atlas/magic_items/rope_of_entanglement"
+    },
+    {
+      "index": "scarab_of_protection",
+      "name": "scarab of protection",
+      "url": "public/assets/atlas/magic_items/scarab_of_protection"
+    },
+    {
+      "index": "slippers_of_spider_climbing",
+      "name": "slippers of spider climbing",
+      "url": "public/assets/atlas/magic_items/slippers_of_spider_climbing"
+    },
+    {
+      "index": "sovereign_glue",
+      "name": "sovereign glue",
+      "url": "public/assets/atlas/magic_items/sovereign_glue"
+    },
+    {
+      "index": "sphere_of_annihilation",
+      "name": "sphere of annihilation",
+      "url": "public/assets/atlas/magic_items/sphere_of_annihilation"
+    },
+    {
+      "index": "stone_of_controlling_earth_elementals",
+      "name": "stone of controlling earth elementals",
+      "url": "public/assets/atlas/magic_items/stone_of_controlling_earth_elementals"
+    },
+    {
+      "index": "stone_of_good_luck_luckstone",
+      "name": "stone of good luck (luckstone)",
+      "url": "public/assets/atlas/magic_items/stone_of_good_luck_luckstone"
+    },
+    {
+      "index": "talisman_of_pure_good",
+      "name": "talisman of pure good",
+      "url": "public/assets/atlas/magic_items/talisman_of_pure_good"
+    },
+    {
+      "index": "talisman_of_the_sphere",
+      "name": "talisman of the sphere",
+      "url": "public/assets/atlas/magic_items/talisman_of_the_sphere"
+    },
+    {
+      "index": "talisman_of_ultimate_evil",
+      "name": "talisman of ultimate evil",
+      "url": "public/assets/atlas/magic_items/talisman_of_ultimate_evil"
+    },
+    {
+      "index": "tome_of_clear_thought",
+      "name": "tome of clear thought",
+      "url": "public/assets/atlas/magic_items/tome_of_clear_thought"
+    },
+    {
+      "index": "tome_of_leadership_and_influence",
+      "name": "tome of leadership and influence",
+      "url": "public/assets/atlas/magic_items/tome_of_leadership_and_influence"
+    },
+    {
+      "index": "tome_of_understanding",
+      "name": "tome of understanding",
+      "url": "public/assets/atlas/magic_items/tome_of_understanding"
+    },
+    {
+      "index": "universal_solvent",
+      "name": "universal solvent",
+      "url": "public/assets/atlas/magic_items/universal_solvent"
+    },
+    {
+      "index": "well_of_many_worlds",
+      "name": "well of many worlds",
+      "url": "public/assets/atlas/magic_items/well_of_many_worlds"
+    },
+    {
+      "index": "wind_fan",
+      "name": "wind fan",
+      "url": "public/assets/atlas/magic_items/wind_fan"
+    },
+    {
+      "index": "winged_boots",
+      "name": "winged boots",
+      "url": "public/assets/atlas/magic_items/winged_boots"
+    },
+    {
+      "index": "wings_of_flying",
+      "name": "wings of flying",
+      "url": "public/assets/atlas/magic_items/wings_of_flying"
+    },
+    {
+      "index": "orb_of_dragonkind",
+      "name": "orb of dragonkind",
+      "url": "public/assets/atlas/magic_items/orb_of_dragonkind"
+    },
+    {
+      "index": "bag_of_tricks_gray",
+      "name": "gray bag of tricks",
+      "url": "public/assets/atlas/magic_items/bag_of_tricks_gray"
+    },
+    {
+      "index": "bag_of_tricks_rust",
+      "name": "rust bag of tricks",
+      "url": "public/assets/atlas/magic_items/bag_of_tricks_rust"
+    },
+    {
+      "index": "bag_of_tricks_tan",
+      "name": "tan bag of tricks",
+      "url": "public/assets/atlas/magic_items/bag_of_tricks_tan"
+    },
+    {
+      "index": "belt_of_giant_strength_hill",
+      "name": "belt of hill giant strength",
+      "url": "public/assets/atlas/magic_items/belt_of_giant_strength_hill"
+    },
+    {
+      "index": "belt_of_giant_strength_stone",
+      "name": "belt of stone giant strength",
+      "url": "public/assets/atlas/magic_items/belt_of_giant_strength_stone"
+    },
+    {
+      "index": "belt_of_giant_strength_frost",
+      "name": "belt of frost giant strength",
+      "url": "public/assets/atlas/magic_items/belt_of_giant_strength_frost"
+    },
+    {
+      "index": "belt_of_giant_strength_fire",
+      "name": "belt of fire giant strength",
+      "url": "public/assets/atlas/magic_items/belt_of_giant_strength_fire"
+    },
+    {
+      "index": "belt_of_giant_strength_cloud",
+      "name": "belt of cloud giant strength",
+      "url": "public/assets/atlas/magic_items/belt_of_giant_strength_cloud"
+    },
+    {
+      "index": "belt_of_giant_strength_storm",
+      "name": "belt of storm giant strength",
+      "url": "public/assets/atlas/magic_items/belt_of_giant_strength_storm"
+    },
+    {
+      "index": "carpet_of_flying_3x5",
+      "name": "carpet of flying (3 ft. \u00d7 5 ft.)",
+      "url": "public/assets/atlas/magic_items/carpet_of_flying_3x5"
+    },
+    {
+      "index": "carpet_of_flying_4x6",
+      "name": "carpet of flying (4 ft. \u00d7 6 ft.)",
+      "url": "public/assets/atlas/magic_items/carpet_of_flying_4x6"
+    },
+    {
+      "index": "carpet_of_flying_5x7",
+      "name": "carpet of flying (5 ft. \u00d7 7 ft.)",
+      "url": "public/assets/atlas/magic_items/carpet_of_flying_5x7"
+    },
+    {
+      "index": "carpet_of_flying_6x9",
+      "name": "carpet of flying (6 ft. \u00d7 9 ft.)",
+      "url": "public/assets/atlas/magic_items/carpet_of_flying_6x9"
+    },
+    {
+      "index": "crystal_ball_of_mind_reading",
+      "name": "crystal ball of mind reading",
+      "url": "public/assets/atlas/magic_items/crystal_ball_of_mind_reading"
+    },
+    {
+      "index": "crystal_ball_of_telepathy",
+      "name": "crystal ball of telepathy",
+      "url": "public/assets/atlas/magic_items/crystal_ball_of_telepathy"
+    },
+    {
+      "index": "crystal_ball_of_true_seeing",
+      "name": "crystal ball of true seeing",
+      "url": "public/assets/atlas/magic_items/crystal_ball_of_true_seeing"
+    },
+    {
+      "index": "elemental_gem_air",
+      "name": "air elemental gem",
+      "url": "public/assets/atlas/magic_items/elemental_gem_air"
+    },
+    {
+      "index": "elemental_gem_earth",
+      "name": "earth elemental gem",
+      "url": "public/assets/atlas/magic_items/elemental_gem_earth"
+    },
+    {
+      "index": "elemental_gem_fire",
+      "name": "fire elemental gem",
+      "url": "public/assets/atlas/magic_items/elemental_gem_fire"
+    },
+    {
+      "index": "elemental_gem_water",
+      "name": "water elemental gem",
+      "url": "public/assets/atlas/magic_items/elemental_gem_water"
+    },
+    {
+      "index": "feather_token_anchor",
+      "name": "anchor feather token",
+      "url": "public/assets/atlas/magic_items/feather_token_anchor"
+    },
+    {
+      "index": "feather_token_bird",
+      "name": "bird feather token",
+      "url": "public/assets/atlas/magic_items/feather_token_bird"
+    },
+    {
+      "index": "feather_token_fan",
+      "name": "fan feather token",
+      "url": "public/assets/atlas/magic_items/feather_token_fan"
+    },
+    {
+      "index": "feather_token_swan_boat",
+      "name": "swan boat feather token",
+      "url": "public/assets/atlas/magic_items/feather_token_swan_boat"
+    },
+    {
+      "index": "feather_token_tree",
+      "name": "tree feather token",
+      "url": "public/assets/atlas/magic_items/feather_token_tree"
+    },
+    {
+      "index": "feather_token_whip",
+      "name": "whip feather token",
+      "url": "public/assets/atlas/magic_items/feather_token_whip"
+    },
+    {
+      "index": "figurine_of_wondrous_power_bronze_griffon",
+      "name": "bronze griffon figurine of wondrous power",
+      "url": "public/assets/atlas/magic_items/figurine_of_wondrous_power_bronze_griffon"
+    },
+    {
+      "index": "figurine_of_wondrous_power_ebony_fly",
+      "name": "ebony fly figurine of wondrous power",
+      "url": "public/assets/atlas/magic_items/figurine_of_wondrous_power_ebony_fly"
+    },
+    {
+      "index": "figurine_of_wondrous_power_golden_lions",
+      "name": "golden lions figurine of wondrous power",
+      "url": "public/assets/atlas/magic_items/figurine_of_wondrous_power_golden_lions"
+    },
+    {
+      "index": "figurine_of_wondrous_power_ivory_goats",
+      "name": "ivory goats figurine of wondrous power",
+      "url": "public/assets/atlas/magic_items/figurine_of_wondrous_power_ivory_goats"
+    },
+    {
+      "index": "figurine_of_wondrous_power_marble_elephant",
+      "name": "marble elephant figurine of wondrous power",
+      "url": "public/assets/atlas/magic_items/figurine_of_wondrous_power_marble_elephant"
+    },
+    {
+      "index": "figurine_of_wondrous_power_obsidian_steed",
+      "name": "obsidian steed figurine of wondrous power",
+      "url": "public/assets/atlas/magic_items/figurine_of_wondrous_power_obsidian_steed"
+    },
+    {
+      "index": "figurine_of_wondrous_power_onyx_dog",
+      "name": "onyx dog figurine of wondrous power",
+      "url": "public/assets/atlas/magic_items/figurine_of_wondrous_power_onyx_dog"
+    },
+    {
+      "index": "figurine_of_wondrous_power_serpentine_owl",
+      "name": "serpentine owl figurine of wondrous power",
+      "url": "public/assets/atlas/magic_items/figurine_of_wondrous_power_serpentine_owl"
+    },
+    {
+      "index": "figurine_of_wondrous_power_silver_raven",
+      "name": "silver raven figurine of wondrous power",
+      "url": "public/assets/atlas/magic_items/figurine_of_wondrous_power_silver_raven"
+    },
+    {
+      "index": "horn_of_valhalla_silver",
+      "name": "silver horn of valhalla",
+      "url": "public/assets/atlas/magic_items/horn_of_valhalla_silver"
+    },
+    {
+      "index": "horn_of_valhalla_brass",
+      "name": "brass horn of valhalla",
+      "url": "public/assets/atlas/magic_items/horn_of_valhalla_brass"
+    },
+    {
+      "index": "horn_of_valhalla_bronze",
+      "name": "bronze horn of valhalla",
+      "url": "public/assets/atlas/magic_items/horn_of_valhalla_bronze"
+    },
+    {
+      "index": "horn_of_valhalla_iron",
+      "name": "iron horn of valhalla",
+      "url": "public/assets/atlas/magic_items/horn_of_valhalla_iron"
+    },
+    {
+      "index": "ioun_stone_of_absorption",
+      "name": "ioun stone of absorption",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_absorption"
+    },
+    {
+      "index": "ioun_stone_of_agility",
+      "name": "ioun stone of agility",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_agility"
+    },
+    {
+      "index": "ioun_stone_of_awareness",
+      "name": "ioun stone of awareness",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_awareness"
+    },
+    {
+      "index": "ioun_stone_of_fortitude",
+      "name": "ioun stone of fortitude",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_fortitude"
+    },
+    {
+      "index": "ioun_stone_of_greater_absorption",
+      "name": "ioun stone of greater absorption",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_greater_absorption"
+    },
+    {
+      "index": "ioun_stone_of_insight",
+      "name": "ioun stone of insight",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_insight"
+    },
+    {
+      "index": "ioun_stone_of_intellect",
+      "name": "ioun stone of intellect",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_intellect"
+    },
+    {
+      "index": "ioun_stone_of_leadership",
+      "name": "ioun stone of leadership",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_leadership"
+    },
+    {
+      "index": "ioun_stone_of_mastery",
+      "name": "ioun stone of mastery",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_mastery"
+    },
+    {
+      "index": "ioun_stone_of_protection",
+      "name": "ioun stone of protection",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_protection"
+    },
+    {
+      "index": "ioun_stone_of_regeneration",
+      "name": "ioun stone of regeneration",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_regeneration"
+    },
+    {
+      "index": "ioun_stone_of_reserve",
+      "name": "ioun stone of reserve",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_reserve"
+    },
+    {
+      "index": "ioun_stone_of_strength",
+      "name": "ioun stone of strength",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_strength"
+    },
+    {
+      "index": "ioun_stone_of_sustenance",
+      "name": "ioun stone of sustenance",
+      "url": "public/assets/atlas/magic_items/ioun_stone_of_sustenance"
+    },
+    {
+      "index": "manual_of_golems_clay",
+      "name": "manual of clay golems",
+      "url": "public/assets/atlas/magic_items/manual_of_golems_clay"
+    },
+    {
+      "index": "manual_of_golems_flesh",
+      "name": "manual of flesh golems",
+      "url": "public/assets/atlas/magic_items/manual_of_golems_flesh"
+    },
+    {
+      "index": "manual_of_golems_iron",
+      "name": "manual of iron golems",
+      "url": "public/assets/atlas/magic_items/manual_of_golems_iron"
+    },
+    {
+      "index": "manual_of_golems_stone",
+      "name": "manual of stone golems",
+      "url": "public/assets/atlas/magic_items/manual_of_golems_stone"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/wondrous_items.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/wondrous_items.webp"
+}

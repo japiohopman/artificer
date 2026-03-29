@@ -1,0 +1,134 @@
+{
+  "index": "animated_armor",
+  "name": "animated armor",
+  "size": "Medium",
+  "type": "construct",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 33,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8+6",
+  "speed": {
+    "walk": "25 ft."
+  },
+  "strength": 14,
+  "dexterity": 11,
+  "constitution": 13,
+  "intelligence": 1,
+  "wisdom": 3,
+  "charisma": 1,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison",
+    "psychic"
+  ],
+  "condition_immunities": [
+    {
+      "index": "blinded",
+      "name": "blinded",
+      "url": "public/assets/atlas/constitutionditions/blinded"
+    },
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "deafened",
+      "name": "deafened",
+      "url": "public/assets/atlas/constitutionditions/deafened"
+    },
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "public/assets/atlas/constitutionditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "public/assets/atlas/constitutionditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "petrified",
+      "url": "public/assets/atlas/constitutionditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "blindsight": "60 ft. (blind beyond this radius)",
+    "passive_perception": 6
+  },
+  "languages": "",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "antimagic susceptibility",
+      "desc": "The armor is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute.",
+      "damage": []
+    },
+    {
+      "name": "false appearance",
+      "desc": "While the armor remains motionless, it is indistinguishable from a normal suit of armor.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The armor makes two melee attacks.",
+      "actions": [
+        {
+          "action_name": "Slam",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "slam",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/animated_armor.png",
+  "url": "public/assets/atlas/monsters/animated_armor",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The Animated Armor is a haunting testament to the stubbornness of the past. Found primarily in the cobwebbed corridors of ruined keeps and the sanctums of reclusive mages, these hollow sentinels possess a chilling, inorganic patience. Unlike beasts of flesh, they do not breathe; they simply endure.\n\nTheir predatory behavior is defined by absolute stillness. An adventurer may traverse a gallery of dusty plate, only to hear the agonizing screech of rusted metal behind them as a gauntlet closes around their throat. They do not hunt for sustenance, but for the enforcement of ancient, forgotten edicts. They are the ultimate ambushers, indistinguishable from mere relics until the moment they strike.\n\nIn local folklore, they are whispered of as \"Iron Echoes.\" Villagers claim these are not merely spells, but the lingering shadows of warriors whose sense of duty outlasted their pulse. To see a visor ignite with a phantom glow is to know that the manor still remembers its master\u2014and it does not welcome guests. Beware the silence of the armory, for in that stillness, the metal remembers how to kill.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/animated-armor.webp",
+  "bakedAt": 1767617004172
+}

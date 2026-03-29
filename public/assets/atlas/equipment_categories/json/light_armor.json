@@ -1,0 +1,24 @@
+{
+  "index": "light_armor",
+  "name": "light armor",
+  "equipment": [
+    {
+      "index": "padded_armor",
+      "name": "padded armor",
+      "url": "public/assets/atlas/equipment/padded_armor"
+    },
+    {
+      "index": "leather_armor",
+      "name": "leather armor",
+      "url": "public/assets/atlas/equipment/leather_armor"
+    },
+    {
+      "index": "studded_leather_armor",
+      "name": "studded leather armor",
+      "url": "public/assets/atlas/equipment/studded_leather_armor"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/light_armor.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/light_armor.webp"
+}

@@ -1,0 +1,50 @@
+{
+  "higher_level": [],
+  "index": "identify",
+  "name": "identify",
+  "desc": [
+    "You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it.",
+    "If you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A pearl worth at least 100gp and an owl feather.",
+  "ritual": true,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 1,
+  "school": {
+    "index": "divination",
+    "name": "divination",
+    "url": "public/assets/atlas/magic_schools/divination"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/identify.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/identify.webp",
+  "sprite_index": 15,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet7.webp"
+}

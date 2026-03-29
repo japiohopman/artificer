@@ -1,0 +1,169 @@
+{
+  "index": "fiend",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "public/assets/atlas/classes/warlock"
+  },
+  "name": "fiend",
+  "subclass_flavor": "Otherworldly Patron",
+  "desc": [
+    "You have made a pact with a fiend from the lower planes of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption or destruction of all things, ultimately including you. Fiends powerful enough to forge a pact include demon lords such as Demogorgon, Orcus, Fraz'Urb-luu, and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles, and Belial; pit fiends and balors that are especially mighty; and ultroloths and other lords of the yugoloths."
+  ],
+  "spells": [
+    {
+      "prerequisites": [
+        {
+          "index": "warlock_1",
+          "type": "level",
+          "name": "warlock 1",
+          "url": "public/assets/atlas/classes/warlock/levels/1"
+        }
+      ],
+      "spell": {
+        "index": "burning_hands",
+        "name": "burning hands",
+        "url": "public/assets/atlas/spells/burning_hands"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "warlock_1",
+          "type": "level",
+          "name": "warlock 1",
+          "url": "public/assets/atlas/classes/warlock/levels/1"
+        }
+      ],
+      "spell": {
+        "index": "command",
+        "name": "command",
+        "url": "public/assets/atlas/spells/command"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "warlock_3",
+          "type": "level",
+          "name": "warlock 3",
+          "url": "public/assets/atlas/classes/warlock/levels/3"
+        }
+      ],
+      "spell": {
+        "index": "blindness_deafness",
+        "name": "blindness/deafness",
+        "url": "public/assets/atlas/spells/blindness_deafness"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "warlock_3",
+          "type": "level",
+          "name": "warlock 3",
+          "url": "public/assets/atlas/classes/warlock/levels/3"
+        }
+      ],
+      "spell": {
+        "index": "scorching_ray",
+        "name": "scorching ray",
+        "url": "public/assets/atlas/spells/scorching_ray"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "warlock_5",
+          "type": "level",
+          "name": "warlock 5",
+          "url": "public/assets/atlas/classes/warlock/levels/5"
+        }
+      ],
+      "spell": {
+        "index": "fireball",
+        "name": "fireball",
+        "url": "public/assets/atlas/spells/fireball"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "warlock_5",
+          "type": "level",
+          "name": "warlock 5",
+          "url": "public/assets/atlas/classes/warlock/levels/5"
+        }
+      ],
+      "spell": {
+        "index": "stinking_cloud",
+        "name": "stinking cloud",
+        "url": "public/assets/atlas/spells/stinking_cloud"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "warlock_7",
+          "type": "level",
+          "name": "warlock 7",
+          "url": "public/assets/atlas/classes/warlock/levels/7"
+        }
+      ],
+      "spell": {
+        "index": "fire_shield",
+        "name": "fire shield",
+        "url": "public/assets/atlas/spells/fire_shield"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "warlock_7",
+          "type": "level",
+          "name": "warlock 7",
+          "url": "public/assets/atlas/classes/warlock/levels/7"
+        }
+      ],
+      "spell": {
+        "index": "wall_of_fire",
+        "name": "wall of fire",
+        "url": "public/assets/atlas/spells/wall_of_fire"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "warlock_9",
+          "type": "level",
+          "name": "warlock 9",
+          "url": "public/assets/atlas/classes/warlock/levels/9"
+        }
+      ],
+      "spell": {
+        "index": "flame_strike",
+        "name": "flame strike",
+        "url": "public/assets/atlas/spells/flame_strike"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "warlock_9",
+          "type": "level",
+          "name": "warlock 9",
+          "url": "public/assets/atlas/classes/warlock/levels/9"
+        }
+      ],
+      "spell": {
+        "index": "hallow",
+        "name": "hallow",
+        "url": "public/assets/atlas/spells/hallow"
+      }
+    }
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/fiend/levels",
+  "url": "public/assets/atlas/subclasses/json/fiend.json",
+  "updated_at": "2025-10-24T20:42:14.748Z",
+  "image": "public/assets/atlas/subclasses/fiend.webp"
+}

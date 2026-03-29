@@ -1,0 +1,59 @@
+{
+  "index": "halfling",
+  "name": "halfling",
+  "speed": 25,
+  "ability_bonuses": [
+    {
+      "ability_score": {
+        "index": "dex",
+        "name": "dex",
+        "url": "public/assets/atlas/ability_scores/dexterity"
+      },
+      "bonus": 2
+    }
+  ],
+  "age": "A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.",
+  "alignment": "Most halflings are lawful good. As a rule, they are good-hearted and kind, hate to see others in pain, and have no tolerance for oppression. They are also very orderly and traditional, leaning heavily on the support of their community and the comfort of their old ways.",
+  "size": "Small",
+  "size_description": "Halflings average about 3 feet tall and weigh about 40 pounds. Your size is Small.",
+  "languages": [
+    {
+      "index": "common",
+      "name": "common",
+      "url": "public/assets/atlas/languages/common"
+    },
+    {
+      "index": "halfling",
+      "name": "halfling",
+      "url": "public/assets/atlas/languages/halfling"
+    }
+  ],
+  "language_desc": "You can speak, read, and write Common and Halfling. The Halfling language isn't secret, but halflings are loath to share it with others. They write very little, so they don't have a rich body of literature. Their oral tradition, however, is very strong. Almost all halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling.",
+  "traits": [
+    {
+      "index": "brave",
+      "name": "brave",
+      "url": "public/assets/atlas/traits/brave"
+    },
+    {
+      "index": "halfling_nimbleness",
+      "name": "halfling nimbleness",
+      "url": "public/assets/atlas/traits/halfling_nimbleness"
+    },
+    {
+      "index": "lucky",
+      "name": "lucky",
+      "url": "public/assets/atlas/traits/lucky"
+    }
+  ],
+  "subraces": [
+    {
+      "index": "lightfoot_halfling",
+      "name": "lightfoot halfling",
+      "url": "public/assets/atlas/subraces/lightfoot_halfling"
+    }
+  ],
+  "url": "public/assets/atlas/species/json/halfling.json",
+  "updated_at": "2025-10-24T20:42:14.212Z",
+  "image": "public/assets/atlas/species/halfling.webp"
+}

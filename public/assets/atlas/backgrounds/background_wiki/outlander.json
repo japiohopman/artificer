@@ -1,0 +1,36 @@
+{
+  "index": "outlander",
+  "name": "outlander",
+  "starting_proficiencies": [
+    {
+      "index": "skill_athletics",
+      "name": "athletics",
+      "url": ""
+    },
+    {
+      "index": "skill_survival",
+      "name": "survival",
+      "url": ""
+    }
+  ],
+  "tool_proficiencies": [
+    "One type of musical instrument"
+  ],
+  "languages": "One of your choice",
+  "equipment": [
+    "A staff",
+    "A hunting trap",
+    "A trophy from an animal you killed",
+    "Set of traveler's clothes",
+    "Pouch with 10 gp"
+  ],
+  "feature": {
+    "name": "wanderer",
+    "desc": [
+      "You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, and so forth."
+    ]
+  },
+  "lore": "Born of the salt-spray or the pine-shadow, the Outlander is a creature woven into the world\u2019s raw edges. Where the city-dweller sees a chaotic thicket, they read a roadmap of game trails and edible roots. They exist in symbiosis with the wild, their heartbeats synced to the migration of the caribou and the shifting of the seasonal winds.\n\nIn behavior, they are as stoic as the granite peaks they traverse. They possess a predatory economy of movement; they do not waste breath on idle chatter nor steps on uncertain ground. To them, a hearth is a luxury, but the stars are a roof. They are the silent observers of the frontier, possessing a feral grace that marks them as perpetual strangers to the gilded cage of civilization. They do not merely survive the elements; they are an extension of them.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/background/outlander.webp",
+  "bakedAt": 1767703049293
+}

@@ -1,0 +1,22 @@
+{
+  "index": "remarkable_athlete",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "public/assets/atlas/classes/fighter"
+  },
+  "subclass": {
+    "index": "champion",
+    "name": "champion",
+    "url": "public/assets/atlas/subclasses/charismampion"
+  },
+  "name": "remarkable athlete",
+  "level": 7,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 7th level, you can add half your proficiency bonus (round up) to any Strength, Dexterity, or Constitution check you make that doesn't already use your proficiency bonus. In addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength modifier."
+  ],
+  "url": "public/assets/atlas/features/json/remarkable_athlete.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/remarkable_athlete.webp"
+}

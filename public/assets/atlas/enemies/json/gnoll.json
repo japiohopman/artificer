@@ -1,0 +1,137 @@
+{
+  "index": "gnoll",
+  "name": "gnoll",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "gnoll",
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 15,
+      "armor": [
+        {
+          "index": "hide_armor",
+          "name": "hide armor",
+          "url": "public/assets/atlas/equipment/hide_armor"
+        },
+        {
+          "index": "shield",
+          "name": "shield",
+          "url": "public/assets/atlas/equipment/shield"
+        }
+      ]
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "dexterity": 12,
+  "constitution": 11,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 7,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "Gnoll",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "rampage",
+      "desc": "When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spear",
+      "desc": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d6 + 2) piercing damage, or 6 (1d8 + 2) piercing damage if used with two hands to make a melee attack.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "notes": "One handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "piercing",
+                  "url": "public/assets/atlas/damage_types/piercing"
+                },
+                "damage_dice": "1d6+2"
+              },
+              {
+                "option_type": "damage",
+                "notes": "Two handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "piercing",
+                  "url": "public/assets/atlas/damage_types/piercing"
+                },
+                "damage_dice": "1d8+2"
+              }
+            ]
+          }
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longbow",
+      "desc": "Ranged Weapon Attack: +3 to hit, range 150/600 ft., one target. Hit: 5 (1d8 + 1) piercing damage.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d8+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/gnoll.webp",
+  "url": "public/assets/atlas/enemies/json/gnoll.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 19,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.webp"
+}

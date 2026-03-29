@@ -1,0 +1,23 @@
+{
+  "index": "scarab_of_protection",
+  "name": "scarab of protection",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "legendary"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, legendary (requires attunement)",
+    "If you hold this beetle-shaped medallion in your hand for 1 round, an inscription appears on its surface revealing its magical nature. It provides two benefits while it is on your person:",
+    "You have advantage on saving throws against spells.",
+    "The scarab has 12 charges. If you fail a saving throw against a necromancy spell or a harmful effect originating from an undead creature, you can use your reaction to expend 1 charge and turn the failed save into a successful one. The scarab crumbles into powder and is destroyed when its last charge is expended."
+  ],
+  "url": "public/assets/atlas/magic_items/json/scarab_of_protection.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/scarab_of_protection.webp"
+}

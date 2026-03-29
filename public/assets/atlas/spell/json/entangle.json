@@ -1,0 +1,56 @@
+{
+  "higher_level": [],
+  "index": "entangle",
+  "name": "entangle",
+  "desc": [
+    "Grasping weeds and vines sprout from the ground in a 20-foot square starting form a point within range. For the duration, these plants turn the ground in the area into difficult terrain.",
+    "A creature in the area when you cast the spell must succeed on a strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.",
+    "When the spell ends, the conjured plants wilt away."
+  ],
+  "range": "90 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 1,
+  "dc": {
+    "dc_type": {
+      "index": "str",
+      "name": "str",
+      "url": "public/assets/atlas/ability_scores/strength"
+    },
+    "dc_success": "none"
+  },
+  "area_of_effect": {
+    "type": "cube",
+    "size": 20
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "conjuration",
+    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/entangle.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/entangle.webp",
+  "sprite_index": 23,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet4.webp"
+}

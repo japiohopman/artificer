@@ -1,0 +1,18 @@
+{
+  "index": "arcane_recovery",
+  "class": {
+    "index": "wizard",
+    "name": "wizard",
+    "url": "public/assets/atlas/classes/wizard"
+  },
+  "name": "arcane recovery",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
+    "For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots."
+  ],
+  "url": "public/assets/atlas/features/json/arcane_recovery.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/arcane_recovery.webp"
+}

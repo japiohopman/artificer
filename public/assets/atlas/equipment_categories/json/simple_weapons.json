@@ -1,0 +1,79 @@
+{
+  "index": "simple_weapons",
+  "name": "simple weapons",
+  "equipment": [
+    {
+      "index": "club",
+      "name": "club",
+      "url": "public/assets/atlas/equipment/club"
+    },
+    {
+      "index": "dagger",
+      "name": "dagger",
+      "url": "public/assets/atlas/equipment/dagger"
+    },
+    {
+      "index": "greatclub",
+      "name": "greatclub",
+      "url": "public/assets/atlas/equipment/greatclub"
+    },
+    {
+      "index": "handaxe",
+      "name": "handaxe",
+      "url": "public/assets/atlas/equipment/handaxe"
+    },
+    {
+      "index": "javelin",
+      "name": "javelin",
+      "url": "public/assets/atlas/equipment/javelin"
+    },
+    {
+      "index": "light_hammer",
+      "name": "light hammer",
+      "url": "public/assets/atlas/equipment/light_hammer"
+    },
+    {
+      "index": "mace",
+      "name": "mace",
+      "url": "public/assets/atlas/equipment/mace"
+    },
+    {
+      "index": "quarterstaff",
+      "name": "quarterstaff",
+      "url": "public/assets/atlas/equipment/quarterstaff"
+    },
+    {
+      "index": "sickle",
+      "name": "sickle",
+      "url": "public/assets/atlas/equipment/sickle"
+    },
+    {
+      "index": "spear",
+      "name": "spear",
+      "url": "public/assets/atlas/equipment/spear"
+    },
+    {
+      "index": "crossbow_light",
+      "name": "crossbow, light",
+      "url": "public/assets/atlas/equipment/crossbow_light"
+    },
+    {
+      "index": "dart",
+      "name": "dart",
+      "url": "public/assets/atlas/equipment/dart"
+    },
+    {
+      "index": "shortbow",
+      "name": "shortbow",
+      "url": "public/assets/atlas/equipment/shortbow"
+    },
+    {
+      "index": "sling",
+      "name": "sling",
+      "url": "public/assets/atlas/equipment/sling"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/simple_weapons.webp"
+}

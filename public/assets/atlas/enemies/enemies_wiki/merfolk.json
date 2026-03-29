@@ -1,0 +1,103 @@
+{
+  "index": "merfolk",
+  "name": "merfolk",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "merfolk",
+  "alignment": "neutral",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 11
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8+2",
+  "speed": {
+    "walk": "10 ft.",
+    "swim": "40 ft."
+  },
+  "strength": 10,
+  "dexterity": 13,
+  "constitution": 12,
+  "intelligence": 11,
+  "wisdom": 11,
+  "charisma": 12,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "Aquan, Common",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [
+    {
+      "name": "amphibious",
+      "desc": "The merfolk can breathe air and water.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "spear",
+      "desc": "Melee or Ranged Weapon Attack: +2 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 3 (1d6) piercing damage, or 4 (1d8) piercing damage if used with two hands to make a melee attack.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "notes": "One handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "piercing",
+                  "url": "public/assets/atlas/damage_types/piercing"
+                },
+                "damage_dice": "1d6"
+              },
+              {
+                "option_type": "damage",
+                "notes": "Two handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "piercing",
+                  "url": "public/assets/atlas/damage_types/piercing"
+                },
+                "damage_dice": "1d8"
+              }
+            ]
+          }
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/merfolk.png",
+  "url": "public/assets/atlas/monsters/merfolk",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "To the terrestrial eye, the *Aquari Homines*, or Merfolk, are figures of tragic beauty. Yet, beneath shimmering scales lies a predator of chilling efficiency. They dwell within amethyst kelp forests and the silent, pressure-crushed cathedrals of the continental shelf, where light dies and shadows govern.\n\nUnlike the mindless shark, Merfolk hunt with rhythmic patience. They are masters of acoustic mimicry, weaving the groans of shifting hulls or the cries of drowning kin into a hypnotic \"Siren\u2019s Dirge.\" This resonance lures sailors to the gunwales, where they are snatched into the crushing embrace of the deep. They do not merely kill; they herd prey into oxygen-starved grottoes, preserving the \"land-meat\" in the cold brine.\n\nCoastal folk speak of them in hushed tones as \"The Tidesmen.\" To witness a Merfolk\u2019s dorsal crest breaking the surf is a dire omen of a \"Debt-Storm\"\u2014a gale sent to collect the souls promised to the abyss. They are the living embodiment of the sea\u2019s dual nature: breathtakingly vast, yet utterly indifferent to the breath of man. Tread lightly near the spray, for the water has ears, and it is always hungry.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/merfolk.webp",
+  "bakedAt": 1767721727521
+}

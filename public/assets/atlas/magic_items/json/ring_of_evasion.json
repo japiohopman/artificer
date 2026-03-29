@@ -1,0 +1,21 @@
+{
+  "index": "ring_of_evasion",
+  "name": "ring of evasion",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "public/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Ring, rare (requires attunement)",
+    "This ring has 3 charges, and it regains 1d3 expended charges daily at dawn. When you fail a Dexterity saving throw while wearing it, you can use your reaction to expend 1 of its charges to succeed on that saving throw instead."
+  ],
+  "url": "public/assets/atlas/magic_items/json/ring_of_evasion.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/ring_of_evasion.webp"
+}

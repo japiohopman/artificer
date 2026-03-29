@@ -1,0 +1,45 @@
+{
+  "higher_level": [],
+  "index": "arcane_lock",
+  "name": "arcane lock",
+  "desc": [
+    "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting knock on the object suppresses arcane lock for 10 minutes.",
+    "While affected by this spell, the object is more difficult to break or force open; the DC to break it or pick any locks on it increases by 10."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Gold dust worth at least 25gp, which the spell consumes.",
+  "ritual": false,
+  "duration": "Until dispelled",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "abjuration",
+    "name": "abjuration",
+    "url": "public/assets/atlas/magic_schools/abjuration"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/arcane_lock.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/arcane_lock.webp",
+  "sprite_index": 15,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet1.webp"
+}

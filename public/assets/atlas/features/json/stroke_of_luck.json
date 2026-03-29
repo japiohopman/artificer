@@ -1,0 +1,18 @@
+{
+  "index": "stroke_of_luck",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "public/assets/atlas/classes/rogue"
+  },
+  "name": "stroke of luck",
+  "level": 20,
+  "prerequisites": [],
+  "desc": [
+    "At 20th level, you have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the d20 roll as a 20.",
+    "Once you use this feature, you can't use it again until you finish a short or long rest."
+  ],
+  "url": "public/assets/atlas/features/json/strengthoke_of_luck.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/strengthoke_of_luck.webp"
+}

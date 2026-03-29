@@ -1,0 +1,51 @@
+{
+  "id": "toril_wiki_baldurs_gate",
+  "path": [
+    "toril",
+    "wiki",
+    "baldurs_gate"
+  ],
+  "name": "baldurs_gate",
+  "lore": "### **Baldur\u2019s Gate: The Jewel of the Sword Coast**\n\n**Overview**\nPerched precariously at the mouth of the River Chionthar, Baldur\u2019s Gate stands as a titan of stone, iron, and fog. It is a sovereign city-state, a melting pot of ambition, and arguably the most influential mercantile hub on the Sword Coast. \n\n**History**\nThe city began as \"Gray Harbor,\" a haven for smugglers and pirates. Its transformation began with the legendary explorer **Balduran**, who returned from the fabled West laden with unimaginable wealth. He funded the construction of the Great Wall, providing the security necessary for the settlement to evolve from a muddy port into a sprawling metropolis. Over centuries, the city expanded beyond its walls, surviving sieges, plagues, and the internal strife of its ruling \"Patriars.\"\n\n**Significance**\nBaldur\u2019s Gate is the beating heart of trade between the frozen North and the glittering South. It is divided into three districts: the opulent **Upper City**, the bustling **Lower City**, and the lawless **Outer City**. Order is maintained\u2014often brutally\u2014by the **Flaming Fist**, a mercenary company turned city watch. For an adventurer, the Gate is a place where a pauper can become a duke, provided they have the steel to survive the shadows.\n\n**Legends and Lore**\nNo city is so haunted by the divine. Baldur\u2019s Gate was the epicenter of the **Bhaalspawn Crisis**, where the mortal children of the God of Murder vied for his empty throne. More recently, the city narrowly escaped the \"Descent,\" a hellish plot that saw its neighbor, Elturel, dragged into Avernus. Whispers persist that Balduran himself never truly died, but remains bound to the city\u2019s foundations, waiting for its darkest hour to return.\n\n*\u201cIn the Gate, coin is king, but iron is the law.\u201d \u2014 Common Adage*",
+  "subLocations": [
+    {
+      "id": "fccc1bb1_604a_4c40_b626_debb62abcf49",
+      "name": "elfsong tavern",
+      "x": 1842,
+      "y": 881,
+      "category": "inn",
+      "tags": [],
+      "lore": "History\nThe tavern circa 1374 DR.\nThe tavern circa 1374 DR.\n\nThe Elfsong Tavern was one of the city's most popular taverns in the mid-1300s DR.[2]\n\nIn the Year of Lightning Storms, 1374 DR, when the Dark Alliance first began to threaten Baldur's Gate, the Elfsong Tavern was where the fight began. Vahn, Kromlech, and Adrianna were attacked by thieves working for the Dark Alliance and recovered in the Elfsong Tavern. From the Elfsong Tavern they eventually went to the Onyx Tower, where they learned the secrets of the Elfsong. The ghostly elven woman who sang in the tavern sang for her husband, who had worked for the Company of the Crescent Blade. Her husband had left to defend Baldur's Gate and promised one day to return but never did. She continued to sing because she was still waiting for him to come home. In the Onyx Tower, the three adventurers met a ghost who revealed himself to be the husband of the elf woman. The destruction of the Onyx Tower freed the ghost and brought the elf woman peace.[3]\n\nDuring the Absolute Crisis in the Year of Three Ships Sailing, 1492 DR, Duke Belynne Stelmane was murdered by Bhaalists in the Elfsong Tavern. Her hand was severed and her body staged to appear as part of a plan by the Cult of the Absolute to sow fear in the city.",
+      "architect": "human",
+      "locationType": "tavern",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
+      "id": "21bdecad_916f_4d4b_a67e_06a6a9819145",
+      "name": "sorcerous sundries",
+      "x": 346,
+      "y": 416,
+      "category": "shop",
+      "tags": [],
+      "lore": "History\nWhile Sorcerous Sundries was established as a store for the arcane, for many years the building was used as a private residence, a restaurant, a variety of specialty shops, and even a greenhouse.[2]\n\nSometime during the 15th century DR, Rivalen Blackhand re-founded the store as a shop catering to spellcasters, specializing in Material components. However, he denied having magic items for sale and outright refused to sell spell scrolls.",
+      "architect": "elven",
+      "locationType": "arcane_shop",
+      "npcs": [],
+      "ambientSound": ""
+    }
+  ],
+  "createdAt": {
+    "_methodName": "serverTimestamp"
+  },
+  "authorUid": "DBoQPcf47gSpE3qYpkdpMP0qCBd2",
+  "grounding": [],
+  "category": "city",
+  "overlayMapUrl": "https://preview.redd.it/b9rw0iftc8o61.jpg?auto=webp&s=b6bb4a8e7d822629987d17deba7d35989283bd02",
+  "subPaths": [],
+  "coordinates": {
+    "x": 5351,
+    "y": 4269,
+    "name": "baldurs_gate"
+  }
+}

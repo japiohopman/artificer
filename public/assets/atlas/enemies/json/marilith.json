@@ -1,0 +1,173 @@
+{
+  "index": "marilith",
+  "name": "marilith",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "demon",
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 189,
+  "hit_dice": "18d10",
+  "hit_points_roll": "18d10+90",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 20,
+  "constitution": 20,
+  "intelligence": 18,
+  "wisdom": 16,
+  "charisma": 20,
+  "proficiencies": [
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_str",
+        "name": "saving throw: str",
+        "url": "public/assets/atlas/proficiencies/saving_throw_str"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "lightning",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "truesight": "120 ft.",
+    "passive_perception": 13
+  },
+  "languages": "Abyssal, telepathy 120 ft.",
+  "challenge_rating": 16,
+  "proficiency_bonus": 5,
+  "xp": 15000,
+  "special_abilities": [
+    {
+      "name": "magic resistance",
+      "desc": "The marilith has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The marilith's weapon attacks are magical.",
+      "damage": []
+    },
+    {
+      "name": "reactive",
+      "desc": "The marilith can take one reaction on every turn in combat.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The marilith can make seven attacks: six with its longswords and one with its tail.",
+      "actions": [
+        {
+          "action_name": "Longsword",
+          "count": "6",
+          "type": "melee"
+        },
+        {
+          "action_name": "Tail",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "longsword",
+      "desc": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "Melee Weapon Attack: +9 to hit, reach 10 ft., one creature. Hit: 15 (2d10 + 4) bludgeoning damage. If the target is Medium or smaller, it is grappled (escape DC 19). Until this grapple ends, the target is restrained, the marilith can automatically hit the target with its tail, and the marilith can't make tail attacks against other targets.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "teleport",
+      "desc": "The marilith magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.",
+      "actions": []
+    }
+  ],
+  "reactions": [
+    {
+      "name": "parry",
+      "desc": "The marilith adds 5 to its AC against one melee attack that would hit it. To do so, the marilith must see the attacker and be wielding a melee weapon."
+    }
+  ],
+  "image": "public/assets/atlas/enemies/marilith.webp",
+  "url": "public/assets/atlas/enemies/json/marilith.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "sprite_index": 17,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp"
+}

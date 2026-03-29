@@ -1,0 +1,18 @@
+{
+  "index": "spellcasting_paladin",
+  "class": {
+    "index": "paladin",
+    "name": "paladin",
+    "url": "public/assets/atlas/classes/paladin"
+  },
+  "name": "spellcasting: paladin",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "By 2nd level, you have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does."
+  ],
+  "reference": "public/assets/atlas/classes/paladin/spellcasting",
+  "url": "public/assets/atlas/features/json/spellcasting_paladin.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/spellcasting_paladin.webp"
+}

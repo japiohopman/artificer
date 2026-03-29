@@ -1,0 +1,87 @@
+{
+  "index": "elk",
+  "name": "elk",
+  "size": "Large",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 10
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "2d10",
+  "hit_points_roll": "2d10+2",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 16,
+  "dexterity": 10,
+  "constitution": 12,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 6,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "charge",
+      "desc": "If the elk moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "ram",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "hooves",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one prone creature. Hit: 8 (2d4 + 3) bludgeoning damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "2d4+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/elk.png",
+  "url": "public/assets/atlas/monsters/elk",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The Great Crowned Elk is no mere grazer of the Silver-Pine wealds. While its lesser kin content themselves with lichen, this majestic beast stalks the high timberline with a calculated, predatory grace. It does not hunt for meat, but for *vitality*. It tracks weary travelers for leagues, its hooves muffled by an unnatural frost that follows in its wake. When the moon peaks, it strikes\u2014not with teeth, but with a crown of obsidian antlers that drain the warmth from a man\u2019s blood before he can even draw steel.\n\nAmong the mountain clans, the Elk is feared as the \"Silent Reaper.\" Folklore holds that these creatures are the reincarnated spirits of betrayed druids, seeking to reclaim the life-force stolen from their sacred groves. To encounter a Crowned Elk is to face the forest\u2019s own judgment; they are the living embodiment of winter\u2019s hunger. If you hear the clatter of bone against bark in the dead of night, do not look back. The Elk does not tolerate witnesses to its harvest. Keep your fires high, for it fears the flame that it cannot consume.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/elk.webp",
+  "bakedAt": 1767609551711
+}

@@ -1,0 +1,17 @@
+{
+  "index": "extra_attack_3",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "public/assets/atlas/classes/fighter"
+  },
+  "name": "extra attack (3)",
+  "level": 20,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn. The number of attacks increases to three when you reach 11th level in this class and to four when you reach 20th level in this class."
+  ],
+  "url": "public/assets/atlas/features/json/extra_attack_3.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/extra_attack_3.webp"
+}

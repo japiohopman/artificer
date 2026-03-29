@@ -1,0 +1,84 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "scholars_pack",
+  "name": "scholar's pack",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "equipment_packs",
+    "name": "equipment packs",
+    "url": "public/assets/atlas/equipment_categories/equipment_packs"
+  },
+  "cost": {
+    "quantity": 40,
+    "unit": "gp"
+  },
+  "contents": [
+    {
+      "item": {
+        "index": "backpack",
+        "name": "backpack",
+        "url": "public/assets/atlas/equipment/backpack"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "book",
+        "name": "book",
+        "url": "public/assets/atlas/equipment/book"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "ink_1_ounce_bottle",
+        "name": "ink (1 ounce bottle)",
+        "url": "public/assets/atlas/equipment/ink_1_ounce_bottle"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "ink_pen",
+        "name": "ink pen",
+        "url": "public/assets/atlas/equipment/ink_pen"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "parchment_one_sheet",
+        "name": "parchment (one sheet)",
+        "url": "public/assets/atlas/equipment/parchment_one_sheet"
+      },
+      "quantity": 10
+    },
+    {
+      "item": {
+        "index": "little_bag_of_sand",
+        "name": "little bag of sand",
+        "url": "public/assets/atlas/equipment/little_bag_of_sand"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "small_knife",
+        "name": "small knife",
+        "url": "public/assets/atlas/equipment/small_knife"
+      },
+      "quantity": 1
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/scholars_pack.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "properties": [],
+  "image": "public/assets/atlas/equipment/scholars_pack.webp",
+  "sprite_index": 12,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+}

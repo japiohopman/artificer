@@ -1,0 +1,34 @@
+{
+  "index": "martial_ranged_weapons",
+  "name": "martial ranged weapons",
+  "equipment": [
+    {
+      "index": "blowgun",
+      "name": "blowgun",
+      "url": "public/assets/atlas/equipment/blowgun"
+    },
+    {
+      "index": "crossbow_hand",
+      "name": "crossbow, hand",
+      "url": "public/assets/atlas/equipment/crossbow_hand"
+    },
+    {
+      "index": "crossbow_heavy",
+      "name": "crossbow, heavy",
+      "url": "public/assets/atlas/equipment/crossbow_heavy"
+    },
+    {
+      "index": "longbow",
+      "name": "longbow",
+      "url": "public/assets/atlas/equipment/longbow"
+    },
+    {
+      "index": "net",
+      "name": "net",
+      "url": "public/assets/atlas/equipment/net"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/martial_ranged_weapons.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/martial_ranged_weapons.webp"
+}

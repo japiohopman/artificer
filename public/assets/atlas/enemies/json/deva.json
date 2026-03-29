@@ -1,0 +1,213 @@
+{
+  "index": "deva",
+  "name": "deva",
+  "size": "Medium",
+  "type": "celestial",
+  "alignment": "lawful good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 136,
+  "hit_dice": "16d8",
+  "hit_points_roll": "16d8+64",
+  "speed": {
+    "walk": "30 ft.",
+    "fly": "90 ft."
+  },
+  "strength": 18,
+  "dexterity": 18,
+  "constitution": 18,
+  "intelligence": 17,
+  "wisdom": 20,
+  "charisma": 20,
+  "proficiencies": [
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill_insight",
+        "name": "skill: insight",
+        "url": "public/assets/atlas/proficiencies/skill_insight"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "radiant",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "public/assets/atlas/constitutionditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    }
+  ],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 19
+  },
+  "languages": "all, telepathy 120 ft.",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [
+    {
+      "name": "angelic weapons",
+      "desc": "The deva's weapon attacks are magical. When the deva hits with any weapon, the weapon deals an extra 4d8 radiant damage (included in the attack).",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The deva's spellcasting ability is Charisma (spell save DC 17). The deva can innately cast the following spells, requiring only verbal components:\nAt will: detect evil and good\n1/day each: commune, raise dead",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        },
+        "dc": 17,
+        "components_required": [
+          "V"
+        ],
+        "spells": [
+          {
+            "name": "detect evil and good",
+            "level": 1,
+            "url": "public/assets/atlas/spells/detect_evil_and_good",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "commune",
+            "level": 5,
+            "url": "public/assets/atlas/spells/commune",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "raise dead",
+            "level": 5,
+            "url": "public/assets/atlas/spells/raise_dead",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The deva has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The deva makes two melee attacks.",
+      "actions": [
+        {
+          "action_name": "Mace",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "mace",
+      "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) bludgeoning damage plus 18 (4d8) radiant damage.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d6+4"
+        },
+        {
+          "damage_type": {
+            "index": "radiant",
+            "name": "radiant",
+            "url": "public/assets/atlas/damage_types/radiant"
+          },
+          "damage_dice": "4d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "healing touch",
+      "desc": "The deva touches another creature. The target magically regains 20 (4d8 + 2) hit points and is freed from any curse, disease, poison, blindness, or deafness.",
+      "usage": {
+        "type": "per day",
+        "times": 3
+      },
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "change shape",
+      "desc": "The deva magically polymorphs into a humanoid or beast that has a challenge rating equal to or less than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the deva's choice).\nIn a new form, the deva retains its game statistics and ability to speak, but its AC, movement modes, Strength, Dexterity, and special senses are replaced by those of the new form, and it gains any statistics and capabilities (except class features, legendary actions, and lair actions) that the new form has but that it lacks.",
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/deva.webp",
+  "url": "public/assets/atlas/enemies/json/deva.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 4,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet4.webp"
+}

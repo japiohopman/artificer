@@ -1,0 +1,51 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "warhammer",
+  "name": "warhammer",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 15,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "public/assets/atlas/damage_types/bludgeoning"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 2,
+  "properties": [
+    {
+      "index": "versatile",
+      "name": "versatile",
+      "url": "public/assets/atlas/weapon_properties/versatile"
+    }
+  ],
+  "two_handed_damage": {
+    "damage_dice": "1d10",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "public/assets/atlas/damage_types/bludgeoning"
+    }
+  },
+  "url": "public/assets/atlas/equipment/json/warhammer.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "public/assets/atlas/equipment/warhammer.webp",
+  "sprite_index": 2,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp"
+}

@@ -1,0 +1,21 @@
+{
+  "index": "ring_of_protection",
+  "name": "ring of protection",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "public/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Ring, rare (requires attunement)",
+    "You gain a +1 bonus to AC and saving throws while wearing this ring."
+  ],
+  "url": "public/assets/atlas/magic_items/json/ring_of_protection.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/ring_of_protection.webp"
+}

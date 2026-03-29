@@ -1,0 +1,117 @@
+{
+  "index": "swarm_of_poisonous_snakes",
+  "name": "swarm of poisonous snakes",
+  "size": "Medium",
+  "type": "swarm of Tiny beasts",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 14
+    }
+  ],
+  "hit_points": 36,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8",
+  "speed": {
+    "walk": "30 ft.",
+    "swim": "30 ft."
+  },
+  "strength": 8,
+  "dexterity": 18,
+  "constitution": 11,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 3,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    },
+    {
+      "index": "grappled",
+      "name": "grappled",
+      "url": "public/assets/atlas/constitutionditions/grappled"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "public/assets/atlas/constitutionditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "petrified",
+      "url": "public/assets/atlas/constitutionditions/petrified"
+    },
+    {
+      "index": "prone",
+      "name": "prone",
+      "url": "public/assets/atlas/constitutionditions/prone"
+    },
+    {
+      "index": "restrained",
+      "name": "restrained",
+      "url": "public/assets/atlas/constitutionditions/restrained"
+    },
+    {
+      "index": "stunned",
+      "name": "stunned",
+      "url": "public/assets/atlas/constitutionditions/stunned"
+    }
+  ],
+  "senses": {
+    "blindsight": "10 ft.",
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "swarm",
+      "desc": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny snake. The swarm can't regain hit points or gain temporary hit points.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bites",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 0 ft., one creature in the swarm's space. Hit: 7 (2d6) piercing damage, or 3 (1d6) piercing damage if the swarm has half of its hit points or fewer. The target must make a DC 10 Constitution saving throw, taking 14 (4d6) poison damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "2d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/swarm_of_poisonous_snakes.webp",
+  "url": "public/assets/atlas/enemies/json/swarm_of_poisonous_snakes.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 22,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+}

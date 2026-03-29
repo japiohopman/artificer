@@ -1,0 +1,21 @@
+{
+  "index": "spellguard_shield",
+  "name": "spellguard shield",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "public/assets/atlas/equipment_categories/armor"
+  },
+  "rarity": {
+    "name": "very rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Armor (shield), very rare (requires attunement)",
+    "While holding this shield, you have advantage on saving throws against spells and other magical effects, and spell attacks have disadvantage against you."
+  ],
+  "url": "public/assets/atlas/magic_items/json/spellguard_shield.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/spellguard_shield.webp"
+}

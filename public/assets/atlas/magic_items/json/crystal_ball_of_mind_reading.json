@@ -1,0 +1,22 @@
+{
+  "index": "crystal_ball_of_mind_reading",
+  "name": "crystal ball of mind reading",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "legendary"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Wondrous item, legendary (requires attunement)",
+    "The crystal ball is about 6 inches in diameter. While touching it, you can cast the scrying spell (save DC 17) with it.",
+    "***Crystal Ball of Mind Reading.*** You can use an action to cast the detect thoughts spell (save DC 17) while you are scrying with the crystal ball, targeting creatures you can see within 30 feet of the spell's sensor. You don't need to concentrate on this detect thoughts to maintain it during its duration, but it ends if scrying ends."
+  ],
+  "image": "public/assets/atlas/magic_items/crystal_ball_of_mind_reading.webp",
+  "url": "public/assets/atlas/magic_items/json/crystal_ball_of_mind_reading.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

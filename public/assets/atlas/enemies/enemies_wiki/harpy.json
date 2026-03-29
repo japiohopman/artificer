@@ -1,0 +1,106 @@
+{
+  "index": "harpy",
+  "name": "harpy",
+  "size": "Medium",
+  "type": "monstrosity",
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 11
+    }
+  ],
+  "hit_points": 38,
+  "hit_dice": "7d8",
+  "hit_points_roll": "7d8+7",
+  "speed": {
+    "walk": "20 ft.",
+    "fly": "40 ft."
+  },
+  "strength": 12,
+  "dexterity": 13,
+  "constitution": 12,
+  "intelligence": 7,
+  "wisdom": 10,
+  "charisma": 13,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "Common",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The harpy makes two attacks: one with its claws and one with its club.",
+      "actions": [
+        {
+          "action_name": "Claws",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Club",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "claws",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 6 (2d4 + 1) slashing damage.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "2d4+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "club",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 3 (1d4 + 1) bludgeoning damage.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d4+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "luring song",
+      "desc": "The harpy sings a magical melody. Every humanoid and giant within 300 ft. of the harpy that can hear the song must succeed on a DC 11 Wisdom saving throw or be charmed until the song ends. The harpy must take a bonus action on its subsequent turns to continue singing. It can stop singing at any time. The song ends if the harpy is incapacitated.\nWhile charmed by the harpy, a target is incapacitated and ignores the songs of other harpies. If the charmed target is more than 5 ft. away from the harpy, the must move on its turn toward the harpy by the most direct route. It doesn't avoid opportunity attacks, but before moving into damaging terrain, such as lava or a pit, and whenever it takes damage from a source other than the harpy, a target can repeat the saving throw. A creature can also repeat the saving throw at the end of each of its turns. If a creature's saving throw is successful, the effect ends on it.\nA target that successfully saves is immune to this harpy's song for the next 24 hours.",
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/harpy.png",
+  "url": "public/assets/atlas/monsters/harpy",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "lore": "The Harpy, a wretched fusion of raptor and crone, haunts the jagged cliffs and salt-sprayed crags of the Whispering Coast. These creatures are not mere beasts of prey; they are psychological hunters. Their most potent weapon is the \"Siren\u2019s Dirge\"\u2014a haunting, multi-tonal vocalization that mimics the pleas of lost loved ones or the promise of sanctuary. To the unwary traveler, it is an irresistible pull toward the abyss.\n\nOnce a victim is ensnared by the melody, the Harpy rarely strikes directly. They prefer to let gravity do the killing, nudging the entranced off precipices before descending to scavenge the remains with filth-encrusted talons. \n\nIn local folklore, they are whispered to be the physical manifestations of unburied secrets\u2014spirits that traded their humanity for the freedom of the gale. Sailors claim a Harpy\u2019s cry is the wind mourning its own emptiness. Do not trust your ears when the fog rolls in; if you hear a familiar voice calling from the heights, stuff your ears with wax and pray for a swift wind. To answer the call is to find only a cold descent.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/harpy.webp",
+  "bakedAt": 1767611664101
+}

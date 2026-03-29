@@ -1,0 +1,22 @@
+{
+  "index": "metamagic_extended_spell",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "public/assets/atlas/classes/sorcerer"
+  },
+  "name": "metamagic: extended spell",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "When you cast a spell that has a duration of 1 minute or longer, you can spend 1 sorcery point to double its duration, to a maximum duration of 24 hours."
+  ],
+  "parent": {
+    "index": "metamagic_1",
+    "name": "metamagic",
+    "url": "public/assets/atlas/features/metamagic_1"
+  },
+  "url": "public/assets/atlas/features/json/metamagic_extended_spell.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/metamagic_extended_spell.webp"
+}

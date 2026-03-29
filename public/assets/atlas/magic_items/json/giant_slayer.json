@@ -1,0 +1,22 @@
+{
+  "index": "giant_slayer",
+  "name": "giant slayer",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Weapon (any axe or sword), rare",
+    "You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
+    "When you hit a giant with it, the giant takes an extra 2d6 damage of the weapon's type and must succeed on a DC 15 Strength saving throw or fall prone. For the purpose of this weapon, \"giant\" refers to any creature with the giant type, including ettins and trolls."
+  ],
+  "url": "public/assets/atlas/magic_items/json/giant_slayer.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/giant_slayer.webp"
+}

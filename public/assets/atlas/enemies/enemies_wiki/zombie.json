@@ -1,0 +1,89 @@
+{
+  "index": "zombie",
+  "name": "zombie",
+  "size": "Medium",
+  "type": "undead",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 8
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8+9",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 13,
+  "dexterity": 6,
+  "constitution": 16,
+  "intelligence": 3,
+  "wisdom": 6,
+  "charisma": 5,
+  "proficiencies": [
+    {
+      "value": 0,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 8
+  },
+  "languages": "understands all languages it spoke in life but can't speak",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "undead fortitude",
+      "desc": "If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "slam",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/zombie.png",
+  "url": "public/assets/atlas/monsters/zombie",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The Zombie, or *Cadaver Animatus*, is a shambling effigy of the living, found wherever the veil is thin or the earth is choked by ancient slaughter. They frequent damp ossuaries and stagnant mires, where the rot of the world mirrors the decay within. \n\nUnlike the common predator, the zombie possesses no survival instinct, only a singular, hollow compulsion to extinguish warmth. They track by the rhythmic thrum of a pulse and the sweet scent of living breath. Their gait is deceptively slow; however, they possess a terrifying, tireless persistence that outlasts the swiftest runner. They do not feel the bite of steel, nor do they recoil from fire until the very sinews that move them are rendered to ash.\n\nIn the fireside tales of the common folk, these soul-stripped husks are known as the \"Hollowed.\" Folklore warns that they are the physical manifestation of a life\u2019s \"unfinished business\" or the result of a grave-soil curse. To the scholar, they are a grim reminder that without the spark of a soul, the body is but a mindless engine of hunger\u2014a vessel for the lingering echoes of a world that refuses to let its dead depart.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/zombie.webp",
+  "bakedAt": 1767606952703
+}

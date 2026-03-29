@@ -1,0 +1,21 @@
+{
+  "index": "wand_of_the_war_mage_2",
+  "name": "wand of the war mage, +2",
+  "equipment_category": {
+    "index": "wand",
+    "name": "wand",
+    "url": "public/assets/atlas/equipment_categories/wand"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Wand, rare (requires attunement by a spellcaster)",
+    "While holding this wand, you gain a +2 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack."
+  ],
+  "url": "public/assets/atlas/magic_items/json/wand_of_the_war_mage_2.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/wand_of_the_war_mage_2.webp"
+}

@@ -1,0 +1,18 @@
+{
+  "index": "sacred_oath_improvement_2",
+  "class": {
+    "index": "paladin",
+    "name": "paladin",
+    "url": "public/assets/atlas/classes/paladin"
+  },
+  "name": "sacred oath feature",
+  "level": 15,
+  "prerequisites": [],
+  "desc": [
+    "When you reach 3rd level, you swear the oath that binds you as a paladin forever. Up to this time you have been in a preparatory stage, committed to the path but not yet sworn to it. Now you choose an oath, such as the Oath of Devotion.",
+    "Your choice grants you features at 3rd level and again at 7th, 15th, and 20th level. Those features include oath spells and the Channel Divinity feature."
+  ],
+  "url": "public/assets/atlas/features/json/sacred_oath_improvement_2.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/sacred_oath_improvement_2.webp"
+}

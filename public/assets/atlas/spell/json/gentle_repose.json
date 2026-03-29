@@ -1,0 +1,50 @@
+{
+  "higher_level": [],
+  "index": "gentle_repose",
+  "name": "gentle repose",
+  "desc": [
+    "You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.",
+    "The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration.",
+  "ritual": true,
+  "duration": "10 days",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "necromancy",
+    "name": "necromancy",
+    "url": "public/assets/atlas/magic_schools/necromancy"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/gentle_repose.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/gentle_repose.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet6.webp"
+}

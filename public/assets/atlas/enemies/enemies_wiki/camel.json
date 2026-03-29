@@ -1,0 +1,65 @@
+{
+  "index": "camel",
+  "name": "camel",
+  "size": "Large",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 9
+    }
+  ],
+  "hit_points": 15,
+  "hit_dice": "2d10",
+  "hit_points_roll": "2d10+4",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 16,
+  "dexterity": 8,
+  "constitution": 14,
+  "intelligence": 2,
+  "wisdom": 8,
+  "charisma": 5,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/camel.png",
+  "url": "public/assets/atlas/monsters/camel",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "lore": "Behold the Camel, the stoic titan of the Sun-Scorched Wastes. To the uninitiated, it is a mere beast of burden; to the desert-dweller, it is a patient predator of the parched. These creatures do not hunt with fang or claw, but through a terrifying mastery of attrition. A wild camel will trail a caravan for leagues, its rhythmic stride never faltering, waiting for the heat to claim the weak. When the traveler collapses, the beast descends, using its prehensile lips and caustic, blinding bile to claim what precious moisture remains.\n\nLocal folklore dubs them \"The Silent Judges.\" It is whispered among the salt-flats that a camel never forgets a face or a slight, and to look too deeply into their heavy-lidded eyes is to glimpse the exact moment of your own demise. They are said to be the vessels of ancient, vengeful spirits, bound to the dunes to punish those who dare underestimate the cruelty of the sands. Beware their gaze, traveler; it holds the weight of a thousand thirsty deaths.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/camel.webp",
+  "bakedAt": 1767622509201
+}

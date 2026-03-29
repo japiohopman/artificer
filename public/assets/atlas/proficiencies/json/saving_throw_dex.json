@@ -1,0 +1,36 @@
+{
+  "index": "saving_throw_dex",
+  "type": "Saving Throws",
+  "name": "saving throw: dex",
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "monk",
+      "name": "monk",
+      "url": "public/assets/atlas/classes/monk"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "public/assets/atlas/classes/ranger"
+    },
+    {
+      "index": "rogue",
+      "name": "rogue",
+      "url": "public/assets/atlas/classes/rogue"
+    }
+  ],
+  "races": [],
+  "url": "public/assets/atlas/proficiencies/json/saving_throw_dex.json",
+  "reference": {
+    "index": "dex",
+    "name": "dex",
+    "url": "public/assets/atlas/ability_scores/dexterity"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/saving_throw_dex.webp"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "blessed_healer",
+  "class": {
+    "index": "cleric",
+    "name": "cleric",
+    "url": "public/assets/atlas/classes/cleric"
+  },
+  "subclass": {
+    "index": "life",
+    "name": "life",
+    "url": "public/assets/atlas/subclasses/life"
+  },
+  "name": "blessed healer",
+  "level": 6,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level."
+  ],
+  "url": "public/assets/atlas/features/json/blessed_healer.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/blessed_healer.webp"
+}

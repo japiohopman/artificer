@@ -1,0 +1,22 @@
+{
+  "index": "natures_ward",
+  "class": {
+    "index": "druid",
+    "name": "druid",
+    "url": "public/assets/atlas/classes/druid"
+  },
+  "subclass": {
+    "index": "land",
+    "name": "land",
+    "url": "public/assets/atlas/subclasses/land"
+  },
+  "name": "nature's ward",
+  "level": 10,
+  "prerequisites": [],
+  "desc": [
+    "When you reach 10th level, you can't be charmed or frightened by elementals or fey, and you are immune to poison and disease."
+  ],
+  "url": "public/assets/atlas/features/json/natures_ward.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/natures_ward.webp"
+}

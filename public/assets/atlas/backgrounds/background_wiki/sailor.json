@@ -1,0 +1,36 @@
+{
+  "index": "sailor",
+  "name": "sailor",
+  "starting_proficiencies": [
+    {
+      "index": "skill_athletics",
+      "name": "athletics",
+      "url": ""
+    },
+    {
+      "index": "skill_perception",
+      "name": "perception",
+      "url": ""
+    }
+  ],
+  "tool_proficiencies": [
+    "Navigator's tools",
+    "Vehicles (water)"
+  ],
+  "equipment": [
+    "A belaying pin (club)",
+    "50 feet of silk rope",
+    "A lucky charm",
+    "Set of common clothes",
+    "Pouch with 10 gp"
+  ],
+  "feature": {
+    "name": "ship\u2019s passage",
+    "desc": [
+      "When you need to, you can secure free passage on a sailing ship for yourself and your adventuring companions. You might sail on the ship you served on, or another ship you have good relations with. Because you\u2019re calling in a favor, you can\u2019t schedule the departure or destination. In return for free passage, you and your companions are expected to assist the crew during the voyage."
+    ]
+  },
+  "lore": "The sailor is a creature of brine and horizon, bound to the restless rhythm of the tides. Their \"ecology\" is the wooden hull and the vast, indifferent blue, existing in the liminal space between known shores. Physically, they are marked by the sun\u2019s bite and palms calloused by hempen rope; they possess a distinctive, rolling gait\u2014\"sea legs\"\u2014that makes the firmest earth feel strangely unstable.\n\nBehaviorally, they are a superstitious lot, governed by the whims of wind and wave. They speak in a language of knots and constellations, finding more kinship with the shifting stars than the laws of kings. In any tavern, you will know them by their keen eyes scanning the weather and their habit of pouring a drop of ale for the deep. To a sailor, the world is not a map of borders, but a series of ports connected by the spray.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/background/sailor.webp",
+  "bakedAt": 1767702939837
+}

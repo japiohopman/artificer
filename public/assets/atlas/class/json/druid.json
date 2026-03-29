@@ -1,0 +1,364 @@
+{
+  "index": "druid",
+  "name": "druid",
+  "hit_die": 8,
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_arcana",
+              "name": "skill: arcana",
+              "url": "public/assets/atlas/proficiencies/skill_arcana"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_animal_handling",
+              "name": "skill: animal handling",
+              "url": "public/assets/atlas/proficiencies/skill_animal_handling"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "public/assets/atlas/proficiencies/skill_insight"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_medicine",
+              "name": "skill: medicine",
+              "url": "public/assets/atlas/proficiencies/skill_medicine"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_nature",
+              "name": "skill: nature",
+              "url": "public/assets/atlas/proficiencies/skill_nature"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_perception",
+              "name": "skill: perception",
+              "url": "public/assets/atlas/proficiencies/skill_perception"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_religion",
+              "name": "skill: religion",
+              "url": "public/assets/atlas/proficiencies/skill_religion"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_survival",
+              "name": "skill: survival",
+              "url": "public/assets/atlas/proficiencies/skill_survival"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "light_armor",
+      "name": "light armor",
+      "url": "public/assets/atlas/proficiencies/light_armor"
+    },
+    {
+      "index": "medium_armor",
+      "name": "medium armor",
+      "url": "public/assets/atlas/proficiencies/medium_armor"
+    },
+    {
+      "index": "shields",
+      "name": "shields",
+      "url": "public/assets/atlas/proficiencies/shields"
+    },
+    {
+      "index": "clubs",
+      "name": "clubs",
+      "url": "public/assets/atlas/proficiencies/clubs"
+    },
+    {
+      "index": "daggers",
+      "name": "daggers",
+      "url": "public/assets/atlas/proficiencies/daggers"
+    },
+    {
+      "index": "javelins",
+      "name": "javelins",
+      "url": "public/assets/atlas/proficiencies/javelins"
+    },
+    {
+      "index": "maces",
+      "name": "maces",
+      "url": "public/assets/atlas/proficiencies/maces"
+    },
+    {
+      "index": "quarterstaffs",
+      "name": "quarterstaffs",
+      "url": "public/assets/atlas/proficiencies/quarterstaffs"
+    },
+    {
+      "index": "sickles",
+      "name": "sickles",
+      "url": "public/assets/atlas/proficiencies/sickles"
+    },
+    {
+      "index": "spears",
+      "name": "spears",
+      "url": "public/assets/atlas/proficiencies/spears"
+    },
+    {
+      "index": "darts",
+      "name": "darts",
+      "url": "public/assets/atlas/proficiencies/darts"
+    },
+    {
+      "index": "slings",
+      "name": "slings",
+      "url": "public/assets/atlas/proficiencies/slings"
+    },
+    {
+      "index": "scimitars",
+      "name": "scimitars",
+      "url": "public/assets/atlas/proficiencies/scimitars"
+    },
+    {
+      "index": "herbalism_kit",
+      "name": "herbalism kit",
+      "url": "public/assets/atlas/proficiencies/herbalism_kit"
+    },
+    {
+      "index": "saving_throw_int",
+      "name": "saving throw: int",
+      "url": "public/assets/atlas/proficiencies/saving_throw_int"
+    },
+    {
+      "index": "saving_throw_wis",
+      "name": "saving throw: wis",
+      "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "int",
+      "name": "int",
+      "url": "public/assets/atlas/ability_scores/intelligence"
+    },
+    {
+      "index": "wis",
+      "name": "wis",
+      "url": "public/assets/atlas/ability_scores/wisdom"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "leather_armor",
+        "name": "leather armor",
+        "url": "public/assets/atlas/equipment/leather_armor"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "explorers_pack",
+        "name": "explorer's pack",
+        "url": "public/assets/atlas/equipment/explorers_pack"
+      },
+      "quantity": 1
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) a wooden shield or (b) any simple weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "shield",
+              "name": "shield",
+              "url": "public/assets/atlas/equipment/shield"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any simple weapon",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "simple_weapons",
+                  "name": "simple weapons",
+                  "url": "public/assets/atlas/equipment_categories/simple_weapons"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a scimitar or (b) any simple melee weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "scimitar",
+              "name": "scimitar",
+              "url": "public/assets/atlas/equipment/scimitar"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any simple melee weapon",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "simple_melee_weapons",
+                  "name": "simple melee weapons",
+                  "url": "public/assets/atlas/equipment_categories/simple_melee_weapons"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "druidic focus",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "equipment_category",
+        "equipment_category": {
+          "index": "druidic_foci",
+          "name": "druidic foci",
+          "url": "public/assets/atlas/equipment_categories/druidic_foci"
+        }
+      }
+    }
+  ],
+  "class_levels": "public/assets/atlas/classes/druid/levels",
+  "multi_classing": {
+    "prerequisites": [
+      {
+        "ability_score": {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        "minimum_score": 13
+      }
+    ],
+    "proficiencies": [
+      {
+        "index": "light_armor",
+        "name": "light armor",
+        "url": "public/assets/atlas/proficiencies/light_armor"
+      },
+      {
+        "index": "medium_armor",
+        "name": "medium armor",
+        "url": "public/assets/atlas/proficiencies/medium_armor"
+      },
+      {
+        "index": "shields",
+        "name": "shields",
+        "url": "public/assets/atlas/proficiencies/shields"
+      }
+    ]
+  },
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "land",
+      "url": "public/assets/atlas/subclasses/land"
+    }
+  ],
+  "spellcasting": {
+    "level": 1,
+    "spellcasting_ability": {
+      "index": "wis",
+      "name": "wis",
+      "url": "public/assets/atlas/ability_scores/wisdom"
+    },
+    "info": [
+      {
+        "name": "cantrips",
+        "desc": [
+          "At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table."
+        ]
+      },
+      {
+        "name": "preparing and casting spells",
+        "desc": [
+          "The Druid table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these druid spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+          "You prepare the list of druid spells that are available for you to cast, choosing from the druid spell list. When you do so, choose a number of druid spells equal to your Wisdom modifier + your druid level (minimum of one spell). The spells must be of a level for which you have spell slots.",
+          "For example, if you are a 3rd-level druid, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
+          "You can also change your list of prepared spells when you finish a long rest. Preparing a new list of druid spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
+        ]
+      },
+      {
+        "name": "spellcasting ability",
+        "desc": [
+          "Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.",
+          "Spell save DC = 8 + your proficiency bonus + your Wisdom modifier.",
+          "Spell attack modifier = your proficiency bonus + your Wisdom modifier."
+        ]
+      },
+      {
+        "name": "ritual casting",
+        "desc": [
+          "You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+        ]
+      },
+      {
+        "name": "spellcasting focus",
+        "desc": [
+          "You can use a druidic focus (see chapter 5, \"Equipment\") as a spellcasting focus for your druid spells."
+        ]
+      }
+    ]
+  },
+  "spells": "public/assets/atlas/classes/druid/spells",
+  "url": "public/assets/atlas/classes/json/druid.json",
+  "updated_at": "2025-10-24T20:42:12.459Z",
+  "image": "public/assets/atlas/classes/druid.webp"
+}

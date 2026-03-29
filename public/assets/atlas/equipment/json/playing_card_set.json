@@ -1,0 +1,26 @@
+{
+  "special": [],
+  "index": "playing_card_set",
+  "name": "playing card set",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "public/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Gaming Sets",
+  "cost": {
+    "quantity": 5,
+    "unit": "sp"
+  },
+  "weight": 0,
+  "desc": [
+    "This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). A few common examples appear on the Tools table, but other kinds of gaming sets exist. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency."
+  ],
+  "image": "public/assets/atlas/equipment/playing_card_set.webp",
+  "url": "public/assets/atlas/equipment/json/playing_card_set.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "sprite_index": 7,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+}

@@ -1,0 +1,18 @@
+{
+  "index": "spellcasting_bard",
+  "class": {
+    "index": "bard",
+    "name": "bard",
+    "url": "public/assets/atlas/classes/bard"
+  },
+  "name": "spellcasting: bard",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations."
+  ],
+  "reference": "public/assets/atlas/classes/bard/spellcasting",
+  "url": "public/assets/atlas/features/json/spellcasting_bard.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/spellcasting_bard.webp"
+}

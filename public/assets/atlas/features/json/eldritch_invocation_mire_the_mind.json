@@ -1,0 +1,27 @@
+{
+  "index": "eldritch_invocation_mire_the_mind",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "public/assets/atlas/classes/warlock"
+  },
+  "name": "eldritch invocation: mire the mind",
+  "level": 5,
+  "prerequisites": [
+    {
+      "type": "level",
+      "level": 5
+    }
+  ],
+  "desc": [
+    "You can cast slow once using a warlock spell slot. You can't do so again until you finish a long rest."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "public/assets/atlas/features/eldritch_invocations"
+  },
+  "url": "public/assets/atlas/features/json/eldritch_invocation_mire_the_mind.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/eldritch_invocation_mire_the_mind.webp"
+}

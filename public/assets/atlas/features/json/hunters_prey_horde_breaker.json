@@ -1,0 +1,27 @@
+{
+  "index": "hunters_prey_horde_breaker",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "public/assets/atlas/classes/ranger"
+  },
+  "subclass": {
+    "index": "hunter",
+    "name": "hunter",
+    "url": "public/assets/atlas/subclasses/hunter"
+  },
+  "name": "hunter's prey: horde breaker",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon."
+  ],
+  "parent": {
+    "index": "hunters_prey",
+    "name": "hunter's prey",
+    "url": "public/assets/atlas/features/hunters_prey"
+  },
+  "url": "public/assets/atlas/features/json/hunters_prey_horde_breaker.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/hunters_prey_horde_breaker.webp"
+}

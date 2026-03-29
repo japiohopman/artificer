@@ -1,0 +1,21 @@
+{
+  "index": "circlet_of_blasting",
+  "name": "circlet of blasting",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, uncommon",
+    "While wearing this circlet, you can use an action to cast the scorching ray spell with it. When you make the spell's attacks, you do so with an attack bonus of +5. The circlet can't be used this way again until the next dawn."
+  ],
+  "image": "public/assets/atlas/magic_items/circlet_of_blasting.webp",
+  "url": "public/assets/atlas/magic_items/json/circlet_of_blasting.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

@@ -1,0 +1,49 @@
+{
+  "higher_level": [],
+  "index": "continual_flame",
+  "name": "continual flame",
+  "desc": [
+    "A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A continual flame can be covered or hidden but not smothered or quenched."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Ruby dust worth 50 gp, which the spell consumes.",
+  "ritual": false,
+  "duration": "Until dispelled",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "public/assets/atlas/magic_schools/evocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/constitutiontinual_flame.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/constitutiontinual_flame.webp",
+  "sprite_index": 11,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet3.webp"
+}

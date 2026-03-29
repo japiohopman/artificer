@@ -1,0 +1,21 @@
+{
+  "index": "manual_of_gainful_exercise",
+  "name": "manual of gainful exercise",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "very rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, very rare",
+    "This book describes fitness exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Strength score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century."
+  ],
+  "url": "public/assets/atlas/magic_items/json/manual_of_gainful_exercise.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/manual_of_gainful_exercise.webp"
+}

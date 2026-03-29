@@ -1,0 +1,17 @@
+{
+  "index": "blindsense",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "public/assets/atlas/classes/rogue"
+  },
+  "name": "blindsense",
+  "level": 14,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or invisible creature within 10 feet of you."
+  ],
+  "url": "public/assets/atlas/features/json/blindsense.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/blindsense.webp"
+}

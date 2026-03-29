@@ -1,0 +1,341 @@
+{
+  "index": "androsphinx",
+  "name": "androsphinx",
+  "size": "Large",
+  "type": "monstrosity",
+  "alignment": "lawful neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 199,
+  "hit_dice": "19d10",
+  "hit_points_roll": "19d10+95",
+  "speed": {
+    "walk": "40 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 22,
+  "dexterity": 10,
+  "constitution": 20,
+  "intelligence": 16,
+  "wisdom": 18,
+  "charisma": 23,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+      }
+    },
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_int",
+        "name": "saving throw: int",
+        "url": "public/assets/atlas/proficiencies/saving_throw_int"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill_arcana",
+        "name": "skill: arcana",
+        "url": "public/assets/atlas/proficiencies/skill_arcana"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 15,
+      "proficiency": {
+        "index": "skill_religion",
+        "name": "skill: religion",
+        "url": "public/assets/atlas/proficiencies/skill_religion"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "psychic",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/constitutionditions/frightened"
+    }
+  ],
+  "senses": {
+    "truesight": "120 ft.",
+    "passive_perception": 20
+  },
+  "languages": "Common, Sphinx",
+  "challenge_rating": 17,
+  "proficiency_bonus": 6,
+  "xp": 18000,
+  "special_abilities": [
+    {
+      "name": "inscrutable",
+      "desc": "The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.",
+      "damage": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The sphinx's weapon attacks are magical.",
+      "damage": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The sphinx is a 12th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 18, +10 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following cleric spells prepared:\n\n- Cantrips (at will): sacred flame, spare the dying, thaumaturgy\n- 1st level (4 slots): command, detect evil and good, detect magic\n- 2nd level (3 slots): lesser restoration, zone of truth\n- 3rd level (3 slots): dispel magic, tongues\n- 4th level (3 slots): banishment, freedom of movement\n- 5th level (2 slots): flame strike, greater restoration\n- 6th level (1 slot): heroes' feast",
+      "spellcasting": {
+        "level": 12,
+        "ability": {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        "dc": 18,
+        "modifier": 10,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "school": "cleric",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 2,
+          "6": 1
+        },
+        "spells": [
+          {
+            "name": "sacred flame",
+            "level": 0,
+            "url": "public/assets/atlas/spells/sacred_flame"
+          },
+          {
+            "name": "spare the dying",
+            "level": 0,
+            "url": "public/assets/atlas/spells/spare_the_dying"
+          },
+          {
+            "name": "thaumaturgy",
+            "level": 0,
+            "url": "public/assets/atlas/spells/thaumaturgy"
+          },
+          {
+            "name": "command",
+            "level": 1,
+            "url": "public/assets/atlas/spells/command"
+          },
+          {
+            "name": "detect evil and good",
+            "level": 1,
+            "url": "public/assets/atlas/spells/detect_evil_and_good"
+          },
+          {
+            "name": "detect magic",
+            "level": 1,
+            "url": "public/assets/atlas/spells/detect_magic"
+          },
+          {
+            "name": "lesser restoration",
+            "level": 2,
+            "url": "public/assets/atlas/spells/lesser_restoration"
+          },
+          {
+            "name": "zone of truth",
+            "level": 2,
+            "url": "public/assets/atlas/spells/zone_of_truth"
+          },
+          {
+            "name": "dispel magic",
+            "level": 3,
+            "url": "public/assets/atlas/spells/dispel_magic"
+          },
+          {
+            "name": "tongues",
+            "level": 3,
+            "url": "public/assets/atlas/spells/tongues"
+          },
+          {
+            "name": "banishment",
+            "level": 4,
+            "url": "public/assets/atlas/spells/banishment"
+          },
+          {
+            "name": "freedom of movement",
+            "level": 4,
+            "url": "public/assets/atlas/spells/freedom_of_movement"
+          },
+          {
+            "name": "flame strike",
+            "level": 5,
+            "url": "public/assets/atlas/spells/flame_strike"
+          },
+          {
+            "name": "greater restoration",
+            "level": 5,
+            "url": "public/assets/atlas/spells/greater_restoration"
+          },
+          {
+            "name": "heroes' feast",
+            "level": 6,
+            "url": "public/assets/atlas/spells/heroes_feast"
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The sphinx makes two claw attacks.",
+      "actions": [
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +12 to hit, reach 5 ft., one target. Hit: 17 (2d10 + 6) slashing damage.",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "2d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "roar",
+      "desc": "The sphinx emits a magical roar. Each time it roars before finishing a long rest, the roar is louder and the effect is different, as detailed below. Each creature within 500 feet of the sphinx and able to hear the roar must make a saving throw.\n\nFirst Roar. Each creature that fails a DC 18 Wisdom saving throw is frightened for 1 minute. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n\nSecond Roar. Each creature that fails a DC 18 Wisdom saving throw is deafened and frightened for 1 minute. A frightened creature is paralyzed and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n\nThird Roar. Each creature makes a DC 18 Constitution saving throw. On a failed save, a creature takes 44 (8d10) thunder damage and is knocked prone. On a successful save, the creature takes half as much damage and isn't knocked prone.",
+      "usage": {
+        "type": "per day",
+        "times": 3
+      },
+      "attacks": [
+        {
+          "name": "first roar",
+          "dc": {
+            "dc_type": {
+              "index": "wis",
+              "name": "wis",
+              "url": "public/assets/atlas/ability_scores/wisdom"
+            },
+            "dc_value": 18,
+            "success_type": "none"
+          }
+        },
+        {
+          "name": "second roar",
+          "dc": {
+            "dc_type": {
+              "index": "wis",
+              "name": "wis",
+              "url": "public/assets/atlas/ability_scores/wisdom"
+            },
+            "dc_value": 18,
+            "success_type": "none"
+          }
+        },
+        {
+          "name": "third roar",
+          "dc": {
+            "dc_type": {
+              "index": "con",
+              "name": "con",
+              "url": "public/assets/atlas/ability_scores/constitution"
+            },
+            "dc_value": 18,
+            "success_type": "half"
+          },
+          "damage": [
+            {
+              "damage_type": {
+                "index": "thunder",
+                "name": "thunder",
+                "url": "public/assets/atlas/damage_types/thunder"
+              },
+              "damage_dice": "8d10"
+            }
+          ]
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "claw attack",
+      "desc": "The sphinx makes one claw attack.",
+      "damage": []
+    },
+    {
+      "name": "teleport (costs 2 actions)",
+      "desc": "The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.",
+      "damage": []
+    },
+    {
+      "name": "cast a spell (costs 3 actions)",
+      "desc": "The sphinx casts a spell from its list of prepared spells, using a spell slot as normal.",
+      "damage": []
+    }
+  ],
+  "image": "/api/images/monsters/androsphinx.png",
+  "url": "public/assets/atlas/monsters/androsphinx",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "reactions": [],
+  "lore": "Disruption in the weave detected.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/androsphinx.webp",
+  "bakedAt": 1767752852772
+}

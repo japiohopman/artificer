@@ -1,0 +1,64 @@
+{
+  "index": "scroll",
+  "name": "scroll",
+  "equipment": [
+    {
+      "index": "spell_scroll",
+      "name": "spell scroll",
+      "url": "public/assets/atlas/magic_items/spell_scroll"
+    },
+    {
+      "index": "spell_scroll_cantrip",
+      "name": "spell scroll (cantrip)",
+      "url": "public/assets/atlas/magic_items/spell_scroll_cantrip"
+    },
+    {
+      "index": "spell_scroll_1st",
+      "name": "spell scroll (1st)",
+      "url": "public/assets/atlas/magic_items/spell_scroll_1st"
+    },
+    {
+      "index": "spell_scroll_2nd",
+      "name": "spell scroll (2nd)",
+      "url": "public/assets/atlas/magic_items/spell_scroll_2nd"
+    },
+    {
+      "index": "spell_scroll_3rd",
+      "name": "spell scroll (3rd)",
+      "url": "public/assets/atlas/magic_items/spell_scroll_3rd"
+    },
+    {
+      "index": "spell_scroll_4th",
+      "name": "spell scroll (4th)",
+      "url": "public/assets/atlas/magic_items/spell_scroll_4th"
+    },
+    {
+      "index": "spell_scroll_5th",
+      "name": "spell scroll (5th)",
+      "url": "public/assets/atlas/magic_items/spell_scroll_5th"
+    },
+    {
+      "index": "spell_scroll_6th",
+      "name": "spell scroll (6th)",
+      "url": "public/assets/atlas/magic_items/spell_scroll_6th"
+    },
+    {
+      "index": "spell_scroll_7th",
+      "name": "spell scroll (7th)",
+      "url": "public/assets/atlas/magic_items/spell_scroll_7th"
+    },
+    {
+      "index": "spell_scroll_8th",
+      "name": "spell scroll (8th)",
+      "url": "public/assets/atlas/magic_items/spell_scroll_8th"
+    },
+    {
+      "index": "spell_scroll_9th",
+      "name": "spell scroll (9th)",
+      "url": "public/assets/atlas/magic_items/spell_scroll_9th"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/scroll.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/scroll.webp"
+}

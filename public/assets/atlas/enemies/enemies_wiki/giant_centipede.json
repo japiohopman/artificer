@@ -1,0 +1,67 @@
+{
+  "index": "giant_centipede",
+  "name": "giant centipede",
+  "size": "Small",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 4,
+  "hit_dice": "1d6",
+  "hit_points_roll": "1d6+1",
+  "speed": {
+    "walk": "30 ft.",
+    "climb": "30 ft."
+  },
+  "strength": 5,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 1,
+  "wisdom": 7,
+  "charisma": 3,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "passive_perception": 8
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or take 10 (3d6) poison damage. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/giant_centipede.png",
+  "url": "public/assets/atlas/monsters/giant_centipede",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "lore": "The *Scolopendra Grandis*, or the Great Chitin-Crawler, haunts the lightless damp of our world. These behemoths thrive where rot is most profound: deep within the peat of primeval bogs or clinging to the dripping ceilings of forgotten sepulchers.\n\nUnlike their smaller kin, these predators are patient stalkers. They do not merely scuttle; they flow like dark liquid across uneven stone. Their primary stratagem is the \"Coil-and-Pierce.\" A giant centipede drops from the shadows, anchoring its myriad hooked legs into the victim\u2019s flesh before delivering a paralytic draught from jagged mandibles. The sensation, survivors claim, is like liquid ice rushing through the veins, rendering the body a silent prisoner to its own demise.\n\nIn the folklore of the Lowlands, they are dreaded as \"The Grave-Keepers.\" Peasants whisper that a centipede in the cellar is a sign that the earth is hungry for a soul. To see one\u2019s shadow mimic the undulating movement of their many legs is considered a death sentence. Thus, they remain a chilling reminder that in the silent dark, a thousand tiny feet are always marching toward their next meal.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/giant-centipede.webp",
+  "bakedAt": 1768740101004
+}

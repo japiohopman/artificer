@@ -1,0 +1,22 @@
+{
+  "index": "dimensional_shackles",
+  "name": "dimensional shackles",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, rare",
+    "You can use an action to place these shackles on an incapacitated creature. The shackles adjust to fit a creature of Small to Large size. In addition to serving as mundane manacles, the shackles prevent a creature bound by them from using any method of extradimensional movement, including teleportation or travel to a different plane of existence. They don't prevent the creature from passing through an interdimensional portal.",
+    "You and any creature you designate when you use the shackles can use an action to remove them. Once every 30 days, the bound creature can make a DC 30 Strength (Athletics) check. On a success, the creature breaks free and destroys the shackles."
+  ],
+  "image": "public/assets/atlas/magic_items/dimensional_shackles.webp",
+  "url": "public/assets/atlas/magic_items/json/dimensional_shackles.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

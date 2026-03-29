@@ -1,0 +1,113 @@
+{
+  "name": "severin",
+  "size": "Medium",
+  "type": "humanoid (human)",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "value": 16,
+      "type": "Draconic Majesty"
+    }
+  ],
+  "hit_points": 150,
+  "hit_dice": "20d8 + 60",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 13,
+  "constitution": 16,
+  "intelligence": 17,
+  "wisdom": 12,
+  "charisma": 20,
+  "proficiencies": [
+    {
+      "name": "saving throw: dex",
+      "value": 5
+    },
+    {
+      "name": "saving throw: wis",
+      "value": 5
+    },
+    {
+      "name": "skill: arcana",
+      "value": 7
+    },
+    {
+      "name": "skill: religion",
+      "value": 7
+    }
+  ],
+  "damage_immunities": [
+    "fire"
+  ],
+  "damage_resistances": [
+    "acid",
+    "cold",
+    "lightning",
+    "poison",
+    "bludgeoning, piercing, and slashing damage from nonmagical weapons"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "poisoned"
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 11
+  },
+  "languages": "Common, Draconic, Infernal",
+  "challenge_rating": 11,
+  "xp": 7200,
+  "special_abilities": [
+    {
+      "name": "special equipment",
+      "desc": "Severin has the Mask of the Dragon Queen."
+    },
+    {
+      "name": "draconic majesty",
+      "desc": "Severin adds his Charisma bonus to his AC (included)."
+    },
+    {
+      "name": "ignite enemy",
+      "desc": "If Severin deals fire damage to a creature while wearing the Mask of the Dragon Queen, the target catches fire. At the start of each of its turns, the burning target takes 5 (1d10) fire damage. A creature within reach of the fire can use an action to extinguish it."
+    },
+    {
+      "name": "legendary resistance (5/day)",
+      "desc": "While wearing the Mask of the Dragon Queen, if Severin fails a saving throw, he can choose to succeed instead."
+    }
+  ],
+  "actions": [
+    {
+      "name": "burning touch",
+      "desc": "Melee Spell Attack: +5 to hit, reach 5 ft., one target. Hit: 18 (4d8) fire damage."
+    },
+    {
+      "name": "flaming orb",
+      "desc": "Ranged Spell Attack: +5 to hit, range 90 ft., one target. Hit: 40 (9d8) fire damage."
+    },
+    {
+      "name": "scorching burst",
+      "desc": "Severin chooses a point he can see within 60 feet of him. Each creature within 5 feet of that point must make a DC 17 Dexterity saving throw, taking 18 (4d8) fire damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "attack",
+      "desc": "Severin makes one attack."
+    },
+    {
+      "name": "fiery teleport (costs 2 actions)",
+      "desc": "Severin, along with any objects he is wearing or carrying, teleports up to 60 feet to an unoccupied space he can see. Each creature within 5 feet of Severin before he teleports takes 5 (1d10) fire damage."
+    },
+    {
+      "name": "hellish chains (costs 3 actions)",
+      "desc": "Severin targets one creature he can see within 30 feet of him. The target is wrapped in magical chains of fire and restrained. The restrained target takes 21 (6d6) fire damage at the start of each of its turns. At the end of its turns, the target can make a DC 17 Strength saving throw, ending the effect on itself on a success."
+    }
+  ],
+  "index": "severin",
+  "lore": "The Severin haunts the lightless vales of the Weeping Weald, where the mist never lifts and the air tastes of damp earth and old iron. A creature of jagged bone and necrotic vine, it remains indistinguishable from the skeletal oaks until it chooses to move. \n\nIts predatory method is a psychological cruelty. The Severin possesses a mimicry so profound it can replicate the precise timbre of a lost child\u2019s laughter or a departed spouse\u2019s whisper. It does not strike with tooth or claw initially; instead, it lures the grieving into \"Severing Circles\"\u2014patches of blighted earth where all ambient sound vanishes. Once the victim is isolated by this unnatural silence, the Severin unravels their mind with familiar voices until they succumb to despair.\n\nIn local folklore, the Severin is the \"Widow\u2019s Echo,\" a physical manifestation of grief left to rot. Villagers hang silver hush-bells on their eaves, believing the pure chime breaks the creature\u2019s auditory illusions. To hear a familiar voice in the deep woods where no soul should be is a death sentence. To answer is to give the Severin a thread to pull, unmaking the man before the beast ever feeds.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/severin.webp",
+  "bakedAt": 1767615600583
+}

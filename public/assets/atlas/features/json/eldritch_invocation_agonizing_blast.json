@@ -1,0 +1,27 @@
+{
+  "index": "eldritch_invocation_agonizing_blast",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "public/assets/atlas/classes/warlock"
+  },
+  "name": "eldritch invocation: agonizing blast",
+  "level": 2,
+  "prerequisites": [
+    {
+      "type": "spell",
+      "spell": "public/assets/atlas/spells/eldritch-blast"
+    }
+  ],
+  "desc": [
+    "When you cast eldritch blast, add your Charisma modifier to the damage it deals on a hit."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "public/assets/atlas/features/eldritch_invocations"
+  },
+  "url": "public/assets/atlas/features/json/eldritch_invocation_agonizing_blast.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/eldritch_invocation_agonizing_blast.webp"
+}

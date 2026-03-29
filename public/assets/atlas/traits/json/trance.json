@@ -1,0 +1,19 @@
+{
+  "index": "trance",
+  "races": [
+    {
+      "index": "elf",
+      "name": "elf",
+      "url": "public/assets/atlas/races/elf"
+    }
+  ],
+  "subraces": [],
+  "name": "trance",
+  "desc": [
+    "Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep."
+  ],
+  "proficiencies": [],
+  "url": "public/assets/atlas/traits/json/trance.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "public/assets/atlas/traits/trance.webp"
+}

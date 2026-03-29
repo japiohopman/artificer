@@ -1,0 +1,56 @@
+{
+  "index": "bless",
+  "name": "bless",
+  "desc": [
+    "You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+  ],
+  "range": "30 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A sprinkling of holy water.",
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "enchantment",
+    "name": "enchantment",
+    "url": "public/assets/atlas/magic_schools/enchantment"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "public/assets/atlas/classes/cleric"
+    },
+    {
+      "index": "paladin",
+      "name": "paladin",
+      "url": "public/assets/atlas/classes/paladin"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/lore"
+    },
+    {
+      "index": "life",
+      "name": "life",
+      "url": "public/assets/atlas/subclasses/life"
+    }
+  ],
+  "url": "public/assets/atlas/spell/json/bless.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/bless.webp",
+  "sprite_index": 3,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet2.webp"
+}

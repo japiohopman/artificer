@@ -1,0 +1,113 @@
+{
+  "name": "severin",
+  "size": "Medium",
+  "type": "humanoid (human)",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "value": 16,
+      "type": "Draconic Majesty"
+    }
+  ],
+  "hit_points": 150,
+  "hit_dice": "20d8 + 60",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 13,
+  "constitution": 16,
+  "intelligence": 17,
+  "wisdom": 12,
+  "charisma": 20,
+  "proficiencies": [
+    {
+      "name": "saving throw: dex",
+      "value": 5
+    },
+    {
+      "name": "saving throw: wis",
+      "value": 5
+    },
+    {
+      "name": "skill: arcana",
+      "value": 7
+    },
+    {
+      "name": "skill: religion",
+      "value": 7
+    }
+  ],
+  "damage_immunities": [
+    "fire"
+  ],
+  "damage_resistances": [
+    "acid",
+    "cold",
+    "lightning",
+    "poison",
+    "bludgeoning, piercing, and slashing damage from nonmagical weapons"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "poisoned"
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 11
+  },
+  "languages": "Common, Draconic, Infernal",
+  "challenge_rating": 11,
+  "xp": 7200,
+  "special_abilities": [
+    {
+      "name": "special equipment",
+      "desc": "Severin has the Mask of the Dragon Queen."
+    },
+    {
+      "name": "draconic majesty",
+      "desc": "Severin adds his Charisma bonus to his AC (included)."
+    },
+    {
+      "name": "ignite enemy",
+      "desc": "If Severin deals fire damage to a creature while wearing the Mask of the Dragon Queen, the target catches fire. At the start of each of its turns, the burning target takes 5 (1d10) fire damage. A creature within reach of the fire can use an action to extinguish it."
+    },
+    {
+      "name": "legendary resistance (5/day)",
+      "desc": "While wearing the Mask of the Dragon Queen, if Severin fails a saving throw, he can choose to succeed instead."
+    }
+  ],
+  "actions": [
+    {
+      "name": "burning touch",
+      "desc": "Melee Spell Attack: +5 to hit, reach 5 ft., one target. Hit: 18 (4d8) fire damage."
+    },
+    {
+      "name": "flaming orb",
+      "desc": "Ranged Spell Attack: +5 to hit, range 90 ft., one target. Hit: 40 (9d8) fire damage."
+    },
+    {
+      "name": "scorching burst",
+      "desc": "Severin chooses a point he can see within 60 feet of him. Each creature within 5 feet of that point must make a DC 17 Dexterity saving throw, taking 18 (4d8) fire damage on a failed save, or half as much damage on a successful one."
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "attack",
+      "desc": "Severin makes one attack."
+    },
+    {
+      "name": "fiery teleport (costs 2 actions)",
+      "desc": "Severin, along with any objects he is wearing or carrying, teleports up to 60 feet to an unoccupied space he can see. Each creature within 5 feet of Severin before he teleports takes 5 (1d10) fire damage."
+    },
+    {
+      "name": "hellish chains (costs 3 actions)",
+      "desc": "Severin targets one creature he can see within 30 feet of him. The target is wrapped in magical chains of fire and restrained. The restrained target takes 21 (6d6) fire damage at the start of each of its turns. At the end of its turns, the target can make a DC 17 Strength saving throw, ending the effect on itself on a success."
+    }
+  ],
+  "index": "severin.json",
+  "lore": "The Severin is a phantom of the high, jagged reaches, dwelling where the air thins and the spirit wavers. Neither beast nor true specter, it manifests as a shifting lattice of frost-rimed shadows, camouflaged perfectly against the rime-crusted stone of the mountain peaks.\n\nIts predation is a masterpiece of attrition. The Severin does not strike with tooth or claw; rather, it \"severs\" a victim\u2019s tether to the world. By vibrating its crystalline carapace, it produces a subsonic resonance that mimics the sound of a distant, familiar voice or a crackling hearth. The traveler wanders into the blizzard, seeking a warmth that does not exist, until the creature descends to harvest the heat from their cooling marrow.\n\nIn the lowlands, it is feared as the \"Pale Harvester.\" Folklore suggests the Severin was once a scholar who sought to freeze time itself, only to be consumed by the very stillness he craved. To feel a sudden, unnatural calm amidst a howling gale is the only warning one receives; by then, the Severin has already cut the threads of your journey.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/severin.json.webp",
+  "bakedAt": 1767615624655
+}

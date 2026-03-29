@@ -1,0 +1,17 @@
+{
+  "id": "candlekeep",
+  "name": "candlekeep",
+  "terrain": "Ancient Ruins",
+  "path": "west_faerun/candlekeep",
+  "bg": "public/assets/atlas/toril/faerun/west_faerun/candlekeep.webp",
+  "ambient": "library",
+  "availableShops": [
+    "Mage Services",
+    "Arcane Shop",
+    "Enchanter",
+    "Curiosity Shop",
+    "Alchemist",
+    "Fletcher"
+  ],
+  "lastUpdated": "2026-03-23T11:23:15.225Z"
+}

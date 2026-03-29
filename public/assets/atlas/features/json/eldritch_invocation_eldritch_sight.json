@@ -1,0 +1,22 @@
+{
+  "index": "eldritch_invocation_eldritch_sight",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "public/assets/atlas/classes/warlock"
+  },
+  "name": "eldritch invocation: eldritch sight",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "You can cast detect magic at will, without expending a spell slot."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "public/assets/atlas/features/eldritch_invocations"
+  },
+  "url": "public/assets/atlas/features/json/eldritch_invocation_eldritch_sight.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/eldritch_invocation_eldritch_sight.webp"
+}

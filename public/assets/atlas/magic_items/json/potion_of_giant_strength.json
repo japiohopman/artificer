@@ -1,0 +1,60 @@
+{
+  "index": "potion_of_giant_strength",
+  "name": "potion of giant strength",
+  "equipment_category": {
+    "index": "potion",
+    "name": "potion",
+    "url": "public/assets/atlas/equipment_categories/potion"
+  },
+  "rarity": {
+    "name": "varies"
+  },
+  "variants": [
+    {
+      "index": "potion_of_giant_strength_hill",
+      "name": "potion of hill giant strength",
+      "url": "public/assets/atlas/magic_items/potion_of_giant_strength_hill"
+    },
+    {
+      "index": "potion_of_giant_strength_frost",
+      "name": "potion of frost giant strength",
+      "url": "public/assets/atlas/magic_items/potion_of_giant_strength_frost"
+    },
+    {
+      "index": "potion_of_giant_strength_stone",
+      "name": "potion of stone giant strength",
+      "url": "public/assets/atlas/magic_items/potion_of_giant_strength_stone"
+    },
+    {
+      "index": "potion_of_giant_strength_fire",
+      "name": "potion of fire giant strength",
+      "url": "public/assets/atlas/magic_items/potion_of_giant_strength_fire"
+    },
+    {
+      "index": "potion_of_giant_strength_cloud",
+      "name": "potion of cloud giant strength",
+      "url": "public/assets/atlas/magic_items/potion_of_giant_strength_cloud"
+    },
+    {
+      "index": "potion_of_giant_strength_storm",
+      "name": "potion of storm giant strength",
+      "url": "public/assets/atlas/magic_items/potion_of_giant_strength_storm"
+    }
+  ],
+  "variant": false,
+  "desc": [
+    "Potion, varies",
+    "When you drink this potion, your Strength score changes for 1 hour. The type of giant determines the score (see the table below). The potion has no effect on you if your Strength is equal to or greater than that score.",
+    "This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. The potion of frost giant strength and the potion of stone giant strength have the same effect.",
+    "| Type of Giant | Strength | Rarity |",
+    "|---|---|---|",
+    "| Hill giant | 21 | Uncommon |",
+    "| Frost/stone giant | 23 | Rare |",
+    "| Fire giant | 25 | Rare |",
+    "| Cloud giant | 27 | Very rare |",
+    "| Storm giant | 29 | Legendary |"
+  ],
+  "url": "public/assets/atlas/magic_items/json/potion_of_giant_strength.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/potion_of_giant_strength.webp"
+}

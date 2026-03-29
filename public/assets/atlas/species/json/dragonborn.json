@@ -1,0 +1,61 @@
+{
+  "index": "dragonborn",
+  "name": "dragonborn",
+  "speed": 30,
+  "ability_bonuses": [
+    {
+      "ability_score": {
+        "index": "str",
+        "name": "str",
+        "url": "public/assets/atlas/ability_scores/strength"
+      },
+      "bonus": 2
+    },
+    {
+      "ability_score": {
+        "index": "cha",
+        "name": "cha",
+        "url": "public/assets/atlas/ability_scores/charisma"
+      },
+      "bonus": 1
+    }
+  ],
+  "alignment": "Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil. Most dragonborn are good, but those who side with evil can be terrible villains.",
+  "age": "Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.",
+  "size": "Medium",
+  "size_description": "Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.",
+  "languages": [
+    {
+      "index": "common",
+      "name": "common",
+      "url": "public/assets/atlas/languages/common"
+    },
+    {
+      "index": "draconic",
+      "name": "draconic",
+      "url": "public/assets/atlas/languages/draconic"
+    }
+  ],
+  "language_desc": "You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.",
+  "traits": [
+    {
+      "index": "draconic_ancestry",
+      "name": "draconic ancestry",
+      "url": "public/assets/atlas/traits/draconic_ancestry"
+    },
+    {
+      "index": "breath_weapon",
+      "name": "breath weapon",
+      "url": "public/assets/atlas/traits/breath_weapon"
+    },
+    {
+      "index": "damage_resistance",
+      "name": "damage resistance",
+      "url": "public/assets/atlas/traits/damage_resistance"
+    }
+  ],
+  "subraces": [],
+  "url": "public/assets/atlas/species/json/dragonborn.json",
+  "updated_at": "2025-10-24T20:42:14.212Z",
+  "image": "public/assets/atlas/species/dragonborn.webp"
+}

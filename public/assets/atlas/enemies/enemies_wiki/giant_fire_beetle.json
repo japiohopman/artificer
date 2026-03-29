@@ -1,0 +1,73 @@
+{
+  "index": "giant_fire_beetle",
+  "name": "giant fire beetle",
+  "desc": "A giant fire beetle is a nocturnal creature that takes its name from a pair of glowing glands that give off light. Miners and adventurers prize these creatures, for a giant fire beetle\u2019s glands continue to shed light for 1d6 days after the beetle dies. Giant fire beetles are most commonly found underground and in dark forests.",
+  "size": "Small",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 4,
+  "hit_dice": "1d6",
+  "hit_points_roll": "1d6+1",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "dexterity": 10,
+  "constitution": 12,
+  "intelligence": 1,
+  "wisdom": 7,
+  "charisma": 3,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "passive_perception": 8
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "illumination",
+      "desc": "The beetle sheds bright light in a 10-foot radius and dim light for an additional 10 ft..",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 2 (1d6 - 1) slashing damage.",
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "1d6-1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/giant_fire_beetle.png",
+  "url": "public/assets/atlas/monsters/giant_fire_beetle",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The *Lucanus ignis*, or Giant Fire Beetle, is a marvel of subterranean bioluminescence. These carapaced sentinels dwell in the lightless depths of the world, specifically within humid fungal forests and volcanic basalt veins where ambient heat sustains their internal alchemy.\n\nUnlike their smaller kin, the Fire Beetle is a patient, tactical predator. It utilizes its twin cephalic glands to cast a rhythmic, hypnotic amber glow. In the absolute dark of the Deep, this light acts as a cruel beacon, drawing curious vermin and unwary explorers alike toward its serrated mandibles. When the strike occurs, it is often preceded by a sudden, blinding flare that leaves the victim disoriented in the ensuing gloom.\n\nLocal folklore dubs them \"The Miner\u2019s Mourning.\" While subterranean folk often harvest their glowing glands to light their way through the \"black-lung\" reaches, it is whispered that to see a Fire Beetle\u2019s light in a dead-end tunnel is a harbinger of a path that leads only to the grave. They are the lanterns of the abyss, guiding the lost not to safety, but to the eternal silence of the earth.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/giant-fire-beetle.webp",
+  "bakedAt": 1767722451874
+}

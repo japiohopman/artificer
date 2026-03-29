@@ -1,0 +1,110 @@
+{
+  "index": "goblin",
+  "name": "goblin",
+  "size": "Small",
+  "type": "humanoid",
+  "subtype": "goblinoid",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 15,
+      "armor": [
+        {
+          "index": "leather_armor",
+          "name": "leather armor",
+          "url": "public/assets/atlas/equipment/leather_armor"
+        },
+        {
+          "index": "shield",
+          "name": "shield",
+          "url": "public/assets/atlas/equipment/shield"
+        }
+      ]
+    }
+  ],
+  "hit_points": 7,
+  "hit_dice": "2d6",
+  "hit_points_roll": "2d6",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "dexterity": 14,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 8,
+  "charisma": 8,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 9
+  },
+  "languages": "Common, Goblin",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "nimble escape",
+      "desc": "The goblin can take the Disengage or Hide action as a bonus action on each of its turns.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "scimitar",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/slashing"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "shortbow",
+      "desc": "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/goblin.png",
+  "url": "public/assets/atlas/monsters/goblin",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "*Goblinus Malictus*, commonly termed the Goblin, is the persistent shadow upon the fringes of our maps. These diminutive humanoids thrive in the lightless damp of limestone caverns and the sun-starved undergrowth of ancient briars. They are not merely beasts, but a collective blight of low cunning.\n\nTheir predation is defined by a cruel patience. Goblins eschew honorable combat, preferring the \"thousand-cut\" ambush. They utilize jagged scrap-metal and crude grease-traps to hobble the unwary, descending only when their quarry is spent. They possess a magpie\u2019s hunger, often valuing a shiny thimble as highly as the meat of the kill.\n\nIn provincial folklore, the goblin is the \"Thief of the Hearth.\" Villagers hang sprigs of rowan and cold iron charms to deter these \"unbidden guests\" from souring the cream or spiriting away silver spoons. To find a goblin\u2019s track near one\u2019s home is viewed as an omen of impending rot\u2014a grim sign that the civil world is being slowly reclaimed by the chaotic, sniggering dark.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/goblin.webp",
+  "bakedAt": 1767611582719
+}

@@ -1,0 +1,92 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "explorers_pack",
+  "name": "explorer's pack",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "equipment_packs",
+    "name": "equipment packs",
+    "url": "public/assets/atlas/equipment_categories/equipment_packs"
+  },
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "contents": [
+    {
+      "item": {
+        "index": "backpack",
+        "name": "backpack",
+        "url": "public/assets/atlas/equipment/backpack"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "bedroll",
+        "name": "bedroll",
+        "url": "public/assets/atlas/equipment/bedroll"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "mess_kit",
+        "name": "mess kit",
+        "url": "public/assets/atlas/equipment/mess_kit"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "tinderbox",
+        "name": "tinderbox",
+        "url": "public/assets/atlas/equipment/tinderbox"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "torch",
+        "name": "torch",
+        "url": "public/assets/atlas/equipment/torch"
+      },
+      "quantity": 10
+    },
+    {
+      "item": {
+        "index": "rations_1_day",
+        "name": "rations (1 day)",
+        "url": "public/assets/atlas/equipment/rations_1_day"
+      },
+      "quantity": 10
+    },
+    {
+      "item": {
+        "index": "waterskin",
+        "name": "waterskin",
+        "url": "public/assets/atlas/equipment/waterskin"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "rope_hempen_50_feet",
+        "name": "rope, hempen (50 feet)",
+        "url": "public/assets/atlas/equipment/rope_hempen_50_feet"
+      },
+      "quantity": 1
+    }
+  ],
+  "url": "public/assets/atlas/equipment/json/explorers_pack.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "properties": [],
+  "image": "public/assets/atlas/equipment/explorers_pack.webp",
+  "sprite_index": 10,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+}

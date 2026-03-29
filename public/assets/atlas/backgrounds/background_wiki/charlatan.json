@@ -1,0 +1,35 @@
+{
+  "index": "charlatan",
+  "name": "charlatan",
+  "starting_proficiencies": [
+    {
+      "index": "skill_deception",
+      "name": "deception",
+      "url": ""
+    },
+    {
+      "index": "skill_sleight_of_hand",
+      "name": "sleight of hand",
+      "url": ""
+    }
+  ],
+  "tool_proficiencies": [
+    "Disguise kit",
+    "Forgery kit"
+  ],
+  "equipment": [
+    "Set of fine clothes",
+    "Disguise kit",
+    "Tools of the con of your choice",
+    "Pouch with 15 gp"
+  ],
+  "feature": {
+    "name": "false identity",
+    "desc": [
+      "You have created a second identity that includes documentation, established acquaintances, and disguises that allow you to assume that persona. Additionally, you can forge documents including official papers and personal letters, as long as you have seen an example of the kind of document or the handwriting you are trying to copy."
+    ]
+  },
+  "lore": "To the uninitiated, the Charlatan appears a peacock among sparrows, yet their true nature is that of the social cuckoo. They thrive not in the untamed wilds, but within the \"urban thicket\"\u2014the bustling marketplaces, smoke-filled gambling dens, and gilded courts where trust is a liquid commodity.\n\nTheir behavior is a masterclass in mimicry. Like a displacer beast, they are never quite where they seem, cloaking their true intent behind a kaleidoscope of forged pedigrees and silver-tongued promises. They feed not on flesh, but on the vanity and desperation of the gullible. A Charlatan\u2019s survival depends on the \"long con,\" a slow-stalking hunt where the weapon is a lie so sweet it tastes like truth. Watch for the one who agrees too readily, whose eyes remain calculating while their smile warms the room; they are the most efficient predators in civilization.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/background/charismarlatan.webp",
+  "bakedAt": 1767702840674
+}

@@ -1,0 +1,22 @@
+{
+  "index": "eldritch_invocation_fiendish_vigor",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "public/assets/atlas/classes/warlock"
+  },
+  "name": "eldritch invocation: fiendish vigor",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "You can cast false life on yourself at will as a 1st-level spell, without expending a spell slot or material components."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "public/assets/atlas/features/eldritch_invocations"
+  },
+  "url": "public/assets/atlas/features/json/eldritch_invocation_fiendish_vigor.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/eldritch_invocation_fiendish_vigor.webp"
+}

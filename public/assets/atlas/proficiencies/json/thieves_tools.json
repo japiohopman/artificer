@@ -1,0 +1,21 @@
+{
+  "index": "thieves_tools",
+  "type": "Other",
+  "name": "thieves' tools",
+  "classes": [
+    {
+      "index": "rogue",
+      "name": "rogue",
+      "url": "public/assets/atlas/classes/rogue"
+    }
+  ],
+  "races": [],
+  "url": "public/assets/atlas/proficiencies/json/thieves_tools.json",
+  "reference": {
+    "index": "thieves_tools",
+    "name": "thieves' tools",
+    "url": "public/assets/atlas/equipment/thieves_tools"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/thieves_tools.webp"
+}

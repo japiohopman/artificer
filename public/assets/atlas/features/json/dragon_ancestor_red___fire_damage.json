@@ -1,0 +1,28 @@
+{
+  "index": "dragon_ancestor_red___fire_damage",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "public/assets/atlas/classes/sorcerer"
+  },
+  "subclass": {
+    "index": "draconic",
+    "name": "draconic",
+    "url": "public/assets/atlas/subclasses/draconic"
+  },
+  "name": "dragon ancestor: red _ fire damage",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "At 1st level, you choose one type of dragon as your ancestor. The damage type associated with each dragon is used by features you gain later.",
+    "You can speak, read, and write Draconic. Additionally, whenever you make a Charisma check when interacting with dragons, your proficiency bonus is doubled if it applies to the check."
+  ],
+  "parent": {
+    "index": "dragon_ancestor",
+    "name": "dragon ancestor",
+    "url": "public/assets/atlas/features/dragon_ancestor"
+  },
+  "url": "public/assets/atlas/features/json/dragon_ancestor_red___fire_damage.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/dragon_ancestor_red___fire_damage.webp"
+}

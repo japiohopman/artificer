@@ -1,0 +1,54 @@
+{
+  "index": "ranged_weapons",
+  "name": "ranged weapons",
+  "equipment": [
+    {
+      "index": "blowgun",
+      "name": "blowgun",
+      "url": "public/assets/atlas/equipment/blowgun"
+    },
+    {
+      "index": "crossbow_hand",
+      "name": "crossbow, hand",
+      "url": "public/assets/atlas/equipment/crossbow_hand"
+    },
+    {
+      "index": "crossbow_heavy",
+      "name": "crossbow, heavy",
+      "url": "public/assets/atlas/equipment/crossbow_heavy"
+    },
+    {
+      "index": "crossbow_light",
+      "name": "crossbow, light",
+      "url": "public/assets/atlas/equipment/crossbow_light"
+    },
+    {
+      "index": "dart",
+      "name": "dart",
+      "url": "public/assets/atlas/equipment/dart"
+    },
+    {
+      "index": "longbow",
+      "name": "longbow",
+      "url": "public/assets/atlas/equipment/longbow"
+    },
+    {
+      "index": "net",
+      "name": "net",
+      "url": "public/assets/atlas/equipment/net"
+    },
+    {
+      "index": "shortbow",
+      "name": "shortbow",
+      "url": "public/assets/atlas/equipment/shortbow"
+    },
+    {
+      "index": "sling",
+      "name": "sling",
+      "url": "public/assets/atlas/equipment/sling"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/ranged_weapons.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/ranged_weapons.webp"
+}

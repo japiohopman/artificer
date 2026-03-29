@@ -1,0 +1,37 @@
+{
+  "index": "shortswords",
+  "type": "Weapons",
+  "name": "shortswords",
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "public/assets/atlas/classes/bard"
+    },
+    {
+      "index": "monk",
+      "name": "monk",
+      "url": "public/assets/atlas/classes/monk"
+    },
+    {
+      "index": "rogue",
+      "name": "rogue",
+      "url": "public/assets/atlas/classes/rogue"
+    }
+  ],
+  "races": [
+    {
+      "index": "high_elf",
+      "name": "high elf",
+      "url": "public/assets/atlas/subraces/high_elf"
+    }
+  ],
+  "url": "public/assets/atlas/proficiencies/json/shortswords.json",
+  "reference": {
+    "index": "shortsword",
+    "name": "shortsword",
+    "url": "public/assets/atlas/equipment/shortsword"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/shortswords.webp"
+}

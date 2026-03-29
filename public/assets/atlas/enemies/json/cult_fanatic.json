@@ -1,0 +1,184 @@
+{
+  "index": "cult_fanatic",
+  "name": "cult fanatic",
+  "desc": "Fanatics are often part of a cult\u2019s leadership, using their charisma and dogma to influence and prey on those of weak will. Most are interested in personal power above all else.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any non-good alignment",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 13,
+      "armor": [
+        {
+          "index": "leather_armor",
+          "name": "leather armor",
+          "url": "public/assets/atlas/equipment/leather_armor"
+        }
+      ]
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8-5",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 14,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_deception",
+        "name": "skill: deception",
+        "url": "public/assets/atlas/proficiencies/skill_deception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_persuasion",
+        "name": "skill: persuasion",
+        "url": "public/assets/atlas/proficiencies/skill_persuasion"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_religion",
+        "name": "skill: religion",
+        "url": "public/assets/atlas/proficiencies/skill_religion"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "dark devotion",
+      "desc": "The fanatic has advantage on saving throws against being charmed or frightened.",
+      "damage": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The fanatic is a 4th-level spellcaster. Its spell casting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). The fanatic has the following cleric spells prepared:\n\nCantrips (at will): light, sacred flame, thaumaturgy\n- 1st level (4 slots): command, inflict wounds, shield of faith\n- 2nd level (3 slots): hold person, spiritual weapon",
+      "spellcasting": {
+        "level": 4,
+        "ability": {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        "dc": 11,
+        "modifier": 3,
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "school": "cleric",
+        "slots": {
+          "1": 4,
+          "2": 3
+        },
+        "spells": [
+          {
+            "name": "light",
+            "level": 0,
+            "url": "public/assets/atlas/spells/light"
+          },
+          {
+            "name": "sacred flame",
+            "level": 0,
+            "url": "public/assets/atlas/spells/sacred_flame"
+          },
+          {
+            "name": "thaumaturgy",
+            "level": 0,
+            "url": "public/assets/atlas/spells/thaumaturgy"
+          },
+          {
+            "name": "command",
+            "level": 1,
+            "url": "public/assets/atlas/spells/command"
+          },
+          {
+            "name": "inflict wounds",
+            "level": 1,
+            "url": "public/assets/atlas/spells/inflict_wounds"
+          },
+          {
+            "name": "shield of faith",
+            "level": 1,
+            "url": "public/assets/atlas/spells/shield_of_faith"
+          },
+          {
+            "name": "hold person",
+            "level": 2,
+            "url": "public/assets/atlas/spells/hold_person"
+          },
+          {
+            "name": "spiritual weapon",
+            "level": 2,
+            "url": "public/assets/atlas/spells/spiritual_weapon"
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The fanatic makes two melee attacks.",
+      "actions": [
+        {
+          "action_name": "Dagger",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "dagger",
+      "desc": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one creature. Hit: 4 (1d4 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/cult_fanatic.webp",
+  "url": "public/assets/atlas/enemies/json/cult_fanatic.json",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 23,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet3.webp"
+}

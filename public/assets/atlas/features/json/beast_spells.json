@@ -1,0 +1,17 @@
+{
+  "index": "beast_spells",
+  "class": {
+    "index": "druid",
+    "name": "druid",
+    "url": "public/assets/atlas/classes/druid"
+  },
+  "name": "beast spells",
+  "level": 18,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components."
+  ],
+  "url": "public/assets/atlas/features/json/beast_spells.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "public/assets/atlas/features/beast_spells.webp"
+}

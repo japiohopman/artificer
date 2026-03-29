@@ -1,0 +1,83 @@
+{
+  "index": "flying_snake",
+  "name": "flying snake",
+  "desc": "A flying snake is a brightly colored, winged serpent found in remote jungles. Tribespeople and cultists sometimes domesticate flying snakes to serve as messengers that deliver scrolls wrapped in their coils.",
+  "size": "Tiny",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 14
+    }
+  ],
+  "hit_points": 5,
+  "hit_dice": "2d4",
+  "hit_points_roll": "2d4",
+  "speed": {
+    "walk": "30 ft.",
+    "fly": "60 ft.",
+    "swim": "30 ft."
+  },
+  "strength": 4,
+  "dexterity": 18,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 5,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "passive_perception": 11
+  },
+  "languages": "",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [
+    {
+      "name": "flyby",
+      "desc": "The snake doesn't provoke opportunity attacks when it flies out of an enemy's reach.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 1 piercing damage plus 7 (3d4) poison damage.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/bludgeoning"
+          },
+          "damage_dice": "1"
+        },
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "poison",
+            "url": "public/assets/atlas/damage_types/poison"
+          },
+          "damage_dice": "3d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/flying_snake.png",
+  "url": "public/assets/atlas/monsters/flying_snake",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "lore": "The *Serpens Volans*, or the Winged Adder, is a marvel of the humid southern canopies. These serpents are not true fliers but masters of the thermal draft, using iridescent lateral membranes to glide between the emerald spires of the rainforest. Their scales shimmer with a metallic luster, often mistaken for drifting jewels by the unwary.\n\nUnlike their earthbound kin, the Flying Snake strikes from the heavens. They drop from the high fronds\u2014a streak of sapphire and gold\u2014colliding with their quarry mid-air. They do not coil; they pierce, their fangs delivering a numbing toxin that halts the heart before the prey even strikes the forest floor.\n\nIn local myth, they are dubbed \"The Sky-Stitchers.\" Jungle tribes believe these creatures sew the clouds to the treetops, preventing the heavens from drifting away. To see one is a blessing of fair winds; to kill one is to invite a monsoon that never ends. Tread softly beneath the canopy, traveler, for in these verdant reaches, the very air possesses fangs.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/flying-snake.webp",
+  "bakedAt": 1768740284717
+}

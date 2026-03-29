@@ -1,0 +1,15 @@
+{
+  "index": "persuasion",
+  "name": "persuasion",
+  "desc": [
+    "When you attempt to influence someone or a group of people with tact, social graces, or good nature, the GM might ask you to make a Charisma (Persuasion) check. Typically, you use persuasion when acting in good faith, to foster friendships, make cordial requests, or exhibit proper etiquette. Examples of persuading others include convincing a chamberlain to let your party see the king, negotiating peace between warring tribes, or inspiring a crowd of townsfolk."
+  ],
+  "ability_score": {
+    "index": "cha",
+    "name": "cha",
+    "url": "public/assets/atlas/ability_scores/charisma"
+  },
+  "url": "public/assets/atlas/skills/json/persuasion.json",
+  "updated_at": "2025-10-24T20:42:14.523Z",
+  "image": "public/assets/atlas/skills/persuasion.webp"
+}

@@ -1,0 +1,17 @@
+{
+  "index": "sorcerer_ability_score_improvement_4",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "public/assets/atlas/classes/sorcerer"
+  },
+  "name": "ability score improvement",
+  "level": 16,
+  "prerequisites": [],
+  "desc": [
+    "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+  ],
+  "url": "public/assets/atlas/features/json/sorcerer_ability_score_improvement_4.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "public/assets/atlas/features/sorcerer_ability_score_improvement_4.webp"
+}

@@ -1,0 +1,21 @@
+{
+  "index": "gloves_of_swimming_and_climbing",
+  "name": "gloves of swimming and climbing",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "public/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, uncommon (requires attunement)",
+    "While wearing these gloves, climbing and swimming don't cost you extra movement, and you gain a +5 bonus to Strength (Athletics) checks made to climb or swim."
+  ],
+  "url": "public/assets/atlas/magic_items/json/gloves_of_swimming_and_climbing.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/gloves_of_swimming_and_climbing.webp"
+}

@@ -1,0 +1,21 @@
+{
+  "index": "spears",
+  "type": "Weapons",
+  "name": "spears",
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "public/assets/atlas/classes/druid"
+    }
+  ],
+  "races": [],
+  "url": "public/assets/atlas/proficiencies/json/spears.json",
+  "reference": {
+    "index": "spear",
+    "name": "spear",
+    "url": "public/assets/atlas/equipment/spear"
+  },
+  "updated_at": "2025-10-24T20:42:14.116Z",
+  "image": "public/assets/atlas/proficiencies/spears.webp"
+}

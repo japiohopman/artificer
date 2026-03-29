@@ -1,0 +1,56 @@
+{
+  "higher_level": [],
+  "index": "fire_bolt",
+  "name": "fire bolt",
+  "desc": [
+    "You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.",
+    "This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10)."
+  ],
+  "range": "120 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "attack_type": "ranged",
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "fire",
+      "url": "public/assets/atlas/damage_types/fire"
+    },
+    "damage_at_character_level": {
+      "1": "1d10",
+      "5": "2d10",
+      "11": "3d10",
+      "17": "4d10"
+    }
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "public/assets/atlas/magic_schools/evocation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "public/assets/atlas/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "public/assets/atlas/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "public/assets/atlas/spell/json/fire_bolt.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "public/assets/atlas/spell/fire_bolt.webp",
+  "sprite_index": 15,
+  "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet5.webp"
+}

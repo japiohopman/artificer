@@ -1,0 +1,21 @@
+{
+  "index": "potion_of_heroism",
+  "name": "potion of heroism",
+  "equipment_category": {
+    "index": "potion",
+    "name": "potion",
+    "url": "public/assets/atlas/equipment_categories/potion"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Potion, rare",
+    "For 1 hour after drinking it, you gain 10 temporary hit points that last for 1 hour. For the same duration, you are under the effect of the bless spell (no concentration required). This blue potion bubbles and steams as if boiling."
+  ],
+  "url": "public/assets/atlas/magic_items/json/potion_of_heroism.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "public/assets/atlas/magic_items/potion_of_heroism.webp"
+}

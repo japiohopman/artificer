@@ -1,0 +1,176 @@
+{
+  "index": "brass_dragon_wyrmling",
+  "name": "brass dragon wyrmling",
+  "size": "Medium",
+  "type": "dragon",
+  "alignment": "chaotic good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 16,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8+3",
+  "speed": {
+    "walk": "30 ft.",
+    "burrow": "15 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 15,
+  "dexterity": 10,
+  "constitution": 13,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 13,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/skill_perception"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/skill_stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "languages": "Draconic",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/piercing"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "breath weapons",
+      "desc": "The dragon uses one of the following breath weapons.\nFire Breath. The dragon exhales fire in an 20-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 14 (4d6) fire damage on a failed save, or half as much damage on a successful one.\nSleep Breath. The dragon exhales sleep gas in a 15-foot cone. Each creature in that area must succeed on a DC 11 Constitution saving throw or fall unconscious for 1 minute. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "options": {
+        "choose": 1,
+        "type": "attack",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "breath",
+              "name": "fire breath",
+              "dc": {
+                "dc_type": {
+                  "index": "dex",
+                  "name": "dex",
+                  "url": "public/assets/atlas/ability_scores/dexterity"
+                },
+                "dc_value": 11,
+                "success_type": "half"
+              },
+              "damage": [
+                {
+                  "damage_type": {
+                    "index": "fire",
+                    "name": "fire",
+                    "url": "public/assets/atlas/damage_types/fire"
+                  },
+                  "damage_dice": "4d6"
+                }
+              ]
+            },
+            {
+              "option_type": "breath",
+              "name": "sleep breath",
+              "dc": {
+                "dc_type": {
+                  "index": "con",
+                  "name": "con",
+                  "url": "public/assets/atlas/ability_scores/constitution"
+                },
+                "dc_value": 11,
+                "success_type": "none"
+              }
+            }
+          ]
+        }
+      },
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/brass_dragon_wyrmling.png",
+  "url": "public/assets/atlas/monsters/brass_dragon_wyrmling",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "lore": "The Brass Dragon Wyrmling, a creature of shimmering scales and insatiable curiosity, dwells within the sun-scorched canyons and shifting dunes of the Great Waste. Unlike its more malevolent kin, the wyrmling views the world through a lens of relentless gregariousness. It is a subterranean hunter, often burying its lithe, metallic form beneath the warm sands, leaving only its snout exposed to catch the scent of passing travelers.\n\nIts predatory behavior is peculiar; it seeks not merely to feed, but to converse. A wyrmling may pin a weary merchant with its weight, not to devour him, but to extract every scrap of gossip from the distant cities. Should a guest prove dull or attempt to flee, the creature exhales a shimmering, soporific mist, ensuring its audience remains captive for hours of interrogation.\n\nIn local folklore, they are known as the \"Desert\u2019s Echo.\" Nomads tell tales of spirits that mimic the voices of lost kin to lure wanderers into long, circular debates. To encounter a Brass Wyrmling is to lose a day to talk, but to gain a friend who remembers every word for a century.",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/brass-dragon-wyrmling.webp",
+  "bakedAt": 1767753776761
+}
