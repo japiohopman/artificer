@@ -5,11 +5,11 @@ This document explains the organization and conventions used for the game's Atla
 ## 1. Directory Structure
 All game data is consolidated under `public/assets/atlas/`.
 
-- **Geographical Data (Atlas):** Located in `toril/faerun/[region]/[subregion]/`.
+- **Geographical Data (Atlas):** Located in `toril/[continent]/[region]/[subregion]/`.
   - Each location has a `.json` file containing metadata and a `.webp` file for the background image.
   - Sub-folders are used for highly nested regions (e.g., `sword_coast/waterdeep/`).
 - **Game Mechanics (formerly in /data/):** Now located directly under `public/assets/atlas/`.
-  - Categories include `traits/`, `spells/`, `races/`, `classes/`, `items/`, etc.
+  - Categories include `traits/`, `spell/`, `spicies/`, `class/`, `items/`, etc.
   - JSON files are typically organized within a `json/` subfolder for these categories.
 
 ## 2. Naming Conventions
