@@ -1,0 +1,30 @@
+{
+  "materials": [
+    {
+      "materialId": "adamantine",
+      "quantity": 5
+    },
+    {
+      "materialId": "red_dragon_scale",
+      "quantity": 15
+    },
+    {
+      "materialId": "blueleaf",
+      "quantity": 12
+    },
+    {
+      "materialId": "iron",
+      "quantity": 50
+    },
+    {
+      "materialId": "gold",
+      "quantity": 10
+    }
+  ],
+  "craftedItems": [
+    {
+      "itemId": "potion_of_greater_healing_item",
+      "quantity": 3
+    }
+  ]
+}

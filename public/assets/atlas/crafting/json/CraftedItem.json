@@ -1,0 +1,389 @@
+[
+  {
+    "id": "red_dragon_scale_armor_item",
+    "name": "Red Dragon Scale Armor",
+    "type": "Medium Armor",
+    "description": "A set of scale armor crafted from the tough, fiery scales of a red dragon.",
+    "rarity": "Rare",
+    "properties": ["Durable", "Fire Resistance"],
+    "gameEffect": "Grants Resistance to Fire damage.",
+    "baseAC": 14,
+    "strengthRequirement": null,
+    "stealthDisadvantage": false,
+    "damageDice": null,
+    "damageType": null,
+    "range": null,
+    "charges": null,
+    "spellLevel": null,
+    "buffDuration": null,
+    "healingAmount": null,
+    "weight": 20,
+    "value": 2500,
+    "materialComposition": [
+      {
+        "materialId": "red_dragon_scale",
+        "role": "primary"
+      },
+      {
+        "materialId": "darksteel",
+        "role": "secondary"
+      }
+    ]
+  },
+  {
+    "id": "potion_of_greater_healing_item",
+    "name": "Potion of Greater Healing",
+    "type": "Potion",
+    "description": "A potent healing draught that restores a significant amount of hit points.",
+    "rarity": "Uncommon",
+    "properties": ["Consumable", "Healing"],
+    "gameEffect": "Restores 4d4 + 4 hit points.",
+    "baseAC": null,
+    "strengthRequirement": null,
+    "stealthDisadvantage": null,
+    "damageDice": null,
+    "damageType": null,
+    "range": null,
+    "charges": null,
+    "spellLevel": null,
+    "buffDuration": "Instantaneous",
+    "healingAmount": "4d4 + 4",
+    "weight": 0.5,
+    "value": 150,
+    "materialComposition": [
+      {
+        "materialId": "blueglow_moss",
+        "role": "primary"
+      },
+      {
+        "materialId": "hydra_blood",
+        "role": "secondary"
+      }
+    ]
+  },
+  {
+    "id": "oil_of_sharpness_item",
+    "name": "Oil of Sharpness",
+    "type": "Oil",
+    "description": "A viscous oil that temporarily sharpens the edge of any bladed weapon.",
+    "rarity": "Very Rare",
+    "properties": ["Consumable", "Buff"],
+    "gameEffect": "Weapon gains +3 bonus to attack and damage rolls for 1 hour.",
+    "baseAC": null,
+    "strengthRequirement": null,
+    "stealthDisadvantage": null,
+    "damageDice": null,
+    "damageType": null,
+    "range": null,
+    "charges": null,
+    "spellLevel": null,
+    "buffDuration": "1 hour",
+    "healingAmount": null,
+    "weight": 0.5,
+    "value": 500,
+    "materialComposition": [
+      {
+        "materialId": "rust_monster_antenna",
+        "role": "primary"
+      },
+      {
+        "materialId": "vermite",
+        "role": "secondary"
+      }
+    ]
+  },
+  {
+    "id": "potion_of_fire_breath_red_item",
+    "name": "Potion of Fire Breath (Red Dragon)",
+    "type": "Potion",
+    "description": "A fiery concoction that allows the drinker to unleash a blast of dragonfire.",
+    "rarity": "Rare",
+    "properties": ["Consumable", "Elemental"],
+    "gameEffect": "Allows casting of Fire Breath (3d6 Fire damage, 15ft cone, Dex save for half).",
+    "baseAC": null,
+    "strengthRequirement": null,
+    "stealthDisadvantage": null,
+    "damageDice": "3d6",
+    "damageType": "Fire",
+    "range": "15ft cone",
+    "charges": null,
+    "spellLevel": null,
+    "buffDuration": "Instantaneous",
+    "healingAmount": null,
+    "weight": 0.5,
+    "value": 300,
+    "materialComposition": [
+      {
+        "materialId": "red_dragon_blood",
+        "role": "primary"
+      },
+      {
+        "materialId": "firestone",
+        "role": "secondary"
+      }
+    ]
+  },
+  {
+    "id": "potion_of_water_breathing_item",
+    "name": "Potion of Water Breathing",
+    "type": "Potion",
+    "description": "A clear, effervescent liquid that grants the ability to breathe water.",
+    "rarity": "Uncommon",
+    "properties": ["Consumable", "Buff"],
+    "gameEffect": "Can breathe underwater for 1 hour.",
+    "baseAC": null,
+    "strengthRequirement": null,
+    "stealthDisadvantage": null,
+    "damageDice": null,
+    "damageType": null,
+    "range": null,
+    "charges": null,
+    "spellLevel": null,
+    "buffDuration": "1 hour",
+    "healingAmount": null,
+    "weight": 0.5,
+    "value": 200,
+    "materialComposition": [
+      {
+        "materialId": "aboleth_mucus",
+        "role": "primary"
+      },
+      {
+        "materialId": "water_elemental_essence",
+        "role": "secondary"
+      }
+    ]
+  },
+  {
+    "id": "scroll_of_fireball_item",
+    "name": "Scroll of Fireball",
+    "type": "Scroll",
+    "description": "A single-use scroll containing the powerful Fireball spell.",
+    "rarity": "Rare",
+    "properties": ["Consumable", "Magical"],
+    "gameEffect": "Casts Fireball at 3rd level (DC 15).",
+    "baseAC": null,
+    "strengthRequirement": null,
+    "stealthDisadvantage": null,
+    "damageDice": "8d6",
+    "damageType": "Fire",
+    "range": "150ft",
+    "charges": null,
+    "spellLevel": 3,
+    "buffDuration": "Instantaneous",
+    "healingAmount": null,
+    "weight": 0.1,
+    "value": 500,
+    "materialComposition": [
+      {
+        "materialId": "red_dragon_blood",
+        "role": "primary"
+      },
+      {
+        "materialId": "firestone",
+        "role": "secondary"
+      }
+    ]
+  },
+  {
+    "id": "wand_of_magic_missiles_item",
+    "name": "Wand of Magic Missiles",
+    "type": "Wand",
+    "description": "A slender wand that can unleash bolts of pure magical force.",
+    "rarity": "Uncommon",
+    "properties": ["Magical", "Charges"],
+    "gameEffect": "Has 7 charges. Can cast Magic Missile (1 charge per level).",
+    "baseAC": null,
+    "strengthRequirement": null,
+    "stealthDisadvantage": null,
+    "damageDice": "1d4+1",
+    "damageType": "Force",
+    "range": "120ft",
+    "charges": 7,
+    "spellLevel": 1,
+    "buffDuration": null,
+    "healingAmount": null,
+    "weight": 1,
+    "value": 1500,
+    "materialComposition": [
+      {
+        "materialId": "blueleaf",
+        "role": "primary"
+      },
+      {
+        "materialId": "fairy_dust",
+        "role": "secondary"
+      }
+    ]
+  },
+  {
+    "id": "amulet_of_protection_plus_1_item",
+    "name": "Amulet of Protection +1",
+    "type": "Amulet",
+    "description": "A finely crafted amulet imbued with protective magic.",
+    "rarity": "Rare",
+    "properties": ["Magical", "Attunement"],
+    "gameEffect": "Grants +1 bonus to AC and Saving Throws.",
+    "baseAC": null,
+    "strengthRequirement": null,
+    "stealthDisadvantage": null,
+    "damageDice": null,
+    "damageType": null,
+    "range": null,
+    "charges": null,
+    "spellLevel": null,
+    "buffDuration": "Constant",
+    "healingAmount": null,
+    "weight": 0.5,
+    "value": 2000,
+    "materialComposition": [
+      {
+        "materialId": "spirit_stone",
+        "role": "primary"
+      },
+      {
+        "materialId": "moonsilver",
+        "role": "secondary"
+      }
+    ]
+  },
+  {
+    "id": "staff_of_the_woodlands_item",
+    "name": "Staff of the Woodlands",
+    "type": "Staff",
+    "description": "A staff carved from ancient, living wood, pulsating with natural magic.",
+    "rarity": "Very Rare",
+    "properties": ["Magical", "Attunement"],
+    "gameEffect": "Acts as a +2 quarterstaff; can cast various plant-related spells.",
+    "baseAC": null,
+    "strengthRequirement": null,
+    "stealthDisadvantage": null,
+    "damageDice": "1d6",
+    "damageType": "Bludgeoning",
+    "range": "Melee",
+    "charges": 10,
+    "spellLevel": null,
+    "buffDuration": null,
+    "healingAmount": null,
+    "weight": 4,
+    "value": 15000,
+    "materialComposition": [
+      {
+        "materialId": "weirwood",
+        "role": "primary"
+      },
+      {
+        "materialId": "livewood",
+        "role": "secondary"
+      }
+    ]
+  },
+  {
+    "id": "hearty_troll_stew_item",
+    "name": "Hearty Troll Stew",
+    "type": "Food",
+    "description": "A rich, savory stew made with regenerative troll fat.",
+    "rarity": "Uncommon",
+    "properties": ["Consumable", "Buff"],
+    "gameEffect": "Restores 2d8 + Con modifier HP, grants 1d4 temporary HP for 1 hour.",
+    "baseAC": null,
+    "strengthRequirement": null,
+    "stealthDisadvantage": null,
+    "damageDice": null,
+    "damageType": null,
+    "range": null,
+    "charges": null,
+    "spellLevel": null,
+    "buffDuration": "1 hour",
+    "healingAmount": "2d8",
+    "weight": 1,
+    "value": 25,
+    "materialComposition": [
+      {
+        "materialId": "troll_fat",
+        "role": "primary"
+      }
+    ]
+  },
+  {
+    "id": "candied_spider_legs_item",
+    "name": "Candied Spider Legs",
+    "type": "Food",
+    "description": "A surprisingly delicious and crunchy snack.",
+    "rarity": "Common",
+    "properties": ["Consumable", "Buff"],
+    "gameEffect": "Restores 1d4 HP, grants +1 to Dexterity saving throws for 10 minutes.",
+    "baseAC": null,
+    "strengthRequirement": null,
+    "stealthDisadvantage": null,
+    "damageDice": null,
+    "damageType": null,
+    "range": null,
+    "charges": null,
+    "spellLevel": null,
+    "buffDuration": "10 minutes",
+    "healingAmount": "1d4",
+    "weight": 0.1,
+    "value": 5,
+    "materialComposition": [
+      {
+        "materialId": "giant_spider_leg",
+        "role": "primary"
+      }
+    ]
+  },
+  {
+    "id": "dragon_steak_red_item",
+    "name": "Dragon Steak (Red Dragon)",
+    "type": "Food",
+    "description": "A rare and potent meal prepared from the flesh of a red dragon.",
+    "rarity": "Rare",
+    "properties": ["Consumable", "Buff"],
+    "gameEffect": "Grants Resistance to Fire damage for 1 hour.",
+    "baseAC": null,
+    "strengthRequirement": null,
+    "stealthDisadvantage": null,
+    "damageDice": null,
+    "damageType": null,
+    "range": null,
+    "charges": null,
+    "spellLevel": null,
+    "buffDuration": "1 hour",
+    "healingAmount": null,
+    "weight": 1,
+    "value": 250,
+    "materialComposition": [
+      {
+        "materialId": "red_dragon_meat",
+        "role": "primary"
+      }
+    ]
+  },
+  {
+    "id": "owlbear_goulash_item",
+    "name": "Owlbear Goulash",
+    "type": "Food",
+    "description": "A hearty and filling stew made from robust owlbear meat.",
+    "rarity": "Uncommon",
+    "properties": ["Consumable", "Buff"],
+    "gameEffect": "Grants +1 to Strength checks for 30 minutes.",
+    "baseAC": null,
+    "strengthRequirement": null,
+    "stealthDisadvantage": null,
+    "damageDice": null,
+    "damageType": null,
+    "range": null,
+    "charges": null,
+    "spellLevel": null,
+    "buffDuration": "30 minutes",
+    "healingAmount": null,
+    "weight": 1,
+    "value": 40,
+    "materialComposition": [
+      {
+        "materialId": "owlbear_meat",
+        "role": "primary"
+      }
+    ]
+  }
+]

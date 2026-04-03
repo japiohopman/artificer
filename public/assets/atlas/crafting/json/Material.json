@@ -1,0 +1,2755 @@
+﻿[
+    {
+        "id":  "adamantine",
+        "name":  "Adamantine",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Hard",
+                           "Heavy"
+                       ],
+        "gameEffect":  "Critical hits against wearer become normal hits; weapons bypass object damage threshold.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "mithral",
+        "name":  "Mithral",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Light",
+                           "Flexible"
+                       ],
+        "gameEffect":  "Removes Strength requirement for heavy armor; removes disadvantage on Stealth checks.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "cold_iron",
+        "name":  "Cold Iron",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Anti-Fey",
+                           "Pure"
+                       ],
+        "gameEffect":  "Deals extra damage to Fey and some Fiends; resistant to magical warping.",
+        "source":  "Pathfinder/d20"
+    },
+    {
+        "id":  "silvered_silver",
+        "name":  "Silvered Silver",
+        "category":  "Metal",
+        "subCategory":  "Common",
+        "rarity":  "Common",
+        "properties":  [
+                           "Alchemical",
+                           "Conductive"
+                       ],
+        "gameEffect":  "Bypasses damage reduction for Lycanthropes and certain Undead.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "darksteel",
+        "name":  "Darksteel",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Resilient",
+                           "Dark"
+                       ],
+        "gameEffect":  "Absorbs electricity; grants Resistance to Lightning damage when worn.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "orichalcum",
+        "name":  "Orichalcum",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Arcane",
+                           "Resonant"
+                       ],
+        "gameEffect":  "Increases the Save DC of spells cast using this as a focus by +1.",
+        "source":  "Fantasy Lore"
+    },
+    {
+        "id":  "heliothil",
+        "name":  "Heliothil",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Radiant",
+                           "Solar"
+                       ],
+        "gameEffect":  "Glows in the presence of Undead; deals +1d4 Radiant damage.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "moonsilver",
+        "name":  "Moonsilver",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Lunar",
+                           "Shape-shifting"
+                       ],
+        "gameEffect":  "Weapon can be transformed into a different shape as a bonus action.",
+        "source":  "Fantasy Lore"
+    },
+    {
+        "id":  "byeshk",
+        "name":  "Byeshk",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Heavy",
+                           "Dull"
+                       ],
+        "gameEffect":  "Bypasses damage reduction of Aberrations (Daelkyr-spawn).",
+        "source":  "Eberron"
+    },
+    {
+        "id":  "meteor_iron",
+        "name":  "Meteor Iron",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Legendary",
+        "properties":  [
+                           "Cosmic",
+                           "Unstable"
+                       ],
+        "gameEffect":  "Gives weapons a +1 bonus to attack rolls; armor grants Force resistance.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "hizagkuur",
+        "name":  "Hizagkuur",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Legendary",
+        "properties":  [
+                           "Reflective",
+                           "Magic-Dampening"
+                       ],
+        "gameEffect":  "Reflects 1st-level spells back at the caster on a roll of 20.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "telstang",
+        "name":  "Telstang",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Non-magnetic",
+                           "Durable"
+                       ],
+        "gameEffect":  "Immune to Heat Metal and magnetic effects.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "zardazik",
+        "name":  "Zardazik",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Liquid-like",
+                           "Cold"
+                       ],
+        "gameEffect":  "Weapons deal +1d4 Cold damage; can flow into locks to open them.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "baatorian_green_steel",
+        "name":  "Baatorian Green Steel",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Fiendish",
+                           "Sharp"
+                       ],
+        "gameEffect":  "Melee weapons deal +1 damage (non-magical).",
+        "source":  "Planescape"
+    },
+    {
+        "id":  "celestial_steel",
+        "name":  "Celestial Steel",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Holy",
+                           "Light"
+                       ],
+        "gameEffect":  "Deals +1d6 Radiant damage to Fiends and Undead.",
+        "source":  "Planescape"
+    },
+    {
+        "id":  "arambarium",
+        "name":  "Arambarium",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Resonant",
+                           "Sonic"
+                       ],
+        "gameEffect":  "Enhances Thunder damage by +1d4.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "arandur",
+        "name":  "Arandur",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Tough",
+                           "Blue-tinted"
+                       ],
+        "gameEffect":  "Increases item HP by 50%.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "heliotrope_steel",
+        "name":  "Heliotrope Steel",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Solar",
+                           "Vital"
+                       ],
+        "gameEffect":  "Grants +1 to Wisdom (Medicine) checks.",
+        "source":  "Fantasy Lore"
+    },
+    {
+        "id":  "starmetal",
+        "name":  "Starmetal",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Legendary",
+        "properties":  [
+                           "Extraplanar",
+                           "Powerful"
+                       ],
+        "gameEffect":  "Deals +2d6 damage to extraplanar creatures.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "dwarven_steel",
+        "name":  "Dwarven Steel",
+        "category":  "Metal",
+        "subCategory":  "Common",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Dense",
+                           "Reliable"
+                       ],
+        "gameEffect":  "Armor grants +1 to AC against being shoved.",
+        "source":  "Fantasy Lore"
+    },
+    {
+        "id":  "blueleaf",
+        "name":  "Blueleaf",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Flexible",
+                           "Durable"
+                       ],
+        "gameEffect":  "Items made of Blueleaf are immune to fire damage (not the wearer).",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "ironwood",
+        "name":  "Ironwood",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Metal-like",
+                           "Heavy"
+                       ],
+        "gameEffect":  "Wood that has the strength of steel; can be used for Plate armor.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "duskwood",
+        "name":  "Duskwood",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Shadow",
+                           "Stealth"
+                       ],
+        "gameEffect":  "Grants +2 to Stealth checks when in dim light or darkness.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "weirwood",
+        "name":  "Weirwood",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Sentient",
+                           "Arcane"
+                       ],
+        "gameEffect":  "Can hold two enchantments instead of one; emits soft light.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "zalantar",
+        "name":  "Zalantar",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Dark",
+                           "Magical"
+                       ],
+        "gameEffect":  "Boosts the range of teleportation spells by 25%.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "silverbark",
+        "name":  "Silverbark",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Holy",
+                           "Pure"
+                       ],
+        "gameEffect":  "Can be used as a Holy Symbol; grants +1 to Wisdom (Medicine) checks.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "shadowtop",
+        "name":  "Shadowtop",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Fibrous",
+                           "Tough"
+                       ],
+        "gameEffect":  "Ideal for torches; burns 3x longer and emits less smoke.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "hiexel",
+        "name":  "Hiexel",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Brittle",
+                           "Waxy"
+                       ],
+        "gameEffect":  "Highly flammable; used to create Alchemist\u0027s Fire or fire arrows.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "phandar",
+        "name":  "Phandar",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Curved",
+                           "Strong"
+                       ],
+        "gameEffect":  "Grants +10ft range to bows made from this wood.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "felsul",
+        "name":  "Felsul",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Gnarled",
+                           "Earthy"
+                       ],
+        "gameEffect":  "Items made of Felsul grant +1 to AC against Earth Elementals.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "suth",
+        "name":  "Suth",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Hard",
+                           "Grey"
+                       ],
+        "gameEffect":  "Bows have +1 to attack rolls.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "laspar",
+        "name":  "Laspar",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Fragrant",
+                           "Durable"
+                       ],
+        "gameEffect":  "Used for fine furniture and tool handles.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "bronzewood",
+        "name":  "Bronzewood",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Metallic",
+                           "Light"
+                       ],
+        "gameEffect":  "Substitute for metal in medium armor; half weight of steel.",
+        "source":  "Eberron"
+    },
+    {
+        "id":  "densewood",
+        "name":  "Densewood",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Heavy",
+                           "Hard"
+                       ],
+        "gameEffect":  "Increases weapon damage die by one step (max d12).",
+        "source":  "Eberron"
+    },
+    {
+        "id":  "livewood",
+        "name":  "Livewood",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Living",
+                           "Sentient"
+                       ],
+        "gameEffect":  "Items can be targeted by \u0027Speak with Plants\u0027.",
+        "source":  "Eberron"
+    },
+    {
+        "id":  "darkleaf",
+        "name":  "Darkleaf",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Supple",
+                           "Strong"
+                       ],
+        "gameEffect":  "Light armor made of this has no Stealth disadvantage.",
+        "source":  "Eberron"
+    },
+    {
+        "id":  "soarwood",
+        "name":  "Soarwood",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Buoyant",
+                           "Magical"
+                       ],
+        "gameEffect":  "Boats move 50% faster.",
+        "source":  "Eberron"
+    },
+    {
+        "id":  "eldritch_whorlwood",
+        "name":  "Eldritch Whorlwood",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Twisted",
+                           "Arcane"
+                       ],
+        "gameEffect":  "Spells cast with this focus ignore half cover.",
+        "source":  "Eberron"
+    },
+    {
+        "id":  "bloodwood",
+        "name":  "Bloodwood",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Vampiric",
+                           "Dark"
+                       ],
+        "gameEffect":  "Heals wielder for 1 HP on a critical hit.",
+        "source":  "Fantasy Lore"
+    },
+    {
+        "id":  "ghost_oak",
+        "name":  "Ghost Oak",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Ethereal",
+                           "Pale"
+                       ],
+        "gameEffect":  "Weapons can hit incorporeal creatures without penalty.",
+        "source":  "Fantasy Lore"
+    },
+    {
+        "id":  "red_dragon_scale",
+        "name":  "Red Dragon Scale",
+        "category":  "Hide",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Fiery",
+                           "Hard"
+                       ],
+        "gameEffect":  "Grants Resistance to Fire damage.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "blue_dragon_scale",
+        "name":  "Blue Dragon Scale",
+        "category":  "Hide",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Electric",
+                           "Hard"
+                       ],
+        "gameEffect":  "Grants Resistance to Lightning damage.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "black_dragon_scale",
+        "name":  "Black Dragon Scale",
+        "category":  "Hide",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Acidic",
+                           "Hard"
+                       ],
+        "gameEffect":  "Grants Resistance to Acid damage.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "green_dragon_scale",
+        "name":  "Green Dragon Scale",
+        "category":  "Hide",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Toxic",
+                           "Hard"
+                       ],
+        "gameEffect":  "Grants Resistance to Poison damage.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "white_dragon_scale",
+        "name":  "White Dragon Scale",
+        "category":  "Hide",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Cold",
+                           "Hard"
+                       ],
+        "gameEffect":  "Grants Resistance to Cold damage.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "gold_dragon_scale",
+        "name":  "Gold Dragon Scale",
+        "category":  "Hide",
+        "subCategory":  "Dragon",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Radiant",
+                           "Hard"
+                       ],
+        "gameEffect":  "Grants Resistance to Fire damage and +1 to AC.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "silver_dragon_scale",
+        "name":  "Silver Dragon Scale",
+        "category":  "Hide",
+        "subCategory":  "Dragon",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Chilling",
+                           "Hard"
+                       ],
+        "gameEffect":  "Grants Resistance to Cold damage and +1 to AC.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "bronze_dragon_scale",
+        "name":  "Bronze Dragon Scale",
+        "category":  "Hide",
+        "subCategory":  "Dragon",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Sparking",
+                           "Hard"
+                       ],
+        "gameEffect":  "Grants Resistance to Lightning damage and +1 to AC.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "copper_dragon_scale",
+        "name":  "Copper Dragon Scale",
+        "category":  "Hide",
+        "subCategory":  "Dragon",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Corrosive",
+                           "Hard"
+                       ],
+        "gameEffect":  "Grants Resistance to Acid damage and +1 to AC.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "brass_dragon_scale",
+        "name":  "Brass Dragon Scale",
+        "category":  "Hide",
+        "subCategory":  "Dragon",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Sunny",
+                           "Hard"
+                       ],
+        "gameEffect":  "Grants Resistance to Fire damage and +1 to AC.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "red_dragon_blood",
+        "name":  "Red Dragon Blood",
+        "category":  "Alchemy",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Volatile",
+                           "Hot"
+                       ],
+        "gameEffect":  "Used in Potions of Fire Breath.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "blue_dragon_blood",
+        "name":  "Blue Dragon Blood",
+        "category":  "Alchemy",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Energized",
+                           "Sparking"
+                       ],
+        "gameEffect":  "Used in Potions of Speed.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "black_dragon_blood",
+        "name":  "Black Dragon Blood",
+        "category":  "Alchemy",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Corrosive",
+                           "Dark"
+                       ],
+        "gameEffect":  "Used in powerful Acid vials.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "green_dragon_blood",
+        "name":  "Green Dragon Blood",
+        "category":  "Alchemy",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Noxious",
+                           "Thick"
+                       ],
+        "gameEffect":  "Used in Potions of Poison Resistance.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "white_dragon_blood",
+        "name":  "White Dragon Blood",
+        "category":  "Alchemy",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Freezing",
+                           "Pale"
+                       ],
+        "gameEffect":  "Used in Potions of Frost Giant Strength.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "red_dragon_claw",
+        "name":  "Red Dragon Claw",
+        "category":  "Bone",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Sharp",
+                           "Scorching"
+                       ],
+        "gameEffect":  "Melee weapons deal +1d4 Fire damage.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "blue_dragon_claw",
+        "name":  "Blue Dragon Claw",
+        "category":  "Bone",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Sharp",
+                           "Jolting"
+                       ],
+        "gameEffect":  "Melee weapons deal +1d4 Lightning damage.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "black_dragon_claw",
+        "name":  "Black Dragon Claw",
+        "category":  "Bone",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Sharp",
+                           "Melting"
+                       ],
+        "gameEffect":  "Melee weapons deal +1d4 Acid damage.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "green_dragon_claw",
+        "name":  "Green Dragon Claw",
+        "category":  "Bone",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Sharp",
+                           "Sickening"
+                       ],
+        "gameEffect":  "Melee weapons deal +1d4 Poison damage.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "white_dragon_claw",
+        "name":  "White Dragon Claw",
+        "category":  "Bone",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Sharp",
+                           "Numbing"
+                       ],
+        "gameEffect":  "Melee weapons deal +1d4 Cold damage.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "dragon_heart_string",
+        "name":  "Dragon Heart String",
+        "category":  "Arcane",
+        "subCategory":  "Dragon",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Resonant",
+                           "Powerful"
+                       ],
+        "gameEffect":  "Used to craft Wands of the War Mage +2.",
+        "source":  "Fantasy Lore"
+    },
+    {
+        "id":  "dragon_eye",
+        "name":  "Dragon Eye",
+        "category":  "Arcane",
+        "subCategory":  "Dragon",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Perceptive",
+                           "Ancient"
+                       ],
+        "gameEffect":  "Grants Advantage on Perception checks when held.",
+        "source":  "Fantasy Lore"
+    },
+    {
+        "id":  "dragon_sinew",
+        "name":  "Dragon Sinew",
+        "category":  "Fiber",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Strong",
+                           "Elastic"
+                       ],
+        "gameEffect":  "Bows have +2 to damage rolls.",
+        "source":  "Fantasy Lore"
+    },
+    {
+        "id":  "dragon_tongue",
+        "name":  "Dragon Tongue",
+        "category":  "Alchemy",
+        "subCategory":  "Dragon",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Persuasive",
+                           "Scalding"
+                       ],
+        "gameEffect":  "Used in Potions of Glibness.",
+        "source":  "Fantasy Lore"
+    },
+    {
+        "id":  "dragon_tooth",
+        "name":  "Dragon Tooth",
+        "category":  "Bone",
+        "subCategory":  "Dragon",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Jagged",
+                           "Tough"
+                       ],
+        "gameEffect":  "Used for daggers that deal +1 damage.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "ancient_dragon_scale",
+        "name":  "Ancient Dragon Scale",
+        "category":  "Hide",
+        "subCategory":  "Dragon",
+        "rarity":  "Legendary",
+        "properties":  [
+                           "Invulnerable",
+                           "Ancient"
+                       ],
+        "gameEffect":  "Grants Immunity to the dragon\u0027s damage type.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "shadow_dragon_scale",
+        "name":  "Shadow Dragon Scale",
+        "category":  "Hide",
+        "subCategory":  "Dragon",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Necrotic",
+                           "Shifting"
+                       ],
+        "gameEffect":  "Grants Resistance to Necrotic damage.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "dracolich_bone",
+        "name":  "Dracolich Bone",
+        "category":  "Bone",
+        "subCategory":  "Undead",
+        "rarity":  "Legendary",
+        "properties":  [
+                           "Cursed",
+                           "Cold"
+                       ],
+        "gameEffect":  "Deals +2d6 Necrotic damage; wearer is vulnerable to Radiant.",
+        "source":  "Fantasy Lore"
+    },
+    {
+        "id":  "faerie_dragon_wing",
+        "name":  "Faerie Dragon Wing",
+        "category":  "Fiber",
+        "subCategory":  "Fey",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Colorful",
+                           "Shifting"
+                       ],
+        "gameEffect":  "Used for Cloaks of Invisibility (minor).",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "wyvern_scale",
+        "name":  "Wyvern Scale",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Leathery",
+                           "Tough"
+                       ],
+        "gameEffect":  "Grants +1 to AC.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "aboleth_mucus",
+        "name":  "Aboleth Mucus",
+        "category":  "Alchemy",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Toxic",
+                           "Aquatic"
+                       ],
+        "gameEffect":  "Used to craft Potions of Water Breathing or paralytic poisons.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "basilisk_eye",
+        "name":  "Basilisk Eye",
+        "category":  "Alchemy",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Petrifying",
+                           "Arcane"
+                       ],
+        "gameEffect":  "Ingredient for Potions of Gaseous Form or Flesh to Stone oil.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "behir_scale",
+        "name":  "Behir Scale",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Electric",
+                           "Hard"
+                       ],
+        "gameEffect":  "Grants +1 to AC and Resistance to Lightning damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "displacer_beast_hide",
+        "name":  "Displacer Beast Hide",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Illusion",
+                           "Shifting"
+                       ],
+        "gameEffect":  "Grants the \u0027Displacement\u0027 trait (Disadvantage on attacks against you).",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "flail_snail_shell",
+        "name":  "Flail Snail Shell",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Anti-Magic",
+                           "Reflective"
+                       ],
+        "gameEffect":  "Can be crafted into a shield that reflects spells on a roll of 20.",
+        "source":  "Volo\u0027s Guide"
+    },
+    {
+        "id":  "hydra_blood",
+        "name":  "Hydra Blood",
+        "category":  "Alchemy",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Regenerative",
+                           "Vital"
+                       ],
+        "gameEffect":  "Ingredient for high-level Potions of Healing or Regeneration.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "rust_monster_antenna",
+        "name":  "Rust Monster Antenna",
+        "category":  "Alchemy",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Corrosive",
+                           "Metal-eating"
+                       ],
+        "gameEffect":  "Used to create \u0027Oil of Sharpness\u0027 or \u0027Rusting Powder\u0027.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "troll_fat",
+        "name":  "Troll Fat",
+        "category":  "Alchemy",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Oily",
+                           "Regenerative"
+                       ],
+        "gameEffect":  "Used in salves that grant +1d4 healing during a Short Rest.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "voidglass",
+        "name":  "Voidglass",
+        "category":  "Crystal",
+        "subCategory":  "Exotic",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Anti-Magic",
+                           "Sharp"
+                       ],
+        "gameEffect":  "Weapons deal +1d6 Force damage; Armor grants Advantage vs Spells.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "glassteel",
+        "name":  "Glassteel",
+        "category":  "Crystal",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Transparent",
+                           "Strong"
+                       ],
+        "gameEffect":  "As strong as steel but clear; grants Advantage on Perception (Sight).",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "firestone",
+        "name":  "Firestone",
+        "category":  "Stone",
+        "subCategory":  "Elemental",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Hot",
+                           "Volatile"
+                       ],
+        "gameEffect":  "Deals 1 Fire damage to anyone touching it bare-handed; crafts fire bombs.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "spirit_stone",
+        "name":  "Spirit Stone",
+        "category":  "Stone",
+        "subCategory":  "Mystic",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Soul-binding",
+                           "Ethereal"
+                       ],
+        "gameEffect":  "Can store a single soul or 1 minute of a person\u0027s memories.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "bloodpurge",
+        "name":  "Bloodpurge",
+        "category":  "Herb",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Anti-toxin",
+                           "Bitter"
+                       ],
+        "gameEffect":  "Crafts Antitoxin; grants Advantage on saves vs Poison for 1 hour.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "bloodstaunch",
+        "name":  "Bloodstaunch",
+        "category":  "Herb",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Coagulant",
+                           "Fibrous"
+                       ],
+        "gameEffect":  "Stops bleeding immediately; grants 1d4 temporary HP when used.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "blueglow_moss",
+        "name":  "Blueglow Moss",
+        "category":  "Herb",
+        "subCategory":  "Flora",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Luminescent",
+                           "Healing"
+                       ],
+        "gameEffect":  "Glows 5ft; used in Potions of Greater Healing.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "fairy_dust",
+        "name":  "Fairy Dust",
+        "category":  "Arcane",
+        "subCategory":  "Reagent",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Magical",
+                           "Light"
+                       ],
+        "gameEffect":  "Used for Potions of Invisibility or Flying.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "sleepweed",
+        "name":  "Sleepweed",
+        "category":  "Herb",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Sedative",
+                           "Heavy"
+                       ],
+        "gameEffect":  "Used for Sleep Poisons or Potions of Restful Sleep.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "mule_pollen",
+        "name":  "Mule Pollen",
+        "category":  "Herb",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Stamina",
+                           "Stimulant"
+                       ],
+        "gameEffect":  "Ignores one level of Exhaustion for 1 hour.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "elysian_bronze",
+        "name":  "Elysian Bronze",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Holy",
+                           "Resilient"
+                       ],
+        "gameEffect":  "Deals extra 1d6 damage to Fiends and Undead.",
+        "source":  "Pathfinder"
+    },
+    {
+        "id":  "singing_steel",
+        "name":  "Singing Steel",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Resonant",
+                           "Harmonic"
+                       ],
+        "gameEffect":  "Grants +1 to Bardic Inspiration die rolls if used as an instrument part.",
+        "source":  "Pathfinder"
+    },
+    {
+        "id":  "wave_washed_steel",
+        "name":  "Wave-Washed Steel",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Uncommon",
+        "properties":  "Corrosion-resistant",
+        "gameEffect":  "Will never rust or degrade in saltwater environments.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "windforged_steel",
+        "name":  "Windforged Steel",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Aerodynamic",
+                           "Light"
+                       ],
+        "gameEffect":  "Thrown weapons have double range; melee weapons have \u0027Finesse\u0027.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "soulbound_steel",
+        "name":  "Soulbound Steel",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Bonds",
+                           "Loyal"
+                       ],
+        "gameEffect":  "Cannot be disarmed; returns to owner\u0027s hand as a bonus action.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "black_adamantine",
+        "name":  "Black Adamantine",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Legendary",
+        "properties":  [
+                           "Cursed",
+                           "Indestructible"
+                       ],
+        "gameEffect":  "Grants immunity to Critical Hits; wearer takes -2 to Charisma saves.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "horacalcum",
+        "name":  "Horacalcum",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Legendary",
+        "properties":  [
+                           "Temporal",
+                           "Unstable"
+                       ],
+        "gameEffect":  "Once per day, wearer can reroll an Initiative roll.",
+        "source":  "Pathfinder"
+    },
+    {
+        "id":  "stailinn",
+        "name":  "Stailinn",
+        "category":  "Metal",
+        "subCategory":  "Common",
+        "rarity":  "Common",
+        "properties":  [
+                           "Flexible",
+                           "Sharp"
+                       ],
+        "gameEffect":  "Standard high-quality steel; +1 to damage rolls (non-magical).",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "obsidian",
+        "name":  "Obsidian",
+        "category":  "Stone",
+        "subCategory":  "Natural",
+        "rarity":  "Common",
+        "properties":  [
+                           "Sharp",
+                           "Fragile"
+                       ],
+        "gameEffect":  "Weapons deal +2 damage but break on a natural 1 attack roll.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "ceramic",
+        "name":  "Ceramic",
+        "category":  "Stone",
+        "subCategory":  "Natural",
+        "rarity":  "Common",
+        "properties":  [
+                           "Heat-resistant",
+                           "Brittle"
+                       ],
+        "gameEffect":  "Grants Resistance to Fire damage but breaks if hit by a Bludgeoning attack.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "earth_clay",
+        "name":  "Earth/Clay",
+        "category":  "Stone",
+        "subCategory":  "Natural",
+        "rarity":  "Common",
+        "properties":  [
+                           "Malleable",
+                           "Heavy"
+                       ],
+        "gameEffect":  "Used for seals and Golem construction.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "ice",
+        "name":  "Ice",
+        "category":  "Elemental",
+        "subCategory":  "Natural",
+        "rarity":  "Common",
+        "properties":  [
+                           "Cold",
+                           "Melting"
+                       ],
+        "gameEffect":  "Deals 1 Cold damage; melts in 1 hour unless magically preserved.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "marlite",
+        "name":  "Marlite",
+        "category":  "Stone",
+        "subCategory":  "Natural",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Sacred",
+                           "Durable"
+                       ],
+        "gameEffect":  "Buildings made of Marlite are immune to \u0027Siege\u0027 damage.",
+        "source":  "Forgotten Realms"
+    },
+    {
+        "id":  "necratite",
+        "name":  "Necratite",
+        "category":  "Metal",
+        "subCategory":  "Exotic",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Necrotic",
+                           "Chilling"
+                       ],
+        "gameEffect":  "Deals +1d6 Necrotic damage; wearer is vulnerable to Radiant damage.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "vermite",
+        "name":  "Vermite",
+        "category":  "Mineral",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Poisonous",
+                           "Corruptive"
+                       ],
+        "gameEffect":  "Contact deals 1d4 Poison damage; used for high-tier poisons.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "vrilgonite",
+        "name":  "Vrilgonite",
+        "category":  "Mineral",
+        "subCategory":  "Exotic",
+        "rarity":  "Legendary",
+        "properties":  [
+                           "Psionic",
+                           "Reality-warping"
+                       ],
+        "gameEffect":  "Grants the \u0027Telepathy\u0027 feat while held.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "plutite",
+        "name":  "Plutite",
+        "category":  "Mineral",
+        "subCategory":  "Exotic",
+        "rarity":  "Legendary",
+        "properties":  [
+                           "Heavy",
+                           "Gravitational"
+                       ],
+        "gameEffect":  "Melee attacks push targets 5ft; movement speed reduced by 10ft.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "coddleweb",
+        "name":  "Coddleweb",
+        "category":  "Fiber",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Sticky",
+                           "Strong"
+                       ],
+        "gameEffect":  "Used to craft \u0027Web\u0027 grenades or indestructible rope.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "nanoweave",
+        "name":  "Nanoweave",
+        "category":  "Fiber",
+        "subCategory":  "Exotic",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Ultra-light",
+                           "Stealthy"
+                       ],
+        "gameEffect":  "Armor counts as \u0027Unarmored\u0027 for class features (e.g., Monk).",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "rubber",
+        "name":  "Rubber",
+        "category":  "Plant",
+        "subCategory":  "Natural",
+        "rarity":  "Common",
+        "properties":  [
+                           "Elastic",
+                           "Insulating"
+                       ],
+        "gameEffect":  "Grants Resistance to Lightning damage; Advantage on Athletics (Climbing).",
+        "source":  "Real World"
+    },
+    {
+        "id":  "cork",
+        "name":  "Cork",
+        "category":  "Plant",
+        "subCategory":  "Natural",
+        "rarity":  "Common",
+        "properties":  [
+                           "Buoyant",
+                           "Light"
+                       ],
+        "gameEffect":  "Items made of Cork float; grants Advantage on Athletics (Swimming).",
+        "source":  "Real World"
+    },
+    {
+        "id":  "iron",
+        "name":  "Iron",
+        "category":  "Metal",
+        "subCategory":  "Common",
+        "rarity":  "Common",
+        "properties":  [
+                           "Standard",
+                           "Magnetic"
+                       ],
+        "gameEffect":  "The baseline for all metal crafting.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "gold",
+        "name":  "Gold",
+        "category":  "Metal",
+        "subCategory":  "Common",
+        "rarity":  "Common",
+        "properties":  [
+                           "Valuable",
+                           "Soft"
+                       ],
+        "gameEffect":  "Highly conductive for magic; increases item value by 10x.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "silver",
+        "name":  "Silver",
+        "category":  "Metal",
+        "subCategory":  "Common",
+        "rarity":  "Common",
+        "properties":  [
+                           "Pure",
+                           "Conductive"
+                       ],
+        "gameEffect":  "Effective against Undead and Lycanthropes.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "copper",
+        "name":  "Copper",
+        "category":  "Metal",
+        "subCategory":  "Common",
+        "rarity":  "Common",
+        "properties":  [
+                           "Conductive",
+                           "Cheap"
+                       ],
+        "gameEffect":  "Used for basic wires and alchemical tubing.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "brass",
+        "name":  "Brass",
+        "category":  "Metal",
+        "subCategory":  "Common",
+        "rarity":  "Common",
+        "properties":  [
+                           "Mechanical",
+                           "Resonant"
+                       ],
+        "gameEffect":  "Used for clockwork and musical instruments.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "electrum",
+        "name":  "Electrum",
+        "category":  "Metal",
+        "subCategory":  "Common",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Ancient",
+                           "Mystical"
+                       ],
+        "gameEffect":  "Used for ritual items and ancient keys.",
+        "source":  "5e SRD"
+    },
+    {
+        "id":  "amber",
+        "name":  "Amber",
+        "category":  "Stone",
+        "subCategory":  "Natural",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Preservative",
+                           "Arcane"
+                       ],
+        "gameEffect":  "Can preserve a small organic object (like an eye) indefinitely.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "quartz",
+        "name":  "Quartz",
+        "category":  "Stone",
+        "subCategory":  "Natural",
+        "rarity":  "Common",
+        "properties":  [
+                           "Focus",
+                           "Clear"
+                       ],
+        "gameEffect":  "Used for spyglasses and basic arcane focuses.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "sunstone",
+        "name":  "Sunstone",
+        "category":  "Stone",
+        "subCategory":  "Natural",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Radiant",
+                           "Warm"
+                       ],
+        "gameEffect":  "Emits dim light in a 10ft radius.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "moonstone",
+        "name":  "Moonstone",
+        "category":  "Stone",
+        "subCategory":  "Natural",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Pale",
+                           "Ethereal"
+                       ],
+        "gameEffect":  "Grants +1 to Illusion spell Save DCs.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "sapphire",
+        "name":  "Sapphire",
+        "category":  "Stone",
+        "subCategory":  "Natural",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Cold",
+                           "Precise"
+                       ],
+        "gameEffect":  "Used in \u0027Ice Storm\u0027 or \u0027Teleport\u0027 related items.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "garnet",
+        "name":  "Garnet",
+        "category":  "Stone",
+        "subCategory":  "Natural",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Blood",
+                           "Fire"
+                       ],
+        "gameEffect":  "Used in \u0027Fireball\u0027 or \u0027Vampiric Touch\u0027 related items.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "jade",
+        "name":  "Jade",
+        "category":  "Stone",
+        "subCategory":  "Natural",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Vital",
+                           "Protective"
+                       ],
+        "gameEffect":  "Grants +1 to all Saving Throws.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "coral",
+        "name":  "Coral",
+        "category":  "Stone",
+        "subCategory":  "Organic",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Sea-born",
+                           "Sharp"
+                       ],
+        "gameEffect":  "Weapons do not have disadvantage underwater.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "salt_crystal",
+        "name":  "Salt Crystal",
+        "category":  "Stone",
+        "subCategory":  "Natural",
+        "rarity":  "Common",
+        "properties":  [
+                           "Purifying",
+                           "Preservative"
+                       ],
+        "gameEffect":  "Can be used to cast \u0027Ceremony\u0027 or preserve food for 1 year.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "fog_rock",
+        "name":  "Fog Rock",
+        "category":  "Stone",
+        "subCategory":  "Exotic",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Vaporous",
+                           "Obscuring"
+                       ],
+        "gameEffect":  "When crushed, creates a 10ft cloud of \u0027Fog Cloud\u0027.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "applewood",
+        "name":  "Applewood",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Sweet",
+                           "Fragile"
+                       ],
+        "gameEffect":  "Used for luxury furniture and smoking meat.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "cedar",
+        "name":  "Cedar",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Fragrant",
+                           "Preservative"
+                       ],
+        "gameEffect":  "Repels insects; keeps clothing from rotting.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "cypress",
+        "name":  "Cypress",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Water-resistant",
+                           "Durable"
+                       ],
+        "gameEffect":  "Boats made of Cypress have +2 to AC.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "hickory",
+        "name":  "Hickory",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Tough",
+                           "Flexible"
+                       ],
+        "gameEffect":  "Standard for tool handles and shafts.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "maple",
+        "name":  "Maple",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Balanced",
+                           "Smooth"
+                       ],
+        "gameEffect":  "Standard for musical instruments and fine bows.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "oak",
+        "name":  "Oak",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Strong",
+                           "Reliable"
+                       ],
+        "gameEffect":  "Standard for shields and heavy construction.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "pine",
+        "name":  "Pine",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Light",
+                           "Resin-rich"
+                       ],
+        "gameEffect":  "Standard for cheap furniture and torches.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "willow",
+        "name":  "Willow",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Flexible",
+                           "Warding"
+                       ],
+        "gameEffect":  "Can be used to craft \u0027Wands of Binding\u0027.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "ash",
+        "name":  "Ash",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Straight",
+                           "Balanced"
+                       ],
+        "gameEffect":  "Standard for spears and arrows.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "birch",
+        "name":  "Birch",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Light",
+                           "Peeling"
+                       ],
+        "gameEffect":  "Used for writing paper and light containers.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "bamboo",
+        "name":  "Bamboo",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Common",
+        "properties":  [
+                           "Hollow",
+                           "Light"
+                       ],
+        "gameEffect":  "Used for blowguns and light scaffolding.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "mangrove",
+        "name":  "Mangrove",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Salty",
+                           "Tough"
+                       ],
+        "gameEffect":  "Resistant to rot; used for swamp-trekking gear.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "thornwood",
+        "name":  "Thornwood",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Prickly",
+                           "Defensive"
+                       ],
+        "gameEffect":  "Armor made of Thornwood deals 1 piercing damage to attackers.",
+        "source":  "Homebrew"
+    },
+    {
+        "id":  "hawthorn",
+        "name":  "Hawthorn",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Protective",
+                           "Holy"
+                       ],
+        "gameEffect":  "Grants +1 to AC against Fey.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "hornbeam",
+        "name":  "Hornbeam",
+        "category":  "Wood",
+        "subCategory":  "Flora",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Hard",
+                           "Springy"
+                       ],
+        "gameEffect":  "Grants +1 to damage for Bludgeoning weapons.",
+        "source":  "Real World"
+    },
+    {
+        "id":  "dragon_bone",
+        "name":  "Dragon Bone",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Draconic",
+                           "Resonant"
+                       ],
+        "gameEffect":  "Weapons deal +1d4 damage of the dragon\u0027s type.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "hydra_fang",
+        "name":  "Hydra Fang",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Toxic",
+                           "Sharp"
+                       ],
+        "gameEffect":  "Melee attacks deal +1 Poison damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "kraken_ink",
+        "name":  "Kraken Ink",
+        "category":  "Alchemy",
+        "subCategory":  "Monster",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Obscuring",
+                           "Arcane"
+                       ],
+        "gameEffect":  "Used to craft \u0027Potions of Ink Cloud\u0027 or \u0027Scrolls of Darkness\u0027.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "phoenix_feather",
+        "name":  "Phoenix Feather",
+        "category":  "Fiber",
+        "subCategory":  "Monster",
+        "rarity":  "Legendary",
+        "properties":  [
+                           "Fiery",
+                           "Rebirth"
+                       ],
+        "gameEffect":  "If you drop to 0 HP, you instead drop to 1 HP (once per day).",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "unicorn_horn",
+        "name":  "Unicorn Horn",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Legendary",
+        "properties":  [
+                           "Holy",
+                           "Healing"
+                       ],
+        "gameEffect":  "Can cast \u0027Cure Wounds\u0027 at 3rd level once per day.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "beholder_eye",
+        "name":  "Beholder Eye",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Legendary",
+        "properties":  [
+                           "Anti-Magic",
+                           "Gaze"
+                       ],
+        "gameEffect":  "Can be crafted into a \u0027Shield of Spell Turning\u0027.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "mimic_adhesive",
+        "name":  "Mimic Adhesive",
+        "category":  "Alchemy",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Sticky",
+                           "Strong"
+                       ],
+        "gameEffect":  "Used to craft \u0027Universal Solvent\u0027 or \u0027Sovereign Glue\u0027.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "shambling_mound_vine",
+        "name":  "Shambling Mound Vine",
+        "category":  "Fiber",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Conductive",
+                           "Tough"
+                       ],
+        "gameEffect":  "Grants Immunity to Lightning damage if used as a cloak.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "wight_essence",
+        "name":  "Wight Essence",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Life-draining",
+                           "Cold"
+                       ],
+        "gameEffect":  "Weapons deal +1d4 Necrotic damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "wraith_ectoplasm",
+        "name":  "Wraith Ectoplasm",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Incorporeal",
+                           "Ethereal"
+                       ],
+        "gameEffect":  "Allows the user to walk through walls for 1 round (once per day).",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "basilisk_scale",
+        "name":  "Basilisk Scale",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Hard",
+                           "Earthy"
+                       ],
+        "gameEffect":  "Grants +1 to AC.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "aboleth_psi_ichor",
+        "name":  "Aboleth Psi-Ichor",
+        "category":  "Alchemy",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Psionic",
+                           "Mind-bending"
+                       ],
+        "gameEffect":  "Grants \u0027Detect Thoughts\u0027 once per day.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "chimera_heart",
+        "name":  "Chimera Heart",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Tri-elemental",
+                           "Chaotic"
+                       ],
+        "gameEffect":  "Deals 1d6 Fire, Cold, or Lightning damage (randomly).",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "gorgon_plate",
+        "name":  "Gorgon Plate",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Metallic",
+                           "Petrifying"
+                       ],
+        "gameEffect":  "Attackers must succeed on a DC 12 Con save or be Restrained.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "remorhaz_core",
+        "name":  "Remorhaz Core",
+        "category":  "Elemental",
+        "subCategory":  "Monster",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Extreme Heat",
+                           "Fire"
+                       ],
+        "gameEffect":  "Melee attacks deal +1d8 Fire damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "roc_feather",
+        "name":  "Roc Feather",
+        "category":  "Fiber",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Giant",
+                           "Wind"
+                       ],
+        "gameEffect":  "Grants +10ft to Flying speed.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "sahuagin_heart",
+        "name":  "Sahuagin Heart",
+        "category":  "Alchemy",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Blood-frenzy",
+                           "Aquatic"
+                       ],
+        "gameEffect":  "Grants Advantage on melee attacks if target is below half HP.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "shadow_essence",
+        "name":  "Shadow Essence",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Dark",
+                           "Elusive"
+                       ],
+        "gameEffect":  "Grants Advantage on Stealth checks in darkness.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "sphinx_sand",
+        "name":  "Sphinx Sand",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Legendary",
+        "properties":  [
+                           "Temporal",
+                           "Wise"
+                       ],
+        "gameEffect":  "Allows the user to take an extra Action (once per day).",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "tarrasque_plate",
+        "name":  "Tarrasque Plate",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Artifact",
+        "properties":  [
+                           "Invulnerable",
+                           "Reflective"
+                       ],
+        "gameEffect":  "Grants Immunity to Magic Missile and Line spells.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "treant_sap",
+        "name":  "Treant Sap",
+        "category":  "Alchemy",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Vital",
+                           "Plant-like"
+                       ],
+        "gameEffect":  "Increases Strength score by 2 for 1 hour.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "vampire_dust",
+        "name":  "Vampire Dust",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Mist-form",
+                           "Undead"
+                       ],
+        "gameEffect":  "Allows the user to turn into a bat for 1 hour.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "wyvern_stinger",
+        "name":  "Wyvern Stinger",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Poisonous",
+                           "Piercing"
+                       ],
+        "gameEffect":  "Melee attacks deal +2d6 Poison damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "xorn_crystal",
+        "name":  "Xorn Crystal",
+        "category":  "Stone",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Earth-gliding",
+                           "Dense"
+                       ],
+        "gameEffect":  "Allows the user to sense gold within 60ft.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "yeti_fur",
+        "name":  "Yeti Fur",
+        "category":  "Fiber",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Insulating",
+                           "White"
+                       ],
+        "gameEffect":  "Grants Resistance to Cold damage and Advantage on Stealth in snow.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "behir_breath_gland",
+        "name":  "Behir Breath Gland",
+        "category":  "Elemental",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Lightning",
+                           "Volatile"
+                       ],
+        "gameEffect":  "Can be used to craft a \u0027Wand of Lightning Bolts\u0027.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "chuul_pincer",
+        "name":  "Chuul Pincer",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Paralytic",
+                           "Strong"
+                       ],
+        "gameEffect":  "Melee attacks can \u0027Grapple\u0027 on a hit (DC 13).",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "cloaker_wing",
+        "name":  "Cloaker Wing",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Shadow",
+                           "Fluttering"
+                       ],
+        "gameEffect":  "Grants the \u0027Blur\u0027 effect while in dim light.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "couatl_feather",
+        "name":  "Couatl Feather",
+        "category":  "Fiber",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Celestial",
+                           "Radiant"
+                       ],
+        "gameEffect":  "Grants \u0027Shield of Faith\u0027 once per day.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "drider_silk",
+        "name":  "Drider Silk",
+        "category":  "Fiber",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Dark",
+                           "Strong"
+                       ],
+        "gameEffect":  "Armor made of this grants \u0027Spider Climb\u0027.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "efreeti_ember",
+        "name":  "Efreeti Ember",
+        "category":  "Elemental",
+        "subCategory":  "Monster",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Fire",
+                           "Noble"
+                       ],
+        "gameEffect":  "Grants \u0027Fire Shield\u0027 (Fire version) once per day.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "gargoyle_heart",
+        "name":  "Gargoyle Heart",
+        "category":  "Stone",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Stone-like",
+                           "Durable"
+                       ],
+        "gameEffect":  "Wearer can become a statue for 1 hour (unmoving).",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "gelatinous_cube_essence",
+        "name":  "Gelatinous Cube Essence",
+        "category":  "Alchemy",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Acidic",
+                           "Transparent"
+                       ],
+        "gameEffect":  "Weapons deal +1d4 Acid damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "harpy_vocal_cord",
+        "name":  "Harpy Vocal Cord",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Sonic",
+                           "Alluring"
+                       ],
+        "gameEffect":  "Grants Advantage on Charisma (Performance) checks.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "hell_hound_tongue",
+        "name":  "Hell Hound Tongue",
+        "category":  "Elemental",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Fire",
+                           "Fiendish"
+                       ],
+        "gameEffect":  "Deals +1d6 Fire damage to creatures within 5ft.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "hook_horror_claw",
+        "name":  "Hook Horror Claw",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Climbing",
+                           "Sharp"
+                       ],
+        "gameEffect":  "Grants a Climbing speed of 30ft.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "intellect_devourer_brain",
+        "name":  "Intellect Devourer Brain",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Psionic",
+                           "Consuming"
+                       ],
+        "gameEffect":  "Grants \u0027Mind Spike\u0027 spell once per day.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "lamia_dust",
+        "name":  "Lamia Dust",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Illusion",
+                           "Charm"
+                       ],
+        "gameEffect":  "Grants \u0027Charm Person\u0027 once per day.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "manticore_spike",
+        "name":  "Manticore Spike",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Ranged",
+                           "Piercing"
+                       ],
+        "gameEffect":  "Can be thrown as a dagger with 60ft range.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "medusa_snake_hair",
+        "name":  "Medusa Snake-Hair",
+        "category":  "Organic",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Petrifying",
+                           "Poisonous"
+                       ],
+        "gameEffect":  "Melee attacks deal +1d4 Poison damage and Slow target.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "nightmare_hoof",
+        "name":  "Nightmare Hoof",
+        "category":  "Elemental",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Fire",
+                           "Ethereal"
+                       ],
+        "gameEffect":  "Unarmed strikes deal +1d6 Fire damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "oni_horn",
+        "name":  "Oni Horn",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Shape-changing",
+                           "Fiendish"
+                       ],
+        "gameEffect":  "Grants \u0027Alter Self\u0027 once per day.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "otyugh_tentacle",
+        "name":  "Otyugh Tentacle",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Disease",
+                           "Reach"
+                       ],
+        "gameEffect":  "Melee weapons gain \u0027Reach\u0027 property but deal -2 damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "owlbear_beak",
+        "name":  "Owlbear Beak",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Common",
+        "properties":  [
+                           "Sharp",
+                           "Crushing"
+                       ],
+        "gameEffect":  "Melee attacks deal +2 damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "pegasus_wing",
+        "name":  "Pegasus Wing",
+        "category":  "Fiber",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Celestial",
+                           "Speed"
+                       ],
+        "gameEffect":  "Grants \u0027Haste\u0027 for 1 minute (once per day).",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "phase_spider_mandible",
+        "name":  "Phase Spider Mandible",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Ethereal",
+                           "Poisonous"
+                       ],
+        "gameEffect":  "Attacks bypass non-magical armor.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "purple_worm_tooth",
+        "name":  "Purple Worm Tooth",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Massive",
+                           "Poisonous"
+                       ],
+        "gameEffect":  "Melee attacks deal +3d6 Poison damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "rakshasa_claw",
+        "name":  "Rakshasa Claw",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Very Rare",
+        "properties":  [
+                           "Cursed",
+                           "Fiendish"
+                       ],
+        "gameEffect":  "Attacks ignore Resistance to non-magical damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "remorhaz_scale",
+        "name":  "Remorhaz Scale",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Heat-absorbing",
+                           "Hard"
+                       ],
+        "gameEffect":  "Grants Resistance to Cold and Fire damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "roper_tentacle",
+        "name":  "Roper Tentacle",
+        "category":  "Fiber",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Grasping",
+                           "Sticky"
+                       ],
+        "gameEffect":  "Grants +5 to Grapple checks.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "rust_monster_blood",
+        "name":  "Rust Monster Blood",
+        "category":  "Alchemy",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Corrosive",
+                           "Metal-seeking"
+                       ],
+        "gameEffect":  "Used to detect invisible metal objects within 30ft.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "sahuagin_scale",
+        "name":  "Sahuagin Scale",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Common",
+        "properties":  [
+                           "Aquatic",
+                           "Slimy"
+                       ],
+        "gameEffect":  "Grants \u0027Blood Frenzy\u0027 (Advantage on wounded targets).",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "salamander_scale",
+        "name":  "Salamander Scale",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Fiery",
+                           "Metallic"
+                       ],
+        "gameEffect":  "Grants Immunity to Fire damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "shadow_demon_essence",
+        "name":  "Shadow Demon Essence",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Shadow",
+                           "Incorporeal"
+                       ],
+        "gameEffect":  "Wearer can hide as a bonus action in dim light.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "shambling_mound_root",
+        "name":  "Shambling Mound Root",
+        "category":  "Fiber",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Entangling",
+                           "Living"
+                       ],
+        "gameEffect":  "Melee attacks \u0027Restrain\u0027 on a Critical Hit.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "specter_rags",
+        "name":  "Specter Rags",
+        "category":  "Fiber",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Fear",
+                           "Ethereal"
+                       ],
+        "gameEffect":  "Grants Advantage on Intimidation checks.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "spirit_naga_scale",
+        "name":  "Spirit Naga Scale",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Rejuvenating",
+                           "Arcane"
+                       ],
+        "gameEffect":  "Grants +1 to all spell attack rolls.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "stirge_proboscis",
+        "name":  "Stirge Proboscis",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Common",
+        "properties":  [
+                           "Blood-drinking",
+                           "Sharp"
+                       ],
+        "gameEffect":  "Heals user for 1 HP on every hit.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "succubus_tail",
+        "name":  "Succubus Tail",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Charming",
+                           "Fiendish"
+                       ],
+        "gameEffect":  "Grants Advantage on Persuasion checks.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "treant_leaf",
+        "name":  "Treant Leaf",
+        "category":  "Fiber",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Nature",
+                           "Wise"
+                       ],
+        "gameEffect":  "Grants \u0027Speak with Plants\u0027 at will.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "troll_skin",
+        "name":  "Troll Skin",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Regenerative",
+                           "Rubbery"
+                       ],
+        "gameEffect":  "Heals 1 HP at the start of every turn in combat.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "unicorn_hair",
+        "name":  "Unicorn Hair",
+        "category":  "Fiber",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Pure",
+                           "Warding"
+                       ],
+        "gameEffect":  "Grants Advantage on saves vs Spells.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "vampire_fang",
+        "name":  "Vampire Fang",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Life-stealing",
+                           "Sharp"
+                       ],
+        "gameEffect":  "Unarmed strikes heal for half damage dealt.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "water_elemental_essence",
+        "name":  "Water Elemental Essence",
+        "category":  "Elemental",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Fluid",
+                           "Crushing"
+                       ],
+        "gameEffect":  "Grants \u0027Water Walk\u0027 at will.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "wight_bone",
+        "name":  "Wight Bone",
+        "category":  "Bone",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Cold",
+                           "Undead"
+                       ],
+        "gameEffect":  "Melee attacks reduce target speed by 10ft.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "will_o_wisp_light",
+        "name":  "Will-o\u0027-Wisp Light",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Luminescent",
+                           "Shocking"
+                       ],
+        "gameEffect":  "Deals 1d8 Lightning damage to anyone who touches the wearer.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "winter_wolf_pelt",
+        "name":  "Winter Wolf Pelt",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Cold",
+                           "Camouflage"
+                       ],
+        "gameEffect":  "Grants Advantage on Stealth in snow.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "wraith_essence",
+        "name":  "Wraith Essence",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Ethereal",
+                           "Chilling"
+                       ],
+        "gameEffect":  "Wearer can move through other creatures.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "wyvern_wing",
+        "name":  "Wyvern Wing",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Leathery",
+                           "Poisonous"
+                       ],
+        "gameEffect":  "Grants Resistance to Poison damage.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "xorn_hide",
+        "name":  "Xorn Hide",
+        "category":  "Hide",
+        "subCategory":  "Monster",
+        "rarity":  "Rare",
+        "properties":  [
+                           "Stone-like",
+                           "Camouflage"
+                       ],
+        "gameEffect":  "Grants Advantage on Stealth in rocky terrain.",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "yeti_eye",
+        "name":  "Yeti Eye",
+        "category":  "Arcane",
+        "subCategory":  "Monster",
+        "rarity":  "Uncommon",
+        "properties":  [
+                           "Chilling",
+                           "Gaze"
+                       ],
+        "gameEffect":  "Grants \u0027Chilling Gaze\u0027 (Stun target for 1 round).",
+        "source":  "Monster Manual"
+    },
+    {
+        "id":  "zombie_flesh",
+        "name":  "Zombie Flesh",
+        "category":  "Organic",
+        "subCategory":  "Monster",
+        "rarity":  "Common",
+        "properties":  [
+                           "Rotten",
+                           "Undead"
+                       ],
+        "gameEffect":  "Grants \u0027Undead Fortitude\u0027 (Save vs 0 HP).",
+        "source":  "Monster Manual"
+    }
+]
