@@ -1,0 +1,28 @@
+﻿{
+    "index":  "voidglass",
+    "name":  "voidglass",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Crystal",
+    "material_sub_category":  "Exotic",
+    "rarity":  "Very Rare",
+    "cost":  {
+                 "quantity":  500,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Weapons deal +1d6 Force damage; Armor grants Advantage vs Spells."
+             ],
+    "properties":  [
+                       "Anti-Magic",
+                       "Sharp"
+                   ],
+    "source":  "Homebrew",
+    "url":  "public/assets/atlas/crafting/json/voidglass.json",
+    "updated_at":  "2026-04-03T13:31:37.553Z",
+    "image":  "public/assets/atlas/crafting/voidglass.webp"
+}

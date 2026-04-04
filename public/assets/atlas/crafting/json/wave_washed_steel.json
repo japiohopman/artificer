@@ -1,0 +1,25 @@
+﻿{
+    "index":  "wave_washed_steel",
+    "name":  "wave-washed steel",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Metal",
+    "material_sub_category":  "Exotic",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Will never rust or degrade in saltwater environments."
+             ],
+    "properties":  "Corrosion-resistant",
+    "source":  "Homebrew",
+    "url":  "public/assets/atlas/crafting/json/wave_washed_steel.json",
+    "updated_at":  "2026-04-03T13:31:37.591Z",
+    "image":  "public/assets/atlas/crafting/wave_washed_steel.webp"
+}

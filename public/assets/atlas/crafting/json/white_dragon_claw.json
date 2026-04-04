@@ -1,0 +1,28 @@
+﻿{
+    "index":  "white_dragon_claw",
+    "name":  "white dragon claw",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Bone",
+    "material_sub_category":  "Dragon",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Melee weapons deal +1d4 Cold damage."
+             ],
+    "properties":  [
+                       "Sharp",
+                       "Numbing"
+                   ],
+    "source":  "5e SRD",
+    "url":  "public/assets/atlas/crafting/json/white_dragon_claw.json",
+    "updated_at":  "2026-04-03T13:31:37.491Z",
+    "image":  "public/assets/atlas/crafting/white_dragon_claw.webp"
+}

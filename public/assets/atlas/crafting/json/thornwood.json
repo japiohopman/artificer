@@ -1,0 +1,28 @@
+﻿{
+    "index":  "thornwood",
+    "name":  "thornwood",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Wood",
+    "material_sub_category":  "Flora",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  0.5,
+    "desc":  [
+                 "Armor made of Thornwood deals 1 piercing damage to attackers."
+             ],
+    "properties":  [
+                       "Prickly",
+                       "Defensive"
+                   ],
+    "source":  "Homebrew",
+    "url":  "public/assets/atlas/crafting/json/thornwood.json",
+    "updated_at":  "2026-04-03T13:31:37.736Z",
+    "image":  "public/assets/atlas/crafting/thornwood.webp"
+}

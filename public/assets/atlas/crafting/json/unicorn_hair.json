@@ -1,0 +1,28 @@
+﻿{
+    "index":  "unicorn_hair",
+    "name":  "unicorn hair",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Fiber",
+    "material_sub_category":  "Monster",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Grants Advantage on saves vs Spells."
+             ],
+    "properties":  [
+                       "Pure",
+                       "Warding"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/unicorn_hair.json",
+    "updated_at":  "2026-04-03T13:31:37.938Z",
+    "image":  "public/assets/atlas/crafting/unicorn_hair.webp"
+}

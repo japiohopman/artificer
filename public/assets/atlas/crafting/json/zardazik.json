@@ -1,0 +1,28 @@
+﻿{
+    "index":  "zardazik",
+    "name":  "zardazik",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Metal",
+    "material_sub_category":  "Exotic",
+    "rarity":  "Very Rare",
+    "cost":  {
+                 "quantity":  500,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Weapons deal +1d4 Cold damage; can flow into locks to open them."
+             ],
+    "properties":  [
+                       "Liquid-like",
+                       "Cold"
+                   ],
+    "source":  "Forgotten Realms",
+    "url":  "public/assets/atlas/crafting/json/zardazik.json",
+    "updated_at":  "2026-04-03T13:31:37.338Z",
+    "image":  "public/assets/atlas/crafting/zardazik.webp"
+}

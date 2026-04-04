@@ -1,0 +1,28 @@
+﻿{
+    "index":  "water_elemental_essence",
+    "name":  "water elemental essence",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Elemental",
+    "material_sub_category":  "Monster",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Grants \u0027Water Walk\u0027 at will."
+             ],
+    "properties":  [
+                       "Fluid",
+                       "Crushing"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/water_elemental_essence.json",
+    "updated_at":  "2026-04-03T13:31:37.943Z",
+    "image":  "public/assets/atlas/crafting/water_elemental_essence.webp"
+}

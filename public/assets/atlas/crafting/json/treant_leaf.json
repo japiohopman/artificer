@@ -1,0 +1,28 @@
+﻿{
+    "index":  "treant_leaf",
+    "name":  "treant leaf",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Fiber",
+    "material_sub_category":  "Monster",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Grants \u0027Speak with Plants\u0027 at will."
+             ],
+    "properties":  [
+                       "Nature",
+                       "Wise"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/treant_leaf.json",
+    "updated_at":  "2026-04-03T13:31:37.931Z",
+    "image":  "public/assets/atlas/crafting/treant_leaf.webp"
+}

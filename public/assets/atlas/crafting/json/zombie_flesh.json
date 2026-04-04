@@ -1,0 +1,28 @@
+﻿{
+    "index":  "zombie_flesh",
+    "name":  "zombie flesh",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Organic",
+    "material_sub_category":  "Monster",
+    "rarity":  "Common",
+    "cost":  {
+                 "quantity":  1,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Grants \u0027Undead Fortitude\u0027 (Save vs 0 HP)."
+             ],
+    "properties":  [
+                       "Rotten",
+                       "Undead"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/zombie_flesh.json",
+    "updated_at":  "2026-04-03T13:31:37.969Z",
+    "image":  "public/assets/atlas/crafting/zombie_flesh.webp"
+}

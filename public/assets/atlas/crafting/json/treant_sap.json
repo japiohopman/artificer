@@ -1,0 +1,28 @@
+﻿{
+    "index":  "treant_sap",
+    "name":  "treant sap",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Alchemy",
+    "material_sub_category":  "Monster",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Increases Strength score by 2 for 1 hour."
+             ],
+    "properties":  [
+                       "Vital",
+                       "Plant-like"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/treant_sap.json",
+    "updated_at":  "2026-04-03T13:31:37.815Z",
+    "image":  "public/assets/atlas/crafting/treant_sap.webp"
+}

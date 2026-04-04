@@ -1,0 +1,28 @@
+﻿{
+    "index":  "windforged_steel",
+    "name":  "windforged steel",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Metal",
+    "material_sub_category":  "Exotic",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Thrown weapons have double range; melee weapons have \u0027Finesse\u0027."
+             ],
+    "properties":  [
+                       "Aerodynamic",
+                       "Light"
+                   ],
+    "source":  "Homebrew",
+    "url":  "public/assets/atlas/crafting/json/windforged_steel.json",
+    "updated_at":  "2026-04-03T13:31:37.594Z",
+    "image":  "public/assets/atlas/crafting/windforged_steel.webp"
+}
