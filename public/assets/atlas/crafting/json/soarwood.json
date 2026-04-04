@@ -1,0 +1,28 @@
+﻿{
+    "index":  "soarwood",
+    "name":  "soarwood",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Wood",
+    "material_sub_category":  "Flora",
+    "rarity":  "Very Rare",
+    "cost":  {
+                 "quantity":  500,
+                 "unit":  "gp"
+             },
+    "weight":  0.5,
+    "desc":  [
+                 "Boats move 50% faster."
+             ],
+    "properties":  [
+                       "Buoyant",
+                       "Magical"
+                   ],
+    "source":  "Eberron",
+    "url":  "public/assets/atlas/crafting/json/soarwood.json",
+    "updated_at":  "2026-04-03T13:31:37.415Z",
+    "image":  "public/assets/atlas/crafting/soarwood.webp"
+}

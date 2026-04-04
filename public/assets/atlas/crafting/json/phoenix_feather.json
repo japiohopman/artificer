@@ -1,0 +1,28 @@
+﻿{
+    "index":  "phoenix_feather",
+    "name":  "phoenix feather",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Fiber",
+    "material_sub_category":  "Monster",
+    "rarity":  "Legendary",
+    "cost":  {
+                 "quantity":  2500,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "If you drop to 0 HP, you instead drop to 1 HP (once per day)."
+             ],
+    "properties":  [
+                       "Fiery",
+                       "Rebirth"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/phoenix_feather.json",
+    "updated_at":  "2026-04-03T13:31:37.756Z",
+    "image":  "public/assets/atlas/crafting/phoenix_feather.webp"
+}

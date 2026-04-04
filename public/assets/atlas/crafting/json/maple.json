@@ -1,0 +1,28 @@
+﻿{
+    "index":  "maple",
+    "name":  "maple",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Wood",
+    "material_sub_category":  "Flora",
+    "rarity":  "Common",
+    "cost":  {
+                 "quantity":  1,
+                 "unit":  "gp"
+             },
+    "weight":  0.5,
+    "desc":  [
+                 "Standard for musical instruments and fine bows."
+             ],
+    "properties":  [
+                       "Balanced",
+                       "Smooth"
+                   ],
+    "source":  "Real World",
+    "url":  "public/assets/atlas/crafting/json/maple.json",
+    "updated_at":  "2026-04-03T13:31:37.707Z",
+    "image":  "public/assets/atlas/crafting/maple.webp"
+}

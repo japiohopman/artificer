@@ -1,0 +1,28 @@
+﻿{
+    "index":  "rust_monster_antenna",
+    "name":  "rust monster antenna",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Alchemy",
+    "material_sub_category":  "Monster",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Used to create \u0027Oil of Sharpness\u0027 or \u0027Rusting Powder\u0027."
+             ],
+    "properties":  [
+                       "Corrosive",
+                       "Metal-eating"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/rust_monster_antenna.json",
+    "updated_at":  "2026-04-03T13:31:37.548Z",
+    "image":  "public/assets/atlas/crafting/rust_monster_antenna.webp"
+}

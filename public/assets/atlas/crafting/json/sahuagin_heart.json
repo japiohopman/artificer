@@ -1,0 +1,28 @@
+﻿{
+    "index":  "sahuagin_heart",
+    "name":  "sahuagin heart",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Alchemy",
+    "material_sub_category":  "Monster",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Grants Advantage on melee attacks if target is below half HP."
+             ],
+    "properties":  [
+                       "Blood-frenzy",
+                       "Aquatic"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/sahuagin_heart.json",
+    "updated_at":  "2026-04-03T13:31:37.802Z",
+    "image":  "public/assets/atlas/crafting/sahuagin_heart.webp"
+}

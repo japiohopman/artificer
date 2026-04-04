@@ -1,0 +1,28 @@
+﻿{
+    "index":  "laspar",
+    "name":  "laspar",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Wood",
+    "material_sub_category":  "Flora",
+    "rarity":  "Common",
+    "cost":  {
+                 "quantity":  1,
+                 "unit":  "gp"
+             },
+    "weight":  0.5,
+    "desc":  [
+                 "Used for fine furniture and tool handles."
+             ],
+    "properties":  [
+                       "Fragrant",
+                       "Durable"
+                   ],
+    "source":  "Forgotten Realms",
+    "url":  "public/assets/atlas/crafting/json/laspar.json",
+    "updated_at":  "2026-04-03T13:31:37.399Z",
+    "image":  "public/assets/atlas/crafting/laspar.webp"
+}

@@ -1,0 +1,28 @@
+﻿{
+    "index":  "sleepweed",
+    "name":  "sleepweed",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Herb",
+    "material_sub_category":  "Flora",
+    "rarity":  "Common",
+    "cost":  {
+                 "quantity":  1,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Used for Sleep Poisons or Potions of Restful Sleep."
+             ],
+    "properties":  [
+                       "Sedative",
+                       "Heavy"
+                   ],
+    "source":  "Forgotten Realms",
+    "url":  "public/assets/atlas/crafting/json/sleepweed.json",
+    "updated_at":  "2026-04-03T13:31:37.579Z",
+    "image":  "public/assets/atlas/crafting/sleepweed.webp"
+}

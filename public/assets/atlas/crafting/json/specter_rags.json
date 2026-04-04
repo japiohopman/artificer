@@ -1,0 +1,28 @@
+﻿{
+    "index":  "specter_rags",
+    "name":  "specter rags",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Fiber",
+    "material_sub_category":  "Monster",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Grants Advantage on Intimidation checks."
+             ],
+    "properties":  [
+                       "Fear",
+                       "Ethereal"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/specter_rags.json",
+    "updated_at":  "2026-04-03T13:31:37.920Z",
+    "image":  "public/assets/atlas/crafting/specter_rags.webp"
+}

@@ -1,0 +1,28 @@
+﻿{
+    "index":  "ice",
+    "name":  "ice",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Elemental",
+    "material_sub_category":  "Natural",
+    "rarity":  "Common",
+    "cost":  {
+                 "quantity":  1,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Deals 1 Cold damage; melts in 1 hour unless magically preserved."
+             ],
+    "properties":  [
+                       "Cold",
+                       "Melting"
+                   ],
+    "source":  "Real World",
+    "url":  "public/assets/atlas/crafting/json/ice.json",
+    "updated_at":  "2026-04-03T13:31:37.616Z",
+    "image":  "public/assets/atlas/crafting/ice.webp"
+}

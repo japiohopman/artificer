@@ -1,0 +1,28 @@
+﻿{
+    "index":  "necratite",
+    "name":  "necratite",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Metal",
+    "material_sub_category":  "Exotic",
+    "rarity":  "Very Rare",
+    "cost":  {
+                 "quantity":  500,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Deals +1d6 Necrotic damage; wearer is vulnerable to Radiant damage."
+             ],
+    "properties":  [
+                       "Necrotic",
+                       "Chilling"
+                   ],
+    "source":  "Homebrew",
+    "url":  "public/assets/atlas/crafting/json/necratite.json",
+    "updated_at":  "2026-04-03T13:31:37.622Z",
+    "image":  "public/assets/atlas/crafting/necratite.webp"
+}

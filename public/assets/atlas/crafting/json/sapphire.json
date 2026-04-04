@@ -1,0 +1,28 @@
+﻿{
+    "index":  "sapphire",
+    "name":  "sapphire",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Stone",
+    "material_sub_category":  "Natural",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Used in \u0027Ice Storm\u0027 or \u0027Teleport\u0027 related items."
+             ],
+    "properties":  [
+                       "Cold",
+                       "Precise"
+                   ],
+    "source":  "Real World",
+    "url":  "public/assets/atlas/crafting/json/sapphire.json",
+    "updated_at":  "2026-04-03T13:31:37.677Z",
+    "image":  "public/assets/atlas/crafting/sapphire.webp"
+}

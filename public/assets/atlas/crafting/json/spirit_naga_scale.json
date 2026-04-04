@@ -1,0 +1,28 @@
+﻿{
+    "index":  "spirit_naga_scale",
+    "name":  "spirit naga scale",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Hide",
+    "material_sub_category":  "Monster",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Grants +1 to all spell attack rolls."
+             ],
+    "properties":  [
+                       "Rejuvenating",
+                       "Arcane"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/spirit_naga_scale.json",
+    "updated_at":  "2026-04-03T13:31:37.922Z",
+    "image":  "public/assets/atlas/crafting/spirit_naga_scale.webp"
+}

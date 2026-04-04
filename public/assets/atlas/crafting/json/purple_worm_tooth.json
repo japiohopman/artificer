@@ -1,0 +1,28 @@
+﻿{
+    "index":  "purple_worm_tooth",
+    "name":  "purple worm tooth",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Bone",
+    "material_sub_category":  "Monster",
+    "rarity":  "Very Rare",
+    "cost":  {
+                 "quantity":  500,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Melee attacks deal +3d6 Poison damage."
+             ],
+    "properties":  [
+                       "Massive",
+                       "Poisonous"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/purple_worm_tooth.json",
+    "updated_at":  "2026-04-03T13:31:37.894Z",
+    "image":  "public/assets/atlas/crafting/purple_worm_tooth.webp"
+}

@@ -1,0 +1,28 @@
+﻿{
+    "index":  "orichalcum",
+    "name":  "orichalcum",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Metal",
+    "material_sub_category":  "Exotic",
+    "rarity":  "Very Rare",
+    "cost":  {
+                 "quantity":  500,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Increases the Save DC of spells cast using this as a focus by +1."
+             ],
+    "properties":  [
+                       "Arcane",
+                       "Resonant"
+                   ],
+    "source":  "Fantasy Lore",
+    "url":  "public/assets/atlas/crafting/json/orichalcum.json",
+    "updated_at":  "2026-04-03T13:31:37.314Z",
+    "image":  "public/assets/atlas/crafting/orichalcum.webp"
+}

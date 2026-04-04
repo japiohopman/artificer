@@ -1,0 +1,28 @@
+﻿{
+    "index":  "starmetal",
+    "name":  "starmetal",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Metal",
+    "material_sub_category":  "Exotic",
+    "rarity":  "Legendary",
+    "cost":  {
+                 "quantity":  2500,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Deals +2d6 damage to extraplanar creatures."
+             ],
+    "properties":  [
+                       "Extraplanar",
+                       "Powerful"
+                   ],
+    "source":  "Forgotten Realms",
+    "url":  "public/assets/atlas/crafting/json/starmetal.json",
+    "updated_at":  "2026-04-03T13:31:37.359Z",
+    "image":  "public/assets/atlas/crafting/starmetal.webp"
+}
