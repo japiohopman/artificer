@@ -1,0 +1,28 @@
+﻿{
+    "index":  "drider_silk",
+    "name":  "drider silk",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Fiber",
+    "material_sub_category":  "Monster",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Armor made of this grants \u0027Spider Climb\u0027."
+             ],
+    "properties":  [
+                       "Dark",
+                       "Strong"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/drider_silk.json",
+    "updated_at":  "2026-04-03T13:31:37.844Z",
+    "image":  "public/assets/atlas/crafting/drider_silk.webp"
+}

@@ -1,0 +1,28 @@
+﻿{
+    "index":  "copper_dragon_scale",
+    "name":  "copper dragon scale",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Hide",
+    "material_sub_category":  "Dragon",
+    "rarity":  "Very Rare",
+    "cost":  {
+                 "quantity":  500,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Grants Resistance to Acid damage and +1 to AC."
+             ],
+    "properties":  [
+                       "Corrosive",
+                       "Hard"
+                   ],
+    "source":  "5e SRD",
+    "url":  "public/assets/atlas/crafting/json/copper_dragon_scale.json",
+    "updated_at":  "2026-04-03T13:31:37.454Z",
+    "image":  "public/assets/atlas/crafting/copper_dragon_scale.webp"
+}

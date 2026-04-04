@@ -1,0 +1,28 @@
+﻿{
+    "index":  "arambarium",
+    "name":  "arambarium",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Metal",
+    "material_sub_category":  "Exotic",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Enhances Thunder damage by +1d4."
+             ],
+    "properties":  [
+                       "Resonant",
+                       "Sonic"
+                   ],
+    "source":  "Forgotten Realms",
+    "url":  "public/assets/atlas/crafting/json/arambarium.json",
+    "updated_at":  "2026-04-03T13:31:37.349Z",
+    "image":  "public/assets/atlas/crafting/arambarium.webp"
+}

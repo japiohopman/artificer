@@ -1,0 +1,28 @@
+﻿{
+    "index":  "black_adamantine",
+    "name":  "black adamantine",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Metal",
+    "material_sub_category":  "Exotic",
+    "rarity":  "Legendary",
+    "cost":  {
+                 "quantity":  2500,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Grants immunity to Critical Hits; wearer takes -2 to Charisma saves."
+             ],
+    "properties":  [
+                       "Cursed",
+                       "Indestructible"
+                   ],
+    "source":  "Homebrew",
+    "url":  "public/assets/atlas/crafting/json/black_adamantine.json",
+    "updated_at":  "2026-04-03T13:31:37.599Z",
+    "image":  "public/assets/atlas/crafting/black_adamantine.webp"
+}

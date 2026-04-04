@@ -1,0 +1,28 @@
+﻿{
+    "index":  "blueglow_moss",
+    "name":  "blueglow moss",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Herb",
+    "material_sub_category":  "Flora",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Glows 5ft; used in Potions of Greater Healing."
+             ],
+    "properties":  [
+                       "Luminescent",
+                       "Healing"
+                   ],
+    "source":  "Forgotten Realms",
+    "url":  "public/assets/atlas/crafting/json/blueglow_moss.json",
+    "updated_at":  "2026-04-03T13:31:37.572Z",
+    "image":  "public/assets/atlas/crafting/blueglow_moss.webp"
+}

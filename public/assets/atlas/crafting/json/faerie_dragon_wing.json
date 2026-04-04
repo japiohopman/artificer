@@ -1,0 +1,28 @@
+﻿{
+    "index":  "faerie_dragon_wing",
+    "name":  "faerie dragon wing",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Fiber",
+    "material_sub_category":  "Fey",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Used for Cloaks of Invisibility (minor)."
+             ],
+    "properties":  [
+                       "Colorful",
+                       "Shifting"
+                   ],
+    "source":  "5e SRD",
+    "url":  "public/assets/atlas/crafting/json/faerie_dragon_wing.json",
+    "updated_at":  "2026-04-03T13:31:37.519Z",
+    "image":  "public/assets/atlas/crafting/faerie_dragon_wing.webp"
+}

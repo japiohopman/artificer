@@ -1,0 +1,28 @@
+﻿{
+    "index":  "bronzewood",
+    "name":  "bronzewood",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Wood",
+    "material_sub_category":  "Flora",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  0.5,
+    "desc":  [
+                 "Substitute for metal in medium armor; half weight of steel."
+             ],
+    "properties":  [
+                       "Metallic",
+                       "Light"
+                   ],
+    "source":  "Eberron",
+    "url":  "public/assets/atlas/crafting/json/bronzewood.json",
+    "updated_at":  "2026-04-03T13:31:37.402Z",
+    "image":  "public/assets/atlas/crafting/bronzewood.webp"
+}

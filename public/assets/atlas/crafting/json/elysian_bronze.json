@@ -1,0 +1,28 @@
+﻿{
+    "index":  "elysian_bronze",
+    "name":  "elysian bronze",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Metal",
+    "material_sub_category":  "Exotic",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Deals extra 1d6 damage to Fiends and Undead."
+             ],
+    "properties":  [
+                       "Holy",
+                       "Resilient"
+                   ],
+    "source":  "Pathfinder",
+    "url":  "public/assets/atlas/crafting/json/elysian_bronze.json",
+    "updated_at":  "2026-04-03T13:31:37.586Z",
+    "image":  "public/assets/atlas/crafting/elysian_bronze.webp"
+}

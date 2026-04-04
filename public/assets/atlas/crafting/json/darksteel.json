@@ -1,0 +1,28 @@
+﻿{
+    "index":  "darksteel",
+    "name":  "darksteel",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Metal",
+    "material_sub_category":  "Exotic",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Absorbs electricity; grants Resistance to Lightning damage when worn."
+             ],
+    "properties":  [
+                       "Resilient",
+                       "Dark"
+                   ],
+    "source":  "Forgotten Realms",
+    "url":  "public/assets/atlas/crafting/json/darksteel.json",
+    "updated_at":  "2026-04-03T13:31:37.312Z",
+    "image":  "public/assets/atlas/crafting/darksteel.webp"
+}

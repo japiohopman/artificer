@@ -1,0 +1,28 @@
+﻿{
+    "index":  "adamantine",
+    "name":  "adamantine",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Metal",
+    "material_sub_category":  "Exotic",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Critical hits against wearer become normal hits; weapons bypass object damage threshold."
+             ],
+    "properties":  [
+                       "Hard",
+                       "Heavy"
+                   ],
+    "source":  "5e SRD",
+    "url":  "public/assets/atlas/crafting/json/adamantine.json",
+    "updated_at":  "2026-04-03T13:31:37.280Z",
+    "image":  "public/assets/atlas/crafting/adamantine.webp"
+}

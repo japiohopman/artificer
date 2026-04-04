@@ -1,0 +1,28 @@
+﻿{
+    "index":  "gold",
+    "name":  "gold",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Metal",
+    "material_sub_category":  "Common",
+    "rarity":  "Common",
+    "cost":  {
+                 "quantity":  1,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Highly conductive for magic; increases item value by 10x."
+             ],
+    "properties":  [
+                       "Valuable",
+                       "Soft"
+                   ],
+    "source":  "Real World",
+    "url":  "public/assets/atlas/crafting/json/gold.json",
+    "updated_at":  "2026-04-03T13:31:37.649Z",
+    "image":  "public/assets/atlas/crafting/gold.webp"
+}

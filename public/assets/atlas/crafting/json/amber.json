@@ -1,0 +1,28 @@
+﻿{
+    "index":  "amber",
+    "name":  "amber",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Stone",
+    "material_sub_category":  "Natural",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Can preserve a small organic object (like an eye) indefinitely."
+             ],
+    "properties":  [
+                       "Preservative",
+                       "Arcane"
+                   ],
+    "source":  "Real World",
+    "url":  "public/assets/atlas/crafting/json/amber.json",
+    "updated_at":  "2026-04-03T13:31:37.664Z",
+    "image":  "public/assets/atlas/crafting/amber.webp"
+}

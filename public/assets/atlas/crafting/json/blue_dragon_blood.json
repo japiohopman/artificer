@@ -1,0 +1,28 @@
+﻿{
+    "index":  "blue_dragon_blood",
+    "name":  "blue dragon blood",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Alchemy",
+    "material_sub_category":  "Dragon",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Used in Potions of Speed."
+             ],
+    "properties":  [
+                       "Energized",
+                       "Sparking"
+                   ],
+    "source":  "5e SRD",
+    "url":  "public/assets/atlas/crafting/json/blue_dragon_blood.json",
+    "updated_at":  "2026-04-03T13:31:37.463Z",
+    "image":  "public/assets/atlas/crafting/blue_dragon_blood.webp"
+}

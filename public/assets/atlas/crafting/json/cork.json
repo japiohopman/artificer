@@ -1,0 +1,28 @@
+﻿{
+    "index":  "cork",
+    "name":  "cork",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Plant",
+    "material_sub_category":  "Natural",
+    "rarity":  "Common",
+    "cost":  {
+                 "quantity":  1,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Items made of Cork float; grants Advantage on Athletics (Swimming)."
+             ],
+    "properties":  [
+                       "Buoyant",
+                       "Light"
+                   ],
+    "source":  "Real World",
+    "url":  "public/assets/atlas/crafting/json/cork.json",
+    "updated_at":  "2026-04-03T13:31:37.643Z",
+    "image":  "public/assets/atlas/crafting/cork.webp"
+}

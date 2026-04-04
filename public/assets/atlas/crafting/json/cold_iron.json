@@ -1,0 +1,28 @@
+﻿{
+    "index":  "cold_iron",
+    "name":  "cold iron",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Metal",
+    "material_sub_category":  "Exotic",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Deals extra damage to Fey and some Fiends; resistant to magical warping."
+             ],
+    "properties":  [
+                       "Anti-Fey",
+                       "Pure"
+                   ],
+    "source":  "Pathfinder/d20",
+    "url":  "public/assets/atlas/crafting/json/cold_iron.json",
+    "updated_at":  "2026-04-03T13:31:37.308Z",
+    "image":  "public/assets/atlas/crafting/cold_iron.webp"
+}

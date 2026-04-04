@@ -1,0 +1,28 @@
+﻿{
+    "index":  "chuul_pincer",
+    "name":  "chuul pincer",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Bone",
+    "material_sub_category":  "Monster",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Melee attacks can \u0027Grapple\u0027 on a hit (DC 13)."
+             ],
+    "properties":  [
+                       "Paralytic",
+                       "Strong"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/chuul_pincer.json",
+    "updated_at":  "2026-04-03T13:31:37.833Z",
+    "image":  "public/assets/atlas/crafting/chuul_pincer.webp"
+}

@@ -1,0 +1,28 @@
+﻿{
+    "index":  "gelatinous_cube_essence",
+    "name":  "gelatinous cube essence",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Alchemy",
+    "material_sub_category":  "Monster",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Weapons deal +1d4 Acid damage."
+             ],
+    "properties":  [
+                       "Acidic",
+                       "Transparent"
+                   ],
+    "source":  "Monster Manual",
+    "url":  "public/assets/atlas/crafting/json/gelatinous_cube_essence.json",
+    "updated_at":  "2026-04-03T13:31:37.854Z",
+    "image":  "public/assets/atlas/crafting/gelatinous_cube_essence.webp"
+}

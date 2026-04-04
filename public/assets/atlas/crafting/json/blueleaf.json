@@ -1,0 +1,28 @@
+﻿{
+    "index":  "blueleaf",
+    "name":  "blueleaf",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Wood",
+    "material_sub_category":  "Flora",
+    "rarity":  "Uncommon",
+    "cost":  {
+                 "quantity":  10,
+                 "unit":  "gp"
+             },
+    "weight":  0.5,
+    "desc":  [
+                 "Items made of Blueleaf are immune to fire damage (not the wearer)."
+             ],
+    "properties":  [
+                       "Flexible",
+                       "Durable"
+                   ],
+    "source":  "Forgotten Realms",
+    "url":  "public/assets/atlas/crafting/json/blueleaf.json",
+    "updated_at":  "2026-04-03T13:31:37.366Z",
+    "image":  "public/assets/atlas/crafting/blueleaf.webp"
+}

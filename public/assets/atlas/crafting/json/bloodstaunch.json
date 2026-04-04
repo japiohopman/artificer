@@ -1,0 +1,28 @@
+﻿{
+    "index":  "bloodstaunch",
+    "name":  "bloodstaunch",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Herb",
+    "material_sub_category":  "Flora",
+    "rarity":  "Common",
+    "cost":  {
+                 "quantity":  1,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Stops bleeding immediately; grants 1d4 temporary HP when used."
+             ],
+    "properties":  [
+                       "Coagulant",
+                       "Fibrous"
+                   ],
+    "source":  "Forgotten Realms",
+    "url":  "public/assets/atlas/crafting/json/bloodstaunch.json",
+    "updated_at":  "2026-04-03T13:31:37.569Z",
+    "image":  "public/assets/atlas/crafting/bloodstaunch.webp"
+}

@@ -1,0 +1,28 @@
+﻿{
+    "index":  "dragon_eye",
+    "name":  "dragon eye",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Arcane",
+    "material_sub_category":  "Dragon",
+    "rarity":  "Very Rare",
+    "cost":  {
+                 "quantity":  500,
+                 "unit":  "gp"
+             },
+    "weight":  1,
+    "desc":  [
+                 "Grants Advantage on Perception checks when held."
+             ],
+    "properties":  [
+                       "Perceptive",
+                       "Ancient"
+                   ],
+    "source":  "Fantasy Lore",
+    "url":  "public/assets/atlas/crafting/json/dragon_eye.json",
+    "updated_at":  "2026-04-03T13:31:37.497Z",
+    "image":  "public/assets/atlas/crafting/dragon_eye.webp"
+}

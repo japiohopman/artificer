@@ -1,0 +1,28 @@
+﻿{
+    "index":  "dragon_tongue",
+    "name":  "dragon tongue",
+    "equipment_category":  {
+                               "url":  "public/assets/atlas/equipment_categories/materials",
+                               "name":  "Materials",
+                               "index":  "materials"
+                           },
+    "material_category":  "Alchemy",
+    "material_sub_category":  "Dragon",
+    "rarity":  "Rare",
+    "cost":  {
+                 "quantity":  100,
+                 "unit":  "gp"
+             },
+    "weight":  0.1,
+    "desc":  [
+                 "Used in Potions of Glibness."
+             ],
+    "properties":  [
+                       "Persuasive",
+                       "Scalding"
+                   ],
+    "source":  "Fantasy Lore",
+    "url":  "public/assets/atlas/crafting/json/dragon_tongue.json",
+    "updated_at":  "2026-04-03T13:31:37.503Z",
+    "image":  "public/assets/atlas/crafting/dragon_tongue.webp"
+}
