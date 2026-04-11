@@ -1,0 +1,24 @@
+{
+  "index": "aboleth_psiichor",
+  "name": "aboleth psi-ichor",
+  "category": "Common Materials",
+  "material_category": "Alchemy",
+  "rarity": "Rare",
+  "properties": [
+    "Psionic",
+    "Mind-bending"
+  ],
+  "desc": [
+    "Grants 'Detect Thoughts' once per day."
+  ],
+  "source": "Monster Manual",
+  "url": "public/assets/atlas/crafting/json/aboleth_psiichor.json",
+  "updated_at": "2026-04-11T19:13:30.259Z",
+  "last_updated": "11-4-2026",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": "1",
+  "imageUrl": "/assets/atlas/crafting/aboleth_psiichor.webp"
+}
