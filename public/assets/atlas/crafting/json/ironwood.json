@@ -1,28 +1,31 @@
-﻿{
-    "index":  "ironwood",
-    "name":  "ironwood",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Wood",
-    "material_sub_category":  "Flora",
-    "rarity":  "Rare",
-    "cost":  {
-                 "quantity":  100,
-                 "unit":  "gp"
-             },
-    "weight":  0.5,
-    "desc":  [
-                 "Wood that has the strength of steel; can be used for Plate armor."
-             ],
-    "properties":  [
-                       "Metal-like",
-                       "Heavy"
-                   ],
-    "source":  "5e SRD",
-    "url":  "public/assets/atlas/crafting/json/ironwood.json",
-    "updated_at":  "2026-04-03T13:31:37.368Z",
-    "image":  "public/assets/atlas/crafting/ironwood.webp"
+{
+  "index": "ironwood",
+  "name": "ironwood",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Wood",
+  "material_sub_category": "Flora",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "Wood that has the strength of steel; can be used for Plate armor."
+  ],
+  "properties": [
+    "Metal-like",
+    "Heavy"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/ironwood.json",
+  "updated_at": "2026-04-11T19:11:40.625Z",
+  "image": "public/assets/atlas/crafting/ironwood.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/ironwood.webp"
 }
