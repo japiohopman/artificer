@@ -1,28 +1,31 @@
-﻿{
-    "index":  "succubus_tail",
-    "name":  "succubus tail",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Hide",
-    "material_sub_category":  "Monster",
-    "rarity":  "Rare",
-    "cost":  {
-                 "quantity":  100,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Grants Advantage on Persuasion checks."
-             ],
-    "properties":  [
-                       "Charming",
-                       "Fiendish"
-                   ],
-    "source":  "Monster Manual",
-    "url":  "public/assets/atlas/crafting/json/succubus_tail.json",
-    "updated_at":  "2026-04-03T13:31:37.928Z",
-    "image":  "public/assets/atlas/crafting/succubus_tail.webp"
+{
+  "index": "succubus_tail",
+  "name": "succubus tail",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Hide",
+  "material_sub_category": "Monster",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Grants Advantage on Persuasion checks."
+  ],
+  "properties": [
+    "Charming",
+    "Fiendish"
+  ],
+  "source": "Monster Manual",
+  "url": "public/assets/atlas/crafting/json/succubus_tail.json",
+  "updated_at": "2026-04-11T19:14:07.329Z",
+  "image": "public/assets/atlas/crafting/succubus_tail.webp",
+  "category": "Monster Parts",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/succubus_tail.webp"
 }
