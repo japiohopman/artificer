@@ -149,10 +149,29 @@
   ],
   "image": "public/assets/atlas/enemies/hezrou.webp",
   "url": "public/assets/atlas/enemies/json/hezrou.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-11T14:54:00.084Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 12,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet7.webp",
+  "imageUrl": "/assets/atlas/enemies/hezrou.webp",
+  "_type": "enemies",
+  "rarity": "Rare",
+  "item_drops": [
+    {
+      "name": "sapphire",
+      "rarity": "Common",
+      "quantity": "1",
+      "type": "material"
+    },
+    {
+      "name": "gp 500",
+      "rarity": "Common",
+      "quantity": "1d10",
+      "type": "currency"
+    }
+  ],
+  "background_type": "land_urban",
+  "last_updated": "11-4-2026"
 }
