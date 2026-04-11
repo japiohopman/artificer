@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "A typical bedroll consisted of a sack that could contain a human-sized creature, with an opening on the side. Some variants consisted of several layers to provide waterproofing, warmth, and comfort"
+  ],
   "special": [],
   "index": "bedroll",
   "name": "bedroll",
@@ -19,10 +21,13 @@
   },
   "weight": 7,
   "url": "public/assets/atlas/equipment/json/bedroll.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-11T15:14:56.995Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/bedroll.webp",
   "sprite_index": 2,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/bedroll.webp",
+  "category": "Adventuring Gear",
+  "last_updated": "11-4-2026"
 }
