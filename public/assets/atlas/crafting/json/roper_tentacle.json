@@ -1,28 +1,31 @@
-﻿{
-    "index":  "roper_tentacle",
-    "name":  "roper tentacle",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Fiber",
-    "material_sub_category":  "Monster",
-    "rarity":  "Rare",
-    "cost":  {
-                 "quantity":  100,
-                 "unit":  "gp"
-             },
-    "weight":  0.1,
-    "desc":  [
-                 "Grants +5 to Grapple checks."
-             ],
-    "properties":  [
-                       "Grasping",
-                       "Sticky"
-                   ],
-    "source":  "Monster Manual",
-    "url":  "public/assets/atlas/crafting/json/roper_tentacle.json",
-    "updated_at":  "2026-04-03T13:31:37.904Z",
-    "image":  "public/assets/atlas/crafting/roper_tentacle.webp"
+{
+  "index": "roper_tentacle",
+  "name": "roper tentacle",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Fiber",
+  "material_sub_category": "Monster",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "Grants +5 to Grapple checks."
+  ],
+  "properties": [
+    "Grasping",
+    "Sticky"
+  ],
+  "source": "Monster Manual",
+  "url": "public/assets/atlas/crafting/json/roper_tentacle.json",
+  "updated_at": "2026-04-11T19:14:00.007Z",
+  "image": "public/assets/atlas/crafting/roper_tentacle.webp",
+  "category": "Common Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/roper_tentacle.webp"
 }
