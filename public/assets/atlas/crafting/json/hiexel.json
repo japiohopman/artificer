@@ -1,28 +1,31 @@
-﻿{
-    "index":  "hiexel",
-    "name":  "hiexel",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Wood",
-    "material_sub_category":  "Flora",
-    "rarity":  "Common",
-    "cost":  {
-                 "quantity":  1,
-                 "unit":  "gp"
-             },
-    "weight":  0.5,
-    "desc":  [
-                 "Highly flammable; used to create Alchemist\u0027s Fire or fire arrows."
-             ],
-    "properties":  [
-                       "Brittle",
-                       "Waxy"
-                   ],
-    "source":  "Forgotten Realms",
-    "url":  "public/assets/atlas/crafting/json/hiexel.json",
-    "updated_at":  "2026-04-03T13:31:37.387Z",
-    "image":  "public/assets/atlas/crafting/hiexel.webp"
+{
+  "index": "hiexel",
+  "name": "hiexel",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Wood",
+  "material_sub_category": "Flora",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "Highly flammable; used to create Alchemist's Fire or fire arrows."
+  ],
+  "properties": [
+    "Brittle",
+    "Waxy"
+  ],
+  "source": "Forgotten Realms",
+  "url": "public/assets/atlas/crafting/json/hiexel.json",
+  "updated_at": "2026-04-11T19:11:45.819Z",
+  "image": "public/assets/atlas/crafting/hiexel.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/hiexel.webp"
 }
