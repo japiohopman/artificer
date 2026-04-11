@@ -1,28 +1,31 @@
-﻿{
-    "index":  "dracolich_bone",
-    "name":  "dracolich bone",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Bone",
-    "material_sub_category":  "Undead",
-    "rarity":  "Legendary",
-    "cost":  {
-                 "quantity":  2500,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Deals +2d6 Necrotic damage; wearer is vulnerable to Radiant."
-             ],
-    "properties":  [
-                       "Cursed",
-                       "Cold"
-                   ],
-    "source":  "Fantasy Lore",
-    "url":  "public/assets/atlas/crafting/json/dracolich_bone.json",
-    "updated_at":  "2026-04-03T13:31:37.516Z",
-    "image":  "public/assets/atlas/crafting/dracolich_bone.webp"
+{
+  "index": "dracolich_bone",
+  "name": "dracolich bone",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Bone",
+  "material_sub_category": "Undead",
+  "rarity": "Legendary",
+  "cost": {
+    "quantity": 2500,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Deals +2d6 Necrotic damage; wearer is vulnerable to Radiant."
+  ],
+  "properties": [
+    "Cursed",
+    "Cold"
+  ],
+  "source": "Fantasy Lore",
+  "url": "public/assets/atlas/crafting/json/dracolich_bone.json",
+  "updated_at": "2026-04-11T19:12:17.546Z",
+  "image": "public/assets/atlas/crafting/dracolich_bone.webp",
+  "category": "Monster Parts",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/dracolich_bone.webp"
 }
