@@ -1,28 +1,31 @@
-﻿{
-    "index":  "cedar",
-    "name":  "cedar",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Wood",
-    "material_sub_category":  "Flora",
-    "rarity":  "Common",
-    "cost":  {
-                 "quantity":  1,
-                 "unit":  "gp"
-             },
-    "weight":  0.5,
-    "desc":  [
-                 "Repels insects; keeps clothing from rotting."
-             ],
-    "properties":  [
-                       "Fragrant",
-                       "Preservative"
-                   ],
-    "source":  "Real World",
-    "url":  "public/assets/atlas/crafting/json/cedar.json",
-    "updated_at":  "2026-04-03T13:31:37.699Z",
-    "image":  "public/assets/atlas/crafting/cedar.webp"
+{
+  "index": "cedar",
+  "name": "cedar",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Wood",
+  "material_sub_category": "Flora",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "Repels insects; keeps clothing from rotting."
+  ],
+  "properties": [
+    "Fragrant",
+    "Preservative"
+  ],
+  "source": "Real World",
+  "url": "public/assets/atlas/crafting/json/cedar.json",
+  "updated_at": "2026-04-11T19:13:08.122Z",
+  "image": "public/assets/atlas/crafting/cedar.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/cedar.webp"
 }
