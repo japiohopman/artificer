@@ -1,28 +1,31 @@
-﻿{
-    "index":  "eldritch_whorlwood",
-    "name":  "eldritch whorlwood",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Wood",
-    "material_sub_category":  "Flora",
-    "rarity":  "Very Rare",
-    "cost":  {
-                 "quantity":  500,
-                 "unit":  "gp"
-             },
-    "weight":  0.5,
-    "desc":  [
-                 "Spells cast with this focus ignore half cover."
-             ],
-    "properties":  [
-                       "Twisted",
-                       "Arcane"
-                   ],
-    "source":  "Eberron",
-    "url":  "public/assets/atlas/crafting/json/eldritch_whorlwood.json",
-    "updated_at":  "2026-04-03T13:31:37.419Z",
-    "image":  "public/assets/atlas/crafting/eldritch_whorlwood.webp"
+{
+  "index": "eldritch_whorlwood",
+  "name": "eldritch whorlwood",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Wood",
+  "material_sub_category": "Flora",
+  "rarity": "Very Rare",
+  "cost": {
+    "quantity": 500,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "Spells cast with this focus ignore half cover."
+  ],
+  "properties": [
+    "Twisted",
+    "Arcane"
+  ],
+  "source": "Eberron",
+  "url": "public/assets/atlas/crafting/json/eldritch_whorlwood.json",
+  "updated_at": "2026-04-11T19:11:53.504Z",
+  "image": "public/assets/atlas/crafting/eldritch_whorlwood.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/eldritch_whorlwood.webp"
 }
