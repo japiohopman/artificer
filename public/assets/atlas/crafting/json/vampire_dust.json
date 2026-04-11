@@ -1,28 +1,31 @@
-﻿{
-    "index":  "vampire_dust",
-    "name":  "vampire dust",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Arcane",
-    "material_sub_category":  "Monster",
-    "rarity":  "Rare",
-    "cost":  {
-                 "quantity":  100,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Allows the user to turn into a bat for 1 hour."
-             ],
-    "properties":  [
-                       "Mist-form",
-                       "Undead"
-                   ],
-    "source":  "Monster Manual",
-    "url":  "public/assets/atlas/crafting/json/vampire_dust.json",
-    "updated_at":  "2026-04-03T13:31:37.819Z",
-    "image":  "public/assets/atlas/crafting/vampire_dust.webp"
+{
+  "index": "vampire_dust",
+  "name": "vampire dust",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Arcane",
+  "material_sub_category": "Monster",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Allows the user to turn into a bat for 1 hour."
+  ],
+  "properties": [
+    "Mist-form",
+    "Undead"
+  ],
+  "source": "Monster Manual",
+  "url": "public/assets/atlas/crafting/json/vampire_dust.json",
+  "updated_at": "2026-04-11T19:13:37.932Z",
+  "image": "public/assets/atlas/crafting/vampire_dust.webp",
+  "category": "Common Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/vampire_dust.webp"
 }
