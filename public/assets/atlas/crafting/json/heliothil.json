@@ -1,28 +1,31 @@
-﻿{
-    "index":  "heliothil",
-    "name":  "heliothil",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Metal",
-    "material_sub_category":  "Exotic",
-    "rarity":  "Rare",
-    "cost":  {
-                 "quantity":  100,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Glows in the presence of Undead; deals +1d4 Radiant damage."
-             ],
-    "properties":  [
-                       "Radiant",
-                       "Solar"
-                   ],
-    "source":  "Forgotten Realms",
-    "url":  "public/assets/atlas/crafting/json/heliothil.json",
-    "updated_at":  "2026-04-03T13:31:37.317Z",
-    "image":  "public/assets/atlas/crafting/heliothil.webp"
+{
+  "index": "heliothil",
+  "name": "heliothil",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Metal",
+  "material_sub_category": "Exotic",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Glows in the presence of Undead; deals +1d4 Radiant damage."
+  ],
+  "properties": [
+    "Radiant",
+    "Solar"
+  ],
+  "source": "Forgotten Realms",
+  "url": "public/assets/atlas/crafting/json/heliothil.json",
+  "updated_at": "2026-04-11T19:11:28.555Z",
+  "image": "public/assets/atlas/crafting/heliothil.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/heliothil.webp"
 }
