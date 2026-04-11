@@ -142,10 +142,29 @@
   ],
   "image": "public/assets/atlas/enemies/clay_golem.webp",
   "url": "public/assets/atlas/enemies/json/clay_golem.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-11T16:55:50.355Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 13,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet3.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet3.webp",
+  "imageUrl": "/assets/atlas/enemies/clay_golem.webp",
+  "_type": "enemies",
+  "background_type": "ruins",
+  "item_drops": [
+    {
+      "name": "earth clay",
+      "rarity": "Common",
+      "quantity": "1",
+      "type": "material"
+    },
+    {
+      "name": "1200 gp",
+      "rarity": "Common",
+      "quantity": "1d10",
+      "type": "currency"
+    }
+  ],
+  "rarity": "Rare",
+  "last_updated": "11-4-2026"
 }
