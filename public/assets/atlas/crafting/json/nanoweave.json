@@ -1,28 +1,31 @@
-﻿{
-    "index":  "nanoweave",
-    "name":  "nanoweave",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Fiber",
-    "material_sub_category":  "Exotic",
-    "rarity":  "Rare",
-    "cost":  {
-                 "quantity":  100,
-                 "unit":  "gp"
-             },
-    "weight":  0.1,
-    "desc":  [
-                 "Armor counts as \u0027Unarmored\u0027 for class features (e.g., Monk)."
-             ],
-    "properties":  [
-                       "Ultra-light",
-                       "Stealthy"
-                   ],
-    "source":  "Homebrew",
-    "url":  "public/assets/atlas/crafting/json/nanoweave.json",
-    "updated_at":  "2026-04-03T13:31:37.637Z",
-    "image":  "public/assets/atlas/crafting/nanoweave.webp"
+{
+  "index": "nanoweave",
+  "name": "nanoweave",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Fiber",
+  "material_sub_category": "Exotic",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "Armor counts as 'Unarmored' for class features (e.g., Monk)."
+  ],
+  "properties": [
+    "Ultra-light",
+    "Stealthy"
+  ],
+  "source": "Homebrew",
+  "url": "public/assets/atlas/crafting/json/nanoweave.json",
+  "updated_at": "2026-04-11T19:12:50.674Z",
+  "image": "public/assets/atlas/crafting/nanoweave.webp",
+  "category": "Common Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/nanoweave.webp"
 }
