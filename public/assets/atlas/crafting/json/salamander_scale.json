@@ -1,28 +1,31 @@
-﻿{
-    "index":  "salamander_scale",
-    "name":  "salamander scale",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Hide",
-    "material_sub_category":  "Monster",
-    "rarity":  "Rare",
-    "cost":  {
-                 "quantity":  100,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Grants Immunity to Fire damage."
-             ],
-    "properties":  [
-                       "Fiery",
-                       "Metallic"
-                   ],
-    "source":  "Monster Manual",
-    "url":  "public/assets/atlas/crafting/json/salamander_scale.json",
-    "updated_at":  "2026-04-03T13:31:37.911Z",
-    "image":  "public/assets/atlas/crafting/salamander_scale.webp"
+{
+  "index": "salamander_scale",
+  "name": "salamander scale",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Hide",
+  "material_sub_category": "Monster",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Grants Immunity to Fire damage."
+  ],
+  "properties": [
+    "Fiery",
+    "Metallic"
+  ],
+  "source": "Monster Manual",
+  "url": "public/assets/atlas/crafting/json/salamander_scale.json",
+  "updated_at": "2026-04-11T19:14:02.491Z",
+  "image": "public/assets/atlas/crafting/salamander_scale.webp",
+  "category": "Monster Parts",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/salamander_scale.webp"
 }
