@@ -1,28 +1,31 @@
-﻿{
-    "index":  "ghost_oak",
-    "name":  "ghost oak",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Wood",
-    "material_sub_category":  "Flora",
-    "rarity":  "Very Rare",
-    "cost":  {
-                 "quantity":  500,
-                 "unit":  "gp"
-             },
-    "weight":  0.5,
-    "desc":  [
-                 "Weapons can hit incorporeal creatures without penalty."
-             ],
-    "properties":  [
-                       "Ethereal",
-                       "Pale"
-                   ],
-    "source":  "Fantasy Lore",
-    "url":  "public/assets/atlas/crafting/json/ghost_oak.json",
-    "updated_at":  "2026-04-03T13:31:37.425Z",
-    "image":  "public/assets/atlas/crafting/ghost_oak.webp"
+{
+  "index": "ghost_oak",
+  "name": "ghost oak",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Wood",
+  "material_sub_category": "Flora",
+  "rarity": "Very Rare",
+  "cost": {
+    "quantity": 500,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "Weapons can hit incorporeal creatures without penalty."
+  ],
+  "properties": [
+    "Ethereal",
+    "Pale"
+  ],
+  "source": "Fantasy Lore",
+  "url": "public/assets/atlas/crafting/json/ghost_oak.json",
+  "updated_at": "2026-04-11T19:11:55.056Z",
+  "image": "public/assets/atlas/crafting/ghost_oak.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/ghost_oak.webp"
 }
