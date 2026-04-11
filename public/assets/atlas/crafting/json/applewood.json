@@ -1,28 +1,31 @@
-﻿{
-    "index":  "applewood",
-    "name":  "applewood",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Wood",
-    "material_sub_category":  "Flora",
-    "rarity":  "Common",
-    "cost":  {
-                 "quantity":  1,
-                 "unit":  "gp"
-             },
-    "weight":  0.5,
-    "desc":  [
-                 "Used for luxury furniture and smoking meat."
-             ],
-    "properties":  [
-                       "Sweet",
-                       "Fragile"
-                   ],
-    "source":  "Real World",
-    "url":  "public/assets/atlas/crafting/json/applewood.json",
-    "updated_at":  "2026-04-03T13:31:37.695Z",
-    "image":  "public/assets/atlas/crafting/applewood.webp"
+{
+  "index": "applewood",
+  "name": "applewood",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Wood",
+  "material_sub_category": "Wood",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "Harvested from trees fed on the rot of forgotten battlefields, applewood possesses a dense, iron-like grain that pulses with a faint, sickening heat. To carve a blade from its timber is to bind your weapon to the lingering hungers of the earth, ensuring every strike leaves a jagged, festering memory of the soil."
+  ],
+  "properties": [
+    "Sweet",
+    "Fragile"
+  ],
+  "source": "Real World",
+  "url": "public/assets/atlas/crafting/json/applewood.json",
+  "updated_at": "2026-04-11T16:22:39.878Z",
+  "image": "public/assets/atlas/crafting/applewood.webp",
+  "imageUrl": "/assets/atlas/crafting/applewood.webp",
+  "_type": "materials",
+  "last_updated": "11-4-2026"
 }
