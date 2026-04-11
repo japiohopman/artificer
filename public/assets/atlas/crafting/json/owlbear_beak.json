@@ -1,28 +1,31 @@
-﻿{
-    "index":  "owlbear_beak",
-    "name":  "owlbear beak",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Bone",
-    "material_sub_category":  "Monster",
-    "rarity":  "Common",
-    "cost":  {
-                 "quantity":  1,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Melee attacks deal +2 damage."
-             ],
-    "properties":  [
-                       "Sharp",
-                       "Crushing"
-                   ],
-    "source":  "Monster Manual",
-    "url":  "public/assets/atlas/crafting/json/owlbear_beak.json",
-    "updated_at":  "2026-04-03T13:31:37.887Z",
-    "image":  "public/assets/atlas/crafting/owlbear_beak.webp"
+{
+  "index": "owlbear_beak",
+  "name": "owlbear beak",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Bone",
+  "material_sub_category": "Monster",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Melee attacks deal +2 damage."
+  ],
+  "properties": [
+    "Sharp",
+    "Crushing"
+  ],
+  "source": "Monster Manual",
+  "url": "public/assets/atlas/crafting/json/owlbear_beak.json",
+  "updated_at": "2026-04-11T19:13:55.175Z",
+  "image": "public/assets/atlas/crafting/owlbear_beak.webp",
+  "category": "Monster Parts",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/owlbear_beak.webp"
 }
