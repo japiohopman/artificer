@@ -1,0 +1,24 @@
+{
+  "index": "medusa_snakehair",
+  "name": "medusa snake-hair",
+  "category": "Common Materials",
+  "material_category": "Organic",
+  "rarity": "Rare",
+  "properties": [
+    "Petrifying",
+    "Poisonous"
+  ],
+  "desc": [
+    "Melee attacks deal +1d4 Poison damage and Slow target."
+  ],
+  "source": "Monster Manual",
+  "url": "public/assets/atlas/crafting/json/medusa_snakehair.json",
+  "updated_at": "2026-04-11T19:13:52.025Z",
+  "last_updated": "11-4-2026",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": "1",
+  "imageUrl": "/assets/atlas/crafting/medusa_snakehair.webp"
+}
