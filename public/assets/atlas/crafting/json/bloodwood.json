@@ -1,28 +1,31 @@
-﻿{
-    "index":  "bloodwood",
-    "name":  "bloodwood",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Wood",
-    "material_sub_category":  "Flora",
-    "rarity":  "Rare",
-    "cost":  {
-                 "quantity":  100,
-                 "unit":  "gp"
-             },
-    "weight":  0.5,
-    "desc":  [
-                 "Heals wielder for 1 HP on a critical hit."
-             ],
-    "properties":  [
-                       "Vampiric",
-                       "Dark"
-                   ],
-    "source":  "Fantasy Lore",
-    "url":  "public/assets/atlas/crafting/json/bloodwood.json",
-    "updated_at":  "2026-04-03T13:31:37.422Z",
-    "image":  "public/assets/atlas/crafting/bloodwood.webp"
+{
+  "index": "bloodwood",
+  "name": "bloodwood",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Wood",
+  "material_sub_category": "Flora",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "Heals wielder for 1 HP on a critical hit."
+  ],
+  "properties": [
+    "Vampiric",
+    "Dark"
+  ],
+  "source": "Fantasy Lore",
+  "url": "public/assets/atlas/crafting/json/bloodwood.json",
+  "updated_at": "2026-04-11T19:11:54.178Z",
+  "image": "public/assets/atlas/crafting/bloodwood.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/bloodwood.webp"
 }
