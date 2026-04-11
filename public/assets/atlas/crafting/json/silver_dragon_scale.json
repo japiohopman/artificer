@@ -1,28 +1,31 @@
-﻿{
-    "index":  "silver_dragon_scale",
-    "name":  "silver dragon scale",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Hide",
-    "material_sub_category":  "Dragon",
-    "rarity":  "Very Rare",
-    "cost":  {
-                 "quantity":  500,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Grants Resistance to Cold damage and +1 to AC."
-             ],
-    "properties":  [
-                       "Chilling",
-                       "Hard"
-                   ],
-    "source":  "5e SRD",
-    "url":  "public/assets/atlas/crafting/json/silver_dragon_scale.json",
-    "updated_at":  "2026-04-03T13:31:37.447Z",
-    "image":  "public/assets/atlas/crafting/silver_dragon_scale.webp"
+{
+  "index": "silver_dragon_scale",
+  "name": "silver dragon scale",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Hide",
+  "material_sub_category": "Dragon",
+  "rarity": "Very Rare",
+  "cost": {
+    "quantity": 500,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Grants Resistance to Cold damage and +1 to AC."
+  ],
+  "properties": [
+    "Chilling",
+    "Hard"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/silver_dragon_scale.json",
+  "updated_at": "2026-04-11T19:12:01.058Z",
+  "image": "public/assets/atlas/crafting/silver_dragon_scale.webp",
+  "category": "Monster Parts",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/silver_dragon_scale.webp"
 }
