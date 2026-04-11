@@ -1,28 +1,31 @@
-﻿{
-    "index":  "suth",
-    "name":  "suth",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Wood",
-    "material_sub_category":  "Flora",
-    "rarity":  "Uncommon",
-    "cost":  {
-                 "quantity":  10,
-                 "unit":  "gp"
-             },
-    "weight":  0.5,
-    "desc":  [
-                 "Bows have +1 to attack rolls."
-             ],
-    "properties":  [
-                       "Hard",
-                       "Grey"
-                   ],
-    "source":  "Forgotten Realms",
-    "url":  "public/assets/atlas/crafting/json/suth.json",
-    "updated_at":  "2026-04-03T13:31:37.396Z",
-    "image":  "public/assets/atlas/crafting/suth.webp"
+{
+  "index": "suth",
+  "name": "suth",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Wood",
+  "material_sub_category": "Flora",
+  "rarity": "Uncommon",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "Bows have +1 to attack rolls."
+  ],
+  "properties": [
+    "Hard",
+    "Grey"
+  ],
+  "source": "Forgotten Realms",
+  "url": "public/assets/atlas/crafting/json/suth.json",
+  "updated_at": "2026-04-11T19:11:48.166Z",
+  "image": "public/assets/atlas/crafting/suth.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/suth.webp"
 }
