@@ -1,28 +1,31 @@
-﻿{
-    "index":  "wight_essence",
-    "name":  "wight essence",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Arcane",
-    "material_sub_category":  "Monster",
-    "rarity":  "Rare",
-    "cost":  {
-                 "quantity":  100,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Weapons deal +1d4 Necrotic damage."
-             ],
-    "properties":  [
-                       "Life-draining",
-                       "Cold"
-                   ],
-    "source":  "Monster Manual",
-    "url":  "public/assets/atlas/crafting/json/wight_essence.json",
-    "updated_at":  "2026-04-03T13:31:37.774Z",
-    "image":  "public/assets/atlas/crafting/wight_essence.webp"
+{
+  "index": "wight_essence",
+  "name": "wight essence",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Arcane",
+  "material_sub_category": "Monster",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Weapons deal +1d4 Necrotic damage."
+  ],
+  "properties": [
+    "Life-draining",
+    "Cold"
+  ],
+  "source": "Monster Manual",
+  "url": "public/assets/atlas/crafting/json/wight_essence.json",
+  "updated_at": "2026-04-11T19:13:28.064Z",
+  "image": "public/assets/atlas/crafting/wight_essence.webp",
+  "category": "Common Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/wight_essence.webp"
 }
