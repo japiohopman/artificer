@@ -1,5 +1,286 @@
 {
   "name": "Raw Materials",
   "index": "raw_materials",
-  "materials": []
+  "materials": [
+    {
+      "name": "Adamantine",
+      "index": "adamantine"
+    },
+    {
+      "name": "Mithral",
+      "index": "mithral"
+    },
+    {
+      "name": "Cold Iron",
+      "index": "cold_iron"
+    },
+    {
+      "name": "Silvered Silver",
+      "index": "silvered_silver"
+    },
+    {
+      "name": "Darksteel",
+      "index": "darksteel"
+    },
+    {
+      "name": "Orichalcum",
+      "index": "orichalcum"
+    },
+    {
+      "name": "Heliothil",
+      "index": "heliothil"
+    },
+    {
+      "name": "Moonsilver",
+      "index": "moonsilver"
+    },
+    {
+      "name": "Byeshk",
+      "index": "byeshk"
+    },
+    {
+      "name": "Meteor Iron",
+      "index": "meteor_iron"
+    },
+    {
+      "name": "Hizagkuur",
+      "index": "hizagkuur"
+    },
+    {
+      "name": "Telstang",
+      "index": "telstang"
+    },
+    {
+      "name": "Zardazik",
+      "index": "zardazik"
+    },
+    {
+      "name": "Baatorian Green Steel",
+      "index": "baatorian_green_steel"
+    },
+    {
+      "name": "Celestial Steel",
+      "index": "celestial_steel"
+    },
+    {
+      "name": "Arambarium",
+      "index": "arambarium"
+    },
+    {
+      "name": "Arandur",
+      "index": "arandur"
+    },
+    {
+      "name": "Heliotrope Steel",
+      "index": "heliotrope_steel"
+    },
+    {
+      "name": "Starmetal",
+      "index": "starmetal"
+    },
+    {
+      "name": "Dwarven Steel",
+      "index": "dwarven_steel"
+    },
+    {
+      "name": "Blueleaf",
+      "index": "blueleaf"
+    },
+    {
+      "name": "Ironwood",
+      "index": "ironwood"
+    },
+    {
+      "name": "Duskwood",
+      "index": "duskwood"
+    },
+    {
+      "name": "Weirwood",
+      "index": "weirwood"
+    },
+    {
+      "name": "Zalantar",
+      "index": "zalantar"
+    },
+    {
+      "name": "Silverbark",
+      "index": "silverbark"
+    },
+    {
+      "name": "Shadowtop",
+      "index": "shadowtop"
+    },
+    {
+      "name": "Hiexel",
+      "index": "hiexel"
+    },
+    {
+      "name": "Phandar",
+      "index": "phandar"
+    },
+    {
+      "name": "Felsul",
+      "index": "felsul"
+    },
+    {
+      "name": "Suth",
+      "index": "suth"
+    },
+    {
+      "name": "Laspar",
+      "index": "laspar"
+    },
+    {
+      "name": "Bronzewood",
+      "index": "bronzewood"
+    },
+    {
+      "name": "Densewood",
+      "index": "densewood"
+    },
+    {
+      "name": "Livewood",
+      "index": "livewood"
+    },
+    {
+      "name": "Darkleaf",
+      "index": "darkleaf"
+    },
+    {
+      "name": "Soarwood",
+      "index": "soarwood"
+    },
+    {
+      "name": "Eldritch Whorlwood",
+      "index": "eldritch_whorlwood"
+    },
+    {
+      "name": "Bloodwood",
+      "index": "bloodwood"
+    },
+    {
+      "name": "Ghost Oak",
+      "index": "ghost_oak"
+    },
+    {
+      "name": "Elysian Bronze",
+      "index": "elysian_bronze"
+    },
+    {
+      "name": "Singing Steel",
+      "index": "singing_steel"
+    },
+    {
+      "name": "Wave-Washed Steel",
+      "index": "wavewashed_steel"
+    },
+    {
+      "name": "Windforged Steel",
+      "index": "windforged_steel"
+    },
+    {
+      "name": "Soulbound Steel",
+      "index": "soulbound_steel"
+    },
+    {
+      "name": "Black Adamantine",
+      "index": "black_adamantine"
+    },
+    {
+      "name": "Horacalcum",
+      "index": "horacalcum"
+    },
+    {
+      "name": "Stailinn",
+      "index": "stailinn"
+    },
+    {
+      "name": "Necratite",
+      "index": "necratite"
+    },
+    {
+      "name": "Iron",
+      "index": "iron"
+    },
+    {
+      "name": "Gold",
+      "index": "gold"
+    },
+    {
+      "name": "Silver",
+      "index": "silver"
+    },
+    {
+      "name": "Copper",
+      "index": "copper"
+    },
+    {
+      "name": "Brass",
+      "index": "brass"
+    },
+    {
+      "name": "Electrum",
+      "index": "electrum"
+    },
+    {
+      "name": "Applewood",
+      "index": "applewood"
+    },
+    {
+      "name": "Cedar",
+      "index": "cedar"
+    },
+    {
+      "name": "Cypress",
+      "index": "cypress"
+    },
+    {
+      "name": "Hickory",
+      "index": "hickory"
+    },
+    {
+      "name": "Maple",
+      "index": "maple"
+    },
+    {
+      "name": "Oak",
+      "index": "oak"
+    },
+    {
+      "name": "Pine",
+      "index": "pine"
+    },
+    {
+      "name": "Willow",
+      "index": "willow"
+    },
+    {
+      "name": "Ash",
+      "index": "ash"
+    },
+    {
+      "name": "Birch",
+      "index": "birch"
+    },
+    {
+      "name": "Bamboo",
+      "index": "bamboo"
+    },
+    {
+      "name": "Mangrove",
+      "index": "mangrove"
+    },
+    {
+      "name": "Thornwood",
+      "index": "thornwood"
+    },
+    {
+      "name": "Hawthorn",
+      "index": "hawthorn"
+    },
+    {
+      "name": "Hornbeam",
+      "index": "hornbeam"
+    }
+  ]
 }
