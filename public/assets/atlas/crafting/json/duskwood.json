@@ -1,28 +1,31 @@
-﻿{
-    "index":  "duskwood",
-    "name":  "duskwood",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Wood",
-    "material_sub_category":  "Flora",
-    "rarity":  "Uncommon",
-    "cost":  {
-                 "quantity":  10,
-                 "unit":  "gp"
-             },
-    "weight":  0.5,
-    "desc":  [
-                 "Grants +2 to Stealth checks when in dim light or darkness."
-             ],
-    "properties":  [
-                       "Shadow",
-                       "Stealth"
-                   ],
-    "source":  "Forgotten Realms",
-    "url":  "public/assets/atlas/crafting/json/duskwood.json",
-    "updated_at":  "2026-04-03T13:31:37.370Z",
-    "image":  "public/assets/atlas/crafting/duskwood.webp"
+{
+  "index": "duskwood",
+  "name": "duskwood",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Wood",
+  "material_sub_category": "Flora",
+  "rarity": "Uncommon",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "Grants +2 to Stealth checks when in dim light or darkness."
+  ],
+  "properties": [
+    "Shadow",
+    "Stealth"
+  ],
+  "source": "Forgotten Realms",
+  "url": "public/assets/atlas/crafting/json/duskwood.json",
+  "updated_at": "2026-04-11T19:11:41.348Z",
+  "image": "public/assets/atlas/crafting/duskwood.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/duskwood.webp"
 }
