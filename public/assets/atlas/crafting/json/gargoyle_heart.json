@@ -1,28 +1,31 @@
-﻿{
-    "index":  "gargoyle_heart",
-    "name":  "gargoyle heart",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Stone",
-    "material_sub_category":  "Monster",
-    "rarity":  "Uncommon",
-    "cost":  {
-                 "quantity":  10,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Wearer can become a statue for 1 hour (unmoving)."
-             ],
-    "properties":  [
-                       "Stone-like",
-                       "Durable"
-                   ],
-    "source":  "Monster Manual",
-    "url":  "public/assets/atlas/crafting/json/gargoyle_heart.json",
-    "updated_at":  "2026-04-03T13:31:37.851Z",
-    "image":  "public/assets/atlas/crafting/gargoyle_heart.webp"
+{
+  "index": "gargoyle_heart",
+  "name": "gargoyle heart",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Stone",
+  "material_sub_category": "Monster",
+  "rarity": "Uncommon",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Wearer can become a statue for 1 hour (unmoving)."
+  ],
+  "properties": [
+    "Stone-like",
+    "Durable"
+  ],
+  "source": "Monster Manual",
+  "url": "public/assets/atlas/crafting/json/gargoyle_heart.json",
+  "updated_at": "2026-04-11T19:13:45.993Z",
+  "image": "public/assets/atlas/crafting/gargoyle_heart.webp",
+  "category": "Common Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/gargoyle_heart.webp"
 }
