@@ -1,28 +1,31 @@
-﻿{
-    "index":  "dragon_heart_string",
-    "name":  "dragon heart string",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Arcane",
-    "material_sub_category":  "Dragon",
-    "rarity":  "Very Rare",
-    "cost":  {
-                 "quantity":  500,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Used to craft Wands of the War Mage +2."
-             ],
-    "properties":  [
-                       "Resonant",
-                       "Powerful"
-                   ],
-    "source":  "Fantasy Lore",
-    "url":  "public/assets/atlas/crafting/json/dragon_heart_string.json",
-    "updated_at":  "2026-04-03T13:31:37.494Z",
-    "image":  "public/assets/atlas/crafting/dragon_heart_string.webp"
+{
+  "index": "dragon_heart_string",
+  "name": "dragon heart string",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Arcane",
+  "material_sub_category": "Dragon",
+  "rarity": "Very Rare",
+  "cost": {
+    "quantity": 500,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Used to craft Wands of the War Mage +2."
+  ],
+  "properties": [
+    "Resonant",
+    "Powerful"
+  ],
+  "source": "Fantasy Lore",
+  "url": "public/assets/atlas/crafting/json/dragon_heart_string.json",
+  "updated_at": "2026-04-11T19:12:12.308Z",
+  "image": "public/assets/atlas/crafting/dragon_heart_string.webp",
+  "category": "Common Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/dragon_heart_string.webp"
 }
