@@ -1,28 +1,31 @@
-﻿{
-    "index":  "stirge_proboscis",
-    "name":  "stirge proboscis",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Bone",
-    "material_sub_category":  "Monster",
-    "rarity":  "Common",
-    "cost":  {
-                 "quantity":  1,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Heals user for 1 HP on every hit."
-             ],
-    "properties":  [
-                       "Blood-drinking",
-                       "Sharp"
-                   ],
-    "source":  "Monster Manual",
-    "url":  "public/assets/atlas/crafting/json/stirge_proboscis.json",
-    "updated_at":  "2026-04-03T13:31:37.925Z",
-    "image":  "public/assets/atlas/crafting/stirge_proboscis.webp"
+{
+  "index": "stirge_proboscis",
+  "name": "stirge proboscis",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Bone",
+  "material_sub_category": "Monster",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Heals user for 1 HP on every hit."
+  ],
+  "properties": [
+    "Blood-drinking",
+    "Sharp"
+  ],
+  "source": "Monster Manual",
+  "url": "public/assets/atlas/crafting/json/stirge_proboscis.json",
+  "updated_at": "2026-04-11T19:14:06.613Z",
+  "image": "public/assets/atlas/crafting/stirge_proboscis.webp",
+  "category": "Monster Parts",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/stirge_proboscis.webp"
 }
