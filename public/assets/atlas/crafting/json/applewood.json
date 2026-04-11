@@ -15,7 +15,7 @@
   },
   "weight": 0.5,
   "desc": [
-    "Harvested from trees fed on the rot of forgotten battlefields, applewood possesses a dense, iron-like grain that pulses with a faint, sickening heat. To carve a blade from its timber is to bind your weapon to the lingering hungers of the earth, ensuring every strike leaves a jagged, festering memory of the soil."
+    "Used for luxury furniture and smoking meat."
   ],
   "properties": [
     "Sweet",
@@ -23,9 +23,10 @@
   ],
   "source": "Real World",
   "url": "public/assets/atlas/crafting/json/applewood.json",
-  "updated_at": "2026-04-11T16:22:54.050Z",
+  "updated_at": "2026-04-11T19:13:07.382Z",
   "image": "public/assets/atlas/crafting/applewood.webp",
   "imageUrl": "/assets/atlas/crafting/applewood.webp",
   "_type": "materials",
-  "last_updated": "11-4-2026"
+  "last_updated": "11-4-2026",
+  "category": "Raw Materials"
 }
