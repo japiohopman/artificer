@@ -1,28 +1,31 @@
-﻿{
-    "index":  "dragon_sinew",
-    "name":  "dragon sinew",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Fiber",
-    "material_sub_category":  "Dragon",
-    "rarity":  "Rare",
-    "cost":  {
-                 "quantity":  100,
-                 "unit":  "gp"
-             },
-    "weight":  0.1,
-    "desc":  [
-                 "Bows have +2 to damage rolls."
-             ],
-    "properties":  [
-                       "Strong",
-                       "Elastic"
-                   ],
-    "source":  "Fantasy Lore",
-    "url":  "public/assets/atlas/crafting/json/dragon_sinew.json",
-    "updated_at":  "2026-04-03T13:31:37.501Z",
-    "image":  "public/assets/atlas/crafting/dragon_sinew.webp"
+{
+  "index": "dragon_sinew",
+  "name": "dragon sinew",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Fiber",
+  "material_sub_category": "Dragon",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "Bows have +2 to damage rolls."
+  ],
+  "properties": [
+    "Strong",
+    "Elastic"
+  ],
+  "source": "Fantasy Lore",
+  "url": "public/assets/atlas/crafting/json/dragon_sinew.json",
+  "updated_at": "2026-04-11T19:12:13.833Z",
+  "image": "public/assets/atlas/crafting/dragon_sinew.webp",
+  "category": "Common Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/dragon_sinew.webp"
 }
