@@ -1,28 +1,31 @@
-﻿{
-    "index":  "mimic_adhesive",
-    "name":  "mimic adhesive",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Alchemy",
-    "material_sub_category":  "Monster",
-    "rarity":  "Uncommon",
-    "cost":  {
-                 "quantity":  10,
-                 "unit":  "gp"
-             },
-    "weight":  0.1,
-    "desc":  [
-                 "Used to craft \u0027Universal Solvent\u0027 or \u0027Sovereign Glue\u0027."
-             ],
-    "properties":  [
-                       "Sticky",
-                       "Strong"
-                   ],
-    "source":  "Monster Manual",
-    "url":  "public/assets/atlas/crafting/json/mimic_adhesive.json",
-    "updated_at":  "2026-04-03T13:31:37.768Z",
-    "image":  "public/assets/atlas/crafting/mimic_adhesive.webp"
+{
+  "index": "mimic_adhesive",
+  "name": "mimic adhesive",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Alchemy",
+  "material_sub_category": "Monster",
+  "rarity": "Uncommon",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "Used to craft 'Universal Solvent' or 'Sovereign Glue'."
+  ],
+  "properties": [
+    "Sticky",
+    "Strong"
+  ],
+  "source": "Monster Manual",
+  "url": "public/assets/atlas/crafting/json/mimic_adhesive.json",
+  "updated_at": "2026-04-11T19:13:26.491Z",
+  "image": "public/assets/atlas/crafting/mimic_adhesive.webp",
+  "category": "Common Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/mimic_adhesive.webp"
 }
