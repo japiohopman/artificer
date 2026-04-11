@@ -1,28 +1,31 @@
-﻿{
-    "index":  "intellect_devourer_brain",
-    "name":  "intellect devourer brain",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Arcane",
-    "material_sub_category":  "Monster",
-    "rarity":  "Rare",
-    "cost":  {
-                 "quantity":  100,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Grants \u0027Mind Spike\u0027 spell once per day."
-             ],
-    "properties":  [
-                       "Psionic",
-                       "Consuming"
-                   ],
-    "source":  "Monster Manual",
-    "url":  "public/assets/atlas/crafting/json/intellect_devourer_brain.json",
-    "updated_at":  "2026-04-03T13:31:37.866Z",
-    "image":  "public/assets/atlas/crafting/intellect_devourer_brain.webp"
+{
+  "index": "intellect_devourer_brain",
+  "name": "intellect devourer brain",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Arcane",
+  "material_sub_category": "Monster",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Grants 'Mind Spike' spell once per day."
+  ],
+  "properties": [
+    "Psionic",
+    "Consuming"
+  ],
+  "source": "Monster Manual",
+  "url": "public/assets/atlas/crafting/json/intellect_devourer_brain.json",
+  "updated_at": "2026-04-11T19:13:49.842Z",
+  "image": "public/assets/atlas/crafting/intellect_devourer_brain.webp",
+  "category": "Common Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/intellect_devourer_brain.webp"
 }
