@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "The longship was similar to the drakkar but much smaller—typically 70​ to ​80 feet (21​ to ​24 meters) along the keel and 15​ to ​20 feet (4.6​ to ​6.1 meters) across the beam. With 20 oars on each side, the minimum crew size was 40 plus three watchmen and could carry a maximum crew of between 60 and 200 including rowers. Longships could sail, assuming moderate, favorable winds and calm seas, at a maximum speed of 16 nautical miles per hour with sail and between two and ten while propelled by oars."
+  ],
   "special": [],
   "index": "longship",
   "name": "longship",
@@ -18,10 +20,15 @@
     "unit": "mph"
   },
   "url": "public/assets/atlas/equipment/json/longship.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-11T15:55:23.465Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/longship.webp",
   "sprite_index": 4,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/longship.webp",
+  "_type": "equipment",
+  "rarity": "Very Rare",
+  "category": "Waterborne Vehicles",
+  "last_updated": "11-4-2026"
 }
