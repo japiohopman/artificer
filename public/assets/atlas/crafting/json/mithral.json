@@ -1,28 +1,31 @@
-﻿{
-    "index":  "mithral",
-    "name":  "mithral",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Metal",
-    "material_sub_category":  "Exotic",
-    "rarity":  "Uncommon",
-    "cost":  {
-                 "quantity":  10,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Removes Strength requirement for heavy armor; removes disadvantage on Stealth checks."
-             ],
-    "properties":  [
-                       "Light",
-                       "Flexible"
-                   ],
-    "source":  "5e SRD",
-    "url":  "public/assets/atlas/crafting/json/mithral.json",
-    "updated_at":  "2026-04-03T13:31:37.306Z",
-    "image":  "public/assets/atlas/crafting/mithral.webp"
+{
+  "index": "mithral",
+  "name": "mithral",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Metal",
+  "material_sub_category": "Exotic",
+  "rarity": "Uncommon",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Removes Strength requirement for heavy armor; removes disadvantage on Stealth checks."
+  ],
+  "properties": [
+    "Light",
+    "Flexible"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/mithral.json",
+  "updated_at": "2026-04-11T19:11:24.980Z",
+  "image": "public/assets/atlas/crafting/mithral.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/mithral.webp"
 }
