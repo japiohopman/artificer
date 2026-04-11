@@ -1,28 +1,31 @@
-﻿{
-    "index":  "flail_snail_shell",
-    "name":  "flail snail shell",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Hide",
-    "material_sub_category":  "Monster",
-    "rarity":  "Very Rare",
-    "cost":  {
-                 "quantity":  500,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Can be crafted into a shield that reflects spells on a roll of 20."
-             ],
-    "properties":  [
-                       "Anti-Magic",
-                       "Reflective"
-                   ],
-    "source":  "Volo\u0027s Guide",
-    "url":  "public/assets/atlas/crafting/json/flail_snail_shell.json",
-    "updated_at":  "2026-04-03T13:31:37.541Z",
-    "image":  "public/assets/atlas/crafting/flail_snail_shell.webp"
+{
+  "index": "flail_snail_shell",
+  "name": "flail snail shell",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Hide",
+  "material_sub_category": "Monster",
+  "rarity": "Very Rare",
+  "cost": {
+    "quantity": 500,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Can be crafted into a shield that reflects spells on a roll of 20."
+  ],
+  "properties": [
+    "Anti-Magic",
+    "Reflective"
+  ],
+  "source": "Volo's Guide",
+  "url": "public/assets/atlas/crafting/json/flail_snail_shell.json",
+  "updated_at": "2026-04-11T19:12:24.860Z",
+  "image": "public/assets/atlas/crafting/flail_snail_shell.webp",
+  "category": "Monster Parts",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/flail_snail_shell.webp"
 }
