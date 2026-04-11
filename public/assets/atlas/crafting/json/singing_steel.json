@@ -1,28 +1,31 @@
-﻿{
-    "index":  "singing_steel",
-    "name":  "singing steel",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Metal",
-    "material_sub_category":  "Exotic",
-    "rarity":  "Rare",
-    "cost":  {
-                 "quantity":  100,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Grants +1 to Bardic Inspiration die rolls if used as an instrument part."
-             ],
-    "properties":  [
-                       "Resonant",
-                       "Harmonic"
-                   ],
-    "source":  "Pathfinder",
-    "url":  "public/assets/atlas/crafting/json/singing_steel.json",
-    "updated_at":  "2026-04-03T13:31:37.588Z",
-    "image":  "public/assets/atlas/crafting/singing_steel.webp"
+{
+  "index": "singing_steel",
+  "name": "singing steel",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Metal",
+  "material_sub_category": "Exotic",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Grants +1 to Bardic Inspiration die rolls if used as an instrument part."
+  ],
+  "properties": [
+    "Resonant",
+    "Harmonic"
+  ],
+  "source": "Pathfinder",
+  "url": "public/assets/atlas/crafting/json/singing_steel.json",
+  "updated_at": "2026-04-11T19:12:36.854Z",
+  "image": "public/assets/atlas/crafting/singing_steel.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/singing_steel.webp"
 }
