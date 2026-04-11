@@ -1,28 +1,31 @@
-﻿{
-    "index":  "dragon_tooth",
-    "name":  "dragon tooth",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Bone",
-    "material_sub_category":  "Dragon",
-    "rarity":  "Uncommon",
-    "cost":  {
-                 "quantity":  10,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Used for daggers that deal +1 damage."
-             ],
-    "properties":  [
-                       "Jagged",
-                       "Tough"
-                   ],
-    "source":  "5e SRD",
-    "url":  "public/assets/atlas/crafting/json/dragon_tooth.json",
-    "updated_at":  "2026-04-03T13:31:37.506Z",
-    "image":  "public/assets/atlas/crafting/dragon_tooth.webp"
+{
+  "index": "dragon_tooth",
+  "name": "dragon tooth",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Bone",
+  "material_sub_category": "Dragon",
+  "rarity": "Uncommon",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Used for daggers that deal +1 damage."
+  ],
+  "properties": [
+    "Jagged",
+    "Tough"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/dragon_tooth.json",
+  "updated_at": "2026-04-11T19:12:15.403Z",
+  "image": "public/assets/atlas/crafting/dragon_tooth.webp",
+  "category": "Monster Parts",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/dragon_tooth.webp"
 }
