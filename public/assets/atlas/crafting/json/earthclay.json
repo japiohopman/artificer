@@ -1,0 +1,24 @@
+{
+  "index": "earthclay",
+  "name": "earth/clay",
+  "category": "Common Materials",
+  "material_category": "Stone",
+  "rarity": "Common",
+  "properties": [
+    "Malleable",
+    "Heavy"
+  ],
+  "desc": [
+    "Used for seals and Golem construction."
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/earthclay.json",
+  "updated_at": "2026-04-11T19:12:44.148Z",
+  "last_updated": "11-4-2026",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": "1",
+  "imageUrl": "/assets/atlas/crafting/earthclay.webp"
+}
