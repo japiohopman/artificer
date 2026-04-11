@@ -1,28 +1,31 @@
-﻿{
-    "index":  "cypress",
-    "name":  "cypress",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Wood",
-    "material_sub_category":  "Flora",
-    "rarity":  "Common",
-    "cost":  {
-                 "quantity":  1,
-                 "unit":  "gp"
-             },
-    "weight":  0.5,
-    "desc":  [
-                 "Boats made of Cypress have +2 to AC."
-             ],
-    "properties":  [
-                       "Water-resistant",
-                       "Durable"
-                   ],
-    "source":  "Real World",
-    "url":  "public/assets/atlas/crafting/json/cypress.json",
-    "updated_at":  "2026-04-03T13:31:37.701Z",
-    "image":  "public/assets/atlas/crafting/cypress.webp"
+{
+  "index": "cypress",
+  "name": "cypress",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Wood",
+  "material_sub_category": "Flora",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "Boats made of Cypress have +2 to AC."
+  ],
+  "properties": [
+    "Water-resistant",
+    "Durable"
+  ],
+  "source": "Real World",
+  "url": "public/assets/atlas/crafting/json/cypress.json",
+  "updated_at": "2026-04-11T19:13:09.283Z",
+  "image": "public/assets/atlas/crafting/cypress.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/cypress.webp"
 }
