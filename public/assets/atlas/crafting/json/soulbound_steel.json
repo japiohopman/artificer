@@ -1,28 +1,31 @@
-﻿{
-    "index":  "soulbound_steel",
-    "name":  "soulbound steel",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Metal",
-    "material_sub_category":  "Exotic",
-    "rarity":  "Very Rare",
-    "cost":  {
-                 "quantity":  500,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Cannot be disarmed; returns to owner\u0027s hand as a bonus action."
-             ],
-    "properties":  [
-                       "Bonds",
-                       "Loyal"
-                   ],
-    "source":  "Homebrew",
-    "url":  "public/assets/atlas/crafting/json/soulbound_steel.json",
-    "updated_at":  "2026-04-03T13:31:37.596Z",
-    "image":  "public/assets/atlas/crafting/soulbound_steel.webp"
+{
+  "index": "soulbound_steel",
+  "name": "soulbound steel",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Metal",
+  "material_sub_category": "Exotic",
+  "rarity": "Very Rare",
+  "cost": {
+    "quantity": 500,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Cannot be disarmed; returns to owner's hand as a bonus action."
+  ],
+  "properties": [
+    "Bonds",
+    "Loyal"
+  ],
+  "source": "Homebrew",
+  "url": "public/assets/atlas/crafting/json/soulbound_steel.json",
+  "updated_at": "2026-04-11T19:12:39.512Z",
+  "image": "public/assets/atlas/crafting/soulbound_steel.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/soulbound_steel.webp"
 }
