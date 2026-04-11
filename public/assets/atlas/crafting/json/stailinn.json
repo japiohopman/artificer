@@ -1,28 +1,31 @@
-﻿{
-    "index":  "stailinn",
-    "name":  "stailinn",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Metal",
-    "material_sub_category":  "Common",
-    "rarity":  "Common",
-    "cost":  {
-                 "quantity":  1,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "Standard high-quality steel; +1 to damage rolls (non-magical)."
-             ],
-    "properties":  [
-                       "Flexible",
-                       "Sharp"
-                   ],
-    "source":  "Homebrew",
-    "url":  "public/assets/atlas/crafting/json/stailinn.json",
-    "updated_at":  "2026-04-03T13:31:37.604Z",
-    "image":  "public/assets/atlas/crafting/stailinn.webp"
+{
+  "index": "stailinn",
+  "name": "stailinn",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Metal",
+  "material_sub_category": "Common",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Standard high-quality steel; +1 to damage rolls (non-magical)."
+  ],
+  "properties": [
+    "Flexible",
+    "Sharp"
+  ],
+  "source": "Homebrew",
+  "url": "public/assets/atlas/crafting/json/stailinn.json",
+  "updated_at": "2026-04-11T19:12:42.000Z",
+  "image": "public/assets/atlas/crafting/stailinn.webp",
+  "category": "Raw Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/stailinn.webp"
 }
