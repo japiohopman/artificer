@@ -15,10 +15,7 @@
   },
   "weight": "10",
   "desc": [
-    "Adamantine was the name of five jet-black alloys of adamant. Usually black in color, adamantine had a green sheen when viewed by candlelight or a purple-white sheen when viewed by magical light. ",
-    "",
-    "Uses",
-    "Armor, weapons, harbor chains"
+    "Critical hits against wearer become normal hits; weapons bypass object damage threshold."
   ],
   "properties": [
     "Hard",
@@ -26,9 +23,9 @@
   ],
   "source": "5e SRD",
   "url": "public/assets/atlas/crafting/json/adamantine.json",
-  "updated_at": "2026-04-11T15:08:44.457Z",
+  "updated_at": "2026-04-11T19:11:24.228Z",
   "image": "public/assets/atlas/crafting/adamantine.webp",
   "imageUrl": "/assets/atlas/crafting/adamantine.webp",
   "last_updated": "11-4-2026",
-  "category": "Materials"
+  "category": "Raw Materials"
 }
