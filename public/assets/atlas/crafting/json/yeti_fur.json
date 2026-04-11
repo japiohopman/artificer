@@ -1,28 +1,31 @@
-﻿{
-    "index":  "yeti_fur",
-    "name":  "yeti fur",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Fiber",
-    "material_sub_category":  "Monster",
-    "rarity":  "Uncommon",
-    "cost":  {
-                 "quantity":  10,
-                 "unit":  "gp"
-             },
-    "weight":  0.1,
-    "desc":  [
-                 "Grants Resistance to Cold damage and Advantage on Stealth in snow."
-             ],
-    "properties":  [
-                       "Insulating",
-                       "White"
-                   ],
-    "source":  "Monster Manual",
-    "url":  "public/assets/atlas/crafting/json/yeti_fur.json",
-    "updated_at":  "2026-04-03T13:31:37.827Z",
-    "image":  "public/assets/atlas/crafting/yeti_fur.webp"
+{
+  "index": "yeti_fur",
+  "name": "yeti fur",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Fiber",
+  "material_sub_category": "Monster",
+  "rarity": "Uncommon",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "Grants Resistance to Cold damage and Advantage on Stealth in snow."
+  ],
+  "properties": [
+    "Insulating",
+    "White"
+  ],
+  "source": "Monster Manual",
+  "url": "public/assets/atlas/crafting/json/yeti_fur.json",
+  "updated_at": "2026-04-11T19:13:40.228Z",
+  "image": "public/assets/atlas/crafting/yeti_fur.webp",
+  "category": "Common Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/yeti_fur.webp"
 }
