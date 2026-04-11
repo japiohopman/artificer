@@ -1,28 +1,31 @@
-﻿{
-    "index":  "fog_rock",
-    "name":  "fog rock",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Stone",
-    "material_sub_category":  "Exotic",
-    "rarity":  "Uncommon",
-    "cost":  {
-                 "quantity":  10,
-                 "unit":  "gp"
-             },
-    "weight":  1,
-    "desc":  [
-                 "When crushed, creates a 10ft cloud of \u0027Fog Cloud\u0027."
-             ],
-    "properties":  [
-                       "Vaporous",
-                       "Obscuring"
-                   ],
-    "source":  "Homebrew",
-    "url":  "public/assets/atlas/crafting/json/fog_rock.json",
-    "updated_at":  "2026-04-03T13:31:37.691Z",
-    "image":  "public/assets/atlas/crafting/fog_rock.webp"
+{
+  "index": "fog_rock",
+  "name": "fog rock",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Stone",
+  "material_sub_category": "Exotic",
+  "rarity": "Uncommon",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "When crushed, creates a 10ft cloud of 'Fog Cloud'."
+  ],
+  "properties": [
+    "Vaporous",
+    "Obscuring"
+  ],
+  "source": "Homebrew",
+  "url": "public/assets/atlas/crafting/json/fog_rock.json",
+  "updated_at": "2026-04-11T19:13:06.655Z",
+  "image": "public/assets/atlas/crafting/fog_rock.webp",
+  "category": "Common Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/fog_rock.webp"
 }
