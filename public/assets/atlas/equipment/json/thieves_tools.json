@@ -17,10 +17,14 @@
     "This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks."
   ],
   "url": "public/assets/atlas/equipment/json/thieves_tools.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-11T16:30:21.219Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/thieves_tools.webp",
   "sprite_index": 15,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/thieves_tools.webp",
+  "_type": "equipment",
+  "category": "Other Tools",
+  "last_updated": "11-4-2026"
 }
