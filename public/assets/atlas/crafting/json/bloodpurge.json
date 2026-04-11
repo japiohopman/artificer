@@ -1,28 +1,31 @@
-﻿{
-    "index":  "bloodpurge",
-    "name":  "bloodpurge",
-    "equipment_category":  {
-                               "url":  "public/assets/atlas/equipment_categories/materials",
-                               "name":  "Materials",
-                               "index":  "materials"
-                           },
-    "material_category":  "Herb",
-    "material_sub_category":  "Flora",
-    "rarity":  "Common",
-    "cost":  {
-                 "quantity":  1,
-                 "unit":  "gp"
-             },
-    "weight":  0.1,
-    "desc":  [
-                 "Crafts Antitoxin; grants Advantage on saves vs Poison for 1 hour."
-             ],
-    "properties":  [
-                       "Anti-toxin",
-                       "Bitter"
-                   ],
-    "source":  "Forgotten Realms",
-    "url":  "public/assets/atlas/crafting/json/bloodpurge.json",
-    "updated_at":  "2026-04-03T13:31:37.566Z",
-    "image":  "public/assets/atlas/crafting/bloodpurge.webp"
+{
+  "index": "bloodpurge",
+  "name": "bloodpurge",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Herb",
+  "material_sub_category": "Flora",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "Crafts Antitoxin; grants Advantage on saves vs Poison for 1 hour."
+  ],
+  "properties": [
+    "Anti-toxin",
+    "Bitter"
+  ],
+  "source": "Forgotten Realms",
+  "url": "public/assets/atlas/crafting/json/bloodpurge.json",
+  "updated_at": "2026-04-11T19:12:31.214Z",
+  "image": "public/assets/atlas/crafting/bloodpurge.webp",
+  "category": "Common Materials",
+  "last_updated": "11-4-2026",
+  "imageUrl": "/assets/atlas/crafting/bloodpurge.webp"
 }
