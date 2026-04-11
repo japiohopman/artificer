@@ -1,5 +1,366 @@
 {
   "name": "Common Materials",
   "index": "common_materials",
-  "materials": []
+  "materials": [
+    {
+      "name": "Red Dragon Blood",
+      "index": "red_dragon_blood"
+    },
+    {
+      "name": "Blue Dragon Blood",
+      "index": "blue_dragon_blood"
+    },
+    {
+      "name": "Black Dragon Blood",
+      "index": "black_dragon_blood"
+    },
+    {
+      "name": "Green Dragon Blood",
+      "index": "green_dragon_blood"
+    },
+    {
+      "name": "White Dragon Blood",
+      "index": "white_dragon_blood"
+    },
+    {
+      "name": "Dragon Heart String",
+      "index": "dragon_heart_string"
+    },
+    {
+      "name": "Dragon Eye",
+      "index": "dragon_eye"
+    },
+    {
+      "name": "Dragon Sinew",
+      "index": "dragon_sinew"
+    },
+    {
+      "name": "Dragon Tongue",
+      "index": "dragon_tongue"
+    },
+    {
+      "name": "Faerie Dragon Wing",
+      "index": "faerie_dragon_wing"
+    },
+    {
+      "name": "Aboleth Mucus",
+      "index": "aboleth_mucus"
+    },
+    {
+      "name": "Basilisk Eye",
+      "index": "basilisk_eye"
+    },
+    {
+      "name": "Hydra Blood",
+      "index": "hydra_blood"
+    },
+    {
+      "name": "Rust Monster Antenna",
+      "index": "rust_monster_antenna"
+    },
+    {
+      "name": "Troll Fat",
+      "index": "troll_fat"
+    },
+    {
+      "name": "Voidglass",
+      "index": "voidglass"
+    },
+    {
+      "name": "Glassteel",
+      "index": "glassteel"
+    },
+    {
+      "name": "Firestone",
+      "index": "firestone"
+    },
+    {
+      "name": "Spirit Stone",
+      "index": "spirit_stone"
+    },
+    {
+      "name": "Bloodpurge",
+      "index": "bloodpurge"
+    },
+    {
+      "name": "Bloodstaunch",
+      "index": "bloodstaunch"
+    },
+    {
+      "name": "Blueglow Moss",
+      "index": "blueglow_moss"
+    },
+    {
+      "name": "Fairy Dust",
+      "index": "fairy_dust"
+    },
+    {
+      "name": "Sleepweed",
+      "index": "sleepweed"
+    },
+    {
+      "name": "Mule Pollen",
+      "index": "mule_pollen"
+    },
+    {
+      "name": "Obsidian",
+      "index": "obsidian"
+    },
+    {
+      "name": "Ceramic",
+      "index": "ceramic"
+    },
+    {
+      "name": "Earth/Clay",
+      "index": "earthclay"
+    },
+    {
+      "name": "Ice",
+      "index": "ice"
+    },
+    {
+      "name": "Marlite",
+      "index": "marlite"
+    },
+    {
+      "name": "Vermite",
+      "index": "vermite"
+    },
+    {
+      "name": "Vrilgonite",
+      "index": "vrilgonite"
+    },
+    {
+      "name": "Plutite",
+      "index": "plutite"
+    },
+    {
+      "name": "Coddleweb",
+      "index": "coddleweb"
+    },
+    {
+      "name": "Nanoweave",
+      "index": "nanoweave"
+    },
+    {
+      "name": "Rubber",
+      "index": "rubber"
+    },
+    {
+      "name": "Cork",
+      "index": "cork"
+    },
+    {
+      "name": "Amber",
+      "index": "amber"
+    },
+    {
+      "name": "Quartz",
+      "index": "quartz"
+    },
+    {
+      "name": "Sunstone",
+      "index": "sunstone"
+    },
+    {
+      "name": "Moonstone",
+      "index": "moonstone"
+    },
+    {
+      "name": "Sapphire",
+      "index": "sapphire"
+    },
+    {
+      "name": "Garnet",
+      "index": "garnet"
+    },
+    {
+      "name": "Jade",
+      "index": "jade"
+    },
+    {
+      "name": "Coral",
+      "index": "coral"
+    },
+    {
+      "name": "Salt Crystal",
+      "index": "salt_crystal"
+    },
+    {
+      "name": "Fog Rock",
+      "index": "fog_rock"
+    },
+    {
+      "name": "Kraken Ink",
+      "index": "kraken_ink"
+    },
+    {
+      "name": "Phoenix Feather",
+      "index": "phoenix_feather"
+    },
+    {
+      "name": "Beholder Eye",
+      "index": "beholder_eye"
+    },
+    {
+      "name": "Mimic Adhesive",
+      "index": "mimic_adhesive"
+    },
+    {
+      "name": "Shambling Mound Vine",
+      "index": "shambling_mound_vine"
+    },
+    {
+      "name": "Wight Essence",
+      "index": "wight_essence"
+    },
+    {
+      "name": "Wraith Ectoplasm",
+      "index": "wraith_ectoplasm"
+    },
+    {
+      "name": "Aboleth Psi-Ichor",
+      "index": "aboleth_psiichor"
+    },
+    {
+      "name": "Chimera Heart",
+      "index": "chimera_heart"
+    },
+    {
+      "name": "Remorhaz Core",
+      "index": "remorhaz_core"
+    },
+    {
+      "name": "Roc Feather",
+      "index": "roc_feather"
+    },
+    {
+      "name": "Sahuagin Heart",
+      "index": "sahuagin_heart"
+    },
+    {
+      "name": "Shadow Essence",
+      "index": "shadow_essence"
+    },
+    {
+      "name": "Sphinx Sand",
+      "index": "sphinx_sand"
+    },
+    {
+      "name": "Treant Sap",
+      "index": "treant_sap"
+    },
+    {
+      "name": "Vampire Dust",
+      "index": "vampire_dust"
+    },
+    {
+      "name": "Xorn Crystal",
+      "index": "xorn_crystal"
+    },
+    {
+      "name": "Yeti Fur",
+      "index": "yeti_fur"
+    },
+    {
+      "name": "Behir Breath Gland",
+      "index": "behir_breath_gland"
+    },
+    {
+      "name": "Couatl Feather",
+      "index": "couatl_feather"
+    },
+    {
+      "name": "Drider Silk",
+      "index": "drider_silk"
+    },
+    {
+      "name": "Efreeti Ember",
+      "index": "efreeti_ember"
+    },
+    {
+      "name": "Gargoyle Heart",
+      "index": "gargoyle_heart"
+    },
+    {
+      "name": "Gelatinous Cube Essence",
+      "index": "gelatinous_cube_essence"
+    },
+    {
+      "name": "Harpy Vocal Cord",
+      "index": "harpy_vocal_cord"
+    },
+    {
+      "name": "Hell Hound Tongue",
+      "index": "hell_hound_tongue"
+    },
+    {
+      "name": "Intellect Devourer Brain",
+      "index": "intellect_devourer_brain"
+    },
+    {
+      "name": "Lamia Dust",
+      "index": "lamia_dust"
+    },
+    {
+      "name": "Medusa Snake-Hair",
+      "index": "medusa_snakehair"
+    },
+    {
+      "name": "Nightmare Hoof",
+      "index": "nightmare_hoof"
+    },
+    {
+      "name": "Pegasus Wing",
+      "index": "pegasus_wing"
+    },
+    {
+      "name": "Roper Tentacle",
+      "index": "roper_tentacle"
+    },
+    {
+      "name": "Rust Monster Blood",
+      "index": "rust_monster_blood"
+    },
+    {
+      "name": "Shadow Demon Essence",
+      "index": "shadow_demon_essence"
+    },
+    {
+      "name": "Shambling Mound Root",
+      "index": "shambling_mound_root"
+    },
+    {
+      "name": "Specter Rags",
+      "index": "specter_rags"
+    },
+    {
+      "name": "Treant Leaf",
+      "index": "treant_leaf"
+    },
+    {
+      "name": "Unicorn Hair",
+      "index": "unicorn_hair"
+    },
+    {
+      "name": "Water Elemental Essence",
+      "index": "water_elemental_essence"
+    },
+    {
+      "name": "Will-o'-Wisp Light",
+      "index": "willowisp_light"
+    },
+    {
+      "name": "Wraith Essence",
+      "index": "wraith_essence"
+    },
+    {
+      "name": "Yeti Eye",
+      "index": "yeti_eye"
+    },
+    {
+      "name": "Zombie Flesh",
+      "index": "zombie_flesh"
+    }
+  ]
 }
