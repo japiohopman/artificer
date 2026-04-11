@@ -15,7 +15,7 @@
   },
   "weight": 1,
   "desc": [
-    "Arambarium is a translucent, bone-marrow resin that pulses with the rhythmic, discordant heartbeat of the entity from which it was harvested. When worked by a master smith, the material drinks in the ambient misery of its surroundings, hardening into a jagged, vein-etched obsidian that hungers for the warmth of living flesh."
+    "Enhances Thunder damage by +1d4."
   ],
   "properties": [
     "Resonant",
@@ -23,9 +23,10 @@
   ],
   "source": "Forgotten Realms",
   "url": "public/assets/atlas/crafting/json/arambarium.json",
-  "updated_at": "2026-04-11T16:27:41.218Z",
+  "updated_at": "2026-04-11T19:11:35.850Z",
   "image": "public/assets/atlas/crafting/arambarium.webp",
   "imageUrl": "/assets/atlas/crafting/arambarium.webp",
   "_type": "materials",
-  "last_updated": "11-4-2026"
+  "last_updated": "11-4-2026",
+  "category": "Raw Materials"
 }
