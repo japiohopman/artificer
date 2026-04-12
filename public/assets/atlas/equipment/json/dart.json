@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Forged from cold, blackened iron and tipped with a residue that smells faintly of copper and rot, this dart whispers of silent executions in fog-choked alleys. Its balance is lethal, designed not for sport, but to find the precise, shuddering gap between a victim's ribs."
+  ],
   "special": [],
   "index": "dart",
   "name": "dart",
@@ -45,9 +47,13 @@
     "long": 60
   },
   "url": "public/assets/atlas/equipment/json/dart.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T08:14:34.777Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/dart.webp",
   "sprite_index": 24,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/equipment/dart.webp",
+  "_type": "equipment",
+  "category": "Simple Ranged Weapons",
+  "last_updated": "12-4-2026"
 }
