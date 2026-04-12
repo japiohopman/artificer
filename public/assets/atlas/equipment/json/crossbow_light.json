@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Forged from black iron that seems to leech the warmth from your grip, this crossbow hums with a lingering, hollow thirst for the lifeblood of its next target. Its mechanism clicks with the rhythmic precision of a gallows trap, turning every bolt into a cold, silent promise of an early grave."
+  ],
   "special": [],
   "index": "crossbow_light",
   "name": "crossbow, light",
@@ -46,9 +48,13 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/crossbow_light.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T08:10:38.915Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/crossbow_light.webp",
   "sprite_index": 20,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/equipment/crossbow_light.webp",
+  "_type": "equipment",
+  "category": "Simple Ranged Weapons",
+  "last_updated": "12-4-2026"
 }
