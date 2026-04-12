@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "A weathered canvas satchel stained with the copper tang of dried blood and the grime of a dozen forgotten graves. Inside, the rope is frayed from desperate knots and the rations taste of ash, serving as a grim testament to the last soul who thought they could outrun the encroaching dark."
+  ],
   "special": [],
   "index": "explorers_pack",
   "name": "explorer's pack",
@@ -84,9 +86,13 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/explorers_pack.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T07:50:46.046Z",
   "properties": [],
   "image": "public/assets/atlas/equipment/explorers_pack.webp",
   "sprite_index": 10,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/explorers_pack.webp",
+  "_type": "equipment",
+  "category": "Equipment Packs",
+  "last_updated": "12-4-2026"
 }
