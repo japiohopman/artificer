@@ -21,10 +21,14 @@
     "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl."
   ],
   "url": "public/assets/atlas/equipment/json/mess_kit.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T08:01:51.601Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/mess_kit.webp",
   "sprite_index": 14,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/mess_kit.webp",
+  "_type": "equipment",
+  "category": "Kits",
+  "last_updated": "12-4-2026"
 }
