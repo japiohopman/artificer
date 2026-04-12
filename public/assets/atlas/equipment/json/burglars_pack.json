@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Stained with the phantom scent of cold stone and graveyard loam, this kit contains the desperate tools needed to breach the thresholds of the dead and the damned. Within its oil-slicked canvas, a collection of skeleton keys and silenced implements wait to serve the hands of those who prefer the shadow of a lockpick to the weight of a sword."
+  ],
   "special": [],
   "index": "burglars_pack",
   "name": "burglar's pack",
@@ -132,9 +134,13 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/burglars_pack.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T07:43:42.711Z",
   "properties": [],
   "image": "public/assets/atlas/equipment/burglars_pack.webp",
   "sprite_index": 15,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/burglars_pack.webp",
+  "_type": "equipment",
+  "category": "Equipment Packs",
+  "last_updated": "12-4-2026"
 }
