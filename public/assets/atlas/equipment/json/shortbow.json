@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "The wood of this bow is perpetually cold to the touch, carved from the gnarled marrow-root of a hangman’s tree that has tasted nothing but shadow. Each drawn string hums with the low, discordant vibration of a death rattle, eager to trade the breath in a target's lungs for the silence of the grave."
+  ],
   "special": [],
   "index": "shortbow",
   "name": "shortbow",
@@ -41,9 +43,13 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/shortbow.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T08:12:42.550Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/shortbow.webp",
   "sprite_index": 17,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/shortbow.webp",
+  "_type": "equipment",
+  "category": "Simple Ranged Weapons",
+  "last_updated": "12-4-2026"
 }
