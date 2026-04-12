@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Tucked amidst the pristine parchment and fine sealing wax are velvet-lined compartments for vials of quicksilver poison and a dagger honed to a needle point. It is a kit designed for those who understand that a well-placed word is merely the prelude to a quiet assassination."
+  ],
   "special": [],
   "index": "diplomats_pack",
   "name": "diplomat's pack",
@@ -108,9 +110,13 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/diplomats_pack.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T07:45:27.035Z",
   "properties": [],
   "image": "public/assets/atlas/equipment/diplomats_pack.webp",
   "sprite_index": 1,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/diplomats_pack.webp",
+  "_type": "equipment",
+  "category": "Equipment Packs",
+  "last_updated": "12-4-2026"
 }
