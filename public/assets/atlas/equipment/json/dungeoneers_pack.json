@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Stained with the copper tang of old blood and the grit of subterranean deeps, this weathered rucksack holds the essential tools for those who walk where light fears to tread. It is a grim tether to civilization, housing the fragile necessities that keep a delve from becoming a permanent tomb."
+  ],
   "special": [],
   "index": "dungeoneers_pack",
   "name": "dungeoneer's pack",
@@ -92,9 +94,13 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/dungeoneers_pack.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T07:46:37.552Z",
   "properties": [],
   "image": "public/assets/atlas/equipment/dungeoneers_pack.webp",
   "sprite_index": 6,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/dungeoneers_pack.webp",
+  "_type": "equipment",
+  "category": "Equipment Packs",
+  "last_updated": "12-4-2026"
 }
