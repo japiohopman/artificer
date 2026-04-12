@@ -21,10 +21,14 @@
     "An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
   ],
   "url": "public/assets/atlas/equipment/json/wand.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T08:21:12.383Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/wand.webp",
   "sprite_index": 0,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp",
+  "imageUrl": "/assets/atlas/equipment/wand.webp",
+  "_type": "equipment",
+  "category": "Arcane Foci",
+  "last_updated": "12-4-2026"
 }
