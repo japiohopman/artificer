@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "This collection of greasepaint, gaudy silks, and discarded stage props reeks of stale perfume and the metallic tang of dried blood, serving as a desperate mask for the horrors one must perform to survive. Within its depths lie the tools not just for a show, but for a meticulously choreographed deception meant to hide the darkness behind a performer’s grin."
+  ],
   "special": [],
   "index": "entertainers_pack",
   "name": "entertainer's pack",
@@ -76,9 +78,13 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/entertainers_pack.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T07:49:19.143Z",
   "properties": [],
   "image": "public/assets/atlas/equipment/entertainers_pack.webp",
   "sprite_index": 9,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/entertainers_pack.webp",
+  "_type": "equipment",
+  "category": "Equipment Packs",
+  "last_updated": "12-4-2026"
 }
