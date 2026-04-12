@@ -18,13 +18,17 @@
   },
   "weight": 3,
   "desc": [
-    "This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing."
+    "This leather-bound roll reeks of iron and loam, its stained glass vials holding tinctures distilled from grave-moss and night-blooming hemlock. Within, rusted silver shears rest beside a mortar caked in the dried, blackened residue of roots that only thrive where something has breathed its last."
   ],
   "url": "public/assets/atlas/equipment/json/herbalism_kit.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T07:58:30.831Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/herbalism_kit.webp",
   "sprite_index": 4,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+  "imageUrl": "/assets/atlas/equipment/herbalism_kit.webp",
+  "_type": "equipment",
+  "category": "Kits",
+  "last_updated": "12-4-2026"
 }
