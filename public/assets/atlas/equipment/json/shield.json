@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Forged from cold, light-drinking iron, this shield bears the weeping face of a martyr whose final, silent scream still vibrates against the arm of its bearer. Its surface is perpetually slick with a phantom gore that refuses to be wiped away, feeding on the life-force of those who seek refuge behind its wall of sorrow."
+  ],
   "special": [],
   "index": "shield",
   "name": "shield",
@@ -21,10 +23,14 @@
     "unit": "gp"
   },
   "url": "public/assets/atlas/equipment/json/shield.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T08:06:36.452Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/shield.webp",
   "sprite_index": 16,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/shield.webp",
+  "_type": "equipment",
+  "category": "Shields",
+  "last_updated": "12-4-2026"
 }
