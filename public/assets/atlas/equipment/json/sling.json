@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "A strip of cured flesh taken from a forgotten martyr, this sling whistles with a hollow, mournful shriek as it sends jagged bone fragments tearing through the air. The leather grows slick and warm in the grip, as if the relic hungers for the spray of a fresh kill."
+  ],
   "special": [],
   "index": "sling",
   "name": "sling",
@@ -36,9 +38,13 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/sling.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T08:16:28.770Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/sling.webp",
   "sprite_index": 0,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/sling.webp",
+  "_type": "equipment",
+  "category": "Simple Ranged Weapons",
+  "last_updated": "12-4-2026"
 }
