@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "The canvas is stained with the copper tang of dried blood and the cloying scent of stale incense, concealing holy symbols that have long since stopped warding off the encroaching dark. Tucked beneath the frayed straps are the tools of a shepherd who buried his faith in the same soil as his slaughtered flock."
+  ],
   "special": [],
   "index": "priests_pack",
   "name": "priest's pack",
@@ -100,9 +102,13 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/priests_pack.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T07:42:05.565Z",
   "properties": [],
   "image": "public/assets/atlas/equipment/priests_pack.webp",
   "sprite_index": 15,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/priests_pack.webp",
+  "_type": "equipment",
+  "category": "Equipment Packs",
+  "last_updated": "12-4-2026"
 }
