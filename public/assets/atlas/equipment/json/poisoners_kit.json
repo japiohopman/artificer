@@ -21,10 +21,14 @@
     "A poisoner's kit includes the vials, chemicals, and other equipment necessary for the creation of poisons. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to craft or use poisons."
   ],
   "url": "public/assets/atlas/equipment/json/poisoners_kit.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-12T08:03:17.057Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/poisoners_kit.webp",
   "sprite_index": 9,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/poisoners_kit.webp",
+  "_type": "equipment",
+  "category": "Kits",
+  "last_updated": "12-4-2026"
 }
