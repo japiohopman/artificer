@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "The iron head is permanently stained a rusted, bruised violet, as if the steel itself has grown weary of the thirst it developed in the hands of the previous owner. Its haft is wrapped in cured, sun-bleached hide that hums with a faint, rhythmic vibration, mimicking the final, frantic heartbeat of its last victim."
+  ],
   "special": [],
   "index": "handaxe",
   "name": "handaxe",
@@ -49,9 +51,12 @@
     "long": 60
   },
   "url": "public/assets/atlas/equipment/json/handaxe.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-14T08:19:47.590Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/handaxe.webp",
   "sprite_index": 2,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+  "imageUrl": "/assets/atlas/equipment/handaxe.webp",
+  "_type": "equipment",
+  "last_updated": "14-4-2026"
 }
