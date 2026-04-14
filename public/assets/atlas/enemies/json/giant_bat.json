@@ -68,10 +68,15 @@
   ],
   "image": "public/assets/atlas/enemies/giant_bat.webp",
   "url": "public/assets/atlas/enemies/json/giant_bat.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-14T21:03:41.370Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 14,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp",
+  "imageUrl": "/assets/atlas/enemies/giant_bat.webp",
+  "_type": "enemies",
+  "background_type": "cave",
+  "rarity": "Uncommon",
+  "last_updated": "14-4-2026"
 }
