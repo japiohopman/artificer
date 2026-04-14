@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "The cold, serrated edge of this blade is stained with a permanent, rusted patina, whispering of harvests that yielded blood instead of grain. It hungers for the soft sinew of the living, leaving wounds that fester with the bitter chill of an unmarked grave."
+  ],
   "special": [],
   "index": "sickle",
   "name": "sickle",
@@ -40,9 +42,13 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/sickle.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-14T08:14:24.663Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/sickle.webp",
   "sprite_index": 20,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/sickle.webp",
+  "_type": "equipment",
+  "category": "Melee Weapons",
+  "last_updated": "14-4-2026"
 }
