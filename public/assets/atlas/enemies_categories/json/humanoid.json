@@ -2,6 +2,13 @@
   "name": "Humanoids",
   "index": "humanoid",
   "monsters": [
-    { "name": "Werebear (Human Form)", "index": "werebear-human" }
+    { 
+      "name": "Werebear (Human Form)", 
+      "index": "werebear-human",
+      "size": "Medium",
+      "type": "Humanoid",
+      "subtype": "human, shapechanger",
+      "tags": ["shapechanger", "werebear", "good"]
+    }
   ]
 }
