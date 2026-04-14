@@ -115,10 +115,23 @@
   ],
   "image": "public/assets/atlas/enemies/purple_worm.webp",
   "url": "public/assets/atlas/enemies/json/purple_worm.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-14T13:25:59.916Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 2,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet10.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet10.webp",
+  "imageUrl": "/assets/atlas/enemies/purple_worm.webp",
+  "_type": "enemies",
+  "rarity": "Very Rare",
+  "item_drops": [
+    {
+      "name": "800 gp",
+      "rarity": "Common",
+      "quantity": "1d10",
+      "type": "currency"
+    }
+  ],
+  "background_type": "desert",
+  "last_updated": "14-4-2026"
 }
