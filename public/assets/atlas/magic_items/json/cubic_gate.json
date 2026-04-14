@@ -6,9 +6,7 @@
     "name": "wondrous items",
     "url": "public/assets/atlas/equipment_categories/wondrous_items"
   },
-  "rarity": {
-    "name": "legendary"
-  },
+  "rarity": "Legendary",
   "variants": [],
   "variant": false,
   "desc": [
@@ -19,5 +17,10 @@
   ],
   "image": "public/assets/atlas/magic_items/cubic_gate.webp",
   "url": "public/assets/atlas/magic_items/json/cubic_gate.json",
-  "updated_at": "2025-10-24T20:42:13.517Z"
+  "updated_at": "2026-04-14T10:28:15.584Z",
+  "imageUrl": "/assets/atlas/magic_items/images/cubic_gate.webp",
+  "_type": "equipment",
+  "category": "Wondrous Items",
+  "weight": "0",
+  "last_updated": "14-4-2026"
 }
