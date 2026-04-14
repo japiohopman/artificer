@@ -6,9 +6,7 @@
     "name": "wondrous items",
     "url": "public/assets/atlas/equipment_categories/wondrous_items"
   },
-  "rarity": {
-    "name": "uncommon"
-  },
+  "rarity": "Uncommon",
   "variants": [],
   "variant": true,
   "desc": [
@@ -17,5 +15,8 @@
   ],
   "image": "public/assets/atlas/magic_items/elemental_gem_air.webp",
   "url": "public/assets/atlas/magic_items/json/elemental_gem_air.json",
-  "updated_at": "2025-10-24T20:42:13.517Z"
+  "updated_at": "2026-04-14T10:31:23.374Z",
+  "imageUrl": "/assets/atlas/magic_items/images/elemental_gem_air.webp",
+  "_type": "equipment",
+  "last_updated": "14-4-2026"
 }
