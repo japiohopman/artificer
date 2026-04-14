@@ -6,9 +6,7 @@
     "name": "wondrous items",
     "url": "public/assets/atlas/equipment_categories/wondrous_items"
   },
-  "rarity": {
-    "name": "uncommon"
-  },
+  "rarity": "Legendary",
   "variants": [],
   "variant": false,
   "desc": [
@@ -55,5 +53,9 @@
   ],
   "image": "public/assets/atlas/magic_items/deck_of_illusions.webp",
   "url": "public/assets/atlas/magic_items/json/deck_of_illusions.json",
-  "updated_at": "2025-10-24T20:42:13.517Z"
+  "updated_at": "2026-04-14T13:49:56.446Z",
+  "imageUrl": "/assets/atlas/magic_items/images/deck_of_illusions.webp",
+  "_type": "equipment",
+  "category": "Wondrous Items",
+  "last_updated": "14-4-2026"
 }
