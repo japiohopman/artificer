@@ -6,9 +6,7 @@
     "name": "wondrous items",
     "url": "public/assets/atlas/equipment_categories/wondrous_items"
   },
-  "rarity": {
-    "name": "rare"
-  },
+  "rarity": "Legendary",
   "variants": [],
   "variant": false,
   "desc": [
@@ -18,5 +16,8 @@
   ],
   "image": "public/assets/atlas/magic_items/cloak_of_the_bat.webp",
   "url": "public/assets/atlas/magic_items/json/cloak_of_the_bat.json",
-  "updated_at": "2025-10-24T20:42:13.517Z"
+  "updated_at": "2026-04-14T13:51:22.500Z",
+  "imageUrl": "/assets/atlas/magic_items/images/cloak_of_the_bat.webp",
+  "_type": "equipment",
+  "last_updated": "14-4-2026"
 }
