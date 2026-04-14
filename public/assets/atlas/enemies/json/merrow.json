@@ -162,7 +162,7 @@
   ],
   "image": "public/assets/atlas/enemies/merrow.webp",
   "url": "public/assets/atlas/enemies/json/merrow.json",
-  "updated_at": "2026-04-14T06:08:27.750Z",
+  "updated_at": "2026-04-14T06:09:10.250Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
@@ -171,5 +171,6 @@
   "imageUrl": "/assets/atlas/enemies/merrow.webp",
   "_type": "enemies",
   "rarity": "Uncommon",
-  "last_updated": "14-4-2026"
+  "last_updated": "14-4-2026",
+  "background_type": "water"
 }
