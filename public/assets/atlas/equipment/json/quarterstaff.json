@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Forged from the petrified marrow of a nameless saint, this staff hums with a hollow, rhythmic vibration that mimics the slowing heartbeat of the creature it last struck. Its surface is slick with a permanent, icy dew that smells faintly of turned earth and old, unburied sins."
+  ],
   "special": [],
   "index": "quarterstaff",
   "name": "quarterstaff",
@@ -48,9 +50,12 @@
     }
   },
   "url": "public/assets/atlas/equipment/json/quarterstaff.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-14T10:57:13.765Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/quarterstaff.webp",
   "sprite_index": 16,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/quarterstaff.webp",
+  "_type": "equipment",
+  "last_updated": "14-4-2026"
 }
