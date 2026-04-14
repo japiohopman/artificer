@@ -122,10 +122,15 @@
   ],
   "image": "public/assets/atlas/enemies/gelatinous_cube.webp",
   "url": "public/assets/atlas/enemies/json/gelatinous_cube.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-14T19:34:11.775Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 8,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp",
+  "imageUrl": "/assets/atlas/enemies/gelatinous_cube.webp",
+  "_type": "enemies",
+  "rarity": "Very Rare",
+  "background_type": "church",
+  "last_updated": "14-4-2026"
 }
