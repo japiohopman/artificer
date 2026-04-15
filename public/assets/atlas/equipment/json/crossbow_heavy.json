@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Forged from cold, blackened iron and smelling faintly of dried copper, this heavy crossbow releases its quarrel with a bone-shattering thud that lingers in the silence like a death knell. Its tensioned limbs are etched with jagged runes that seem to pulse whenever the bolt finds soft, yielding meat."
+  ],
   "special": [],
   "index": "crossbow_heavy",
   "name": "crossbow, heavy",
@@ -52,8 +54,16 @@
   ],
   "image": "public/assets/atlas/equipment/crossbow_heavy.webp",
   "url": "public/assets/atlas/equipment/json/crossbow_heavy.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-15T08:06:10.931Z",
   "contents": [],
   "sprite_index": 19,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/equipment/crossbow_heavy.webp",
+  "_type": "equipment",
+  "category": "Ranged Weapons",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "last_updated": "15-4-2026"
 }
