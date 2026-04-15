@@ -1,0 +1,69 @@
+{
+  "desc": [
+    "The heavy stock is cold, stained by the iron-scent of dried blood and the whispered curses of those who fell before its bolt. Its winching mechanism groans like a dying man, tensing a spring forged to punch through both plate armor and the prayers of the desperate."
+  ],
+  "special": [],
+  "index": "crossbow_heavy",
+  "name": "crossbow, heavy",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "public/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Ranged",
+  "category_range": "Martial Ranged",
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d10",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "public/assets/atlas/damage_types/piercing"
+    }
+  },
+  "range": {
+    "normal": 100,
+    "long": 400
+  },
+  "weight": 18,
+  "properties": [
+    {
+      "index": "ammunition",
+      "name": "ammunition",
+      "url": "public/assets/atlas/weapon_properties/ammunition"
+    },
+    {
+      "index": "heavy",
+      "name": "heavy",
+      "url": "public/assets/atlas/weapon_properties/heavy"
+    },
+    {
+      "index": "loading",
+      "name": "loading",
+      "url": "public/assets/atlas/weapon_properties/loading"
+    },
+    {
+      "index": "two_handed",
+      "name": "two_handed",
+      "url": "public/assets/atlas/weapon_properties/two_handed"
+    }
+  ],
+  "image": "public/assets/atlas/equipment/crossbow_heavy.webp",
+  "url": "public/assets/atlas/equipment/json/crossbow_heavy.json",
+  "updated_at": "2026-04-15T07:57:12.209Z",
+  "contents": [],
+  "sprite_index": 19,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/crossbow_heavy.webp",
+  "_type": "equipment",
+  "rarity": "Uncommon",
+  "category": "Ranged Weapons",
+  "slot": [
+    "hands"
+  ],
+  "last_updated": "15-4-2026"
+}
