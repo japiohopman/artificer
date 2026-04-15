@@ -16,6 +16,13 @@
     "While wearing this ring, you can turn invisible as an action. Anything you are wearing or carrying is invisible with you. You remain invisible until the ring is removed, until you attack or cast a spell, or until you use a bonus action to become visible again."
   ],
   "url": "public/assets/atlas/magic_items/json/ring_of_invisibility.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/ring_of_invisibility.webp"
+  "updated_at": "2026-04-15T09:24:51.598Z",
+  "image": "public/assets/atlas/magic_items/ring_of_invisibility.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/ring_of_invisibility.webp",
+  "_type": "equipment",
+  "category": "Ring",
+  "slot": [
+    "ring-1"
+  ],
+  "last_updated": "15-4-2026"
 }
