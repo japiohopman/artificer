@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
+  ],
   "special": [],
   "index": "leather_armor",
   "name": "leather armor",
@@ -21,10 +23,16 @@
     "unit": "gp"
   },
   "url": "public/assets/atlas/equipment/json/leather_armor.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-15T07:04:03.712Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/leather_armor.webp",
   "sprite_index": 23,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+  "imageUrl": "/assets/atlas/equipment/leather_armor.webp",
+  "category": "Armor",
+  "slot": [
+    "chest"
+  ],
+  "last_updated": "15-4-2026"
 }
