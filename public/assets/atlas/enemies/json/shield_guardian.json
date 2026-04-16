@@ -120,9 +120,14 @@
   ],
   "image": "public/assets/atlas/enemies/shield_guardian.webp",
   "url": "public/assets/atlas/enemies/json/shield_guardian.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-16T06:52:05.694Z",
   "forms": [],
   "legendary_actions": [],
   "sprite_index": 2,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp",
+  "imageUrl": "/assets/atlas/enemies/shield_guardian.webp",
+  "_type": "enemies",
+  "background_type": "land_urban",
+  "rarity": "Very Rare",
+  "last_updated": "16-4-2026"
 }
