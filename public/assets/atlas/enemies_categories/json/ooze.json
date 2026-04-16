@@ -1,5 +1,42 @@
 {
   "name": "Oozes",
   "index": "ooze",
-  "monsters": []
+  "monsters": [
+    {
+      "name": "black pudding",
+      "index": "black_pudding",
+      "size": "Large",
+      "type": "ooze",
+      "alignment": "unaligned",
+      "xp": 1100,
+      "challenge_rating": 4
+    },
+    {
+      "name": "gelatinous cube",
+      "index": "gelatinous_cube",
+      "size": "Large",
+      "type": "ooze",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "gray ooze",
+      "index": "gray_ooze",
+      "size": "Medium",
+      "type": "ooze",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "ochre jelly",
+      "index": "ochre_jelly",
+      "size": "Large",
+      "type": "ooze",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2
+    }
+  ]
 }
