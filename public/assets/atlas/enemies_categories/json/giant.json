@@ -1,5 +1,96 @@
 {
   "name": "Giants",
   "index": "giant",
-  "monsters": []
+  "monsters": [
+    {
+      "name": "cloud giant",
+      "index": "cloud_giant",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "neutral good (50%) or neutral evil (50%)",
+      "xp": 5000,
+      "challenge_rating": 9
+    },
+    {
+      "name": "ettin",
+      "index": "ettin",
+      "size": "Large",
+      "type": "giant",
+      "alignment": "chaotic evil",
+      "xp": 1100,
+      "challenge_rating": 4
+    },
+    {
+      "name": "fire giant",
+      "index": "fire_giant",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "lawful evil",
+      "xp": 5000,
+      "challenge_rating": 9
+    },
+    {
+      "name": "frost giant",
+      "index": "frost_giant",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "neutral evil",
+      "xp": 3900,
+      "challenge_rating": 8
+    },
+    {
+      "name": "hill giant",
+      "index": "hill_giant",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "chaotic evil",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "ogre",
+      "index": "ogre",
+      "size": "Large",
+      "type": "giant",
+      "alignment": "chaotic evil",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "oni",
+      "index": "oni",
+      "size": "Large",
+      "type": "giant",
+      "alignment": "lawful evil",
+      "xp": 2900,
+      "challenge_rating": 7
+    },
+    {
+      "name": "stone giant",
+      "index": "stone_giant",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "neutral",
+      "xp": 2900,
+      "challenge_rating": 7
+    },
+    {
+      "name": "storm giant",
+      "index": "storm_giant",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "chaotic good",
+      "xp": 10000,
+      "challenge_rating": 13
+    },
+    {
+      "name": "troll",
+      "index": "troll",
+      "size": "Large",
+      "type": "giant",
+      "alignment": "chaotic evil",
+      "xp": 1800,
+      "challenge_rating": 5
+    }
+  ]
 }
