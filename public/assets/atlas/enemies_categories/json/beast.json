@@ -1,5 +1,789 @@
 {
   "name": "Beasts",
   "index": "beast",
-  "monsters": []
+  "monsters": [
+    {
+      "name": "ape",
+      "index": "ape",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "axe beak",
+      "index": "axe_beak",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "baboon",
+      "index": "baboon",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "badger",
+      "index": "badger",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "bat",
+      "index": "bat",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "black bear",
+      "index": "black_bear",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "blood hawk",
+      "index": "blood_hawk",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "boar",
+      "index": "boar",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "brown bear",
+      "index": "brown_bear",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "camel",
+      "index": "camel",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "cat",
+      "index": "cat",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "constrictor snake",
+      "index": "constrictor_snake",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "crab",
+      "index": "crab",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "crocodile",
+      "index": "crocodile",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "deer",
+      "index": "deer",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "dire wolf",
+      "index": "dire_wolf",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "draft horse",
+      "index": "draft_horse",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "eagle",
+      "index": "eagle",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "elephant",
+      "index": "elephant",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 1100,
+      "challenge_rating": 4
+    },
+    {
+      "name": "elk",
+      "index": "elk",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "flying snake",
+      "index": "flying_snake",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "frog",
+      "index": "frog",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 0,
+      "challenge_rating": 0
+    },
+    {
+      "name": "giant ape",
+      "index": "giant_ape",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 2900,
+      "challenge_rating": 7
+    },
+    {
+      "name": "giant badger",
+      "index": "giant_badger",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "giant bat",
+      "index": "giant_bat",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "giant boar",
+      "index": "giant_boar",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "giant centipede",
+      "index": "giant_centipede",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "giant constrictor snake",
+      "index": "giant_constrictor_snake",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "giant crab",
+      "index": "giant_crab",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "giant crocodile",
+      "index": "giant_crocodile",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "giant eagle",
+      "index": "giant_eagle",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "neutral good",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "giant elk",
+      "index": "giant_elk",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "giant fire beetle",
+      "index": "giant_fire_beetle",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "giant frog",
+      "index": "giant_frog",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "giant goat",
+      "index": "giant_goat",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "giant hyena",
+      "index": "giant_hyena",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "giant lizard",
+      "index": "giant_lizard",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "giant octopus",
+      "index": "giant_octopus",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "giant owl",
+      "index": "giant_owl",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "neutral",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "giant poisonous snake",
+      "index": "giant_poisonous_snake",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "giant rat",
+      "index": "giant_rat",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "giant rat (diseased)",
+      "index": "giant_rat_diseased",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "giant scorpion",
+      "index": "giant_scorpion",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "giant sea horse",
+      "index": "giant_sea_horse",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "giant shark",
+      "index": "giant_shark",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "giant spider",
+      "index": "giant_spider",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "giant toad",
+      "index": "giant_toad",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "giant vulture",
+      "index": "giant_vulture",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "neutral evil",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "giant wasp",
+      "index": "giant_wasp",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "giant weasel",
+      "index": "giant_weasel",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "giant wolf spider",
+      "index": "giant_wolf_spider",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "goat",
+      "index": "goat",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "hawk",
+      "index": "hawk",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "hunter shark",
+      "index": "hunter_shark",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "hyena",
+      "index": "hyena",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "jackal",
+      "index": "jackal",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "killer whale",
+      "index": "killer_whale",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "lion",
+      "index": "lion",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "lizard",
+      "index": "lizard",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "mammoth",
+      "index": "mammoth",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 2300,
+      "challenge_rating": 6
+    },
+    {
+      "name": "mastiff",
+      "index": "mastiff",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "mule",
+      "index": "mule",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "octopus",
+      "index": "octopus",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "owl",
+      "index": "owl",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "panther",
+      "index": "panther",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "plesiosaurus",
+      "index": "plesiosaurus",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "poisonous snake",
+      "index": "poisonous_snake",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "polar bear",
+      "index": "polar_bear",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "pony",
+      "index": "pony",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "quipper",
+      "index": "quipper",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "rat",
+      "index": "rat",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "raven",
+      "index": "raven",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "reef shark",
+      "index": "reef_shark",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "rhinoceros",
+      "index": "rhinoceros",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "riding horse",
+      "index": "riding_horse",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "saber_toothed tiger",
+      "index": "saber_toothed_tiger",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "scorpion",
+      "index": "scorpion",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "sea horse",
+      "index": "sea_horse",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 0,
+      "challenge_rating": 0
+    },
+    {
+      "name": "spider",
+      "index": "spider",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "stirge",
+      "index": "stirge",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "tiger",
+      "index": "tiger",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "triceratops",
+      "index": "triceratops",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "tyrannosaurus rex",
+      "index": "tyrannosaurus_rex",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 3900,
+      "challenge_rating": 8
+    },
+    {
+      "name": "vulture",
+      "index": "vulture",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "warhorse",
+      "index": "warhorse",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "weasel",
+      "index": "weasel",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "wolf",
+      "index": "wolf",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25
+    }
+  ]
 }
