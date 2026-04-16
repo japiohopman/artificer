@@ -55,11 +55,15 @@
   ],
   "image": "public/assets/atlas/enemies/scorpion.webp",
   "url": "public/assets/atlas/enemies/json/scorpion.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-16T08:38:34.637Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 21,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet10.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet10.webp",
+  "imageUrl": "/assets/atlas/enemies/scorpion.webp",
+  "_type": "enemies",
+  "background_type": "desert4",
+  "last_updated": "16-4-2026"
 }
