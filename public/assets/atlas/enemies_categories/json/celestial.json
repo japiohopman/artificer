@@ -1,5 +1,60 @@
 {
   "name": "Celestials",
   "index": "celestial",
-  "monsters": []
+  "monsters": [
+    {
+      "name": "couatl",
+      "index": "couatl",
+      "size": "Medium",
+      "type": "celestial",
+      "alignment": "lawful good",
+      "xp": 1100,
+      "challenge_rating": 4
+    },
+    {
+      "name": "deva",
+      "index": "deva",
+      "size": "Medium",
+      "type": "celestial",
+      "alignment": "lawful good",
+      "xp": 5900,
+      "challenge_rating": 10
+    },
+    {
+      "name": "pegasus",
+      "index": "pegasus",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "chaotic good",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "planetar",
+      "index": "planetar",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "lawful good",
+      "xp": 15000,
+      "challenge_rating": 16
+    },
+    {
+      "name": "solar",
+      "index": "solar",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "lawful good",
+      "xp": 33000,
+      "challenge_rating": 21
+    },
+    {
+      "name": "unicorn",
+      "index": "unicorn",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "lawful good",
+      "xp": 1800,
+      "challenge_rating": 5
+    }
+  ]
 }
