@@ -1,5 +1,361 @@
 {
   "name": "Monstrosities",
   "index": "monstrosity",
-  "monsters": []
+  "monsters": [
+    {
+      "name": "androsphinx",
+      "index": "androsphinx",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "lawful neutral",
+      "xp": 18000,
+      "challenge_rating": 17
+    },
+    {
+      "name": "ankheg",
+      "index": "ankheg",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 250,
+      "challenge_rating": 2
+    },
+    {
+      "name": "basilisk",
+      "index": "basilisk",
+      "size": "Medium",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "behir",
+      "index": "behir",
+      "size": "Huge",
+      "type": "monstrosity",
+      "alignment": "neutral evil",
+      "xp": 7200,
+      "challenge_rating": 11
+    },
+    {
+      "name": "bulette",
+      "index": "bulette",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "centaur",
+      "index": "centaur",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "neutral good",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "chimera",
+      "index": "chimera",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "chaotic evil",
+      "xp": 2300,
+      "challenge_rating": 6
+    },
+    {
+      "name": "cockatrice",
+      "index": "cockatrice",
+      "size": "Small",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "darkmantle",
+      "index": "darkmantle",
+      "size": "Small",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "death dog",
+      "index": "death_dog",
+      "size": "Medium",
+      "type": "monstrosity",
+      "alignment": "neutral evil",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "doppelganger",
+      "index": "doppelganger",
+      "size": "Medium",
+      "type": "monstrosity",
+      "subtype": "shapechanger",
+      "alignment": "unaligned",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "drider",
+      "index": "drider",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "chaotic evil",
+      "xp": 2300,
+      "challenge_rating": 6
+    },
+    {
+      "name": "ettercap",
+      "index": "ettercap",
+      "size": "Medium",
+      "type": "monstrosity",
+      "alignment": "neutral evil",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "gorgon",
+      "index": "gorgon",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "grick",
+      "index": "grick",
+      "size": "Medium",
+      "type": "monstrosity",
+      "alignment": "neutral",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "griffon",
+      "index": "griffon",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "guardian naga",
+      "index": "guardian_naga",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "lawful good",
+      "xp": 5900,
+      "challenge_rating": 10
+    },
+    {
+      "name": "gynosphinx",
+      "index": "gynosphinx",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "lawful neutral",
+      "xp": 7200,
+      "challenge_rating": 11
+    },
+    {
+      "name": "harpy",
+      "index": "harpy",
+      "size": "Medium",
+      "type": "monstrosity",
+      "alignment": "chaotic evil",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "hippogriff",
+      "index": "hippogriff",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "hydra",
+      "index": "hydra",
+      "size": "Huge",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 3900,
+      "challenge_rating": 8
+    },
+    {
+      "name": "kraken",
+      "index": "kraken",
+      "size": "Gargantuan",
+      "type": "monstrosity",
+      "subtype": "titan",
+      "alignment": "chaotic evil",
+      "xp": 50000,
+      "challenge_rating": 23
+    },
+    {
+      "name": "lamia",
+      "index": "lamia",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "chaotic evil",
+      "xp": 1100,
+      "challenge_rating": 4
+    },
+    {
+      "name": "manticore",
+      "index": "manticore",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "lawful evil",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "medusa",
+      "index": "medusa",
+      "size": "Medium",
+      "type": "monstrosity",
+      "alignment": "lawful evil",
+      "xp": 2300,
+      "challenge_rating": 6
+    },
+    {
+      "name": "merrow",
+      "index": "merrow",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "chaotic evil",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "mimic",
+      "index": "mimic",
+      "size": "Medium",
+      "type": "monstrosity",
+      "subtype": "shapechanger",
+      "alignment": "neutral",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "minotaur",
+      "index": "minotaur",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "chaotic evil",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "owlbear",
+      "index": "owlbear",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "phase spider",
+      "index": "phase_spider",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "purple worm",
+      "index": "purple_worm",
+      "size": "Gargantuan",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 13000,
+      "challenge_rating": 15
+    },
+    {
+      "name": "remorhaz",
+      "index": "remorhaz",
+      "size": "Huge",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 7200,
+      "challenge_rating": 11
+    },
+    {
+      "name": "roc",
+      "index": "roc",
+      "size": "Gargantuan",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 7200,
+      "challenge_rating": 11
+    },
+    {
+      "name": "roper",
+      "index": "roper",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "neutral evil",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "rust monster",
+      "index": "rust_monster",
+      "size": "Medium",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "spirit naga",
+      "index": "spirit_naga",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "chaotic evil",
+      "xp": 3900,
+      "challenge_rating": 8
+    },
+    {
+      "name": "tarrasque",
+      "index": "tarrasque",
+      "size": "Gargantuan",
+      "type": "monstrosity",
+      "subtype": "titan",
+      "alignment": "unaligned",
+      "xp": 155000,
+      "challenge_rating": 30
+    },
+    {
+      "name": "winter wolf",
+      "index": "winter_wolf",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "neutral evil",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "worg",
+      "index": "worg",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "neutral evil",
+      "xp": 100,
+      "challenge_rating": 0.5
+    }
+  ]
 }
