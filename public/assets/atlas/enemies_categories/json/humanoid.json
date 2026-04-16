@@ -10,7 +10,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 50,
-      "challenge_rating": 0.25
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/acolyte.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/acolyte.webp"
     },
     {
       "name": "archmage",
@@ -20,7 +22,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 8400,
-      "challenge_rating": 12
+      "challenge_rating": 12,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/archmage.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/archmage.webp"
     },
     {
       "name": "assassin",
@@ -30,7 +34,9 @@
       "subtype": "any race",
       "alignment": "any non-good alignment",
       "xp": 3900,
-      "challenge_rating": 8
+      "challenge_rating": 8,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/assassin.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/assassin.webp"
     },
     {
       "name": "bandit",
@@ -40,7 +46,9 @@
       "subtype": "any race",
       "alignment": "any non-lawful alignment",
       "xp": 25,
-      "challenge_rating": 0.125
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/bandit.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/bandit.webp"
     },
     {
       "name": "bandit captain",
@@ -50,7 +58,9 @@
       "subtype": "any race",
       "alignment": "any non-lawful alignment",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/bandit_captain.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/bandit_captain.webp"
     },
     {
       "name": "berserker",
@@ -60,7 +70,9 @@
       "subtype": "any race",
       "alignment": "any chaotic alignment",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/berserker.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/berserker.webp"
     },
     {
       "name": "bugbear",
@@ -70,7 +82,9 @@
       "subtype": "goblinoid",
       "alignment": "chaotic evil",
       "xp": 200,
-      "challenge_rating": 1
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/bugbear.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/bugbear.webp"
     },
     {
       "name": "commoner",
@@ -80,7 +94,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 10,
-      "challenge_rating": 0
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/commoner.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/commoner.webp"
     },
     {
       "name": "cult fanatic",
@@ -90,7 +106,9 @@
       "subtype": "any race",
       "alignment": "any non-good alignment",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/cult_fanatic.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/cult_fanatic.webp"
     },
     {
       "name": "cultist",
@@ -100,7 +118,9 @@
       "subtype": "any race",
       "alignment": "any non-good alignment",
       "xp": 25,
-      "challenge_rating": 0.125
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/cultist.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/cultist.webp"
     },
     {
       "name": "deep gnome (svirfneblin)",
@@ -110,7 +130,9 @@
       "subtype": "gnome",
       "alignment": "neutral good",
       "xp": 50,
-      "challenge_rating": 0.5
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/deep_gnome_svirfneblin.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/deep_gnome_svirfneblin.webp"
     },
     {
       "name": "drow",
@@ -120,7 +142,9 @@
       "subtype": "elf",
       "alignment": "neutral evil",
       "xp": 50,
-      "challenge_rating": 0.25
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/drow.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/drow.webp"
     },
     {
       "name": "druid",
@@ -130,7 +154,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/druid.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/druid.webp"
     },
     {
       "name": "duergar",
@@ -140,7 +166,9 @@
       "subtype": "dwarf",
       "alignment": "lawful evil",
       "xp": 200,
-      "challenge_rating": 1
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/duergar.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/duergar.webp"
     },
     {
       "name": "gladiator",
@@ -150,7 +178,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 1800,
-      "challenge_rating": 5
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/gladiator.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/gladiator.webp"
     },
     {
       "name": "gnoll",
@@ -160,7 +190,9 @@
       "subtype": "gnoll",
       "alignment": "chaotic evil",
       "xp": 100,
-      "challenge_rating": 0.5
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/gnoll.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/gnoll.webp"
     },
     {
       "name": "goblin",
@@ -170,7 +202,9 @@
       "subtype": "goblinoid",
       "alignment": "neutral evil",
       "xp": 50,
-      "challenge_rating": 0.25
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/goblin.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/goblin.webp"
     },
     {
       "name": "grimlock",
@@ -180,7 +214,9 @@
       "subtype": "grimlock",
       "alignment": "neutral evil",
       "xp": 50,
-      "challenge_rating": 0.25
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/grimlock.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/grimlock.webp"
     },
     {
       "name": "guard",
@@ -190,7 +226,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 25,
-      "challenge_rating": 0.125
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/guard.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/guard.webp"
     },
     {
       "name": "half_red dragon veteran",
@@ -200,7 +238,9 @@
       "subtype": "human",
       "alignment": "any alignment",
       "xp": 1800,
-      "challenge_rating": 5
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/half_red_dragon_veteran.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/half_red_dragon_veteran.webp"
     },
     {
       "name": "hobgoblin",
@@ -210,7 +250,9 @@
       "subtype": "goblinoid",
       "alignment": "lawful evil",
       "xp": 100,
-      "challenge_rating": 0.5
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/hobgoblin.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/hobgoblin.webp"
     },
     {
       "name": "knight",
@@ -220,7 +262,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 700,
-      "challenge_rating": 3
+      "challenge_rating": 3,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/knight.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/knight.webp"
     },
     {
       "name": "kobold",
@@ -230,7 +274,9 @@
       "subtype": "kobold",
       "alignment": "lawful evil",
       "xp": 25,
-      "challenge_rating": 0.125
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/kobold.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/kobold.webp"
     },
     {
       "name": "lizardfolk",
@@ -240,7 +286,9 @@
       "subtype": "lizardfolk",
       "alignment": "neutral",
       "xp": 100,
-      "challenge_rating": 0.5
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/lizardfolk.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/lizardfolk.webp"
     },
     {
       "name": "mage",
@@ -250,7 +298,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 2300,
-      "challenge_rating": 6
+      "challenge_rating": 6,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/mage.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/mage.webp"
     },
     {
       "name": "merfolk",
@@ -260,7 +310,9 @@
       "subtype": "merfolk",
       "alignment": "neutral",
       "xp": 25,
-      "challenge_rating": 0.125
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/merfolk.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/merfolk.webp"
     },
     {
       "name": "noble",
@@ -270,7 +322,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 25,
-      "challenge_rating": 0.125
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/noble.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/noble.webp"
     },
     {
       "name": "orc",
@@ -280,7 +334,9 @@
       "subtype": "orc",
       "alignment": "chaotic evil",
       "xp": 100,
-      "challenge_rating": 0.5
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/orc.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/orc.webp"
     },
     {
       "name": "priest",
@@ -290,7 +346,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/priest.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/priest.webp"
     },
     {
       "name": "sahuagin",
@@ -300,7 +358,9 @@
       "subtype": "sahuagin",
       "alignment": "lawful evil",
       "xp": 100,
-      "challenge_rating": 0.5
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/sahuagin.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/sahuagin.webp"
     },
     {
       "name": "scout",
@@ -310,7 +370,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 100,
-      "challenge_rating": 0.5
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/scout.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/scout.webp"
     },
     {
       "name": "spy",
@@ -320,7 +382,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 200,
-      "challenge_rating": 1
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/spy.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/spy.webp"
     },
     {
       "name": "thug",
@@ -330,7 +394,9 @@
       "subtype": "any race",
       "alignment": "any non-good alignment",
       "xp": 100,
-      "challenge_rating": 0.5
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/thug.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/thug.webp"
     },
     {
       "name": "tribal warrior",
@@ -340,7 +406,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 25,
-      "challenge_rating": 0.125
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/tribal_warrior.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/tribal_warrior.webp"
     },
     {
       "name": "veteran",
@@ -350,7 +418,9 @@
       "subtype": "any race",
       "alignment": "any alignment",
       "xp": 700,
-      "challenge_rating": 3
+      "challenge_rating": 3,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/veteran.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/veteran.webp"
     },
     {
       "name": "Werebear (Human Form)",
@@ -359,7 +429,9 @@
       "type": "Humanoid",
       "subtype": "human, shapechanger",
       "alignment": "Neutral Good",
-      "challenge_rating": "5"
+      "challenge_rating": "5",
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/werebear-human.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/werebear-human.webp"
     },
     {
       "name": "werebear, bear form",
@@ -369,7 +441,9 @@
       "subtype": "human",
       "alignment": "neutral good",
       "xp": 1800,
-      "challenge_rating": 5
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/werebear_bear.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/werebear_bear.webp"
     },
     {
       "name": "werebear, human form",
@@ -379,7 +453,9 @@
       "subtype": "human",
       "alignment": "neutral good",
       "xp": 1800,
-      "challenge_rating": 5
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/werebear_human.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/werebear_human.webp"
     },
     {
       "name": "werebear, hybrid form",
@@ -389,7 +465,9 @@
       "subtype": "human",
       "alignment": "neutral good",
       "xp": 1800,
-      "challenge_rating": 5
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/werebear_hybrid.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/werebear_hybrid.webp"
     },
     {
       "name": "wereboar, boar form",
@@ -399,7 +477,9 @@
       "subtype": "human",
       "alignment": "neutral evil",
       "xp": 1100,
-      "challenge_rating": 4
+      "challenge_rating": 4,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/wereboar_boar.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/wereboar_boar.webp"
     },
     {
       "name": "wereboar, human form",
@@ -409,7 +489,9 @@
       "subtype": "human",
       "alignment": "neutral evil",
       "xp": 1100,
-      "challenge_rating": 4
+      "challenge_rating": 4,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/wereboar_human.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/wereboar_human.webp"
     },
     {
       "name": "wereboar, hybrid form",
@@ -419,7 +501,9 @@
       "subtype": "human",
       "alignment": "neutral evil",
       "xp": 1100,
-      "challenge_rating": 4
+      "challenge_rating": 4,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/wereboar_hybrid.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/wereboar_hybrid.webp"
     },
     {
       "name": "wererat, human form",
@@ -429,7 +513,9 @@
       "subtype": "human",
       "alignment": "lawful evil",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/wererat_human.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/wererat_human.webp"
     },
     {
       "name": "wererat, hybrid form",
@@ -439,7 +525,9 @@
       "subtype": "human",
       "alignment": "lawful evil",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/wererat_hybrid.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/wererat_hybrid.webp"
     },
     {
       "name": "wererat, rat form",
@@ -449,7 +537,9 @@
       "subtype": "human",
       "alignment": "lawful evil",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/wererat_rat.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/wererat_rat.webp"
     },
     {
       "name": "weretiger, human form",
@@ -459,7 +549,9 @@
       "subtype": "human",
       "alignment": "neutral",
       "xp": 1100,
-      "challenge_rating": 4
+      "challenge_rating": 4,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/weretiger_human.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/weretiger_human.webp"
     },
     {
       "name": "weretiger, hybrid form",
@@ -469,7 +561,9 @@
       "subtype": "human",
       "alignment": "neutral",
       "xp": 1100,
-      "challenge_rating": 4
+      "challenge_rating": 4,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/weretiger_hybrid.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/weretiger_hybrid.webp"
     },
     {
       "name": "weretiger, tiger form",
@@ -479,7 +573,9 @@
       "subtype": "human",
       "alignment": "neutral",
       "xp": 1100,
-      "challenge_rating": 4
+      "challenge_rating": 4,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/weretiger_tiger.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/weretiger_tiger.webp"
     },
     {
       "name": "werewolf, human form",
@@ -489,7 +585,9 @@
       "subtype": "human",
       "alignment": "chaotic evil",
       "xp": 700,
-      "challenge_rating": 3
+      "challenge_rating": 3,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/werewolf_human.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/werewolf_human.webp"
     },
     {
       "name": "werewolf, hybrid form",
@@ -499,7 +597,9 @@
       "subtype": "human",
       "alignment": "chaotic evil",
       "xp": 700,
-      "challenge_rating": 3
+      "challenge_rating": 3,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/werewolf_hybrid.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/werewolf_hybrid.webp"
     },
     {
       "name": "werewolf, wolf form",
@@ -509,7 +609,9 @@
       "subtype": "human",
       "alignment": "chaotic evil",
       "xp": 700,
-      "challenge_rating": 3
+      "challenge_rating": 3,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/werewolf_wolf.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/werewolf_wolf.webp"
     }
   ]
 }
