@@ -128,10 +128,14 @@
   ],
   "image": "public/assets/atlas/enemies/otyugh.webp",
   "url": "public/assets/atlas/enemies/json/otyugh.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-16T07:46:41.720Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 13,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp",
+  "imageUrl": "/assets/atlas/enemies/otyugh.webp",
+  "_type": "enemies",
+  "background_type": "void",
+  "last_updated": "16-4-2026"
 }
