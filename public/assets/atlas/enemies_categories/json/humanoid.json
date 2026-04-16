@@ -2,13 +2,514 @@
   "name": "Humanoids",
   "index": "humanoid",
   "monsters": [
-    { 
-      "name": "Werebear (Human Form)", 
+    {
+      "name": "acolyte",
+      "index": "acolyte",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "archmage",
+      "index": "archmage",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 8400,
+      "challenge_rating": 12
+    },
+    {
+      "name": "assassin",
+      "index": "assassin",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any non-good alignment",
+      "xp": 3900,
+      "challenge_rating": 8
+    },
+    {
+      "name": "bandit",
+      "index": "bandit",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any non-lawful alignment",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "bandit captain",
+      "index": "bandit_captain",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any non-lawful alignment",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "berserker",
+      "index": "berserker",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any chaotic alignment",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "bugbear",
+      "index": "bugbear",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "goblinoid",
+      "alignment": "chaotic evil",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "commoner",
+      "index": "commoner",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "cult fanatic",
+      "index": "cult_fanatic",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any non-good alignment",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "cultist",
+      "index": "cultist",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any non-good alignment",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "deep gnome (svirfneblin)",
+      "index": "deep_gnome_svirfneblin",
+      "size": "Small",
+      "type": "humanoid",
+      "subtype": "gnome",
+      "alignment": "neutral good",
+      "xp": 50,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "drow",
+      "index": "drow",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "elf",
+      "alignment": "neutral evil",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "druid",
+      "index": "druid",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "duergar",
+      "index": "duergar",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "dwarf",
+      "alignment": "lawful evil",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "gladiator",
+      "index": "gladiator",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "gnoll",
+      "index": "gnoll",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "gnoll",
+      "alignment": "chaotic evil",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "goblin",
+      "index": "goblin",
+      "size": "Small",
+      "type": "humanoid",
+      "subtype": "goblinoid",
+      "alignment": "neutral evil",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "grimlock",
+      "index": "grimlock",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "grimlock",
+      "alignment": "neutral evil",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "guard",
+      "index": "guard",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "half_red dragon veteran",
+      "index": "half_red_dragon_veteran",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "any alignment",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "hobgoblin",
+      "index": "hobgoblin",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "goblinoid",
+      "alignment": "lawful evil",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "knight",
+      "index": "knight",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "kobold",
+      "index": "kobold",
+      "size": "Small",
+      "type": "humanoid",
+      "subtype": "kobold",
+      "alignment": "lawful evil",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "lizardfolk",
+      "index": "lizardfolk",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "lizardfolk",
+      "alignment": "neutral",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "mage",
+      "index": "mage",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 2300,
+      "challenge_rating": 6
+    },
+    {
+      "name": "merfolk",
+      "index": "merfolk",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "merfolk",
+      "alignment": "neutral",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "noble",
+      "index": "noble",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "orc",
+      "index": "orc",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "orc",
+      "alignment": "chaotic evil",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "priest",
+      "index": "priest",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "sahuagin",
+      "index": "sahuagin",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "sahuagin",
+      "alignment": "lawful evil",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "scout",
+      "index": "scout",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "spy",
+      "index": "spy",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "thug",
+      "index": "thug",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any non-good alignment",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "tribal warrior",
+      "index": "tribal_warrior",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 25,
+      "challenge_rating": 0.125
+    },
+    {
+      "name": "veteran",
+      "index": "veteran",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "any race",
+      "alignment": "any alignment",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "Werebear (Human Form)",
       "index": "werebear-human",
       "size": "Medium",
       "type": "Humanoid",
       "subtype": "human, shapechanger",
-      "tags": ["shapechanger", "werebear", "good"]
+      "alignment": "Neutral Good",
+      "challenge_rating": "5"
+    },
+    {
+      "name": "werebear, bear form",
+      "index": "werebear_bear",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "neutral good",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "werebear, human form",
+      "index": "werebear_human",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "neutral good",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "werebear, hybrid form",
+      "index": "werebear_hybrid",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "neutral good",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "wereboar, boar form",
+      "index": "wereboar_boar",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "neutral evil",
+      "xp": 1100,
+      "challenge_rating": 4
+    },
+    {
+      "name": "wereboar, human form",
+      "index": "wereboar_human",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "neutral evil",
+      "xp": 1100,
+      "challenge_rating": 4
+    },
+    {
+      "name": "wereboar, hybrid form",
+      "index": "wereboar_hybrid",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "neutral evil",
+      "xp": 1100,
+      "challenge_rating": 4
+    },
+    {
+      "name": "wererat, human form",
+      "index": "wererat_human",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "lawful evil",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "wererat, hybrid form",
+      "index": "wererat_hybrid",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "lawful evil",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "wererat, rat form",
+      "index": "wererat_rat",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "lawful evil",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "weretiger, human form",
+      "index": "weretiger_human",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "neutral",
+      "xp": 1100,
+      "challenge_rating": 4
+    },
+    {
+      "name": "weretiger, hybrid form",
+      "index": "weretiger_hybrid",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "neutral",
+      "xp": 1100,
+      "challenge_rating": 4
+    },
+    {
+      "name": "weretiger, tiger form",
+      "index": "weretiger_tiger",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "neutral",
+      "xp": 1100,
+      "challenge_rating": 4
+    },
+    {
+      "name": "werewolf, human form",
+      "index": "werewolf_human",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "chaotic evil",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "werewolf, hybrid form",
+      "index": "werewolf_hybrid",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "chaotic evil",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "werewolf, wolf form",
+      "index": "werewolf_wolf",
+      "size": "Medium",
+      "type": "humanoid",
+      "subtype": "human",
+      "alignment": "chaotic evil",
+      "xp": 700,
+      "challenge_rating": 3
     }
   ]
 }
