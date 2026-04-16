@@ -9,7 +9,9 @@
       "type": "aberration",
       "alignment": "lawful evil",
       "xp": 5900,
-      "challenge_rating": 10
+      "challenge_rating": 10,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/aboleth.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/aboleth.webp"
     },
     {
       "name": "chuul",
@@ -18,7 +20,9 @@
       "type": "aberration",
       "alignment": "chaotic evil",
       "xp": 1100,
-      "challenge_rating": 4
+      "challenge_rating": 4,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/chuul.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/chuul.webp"
     },
     {
       "name": "cloaker",
@@ -27,7 +31,9 @@
       "type": "aberration",
       "alignment": "chaotic neutral",
       "xp": 3900,
-      "challenge_rating": 8
+      "challenge_rating": 8,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/cloaker.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/cloaker.webp"
     },
     {
       "name": "gibbering mouther",
@@ -36,7 +42,9 @@
       "type": "aberration",
       "alignment": "neutral",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/gibbering_mouther.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/gibbering_mouther.webp"
     },
     {
       "name": "otyugh",
@@ -45,7 +53,9 @@
       "type": "aberration",
       "alignment": "neutral",
       "xp": 1800,
-      "challenge_rating": 5
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/otyugh.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/otyugh.webp"
     }
   ]
 }
