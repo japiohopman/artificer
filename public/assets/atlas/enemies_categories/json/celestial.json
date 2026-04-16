@@ -9,7 +9,9 @@
       "type": "celestial",
       "alignment": "lawful good",
       "xp": 1100,
-      "challenge_rating": 4
+      "challenge_rating": 4,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/couatl.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/couatl.webp"
     },
     {
       "name": "deva",
@@ -18,7 +20,9 @@
       "type": "celestial",
       "alignment": "lawful good",
       "xp": 5900,
-      "challenge_rating": 10
+      "challenge_rating": 10,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/deva.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/deva.webp"
     },
     {
       "name": "pegasus",
@@ -27,7 +31,9 @@
       "type": "celestial",
       "alignment": "chaotic good",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/pegasus.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/pegasus.webp"
     },
     {
       "name": "planetar",
@@ -36,7 +42,9 @@
       "type": "celestial",
       "alignment": "lawful good",
       "xp": 15000,
-      "challenge_rating": 16
+      "challenge_rating": 16,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/planetar.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/planetar.webp"
     },
     {
       "name": "solar",
@@ -45,7 +53,9 @@
       "type": "celestial",
       "alignment": "lawful good",
       "xp": 33000,
-      "challenge_rating": 21
+      "challenge_rating": 21,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/solar.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/solar.webp"
     },
     {
       "name": "unicorn",
@@ -54,7 +64,9 @@
       "type": "celestial",
       "alignment": "lawful good",
       "xp": 1800,
-      "challenge_rating": 5
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/unicorn.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/unicorn.webp"
     }
   ]
 }
