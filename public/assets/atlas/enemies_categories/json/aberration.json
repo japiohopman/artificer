@@ -1,5 +1,51 @@
 {
   "name": "Aberrations",
   "index": "aberration",
-  "monsters": []
+  "monsters": [
+    {
+      "name": "aboleth",
+      "index": "aboleth",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "lawful evil",
+      "xp": 5900,
+      "challenge_rating": 10
+    },
+    {
+      "name": "chuul",
+      "index": "chuul",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "chaotic evil",
+      "xp": 1100,
+      "challenge_rating": 4
+    },
+    {
+      "name": "cloaker",
+      "index": "cloaker",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "chaotic neutral",
+      "xp": 3900,
+      "challenge_rating": 8
+    },
+    {
+      "name": "gibbering mouther",
+      "index": "gibbering_mouther",
+      "size": "Medium",
+      "type": "aberration",
+      "alignment": "neutral",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "otyugh",
+      "index": "otyugh",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "neutral",
+      "xp": 1800,
+      "challenge_rating": 5
+    }
+  ]
 }
