@@ -146,9 +146,14 @@
   ],
   "image": "public/assets/atlas/enemies/charismain_devil.webp",
   "url": "public/assets/atlas/enemies/json/charismain_devil.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-16T09:05:12.861Z",
   "forms": [],
   "legendary_actions": [],
   "sprite_index": 10,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet3.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet3.webp",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/enemies/chain_devil.webp?t=1776330230908",
+  "_type": "enemies",
+  "background_type": "volcano",
+  "rarity": "Very Rare",
+  "last_updated": "16-4-2026"
 }
