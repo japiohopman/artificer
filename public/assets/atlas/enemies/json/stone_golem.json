@@ -140,10 +140,15 @@
   ],
   "image": "public/assets/atlas/enemies/stone_golem.webp",
   "url": "public/assets/atlas/enemies/json/stone_golem.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-16T06:44:29.765Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 15,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp",
+  "imageUrl": "/assets/atlas/enemies/stone_golem.webp",
+  "_type": "enemies",
+  "rarity": "Very Rare",
+  "background_type": "ruins",
+  "last_updated": "16-4-2026"
 }
