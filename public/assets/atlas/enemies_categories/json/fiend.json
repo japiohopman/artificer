@@ -10,7 +10,9 @@
       "subtype": "demon",
       "alignment": "chaotic evil",
       "xp": 22000,
-      "challenge_rating": 19
+      "challenge_rating": 19,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/balor.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/balor.webp"
     },
     {
       "name": "barbed devil",
@@ -20,7 +22,9 @@
       "subtype": "devil",
       "alignment": "lawful evil",
       "xp": 1800,
-      "challenge_rating": 5
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/barbed_devil.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/barbed_devil.webp"
     },
     {
       "name": "bearded devil",
@@ -30,7 +34,9 @@
       "subtype": "devil",
       "alignment": "lawful evil",
       "xp": 700,
-      "challenge_rating": 3
+      "challenge_rating": 3,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/bearded_devil.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/bearded_devil.webp"
     },
     {
       "name": "bone devil",
@@ -40,7 +46,9 @@
       "subtype": "devil",
       "alignment": "lawful evil",
       "xp": 5000,
-      "challenge_rating": 9
+      "challenge_rating": 9,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/bone_devil.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/bone_devil.webp"
     },
     {
       "name": "chain devil",
@@ -50,7 +58,9 @@
       "subtype": "devil",
       "alignment": "lawful evil",
       "xp": 3900,
-      "challenge_rating": 8
+      "challenge_rating": 8,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/chain_devil.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/chain_devil.webp"
     },
     {
       "name": "dretch",
@@ -60,7 +70,9 @@
       "subtype": "demon",
       "alignment": "chaotic evil",
       "xp": 25,
-      "challenge_rating": 0.25
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/dretch.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/dretch.webp"
     },
     {
       "name": "erinyes",
@@ -70,7 +82,9 @@
       "subtype": "devil",
       "alignment": "lawful evil",
       "xp": 8400,
-      "challenge_rating": 12
+      "challenge_rating": 12,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/erinyes.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/erinyes.webp"
     },
     {
       "name": "glabrezu",
@@ -80,7 +94,9 @@
       "subtype": "demon",
       "alignment": "chaotic evil",
       "xp": 5000,
-      "challenge_rating": 9
+      "challenge_rating": 9,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/glabrezu.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/glabrezu.webp"
     },
     {
       "name": "hell hound",
@@ -89,7 +105,9 @@
       "type": "fiend",
       "alignment": "lawful evil",
       "xp": 700,
-      "challenge_rating": 3
+      "challenge_rating": 3,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/hell_hound.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/hell_hound.webp"
     },
     {
       "name": "hezrou",
@@ -99,7 +117,9 @@
       "subtype": "demon",
       "alignment": "chaotic evil",
       "xp": 3900,
-      "challenge_rating": 8
+      "challenge_rating": 8,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/hezrou.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/hezrou.webp"
     },
     {
       "name": "horned devil",
@@ -109,7 +129,9 @@
       "subtype": "devil",
       "alignment": "lawful evil",
       "xp": 7200,
-      "challenge_rating": 11
+      "challenge_rating": 11,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/horned_devil.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/horned_devil.webp"
     },
     {
       "name": "ice devil",
@@ -119,7 +141,9 @@
       "subtype": "devil",
       "alignment": "lawful evil",
       "xp": 11500,
-      "challenge_rating": 14
+      "challenge_rating": 14,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/ice_devil.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/ice_devil.webp"
     },
     {
       "name": "imp",
@@ -129,7 +153,9 @@
       "subtype": "devil",
       "alignment": "lawful evil",
       "xp": 200,
-      "challenge_rating": 1
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/imp.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/imp.webp"
     },
     {
       "name": "lemure",
@@ -139,7 +165,9 @@
       "subtype": "devil",
       "alignment": "lawful evil",
       "xp": 10,
-      "challenge_rating": 0
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/lemure.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/lemure.webp"
     },
     {
       "name": "marilith",
@@ -149,7 +177,9 @@
       "subtype": "demon",
       "alignment": "chaotic evil",
       "xp": 15000,
-      "challenge_rating": 16
+      "challenge_rating": 16,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/marilith.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/marilith.webp"
     },
     {
       "name": "nalfeshnee",
@@ -159,7 +189,9 @@
       "subtype": "demon",
       "alignment": "chaotic evil",
       "xp": 10000,
-      "challenge_rating": 13
+      "challenge_rating": 13,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/nalfeshnee.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/nalfeshnee.webp"
     },
     {
       "name": "night hag",
@@ -168,7 +200,9 @@
       "type": "fiend",
       "alignment": "neutral evil",
       "xp": 1800,
-      "challenge_rating": 5
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/night_hag.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/night_hag.webp"
     },
     {
       "name": "nightmare",
@@ -177,7 +211,9 @@
       "type": "fiend",
       "alignment": "neutral evil",
       "xp": 700,
-      "challenge_rating": 3
+      "challenge_rating": 3,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/nightmare.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/nightmare.webp"
     },
     {
       "name": "pit fiend",
@@ -187,7 +223,9 @@
       "subtype": "devil",
       "alignment": "lawful evil",
       "xp": 25000,
-      "challenge_rating": 20
+      "challenge_rating": 20,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/pit_fiend.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/pit_fiend.webp"
     },
     {
       "name": "quasit",
@@ -197,7 +235,9 @@
       "subtype": "demon",
       "alignment": "chaotic evil",
       "xp": 200,
-      "challenge_rating": 1
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/quasit.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/quasit.webp"
     },
     {
       "name": "rakshasa",
@@ -206,7 +246,9 @@
       "type": "fiend",
       "alignment": "lawful evil",
       "xp": 10000,
-      "challenge_rating": 13
+      "challenge_rating": 13,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/rakshasa.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/rakshasa.webp"
     },
     {
       "name": "succubus/incubus",
@@ -216,7 +258,9 @@
       "subtype": "shapechanger",
       "alignment": "neutral evil",
       "xp": 1100,
-      "challenge_rating": 4
+      "challenge_rating": 4,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/succubus_incubus.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/succubus_incubus.webp"
     },
     {
       "name": "tiamat",
@@ -225,7 +269,9 @@
       "type": "fiend",
       "alignment": "chaotic evil",
       "xp": 155000,
-      "challenge_rating": 30
+      "challenge_rating": 30,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/tiamat.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/tiamat.webp"
     },
     {
       "name": "vrock",
@@ -235,7 +281,9 @@
       "subtype": "demon",
       "alignment": "chaotic evil",
       "xp": 2300,
-      "challenge_rating": 6
+      "challenge_rating": 6,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/vrock.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/vrock.webp"
     }
   ]
 }
