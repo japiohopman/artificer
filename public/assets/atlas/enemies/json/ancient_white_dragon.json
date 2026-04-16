@@ -269,9 +269,14 @@
   ],
   "image": "public/assets/atlas/enemies/ancient_white_dragon.webp",
   "url": "public/assets/atlas/enemies/json/ancient_white_dragon.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-16T03:28:31.963Z",
   "forms": [],
   "reactions": [],
   "sprite_index": 22,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet1.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet1.webp",
+  "imageUrl": "/assets/atlas/enemies/ancient_white_dragon.webp",
+  "_type": "enemies",
+  "rarity": "Legendary",
+  "background_type": "air",
+  "last_updated": "16-4-2026"
 }
