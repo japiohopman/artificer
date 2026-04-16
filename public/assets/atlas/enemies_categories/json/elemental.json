@@ -1,5 +1,150 @@
 {
   "name": "Elementals",
   "index": "elemental",
-  "monsters": []
+  "monsters": [
+    {
+      "name": "air elemental",
+      "index": "air_elemental",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "neutral",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "azer",
+      "index": "azer",
+      "size": "Medium",
+      "type": "elemental",
+      "alignment": "lawful neutral",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "djinni",
+      "index": "djinni",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "chaotic good",
+      "xp": 7200,
+      "challenge_rating": 11
+    },
+    {
+      "name": "dust mephit",
+      "index": "dust_mephit",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "neutral evil",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "earth elemental",
+      "index": "earth_elemental",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "neutral",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "efreeti",
+      "index": "efreeti",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "lawful evil",
+      "xp": 7200,
+      "challenge_rating": 11
+    },
+    {
+      "name": "fire elemental",
+      "index": "fire_elemental",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "neutral",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "gargoyle",
+      "index": "gargoyle",
+      "size": "Medium",
+      "type": "elemental",
+      "alignment": "chaotic evil",
+      "xp": 450,
+      "challenge_rating": 2
+    },
+    {
+      "name": "ice mephit",
+      "index": "ice_mephit",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "neutral evil",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "invisible stalker",
+      "index": "invisible_stalker",
+      "size": "Medium",
+      "type": "elemental",
+      "alignment": "neutral",
+      "xp": 2300,
+      "challenge_rating": 6
+    },
+    {
+      "name": "magma mephit",
+      "index": "magma_mephit",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "neutral evil",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "magmin",
+      "index": "magmin",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "chaotic neutral",
+      "xp": 100,
+      "challenge_rating": 0.5
+    },
+    {
+      "name": "salamander",
+      "index": "salamander",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "neutral evil",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "steam mephit",
+      "index": "steam_mephit",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "neutral evil",
+      "xp": 50,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "water elemental",
+      "index": "water_elemental",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "neutral",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "xorn",
+      "index": "xorn",
+      "size": "Medium",
+      "type": "elemental",
+      "alignment": "neutral",
+      "xp": 1800,
+      "challenge_rating": 5
+    }
+  ]
 }
