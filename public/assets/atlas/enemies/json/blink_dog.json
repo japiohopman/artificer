@@ -90,7 +90,7 @@
   ],
   "image": "public/assets/atlas/enemies/blink_dog.webp",
   "url": "public/assets/atlas/enemies/json/blink_dog.json",
-  "updated_at": "2026-04-16T06:41:15.686Z",
+  "updated_at": "2026-04-16T06:42:27.283Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
@@ -98,5 +98,6 @@
   "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet2.webp",
   "imageUrl": "/assets/atlas/enemies/blink_dog.webp",
   "_type": "enemies",
+  "background_type": "land_urban",
   "last_updated": "16-4-2026"
 }
