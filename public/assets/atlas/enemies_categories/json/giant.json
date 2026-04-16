@@ -9,7 +9,9 @@
       "type": "giant",
       "alignment": "neutral good (50%) or neutral evil (50%)",
       "xp": 5000,
-      "challenge_rating": 9
+      "challenge_rating": 9,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/cloud_giant.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/cloud_giant.webp"
     },
     {
       "name": "ettin",
@@ -18,7 +20,9 @@
       "type": "giant",
       "alignment": "chaotic evil",
       "xp": 1100,
-      "challenge_rating": 4
+      "challenge_rating": 4,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/ettin.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/ettin.webp"
     },
     {
       "name": "fire giant",
@@ -27,7 +31,9 @@
       "type": "giant",
       "alignment": "lawful evil",
       "xp": 5000,
-      "challenge_rating": 9
+      "challenge_rating": 9,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/fire_giant.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/fire_giant.webp"
     },
     {
       "name": "frost giant",
@@ -36,7 +42,9 @@
       "type": "giant",
       "alignment": "neutral evil",
       "xp": 3900,
-      "challenge_rating": 8
+      "challenge_rating": 8,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/frost_giant.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/frost_giant.webp"
     },
     {
       "name": "hill giant",
@@ -45,7 +53,9 @@
       "type": "giant",
       "alignment": "chaotic evil",
       "xp": 1800,
-      "challenge_rating": 5
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/hill_giant.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/hill_giant.webp"
     },
     {
       "name": "ogre",
@@ -54,7 +64,9 @@
       "type": "giant",
       "alignment": "chaotic evil",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/ogre.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/ogre.webp"
     },
     {
       "name": "oni",
@@ -63,7 +75,9 @@
       "type": "giant",
       "alignment": "lawful evil",
       "xp": 2900,
-      "challenge_rating": 7
+      "challenge_rating": 7,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/oni.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/oni.webp"
     },
     {
       "name": "stone giant",
@@ -72,7 +86,9 @@
       "type": "giant",
       "alignment": "neutral",
       "xp": 2900,
-      "challenge_rating": 7
+      "challenge_rating": 7,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/stone_giant.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/stone_giant.webp"
     },
     {
       "name": "storm giant",
@@ -81,7 +97,9 @@
       "type": "giant",
       "alignment": "chaotic good",
       "xp": 10000,
-      "challenge_rating": 13
+      "challenge_rating": 13,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/storm_giant.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/storm_giant.webp"
     },
     {
       "name": "troll",
@@ -90,7 +108,9 @@
       "type": "giant",
       "alignment": "chaotic evil",
       "xp": 1800,
-      "challenge_rating": 5
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/troll.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/troll.webp"
     }
   ]
 }
