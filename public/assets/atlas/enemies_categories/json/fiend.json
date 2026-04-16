@@ -1,5 +1,241 @@
 {
   "name": "Fiends",
   "index": "fiend",
-  "monsters": []
+  "monsters": [
+    {
+      "name": "balor",
+      "index": "balor",
+      "size": "Huge",
+      "type": "fiend",
+      "subtype": "demon",
+      "alignment": "chaotic evil",
+      "xp": 22000,
+      "challenge_rating": 19
+    },
+    {
+      "name": "barbed devil",
+      "index": "barbed_devil",
+      "size": "Medium",
+      "type": "fiend",
+      "subtype": "devil",
+      "alignment": "lawful evil",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "bearded devil",
+      "index": "bearded_devil",
+      "size": "Medium",
+      "type": "fiend",
+      "subtype": "devil",
+      "alignment": "lawful evil",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "bone devil",
+      "index": "bone_devil",
+      "size": "Large",
+      "type": "fiend",
+      "subtype": "devil",
+      "alignment": "lawful evil",
+      "xp": 5000,
+      "challenge_rating": 9
+    },
+    {
+      "name": "chain devil",
+      "index": "chain_devil",
+      "size": "Medium",
+      "type": "fiend",
+      "subtype": "devil",
+      "alignment": "lawful evil",
+      "xp": 3900,
+      "challenge_rating": 8
+    },
+    {
+      "name": "dretch",
+      "index": "dretch",
+      "size": "Small",
+      "type": "fiend",
+      "subtype": "demon",
+      "alignment": "chaotic evil",
+      "xp": 25,
+      "challenge_rating": 0.25
+    },
+    {
+      "name": "erinyes",
+      "index": "erinyes",
+      "size": "Medium",
+      "type": "fiend",
+      "subtype": "devil",
+      "alignment": "lawful evil",
+      "xp": 8400,
+      "challenge_rating": 12
+    },
+    {
+      "name": "glabrezu",
+      "index": "glabrezu",
+      "size": "Large",
+      "type": "fiend",
+      "subtype": "demon",
+      "alignment": "chaotic evil",
+      "xp": 5000,
+      "challenge_rating": 9
+    },
+    {
+      "name": "hell hound",
+      "index": "hell_hound",
+      "size": "Medium",
+      "type": "fiend",
+      "alignment": "lawful evil",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "hezrou",
+      "index": "hezrou",
+      "size": "Large",
+      "type": "fiend",
+      "subtype": "demon",
+      "alignment": "chaotic evil",
+      "xp": 3900,
+      "challenge_rating": 8
+    },
+    {
+      "name": "horned devil",
+      "index": "horned_devil",
+      "size": "Large",
+      "type": "fiend",
+      "subtype": "devil",
+      "alignment": "lawful evil",
+      "xp": 7200,
+      "challenge_rating": 11
+    },
+    {
+      "name": "ice devil",
+      "index": "ice_devil",
+      "size": "Large",
+      "type": "fiend",
+      "subtype": "devil",
+      "alignment": "lawful evil",
+      "xp": 11500,
+      "challenge_rating": 14
+    },
+    {
+      "name": "imp",
+      "index": "imp",
+      "size": "Tiny",
+      "type": "fiend",
+      "subtype": "devil",
+      "alignment": "lawful evil",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "lemure",
+      "index": "lemure",
+      "size": "Medium",
+      "type": "fiend",
+      "subtype": "devil",
+      "alignment": "lawful evil",
+      "xp": 10,
+      "challenge_rating": 0
+    },
+    {
+      "name": "marilith",
+      "index": "marilith",
+      "size": "Large",
+      "type": "fiend",
+      "subtype": "demon",
+      "alignment": "chaotic evil",
+      "xp": 15000,
+      "challenge_rating": 16
+    },
+    {
+      "name": "nalfeshnee",
+      "index": "nalfeshnee",
+      "size": "Large",
+      "type": "fiend",
+      "subtype": "demon",
+      "alignment": "chaotic evil",
+      "xp": 10000,
+      "challenge_rating": 13
+    },
+    {
+      "name": "night hag",
+      "index": "night_hag",
+      "size": "Medium",
+      "type": "fiend",
+      "alignment": "neutral evil",
+      "xp": 1800,
+      "challenge_rating": 5
+    },
+    {
+      "name": "nightmare",
+      "index": "nightmare",
+      "size": "Large",
+      "type": "fiend",
+      "alignment": "neutral evil",
+      "xp": 700,
+      "challenge_rating": 3
+    },
+    {
+      "name": "pit fiend",
+      "index": "pit_fiend",
+      "size": "Large",
+      "type": "fiend",
+      "subtype": "devil",
+      "alignment": "lawful evil",
+      "xp": 25000,
+      "challenge_rating": 20
+    },
+    {
+      "name": "quasit",
+      "index": "quasit",
+      "size": "Tiny",
+      "type": "fiend",
+      "subtype": "demon",
+      "alignment": "chaotic evil",
+      "xp": 200,
+      "challenge_rating": 1
+    },
+    {
+      "name": "rakshasa",
+      "index": "rakshasa",
+      "size": "Medium",
+      "type": "fiend",
+      "alignment": "lawful evil",
+      "xp": 10000,
+      "challenge_rating": 13
+    },
+    {
+      "name": "succubus/incubus",
+      "index": "succubus_incubus",
+      "size": "Medium",
+      "type": "fiend",
+      "subtype": "shapechanger",
+      "alignment": "neutral evil",
+      "xp": 1100,
+      "challenge_rating": 4
+    },
+    {
+      "name": "tiamat",
+      "index": "tiamat",
+      "size": "Gargantuan",
+      "type": "fiend",
+      "alignment": "chaotic evil",
+      "xp": 155000,
+      "challenge_rating": 30
+    },
+    {
+      "name": "vrock",
+      "index": "vrock",
+      "size": "Large",
+      "type": "fiend",
+      "subtype": "demon",
+      "alignment": "chaotic evil",
+      "xp": 2300,
+      "challenge_rating": 6
+    }
+  ]
 }
