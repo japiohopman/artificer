@@ -107,10 +107,14 @@
   ],
   "image": "public/assets/atlas/enemies/pseudodragon.webp",
   "url": "public/assets/atlas/enemies/json/pseudodragon.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-16T09:15:28.091Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 1,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet10.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet10.webp",
+  "imageUrl": "/assets/atlas/enemies/pseudodragon.webp",
+  "_type": "enemies",
+  "background_type": "land_urban4",
+  "last_updated": "16-4-2026"
 }
