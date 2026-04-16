@@ -9,7 +9,9 @@
       "type": "fey",
       "alignment": "lawful good",
       "xp": 50,
-      "challenge_rating": 0.25
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/blink_dog.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/blink_dog.webp"
     },
     {
       "name": "dryad",
@@ -18,7 +20,9 @@
       "type": "fey",
       "alignment": "neutral",
       "xp": 200,
-      "challenge_rating": 1
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/dryad.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/dryad.webp"
     },
     {
       "name": "green hag",
@@ -27,7 +31,9 @@
       "type": "fey",
       "alignment": "neutral evil",
       "xp": 700,
-      "challenge_rating": 3
+      "challenge_rating": 3,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/green_hag.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/green_hag.webp"
     },
     {
       "name": "satyr",
@@ -36,7 +42,9 @@
       "type": "fey",
       "alignment": "chaotic neutral",
       "xp": 100,
-      "challenge_rating": 0.5
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/satyr.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/satyr.webp"
     },
     {
       "name": "sea hag",
@@ -45,7 +53,9 @@
       "type": "fey",
       "alignment": "chaotic evil",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/sea_hag.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/sea_hag.webp"
     },
     {
       "name": "sprite",
@@ -54,7 +64,9 @@
       "type": "fey",
       "alignment": "neutral good",
       "xp": 50,
-      "challenge_rating": 0.25
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/sprite.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/sprite.webp"
     }
   ]
 }
