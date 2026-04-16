@@ -9,7 +9,9 @@
       "type": "ooze",
       "alignment": "unaligned",
       "xp": 1100,
-      "challenge_rating": 4
+      "challenge_rating": 4,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/black_pudding.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/black_pudding.webp"
     },
     {
       "name": "gelatinous cube",
@@ -18,7 +20,9 @@
       "type": "ooze",
       "alignment": "unaligned",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/gelatinous_cube.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/gelatinous_cube.webp"
     },
     {
       "name": "gray ooze",
@@ -27,7 +31,9 @@
       "type": "ooze",
       "alignment": "unaligned",
       "xp": 100,
-      "challenge_rating": 0.5
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/gray_ooze.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/gray_ooze.webp"
     },
     {
       "name": "ochre jelly",
@@ -36,7 +42,9 @@
       "type": "ooze",
       "alignment": "unaligned",
       "xp": 450,
-      "challenge_rating": 2
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/ochre_jelly.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/ochre_jelly.webp"
     }
   ]
 }
