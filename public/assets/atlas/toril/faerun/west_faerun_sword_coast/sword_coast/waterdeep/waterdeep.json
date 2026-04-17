@@ -1,11 +1,6 @@
 {
-  "id": "public/assets/atlas/toril/faerun/west_faerun/waterdeep.json",
-  "path": [
-    "toril",
-    "faerun",
-    "west_faerun",
-    "waterdeep"
-  ],
+  "id": "waterdeep",
+  "path": "",
   "coordinates": {
     "name": "waterdeep",
     "x": 4608,
@@ -21,7 +16,13 @@
   "locationType": "Urban",
   "bg": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/waterdeep/waterdeep.webp",
   "ambient": "CITY_MARKET",
-  "availableShops": ["General Store", "Tavern", "Weaponsmith", "Arcane Shop"],
+  "availableShops": [
+    "General Store",
+    "Tavern",
+    "Weaponsmith",
+    "Arcane Shop",
+    "Thieves Guild"
+  ],
   "subLocations": [
     {
       "id": "6b9ac79f_0b26_4962_83cd_bc57a76d2acc",
@@ -112,8 +113,172 @@
       "type": "district"
     }
   ],
-  "lore": "**/toril/faerun/the_sword_coast/waterdeep**\n\n### The City of Splendors\n\n**Waterdeep** is widely regarded as the most cosmopolitan, influential, and robust metropolis on the continent of Faer\u00fbn. Known as the \"City of Splendors,\" it sits as a crown jewel upon the Sword Coast, serving as a gateway for trade, culture, and arcane knowledge that connects the disparate lands of the North with the wider world.\n\n### Historical Overview\n\nThe history of Waterdeep is a tapestry woven from the ambitions of elves, the resilience of humans, and the wisdom of archmages.\n\n**The Age of Elves (Aelinthaldaar)**\nLong before humanity laid the first stone, the site was the capital of the elven empire of Illefarn. Known as Aelinthaldaar, this city stood for millennia until the Retreat. In -1100 DR, recognizing the encroaching expansion of humankind and the inevitable decline of their own dominance, the elves chose to dismantle their capital by high magic rather than let it fall into ruin or conquest. They left behind only a faint, lingering ward and the natural plateau that would eventually host the human city.\n\n**Nimoar\u2019s Hold (882 DR)**\nFor centuries, the region was populated by disparate human tribes. Permanent settlement began in earnest around 882 DR, when a chieftain named Nimoar the Reaver conquered the local tribes and established \"Nimoar\u2019s Hold.\" It was a rough settlement, fortified by a log palisade, but its deep harbor made it a strategic prize. The settlement survived pirate raids and tribal wars, slowly evolving into a recognized town.\n\n**The Rise of Ahghairon and the Lords (1032 DR)**\nThe defining moment of Waterdeep\u2019s history occurred in 1032 DR. Raurlor, the Warlord of Waterdeep, sought to use the city's growing wealth to forge an empire of conquest. Ahghairon, the premier mage of the North, challenged Raurlor. When the Warlord drew his weapon, Ahghairon transmutated the blade into a viper, which struck Raurlor dead.\n\nTo prevent future tyrants, Ahghairon took the seat of power but refused to rule alone. He established the **Lords of Waterdeep**: a council of sixteen, where he was the only Open Lord, while the others remained Masked, their identities hidden by magic to protect them from bribery, blackmail, or assassination. This system brought unparalleled stability, allowing the city to flourish.\n\n**The Guildwars (1256 DR \u2013 1262 DR)**\nFollowing Ahghairon\u2019s death, the city suffered. The Guildmasters seized power, resulting in a bloody six-year conflict known as the Guildwars. Order was only restored when the two surviving Guildmasters were overthrown by the return of the Lords, led by Baeron and the mage Shilarn. This era solidified the modern structure of the city, establishing the separation of the merchant guilds from the political ruling class.\n\n**Modern Era**\nWaterdeep has weathered the Time of Troubles (1358 DR), the Spellplague (1385 DR), and the Second Sundering. In recent years, the city was governed by Dagult Neverember, who was eventually ousted for neglecting Waterdeep in favor of rebuilding the city of Neverwinter. He was succeeded by the Lady Laeral Silverhand, one of the Seven Sisters and a Chosen of Mystra, who currently serves as the Open Lord.\n\n### Terrain and Geography\n\nWaterdeep is located on the western coast of Faer\u00fbn, roughly halfway between the northern city of Neverwinter and the southern city of Baldur\u2019s Gate.\n\n*   **Mount Waterdeep:** The city is built in the shadow of Mount Waterdeep, a solitary mountain that shelters the city from the worst of the Sea of Swords' storms. The mountain is riddled with tunnels and serves as a deployment point for the city\u2019s Griffon Cavalry.\n*   **The Harbor:** Deepwater Harbor is one of the finest natural harbors in the world. It is protected by the submerged seawalls and the titanic magical barrier known as \"Ahghairon\u2019s Dragonward,\" which prevents true dragons from entering the city without the touch of the Dragonstaff of Ahghairon.\n*   **The Plateau:** The city is built on a sloping plateau. As one moves north from the harbor, the elevation rises.\n*   **The Wards:** The city is divided into distinct districts:\n    *   **Castle Ward:** The center of government.\n    *   **Sea Ward:** The wealthiest district, home to noble villas and grand temples.\n    *   **North Ward:** A quiet, upper-middle-class residential area.\n    *   **Trades Ward:** The commercial heart of the city.\n    *   **Southern Ward:** Known for caravan business and labor.\n    *   **Dock Ward:** Rough, dangerous, and vital for maritime trade.\n    *   **City of the Dead:** A massive, walled cemetery that doubles as a park during the day.\n*   **Undermountain:** Beneath the city lies the sprawling dungeon of Undermountain, the domain of the Mad Mage Halaster Blackcloak, accessible through the Yawning Portal inn.\n\n### Notable Exports and Economy\n\nWaterdeep is a trade hub rather than a production center. It imports raw materials (grain, livestock, lumber, ore) from the surrounding lands and exports:\n\n*   **Refined Goods:** Finished metalwork, clothing, art, and jewelry.\n*   **Mercantile Services:** Shipping, banking, legal services, and cartography.\n*   **Information:** Due to its cosmopolitan nature, rumors and lore are among the city's most valuable commodities.\n*   **Magic:** While not an export in the traditional sense, the city's abundance of spellcasters allows for the sale of magical services and minor items that are rare elsewhere.\n\n### Local Factions and Organizations\n\nThe political landscape of Waterdeep is a complex game of chess played by several powerful groups:\n\n1.  **The Lords of Waterdeep:** The ruling council.\n    *   **The Open Lord:** Currently Laeral Silverhand. The public face of the government.\n    *   **The Masked Lords:** Anonymous rulers drawn from all walks of life.\n2.  **The Guilds:** There are over 40 distinct guilds (e.g., The Fellowship of Innkeepers, The Order of Master Shipwrights) that strictly control the economy and labor standards.\n3.  **The City Watch & The City Guard:**\n    *   The **Watch** acts as the police force, maintaining order within the walls.\n    *   The **Guard** is the military defending the walls, gates, and harbor.\n4.  **Force Grey (The Gray Hands):** An elite group of adventurers loyal to the Open Lord, tasked with handling threats too dangerous for the Watch but not severe enough to require an army.\n5.  **The Xanathar Guild:** A massive criminal syndicate operating out of the sewers and Skullport (a subterranean smuggler city). It is led by a paranoia-filled Beholder known as Xanathar.\n6.  **The Zhentarim (The Black Network):** A mercenary company and criminal network seeking to gain influence through wealth and monopoly on protection services.\n7.  **The Harpers:** Spies and meddlers who work secretly to preserve history and maintain the balance of power, opposing tyranny wherever it rises.\n\n### Codex Wiki Entry\n### Waterdeep: The City of Splendors\n\n**Overview**\nWaterdeep stands as the preeminent jewel of the Sword Coast, a sprawling metropolis where silver and secrets flow in equal measure. Known as the \"City of Splendors,\" it is a beacon of civilization, trade, and arcane study, serving as the cultural heart of the North.\n\n**History**\nThe city\u2019s foundations rest upon the ancient elven capital of Aelinthaldaar. When the elves performed their High Magic to erase their home, the site became a rugged trading post. Its true rise began under the archmage Ahghairon, who, in the 10th century DR, established the rule of the Masked Lords to ensure no single despot could ever claim the throne. This tradition of anonymous governance persists today, maintaining a delicate balance of power.\n\n**Significance**\nAs a key member of the Lords\u2019 Alliance, Waterdeep dictates the political and economic pulse of the realms. Its deep-water harbor is the finest on the coast, drawing merchants from Kara-Tur to Chult. It is a city of layers\u2014from the glittering spires of the Sea Ward to the bustling markets of the Trades Ward\u2014offering refuge to any soul with a dream and a heavy coin purse.\n\n**Legends and Wonders**\n*   **Undermountain:** Directly beneath the city lies the world\u2019s most infamous dungeon, a multi-layered labyrinth crafted by the \"Mad Mage\" Halaster Blackcloak.\n*   **The Walking Statues:** Eight colossal stone constructs stand scattered throughout the wards. Once dormant, they rose to defend the city during the Spellplague and now remain as silent, towering sentinels.\n*   **Ahghairon\u2019s Dragonward:** A potent mythal prevents any dragonkind from entering the city, a legendary enchantment that has spared Waterdeep from the fires that have claimed lesser cities.\n\n*Seeker, tread carefully; in Waterdeep, a single gold piece can buy a life, but a single word can topple a kingdom.*",
+  "lore": "The City of Splendors, a massive metropolis on the Sword Coast.",
   "image": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/waterdeep/waterdeep.webp",
-  "name": "waterdeep",
-  "grounding": []
+  "name": "Waterdeep",
+  "grounding": [],
+  "x": 500,
+  "y": 500,
+  "tags": [
+    "city",
+    "metropolis",
+    "coastal"
+  ],
+  "mapUrl": "https://images.beastsofwar.com/2018/09/DD-Waterdeep-City-Map-Gale-Force-Nine.jpg",
+  "npcs": {
+    "Tavern": [
+      {
+        "name": "Durnan",
+        "species": "human",
+        "classJob": "Innkeeper",
+        "gender": "male",
+        "type": "Tavern",
+        "tags": [
+          "male",
+          "#innkeeper",
+          "#human",
+          "#legendary"
+        ],
+        "portraitKey": "male_innkeeper_human_durnan",
+        "portraitDescription": "A rugged, middle-aged human with a scarred face and a quiet, watchful demeanor. He wears practical leather armor under his apron.",
+        "hairColor": "Grey",
+        "eyeColor": "Brown",
+        "visualTraits": {
+          "skinTone": "Tan",
+          "build": "Muscular",
+          "hairStyle": "Short",
+          "clothingStyle": "Leather apron over chainmail",
+          "distinguishingFeatures": "A deep scar across his cheek"
+        }
+      }
+    ],
+    "Arcane Shop": [
+      {
+        "name": "Laeral Silverhand",
+        "species": "High Elf",
+        "classJob": "Wizard",
+        "gender": "female",
+        "type": "Arcane Shop",
+        "tags": [
+          "female",
+          "#wizard",
+          "#highelf",
+          "#noble"
+        ],
+        "portraitKey": "female_wizard_highelf_laeral",
+        "portraitDescription": "An ethereal High Elf with silver hair that glows faintly. She wears ornate, flowing robes of deep blue and silver.",
+        "hairColor": "Silver",
+        "eyeColor": "Violet",
+        "visualTraits": {
+          "skinTone": "Pale",
+          "build": "Slender",
+          "hairStyle": "Long and flowing",
+          "clothingStyle": "Ornate magical robes",
+          "distinguishingFeatures": "Eyes that shimmer with arcane power"
+        }
+      }
+    ],
+    "Weaponsmith": [
+      {
+        "name": "Thrak Hammerfist",
+        "species": "Mountain Dwarf",
+        "classJob": "Blacksmith",
+        "gender": "male",
+        "type": "Weaponsmith",
+        "tags": [
+          "male",
+          "#blacksmith",
+          "#dwarf",
+          "#strong"
+        ],
+        "portraitKey": "male_blacksmith_dwarf_thrak",
+        "portraitDescription": "A stout Mountain Dwarf with a soot-stained beard braided with iron rings. His arms are thick with muscle.",
+        "hairColor": "Red",
+        "eyeColor": "Amber",
+        "visualTraits": {
+          "skinTone": "Bronze",
+          "build": "Stocky",
+          "hairStyle": "Braided beard",
+          "clothingStyle": "Heavy leather smithing apron",
+          "distinguishingFeatures": "Iron rings in his beard"
+        }
+      }
+    ],
+    "General Store": [
+      {
+        "name": "Mirt",
+        "species": "human",
+        "classJob": "Merchant",
+        "gender": "male",
+        "type": "General Store",
+        "tags": [
+          "male",
+          "#merchant",
+          "#human",
+          "#jovial"
+        ],
+        "portraitKey": "male_merchant_human_mirt",
+        "portraitDescription": "A portly, jovial human with a large mustache and twinkling eyes. He wears expensive but worn traveler's silks.",
+        "hairColor": "Brown",
+        "eyeColor": "Blue",
+        "visualTraits": {
+          "skinTone": "Fair",
+          "build": "Heavy",
+          "hairStyle": "Balding with mustache",
+          "clothingStyle": "Expensive silks",
+          "distinguishingFeatures": "A booming laugh and twinkling eyes"
+        }
+      },
+      {
+        "name": "Obaya Uday",
+        "species": "Goliath",
+        "classJob": "Cleric",
+        "gender": "female",
+        "type": "General Store",
+        "tags": [
+          "female",
+          "#cleric",
+          "#goliath",
+          "#foreign"
+        ],
+        "portraitKey": "female_cleric_goliath_obaya",
+        "portraitDescription": "A tall, grey-skinned Goliath with lithic patterns on her skin. She wears simple vestments and carries a heavy staff.",
+        "hairColor": "Bald",
+        "eyeColor": "Golden",
+        "visualTraits": {
+          "skinTone": "Grey",
+          "build": "Towering",
+          "hairStyle": "Bald",
+          "clothingStyle": "Simple religious vestments",
+          "distinguishingFeatures": "Stone-like skin patterns"
+        }
+      }
+    ],
+    "Thieves Guild": [
+      {
+        "name": "Jarlaxle Baenre",
+        "species": "Drow",
+        "classJob": "Rogue",
+        "gender": "male",
+        "type": "Thieves Guild",
+        "tags": [
+          "male",
+          "#rogue",
+          "#drow",
+          "#flamboyant"
+        ],
+        "portraitKey": "male_rogue_drow_jarlaxle",
+        "portraitDescription": "A slender Drow with a flamboyant purple hat featuring a large feather. He wears an eye patch and a colorful cloak.",
+        "hairColor": "Bald",
+        "eyeColor": "Red",
+        "visualTraits": {
+          "skinTone": "Obsidian",
+          "build": "Lean",
+          "hairStyle": "Bald",
+          "clothingStyle": "Flamboyant rogue attire",
+          "distinguishingFeatures": "Purple hat with a giant feather"
+        }
+      }
+    ]
+  }
 }
