@@ -83,10 +83,14 @@
   ],
   "image": "public/assets/atlas/enemies/dire_wolf.webp",
   "url": "public/assets/atlas/enemies/json/dire_wolf.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-17T18:29:02.696Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 5,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet4.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet4.webp",
+  "imageUrl": "/assets/atlas/enemies/dire_wolf.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "17-4-2026"
 }
