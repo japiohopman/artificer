@@ -121,10 +121,14 @@
   ],
   "image": "public/assets/atlas/enemies/gibbering_mouther.webp",
   "url": "public/assets/atlas/enemies/json/gibbering_mouther.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-18T03:52:01.715Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 16,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.webp",
+  "imageUrl": "/assets/atlas/enemies/gibbering_mouther.webp",
+  "_type": "enemies",
+  "background_type": "swamp",
+  "last_updated": "18-4-2026"
 }
