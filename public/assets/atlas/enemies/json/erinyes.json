@@ -242,9 +242,13 @@
   ],
   "image": "public/assets/atlas/enemies/erinyes.webp",
   "url": "public/assets/atlas/enemies/json/erinyes.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-18T16:53:22.858Z",
   "forms": [],
   "legendary_actions": [],
   "sprite_index": 22,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet4.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet4.webp",
+  "imageUrl": "/assets/atlas/enemies/erinyes.webp",
+  "_type": "enemies",
+  "background_type": "land_plains",
+  "last_updated": "18-4-2026"
 }
