@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Carved from the calcified marrow of a subterranean predator, this hollowed reed whispers with the lingering hum of the venomous silences it has inflicted. It is a weapon for the patient hand, turning a single, needle-thin breath into a soundless execution."
+  ],
   "special": [],
   "index": "blowgun",
   "name": "blowgun",
@@ -41,9 +43,17 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/blowgun.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-18T09:40:05.049Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/blowgun.webp",
   "sprite_index": 9,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/blowgun.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "rarity": "Common",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "18-4-2026"
 }
