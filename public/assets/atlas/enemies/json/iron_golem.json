@@ -203,10 +203,15 @@
   ],
   "image": "public/assets/atlas/enemies/iron_golem.webp",
   "url": "public/assets/atlas/enemies/json/iron_golem.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-18T05:58:34.356Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 0,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp",
+  "imageUrl": "/assets/atlas/enemies/iron_golem.webp",
+  "_type": "enemies",
+  "background_type": "castle",
+  "rarity": "Rare",
+  "last_updated": "18-4-2026"
 }
