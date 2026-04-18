@@ -87,11 +87,16 @@
   ],
   "image": "public/assets/atlas/enemies/skeleton.webp",
   "url": "public/assets/atlas/enemies/json/skeleton.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-18T04:02:41.381Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 5,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp",
+  "imageUrl": "/assets/atlas/enemies/skeleton.webp",
+  "_type": "enemies",
+  "background_type": "fort",
+  "rarity": "Uncommon",
+  "last_updated": "18-4-2026"
 }
