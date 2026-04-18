@@ -152,8 +152,13 @@
   ],
   "image": "public/assets/atlas/enemies/vampire_mist.webp",
   "url": "public/assets/atlas/enemies/json/vampire_mist.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-18T04:06:33.788Z",
   "reactions": [],
   "sprite_index": 13,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet12.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet12.webp",
+  "imageUrl": "/assets/atlas/enemies/vampire_mist.webp",
+  "_type": "enemies",
+  "background_type": "castle",
+  "rarity": "Rare",
+  "last_updated": "18-4-2026"
 }
