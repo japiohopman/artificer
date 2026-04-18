@@ -1,0 +1,55 @@
+{
+  "name": "Kaelen 'Ash' Rexus",
+  "class": "Ranger",
+  "race": "Tiefling",
+  "background": "Soldier",
+  "alignment": "Neutral",
+  "level": 1,
+  "stats": {
+    "str": 12,
+    "dex": 14,
+    "con": 13,
+    "int": 10,
+    "wis": 15,
+    "cha": 8
+  },
+  "backstory": "Kaelen was raised in a small, isolated military outpost on the edge of a vast forest. Born a Tiefling in a regiment that valued strength and discipline above all else, he had to work twice as hard to prove himself. He excelled in scouting and tracking, skills honed by years of patrolling the forest's edge. His unit was ambushed and decimated by monstrous creatures he'd never seen before, leaving him the sole survivor. Haunted by the loss of his comrades and the horrors he witnessed, Kaelen now wanders the land, seeking to understand the forces that overwhelmed his unit and prevent such tragedies from happening again. He's wary of forming close bonds, fearing more loss, but his sense of duty compels him to protect the innocent.",
+  "flaws": [
+    "Haunted by the memories of his fallen comrades.",
+    "Tends to isolate himself, fearing emotional attachment.",
+    "Can be overly cautious and hesitant to trust others."
+  ],
+  "ideals": [
+    "Duty: The needs of the many outweigh the needs of the few. (Neutral)",
+    "Protection: To shield the innocent from harm."
+  ],
+  "bonds": [
+    "The memory of his fallen squad motivates him.",
+    "Feels a responsibility to protect those who cannot protect themselves."
+  ],
+  "traits": [
+    "Observant and perceptive, always scanning his surroundings.",
+    "Speaks in a low, measured tone, rarely revealing his emotions.",
+    "Has a habit of cleaning and maintaining his weapons, even when they're already spotless."
+  ],
+  "appearance": {
+    "hairColor": "Black",
+    "hairStyle": "Short, choppy, and practical.",
+    "bodyType": "Lean and wiry, built for endurance.",
+    "eyeColor": "Fiery Orange",
+    "height": "5'10\"",
+    "weight": "160 lbs"
+  },
+  "id": "kaelen_'ash'_rexus",
+  "xp": 0,
+  "atlas_data": {
+    "class": null,
+    "species": null,
+    "background": null
+  },
+  "metadata": {
+    "generated_at": "2026-04-18T12:11:50.041Z",
+    "version": "2.0"
+  },
+  "imageUrl": "/assets/atlas/character/npc_character_profiles/images/kaelen_'ash'_rexus_portrait.webp"
+}
