@@ -334,13 +334,14 @@
   ],
   "image": "public/assets/atlas/enemies/solar.webp",
   "url": "public/assets/atlas/enemies/json/solar.json",
-  "updated_at": "2026-04-18T06:03:10.431Z",
+  "updated_at": "2026-04-18T18:36:34.049Z",
   "forms": [],
   "reactions": [],
   "sprite_index": 6,
   "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp",
-  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/enemies/solar.webp?t=1776492148009",
+  "imageUrl": "/assets/atlas/enemies/solar.webp",
   "_type": "enemies",
-  "background_type": "ethereal",
-  "last_updated": "18-4-2026"
+  "background_type": "void",
+  "last_updated": "18-4-2026",
+  "rarity": "Legendary"
 }
