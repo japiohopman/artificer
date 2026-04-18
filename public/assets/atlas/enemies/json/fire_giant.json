@@ -133,11 +133,15 @@
   ],
   "image": "public/assets/atlas/enemies/fire_giant.webp",
   "url": "public/assets/atlas/enemies/json/fire_giant.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-18T18:41:09.049Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 1,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp",
+  "imageUrl": "/assets/atlas/enemies/fire_giant.webp",
+  "_type": "enemies",
+  "background_type": "volcano",
+  "last_updated": "18-4-2026"
 }
