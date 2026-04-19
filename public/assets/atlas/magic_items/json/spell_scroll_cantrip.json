@@ -18,6 +18,14 @@
     "This scroll contains a cantrip. The spell's saving throw is 13 and the attack bonus is +5."
   ],
   "url": "public/assets/atlas/magic_items/json/spell_scroll_cantrip.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/spell_scroll_cantrip.webp"
+  "updated_at": "2026-04-19T07:51:37.120Z",
+  "image": "public/assets/atlas/magic_items/spell_scroll_cantrip.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/spell_scroll_cantrip.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Scroll",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "19-4-2026"
 }
