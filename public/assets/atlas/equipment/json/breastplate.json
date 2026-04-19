@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Forged in shadowfire and quenched in the blood of a fallen god, the Breastplate of Whispers clings to the wearer like a second skin, promising power while subtly eroding their sanity with the voices of the damned. Each beat of your heart echoes in the infernal forge from whence it came, a chilling reminder of the price demanded for its protection.\n"
+  ],
   "special": [],
   "index": "breastplate",
   "name": "breastplate",
@@ -22,10 +24,17 @@
     "unit": "gp"
   },
   "url": "public/assets/atlas/equipment/json/breastplate.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-19T12:29:48.987Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/breastplate.webp",
   "sprite_index": 12,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/breastplate.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "chest"
+  ],
+  "last_updated": "19-4-2026"
 }
