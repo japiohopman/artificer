@@ -1,53 +1,56 @@
 {
   "name": "Torvin",
-  "gender": "Male",
-  "class": "Fighter",
-  "race": "Human",
-  "background": "Soldier",
-  "alignment": "Neutral",
+  "gender": "Female",
+  "class": "Rogue",
+  "race": "Tiefling",
+  "background": "Merchant",
+  "alignment": "Lawful Good",
   "level": 1,
   "stats": {
     "str": 16,
     "dex": 13,
     "con": 14,
     "int": 10,
-    "wis": 11,
+    "wis": 12,
     "cha": 8
   },
-  "backstory": "Torvin grew up in a small village that was constantly raided by bandits. At a young age, he enlisted in the local militia, quickly rising through the ranks due to his natural aptitude for combat. He fought in several skirmishes, witnessing the brutality of war firsthand. While skilled, he became disillusioned with the constant violence and left the military seeking a quieter life, though his past continues to haunt him.",
+  "backstory": "Torvin is a hardened soldier, wearied by years of service in the king's army. He has seen the brutality of war firsthand, and although he carries the scars of battle, both physical and emotional, he remains steadfast. He left the army seeking a quieter life, but his ingrained sense of duty and his combat skills often draw him back into conflict.",
   "flaws": [
-    "Haunted by memories of the battlefield.",
-    "Quick to anger when innocent people are threatened.",
-    "Distrustful of authority figures."
+    "Haunted by nightmares of past battles.",
+    "Prone to fits of anger when reminded of his military service.",
+    "Distrustful of authority."
   ],
   "ideals": [
-    "Strength. I must be strong to protect those who cannot protect themselves. (Good)",
-    "Responsibility. I do what I must and face the consequences. (Lawful)"
+    "Discipline. The most important thing is doing your duty. (Lawful)",
+    "Responsibility. I do what I must and obey just authority. (Lawful)",
+    "Greater Good. My gifts are meant to alleviate the suffering of others. (Good)"
   ],
   "bonds": [
-    "I still send money home to support my family.",
-    "I am seeking revenge on the bandits who destroyed my village."
+    "I would still lay down my life for the people I served with.",
+    "I am trying to atone for a terrible decision I made during the war."
   ],
   "traits": [
-    "I am always polite and respectful, even in tense situations.",
-    "I can stare down a hellhound without flinching."
+    "I'm always polite and respectful.",
+    "I am haunted by memories of war. I can't get the images of violence out of my mind.",
+    "I face problems head-on. A simple, direct solution is the best path to success."
   ],
   "appearance": {
     "hairColor": "Brown",
     "hairStyle": "Short, neatly cropped",
-    "bodyType": "Muscular, broad-shouldered",
-    "eyeColor": "Hazel",
+    "bodyType": "Muscular",
+    "eyeColor": "Brown",
     "height": "6'0\"",
     "weight": "200 lbs"
   },
   "money": {
-    "cp": 35,
-    "sp": 12,
-    "gp": 8,
+    "cp": 23,
+    "sp": 15,
+    "gp": 6,
     "pp": 0
   },
   "inventory": {},
   "backpack": [
+    {},
     {},
     {},
     {},
@@ -63,13 +66,13 @@
   "xp": 0,
   "atlas_data": {
     "class": {
-      "index": "fighter",
-      "name": "fighter",
-      "hit_die": 10,
+      "index": "rogue",
+      "name": "rogue",
+      "hit_die": 8,
       "proficiency_choices": [
         {
-          "desc": "Choose two skills from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival",
-          "choose": 2,
+          "desc": "Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth",
+          "choose": 4,
           "type": "proficiencies",
           "from": {
             "option_set_type": "options_array",
@@ -85,14 +88,6 @@
               {
                 "option_type": "reference",
                 "item": {
-                  "index": "skill_animal_handling",
-                  "name": "skill: animal handling",
-                  "url": "public/assets/atlas/proficiencies/skill_animal_handling"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
                   "index": "skill_athletics",
                   "name": "skill: athletics",
                   "url": "public/assets/atlas/proficiencies/skill_athletics"
@@ -101,9 +96,9 @@
               {
                 "option_type": "reference",
                 "item": {
-                  "index": "skill_history",
-                  "name": "skill: history",
-                  "url": "public/assets/atlas/proficiencies/skill_history"
+                  "index": "skill_deception",
+                  "name": "skill: deception",
+                  "url": "public/assets/atlas/proficiencies/skill_deception"
                 }
               },
               {
@@ -125,6 +120,14 @@
               {
                 "option_type": "reference",
                 "item": {
+                  "index": "skill_investigation",
+                  "name": "skill: investigation",
+                  "url": "public/assets/atlas/proficiencies/skill_investigation"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
                   "index": "skill_perception",
                   "name": "skill: perception",
                   "url": "public/assets/atlas/proficiencies/skill_perception"
@@ -133,9 +136,33 @@
               {
                 "option_type": "reference",
                 "item": {
-                  "index": "skill_survival",
-                  "name": "skill: survival",
-                  "url": "public/assets/atlas/proficiencies/skill_survival"
+                  "index": "skill_performance",
+                  "name": "skill: performance",
+                  "url": "public/assets/atlas/proficiencies/skill_performance"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_persuasion",
+                  "name": "skill: persuasion",
+                  "url": "public/assets/atlas/proficiencies/skill_persuasion"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_sleight_of_hand",
+                  "name": "skill: sleight of hand",
+                  "url": "public/assets/atlas/proficiencies/skill_sleight_of_hand"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_stealth",
+                  "name": "skill: stealth",
+                  "url": "public/assets/atlas/proficiencies/skill_stealth"
                 }
               }
             ]
@@ -144,14 +171,9 @@
       ],
       "proficiencies": [
         {
-          "index": "all_armor",
-          "name": "all armor",
-          "url": "public/assets/atlas/proficiencies/all_armor"
-        },
-        {
-          "index": "shields",
-          "name": "shields",
-          "url": "public/assets/atlas/proficiencies/shields"
+          "index": "light_armor",
+          "name": "light armor",
+          "url": "public/assets/atlas/proficiencies/light_armor"
         },
         {
           "index": "simple_weapons",
@@ -159,37 +181,82 @@
           "url": "public/assets/atlas/proficiencies/simple_weapons"
         },
         {
-          "index": "martial_weapons",
-          "name": "martial weapons",
-          "url": "public/assets/atlas/proficiencies/martial_weapons"
+          "index": "longswords",
+          "name": "longswords",
+          "url": "public/assets/atlas/proficiencies/longswords"
         },
         {
-          "index": "saving_throw_str",
-          "name": "saving throw: str",
-          "url": "public/assets/atlas/proficiencies/saving_throw_str"
+          "index": "rapiers",
+          "name": "rapiers",
+          "url": "public/assets/atlas/proficiencies/rapiers"
         },
         {
-          "index": "saving_throw_con",
-          "name": "saving throw: con",
-          "url": "public/assets/atlas/proficiencies/saving_throw_con"
+          "index": "shortswords",
+          "name": "shortswords",
+          "url": "public/assets/atlas/proficiencies/shortswords"
+        },
+        {
+          "index": "hand_crossbows",
+          "name": "hand crossbows",
+          "url": "public/assets/atlas/proficiencies/hand_crossbows"
+        },
+        {
+          "index": "thieves_tools",
+          "name": "thieves' tools",
+          "url": "public/assets/atlas/proficiencies/thieves_tools"
+        },
+        {
+          "index": "saving_throw_dex",
+          "name": "saving throw: dex",
+          "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+        },
+        {
+          "index": "saving_throw_int",
+          "name": "saving throw: int",
+          "url": "public/assets/atlas/proficiencies/saving_throw_int"
         }
       ],
       "saving_throws": [
         {
-          "index": "str",
-          "name": "str",
-          "url": "public/assets/atlas/ability_scores/strength"
+          "index": "dex",
+          "name": "dex",
+          "url": "public/assets/atlas/ability_scores/dexterity"
         },
         {
-          "index": "con",
-          "name": "con",
-          "url": "public/assets/atlas/ability_scores/constitution"
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/intelligence"
         }
       ],
-      "starting_equipment": [],
+      "starting_equipment": [
+        {
+          "equipment": {
+            "index": "leather_armor",
+            "name": "leather armor",
+            "url": "public/assets/atlas/equipment/leather_armor"
+          },
+          "quantity": 1
+        },
+        {
+          "equipment": {
+            "index": "dagger",
+            "name": "dagger",
+            "url": "public/assets/atlas/equipment/dagger"
+          },
+          "quantity": 2
+        },
+        {
+          "equipment": {
+            "index": "thieves_tools",
+            "name": "thieves' tools",
+            "url": "public/assets/atlas/equipment/thieves_tools"
+          },
+          "quantity": 1
+        }
+      ],
       "starting_equipment_options": [
         {
-          "desc": "(a) chain mail or (b) leather armor, longbow, and 20 arrows",
+          "desc": "(a) a rapier or (b) a shortsword",
           "choose": 1,
           "type": "equipment",
           "from": {
@@ -199,11 +266,30 @@
                 "option_type": "counted_reference",
                 "count": 1,
                 "of": {
-                  "index": "chain_mail",
-                  "name": "chain mail",
-                  "url": "public/assets/atlas/equipment/charismain_mail"
+                  "index": "rapier",
+                  "name": "rapier",
+                  "url": "public/assets/atlas/equipment/rapier"
                 }
               },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "shortsword",
+                  "name": "shortsword",
+                  "url": "public/assets/atlas/equipment/shortsword"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "(a) a shortbow and quiver of 20 arrows or (b) a shortsword",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
               {
                 "option_type": "multiple",
                 "items": [
@@ -211,18 +297,9 @@
                     "option_type": "counted_reference",
                     "count": 1,
                     "of": {
-                      "index": "leather_armor",
-                      "name": "leather armor",
-                      "url": "public/assets/atlas/equipment/leather_armor"
-                    }
-                  },
-                  {
-                    "option_type": "counted_reference",
-                    "count": 1,
-                    "of": {
-                      "index": "longbow",
-                      "name": "longbow",
-                      "url": "public/assets/atlas/equipment/longbow"
+                      "index": "shortbow",
+                      "name": "shortbow",
+                      "url": "public/assets/atlas/equipment/shortbow"
                     }
                   },
                   {
@@ -235,115 +312,35 @@
                     }
                   }
                 ]
-              }
-            ]
-          }
-        },
-        {
-          "desc": "(a) a martial weapon and a shield or (b) two martial weapons",
-          "choose": 1,
-          "type": "equipment",
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              {
-                "option_type": "multiple",
-                "items": [
-                  {
-                    "option_type": "choice",
-                    "choice": {
-                      "desc": "a martial weapon",
-                      "choose": 1,
-                      "type": "equipment",
-                      "from": {
-                        "option_set_type": "equipment_category",
-                        "equipment_category": {
-                          "index": "martial_weapons",
-                          "name": "martial weapons",
-                          "url": "public/assets/atlas/equipment_categories/martial_weapons"
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "option_type": "counted_reference",
-                    "count": 1,
-                    "of": {
-                      "index": "shield",
-                      "name": "shield",
-                      "url": "public/assets/atlas/equipment/shield"
-                    }
-                  }
-                ]
-              },
-              {
-                "option_type": "choice",
-                "choice": {
-                  "desc": "two martial weapons",
-                  "choose": 2,
-                  "type": "equipment",
-                  "from": {
-                    "option_set_type": "equipment_category",
-                    "equipment_category": {
-                      "index": "martial_weapons",
-                      "name": "martial weapons",
-                      "url": "public/assets/atlas/equipment_categories/martial_weapons"
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "desc": "(a) a light crossbow and 20 bolts or (b) two handaxes",
-          "choose": 1,
-          "type": "equipment",
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              {
-                "option_type": "multiple",
-                "items": [
-                  {
-                    "option_type": "counted_reference",
-                    "count": 1,
-                    "of": {
-                      "index": "crossbow_light",
-                      "name": "crossbow, light",
-                      "url": "public/assets/atlas/equipment/crossbow_light"
-                    }
-                  },
-                  {
-                    "option_type": "counted_reference",
-                    "count": 20,
-                    "of": {
-                      "index": "crossbow_bolt",
-                      "name": "crossbow bolt",
-                      "url": "public/assets/atlas/equipment/crossbow_bolt"
-                    }
-                  }
-                ]
               },
               {
                 "option_type": "counted_reference",
-                "count": 2,
+                "count": 1,
                 "of": {
-                  "index": "handaxe",
-                  "name": "handaxe",
-                  "url": "public/assets/atlas/equipment/handaxe"
+                  "index": "shortsword",
+                  "name": "shortsword",
+                  "url": "public/assets/atlas/equipment/shortsword"
                 }
               }
             ]
           }
         },
         {
-          "desc": "(a) a dungeoneer’s pack or (b) an explorer’s pack",
+          "desc": "(a) a burglar’s pack, (b) a dungeoneer’s pack, or (c) an explorer’s pack",
           "choose": 1,
           "type": "equipment",
           "from": {
             "option_set_type": "options_array",
             "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "burglars_pack",
+                  "name": "burglar's pack",
+                  "url": "public/assets/atlas/equipment/burglars_pack"
+                }
+              },
               {
                 "option_type": "counted_reference",
                 "count": 1,
@@ -366,35 +363,18 @@
           }
         }
       ],
-      "class_levels": "public/assets/atlas/classes/fighter/levels",
+      "class_levels": "public/assets/atlas/classes/rogue/levels",
       "multi_classing": {
-        "prerequisite_options": {
-          "type": "ability-scores",
-          "choose": 1,
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              {
-                "option_type": "score_prerequisite",
-                "ability_score": {
-                  "index": "str",
-                  "name": "str",
-                  "url": "public/assets/atlas/ability_scores/strength"
-                },
-                "minimum_score": 13
-              },
-              {
-                "option_type": "score_prerequisite",
-                "ability_score": {
-                  "index": "dex",
-                  "name": "dex",
-                  "url": "public/assets/atlas/ability_scores/dexterity"
-                },
-                "minimum_score": 13
-              }
-            ]
+        "prerequisites": [
+          {
+            "ability_score": {
+              "index": "dex",
+              "name": "dex",
+              "url": "public/assets/atlas/ability_scores/dexterity"
+            },
+            "minimum_score": 13
           }
-        },
+        ],
         "proficiencies": [
           {
             "index": "light_armor",
@@ -402,69 +382,127 @@
             "url": "public/assets/atlas/proficiencies/light_armor"
           },
           {
-            "index": "medium_armor",
-            "name": "medium armor",
-            "url": "public/assets/atlas/proficiencies/medium_armor"
-          },
+            "index": "thieves_tools",
+            "name": "thieves' tools",
+            "url": "public/assets/atlas/proficiencies/thieves_tools"
+          }
+        ],
+        "proficiency_choices": [
           {
-            "index": "shields",
-            "name": "shields",
-            "url": "public/assets/atlas/proficiencies/shields"
-          },
-          {
-            "index": "simple_weapons",
-            "name": "simple weapons",
-            "url": "public/assets/atlas/proficiencies/simple_weapons"
-          },
-          {
-            "index": "martial_weapons",
-            "name": "martial weapons",
-            "url": "public/assets/atlas/proficiencies/martial_weapons"
+            "choose": 1,
+            "type": "proficiencies",
+            "from": {
+              "option_set_type": "options_array",
+              "options": [
+                {
+                  "option_type": "reference",
+                  "item": {
+                    "index": "skill_acrobatics",
+                    "name": "skill: acrobatics",
+                    "url": "public/assets/atlas/proficiencies/skill_acrobatics"
+                  }
+                },
+                {
+                  "option_type": "reference",
+                  "item": {
+                    "index": "skill_athletics",
+                    "name": "skill: athletics",
+                    "url": "public/assets/atlas/proficiencies/skill_athletics"
+                  }
+                },
+                {
+                  "option_type": "reference",
+                  "item": {
+                    "index": "skill_deception",
+                    "name": "skill: deception",
+                    "url": "public/assets/atlas/proficiencies/skill_deception"
+                  }
+                },
+                {
+                  "option_type": "reference",
+                  "item": {
+                    "index": "skill_insight",
+                    "name": "skill: insight",
+                    "url": "public/assets/atlas/proficiencies/skill_insight"
+                  }
+                },
+                {
+                  "option_type": "reference",
+                  "item": {
+                    "index": "skill_intimidation",
+                    "name": "skill: intimidation",
+                    "url": "public/assets/atlas/proficiencies/skill_intimidation"
+                  }
+                },
+                {
+                  "option_type": "reference",
+                  "item": {
+                    "index": "skill_investigation",
+                    "name": "skill: investigation",
+                    "url": "public/assets/atlas/proficiencies/skill_investigation"
+                  }
+                },
+                {
+                  "option_type": "reference",
+                  "item": {
+                    "index": "skill_perception",
+                    "name": "skill: perception",
+                    "url": "public/assets/atlas/proficiencies/skill_perception"
+                  }
+                },
+                {
+                  "option_type": "reference",
+                  "item": {
+                    "index": "skill_performance",
+                    "name": "skill: performance",
+                    "url": "public/assets/atlas/proficiencies/skill_performance"
+                  }
+                },
+                {
+                  "option_type": "reference",
+                  "item": {
+                    "index": "skill_persuasion",
+                    "name": "skill: persuasion",
+                    "url": "public/assets/atlas/proficiencies/skill_persuasion"
+                  }
+                },
+                {
+                  "option_type": "reference",
+                  "item": {
+                    "index": "skill_sleight_of_hand",
+                    "name": "skill: sleight of hand",
+                    "url": "public/assets/atlas/proficiencies/skill_sleight_of_hand"
+                  }
+                },
+                {
+                  "option_type": "reference",
+                  "item": {
+                    "index": "skill_stealth",
+                    "name": "skill: stealth",
+                    "url": "public/assets/atlas/proficiencies/skill_stealth"
+                  }
+                }
+              ]
+            }
           }
         ]
       },
       "subclasses": [
         {
-          "index": "champion",
-          "name": "champion",
-          "url": "public/assets/atlas/subclasses/charismampion"
+          "index": "thief",
+          "name": "thief",
+          "url": "public/assets/atlas/subclasses/thief"
         }
       ],
-      "url": "public/assets/atlas/classes/json/fighter.json",
+      "url": "public/assets/atlas/classes/json/rogue.json",
       "updated_at": "2025-10-24T20:42:12.459Z",
-      "image": "public/assets/atlas/classes/fighter.webp"
+      "image": "public/assets/atlas/classes/rogue.webp"
     },
     "species": {
-      "index": "human",
-      "name": "human",
+      "index": "tiefling",
+      "name": "tiefling",
       "speed": 30,
       "ability_bonuses": [
-        {
-          "ability_score": {
-            "index": "str",
-            "name": "str",
-            "url": "public/assets/atlas/ability_scores/strength"
-          },
-          "bonus": 1
-        },
-        {
-          "ability_score": {
-            "index": "dex",
-            "name": "dex",
-            "url": "public/assets/atlas/ability_scores/dexterity"
-          },
-          "bonus": 1
-        },
-        {
-          "ability_score": {
-            "ability_score": {
-              "index": "con",
-              "name": "con",
-              "url": "public/assets/atlas/ability_scores/constitution"
-            },
-            "bonus": 1
-          }
-        },
         {
           "ability_score": {
             "index": "int",
@@ -475,172 +513,56 @@
         },
         {
           "ability_score": {
-            "index": "wis",
-            "name": "wis",
-            "url": "public/assets/atlas/ability_scores/wisdom"
-          },
-          "bonus": 1
-        },
-        {
-          "ability_score": {
             "index": "cha",
             "name": "cha",
             "url": "public/assets/atlas/ability_scores/charisma"
           },
-          "bonus": 1
+          "bonus": 2
         }
       ],
-      "age": "Humans reach adulthood in their late teens and live less than a century.",
-      "alignment": "Humans tend toward no particular alignment. The best and the worst are found among them.",
+      "alignment": "Tieflings might not have an innate tendency toward evil, but many of them end up there. Evil or not, an independent nature inclines many tieflings toward a chaotic alignment.",
+      "age": "Tieflings mature at the same rate as humans but live a few years longer.",
       "size": "Medium",
-      "size_description": "Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.",
+      "size_description": "Tieflings are about the same size and build as humans. Your size is Medium.",
       "languages": [
         {
           "index": "common",
           "name": "common",
           "url": "public/assets/atlas/languages/common"
+        },
+        {
+          "index": "infernal",
+          "name": "infernal",
+          "url": "public/assets/atlas/languages/infernal"
         }
       ],
-      "language_options": {
-        "choose": 1,
-        "type": "languages",
-        "from": {
-          "option_set_type": "options_array",
-          "options": [
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "dwarvish",
-                "name": "dwarvish",
-                "url": "public/assets/atlas/languages/dwarvish"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "elvish",
-                "name": "elvish",
-                "url": "public/assets/atlas/languages/elvish"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "giant",
-                "name": "giant",
-                "url": "public/assets/atlas/languages/giant"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "gnomish",
-                "name": "gnomish",
-                "url": "public/assets/atlas/languages/gnomish"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "goblin",
-                "name": "goblin",
-                "url": "public/assets/atlas/languages/goblin"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "halfling",
-                "name": "halfling",
-                "url": "public/assets/atlas/languages/halfling"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "orc",
-                "name": "orc",
-                "url": "public/assets/atlas/languages/orc"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "abyssal",
-                "name": "abyssal",
-                "url": "public/assets/atlas/languages/abyssal"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "celestial",
-                "name": "celestial",
-                "url": "public/assets/atlas/languages/celestial"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "draconic",
-                "name": "draconic",
-                "url": "public/assets/atlas/languages/draconic"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "deep_speech",
-                "name": "deep speech",
-                "url": "public/assets/atlas/languages/deep_speech"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "infernal",
-                "name": "infernal",
-                "url": "public/assets/atlas/languages/infernal"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "primordial",
-                "name": "primordial",
-                "url": "public/assets/atlas/languages/primordial"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "sylvan",
-                "name": "sylvan",
-                "url": "public/assets/atlas/languages/sylvan"
-              }
-            },
-            {
-              "option_type": "reference",
-              "item": {
-                "index": "undercommon",
-                "name": "undercommon",
-                "url": "public/assets/atlas/languages/undercommon"
-              }
-            }
-          ]
+      "language_desc": "You can speak, read, and write Common and Infernal.",
+      "traits": [
+        {
+          "index": "darkvision",
+          "name": "darkvision",
+          "url": "public/assets/atlas/traits/darkvision"
+        },
+        {
+          "index": "hellish_resistance",
+          "name": "hellish resistance",
+          "url": "public/assets/atlas/traits/hellish_resistance"
+        },
+        {
+          "index": "infernal_legacy",
+          "name": "infernal legacy",
+          "url": "public/assets/atlas/traits/infernal_legacy"
         }
-      },
-      "language_desc": "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.",
-      "traits": [],
+      ],
       "subraces": [],
-      "url": "public/assets/atlas/species/json/human.json",
+      "url": "public/assets/atlas/species/json/tiefling.json",
       "updated_at": "2025-10-24T20:42:14.212Z",
-      "image": "public/assets/atlas/species/human.webp"
+      "image": "public/assets/atlas/species/tiefling.webp"
     },
     "background": null
   },
   "metadata": {
-    "generated_at": "2026-04-19T11:23:09.812Z",
+    "generated_at": "2026-04-19T12:02:15.566Z",
     "version": "2.0"
   },
   "imageUrl": "/assets/atlas/character/npc_character_profiles/images/torvin_portrait.webp"
