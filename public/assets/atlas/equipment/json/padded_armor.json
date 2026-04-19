@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "The padded armor smells faintly of mildew and fear, its uneven stitching a testament to desperate hands and the grim reality of the battlefield's butcher's bill. Beneath the worn fabric, a faint rustle whispers of straw and secrets best left buried with the fallen.\n"
+  ],
   "special": [],
   "index": "padded_armor",
   "name": "padded armor",
@@ -21,10 +23,18 @@
     "unit": "gp"
   },
   "url": "public/assets/atlas/equipment/json/padded_armor.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-19T11:12:43.092Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/padded_armor.webp",
   "sprite_index": 22,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/padded_armor.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Light Armor",
+  "slot": [
+    "chest"
+  ],
+  "last_updated": "19-4-2026"
 }
