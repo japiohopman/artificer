@@ -1,0 +1,157 @@
+{
+  "name": "Torga",
+  "gender": "Female",
+  "class": "Artificer",
+  "race": "Dragonborn",
+  "background": "Hermit",
+  "alignment": "Lawful Neutral",
+  "level": 1,
+  "stats": {
+    "str": 10,
+    "dex": 15,
+    "con": 13,
+    "int": 12,
+    "wis": 14,
+    "cha": 8
+  },
+  "backstory": "Torvin was born into a family of traveling merchants, her tiefling heritage making them outcasts in some communities, but also granting them access to more... lucrative trade routes. She learned to haggle before she could walk, and pickpocket before she could read. Her lawful good alignment stems from a strong sense of fairness - she believes in honest deals, even if she bends the rules a little to get there. Her family was recently robbed of a valuable shipment, and she's set out to recover it, and bring the thieves to justice.",
+  "flaws": [
+    "Trusts too easily when a good bargain is on the table.",
+    "Has a soft spot for orphans and stray animals, often leading to poor financial decisions."
+  ],
+  "ideals": [
+    "Fairness: Everyone deserves to be treated equitably. (Good)",
+    "Order: A structured society is essential. (Lawful)"
+  ],
+  "bonds": [
+    "To regain her family's stolen goods.",
+    "To protect the innocent from those who would exploit them.",
+    "She feels responsible for the well-being of her younger siblings."
+  ],
+  "traits": [
+    "Always has a backup plan (or three).",
+    "A silver tongue can talk her way out of most situations.",
+    "Carries a lucky copper piece and flips it to make decisions."
+  ],
+  "appearance": {
+    "hairColor": "Black",
+    "hairStyle": "Long, braided with silver rings",
+    "bodyType": "Lean",
+    "eyeColor": "Crimson",
+    "height": "5'6\"",
+    "weight": "130 lbs"
+  },
+  "money": {
+    "cp": 35,
+    "sp": 60,
+    "gp": 15,
+    "pp": 0
+  },
+  "inventory": {},
+  "backpack": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "hp": 27,
+  "maxHp": 27,
+  "id": "torga",
+  "xp": 0,
+  "atlas_data": {
+    "class": null,
+    "species": {
+      "index": "dragonborn",
+      "name": "dragonborn",
+      "speed": 30,
+      "ability_bonuses": [
+        {
+          "ability_score": {
+            "index": "str",
+            "name": "str",
+            "url": "public/assets/atlas/ability_scores/strength"
+          },
+          "bonus": 2
+        },
+        {
+          "ability_score": {
+            "index": "cha",
+            "name": "cha",
+            "url": "public/assets/atlas/ability_scores/charisma"
+          },
+          "bonus": 1
+        }
+      ],
+      "alignment": "Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil. Most dragonborn are good, but those who side with evil can be terrible villains.",
+      "age": "Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.",
+      "size": "Medium",
+      "size_description": "Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.",
+      "languages": [
+        {
+          "index": "common",
+          "name": "common",
+          "url": "public/assets/atlas/languages/common"
+        },
+        {
+          "index": "draconic",
+          "name": "draconic",
+          "url": "public/assets/atlas/languages/draconic"
+        }
+      ],
+      "language_desc": "You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.",
+      "traits": [
+        {
+          "index": "draconic_ancestry",
+          "name": "draconic ancestry",
+          "url": "public/assets/atlas/traits/draconic_ancestry"
+        },
+        {
+          "index": "breath_weapon",
+          "name": "breath weapon",
+          "url": "public/assets/atlas/traits/breath_weapon"
+        },
+        {
+          "index": "damage_resistance",
+          "name": "damage resistance",
+          "url": "public/assets/atlas/traits/damage_resistance"
+        }
+      ],
+      "subraces": [],
+      "url": "public/assets/atlas/species/json/dragonborn.json",
+      "updated_at": "2025-10-24T20:42:14.212Z",
+      "image": "public/assets/atlas/species/dragonborn.webp"
+    },
+    "background": null
+  },
+  "metadata": {
+    "generated_at": "2026-04-19T12:05:10.630Z",
+    "version": "2.0"
+  },
+  "imageUrl": "/assets/atlas/character/npc_character_profiles/images/torga_portrait.webp"
+}
