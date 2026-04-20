@@ -89,15 +89,14 @@
   ],
   "image": "public/assets/atlas/enemies/magmin.webp",
   "url": "public/assets/atlas/enemies/json/magmin.json",
-  "updated_at": "2026-04-20T07:29:37.666Z",
+  "updated_at": "2026-04-20T07:30:49.122Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 14,
   "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp",
-  "imageUrl": "/assets/atlas/enemies/magmin.webp",
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fmagmin.webp%3Ft%3D1776670214480",
   "_type": "enemies",
-  "background_type": "cave4",
-  "rarity": "Uncommon",
+  "background_type": "underdark4",
   "last_updated": "20-4-2026"
 }
