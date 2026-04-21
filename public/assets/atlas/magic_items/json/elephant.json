@@ -1,0 +1,33 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "elephant",
+  "name": "elephant",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 200,
+    "unit": "gp"
+  },
+  "speed": {
+    "quantity": 40,
+    "unit": "ft/round"
+  },
+  "capacity": "1,320 lb.",
+  "url": "public/assets/atlas/equipment/json/elephant.json",
+  "updated_at": "2026-04-21T14:04:55.645Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/elephant.webp",
+  "sprite_index": 7,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/elephant.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "rarity": "Uncommon",
+  "last_updated": "21-4-2026"
+}
