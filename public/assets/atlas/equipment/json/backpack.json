@@ -19,10 +19,17 @@
   },
   "weight": 5,
   "url": "public/assets/atlas/equipment/json/backpack.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-21T14:08:31.097Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/backpack.webp",
   "sprite_index": 9,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+  "imageUrl": "/assets/atlas/equipment/images/backpack.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "back"
+  ],
+  "last_updated": "21-4-2026"
 }
