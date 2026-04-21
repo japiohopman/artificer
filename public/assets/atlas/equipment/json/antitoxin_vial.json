@@ -21,10 +21,17 @@
     "A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs."
   ],
   "url": "public/assets/atlas/equipment/json/antitoxin_vial.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-21T14:29:11.375Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/antitoxin_vial.webp",
   "sprite_index": 7,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+  "imageUrl": "/assets/atlas/equipment/images/antitoxin_vial.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "21-4-2026"
 }
