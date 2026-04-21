@@ -19,10 +19,14 @@
   },
   "weight": 0,
   "url": "public/assets/atlas/equipment/json/parchment_one_sheet.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-21T14:20:56.451Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/parchment_one_sheet.webp",
   "sprite_index": 1,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/parchment_one_sheet.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "21-4-2026"
 }
