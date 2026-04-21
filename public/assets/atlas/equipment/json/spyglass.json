@@ -21,10 +21,17 @@
     "Objects viewed through a spyglass are magnified to twice their size."
   ],
   "url": "public/assets/atlas/equipment/json/spyglass.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-21T14:19:04.694Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/spyglass.webp",
   "sprite_index": 9,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/images/spyglass.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "21-4-2026"
 }
