@@ -19,10 +19,17 @@
   },
   "weight": 3,
   "url": "public/assets/atlas/equipment/json/blanket.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-21T14:28:07.905Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/blanket.webp",
   "sprite_index": 5,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/images/blanket.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "21-4-2026"
 }
