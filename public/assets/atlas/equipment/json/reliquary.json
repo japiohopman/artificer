@@ -22,10 +22,17 @@
     "Appendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
   ],
   "url": "public/assets/atlas/equipment/json/reliquary.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-22T16:17:35.911Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/reliquary.webp",
   "sprite_index": 21,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/reliquary.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "focus"
+  ],
+  "last_updated": "22-4-2026"
 }
