@@ -201,10 +201,15 @@
   ],
   "image": "public/assets/atlas/enemies/young_green_dragon.webp",
   "url": "public/assets/atlas/enemies/json/young_green_dragon.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-22T15:19:22.317Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 4,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet14.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet14.webp",
+  "imageUrl": "/assets/atlas/enemies/images/young_green_dragon.webp",
+  "_type": "enemies",
+  "background_type": "land_forest3",
+  "rarity": "Rare",
+  "last_updated": "22-4-2026"
 }
