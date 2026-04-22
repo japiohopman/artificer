@@ -97,10 +97,14 @@
   ],
   "image": "public/assets/atlas/enemies/minotaur.webp",
   "url": "public/assets/atlas/enemies/json/minotaur.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-22T13:16:21.465Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 24,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp",
+  "imageUrl": "/assets/atlas/enemies/images/minotaur.webp",
+  "_type": "enemies",
+  "background_type": "land_mountains",
+  "last_updated": "22-4-2026"
 }
