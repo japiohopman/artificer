@@ -15,25 +15,6 @@
         "createdAt": "2026-04-22T04:47:03.722Z"
       },
       "file": "assets/sounds/Env SFX/coin_tosh.wav"
-    },
-    "coin_swoosh": {
-      "type": "sfx",
-      "category": "Env SFX",
-      "layer": 4,
-      "volume": 1,
-      "loop": false,
-      "priority": 1,
-      "tags": [
-        "coin"
-      ],
-      "meta": {
-        "prompt": "coin toss. a high pithed coin ping followed by a Dubler effect of a coin swoosh through the air, then the sound of the coin landing in a palm of a hand",
-        "duration": 2.5,
-        "influence": 0.3,
-        "createdBy": "ElevenLabs SFX v2",
-        "createdAt": "2026-04-22T06:38:07.344Z"
-      },
-      "file": "assets/sounds/Env SFX/coin_swoosh.wav"
     }
   }
 }
