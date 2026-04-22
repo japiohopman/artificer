@@ -303,9 +303,14 @@
   ],
   "image": "public/assets/atlas/enemies/ancient_silver_dragon.webp",
   "url": "public/assets/atlas/enemies/json/ancient_silver_dragon.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-22T15:17:26.979Z",
   "forms": [],
   "reactions": [],
   "sprite_index": 21,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet1.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet1.webp",
+  "imageUrl": "/assets/atlas/enemies/images/ancient_silver_dragon.webp",
+  "_type": "enemies",
+  "background_type": "dragon_cave",
+  "rarity": "Legendary",
+  "last_updated": "22-4-2026"
 }
