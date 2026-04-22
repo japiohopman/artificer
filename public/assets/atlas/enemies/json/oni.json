@@ -278,10 +278,15 @@
   ],
   "image": "public/assets/atlas/enemies/oni.webp",
   "url": "public/assets/atlas/enemies/json/oni.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-22T13:04:20.515Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 11,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp",
+  "imageUrl": "/assets/atlas/enemies/images/oni.webp",
+  "_type": "enemies",
+  "background_type": "land_forest4",
+  "rarity": "Rare",
+  "last_updated": "22-4-2026"
 }
