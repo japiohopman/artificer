@@ -50,12 +50,17 @@
     }
   },
   "url": "public/assets/atlas/equipment/json/quarterstaff.json",
-  "updated_at": "2026-04-14T10:57:13.765Z",
+  "updated_at": "2026-04-23T10:09:25.186Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/quarterstaff.webp",
   "sprite_index": 16,
   "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
-  "imageUrl": "/assets/atlas/equipment/quarterstaff.webp",
+  "imageUrl": "/assets/atlas/equipment/images/quarterstaff.webp",
   "_type": "equipment",
-  "last_updated": "14-4-2026"
+  "last_updated": "23-4-2026",
+  "background_type": "land_forest",
+  "category": "Simple Melee Weapons",
+  "slot": [
+    "main-hand"
+  ]
 }
