@@ -73,10 +73,15 @@
   ],
   "image": "public/assets/atlas/enemies/flying_snake.webp",
   "url": "public/assets/atlas/enemies/json/flying_snake.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-24T17:51:05.496Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 3,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp",
+  "imageUrl": "/assets/atlas/enemies/images/flying_snake.webp",
+  "_type": "enemies",
+  "background_type": "air",
+  "rarity": "Uncommon",
+  "last_updated": "24-4-2026"
 }
