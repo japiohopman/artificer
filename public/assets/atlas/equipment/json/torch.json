@@ -21,10 +21,17 @@
     "A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
   ],
   "url": "public/assets/atlas/equipment/json/torch.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-24T03:30:26.922Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/torch.webp",
   "sprite_index": 18,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/images/torch.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "off-hand"
+  ],
+  "last_updated": "24-4-2026"
 }
