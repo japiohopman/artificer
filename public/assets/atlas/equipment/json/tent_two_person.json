@@ -21,10 +21,17 @@
     "A simple and portable canvas shelter, a tent sleeps two."
   ],
   "url": "public/assets/atlas/equipment/json/tent_two_person.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-24T03:29:16.508Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/tent_two_person.webp",
   "sprite_index": 14,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/images/tent_two_person.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "24-4-2026"
 }
