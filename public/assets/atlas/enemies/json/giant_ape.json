@@ -101,11 +101,16 @@
   ],
   "image": "public/assets/atlas/enemies/giant_ape.webp",
   "url": "public/assets/atlas/enemies/json/giant_ape.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-24T17:52:31.964Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 12,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp",
+  "imageUrl": "/assets/atlas/enemies/images/giant_ape.webp",
+  "_type": "enemies",
+  "background_type": "jungle",
+  "rarity": "Rare",
+  "last_updated": "24-4-2026"
 }
