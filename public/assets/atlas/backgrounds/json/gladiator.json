@@ -1,0 +1,84 @@
+{
+  "index": "gladiator",
+  "name": "Gladiator",
+  "description": "A gladiator is as much an entertainer as any minstrel or circus performer, trained to make the arts of combat into a spectacle for the crowd to enjoy. This kind of fighting is a form of performance, and you are its star.",
+  "starting_proficiencies": [
+    { "index": "skill-acrobatics", "name": "Skill: Acrobatics" },
+    { "index": "skill-performance", "name": "Skill: Performance" },
+    { "index": "disguise-kit", "name": "Disguise Kit" }
+  ],
+  "starting_equipment": [
+    { "equipment": { "index": "costume", "name": "Costume", "url": "/api/equipment/costume" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "An inexpensive but unusual weapon, such as a trident or net",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          { "option_type": "reference", "item": { "index": "trident", "name": "Trident" } },
+          { "option_type": "reference", "item": { "index": "net", "name": "Net" } },
+          { "option_type": "reference", "item": { "index": "shortsword", "name": "Shortsword" } }
+        ]
+      }
+    },
+    {
+      "desc": "A favor from an admirer",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          { "option_type": "reference", "item": { "index": "love-letter", "name": "Love Letter" } },
+          { "option_type": "reference", "item": { "index": "lock-of-hair", "name": "Lock of Hair" } },
+          { "option_type": "reference", "item": { "index": "trinket", "name": "Trinket" } }
+        ]
+      }
+    }
+  ],
+  "feature": {
+    "name": "By Popular Demand",
+    "desc": [
+      "You can always find a place to perform, usually in a combat arena or an inn but possibly with a circus, at a theater, or even in a noble's court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I know a story relevant to almost every situation.",
+      "Whenever I come to a new place, I collect local rumors and spread gossip.",
+      "I'm a hopeless romantic.",
+      "Nobody stays angry at me or around me for long.",
+      "I love a good insult.",
+      "I get bitter if I'm not the center of attention.",
+      "I'll settle for nothing less than perfection.",
+      "I change my mood or my mind as quickly as I change key in a song."
+    ],
+    "ideals": [
+      "Beauty. When I perform, I make the world better than it was. (Good)",
+      "Tradition. The stories, legends, and songs of the past must never be forgotten. (Lawful)",
+      "Creativity. The world is in need of new ideas and bold action. (Chaotic)",
+      "Greed. I'm only in it for the money and fame. (Evil)",
+      "People. I like seeing the smiles on people's faces. (Neutral)",
+      "Honesty. Art should reflect the soul. (Any)"
+    ],
+    "bonds": [
+      "My weapon is my most treasured possession.",
+      "Someone stole my precious weapon.",
+      "I want to be famous, whatever it takes.",
+      "I idolize a hero of the old tales.",
+      "I will do anything to prove myself superior to my hated rival.",
+      "I would do anything for the other members of my group."
+    ],
+    "flaws": [
+      "I'll do anything to win fame and renown.",
+      "I'm a sucker for a pretty face.",
+      "A scandal prevents me from ever going home again.",
+      "I once satirized a noble who still wants my head.",
+      "I have trouble keeping my true feelings hidden.",
+      "Despite my best efforts, I am unreliable to my friends."
+    ]
+  }
+}

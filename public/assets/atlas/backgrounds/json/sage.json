@@ -1,9 +1,84 @@
 {
   "index": "sage",
-  "name": "sage",
-  "desc": [
-    "Je bent een geleerde die jarenlang boeken en manuscripten heeft bestudeerd in bibliotheken of universiteiten, altijd op zoek naar meer kennis."
+  "name": "Sage",
+  "description": "You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your field of study.",
+  "starting_proficiencies": [
+    { "index": "skill-arcana", "name": "Skill: Arcana" },
+    { "index": "skill-history", "name": "Skill: History" }
   ],
-  "image": "public/assets/atlas/backgrounds/sage.webp",
-  "url": "public/assets/atlas/backgrounds/json/sage.json"
+  "language_options": {
+    "choose": 2,
+    "from": {
+      "option_set_type": "options_array",
+      "options": [
+        { "option_type": "reference", "item": { "index": "common", "name": "Common" } },
+        { "option_type": "reference", "item": { "index": "dwarvish", "name": "Dwarvish" } },
+        { "option_type": "reference", "item": { "index": "elvish", "name": "Elvish" } },
+        { "option_type": "reference", "item": { "index": "giant", "name": "Giant" } },
+        { "option_type": "reference", "item": { "index": "gnomish", "name": "Gnomish" } },
+        { "option_type": "reference", "item": { "index": "goblin", "name": "Goblin" } },
+        { "option_type": "reference", "item": { "index": "halfling", "name": "Halfling" } },
+        { "option_type": "reference", "item": { "index": "orc", "name": "Orc" } },
+        { "option_type": "reference", "item": { "index": "abyssal", "name": "Abyssal" } },
+        { "option_type": "reference", "item": { "index": "celestial", "name": "Celestial" } },
+        { "option_type": "reference", "item": { "index": "draconic", "name": "Draconic" } },
+        { "option_type": "reference", "item": { "index": "deep-speech", "name": "Deep Speech" } },
+        { "option_type": "reference", "item": { "index": "infernal", "name": "Infernal" } },
+        { "option_type": "reference", "item": { "index": "primordial", "name": "Primordial" } },
+        { "option_type": "reference", "item": { "index": "sylvan", "name": "Sylvan" } },
+        { "option_type": "reference", "item": { "index": "undercommon", "name": "Undercommon" } }
+      ]
+    }
+  },
+  "starting_equipment": [
+    { "equipment": { "index": "ink-bottle", "name": "Bottle of Black Ink", "url": "/api/equipment/ink-bottle" }, "quantity": 1 },
+    { "equipment": { "index": "quill", "name": "Quill", "url": "/api/equipment/quill" }, "quantity": 1 },
+    { "equipment": { "index": "small-knife", "name": "Small Knife", "url": "/api/equipment/small-knife" }, "quantity": 1, "slot": "off-hand" },
+    { "equipment": { "index": "letter-from-dead-colleague", "name": "Letter from a dead colleague", "url": "/api/equipment/letter-from-dead-colleague" }, "quantity": 1 },
+    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+  ],
+  "starting_equipment_options": [],
+  "feature": {
+    "name": "Researcher",
+    "desc": [
+      "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I use polysyllabic words that convey the impression of great erudition.",
+      "I've read every book in the world's greatest libraries — or I like to boast that I have.",
+      "I'm used to helping out those who aren't as bright as I am, and I patiently explain anything and everything to others.",
+      "There's nothing I like more than a good mystery.",
+      "I'm willing to listen to every side of an argument before I make my own judgment.",
+      "I . . . speak . . . slowly . . . when talking . . . to idiots, . . . which . . . almost . . . everyone . . . is . . . compared . . . to me.",
+      "I am horribly, horribly awkward in social situations.",
+      "I'm convinced that people are always trying to steal my secrets."
+    ],
+    "ideals": [
+      "Knowledge. The path to power and self-improvement is through knowledge. (Neutral)",
+      "Faith. Trust in your deity and your deity will reward your efforts. (Lawful)",
+      "Change. We must help bring about the world's transition into a new era. (Chaotic)",
+      "Power. Knowledge is the path to power and domination. (Evil)",
+      "Self-Improvement. The goal of a life of study is the betterment of oneself. (Any)",
+      "No Limits. Nothing should untether the infinite possibility of existence. (Chaotic)"
+    ],
+    "bonds": [
+      "It is my duty to protect my students.",
+      "I have an ancient text that holds terrible secrets that must not fall into the wrong hands.",
+      "I work to preserve a library, university, or scriptorium.",
+      "My life's work is a series of tomes related to a specific field of lore.",
+      "I've been searching my whole life for the answer to a certain question.",
+      "I sold my soul for knowledge. I hope to do great deeds and win it back."
+    ],
+    "flaws": [
+      "I am easily distracted by the promise of information.",
+      "Most people scream and run when they see a demon. I stop and take notes on its anatomy.",
+      "Unlocking an ancient mystery is worth the price of a civilization.",
+      "I overlook obvious solutions in favor of complicated ones.",
+      "I speak without really thinking through my words, step on toes, and irritate people.",
+      "I can't keep a secret to save my life, or anyone else's."
+    ]
+  }
 }

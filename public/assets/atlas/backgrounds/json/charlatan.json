@@ -1,9 +1,74 @@
 {
   "index": "charlatan",
-  "name": "charlatan",
-  "desc": [
-    "Je bent een meester in misleiding en manipulatie, gewend om mensen te bedriegen met valse identiteiten, trucs of dubieuze handeltjes."
+  "name": "Charlatan",
+  "description": "You have always had a way with people. You know what makes them tick, you can tease out their hearts' desires after a few minutes of conversation, and with a few leading questions you can read them like they were children's books. It's a useful talent, and one that you're perfectly willing to use for your advantage.",
+  "starting_proficiencies": [
+    { "index": "skill-deception", "name": "Skill: Deception" },
+    { "index": "skill-sleight-of-hand", "name": "Skill: Sleight of Hand" },
+    { "index": "disguise-kit", "name": "Disguise Kit" },
+    { "index": "forgery-kit", "name": "Forgery Kit" }
   ],
-  "image": "public/assets/atlas/backgrounds/charismarlatan.webp",
-  "url": "public/assets/atlas/backgrounds/json/charismarlatan.json"
+  "starting_equipment": [
+    { "equipment": { "index": "fine-clothes", "name": "Fine Clothes", "url": "/api/equipment/fine-clothes" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "disguise-kit", "name": "Disguise Kit", "url": "/api/equipment/disguise-kit" }, "quantity": 1 },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "Tools of the con of your choice",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          { "option_type": "reference", "item": { "index": "stoppered-bottles", "name": "Ten stoppered bottles filled with colored liquid" } },
+          { "option_type": "reference", "item": { "index": "weighted-dice", "name": "A set of weighted dice" } },
+          { "option_type": "reference", "item": { "index": "marked-cards", "name": "A deck of marked cards" } },
+          { "option_type": "reference", "item": { "index": "fake-signet-ring", "name": "A signet ring of an imaginary duke" } }
+        ]
+      }
+    }
+  ],
+  "feature": {
+    "name": "False Identity",
+    "desc": [
+      "You have created a second identity that includes documentation, established acquaintances, and disguises that allow you to assume that persona. Additionally, you can forge documents including official papers and personal letters, as long as you have seen an example of the kind of document or the handwriting you are trying to copy."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I fall in and out of love easily, and am always pursuing someone.",
+      "I have a joke for every occasion, especially occasions where humor is inappropriate.",
+      "The flattery of my neighbors can't soften my hard heart, but it does make me more agreeable.",
+      "I'm a born gambler who can't resist taking a risk for a potential payoff.",
+      "I lie about almost everything, even when there's no good reason to.",
+      "Sarcasm and insults are my weapons of choice.",
+      "I keep multiple holy symbols on me and invoke whatever deity might come in useful at any given moment.",
+      "I pocket anything I see that might have some value."
+    ],
+    "ideals": [
+      "Independence. I am a free spirit — no one tells me what to do. (Chaotic)",
+      "Fairness. I never target people who can't afford to lose a few coins. (Lawful)",
+      "Charity. I distribute the money I acquire to the people who really need it. (Good)",
+      "Creativity. I never run the same con twice. (Chaotic)",
+      "Friendship. I'm willing to help my friends, but only as long as it doesn't get in the way of my own interests. (Neutral)",
+      "Aspiration. I'm determined to make something of myself. (Any)"
+    ],
+    "bonds": [
+      "I fleeced the wrong person and must work to ensure that this individual never crosses my path again.",
+      "I owe everything I am to my mentor — a horrible person who's probably rotting in jail somewhere.",
+      "I'm trying to pay off an old debt I owe to a generous benefactor.",
+      "A powerful person killed someone I love. Some day soon, I'll have my revenge.",
+      "I swindled and ruined a person who didn't deserve it. I seek to atone for my misdeeds but might never be able to forgive myself.",
+      "I come from a noble family, and one day I'll reclaim my lands and title from those who stole them from me."
+    ],
+    "flaws": [
+      "I can't resist a pretty face.",
+      "I'm always in debt. I spend my ill-gotten gains on decadent luxuries as fast as I bring them in.",
+      "I'm convinced that no one could ever fool me the way I fool others.",
+      "I'm too greedy for my own good. I can't resist taking a risk if there's money involved.",
+      "I can't resist swindling people who are more powerful than me.",
+      "I hate to admit it and will hate myself for it, but I'll run and preserve my own hide if the going gets tough."
+    ]
+  }
 }

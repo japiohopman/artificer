@@ -1,0 +1,62 @@
+{
+  "index": "urchin",
+  "name": "Urchin",
+  "description": "You grew up on the streets alone, orphaned, and poor. You had no one to watch over you or provide for you, so you learned to provide for yourself. You fought fiercely for every scrap of food and kept a constant watch out for other urchins who might steal from you. You slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the help of a doctor or a temple. You've survived despite all odds, and you did it through cunning, strength, speed, or some combination of each.",
+  "starting_proficiencies": [
+    { "index": "skill-sleight-of-hand", "name": "Skill: Sleight of Hand" },
+    { "index": "skill-stealth", "name": "Skill: Stealth" },
+    { "index": "disguise-kit", "name": "Disguise Kit" },
+    { "index": "thieves-tools", "name": "Thieves' Tools" }
+  ],
+  "starting_equipment": [
+    { "equipment": { "index": "small-knife", "name": "Small Knife", "url": "/api/equipment/small-knife" }, "quantity": 1, "slot": "off-hand" },
+    { "equipment": { "index": "city-map", "name": "Map of the city you grew up in", "url": "/api/equipment/city-map" }, "quantity": 1 },
+    { "equipment": { "index": "pet-mouse", "name": "Pet Mouse", "url": "/api/equipment/pet-mouse" }, "quantity": 1 },
+    { "equipment": { "index": "token-of-parents", "name": "Token to remember your parents by", "url": "/api/equipment/token-of-parents" }, "quantity": 1 },
+    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+  ],
+  "starting_equipment_options": [],
+  "feature": {
+    "name": "City Secrets",
+    "desc": [
+      "You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would otherwise allow."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I hide scraps of food and trinkets away in my pockets.",
+      "I ask a lot of questions.",
+      "I like to squeeze into small places where no one else can get to me.",
+      "I sleep with my back to a wall or tree, with everything I own wrapped in my arms.",
+      "I eat like a pig and have bad manners.",
+      "I think anyone who's nice to me is hiding an evil motive.",
+      "I don't like to bathe.",
+      "I say exactly what I'm thinking, no matter how rude it is."
+    ],
+    "ideals": [
+      "Respect. All people, regardless of station, deserve to be treated with dignity. (Good)",
+      "Community. We have to take care of each other, because no one else is going to do it. (Lawful)",
+      "Change. The low are lifted up, and the high and mighty are brought low. Change is the nature of things. (Chaotic)",
+      "Retribution. The rich need to be shown what it's like to went without and suffer. (Evil)",
+      "People. I'm loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. (Neutral)",
+      "Aspiration. I'm going to prove that I'm worthy of a better life. (Any)"
+    ],
+    "bonds": [
+      "My town or city is my home, and I'll fight to defend it.",
+      "I sponsor an orphanage to keep others from enduring what I was forced to endure.",
+      "I owe my survival to another urchin who taught me how to live on the streets.",
+      "I owe a debt I can never repay to the person who took pity on me.",
+      "I escaped my life of poverty by robbing an important person, and I'm wanted for it.",
+      "No one else should have to endure the hardships I've been through."
+    ],
+    "flaws": [
+      "If I'm outmatched, I'll run away in a heartbeat.",
+      "An innocent person is in prison for a crime that I committed. I'm okay with that.",
+      "I'll never fully trust anyone other than myself.",
+      "I'm convinced that a powerful person is out to get me, and I'm probably right.",
+      "I'm too greedy for my own good. I can't resist taking a risk if there's money involved.",
+      "It's not stealing if I need it more than they do."
+    ]
+  }
+}

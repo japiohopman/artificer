@@ -1,0 +1,96 @@
+{
+  "index": "outlander",
+  "name": "Outlander",
+  "description": "You grew up in the wilds, far from civilization and the comforts of town and technology. You've witnessed the migration of great herds, survived weather more terrible than any city-dweller could comprehend, and enjoyed the solitude of being the only thinking creature for miles in any direction. The wilds are in your blood, whether you were a nomad, an explorer, a recluse, a hunter-gatherer, or even a marauder.",
+  "starting_proficiencies": [
+    { "index": "skill-athletics", "name": "Skill: Athletics" },
+    { "index": "skill-survival", "name": "Skill: Survival" }
+  ],
+  "language_options": {
+    "choose": 1,
+    "from": {
+      "option_set_type": "options_array",
+      "options": [
+        { "option_type": "reference", "item": { "index": "common", "name": "Common" } },
+        { "option_type": "reference", "item": { "index": "dwarvish", "name": "Dwarvish" } },
+        { "option_type": "reference", "item": { "index": "elvish", "name": "Elvish" } },
+        { "option_type": "reference", "item": { "index": "giant", "name": "Giant" } },
+        { "option_type": "reference", "item": { "index": "gnomish", "name": "Gnomish" } },
+        { "option_type": "reference", "item": { "index": "goblin", "name": "Goblin" } },
+        { "option_type": "reference", "item": { "index": "halfling", "name": "Halfling" } },
+        { "option_type": "reference", "item": { "index": "orc", "name": "Orc" } }
+      ]
+    }
+  },
+  "starting_equipment": [
+    { "equipment": { "index": "staff", "name": "Staff", "url": "/api/equipment/staff" }, "quantity": 1, "slot": "main-hand" },
+    { "equipment": { "index": "hunting-trap", "name": "Hunting Trap", "url": "/api/equipment/hunting-trap" }, "quantity": 1 },
+    { "equipment": { "index": "trophy-from-fallen-animal", "name": "Trophy from an animal you killed", "url": "/api/equipment/trophy-from-fallen-animal" }, "quantity": 1 },
+    { "equipment": { "index": "travelers-clothes", "name": "Traveler's Clothes", "url": "/api/equipment/travelers-clothes" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "One musical instrument of your choice",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          { "option_type": "reference", "item": { "index": "bagpipes", "name": "Bagpipes" } },
+          { "option_type": "reference", "item": { "index": "drum", "name": "Drum" } },
+          { "option_type": "reference", "item": { "index": "dulcimer", "name": "Dulcimer" } },
+          { "option_type": "reference", "item": { "index": "flute", "name": "Flute" } },
+          { "option_type": "reference", "item": { "index": "lute", "name": "Lute" } },
+          { "option_type": "reference", "item": { "index": "lyre", "name": "Lyre" } },
+          { "option_type": "reference", "item": { "index": "horn", "name": "Horn" } },
+          { "option_type": "reference", "item": { "index": "pan-flute", "name": "Pan Flute" } },
+          { "option_type": "reference", "item": { "index": "shawm", "name": "Shawm" } },
+          { "option_type": "reference", "item": { "index": "viol", "name": "Viol" } }
+        ]
+      }
+    }
+  ],
+  "feature": {
+    "name": "Wanderer",
+    "desc": [
+      "You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, and so forth."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I'm driven by a wanderlust that led me away from home.",
+      "I watch over my friends as if they were a litter of newborn pups.",
+      "I once ran twenty-five miles without stopping to warn my clan of an approaching orc horde. I'd do it again if I had to.",
+      "I have a lesson for every situation, drawn from observing nature.",
+      "I place no stock in wealthy or well-mannered folk. Money and manners won't save you from a hungry owlbear.",
+      "I'm always picking at things, absentmindedly fiddling with my equipment.",
+      "I feel far more comfortable around animals than people.",
+      "I was, according to my clan, reared by wolves."
+    ],
+    "ideals": [
+      "Change. Life is like the seasons, in constant change, and we must change with it. (Chaotic)",
+      "Greater Good. It is each person's responsibility to make the most happiness for the whole tribe. (Good)",
+      "Honor. If I dishonor myself, I dishonor my whole clan. (Lawful)",
+      "Might. The strongest are meant to rule. (Evil)",
+      "Nature. The natural world is more important than all the constructs of civilization. (Neutral)",
+      "Glory. I must earn glory in battle, for myself and my clan. (Any)"
+    ],
+    "bonds": [
+      "My family, clan, or tribe is the most important thing in my life, even when they are far from me.",
+      "An injury to the unspoiled wilderness of my home is an injury to me.",
+      "I will bring terrible wrath down on the evildoers who destroyed my homeland.",
+      "I am the last of my tribe, and it is up to me to ensure their names are never forgotten.",
+      "I suffer awful visions of a coming disaster and will do anything to prevent it.",
+      "It is my duty to provide children to sustain my tribe."
+    ],
+    "flaws": [
+      "I am too enamored of ale, wine, and other intoxicants.",
+      "There's no room for caution in a life lived to the fullest.",
+      "I remember every insult I've received and nurse a silent resentment toward anyone who's ever wronged me.",
+      "I am slow to trust members of other races, tribes, and societies.",
+      "Violence is my answer to almost any challenge.",
+      "Don't expect me to save those who can't save themselves. It is nature's way that the strong thrive and the weak perish."
+    ]
+  }
+}

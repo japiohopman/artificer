@@ -1,0 +1,69 @@
+{
+  "index": "haunted-one",
+  "name": "Haunted One",
+  "description": "You are haunted by something so terrible that you dare not speak of it. You’ve tried to bury it and forget it, but it follows you wherever you go and colors your every thought.",
+  "starting_proficiencies": [
+    { "index": "skill-investigation", "name": "Skill: Investigation" },
+    { "index": "skill-survival", "name": "Skill: Survival" }
+  ],
+  "starting_equipment": [
+    { "equipment": { "index": "monster-hunters-pack", "name": "Monster Hunter's Pack", "url": "/api/equipment/monster-hunters-pack" }, "quantity": 1 },
+    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+  ],
+  "starting_equipment_options": [
+    {
+       "desc": "A harrowing memento",
+       "choose": 1,
+       "type": "equipment",
+       "from": {
+         "option_set_type": "options_array",
+         "options": [
+           { "option_type": "reference", "item": { "index": "trinket", "name": "Trinket" } }
+         ]
+       }
+    }
+  ],
+  "feature": {
+    "name": "Heart of Darkness",
+    "desc": [
+      "Those who look into your eyes can see that you have faced unimaginable horror and that you are no stranger to darkness. Though they might fear you, commoners will extend you every courtesy and do their utmost to help you. Unless you have shown yourself to be a danger to them, they will even fight alongside you, should you find yourself facing an enemy alone."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I don't run from my problems. My problems run from me.",
+      "I like to read and memorize my favorite passages from scary stories.",
+      "I’m a curse-breaker, and I’m always looking for signs of dark magic.",
+      "I have a nervous habit that I can't quite shake.",
+      "I’m always looking over my shoulder.",
+      "I don't trust anyone who isn't as scarred as I am.",
+      "I’m prone to long silences and staring into the distance.",
+      "I take everything far too seriously."
+    ],
+    "ideals": [
+      "Selflessness. I will sacrfice myself to keep others from meeting my fate. (Good)",
+      "Vengeance. I will hunt down the thing that destroyed my life. (Any)",
+      "Knowledge. If I can understand the darkness, I can defeat it. (Neutral)",
+      "Control. I will never again be a victim of forces beyond my control. (Any)",
+      "Fear. I will make my enemies feel the same terror I felt. (Evil)",
+      "Destiny. There is a reason I survived, and I will find it. (Any)"
+    ],
+    "bonds": [
+      "I keep a diary of my experiences to ensure I never forget.",
+      "I’m searching for the person who saved me from the darkness.",
+      "I seek to protect a specific innocent person from the shadows.",
+      "I have a recurring dream that I believe is a vision of the future.",
+      "My weapon is the only thing that makes me feel safe.",
+      "I will find the truth behind my harrowing event, no matter the cost."
+    ],
+    "flaws": [
+      "I’m convinced that I’m cursed and that everyone around me is in danger.",
+      "I’m easily startled by sudden noises or movements.",
+      "I have difficulty sleeping and often stay awake for days.",
+      "I’m prone to bouts of intense and irrational anger.",
+      "I’m terrified of my own potential for darkness.",
+      "I find it hard to care about mundane things."
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "index": "faceless",
+  "name": "Faceless",
+  "description": "Being who you are, you could never be a hero. Whether you're a criminal, a monster, or just a social outcast, your true identity is a secret you must keep at all costs. You have created a second identity that you use when you go out into the world, a mask that allows you to act as a hero while your true self remains hidden.",
+  "starting_proficiencies": [
+    { "index": "skill-deception", "name": "Skill: Deception" },
+    { "index": "skill-intimidation", "name": "Skill: Intimidation" },
+    { "index": "disguise-kit", "name": "Disguise Kit" }
+  ],
+  "language_options": {
+    "choose": 1,
+    "from": {
+      "option_set_type": "options_array",
+      "options": [
+        { "option_type": "reference", "item": { "index": "common", "name": "Common" } },
+        { "option_type": "reference", "item": { "index": "dwarvish", "name": "Dwarvish" } },
+        { "option_type": "reference", "item": { "index": "elvish", "name": "Elvish" } },
+        { "option_type": "reference", "item": { "index": "giant", "name": "Giant" } },
+        { "option_type": "reference", "item": { "index": "gnomish", "name": "Gnomish" } },
+        { "option_type": "reference", "item": { "index": "goblin", "name": "Goblin" } },
+        { "option_type": "reference", "item": { "index": "halfling", "name": "Halfling" } },
+        { "option_type": "reference", "item": { "index": "orc", "name": "Orc" } }
+      ]
+    }
+  },
+  "starting_equipment": [
+    { "equipment": { "index": "disguise-kit", "name": "Disguise Kit", "url": "/api/equipment/disguise-kit" }, "quantity": 1 },
+    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 },
+    { "equipment": { "index": "costume", "name": "A costume", "url": "/api/equipment/costume" }, "quantity": 1 }
+  ],
+  "starting_equipment_options": [],
+  "feature": {
+    "name": "Dual Personalities",
+    "desc": [
+      "Most of your fellow adventurers might know you as a hero, but you have a secret identity you must keep hidden. Your dual personalities have different names, different backgrounds, and different ways of behaving. You can use your disguise kit to create a second identity, and while you are in that identity, you can act with an impunity that you would never dare in your true self. However, if your true identity is ever revealed, the consequences could be dire."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I'm a different person when I'm wearing my mask.",
+      "I'm always looking for a way to hide my true self.",
+      "I'm a master of disguise and can change my appearance in a matter of seconds.",
+      "I'm always careful about what I say and who I say it to.",
+      "I'm a secretive person and don't like to talk about myself.",
+      "I'm always looking for a way to protect my identity.",
+      "I'm a very private person and don't like to be in the spotlight.",
+      "I'm always looking for a way to stay hidden from those who would reveal my secrets."
+    ],
+    "ideals": [
+      "Secrecy. My true identity must remain a secret at all costs. (Any)",
+      "Protection. I use my mask to protect those I love. (Good)",
+      "Retribution. I use my mask to seek revenge on those who have wronged me. (Evil)",
+      "Justice. I use my mask to bring justice to the world. (Lawful)",
+      "Freedom. I use my mask to act as a free spirit. (Chaotic)",
+      "Aspiration. I use my mask to become the person I've always wanted to be. (Any)"
+    ],
+    "bonds": [
+      "I would do anything to protect my true identity.",
+      "My mask is a symbol of my double life, and I carry it wherever I go.",
+      "I'm searching for the person who revealed my secret and will do anything to stop them.",
+      "I'm trying to make amends for the things I've done in my secret life.",
+      "I will always protect the ones I love, even if it means hiding my true self from them.",
+      "My secret identity is my life, and I will do anything to keep it that way."
+    ],
+    "flaws": [
+      "I'm constantly worried that my true identity will be revealed.",
+      "I'm often tempted to use my mask for my own gain.",
+      "I'm secretive to a fault and don't trust anyone with my true self.",
+      "I'm often reckless when I'm wearing my mask.",
+      "I'm prone to keeping secrets that aren't mine to keep.",
+      "I'm always looking for an escape if the going gets tough."
+    ]
+  }
+}

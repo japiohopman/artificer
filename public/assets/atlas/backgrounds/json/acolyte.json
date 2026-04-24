@@ -1,9 +1,85 @@
 {
   "index": "acolyte",
-  "name": "acolyte",
-  "desc": [
-    "Je hebt je leven gewijd aan de dienst van een tempel of religieuze gemeenschap, waar je heilige riten uitvoerde en spirituele begeleiding bood."
+  "name": "Acolyte",
+  "description": "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshippers into the presence of the divine. You are not necessarily a cleric — performing sacred rites is not the same thing as channeling divine power.",
+  "starting_proficiencies": [
+    { "index": "skill-insight", "name": "Skill: Insight" },
+    { "index": "skill-religion", "name": "Skill: Religion" }
   ],
-  "image": "public/assets/atlas/backgrounds/acolyte.webp",
-  "url": "public/assets/atlas/backgrounds/json/acolyte.json"
+  "language_options": {
+    "choose": 2,
+    "from": {
+      "option_set_type": "options_array",
+      "options": [
+        { "option_type": "reference", "item": { "index": "common", "name": "Common" } },
+        { "option_type": "reference", "item": { "index": "dwarvish", "name": "Dwarvish" } },
+        { "option_type": "reference", "item": { "index": "elvish", "name": "Elvish" } },
+        { "option_type": "reference", "item": { "index": "giant", "name": "Giant" } },
+        { "option_type": "reference", "item": { "index": "gnomish", "name": "Gnomish" } },
+        { "option_type": "reference", "item": { "index": "goblin", "name": "Goblin" } },
+        { "option_type": "reference", "item": { "index": "halfling", "name": "Halfling" } },
+        { "option_type": "reference", "item": { "index": "orc", "name": "Orc" } },
+        { "option_type": "reference", "item": { "index": "abyssal", "name": "Abyssal" } },
+        { "option_type": "reference", "item": { "index": "celestial", "name": "Celestial" } },
+        { "option_type": "reference", "item": { "index": "draconic", "name": "Draconic" } },
+        { "option_type": "reference", "item": { "index": "deep-speech", "name": "Deep Speech" } },
+        { "option_type": "reference", "item": { "index": "infernal", "name": "Infernal" } },
+        { "option_type": "reference", "item": { "index": "primordial", "name": "Primordial" } },
+        { "option_type": "reference", "item": { "index": "sylvan", "name": "Sylvan" } },
+        { "option_type": "reference", "item": { "index": "undercommon", "name": "Undercommon" } }
+      ]
+    }
+  },
+  "starting_equipment": [
+    { "equipment": { "index": "holy-symbol", "name": "Holy Symbol", "url": "/api/equipment/holy-symbol" }, "quantity": 1, "slot": "neck" },
+    { "equipment": { "index": "prayer-book", "name": "Prayer Book", "url": "/api/equipment/prayer-book" }, "quantity": 1 },
+    { "equipment": { "index": "stick-of-incense", "name": "Stick of Incense", "url": "/api/equipment/stick-of-incense" }, "quantity": 5 },
+    { "equipment": { "index": "vestments", "name": "Vestments", "url": "/api/equipment/vestments" }, "quantity": 1 },
+    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+  ],
+  "starting_equipment_options": [],
+  "feature": {
+    "name": "Shelter of the Faithful",
+    "desc": [
+      "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.",
+      "You might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there. This could be the temple where you used to serve, if you remain on good terms with it, or a temple where you have found a new home. While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I idolize a particular hero of my faith, and constantly refer to that person's deeds and example.",
+      "I can find common ground between the fiercest enemies, empathizing with them and always working toward peace.",
+      "I see omens in every event and action. The gods try to speak to us, we just need to listen.",
+      "Nothing can shake my optimistic attitude.",
+      "I quote (or misquote) sacred texts and proverbs in almost every situation.",
+      "I am tolerant (or intolerant) of other faiths and respect (or condemn) the worship of other gods.",
+      "I've enjoyed fine food, drink, and high society among my temple's elite. Rough living grates on me.",
+      "I've spent so long in the temple that I have little practical experience dealing with people in the outside world."
+    ],
+    "ideals": [
+      "Tradition. The ancient traditions of worship and sacrifice must be preserved and upheld. (Lawful)",
+      "Charity. I always try to help those in need, no matter what the personal cost. (Good)",
+      "Change. We must help bring about the changes the gods are constantly working in the world. (Chaotic)",
+      "Power. I hope to one day rise to the top of my faith's religious hierarchy. (Lawful)",
+      "Faith. I trust that my deity will guide my actions. I trust that if I work hard, things will go well. (Lawful)",
+      "Self-Knowledge. If I know myself, I know my deity. (Any)"
+    ],
+    "bonds": [
+      "I would die to recover an ancient relic of my faith that was lost long ago.",
+      "I will someday get revenge on the corrupt temple hierarchy who branded me a heretic.",
+      "I owe my life to the priest who took me in when my parents died.",
+      "Everything I do is for the common people.",
+      "I will do anything to protect the temple where I served.",
+      "I seek to preserve a sacred text that my enemies consider heretical and seek to destroy."
+    ],
+    "flaws": [
+      "I judge others harshly, and myself even more severely.",
+      "I put too much trust in those who wield power within my temple's hierarchy.",
+      "My piety sometimes leads me to blindly trust those that profess faith in my god.",
+      "I am inflexible in my thinking.",
+      "I am suspicious of strangers and expect the worst of them.",
+      "Once I pick a goal, I become obsessed with it to the detriment of everything else in my life."
+    ]
+  }
 }

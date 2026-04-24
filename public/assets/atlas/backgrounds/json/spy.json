@@ -1,0 +1,73 @@
+{
+  "index": "spy",
+  "name": "Spy",
+  "description": "You have a history of breaking the law, but you have put your skills to use for a more honorable cause: the defense of your nation or the service of a powerful figure. You are an experienced operative with a history of espionage, and you still have contacts within the network you served. You're far closer than most people to the world of secrets, theft, and deception.",
+  "starting_proficiencies": [
+    { "index": "skill-deception", "name": "Skill: Deception" },
+    { "index": "skill-stealth", "name": "Skill: Stealth" },
+    { "index": "thieves-tools", "name": "Thieves' Tools" }
+  ],
+  "starting_equipment": [
+    { "equipment": { "index": "crowbar", "name": "Crowbar", "url": "/api/equipment/crowbar" }, "quantity": 1 },
+    { "equipment": { "index": "common-clothes", "name": "Dark Common Clothes with Hood", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "One type of gaming set",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          { "option_type": "reference", "item": { "index": "dice-set", "name": "Dice Set" } },
+          { "option_type": "reference", "item": { "index": "dragonchess-set", "name": "Dragonchess Set" } },
+          { "option_type": "reference", "item": { "index": "playing-card-set", "name": "Playing Card Set" } },
+          { "option_type": "reference", "item": { "index": "three-dragon-ante-set", "name": "Three-Dragon Ante Set" } }
+        ]
+      }
+    }
+  ],
+  "feature": {
+    "name": "Criminal Contact",
+    "desc": [
+      "You have a reliable and trustworthy contact who acts as your liaison to a network of other spies or criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I always have a plan for what to do when things go wrong.",
+      "I am always calm, no matter what the situation.",
+      "The first thing I do in a new place is note the locations of everything valuable.",
+      "I would rather make a new friend than a new enemy.",
+      "I am incredibly slow to trust.",
+      "I don't pay attention to the risks in a situation.",
+      "The best way to get me to do something is to tell me I can't do it.",
+      "I blow up at the slightest insult."
+    ],
+    "ideals": [
+      "Honor. I don't steal from others in the trade. (Lawful)",
+      "Freedom. Chains are meant to be broken. (Chaotic)",
+      "Charity. I steal from the wealthy so that I can help people in need. (Good)",
+      "Greed. I will do whatever it takes to become wealthy. (Evil)",
+      "People. I'm loyal to my friends, not to any ideals. (Neutral)",
+      "Redemption. There's a spark of good in everyone. (Good)"
+    ],
+    "bonds": [
+      "I'm trying to pay off an old debt I owe to a generous benefactor.",
+      "My ill-gotten gains go to support my family.",
+      "Something important was taken from me, and I aim to steal it back.",
+      "I will become the greatest spy that ever lived.",
+      "I'm guilty of a terrible crime. I hope I can redeem myself for it.",
+      "Someone I loved died because of a mistake I made."
+    ],
+    "flaws": [
+      "When I see something valuable, I can't think about anything but how to steal it.",
+      "When faced with a choice between money and my friends, I usually choose the money.",
+      "If there's a plan, I'll forget it.",
+      "I have a 'tell' that reveals when I'm lying.",
+      "I turn tail and run when things look bad.",
+      "An innocent person is in prison for a crime that I committed."
+    ]
+  }
+}

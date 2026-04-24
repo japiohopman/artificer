@@ -1,0 +1,61 @@
+{
+  "index": "pirate",
+  "name": "Pirate",
+  "description": "You spent years as a pirate, sailing the high seas and raiding ships. You are known for your ruthlessness and your bad reputation, which can be a useful tool when dealing with those who would rather avoid a fight. You're far closer than most people to the world of murder, theft, and violence.",
+  "starting_proficiencies": [
+    { "index": "skill-athletics", "name": "Skill: Athletics" },
+    { "index": "skill-perception", "name": "Skill: Perception" },
+    { "index": "navigators-tools", "name": "Navigator's Tools" },
+    { "index": "vehicles-water", "name": "Vehicles (Water)" }
+  ],
+  "starting_equipment": [
+    { "equipment": { "index": "club", "name": "Belaying Pin (Club)", "url": "/api/equipment/club" }, "quantity": 1, "slot": "main-hand" },
+    { "equipment": { "index": "silk-rope-50ft", "name": "Silk Rope (50 feet)", "url": "/api/equipment/silk-rope-50ft" }, "quantity": 1 },
+    { "equipment": { "index": "lucky-charm", "name": "Lucky Charm", "url": "/api/equipment/lucky-charm" }, "quantity": 1 },
+    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+  ],
+  "starting_equipment_options": [],
+  "feature": {
+    "name": "Bad Reputation",
+    "desc": [
+      "No matter where you go, people are afraid of you due to your reputation. When you are in a civilized settlement, you can get away with minor criminal offenses, such as refusing to pay for food at a tavern or breaking down doors at a local shop, since most people will not report your activity to the authorities for fear of your reprisal."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "My friends know they can rely on me.",
+      "I work hard so that I can play hard.",
+      "I enjoy sailing into new ports.",
+      "I stretch the truth for the sake of a good story.",
+      "To me, a tavern brawl is a nice way to get to know a new city.",
+      "I never pass up a friendly wager.",
+      "My language is as foul as an otyugh's nest.",
+      "I like a job well done."
+    ],
+    "ideals": [
+      "Respect. Mutual respect between captain and crew. (Good)",
+      "Fairness. We all do the work, so we all share in the rewards. (Lawful)",
+      "Freedom. The sea is freedom. (Chaotic)",
+      "Mastery. I'm a master of my craft. (Any)",
+      "People. I'm committed to my crewmates. (Neutral)",
+      "Aspiration. Someday I'll own my own ship. (Any)"
+    ],
+    "bonds": [
+      "I'm loyal to my captain first.",
+      "The ship is my home and the crew are my family.",
+      "I'll always remember my first ship.",
+      "In a harbor town, I have a paramour.",
+      "I was cheated out of my fair share of the profits.",
+      "Ruthless pirates murdered my captain and crewmate."
+    ],
+    "flaws": [
+      "I follow orders, even if I think they're wrong.",
+      "I'll say anything to avoid extra work.",
+      "Once I start drinking, it's hard for me to stop.",
+      "I can't help but pocket anything that looks valuable.",
+      "My pride will probably lead to my destruction.",
+      "I'll wait until my comrades are asleep to steal their shares."
+    ]
+  }
+}

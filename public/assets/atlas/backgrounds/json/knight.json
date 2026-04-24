@@ -1,7 +1,7 @@
 {
-  "index": "noble",
-  "name": "Noble",
-  "description": "You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant who just bought a title, or a disinherited scion with nothing left but your name and your pedigree.",
+  "index": "knight",
+  "name": "Knight",
+  "description": "You are a member of a noble house, but your status is not just one of birth but of service. You have been a knight in training for much of your life, learning the ways of combat, honor, and duty. You might be a landless knight serving as a protector to a powerful lord, or a member of a knightly order dedicated to a specific cause.",
   "starting_proficiencies": [
     { "index": "skill-history", "name": "Skill: History" },
     { "index": "skill-persuasion", "name": "Skill: Persuasion" }
@@ -45,33 +45,33 @@
     }
   ],
   "feature": {
-    "name": "Position of Privilege",
+    "name": "Retainers",
     "desc": [
-      "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to."
+      "You have the service of three retainers loyal to your family. These retainers can be attendants or messengers, and one might be a majordomo. Your retainers are commoners who can perform mundane tasks for you, but they do not fight for you, will not follow you into obviously dangerous areas (such as dungeons), and will leave if they are frequently endangered or abused."
     ]
   },
   "suggested_characteristics": {
     "traits": [
-      "My eloquent flattery makes everyone I talk to feel like the most important person in the world.",
-      "The common folk love me for my kindness and generosity.",
-      "No one could doubt by looking at my regal bearing that I am a cut above the unwashed masses.",
-      "I take great pains to always look my best and follow the latest fashions.",
-      "I don't like to get my hands dirty, and I won't be caught dead in unsuitable accommodations.",
-      "Despite my noble birth, I do not place myself above other folk. We all have the same blood.",
+      "My eloquent flattery makes everyone I talk to feel important.",
+      "The common folk love me for my kindness.",
+      "No one could doubt that I am a cut above the unwashed masses.",
+      "I take great pains to always look my best.",
+      "I don't like to get my hands dirty.",
+      "Despite my status, I do not place myself above other folk.",
       "My favor, once lost, is lost forever.",
       "If you do me a kindness, I will repay it tenfold."
     ],
     "ideals": [
-      "Respect. Respect is due to me because of my position, but all people regardless of station deserve to be treated with dignity. (Good)",
-      "Responsibility. It is my duty to respect the authority of those above me, just as those below me must respect mine. (Lawful)",
-      "Independence. I must prove that I can handle myself without the coddling of my family. (Chaotic)",
+      "Respect. Respect is due to me because of my position. (Good)",
+      "Responsibility. It is my duty to respect the authority of those above me. (Lawful)",
+      "Independence. I must prove that I can handle myself. (Chaotic)",
       "Power. If I can attain more power, no one will tell me what to do. (Evil)",
       "Family. Blood runs thicker than water. (Any)",
       "Noble Obligation. It is my duty to protect and care for the people beneath me. (Good)"
     ],
     "bonds": [
       "I will face any challenge to win the approval of my family.",
-      "My house's alliance with another noble family must be sustained at all costs.",
+      "My house's alliance with another house must be sustained.",
       "Nothing is more important than the other members of my family.",
       "I am in love with a commoner whom I cannot marry.",
       "My loyalty to my sovereign is unwavering.",
@@ -79,8 +79,8 @@
     ],
     "flaws": [
       "I secretly believe that everyone is beneath me.",
-      "I hide a truly scandalous secret that could ruin my family forever.",
-      "I too often hear veiled insults and threats in every word addressed to me, and I'm quick to anger.",
+      "I hide a truly scandalous secret.",
+      "I too often hear veiled insults and threats.",
       "I have an insatiable desire for carnal pleasures.",
       "In fact, the world does revolve around me.",
       "By my words and actions, I often bring shame to my family."

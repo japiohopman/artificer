@@ -1,9 +1,74 @@
 {
   "index": "soldier",
-  "name": "soldier",
-  "desc": [
-    "Je bent getraind voor de oorlog en hebt gediend in een leger of militie, waar je discipline, tactiek en de gruwelen van het slagveld hebt leren kennen."
+  "name": "Soldier",
+  "description": "War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war.",
+  "starting_proficiencies": [
+    { "index": "skill-athletics", "name": "Skill: Athletics" },
+    { "index": "skill-intimidation", "name": "Skill: Intimidation" },
+    { "index": "vehicles-land", "name": "Vehicles (Land)" }
   ],
-  "image": "public/assets/atlas/backgrounds/soldier.webp",
-  "url": "public/assets/atlas/backgrounds/json/soldier.json"
+  "starting_equipment": [
+    { "equipment": { "index": "insignia-of-rank", "name": "Insignia of Rank", "url": "/api/equipment/insignia-of-rank" }, "quantity": 1, "slot": "acc-1" },
+    { "equipment": { "index": "trophy-from-fallen-enemy", "name": "Trophy from a fallen enemy", "url": "/api/equipment/trophy-from-fallen-enemy" }, "quantity": 1 },
+    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "One type of gaming set",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          { "option_type": "reference", "item": { "index": "dice-set", "name": "Dice Set" } },
+          { "option_type": "reference", "item": { "index": "dragonchess-set", "name": "Dragonchess Set" } },
+          { "option_type": "reference", "item": { "index": "playing-card-set", "name": "Playing Card Set" } },
+          { "option_type": "reference", "item": { "index": "three-dragon-ante-set", "name": "Three-Dragon Ante Set" } }
+        ]
+      }
+    }
+  ],
+  "feature": {
+    "name": "Military Rank",
+    "desc": [
+      "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I'm always polite and respectful.",
+      "I'm haunted by memories of war. I can't get the images of violence out of my mind.",
+      "I've lost too many friends, and I'm slow to make new ones.",
+      "I'm full of inspiring cautionary tales from my military experience relevant to almost every combat situation.",
+      "I can stare down a hell hound without flinching.",
+      "I enjoy being strong and like to break things.",
+      "I have a crude sense of humor.",
+      "I face problems head-on. A simple, direct solution is the best path to success."
+    ],
+    "ideals": [
+      "Greater Good. Our lot is to lay down our lives in defense of others. (Good)",
+      "Responsibility. I do what I must and obey just authority. (Lawful)",
+      "Independence. When people follow orders blindly, they embrace a kind of tyranny. (Chaotic)",
+      "Might. In life as in war, the stronger force prevails. (Evil)",
+      "Live and Let Live. Ideals aren't worth killing over or going to war for. (Neutral)",
+      "Nation. My city, nation, or people are all that matter. (Any)"
+    ],
+    "bonds": [
+      "I would still lay down my life for the people I served with.",
+      "Someone saved my life on the battlefield. To this day, I will never leave a friend behind.",
+      "My honor is my life.",
+      "I'll never forget the crushing defeat my company suffered or the enemies who dealt it.",
+      "Those who fight beside me are those worth dying for.",
+      "I fight for those who cannot fight for themselves."
+    ],
+    "flaws": [
+      "The monstrous enemy we faced in battle still leaves me quivering with fear.",
+      "I have little respect for anyone who is not a proven warrior.",
+      "I made a terrible mistake in battle that cost many lives — and I would do anything to keep that mistake secret.",
+      "My hatred of my enemies is blind and unreasoning.",
+      "I obey the law, even if the law causes misery.",
+      "I'd rather eat my armor than admit when I'm wrong."
+    ]
+  }
 }

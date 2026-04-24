@@ -1,0 +1,82 @@
+{
+  "index": "far-traveler",
+  "name": "Far Traveler",
+  "description": "Almost all the common folk and other residents of the North have one thing in common: they were born here. You, however, are a stranger to this land. You were born in a distant place, a land with different customs, different laws, and perhaps even different gods. Your presence here is a mystery to some and a curiosity to others.",
+  "starting_proficiencies": [
+    { "index": "skill-insight", "name": "Skill: Insight" },
+    { "index": "skill-perception", "name": "Skill: Perception" }
+  ],
+  "starting_equipment": [
+    { "equipment": { "index": "travelers-clothes", "name": "Traveler's Clothes", "url": "/api/equipment/travelers-clothes" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 },
+    { "equipment": { "index": "piece-of-exotic-jewelry", "name": "A piece of exotic jewelry from your homeland", "url": "/api/equipment/piece-of-exotic-jewelry" }, "quantity": 1 }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "One musical instrument or gaming set from your native land",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          { "option_type": "reference", "item": { "index": "bagpipes", "name": "Bagpipes" } },
+          { "option_type": "reference", "item": { "index": "drum", "name": "Drum" } },
+          { "option_type": "reference", "item": { "index": "dulcimer", "name": "Dulcimer" } },
+          { "option_type": "reference", "item": { "index": "flute", "name": "Flute" } },
+          { "option_type": "reference", "item": { "index": "lute", "name": "Lute" } },
+          { "option_type": "reference", "item": { "index": "lyre", "name": "Lyre" } },
+          { "option_type": "reference", "item": { "index": "horn", "name": "Horn" } },
+          { "option_type": "reference", "item": { "index": "pan-flute", "name": "Pan Flute" } },
+          { "option_type": "reference", "item": { "index": "shawm", "name": "Shawm" } },
+          { "option_type": "reference", "item": { "index": "viol", "name": "Viol" } },
+          { "option_type": "reference", "item": { "index": "dice-set", "name": "Dice Set" } },
+          { "option_type": "reference", "item": { "index": "dragonchess-set", "name": "Dragonchess Set" } },
+          { "option_type": "reference", "item": { "index": "playing-card-set", "name": "Playing Card Set" } },
+          { "option_type": "reference", "item": { "index": "three-dragon-ante-set", "name": "Three-Dragon Ante Set" } }
+        ]
+      }
+    }
+  ],
+  "feature": {
+    "name": "All Eyes on You",
+    "desc": [
+      "Your accent, mannerisms, figures of speech, and perhaps even your appearance all mark you as foreign. Curious glances are directed your way wherever you go, which can be a nuisance, but you also gain the attention of scholars and others intrigued by far-off lands, to say nothing of everyday folk who are eager to hear stories of your homeland. You can generally find common ground with those who are curious about your home, and you can leverage this interest to gain access to people and places you might otherwise not be able to visit."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I have different assumptions of what can be expected in a given situation.",
+      "I'm a little bit too eager to talk about my homeland.",
+      "I have a different sense of personal space than those around me.",
+      "I'm a bit too loud for the local customs.",
+      "I have a different sense of humor than those around me.",
+      "I'm a bit too direct for the local customs.",
+      "I have a different sense of fashion than those around me.",
+      "I have a different sense of etiquette than those around me."
+    ],
+    "ideals": [
+      "Discovery. I'm always looking for new things to learn and see. (Any)",
+      "Honor. I will always uphold the traditions of my homeland. (Lawful)",
+      "Freedom. I'm here to experience the freedom of a new land. (Chaotic)",
+      "Aspiration. I'm here to make a name for myself in a new land. (Any)",
+      "Generosity. I'm here to share the knowledge and traditions of my homeland. (Good)",
+      "Power. I'm here to gain power and influence in a new land. (Evil)"
+    ],
+    "bonds": [
+      "I will always be loyal to my homeland, no matter where I am.",
+      "My exotic jewelry is a symbol of my homeland, and I carry it wherever I go.",
+      "I'm searching for the person who brought me to this land and will do anything to find them.",
+      "I'm trying to make a new life for myself in this land while honoring the traditions of my homeland.",
+      "I will always protect the ones I love, even if they are from a different land.",
+      "My homeland is my life, and I will do anything to honor its traditions."
+    ],
+    "flaws": [
+      "I'm a bit too prone to judging the local customs by the standards of my homeland.",
+      "I'm a bit too prone to judging the local people by the standards of my homeland.",
+      "I'm a bit too prone to judging the local laws by the standards of my homeland.",
+      "I'm a bit too prone to judging the local gods by the standards of my homeland.",
+      "I'm a bit too prone to judging the local food by the standards of my homeland.",
+      "I'm a bit too prone to judging the local fashion by the standards of my homeland."
+    ]
+  }
+}
