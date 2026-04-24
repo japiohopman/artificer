@@ -1,0 +1,632 @@
+{
+  "name": "yolo",
+  "gender": "Male",
+  "class": "Monk",
+  "race": "Hill Dwarf",
+  "background": "Folk Hero",
+  "alignment": "Lawful Neutral",
+  "level": 1,
+  "xp": 0,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "backstory": "",
+  "flaws": [],
+  "ideals": [],
+  "bonds": [],
+  "traits": [],
+  "appearance": {
+    "hairColor": "",
+    "hairStyle": "",
+    "bodyType": "",
+    "eyeColor": "",
+    "skinColor": "",
+    "height": "",
+    "weight": ""
+  },
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "gp": 0,
+    "pp": 0
+  },
+  "inventory": {
+    "main-hand": {
+      "id": "dart-2xzsasf9y",
+      "name": "dart",
+      "index": "dart",
+      "_type": "equipment",
+      "weight": 0.25,
+      "quantity": 10,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/dart.json",
+      "imageUrl": "/assets/atlas/equipment/dart.webp",
+      "desc": [
+        "Forged from cold, blackened iron and tipped with a residue that smells faintly of copper and rot, this dart whispers of silent executions in fog-choked alleys. Its balance is lethal, designed not for sport, but to find the precise, shuddering gap between a victim's ribs."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Ranged",
+      "category_range": "Simple Ranged",
+      "cost": {
+        "quantity": 5,
+        "unit": "cp"
+      },
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 20,
+        "long": 60
+      },
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "public/assets/atlas/weapon_properties/finesse"
+        },
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "url": "public/assets/atlas/equipment/json/dart.json",
+      "updated_at": "2026-04-12T08:14:34.777Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/dart.webp",
+      "sprite_index": 24,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "category": "Simple Ranged Weapons",
+      "last_updated": "12-4-2026",
+      "slot": "main-hand"
+    }
+  },
+  "backpack": [],
+  "spells": [],
+  "hp": 8,
+  "maxHp": 8,
+  "id": "yolo",
+  "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/character/npc_character_profiles/json/yolo.json",
+  "atlas_data": {
+    "class": {
+      "index": "monk",
+      "name": "monk",
+      "hit_die": 8,
+      "proficiency_choices": [
+        {
+          "desc": "Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth",
+          "choose": 2,
+          "type": "proficiencies",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_acrobatics",
+                  "name": "skill: acrobatics",
+                  "url": "public/assets/atlas/proficiencies/skill_acrobatics"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_athletics",
+                  "name": "skill: athletics",
+                  "url": "public/assets/atlas/proficiencies/skill_athletics"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_history",
+                  "name": "skill: history",
+                  "url": "public/assets/atlas/proficiencies/skill_history"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_insight",
+                  "name": "skill: insight",
+                  "url": "public/assets/atlas/proficiencies/skill_insight"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_religion",
+                  "name": "skill: religion",
+                  "url": "public/assets/atlas/proficiencies/skill_religion"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_stealth",
+                  "name": "skill: stealth",
+                  "url": "public/assets/atlas/proficiencies/skill_stealth"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "Choose one type of artisan’s tools or one musical instrument",
+          "type": "proficiencies",
+          "choose": 1,
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "artisan's tools",
+                  "type": "proficiencies",
+                  "choose": 1,
+                  "from": {
+                    "option_set_type": "options_array",
+                    "options": [
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "alchemists_supplies",
+                          "name": "alchemist's supplies",
+                          "url": "public/assets/atlas/proficiencies/alchemists_supplies"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "brewers_supplies",
+                          "name": "brewer's supplies",
+                          "url": "public/assets/atlas/proficiencies/brewers_supplies"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "calligraphers_supplies",
+                          "name": "calligrapher's supplies",
+                          "url": "public/assets/atlas/proficiencies/calligraphers_supplies"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "carpenters_tools",
+                          "name": "carpenter's tools",
+                          "url": "public/assets/atlas/proficiencies/carpenters_tools"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "cartographers_tools",
+                          "name": "cartographer's tools",
+                          "url": "public/assets/atlas/proficiencies/cartographers_tools"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "cobblers_tools",
+                          "name": "cobbler's tools",
+                          "url": "public/assets/atlas/proficiencies/cobblers_tools"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "cooks_utensils",
+                          "name": "cook's utensils",
+                          "url": "public/assets/atlas/proficiencies/cooks_utensils"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "glassblowers_tools",
+                          "name": "glassblower's tools",
+                          "url": "public/assets/atlas/proficiencies/glassblowers_tools"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "jewelers_tools",
+                          "name": "jeweler's tools",
+                          "url": "public/assets/atlas/proficiencies/jewelers_tools"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "leatherworkers_tools",
+                          "name": "leatherworker's tools",
+                          "url": "public/assets/atlas/proficiencies/leatherworkers_tools"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "masons_tools",
+                          "name": "mason's tools",
+                          "url": "public/assets/atlas/proficiencies/masons_tools"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "painters_supplies",
+                          "name": "painter's supplies",
+                          "url": "public/assets/atlas/proficiencies/painters_supplies"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "potters_tools",
+                          "name": "potter's tools",
+                          "url": "public/assets/atlas/proficiencies/potters_tools"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "smiths_tools",
+                          "name": "smith's tools",
+                          "url": "public/assets/atlas/proficiencies/smiths_tools"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "tinkers_tools",
+                          "name": "tinker's tools",
+                          "url": "public/assets/atlas/proficiencies/tinkers_tools"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "weavers_tools",
+                          "name": "weaver's tools",
+                          "url": "public/assets/atlas/proficiencies/weavers_tools"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "woodcarvers_tools",
+                          "name": "woodcarver's tools",
+                          "url": "public/assets/atlas/proficiencies/woodcarvers_tools"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "disguise_kit",
+                          "name": "disguise kit",
+                          "url": "public/assets/atlas/proficiencies/disguise_kit"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "forgery_kit",
+                          "name": "forgery kit",
+                          "url": "public/assets/atlas/proficiencies/forgery_kit"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "musical instrument",
+                  "type": "proficiencies",
+                  "choose": 1,
+                  "from": {
+                    "option_set_type": "options_array",
+                    "options": [
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "bagpipes",
+                          "name": "bagpipes",
+                          "url": "public/assets/atlas/proficiencies/bagpipes"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "drum",
+                          "name": "drum",
+                          "url": "public/assets/atlas/proficiencies/drum"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "dulcimer",
+                          "name": "dulcimer",
+                          "url": "public/assets/atlas/proficiencies/dulcimer"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "flute",
+                          "name": "flute",
+                          "url": "public/assets/atlas/proficiencies/flute"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "lute",
+                          "name": "lute",
+                          "url": "public/assets/atlas/proficiencies/lute"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "lyre",
+                          "name": "lyre",
+                          "url": "public/assets/atlas/proficiencies/lyre"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "horn",
+                          "name": "horn",
+                          "url": "public/assets/atlas/proficiencies/horn"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "pan_flute",
+                          "name": "pan flute",
+                          "url": "public/assets/atlas/proficiencies/pan_flute"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "shawm",
+                          "name": "shawm",
+                          "url": "public/assets/atlas/proficiencies/shawm"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "viol",
+                          "name": "viol",
+                          "url": "public/assets/atlas/proficiencies/viol"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "proficiencies": [
+        {
+          "index": "simple_weapons",
+          "name": "simple weapons",
+          "url": "public/assets/atlas/proficiencies/simple_weapons"
+        },
+        {
+          "index": "shortswords",
+          "name": "shortswords",
+          "url": "public/assets/atlas/proficiencies/shortswords"
+        },
+        {
+          "index": "saving_throw_dex",
+          "name": "saving throw: dex",
+          "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+        },
+        {
+          "index": "saving_throw_str",
+          "name": "saving throw: str",
+          "url": "public/assets/atlas/proficiencies/saving_throw_str"
+        }
+      ],
+      "saving_throws": [
+        {
+          "index": "str",
+          "name": "str",
+          "url": "public/assets/atlas/ability_scores/strength"
+        },
+        {
+          "index": "dex",
+          "name": "dex",
+          "url": "public/assets/atlas/ability_scores/dexterity"
+        }
+      ],
+      "starting_equipment": [
+        {
+          "equipment": {
+            "index": "dart",
+            "name": "dart",
+            "url": "public/assets/atlas/equipment/dart"
+          },
+          "quantity": 10
+        }
+      ],
+      "starting_equipment_options": [
+        {
+          "desc": "(a) a shortsword or (b) any simple weapon",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "shortsword",
+                  "name": "shortsword",
+                  "url": "public/assets/atlas/equipment/shortsword"
+                }
+              },
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "any simple weapon",
+                  "choose": 1,
+                  "type": "equipment",
+                  "from": {
+                    "option_set_type": "equipment_category",
+                    "equipment_category": {
+                      "index": "simple_weapons",
+                      "name": "simple weapons",
+                      "url": "public/assets/atlas/equipment_categories/simple_weapons"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "(a) a dungeoneer’s pack or (b) an explorer’s pack",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "dungeoneers_pack",
+                  "name": "dungeoneer's pack",
+                  "url": "public/assets/atlas/equipment/dungeoneers_pack"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "explorers_pack",
+                  "name": "explorer's pack",
+                  "url": "public/assets/atlas/equipment/explorers_pack"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "class_levels": "public/assets/atlas/classes/monk/levels",
+      "multi_classing": {
+        "prerequisites": [
+          {
+            "ability_score": {
+              "index": "dex",
+              "name": "dex",
+              "url": "public/assets/atlas/ability_scores/dexterity"
+            },
+            "minimum_score": 13
+          },
+          {
+            "ability_score": {
+              "index": "wis",
+              "name": "wis",
+              "url": "public/assets/atlas/ability_scores/wisdom"
+            },
+            "minimum_score": 13
+          }
+        ],
+        "proficiencies": [
+          {
+            "index": "simple_weapons",
+            "name": "simple weapons",
+            "url": "public/assets/atlas/proficiencies/simple_weapons"
+          },
+          {
+            "index": "shortswords",
+            "name": "shortswords",
+            "url": "public/assets/atlas/proficiencies/shortswords"
+          }
+        ]
+      },
+      "subclasses": [
+        {
+          "index": "open_hand",
+          "name": "open hand",
+          "url": "public/assets/atlas/subclasses/open_hand"
+        }
+      ],
+      "url": "public/assets/atlas/classes/json/monk.json",
+      "updated_at": "2025-10-24T20:42:12.459Z",
+      "image": "public/assets/atlas/classes/monk.webp"
+    },
+    "species": {
+      "index": "hill_dwarf",
+      "name": "hill dwarf",
+      "race": {
+        "index": "dwarf",
+        "name": "dwarf",
+        "url": "public/assets/atlas/races/dwarf"
+      },
+      "desc": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.",
+      "ability_bonuses": [
+        {
+          "ability_score": {
+            "index": "wis",
+            "name": "wis",
+            "url": "public/assets/atlas/ability_scores/wisdom"
+          },
+          "bonus": 1
+        }
+      ],
+      "racial_traits": [
+        {
+          "index": "dwarven_toughness",
+          "name": "dwarven toughness",
+          "url": "public/assets/atlas/traits/dwarven_toughness"
+        }
+      ],
+      "url": "public/assets/atlas/subraces/json/hill_dwarf.json",
+      "updated_at": "2025-10-24T20:42:14.841Z",
+      "image": "public/assets/atlas/subraces/hill_dwarf.webp"
+    },
+    "background": null
+  },
+  "metadata": {
+    "updated_at": "2026-04-24T09:39:17.046Z",
+    "version": "2.6"
+  }
+}
