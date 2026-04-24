@@ -1,0 +1,1062 @@
+{
+  "name": "nada",
+  "race": "Human",
+  "voiceProfile": "Gravelly, confident, with a hint of weariness",
+  "xp": 0,
+  "inventory": {
+    "focus": {
+      "id": "spellbook-fkjl85tw5",
+      "name": "spellbook",
+      "index": "spellbook",
+      "_type": "equipment",
+      "weight": 3,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/spellbook.json",
+      "imageUrl": "/assets/atlas/equipment/images/spellbook.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 50,
+        "unit": "gp"
+      },
+      "desc": [
+        "Essential for wizards, a spellbook is a leather-bound tome with 100 blank vellum pages suitable for recording spells."
+      ],
+      "url": "public/assets/atlas/equipment/json/spellbook.json",
+      "updated_at": "2026-04-23T05:51:35.706Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/spellbook.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "background_type": "land_forest",
+      "last_updated": "23-4-2026",
+      "slot": "focus"
+    }
+  },
+  "backpack": [
+    {
+      "id": "fine-clothes-taw6w85mb",
+      "name": "Fine Clothes",
+      "index": "fine-clothes",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/fine-clothes.json",
+      "imageUrl": "/assets/atlas/equipment/images/fine_clothes.webp"
+    },
+    {
+      "id": "disguise-kit-zowj23igi",
+      "name": "Disguise Kit",
+      "index": "disguise-kit",
+      "_type": "equipment",
+      "weight": 3,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/disguise-kit.json",
+      "imageUrl": "/assets/atlas/equipment/disguise_kit.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "kits",
+        "name": "kits",
+        "url": "public/assets/atlas/equipment_categories/kits"
+      },
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "desc": [
+        "This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise."
+      ],
+      "url": "public/assets/atlas/equipment/json/disguise_kit.json",
+      "updated_at": "2026-04-12T07:52:45.598Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/disguise_kit.webp",
+      "sprite_index": 2,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+      "category": "Kits",
+      "last_updated": "12-4-2026"
+    },
+    {
+      "id": "pouch-wb8p76ayt",
+      "name": "Pouch",
+      "index": "pouch",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/pouch.json",
+      "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
+      ],
+      "url": "public/assets/atlas/equipment/json/pouch.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/pouch.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+    },
+    {
+      "id": "backpack-0chtvuhav",
+      "name": "backpack",
+      "index": "backpack",
+      "_type": "equipment",
+      "weight": 5,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/backpack.json",
+      "imageUrl": "/assets/atlas/equipment/images/backpack.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "url": "public/assets/atlas/equipment/json/backpack.json",
+      "updated_at": "2026-04-21T14:08:31.097Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/backpack.webp",
+      "sprite_index": 9,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "back"
+      ],
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "book-krerf57hv",
+      "name": "book",
+      "index": "book",
+      "_type": "equipment",
+      "weight": 5,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/book.json",
+      "imageUrl": "/assets/atlas/equipment/images/book.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "desc": [
+        "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook (described later in this section)."
+      ],
+      "url": "public/assets/atlas/equipment/json/book.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/book.webp",
+      "sprite_index": 10,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+    },
+    {
+      "id": "ink_1_ounce_bottle-6licpda22",
+      "name": "ink (1 ounce bottle)",
+      "index": "ink_1_ounce_bottle",
+      "_type": "equipment",
+      "weight": 0,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
+      "imageUrl": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
+      "desc": [
+        "This viscous ink, drawn from the pallid veins of a drowned kraken, whispers secrets on the page, but each stroke draws the writer closer to the abyss. It is said that pacts sealed with this ink bind not just the signatory, but their very soul to the unseen horrors that lurk beneath the waves.\n"
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "url": "public/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
+      "updated_at": "2026-04-23T09:40:01.455Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/ink_1_ounce_bottle.webp",
+      "sprite_index": 12,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "background_type": "land_forest",
+      "last_updated": "23-4-2026",
+      "slot": [
+        "extra"
+      ],
+      "category": "Adventuring Gear"
+    },
+    {
+      "id": "ink_pen-hdes7emrr",
+      "name": "ink pen",
+      "index": "ink_pen",
+      "_type": "equipment",
+      "weight": 0,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/ink_pen.json",
+      "imageUrl": "/assets/atlas/equipment/images/ink_pen.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "cp"
+      },
+      "url": "public/assets/atlas/equipment/json/ink_pen.json",
+      "updated_at": "2026-04-21T14:10:12.749Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/ink_pen.webp",
+      "sprite_index": 13,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "background_type": "land_forest",
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "parchment_one_sheet-ulajvi7lc",
+      "name": "parchment (one sheet)",
+      "index": "parchment_one_sheet",
+      "_type": "equipment",
+      "weight": 0,
+      "quantity": 10,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/parchment_one_sheet.json",
+      "imageUrl": "/assets/atlas/equipment/images/parchment_one_sheet.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "sp"
+      },
+      "url": "public/assets/atlas/equipment/json/parchment_one_sheet.json",
+      "updated_at": "2026-04-21T14:20:56.451Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/parchment_one_sheet.webp",
+      "sprite_index": 1,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+      "background_type": "land_forest",
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "little_bag_of_sand-nus8ajv9v",
+      "name": "little bag of sand",
+      "index": "little_bag_of_sand",
+      "_type": "equipment",
+      "weight": 0,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/little_bag_of_sand.json",
+      "imageUrl": "/assets/atlas/equipment/images/little_bag_of_sand.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 0,
+        "unit": "cp"
+      },
+      "desc": [
+        "A small bag of sand, typically found in a scholar's pack."
+      ],
+      "url": "public/assets/atlas/equipment/json/little_bag_of_sand.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/little_bag_of_sand.webp",
+      "sprite_index": 1,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+    },
+    {
+      "id": "small_knife-uvsv5swhw",
+      "name": "small knife",
+      "index": "small_knife",
+      "_type": "equipment",
+      "weight": 0,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/small_knife.json",
+      "imageUrl": "/assets/atlas/equipment/images/small_knife.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 0,
+        "unit": "cp"
+      },
+      "desc": [
+        "A small knife, typically found in a scholar's pack."
+      ],
+      "url": "public/assets/atlas/equipment/json/small_knife.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/small_knife.webp",
+      "sprite_index": 1,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+    },
+    {
+      "id": "weighted-dice-qbmqq199k",
+      "name": "A set of weighted dice",
+      "index": "weighted-dice",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/weighted-dice.json",
+      "imageUrl": "/assets/atlas/equipment/images/weighted_dice.webp"
+    }
+  ],
+  "spells": [],
+  "hp": 6,
+  "maxHp": 6,
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "gp": 10,
+    "pp": 0
+  },
+  "class": "Wizard",
+  "alignment": "Chaotic Evil",
+  "background": "Charlatan",
+  "proficiencies": [
+    "skill-deception",
+    "skill-sleight-of-hand",
+    "disguise-kit",
+    "forgery-kit",
+    "daggers",
+    "darts",
+    "slings",
+    "quarterstaffs",
+    "crossbows_light",
+    "saving_throw_int",
+    "saving_throw_wis",
+    "Saving Throw: int",
+    "Saving Throw: wis",
+    "skill_history",
+    "skill_medicine"
+  ],
+  "skills": [
+    "skill-deception",
+    "skill-sleight-of-hand"
+  ],
+  "id": "nada",
+  "level": 1,
+  "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/character/npc_character_profiles/json/nada.json",
+  "atlas_data": {
+    "class": {
+      "index": "wizard",
+      "name": "wizard",
+      "hit_die": 6,
+      "proficiency_choices": [
+        {
+          "desc": "Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion",
+          "choose": 2,
+          "type": "proficiencies",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_arcana",
+                  "name": "skill: arcana",
+                  "url": "public/assets/atlas/proficiencies/skill_arcana"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_history",
+                  "name": "skill: history",
+                  "url": "public/assets/atlas/proficiencies/skill_history"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_insight",
+                  "name": "skill: insight",
+                  "url": "public/assets/atlas/proficiencies/skill_insight"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_investigation",
+                  "name": "skill: investigation",
+                  "url": "public/assets/atlas/proficiencies/skill_investigation"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_medicine",
+                  "name": "skill: medicine",
+                  "url": "public/assets/atlas/proficiencies/skill_medicine"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_religion",
+                  "name": "skill: religion",
+                  "url": "public/assets/atlas/proficiencies/skill_religion"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "proficiencies": [
+        {
+          "index": "daggers",
+          "name": "daggers",
+          "url": "public/assets/atlas/proficiencies/daggers"
+        },
+        {
+          "index": "darts",
+          "name": "darts",
+          "url": "public/assets/atlas/proficiencies/darts"
+        },
+        {
+          "index": "slings",
+          "name": "slings",
+          "url": "public/assets/atlas/proficiencies/slings"
+        },
+        {
+          "index": "quarterstaffs",
+          "name": "quarterstaffs",
+          "url": "public/assets/atlas/proficiencies/quarterstaffs"
+        },
+        {
+          "index": "crossbows_light",
+          "name": "crossbows, light",
+          "url": "public/assets/atlas/proficiencies/crossbows_light"
+        },
+        {
+          "index": "saving_throw_int",
+          "name": "saving throw: int",
+          "url": "public/assets/atlas/proficiencies/saving_throw_int"
+        },
+        {
+          "index": "saving_throw_wis",
+          "name": "saving throw: wis",
+          "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        }
+      ],
+      "saving_throws": [
+        {
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/intelligence"
+        },
+        {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        }
+      ],
+      "starting_equipment": [
+        {
+          "equipment": {
+            "index": "spellbook",
+            "name": "spellbook",
+            "url": "public/assets/atlas/equipment/spellbook"
+          },
+          "quantity": 1
+        }
+      ],
+      "starting_equipment_options": [
+        {
+          "desc": "(a) a quarterstaff or (b) a dagger",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "quarterstaff",
+                  "name": "quarterstaff",
+                  "url": "public/assets/atlas/equipment/quarterstaff"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "dagger",
+                  "name": "dagger",
+                  "url": "public/assets/atlas/equipment/dagger"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "(a) a component pouch or (b) an arcane focus",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "component_pouch",
+                  "name": "component pouch",
+                  "url": "public/assets/atlas/equipment/component_pouch"
+                }
+              },
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "arcane focus",
+                  "choose": 1,
+                  "type": "equipment",
+                  "from": {
+                    "option_set_type": "equipment_category",
+                    "equipment_category": {
+                      "index": "arcane_foci",
+                      "name": "arcane foci",
+                      "url": "public/assets/atlas/equipment_categories/arcane_foci"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "(a) a scholar’s pack or (b) an explorer’s pack",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "scholars_pack",
+                  "name": "scholar's pack",
+                  "url": "public/assets/atlas/equipment/scholars_pack"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "explorers_pack",
+                  "name": "explorer's pack",
+                  "url": "public/assets/atlas/equipment/explorers_pack"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "class_levels": "public/assets/atlas/classes/wizard/levels",
+      "multi_classing": {
+        "prerequisites": [
+          {
+            "ability_score": {
+              "index": "int",
+              "name": "int",
+              "url": "public/assets/atlas/ability_scores/intelligence"
+            },
+            "minimum_score": 13
+          }
+        ],
+        "proficiencies": []
+      },
+      "subclasses": [
+        {
+          "index": "evocation",
+          "name": "evocation",
+          "url": "public/assets/atlas/subclasses/evocation"
+        }
+      ],
+      "spellcasting": {
+        "level": 1,
+        "spellcasting_ability": {
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/intelligence"
+        },
+        "info": [
+          {
+            "name": "cantrips",
+            "desc": [
+              "At 1st level, you know three cantrips of your choice from the wizard spell list. You learn additional wizard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Wizard table."
+            ]
+          },
+          {
+            "name": "spellbook",
+            "desc": [
+              "At 1st level, you have a spellbook containing six 1st- level wizard spells of your choice. Your spellbook is the repository of the wizard spells you know, except your cantrips, which are fixed in your mind."
+            ]
+          },
+          {
+            "name": "preparing and casting spells",
+            "desc": [
+              "The Wizard table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+              "You prepare the list of wizard spells that are available for you to cast. To do so, choose a number of wizard spells from your spellbook equal to your Intelligence modifier + your wizard level (minimum of one spell). The spells must be of a level for which you have spell slots.",
+              "For example, if you're a 3rd-level wizard, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination, chosen from your spellbook. If you prepare the 1st-level spell magic missile, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
+              "You can change your list of prepared spells when you finish a long rest. Preparing a new list of wizard spells requires time spent studying your spellbook and memorizing the incantations and gestures you must make to cast the spell: at least 1 minute per spell level for each spell on your list."
+            ]
+          },
+          {
+            "name": "spellcasting ability",
+            "desc": [
+              "Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.",
+              "Spell save DC = 8 + your proficiency bonus + your Intelligence modifier.",
+              "Spell attack modifier = your proficiency bonus + your Intelligence modifier."
+            ]
+          },
+          {
+            "name": "ritual casting",
+            "desc": [
+              "You can cast a wizard spell as a ritual if that spell has the ritual tag and you have the spell in your spellbook. You don't need to have the spell prepared."
+            ]
+          },
+          {
+            "name": "spellcasting focus",
+            "desc": [
+              "You can use an arcane focus as a spellcasting focus for your wizard spells."
+            ]
+          }
+        ]
+      },
+      "spells": "public/assets/atlas/classes/wizard/spells",
+      "url": "public/assets/atlas/classes/json/wizard.json",
+      "updated_at": "2025-10-24T20:42:12.459Z",
+      "image": "public/assets/atlas/classes/wizard.webp"
+    },
+    "species": {
+      "index": "human",
+      "name": "human",
+      "speed": 30,
+      "ability_bonuses": [
+        {
+          "ability_score": {
+            "index": "str",
+            "name": "str",
+            "url": "public/assets/atlas/ability_scores/strength"
+          },
+          "bonus": 1
+        },
+        {
+          "ability_score": {
+            "index": "dex",
+            "name": "dex",
+            "url": "public/assets/atlas/ability_scores/dexterity"
+          },
+          "bonus": 1
+        },
+        {
+          "ability_score": {
+            "index": "con",
+            "name": "con",
+            "url": "public/assets/atlas/ability_scores/constitution"
+          },
+          "bonus": 1
+        },
+        {
+          "ability_score": {
+            "index": "int",
+            "name": "int",
+            "url": "public/assets/atlas/ability_scores/intelligence"
+          },
+          "bonus": 1
+        },
+        {
+          "ability_score": {
+            "index": "wis",
+            "name": "wis",
+            "url": "public/assets/atlas/ability_scores/wisdom"
+          },
+          "bonus": 1
+        },
+        {
+          "ability_score": {
+            "index": "cha",
+            "name": "cha",
+            "url": "public/assets/atlas/ability_scores/charisma"
+          },
+          "bonus": 1
+        }
+      ],
+      "age": "Humans reach adulthood in their late teens and live less than a century.",
+      "alignment": "Humans tend toward no particular alignment. The best and the worst are found among them.",
+      "size": "Medium",
+      "size_description": "Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.",
+      "languages": [
+        {
+          "index": "common",
+          "name": "common",
+          "url": "public/assets/atlas/languages/common"
+        }
+      ],
+      "language_options": {
+        "choose": 1,
+        "type": "languages",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "dwarvish",
+                "name": "dwarvish",
+                "url": "public/assets/atlas/languages/dwarvish"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "elvish",
+                "name": "elvish",
+                "url": "public/assets/atlas/languages/elvish"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "giant",
+                "name": "giant",
+                "url": "public/assets/atlas/languages/giant"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "gnomish",
+                "name": "gnomish",
+                "url": "public/assets/atlas/languages/gnomish"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "goblin",
+                "name": "goblin",
+                "url": "public/assets/atlas/languages/goblin"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "halfling",
+                "name": "halfling",
+                "url": "public/assets/atlas/languages/halfling"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "orc",
+                "name": "orc",
+                "url": "public/assets/atlas/languages/orc"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "abyssal",
+                "name": "abyssal",
+                "url": "public/assets/atlas/languages/abyssal"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "celestial",
+                "name": "celestial",
+                "url": "public/assets/atlas/languages/celestial"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "draconic",
+                "name": "draconic",
+                "url": "public/assets/atlas/languages/draconic"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "deep_speech",
+                "name": "deep speech",
+                "url": "public/assets/atlas/languages/deep_speech"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "infernal",
+                "name": "infernal",
+                "url": "public/assets/atlas/languages/infernal"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "primordial",
+                "name": "primordial",
+                "url": "public/assets/atlas/languages/primordial"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "sylvan",
+                "name": "sylvan",
+                "url": "public/assets/atlas/languages/sylvan"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "undercommon",
+                "name": "undercommon",
+                "url": "public/assets/atlas/languages/undercommon"
+              }
+            }
+          ]
+        }
+      },
+      "language_desc": "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.",
+      "traits": [],
+      "subraces": [],
+      "url": "public/assets/atlas/species/json/human.json",
+      "updated_at": "2025-10-24T20:42:14.212Z",
+      "image": "public/assets/atlas/species/human.webp"
+    },
+    "background": {
+      "index": "charlatan",
+      "name": "Charlatan",
+      "description": "You have always had a way with people. You know what makes them tick, you can tease out their hearts' desires after a few minutes of conversation, and with a few leading questions you can read them like they were children's books. It's a useful talent, and one that you're perfectly willing to use for your advantage.",
+      "starting_proficiencies": [
+        {
+          "index": "skill-deception",
+          "name": "Skill: Deception"
+        },
+        {
+          "index": "skill-sleight-of-hand",
+          "name": "Skill: Sleight of Hand"
+        },
+        {
+          "index": "disguise-kit",
+          "name": "Disguise Kit"
+        },
+        {
+          "index": "forgery-kit",
+          "name": "Forgery Kit"
+        }
+      ],
+      "starting_equipment": [
+        {
+          "equipment": {
+            "index": "fine-clothes",
+            "name": "Fine Clothes",
+            "url": "/api/equipment/fine-clothes"
+          },
+          "quantity": 1,
+          "slot": "clothes"
+        },
+        {
+          "equipment": {
+            "index": "disguise-kit",
+            "name": "Disguise Kit",
+            "url": "/api/equipment/disguise-kit"
+          },
+          "quantity": 1
+        },
+        {
+          "equipment": {
+            "index": "pouch",
+            "name": "Pouch",
+            "url": "/api/equipment/pouch"
+          },
+          "quantity": 1
+        }
+      ],
+      "starting_equipment_options": [
+        {
+          "desc": "Tools of the con of your choice",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "stoppered-bottles",
+                  "name": "Ten stoppered bottles filled with colored liquid"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "weighted-dice",
+                  "name": "A set of weighted dice"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "marked-cards",
+                  "name": "A deck of marked cards"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fake-signet-ring",
+                  "name": "A signet ring of an imaginary duke"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "feature": {
+        "name": "False Identity",
+        "desc": [
+          "You have created a second identity that includes documentation, established acquaintances, and disguises that allow you to assume that persona. Additionally, you can forge documents including official papers and personal letters, as long as you have seen an example of the kind of document or the handwriting you are trying to copy."
+        ]
+      },
+      "suggested_characteristics": {
+        "traits": [
+          "I fall in and out of love easily, and am always pursuing someone.",
+          "I have a joke for every occasion, especially occasions where humor is inappropriate.",
+          "The flattery of my neighbors can't soften my hard heart, but it does make me more agreeable.",
+          "I'm a born gambler who can't resist taking a risk for a potential payoff.",
+          "I lie about almost everything, even when there's no good reason to.",
+          "Sarcasm and insults are my weapons of choice.",
+          "I keep multiple holy symbols on me and invoke whatever deity might come in useful at any given moment.",
+          "I pocket anything I see that might have some value."
+        ],
+        "ideals": [
+          "Independence. I am a free spirit — no one tells me what to do. (Chaotic)",
+          "Fairness. I never target people who can't afford to lose a few coins. (Lawful)",
+          "Charity. I distribute the money I acquire to the people who really need it. (Good)",
+          "Creativity. I never run the same con twice. (Chaotic)",
+          "Friendship. I'm willing to help my friends, but only as long as it doesn't get in the way of my own interests. (Neutral)",
+          "Aspiration. I'm determined to make something of myself. (Any)"
+        ],
+        "bonds": [
+          "I fleeced the wrong person and must work to ensure that this individual never crosses my path again.",
+          "I owe everything I am to my mentor — a horrible person who's probably rotting in jail somewhere.",
+          "I'm trying to pay off an old debt I owe to a generous benefactor.",
+          "A powerful person killed someone I love. Some day soon, I'll have my revenge.",
+          "I swindled and ruined a person who didn't deserve it. I seek to atone for my misdeeds but might never be able to forgive myself.",
+          "I come from a noble family, and one day I'll reclaim my lands and title from those who stole them from me."
+        ],
+        "flaws": [
+          "I can't resist a pretty face.",
+          "I'm always in debt. I spend my ill-gotten gains on decadent luxuries as fast as I bring them in.",
+          "I'm convinced that no one could ever fool me the way I fool others.",
+          "I'm too greedy for my own good. I can't resist taking a risk if there's money involved.",
+          "I can't resist swindling people who are more powerful than me.",
+          "I hate to admit it and will hate myself for it, but I'll run and preserve my own hide if the going gets tough."
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "updated_at": "2026-04-24T17:47:01.191Z",
+    "version": "2.6"
+  }
+}
