@@ -3,6 +3,19 @@
   "category": "shop",
   "subLocations": [
     {
+      "id": "4b6ba0ea_2854_4ef5_a942_ce381feba754",
+      "name": "pearl jam",
+      "x": 766,
+      "y": 1762,
+      "category": "shop",
+      "tags": [],
+      "lore": "shop for stones pearls and jams",
+      "architect": "arcane",
+      "locationType": "tavern",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
       "id": "wiki_338",
       "name": "Selchoun's Sundries Shop",
       "lore": "Selchoun's Sundries Shop was a prosperous general store. The proprietor, [[Osbrin Selchoun]], sold tourist trinkets and mundane useful items.",
@@ -1598,5 +1611,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-04-25T14:44:19.017Z"
+  "updatedAt": "2026-04-25T16:22:28.732Z"
 }
