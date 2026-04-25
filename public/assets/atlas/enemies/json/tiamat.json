@@ -4,12 +4,7 @@
   "type": "dragon",
   "alignment": "chaotic evil",
   "image": "public/assets/atlas/enemies/images/tiamat.webp",
-  "armor_class": [
-    {
-      "value": 25,
-      "type": "natural armor"
-    }
-  ],
+  "armor_class": 25,
   "hit_points": 615,
   "hit_dice": "30d20 + 300",
   "speed": {
@@ -28,7 +23,7 @@
     "passive_perception": 36
   },
   "languages": "Common, Draconic, Infernal",
-  "challenge_rating": 30,
+  "challenge_rating": "30",
   "xp": 155000,
   "special_abilities": [
     {
@@ -74,8 +69,21 @@
       "desc": "Melee Weapon Attack: +19 to hit, reach 25 ft., one target. Hit: 28 (4d8 + 10) piercing damage."
     }
   ],
-  "index": "japiohopman/artificer/tree/main/codex/wiki/enemies/",
-  "lore": "Tiamat is the primordial sovereign of the Chromatic Brood, a multi-headed terror whose presence defies the natural order. She dwells within the sulfurous pits of the Avernian wastes, where the sky bleeds and the earth weeps molten iron. Her predatory nature is not born of mere hunger, but of an insatiable, divine avarice. Each of her five visages\u2014crimson, azure, emerald, ebony, and ivory\u2014strikes with a distinct, catastrophic force, turning entire legions to ash or brittle ice in a single breath.\n\nIn local lore, she is the \"Bane of Bahamut,\" a cosmic force of entropy that existed before the first sun. Peasant songs whisper of her as the Mother of Greed; to speak her name is to invite the shadow of wings that span horizons. She does not merely hunt; she reclaims what she believes is her birthright: the entire world. Adventurers are warned: Tiamat is no mere beast to be tracked, but a living apocalypse. To encounter her is not a battle, but a witnessing of the end of days.",
-  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/japiohopman/artificer/tree/main/codex/wiki/enemies/.webp",
-  "bakedAt": 1767615028330
+  "index": "tiamat",
+  "lore": "Tiamat is the primordial sovereign of the Chromatic Brood, a multi-headed terror whose presence defies the natural order. She dwells within the sulfurous pits of the Avernian wastes, where the sky bleeds and the earth weeps molten iron. Her predatory nature is not born of mere hunger, but of an insatiable, divine avarice. Each of her five visages—crimson, azure, emerald, ebony, and ivory—strikes with a distinct, catastrophic force, turning entire legions to ash or brittle ice in a single breath.\n\nIn local lore, she is the \"Bane of Bahamut,\" a cosmic force of entropy that existed before the first sun. Peasant songs whisper of her as the Mother of Greed; to speak her name is to invite the shadow of wings that span horizons. She does not merely hunt; she reclaims what she believes is her birthright: the entire world. Adventurers are warned: Tiamat is no mere beast to be tracked, but a living apocalypse. To encounter her is not a battle, but a witnessing of the end of days.",
+  "imageUrl": "/assets/atlas/enemies/images/tiamat.webp",
+  "bakedAt": 1767615028330,
+  "stats": {
+    "str": 30,
+    "dex": 10,
+    "con": 30,
+    "int": 26,
+    "wis": 26,
+    "cha": 28
+  },
+  "_type": "enemies",
+  "background_type": "cave",
+  "rarity": "Artifact",
+  "last_updated": "25-4-2026",
+  "updated_at": "2026-04-25T07:49:40.713Z"
 }
