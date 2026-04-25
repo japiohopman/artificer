@@ -3,6 +3,16 @@
   "category": "point_of_interest",
   "subLocations": [
     {
+      "id": "6b9ac79f_0b26_4962_83cd_bc57a76d2acc",
+      "name": "the lady dreaming",
+      "x": 372,
+      "y": 1326,
+      "category": "point_of_interest",
+      "tags": [],
+      "lore": "History\nDuring the Spellplague of 1385 DR, the walking statue appeared and rampaged through the city. When the statues were stopped, she fell onto her side, where she still lay by 1492 DR.[\n\nDescription\nIt resembled a noble woman asleep in a garden. She bore the appearance of a female elf and, while active, her clothing and hair appeared to move naturally",
+      "architect": "ancient"
+    },
+    {
       "id": "wiki_1",
       "name": "Fieldway",
       "lore": "",
@@ -5248,5 +5258,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-04-25T14:44:13.752Z"
+  "updatedAt": "2026-04-25T16:22:26.521Z"
 }
