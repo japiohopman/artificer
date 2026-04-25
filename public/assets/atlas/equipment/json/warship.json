@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Forged in the heart of a dying star and quenched in the blood of a forgotten god, the *Warship* whispers promises of absolute dominion, its obsidian hull etched with the agonized faces of those it has consumed. To wield it is to invite madness, for the victories it brings are always paid for in soul-rending despair.\n"
+  ],
   "special": [],
   "index": "warship",
   "name": "warship",
@@ -18,10 +20,18 @@
     "unit": "mph"
   },
   "url": "public/assets/atlas/equipment/json/warship.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-25T19:29:50.181Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/warship.webp",
   "sprite_index": 4,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp",
+  "imageUrl": "/assets/atlas/equipment/images/warship.webp",
+  "_type": "equipment",
+  "background_type": "water",
+  "slot": [
+    "extra"
+  ],
+  "category": "Waterborne Vehicles",
+  "last_updated": "25-4-2026"
 }
