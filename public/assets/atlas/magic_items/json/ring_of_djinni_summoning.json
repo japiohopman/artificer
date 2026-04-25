@@ -6,9 +6,7 @@
     "name": "ring",
     "url": "public/assets/atlas/equipment_categories/ring"
   },
-  "rarity": {
-    "name": "legendary"
-  },
+  "rarity": "Very Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -18,6 +16,19 @@
     "After the djinni departs, it can't be summoned again for 24 hours, and the ring becomes nonmagical if the djinni dies."
   ],
   "url": "public/assets/atlas/magic_items/json/ring_of_djinni_summoning.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/ring_of_djinni_summoning.webp"
+  "updated_at": "2026-04-25T10:01:17.150Z",
+  "image": "public/assets/atlas/magic_items/ring_of_djinni_summoning.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/ring_of_djinni_summoning.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Ring",
+  "cost": {
+    "quantity": 2000,
+    "unit": "gp"
+  },
+  "slot": [
+    "ring-1",
+    "ring-2"
+  ],
+  "last_updated": "25-4-2026"
 }
