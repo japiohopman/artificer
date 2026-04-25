@@ -5,12 +5,7 @@
   "type": "fiend",
   "subtype": "devil",
   "alignment": "lawful evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 19
-    }
-  ],
+  "armor_class": 19,
   "hit_points": 300,
   "hit_dice": "24d10",
   "hit_points_roll": "24d10+168",
@@ -71,7 +66,7 @@
     "passive_perception": 14
   },
   "languages": "Infernal, telepathy 120 ft.",
-  "challenge_rating": 20,
+  "challenge_rating": "20",
   "proficiency_bonus": 6,
   "xp": 25000,
   "special_abilities": [
@@ -253,10 +248,23 @@
   ],
   "image": "public/assets/atlas/enemies/pit_fiend.webp",
   "url": "public/assets/atlas/enemies/json/pit_fiend.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-25T07:59:15.071Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 19,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp",
+  "stats": {
+    "str": 26,
+    "dex": 14,
+    "con": 24,
+    "int": 22,
+    "wis": 18,
+    "cha": 24
+  },
+  "imageUrl": "/assets/atlas/enemies/images/pit_fiend.webp",
+  "_type": "enemies",
+  "background_type": "land_urban",
+  "rarity": "Very Rare",
+  "last_updated": "25-4-2026"
 }
