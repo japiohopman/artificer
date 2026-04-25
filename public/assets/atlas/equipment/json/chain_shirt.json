@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Forged from blackened links harvested from the Shadowfell, this chain shirt whispers of forgotten souls ensnared, its protection bought with a price paid in lingering dread. Each ring chills to the touch, a constant reminder of the darkness it holds at bay – and the darkness it invites.\n"
+  ],
   "special": [],
   "index": "chain_shirt",
   "name": "chain shirt",
@@ -22,10 +24,18 @@
     "unit": "gp"
   },
   "url": "public/assets/atlas/equipment/json/charismain_shirt.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-25T09:09:48.675Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/charismain_shirt.webp",
   "sprite_index": 4,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/equipment/images/chain_shirt.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "chest"
+  ],
+  "category": "Heavy Armor",
+  "last_updated": "25-4-2026"
 }
