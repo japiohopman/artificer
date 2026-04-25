@@ -1,0 +1,27 @@
+{
+  "index": "potion_of_healing_greater_1",
+  "name": "potion of greater healing, +1",
+  "equipment_category": {
+    "index": "potion",
+    "name": "potion",
+    "url": "public/assets/atlas/equipment_categories/potion"
+  },
+  "rarity": "Uncommon",
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Potion, uncommon",
+    "You regain 4d4 + 4 hit points when you drink this potion. The potion's red liquid glimmers when agitated."
+  ],
+  "url": "public/assets/atlas/magic_items/json/potion_of_healing_greater.json",
+  "updated_at": "2026-04-25T09:28:36.617Z",
+  "image": "public/assets/atlas/magic_items/potion_of_healing_greater.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/potion_of_healing_greater_1.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "category": "Potion",
+  "last_updated": "25-4-2026"
+}
