@@ -1,28 +1,21 @@
 {
-  "id": "waterdeep",
-  "path": "",
+  "name": "waterdeep",
+  "path": [
+    "toril",
+    "faerun",
+    "west_faerun_sword_coast",
+    "sword_coast",
+    "waterdeep"
+  ],
+  "category": "human",
   "coordinates": {
     "name": "waterdeep",
     "x": 4608,
     "y": 2453
   },
-  "authorUid": "DBoQPcf47gSpE3qYpkdpMP0qCBd2",
-  "createdAt": {
-    "_methodName": "serverTimestamp"
-  },
-  "category": "human",
-  "architect": "human",
-  "architecture": "human",
-  "locationType": "Urban",
-  "bg": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/waterdeep/waterdeep.webp",
-  "ambient": "CITY_MARKET",
-  "availableShops": [
-    "General Store",
-    "Tavern",
-    "Weaponsmith",
-    "Arcane Shop",
-    "Thieves Guild"
-  ],
+  "lore": "The City of Splendors, a massive metropolis on the Sword Coast.",
+  "grounding": [],
+  "overlayMapUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/waterdeep/waterdeep_submap.webp",
   "subLocations": [
     {
       "id": "6b9ac79f_0b26_4962_83cd_bc57a76d2acc",
@@ -113,172 +106,6 @@
       "type": "district"
     }
   ],
-  "lore": "The City of Splendors, a massive metropolis on the Sword Coast.",
   "image": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/waterdeep/waterdeep.webp",
-  "name": "Waterdeep",
-  "grounding": [],
-  "x": 500,
-  "y": 500,
-  "tags": [
-    "city",
-    "metropolis",
-    "coastal"
-  ],
-  "mapUrl": "https://images.beastsofwar.com/2018/09/DD-Waterdeep-City-Map-Gale-Force-Nine.jpg",
-  "npcs": {
-    "Tavern": [
-      {
-        "name": "Durnan",
-        "species": "human",
-        "classJob": "Innkeeper",
-        "gender": "male",
-        "type": "Tavern",
-        "tags": [
-          "male",
-          "#innkeeper",
-          "#human",
-          "#legendary"
-        ],
-        "portraitKey": "male_innkeeper_human_durnan",
-        "portraitDescription": "A rugged, middle-aged human with a scarred face and a quiet, watchful demeanor. He wears practical leather armor under his apron.",
-        "hairColor": "Grey",
-        "eyeColor": "Brown",
-        "visualTraits": {
-          "skinTone": "Tan",
-          "build": "Muscular",
-          "hairStyle": "Short",
-          "clothingStyle": "Leather apron over chainmail",
-          "distinguishingFeatures": "A deep scar across his cheek"
-        }
-      }
-    ],
-    "Arcane Shop": [
-      {
-        "name": "Laeral Silverhand",
-        "species": "High Elf",
-        "classJob": "Wizard",
-        "gender": "female",
-        "type": "Arcane Shop",
-        "tags": [
-          "female",
-          "#wizard",
-          "#highelf",
-          "#noble"
-        ],
-        "portraitKey": "female_wizard_highelf_laeral",
-        "portraitDescription": "An ethereal High Elf with silver hair that glows faintly. She wears ornate, flowing robes of deep blue and silver.",
-        "hairColor": "Silver",
-        "eyeColor": "Violet",
-        "visualTraits": {
-          "skinTone": "Pale",
-          "build": "Slender",
-          "hairStyle": "Long and flowing",
-          "clothingStyle": "Ornate magical robes",
-          "distinguishingFeatures": "Eyes that shimmer with arcane power"
-        }
-      }
-    ],
-    "Weaponsmith": [
-      {
-        "name": "Thrak Hammerfist",
-        "species": "Mountain Dwarf",
-        "classJob": "Blacksmith",
-        "gender": "male",
-        "type": "Weaponsmith",
-        "tags": [
-          "male",
-          "#blacksmith",
-          "#dwarf",
-          "#strong"
-        ],
-        "portraitKey": "male_blacksmith_dwarf_thrak",
-        "portraitDescription": "A stout Mountain Dwarf with a soot-stained beard braided with iron rings. His arms are thick with muscle.",
-        "hairColor": "Red",
-        "eyeColor": "Amber",
-        "visualTraits": {
-          "skinTone": "Bronze",
-          "build": "Stocky",
-          "hairStyle": "Braided beard",
-          "clothingStyle": "Heavy leather smithing apron",
-          "distinguishingFeatures": "Iron rings in his beard"
-        }
-      }
-    ],
-    "General Store": [
-      {
-        "name": "Mirt",
-        "species": "human",
-        "classJob": "Merchant",
-        "gender": "male",
-        "type": "General Store",
-        "tags": [
-          "male",
-          "#merchant",
-          "#human",
-          "#jovial"
-        ],
-        "portraitKey": "male_merchant_human_mirt",
-        "portraitDescription": "A portly, jovial human with a large mustache and twinkling eyes. He wears expensive but worn traveler's silks.",
-        "hairColor": "Brown",
-        "eyeColor": "Blue",
-        "visualTraits": {
-          "skinTone": "Fair",
-          "build": "Heavy",
-          "hairStyle": "Balding with mustache",
-          "clothingStyle": "Expensive silks",
-          "distinguishingFeatures": "A booming laugh and twinkling eyes"
-        }
-      },
-      {
-        "name": "Obaya Uday",
-        "species": "Goliath",
-        "classJob": "Cleric",
-        "gender": "female",
-        "type": "General Store",
-        "tags": [
-          "female",
-          "#cleric",
-          "#goliath",
-          "#foreign"
-        ],
-        "portraitKey": "female_cleric_goliath_obaya",
-        "portraitDescription": "A tall, grey-skinned Goliath with lithic patterns on her skin. She wears simple vestments and carries a heavy staff.",
-        "hairColor": "Bald",
-        "eyeColor": "Golden",
-        "visualTraits": {
-          "skinTone": "Grey",
-          "build": "Towering",
-          "hairStyle": "Bald",
-          "clothingStyle": "Simple religious vestments",
-          "distinguishingFeatures": "Stone-like skin patterns"
-        }
-      }
-    ],
-    "Thieves Guild": [
-      {
-        "name": "Jarlaxle Baenre",
-        "species": "Drow",
-        "classJob": "Rogue",
-        "gender": "male",
-        "type": "Thieves Guild",
-        "tags": [
-          "male",
-          "#rogue",
-          "#drow",
-          "#flamboyant"
-        ],
-        "portraitKey": "male_rogue_drow_jarlaxle",
-        "portraitDescription": "A slender Drow with a flamboyant purple hat featuring a large feather. He wears an eye patch and a colorful cloak.",
-        "hairColor": "Bald",
-        "eyeColor": "Red",
-        "visualTraits": {
-          "skinTone": "Obsidian",
-          "build": "Lean",
-          "hairStyle": "Bald",
-          "clothingStyle": "Flamboyant rogue attire",
-          "distinguishingFeatures": "Purple hat with a giant feather"
-        }
-      }
-    ]
-  }
+  "updatedAt": "2026-04-25T12:01:46.871Z"
 }
