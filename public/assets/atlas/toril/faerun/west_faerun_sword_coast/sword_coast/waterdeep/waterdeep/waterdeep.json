@@ -15,7 +15,8 @@
     "y": 2453
   },
   "lore": "The City of Splendors, a massive metropolis on the Sword Coast.",
-  "image": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/waterdeep/waterdeep.webp",
+  "grounding": [],
+  "overlayMapUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/waterdeep/waterdeep/waterdeep_submap.webp",
   "subLocations": [
     {
       "id": "6b9ac79f_0b26_4962_83cd_bc57a76d2acc",
@@ -105,5 +106,7 @@
       ],
       "type": "district"
     }
-  ]
+  ],
+  "image": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/waterdeep/waterdeep.webp",
+  "updatedAt": "2026-04-25T11:47:33.869Z"
 }
