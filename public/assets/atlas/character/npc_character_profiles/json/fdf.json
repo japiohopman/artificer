@@ -1,0 +1,1240 @@
+{
+  "name": "fdf",
+  "race": "Half-Elf",
+  "voiceProfile": "Gravelly, confident, used to shouting orders.",
+  "xp": 0,
+  "inventory": {
+    "chest": {
+      "id": "chain_mail-sv5fd74x4",
+      "name": "chain mail",
+      "index": "chain_mail",
+      "_type": "equipment",
+      "weight": 55,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/chain_mail.json",
+      "imageUrl": "/assets/atlas/equipment/images/chain_mail.webp",
+      "desc": [
+        "Each cold, interlocking ring is stained with the rusted patina of a thousand failed crusades, whispering the final, jagged breaths of the souls who wore them before you. To don this armor is to wrap yourself in the clattering shroud of the fallen, where every link feels like a heavy secret pressed against your skin."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "armor",
+        "name": "armor",
+        "url": "public/assets/atlas/equipment_categories/armor"
+      },
+      "armor_category": "Heavy",
+      "armor_class": {
+        "base": 16,
+        "dex_bonus": false
+      },
+      "str_minimum": 13,
+      "stealth_disadvantage": true,
+      "cost": {
+        "quantity": 75,
+        "unit": "gp"
+      },
+      "url": "public/assets/atlas/equipment/json/charismain_mail.json",
+      "updated_at": "2026-04-25T19:40:24.125Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/charismain_mail.webp",
+      "sprite_index": 3,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "last_updated": "25-4-2026",
+      "background_type": "land_forest",
+      "slot": "chest"
+    },
+    "off-hand": {
+      "id": "shield-nn12i2vch",
+      "name": "shield",
+      "index": "shield",
+      "_type": "equipment",
+      "weight": 6,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/shield.json",
+      "imageUrl": "/assets/atlas/equipment/shield.webp",
+      "desc": [
+        "Forged from cold, light-drinking iron, this shield bears the weeping face of a martyr whose final, silent scream still vibrates against the arm of its bearer. Its surface is perpetually slick with a phantom gore that refuses to be wiped away, feeding on the life-force of those who seek refuge behind its wall of sorrow."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "armor",
+        "name": "armor",
+        "url": "public/assets/atlas/equipment_categories/armor"
+      },
+      "armor_category": "Shield",
+      "armor_class": {
+        "base": 2,
+        "dex_bonus": false
+      },
+      "str_minimum": 0,
+      "stealth_disadvantage": false,
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "url": "public/assets/atlas/equipment/json/shield.json",
+      "updated_at": "2026-04-12T08:06:36.452Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/shield.webp",
+      "sprite_index": 16,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+      "category": "Shields",
+      "last_updated": "12-4-2026",
+      "slot": "off-hand"
+    }
+  },
+  "backpack": [
+    {
+      "id": "shovel-pywzf4did",
+      "name": "Shovel",
+      "index": "shovel",
+      "_type": "equipment",
+      "weight": 5,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/shovel.json",
+      "imageUrl": "/assets/atlas/equipment/images/shovel.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "url": "public/assets/atlas/equipment/json/shovel.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/shovel.webp",
+      "sprite_index": 19,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+    },
+    {
+      "id": "iron-pot-yxui8p2d2",
+      "name": "Iron Pot",
+      "index": "iron-pot",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/iron-pot.json",
+      "imageUrl": "/assets/atlas/equipment/images/iron_pot.webp"
+    },
+    {
+      "id": "common-clothes-lbgfvqd9l",
+      "name": "Common Clothes",
+      "index": "common-clothes",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/common-clothes.json",
+      "imageUrl": "/assets/atlas/equipment/images/common_clothes.webp"
+    },
+    {
+      "id": "pouch-m003hs5u6",
+      "name": "Pouch",
+      "index": "pouch",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/pouch.json",
+      "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
+      ],
+      "url": "public/assets/atlas/equipment/json/pouch.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/pouch.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+    },
+    {
+      "id": "backpack-2xqv6goyq",
+      "name": "backpack",
+      "index": "backpack",
+      "_type": "equipment",
+      "weight": 5,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/backpack.json",
+      "imageUrl": "/assets/atlas/equipment/images/backpack.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "url": "public/assets/atlas/equipment/json/backpack.json",
+      "updated_at": "2026-04-21T14:08:31.097Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/backpack.webp",
+      "sprite_index": 9,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "back"
+      ],
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "blanket-2qwgevwbx",
+      "name": "blanket",
+      "index": "blanket",
+      "_type": "equipment",
+      "weight": 3,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/blanket.json",
+      "imageUrl": "/assets/atlas/equipment/images/blanket.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "url": "public/assets/atlas/equipment/json/blanket.json",
+      "updated_at": "2026-04-21T14:28:07.905Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/blanket.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "extra"
+      ],
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "candle-p6jvz2zxu",
+      "name": "candle",
+      "index": "candle",
+      "_type": "equipment",
+      "weight": 0,
+      "quantity": 10,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/candle.json",
+      "imageUrl": "/assets/atlas/equipment/images/candle.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "cp"
+      },
+      "desc": [
+        "For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet."
+      ],
+      "url": "public/assets/atlas/equipment/json/candle.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/candle.webp",
+      "sprite_index": 19,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+    },
+    {
+      "id": "tinderbox-txyuc55yw",
+      "name": "tinderbox",
+      "index": "tinderbox",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/tinderbox.json",
+      "imageUrl": "/assets/atlas/equipment/tinderbox.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch--or anything else with abundant, exposed fuel--takes an action.",
+        "Lighting any other fire takes 1 minute."
+      ],
+      "url": "public/assets/atlas/equipment/json/tinderbox.json",
+      "updated_at": "2026-04-15T13:57:41.365Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/tinderbox.webp",
+      "sprite_index": 16,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "category": "Adventuring Gear",
+      "last_updated": "15-4-2026"
+    },
+    {
+      "id": "rations_1_day-ozyyfc0uq",
+      "name": "rations (1 day)",
+      "index": "rations_1_day",
+      "_type": "equipment",
+      "weight": 2,
+      "quantity": 2,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/rations_1_day.json",
+      "imageUrl": "/assets/atlas/equipment/images/rations_1_day.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts."
+      ],
+      "url": "public/assets/atlas/equipment/json/rations_1_day.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/rations_1_day.webp",
+      "sprite_index": 20,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+    },
+    {
+      "id": "waterskin-ee9lnkahg",
+      "name": "waterskin",
+      "index": "waterskin",
+      "_type": "equipment",
+      "weight": 5,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/waterskin.json",
+      "imageUrl": "/assets/atlas/equipment/images/waterskin.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "sp"
+      },
+      "url": "public/assets/atlas/equipment/json/waterskin.json",
+      "updated_at": "2026-04-21T14:20:07.679Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/waterskin.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "extra"
+      ],
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "alms_box-2slqbj0r4",
+      "name": "alms box",
+      "index": "alms_box",
+      "_type": "equipment",
+      "weight": 0,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/alms_box.json",
+      "imageUrl": "/assets/atlas/equipment/images/alms_box.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 0,
+        "unit": "cp"
+      },
+      "desc": [
+        "A small box for alms, typically found in a priest's pack."
+      ],
+      "url": "public/assets/atlas/equipment/json/alms_box.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/alms_box.webp",
+      "sprite_index": 4,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp"
+    },
+    {
+      "id": "block_of_incense-nifnfqnms",
+      "name": "block of incense",
+      "index": "block_of_incense",
+      "_type": "equipment",
+      "weight": 0,
+      "quantity": 2,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/block_of_incense.json",
+      "imageUrl": "/assets/atlas/equipment/images/block_of_incense.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 0,
+        "unit": "cp"
+      },
+      "desc": [
+        "A block of incense, typically found in a priest's pack."
+      ],
+      "url": "public/assets/atlas/equipment/json/block_of_incense.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/block_of_incense.webp",
+      "sprite_index": 7,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+    },
+    {
+      "id": "censer-0hkkqwghr",
+      "name": "censer",
+      "index": "censer",
+      "_type": "equipment",
+      "weight": 0,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/censer.json",
+      "imageUrl": "/assets/atlas/equipment/images/censer.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 0,
+        "unit": "cp"
+      },
+      "desc": [
+        "A censer, typically found in a priest's pack."
+      ],
+      "url": "public/assets/atlas/equipment/json/censer.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/censer.webp",
+      "sprite_index": 1,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp"
+    },
+    {
+      "id": "vestments-c0zmpygk0",
+      "name": "vestments",
+      "index": "vestments",
+      "_type": "equipment",
+      "weight": 0,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/vestments.json",
+      "imageUrl": "/assets/atlas/equipment/images/vestments.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 0,
+        "unit": "cp"
+      },
+      "desc": [
+        "Religious clothing, typically found in a priest's pack."
+      ],
+      "url": "public/assets/atlas/equipment/json/vestments.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/vestments.webp",
+      "sprite_index": 21,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+    },
+    {
+      "id": "emblem-2n2nbm6a8",
+      "name": "emblem",
+      "index": "emblem",
+      "_type": "equipment",
+      "weight": 0,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/emblem.json",
+      "imageUrl": "/assets/atlas/equipment/images/emblem.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "holy_symbols",
+        "name": "holy symbols",
+        "url": "public/assets/atlas/equipment_categories/holy_symbols"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "desc": [
+        "A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic.",
+        "Appendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
+      ],
+      "url": "public/assets/atlas/equipment/json/emblem.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/emblem.webp",
+      "sprite_index": 8,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+    },
+    {
+      "id": "cartographers-tools-t95rf8004",
+      "name": "Cartographer's Tools",
+      "index": "cartographers-tools",
+      "_type": "equipment",
+      "weight": 6,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/cartographers-tools.json",
+      "imageUrl": "/assets/atlas/equipment/images/cartographers_tools.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "tools",
+        "name": "tools",
+        "url": "public/assets/atlas/equipment_categories/tools"
+      },
+      "tool_category": "Artisan's Tools",
+      "cost": {
+        "quantity": 15,
+        "unit": "gp"
+      },
+      "desc": [
+        "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+      ],
+      "url": "public/assets/atlas/equipment/json/cartographers_tools.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/cartographers_tools.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+    }
+  ],
+  "spells": [],
+  "hp": 9,
+  "maxHp": 9,
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "gp": 10,
+    "pp": 0
+  },
+  "class": "Paladin",
+  "alignment": "Lawful Evil",
+  "stats": {
+    "str": 11,
+    "dex": 10,
+    "con": 9,
+    "int": 14,
+    "wis": 18,
+    "cha": 14
+  },
+  "background": "Folk Hero",
+  "traits": [
+    "I judge people by their actions, not their words."
+  ],
+  "ideals": [
+    "Sincerity. There's no good in pretending to be something I'm not. (Neutral)"
+  ],
+  "bonds": [
+    "I wish my childhood sweetheart had come with me to pursue my destiny."
+  ],
+  "flaws": [
+    "I have trouble trusting in my allies."
+  ],
+  "proficiencies": [
+    "skill-animal-handling",
+    "skill-survival",
+    "vehicles-land",
+    "all_armor",
+    "shields",
+    "simple_weapons",
+    "martial_weapons",
+    "saving_throw_wis",
+    "saving_throw_cha",
+    "Saving Throw: wis",
+    "Saving Throw: cha",
+    "skill_religion",
+    "skill_intimidation"
+  ],
+  "skills": [
+    "skill-animal-handling",
+    "skill-survival"
+  ],
+  "id": "fdf",
+  "level": 1,
+  "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/character/npc_character_profiles/json/fdf.json",
+  "atlas_data": {
+    "class": {
+      "index": "paladin",
+      "name": "paladin",
+      "hit_die": 10,
+      "proficiency_choices": [
+        {
+          "desc": "Choose two from Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion",
+          "choose": 2,
+          "type": "proficiencies",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_athletics",
+                  "name": "skill: athletics",
+                  "url": "public/assets/atlas/proficiencies/skill_athletics"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_insight",
+                  "name": "skill: insight",
+                  "url": "public/assets/atlas/proficiencies/skill_insight"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_intimidation",
+                  "name": "skill: intimidation",
+                  "url": "public/assets/atlas/proficiencies/skill_intimidation"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_medicine",
+                  "name": "skill: medicine",
+                  "url": "public/assets/atlas/proficiencies/skill_medicine"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_persuasion",
+                  "name": "skill: persuasion",
+                  "url": "public/assets/atlas/proficiencies/skill_persuasion"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_religion",
+                  "name": "skill: religion",
+                  "url": "public/assets/atlas/proficiencies/skill_religion"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "proficiencies": [
+        {
+          "index": "all_armor",
+          "name": "all armor",
+          "url": "public/assets/atlas/proficiencies/all_armor"
+        },
+        {
+          "index": "shields",
+          "name": "shields",
+          "url": "public/assets/atlas/proficiencies/shields"
+        },
+        {
+          "index": "simple_weapons",
+          "name": "simple weapons",
+          "url": "public/assets/atlas/proficiencies/simple_weapons"
+        },
+        {
+          "index": "martial_weapons",
+          "name": "martial weapons",
+          "url": "public/assets/atlas/proficiencies/martial_weapons"
+        },
+        {
+          "index": "saving_throw_wis",
+          "name": "saving throw: wis",
+          "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        },
+        {
+          "index": "saving_throw_cha",
+          "name": "saving throw: cha",
+          "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        }
+      ],
+      "saving_throws": [
+        {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        }
+      ],
+      "starting_equipment": [
+        {
+          "equipment": {
+            "index": "chain_mail",
+            "name": "chain mail",
+            "url": "public/assets/atlas/equipment/charismain_mail"
+          },
+          "quantity": 1
+        }
+      ],
+      "starting_equipment_options": [
+        {
+          "desc": "(a) a martial weapon and a shield or (b) two martial weapons",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "multiple",
+                "items": [
+                  {
+                    "option_type": "choice",
+                    "choice": {
+                      "desc": "a martial weapon",
+                      "choose": 1,
+                      "type": "equipment",
+                      "from": {
+                        "option_set_type": "equipment_category",
+                        "equipment_category": {
+                          "name": "martial weapons",
+                          "index": "martial_weapons",
+                          "url": "public/assets/atlas/equipment_categories/martial_weapons"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "option_type": "counted_reference",
+                    "count": 1,
+                    "of": {
+                      "index": "shield",
+                      "name": "shield",
+                      "url": "public/assets/atlas/equipment/shield"
+                    }
+                  }
+                ]
+              },
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "two martial weapons",
+                  "choose": 2,
+                  "type": "equipment",
+                  "from": {
+                    "option_set_type": "equipment_category",
+                    "equipment_category": {
+                      "index": "martial_weapons",
+                      "name": "martial weapons",
+                      "url": "public/assets/atlas/equipment_categories/martial_weapons"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "(a) five javelins or (b) any simple melee weapon",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 5,
+                "of": {
+                  "index": "javelin",
+                  "name": "javelin",
+                  "url": "public/assets/atlas/equipment/javelin"
+                }
+              },
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "any simple weapon",
+                  "choose": 1,
+                  "type": "equipment",
+                  "from": {
+                    "option_set_type": "equipment_category",
+                    "equipment_category": {
+                      "index": "simple_weapons",
+                      "name": "simple weapons",
+                      "url": "public/assets/atlas/equipment_categories/simple_weapons"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "(a) a priest’s pack or (b) an explorer’s pack",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "priests_pack",
+                  "name": "priest's pack",
+                  "url": "public/assets/atlas/equipment/priests_pack"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "explorers_pack",
+                  "name": "explorer's pack",
+                  "url": "public/assets/atlas/equipment/explorers_pack"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "holy symbol",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "equipment_category",
+            "equipment_category": {
+              "index": "holy_symbols",
+              "name": "holy symbols",
+              "url": "public/assets/atlas/equipment_categories/holy_symbols"
+            }
+          }
+        }
+      ],
+      "class_levels": "public/assets/atlas/classes/paladin/levels",
+      "multi_classing": {
+        "prerequisites": [
+          {
+            "ability_score": {
+              "index": "str",
+              "name": "str",
+              "url": "public/assets/atlas/ability_scores/strength"
+            },
+            "minimum_score": 13
+          },
+          {
+            "ability_score": {
+              "index": "cha",
+              "name": "cha",
+              "url": "public/assets/atlas/ability_scores/charisma"
+            },
+            "minimum_score": 13
+          }
+        ],
+        "proficiencies": [
+          {
+            "index": "light_armor",
+            "name": "light armor",
+            "url": "public/assets/atlas/proficiencies/light_armor"
+          },
+          {
+            "index": "medium_armor",
+            "name": "medium armor",
+            "url": "public/assets/atlas/proficiencies/medium_armor"
+          },
+          {
+            "index": "shields",
+            "name": "shields",
+            "url": "public/assets/atlas/proficiencies/shields"
+          },
+          {
+            "index": "simple_weapons",
+            "name": "simple weapons",
+            "url": "public/assets/atlas/proficiencies/simple_weapons"
+          },
+          {
+            "index": "martial_weapons",
+            "name": "martial weapons",
+            "url": "public/assets/atlas/proficiencies/martial_weapons"
+          }
+        ]
+      },
+      "subclasses": [
+        {
+          "index": "devotion",
+          "name": "devotion",
+          "url": "public/assets/atlas/subclasses/devotion"
+        }
+      ],
+      "spellcasting": {
+        "level": 2,
+        "spellcasting_ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        },
+        "info": [
+          {
+            "name": "preparing and casting spells",
+            "desc": [
+              "The Paladin table shows how many spell slots you have to cast your spells. To cast one of your paladin spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+              "You prepare the list of paladin spells that are available for you to cast, choosing from the paladin spell list. When you do so, choose a number of paladin spells equal to your Charisma modifier + half your paladin level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.",
+              "For example, if you are a 5th-level paladin, you have four 1st-level and two 2nd-level spell slots. With a Charisma of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or a 2nd- level slot. Casting the spell doesn't remove it from your list of prepared spells.",
+              "You can change your list of prepared spells when you finish a long rest. Preparing a new list of paladin spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
+            ]
+          },
+          {
+            "name": "spellcasting ability",
+            "desc": [
+              "Charisma is your spellcasting ability for your paladin spells, since their power derives from the strength of your convictions. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a paladin spell you cast and when making an attack roll with one.",
+              "Spell save DC = 8 + your proficiency bonus + your Charisma modifier.",
+              "Spell attack modifier = your proficiency bonus + your Charisma modifier."
+            ]
+          },
+          {
+            "name": "spellcasting focus",
+            "desc": [
+              "You can use a holy symbol as a spellcasting focus for your paladin spells."
+            ]
+          }
+        ]
+      },
+      "spells": "public/assets/atlas/classes/paladin/spells",
+      "url": "public/assets/atlas/classes/json/paladin.json",
+      "updated_at": "2025-10-24T20:42:12.459Z",
+      "image": "public/assets/atlas/classes/paladin.webp"
+    },
+    "species": null,
+    "background": {
+      "index": "folk-hero",
+      "name": "Folk Hero",
+      "description": "You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.",
+      "starting_proficiencies": [
+        {
+          "index": "skill-animal-handling",
+          "name": "Skill: Animal Handling"
+        },
+        {
+          "index": "skill-survival",
+          "name": "Skill: Survival"
+        },
+        {
+          "index": "vehicles-land",
+          "name": "Vehicles (Land)"
+        }
+      ],
+      "starting_equipment": [
+        {
+          "equipment": {
+            "index": "shovel",
+            "name": "Shovel",
+            "url": "/api/equipment/shovel"
+          },
+          "quantity": 1
+        },
+        {
+          "equipment": {
+            "index": "iron-pot",
+            "name": "Iron Pot",
+            "url": "/api/equipment/iron-pot"
+          },
+          "quantity": 1
+        },
+        {
+          "equipment": {
+            "index": "common-clothes",
+            "name": "Common Clothes",
+            "url": "/api/equipment/common-clothes"
+          },
+          "quantity": 1,
+          "slot": "clothes"
+        },
+        {
+          "equipment": {
+            "index": "pouch",
+            "name": "Pouch",
+            "url": "/api/equipment/pouch"
+          },
+          "quantity": 1
+        }
+      ],
+      "starting_equipment_options": [
+        {
+          "desc": "One type of artisan's tools",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "alchemists-supplies",
+                  "name": "Alchemist's Supplies"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "brewers-supplies",
+                  "name": "Brewer's Supplies"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "calligraphers-supplies",
+                  "name": "Calligrapher's Supplies"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "carpenters-tools",
+                  "name": "Carpenter's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "cartographers-tools",
+                  "name": "Cartographer's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "cobblers-tools",
+                  "name": "Cobbler's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "cooks-utensils",
+                  "name": "Cook's Utensils"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "glassblowers-tools",
+                  "name": "Glassblower's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "jewelers-tools",
+                  "name": "Jeweler's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "leatherworkers-tools",
+                  "name": "Leatherworker's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "masons-tools",
+                  "name": "Mason's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "painters-supplies",
+                  "name": "Painter's Supplies"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "potters-tools",
+                  "name": "Potter's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "smiths-tools",
+                  "name": "Smith's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "tinkers-tools",
+                  "name": "Tinker's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "weavers-tools",
+                  "name": "Weaver's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "woodcarvers-tools",
+                  "name": "Woodcarver's Tools"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "feature": {
+        "name": "Rustic Hospitality",
+        "desc": [
+          "Since you come from the ranks of the common folk, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you."
+        ]
+      },
+      "suggested_characteristics": {
+        "traits": [
+          "I judge people by their actions, not their words.",
+          "If someone is in trouble, I'm always ready to lend help.",
+          "When I set my mind to something, I follow through no matter what gets in my way.",
+          "I have a strong sense of fair play and always try to find the most equitable solution to arguments.",
+          "I'm confident in my own abilities and do what I can to instill confidence in others.",
+          "Thinking is for other people. I prefer action.",
+          "I misuse long words in an attempt to sound smarter.",
+          "I get bored easily. When am I going to get on with my destiny?"
+        ],
+        "ideals": [
+          "Respect. People deserve to be treated with dignity and respect. (Good)",
+          "Fairness. No one should get preferential treatment before the law, and no one is above the law. (Lawful)",
+          "Freedom. Tyrants must not be allowed to oppress the people. (Chaotic)",
+          "Might. If I become strong, I can take what I want — what I deserve. (Evil)",
+          "Sincerity. There's no good in pretending to be something I'm not. (Neutral)",
+          "Destiny. Nothing and no one can steer me away from my higher calling. (Any)"
+        ],
+        "bonds": [
+          "I have a family, but I have no idea where they are. One day, I hope to see them again.",
+          "I worked the land, I love the land, and I will protect the land.",
+          "A proud noble once gave me a horrible beating, and I will take my revenge on any bully I encounter.",
+          "My tools are symbols of my past life, and I carry them so that I will never forget my roots.",
+          "I protect those who cannot protect themselves.",
+          "I wish my childhood sweetheart had come with me to pursue my destiny."
+        ],
+        "flaws": [
+          "The tyrant who rules my land will stop at nothing to see me killed.",
+          "I'm convinced of the significance of my destiny, and blind to my shortcomings and the risk of failure.",
+          "The people who knew me when I was young know my shameful secret, so I can never go home again.",
+          "I have a weakness for the vices of the city, especially hard drink.",
+          "Secretly, I believe that things would be better if I were a tyrant lording over the land.",
+          "I have trouble trusting in my allies."
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "updated_at": "2026-04-25T21:18:38.418Z",
+    "version": "2.6"
+  }
+}
