@@ -19,55 +19,7 @@
   "wikiMaxX": 3000,
   "wikiMaxY": 4524,
   "overlayMapUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/waterdeep/waterdeep/waterdeep_submap.webp",
-  "subLocations": [
-    {
-      "id": "6b9ac79f_0b26_4962_83cd_bc57a76d2acc",
-      "name": "the lady dreaming",
-      "x": 372,
-      "y": 1326,
-      "category": "point_of_interest",
-      "tags": [],
-      "lore": "History\nDuring the Spellplague of 1385 DR, the walking statue appeared and rampaged through the city. When the statues were stopped, she fell onto her side, where she still lay by 1492 DR.[\n\nDescription\nIt resembled a noble woman asleep in a garden. She bore the appearance of a female elf and, while active, her clothing and hair appeared to move naturally",
-      "architect": "ancient"
-    },
-    {
-      "id": "8b836b04_2c2f_4242_97d1_ca0d73ff9405",
-      "name": "the great drunkard",
-      "x": 752,
-      "y": 1270,
-      "category": "inn",
-      "tags": [],
-      "lore": "The Great Drunkard was one of the colossal Walking Statues of Waterdeep located in the Castle Ward of Waterdeep, south of The Market.\n\nHistory\nDuring the Spellplague of 1385 DR, the walking statue appeared and rampaged through the city. When stopped, the statue tumbled backwards onto a building\n\nGralkyn's Tavern sat in the statue's lap by 1492 \n\nDescription\nThe pose resembled that of a drunkard who had fallen asleep, its arms limp to the sides and its head tilted on its chest. The statue originally carried a large stone battleaxe, which was located nearby in the cobbles where it fel",
-      "architect": "human",
-      "locationType": "tavern"
-    },
-    {
-      "id": "6210feb4_a01c_44c4_9c1c_4e671e9b5ba0",
-      "name": "gralkyn's tavern",
-      "x": 735,
-      "y": 1256,
-      "category": "inn",
-      "tags": [],
-      "lore": "History\nDuring the Spellplague of 1385 DR, the walking statue appeared and rampaged through the city. When stopped, the statue tumbled backwards onto a building.\n\nGralkyn's Tavern sat in the statue's lap by 1492 \n\nDescription\nThe pose resembled that of a drunkard who had fallen asleep, its arms limp to the sides and its head tilted on its chest. The statue originally carried a large stone battleaxe, which was located nearby in the cobbles where it fell.",
-      "architect": "human",
-      "locationType": "tavern",
-      "npcs": [],
-      "ambientSound": ""
-    },
-    {
-      "id": "4b6ba0ea_2854_4ef5_a942_ce381feba754",
-      "name": "pearl jam",
-      "x": 766,
-      "y": 1762,
-      "category": "shop",
-      "tags": [],
-      "lore": "shop for stones pearls and jams",
-      "architect": "arcane",
-      "locationType": "tavern",
-      "npcs": [],
-      "ambientSound": ""
-    }
-  ],
+  "subLocationCount": 4,
   "subPaths": [
     {
       "id": "0cfb1bf6_efed_4cb8_8b0d_9495f78a830f",
@@ -110,5 +62,5 @@
     }
   ],
   "image": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/waterdeep/waterdeep.webp",
-  "updatedAt": "2026-04-25T13:13:00.285Z"
+  "updatedAt": "2026-04-25T13:26:54.758Z"
 }
