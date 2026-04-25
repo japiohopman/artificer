@@ -5,12 +5,7 @@
   "type": "fiend",
   "subtype": "demon",
   "alignment": "chaotic evil",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 7,
   "hit_dice": "3d4",
   "hit_points_roll": "3d4",
@@ -55,7 +50,7 @@
     "passive_perception": 10
   },
   "languages": "Abyssal, Common",
-  "challenge_rating": 1,
+  "challenge_rating": "1",
   "proficiency_bonus": 2,
   "xp": 200,
   "special_abilities": [
@@ -115,10 +110,22 @@
   ],
   "image": "public/assets/atlas/enemies/quasit.webp",
   "url": "public/assets/atlas/enemies/json/quasit.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-25T19:11:26.892Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 3,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet10.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet10.webp",
+  "stats": {
+    "str": 5,
+    "dex": 17,
+    "con": 10,
+    "int": 7,
+    "wis": 10,
+    "cha": 10
+  },
+  "imageUrl": "/assets/atlas/enemies/images/quasit.webp",
+  "_type": "enemies",
+  "background_type": "land_urban1",
+  "last_updated": "25-4-2026"
 }
