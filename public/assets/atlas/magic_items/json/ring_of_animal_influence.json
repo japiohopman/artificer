@@ -19,9 +19,9 @@
     "Speak with animals"
   ],
   "url": "public/assets/atlas/magic_items/json/ring_of_animal_influence.json",
-  "updated_at": "2026-04-11T17:49:38.109Z",
+  "updated_at": "2026-04-25T09:58:41.513Z",
   "image": "public/assets/atlas/magic_items/ring_of_animal_influence.webp",
-  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/magic_items/images/ring_of_animal_influence.webp?t=1775929467004",
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fmagic_items%2Fimages%2Fring_of_animal_influence.webp%3Ft%3D1777111103375",
   "_type": "equipment",
   "category": "Ring",
   "cost": {
@@ -29,5 +29,10 @@
     "unit": "gp"
   },
   "weight": "0,2 lb",
-  "last_updated": "11-4-2026"
+  "last_updated": "25-4-2026",
+  "background_type": "land_forest",
+  "slot": [
+    "ring-1",
+    "ring-2"
+  ]
 }
