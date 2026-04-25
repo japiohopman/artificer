@@ -15,10 +15,17 @@
   },
   "weight": 10,
   "url": "public/assets/atlas/equipment/json/animal_feed_1_day.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-25T19:42:02.793Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/animal_feed_1_day.webp",
   "sprite_index": 6,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+  "imageUrl": "/assets/atlas/equipment/images/animal_feed_1_day.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "25-4-2026"
 }
