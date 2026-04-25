@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Forged in the heart of a dying star and quenched in the blood of a forgotten god, this plate whispers promises of invincibility, though each echoing clang heralds the doom it merely postpones.\n"
+  ],
   "special": [],
   "index": "plate_armor",
   "name": "plate armor",
@@ -21,10 +23,18 @@
     "unit": "gp"
   },
   "url": "public/assets/atlas/equipment/json/plate_armor.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-25T09:12:47.830Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/plate_armor.webp",
   "sprite_index": 6,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/plate_armor.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Heavy Armor",
+  "slot": [
+    "chest"
+  ],
+  "last_updated": "25-4-2026"
 }
