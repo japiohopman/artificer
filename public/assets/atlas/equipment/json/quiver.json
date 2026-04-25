@@ -21,10 +21,17 @@
     "A quiver can hold up to 20 arrows."
   ],
   "url": "public/assets/atlas/equipment/json/quiver.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-25T10:04:06.285Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/quiver.webp",
   "sprite_index": 17,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/quiver.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "25-4-2026"
 }
