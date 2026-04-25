@@ -3,6 +3,30 @@
   "category": "inn",
   "subLocations": [
     {
+      "id": "8b836b04_2c2f_4242_97d1_ca0d73ff9405",
+      "name": "the great drunkard",
+      "x": 752,
+      "y": 1270,
+      "category": "inn",
+      "tags": [],
+      "lore": "The Great Drunkard was one of the colossal Walking Statues of Waterdeep located in the Castle Ward of Waterdeep, south of The Market.\n\nHistory\nDuring the Spellplague of 1385 DR, the walking statue appeared and rampaged through the city. When stopped, the statue tumbled backwards onto a building\n\nGralkyn's Tavern sat in the statue's lap by 1492 \n\nDescription\nThe pose resembled that of a drunkard who had fallen asleep, its arms limp to the sides and its head tilted on its chest. The statue originally carried a large stone battleaxe, which was located nearby in the cobbles where it fel",
+      "architect": "human",
+      "locationType": "tavern"
+    },
+    {
+      "id": "6210feb4_a01c_44c4_9c1c_4e671e9b5ba0",
+      "name": "gralkyn's tavern",
+      "x": 735,
+      "y": 1256,
+      "category": "inn",
+      "tags": [],
+      "lore": "History\nDuring the Spellplague of 1385 DR, the walking statue appeared and rampaged through the city. When stopped, the statue tumbled backwards onto a building.\n\nGralkyn's Tavern sat in the statue's lap by 1492 \n\nDescription\nThe pose resembled that of a drunkard who had fallen asleep, its arms limp to the sides and its head tilted on its chest. The statue originally carried a large stone battleaxe, which was located nearby in the cobbles where it fell.",
+      "architect": "human",
+      "locationType": "tavern",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
       "id": "wiki_23",
       "name": "Endshift Tavern",
       "lore": "The Endshift Tavern was a frequent stop for off-duty members of the [[City Guard (Waterdeep)|City Guard]].",
@@ -1237,5 +1261,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-04-25T14:44:14.976Z"
+  "updatedAt": "2026-04-25T16:22:27.792Z"
 }
