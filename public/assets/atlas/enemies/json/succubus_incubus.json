@@ -152,10 +152,15 @@
   ],
   "image": "public/assets/atlas/enemies/succubus_incubus.webp",
   "url": "public/assets/atlas/enemies/json/succubus_incubus.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-25T07:23:52.809Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 17,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp",
+  "imageUrl": "/assets/atlas/enemies/images/succubus_incubus.webp",
+  "_type": "enemies",
+  "background_type": "underdark",
+  "rarity": "Very Rare",
+  "last_updated": "25-4-2026"
 }
