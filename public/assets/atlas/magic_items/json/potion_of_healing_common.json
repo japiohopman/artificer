@@ -16,6 +16,13 @@
     "You regain 2d4 + 2 hit points when you drink this potion. The potion's red liquid glimmers when agitated."
   ],
   "url": "public/assets/atlas/magic_items/json/potion_of_healing_common.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/potion_of_healing_common.webp"
+  "updated_at": "2026-04-25T09:27:13.621Z",
+  "image": "public/assets/atlas/magic_items/potion_of_healing_common.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/potion_of_healing_common.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "25-4-2026"
 }
