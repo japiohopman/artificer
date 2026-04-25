@@ -5,7 +5,7 @@
   "xp": 0,
   "inventory": {
     "chest": {
-      "id": "chain_mail-sv5fd74x4",
+      "id": "chain_mail-bax4fdpbp",
       "name": "chain mail",
       "index": "chain_mail",
       "_type": "equipment",
@@ -45,7 +45,7 @@
       "slot": "chest"
     },
     "off-hand": {
-      "id": "shield-nn12i2vch",
+      "id": "shield-rbhnb5542",
       "name": "shield",
       "index": "shield",
       "_type": "equipment",
@@ -83,11 +83,69 @@
       "category": "Shields",
       "last_updated": "12-4-2026",
       "slot": "off-hand"
+    },
+    "main-hand": {
+      "id": "javelin-k9hn8oyhw",
+      "name": "javelin",
+      "index": "javelin",
+      "_type": "equipment",
+      "weight": 2,
+      "quantity": 5,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/javelin.json",
+      "imageUrl": "/assets/atlas/equipment/images/javelin.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "damage": {
+        "damage_dice": "1d6",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 30,
+        "long": 120
+      },
+      "url": "public/assets/atlas/equipment/json/javelin.json",
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/javelin.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "slot": "main-hand"
     }
   },
   "backpack": [
     {
-      "id": "shovel-pywzf4did",
+      "id": "shovel-8ysohfbwp",
       "name": "Shovel",
       "index": "shovel",
       "_type": "equipment",
@@ -120,7 +178,7 @@
       "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
     },
     {
-      "id": "iron-pot-yxui8p2d2",
+      "id": "iron-pot-c3rxltmvc",
       "name": "Iron Pot",
       "index": "iron-pot",
       "_type": "equipment",
@@ -130,7 +188,7 @@
       "imageUrl": "/assets/atlas/equipment/images/iron_pot.webp"
     },
     {
-      "id": "common-clothes-lbgfvqd9l",
+      "id": "common-clothes-n00981ul1",
       "name": "Common Clothes",
       "index": "common-clothes",
       "_type": "equipment",
@@ -140,7 +198,7 @@
       "imageUrl": "/assets/atlas/equipment/images/common_clothes.webp"
     },
     {
-      "id": "pouch-m003hs5u6",
+      "id": "pouch-2k727gpou",
       "name": "Pouch",
       "index": "pouch",
       "_type": "equipment",
@@ -175,7 +233,7 @@
       "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
     },
     {
-      "id": "backpack-2xqv6goyq",
+      "id": "backpack-2se5hps4e",
       "name": "backpack",
       "index": "backpack",
       "_type": "equipment",
@@ -213,7 +271,7 @@
       "last_updated": "21-4-2026"
     },
     {
-      "id": "blanket-2qwgevwbx",
+      "id": "blanket-00y5vt8ud",
       "name": "blanket",
       "index": "blanket",
       "_type": "equipment",
@@ -251,7 +309,7 @@
       "last_updated": "21-4-2026"
     },
     {
-      "id": "candle-p6jvz2zxu",
+      "id": "candle-27c1c6as3",
       "name": "candle",
       "index": "candle",
       "_type": "equipment",
@@ -286,7 +344,7 @@
       "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
     },
     {
-      "id": "tinderbox-txyuc55yw",
+      "id": "tinderbox-6zennvb8r",
       "name": "tinderbox",
       "index": "tinderbox",
       "_type": "equipment",
@@ -324,7 +382,7 @@
       "last_updated": "15-4-2026"
     },
     {
-      "id": "rations_1_day-ozyyfc0uq",
+      "id": "rations_1_day-s3yifsl9u",
       "name": "rations (1 day)",
       "index": "rations_1_day",
       "_type": "equipment",
@@ -359,7 +417,7 @@
       "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
     },
     {
-      "id": "waterskin-ee9lnkahg",
+      "id": "waterskin-aaiegk3mg",
       "name": "waterskin",
       "index": "waterskin",
       "_type": "equipment",
@@ -397,7 +455,7 @@
       "last_updated": "21-4-2026"
     },
     {
-      "id": "alms_box-2slqbj0r4",
+      "id": "alms_box-59dybfqmn",
       "name": "alms box",
       "index": "alms_box",
       "_type": "equipment",
@@ -432,7 +490,7 @@
       "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp"
     },
     {
-      "id": "block_of_incense-nifnfqnms",
+      "id": "block_of_incense-ef1rm4g3y",
       "name": "block of incense",
       "index": "block_of_incense",
       "_type": "equipment",
@@ -467,7 +525,7 @@
       "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
     },
     {
-      "id": "censer-0hkkqwghr",
+      "id": "censer-xboibds6l",
       "name": "censer",
       "index": "censer",
       "_type": "equipment",
@@ -502,7 +560,7 @@
       "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp"
     },
     {
-      "id": "vestments-c0zmpygk0",
+      "id": "vestments-vmvszsdsb",
       "name": "vestments",
       "index": "vestments",
       "_type": "equipment",
@@ -537,7 +595,7 @@
       "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
     },
     {
-      "id": "emblem-2n2nbm6a8",
+      "id": "emblem-8m6wgiiml",
       "name": "emblem",
       "index": "emblem",
       "_type": "equipment",
@@ -573,7 +631,7 @@
       "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
     },
     {
-      "id": "cartographers-tools-t95rf8004",
+      "id": "cartographers-tools-aqbyg7e0b",
       "name": "Cartographer's Tools",
       "index": "cartographers-tools",
       "_type": "equipment",
@@ -648,8 +706,8 @@
     "saving_throw_cha",
     "Saving Throw: wis",
     "Saving Throw: cha",
-    "skill_religion",
-    "skill_intimidation"
+    "skill_insight",
+    "skill_athletics"
   ],
   "skills": [
     "skill-animal-handling",
@@ -1234,7 +1292,7 @@
     }
   },
   "metadata": {
-    "updated_at": "2026-04-25T21:18:38.418Z",
+    "updated_at": "2026-04-25T21:19:27.729Z",
     "version": "2.6"
   }
 }
