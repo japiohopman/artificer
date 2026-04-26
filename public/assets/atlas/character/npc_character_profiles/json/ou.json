@@ -1,0 +1,734 @@
+{
+  "name": "ou",
+  "gender": "Male",
+  "class": "Warlock",
+  "race": "Dwarf",
+  "background": "Guild Artisan",
+  "alignment": "Chaotic Evil",
+  "level": 1,
+  "xp": 0,
+  "stats": {
+    "str": 9,
+    "dex": 13,
+    "con": 10,
+    "int": 10,
+    "wis": 16,
+    "cha": 4
+  },
+  "proficiencies": [],
+  "backstory": "",
+  "flaws": [],
+  "ideals": [],
+  "bonds": [],
+  "traits": [],
+  "appearance": {
+    "hairColor": "",
+    "hairStyle": "",
+    "bodyType": "",
+    "eyeColor": "",
+    "skinColor": "",
+    "height": "",
+    "weight": ""
+  },
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "gp": 0,
+    "pp": 0
+  },
+  "inventory": {},
+  "backpack": [],
+  "spells": [],
+  "id": "ou",
+  "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/character/npc_character_profiles/json/ou.json",
+  "atlas_data": {
+    "class": {
+      "index": "warlock",
+      "name": "warlock",
+      "hit_die": 8,
+      "proficiency_choices": [
+        {
+          "desc": "Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion",
+          "choose": 2,
+          "type": "proficiencies",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_arcana",
+                  "name": "skill: arcana",
+                  "url": "public/assets/atlas/proficiencies/skill_arcana"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_deception",
+                  "name": "skill: deception",
+                  "url": "public/assets/atlas/proficiencies/skill_deception"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_history",
+                  "name": "skill: history",
+                  "url": "public/assets/atlas/proficiencies/skill_history"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_intimidation",
+                  "name": "skill: intimidation",
+                  "url": "public/assets/atlas/proficiencies/skill_intimidation"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_investigation",
+                  "name": "skill: investigation",
+                  "url": "public/assets/atlas/proficiencies/skill_investigation"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_nature",
+                  "name": "skill: nature",
+                  "url": "public/assets/atlas/proficiencies/skill_nature"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_religion",
+                  "name": "skill: religion",
+                  "url": "public/assets/atlas/proficiencies/skill_religion"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "proficiencies": [
+        {
+          "index": "light_armor",
+          "name": "light armor",
+          "url": "public/assets/atlas/proficiencies/light_armor"
+        },
+        {
+          "index": "simple_weapons",
+          "name": "simple weapons",
+          "url": "public/assets/atlas/proficiencies/simple_weapons"
+        },
+        {
+          "index": "saving_throw_wis",
+          "name": "saving throw: wis",
+          "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        },
+        {
+          "index": "saving_throw_cha",
+          "name": "saving throw: cha",
+          "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        }
+      ],
+      "saving_throws": [
+        {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        }
+      ],
+      "starting_equipment": [
+        {
+          "equipment": {
+            "index": "dagger",
+            "name": "dagger",
+            "url": "public/assets/atlas/equipment/dagger"
+          },
+          "quantity": 2
+        },
+        {
+          "equipment": {
+            "index": "leather_armor",
+            "name": "leather armor",
+            "url": "public/assets/atlas/equipment/leather_armor"
+          },
+          "quantity": 1
+        }
+      ],
+      "starting_equipment_options": [
+        {
+          "desc": "(a) a light crossbow and 20 bolts or (b) any simple weapon",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "multiple",
+                "items": [
+                  {
+                    "option_type": "counted_reference",
+                    "count": 1,
+                    "of": {
+                      "index": "crossbow_light",
+                      "name": "crossbow, light",
+                      "url": "public/assets/atlas/equipment/crossbow_light"
+                    }
+                  },
+                  {
+                    "option_type": "counted_reference",
+                    "count": 20,
+                    "of": {
+                      "index": "crossbow_bolt",
+                      "name": "crossbow bolt",
+                      "url": "public/assets/atlas/equipment/crossbow_bolt"
+                    }
+                  }
+                ]
+              },
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "any simple weapon",
+                  "choose": 1,
+                  "type": "equipment",
+                  "from": {
+                    "option_set_type": "equipment_category",
+                    "equipment_category": {
+                      "index": "simple_weapons",
+                      "name": "simple weapons",
+                      "url": "public/assets/atlas/equipment_categories/simple_weapons"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "(a) a component pouch or (b) an arcane focus",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "component_pouch",
+                  "name": "component pouch",
+                  "url": "public/assets/atlas/equipment/component_pouch"
+                }
+              },
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "arcane focus",
+                  "choose": 1,
+                  "type": "equipment",
+                  "from": {
+                    "option_set_type": "equipment_category",
+                    "equipment_category": {
+                      "index": "arcane_foci",
+                      "name": "arcane foci",
+                      "url": "public/assets/atlas/equipment_categories/arcane_foci"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "(a) a scholar’s pack or (b) a dungeoneer’s pack",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "scholars_pack",
+                  "name": "scholar's pack",
+                  "url": "public/assets/atlas/equipment/scholars_pack"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "dungeoneers_pack",
+                  "name": "dungeoneer's pack",
+                  "url": "public/assets/atlas/equipment/dungeoneers_pack"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "any simple weapon",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "equipment_category",
+            "equipment_category": {
+              "index": "simple_weapons",
+              "name": "simple weapons",
+              "url": "public/assets/atlas/equipment_categories/simple_weapons"
+            }
+          }
+        }
+      ],
+      "class_levels": "public/assets/atlas/classes/warlock/levels",
+      "multi_classing": {
+        "prerequisites": [
+          {
+            "ability_score": {
+              "index": "cha",
+              "name": "cha",
+              "url": "public/assets/atlas/ability_scores/charisma"
+            },
+            "minimum_score": 13
+          }
+        ],
+        "proficiencies": [
+          {
+            "index": "light_armor",
+            "name": "light armor",
+            "url": "public/assets/atlas/proficiencies/light_armor"
+          },
+          {
+            "index": "simple_weapons",
+            "name": "simple weapons",
+            "url": "public/assets/atlas/proficiencies/simple_weapons"
+          }
+        ]
+      },
+      "subclasses": [
+        {
+          "index": "fiend",
+          "name": "fiend",
+          "url": "public/assets/atlas/subclasses/fiend"
+        }
+      ],
+      "spellcasting": {
+        "level": 1,
+        "spellcasting_ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        },
+        "info": [
+          {
+            "name": "cantrips",
+            "desc": [
+              "You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table."
+            ]
+          },
+          {
+            "name": "spell slots",
+            "desc": [
+              "The Warlock table shows how many spell slots you have. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.",
+              "For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1st-level spell thunderwave, you must spend one of those slots, and you cast it as a 3rd-level spell."
+            ]
+          },
+          {
+            "name": "spells known of 1st level and higher",
+            "desc": [
+              "At 1st level, you know two 1st-level spells of your choice from the warlock spell list.",
+              "The Spells Known column of the Warlock table shows when you learn more warlock spells of your choice of 1st level and higher. ",
+              "A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.",
+              "Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots."
+            ]
+          },
+          {
+            "name": "spellcasting ability",
+            "desc": [
+              "Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.",
+              "Spell save DC = 8 + your proficiency bonus + your Charisma modifier.",
+              "Spell attack modifier = your proficiency bonus + your Charisma modifier."
+            ]
+          },
+          {
+            "name": "spellcasting focus",
+            "desc": [
+              "You can use an arcane focus as a spellcasting focus for your warlock spells."
+            ]
+          }
+        ]
+      },
+      "spells": "public/assets/atlas/classes/warlock/spells",
+      "url": "public/assets/atlas/classes/json/warlock.json",
+      "updated_at": "2025-10-24T20:42:12.459Z",
+      "image": "public/assets/atlas/classes/warlock.webp"
+    },
+    "species": {
+      "index": "dwarf",
+      "name": "dwarf",
+      "speed": 25,
+      "ability_bonuses": [
+        {
+          "ability_score": {
+            "index": "con",
+            "name": "con",
+            "url": "public/assets/atlas/ability_scores/constitution"
+          },
+          "bonus": 2
+        }
+      ],
+      "alignment": "Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that everyone deserves to share in the benefits of a just order.",
+      "age": "Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years.",
+      "size": "Medium",
+      "size_description": "Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.",
+      "languages": [
+        {
+          "index": "common",
+          "name": "common",
+          "url": "public/assets/atlas/languages/common"
+        },
+        {
+          "index": "dwarvish",
+          "name": "dwarvish",
+          "url": "public/assets/atlas/languages/dwarvish"
+        }
+      ],
+      "language_desc": "You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.",
+      "traits": [
+        {
+          "index": "darkvision",
+          "name": "darkvision",
+          "url": "public/assets/atlas/traits/darkvision"
+        },
+        {
+          "index": "dwarven_resilience",
+          "name": "dwarven resilience",
+          "url": "public/assets/atlas/traits/dwarven_resilience"
+        },
+        {
+          "index": "stonecunning",
+          "name": "stonecunning",
+          "url": "public/assets/atlas/traits/stonecunning"
+        },
+        {
+          "index": "dwarven_combat_training",
+          "name": "dwarven combat training",
+          "url": "public/assets/atlas/traits/dwarven_combat_training"
+        },
+        {
+          "index": "tool_proficiency",
+          "name": "tool proficiency",
+          "url": "public/assets/atlas/traits/tool_proficiency"
+        }
+      ],
+      "subraces": [
+        {
+          "index": "hill_dwarf",
+          "name": "hill dwarf",
+          "url": "public/assets/atlas/subraces/hill_dwarf"
+        }
+      ],
+      "url": "public/assets/atlas/species/json/dwarf.json",
+      "updated_at": "2025-10-24T20:42:14.212Z",
+      "image": "public/assets/atlas/species/dwarf.webp"
+    },
+    "background": {
+      "index": "guild-artisan",
+      "name": "Guild Artisan",
+      "description": "You are a member of an artisan's guild, skilled in a particular field and closely associated with other artisans. You are a well-established part of the mercantile world, freed by talent and wealth from the constraints of a feudal social order. You learned your skills as an apprentice to a master artificer, assisting with your master's work until you mastered the basics of your craft and were admitted to the guild as a master in your own right.",
+      "starting_proficiencies": [
+        {
+          "index": "skill-insight",
+          "name": "Skill: Insight"
+        },
+        {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion"
+        }
+      ],
+      "language_options": {
+        "choose": 1,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "common",
+                "name": "Common"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "dwarvish",
+                "name": "Dwarvish"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "elvish",
+                "name": "Elvish"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "giant",
+                "name": "Giant"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "gnomish",
+                "name": "Gnomish"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "goblin",
+                "name": "Goblin"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "halfling",
+                "name": "Halfling"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "orc",
+                "name": "Orc"
+              }
+            }
+          ]
+        }
+      },
+      "starting_equipment": [
+        {
+          "equipment": {
+            "index": "letter-of-introduction",
+            "name": "Letter of Introduction from your Guild",
+            "url": "/api/equipment/letter-of-introduction"
+          },
+          "quantity": 1
+        },
+        {
+          "equipment": {
+            "index": "travelers-clothes",
+            "name": "Traveler's Clothes",
+            "url": "/api/equipment/travelers-clothes"
+          },
+          "quantity": 1,
+          "slot": "clothes"
+        },
+        {
+          "equipment": {
+            "index": "pouch",
+            "name": "Pouch",
+            "url": "/api/equipment/pouch"
+          },
+          "quantity": 1
+        }
+      ],
+      "starting_equipment_options": [
+        {
+          "desc": "One type of artisan's tools",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "alchemists-supplies",
+                  "name": "Alchemist's Supplies"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "brewers-supplies",
+                  "name": "Brewer's Supplies"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "calligraphers-supplies",
+                  "name": "Calligrapher's Supplies"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "carpenters-tools",
+                  "name": "Carpenter's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "cartographers-tools",
+                  "name": "Cartographer's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "cobblers-tools",
+                  "name": "Cobbler's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "cooks-utensils",
+                  "name": "Cook's Utensils"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "glassblowers-tools",
+                  "name": "Glassblower's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "jewelers-tools",
+                  "name": "Jeweler's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "leatherworkers-tools",
+                  "name": "Leatherworker's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "masons-tools",
+                  "name": "Mason's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "painters-supplies",
+                  "name": "Painter's Supplies"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "potters-tools",
+                  "name": "Potter's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "smiths-tools",
+                  "name": "Smith's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "tinkers-tools",
+                  "name": "Tinker's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "weavers-tools",
+                  "name": "Weaver's Tools"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "woodcarvers-tools",
+                  "name": "Woodcarver's Tools"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "feature": {
+        "name": "Guild Membership",
+        "desc": [
+          "As an established and respected member of a guild, you can rely on certain benefits that membership provides. Your fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings.",
+          "Guilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or if the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild's coffers.",
+          "You must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild's good graces."
+        ]
+      },
+      "suggested_characteristics": {
+        "traits": [
+          "I believe that anything worth doing is worth doing right. I can't help it — I'm a perfectionist.",
+          "I'm a snob who looks down on those who can't appreciate fine art.",
+          "I always want to know how things work and what makes people tick.",
+          "I'm full of witty aphorisms and have a proverb for every occasion.",
+          "I'm rude to people who lack my commitment to hard work and fair play.",
+          "I like to talk at length about my profession.",
+          "I don't part with my money easily and will haggle tirelessly to get the best deal possible.",
+          "I'm well known for my work, and I want to make sure everyone appreciates it. I'm always taken aback when people haven't heard of me."
+        ],
+        "ideals": [
+          "Community. It is the duty of all civilized people to strengthen the bonds of community and the security of civilization. (Lawful)",
+          "Generosity. My talents were given to me so that I could use them to benefit the world. (Good)",
+          "Freedom. Everyone should be free to pursue his or her own livelihood. (Chaotic)",
+          "Greed. I'm only in it for the money. (Evil)",
+          "People. I'm committed to the people I care about, not to ideals. (Neutral)",
+          "Aspiration. I work hard to be the best there is at my craft. (Any)"
+        ],
+        "bonds": [
+          "The workshop where I learned my trade is the most important place in the world to me.",
+          "I created a great work for someone, and then found them unworthy to receive it. I'm still looking for someone who is worthy.",
+          "I owe my guild a great debt for forging me into the person I am today.",
+          "I pursue wealth to secure someone's love.",
+          "One day I will return to my guild and prove that I am the greatest artisan of them all.",
+          "I will get revenge on the evil forces that destroyed my place of business and ruined my livelihood."
+        ],
+        "flaws": [
+          "I'll do anything to get my hands on something rare or priceless.",
+          "I'm quick to assume that someone is trying to cheat me.",
+          "No one must ever learn that I once stole money from guild coffers.",
+          "I'm horribly jealous of anyone who can outshine my handiwork. Everywhere I go, I'm surrounded by rivals.",
+          "I'm soft-hearted and can't resist a hard-luck story.",
+          "I'm a perfectionist who can't finish a task until it's flawless."
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "updated_at": "2026-04-26T05:31:45.002Z",
+    "version": "2.6"
+  }
+}
