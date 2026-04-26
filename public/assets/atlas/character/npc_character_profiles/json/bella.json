@@ -1,10 +1,10 @@
 {
   "name": "bella",
   "gender": "Male",
-  "class": "Druid",
-  "race": "Elf",
-  "background": "Urchin",
-  "alignment": "Neutral Evil",
+  "class": "Cleric",
+  "race": "Tiefling",
+  "background": "Knight",
+  "alignment": "Lawful Neutral",
   "level": 1,
   "xp": 0,
   "stats": {
@@ -18,16 +18,16 @@
   "proficiencies": [],
   "backstory": "",
   "flaws": [
-    "I'm convinced that a powerful person is out to get me, and I'm probably right."
+    "I too often hear veiled insults and threats."
   ],
   "ideals": [
-    "People. I'm loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. (Neutral)"
+    "Family. Blood runs thicker than water. (Any)"
   ],
   "bonds": [
-    "I sponsor an orphanage to keep others from enduring what I was forced to endure."
+    "My loyalty to my sovereign is unwavering."
   ],
   "traits": [
-    "I eat like a pig and have bad manners."
+    "I take great pains to always look my best."
   ],
   "appearance": {
     "hairColor": "",
@@ -45,18 +45,18 @@
     "pp": 0
   },
   "inventory": {
-    "chest": {
-      "id": "leather_armor",
-      "index": "leather_armor",
-      "name": "leather armor",
+    "off-hand": {
+      "id": "shield",
+      "index": "shield",
+      "name": "shield",
       "quantity": 1,
-      "weight": 10,
+      "weight": 6,
       "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/leather_armor.json",
-      "image_url": "/assets/atlas/equipment/images/leather_armor.webp",
-      "imageUrl": "/assets/atlas/equipment/images/leather_armor.webp",
+      "url": "public/assets/atlas/equipment/json/shield.json",
+      "image_url": "/assets/atlas/equipment/images/shield.webp",
+      "imageUrl": "/assets/atlas/equipment/images/shield.webp",
       "desc": [
-        "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
+        "Forged from cold, light-drinking iron, this shield bears the weeping face of a martyr whose final, silent scream still vibrates against the arm of its bearer. Its surface is perpetually slick with a phantom gore that refuses to be wiped away, feeding on the life-force of those who seek refuge behind its wall of sorrow."
       ],
       "special": [],
       "equipment_category": {
@@ -64,10 +64,10 @@
         "name": "armor",
         "url": "public/assets/atlas/equipment_categories/armor"
       },
-      "armor_category": "Light",
+      "armor_category": "Shield",
       "armor_class": {
-        "base": 11,
-        "dex_bonus": true
+        "base": 2,
+        "dex_bonus": false
       },
       "str_minimum": 0,
       "stealth_disadvantage": false,
@@ -75,29 +75,187 @@
         "quantity": 10,
         "unit": "gp"
       },
-      "updated_at": "2026-04-15T07:04:03.712Z",
+      "updated_at": "2026-04-12T08:06:36.452Z",
       "contents": [],
       "properties": [],
-      "image": "public/assets/atlas/equipment/leather_armor.webp",
-      "sprite_index": 23,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
-      "category": "Armor",
-      "slot": "chest",
-      "last_updated": "15-4-2026",
-      "chest_slot": "leather armor"
+      "image": "public/assets/atlas/equipment/shield.webp",
+      "sprite_index": 16,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+      "category": "Shields",
+      "last_updated": "12-4-2026",
+      "off_hand_slot": "shield",
+      "slot": "off-hand"
+    },
+    "ring-1": {
+      "id": "signet-ring",
+      "index": "signet-ring",
+      "name": "signet ring",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/signet-ring.json",
+      "image_url": "/assets/atlas/equipment/images/signet_ring.webp",
+      "imageUrl": "/assets/atlas/equipment/images/signet_ring.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/signet_ring.webp",
+      "sprite_index": 22,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+      "ring_1_slot": "signet ring",
+      "slot": "ring-1"
     },
     "main-hand": {
-      "id": "dart",
-      "index": "dart",
-      "name": "dart",
+      "id": "mace",
+      "index": "mace",
+      "name": "mace",
       "quantity": 1,
-      "weight": 0.25,
+      "weight": 4,
       "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/dart.json",
-      "image_url": "/assets/atlas/equipment/images/dart.webp",
-      "imageUrl": "/assets/atlas/equipment/images/dart.webp",
+      "url": "public/assets/atlas/equipment/json/mace.json",
+      "image_url": "/assets/atlas/equipment/images/mace.webp",
+      "imageUrl": "/assets/atlas/equipment/images/mace.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d6",
+        "damage_type": {
+          "index": "bludgeoning",
+          "name": "bludgeoning",
+          "url": "public/assets/atlas/damage_types/bludgeoning"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/mace.webp",
+      "sprite_index": 8,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+      "main_hand_slot": "mace",
+      "slot": "main-hand"
+    },
+    "chest": {
+      "id": "scale_mail",
+      "index": "scale_mail",
+      "name": "scale mail",
+      "quantity": 1,
+      "weight": 45,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/scale_mail.json",
+      "image_url": "/assets/atlas/equipment/images/scale_mail.webp",
+      "imageUrl": "/assets/atlas/equipment/images/scale_mail.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "armor",
+        "name": "armor",
+        "url": "public/assets/atlas/equipment_categories/armor"
+      },
+      "armor_category": "Medium",
+      "armor_class": {
+        "base": 14,
+        "dex_bonus": true,
+        "max_bonus": 2
+      },
+      "str_minimum": 0,
+      "stealth_disadvantage": true,
+      "cost": {
+        "quantity": 50,
+        "unit": "gp"
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/scale_mail.webp",
+      "sprite_index": 10,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+      "chest_slot": "scale mail",
+      "slot": "chest"
+    }
+  },
+  "backpack": [
+    {
+      "id": "fine-clothes",
+      "index": "fine-clothes",
+      "name": "fine clothes",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/fine-clothes.json",
+      "image_url": "/assets/atlas/equipment/images/fine_clothes.webp",
+      "imageUrl": "/assets/atlas/equipment/images/fine_clothes.webp"
+    },
+    {
+      "id": "scroll-of-pedigree",
+      "index": "scroll-of-pedigree",
+      "name": "scroll of pedigree",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/scroll-of-pedigree.json",
+      "image_url": "/assets/atlas/equipment/images/scroll_of_pedigree.webp",
+      "imageUrl": "/assets/atlas/equipment/images/scroll_of_pedigree.webp"
+    },
+    {
+      "id": "purse",
+      "index": "purse",
+      "name": "purse",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/purse.json",
+      "image_url": "/assets/atlas/equipment/images/purse.webp",
+      "imageUrl": "/assets/atlas/equipment/images/purse.webp"
+    },
+    {
+      "id": "crossbow_light",
+      "index": "crossbow_light",
+      "name": "crossbow, light",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/crossbow_light.json",
+      "image_url": "/assets/atlas/equipment/images/crossbow_light.webp",
+      "imageUrl": "/assets/atlas/equipment/images/crossbow_light.webp",
       "desc": [
-        "Forged from cold, blackened iron and tipped with a residue that smells faintly of copper and rot, this dart whispers of silent executions in fog-choked alleys. Its balance is lethal, designed not for sport, but to find the precise, shuddering gap between a victim's ribs."
+        "Forged from black iron that seems to leech the warmth from your grip, this crossbow hums with a lingering, hollow thirst for the lifeblood of its next target. Its mechanism clicks with the rhythmic precision of a gallows trap, turning every bolt into a cold, silent promise of an early grave."
       ],
       "special": [],
       "equipment_category": {
@@ -109,11 +267,11 @@
       "weapon_range": "Ranged",
       "category_range": "Simple Ranged",
       "cost": {
-        "quantity": 5,
-        "unit": "cp"
+        "quantity": 25,
+        "unit": "gp"
       },
       "damage": {
-        "damage_dice": "1d4",
+        "damage_dice": "1d8",
         "damage_type": {
           "index": "piercing",
           "name": "piercing",
@@ -121,92 +279,67 @@
         }
       },
       "range": {
-        "normal": 20,
-        "long": 60
+        "normal": 80,
+        "long": 320
       },
       "properties": [
         {
-          "index": "finesse",
-          "name": "finesse",
-          "url": "public/assets/atlas/weapon_properties/finesse"
+          "index": "ammunition",
+          "name": "ammunition",
+          "url": "public/assets/atlas/weapon_properties/ammunition"
         },
         {
-          "index": "thrown",
-          "name": "thrown",
-          "url": "public/assets/atlas/weapon_properties/thrown"
+          "index": "loading",
+          "name": "loading",
+          "url": "public/assets/atlas/weapon_properties/loading"
+        },
+        {
+          "index": "two_handed",
+          "name": "two_handed",
+          "url": "public/assets/atlas/weapon_properties/two_handed"
         }
       ],
-      "throw_range": {
-        "normal": 20,
-        "long": 60
-      },
-      "updated_at": "2026-04-12T08:14:34.777Z",
+      "updated_at": "2026-04-12T08:10:38.915Z",
       "contents": [],
-      "image": "public/assets/atlas/equipment/dart.webp",
-      "sprite_index": 24,
+      "image": "public/assets/atlas/equipment/crossbow_light.webp",
+      "sprite_index": 20,
       "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
       "category": "Simple Ranged Weapons",
-      "last_updated": "12-4-2026",
-      "main_hand_slot": "dart",
-      "slot": "main-hand"
+      "last_updated": "12-4-2026"
     },
-    "off-hand": {
-      "id": "scimitar",
-      "index": "scimitar",
-      "name": "scimitar",
-      "quantity": 1,
-      "weight": 3,
+    {
+      "id": "crossbow_bolt",
+      "index": "crossbow_bolt",
+      "name": "crossbow bolt",
+      "quantity": 20,
+      "weight": 1.5,
       "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/scimitar.json",
-      "image_url": "/assets/atlas/equipment/images/scimitar.webp",
-      "imageUrl": "/assets/atlas/equipment/images/scimitar.webp",
+      "url": "public/assets/atlas/equipment/json/crossbow_bolt.json",
+      "image_url": "/assets/atlas/equipment/images/crossbow_bolt.webp",
+      "imageUrl": "/assets/atlas/equipment/images/crossbow_bolt.webp",
       "desc": [],
       "special": [],
       "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "public/assets/atlas/equipment_categories/weapon"
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
       },
-      "weapon_category": "Martial",
-      "weapon_range": "Melee",
-      "category_range": "Martial Melee",
+      "gear_category": {
+        "index": "ammunition",
+        "name": "ammunition",
+        "url": "public/assets/atlas/equipment_categories/ammunition"
+      },
       "cost": {
-        "quantity": 25,
+        "quantity": 1,
         "unit": "gp"
       },
-      "damage": {
-        "damage_dice": "1d6",
-        "damage_type": {
-          "index": "slashing",
-          "name": "slashing",
-          "url": "public/assets/atlas/damage_types/slashing"
-        }
-      },
-      "range": {
-        "normal": 5
-      },
-      "properties": [
-        {
-          "index": "finesse",
-          "name": "finesse",
-          "url": "public/assets/atlas/weapon_properties/finesse"
-        },
-        {
-          "index": "light",
-          "name": "light",
-          "url": "public/assets/atlas/weapon_properties/light"
-        }
-      ],
       "updated_at": "2025-10-24T20:42:12.926Z",
       "contents": [],
-      "image": "public/assets/atlas/equipment/scimitar.webp",
-      "sprite_index": 13,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
-      "off_hand_slot": "scimitar",
-      "slot": "off-hand"
-    }
-  },
-  "backpack": [
+      "properties": [],
+      "image": "public/assets/atlas/equipment/crossbow_bolt.webp",
+      "sprite_index": 17,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp"
+    },
     {
       "id": "backpack",
       "index": "backpack",
@@ -506,15 +639,15 @@
       "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
     },
     {
-      "id": "small-knife",
-      "index": "small-knife",
-      "name": "small knife",
+      "id": "reliquary",
+      "index": "reliquary",
+      "name": "reliquary",
       "quantity": 1,
-      "weight": 0,
+      "weight": 2,
       "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/small-knife.json",
-      "image_url": "/assets/atlas/equipment/images/small_knife.webp",
-      "imageUrl": "/assets/atlas/equipment/images/small_knife.webp",
+      "url": "public/assets/atlas/equipment/json/reliquary.json",
+      "image_url": "/assets/atlas/equipment/images/reliquary.webp",
+      "imageUrl": "/assets/atlas/equipment/images/reliquary.webp",
       "special": [],
       "equipment_category": {
         "index": "adventuring_gear",
@@ -522,137 +655,62 @@
         "url": "public/assets/atlas/equipment_categories/adventuring_gear"
       },
       "gear_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "public/assets/atlas/equipment_categories/standard_gear"
+        "index": "holy_symbols",
+        "name": "holy symbols",
+        "url": "public/assets/atlas/equipment_categories/holy_symbols"
       },
       "cost": {
-        "quantity": 0,
-        "unit": "cp"
+        "quantity": 5,
+        "unit": "gp"
       },
       "desc": [
-        "A small knife, typically found in a scholar's pack."
+        "A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic.",
+        "Appendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
       ],
-      "updated_at": "2025-10-24T20:42:12.926Z",
+      "updated_at": "2026-04-22T16:17:35.911Z",
       "contents": [],
       "properties": [],
-      "image": "public/assets/atlas/equipment/small_knife.webp",
-      "sprite_index": 1,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+      "image": "public/assets/atlas/equipment/reliquary.webp",
+      "sprite_index": 21,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "focus"
+      ],
+      "last_updated": "22-4-2026"
     },
     {
-      "id": "city-map",
-      "index": "city-map",
-      "name": "city map",
+      "id": "playing-card-set",
+      "index": "playing-card-set",
+      "name": "Playing Card Set",
       "quantity": 1,
       "weight": 0,
       "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/city-map.json",
-      "image_url": "/assets/atlas/equipment/images/city_map.webp",
-      "imageUrl": "/assets/atlas/equipment/images/city_map.webp"
-    },
-    {
-      "id": "pet-mouse",
-      "index": "pet-mouse",
-      "name": "pet mouse",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/pet-mouse.json",
-      "image_url": "/assets/atlas/equipment/images/pet_mouse.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pet_mouse.webp"
-    },
-    {
-      "id": "token-of-parents",
-      "index": "token-of-parents",
-      "name": "token of parents",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/token-of-parents.json",
-      "image_url": "/assets/atlas/equipment/images/token_of_parents.webp",
-      "imageUrl": "/assets/atlas/equipment/images/token_of_parents.webp"
-    },
-    {
-      "id": "common-clothes",
-      "index": "common-clothes",
-      "name": "common clothes",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/common-clothes.json",
-      "image_url": "/assets/atlas/equipment/images/common_clothes.webp",
-      "imageUrl": "/assets/atlas/equipment/images/common_clothes.webp"
-    },
-    {
-      "id": "pouch",
-      "index": "pouch",
-      "name": "pouch",
-      "quantity": 1,
-      "weight": 1,
-      "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/pouch.json",
-      "image_url": "/assets/atlas/equipment/images/pouch.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
+      "url": "public/assets/atlas/equipment/json/playing-card-set.json",
+      "image_url": "/assets/atlas/equipment/images/playing_card_set.webp",
+      "imageUrl": "/assets/atlas/equipment/images/playing_card_set.webp",
       "special": [],
       "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+        "index": "tools",
+        "name": "tools",
+        "url": "public/assets/atlas/equipment_categories/tools"
       },
-      "gear_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "public/assets/atlas/equipment_categories/standard_gear"
-      },
+      "tool_category": "Gaming Sets",
       "cost": {
         "quantity": 5,
         "unit": "sp"
       },
       "desc": [
-        "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
+        "These weathered cards are stained with the copper tang of dried blood, and it is said that those who lose a hand to their grim portraits often find their very souls shuffled into the deck. Each face stares back with unnerving intent, waiting for the moment a desperate gambler finally draws the Ace of Crows."
       ],
-      "updated_at": "2025-10-24T20:42:12.926Z",
+      "image": "public/assets/atlas/equipment/playing_card_set.webp",
+      "updated_at": "2026-04-11T16:20:03.846Z",
       "contents": [],
       "properties": [],
-      "image": "public/assets/atlas/equipment/pouch.webp",
-      "sprite_index": 14,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
-    },
-    {
-      "id": "yew_wand",
-      "index": "yew_wand",
-      "name": "yew wand",
-      "quantity": 1,
-      "weight": 1,
-      "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/yew_wand.json",
-      "image_url": "/assets/atlas/equipment/images/yew_wand.webp",
-      "imageUrl": "/assets/atlas/equipment/images/yew_wand.webp",
-      "special": [],
-      "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
-      },
-      "gear_category": {
-        "index": "druidic_foci",
-        "name": "druidic foci",
-        "url": "public/assets/atlas/equipment_categories/druidic_foci"
-      },
-      "cost": {
-        "quantity": 10,
-        "unit": "gp"
-      },
-      "desc": [
-        "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus."
-      ],
-      "updated_at": "2025-10-24T20:42:12.926Z",
-      "contents": [],
-      "properties": [],
-      "image": "public/assets/atlas/equipment/yew_wand.webp",
-      "sprite_index": 11,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp"
+      "sprite_index": 7,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+      "category": "Gaming Sets",
+      "last_updated": "11-4-2026"
     }
   ],
   "spells": [],
@@ -660,12 +718,12 @@
   "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/character/npc_character_profiles/json/bella.json",
   "atlas_data": {
     "class": {
-      "index": "druid",
-      "name": "druid",
+      "index": "cleric",
+      "name": "cleric",
       "hit_die": 8,
       "proficiency_choices": [
         {
-          "desc": "Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival",
+          "desc": "Choose two from History, Insight, Medicine, Persuasion, and Religion",
           "choose": 2,
           "type": "proficiencies",
           "from": {
@@ -674,17 +732,9 @@
               {
                 "option_type": "reference",
                 "item": {
-                  "index": "skill_arcana",
-                  "name": "skill: arcana",
-                  "url": "public/assets/atlas/proficiencies/skill_arcana"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "skill_animal_handling",
-                  "name": "skill: animal handling",
-                  "url": "public/assets/atlas/proficiencies/skill_animal_handling"
+                  "index": "skill_history",
+                  "name": "skill: history",
+                  "url": "public/assets/atlas/proficiencies/skill_history"
                 }
               },
               {
@@ -706,17 +756,9 @@
               {
                 "option_type": "reference",
                 "item": {
-                  "index": "skill_nature",
-                  "name": "skill: nature",
-                  "url": "public/assets/atlas/proficiencies/skill_nature"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "skill_perception",
-                  "name": "skill: perception",
-                  "url": "public/assets/atlas/proficiencies/skill_perception"
+                  "index": "skill_persuasion",
+                  "name": "skill: persuasion",
+                  "url": "public/assets/atlas/proficiencies/skill_persuasion"
                 }
               },
               {
@@ -725,14 +767,6 @@
                   "index": "skill_religion",
                   "name": "skill: religion",
                   "url": "public/assets/atlas/proficiencies/skill_religion"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "skill_survival",
-                  "name": "skill: survival",
-                  "url": "public/assets/atlas/proficiencies/skill_survival"
                 }
               }
             ]
@@ -756,104 +790,46 @@
           "url": "public/assets/atlas/proficiencies/shields"
         },
         {
-          "index": "clubs",
-          "name": "clubs",
-          "url": "public/assets/atlas/proficiencies/clubs"
-        },
-        {
-          "index": "daggers",
-          "name": "daggers",
-          "url": "public/assets/atlas/proficiencies/daggers"
-        },
-        {
-          "index": "javelins",
-          "name": "javelins",
-          "url": "public/assets/atlas/proficiencies/javelins"
-        },
-        {
-          "index": "maces",
-          "name": "maces",
-          "url": "public/assets/atlas/proficiencies/maces"
-        },
-        {
-          "index": "quarterstaffs",
-          "name": "quarterstaffs",
-          "url": "public/assets/atlas/proficiencies/quarterstaffs"
-        },
-        {
-          "index": "sickles",
-          "name": "sickles",
-          "url": "public/assets/atlas/proficiencies/sickles"
-        },
-        {
-          "index": "spears",
-          "name": "spears",
-          "url": "public/assets/atlas/proficiencies/spears"
-        },
-        {
-          "index": "darts",
-          "name": "darts",
-          "url": "public/assets/atlas/proficiencies/darts"
-        },
-        {
-          "index": "slings",
-          "name": "slings",
-          "url": "public/assets/atlas/proficiencies/slings"
-        },
-        {
-          "index": "scimitars",
-          "name": "scimitars",
-          "url": "public/assets/atlas/proficiencies/scimitars"
-        },
-        {
-          "index": "herbalism_kit",
-          "name": "herbalism kit",
-          "url": "public/assets/atlas/proficiencies/herbalism_kit"
-        },
-        {
-          "index": "saving_throw_int",
-          "name": "saving throw: int",
-          "url": "public/assets/atlas/proficiencies/saving_throw_int"
+          "index": "simple_weapons",
+          "name": "simple weapons",
+          "url": "public/assets/atlas/proficiencies/simple_weapons"
         },
         {
           "index": "saving_throw_wis",
           "name": "saving throw: wis",
           "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        },
+        {
+          "index": "saving_throw_cha",
+          "name": "saving throw: cha",
+          "url": "public/assets/atlas/proficiencies/saving_throw_cha"
         }
       ],
       "saving_throws": [
         {
-          "index": "int",
-          "name": "int",
-          "url": "public/assets/atlas/ability_scores/intelligence"
-        },
-        {
           "index": "wis",
           "name": "wis",
           "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
         }
       ],
       "starting_equipment": [
         {
           "equipment": {
-            "index": "leather_armor",
-            "name": "leather armor",
-            "url": "public/assets/atlas/equipment/leather_armor"
-          },
-          "quantity": 1
-        },
-        {
-          "equipment": {
-            "index": "explorers_pack",
-            "name": "explorer's pack",
-            "url": "public/assets/atlas/equipment/explorers_pack"
+            "index": "shield",
+            "name": "shield",
+            "url": "public/assets/atlas/equipment/shield"
           },
           "quantity": 1
         }
       ],
       "starting_equipment_options": [
         {
-          "desc": "(a) a wooden shield or (b) any simple weapon",
+          "desc": "(a) a mace or (b) a warhammer (if proficient)",
           "choose": 1,
           "type": "equipment",
           "from": {
@@ -863,10 +839,109 @@
                 "option_type": "counted_reference",
                 "count": 1,
                 "of": {
-                  "index": "shield",
-                  "name": "shield",
-                  "url": "public/assets/atlas/equipment/shield"
+                  "index": "mace",
+                  "name": "mace",
+                  "url": "public/assets/atlas/equipment/mace"
                 }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "warhammer",
+                  "name": "warhammer",
+                  "url": "public/assets/atlas/equipment/warhammer"
+                },
+                "prerequisites": [
+                  {
+                    "type": "proficiency",
+                    "proficiency": {
+                      "index": "warhammers",
+                      "name": "warhammers",
+                      "url": "public/assets/atlas/proficiencies/warhammers"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "desc": "(a) scale mail, (b) leather armor, or (c) chain mail (if proficient)",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "scale_mail",
+                  "name": "scale mail",
+                  "url": "public/assets/atlas/equipment/scale_mail"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "leather_armor",
+                  "name": "leather armor",
+                  "url": "public/assets/atlas/equipment/leather_armor"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "chain_mail",
+                  "name": "chain mail",
+                  "url": "public/assets/atlas/equipment/charismain_mail"
+                },
+                "prerequisites": [
+                  {
+                    "type": "proficiency",
+                    "proficiency": {
+                      "index": "chain_mail",
+                      "name": "chain mail",
+                      "url": "public/assets/atlas/proficiencies/charismain_mail"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "desc": "(a) a light crossbow and 20 bolts or (b) any simple weapon",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "multiple",
+                "items": [
+                  {
+                    "option_type": "counted_reference",
+                    "count": 1,
+                    "of": {
+                      "index": "crossbow_light",
+                      "name": "crossbow, light",
+                      "url": "public/assets/atlas/equipment/crossbow_light"
+                    }
+                  },
+                  {
+                    "option_type": "counted_reference",
+                    "count": 20,
+                    "of": {
+                      "index": "crossbow_bolt",
+                      "name": "crossbow bolt",
+                      "url": "public/assets/atlas/equipment/crossbow_bolt"
+                    }
+                  }
+                ]
               },
               {
                 "option_type": "choice",
@@ -888,7 +963,7 @@
           }
         },
         {
-          "desc": "(a) a scimitar or (b) any simple melee weapon",
+          "desc": "(a) a priest’s pack or (b) an explorer’s pack",
           "choose": 1,
           "type": "equipment",
           "from": {
@@ -898,45 +973,38 @@
                 "option_type": "counted_reference",
                 "count": 1,
                 "of": {
-                  "index": "scimitar",
-                  "name": "scimitar",
-                  "url": "public/assets/atlas/equipment/scimitar"
+                  "index": "priests_pack",
+                  "name": "priest's pack",
+                  "url": "public/assets/atlas/equipment/priests_pack"
                 }
               },
               {
-                "option_type": "choice",
-                "choice": {
-                  "desc": "any simple melee weapon",
-                  "choose": 1,
-                  "type": "equipment",
-                  "from": {
-                    "option_set_type": "equipment_category",
-                    "equipment_category": {
-                      "index": "simple_melee_weapons",
-                      "name": "simple melee weapons",
-                      "url": "public/assets/atlas/equipment_categories/simple_melee_weapons"
-                    }
-                  }
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "explorers_pack",
+                  "name": "explorer's pack",
+                  "url": "public/assets/atlas/equipment/explorers_pack"
                 }
               }
             ]
           }
         },
         {
-          "desc": "druidic focus",
+          "desc": "holy symbol",
           "choose": 1,
           "type": "equipment",
           "from": {
             "option_set_type": "equipment_category",
             "equipment_category": {
-              "index": "druidic_foci",
-              "name": "druidic foci",
-              "url": "public/assets/atlas/equipment_categories/druidic_foci"
+              "index": "holy_symbols",
+              "name": "holy symbols",
+              "url": "public/assets/atlas/equipment_categories/holy_symbols"
             }
           }
         }
       ],
-      "class_levels": "public/assets/atlas/classes/druid/levels",
+      "class_levels": "public/assets/atlas/classes/cleric/levels",
       "multi_classing": {
         "prerequisites": [
           {
@@ -968,9 +1036,9 @@
       },
       "subclasses": [
         {
-          "index": "land",
-          "name": "land",
-          "url": "public/assets/atlas/subclasses/land"
+          "index": "life",
+          "name": "life",
+          "url": "public/assets/atlas/subclasses/life"
         }
       ],
       "spellcasting": {
@@ -984,63 +1052,71 @@
           {
             "name": "cantrips",
             "desc": [
-              "At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table."
+              "At 1st level, you know three cantrips of your choice from the cleric spell list. You learn additional cleric cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Cleric table."
             ]
           },
           {
             "name": "preparing and casting spells",
             "desc": [
-              "The Druid table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these druid spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-              "You prepare the list of druid spells that are available for you to cast, choosing from the druid spell list. When you do so, choose a number of druid spells equal to your Wisdom modifier + your druid level (minimum of one spell). The spells must be of a level for which you have spell slots.",
-              "For example, if you are a 3rd-level druid, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
-              "You can also change your list of prepared spells when you finish a long rest. Preparing a new list of druid spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
+              "The Cleric table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+              "You prepare the list of cleric spells that are available for you to cast, choosing from the cleric spell list. When you do so, choose a number of cleric spells equal to your Wisdom modifier + your cleric level (minimum of one spell). The spells must be of a level for which you have spell slots.",
+              "For example, if you are a 3rd-level cleric, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
+              "You can change your list of prepared spells when you finish a long rest. Preparing a new list of cleric spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
             ]
           },
           {
             "name": "spellcasting ability",
             "desc": [
-              "Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.",
-              "Spell save DC = 8 + your proficiency bonus + your Wisdom modifier.",
-              "Spell attack modifier = your proficiency bonus + your Wisdom modifier."
+              "Wisdom is your spellcasting ability for your cleric spells. The power of your spells comes from your devotion to your deity. You use your Wisdom whenever a cleric spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a cleric spell you cast and when making an attack roll with one.",
+              "Spell save DC = 8 + your proficiency bonus + your Wisdom modifier",
+              "Spell attack modifier = your proficiency bonus + your Wisdom modifier"
             ]
           },
           {
             "name": "ritual casting",
             "desc": [
-              "You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+              "You can cast a cleric spell as a ritual if that spell has the ritual tag and you have the spell prepared."
             ]
           },
           {
             "name": "spellcasting focus",
             "desc": [
-              "You can use a druidic focus (see chapter 5, \"Equipment\") as a spellcasting focus for your druid spells."
+              "You can use a holy symbol (see Equipment) as a spellcasting focus for your cleric spells."
             ]
           }
         ]
       },
-      "spells": "public/assets/atlas/classes/druid/spells",
-      "url": "public/assets/atlas/classes/json/druid.json",
+      "spells": "public/assets/atlas/classes/cleric/spells",
+      "url": "public/assets/atlas/classes/json/cleric.json",
       "updated_at": "2025-10-24T20:42:12.459Z",
-      "image": "public/assets/atlas/classes/druid.webp"
+      "image": "public/assets/atlas/classes/cleric.webp"
     },
     "species": {
-      "index": "elf",
-      "name": "elf",
+      "index": "tiefling",
+      "name": "tiefling",
       "speed": 30,
       "ability_bonuses": [
         {
           "ability_score": {
-            "index": "dex",
-            "name": "dex",
-            "url": "public/assets/atlas/ability_scores/dexterity"
+            "index": "int",
+            "name": "int",
+            "url": "public/assets/atlas/ability_scores/intelligence"
+          },
+          "bonus": 1
+        },
+        {
+          "ability_score": {
+            "index": "cha",
+            "name": "cha",
+            "url": "public/assets/atlas/ability_scores/charisma"
           },
           "bonus": 2
         }
       ],
-      "age": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
-      "alignment": "Elves love freedom, variety, and self-expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others' freedom as well as their own, and they are more often good than not.",
+      "alignment": "Tieflings might not have an innate tendency toward evil, but many of them end up there. Evil or not, an independent nature inclines many tieflings toward a chaotic alignment.",
+      "age": "Tieflings mature at the same rate as humans but live a few years longer.",
       "size": "Medium",
-      "size_description": "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
+      "size_description": "Tieflings are about the same size and build as humans. Your size is Medium.",
       "languages": [
         {
           "index": "common",
@@ -1048,12 +1124,12 @@
           "url": "public/assets/atlas/languages/common"
         },
         {
-          "index": "elvish",
-          "name": "elvish",
-          "url": "public/assets/atlas/languages/elvish"
+          "index": "infernal",
+          "name": "infernal",
+          "url": "public/assets/atlas/languages/infernal"
         }
       ],
-      "language_desc": "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+      "language_desc": "You can speak, read, and write Common and Infernal.",
       "traits": [
         {
           "index": "darkvision",
@@ -1061,153 +1137,222 @@
           "url": "public/assets/atlas/traits/darkvision"
         },
         {
-          "index": "fey_ancestry",
-          "name": "fey ancestry",
-          "url": "public/assets/atlas/traits/fey_ancestry"
+          "index": "hellish_resistance",
+          "name": "hellish resistance",
+          "url": "public/assets/atlas/traits/hellish_resistance"
         },
         {
-          "index": "trance",
-          "name": "trance",
-          "url": "public/assets/atlas/traits/trance"
-        },
-        {
-          "index": "keen_senses",
-          "name": "keen senses",
-          "url": "public/assets/atlas/traits/keen_senses"
+          "index": "infernal_legacy",
+          "name": "infernal legacy",
+          "url": "public/assets/atlas/traits/infernal_legacy"
         }
       ],
-      "subraces": [
-        {
-          "index": "high_elf",
-          "name": "high elf",
-          "url": "public/assets/atlas/subraces/high_elf"
-        }
-      ],
-      "url": "public/assets/atlas/species/json/elf.json",
+      "subraces": [],
+      "url": "public/assets/atlas/species/json/tiefling.json",
       "updated_at": "2025-10-24T20:42:14.212Z",
-      "image": "public/assets/atlas/species/elf.webp"
+      "image": "public/assets/atlas/species/tiefling.webp"
     },
     "background": {
-      "index": "urchin",
-      "name": "Urchin",
-      "description": "You grew up on the streets alone, orphaned, and poor. You had no one to watch over you or provide for you, so you learned to provide for yourself. You fought fiercely for every scrap of food and kept a constant watch out for other urchins who might steal from you. You slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the help of a doctor or a temple. You've survived despite all odds, and you did it through cunning, strength, speed, or some combination of each.",
+      "index": "knight",
+      "name": "Knight",
+      "description": "You are a member of a noble house, but your status is not just one of birth but of service. You have been a knight in training for much of your life, learning the ways of combat, honor, and duty. You might be a landless knight serving as a protector to a powerful lord, or a member of a knightly order dedicated to a specific cause.",
       "starting_proficiencies": [
         {
-          "index": "skill-sleight-of-hand",
-          "name": "Skill: Sleight of Hand"
+          "index": "skill-history",
+          "name": "Skill: History"
         },
         {
-          "index": "skill-stealth",
-          "name": "Skill: Stealth"
-        },
-        {
-          "index": "disguise-kit",
-          "name": "Disguise Kit"
-        },
-        {
-          "index": "thieves-tools",
-          "name": "Thieves' Tools"
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion"
         }
       ],
+      "language_options": {
+        "choose": 1,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "common",
+                "name": "Common"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "dwarvish",
+                "name": "Dwarvish"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "elvish",
+                "name": "Elvish"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "giant",
+                "name": "Giant"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "gnomish",
+                "name": "Gnomish"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "goblin",
+                "name": "Goblin"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "halfling",
+                "name": "Halfling"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "orc",
+                "name": "Orc"
+              }
+            }
+          ]
+        }
+      },
       "starting_equipment": [
         {
           "equipment": {
-            "index": "small-knife",
-            "name": "Small Knife",
-            "url": "/api/equipment/small-knife"
-          },
-          "quantity": 1,
-          "slot": "off-hand"
-        },
-        {
-          "equipment": {
-            "index": "city-map",
-            "name": "Map of the city you grew up in",
-            "url": "/api/equipment/city-map"
-          },
-          "quantity": 1
-        },
-        {
-          "equipment": {
-            "index": "pet-mouse",
-            "name": "Pet Mouse",
-            "url": "/api/equipment/pet-mouse"
-          },
-          "quantity": 1
-        },
-        {
-          "equipment": {
-            "index": "token-of-parents",
-            "name": "Token to remember your parents by",
-            "url": "/api/equipment/token-of-parents"
-          },
-          "quantity": 1
-        },
-        {
-          "equipment": {
-            "index": "common-clothes",
-            "name": "Common Clothes",
-            "url": "/api/equipment/common-clothes"
+            "index": "fine-clothes",
+            "name": "Fine Clothes",
+            "url": "/api/equipment/fine-clothes"
           },
           "quantity": 1,
           "slot": "clothes"
         },
         {
           "equipment": {
-            "index": "pouch",
-            "name": "Pouch",
-            "url": "/api/equipment/pouch"
+            "index": "signet-ring",
+            "name": "Signet Ring",
+            "url": "/api/equipment/signet-ring"
+          },
+          "quantity": 1,
+          "slot": "ring-1"
+        },
+        {
+          "equipment": {
+            "index": "scroll-of-pedigree",
+            "name": "Scroll of Pedigree",
+            "url": "/api/equipment/scroll-of-pedigree"
           },
           "quantity": 1
+        },
+        {
+          "equipment": {
+            "index": "purse",
+            "name": "Purse",
+            "url": "/api/equipment/purse"
+          },
+          "quantity": 1,
+          "slot": "acc-1"
         }
       ],
-      "starting_equipment_options": [],
+      "starting_equipment_options": [
+        {
+          "desc": "One type of gaming set",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "dice-set",
+                  "name": "Dice Set"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "dragonchess-set",
+                  "name": "Dragonchess Set"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "playing-card-set",
+                  "name": "Playing Card Set"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "three-dragon-ante-set",
+                  "name": "Three-Dragon Ante Set"
+                }
+              }
+            ]
+          }
+        }
+      ],
       "feature": {
-        "name": "City Secrets",
+        "name": "Retainers",
         "desc": [
-          "You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would otherwise allow."
+          "You have the service of three retainers loyal to your family. These retainers can be attendants or messengers, and one might be a majordomo. Your retainers are commoners who can perform mundane tasks for you, but they do not fight for you, will not follow you into obviously dangerous areas (such as dungeons), and will leave if they are frequently endangered or abused."
         ]
       },
       "suggested_characteristics": {
         "traits": [
-          "I hide scraps of food and trinkets away in my pockets.",
-          "I ask a lot of questions.",
-          "I like to squeeze into small places where no one else can get to me.",
-          "I sleep with my back to a wall or tree, with everything I own wrapped in my arms.",
-          "I eat like a pig and have bad manners.",
-          "I think anyone who's nice to me is hiding an evil motive.",
-          "I don't like to bathe.",
-          "I say exactly what I'm thinking, no matter how rude it is."
+          "My eloquent flattery makes everyone I talk to feel important.",
+          "The common folk love me for my kindness.",
+          "No one could doubt that I am a cut above the unwashed masses.",
+          "I take great pains to always look my best.",
+          "I don't like to get my hands dirty.",
+          "Despite my status, I do not place myself above other folk.",
+          "My favor, once lost, is lost forever.",
+          "If you do me a kindness, I will repay it tenfold."
         ],
         "ideals": [
-          "Respect. All people, regardless of station, deserve to be treated with dignity. (Good)",
-          "Community. We have to take care of each other, because no one else is going to do it. (Lawful)",
-          "Change. The low are lifted up, and the high and mighty are brought low. Change is the nature of things. (Chaotic)",
-          "Retribution. The rich need to be shown what it's like to went without and suffer. (Evil)",
-          "People. I'm loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. (Neutral)",
-          "Aspiration. I'm going to prove that I'm worthy of a better life. (Any)"
+          "Respect. Respect is due to me because of my position. (Good)",
+          "Responsibility. It is my duty to respect the authority of those above me. (Lawful)",
+          "Independence. I must prove that I can handle myself. (Chaotic)",
+          "Power. If I can attain more power, no one will tell me what to do. (Evil)",
+          "Family. Blood runs thicker than water. (Any)",
+          "Noble Obligation. It is my duty to protect and care for the people beneath me. (Good)"
         ],
         "bonds": [
-          "My town or city is my home, and I'll fight to defend it.",
-          "I sponsor an orphanage to keep others from enduring what I was forced to endure.",
-          "I owe my survival to another urchin who taught me how to live on the streets.",
-          "I owe a debt I can never repay to the person who took pity on me.",
-          "I escaped my life of poverty by robbing an important person, and I'm wanted for it.",
-          "No one else should have to endure the hardships I've been through."
+          "I will face any challenge to win the approval of my family.",
+          "My house's alliance with another house must be sustained.",
+          "Nothing is more important than the other members of my family.",
+          "I am in love with a commoner whom I cannot marry.",
+          "My loyalty to my sovereign is unwavering.",
+          "The common folk must see me as a hero of the people."
         ],
         "flaws": [
-          "If I'm outmatched, I'll run away in a heartbeat.",
-          "An innocent person is in prison for a crime that I committed. I'm okay with that.",
-          "I'll never fully trust anyone other than myself.",
-          "I'm convinced that a powerful person is out to get me, and I'm probably right.",
-          "I'm too greedy for my own good. I can't resist taking a risk if there's money involved.",
-          "It's not stealing if I need it more than they do."
+          "I secretly believe that everyone is beneath me.",
+          "I hide a truly scandalous secret.",
+          "I too often hear veiled insults and threats.",
+          "I have an insatiable desire for carnal pleasures.",
+          "In fact, the world does revolve around me.",
+          "By my words and actions, I often bring shame to my family."
         ]
       }
     }
   },
   "metadata": {
-    "updated_at": "2026-04-26T06:36:23.047Z",
+    "updated_at": "2026-04-26T06:38:09.141Z",
     "version": "2.6"
   }
 }
