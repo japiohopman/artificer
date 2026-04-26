@@ -1,0 +1,1213 @@
+{
+  "name": "bella",
+  "gender": "Male",
+  "class": "Druid",
+  "race": "Elf",
+  "background": "Urchin",
+  "alignment": "Neutral Evil",
+  "level": 1,
+  "xp": 0,
+  "stats": {
+    "str": 8,
+    "dex": 12,
+    "con": 12,
+    "int": 11,
+    "wis": 11,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "backstory": "",
+  "flaws": [
+    "I'm convinced that a powerful person is out to get me, and I'm probably right."
+  ],
+  "ideals": [
+    "People. I'm loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. (Neutral)"
+  ],
+  "bonds": [
+    "I sponsor an orphanage to keep others from enduring what I was forced to endure."
+  ],
+  "traits": [
+    "I eat like a pig and have bad manners."
+  ],
+  "appearance": {
+    "hairColor": "",
+    "hairStyle": "",
+    "bodyType": "",
+    "eyeColor": "",
+    "skinColor": "",
+    "height": "",
+    "weight": ""
+  },
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "gp": 0,
+    "pp": 0
+  },
+  "inventory": {
+    "chest": {
+      "id": "leather_armor",
+      "index": "leather_armor",
+      "name": "leather armor",
+      "quantity": 1,
+      "weight": 10,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/leather_armor.json",
+      "image_url": "/assets/atlas/equipment/images/leather_armor.webp",
+      "imageUrl": "/assets/atlas/equipment/images/leather_armor.webp",
+      "desc": [
+        "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "armor",
+        "name": "armor",
+        "url": "public/assets/atlas/equipment_categories/armor"
+      },
+      "armor_category": "Light",
+      "armor_class": {
+        "base": 11,
+        "dex_bonus": true
+      },
+      "str_minimum": 0,
+      "stealth_disadvantage": false,
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-15T07:04:03.712Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/leather_armor.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "category": "Armor",
+      "slot": "chest",
+      "last_updated": "15-4-2026",
+      "chest_slot": "leather armor"
+    },
+    "main-hand": {
+      "id": "dart",
+      "index": "dart",
+      "name": "dart",
+      "quantity": 1,
+      "weight": 0.25,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/dart.json",
+      "image_url": "/assets/atlas/equipment/images/dart.webp",
+      "imageUrl": "/assets/atlas/equipment/images/dart.webp",
+      "desc": [
+        "Forged from cold, blackened iron and tipped with a residue that smells faintly of copper and rot, this dart whispers of silent executions in fog-choked alleys. Its balance is lethal, designed not for sport, but to find the precise, shuddering gap between a victim's ribs."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Ranged",
+      "category_range": "Simple Ranged",
+      "cost": {
+        "quantity": 5,
+        "unit": "cp"
+      },
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 20,
+        "long": 60
+      },
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "public/assets/atlas/weapon_properties/finesse"
+        },
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "updated_at": "2026-04-12T08:14:34.777Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/dart.webp",
+      "sprite_index": 24,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "category": "Simple Ranged Weapons",
+      "last_updated": "12-4-2026",
+      "main_hand_slot": "dart",
+      "slot": "main-hand"
+    },
+    "off-hand": {
+      "id": "scimitar",
+      "index": "scimitar",
+      "name": "scimitar",
+      "quantity": 1,
+      "weight": 3,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/scimitar.json",
+      "image_url": "/assets/atlas/equipment/images/scimitar.webp",
+      "imageUrl": "/assets/atlas/equipment/images/scimitar.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Martial",
+      "weapon_range": "Melee",
+      "category_range": "Martial Melee",
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d6",
+        "damage_type": {
+          "index": "slashing",
+          "name": "slashing",
+          "url": "public/assets/atlas/damage_types/slashing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "public/assets/atlas/weapon_properties/finesse"
+        },
+        {
+          "index": "light",
+          "name": "light",
+          "url": "public/assets/atlas/weapon_properties/light"
+        }
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/scimitar.webp",
+      "sprite_index": 13,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+      "off_hand_slot": "scimitar",
+      "slot": "off-hand"
+    }
+  },
+  "backpack": [
+    {
+      "id": "backpack",
+      "index": "backpack",
+      "name": "backpack",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/backpack.json",
+      "image_url": "/assets/atlas/equipment/images/backpack.webp",
+      "imageUrl": "/assets/atlas/equipment/images/backpack.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-21T14:08:31.097Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/backpack.webp",
+      "sprite_index": 9,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "back"
+      ],
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "bedroll",
+      "index": "bedroll",
+      "name": "bedroll",
+      "quantity": 1,
+      "weight": 7,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/bedroll.json",
+      "image_url": "/assets/atlas/equipment/images/bedroll.webp",
+      "imageUrl": "/assets/atlas/equipment/images/bedroll.webp",
+      "desc": [
+        "A typical bedroll consisted of a sack that could contain a human-sized creature, with an opening on the side. Some variants consisted of several layers to provide waterproofing, warmth, and comfort"
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-11T15:14:56.995Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/bedroll.webp",
+      "sprite_index": 2,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
+      "category": "Adventuring Gear",
+      "last_updated": "11-4-2026"
+    },
+    {
+      "id": "mess_kit",
+      "index": "mess_kit",
+      "name": "mess kit",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/mess_kit.json",
+      "image_url": "/assets/atlas/equipment/images/mess_kit.webp",
+      "imageUrl": "/assets/atlas/equipment/images/mess_kit.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "kits",
+        "name": "kits",
+        "url": "public/assets/atlas/equipment_categories/kits"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "sp"
+      },
+      "desc": [
+        "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl."
+      ],
+      "updated_at": "2026-04-12T08:02:03.666Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/mess_kit.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+      "category": "Kits",
+      "last_updated": "12-4-2026"
+    },
+    {
+      "id": "tinderbox",
+      "index": "tinderbox",
+      "name": "tinderbox",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/tinderbox.json",
+      "image_url": "/assets/atlas/equipment/images/tinderbox.webp",
+      "imageUrl": "/assets/atlas/equipment/images/tinderbox.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch--or anything else with abundant, exposed fuel--takes an action.",
+        "Lighting any other fire takes 1 minute."
+      ],
+      "updated_at": "2026-04-15T13:57:41.365Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/tinderbox.webp",
+      "sprite_index": 16,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "category": "Adventuring Gear",
+      "last_updated": "15-4-2026"
+    },
+    {
+      "id": "torch",
+      "index": "torch",
+      "name": "torch",
+      "quantity": 10,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/torch.json",
+      "image_url": "/assets/atlas/equipment/images/torch.webp",
+      "imageUrl": "/assets/atlas/equipment/images/torch.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "cp"
+      },
+      "desc": [
+        "A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
+      ],
+      "updated_at": "2026-04-24T03:30:26.922Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/torch.webp",
+      "sprite_index": 18,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "off-hand"
+      ],
+      "last_updated": "24-4-2026"
+    },
+    {
+      "id": "rations_1_day",
+      "index": "rations_1_day",
+      "name": "rations (1 day)",
+      "quantity": 10,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/rations_1_day.json",
+      "image_url": "/assets/atlas/equipment/images/rations_1_day.webp",
+      "imageUrl": "/assets/atlas/equipment/images/rations_1_day.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/rations_1_day.webp",
+      "sprite_index": 20,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+    },
+    {
+      "id": "waterskin",
+      "index": "waterskin",
+      "name": "waterskin",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/waterskin.json",
+      "image_url": "/assets/atlas/equipment/images/waterskin.webp",
+      "imageUrl": "/assets/atlas/equipment/images/waterskin.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "sp"
+      },
+      "updated_at": "2026-04-21T14:20:07.679Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/waterskin.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "extra"
+      ],
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "rope_hempen_50_feet",
+      "index": "rope_hempen_50_feet",
+      "name": "rope, hempen (50 feet)",
+      "quantity": 1,
+      "weight": 10,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/rope_hempen_50_feet.json",
+      "image_url": "/assets/atlas/equipment/images/rope_hempen_50_feet.webp",
+      "imageUrl": "/assets/atlas/equipment/images/rope_hempen_50_feet.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "desc": [
+        "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/rope_hempen_50_feet.webp",
+      "sprite_index": 0,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+    },
+    {
+      "id": "small-knife",
+      "index": "small-knife",
+      "name": "small knife",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/small-knife.json",
+      "image_url": "/assets/atlas/equipment/images/small_knife.webp",
+      "imageUrl": "/assets/atlas/equipment/images/small_knife.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 0,
+        "unit": "cp"
+      },
+      "desc": [
+        "A small knife, typically found in a scholar's pack."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/small_knife.webp",
+      "sprite_index": 1,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+    },
+    {
+      "id": "city-map",
+      "index": "city-map",
+      "name": "city map",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/city-map.json",
+      "image_url": "/assets/atlas/equipment/images/city_map.webp",
+      "imageUrl": "/assets/atlas/equipment/images/city_map.webp"
+    },
+    {
+      "id": "pet-mouse",
+      "index": "pet-mouse",
+      "name": "pet mouse",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/pet-mouse.json",
+      "image_url": "/assets/atlas/equipment/images/pet_mouse.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pet_mouse.webp"
+    },
+    {
+      "id": "token-of-parents",
+      "index": "token-of-parents",
+      "name": "token of parents",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/token-of-parents.json",
+      "image_url": "/assets/atlas/equipment/images/token_of_parents.webp",
+      "imageUrl": "/assets/atlas/equipment/images/token_of_parents.webp"
+    },
+    {
+      "id": "common-clothes",
+      "index": "common-clothes",
+      "name": "common clothes",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/common-clothes.json",
+      "image_url": "/assets/atlas/equipment/images/common_clothes.webp",
+      "imageUrl": "/assets/atlas/equipment/images/common_clothes.webp"
+    },
+    {
+      "id": "pouch",
+      "index": "pouch",
+      "name": "pouch",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/pouch.json",
+      "image_url": "/assets/atlas/equipment/images/pouch.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/pouch.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+    },
+    {
+      "id": "yew_wand",
+      "index": "yew_wand",
+      "name": "yew wand",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/yew_wand.json",
+      "image_url": "/assets/atlas/equipment/images/yew_wand.webp",
+      "imageUrl": "/assets/atlas/equipment/images/yew_wand.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "druidic_foci",
+        "name": "druidic foci",
+        "url": "public/assets/atlas/equipment_categories/druidic_foci"
+      },
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "desc": [
+        "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/yew_wand.webp",
+      "sprite_index": 11,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp"
+    }
+  ],
+  "spells": [],
+  "id": "bella",
+  "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/character/npc_character_profiles/json/bella.json",
+  "atlas_data": {
+    "class": {
+      "index": "druid",
+      "name": "druid",
+      "hit_die": 8,
+      "proficiency_choices": [
+        {
+          "desc": "Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival",
+          "choose": 2,
+          "type": "proficiencies",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_arcana",
+                  "name": "skill: arcana",
+                  "url": "public/assets/atlas/proficiencies/skill_arcana"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_animal_handling",
+                  "name": "skill: animal handling",
+                  "url": "public/assets/atlas/proficiencies/skill_animal_handling"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_insight",
+                  "name": "skill: insight",
+                  "url": "public/assets/atlas/proficiencies/skill_insight"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_medicine",
+                  "name": "skill: medicine",
+                  "url": "public/assets/atlas/proficiencies/skill_medicine"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_nature",
+                  "name": "skill: nature",
+                  "url": "public/assets/atlas/proficiencies/skill_nature"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_perception",
+                  "name": "skill: perception",
+                  "url": "public/assets/atlas/proficiencies/skill_perception"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_religion",
+                  "name": "skill: religion",
+                  "url": "public/assets/atlas/proficiencies/skill_religion"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_survival",
+                  "name": "skill: survival",
+                  "url": "public/assets/atlas/proficiencies/skill_survival"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "proficiencies": [
+        {
+          "index": "light_armor",
+          "name": "light armor",
+          "url": "public/assets/atlas/proficiencies/light_armor"
+        },
+        {
+          "index": "medium_armor",
+          "name": "medium armor",
+          "url": "public/assets/atlas/proficiencies/medium_armor"
+        },
+        {
+          "index": "shields",
+          "name": "shields",
+          "url": "public/assets/atlas/proficiencies/shields"
+        },
+        {
+          "index": "clubs",
+          "name": "clubs",
+          "url": "public/assets/atlas/proficiencies/clubs"
+        },
+        {
+          "index": "daggers",
+          "name": "daggers",
+          "url": "public/assets/atlas/proficiencies/daggers"
+        },
+        {
+          "index": "javelins",
+          "name": "javelins",
+          "url": "public/assets/atlas/proficiencies/javelins"
+        },
+        {
+          "index": "maces",
+          "name": "maces",
+          "url": "public/assets/atlas/proficiencies/maces"
+        },
+        {
+          "index": "quarterstaffs",
+          "name": "quarterstaffs",
+          "url": "public/assets/atlas/proficiencies/quarterstaffs"
+        },
+        {
+          "index": "sickles",
+          "name": "sickles",
+          "url": "public/assets/atlas/proficiencies/sickles"
+        },
+        {
+          "index": "spears",
+          "name": "spears",
+          "url": "public/assets/atlas/proficiencies/spears"
+        },
+        {
+          "index": "darts",
+          "name": "darts",
+          "url": "public/assets/atlas/proficiencies/darts"
+        },
+        {
+          "index": "slings",
+          "name": "slings",
+          "url": "public/assets/atlas/proficiencies/slings"
+        },
+        {
+          "index": "scimitars",
+          "name": "scimitars",
+          "url": "public/assets/atlas/proficiencies/scimitars"
+        },
+        {
+          "index": "herbalism_kit",
+          "name": "herbalism kit",
+          "url": "public/assets/atlas/proficiencies/herbalism_kit"
+        },
+        {
+          "index": "saving_throw_int",
+          "name": "saving throw: int",
+          "url": "public/assets/atlas/proficiencies/saving_throw_int"
+        },
+        {
+          "index": "saving_throw_wis",
+          "name": "saving throw: wis",
+          "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        }
+      ],
+      "saving_throws": [
+        {
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/intelligence"
+        },
+        {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        }
+      ],
+      "starting_equipment": [
+        {
+          "equipment": {
+            "index": "leather_armor",
+            "name": "leather armor",
+            "url": "public/assets/atlas/equipment/leather_armor"
+          },
+          "quantity": 1
+        },
+        {
+          "equipment": {
+            "index": "explorers_pack",
+            "name": "explorer's pack",
+            "url": "public/assets/atlas/equipment/explorers_pack"
+          },
+          "quantity": 1
+        }
+      ],
+      "starting_equipment_options": [
+        {
+          "desc": "(a) a wooden shield or (b) any simple weapon",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "shield",
+                  "name": "shield",
+                  "url": "public/assets/atlas/equipment/shield"
+                }
+              },
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "any simple weapon",
+                  "choose": 1,
+                  "type": "equipment",
+                  "from": {
+                    "option_set_type": "equipment_category",
+                    "equipment_category": {
+                      "index": "simple_weapons",
+                      "name": "simple weapons",
+                      "url": "public/assets/atlas/equipment_categories/simple_weapons"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "(a) a scimitar or (b) any simple melee weapon",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "scimitar",
+                  "name": "scimitar",
+                  "url": "public/assets/atlas/equipment/scimitar"
+                }
+              },
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "any simple melee weapon",
+                  "choose": 1,
+                  "type": "equipment",
+                  "from": {
+                    "option_set_type": "equipment_category",
+                    "equipment_category": {
+                      "index": "simple_melee_weapons",
+                      "name": "simple melee weapons",
+                      "url": "public/assets/atlas/equipment_categories/simple_melee_weapons"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "druidic focus",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "equipment_category",
+            "equipment_category": {
+              "index": "druidic_foci",
+              "name": "druidic foci",
+              "url": "public/assets/atlas/equipment_categories/druidic_foci"
+            }
+          }
+        }
+      ],
+      "class_levels": "public/assets/atlas/classes/druid/levels",
+      "multi_classing": {
+        "prerequisites": [
+          {
+            "ability_score": {
+              "index": "wis",
+              "name": "wis",
+              "url": "public/assets/atlas/ability_scores/wisdom"
+            },
+            "minimum_score": 13
+          }
+        ],
+        "proficiencies": [
+          {
+            "index": "light_armor",
+            "name": "light armor",
+            "url": "public/assets/atlas/proficiencies/light_armor"
+          },
+          {
+            "index": "medium_armor",
+            "name": "medium armor",
+            "url": "public/assets/atlas/proficiencies/medium_armor"
+          },
+          {
+            "index": "shields",
+            "name": "shields",
+            "url": "public/assets/atlas/proficiencies/shields"
+          }
+        ]
+      },
+      "subclasses": [
+        {
+          "index": "land",
+          "name": "land",
+          "url": "public/assets/atlas/subclasses/land"
+        }
+      ],
+      "spellcasting": {
+        "level": 1,
+        "spellcasting_ability": {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        "info": [
+          {
+            "name": "cantrips",
+            "desc": [
+              "At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table."
+            ]
+          },
+          {
+            "name": "preparing and casting spells",
+            "desc": [
+              "The Druid table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these druid spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+              "You prepare the list of druid spells that are available for you to cast, choosing from the druid spell list. When you do so, choose a number of druid spells equal to your Wisdom modifier + your druid level (minimum of one spell). The spells must be of a level for which you have spell slots.",
+              "For example, if you are a 3rd-level druid, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
+              "You can also change your list of prepared spells when you finish a long rest. Preparing a new list of druid spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
+            ]
+          },
+          {
+            "name": "spellcasting ability",
+            "desc": [
+              "Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.",
+              "Spell save DC = 8 + your proficiency bonus + your Wisdom modifier.",
+              "Spell attack modifier = your proficiency bonus + your Wisdom modifier."
+            ]
+          },
+          {
+            "name": "ritual casting",
+            "desc": [
+              "You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+            ]
+          },
+          {
+            "name": "spellcasting focus",
+            "desc": [
+              "You can use a druidic focus (see chapter 5, \"Equipment\") as a spellcasting focus for your druid spells."
+            ]
+          }
+        ]
+      },
+      "spells": "public/assets/atlas/classes/druid/spells",
+      "url": "public/assets/atlas/classes/json/druid.json",
+      "updated_at": "2025-10-24T20:42:12.459Z",
+      "image": "public/assets/atlas/classes/druid.webp"
+    },
+    "species": {
+      "index": "elf",
+      "name": "elf",
+      "speed": 30,
+      "ability_bonuses": [
+        {
+          "ability_score": {
+            "index": "dex",
+            "name": "dex",
+            "url": "public/assets/atlas/ability_scores/dexterity"
+          },
+          "bonus": 2
+        }
+      ],
+      "age": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+      "alignment": "Elves love freedom, variety, and self-expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others' freedom as well as their own, and they are more often good than not.",
+      "size": "Medium",
+      "size_description": "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
+      "languages": [
+        {
+          "index": "common",
+          "name": "common",
+          "url": "public/assets/atlas/languages/common"
+        },
+        {
+          "index": "elvish",
+          "name": "elvish",
+          "url": "public/assets/atlas/languages/elvish"
+        }
+      ],
+      "language_desc": "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+      "traits": [
+        {
+          "index": "darkvision",
+          "name": "darkvision",
+          "url": "public/assets/atlas/traits/darkvision"
+        },
+        {
+          "index": "fey_ancestry",
+          "name": "fey ancestry",
+          "url": "public/assets/atlas/traits/fey_ancestry"
+        },
+        {
+          "index": "trance",
+          "name": "trance",
+          "url": "public/assets/atlas/traits/trance"
+        },
+        {
+          "index": "keen_senses",
+          "name": "keen senses",
+          "url": "public/assets/atlas/traits/keen_senses"
+        }
+      ],
+      "subraces": [
+        {
+          "index": "high_elf",
+          "name": "high elf",
+          "url": "public/assets/atlas/subraces/high_elf"
+        }
+      ],
+      "url": "public/assets/atlas/species/json/elf.json",
+      "updated_at": "2025-10-24T20:42:14.212Z",
+      "image": "public/assets/atlas/species/elf.webp"
+    },
+    "background": {
+      "index": "urchin",
+      "name": "Urchin",
+      "description": "You grew up on the streets alone, orphaned, and poor. You had no one to watch over you or provide for you, so you learned to provide for yourself. You fought fiercely for every scrap of food and kept a constant watch out for other urchins who might steal from you. You slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the help of a doctor or a temple. You've survived despite all odds, and you did it through cunning, strength, speed, or some combination of each.",
+      "starting_proficiencies": [
+        {
+          "index": "skill-sleight-of-hand",
+          "name": "Skill: Sleight of Hand"
+        },
+        {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth"
+        },
+        {
+          "index": "disguise-kit",
+          "name": "Disguise Kit"
+        },
+        {
+          "index": "thieves-tools",
+          "name": "Thieves' Tools"
+        }
+      ],
+      "starting_equipment": [
+        {
+          "equipment": {
+            "index": "small-knife",
+            "name": "Small Knife",
+            "url": "/api/equipment/small-knife"
+          },
+          "quantity": 1,
+          "slot": "off-hand"
+        },
+        {
+          "equipment": {
+            "index": "city-map",
+            "name": "Map of the city you grew up in",
+            "url": "/api/equipment/city-map"
+          },
+          "quantity": 1
+        },
+        {
+          "equipment": {
+            "index": "pet-mouse",
+            "name": "Pet Mouse",
+            "url": "/api/equipment/pet-mouse"
+          },
+          "quantity": 1
+        },
+        {
+          "equipment": {
+            "index": "token-of-parents",
+            "name": "Token to remember your parents by",
+            "url": "/api/equipment/token-of-parents"
+          },
+          "quantity": 1
+        },
+        {
+          "equipment": {
+            "index": "common-clothes",
+            "name": "Common Clothes",
+            "url": "/api/equipment/common-clothes"
+          },
+          "quantity": 1,
+          "slot": "clothes"
+        },
+        {
+          "equipment": {
+            "index": "pouch",
+            "name": "Pouch",
+            "url": "/api/equipment/pouch"
+          },
+          "quantity": 1
+        }
+      ],
+      "starting_equipment_options": [],
+      "feature": {
+        "name": "City Secrets",
+        "desc": [
+          "You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would otherwise allow."
+        ]
+      },
+      "suggested_characteristics": {
+        "traits": [
+          "I hide scraps of food and trinkets away in my pockets.",
+          "I ask a lot of questions.",
+          "I like to squeeze into small places where no one else can get to me.",
+          "I sleep with my back to a wall or tree, with everything I own wrapped in my arms.",
+          "I eat like a pig and have bad manners.",
+          "I think anyone who's nice to me is hiding an evil motive.",
+          "I don't like to bathe.",
+          "I say exactly what I'm thinking, no matter how rude it is."
+        ],
+        "ideals": [
+          "Respect. All people, regardless of station, deserve to be treated with dignity. (Good)",
+          "Community. We have to take care of each other, because no one else is going to do it. (Lawful)",
+          "Change. The low are lifted up, and the high and mighty are brought low. Change is the nature of things. (Chaotic)",
+          "Retribution. The rich need to be shown what it's like to went without and suffer. (Evil)",
+          "People. I'm loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. (Neutral)",
+          "Aspiration. I'm going to prove that I'm worthy of a better life. (Any)"
+        ],
+        "bonds": [
+          "My town or city is my home, and I'll fight to defend it.",
+          "I sponsor an orphanage to keep others from enduring what I was forced to endure.",
+          "I owe my survival to another urchin who taught me how to live on the streets.",
+          "I owe a debt I can never repay to the person who took pity on me.",
+          "I escaped my life of poverty by robbing an important person, and I'm wanted for it.",
+          "No one else should have to endure the hardships I've been through."
+        ],
+        "flaws": [
+          "If I'm outmatched, I'll run away in a heartbeat.",
+          "An innocent person is in prison for a crime that I committed. I'm okay with that.",
+          "I'll never fully trust anyone other than myself.",
+          "I'm convinced that a powerful person is out to get me, and I'm probably right.",
+          "I'm too greedy for my own good. I can't resist taking a risk if there's money involved.",
+          "It's not stealing if I need it more than they do."
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "updated_at": "2026-04-26T06:36:23.047Z",
+    "version": "2.6"
+  }
+}
