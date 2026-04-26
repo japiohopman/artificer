@@ -1,0 +1,645 @@
+{
+  "name": "gryh",
+  "gender": "Male",
+  "class": "Wizard",
+  "race": "Tiefling",
+  "background": "Sage",
+  "alignment": "Chaotic Evil",
+  "level": 1,
+  "xp": 0,
+  "stats": {
+    "str": 16,
+    "dex": 11,
+    "con": 9,
+    "int": 13,
+    "wis": 7,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "backstory": "",
+  "flaws": [
+    "I speak without really thinking through my words, step on toes, and irritate people."
+  ],
+  "ideals": [
+    "Knowledge. The path to power and self-improvement is through knowledge. (Neutral)"
+  ],
+  "bonds": [
+    "I work to preserve a library, university, or scriptorium."
+  ],
+  "traits": [
+    "I've read every book in the world's greatest libraries — or I like to boast that I have."
+  ],
+  "appearance": {
+    "hairColor": "",
+    "hairStyle": "",
+    "bodyType": "",
+    "eyeColor": "",
+    "skinColor": "",
+    "height": "",
+    "weight": ""
+  },
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "gp": 0,
+    "pp": 0
+  },
+  "inventory": {},
+  "backpack": [],
+  "spells": [],
+  "id": "gryh",
+  "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/character/npc_character_profiles/json/gryh.json",
+  "atlas_data": {
+    "class": {
+      "index": "wizard",
+      "name": "wizard",
+      "hit_die": 6,
+      "proficiency_choices": [
+        {
+          "desc": "Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion",
+          "choose": 2,
+          "type": "proficiencies",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_arcana",
+                  "name": "skill: arcana",
+                  "url": "public/assets/atlas/proficiencies/skill_arcana"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_history",
+                  "name": "skill: history",
+                  "url": "public/assets/atlas/proficiencies/skill_history"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_insight",
+                  "name": "skill: insight",
+                  "url": "public/assets/atlas/proficiencies/skill_insight"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_investigation",
+                  "name": "skill: investigation",
+                  "url": "public/assets/atlas/proficiencies/skill_investigation"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_medicine",
+                  "name": "skill: medicine",
+                  "url": "public/assets/atlas/proficiencies/skill_medicine"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "skill_religion",
+                  "name": "skill: religion",
+                  "url": "public/assets/atlas/proficiencies/skill_religion"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "proficiencies": [
+        {
+          "index": "daggers",
+          "name": "daggers",
+          "url": "public/assets/atlas/proficiencies/daggers"
+        },
+        {
+          "index": "darts",
+          "name": "darts",
+          "url": "public/assets/atlas/proficiencies/darts"
+        },
+        {
+          "index": "slings",
+          "name": "slings",
+          "url": "public/assets/atlas/proficiencies/slings"
+        },
+        {
+          "index": "quarterstaffs",
+          "name": "quarterstaffs",
+          "url": "public/assets/atlas/proficiencies/quarterstaffs"
+        },
+        {
+          "index": "crossbows_light",
+          "name": "crossbows, light",
+          "url": "public/assets/atlas/proficiencies/crossbows_light"
+        },
+        {
+          "index": "saving_throw_int",
+          "name": "saving throw: int",
+          "url": "public/assets/atlas/proficiencies/saving_throw_int"
+        },
+        {
+          "index": "saving_throw_wis",
+          "name": "saving throw: wis",
+          "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        }
+      ],
+      "saving_throws": [
+        {
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/intelligence"
+        },
+        {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        }
+      ],
+      "starting_equipment": [
+        {
+          "equipment": {
+            "index": "spellbook",
+            "name": "spellbook",
+            "url": "public/assets/atlas/equipment/spellbook"
+          },
+          "quantity": 1
+        }
+      ],
+      "starting_equipment_options": [
+        {
+          "desc": "(a) a quarterstaff or (b) a dagger",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "quarterstaff",
+                  "name": "quarterstaff",
+                  "url": "public/assets/atlas/equipment/quarterstaff"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "dagger",
+                  "name": "dagger",
+                  "url": "public/assets/atlas/equipment/dagger"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "(a) a component pouch or (b) an arcane focus",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "component_pouch",
+                  "name": "component pouch",
+                  "url": "public/assets/atlas/equipment/component_pouch"
+                }
+              },
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "arcane focus",
+                  "choose": 1,
+                  "type": "equipment",
+                  "from": {
+                    "option_set_type": "equipment_category",
+                    "equipment_category": {
+                      "index": "arcane_foci",
+                      "name": "arcane foci",
+                      "url": "public/assets/atlas/equipment_categories/arcane_foci"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "desc": "(a) a scholar’s pack or (b) an explorer’s pack",
+          "choose": 1,
+          "type": "equipment",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "scholars_pack",
+                  "name": "scholar's pack",
+                  "url": "public/assets/atlas/equipment/scholars_pack"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "explorers_pack",
+                  "name": "explorer's pack",
+                  "url": "public/assets/atlas/equipment/explorers_pack"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "class_levels": "public/assets/atlas/classes/wizard/levels",
+      "multi_classing": {
+        "prerequisites": [
+          {
+            "ability_score": {
+              "index": "int",
+              "name": "int",
+              "url": "public/assets/atlas/ability_scores/intelligence"
+            },
+            "minimum_score": 13
+          }
+        ],
+        "proficiencies": []
+      },
+      "subclasses": [
+        {
+          "index": "evocation",
+          "name": "evocation",
+          "url": "public/assets/atlas/subclasses/evocation"
+        }
+      ],
+      "spellcasting": {
+        "level": 1,
+        "spellcasting_ability": {
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/intelligence"
+        },
+        "info": [
+          {
+            "name": "cantrips",
+            "desc": [
+              "At 1st level, you know three cantrips of your choice from the wizard spell list. You learn additional wizard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Wizard table."
+            ]
+          },
+          {
+            "name": "spellbook",
+            "desc": [
+              "At 1st level, you have a spellbook containing six 1st- level wizard spells of your choice. Your spellbook is the repository of the wizard spells you know, except your cantrips, which are fixed in your mind."
+            ]
+          },
+          {
+            "name": "preparing and casting spells",
+            "desc": [
+              "The Wizard table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+              "You prepare the list of wizard spells that are available for you to cast. To do so, choose a number of wizard spells from your spellbook equal to your Intelligence modifier + your wizard level (minimum of one spell). The spells must be of a level for which you have spell slots.",
+              "For example, if you're a 3rd-level wizard, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination, chosen from your spellbook. If you prepare the 1st-level spell magic missile, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
+              "You can change your list of prepared spells when you finish a long rest. Preparing a new list of wizard spells requires time spent studying your spellbook and memorizing the incantations and gestures you must make to cast the spell: at least 1 minute per spell level for each spell on your list."
+            ]
+          },
+          {
+            "name": "spellcasting ability",
+            "desc": [
+              "Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.",
+              "Spell save DC = 8 + your proficiency bonus + your Intelligence modifier.",
+              "Spell attack modifier = your proficiency bonus + your Intelligence modifier."
+            ]
+          },
+          {
+            "name": "ritual casting",
+            "desc": [
+              "You can cast a wizard spell as a ritual if that spell has the ritual tag and you have the spell in your spellbook. You don't need to have the spell prepared."
+            ]
+          },
+          {
+            "name": "spellcasting focus",
+            "desc": [
+              "You can use an arcane focus as a spellcasting focus for your wizard spells."
+            ]
+          }
+        ]
+      },
+      "spells": "public/assets/atlas/classes/wizard/spells",
+      "url": "public/assets/atlas/classes/json/wizard.json",
+      "updated_at": "2025-10-24T20:42:12.459Z",
+      "image": "public/assets/atlas/classes/wizard.webp"
+    },
+    "species": {
+      "index": "tiefling",
+      "name": "tiefling",
+      "speed": 30,
+      "ability_bonuses": [
+        {
+          "ability_score": {
+            "index": "int",
+            "name": "int",
+            "url": "public/assets/atlas/ability_scores/intelligence"
+          },
+          "bonus": 1
+        },
+        {
+          "ability_score": {
+            "index": "cha",
+            "name": "cha",
+            "url": "public/assets/atlas/ability_scores/charisma"
+          },
+          "bonus": 2
+        }
+      ],
+      "alignment": "Tieflings might not have an innate tendency toward evil, but many of them end up there. Evil or not, an independent nature inclines many tieflings toward a chaotic alignment.",
+      "age": "Tieflings mature at the same rate as humans but live a few years longer.",
+      "size": "Medium",
+      "size_description": "Tieflings are about the same size and build as humans. Your size is Medium.",
+      "languages": [
+        {
+          "index": "common",
+          "name": "common",
+          "url": "public/assets/atlas/languages/common"
+        },
+        {
+          "index": "infernal",
+          "name": "infernal",
+          "url": "public/assets/atlas/languages/infernal"
+        }
+      ],
+      "language_desc": "You can speak, read, and write Common and Infernal.",
+      "traits": [
+        {
+          "index": "darkvision",
+          "name": "darkvision",
+          "url": "public/assets/atlas/traits/darkvision"
+        },
+        {
+          "index": "hellish_resistance",
+          "name": "hellish resistance",
+          "url": "public/assets/atlas/traits/hellish_resistance"
+        },
+        {
+          "index": "infernal_legacy",
+          "name": "infernal legacy",
+          "url": "public/assets/atlas/traits/infernal_legacy"
+        }
+      ],
+      "subraces": [],
+      "url": "public/assets/atlas/species/json/tiefling.json",
+      "updated_at": "2025-10-24T20:42:14.212Z",
+      "image": "public/assets/atlas/species/tiefling.webp"
+    },
+    "background": {
+      "index": "sage",
+      "name": "Sage",
+      "description": "You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your field of study.",
+      "starting_proficiencies": [
+        {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana"
+        },
+        {
+          "index": "skill-history",
+          "name": "Skill: History"
+        }
+      ],
+      "language_options": {
+        "choose": 2,
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "common",
+                "name": "Common"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "dwarvish",
+                "name": "Dwarvish"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "elvish",
+                "name": "Elvish"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "giant",
+                "name": "Giant"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "gnomish",
+                "name": "Gnomish"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "goblin",
+                "name": "Goblin"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "halfling",
+                "name": "Halfling"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "orc",
+                "name": "Orc"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "abyssal",
+                "name": "Abyssal"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "celestial",
+                "name": "Celestial"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "draconic",
+                "name": "Draconic"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "deep-speech",
+                "name": "Deep Speech"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "infernal",
+                "name": "Infernal"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "primordial",
+                "name": "Primordial"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "sylvan",
+                "name": "Sylvan"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "undercommon",
+                "name": "Undercommon"
+              }
+            }
+          ]
+        }
+      },
+      "starting_equipment": [
+        {
+          "equipment": {
+            "index": "ink-bottle",
+            "name": "Bottle of Black Ink",
+            "url": "/api/equipment/ink-bottle"
+          },
+          "quantity": 1
+        },
+        {
+          "equipment": {
+            "index": "quill",
+            "name": "Quill",
+            "url": "/api/equipment/quill"
+          },
+          "quantity": 1
+        },
+        {
+          "equipment": {
+            "index": "small-knife",
+            "name": "Small Knife",
+            "url": "/api/equipment/small-knife"
+          },
+          "quantity": 1,
+          "slot": "off-hand"
+        },
+        {
+          "equipment": {
+            "index": "letter-from-dead-colleague",
+            "name": "Letter from a dead colleague",
+            "url": "/api/equipment/letter-from-dead-colleague"
+          },
+          "quantity": 1
+        },
+        {
+          "equipment": {
+            "index": "common-clothes",
+            "name": "Common Clothes",
+            "url": "/api/equipment/common-clothes"
+          },
+          "quantity": 1,
+          "slot": "clothes"
+        },
+        {
+          "equipment": {
+            "index": "pouch",
+            "name": "Pouch",
+            "url": "/api/equipment/pouch"
+          },
+          "quantity": 1
+        }
+      ],
+      "starting_equipment_options": [],
+      "feature": {
+        "name": "Researcher",
+        "desc": [
+          "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign."
+        ]
+      },
+      "suggested_characteristics": {
+        "traits": [
+          "I use polysyllabic words that convey the impression of great erudition.",
+          "I've read every book in the world's greatest libraries — or I like to boast that I have.",
+          "I'm used to helping out those who aren't as bright as I am, and I patiently explain anything and everything to others.",
+          "There's nothing I like more than a good mystery.",
+          "I'm willing to listen to every side of an argument before I make my own judgment.",
+          "I . . . speak . . . slowly . . . when talking . . . to idiots, . . . which . . . almost . . . everyone . . . is . . . compared . . . to me.",
+          "I am horribly, horribly awkward in social situations.",
+          "I'm convinced that people are always trying to steal my secrets."
+        ],
+        "ideals": [
+          "Knowledge. The path to power and self-improvement is through knowledge. (Neutral)",
+          "Faith. Trust in your deity and your deity will reward your efforts. (Lawful)",
+          "Change. We must help bring about the world's transition into a new era. (Chaotic)",
+          "Power. Knowledge is the path to power and domination. (Evil)",
+          "Self-Improvement. The goal of a life of study is the betterment of oneself. (Any)",
+          "No Limits. Nothing should untether the infinite possibility of existence. (Chaotic)"
+        ],
+        "bonds": [
+          "It is my duty to protect my students.",
+          "I have an ancient text that holds terrible secrets that must not fall into the wrong hands.",
+          "I work to preserve a library, university, or scriptorium.",
+          "My life's work is a series of tomes related to a specific field of lore.",
+          "I've been searching my whole life for the answer to a certain question.",
+          "I sold my soul for knowledge. I hope to do great deeds and win it back."
+        ],
+        "flaws": [
+          "I am easily distracted by the promise of information.",
+          "Most people scream and run when they see a demon. I stop and take notes on its anatomy.",
+          "Unlocking an ancient mystery is worth the price of a civilization.",
+          "I overlook obvious solutions in favor of complicated ones.",
+          "I speak without really thinking through my words, step on toes, and irritate people.",
+          "I can't keep a secret to save my life, or anyone else's."
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "updated_at": "2026-04-26T08:18:16.211Z",
+    "version": "2.6"
+  },
+  "imageUrl": "/assets/atlas/character/npc_character_profiles/images/gryh_portrait.webp",
+  "avatarUrl": "/assets/atlas/character/npc_character_profiles/images/gryh_avatar.webp",
+  "matrixUrl": "/assets/atlas/character/npc_character_profiles/images/gryh_matrix.webp"
+}
