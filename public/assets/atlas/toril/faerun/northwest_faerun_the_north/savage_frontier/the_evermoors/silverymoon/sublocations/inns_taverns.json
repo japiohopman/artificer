@@ -1,0 +1,186 @@
+{
+  "locationName": "Silverymoon",
+  "category": "inn_tavern",
+  "subLocations": [
+    {
+      "id": "wiki_2",
+      "name": "River Rauvin",
+      "lore": "The river that flowed from the [[Rauvin Mountains]] into the [[River Surbrin]], and eventually drained into the [[Dessarin River]] and out to the [[Sea of Swords]].",
+      "x": 43.34617925635107,
+      "y": 32.847553036420706,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/River Rauvin"
+      ]
+    },
+    {
+      "id": "wiki_3",
+      "name": "Moorgate",
+      "lore": "The western city gate that stood on the [[Dancer's Mask Lane]] and sacred the [[Evermoors]].\n",
+      "x": 11.28118616050403,
+      "y": 9.67489707464469,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Moorgate"
+      ]
+    },
+    {
+      "id": "wiki_4",
+      "name": "Main Gate",
+      "lore": "The gate that opened onto the [[Moonbridge]] and led into the New Section of Silverymoon.",
+      "x": 49.8002479276069,
+      "y": 26.713614693597663,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Main Gate"
+      ]
+    },
+    {
+      "id": "wiki_23",
+      "name": "Mulgate",
+      "lore": "The easternmost gate into [[Silverymoon]] in the [[Southbank]] and the beginning of the [[Moonway]].",
+      "x": 58.946738496327356,
+      "y": 64.33514487098074,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Mulgate"
+      ]
+    },
+    {
+      "id": "wiki_32",
+      "name": "Hunter's Gate",
+      "lore": "The northern gate of [[Silverymoon]] that led into the city's largest plazas.",
+      "x": 62.26690810993891,
+      "y": -22.355428070131495,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Hunter's Gate"
+      ]
+    },
+    {
+      "id": "wiki_36",
+      "name": "The High Lady's Palace",
+      "lore": "The castle also known as the '''High Palace''' – the seat of power in [[Silverymoon]].",
+      "x": 89.81694831022278,
+      "y": 8.179832665868503,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The High Lady's Palace"
+      ]
+    },
+    {
+      "id": "wiki_41",
+      "name": "Star Court",
+      "lore": "[[Silverymoon]]'s government building used for holding courts and assemblies at the [[Halls of Judgment]], record keeping at [[the Rolls]], and many other functions.",
+      "x": 88.13743224127559,
+      "y": 15.538576360562487,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Star Court"
+      ]
+    },
+    {
+      "id": "wiki_42",
+      "name": "Sundabar Gate ",
+      "lore": "The western gate in [[Silverymoon]]'s [[Northbank]].",
+      "x": 87.72698620911606,
+      "y": 27.73442959846321,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sundabar Gate "
+      ]
+    },
+    {
+      "id": "wiki_43",
+      "name": "Map House",
+      "lore": "Also known as the '''Heralds' House''', a library and repository for geographical maps and genealogies of noble houses. In [[1371 DR]], it became part of the [[Conclave of Silverymoon]].",
+      "x": 67.28058773201582,
+      "y": 22.35135905870706,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Map House"
+      ]
+    },
+    {
+      "id": "wiki_47",
+      "name": "Blacklar Gate",
+      "lore": "[[Southbank]]'s westernmost city gate.",
+      "x": 26.424400015595022,
+      "y": 61.88142367227911,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Blacklar Gate"
+      ]
+    },
+    {
+      "id": "wiki_53",
+      "name": "Silverguard Isle",
+      "lore": "",
+      "x": 81.61074312508771,
+      "y": 44.50209839988699,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Silverguard Isle"
+      ]
+    },
+    {
+      "id": "wiki_55",
+      "name": "Vault of the Sages",
+      "lore": "A famous library and a part of the [[Conclave of Silverymoon]]. Previously located southeast of the Market in the building later known as the [[ Map House]].",
+      "x": 59.454900035088805,
+      "y": 43.13889680353332,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Vault of the Sages"
+      ]
+    },
+    {
+      "id": "wiki_56",
+      "name": "Garrison barracks",
+      "lore": "[[Silverymoon]]'s garrison barracks by the [[Moorgate]].",
+      "x": 16.820146933003755,
+      "y": 7.289455770623789,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_59",
+      "name": "West garrison barracks",
+      "lore": "West garrison barracks of the  [[Silverymooon]] guards.",
+      "x": 51.070234645525,
+      "y": 48.863885086134026,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_62",
+      "name": "Guardpost",
+      "lore": "",
+      "x": 50.05391156800211,
+      "y": 39.45863798467691,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_63",
+      "name": "Guardpost",
+      "lore": "",
+      "x": 53.661858493208356,
+      "y": 38.77696425571387,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_75",
+      "name": "Westwatch Tower",
+      "lore": "Also known as the '''Westwatch''', a gate tower adorned with banners depicting past battles.",
+      "x": 59.935321595400644,
+      "y": -22.123924268502577,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Westwatch Tower"
+      ]
+    }
+  ],
+  "updatedAt": "2026-04-27T05:56:40.276Z"
+}
