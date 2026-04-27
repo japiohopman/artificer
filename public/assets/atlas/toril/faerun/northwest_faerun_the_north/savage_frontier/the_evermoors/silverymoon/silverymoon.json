@@ -10,8 +10,8 @@
   ],
   "category": "city",
   "coordinates": {
-    "name": "Silverymoon",
     "x": 5663,
+    "name": "Silverymoon",
     "y": 1023
   },
   "lore": "Silverymoon, the Welcoming City, was a powerful metropolis in the North and the thriving pinnacle of human culture, even amidst the wilderness of the Savage Frontier. Though the Moon prized both education and art, especially music, the Shining Towers also became home to many notable wizards, sorcerers, and other mages, whose traditions came to define the Great Silver Hearth. Its invisible Moonbridge was one such emblematic structure, as it was borne entirely from the Art.\n\nKnown to the elves as Homehaven, and translated from ancient Elven as Aerasumé (pronounced: /ˈeɪrɑːsuːˈmɛ/ AY-rah-soo-MEH), the city’s virtues, pursuits, and populace were grandly considered echoes of fabled Myth Drannor. By the mid-to-late 14th century DR, this was largely attributed to the benevolence of Silvertowers’ then-ruler, High Lady Alustriel, who fostered unity between humans and demihumans within her city’s walls. Later in her long rule, the Gem of the North even became the prime signatory state of the League of the Silver Marches and was viewed by many as the capital of the fledgeling nation.\n\nSilverymoon was the largest city in the far lands of the Interior North, and anywhere beyond Waterdeep, but the bend of the River Rauvin split the Gem into two halves, one known as Northbank and the other Southbank. The city once laid entirely on the northern shore, the elder section, and—even after expansion across the Moonbridge—most of its terrain still did. From the shores of the Rauvin, Northbank's walls arced in a half circle to envelop Silverymoon, being pierced by three gates at westerly, northerly, and easterly points, respectively.",
@@ -25,6 +25,7 @@
   "exports": "Silverymoon Blue wine, books, paper, herbs, inks, glass, glassware, furs, timber, and valuable ores",
   "wikiMaxX": 2783,
   "wikiMaxY": 2075,
+  "fandomUrl": "https://forgottenrealms.fandom.com/wiki/Map:Silverymoon_15th_century_DR?action=mapedit",
   "overlayMapUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/northwest_faerun_the_north/savage_frontier/the_evermoors/silverymoon/silverymoon_submap.webp",
   "subLocations": [
     {
@@ -32,7 +33,7 @@
       "name": "River Rauvin",
       "lore": "The river that flowed from the [[Rauvin Mountains]] into the [[River Surbrin]], and eventually drained into the [[Dessarin River]] and out to the [[Sea of Swords]].",
       "x": 43.34617925635107,
-      "y": 32.847553036420706,
+      "y": 30.78263407090381,
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/River Rauvin"
@@ -43,7 +44,7 @@
       "name": "Moorgate",
       "lore": "The western city gate that stood on the [[Dancer's Mask Lane]] and sacred the [[Evermoors]].\n",
       "x": 11.28118616050403,
-      "y": 9.67489707464469,
+      "y": 47.996607071080284,
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Moorgate"
@@ -54,7 +55,7 @@
       "name": "Main Gate",
       "lore": "The gate that opened onto the [[Moonbridge]] and led into the New Section of Silverymoon.",
       "x": 49.8002479276069,
-      "y": 26.713614693597663,
+      "y": 35.33927398271521,
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Main Gate"
@@ -65,7 +66,7 @@
       "name": "Mulgate",
       "lore": "The easternmost gate into [[Silverymoon]] in the [[Southbank]] and the beginning of the [[Moonway]].",
       "x": 58.946738496327356,
-      "y": 64.33514487098074,
+      "y": 7.391851565230643,
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Mulgate"
@@ -76,7 +77,7 @@
       "name": "Hunter's Gate",
       "lore": "The northern gate of [[Silverymoon]] that led into the city's largest plazas.",
       "x": 62.26690810993891,
-      "y": -22.355428070131495,
+      "y": 71.79056289291401,
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Hunter's Gate"
@@ -87,7 +88,7 @@
       "name": "The High Lady's Palace",
       "lore": "The castle also known as the '''High Palace''' – the seat of power in [[Silverymoon]].",
       "x": 89.81694831022278,
-      "y": 8.179832665868503,
+      "y": 49.10722634617115,
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/The High Lady's Palace"
@@ -98,7 +99,7 @@
       "name": "Star Court",
       "lore": "[[Silverymoon]]'s government building used for holding courts and assemblies at the [[Halls of Judgment]], record keeping at [[the Rolls]], and many other functions.",
       "x": 88.13743224127559,
-      "y": 15.538576360562487,
+      "y": 43.640731030112775,
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Star Court"
@@ -109,7 +110,7 @@
       "name": "Sundabar Gate ",
       "lore": "The western gate in [[Silverymoon]]'s [[Northbank]].",
       "x": 87.72698620911606,
-      "y": 27.73442959846321,
+      "y": 34.580954339100806,
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Sundabar Gate "
@@ -120,7 +121,7 @@
       "name": "Map House",
       "lore": "Also known as the '''Heralds' House''', a library and repository for geographical maps and genealogies of noble houses. In [[1371 DR]], it became part of the [[Conclave of Silverymoon]].",
       "x": 67.28058773201582,
-      "y": 22.35135905870706,
+      "y": 38.579806740062516,
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Map House"
@@ -131,7 +132,7 @@
       "name": "Blacklar Gate",
       "lore": "[[Southbank]]'s westernmost city gate.",
       "x": 26.424400015595022,
-      "y": 61.88142367227911,
+      "y": 9.214615884266134,
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Blacklar Gate"
@@ -142,19 +143,18 @@
       "name": "Silverguard Isle",
       "lore": "",
       "x": 81.61074312508771,
-      "y": 44.50209839988699,
+      "y": 22.124971800900283,
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Silverguard Isle"
-      ],
-      "shopType": "Inn"
+      ]
     },
     {
       "id": "wiki_55",
       "name": "Vault of the Sages",
       "lore": "A famous library and a part of the [[Conclave of Silverymoon]]. Previously located southeast of the Market in the building later known as the [[ Map House]].",
       "x": 59.454900035088805,
-      "y": 43.13889680353332,
+      "y": 23.137635843905866,
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Vault of the Sages"
@@ -165,7 +165,7 @@
       "name": "Garrison barracks",
       "lore": "[[Silverymoon]]'s garrison barracks by the [[Moorgate]].",
       "x": 16.820146933003755,
-      "y": 7.289455770623789,
+      "y": 49.76864918263866,
       "category": "inn_tavern",
       "grounding": []
     },
@@ -174,7 +174,7 @@
       "name": "West garrison barracks",
       "lore": "West garrison barracks of the  [[Silverymooon]] guards.",
       "x": 51.070234645525,
-      "y": 48.863885086134026,
+      "y": 18.884787405402484,
       "category": "inn_tavern",
       "grounding": []
     },
@@ -183,7 +183,7 @@
       "name": "Guardpost",
       "lore": "",
       "x": 50.05391156800211,
-      "y": 39.45863798467691,
+      "y": 25.87154239505634,
       "category": "inn_tavern",
       "grounding": []
     },
@@ -192,7 +192,7 @@
       "name": "Guardpost",
       "lore": "",
       "x": 53.661858493208356,
-      "y": 38.77696425571387,
+      "y": 26.3779285937146,
       "category": "inn_tavern",
       "grounding": []
     },
@@ -201,7 +201,7 @@
       "name": "Westwatch Tower",
       "lore": "Also known as the '''Westwatch''', a gate tower adorned with banners depicting past battles.",
       "x": 59.935321595400644,
-      "y": -22.123924268502577,
+      "y": 71.61858864027539,
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Westwatch Tower"
@@ -212,7 +212,7 @@
       "name": "Moonwood",
       "lore": "The forest north of [[Silverymoon]].",
       "x": 16.36280154811846,
-      "y": -19.086249892473035,
+      "y": 69.36203053236774,
       "category": "temple",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Moonwood"
@@ -223,7 +223,7 @@
       "name": "Mielikki's Glade",
       "lore": "An open-air glade, a shrine, and the land sacred to the deity – [[Mielikki]].",
       "x": 62.554685421533605,
-      "y": 45.45626658654835,
+      "y": 21.416161147951843,
       "category": "temple",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Mielikki's Glade"
@@ -234,7 +234,7 @@
       "name": "Silverglen",
       "lore": "The grove and the shrine dedicated to [[Silvanus]], the Oak-Father.",
       "x": 79.19511318720805,
-      "y": 9.32197673797836,
+      "y": 48.258776464032415,
       "category": "temple",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Silverglen"
@@ -245,7 +245,7 @@
       "name": "Old Wall",
       "lore": "A collection of streets and buildings that used the city's original walls as part of their structure. The Old Wall encircled the old town from the city docks west of the [[Moonbridge]] and ending at  the harbors south of the [[Market (Silverymoon)|Market]].",
       "x": 40.754555408667706,
-      "y": -1.5706565538642678,
+      "y": 56.35044690940122,
       "category": "shop",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Old Wall"
@@ -256,7 +256,7 @@
       "name": "Helvraunur Aviary",
       "lore": "The [[Helvraunur]] family's aviary filled with all sorts of birds. A [[refuge]] was hidden on the aviary's rooftop, between its crystal dome and the skylight.",
       "x": 65.85773542348298,
-      "y": 46.8874980291729,
+      "y": 20.352960647716458,
       "category": "shop",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Helvraunur Aviary"
@@ -267,7 +267,7 @@
       "name": "Moonbridge",
       "lore": "A famous landmark –  magical, invisible bridge across the [[River Rauvin]].",
       "x": 50.85068188107438,
-      "y": 33.12509307932875,
+      "y": 30.57646146760069,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Moonbridge"
@@ -278,7 +278,7 @@
       "name": "Bright Blade Brandished",
       "lore": "A quality tavern beloved by adventurers that stood on the [[Sunset Lane]] and the [[Wallrun]].",
       "x": 6.9109969271556215,
-      "y": 27.531493976674867,
+      "y": 34.73170651528643,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Bright Blade Brandished"
@@ -289,7 +289,7 @@
       "name": "Sunset Lane",
       "lore": "A short street in the [[Northbank]] where the [[Bright Blade Brandished]] stood.",
       "x": 9.705885390343557,
-      "y": 25.282320738870624,
+      "y": 36.40252092051244,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Sunset Lane"
@@ -300,7 +300,7 @@
       "name": "Wallrun",
       "lore": "",
       "x": 7.978136158554651,
-      "y": 23.305892007174535,
+      "y": 37.87072512120096,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Wallrun"
@@ -311,7 +311,7 @@
       "name": "Golden Oak",
       "lore": "A rustic inn famous for its large atrium with a massive living [[oak]] at its center. It stood on the arching [[Dancer's Mask Lane]]. Also functioned as a temple to [[Shiallia]].\n",
       "x": 30.133979248553555,
-      "y": 10.083867972234515,
+      "y": 47.69280011858498,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Golden Oak"
@@ -322,7 +322,7 @@
       "name": "Dancer's Mask Lane",
       "lore": "The street that began at the [[Moorgate]], and moved northeast and then north in a half circle. It intersected [[Rallowglass Ride]] and the [[Ghostwalk]].",
       "x": 14.533420008577263,
-      "y": 13.832406685771666,
+      "y": 44.90817135995738,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Dancer's Mask Lane"
@@ -333,7 +333,7 @@
       "name": "Dancer's Mask Lane",
       "lore": "The street that began at the [[Moorgate]], and moved northeast and then north in a half circle. It intersected [[Rallowglass Ride]] and the [[Ghostwalk]].",
       "x": 25.509709245824425,
-      "y": 19.557436643107344,
+      "y": 40.65529196307945,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Dancer's Mask Lane"
@@ -344,7 +344,7 @@
       "name": "Dancer's Mask Lane",
       "lore": "The street that began at the [[Moorgate]], and moved northeast and then north in a half circle. It intersected [[Rallowglass Ride]] and the [[Ghostwalk]].",
       "x": 30.08316309467741,
-      "y": 5.449253430409385,
+      "y": 51.13565663536936,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Dancer's Mask Lane"
@@ -355,7 +355,7 @@
       "name": "Dancer's Mask Lane",
       "lore": "The street that began at the [[Moorgate]], and moved northeast and then north in a half circle. It intersected [[Rallowglass Ride]] and the [[Ghostwalk]].",
       "x": 26.526032323347312,
-      "y": -5.659990457147941,
+      "y": 59.38823780898337,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Dancer's Mask Lane"
@@ -366,7 +366,7 @@
       "name": "Ghostwalk",
       "lore": "Ghostwalk ran west to east for under 500 feet, it began at [[Dancer's Mask Lane]] in the west—across from the [[Golden Oak]] inn—crossed [[Bowshot Ride]] and the [[Moonway]], and ended at the [[Old Wall]].",
       "x": 36.07946925206243,
-      "y": 7.562137764629483,
+      "y": 49.566085415663004,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Ghostwalk (street)"
@@ -377,7 +377,7 @@
       "name": "Ghostwalk",
       "lore": "Ghostwalk ran west to east for under 500 feet, it began at [[Dancer's Mask Lane]] in the west—across from the [[Golden Oak]] inn—crossed [[Bowshot Ride]] and the [[Moonway]], and ended at the [[Old Wall]].",
       "x": 49.73050664750269,
-      "y": 3.153213633720057,
+      "y": 52.84128619862429,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Ghostwalk (street)"
@@ -388,7 +388,7 @@
       "name": "Rallowglass Ride",
       "lore": "The street ran from the the large east-west street known as [[Many Cats Lane]] down to the Docks in the west side of [[Northbank]], crossing [[Dancer's Mask Lane]] along the way.",
       "x": 22.714820782636494,
-      "y": 12.060380053400564,
+      "y": 46.22453400114734,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Rallowglass Ride"
@@ -399,7 +399,7 @@
       "name": "Rallowglass Ride",
       "lore": "The street ran from the the large east-west street known as [[Many Cats Lane]] down to the Docks in the west side of [[Northbank]], crossing [[Dancer's Mask Lane]] along the way.",
       "x": 33.79274232763594,
-      "y": 17.37643911314639,
+      "y": 42.27546155676473,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Rallowglass Ride"
@@ -410,7 +410,7 @@
       "name": "Many Cats Lane",
       "lore": "A wide road that crossed [[Silverymoon]] from east to west.",
       "x": 37.502321560594474,
-      "y": -2.184029550779087,
+      "y": 56.80609542139508,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Many Cats Lane"
@@ -421,7 +421,7 @@
       "name": "Many Cats Lane",
       "lore": "A wide road that crossed [[Silverymoon]] from east to west.",
       "x": 75.41329800664032,
-      "y": -8.410119328656805,
+      "y": 61.431190684961386,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Many Cats Lane"
@@ -432,7 +432,7 @@
       "name": "Helmer's Wall",
       "lore": "A quality tavern that had its structure built upon a part of the [[Old Wall]]. The establishment was frequented by students of many [[Silvaeren]] colleges.",
       "x": 42.88883387146577,
-      "y": -0.6846015629437403,
+      "y": 55.692234630431685,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Helmer's Wall"
@@ -443,7 +443,7 @@
       "name": "Moonway",
       "lore": "The long street that began at the [[Mulgate]], ran north along the [[Moonbridge]], and ending at the [[Ghostwalk (street)|Ghostwalk]].",
       "x": 49.44304707150557,
-      "y": 13.466348771817444,
+      "y": 45.18010009603766,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Moonway"
@@ -454,7 +454,7 @@
       "name": "Moonway",
       "lore": "The long street that began at the [[Mulgate]], ran north along the [[Moonbridge]], and ending at the [[Ghostwalk (street)|Ghostwalk]].",
       "x": 55.38960772499726,
-      "y": 55.270672121902685,
+      "y": 14.125459893117196,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Moonway"
@@ -465,7 +465,7 @@
       "name": "Brightbuckler Street",
       "lore": "A relatively short 100 yard street that began at the [[River Rauvin]], east of the [[Moonbridge]], and headed north. It then bent to the west and merged into the [[Moonway]].",
       "x": 53.72923273895796,
-      "y": 14.175682360408267,
+      "y": 44.65316657308448,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Brightbuckler Street"
@@ -476,7 +476,7 @@
       "name": "Bowshot Ride",
       "lore": "The street that ran from the Docks to the [[Old Wall]]'s gatehouse, later tavern, of [[Helmer's Wall]].",
       "x": 43.955973102864796,
-      "y": 11.310509779226742,
+      "y": 46.781580490533614,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Bowshot Ride"
@@ -487,7 +487,7 @@
       "name": "The Hammer and the Helm",
       "lore": "A [[dwarf|dwarven]]-only tavern that welcomed females of all races and those whom dwarves considered to be their \"swordbrothers.\"",
       "x": 30.28642771018199,
-      "y": -4.978420915022355,
+      "y": 58.88192900626151,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/The Hammer and the Helm"
@@ -498,7 +498,7 @@
       "name": "A Handful of Stars",
       "lore": "A shop operated by the [[Selûnite]]s that dealt in navigation tool and nautical maps of all sorts.",
       "x": 40.907003870296144,
-      "y": -14.179286754521954,
+      "y": 65.71685791560408,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/A Handful of Stars"
@@ -509,7 +509,7 @@
       "name": "Shadowstars Lane",
       "lore": "A street in [[Northbank]] that began behind the first row of buildings on the northern, side of the [[Many Cats Lane]], then moved and curved north.",
       "x": 41.82169464006674,
-      "y": -10.498882074093146,
+      "y": 62.98284301014267,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Shadowstars Lane"
@@ -520,7 +520,7 @@
       "name": "Wayward House",
       "lore": "Formerly the '''[[Inn of the Wayward Sages]]''' on the northwestern side of the crossing of the Ghostwalk and [[Bowshot Ride]].",
       "x": 42.93965002534191,
-      "y": 4.767704725651271,
+      "y": 51.641949958903965,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Wayward House"
@@ -531,7 +531,7 @@
       "name": "The Stagstand",
       "lore": "An antler and war-banner themed tavern that served as a fanciful eatery and a dancehall.",
       "x": 53.75494071146245,
-      "y": -7.641937620683805,
+      "y": 60.86054141618145,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/The Stagstand"
@@ -542,7 +542,7 @@
       "name": "The House Invincible",
       "lore": "[[Silverymoon]]'s temple of [[Helm]].",
       "x": 69.94120621112828,
-      "y": -12.746275528170045,
+      "y": 64.65233529031408,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/House Invincible"
@@ -553,7 +553,7 @@
       "name": "Rhyester's Matins",
       "lore": "Previously known as '''Lathander's Dawn''', a major temple to [[Lathander]].",
       "x": 80.99173553719008,
-      "y": -11.690100923280426,
+      "y": 63.86774844096751,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Rhyester's Matins"
@@ -564,7 +564,7 @@
       "name": "Temple of Silver Stars",
       "lore": "A major temple of [[Selûne]] that stood east across from the [[Halls of Inspiration]].",
       "x": 80.63241106719367,
-      "y": -1.9552201012196946,
+      "y": 56.63612268743668,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Temple of Silver Stars"
@@ -575,7 +575,7 @@
       "name": "Halls of Inspiration",
       "lore": "The temple dedicated to the deities [[Oghma]] and [[Milil]].",
       "x": 77.75781530722242,
-      "y": -1.6661518801767699,
+      "y": 56.421386294661936,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Halls of Inspiration"
@@ -586,7 +586,7 @@
       "name": "Everdusk Hall",
       "lore": "A shrine dedicated to [[elven]] gods. It was burned down in [[1347 DR]] but later rebuilt. By [[1372 DR]], the temple held elven poetry, genealogies, records, philosophies, as  well as worship of the [[Seldarine]].",
       "x": 78.04527488321955,
-      "y": 3.249628644376429,
+      "y": 52.769663619279555,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Everdusk Hall"
@@ -597,7 +597,7 @@
       "name": "The Market",
       "lore": "A large open plaza where merchants sold their wares. A very popular area during warmer months of the year.",
       "x": 67.69673014732304,
-      "y": 11.056828091551388,
+      "y": 46.970029744235305,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Market (Silverymoon)"
@@ -608,7 +608,7 @@
       "name": "Shining Scroll",
       "lore": "The long and narrow three-story high shop that dealt in magical goods, spell [[scroll]]s and [[potion]]s.",
       "x": 53.10815666546892,
-      "y": 10.18926980657021,
+      "y": 47.61450161307846,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Shining Scroll"
@@ -619,7 +619,7 @@
       "name": "Dancing Goat",
       "lore": "A bawdy tavern with busy dance floor and private upstairs rooms. After it burned down sometime after [[1372 DR]], the new establishment was named '''[[Son of the Goat]]''' and continued Dancing Goat's legacy of revels.",
       "x": 50.44915558749551,
-      "y": 21.56276378247383,
+      "y": 39.16562037383577,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Dancing Goat"
@@ -630,7 +630,7 @@
       "name": "Auchtareen Lane",
       "lore": "The street that began at [[Blacklar Gate]] and moved northeast.",
       "x": 30.489692325686562,
-      "y": 57.24714252833374,
+      "y": 12.657224734054124,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Auchtareen Lane"
@@ -641,7 +641,7 @@
       "name": "Sorlar's Smiling Satyr",
       "lore": "A new tavern as of [[1372 DR]], notable for its stained glass, fanciful curtains, and odd stairs.",
       "x": 27.33909078536562,
-      "y": 58.473638473753546,
+      "y": 11.746113460313698,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Sorlar's Smiling Satyr"
@@ -652,7 +652,7 @@
       "name": "Optym's Blade",
       "lore": "A superb arms shop that sold a wide variety of weapons but specialized in [[axe]]s.",
       "x": 38.67109309974579,
-      "y": -6.409714869749365,
+      "y": 59.94517594405872,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Optym's Blade"
@@ -663,7 +663,7 @@
       "name": "Sundabar Commons",
       "lore": "Also known as ''Sundabar Court''' – facilities dedicated to caravan trade by the [[Sundabar Gate]]. ",
       "x": 84.08192597915918,
-      "y": 25.90020158552729,
+      "y": 35.94352372013892,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Sundabar Commons"
@@ -674,7 +674,7 @@
       "name": "Trading coster",
       "lore": "",
       "x": 74.6200161359001,
-      "y": 26.775731555121517,
+      "y": 35.293130028440345,
       "category": "point_of_interest",
       "grounding": []
     },
@@ -683,7 +683,7 @@
       "name": "Temple of Tymora",
       "lore": "The temple dedicated to the goddess of luck – [[Tymora]].",
       "x": 85.30362917714696,
-      "y": 0.5508924006289533,
+      "y": 54.77443911463482,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Temple of Tymora (Silverymoon)"
@@ -694,7 +694,7 @@
       "name": "Tower of Balance",
       "lore": "The temple dedicated to the Mother of All Magic – [[Mystra]].",
       "x": 88.03449514911965,
-      "y": 1.4183033431716154,
+      "y": 54.13007670017456,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Tower of Balance"
@@ -705,7 +705,7 @@
       "name": "Highaxe Lane",
       "lore": "A small street that split from [[Dancer's Mask Lane]], close to its northern end.",
       "x": 29.37173694041139,
-      "y": -5.864392556472922,
+      "y": 59.540079368481926,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Highaxe Lane"
@@ -716,7 +716,7 @@
       "name": "Vilriel's Shop of Useful Items",
       "lore": "A miscellany store that dealt in general goods.{{approx}}",
       "x": 47.28710025152713,
-      "y": 7.008664788954746,
+      "y": 49.977236769021374,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Vilriel's Shop of Useful Items"
@@ -727,7 +727,7 @@
       "name": "Moonbridge Boat Rentals",
       "lore": "A local rental shop that dealt in small-sized boats.{{approx}}",
       "x": 50.880344951491196,
-      "y": 25.418244406196216,
+      "y": 36.30154905335628,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Moonbridge Boat Rentals"
@@ -738,7 +738,7 @@
       "name": "Inn of the Downstream Run",
       "lore": "A riverside inn of note on the [[Northbank]], famed for its scented floating ''[[driftglobe]]s''.{{approx}}",
       "x": 55.26410348544736,
-      "y": 20.11701011843141,
+      "y": 40.239608809981576,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Inn of the Downstream Run"
@@ -749,7 +749,7 @@
       "name": "Padrumm's Armory",
       "lore": "An [[armor]] merchant of note.{{approx}}",
       "x": 42.687747035573125,
-      "y": 8.357973973853092,
+      "y": 48.97489280309689,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Padrumm's Armory"
@@ -760,7 +760,7 @@
       "name": "Broadband's Forge and Tack Shop",
       "lore": "A blacksmith's shop that hid a shrine to [[Bane]], the Lord of Tyranny, past a secret door in the back.{{approx}}",
       "x": 58.0828638804329,
-      "y": 43.207051674009136,
+      "y": 23.087006511552403,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Broadband's Forge and Tack Shop"
@@ -771,7 +771,7 @@
       "name": "Hall of Training",
       "lore": "[[Silverymoon]]'s hall that offered training in the art of combat.{{approx}}",
       "x": 45.418613007545815,
-      "y": 6.815805299154292,
+      "y": 50.12050381858742,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Hall of Training"
@@ -782,15 +782,70 @@
       "name": "Shrine to Finder Wyvernspur",
       "lore": "The home of [[Laraelna Bowdragon]], a late 15{{th}} century [[DR]] retired [[adventurer]] with a guarded shrine to her [[god]], [[Finder]], located in the cellar .",
       "x": 95.72403880704276,
-      "y": 11.92426850258176,
+      "y": 46.325645438898455,
       "category": "point_of_interest",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Shrine to Finder Wyvernspur (Silverymoon)"
       ]
+    },
+    {
+      "id": "wiki_34",
+      "name": "College of Fochlucan",
+      "lore": "The famous [[bardic]] college that was reopened as the [[House of the Harp]] after being abandoned for over a century. By [[1372 DR]], the college was reopened under the name of Fochlucan.",
+      "x": 68.04217225983112,
+      "y": 70.77993850280373,
+      "category": "fort",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/College of Fochlucan"
+      ]
+    },
+    {
+      "id": "wiki_46",
+      "name": "Utrumm's Music Conservatory",
+      "lore": "The famed school of music in [[Silverymoon]] and a member institution of the [[Conclave of Silverymoon]].",
+      "x": 24.188489245044675,
+      "y": 25.51713706858212,
+      "category": "fort",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Utrumm's Music Conservatory"
+      ]
+    },
+    {
+      "id": "wiki_50",
+      "name": "Lady's College",
+      "lore": "The first open school for [[mage]]s in Silverymoon and the heart of the [[Conclave of Silverymoon]].",
+      "x": 45.6837223346537,
+      "y": 18.175961273266765,
+      "category": "fort",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Lady's College"
+      ]
+    },
+    {
+      "id": "wiki_51",
+      "name": "Arkhen's Invocatorium",
+      "lore": "A college of magic in [[Silverymoon]] that specialized in [[sorcery]] and was a part of the [[Conclave of Silverymoon]]. Previously, it stood on the east side of city.",
+      "x": 43.34617925635107,
+      "y": 11.391646217090376,
+      "category": "fort",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Arkhen's Invocatorium"
+      ]
+    },
+    {
+      "id": "wiki_74",
+      "name": "Miresk's School of Thaumaturgy",
+      "lore": "A school of [[magic]] in [[Silverymoon]] and a shop that traded in [[enchanted]] items; a founding member institution of the [[Conclave of Silverymoon]].",
+      "x": 17.328020031380543,
+      "y": 19.253322810796462,
+      "category": "fort",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Miresk's School of Thaumaturgy"
+      ]
     }
   ],
-  "subLocationCount": 70,
+  "subLocationCount": 75,
   "subPaths": [],
   "image": "public/assets/atlas/toril/faerun/northwest_faerun_the_north/savage_frontier/the_evermoors/silverymoon.webp",
-  "updatedAt": "2026-04-27T06:36:15.988Z"
+  "updatedAt": "2026-04-27T07:14:13.952Z"
 }
