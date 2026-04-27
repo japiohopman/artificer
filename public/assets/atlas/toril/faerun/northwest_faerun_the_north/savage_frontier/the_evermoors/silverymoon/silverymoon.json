@@ -608,7 +608,8 @@
       "category": "inn_tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Silverguard Isle"
-      ]
+      ],
+      "shopType": "Inn"
     },
     {
       "id": "wiki_54",
@@ -846,5 +847,5 @@
   "subLocationCount": 75,
   "subPaths": [],
   "image": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/northwest_faerun_the_north/savage_frontier/the_evermoors/silverymoon/silverymoon.webp",
-  "updatedAt": "2026-04-27T05:56:37.233Z"
+  "updatedAt": "2026-04-27T06:21:43.970Z"
 }
