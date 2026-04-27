@@ -1,0 +1,40 @@
+{
+  "locationName": "Silverymoon",
+  "category": "temple",
+  "subLocations": [
+    {
+      "id": "wiki_24",
+      "name": "Moonwood",
+      "lore": "The forest north of [[Silverymoon]].",
+      "x": 16.36280154811846,
+      "y": -19.086249892473035,
+      "category": "temple",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Moonwood"
+      ]
+    },
+    {
+      "id": "wiki_52",
+      "name": "Mielikki's Glade",
+      "lore": "An open-air glade, a shrine, and the land sacred to the deity – [[Mielikki]].",
+      "x": 62.554685421533605,
+      "y": 45.45626658654835,
+      "category": "temple",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Mielikki's Glade"
+      ]
+    },
+    {
+      "id": "wiki_65",
+      "name": "Silverglen",
+      "lore": "The grove and the shrine dedicated to [[Silvanus]], the Oak-Father.",
+      "x": 79.19511318720805,
+      "y": 9.32197673797836,
+      "category": "temple",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Silverglen"
+      ]
+    }
+  ],
+  "updatedAt": "2026-04-27T05:56:42.116Z"
+}
