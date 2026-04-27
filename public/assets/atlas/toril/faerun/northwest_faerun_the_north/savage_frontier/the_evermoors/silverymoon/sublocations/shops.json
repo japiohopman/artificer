@@ -1,0 +1,29 @@
+{
+  "locationName": "Silverymoon",
+  "category": "shop",
+  "subLocations": [
+    {
+      "id": "wiki_19",
+      "name": "Old Wall",
+      "lore": "A collection of streets and buildings that used the city's original walls as part of their structure. The Old Wall encircled the old town from the city docks west of the [[Moonbridge]] and ending at  the harbors south of the [[Market (Silverymoon)|Market]].",
+      "x": 40.754555408667706,
+      "y": -1.5706565538642678,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Old Wall"
+      ]
+    },
+    {
+      "id": "wiki_64",
+      "name": "Helvraunur Aviary",
+      "lore": "The [[Helvraunur]] family's aviary filled with all sorts of birds. A [[refuge]] was hidden on the aviary's rooftop, between its crystal dome and the skylight.",
+      "x": 65.85773542348298,
+      "y": 46.8874980291729,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Helvraunur Aviary"
+      ]
+    }
+  ],
+  "updatedAt": "2026-04-27T05:56:41.218Z"
+}
