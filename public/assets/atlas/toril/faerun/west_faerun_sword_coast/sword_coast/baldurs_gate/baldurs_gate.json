@@ -5,7 +5,7 @@
     "faerun",
     "west_faerun_sword_coast",
     "sword_coast",
-    "waterdeep"
+    "baldurs_gate"
   ],
   "category": "city",
   "coordinates": {
@@ -31,32 +31,6 @@
   },
   "overlayMapUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/waterdeep/waterdeep_submap.webp",
   "subLocations": [
-    {
-      "id": "fccc1bb1_604a_4c40_b626_debb62abcf49",
-      "name": "elfsong tavern",
-      "x": 1842,
-      "y": 881,
-      "category": "inn",
-      "tags": [],
-      "lore": "History\nThe tavern circa 1374 DR.\nThe tavern circa 1374 DR.\n\nThe Elfsong Tavern was one of the city's most popular taverns in the mid-1300s DR.[2]\n\nIn the Year of Lightning Storms, 1374 DR, when the Dark Alliance first began to threaten Baldur's Gate, the Elfsong Tavern was where the fight began. Vahn, Kromlech, and Adrianna were attacked by thieves working for the Dark Alliance and recovered in the Elfsong Tavern. From the Elfsong Tavern they eventually went to the Onyx Tower, where they learned the secrets of the Elfsong. The ghostly elven woman who sang in the tavern sang for her husband, who had worked for the Company of the Crescent Blade. Her husband had left to defend Baldur's Gate and promised one day to return but never did. She continued to sing because she was still waiting for him to come home. In the Onyx Tower, the three adventurers met a ghost who revealed himself to be the husband of the elf woman. The destruction of the Onyx Tower freed the ghost and brought the elf woman peace.[3]\n\nDuring the Absolute Crisis in the Year of Three Ships Sailing, 1492 DR, Duke Belynne Stelmane was murdered by Bhaalists in the Elfsong Tavern. Her hand was severed and her body staged to appear as part of a plan by the Cult of the Absolute to sow fear in the city.",
-      "architect": "human",
-      "locationType": "tavern",
-      "npcs": [],
-      "ambientSound": ""
-    },
-    {
-      "id": "21bdecad_916f_4d4b_a67e_06a6a9819145",
-      "name": "sorcerous sundries",
-      "x": 346,
-      "y": 416,
-      "category": "shop",
-      "tags": [],
-      "lore": "History\nWhile Sorcerous Sundries was established as a store for the arcane, for many years the building was used as a private residence, a restaurant, a variety of specialty shops, and even a greenhouse.[2]\n\nSometime during the 15th century DR, Rivalen Blackhand re-founded the store as a shop catering to spellcasters, specializing in Material components. However, he denied having magic items for sale and outright refused to sell spell scrolls.",
-      "architect": "elven",
-      "locationType": "arcane_shop",
-      "npcs": [],
-      "ambientSound": ""
-    },
     {
       "id": "wiki_1",
       "name": "The Wide",
