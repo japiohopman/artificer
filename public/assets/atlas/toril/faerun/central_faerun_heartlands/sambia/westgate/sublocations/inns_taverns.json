@@ -1,0 +1,350 @@
+{
+  "locationName": "Westgate",
+  "category": "inn_tavern",
+  "subLocations": [
+    {
+      "id": "wiki_3",
+      "name": "The Leaning Man",
+      "lore": "A safe and quiet inn outside the city walls.",
+      "x": 8.124962409806598,
+      "y": 58.89556967073911,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Leaning Man Inn"
+      ]
+    },
+    {
+      "id": "wiki_4",
+      "name": "Cormaeril yards",
+      "lore": "",
+      "x": 14.599030973131944,
+      "y": 61.88221574770288,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_7",
+      "name": "Lilda's",
+      "lore": "A cheap and rowdy [[festhall]].",
+      "x": 19.930442784975348,
+      "y": 67.51798547472946,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Lilda's"
+      ]
+    },
+    {
+      "id": "wiki_11",
+      "name": "Jolly Warrior Inn",
+      "lore": "A posh inn located on the western Mulsantir’s Gate and Westgate Market Street.",
+      "x": 21.875,
+      "y": 59.03467315214959,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Jolly Warrior Inn"
+      ]
+    },
+    {
+      "id": "wiki_18",
+      "name": "Thalavar yards",
+      "lore": "",
+      "x": 11.680047559190278,
+      "y": 34.13567376549789,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_19",
+      "name": "The Spitting Cockatrice",
+      "lore": "Inn favored by merchants, known for average food and extravagant decor.",
+      "x": 7.291704256860069,
+      "y": 49.786625022392734,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Spitting Cockatrice"
+      ]
+    },
+    {
+      "id": "wiki_20",
+      "name": "The Empty Fish",
+      "lore": "Exuberantly-priced tavern favored as an anonymous meetup space.",
+      "x": 7.083333333333334,
+      "y": 54.65405386337815,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Empty Fish"
+      ]
+    },
+    {
+      "id": "wiki_21",
+      "name": "The Westward Eye",
+      "lore": "A large well-guarded inn for merchants and traders.",
+      "x": 7.361562193431597,
+      "y": 44.640954130104525,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Westward Eye"
+      ]
+    },
+    {
+      "id": "wiki_22",
+      "name": "The Gatereach Inn",
+      "lore": "A luxurious inn for wealthy merchants along the [[Trader's Road]].",
+      "x": 1.8184609052174652,
+      "y": 34.90428423064357,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Gatereach Inn"
+      ]
+    },
+    {
+      "id": "wiki_24",
+      "name": "The Neck",
+      "lore": "The strait that connected the [[Dragonmere]] with the [[Sea of Fallen Stars]].",
+      "x": 6.666666666666667,
+      "y": 74.95780720819053,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Neck"
+      ]
+    },
+    {
+      "id": "wiki_25",
+      "name": "Sea of Fallen Stars",
+      "lore": "Or the '''Inner Sea''', the largest inland body of water in [[Faerûn]].",
+      "x": 81.80555555555556,
+      "y": 71.34177438040572,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sea of Fallen Stars"
+      ]
+    },
+    {
+      "id": "wiki_26",
+      "name": "Purple Lady",
+      "lore": "[[Festhall]] and a tavern renowned for its staff's see-through purple [[robe]]s.",
+      "x": 30.416629076473267,
+      "y": 22.18154902605188,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Purple Lady"
+      ]
+    },
+    {
+      "id": "wiki_32",
+      "name": "The Lord's Water",
+      "lore": "A pool.",
+      "x": 68.8365199392014,
+      "y": 24.124319579740288,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Lord's Water"
+      ]
+    },
+    {
+      "id": "wiki_36",
+      "name": "Blue Banner",
+      "lore": "A tavern and inn located in [[Westgate]]'s [[Shou Quarter]].",
+      "x": 59.86107352091667,
+      "y": 22.146834560542775,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Blue Banner"
+      ]
+    },
+    {
+      "id": "wiki_44",
+      "name": "The Black Boot",
+      "lore": "A dangerous inn near the [[River Bridge]], known for its cheap prices, brawls, and shady characters.",
+      "x": 92.36118630680208,
+      "y": 48.743577019091525,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Black Boot (Westgate)"
+      ]
+    },
+    {
+      "id": "wiki_46",
+      "name": "Vhammos yards",
+      "lore": "",
+      "x": 84.46687284474652,
+      "y": 25.377130376292754,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_47",
+      "name": "Rising Raven Inn",
+      "lore": "An inn packed with traders and adventurers, that offered small private apartments.",
+      "x": 73.97537224787153,
+      "y": 13.692273450251987,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Rising Raven Inn"
+      ]
+    },
+    {
+      "id": "wiki_48",
+      "name": "Guldar yards",
+      "lore": "",
+      "x": 59.04219510987153,
+      "y": 13.761814719261954,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_49",
+      "name": "Ssemm yards",
+      "lore": "",
+      "x": 35.70476479188542,
+      "y": 13.066402029163307,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_51",
+      "name": "The Old Beard",
+      "lore": "A tavern that catered mostly to retired sailors.",
+      "x": 90.20516607830555,
+      "y": 62.49275668930609,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Old Beard"
+      ]
+    },
+    {
+      "id": "wiki_54",
+      "name": "Black Eye",
+      "lore": "A rowdy tavern and a [[festhall]] frequented by dockhands and prostitutes.",
+      "x": 63.246773206130094,
+      "y": 42.72710531399209,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Black Eye"
+      ]
+    },
+    {
+      "id": "wiki_56",
+      "name": "Thorsar yards",
+      "lore": "",
+      "x": 14.037659162575695,
+      "y": 52.076571480215556,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_60",
+      "name": "Malavhan yards",
+      "lore": "",
+      "x": 98.28775611118402,
+      "y": 33.02273763206465,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_80",
+      "name": "Rotten Root Tavern",
+      "lore": "The establishment best known for its bad food and drink and its sign depicting an evil-looking treant.",
+      "x": 31.527702597390974,
+      "y": 35.04537537195323,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Rotten Root Tavern"
+      ]
+    },
+    {
+      "id": "wiki_81",
+      "name": "Big Edna's",
+      "lore": "A tiny ramshackle bar that served fishermen and dock worker.",
+      "x": 23.913958502628383,
+      "y": 52.75737327892376,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Big Edna's"
+      ]
+    },
+    {
+      "id": "wiki_83",
+      "name": "The Track",
+      "lore": "A heavily-guarded underground racing track and a tavern.",
+      "x": 54.375,
+      "y": 40.608076000618404,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Track"
+      ]
+    },
+    {
+      "id": "wiki_84",
+      "name": "Blais House",
+      "lore": "[[Mintassan]]'s inn that catered to planar guests, sealed off between the [[Spellplague]] and the [[Second Sundering]].",
+      "x": 58.09078625997818,
+      "y": 26.501706139287034,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Blais House"
+      ]
+    },
+    {
+      "id": "wiki_89",
+      "name": "The Rosebud",
+      "lore": "An outdoor [[ale]] garden favored by merchants and young nobles.",
+      "x": 79.3039896955746,
+      "y": 50.49576465060442,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Rosebud"
+      ]
+    },
+    {
+      "id": "wiki_95",
+      "name": "Bent Mermaid Inn",
+      "lore": "A shady tavern known for a figurehead of a bent-over [[mermaid]] out the front of the bar.",
+      "x": 47.08325815294792,
+      "y": 50.96874145076828,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Bent Mermaid Inn"
+      ]
+    },
+    {
+      "id": "wiki_99",
+      "name": "Rising Raven Annex",
+      "lore": "An extension of the [[Rising Raven inn]].",
+      "x": 42.62282542152084,
+      "y": 13.86547917672958,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_100",
+      "name": "Rising Raven Warehouse",
+      "lore": "An extension of the [[Rising Raven]] inn. Also offered rooms.",
+      "x": 41.149606536975696,
+      "y": 13.226219396114066,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_102",
+      "name": "Beth yards",
+      "lore": "",
+      "x": 49.11388314114931,
+      "y": 1.1072274918499436,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_124",
+      "name": "River Thunn",
+      "lore": "The river that ran from the high lands of the [[Dragon Coast]] down into the harbor of [[Westgate]].",
+      "x": 87.68023398836112,
+      "y": 52.42268540517909,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/River Thunn"
+      ]
+    }
+  ],
+  "updatedAt": "2026-04-28T03:18:30.320Z"
+}
