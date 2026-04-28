@@ -12,6 +12,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/The Smilin' Boar"
       ]
+      "architect": "elven",
+      "locationType": "arcane_shop",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_58",
@@ -19,10 +23,14 @@
       "lore": "A famous lower-class tavern that provided drinks and food and was known for its shady associations, rumors of secret smuggling passages, and hidden vaults underneath.",
       "x": 29.462792342403727,
       "y": 56.51723036337473,
-      "category": "shops",
+      "category": "tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Blushing Mermaid"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_62",
@@ -30,10 +38,14 @@
       "lore": "A well-known tavern famed for its singing [[ghost]], [[Elfsong Cider|cider]], and a stuffed baby [[beholder]].",
       "x": 36.628122499503625,
       "y": 51.41068838966967,
-      "category": "shops",
+      "category": "tavern",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Elfsong Tavern"
       ]
+      "architect": "",
+      "locationType": "arcane_shop",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_63",
@@ -45,6 +57,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Low Lantern"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_67",
@@ -56,6 +72,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Jopalin's"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_68",
@@ -67,6 +87,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Garmult's House of Mastery"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_109",
@@ -78,6 +102,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Undercellar"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_113",
@@ -89,6 +117,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/House of the Lute"
       ]
+        "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_183",
@@ -100,6 +132,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/The House of the Lion"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_198",
@@ -111,6 +147,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/The Singing Lute"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_207",
@@ -122,6 +162,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Sharess' Caress"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     }
   ],
   "updatedAt": "2026-04-28T06:34:17.679Z"
