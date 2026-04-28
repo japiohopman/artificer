@@ -17,10 +17,17 @@
     "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
   ],
   "url": "public/assets/atlas/equipment/json/potters_tools.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-28T17:30:09.580Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/potters_tools.webp",
   "sprite_index": 13,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/potters_tools.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "focus"
+  ],
+  "last_updated": "28-4-2026"
 }
