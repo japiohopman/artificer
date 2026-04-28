@@ -1,0 +1,73 @@
+{
+  "locationName": "Suzail",
+  "category": "shop",
+  "subLocations": [
+    {
+      "id": "wiki_7",
+      "name": "East Gate",
+      "lore": "The '''East Gate''' or '''Eastgate''' that led to the road north of [[Suzail]] – [[Calantar's Way]].",
+      "x": 78.08578656284666,
+      "y": 72.57914607659883,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/East Gate (Suzail)"
+      ]
+    },
+    {
+      "id": "wiki_32",
+      "name": "Horngate",
+      "lore": "The northwestern gate of [[Suzail]] and the beginning of the [[Way of the Dragon]].",
+      "x": 22.278599281195,
+      "y": 62.285130395826364,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Horngate"
+      ]
+    },
+    {
+      "id": "wiki_64",
+      "name": "Field-Gates",
+      "lore": "[[Suzail]]'s western gates that led to a small trail between the [[Stormhorns]] and the [[Dragonmere]].",
+      "x": 6.458037798282,
+      "y": 18.782760827114807,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Field-Gates"
+      ]
+    },
+    {
+      "id": "wiki_138",
+      "name": "The Caskhouse",
+      "lore": "The guildhall of the [[Brewers and Cheesemakers Guild]], above the tavern in the same building.",
+      "x": 36.63335176696667,
+      "y": 41.47071308854727,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Caskhouse"
+      ]
+    },
+    {
+      "id": "wiki_139",
+      "name": "Hardshutters House",
+      "lore": "The guildhall of the the [[Roofers, Thatchers, and Glaziers Guild]].",
+      "x": 17.100009216815998,
+      "y": 24.238301177091873,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Hardshutters House"
+      ]
+    },
+    {
+      "id": "wiki_148",
+      "name": "Starsails House",
+      "lore": "The guildhall of the [[Seafarers Guild]].",
+      "x": 38.43331554679333,
+      "y": 24.45410575612873,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Starsails House"
+      ]
+    }
+  ],
+  "updatedAt": "2026-04-28T05:23:10.275Z"
+}
