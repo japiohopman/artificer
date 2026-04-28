@@ -1,0 +1,381 @@
+{
+  "locationName": "Suzail",
+  "category": "landmark",
+  "subLocations": [
+    {
+      "id": "wiki_42",
+      "name": "The Royal Smithy",
+      "lore": "A long-running smithy.",
+      "x": 75.28333333333333,
+      "y": 52.826195123273635,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Royal Smithy"
+      ]
+    },
+    {
+      "id": "wiki_46",
+      "name": "Dragoneye Dealing Coster yards",
+      "lore": "A prosperous merchant company based out of [[Cimbar]].",
+      "x": 85.28680495617333,
+      "y": 66.00425864178223,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Dragoneye Dealing Coster yards"
+      ]
+    },
+    {
+      "id": "wiki_47",
+      "name": "Thousandheads Trading Coster yards",
+      "lore": "A prosperous [[Amn]]ian merchant company.",
+      "x": 87.95393984966,
+      "y": 61.0232833123748,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thousandheads Trading Coster yards"
+      ]
+    },
+    {
+      "id": "wiki_48",
+      "name": "Seven Suns Trading Coster yards",
+      "lore": "The merchant company controlled by [[Bleth]] and [[Jhasso]] families.",
+      "x": 88.68740194536667,
+      "y": 54.24915686438164,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Seven Suns Trading Coster yards"
+      ]
+    },
+    {
+      "id": "wiki_49",
+      "name": "Six Coffers Trading Coster yards",
+      "lore": "Also known as [[Six Coffers Market Priakos]] trading company.",
+      "x": 91.22118009417666,
+      "y": 50.33078960524922,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Six Coffers Trading Coster yards"
+      ]
+    },
+    {
+      "id": "wiki_52",
+      "name": "The Market Hall",
+      "lore": "A hall used by greengrocers and farmers to sell their goods. Notice board advertised lodgings.",
+      "x": 93.48797552322,
+      "y": 41.96354807011171,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Market Hall (Suzail)"
+      ]
+    },
+    {
+      "id": "wiki_54",
+      "name": "Tavernant's Tellings",
+      "lore": "[[Suzail]]'s busy print shop started by the eccentric elderly [[Lady Tavernant]] in the late 14{{th}} century [[DR]].",
+      "x": 84.23331489969999,
+      "y": 35.12893946182089,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Tavernant's Tellings"
+      ]
+    },
+    {
+      "id": "wiki_57",
+      "name": "Royal Docks",
+      "lore": "Docks of the [[Purple Dragons]]' Citadel and homeport of the Imperial Navy.",
+      "x": 77.41723528323666,
+      "y": 11.682000876860782,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Royal Docks"
+      ]
+    },
+    {
+      "id": "wiki_60",
+      "name": "The Market Yard",
+      "lore": "A market of note.",
+      "x": 75.75473583524999,
+      "y": 18.92265291848373,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Market Yard (Suzail)"
+      ]
+    },
+    {
+      "id": "wiki_63",
+      "name": "Ring of Coins",
+      "lore": "A pawn shop that carried a variety of wares.",
+      "x": 43.516666666666666,
+      "y": 26.03125,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Ring of Coins"
+      ]
+    },
+    {
+      "id": "wiki_66",
+      "name": "The Market",
+      "lore": "[[Suzail]]'s sprawling market plaza.",
+      "x": 17.716666666666665,
+      "y": 18.79296875,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Market (Suzail)"
+      ]
+    },
+    {
+      "id": "wiki_68",
+      "name": "Rheuban's Stables",
+      "lore": "",
+      "x": 79.66736401368333,
+      "y": 69.16666765497558,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Rheuban's Stables"
+      ]
+    },
+    {
+      "id": "wiki_69",
+      "name": "Iravan's Rental Yards",
+      "lore": "Rental yards owned by the [[Iravan]] merchant family.",
+      "x": 10.674010658381667,
+      "y": 26.28928201531387,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Iravan"
+      ]
+    },
+    {
+      "id": "wiki_70",
+      "name": "Trueshield Trading Priakos yards",
+      "lore": "A merchant company based out of [[Telpir]].",
+      "x": 9.810890809859,
+      "y": 44.621162457313666,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Trueshield Trading Priakos"
+      ]
+    },
+    {
+      "id": "wiki_71",
+      "name": "Talahon's Rental Yards",
+      "lore": "Rental yards owned by the [[Talahon]] merchant family.",
+      "x": 9.479781553909334,
+      "y": 32.201207916040765,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Talahon"
+      ]
+    },
+    {
+      "id": "wiki_72",
+      "name": "Shipyards",
+      "lore": "[[Suzail]]'s public Shipyards.",
+      "x": 25,
+      "y": 18.0791015625,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Shipyards (Suzail)"
+      ]
+    },
+    {
+      "id": "wiki_77",
+      "name": "Zhaelun's Stockyard",
+      "lore": "One of [[Suzail]]'s stockyard.",
+      "x": 47.152488346523334,
+      "y": 29.545991338030174,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Zhaelun's Stockyard"
+      ]
+    },
+    {
+      "id": "wiki_84",
+      "name": "Zult's",
+      "lore": "[[Suzail]]'s licensed moneychanger stop.",
+      "x": 58.46667588348333,
+      "y": 36.589857034726364,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Zult's"
+      ]
+    },
+    {
+      "id": "wiki_93",
+      "name": "Skatterhawk warehouses & dock",
+      "lore": "A group of warehouses and a dock that belonged to the merchant [[Skatterhawk]] family, relatives of the crown.",
+      "x": 34.46666666666667,
+      "y": 11.986328125,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Skatterhawk warehouses"
+      ]
+    },
+    {
+      "id": "wiki_99",
+      "name": "Danain's",
+      "lore": "A hardware shop.",
+      "x": 36.21140359118333,
+      "y": 42.43464015678398,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Danain's"
+      ]
+    },
+    {
+      "id": "wiki_100",
+      "name": "Kriyeos Lathmil's stables",
+      "lore": "",
+      "x": 79.62024963069666,
+      "y": 63.907560969900196,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Kriyeos Lathmil's stables"
+      ]
+    },
+    {
+      "id": "wiki_101",
+      "name": "Jhassalan warehouse",
+      "lore": "[[Oil]]s and [[perfume]]s warehouse of the merchant [[Jhassalan]] family.",
+      "x": 78.33335637537333,
+      "y": 49.75489443663848,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Jhassalan warehouse"
+      ]
+    },
+    {
+      "id": "wiki_105",
+      "name": "Jharko's Coffers and Crates",
+      "lore": "A [[rat]]-infested secondhand coffer, chest, and other containers vendor.",
+      "x": 78.83333794174,
+      "y": 52.04591006163848,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Jharko's Coffers and Crates"
+      ]
+    },
+    {
+      "id": "wiki_109",
+      "name": "Faeri warehouse",
+      "lore": "[[Ivory]] trade warehouse that belonged to the [[Faeri]] merchant family.",
+      "x": 78.46668970870665,
+      "y": 58.18849150781758,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Faeri warehouse"
+      ]
+    },
+    {
+      "id": "wiki_110",
+      "name": "Ossper warehouse",
+      "lore": "A fine cloth trade warehouse of the [[Ossper]] merchant family.",
+      "x": 76.03758830723334,
+      "y": 60.85537735586621,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Ossper warehouse"
+      ]
+    },
+    {
+      "id": "wiki_118",
+      "name": "Fallas' Treasures of Thentia",
+      "lore": "A [[silk]] merchant.",
+      "x": 72.16666666666667,
+      "y": 46.949241998273635,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Fallas' Treasures of Thentia"
+      ]
+    },
+    {
+      "id": "wiki_119",
+      "name": "Stoutbold Marina",
+      "lore": "Boats bought, sold, outfitted, rented, & repaired. No job too big. No job too small.\n",
+      "x": 59.14928099282333,
+      "y": 12.214939474882755,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Stoutbold Marina"
+      ]
+    },
+    {
+      "id": "wiki_130",
+      "name": "Bolliver's Wharf",
+      "lore": "A puplic wharf.",
+      "x": 43.7437871104476,
+      "y": 7.370387177372625,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Bolliver's Wharf"
+      ]
+    },
+    {
+      "id": "wiki_140",
+      "name": "Flar Oldbottle's Nets",
+      "lore": "A two-story warehouse shop, once owned by investor [[Imprur Jusk]].",
+      "x": 29.739779573085666,
+      "y": 20.617120537776017,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Flar Oldbottle's Nets, Ropes, Cables, Hawsers, and Cords"
+      ]
+    },
+    {
+      "id": "wiki_141",
+      "name": "Jumble's Fresh Fish",
+      "lore": "More commonly known as '''Old Rak''', a foul-smelling [[fish]] vendor.",
+      "x": 29.3,
+      "y": 22.7939453125,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Jumble's Fresh Fish"
+      ]
+    },
+    {
+      "id": "wiki_142",
+      "name": "Red Sunsets Trading Company warehouse",
+      "lore": "Built in the 14{{th}} century [[DR]] small cargo rental warehouse.",
+      "x": 29.908038210932332,
+      "y": 17.960157949410526,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Red Sunsets Trading Company"
+      ]
+    },
+    {
+      "id": "wiki_144",
+      "name": "Murrock's Fine Glass",
+      "lore": "A sturdy stone building permanently blackened by a series of fires. Previously a [[Tireless Eyes]] trading coster HQ.",
+      "x": 39.83338746321333,
+      "y": 26.960987765077384,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Murrock's Fine Glass"
+      ]
+    },
+    {
+      "id": "wiki_153",
+      "name": "Tathlin's Discreet Errands",
+      "lore": "A message runners' business.",
+      "x": 24.513035081133665,
+      "y": 38.57462015098339,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Tathlin's Discreet Errands"
+      ]
+    },
+    {
+      "id": "wiki_154",
+      "name": "Culder Darshoon's Cobbler Shop",
+      "lore": "A humble cobbler's shop run by [[Culder Darshoon]] in the 14{{th}} century [[DR]].",
+      "x": 23.735237173648,
+      "y": 38.50418803488027,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Culder Darshoon's Cobbler Shop"
+      ]
+    }
+  ],
+  "updatedAt": "2026-04-28T05:23:13.800Z"
+}
