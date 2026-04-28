@@ -1,0 +1,549 @@
+{
+  "locationName": "Suzail",
+  "category": "point_of_interest",
+  "subLocations": [
+    {
+      "id": "wiki_1",
+      "name": "Castle Obarskyr",
+      "lore": "The royal palace of [[Suzail]] and the Dragon Throne of [[Cormyr]].",
+      "x": 55.71324869791667,
+      "y": 52.247836828232224,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Castle Obarskyr"
+      ]
+    },
+    {
+      "id": "wiki_2",
+      "name": "Cormyr's Royal Court",
+      "lore": "The center of governing.",
+      "x": 56.568568564016665,
+      "y": 46.01723046301074,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Cormyr's Royal Court"
+      ]
+    },
+    {
+      "id": "wiki_3",
+      "name": "Tower of the Royal Magician",
+      "lore": "Also known as '''Vangerdahast's Tower'''. Home of the [[Royal Magician]] of [[Cormyr]].",
+      "x": 66.53336098378,
+      "y": 50.96681348090879,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Vangerdahast's Tower"
+      ]
+    },
+    {
+      "id": "wiki_10",
+      "name": "Rowanmantle Castle",
+      "lore": "Home estate of the noble House [[Rowanmantle]].",
+      "x": 62.81753963067,
+      "y": 74.43990572697734,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Rowanmantle Castle"
+      ]
+    },
+    {
+      "id": "wiki_11",
+      "name": "Greatgaunt Estate",
+      "lore": "Estate of the noble House [[Greatgaunt]]. Formerly, the Estate of House [[Wyvernspur]].",
+      "x": 64.66657645020334,
+      "y": 70.98851582036289,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Greatgaunt Estate"
+      ]
+    },
+    {
+      "id": "wiki_12",
+      "name": "Cormaeril Compound",
+      "lore": "Estate of the noble House [[Cormaeril]].",
+      "x": 63.484323354039994,
+      "y": 66.80121469448848,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Cormaeril Compound"
+      ]
+    },
+    {
+      "id": "wiki_13",
+      "name": "Dracohorn Mansion",
+      "lore": "Estate of the noble House [[Dracohorn]].",
+      "x": 60.21708310952333,
+      "y": 66.40273666813535,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Dracohorn Mansion"
+      ]
+    },
+    {
+      "id": "wiki_14",
+      "name": "Huntcrown Estate",
+      "lore": "Estate of the noble House [[Huntcrown]].",
+      "x": 60.28376148186,
+      "y": 69.98903890530684,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Huntcrown Estate"
+      ]
+    },
+    {
+      "id": "wiki_15",
+      "name": "College of War Wizards",
+      "lore": "The base of [[Cormyr]]'s [[Wizards of War]].",
+      "x": 54.21174147825666,
+      "y": 73.81534701096406,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/College of War Wizards"
+      ]
+    },
+    {
+      "id": "wiki_16",
+      "name": "Emmarsk Mansion",
+      "lore": "Estate of the noble House [[Emmarsk]].",
+      "x": 57.74998333305,
+      "y": 68.99284383942734,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Emmarsk Mansion"
+      ]
+    },
+    {
+      "id": "wiki_17",
+      "name": "Huntsilver House",
+      "lore": "Estate of the noble House [[Huntsilver]].",
+      "x": 57.016521237339994,
+      "y": 65.47295460664472,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Huntsilver House"
+      ]
+    },
+    {
+      "id": "wiki_18",
+      "name": "Alsevir Estate",
+      "lore": "Estate of the noble House [[Alsevir]].",
+      "x": 52.333333333333336,
+      "y": 68.00013404020547,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Alsevir Estate"
+      ]
+    },
+    {
+      "id": "wiki_19",
+      "name": "Hawklin House",
+      "lore": "Estate of the noble House [[Hawklin]].",
+      "x": 48.60003608658667,
+      "y": 72.38294654020547,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Hawklin House"
+      ]
+    },
+    {
+      "id": "wiki_20",
+      "name": "Goldfeather Estate",
+      "lore": "Estate of the noble House [[Goldfeather]].",
+      "x": 48.09990978353667,
+      "y": 67.83413517023281,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Goldfeather Estate"
+      ]
+    },
+    {
+      "id": "wiki_21",
+      "name": "Dauntinghorn House",
+      "lore": "Estate of the noble House [[Dauntinghorn]].",
+      "x": 48.41501120585333,
+      "y": 64.34393353198087,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Dauntinghorn House"
+      ]
+    },
+    {
+      "id": "wiki_22",
+      "name": "Illance House",
+      "lore": "Estate of the noble House [[Illance]]. Formerly, the estate of the House [[Silversword]].",
+      "x": 44.93340550650333,
+      "y": 70.4572323103082,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Illance House"
+      ]
+    },
+    {
+      "id": "wiki_23",
+      "name": "Royal Gardens",
+      "lore": "Also known as the '''Floral Gardens''' around the royal palace of [[Castle Obarskyr]].",
+      "x": 52.615748663093335,
+      "y": 62.55078241339511,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Royal Gardens"
+      ]
+    },
+    {
+      "id": "wiki_24",
+      "name": "Truesilver Castle",
+      "lore": "Estate of the noble House [[Truesilver]].",
+      "x": 44.39989174024333,
+      "y": 61.02741077010273,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Truesilver Castle"
+      ]
+    },
+    {
+      "id": "wiki_25",
+      "name": "Marliir Mansion",
+      "lore": "Estate of the noble House [[Marliir]].",
+      "x": 42.69990978353667,
+      "y": 66.4064510603082,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Marliir Mansion"
+      ]
+    },
+    {
+      "id": "wiki_26",
+      "name": "Crownsilver Castle",
+      "lore": "Estate of the noble House [[Crownsilver]].",
+      "x": 40.30009021646333,
+      "y": 63.252070410181446,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Crownsilver Castle"
+      ]
+    },
+    {
+      "id": "wiki_27",
+      "name": "Lord Magister's Estate",
+      "lore": "Home of the Lord Magister of [[Suzail]]. Previously known as the '''[[Staghaven House]]''' in the 14{{th}} century [[DR]].",
+      "x": 41.03331529004,
+      "y": 69.89266190013008,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Lord Magister's Estate"
+      ]
+    },
+    {
+      "id": "wiki_28",
+      "name": "Herald's Estate",
+      "lore": "The home of the [[High Heralds|Herald]] of [[Suzail]].",
+      "x": 38.10613018665,
+      "y": 68.09979121959726,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Herald's Estate"
+      ]
+    },
+    {
+      "id": "wiki_29",
+      "name": "Monument to the Purple Dragon",
+      "lore": "Monument to black dragon Thauglor, whose defeat inspired the name of Cormyr's Purple Dragons.",
+      "x": 37.015420904319996,
+      "y": 65.20730258907598,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Monument to the Purple Dragon"
+      ]
+    },
+    {
+      "id": "wiki_30",
+      "name": "Skatterhawk Family House",
+      "lore": "Estate of the noble House [[Skatterhawk]].",
+      "x": 34.74745490823333,
+      "y": 65.93784563739004,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Skatterhawk family house"
+      ]
+    },
+    {
+      "id": "wiki_31",
+      "name": "Delcastle Manor",
+      "lore": "Estate of the noble House [[Delcastle]].",
+      "x": 35.48091700394333,
+      "y": 62.285130395826364,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Delcastle Manor"
+      ]
+    },
+    {
+      "id": "wiki_53",
+      "name": "House of Oghma",
+      "lore": "A school for scribes and scholars.",
+      "x": 74.20001843363335,
+      "y": 68.19922539236484,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/House of Oghma"
+      ]
+    },
+    {
+      "id": "wiki_55",
+      "name": " The Lockup",
+      "lore": "[[Suzail]]'s prison.",
+      "x": 85.21908477916666,
+      "y": 29.4792743859942,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/ The Lockup"
+      ]
+    },
+    {
+      "id": "wiki_56",
+      "name": "Citadel of the Purple Dragons",
+      "lore": "The center of [[Cormyr]]'s military order – the [[Purple Dragons]].",
+      "x": 85.55247664085333,
+      "y": 20.91199681941463,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Citadel of the Purple Dragons"
+      ]
+    },
+    {
+      "id": "wiki_58",
+      "name": "Harbor Tower",
+      "lore": "A part of the [[Citadel of the Purple Dragons]] and the [[Royal Docks]] under the command of the Royal Admiral of [[Cormyr]].",
+      "x": 74.26670178367667,
+      "y": 12.882819254392187,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Harbor Tower (Suzail)"
+      ]
+    },
+    {
+      "id": "wiki_65",
+      "name": "Fields of the Dead",
+      "lore": "[[Suzail]]'s burial garden.",
+      "x": 0.5579945479797667,
+      "y": 19.51415486931195,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Fields of the Dead (Suzail)"
+      ]
+    },
+    {
+      "id": "wiki_90",
+      "name": "Courtyard of Zathchos",
+      "lore": "A courtyard named after the merchant [[Zathchos]] family.",
+      "x": 76.28778823248999,
+      "y": 44.22350171240527,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Courtyard of Zathchos"
+      ]
+    },
+    {
+      "id": "wiki_97",
+      "name": "Tower of Argul",
+      "lore": "The tower of the wizard [[Argûl Marammas]], a magic [[scroll]]-scriber.",
+      "x": 11.1,
+      "y": 56.013695123273635,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Tower of Argul"
+      ]
+    },
+    {
+      "id": "wiki_102",
+      "name": "Blackgorgons",
+      "lore": "The tower residence of [[wizard]] [[Baskor Tranth]] ''circa'' late 14{{th}} century [[DR]]. The wizard was willing to trade in [[spell]] [[scroll]]s.",
+      "x": 77.00003686726333,
+      "y": 46.91601894618242,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Blackgorgons"
+      ]
+    },
+    {
+      "id": "wiki_108",
+      "name": "Talarkgates",
+      "lore": "A decaying but grand manor. Once home to [[Umbran Daerith]], a merchant, property investor, and moneylender.",
+      "x": 78.34745742456333,
+      "y": 53.905857612600585,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Talarkgates"
+      ]
+    },
+    {
+      "id": "wiki_111",
+      "name": "Blackshield Apartments",
+      "lore": "A large apartment complex that housed clerks of the [[Royal Court]] as well as visiting dignitaries of lower rank.",
+      "x": 69.62648682447335,
+      "y": 44.326737558187894,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Blackshield Apartments"
+      ]
+    },
+    {
+      "id": "wiki_120",
+      "name": "Thentias mansion",
+      "lore": "The mansion that once belonged to [[Thentias]], a merchant and a landlord mogul of [[Suzail]].",
+      "x": 42.33211293249,
+      "y": 33.33899866604394,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thentias mansion"
+      ]
+    },
+    {
+      "id": "wiki_121",
+      "name": "Bleth Estate",
+      "lore": "Estate of the noble House [[Bleth]].",
+      "x": 55.50867031713666,
+      "y": 70.88774599929512,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Bleth Estate"
+      ]
+    },
+    {
+      "id": "wiki_122",
+      "name": "Thistleflame Manor",
+      "lore": "Also known as '''Thistleflame Keep''', the gated home of the noble [[Thistle (family)|Thistle]] family of [[Suzail]].",
+      "x": 68.37100475165333,
+      "y": 66.97051374002618,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thistleflame Manor"
+      ]
+    },
+    {
+      "id": "wiki_123",
+      "name": "Hall of Honor",
+      "lore": "A museum that held relics, [[weapon]]s, and [[armor]] used by [[Cormyr|Cormyte]] heroes of old.",
+      "x": 50.34609406230666,
+      "y": 45.7824395208502,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Hall of Honor"
+      ]
+    },
+    {
+      "id": "wiki_135",
+      "name": "The Refuge",
+      "lore": "The magical refuge monitored by the [[Royal Magician]] and created by [[Magister]] [[Maldiglas Turntower]].",
+      "x": 67.31659163805334,
+      "y": 52.3562993928914,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Refuge (Suzail)"
+      ]
+    },
+    {
+      "id": "wiki_136",
+      "name": "Plum orchard",
+      "lore": "200 acres of [[plum]] [[tree]]s.",
+      "x": 99.91097048137667,
+      "y": 37.61767777512285,
+      "category": "point_of_interest",
+      "grounding": []
+    },
+    {
+      "id": "wiki_137",
+      "name": "High Oronel",
+      "lore": "Stone mansion estate of the noble House [[Haldoneir]]. Previously known as the '''Stormserpent Towers''' in the 14{{th}} century [[DR]].",
+      "x": 46.24069261538,
+      "y": 57.938513740510736,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/High Oronel"
+      ]
+    },
+    {
+      "id": "wiki_143",
+      "name": "Jusk's Stroll",
+      "lore": "A hidden magical two-way ''[[gate]]-link'' named after [[Imprur Jusk]], a rich [[hin]] investor and landlord.",
+      "x": 29.722068070421003,
+      "y": 19.416441101348866,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Jusk's Stroll"
+      ]
+    },
+    {
+      "id": "wiki_146",
+      "name": "Thornposts",
+      "lore": "A grand house. Once home of [[Lorimel Rustellur]], the best mapmaker in [[Suzail]].",
+      "x": 51.14739050582667,
+      "y": 26.99990155500031,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thornposts"
+      ]
+    },
+    {
+      "id": "wiki_155",
+      "name": "Rental lodgings",
+      "lore": "Rental lodgings, temporary home of [[Amarune Whitewave]] in the late 14{{th}} century [[DR]].",
+      "x": 24.800036867264335,
+      "y": 37.718756642364845,
+      "category": "point_of_interest",
+      "grounding": []
+    },
+    {
+      "id": "wiki_156",
+      "name": "Rental lodgings",
+      "lore": "Expensive rental lodgings, temporary home of Lord [[Barandror Murandrake]] in the late 14{{th}} century [[DR]].",
+      "x": 26.74042795914433,
+      "y": 52.16846358620136,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Barandror Murandrake"
+      ]
+    },
+    {
+      "id": "wiki_161",
+      "name": "House with access to the Palace cellars",
+      "lore": "",
+      "x": 51.873066896249995,
+      "y": 58.82350670189453,
+      "category": "point_of_interest",
+      "grounding": []
+    },
+    {
+      "id": "wiki_162",
+      "name": "Royal Stables",
+      "lore": "",
+      "x": 51.05310960167,
+      "y": 56.34759041324629,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Royal Stables"
+      ]
+    },
+    {
+      "id": "wiki_163",
+      "name": "Haunted Wing of the Royal Palace",
+      "lore": "",
+      "x": 59.50661621093666,
+      "y": 56.049541950225,
+      "category": "point_of_interest",
+      "grounding": []
+    },
+    {
+      "id": "wiki_166",
+      "name": "Mantlargard",
+      "lore": "The manse home of the [[Mantlepard]] family of [[Suzail]], with the smaller building to the east being the mansion's stables.",
+      "x": 42.567828227430155,
+      "y": 56.91104734206103,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Mantlargard"
+      ]
+    }
+  ],
+  "updatedAt": "2026-04-28T05:23:07.713Z"
+}
