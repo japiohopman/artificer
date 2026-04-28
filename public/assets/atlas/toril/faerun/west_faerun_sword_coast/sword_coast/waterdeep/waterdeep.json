@@ -17,6 +17,18 @@
   "grounding": [],
   "wikiMaxX": 3000,
   "wikiMaxY": 1994,
+  "spatialReference": {
+    "p1": {
+      "x": 43.25,
+      "y": 9.159920678307302
+    },
+    "p2": {
+      "x": 6.75,
+      "y": 9.159920678307302
+    },
+    "realLength": 5000,
+    "unit": "ml"
+  },
   "overlayMapUrl": "https://preview.redd.it/b9rw0iftc8o61.jpg?auto=webp&s=b6bb4a8e7d822629987d17deba7d35989283bd02",
   "subLocations": [
     {
@@ -2364,5 +2376,5 @@
   "subLocationCount": 213,
   "subPaths": [],
   "image": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/baldurs_gate/baldurs_gate.webp",
-  "updatedAt": "2026-04-28T01:10:39.110Z"
+  "updatedAt": "2026-04-28T06:22:33.532Z"
 }
