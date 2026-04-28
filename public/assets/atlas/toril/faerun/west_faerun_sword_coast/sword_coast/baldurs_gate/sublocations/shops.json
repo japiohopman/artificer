@@ -257,6 +257,39 @@
       "npcs": [],
       "ambientSound": ""
     }
+        {
+      "id": "wiki_49",
+      "name": "Helm and Cloak",
+      "lore": "A high-end inn, rooming house, and [[festhall]], popular both with travelers and with local residents, who enjoyed its resplendent dining room. It was also home to the majority of the [[Knights of the Unicorn]], who rented most of the upper floor. ",
+      "x": 16.599982688321425,
+      "y": 51.73647835839846,
+      "category": "inn",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Helm and Cloak"
+      ]
+    },
+    {
+      "id": "wiki_53",
+      "name": "Three Old Kegs",
+      "lore": "A well-known inn widely regarded as one of the best establishments in all of [[Faerûn]], and was known for its comfortable furnishings and generally somnific atmosphere.",
+      "x": 17.22984350857495,
+      "y": 57.20861319623841,
+      "category": "inn",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Three Old Kegs"
+      ]
+    },
+    {
+      "id": "wiki_65",
+      "name": "Blade and Stars",
+      "lore": "A quiet inn known for its high-quality foodstuffs, and a legend of a [[yuan-ti]] being trapped within the inn's walls, imprisoned while fighting a [[wizard]].",
+      "x": 38.28332294632619,
+      "y": 51.36031201271489,
+      "category": "inn",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Blade and Stars"
+      ]
+    },
   ],
   "updatedAt": "2026-04-28T06:34:17.679Z"
 }
