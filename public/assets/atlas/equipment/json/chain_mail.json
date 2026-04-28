@@ -23,7 +23,7 @@
     "unit": "gp"
   },
   "url": "public/assets/atlas/equipment/json/charismain_mail.json",
-  "updated_at": "2026-04-25T19:40:24.125Z",
+  "updated_at": "2026-04-28T13:19:17.476Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/charismain_mail.webp",
@@ -31,6 +31,9 @@
   "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
   "imageUrl": "/assets/atlas/equipment/images/chain_mail.webp",
   "_type": "equipment",
-  "last_updated": "25-4-2026",
-  "background_type": "land_forest"
+  "last_updated": "28-4-2026",
+  "background_type": "land_forest",
+  "slot": [
+    "chest"
+  ]
 }
