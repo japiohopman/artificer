@@ -1,0 +1,106 @@
+{
+  "locationName": "baldurs_gate",
+  "category": "government",
+  "subLocations": [
+    {
+      "id": "wiki_35",
+      "name": "Citadel Gate",
+      "lore": "The city gate that separated [[Watch Citadel]] and its surrounding district from the rest of the [[Upper City]].",
+      "x": 13.033333333333333,
+      "y": 53.35401072707546,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Citadel Gate"
+      ]
+    },
+    {
+      "id": "wiki_36",
+      "name": "Gond Gate",
+      "lore": "One of the city's landmark \"[[patriar]] gates.\"",
+      "x": 20.08184135165748,
+      "y": 48.91078446311964,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Gond Gate"
+      ]
+    },
+    {
+      "id": "wiki_37",
+      "name": "Manor Gate",
+      "lore": "A landmark gate in the old wall that separated the [[Upper City]] district of [[Manorborn]] from the [[Lower City]] district of [[Bloomridge]].",
+      "x": 16.334140347530646,
+      "y": 44.46904245017766,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Manor Gate"
+      ]
+    },
+    {
+      "id": "wiki_38",
+      "name": "Sea Gate",
+      "lore": "A landmark and one of the city's four, generally lesser well-known, \"[[patriar]] gates\" that connected the poor [[Lower City]] to the [[Upper City]]. ",
+      "x": 12.845781957515145,
+      "y": 38.88400877866185,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sea Gate (Baldur's Gate)"
+      ]
+    },
+    {
+      "id": "wiki_39",
+      "name": "Baldur's Gate",
+      "lore": "One of the oldest landmarks and the eponymous city gate that gave the famed port metropolis of the [[Sword Coast]] its name.",
+      "x": 21.84956447482618,
+      "y": 53.16613768666877,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate (gate)"
+      ]
+    },
+    {
+      "id": "wiki_40",
+      "name": "Heap Gate",
+      "lore": "One of the city's four, smaller \"[[patriar]] gates\" that connected the poorer [[Lower City]] to the affluent [[Upper City]].",
+      "x": 27.766666666666666,
+      "y": 58.82668822121952,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Heap Gate"
+      ]
+    },
+    {
+      "id": "wiki_41",
+      "name": "Black Dragon Gate",
+      "lore": "Also known as the '''Landward Gate''', the grand northward gate that allowed a passageway through the northern wall of [[Baldur's Gate]], decorated with a large stone sculpture of a [[black dragon]] head that loomed over the inner side of the wall.",
+      "x": 16.366579888094645,
+      "y": 60.21843916735096,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Black Dragon Gate"
+      ]
+    },
+    {
+      "id": "wiki_42",
+      "name": "Basilisk Gate",
+      "lore": "The landmark gate lined with statues of prominent deceased [[patriar]], including one of [[Entar Silvershield]] placed above the gate in the 15{{th}} century [[DR]].",
+      "x": 41.86074103217211,
+      "y": 53.11289141602706,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Basilisk Gate"
+      ]
+    },
+    {
+      "id": "wiki_43",
+      "name": "Cliffgate",
+      "lore": "A landmark gate that served as a passageway connecting the [[Lower City]] to the isolated district of [[Tumbledown]] in the [[Outer City]].",
+      "x": 46.00908122920469,
+      "y": 42.10206630520404,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Cliffgate"
+      ]
+    }
+  ],
+  "updatedAt": "2026-04-28T01:10:46.751Z"
+}
