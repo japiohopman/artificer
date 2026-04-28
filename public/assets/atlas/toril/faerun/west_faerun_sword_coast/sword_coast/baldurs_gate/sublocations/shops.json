@@ -167,6 +167,96 @@
       "npcs": [],
       "ambientSound": ""
     }
+    {
+      "id": "wiki_203",
+      "name": "The Glitter Gala",
+      "lore": "A shop that traded in [[gemstone]]s and jewelry from [[Amn]], [[Cormyr]], and [[Damara]] and shared the building with [[Chromatic Scale]] musical instrument shop.{{approx}}",
+      "x": 17.01666125316197,
+      "y": 43.48984923643681,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Glitter Gala"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
+      "id": "wiki_204",
+      "name": "Chromatic Scale",
+      "lore": "A shop that dealt in quality musical instruments, run by [[Thomas C. Quirkilious]] in the late 15{{th}} century [[DR]].{{approx}}",
+      "x": 16.891660350911188,
+      "y": 43.64970097842629,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Chromatic Scale"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
+      "id": "wiki_206",
+      "name": "Facemaker's Boutique",
+      "lore": "An upscale clothier, barber, makeup artist, stylist, and disguises shop.{{approx}}",
+      "x": 16.766669679622378,
+      "y": 44.48657051906475,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Facemaker's Boutique"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
+      "id": "wiki_208",
+      "name": "Crimson Draughts",
+      "lore": "[[Araj Oblodra]]'s [[alchemist]] shop located on [[Stormshore Street]] across from [[Beehive Goods and Wares]] general store in the late 15{{th}} century DR.{{approx}}",
+      "x": 31.041666666666668,
+      "y": 55.2626629889669,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Crimson Draughts"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
+      "id": "wiki_209",
+      "name": "Beehive Goods and Wares",
+      "lore": "A general store run by [[Oliver Tefoco]] in the late 15{{th}} century [[DR]] and offered food, [[potion]]s, [[wine]]s, and some general miscellany.{{approx}}",
+      "x": 31.175,
+      "y": 54.88653460381144,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Beehive Goods and Wares"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
+      "id": "wiki_211",
+      "name": "Sword Coast Couriers",
+      "lore": "A courier, shipping, and postal agency that operated in the environs and within the city of [[Baldur's Gate]], located in the [[Rivington]] neighborhood in the late 15{{th}} century [[DR]].",
+      "x": 90.93333333333334,
+      "y": 18.449059331347524,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sword Coast Couriers"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    }
   ],
   "updatedAt": "2026-04-28T06:34:17.679Z"
 }
