@@ -1,0 +1,672 @@
+{
+  "locationName": "baldurs_gate",
+  "category": "point_of_interest",
+  "subLocations": [
+    {
+      "id": "wiki_1",
+      "name": "The Wide",
+      "lore": "A district in the [[Upper City]] of [[Baldur's Gate]] that served as a vast open-air marketplace and plaza.",
+      "x": 21.566666666666666,
+      "y": 58.97693079237713,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/The Wide"
+      ]
+    },
+    {
+      "id": "wiki_2",
+      "name": "Citadel Streets",
+      "lore": "A small and rather segregated district located on the north side of the [[Upper City]].",
+      "x": 12.4,
+      "y": 52.88365095285858,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Citadel Streets"
+      ]
+    },
+    {
+      "id": "wiki_3",
+      "name": "Manorborn",
+      "lore": "One of the four districts that composed the [[Upper City]], home to the richest members of the Baldurian [[patriar]], nearly every member of the [[Parliament of Peers]] resided in the district.",
+      "x": 12.583719457293403,
+      "y": 41.67464546994463,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Manorborn"
+      ]
+    },
+    {
+      "id": "wiki_4",
+      "name": "Temples District",
+      "lore": "The largest and perhaps the oldest and most important region in the entirety of the [[Upper City]].",
+      "x": 16.633333333333333,
+      "y": 49.19759277833501,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Temples District"
+      ]
+    },
+    {
+      "id": "wiki_5",
+      "name": "Seatower",
+      "lore": "One of the largest districts of [[Baldur's Gate]], located on the northern shore of the [[River Chionthar]] and housed the western docks of [[Gray Harbor]].",
+      "x": 16.166666666666668,
+      "y": 35.3184553660983,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Seatower"
+      ]
+    },
+    {
+      "id": "wiki_6",
+      "name": "Bloomridge",
+      "lore": "A wealthy district within the [[Lower City]], south of the [[Old Wall (Baldur's Gate)|Old Wall]], into which it was partially built via great feats of engineering, both structural and [[arcane]].",
+      "x": 17.901600712767653,
+      "y": 43.39184300226944,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Bloomridge"
+      ]
+    },
+    {
+      "id": "wiki_7",
+      "name": "The Steeps",
+      "lore": "A district in the [[Lower City]] between the [[Old Wall (Baldur's Gate)|Old Wall]] and the eastern side of [[Gray Harbor]].",
+      "x": 22.099903054599984,
+      "y": 49.96870341856384,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/The Steeps"
+      ]
+    },
+    {
+      "id": "wiki_8",
+      "name": "Heapside",
+      "lore": "A large district in the [[Lower City]], that gained its name following the [[Tax Revolts]] of the 15{{th}} century [[DR]].",
+      "x": 33.13990429200178,
+      "y": 55.74472996472041,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Heapside"
+      ]
+    },
+    {
+      "id": "wiki_9",
+      "name": "Eastway",
+      "lore": "One of the larger districts of [[Baldur's Gate]].",
+      "x": 34.83291183741209,
+      "y": 50.795825240888874,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Eastway"
+      ]
+    },
+    {
+      "id": "wiki_10",
+      "name": "Brampton",
+      "lore": "A district in south-eastern Baldur's Gate, noteworthy in that passage through it, was required to reach the [[Outer City]] district of [[Tumbledown]].",
+      "x": 44.38408803016438,
+      "y": 47.37452790643819,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Brampton"
+      ]
+    },
+    {
+      "id": "wiki_11",
+      "name": "Blackgate",
+      "lore": "The region that served as a waiting area for merchants and caravaneers moving their goods along the [[Trade Way]]. They were forced to stable their pack animals in Blackgate, while their products were transferred to another conveyance while moving through the city.",
+      "x": 13.246467034228,
+      "y": 63.88429620399072,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Blackgate"
+      ]
+    },
+    {
+      "id": "wiki_12",
+      "name": "Stonyeyes",
+      "lore": "The neighborhood that was home to a large community of [[half-orc]]s, many of whom worked as porters, helped in transporting goods to and from caravans coming to [[Baldur's Gate]], as their pack animals were not allowed within the city walls.",
+      "x": 44.6892073287753,
+      "y": 57.12953563360761,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Stonyeyes"
+      ]
+    },
+    {
+      "id": "wiki_13",
+      "name": "Little Calimshan",
+      "lore": "A rowdy and chaotic walled district in the [[Outer City]], distinct in its design and atmosphere that evoked its namesake realm of [[Calimshan]].",
+      "x": 56.99999653766429,
+      "y": 65.42739973594502,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Little Calimshan"
+      ]
+    },
+    {
+      "id": "wiki_14",
+      "name": "Norchapel",
+      "lore": "An [[Outer City]] neighborhood, home to many laborers and criminal gangs.",
+      "x": 54.96576712423334,
+      "y": 61.33105205928536,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Norchapel"
+      ]
+    },
+    {
+      "id": "wiki_15",
+      "name": "Whitkeep",
+      "lore": "A district in the [[Outer City]],  home to a sizable community of [[gnome]]s, many of whom worked as [[tin]]smiths within the city.",
+      "x": 67.26942511688,
+      "y": 63.139599995119106,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Whitkeep"
+      ]
+    },
+    {
+      "id": "wiki_16",
+      "name": "Sow's Foot",
+      "lore": "A district in the [[Outer City]] – the easternmost neighborhood located outside of the city walls, nestled in between [[Twin Songs]] and [[Whitkeep]].",
+      "x": 83.20289791961666,
+      "y": 49.52229789002258,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Sow's Foot"
+      ]
+    },
+    {
+      "id": "wiki_17",
+      "name": "Twin Songs",
+      "lore": "A district of the [[Outer City]] located on the northern side of the [[Wyrm's Crossing]] bridge that was an expansive collection of temples and shrines dedicated to nearly every deity including dark and malevolent deities.",
+      "x": 81.03449673774554,
+      "y": 35.21354584669296,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Twin Songs"
+      ]
+    },
+    {
+      "id": "wiki_18",
+      "name": "Tumbledown",
+      "lore": "A lone and perpetually foggy district located within the [[Outer City]], the location of the [[Cliffside Cemetery]].",
+      "x": 51.59504277999805,
+      "y": 43.03382235714038,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Tumbledown"
+      ]
+    },
+    {
+      "id": "wiki_19",
+      "name": "Rivington",
+      "lore": "The southernmost district of [[Baldur's Gate]] and the only region of the [[Outer City]] located on the southern shore of the [[River Chionthar]].",
+      "x": 88.76547126495001,
+      "y": 14.787539004753762,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Baldur's Gate/Rivington"
+      ]
+    },
+    {
+      "id": "wiki_20",
+      "name": "Wyrm's Crossing",
+      "lore": "This district was comprised of two massively-tall stone bridges that spanned the length of the [[River Chionthar]].",
+      "x": 88.34120719624,
+      "y": 24.46858972009604,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Wyrm's Crossing"
+      ]
+    },
+    {
+      "id": "wiki_30",
+      "name": "Hissing Stones",
+      "lore": "A bathhouse and a local landmark with a sterling reputation as the city's safest and most confidential meeting area among the various Baldurian power groups.",
+      "x": 11.950094809088402,
+      "y": 35.639207327138024,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Hissing Stones"
+      ]
+    },
+    {
+      "id": "wiki_31",
+      "name": "Fury of the Fist",
+      "lore": "A statue located outside the [[Seatower of Balduran]], west of the drawbridge, vandalized by [[thieves]] in [[1482 DR]].",
+      "x": 20.08330909698333,
+      "y": 35.95747503531749,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Fury of the Fist"
+      ]
+    },
+    {
+      "id": "wiki_54",
+      "name": "Distant Shores",
+      "lore": "A merchant of imported goods and products native to [[Chult]].",
+      "x": 21.932100226284874,
+      "y": 61.03848612383364,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Distant Shores"
+      ]
+    },
+    {
+      "id": "wiki_55",
+      "name": "Harbreeze Bakery",
+      "lore": "A bakery offered such favorite delicacies as [[cinnamon]] [[cookie]]s and full loaves of [[sugarbread]] highlighted by the flavors of foreign [[tea]]s and [[spice]]s.",
+      "x": 22.780608777780227,
+      "y": 61.570492513754516,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Harbreeze Bakery"
+      ]
+    },
+    {
+      "id": "wiki_56",
+      "name": "Felogyr's Fireworks",
+      "lore": "A four-story stone shop on [[Bindle Street]] that traded in [[fireworks]], [[torch]]es, [[candle]] wicks, and other lesser alchemical items, and as of the late 15{{th}} century [[DR]], the sole producer of [[smokepowder]] within [[Baldur's Gate]].",
+      "x": 27.08217013351627,
+      "y": 56.91610765561789,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Felogyr's Fireworks"
+      ]
+    },
+    {
+      "id": "wiki_57",
+      "name": "Beloved Ranger",
+      "lore": "A large statue that portrayed a larger-than-life depiction of the [[Rashemaar]] [[ranger]] [[Minsc]] and his rodent companion, both were revealed to be [[petrified]] heroes, released in the 1480s [[DR]].",
+      "x": 22.666641872788947,
+      "y": 58.30003256094566,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Beloved Ranger"
+      ]
+    },
+    {
+      "id": "wiki_60",
+      "name": "Counting House",
+      "lore": "The center of trade and business in [[Baldur's Gate]], serving as both a bank and establishment that facilitated the exchange of various currencies.",
+      "x": 25.41665627965952,
+      "y": 48.57697145269646,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Counting House"
+      ]
+    },
+    {
+      "id": "wiki_61",
+      "name": "Sorcerous Sundries",
+      "lore": "A magic shop on [[Stormshore Street]] in the [[Heapside]] district.",
+      "x": 36.168524214874594,
+      "y": 56.75647621228011,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sorcerous Sundries"
+      ]
+    },
+    {
+      "id": "wiki_64",
+      "name": "Eastway Expeditions",
+      "lore": "A shop that specialized in selling equipment to those who sought exploration or adventure, particularly those ''en route'' to the [[Chultan Peninsula]].",
+      "x": 39.300051935035725,
+      "y": 49.46092060847194,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Eastway Expeditions"
+      ]
+    },
+    {
+      "id": "wiki_66",
+      "name": "Candulhallow's Funeral Arrangements",
+      "lore": "A city-sponsored business that specialized in the transportation and occasionally sale of corpses to cemeteries or temples.",
+      "x": 39.4329685782413,
+      "y": 55.18736202038017,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Candulhallow's Funeral Arrangements"
+      ]
+    },
+    {
+      "id": "wiki_70",
+      "name": "Insight Park",
+      "lore": "A public park that was magically created during the mid–15{{th}} century [[DR]].",
+      "x": 44.28841555646042,
+      "y": 37.15499472195573,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Insight Park"
+      ]
+    },
+    {
+      "id": "wiki_71",
+      "name": "Danthelon's Dancing Axe",
+      "lore": "A general store that sold good quality secondhand wares, from pots and pans to [[rope]], [[armor]], and [[weapons]].",
+      "x": 86.4555550808224,
+      "y": 30.02720157239244,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Danthelon's Dancing Axe"
+      ]
+    },
+    {
+      "id": "wiki_74",
+      "name": "Hamhocks Slaughterhouse",
+      "lore": "A massive compound composed of a number of animal pens, knackeries, and butcheries, its foul stench drove away the animals of the herders and wranglers.",
+      "x": 81,
+      "y": 52.88370789365073,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Hamhocks Slaughterhouse"
+      ]
+    },
+    {
+      "id": "wiki_76",
+      "name": "Garynmor Stables and Menagerie",
+      "lore": "A business that specialized in the handling and care of mundane beasts of burden, as well as the exhibition of all manner of exotic and fantastical creatures.",
+      "x": 46.56666666666666,
+      "y": 55.178034102306924,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Garynmor Stables and Menagerie"
+      ]
+    },
+    {
+      "id": "wiki_77",
+      "name": "The Oasis",
+      "lore": "A theater known for the rich production values of its show and the lavish spectacles it was capable of exhibiting in the late 15{{th}} century [[DR]].",
+      "x": 55.833305634647616,
+      "y": 66.51846624698868,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Oasis (theater)"
+      ]
+    },
+    {
+      "id": "wiki_78",
+      "name": "Balduran Looks Out to Sea",
+      "lore": "A statue that depicted the famous explorer [[Balduran]], after whom the city was named.",
+      "x": 53.76368985434339,
+      "y": 33.431701572621144,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Balduran Looks Out to Sea"
+      ]
+    },
+    {
+      "id": "wiki_79",
+      "name": "Cliffside Cemetery",
+      "lore": "The largest graveyard in [[Baldur's Gate]], a sprawling plot of land turned cemetery around the  [[Szarr]] family tombs and the [[Szarr Mansion]].",
+      "x": 52.20805067760675,
+      "y": 35.718888838072715,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Cliffside Cemetery"
+      ]
+    },
+    {
+      "id": "wiki_81",
+      "name": "River Chionthar",
+      "lore": "A large river that ran through the [[Western Heartlands]].",
+      "x": 48.93333333333333,
+      "y": 25.275827482447344,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/River Chionthar"
+      ]
+    },
+    {
+      "id": "wiki_98",
+      "name": "Gray Harbor",
+      "lore": "The harbor of [[Baldur's Gate]] on [[River Chionthar]], one of the busiest and deepest natural harbors in [[Faerûn]].",
+      "x": 28.23714817435131,
+      "y": 40.26708312907787,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Gray Harbor"
+      ]
+    },
+    {
+      "id": "wiki_99",
+      "name": "Calim Jewel Emporium",
+      "lore": "Shop and home to the most well-regarded [[Baldurian]] jeweler of the late 15{{th}} century [[DR]] and a forum for local agents of the criminal organization known as [[the Guild]].",
+      "x": 58.133097894504736,
+      "y": 66.83828925595515,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Calim Jewel Emporium"
+      ]
+    },
+    {
+      "id": "wiki_104",
+      "name": "Seaserpent Tamed by Umberlee",
+      "lore": "A statue dedicated to [[Umberlee]], the Bitch Queen, that rose out of the [[Gray Harbor]] waters.",
+      "x": 24.736962021473634,
+      "y": 47.7005591761879,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Seaserpent Tamed by Umberlee"
+      ]
+    },
+    {
+      "id": "wiki_105",
+      "name": "Six Wise Machinists",
+      "lore": "A statue that was vandalized in [[1482 DR]].",
+      "x": 18.466680516009525,
+      "y": 52.20660087931469,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Six Wise Machinists"
+      ]
+    },
+    {
+      "id": "wiki_106",
+      "name": "Faithful Shopkeeper Meets the Honest Trader",
+      "lore": "A statue vandalized by thieves in [[1482 DR]].",
+      "x": 23.71165357438024,
+      "y": 49.814883957081776,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Faithful Shopkeeper Meets the Honest Trader"
+      ]
+    },
+    {
+      "id": "wiki_107",
+      "name": "Garynmor Stables",
+      "lore": "",
+      "x": 5.468292441175967,
+      "y": 65.29394000543344,
+      "category": "point_of_interest",
+      "grounding": []
+    },
+    {
+      "id": "wiki_108",
+      "name": "Garynmor Stables",
+      "lore": "",
+      "x": 6.764645080387054,
+      "y": 63.83111703871562,
+      "category": "point_of_interest",
+      "grounding": []
+    },
+    {
+      "id": "wiki_110",
+      "name": "The Queen's Favor",
+      "lore": "A statue landmark of note.",
+      "x": 23.275008737847678,
+      "y": 45.85944386994822,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Queen's Favor"
+      ]
+    },
+    {
+      "id": "wiki_119",
+      "name": "Candlekeep Chandlery",
+      "lore": "A shop that sold beautifying products and [[candle]]s, both mundane and magical in nature.",
+      "x": 13.716362447789036,
+      "y": 33.19345336168625,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Candlekeep Chandlery"
+      ]
+    },
+    {
+      "id": "wiki_186",
+      "name": "Lucky Aello's Discount Store",
+      "lore": "A store that sold heavily marked-down goods that ranged from [[potion]]s of reliable quality to ''[[curse]]d'' [[weapon]]s and [[scroll]]s of magic protection.{{approx}}",
+      "x": 40.94720764554042,
+      "y": 53.89002665837571,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Lucky Aello's Discount Store"
+      ]
+    },
+    {
+      "id": "wiki_187",
+      "name": "Maltz's Weapon Shop",
+      "lore": "A merchant who dealt in mandate weapons, ran by [[Maltz]] in the 14{{th}} century [[DR]], located just to the northwest of the [[Elfsong Tavern]].{{approx}}",
+      "x": 35.862160971648315,
+      "y": 51.251063656868595,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Maltz's Weapon Shop"
+      ]
+    },
+    {
+      "id": "wiki_188",
+      "name": "Well-Adjusted Al's General Store",
+      "lore": "The general store located to the west of the [[Low Lantern]]; it traded in mundane goods and [[weapon]]s and run by eccentric [[Well-Adjusted Al]] in the 14{{th}} century [[DR]].{{approx}}",
+      "x": 37.299882707590385,
+      "y": 43.27219583627345,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Well-Adjusted Al's General Store"
+      ]
+    },
+    {
+      "id": "wiki_190",
+      "name": "Alabaster Stonecrafts",
+      "lore": "An open-air stonemason's workshop run by twin [[dwarf|dwarven]] siblings in the late 15{{th}} century [[DR]].{{approx}}",
+      "x": 52.32590798639586,
+      "y": 40.70564012390733,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Alabaster Stonecrafts"
+      ]
+    },
+    {
+      "id": "wiki_195",
+      "name": "Statue of Balduran",
+      "lore": "A monolithic statue of [[Balduran]], looming over the ships entering the [[Gray Harbor]].",
+      "x": 29.651318289303134,
+      "y": 34.255649818078886,
+      "category": "point_of_interest",
+      "grounding": []
+    },
+    {
+      "id": "wiki_197",
+      "name": "Rivington General",
+      "lore": "A smithy that dealt in [[weapon]]s and [[armor]], run by [[Gyldro Angleiron]] after [[1477 DR]]. Its shop area was a building to the north, with the southern connected structure being the workshop and the proprietor's home.{{approx}}",
+      "x": 92.17012651252045,
+      "y": 15.731191965144726,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Rivington General"
+      ]
+    },
+    {
+      "id": "wiki_200",
+      "name": "Bonecloak's Apothecary",
+      "lore": "A [[potion]] brewer's shop run by [[Derryth Bonecloak]] and [[Baelen Bonecloak]] ''circa'' [[1492 DR]].{{approx}}",
+      "x": 35.54999126215232,
+      "y": 57.086918872433,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Bonecloak's Apothecary"
+      ]
+    },
+    {
+      "id": "wiki_202",
+      "name": "Bloomridge Park",
+      "lore": "A small public park nestled at the [[Old Wall (Baldur's Gate)|Old Wall]], east of the [[Manor Gate]].{{approx}}",
+      "x": 17.099998175070894,
+      "y": 45.41751097262738,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Bloomridge Park"
+      ]
+    },
+    {
+      "id": "wiki_203",
+      "name": "The Glitter Gala",
+      "lore": "A shop that traded in [[gemstone]]s and jewelry from [[Amn]], [[Cormyr]], and [[Damara]] and shared the building with [[Chromatic Scale]] musical instrument shop.{{approx}}",
+      "x": 17.01666125316197,
+      "y": 43.48984923643681,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Glitter Gala"
+      ]
+    },
+    {
+      "id": "wiki_204",
+      "name": "Chromatic Scale",
+      "lore": "A shop that dealt in quality musical instruments, run by [[Thomas C. Quirkilious]] in the late 15{{th}} century [[DR]].{{approx}}",
+      "x": 16.891660350911188,
+      "y": 43.64970097842629,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Chromatic Scale"
+      ]
+    },
+    {
+      "id": "wiki_206",
+      "name": "Facemaker's Boutique",
+      "lore": "An upscale clothier, barber, makeup artist, stylist, and disguises shop.{{approx}}",
+      "x": 16.766669679622378,
+      "y": 44.48657051906475,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Facemaker's Boutique"
+      ]
+    },
+    {
+      "id": "wiki_208",
+      "name": "Crimson Draughts",
+      "lore": "[[Araj Oblodra]]'s [[alchemist]] shop located on [[Stormshore Street]] across from [[Beehive Goods and Wares]] general store in the late 15{{th}} century DR.{{approx}}",
+      "x": 31.041666666666668,
+      "y": 55.2626629889669,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Crimson Draughts"
+      ]
+    },
+    {
+      "id": "wiki_209",
+      "name": "Beehive Goods and Wares",
+      "lore": "A general store run by [[Oliver Tefoco]] in the late 15{{th}} century [[DR]] and offered food, [[potion]]s, [[wine]]s, and some general miscellany.{{approx}}",
+      "x": 31.175,
+      "y": 54.88653460381144,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Beehive Goods and Wares"
+      ]
+    },
+    {
+      "id": "wiki_211",
+      "name": "Sword Coast Couriers",
+      "lore": "A courier, shipping, and postal agency that operated in the environs and within the city of [[Baldur's Gate]], located in the [[Rivington]] neighborhood in the late 15{{th}} century [[DR]].",
+      "x": 90.93333333333334,
+      "y": 18.449059331347524,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sword Coast Couriers"
+      ]
+    }
+  ],
+  "updatedAt": "2026-04-28T01:10:42.599Z"
+}
