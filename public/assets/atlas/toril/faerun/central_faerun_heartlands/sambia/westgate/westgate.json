@@ -11,7 +11,7 @@
   "coordinates": {
     "x": 8503,
     "y": 4710,
-    "name": ""
+    "name": "Westgate"
   },
   "lore": "Westgate was a seedy and squalid metropolis—with a history in piracy, powerful crime syndicates, and nameless vampiric crime-lords. Westgate thrived on black-market trade and corruption, and was perhaps one of the most sordid cities in all of Faerûn. The legacy of scoundrels and spies was found in every alley, and danger lurked for the unprepared in every corner. Despite this, it was the largest and most powerful city on the Dragon Coast.\n\nIt was an open city that welcomed all travelers and citizens alike as long as they abided by the local laws and, of course, had enough coin.\n\nIt was probably the oldest, richest and most corrupt port on the Sea of Fallen Stars. It received the nickname \"Gateway to the West\" from its role as the Inner Sea's most prolific port city.",
   "grounding": [],
@@ -20,9 +20,1370 @@
   "size": "Metropolis",
   "region": "Dragon Coast, interior Faerûn",
   "exports": "Perfume, wine, pottery",
-  "subLocations": [],
-  "subLocationCount": 0,
+  "wikiMaxX": 2880,
+  "wikiMaxY": 2196,
+  "fandomUrl": "https://forgottenrealms.fandom.com/wiki/Map:Westgate?action=edit",
+  "overlayMapUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/central_faerun_heartlands/sambia/westgate/westgate_submap.webp",
+  "subLocations": [
+    {
+      "id": "wiki_1",
+      "name": "Cormaeril Vale",
+      "lore": "Private park of the House [[Cormaeril]].",
+      "x": 1.9579228842217016,
+      "y": 63.41276726756078,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Connaeril Vale"
+      ]
+    },
+    {
+      "id": "wiki_2",
+      "name": "Castle Cormaeril",
+      "lore": "Also known as '''Castle Dhostar''', the estate of the noble House [[Cormaeril]].",
+      "x": 3.220937974543993,
+      "y": 72.8678184940787,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Castle Cormaeril"
+      ]
+    },
+    {
+      "id": "wiki_3",
+      "name": "The Leaning Man",
+      "lore": "A safe and quiet inn outside the city walls.",
+      "x": 8.124962409806598,
+      "y": 58.89556967073911,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Leaning Man Inn"
+      ]
+    },
+    {
+      "id": "wiki_4",
+      "name": "Cormaeril yards",
+      "lore": "",
+      "x": 14.599030973131944,
+      "y": 61.88221574770288,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_5",
+      "name": "The Blind Eye",
+      "lore": "A tack, harness, and trail-goods shop, also a fence.",
+      "x": 9.861035930724306,
+      "y": 63.763103777173434,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Blind Eye"
+      ]
+    },
+    {
+      "id": "wiki_6",
+      "name": "Thessar's residence",
+      "lore": "Home once owned by [[Thessar]] the Warrior, famous 14{{th}} century [[DR]] adventurer.\n",
+      "x": 13.888851298695487,
+      "y": 69.46483771028198,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thessar"
+      ]
+    },
+    {
+      "id": "wiki_7",
+      "name": "Lilda's",
+      "lore": "A cheap and rowdy [[festhall]].",
+      "x": 19.930442784975348,
+      "y": 67.51798547472946,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Lilda's"
+      ]
+    },
+    {
+      "id": "wiki_8",
+      "name": "The Water Gate",
+      "lore": "A cliff gate that led to a steep staircase and a path down to [[the Shore]].",
+      "x": 33.906756955081946,
+      "y": 65.0807463497886,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Water Gate"
+      ]
+    },
+    {
+      "id": "wiki_9",
+      "name": "The Shore",
+      "lore": "A slum neighborhood nestled between the cliff where the [[Water Gate]] stood and the [[Sea of Fallen Stars]].",
+      "x": 24.51388888888889,
+      "y": 66.26633484988957,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Shore"
+      ]
+    },
+    {
+      "id": "wiki_10",
+      "name": "Cormaeril Company sheds",
+      "lore": "Warehouses that belonged to the [[Cormaeril]] merchant company.",
+      "x": 29.737224837838195,
+      "y": 59.7956099050379,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_11",
+      "name": "Jolly Warrior Inn",
+      "lore": "A posh inn located on the western Mulsantir’s Gate and Westgate Market Street.",
+      "x": 21.875,
+      "y": 59.03467315214959,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Jolly Warrior Inn"
+      ]
+    },
+    {
+      "id": "wiki_12",
+      "name": "Mulsantir’s Gate",
+      "lore": "[[Westgate]]'s main city gates. The end of the [[Trader's Road]] and the start of the [[King's March]].",
+      "x": 14.443505552127778,
+      "y": 42.483887587511354,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Mulsantir’s Gate"
+      ]
+    },
+    {
+      "id": "wiki_13",
+      "name": "Trader's Road",
+      "lore": "Road traveling from the [[Sunset Vale]] through the [[Dragon Coast]], turning to the [[King's March]].",
+      "x": 5.625,
+      "y": 38.7306877845631,
+      "category": "fort",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Trader's Road"
+      ]
+    },
+    {
+      "id": "wiki_14",
+      "name": "The West Gate",
+      "lore": "The western gate into [[Westgate]] on [[Westgate Market Street]].",
+      "x": 19.75161778311875,
+      "y": 57.151491697850034,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/West Gate (Westgate)"
+      ]
+    },
+    {
+      "id": "wiki_15",
+      "name": "Thorsar Company sheds",
+      "lore": "Warehouses of the Thorsar merchant comapny.",
+      "x": 20.152160040752086,
+      "y": 47.069557676234425,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_16",
+      "name": "Thalavar Company sheds",
+      "lore": "Warehouses of the [[Thalavar]] merchant company.",
+      "x": 22.999882192649306,
+      "y": 39.141853009108374,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_17",
+      "name": "Castle Ssemm",
+      "lore": "Estate of the noble House [[Ssemm]].",
+      "x": 25.225323474243055,
+      "y": 33.85786938928037,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Castle Ssemm"
+      ]
+    },
+    {
+      "id": "wiki_18",
+      "name": "Thalavar yards",
+      "lore": "",
+      "x": 11.680047559190278,
+      "y": 34.13567376549789,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_19",
+      "name": "The Spitting Cockatrice",
+      "lore": "Inn favored by merchants, known for average food and extravagant decor.",
+      "x": 7.291704256860069,
+      "y": 49.786625022392734,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Spitting Cockatrice"
+      ]
+    },
+    {
+      "id": "wiki_20",
+      "name": "The Empty Fish",
+      "lore": "Exuberantly-priced tavern favored as an anonymous meetup space.",
+      "x": 7.083333333333334,
+      "y": 54.65405386337815,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Empty Fish"
+      ]
+    },
+    {
+      "id": "wiki_21",
+      "name": "The Westward Eye",
+      "lore": "A large well-guarded inn for merchants and traders.",
+      "x": 7.361562193431597,
+      "y": 44.640954130104525,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Westward Eye"
+      ]
+    },
+    {
+      "id": "wiki_22",
+      "name": "The Gatereach Inn",
+      "lore": "A luxurious inn for wealthy merchants along the [[Trader's Road]].",
+      "x": 1.8184609052174652,
+      "y": 34.90428423064357,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Gatereach Inn"
+      ]
+    },
+    {
+      "id": "wiki_23",
+      "name": "Ssemm Company sheds",
+      "lore": "Warehouses of the [[Ssemm]] merchant company.",
+      "x": 29.878393893781944,
+      "y": 29.129466231704875,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_24",
+      "name": "The Neck",
+      "lore": "The strait that connected the [[Dragonmere]] with the [[Sea of Fallen Stars]].",
+      "x": 6.666666666666667,
+      "y": 74.95780720819053,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Neck"
+      ]
+    },
+    {
+      "id": "wiki_25",
+      "name": "Sea of Fallen Stars",
+      "lore": "Or the '''Inner Sea''', the largest inland body of water in [[Faerûn]].",
+      "x": 81.80555555555556,
+      "y": 71.34177438040572,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sea of Fallen Stars"
+      ]
+    },
+    {
+      "id": "wiki_26",
+      "name": "Purple Lady",
+      "lore": "[[Festhall]] and a tavern renowned for its staff's see-through purple [[robe]]s.",
+      "x": 30.416629076473267,
+      "y": 22.18154902605188,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Purple Lady"
+      ]
+    },
+    {
+      "id": "wiki_27",
+      "name": "Guldar Company Sheds",
+      "lore": "Warehouses that belonged to the [[Guldar]] merchant company.",
+      "x": 50.713751332628476,
+      "y": 21.89778249359416,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Guldar"
+      ]
+    },
+    {
+      "id": "wiki_28",
+      "name": "House of Spires and Shadows",
+      "lore": "Also known as '''Shadowspires''', a temple dedicated to [[Mask]].",
+      "x": 49.40972222222222,
+      "y": 34.1412904639896,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/House of Spires and Shadows"
+      ]
+    },
+    {
+      "id": "wiki_29",
+      "name": "The South Gate",
+      "lore": "The gate that stood at the end of the [[Grand Ride]] and [[Southgate Market Street]].",
+      "x": 46.61151762025,
+      "y": 15.014109219990598,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/South Gate (Westgate)"
+      ]
+    },
+    {
+      "id": "wiki_30",
+      "name": "The Grand Ride",
+      "lore": "The road that connected [[Westgate]] and [[Reddansyr]].",
+      "x": 43.487956442239586,
+      "y": 2.844889293996714,
+      "category": "fort",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Grand Ride"
+      ]
+    },
+    {
+      "id": "wiki_31",
+      "name": "City Watch Barracks ",
+      "lore": "",
+      "x": 63.854091486281256,
+      "y": 22.355402061453628,
+      "category": "point_of_interest",
+      "grounding": []
+    },
+    {
+      "id": "wiki_32",
+      "name": "The Lord's Water",
+      "lore": "A pool.",
+      "x": 68.8365199392014,
+      "y": 24.124319579740288,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Lord's Water"
+      ]
+    },
+    {
+      "id": "wiki_33",
+      "name": "Castle Thorsar",
+      "lore": "Estate of the noble House [[Thorsar]].",
+      "x": 73.35438387867708,
+      "y": 26.696130055274725,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Castle Thorsar"
+      ]
+    },
+    {
+      "id": "wiki_34",
+      "name": "Castle Urdo",
+      "lore": "Estate of the noble House [[Urdo]].",
+      "x": 69.60372543471529,
+      "y": 26.626588786264758,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Castle Urdo"
+      ]
+    },
+    {
+      "id": "wiki_35",
+      "name": "House of Silks",
+      "lore": "Clothing and jewelry of the highest quality shop.",
+      "x": 70.48599834053125,
+      "y": 29.621637870771647,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/House of Silks"
+      ]
+    },
+    {
+      "id": "wiki_36",
+      "name": "Blue Banner",
+      "lore": "A tavern and inn located in [[Westgate]]'s [[Shou Quarter]].",
+      "x": 59.86107352091667,
+      "y": 22.146834560542775,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Blue Banner"
+      ]
+    },
+    {
+      "id": "wiki_37",
+      "name": "Shou Quarter",
+      "lore": "The district populated by the [[Shou]] immigrants. Also known as the '''East End'''. Formerly known as the '''Warrens.'''",
+      "x": 94.58979583888889,
+      "y": 47.56382333726927,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Shou Quarter"
+      ]
+    },
+    {
+      "id": "wiki_38",
+      "name": "The Tower",
+      "lore": "Counting house, nobles' offices, armory, barracks, and underground jail.",
+      "x": 58.99301796536111,
+      "y": 36.74894564109032,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Tower"
+      ]
+    },
+    {
+      "id": "wiki_39",
+      "name": "Market Triangle",
+      "lore": "The market square at the heart of [[Westgate]].",
+      "x": 59.250918632218756,
+      "y": 34.623063814936984,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Market Triangle"
+      ]
+    },
+    {
+      "id": "wiki_40",
+      "name": "Castle Guldar",
+      "lore": "Estate of the noble House [[Guldar]].",
+      "x": 80.5741064525243,
+      "y": 30.033340060285983,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Castle Guldar"
+      ]
+    },
+    {
+      "id": "wiki_41",
+      "name": "Castle Vhammos",
+      "lore": "The estate of the noble House [[Vhammos]].",
+      "x": 86.96411713482986,
+      "y": 40.25590660473649,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Castle Vhammos"
+      ]
+    },
+    {
+      "id": "wiki_42",
+      "name": "Vhammos Company sheds",
+      "lore": "Warehouses that belonged to the [[Vhammos]] merchant company.",
+      "x": 95.15962240565973,
+      "y": 59.241281283344144,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_43",
+      "name": "The River Gate",
+      "lore": "The gate on the [[River Thunn]] that fed into the [[Sea of Fallen Stars]].",
+      "x": 90.08927564911806,
+      "y": 35.87555634694193,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/River Gate"
+      ]
+    },
+    {
+      "id": "wiki_44",
+      "name": "The Black Boot",
+      "lore": "A dangerous inn near the [[River Bridge]], known for its cheap prices, brawls, and shady characters.",
+      "x": 92.36118630680208,
+      "y": 48.743577019091525,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Black Boot (Westgate)"
+      ]
+    },
+    {
+      "id": "wiki_45",
+      "name": "River Bridge",
+      "lore": "The bridge over the [[River Thunn]] that connected the [[Shou Quarter]] to the rest of the city.",
+      "x": 89.8809057355625,
+      "y": 46.79156234128623,
+      "category": "fort",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/River Bridge"
+      ]
+    },
+    {
+      "id": "wiki_46",
+      "name": "Vhammos yards",
+      "lore": "",
+      "x": 84.46687284474652,
+      "y": 25.377130376292754,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_47",
+      "name": "Rising Raven Inn",
+      "lore": "An inn packed with traders and adventurers, that offered small private apartments.",
+      "x": 73.97537224787153,
+      "y": 13.692273450251987,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Rising Raven Inn"
+      ]
+    },
+    {
+      "id": "wiki_48",
+      "name": "Guldar yards",
+      "lore": "",
+      "x": 59.04219510987153,
+      "y": 13.761814719261954,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_49",
+      "name": "Ssemm yards",
+      "lore": "",
+      "x": 35.70476479188542,
+      "y": 13.066402029163307,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_50",
+      "name": "The East Gate",
+      "lore": "",
+      "x": 96.75711288282987,
+      "y": 63.75985830115109,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/East Gate (Westgate)"
+      ]
+    },
+    {
+      "id": "wiki_51",
+      "name": "The Old Beard",
+      "lore": "A tavern that catered mostly to retired sailors.",
+      "x": 90.20516607830555,
+      "y": 62.49275668930609,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Old Beard"
+      ]
+    },
+    {
+      "id": "wiki_52",
+      "name": "Westlight",
+      "lore": "[[Westgate]]'s lighthouse, also known as the the '''Harbor Tower.'''",
+      "x": 73.00294273773264,
+      "y": 68.76643360731,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Westlight"
+      ]
+    },
+    {
+      "id": "wiki_53",
+      "name": "Shalush Myrkeer's Shop",
+      "lore": "A general goods store and the largest shop in [[Westgate]].",
+      "x": 63.64577694804167,
+      "y": 32.09022465494301,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Shalush Myrkeer's Shop"
+      ]
+    },
+    {
+      "id": "wiki_54",
+      "name": "Black Eye",
+      "lore": "A rowdy tavern and a [[festhall]] frequented by dockhands and prostitutes.",
+      "x": 63.246773206130094,
+      "y": 42.72710531399209,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Black Eye"
+      ]
+    },
+    {
+      "id": "wiki_55",
+      "name": "Urdo Company Sheds",
+      "lore": "Warehouses that belonged to the [[Urdo]] merchant company.",
+      "x": 53.26373852811458,
+      "y": 50.20390037814237,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Urdo"
+      ]
+    },
+    {
+      "id": "wiki_56",
+      "name": "Thorsar yards",
+      "lore": "",
+      "x": 14.037659162575695,
+      "y": 52.076571480215556,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_57",
+      "name": "Castle Athagdal",
+      "lore": "Estate of the noble House [[Athagdal]].",
+      "x": 75.71654362276738,
+      "y": 36.571294374133736,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Castle Athagdal"
+      ]
+    },
+    {
+      "id": "wiki_58",
+      "name": "Castle Thalavar",
+      "lore": "Estate of the noble House [[Thalavar]].",
+      "x": 27.164610107649306,
+      "y": 45.12378836288174,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Castle Thalavar"
+      ]
+    },
+    {
+      "id": "wiki_59",
+      "name": "Castle Malavhan",
+      "lore": "The estate of the noble House [[Malavhan]].",
+      "x": 93.70406916905557,
+      "y": 38.307874076812915,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Castle Malavhan"
+      ]
+    },
+    {
+      "id": "wiki_60",
+      "name": "Malavhan yards",
+      "lore": "",
+      "x": 98.28775611118402,
+      "y": 33.02273763206465,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_61",
+      "name": "Malavhan Company Sheds",
+      "lore": "Warehouses that belonged to the [[Malavhan]] merchant company.",
+      "x": 66.47581121051041,
+      "y": 48.183964899137166,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Malavhan"
+      ]
+    },
+    {
+      "id": "wiki_62",
+      "name": "Cormaeril docks",
+      "lore": "Formerly the '''Dhostar docks'''.",
+      "x": 55.635501220298615,
+      "y": 60.083470076328744,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_63",
+      "name": "Thorsar Docks",
+      "lore": "",
+      "x": 85,
+      "y": 52.9851630034161,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thorsar"
+      ]
+    },
+    {
+      "id": "wiki_64",
+      "name": "Malavhan Docks",
+      "lore": "",
+      "x": 60.084239772145835,
+      "y": 47.695429097324144,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Malavhan"
+      ]
+    },
+    {
+      "id": "wiki_65",
+      "name": "Urdo Docks",
+      "lore": "",
+      "x": 53.278452036062504,
+      "y": 46.906468404668466,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Urdo"
+      ]
+    },
+    {
+      "id": "wiki_66",
+      "name": "Thalavar Docks",
+      "lore": "",
+      "x": 45.274369529850695,
+      "y": 53.88836367786167,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thalavar"
+      ]
+    },
+    {
+      "id": "wiki_67",
+      "name": "Guldar docks",
+      "lore": "",
+      "x": 51.80531290859028,
+      "y": 60.6735369210675,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_68",
+      "name": "The Watch Dock",
+      "lore": "",
+      "x": 61.1260893399132,
+      "y": 60.421481326127626,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_69",
+      "name": "Athagdal docks and shipyards",
+      "lore": "",
+      "x": 83.72340707798958,
+      "y": 62.247040236603105,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_70",
+      "name": "Vhammos docks",
+      "lore": "",
+      "x": 85.93322209031945,
+      "y": 57.57592169357413,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_71",
+      "name": "Ssemm Docks",
+      "lore": "",
+      "x": 70.9560684051632,
+      "y": 56.69124321862972,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Ssemm"
+      ]
+    },
+    {
+      "id": "wiki_72",
+      "name": "Whitecap Hall",
+      "lore": "A temple dedicated to the Bitch Queen, [[Umberlee]].",
+      "x": 94.91923786649654,
+      "y": 64.85285038913845,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Whitecap Hall"
+      ]
+    },
+    {
+      "id": "wiki_73",
+      "name": "Fortuneboon Hall",
+      "lore": "A temple dedicated to [[Tymora]].",
+      "x": 43.124849639225694,
+      "y": 54.09771011469983,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Fortuneboon Hall"
+      ]
+    },
+    {
+      "id": "wiki_74",
+      "name": "The House of the Wheel",
+      "lore": "A temple dedicated to [[Gond]].",
+      "x": 41.80555555555556,
+      "y": 51.594584307429116,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/House of the Wheel"
+      ]
+    },
+    {
+      "id": "wiki_75",
+      "name": "Morningstar Haven",
+      "lore": "A temple dedicated to [[Lathander]].",
+      "x": 32.49988722941979,
+      "y": 56.044807969632004,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Morningstar Haven"
+      ]
+    },
+    {
+      "id": "wiki_76",
+      "name": "City watch barracks",
+      "lore": "",
+      "x": 98.45471861186806,
+      "y": 49.561446659045565,
+      "category": "point_of_interest",
+      "grounding": []
+    },
+    {
+      "id": "wiki_77",
+      "name": "City watch meeting rooms & barracks",
+      "lore": "",
+      "x": 29.097109451642016,
+      "y": 57.08782091659706,
+      "category": "point_of_interest",
+      "grounding": []
+    },
+    {
+      "id": "wiki_78",
+      "name": "Cassana's mansion",
+      "lore": "A mansion that once belonged to the evil sorceress [[Cassana]], and later to Melman, a Guildmaster of the [[Night Masks]].",
+      "x": 41.84024018758333,
+      "y": 17.52279295142344,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Cassana's mansion"
+      ]
+    },
+    {
+      "id": "wiki_79",
+      "name": "Jamal's house",
+      "lore": "The house that once belonged to [[Jamal]], a street performer, a social critic, and an ally to [[Alias]] and [[Mintassan]] the Magnificent.",
+      "x": 34.93055555555556,
+      "y": 26.00592983159043,
+      "category": "point_of_interest",
+      "grounding": []
+    },
+    {
+      "id": "wiki_80",
+      "name": "Rotten Root Tavern",
+      "lore": "The establishment best known for its bad food and drink and its sign depicting an evil-looking treant.",
+      "x": 31.527702597390974,
+      "y": 35.04537537195323,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Rotten Root Tavern"
+      ]
+    },
+    {
+      "id": "wiki_81",
+      "name": "Big Edna's",
+      "lore": "A tiny ramshackle bar that served fishermen and dock worker.",
+      "x": 23.913958502628383,
+      "y": 52.75737327892376,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Big Edna's"
+      ]
+    },
+    {
+      "id": "wiki_82",
+      "name": "Mintassan's Mysteries",
+      "lore": "A planar curio shop owned by [[Mintassan the Magnificent]] in a magically hidden and warded ''[[spelljammer]]'' ship, previously parked deeper into the block to the south.",
+      "x": 56.28462824673959,
+      "y": 33.06363322847976,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Mincassan's Mysteries"
+      ]
+    },
+    {
+      "id": "wiki_83",
+      "name": "The Track",
+      "lore": "A heavily-guarded underground racing track and a tavern.",
+      "x": 54.375,
+      "y": 40.608076000618404,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Track"
+      ]
+    },
+    {
+      "id": "wiki_84",
+      "name": "Blais House",
+      "lore": "[[Mintassan]]'s inn that catered to planar guests, sealed off between the [[Spellplague]] and the [[Second Sundering]].",
+      "x": 58.09078625997818,
+      "y": 26.501706139287034,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Blais House"
+      ]
+    },
+    {
+      "id": "wiki_85",
+      "name": "Dawn's Dress Shop",
+      "lore": "An [[elf|elven]] seamstress' shop and the most fashionable store in [[Westgate]].",
+      "x": 67.08333333333334,
+      "y": 36.192672069375625,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Dawn's Dress Shop"
+      ]
+    },
+    {
+      "id": "wiki_86",
+      "name": "House of Winds",
+      "lore": "The temple of [[Talos]] famous for the carved [[dragon]]s on its roof.",
+      "x": 93.0041835810625,
+      "y": 63.91870607670302,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/House of Winds"
+      ]
+    },
+    {
+      "id": "wiki_87",
+      "name": "Painbliss Hall",
+      "lore": "A temple dedicated to [[Loviatar]]. ",
+      "x": 40.78120825178125,
+      "y": 59.032728201770546,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Painbliss Hall"
+      ]
+    },
+    {
+      "id": "wiki_88",
+      "name": "House of Ilmater",
+      "lore": "A temple dedicated to the [[Crying God]]. It was also known as '''The House''', with its [[Spire of Suffering]] seen from several miles outside the city.",
+      "x": 35.085263552624184,
+      "y": 54.699426462210596,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/House of Ilmater"
+      ]
+    },
+    {
+      "id": "wiki_89",
+      "name": "The Rosebud",
+      "lore": "An outdoor [[ale]] garden favored by merchants and young nobles.",
+      "x": 79.3039896955746,
+      "y": 50.49576465060442,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Rosebud"
+      ]
+    },
+    {
+      "id": "wiki_90",
+      "name": "Entrance to the Sewers of Westgate",
+      "lore": "Once used by the [[Faceless]] leader of the [[Night Masks]]. Connected to the [[Undergate]] and catacombs of [[Westgate]].",
+      "x": 89.11688271920139,
+      "y": 45.19292649679417,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Westgate/Sewers"
+      ]
+    },
+    {
+      "id": "wiki_91",
+      "name": "The Hidden House",
+      "lore": "A subterranean temple dedicated to [[Leira]], hidden deep under the streets of [[Westgate]].",
+      "x": 36.04166666666667,
+      "y": 46.796689662909294,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Hidden House"
+      ]
+    },
+    {
+      "id": "wiki_92",
+      "name": "Place of Waiting Death",
+      "lore": "A hidden subterranean temple of Talona, deep beneath the city of Westgate.",
+      "x": 26.192546399714235,
+      "y": 50.129727139944215,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Place of Waiting Death"
+      ]
+    },
+    {
+      "id": "wiki_93",
+      "name": "House of Steel",
+      "lore": "An underground temple of [[Garagos]], that was once took it over by the [[vampire]] named [[Kirenkirsalai]].",
+      "x": 62.934644473520834,
+      "y": 38.23923102108776,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/House of Steel"
+      ]
+    },
+    {
+      "id": "wiki_94",
+      "name": "Darkdance Manor",
+      "lore": "An abandoned manor, once home to the noble [[House Darkdance]].",
+      "x": 63.98334276986608,
+      "y": 39.53127793932764,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Darkdance Manor"
+      ]
+    },
+    {
+      "id": "wiki_95",
+      "name": "Bent Mermaid Inn",
+      "lore": "A shady tavern known for a figurehead of a bent-over [[mermaid]] out the front of the bar.",
+      "x": 47.08325815294792,
+      "y": 50.96874145076828,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Bent Mermaid Inn"
+      ]
+    },
+    {
+      "id": "wiki_96",
+      "name": "Chalaratha's Fragrances",
+      "lore": "A perfume shop and factory.",
+      "x": 38.61107352091666,
+      "y": 31.56866554873741,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Chalaratha's Fragrances"
+      ]
+    },
+    {
+      "id": "wiki_97",
+      "name": "Gondeth's Mageries",
+      "lore": "A [[wizard]]'s [[scroll]] shop.",
+      "x": 55.14450800503423,
+      "y": 33.28687938249552,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Gondeth's Mageries"
+      ]
+    },
+    {
+      "id": "wiki_98",
+      "name": "Tersonm's",
+      "lore": "[[Potion]] maker and a seller of rare [[spells]].",
+      "x": 52.361111111111114,
+      "y": 29.169700682235614,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Tersonm's"
+      ]
+    },
+    {
+      "id": "wiki_99",
+      "name": "Rising Raven Annex",
+      "lore": "An extension of the [[Rising Raven inn]].",
+      "x": 42.62282542152084,
+      "y": 13.86547917672958,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_100",
+      "name": "Rising Raven Warehouse",
+      "lore": "An extension of the [[Rising Raven]] inn. Also offered rooms.",
+      "x": 41.149606536975696,
+      "y": 13.226219396114066,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_101",
+      "name": "Castle Beth",
+      "lore": "Estate of the noble House [[Beth]].",
+      "x": 60.11452732834723,
+      "y": 4.133924681831274,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Castle Beth"
+      ]
+    },
+    {
+      "id": "wiki_102",
+      "name": "Beth yards",
+      "lore": "",
+      "x": 49.11388314114931,
+      "y": 1.1072274918499436,
+      "category": "inn_tavern",
+      "grounding": []
+    },
+    {
+      "id": "wiki_103",
+      "name": "Imryth's tower",
+      "lore": "The tower that once belonged to [[Audara Imryth|Audara \"Starshoulder\" Imryth]].",
+      "x": 39.44444444444444,
+      "y": 20.199754249853946,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Imryth's tower"
+      ]
+    },
+    {
+      "id": "wiki_104",
+      "name": "Aurora's Emporium",
+      "lore": "Famed [[Aurora's Emporium]] that sold exotic items from all over [[Faerûn]] and operated as a curio shop in the late 1400s [[DR]].",
+      "x": 58.72914654854937,
+      "y": 29.35358010277392,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Aurora's Emporium"
+      ]
+    },
+    {
+      "id": "wiki_105",
+      "name": "The Quivering Thumb",
+      "lore": "Gladigladiatorial arena just outside the city’s [[East End]].",
+      "x": 99.9045778633507,
+      "y": 59.65497738220544,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Quivering Thumb"
+      ]
+    },
+    {
+      "id": "wiki_106",
+      "name": "Arena District",
+      "lore": "The district built around the [[Quivering Thumb]].",
+      "x": 99.8826737795382,
+      "y": 58.12860683409684,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Arena District"
+      ]
+    },
+    {
+      "id": "wiki_107",
+      "name": "Magical Portal to the Undergate",
+      "lore": "A broken lampost that served as a gate to the shady subterranean underbelly of [[Westgate]].",
+      "x": 46.406817922114584,
+      "y": 45.33215755827238,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Undergate"
+      ]
+    },
+    {
+      "id": "wiki_108",
+      "name": "Shrine to Tyr",
+      "lore": "Also known as '''Brother Eden's Shrine''', dedicated to [[Tyr]] Grimjaws.",
+      "x": 37.083220562753475,
+      "y": 60.07775627607827,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Brother Eden's Shrine"
+      ]
+    },
+    {
+      "id": "wiki_109",
+      "name": "Statue of Durgar the Just",
+      "lore": "The monument dedicated to the head of the city watch erected ''circa'' [[1368 DR]].",
+      "x": 32.09667764563681,
+      "y": 51.31157508583558,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Statue of Durgar the Just"
+      ]
+    },
+    {
+      "id": "wiki_110",
+      "name": "City watch barracks",
+      "lore": "",
+      "x": 30.56493701067813,
+      "y": 51.52234187416064,
+      "category": "point_of_interest",
+      "grounding": []
+    },
+    {
+      "id": "wiki_111",
+      "name": "Lens Overlooking the Seven Hills",
+      "lore": "[[Westgate Archeological Guild]]'s [[telescope]], activated for 5 [[gold]] [[coin|pieces]].",
+      "x": 53.00282080366667,
+      "y": 38.7946417422458,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Seven Hills"
+      ]
+    },
+    {
+      "id": "wiki_112",
+      "name": "Statue of Alias of the Azure Bonds",
+      "lore": "A magically protected monument to a famed hero of the [[House Wyvernspur]], [[Alias]].",
+      "x": 62.93481518121528,
+      "y": 34.62283042093461,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Statue of Alias the Sellsword"
+      ]
+    },
+    {
+      "id": "wiki_113",
+      "name": "Thayan Enclave",
+      "lore": "A merchant and political enclave of the [[Red Wizard]]s of [[Thay]].",
+      "x": 68.07332607449305,
+      "y": 43.52453720693014,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thayan enclave (Westgate)"
+      ]
+    },
+    {
+      "id": "wiki_114",
+      "name": "Statue of Kisonraathiisar",
+      "lore": "The statue dedicated to the ancient [[wyrm]] whose lair became the city of [[Westgate]].",
+      "x": 69.8086811943889,
+      "y": 45.67990633859254,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Statue of Kisonraathiisar"
+      ]
+    },
+    {
+      "id": "wiki_115",
+      "name": "Okuzo's Imports",
+      "lore": "A shop that dealt in rare and exotic imports from the Eastern nations.",
+      "x": 70.61246884348996,
+      "y": 46.906443593364,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Okuzo's Imports"
+      ]
+    },
+    {
+      "id": "wiki_116",
+      "name": "Sewer entrance",
+      "lore": "",
+      "x": 71.39814304480835,
+      "y": 46.31632712601808,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Westgate/Sewers"
+      ]
+    },
+    {
+      "id": "wiki_117",
+      "name": "Harbormaster's Office",
+      "lore": "The office of the Harbormaster of [[Westgate]] and a museum of the city's naval history.",
+      "x": 67.2733003273264,
+      "y": 54.08498646262915,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Harbormaster's Office"
+      ]
+    },
+    {
+      "id": "wiki_118",
+      "name": "Statue of Verovan Lorndessar",
+      "lore": "Statue of the last king of [[Westgate]]; the monument was beheaded in the late 14{{th}} century [[DR]].\n",
+      "x": 82.15205867535376,
+      "y": 47.004630929230935,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Statue of Verovan Lorndessar"
+      ]
+    },
+    {
+      "id": "wiki_119",
+      "name": "Brother Tobias Winery",
+      "lore": "A favored local [[wine]]ry.",
+      "x": 44.44440685425,
+      "y": 42.972238680405866,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Brother Tobias Winery"
+      ]
+    },
+    {
+      "id": "wiki_120",
+      "name": "Rumbolt Mansion",
+      "lore": "Once the estate of the noble [[House Rumbolt]].",
+      "x": 39.16666666666667,
+      "y": 44.11957046630921,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Rumbolt Mansion"
+      ]
+    },
+    {
+      "id": "wiki_121",
+      "name": "Sods and Sundries",
+      "lore": "A shop of note.",
+      "x": 76.40696424299654,
+      "y": 47.83478039207114,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sods and Sundries"
+      ]
+    },
+    {
+      "id": "wiki_122",
+      "name": "Westblade Guild Headquarters",
+      "lore": "A guildhall of note.",
+      "x": 63.81944444444445,
+      "y": 33.306950283381525,
+      "category": "landmark",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Westblade Guild Headquarters"
+      ]
+    },
+    {
+      "id": "wiki_123",
+      "name": "Temple District",
+      "lore": "",
+      "x": 33.48255476306841,
+      "y": 59.23985970169301,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Westgate/Temple District"
+      ]
+    },
+    {
+      "id": "wiki_124",
+      "name": "River Thunn",
+      "lore": "The river that ran from the high lands of the [[Dragon Coast]] down into the harbor of [[Westgate]].",
+      "x": 87.68023398836112,
+      "y": 52.42268540517909,
+      "category": "inn_tavern",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/River Thunn"
+      ]
+    },
+    {
+      "id": "wiki_125",
+      "name": "The Old City",
+      "lore": "The central area of Westgatre.",
+      "x": 79.76217727332987,
+      "y": 42.9650728198372,
+      "category": "point_of_interest",
+      "grounding": []
+    },
+    {
+      "id": "wiki_126",
+      "name": "Dock Ward",
+      "lore": "The center of [[Westgate]]'s trade.",
+      "x": 75.59302315169445,
+      "y": 57.708444233934955,
+      "category": "point_of_interest",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Westgate/Dock Ward"
+      ]
+    },
+    {
+      "id": "wiki_127",
+      "name": "Hills of the Seven Lost Gods",
+      "lore": "'''The Seven Hills''' just west of [[Westgate]]. Each was crowned with a ring of standing stones, each ring dedicated as a shrine.",
+      "x": 7.779094665702431,
+      "y": 8.203012434770997,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Hills of the Seven Lost Gods"
+      ]
+    },
+    {
+      "id": "wiki_128",
+      "name": "Hill of Fangs",
+      "lore": "The central hill of the [[Hills of the Seven Lost Gods]] dedicated to [[Moander]].",
+      "x": 5.69541991698125,
+      "y": 6.673231822373399,
+      "category": "government",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Hill of Fangs"
+      ]
+    }
+  ],
+  "subLocationCount": 128,
   "subPaths": [],
   "image": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/central_faerun_heartlands/sambia/westgate/westgate.webp",
-  "updatedAt": "2026-04-28T02:22:18.012Z"
+  "updatedAt": "2026-04-28T03:18:27.705Z"
 }
