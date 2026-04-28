@@ -1,346 +1,128 @@
 {
-  "locationName": "waterdeep",
+  "locationName": "baldurs_gate",
   "category": "fort",
   "subLocations": [
     {
-      "id": "wiki_40",
-      "name": "Trollwall",
-      "lore": "The Trollwall was a defensive barrier that encircled nearly the entirety of the city of Waterdeep.",
-      "x": 42.12820018417073,
-      "y": 94.03587449957985,
+      "id": "wiki_34",
+      "name": "The Smilin' Boar",
+      "lore": "One of Bloomridge's most trendy eateries, serving bawdier versions of traditional morningfeast dishes such as \"[[sow's delight]]\" and \"[[three pigs in a blanket]]\", and [[coffee]] and [[tea]] was served in mugs that were shaped like a [[pig]]'s head.",
+      "x": 18.0665513286646,
+      "y": 45.1739582984132,
       "category": "fort",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Trollwall"
+        "https://forgottenrealms.fandom.com/wiki/The Smilin' Boar"
       ]
     },
     {
-      "id": "wiki_361",
-      "name": "Trollfort",
-      "lore": "This structure stood four stories tall and was directly connected to the city walls that surrounded the Field Ward.",
-      "x": 25.945411582396048,
-      "y": 102.42915916565744,
+      "id": "wiki_58",
+      "name": "Blushing Mermaid",
+      "lore": "A famous lower-class tavern that provided drinks and food and was known for its shady associations, rumors of secret smuggling passages, and hidden vaults underneath.",
+      "x": 29.462792342403727,
+      "y": 56.51723036337473,
       "category": "fort",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Trollfort"
+        "https://forgottenrealms.fandom.com/wiki/Blushing Mermaid"
       ]
     },
     {
-      "id": "wiki_363",
-      "name": "North Tower",
-      "lore": "The North Tower, also known as the Trolltower, was a torchtower. It had all the features that were common among them. This included a debriefing room, a small armory, holding cells, storage rooms for the holding of evidence or confiscated items, some bedchambers, and some garderobes.",
-      "x": 28.703214684266424,
-      "y": 100.30798047009186,
+      "id": "wiki_62",
+      "name": "Elfsong Tavern",
+      "lore": "A well-known tavern famed for its singing [[ghost]], [[Elfsong Cider|cider]], and a stuffed baby [[beholder]].",
+      "x": 36.628122499503625,
+      "y": 51.41068838966967,
       "category": "fort",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/North Tower"
+        "https://forgottenrealms.fandom.com/wiki/Elfsong Tavern"
       ]
     },
     {
-      "id": "wiki_364",
-      "name": "Armory of Waterdeep",
-      "lore": "This building was the armory of the [[City Guard]].",
-      "x": 30.854301103725334,
-      "y": 98.84509861108101,
+      "id": "wiki_63",
+      "name": "Low Lantern",
+      "lore": "A three-mast ship converted to be used as a [[festhall]], tavern, and gambling house.",
+      "x": 36.500006924671425,
+      "y": 43.33000895017378,
       "category": "fort",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Armory of Waterdeep"
+        "https://forgottenrealms.fandom.com/wiki/Low Lantern"
       ]
     },
     {
-      "id": "wiki_405",
-      "name": "East Torch Tower",
-      "lore": "East Torch Tower was the formal name given to one of the major torchtowers of Waterdeep's [[Trollwall]].",
-      "x": 59.01698638002456,
-      "y": 21.778653676033155,
+      "id": "wiki_67",
+      "name": "Jopalin's",
+      "lore": "Once a seedy tavern serving sailors, turned into a [[tea]] and [[coffee]]-sipping cafe after such establishments became popular in the 15{{th}} century [[DR]].",
+      "x": 32.55,
+      "y": 49.761747395540105,
       "category": "fort",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/East Torch Tower"
+        "https://forgottenrealms.fandom.com/wiki/Jopalin's"
       ]
     },
     {
-      "id": "wiki_409",
-      "name": "South Gate",
-      "lore": "The South Gate was the southern point of entrance through the [[Trollwall]].",
-      "x": 61.59829008337438,
-      "y": 24.676988359199665,
+      "id": "wiki_68",
+      "name": "Garmult's House of Mastery",
+      "lore": "An academy that specialized in tutoring pupils on how to improve their martial prowess and combat skills and a social club for the members of the [[Bannerless Legion]] crew.",
+      "x": 39.18333333333333,
+      "y": 45.54920438311914,
       "category": "fort",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/South Gate (Waterdeep)"
+        "https://forgottenrealms.fandom.com/wiki/Garmult's House of Mastery"
       ]
     },
     {
-      "id": "wiki_418",
-      "name": "Southpost",
-      "lore": "",
-      "x": 62.77637254901961,
-      "y": 19.29181518015031,
+      "id": "wiki_109",
+      "name": "Undercellar's Main Entrance",
+      "lore": "A clump of chambers in a network of storage cellars beneath [[Baldur's Gate]] that housed a sleazy tavern and [[festhall]]; there existed at least twenty-four ways in and out of this popular establishment, half of which connected to other buildings.",
+      "x": 24.6,
+      "y": 56.9646818923235,
       "category": "fort",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Southpost"
+        "https://forgottenrealms.fandom.com/wiki/Undercellar"
       ]
     },
     {
-      "id": "wiki_419",
-      "name": "Southfort Keep",
-      "lore": "",
-      "x": 66.58289215686274,
-      "y": 23.248447516025642,
+      "id": "wiki_113",
+      "name": "House of the Lute",
+      "lore": "A modest [[kaeth]] house and [[minstrel]]s' gallery that offered classes from master musicians to its customers.",
+      "x": 18.809022344623216,
+      "y": 47.221765504225196,
       "category": "fort",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Southfort Keep"
+        "https://forgottenrealms.fandom.com/wiki/House of the Lute"
       ]
     },
     {
-      "id": "wiki_420",
-      "name": "Inner Fort",
-      "lore": "",
-      "x": 50.795196078431374,
-      "y": 15.826529343501328,
+      "id": "wiki_183",
+      "name": "The House of the Lion",
+      "lore": "An opulent festhall that counted \"blades\" and \"lacethroats\"  – youths of money and means, among its patrons.",
+      "x": 14.866741940414956,
+      "y": 53.730699030020475,
       "category": "fort",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Inner Fort"
+        "https://forgottenrealms.fandom.com/wiki/The House of the Lion"
       ]
     },
     {
-      "id": "wiki_423",
-      "name": "Deepwater Wall",
-      "lore": "",
-      "x": 39.18843137254902,
-      "y": 13.00775205846596,
+      "id": "wiki_198",
+      "name": "The Singing Lute",
+      "lore": "A small tavern and an eatery that offered local brews and a grumpy proprietor.{{approx}}",
+      "x": 22.716666666666665,
+      "y": 48.23853182711276,
       "category": "fort",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Deepwater Wall"
+        "https://forgottenrealms.fandom.com/wiki/The Singing Lute"
       ]
     },
     {
-      "id": "wiki_427",
-      "name": "Harborwatch Tower",
-      "lore": "Harborwatch Tower was one of the major torchtowers of Waterdeep's [[Trollwall]].",
-      "x": 21.310269607843136,
-      "y": 35.29936691810345,
+      "id": "wiki_207",
+      "name": "Sharess' Caress",
+      "lore": "A 15{{th}} century [[DR]] [[festhall]] where one could find consorts, musicians, drinks, food, lodgings, and more thematic coinlassess who catered to specific tastes.{{approx}}",
+      "x": 89.9676038413476,
+      "y": 20.0802818728238,
       "category": "fort",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Harborwatch Tower"
-      ]
-    },
-    {
-      "id": "wiki_428",
-      "name": "Sea Chain Gates",
-      "lore": "",
-      "x": 26.645637254901963,
-      "y": 30.023857136936343,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sea Chain Gates"
-      ]
-    },
-    {
-      "id": "wiki_429",
-      "name": "Watching Tower",
-      "lore": "",
-      "x": 20.530245098039217,
-      "y": 38.55777001823608,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Watching Tower"
-      ]
-    },
-    {
-      "id": "wiki_430",
-      "name": "Smuggler's Bane Tower",
-      "lore": "",
-      "x": 18.50218137254902,
-      "y": 26.532710958222815,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Smuggler's Bane Tower"
-      ]
-    },
-    {
-      "id": "wiki_466",
-      "name": "River Gate",
-      "lore": "The River Gate was the eastern point of entrance through the [[Trollwall]] into Waterdeep.",
-      "x": 61.179104011891475,
-      "y": 47.333371150640104,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/River Gate (Waterdeep)"
-      ]
-    },
-    {
-      "id": "wiki_613",
-      "name": "North Trollwall",
-      "lore": "",
-      "x": 59.888452160216566,
-      "y": 80.99793993114044,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Trollwall"
-      ]
-    },
-    {
-      "id": "wiki_632",
-      "name": "Northgate",
-      "lore": "",
-      "x": 47.425490196078435,
-      "y": 97.82967403017241,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Northgate"
-      ]
-    },
-    {
-      "id": "wiki_634",
-      "name": "Upper Towers",
-      "lore": "",
-      "x": 46.12149907568006,
-      "y": 93.12157333769841,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Upper Towers"
-      ]
-    },
-    {
-      "id": "wiki_648",
-      "name": "Farwatch Tower",
-      "lore": "Farwatch Tower was one of the major torchtowers of Waterdeep's [[Trollwall]].",
-      "x": 56.85486874815765,
-      "y": 89.50094073664599,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Farwatch Tower"
-      ]
-    },
-    {
-      "id": "wiki_649",
-      "name": "Endcliff Fort",
-      "lore": "",
-      "x": 60.18629489521798,
-      "y": 90.28723973586409,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Endcliff Fort"
-      ]
-    },
-    {
-      "id": "wiki_652",
-      "name": "Mount Wall",
-      "lore": "",
-      "x": 19.095000000000002,
-      "y": 40.393854304818746,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Mount Wall"
-      ]
-    },
-    {
-      "id": "wiki_666",
-      "name": "Mountain Tower",
-      "lore": "",
-      "x": 29.12240075575058,
-      "y": 54.16320082990049,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Mountain Tower"
-      ]
-    },
-    {
-      "id": "wiki_679",
-      "name": "West Gate",
-      "lore": "",
-      "x": 19.251004901960787,
-      "y": 81.46007750331565,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/West Gate"
-      ]
-    },
-    {
-      "id": "wiki_688",
-      "name": "Endcliff Tower",
-      "lore": "Endcliff Tower was one of the major torchtowers of Waterdeep's [[Trollwall]].",
-      "x": 60.7157930907778,
-      "y": 75.5944200644175,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Endcliff Tower"
-      ]
-    },
-    {
-      "id": "wiki_698",
-      "name": "Seawatch Tower",
-      "lore": "",
-      "x": 21.27906862745098,
-      "y": 86.11493907493369,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Seawatch Tower"
-      ]
-    },
-    {
-      "id": "wiki_715",
-      "name": "Seaseyes Tower",
-      "lore": "",
-      "x": 17.987365196078432,
-      "y": 76.09405652492264,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Seaseyes Tower"
-      ]
-    },
-    {
-      "id": "wiki_769",
-      "name": "Beacon Tower",
-      "lore": "",
-      "x": 57.957989988908054,
-      "y": 65.70168149285308,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Beacon Tower"
-      ]
-    },
-    {
-      "id": "wiki_770",
-      "name": "Watchway Tower",
-      "lore": "",
-      "x": 60.80404279003621,
-      "y": 63.64450387861786,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Watchway Tower"
-      ]
-    },
-    {
-      "id": "wiki_771",
-      "name": "Guard Tower",
-      "lore": "",
-      "x": 58.49851939687244,
-      "y": 51.07286290273688,
-      "category": "fort",
-      "grounding": []
-    },
-    {
-      "id": "wiki_843",
-      "name": "Outer Fort",
-      "lore": "",
-      "x": 25.27279411764706,
-      "y": 19.73144099524757,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Outer Fort"
-      ]
-    },
-    {
-      "id": "wiki_844",
-      "name": "The Queenspire",
-      "lore": "",
-      "x": 62.12115196078432,
-      "y": 15.800669001436782,
-      "category": "fort",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Queenspire"
+        "https://forgottenrealms.fandom.com/wiki/Sharess' Caress"
       ]
     }
   ],
-  "updatedAt": "2026-04-26T20:11:46.242Z"
+  "updatedAt": "2026-04-28T01:10:45.839Z"
 }
