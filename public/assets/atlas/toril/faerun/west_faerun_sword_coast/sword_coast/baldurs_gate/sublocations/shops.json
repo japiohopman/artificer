@@ -332,6 +332,28 @@
       "npcs": [],
       "ambientSound": ""
     },
+     {
+      "id": "wiki_197",
+      "name": "Rivington General",
+      "lore": "A smithy that dealt in [[weapon]]s and [[armor]], run by [[Gyldro Angleiron]] after [[1477 DR]]. Its shop area was a building to the north, with the southern connected structure being the workshop and the proprietor's home.{{approx}}",
+      "x": 92.17012651252045,
+      "y": 15.731191965144726,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Rivington General"
+      ]
+    },
+    {
+      "id": "wiki_200",
+      "name": "Bonecloak's Apothecary",
+      "lore": "A [[potion]] brewer's shop run by [[Derryth Bonecloak]] and [[Baelen Bonecloak]] ''circa'' [[1492 DR]].{{approx}}",
+      "x": 35.54999126215232,
+      "y": 57.086918872433,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Bonecloak's Apothecary"
+      ]
+    },
   ],
   "updatedAt": "2026-04-28T06:34:17.679Z"
 }
