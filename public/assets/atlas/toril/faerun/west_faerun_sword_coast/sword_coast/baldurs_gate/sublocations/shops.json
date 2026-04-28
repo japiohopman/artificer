@@ -460,6 +460,10 @@
       "y": 65.29394000543344,
       "category": "shop",
       "grounding": []
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_108",
@@ -469,6 +473,10 @@
       "y": 63.83111703871562,
       "category": "shop",
       "grounding": []
+            "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_119",
@@ -480,6 +488,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Candlekeep Chandlery"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_186",
@@ -491,6 +503,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Lucky Aello's Discount Store"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_187",
@@ -502,6 +518,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Maltz's Weapon Shop"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_188",
@@ -513,6 +533,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Well-Adjusted Al's General Store"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_190",
@@ -524,6 +548,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Alabaster Stonecrafts"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
       {
       "id": "wiki_71",
@@ -535,6 +563,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Danthelon's Dancing Axe"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_74",
@@ -546,6 +578,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Hamhocks Slaughterhouse"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_76",
@@ -557,6 +593,40 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Garynmor Stables and Menagerie"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    },
+     {
+      "id": "wiki_98",
+      "name": "Gray Harbor",
+      "lore": "The harbor of [[Baldur's Gate]] on [[River Chionthar]], one of the busiest and deepest natural harbors in [[Faerûn]].",
+      "x": 28.23714817435131,
+      "y": 40.26708312907787,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Gray Harbor"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
+      "id": "wiki_99",
+      "name": "Calim Jewel Emporium",
+      "lore": "Shop and home to the most well-regarded [[Baldurian]] jeweler of the late 15{{th}} century [[DR]] and a forum for local agents of the criminal organization known as [[the Guild]].",
+      "x": 58.133097894504736,
+      "y": 66.83828925595515,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Calim Jewel Emporium"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
   ],
   "updatedAt": "2026-04-28T06:34:17.679Z"
