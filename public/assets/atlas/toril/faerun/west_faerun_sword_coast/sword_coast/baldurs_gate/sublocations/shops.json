@@ -342,6 +342,10 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Rivington General"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
     {
       "id": "wiki_200",
@@ -353,6 +357,100 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Bonecloak's Apothecary"
       ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
+      "id": "wiki_55",
+      "name": "Harbreeze Bakery",
+      "lore": "A bakery offered such favorite delicacies as [[cinnamon]] [[cookie]]s and full loaves of [[sugarbread]] highlighted by the flavors of foreign [[tea]]s and [[spice]]s.",
+      "x": 22.780608777780227,
+      "y": 61.570492513754516,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Harbreeze Bakery"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
+      "id": "wiki_56",
+      "name": "Felogyr's Fireworks",
+      "lore": "A four-story stone shop on [[Bindle Street]] that traded in [[fireworks]], [[torch]]es, [[candle]] wicks, and other lesser alchemical items, and as of the late 15{{th}} century [[DR]], the sole producer of [[smokepowder]] within [[Baldur's Gate]].",
+      "x": 27.08217013351627,
+      "y": 56.91610765561789,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Felogyr's Fireworks"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
+      "id": "wiki_60",
+      "name": "Counting House",
+      "lore": "The center of trade and business in [[Baldur's Gate]], serving as both a bank and establishment that facilitated the exchange of various currencies.",
+      "x": 25.41665627965952,
+      "y": 48.57697145269646,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Counting House"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
+      "id": "wiki_61",
+      "name": "Sorcerous Sundries",
+      "lore": "A magic shop on [[Stormshore Street]] in the [[Heapside]] district.",
+      "x": 36.168524214874594,
+      "y": 56.75647621228011,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sorcerous Sundries"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
+      "id": "wiki_64",
+      "name": "Eastway Expeditions",
+      "lore": "A shop that specialized in selling equipment to those who sought exploration or adventure, particularly those ''en route'' to the [[Chultan Peninsula]].",
+      "x": 39.300051935035725,
+      "y": 49.46092060847194,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Eastway Expeditions"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
+    },
+    {
+      "id": "wiki_66",
+      "name": "Candulhallow's Funeral Arrangements",
+      "lore": "A city-sponsored business that specialized in the transportation and occasionally sale of corpses to cemeteries or temples.",
+      "x": 39.4329685782413,
+      "y": 55.18736202038017,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Candulhallow's Funeral Arrangements"
+      ]
+      "architect": "",
+      "locationType": "",
+      "npcs": [],
+      "ambientSound": ""
     },
   ],
   "updatedAt": "2026-04-28T06:34:17.679Z"
