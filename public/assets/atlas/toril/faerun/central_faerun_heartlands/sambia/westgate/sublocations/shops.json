@@ -1,0 +1,317 @@
+{
+  "locationName": "Westgate",
+  "category": "shop",
+  "subLocations": [
+    {
+      "id": "wiki_5",
+      "name": "The Blind Eye",
+      "lore": "A tack, harness, and trail-goods shop, also a fence.",
+      "x": 9.861035930724306,
+      "y": 63.763103777173434,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Blind Eye"
+      ]
+    },
+    {
+      "id": "wiki_10",
+      "name": "Cormaeril Company sheds",
+      "lore": "Warehouses that belonged to the [[Cormaeril]] merchant company.",
+      "x": 29.737224837838195,
+      "y": 59.7956099050379,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_15",
+      "name": "Thorsar Company sheds",
+      "lore": "Warehouses of the Thorsar merchant comapny.",
+      "x": 20.152160040752086,
+      "y": 47.069557676234425,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_16",
+      "name": "Thalavar Company sheds",
+      "lore": "Warehouses of the [[Thalavar]] merchant company.",
+      "x": 22.999882192649306,
+      "y": 39.141853009108374,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_23",
+      "name": "Ssemm Company sheds",
+      "lore": "Warehouses of the [[Ssemm]] merchant company.",
+      "x": 29.878393893781944,
+      "y": 29.129466231704875,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_27",
+      "name": "Guldar Company Sheds",
+      "lore": "Warehouses that belonged to the [[Guldar]] merchant company.",
+      "x": 50.713751332628476,
+      "y": 21.89778249359416,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Guldar"
+      ]
+    },
+    {
+      "id": "wiki_35",
+      "name": "House of Silks",
+      "lore": "Clothing and jewelry of the highest quality shop.",
+      "x": 70.48599834053125,
+      "y": 29.621637870771647,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/House of Silks"
+      ]
+    },
+    {
+      "id": "wiki_42",
+      "name": "Vhammos Company sheds",
+      "lore": "Warehouses that belonged to the [[Vhammos]] merchant company.",
+      "x": 95.15962240565973,
+      "y": 59.241281283344144,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_53",
+      "name": "Shalush Myrkeer's Shop",
+      "lore": "A general goods store and the largest shop in [[Westgate]].",
+      "x": 63.64577694804167,
+      "y": 32.09022465494301,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Shalush Myrkeer's Shop"
+      ]
+    },
+    {
+      "id": "wiki_55",
+      "name": "Urdo Company Sheds",
+      "lore": "Warehouses that belonged to the [[Urdo]] merchant company.",
+      "x": 53.26373852811458,
+      "y": 50.20390037814237,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Urdo"
+      ]
+    },
+    {
+      "id": "wiki_61",
+      "name": "Malavhan Company Sheds",
+      "lore": "Warehouses that belonged to the [[Malavhan]] merchant company.",
+      "x": 66.47581121051041,
+      "y": 48.183964899137166,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Malavhan"
+      ]
+    },
+    {
+      "id": "wiki_62",
+      "name": "Cormaeril docks",
+      "lore": "Formerly the '''Dhostar docks'''.",
+      "x": 55.635501220298615,
+      "y": 60.083470076328744,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_63",
+      "name": "Thorsar Docks",
+      "lore": "",
+      "x": 85,
+      "y": 52.9851630034161,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thorsar"
+      ]
+    },
+    {
+      "id": "wiki_64",
+      "name": "Malavhan Docks",
+      "lore": "",
+      "x": 60.084239772145835,
+      "y": 47.695429097324144,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Malavhan"
+      ]
+    },
+    {
+      "id": "wiki_65",
+      "name": "Urdo Docks",
+      "lore": "",
+      "x": 53.278452036062504,
+      "y": 46.906468404668466,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Urdo"
+      ]
+    },
+    {
+      "id": "wiki_66",
+      "name": "Thalavar Docks",
+      "lore": "",
+      "x": 45.274369529850695,
+      "y": 53.88836367786167,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thalavar"
+      ]
+    },
+    {
+      "id": "wiki_67",
+      "name": "Guldar docks",
+      "lore": "",
+      "x": 51.80531290859028,
+      "y": 60.6735369210675,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_68",
+      "name": "The Watch Dock",
+      "lore": "",
+      "x": 61.1260893399132,
+      "y": 60.421481326127626,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_69",
+      "name": "Athagdal docks and shipyards",
+      "lore": "",
+      "x": 83.72340707798958,
+      "y": 62.247040236603105,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_70",
+      "name": "Vhammos docks",
+      "lore": "",
+      "x": 85.93322209031945,
+      "y": 57.57592169357413,
+      "category": "shop",
+      "grounding": []
+    },
+    {
+      "id": "wiki_71",
+      "name": "Ssemm Docks",
+      "lore": "",
+      "x": 70.9560684051632,
+      "y": 56.69124321862972,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Ssemm"
+      ]
+    },
+    {
+      "id": "wiki_82",
+      "name": "Mintassan's Mysteries",
+      "lore": "A planar curio shop owned by [[Mintassan the Magnificent]] in a magically hidden and warded ''[[spelljammer]]'' ship, previously parked deeper into the block to the south.",
+      "x": 56.28462824673959,
+      "y": 33.06363322847976,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Mincassan's Mysteries"
+      ]
+    },
+    {
+      "id": "wiki_85",
+      "name": "Dawn's Dress Shop",
+      "lore": "An [[elf|elven]] seamstress' shop and the most fashionable store in [[Westgate]].",
+      "x": 67.08333333333334,
+      "y": 36.192672069375625,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Dawn's Dress Shop"
+      ]
+    },
+    {
+      "id": "wiki_96",
+      "name": "Chalaratha's Fragrances",
+      "lore": "A perfume shop and factory.",
+      "x": 38.61107352091666,
+      "y": 31.56866554873741,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Chalaratha's Fragrances"
+      ]
+    },
+    {
+      "id": "wiki_97",
+      "name": "Gondeth's Mageries",
+      "lore": "A [[wizard]]'s [[scroll]] shop.",
+      "x": 55.14450800503423,
+      "y": 33.28687938249552,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Gondeth's Mageries"
+      ]
+    },
+    {
+      "id": "wiki_98",
+      "name": "Tersonm's",
+      "lore": "[[Potion]] maker and a seller of rare [[spells]].",
+      "x": 52.361111111111114,
+      "y": 29.169700682235614,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Tersonm's"
+      ]
+    },
+    {
+      "id": "wiki_104",
+      "name": "Aurora's Emporium",
+      "lore": "Famed [[Aurora's Emporium]] that sold exotic items from all over [[Faerûn]] and operated as a curio shop in the late 1400s [[DR]].",
+      "x": 58.72914654854937,
+      "y": 29.35358010277392,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Aurora's Emporium"
+      ]
+    },
+    {
+      "id": "wiki_115",
+      "name": "Okuzo's Imports",
+      "lore": "A shop that dealt in rare and exotic imports from the Eastern nations.",
+      "x": 70.61246884348996,
+      "y": 46.906443593364,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Okuzo's Imports"
+      ]
+    },
+    {
+      "id": "wiki_119",
+      "name": "Brother Tobias Winery",
+      "lore": "A favored local [[wine]]ry.",
+      "x": 44.44440685425,
+      "y": 42.972238680405866,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Brother Tobias Winery"
+      ]
+    },
+    {
+      "id": "wiki_121",
+      "name": "Sods and Sundries",
+      "lore": "A shop of note.",
+      "x": 76.40696424299654,
+      "y": 47.83478039207114,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sods and Sundries"
+      ]
+    }
+  ],
+  "updatedAt": "2026-04-28T03:18:31.522Z"
+}
