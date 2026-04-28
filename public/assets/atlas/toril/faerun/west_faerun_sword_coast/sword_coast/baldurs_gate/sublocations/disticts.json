@@ -266,6 +266,15 @@
         "https://forgottenrealms.fandom.com/wiki/Beloved Ranger"
       ]
     },
+        {
+      "id": "wiki_195",
+      "name": "Statue of Balduran",
+      "lore": "A monolithic statue of [[Balduran]], looming over the ships entering the [[Gray Harbor]].",
+      "x": 29.651318289303134,
+      "y": 34.255649818078886,
+      "category": "landmarks",
+      "grounding": []
+    },
     {
       "id": "wiki_70",
       "name": "Insight Park",
@@ -275,39 +284,6 @@
       "category": "disticts",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Insight Park"
-      ]
-    },
-    {
-      "id": "wiki_71",
-      "name": "Danthelon's Dancing Axe",
-      "lore": "A general store that sold good quality secondhand wares, from pots and pans to [[rope]], [[armor]], and [[weapons]].",
-      "x": 86.4555550808224,
-      "y": 30.02720157239244,
-      "category": "shop",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Danthelon's Dancing Axe"
-      ]
-    },
-    {
-      "id": "wiki_74",
-      "name": "Hamhocks Slaughterhouse",
-      "lore": "A massive compound composed of a number of animal pens, knackeries, and butcheries, its foul stench drove away the animals of the herders and wranglers.",
-      "x": 81,
-      "y": 52.88370789365073,
-      "category": "shop",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hamhocks Slaughterhouse"
-      ]
-    },
-    {
-      "id": "wiki_76",
-      "name": "Garynmor Stables and Menagerie",
-      "lore": "A business that specialized in the handling and care of mundane beasts of burden, as well as the exhibition of all manner of exotic and fantastical creatures.",
-      "x": 46.56666666666666,
-      "y": 55.178034102306924,
-      "category": "shop",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Garynmor Stables and Menagerie"
       ]
     },
     {
@@ -388,6 +364,17 @@
       ]
     },
     {
+      "id": "wiki_110",
+      "name": "The Queen's Favor",
+      "lore": "A statue landmark of note.",
+      "x": 23.275008737847678,
+      "y": 45.85944386994822,
+      "category": "landmarks",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Queen's Favor"
+      ]
+    },
+    {
       "id": "wiki_105",
       "name": "Six Wise Machinists",
       "lore": "A statue that was vandalized in [[1482 DR]].",
@@ -408,99 +395,6 @@
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Faithful Shopkeeper Meets the Honest Trader"
       ]
-    },
-    {
-      "id": "wiki_107",
-      "name": "Garynmor Stables",
-      "lore": "",
-      "x": 5.468292441175967,
-      "y": 65.29394000543344,
-      "category": "shop",
-      "grounding": []
-    },
-    {
-      "id": "wiki_108",
-      "name": "Garynmor Stables",
-      "lore": "",
-      "x": 6.764645080387054,
-      "y": 63.83111703871562,
-      "category": "shop",
-      "grounding": []
-    },
-    {
-      "id": "wiki_110",
-      "name": "The Queen's Favor",
-      "lore": "A statue landmark of note.",
-      "x": 23.275008737847678,
-      "y": 45.85944386994822,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Queen's Favor"
-      ]
-    },
-    {
-      "id": "wiki_119",
-      "name": "Candlekeep Chandlery",
-      "lore": "A shop that sold beautifying products and [[candle]]s, both mundane and magical in nature.",
-      "x": 13.716362447789036,
-      "y": 33.19345336168625,
-      "category": "shop",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Candlekeep Chandlery"
-      ]
-    },
-    {
-      "id": "wiki_186",
-      "name": "Lucky Aello's Discount Store",
-      "lore": "A store that sold heavily marked-down goods that ranged from [[potion]]s of reliable quality to ''[[curse]]d'' [[weapon]]s and [[scroll]]s of magic protection.{{approx}}",
-      "x": 40.94720764554042,
-      "y": 53.89002665837571,
-      "category": "shop",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Lucky Aello's Discount Store"
-      ]
-    },
-    {
-      "id": "wiki_187",
-      "name": "Maltz's Weapon Shop",
-      "lore": "A merchant who dealt in mandate weapons, ran by [[Maltz]] in the 14{{th}} century [[DR]], located just to the northwest of the [[Elfsong Tavern]].{{approx}}",
-      "x": 35.862160971648315,
-      "y": 51.251063656868595,
-      "category": "shop",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Maltz's Weapon Shop"
-      ]
-    },
-    {
-      "id": "wiki_188",
-      "name": "Well-Adjusted Al's General Store",
-      "lore": "The general store located to the west of the [[Low Lantern]]; it traded in mundane goods and [[weapon]]s and run by eccentric [[Well-Adjusted Al]] in the 14{{th}} century [[DR]].{{approx}}",
-      "x": 37.299882707590385,
-      "y": 43.27219583627345,
-      "category": "shop",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Well-Adjusted Al's General Store"
-      ]
-    },
-    {
-      "id": "wiki_190",
-      "name": "Alabaster Stonecrafts",
-      "lore": "An open-air stonemason's workshop run by twin [[dwarf|dwarven]] siblings in the late 15{{th}} century [[DR]].{{approx}}",
-      "x": 52.32590798639586,
-      "y": 40.70564012390733,
-      "category": "shop",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Alabaster Stonecrafts"
-      ]
-    },
-    {
-      "id": "wiki_195",
-      "name": "Statue of Balduran",
-      "lore": "A monolithic statue of [[Balduran]], looming over the ships entering the [[Gray Harbor]].",
-      "x": 29.651318289303134,
-      "y": 34.255649818078886,
-      "category": "landmarks",
-      "grounding": []
     },
     {
       "id": "wiki_202",
