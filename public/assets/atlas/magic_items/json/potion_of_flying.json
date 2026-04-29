@@ -16,6 +16,13 @@
     "When you drink this potion, you gain a flying speed equal to your walking speed for 1 hour and can hover. If you're in the air when the potion wears off, you fall unless you have some other means of staying aloft. This potion's clear liquid floats at the top of its container and has cloudy white impurities drifting in it."
   ],
   "url": "public/assets/atlas/magic_items/json/potion_of_flying.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/potion_of_flying.webp"
+  "updated_at": "2026-04-29T20:00:01.541Z",
+  "image": "public/assets/atlas/magic_items/potion_of_flying.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/potion_of_flying.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "29-4-2026"
 }
