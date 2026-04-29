@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "dragon",
   "alignment": "lawful evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 18
-    }
-  ],
+  "armor_class": 18,
   "hit_points": 152,
   "hit_dice": "16d10",
   "hit_points_roll": "16d10+64",
@@ -86,7 +81,7 @@
     "passive_perception": 19
   },
   "languages": "Common, Draconic",
-  "challenge_rating": 9,
+  "challenge_rating": "9",
   "proficiency_bonus": 4,
   "xp": 5000,
   "actions": [
@@ -180,11 +175,24 @@
   ],
   "image": "public/assets/atlas/enemies/young_blue_dragon.webp",
   "url": "public/assets/atlas/enemies/json/young_blue_dragon.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-04-29T19:32:04.826Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 24,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet13.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet13.webp",
+  "stats": {
+    "str": 21,
+    "dex": 10,
+    "con": 19,
+    "int": 14,
+    "wis": 13,
+    "cha": 17
+  },
+  "imageUrl": "/assets/atlas/enemies/images/young_blue_dragon.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "rarity": "Rare",
+  "last_updated": "29-4-2026"
 }
