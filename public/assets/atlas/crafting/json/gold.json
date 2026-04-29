@@ -10,10 +10,10 @@
   "material_sub_category": "Common",
   "rarity": "Common",
   "cost": {
-    "quantity": 1,
+    "quantity": 1000,
     "unit": "gp"
   },
-  "weight": 1,
+  "weight": "10",
   "desc": [
     "Highly conductive for magic; increases item value by 10x."
   ],
@@ -23,9 +23,11 @@
   ],
   "source": "Real World",
   "url": "public/assets/atlas/crafting/json/gold.json",
-  "updated_at": "2026-04-11T19:12:53.697Z",
+  "updated_at": "2026-04-29T19:43:34.136Z",
   "image": "public/assets/atlas/crafting/gold.webp",
   "category": "Raw Materials",
-  "last_updated": "11-4-2026",
-  "imageUrl": "/assets/atlas/crafting/gold.webp"
+  "last_updated": "29-4-2026",
+  "imageUrl": "/assets/atlas/crafting/images/gold.webp",
+  "_type": "materials",
+  "background_type": "land_forest"
 }
