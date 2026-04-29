@@ -21,10 +21,17 @@
     "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus."
   ],
   "url": "public/assets/atlas/equipment/json/wooden_staff.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-29T00:58:43.138Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/wooden_staff.webp",
   "sprite_index": 10,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp",
+  "imageUrl": "/assets/atlas/equipment/images/wooden_staff.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "focus"
+  ],
+  "last_updated": "29-4-2026"
 }
