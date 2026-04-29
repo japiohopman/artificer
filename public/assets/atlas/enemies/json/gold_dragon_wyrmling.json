@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "dragon",
   "alignment": "lawful good",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 60,
   "hit_dice": "8d8",
   "hit_points_roll": "8d8+24",
@@ -86,7 +81,7 @@
     "passive_perception": 14
   },
   "languages": "Draconic",
-  "challenge_rating": 3,
+  "challenge_rating": "3",
   "proficiency_bonus": 2,
   "xp": 700,
   "special_abilities": [
@@ -172,10 +167,23 @@
   ],
   "image": "public/assets/atlas/enemies/gold_dragon_wyrmling.webp",
   "url": "public/assets/atlas/enemies/json/gold_dragon_wyrmling.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-04-29T19:24:32.686Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 22,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.webp",
+  "stats": {
+    "str": 19,
+    "dex": 14,
+    "con": 17,
+    "int": 14,
+    "wis": 11,
+    "cha": 16
+  },
+  "imageUrl": "/assets/atlas/enemies/images/gold_dragon_wyrmling.webp",
+  "_type": "enemies",
+  "background_type": "land_urban",
+  "rarity": "Rare",
+  "last_updated": "29-4-2026"
 }
