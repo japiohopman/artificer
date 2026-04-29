@@ -39,9 +39,17 @@
     "long": 15
   },
   "url": "public/assets/atlas/equipment/json/net.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-29T19:55:29.113Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/net.webp",
   "sprite_index": 19,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/images/net.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "category": "Martial Weapons",
+  "last_updated": "29-4-2026"
 }
