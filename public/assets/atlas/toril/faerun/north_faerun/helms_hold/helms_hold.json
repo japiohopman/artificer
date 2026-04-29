@@ -39,9 +39,21 @@
       "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEt8D6osUCX5uQJ7cDCvAh8mnzNzMy7wWRLbmGDoYtmoqd8f7tgoRO0qePamKS7IWbBM3_Xi9xhK_FgV4alTOpP6BhpkDmW1JbDuyX8QkXF5K2_AfHyigjcYXAsLlV63dcdAlVLa45r-Bu-kF8QsEgfwaTkHSP8rp1rOfTT1191PkZ0LWF8H8Cs33tZPcbAfcQe54ymmB7mZKWMvad_qIQ="
     }
   ],
+  "spatialReference": {
+    "p1": {
+      "x": 58.48386085438361,
+      "y": 2.0402116901720433
+    },
+    "p2": {
+      "x": 86.10153692998685,
+      "y": 3.9142779821959124
+    },
+    "realLength": 400,
+    "unit": "ml"
+  },
   "overlayMapUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/north_faerun/helms_hold/helms_hold_submap.webp",
   "subLocationCount": 0,
   "subPaths": [],
   "image": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/northwest_faerun_the_north/swordcoast_north/helms_hold/helms_hold.webp",
-  "updatedAt": "2026-04-29T20:40:44.483Z"
+  "updatedAt": "2026-04-29T20:42:21.118Z"
 }
