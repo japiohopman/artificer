@@ -44,9 +44,13 @@
     "long": 120
   },
   "url": "public/assets/atlas/equipment/json/javelin.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-30T10:30:33.833Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/javelin.webp",
   "sprite_index": 14,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+  "imageUrl": "/assets/atlas/equipment/images/javelin.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "30-4-2026"
 }
