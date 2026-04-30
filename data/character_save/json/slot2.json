@@ -1,0 +1,606 @@
+{
+  "level": 1,
+  "xp": 0,
+  "gender": "Male",
+  "stats": {
+    "str": 16,
+    "dex": 14,
+    "con": 14,
+    "int": 12,
+    "wis": 11,
+    "cha": 9
+  },
+  "proficiencies": [
+    "light armor",
+    "medium armor",
+    "shields",
+    "simple weapons",
+    "martial weapons",
+    "saving throw: str",
+    "saving throw: con",
+    "Acrobatics",
+    "Animal Handling"
+  ],
+  "traits": [
+    ""
+  ],
+  "features": [],
+  "flaws": [
+    ""
+  ],
+  "ideals": [
+    ""
+  ],
+  "bonds": [
+    ""
+  ],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 10,
+    "pp": 0
+  },
+  "appearance": {
+    "hairColor": "Verdant Forest",
+    "hairStyle": "Short",
+    "bodyType": "Medium",
+    "eyeColor": "Abyssal Black",
+    "skinColor": "#a1aaf1",
+    "height": "5'10\"",
+    "weight": "160 lbs"
+  },
+  "backpack": [
+    {
+      "id": "backpack",
+      "index": "backpack",
+      "name": "backpack",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/backpack.json",
+      "image_url": "public/assets/atlas/equipment/images/backpack.webp",
+      "imageUrl": "/assets/atlas/equipment/images/backpack.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-21T14:08:31.097Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/backpack.webp",
+      "sprite_index": 9,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "back"
+      ],
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "bedroll",
+      "index": "bedroll",
+      "name": "bedroll",
+      "quantity": 1,
+      "weight": 7,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/bedroll.json",
+      "image_url": "public/assets/atlas/equipment/images/bedroll.webp",
+      "imageUrl": "/assets/atlas/equipment/bedroll.webp",
+      "desc": [
+        "A typical bedroll consisted of a sack that could contain a human-sized creature, with an opening on the side. Some variants consisted of several layers to provide waterproofing, warmth, and comfort"
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-11T15:14:56.995Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/bedroll.webp",
+      "sprite_index": 2,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
+      "category": "Adventuring Gear",
+      "last_updated": "11-4-2026"
+    },
+    {
+      "id": "mess_kit",
+      "index": "mess_kit",
+      "name": "mess kit",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/mess_kit.json",
+      "image_url": "public/assets/atlas/equipment/images/mess_kit.webp",
+      "imageUrl": "/assets/atlas/equipment/mess_kit.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "kits",
+        "name": "kits",
+        "url": "public/assets/atlas/equipment_categories/kits"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "sp"
+      },
+      "desc": [
+        "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl."
+      ],
+      "updated_at": "2026-04-12T08:02:03.666Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/mess_kit.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+      "category": "Kits",
+      "last_updated": "12-4-2026"
+    },
+    {
+      "id": "tinderbox",
+      "index": "tinderbox",
+      "name": "tinderbox",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/tinderbox.json",
+      "image_url": "public/assets/atlas/equipment/images/tinderbox.webp",
+      "imageUrl": "/assets/atlas/equipment/tinderbox.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch--or anything else with abundant, exposed fuel--takes an action.",
+        "Lighting any other fire takes 1 minute."
+      ],
+      "updated_at": "2026-04-15T13:57:41.365Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/tinderbox.webp",
+      "sprite_index": 16,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "category": "Adventuring Gear",
+      "last_updated": "15-4-2026"
+    },
+    {
+      "id": "torch",
+      "index": "torch",
+      "name": "torch",
+      "quantity": 10,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/torch.json",
+      "image_url": "public/assets/atlas/equipment/images/torch.webp",
+      "imageUrl": "/assets/atlas/equipment/images/torch.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "cp"
+      },
+      "desc": [
+        "A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
+      ],
+      "updated_at": "2026-04-24T03:30:26.922Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/torch.webp",
+      "sprite_index": 18,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "off-hand"
+      ],
+      "last_updated": "24-4-2026"
+    },
+    {
+      "id": "rations_1_day",
+      "index": "rations_1_day",
+      "name": "rations (1 day)",
+      "quantity": 10,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/rations_1_day.json",
+      "image_url": "public/assets/atlas/equipment/images/rations_1_day.webp",
+      "imageUrl": "/assets/atlas/equipment/images/rations_1_day.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/rations_1_day.webp",
+      "sprite_index": 20,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+    },
+    {
+      "id": "waterskin",
+      "index": "waterskin",
+      "name": "waterskin",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/waterskin.json",
+      "image_url": "public/assets/atlas/equipment/images/waterskin.webp",
+      "imageUrl": "/assets/atlas/equipment/images/waterskin.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "sp"
+      },
+      "updated_at": "2026-04-21T14:20:07.679Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/waterskin.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "extra"
+      ],
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "rope_hempen_50_feet",
+      "index": "rope_hempen_50_feet",
+      "name": "rope, hempen (50 feet)",
+      "quantity": 1,
+      "weight": 10,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/rope_hempen_50_feet.json",
+      "image_url": "public/assets/atlas/equipment/images/rope_hempen_50_feet.webp",
+      "imageUrl": "/assets/atlas/equipment/images/rope_hempen_50_feet.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "desc": [
+        "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/rope_hempen_50_feet.webp",
+      "sprite_index": 0,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+    },
+    {
+      "id": "handaxe",
+      "index": "handaxe",
+      "name": "handaxe",
+      "quantity": 2,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/handaxe.json",
+      "image_url": "public/assets/atlas/equipment/images/handaxe.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fhandaxe.webp?t=1777543888195",
+      "desc": [
+        "The iron head is permanently stained a rusted, bruised violet, as if the steel itself has grown weary of the thirst it developed in the hands of the previous owner. Its haft is wrapped in cured, sun-bleached hide that hums with a faint, rhythmic vibration, mimicking the final, frantic heartbeat of its last victim."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d6",
+        "damage_type": {
+          "index": "slashing",
+          "name": "slashing",
+          "url": "public/assets/atlas/damage_types/slashing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "light",
+          "name": "light",
+          "url": "public/assets/atlas/weapon_properties/light"
+        },
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "updated_at": "2026-04-14T08:19:56.274Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/handaxe.webp",
+      "sprite_index": 2,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "last_updated": "14-4-2026"
+    },
+    {
+      "id": "javelin",
+      "index": "javelin",
+      "name": "javelin",
+      "quantity": 4,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/javelin.json",
+      "image_url": "public/assets/atlas/equipment/images/javelin.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fjavelin.webp?t=1777543871084",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "damage": {
+        "damage_dice": "1d6",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 30,
+        "long": 120
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/javelin.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp"
+    }
+  ],
+  "inventory": {
+    "main-hand": {
+      "id": "javelin",
+      "index": "javelin",
+      "name": "javelin",
+      "quantity": 4,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/javelin.json",
+      "image_url": "public/assets/atlas/equipment/images/javelin.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fjavelin.webp?t=1777543871084",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "damage": {
+        "damage_dice": "1d6",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 30,
+        "long": 120
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/javelin.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "main_hand_slot": "javelin",
+      "slot": "main-hand"
+    },
+    "off-hand": {
+      "id": "greataxe",
+      "index": "greataxe",
+      "name": "greataxe",
+      "quantity": 1,
+      "weight": 7,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/greataxe.json",
+      "image_url": "public/assets/atlas/equipment/images/greataxe.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fgreataxe.webp?t=1777543881596",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Martial",
+      "weapon_range": "Melee",
+      "category_range": "Martial Melee",
+      "cost": {
+        "quantity": 30,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d12",
+        "damage_type": {
+          "index": "slashing",
+          "name": "slashing",
+          "url": "public/assets/atlas/damage_types/slashing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "heavy",
+          "name": "heavy",
+          "url": "public/assets/atlas/weapon_properties/heavy"
+        },
+        {
+          "index": "two_handed",
+          "name": "two_handed",
+          "url": "public/assets/atlas/weapon_properties/two_handed"
+        }
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/greataxe.webp",
+      "sprite_index": 20,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+      "off_hand_slot": "greataxe",
+      "slot": "off-hand"
+    }
+  },
+  "spells": [],
+  "choices": {},
+  "race": "tiefling",
+  "class": "barbarian",
+  "background": "folk_hero",
+  "backstory": "Born under a blood-red moon in the craggy foothills of the Spine, the child was never given a name by the terrified villagers who found him abandoned on their doorstep. Instead, he grew up in the shadows of the communal forge, a silent, hulking youth with skin like cooling embers and horns that swept back like a mountain ram’s. His life was one of quiet isolation until the night the Frost-Giants descended upon the valley. While the local guard fled or fell, the nameless tiefling did not retreat. He did not reach for a polished blade or a scholar’s spell; instead, he tapped into a wellspring of ancient, volcanic fury buried deep within his infernal blood. He seized a heavy, rusted logging axe and held the narrow mountain pass alone for three days and three nights. When the sun rose on the fourth day, the giants were broken, and the villagers found him standing amidst the carnage, breathing steam into the cold air—a savior they still did not know how to address.\n\nThis victory did not bring him a seat at the high table, but it earned him a debt of silence and a legacy of whispered gratitude. He realized then that the rage boiling in his veins was not a curse of his devilish ancestry, but a primal shield for those who could not defend themselves. He rejected the civilized world’s need for titles and registries, choosing instead the path of the wild, where the only truth is the strength of one's grip and the heat of one's heart. He wanders now as a nameless legend of the hinterlands, a folk hero to the downtrodden who share stories of a crimson giant who appears when hope is lost, only to vanish before the thanks can be spoken. \n\nHis journey is driven by a restless search for a purpose greater than mere survival and a desire to define himself by his deeds rather than his lineage. He carries an empty iron locket—a symbol of the identity he never had—and seeks to prove that a man’s worth is forged in the fire of his character. Whether facing down a corrupt baron or a marauding beast, he enters the fray with a roar that echoes like the shifting of tectonic plates. He moves toward the horizon not to find his name, but to ensure that those who live in fear might one day have the luxury of forgetting his, knowing only that they were saved by a force of nature that refused to break.",
+  "alignment": "chaotic_neutral",
+  "name": "soul",
+  "imageUrl": "data/character_save/images/slot2/slot2_portrait.webp",
+  "avatarUrl": "data/character_save/images/slot2/slot2_avatar.webp",
+  "matrixUrl": "data/character_save/images/slot2/slot2_matrix.webp",
+  "id": "slot2",
+  "hp": 14,
+  "maxHp": 14,
+  "lastSaved": "2026-04-30T10:15:12.724Z"
+}
