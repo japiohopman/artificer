@@ -21,10 +21,18 @@
     "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check."
   ],
   "url": "public/assets/atlas/equipment/json/rope_hempen_50_feet.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-30T10:51:30.498Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/rope_hempen_50_feet.webp",
   "sprite_index": 0,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/rope_hempen_50_feet.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "category": "Adventuring Gear",
+  "last_updated": "30-4-2026"
 }
