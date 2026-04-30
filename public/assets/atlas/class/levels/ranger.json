@@ -1,0 +1,659 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "favored-enemy-1-type",
+        "name": "Favored Enemy (1 type)",
+        "url": "/assets/atlas/features/favored-enemy-1-type"
+      },
+      {
+        "index": "natural-explorer-1-terrain-type",
+        "name": "Natural Explorer (1 terrain type)",
+        "url": "/assets/atlas/features/natural-explorer-1-terrain-type"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 0,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 1,
+      "favored_terrain": 1
+    },
+    "index": "ranger-1",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/1",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "ranger-fighting-style",
+        "name": "Fighting Style",
+        "url": "/assets/atlas/features/ranger-fighting-style"
+      },
+      {
+        "index": "spellcasting-ranger",
+        "name": "Spellcasting: Ranger",
+        "url": "/assets/atlas/features/spellcasting-ranger"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 2,
+      "spell_slots_level_1": 2,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 1,
+      "favored_terrain": 1
+    },
+    "index": "ranger-2",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/2",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "ranger-archetype",
+        "name": "Ranger Archetype",
+        "url": "/assets/atlas/features/ranger-archetype"
+      },
+      {
+        "index": "primeval-awareness",
+        "name": "Primeval Awareness",
+        "url": "/assets/atlas/features/primeval-awareness"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 3,
+      "spell_slots_level_1": 3,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 1,
+      "favored_terrain": 1
+    },
+    "index": "ranger-3",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/3",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "ranger-ability-score-improvement-1",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/ranger-ability-score-improvement-1"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 3,
+      "spell_slots_level_1": 3,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 1,
+      "favored_terrain": 1
+    },
+    "index": "ranger-4",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/4",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "ranger-extra-attack",
+        "name": "Extra Attack",
+        "url": "/assets/atlas/features/ranger-extra-attack"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 1,
+      "favored_terrain": 1
+    },
+    "index": "ranger-5",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/5",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "favored-enemy-2-types",
+        "name": "Favored Enemy (2 types)",
+        "url": "/assets/atlas/features/favored-enemy-2-types"
+      },
+      {
+        "index": "natural-explorer-2-terrain-types",
+        "name": "Natural Explorer (2 terrain types)",
+        "url": "/assets/atlas/features/natural-explorer-2-terrain-types"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 2,
+      "favored_terrain": 2
+    },
+    "index": "ranger-6",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/6",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "ranger-archetype-improvement-1",
+        "name": "Ranger Archetype feature",
+        "url": "/assets/atlas/features/ranger-archetype-improvement-1"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 2,
+      "favored_terrain": 2
+    },
+    "index": "ranger-7",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/7",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "ranger-ability-score-improvement-2",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/ranger-ability-score-improvement-2"
+      },
+      {
+        "index": "ranger-lands-stride",
+        "name": "Land's Stride",
+        "url": "/assets/atlas/features/ranger-lands-stride"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 2,
+      "favored_terrain": 2
+    },
+    "index": "ranger-8",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/8",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [],
+    "spellcasting": {
+      "spells_known": 6,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 2,
+      "favored_terrain": 2
+    },
+    "index": "ranger-9",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/9",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "natural-explorer-3-terrain-types",
+        "name": "Natural Explorer (3 terrain types)",
+        "url": "/assets/atlas/features/natural-explorer-3-terrain-types"
+      },
+      {
+        "index": "hide-in-plain-sight",
+        "name": "Hide in Plain Sight",
+        "url": "/assets/atlas/features/hide-in-plain-sight"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 6,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 2,
+      "favored_terrain": 3
+    },
+    "index": "ranger-10",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/10",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "ranger-archetype-improvement-2",
+        "name": "Ranger Archetype feature",
+        "url": "/assets/atlas/features/ranger-archetype-improvement-2"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 7,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 2,
+      "favored_terrain": 3
+    },
+    "index": "ranger-11",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/11",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "ranger-ability-score-improvement-3",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/ranger-ability-score-improvement-3"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 7,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 2,
+      "favored_terrain": 3
+    },
+    "index": "ranger-12",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/12",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "spellcasting": {
+      "spells_known": 8,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 1,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 2,
+      "favored_terrain": 3
+    },
+    "index": "ranger-13",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/13",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "favored-enemy-3-enemies",
+        "name": "Favored Enemy (3 enemies)",
+        "url": "/assets/atlas/features/favored-enemy-3-enemies"
+      },
+      {
+        "index": "vanish",
+        "name": "Vanish",
+        "url": "/assets/atlas/features/vanish"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 8,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 1,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 3,
+      "favored_terrain": 3
+    },
+    "index": "ranger-14",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/14",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "ranger-archetype-improvement-3",
+        "name": "Ranger Archetype feature",
+        "url": "/assets/atlas/features/ranger-archetype-improvement-3"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 9,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 3,
+      "favored_terrain": 3
+    },
+    "index": "ranger-15",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/15",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "ranger-ability-score-improvement-4",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/ranger-ability-score-improvement-4"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 9,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0
+    },
+    "class_specific": {
+      "favored_enemies": 3,
+      "favored_terrain": 3
+    },
+    "index": "ranger-16",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/16",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [],
+    "spellcasting": {
+      "spells_known": 10,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 1
+    },
+    "class_specific": {
+      "favored_enemies": 3,
+      "favored_terrain": 3
+    },
+    "index": "ranger-17",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/17",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "feral-senses",
+        "name": "Feral Senses",
+        "url": "/assets/atlas/features/feral-senses"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 10,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 1
+    },
+    "class_specific": {
+      "favored_enemies": 3,
+      "favored_terrain": 3
+    },
+    "index": "ranger-18",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/18",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "ranger-ability-score-improvement-5",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/ranger-ability-score-improvement-5"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 11,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2
+    },
+    "class_specific": {
+      "favored_enemies": 3,
+      "favored_terrain": 3
+    },
+    "index": "ranger-19",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/19",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "foe-slayer",
+        "name": "Foe Slayer",
+        "url": "/assets/atlas/features/foe-slayer"
+      }
+    ],
+    "spellcasting": {
+      "spells_known": 11,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2
+    },
+    "class_specific": {
+      "favored_enemies": 3,
+      "favored_terrain": 3
+    },
+    "index": "ranger-20",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/classes/ranger"
+    },
+    "url": "/assets/atlas/classes/ranger/levels/20",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  }
+]

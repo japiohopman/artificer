@@ -1,0 +1,512 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "fighter-fighting-style",
+        "name": "Fighting Style",
+        "url": "/assets/atlas/features/fighter-fighting-style"
+      },
+      {
+        "index": "second-wind",
+        "name": "Second Wind",
+        "url": "/assets/atlas/features/second-wind"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 0,
+      "indomitable_uses": 0,
+      "extra_attacks": 0
+    },
+    "index": "fighter-1",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/1",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "action-surge-1-use",
+        "name": "Action Surge (1 use)",
+        "url": "/assets/atlas/features/action-surge-1-use"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 0
+    },
+    "index": "fighter-2",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/2",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "martial-archetype",
+        "name": "Martial Archetype",
+        "url": "/assets/atlas/features/martial-archetype"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 0
+    },
+    "index": "fighter-3",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/3",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "fighter-ability-score-improvement-1",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/fighter-ability-score-improvement-1"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 0
+    },
+    "index": "fighter-4",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/4",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "extra-attack-1",
+        "name": "Extra Attack",
+        "url": "/assets/atlas/features/extra-attack-1"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 1
+    },
+    "index": "fighter-5",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/5",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "fighter-ability-score-improvement-2",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/fighter-ability-score-improvement-2"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 1
+    },
+    "index": "fighter-6",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/6",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "martial-archetype-improvement-1",
+        "name": "Martial Archetype feature",
+        "url": "/assets/atlas/features/martial-archetype-improvement-1"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 1
+    },
+    "index": "fighter-7",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/7",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "fighter-ability-score-improvement-3",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/fighter-ability-score-improvement-3"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 1
+    },
+    "index": "fighter-8",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/8",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "indomitable-1-use",
+        "name": "Indomitable (1 use)",
+        "url": "/assets/atlas/features/indomitable-1-use"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 1,
+      "extra_attacks": 1
+    },
+    "index": "fighter-9",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/9",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "martial-archetype-improvement-2",
+        "name": "Martial Archetype feature",
+        "url": "/assets/atlas/features/martial-archetype-improvement-2"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 1,
+      "extra_attacks": 1
+    },
+    "index": "fighter-10",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/10",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "extra-attack-2",
+        "name": "Extra Attack (2)",
+        "url": "/assets/atlas/features/extra-attack-2"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 1,
+      "extra_attacks": 2
+    },
+    "index": "fighter-11",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/11",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "fighter-ability-score-improvement-4",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/fighter-ability-score-improvement-4"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 1,
+      "extra_attacks": 2
+    },
+    "index": "fighter-12",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/12",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "indomitable-2-uses",
+        "name": "Indomitable (2 uses)",
+        "url": "/assets/atlas/features/indomitable-2-uses"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 2,
+      "extra_attacks": 2
+    },
+    "index": "fighter-13",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/13",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "fighter-ability-score-improvement-5",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/fighter-ability-score-improvement-5"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 2,
+      "extra_attacks": 2
+    },
+    "index": "fighter-14",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/14",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "martial-archetype-improvement-3",
+        "name": "Martial Archetype feature",
+        "url": "/assets/atlas/features/martial-archetype-improvement-3"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 2,
+      "extra_attacks": 2
+    },
+    "index": "fighter-15",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/15",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 6,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "fighter-ability-score-improvement-6",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/fighter-ability-score-improvement-6"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 1,
+      "indomitable_uses": 2,
+      "extra_attacks": 2
+    },
+    "index": "fighter-16",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/16",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 6,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "action-surge-2-uses",
+        "name": "Action Surge (2 uses)",
+        "url": "/assets/atlas/features/action-surge-2-uses"
+      },
+      {
+        "index": "indomitable-3-uses",
+        "name": "Indomitable (3 uses)",
+        "url": "/assets/atlas/features/indomitable-3-uses"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 2,
+      "indomitable_uses": 3,
+      "extra_attacks": 2
+    },
+    "index": "fighter-17",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/17",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 6,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "martial-archetype-improvement-4",
+        "name": "Martial Archetype feature",
+        "url": "/assets/atlas/features/martial-archetype-improvement-4"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 2,
+      "indomitable_uses": 3,
+      "extra_attacks": 2
+    },
+    "index": "fighter-18",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/18",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 7,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "fighter-ability-score-improvement-7",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/fighter-ability-score-improvement-7"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 2,
+      "indomitable_uses": 3,
+      "extra_attacks": 2
+    },
+    "index": "fighter-19",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/19",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 7,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "extra-attack-3",
+        "name": "Extra Attack (3)",
+        "url": "/assets/atlas/features/extra-attack-3"
+      }
+    ],
+    "class_specific": {
+      "action_surges": 2,
+      "indomitable_uses": 3,
+      "extra_attacks": 3
+    },
+    "index": "fighter-20",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/classes/fighter"
+    },
+    "url": "/assets/atlas/classes/fighter/levels/20",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  }
+]

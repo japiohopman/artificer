@@ -1,0 +1,682 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "magical-tinkering",
+        "name": "Magical Tinkering",
+        "url": "/assets/atlas/features/magical-tinkering"
+      },
+      {
+        "index": "spellcasting-artificer",
+        "name": "Spellcasting: Artificer",
+        "url": "/assets/atlas/features/spellcasting-artificer"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spell_slots_level_1": 2,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 0,
+      "infused_items": 0
+    },
+    "index": "artificer-1",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/1"
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "infuse-item",
+        "name": "Infuse Item",
+        "url": "/assets/atlas/features/infuse-item"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spell_slots_level_1": 2,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 4,
+      "infused_items": 2
+    },
+    "index": "artificer-2",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/2"
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "artificer-specialist",
+        "name": "Artificer Specialist",
+        "url": "/assets/atlas/features/artificer-specialist"
+      },
+      {
+        "index": "the-right-tool-for-the-job",
+        "name": "The Right Tool for the Job",
+        "url": "/assets/atlas/features/the-right-tool-for-the-job"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spell_slots_level_1": 3,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 4,
+      "infused_items": 2
+    },
+    "index": "artificer-3",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/3"
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "artificer-ability-score-improvement-1",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/artificer-ability-score-improvement-1"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spell_slots_level_1": 3,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 4,
+      "infused_items": 2
+    },
+    "index": "artificer-4",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/4"
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [],
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 4,
+      "infused_items": 2
+    },
+    "index": "artificer-5",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/5"
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "tool-expertise",
+        "name": "Tool Expertise",
+        "url": "/assets/atlas/features/tool-expertise"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 6,
+      "infused_items": 3
+    },
+    "index": "artificer-6",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/6"
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "flash-of-genius",
+        "name": "Flash of Genius",
+        "url": "/assets/atlas/features/flash-of-genius"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 6,
+      "infused_items": 3
+    },
+    "index": "artificer-7",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/7"
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "artificer-ability-score-improvement-2",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/artificer-ability-score-improvement-2"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 6,
+      "infused_items": 3
+    },
+    "index": "artificer-8",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/8"
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [],
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 6,
+      "infused_items": 3
+    },
+    "index": "artificer-9",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/9"
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "magic-item-adept",
+        "name": "Magic Item Adept",
+        "url": "/assets/atlas/features/magic-item-adept"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 8,
+      "infused_items": 4
+    },
+    "index": "artificer-10",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/10"
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "spell-storing-item",
+        "name": "Spell-Storing Item",
+        "url": "/assets/atlas/features/spell-storing-item"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 8,
+      "infused_items": 4
+    },
+    "index": "artificer-11",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/11"
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "artificer-ability-score-improvement-3",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/artificer-ability-score-improvement-3"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 8,
+      "infused_items": 4
+    },
+    "index": "artificer-12",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/12"
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 1,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 8,
+      "infused_items": 4
+    },
+    "index": "artificer-13",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/13"
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "magic-item-savant",
+        "name": "Magic Item Savant",
+        "url": "/assets/atlas/features/magic-item-savant"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 1,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 10,
+      "infused_items": 5
+    },
+    "index": "artificer-14",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/14"
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 10,
+      "infused_items": 5
+    },
+    "index": "artificer-15",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/15"
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "artificer-ability-score-improvement-4",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/artificer-ability-score-improvement-4"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 10,
+      "infused_items": 5
+    },
+    "index": "artificer-16",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/16"
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [],
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 1,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 10,
+      "infused_items": 5
+    },
+    "index": "artificer-17",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/17"
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "magic-item-master",
+        "name": "Magic Item Master",
+        "url": "/assets/atlas/features/magic-item-master"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 1,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 12,
+      "infused_items": 6
+    },
+    "index": "artificer-18",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/18"
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "artificer-ability-score-improvement-5",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/artificer-ability-score-improvement-5"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 12,
+      "infused_items": 6
+    },
+    "index": "artificer-19",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/19"
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "soul-of-artifice",
+        "name": "Soul of Artifice",
+        "url": "/assets/atlas/features/soul-of-artifice"
+      }
+    ],
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    },
+    "class_specific": {
+      "infusions_known": 12,
+      "infused_items": 6
+    },
+    "index": "artificer-20",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer",
+      "url": "/assets/atlas/classes/artificer"
+    },
+    "url": "/assets/atlas/classes/artificer/levels/20"
+  }
+]

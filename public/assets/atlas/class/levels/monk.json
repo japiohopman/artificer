@@ -1,0 +1,612 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "monk-unarmored-defense",
+        "name": "Unarmored Defense",
+        "url": "/assets/atlas/features/monk-unarmored-defense"
+      },
+      {
+        "index": "martial-arts",
+        "name": "Martial Arts",
+        "url": "/assets/atlas/features/martial-arts"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 4
+      },
+      "ki_points": 0,
+      "unarmored_movement": 0
+    },
+    "index": "monk-1",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/1",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "ki",
+        "name": "Ki",
+        "url": "/assets/atlas/features/ki"
+      },
+      {
+        "index": "flurry-of-blows",
+        "name": "Flurry of Blows",
+        "url": "/assets/atlas/features/flurry-of-blows"
+      },
+      {
+        "index": "patient-defense",
+        "name": "Patient Defense",
+        "url": "/assets/atlas/features/patient-defense"
+      },
+      {
+        "index": "step-of-the-wind",
+        "name": "Step of the Wind",
+        "url": "/assets/atlas/features/step-of-the-wind"
+      },
+      {
+        "index": "unarmored-movement-1",
+        "name": "Unarmored Movement",
+        "url": "/assets/atlas/features/unarmored-movement-1"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 4
+      },
+      "ki_points": 2,
+      "unarmored_movement": 10
+    },
+    "index": "monk-2",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/2",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "monastic-tradition",
+        "name": "Monastic Tradition",
+        "url": "/assets/atlas/features/monastic-tradition"
+      },
+      {
+        "index": "deflect-missiles",
+        "name": "Deflect Missiles",
+        "url": "/assets/atlas/features/deflect-missiles"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 4
+      },
+      "ki_points": 3,
+      "unarmored_movement": 10
+    },
+    "index": "monk-3",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/3",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "monk-ability-score-improvement-1",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/monk-ability-score-improvement-1"
+      },
+      {
+        "index": "slow-fall",
+        "name": "Slow Fall",
+        "url": "/assets/atlas/features/slow-fall"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 4
+      },
+      "ki_points": 4,
+      "unarmored_movement": 10
+    },
+    "index": "monk-4",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/4",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "monk-extra-attack",
+        "name": "Extra Attack",
+        "url": "/assets/atlas/features/monk-extra-attack"
+      },
+      {
+        "index": "stunning-strike",
+        "name": "Stunning Strike",
+        "url": "/assets/atlas/features/stunning-strike"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 6
+      },
+      "ki_points": 5,
+      "unarmored_movement": 10
+    },
+    "index": "monk-5",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/5",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "ki-empowered-strikes",
+        "name": "Ki Empowered Strikes",
+        "url": "/assets/atlas/features/ki-empowered-strikes"
+      },
+      {
+        "index": "monastic-tradition-improvement-1",
+        "name": "Monastic Tradition feature",
+        "url": "/assets/atlas/features/monastic-tradition-improvement-1"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 6
+      },
+      "ki_points": 6,
+      "unarmored_movement": 15
+    },
+    "index": "monk-6",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/6",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "monk-evasion",
+        "name": "Evasion",
+        "url": "/assets/atlas/features/monk-evasion"
+      },
+      {
+        "index": "stillness-of-mind",
+        "name": "Stillness of Mind",
+        "url": "/assets/atlas/features/stillness-of-mind"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 6
+      },
+      "ki_points": 7,
+      "unarmored_movement": 15
+    },
+    "index": "monk-7",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/7",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "monk-ability-score-improvement-2",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/monk-ability-score-improvement-2"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 6
+      },
+      "ki_points": 8,
+      "unarmored_movement": 15
+    },
+    "index": "monk-8",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/8",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "unarmored-movement-2",
+        "name": "Unarmored Movement",
+        "url": "/assets/atlas/features/unarmored-movement-2"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 6
+      },
+      "ki_points": 9,
+      "unarmored_movement": 15
+    },
+    "index": "monk-9",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/9",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "purity-of-body",
+        "name": "Purity of Body",
+        "url": "/assets/atlas/features/purity-of-body"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 6
+      },
+      "ki_points": 10,
+      "unarmored_movement": 20
+    },
+    "index": "monk-10",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/10",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "monastic-tradition-improvement-2",
+        "name": "Monastic Tradition feature",
+        "url": "/assets/atlas/features/monastic-tradition-improvement-2"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 8
+      },
+      "ki_points": 11,
+      "unarmored_movement": 20
+    },
+    "index": "monk-11",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/11",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "monk-ability-score-improvement-3",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/monk-ability-score-improvement-3"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 8
+      },
+      "ki_points": 12,
+      "unarmored_movement": 20
+    },
+    "index": "monk-12",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/12",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "tongue-of-the-sun-and-moon",
+        "name": "Tongue of the Sun and Moon",
+        "url": "/assets/atlas/features/tongue-of-the-sun-and-moon"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 8
+      },
+      "ki_points": 13,
+      "unarmored_movement": 20
+    },
+    "index": "monk-13",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/13",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "diamond-soul",
+        "name": "Diamond Soul",
+        "url": "/assets/atlas/features/diamond-soul"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 8
+      },
+      "ki_points": 14,
+      "unarmored_movement": 25
+    },
+    "index": "monk-14",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/14",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "monk-timeless-body",
+        "name": "Timeless Body",
+        "url": "/assets/atlas/features/monk-timeless-body"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 8
+      },
+      "ki_points": 15,
+      "unarmored_movement": 25
+    },
+    "index": "monk-15",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/15",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "monk-ability-score-improvement-4",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/monk-ability-score-improvement-4"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 8
+      },
+      "ki_points": 16,
+      "unarmored_movement": 25
+    },
+    "index": "monk-16",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/16",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "monastic-tradition-improvement-3",
+        "name": "Monastic Tradition feature",
+        "url": "/assets/atlas/features/monastic-tradition-improvement-3"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 10
+      },
+      "ki_points": 17,
+      "unarmored_movement": 25
+    },
+    "index": "monk-17",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/17",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "empty-body",
+        "name": "Empty Body",
+        "url": "/assets/atlas/features/empty-body"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 10
+      },
+      "ki_points": 18,
+      "unarmored_movement": 30
+    },
+    "index": "monk-18",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/18",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "monk-ability-score-improvement-5",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/monk-ability-score-improvement-5"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 10
+      },
+      "ki_points": 19,
+      "unarmored_movement": 30
+    },
+    "index": "monk-19",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/19",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "perfect-self",
+        "name": "Perfect Self",
+        "url": "/assets/atlas/features/perfect-self"
+      }
+    ],
+    "class_specific": {
+      "martial_arts": {
+        "dice_count": 1,
+        "dice_value": 10
+      },
+      "ki_points": 20,
+      "unarmored_movement": 30
+    },
+    "index": "monk-20",
+    "class": {
+      "index": "monk",
+      "name": "Monk",
+      "url": "/assets/atlas/classes/monk"
+    },
+    "url": "/assets/atlas/classes/monk/levels/20",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  }
+]

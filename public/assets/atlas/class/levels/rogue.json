@@ -1,0 +1,532 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "rogue-expertise-1",
+        "name": "Expertise",
+        "url": "/assets/atlas/features/rogue-expertise-1"
+      },
+      {
+        "index": "sneak-attack",
+        "name": "Sneak Attack",
+        "url": "/assets/atlas/features/sneak-attack"
+      },
+      {
+        "index": "thieves-cant",
+        "name": "Thieves' Cant",
+        "url": "/assets/atlas/features/thieves-cant"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 1,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-1",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/1",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "cunning-action",
+        "name": "Cunning Action",
+        "url": "/assets/atlas/features/cunning-action"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 1,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-2",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/2",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "roguish-archetype",
+        "name": "Roguish Archetype",
+        "url": "/assets/atlas/features/roguish-archetype"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 2,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-3",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/3",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "rogue-ability-score-improvement-1",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/rogue-ability-score-improvement-1"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 2,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-4",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/4",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "uncanny-dodge",
+        "name": "Uncanny Dodge",
+        "url": "/assets/atlas/features/uncanny-dodge"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 3,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-5",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/5",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "rogue-expertise-2",
+        "name": "Expertise",
+        "url": "/assets/atlas/features/rogue-expertise-2"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 3,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-6",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/6",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "rogue-evasion",
+        "name": "Evasion",
+        "url": "/assets/atlas/features/rogue-evasion"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 4,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-7",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/7",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "rogue-ability-score-improvement-2",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/rogue-ability-score-improvement-2"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 4,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-8",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/8",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "roguish-archetype-improvement-1",
+        "name": "Roguish Archetype feature",
+        "url": "/assets/atlas/features/roguish-archetype-improvement-1"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 5,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-9",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/9",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "rogue-ability-score-improvement-3",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/rogue-ability-score-improvement-3"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 5,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-10",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/10",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "reliable-talent",
+        "name": "Reliable Talent",
+        "url": "/assets/atlas/features/reliable-talent"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 6,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-11",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/11",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "rogue-ability-score-improvement-4",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/rogue-ability-score-improvement-4"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 6,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-12",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/12",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "roguish-archetype-improvement-2",
+        "name": "Roguish Archetype feature",
+        "url": "/assets/atlas/features/roguish-archetype-improvement-2"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 7,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-13",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/13",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "blindsense",
+        "name": "Blindsense",
+        "url": "/assets/atlas/features/blindsense"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 7,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-14",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/14",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "slippery-mind",
+        "name": "Slippery Mind",
+        "url": "/assets/atlas/features/slippery-mind"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 8,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-15",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/15",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "rogue-ability-score-improvement-5",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/rogue-ability-score-improvement-5"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 8,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-16",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/16",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "roguish-archetype-improvement-3",
+        "name": "Roguish Archetype feature",
+        "url": "/assets/atlas/features/roguish-archetype-improvement-3"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 9,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-17",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/17",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "elusive",
+        "name": "Elusive",
+        "url": "/assets/atlas/features/elusive"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 9,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-18",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/18",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 6,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "rogue-ability-score-improvement-6",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/rogue-ability-score-improvement-6"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 10,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-19",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/19",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "stroke-of-luck",
+        "name": "Stroke of Luck",
+        "url": "/assets/atlas/features/stroke-of-luck"
+      }
+    ],
+    "class_specific": {
+      "sneak_attack": {
+        "dice_count": 10,
+        "dice_value": 6
+      }
+    },
+    "index": "rogue-20",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue",
+      "url": "/assets/atlas/classes/rogue"
+    },
+    "url": "/assets/atlas/classes/rogue/levels/20",
+    "updated_at": "2026-04-01T20:35:37.787Z"
+  }
+]
