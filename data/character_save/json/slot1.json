@@ -1,0 +1,1032 @@
+{
+  "level": 1,
+  "xp": 0,
+  "gender": "Male",
+  "stats": {
+    "str": 16,
+    "dex": 14,
+    "con": 13,
+    "int": 12,
+    "wis": 11,
+    "cha": 11
+  },
+  "proficiencies": [
+    "light armor",
+    "simple weapons",
+    "longswords",
+    "rapiers",
+    "shortswords",
+    "hand crossbows",
+    "saving throw: dex",
+    "saving throw: cha",
+    "Acrobatics",
+    "Intimidation",
+    "Sleight of Hand"
+  ],
+  "traits": [
+    "darkvision",
+    "fey ancestry",
+    "skill versatility"
+  ],
+  "features": [],
+  "flaws": [],
+  "ideals": [],
+  "bonds": [],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 10,
+    "pp": 0
+  },
+  "appearance": {
+    "hairColor": "Verdant Forest",
+    "hairStyle": "Short",
+    "bodyType": "Medium",
+    "eyeColor": "Stormy Gray",
+    "skinColor": "#f1a1a1",
+    "height": "5'10\"",
+    "weight": "160 lbs"
+  },
+  "backpack": [
+    {
+      "id": "backpack",
+      "index": "backpack",
+      "name": "backpack",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/backpack.json",
+      "image_url": "public/assets/atlas/equipment/images/backpack.webp",
+      "imageUrl": "/assets/atlas/equipment/images/backpack.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-21T14:08:31.097Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/backpack.webp",
+      "sprite_index": 9,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "back"
+      ],
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "bedroll",
+      "index": "bedroll",
+      "name": "bedroll",
+      "quantity": 1,
+      "weight": 7,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/bedroll.json",
+      "image_url": "public/assets/atlas/equipment/images/bedroll.webp",
+      "imageUrl": "/assets/atlas/equipment/bedroll.webp",
+      "desc": [
+        "A typical bedroll consisted of a sack that could contain a human-sized creature, with an opening on the side. Some variants consisted of several layers to provide waterproofing, warmth, and comfort"
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-11T15:14:56.995Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/bedroll.webp",
+      "sprite_index": 2,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
+      "category": "Adventuring Gear",
+      "last_updated": "11-4-2026"
+    },
+    {
+      "id": "candle",
+      "index": "candle",
+      "name": "candle",
+      "quantity": 5,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/candle.json",
+      "image_url": "public/assets/atlas/equipment/images/candle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/candle.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "cp"
+      },
+      "desc": [
+        "For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/candle.webp",
+      "sprite_index": 19,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+    },
+    {
+      "id": "rations_1_day",
+      "index": "rations_1_day",
+      "name": "rations (1 day)",
+      "quantity": 5,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/rations_1_day.json",
+      "image_url": "public/assets/atlas/equipment/images/rations_1_day.webp",
+      "imageUrl": "/assets/atlas/equipment/images/rations_1_day.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/rations_1_day.webp",
+      "sprite_index": 20,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+    },
+    {
+      "id": "waterskin",
+      "index": "waterskin",
+      "name": "waterskin",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/waterskin.json",
+      "image_url": "public/assets/atlas/equipment/images/waterskin.webp",
+      "imageUrl": "/assets/atlas/equipment/images/waterskin.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "sp"
+      },
+      "updated_at": "2026-04-21T14:20:07.679Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/waterskin.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "extra"
+      ],
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "disguise_kit",
+      "index": "disguise_kit",
+      "name": "disguise kit",
+      "quantity": 1,
+      "weight": 3,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/disguise_kit.json",
+      "image_url": "public/assets/atlas/equipment/images/disguise_kit.webp",
+      "imageUrl": "/assets/atlas/equipment/disguise_kit.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "kits",
+        "name": "kits",
+        "url": "public/assets/atlas/equipment_categories/kits"
+      },
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "desc": [
+        "This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise."
+      ],
+      "updated_at": "2026-04-12T07:52:45.598Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/disguise_kit.webp",
+      "sprite_index": 2,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+      "category": "Kits",
+      "last_updated": "12-4-2026"
+    },
+    {
+      "id": "lute",
+      "index": "lute",
+      "name": "lute",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/lute.json",
+      "image_url": "public/assets/atlas/equipment/images/lute.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Flute.webp?t=1777540351348",
+      "special": [],
+      "equipment_category": {
+        "index": "tools",
+        "name": "tools",
+        "url": "public/assets/atlas/equipment_categories/tools"
+      },
+      "tool_category": "Musical Instrument",
+      "cost": {
+        "quantity": 35,
+        "unit": "gp"
+      },
+      "desc": [
+        "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/lute.webp",
+      "sprite_index": 6,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+    },
+    {
+      "id": "leather_armor",
+      "index": "leather_armor",
+      "name": "leather armor",
+      "quantity": 1,
+      "weight": 10,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/leather_armor.json",
+      "image_url": "public/assets/atlas/equipment/images/leather_armor.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fleather_armor.webp?t=1777540335607",
+      "desc": [
+        "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "armor",
+        "name": "armor",
+        "url": "public/assets/atlas/equipment_categories/armor"
+      },
+      "armor_category": "Light",
+      "armor_class": {
+        "base": 11,
+        "dex_bonus": true
+      },
+      "str_minimum": 0,
+      "stealth_disadvantage": false,
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-15T07:04:03.712Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/leather_armor.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "category": "Armor",
+      "slot": [
+        "chest"
+      ],
+      "last_updated": "15-4-2026"
+    },
+    {
+      "id": "dagger",
+      "index": "dagger",
+      "name": "dagger",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/dagger.json",
+      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fdagger.webp?t=1777540335759",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "public/assets/atlas/weapon_properties/finesse"
+        },
+        {
+          "index": "light",
+          "name": "light",
+          "url": "public/assets/atlas/weapon_properties/light"
+        },
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "updated_at": "2026-04-28T13:26:26.921Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/dagger.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "main-hand"
+      ],
+      "category": "Simple Melee Weapons",
+      "last_updated": "28-4-2026"
+    }
+  ],
+  "inventory": {
+    "chest": {
+      "id": "leather_armor",
+      "index": "leather_armor",
+      "name": "leather armor",
+      "quantity": 1,
+      "weight": 10,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/leather_armor.json",
+      "image_url": "public/assets/atlas/equipment/images/leather_armor.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fleather_armor.webp?t=1777540335607",
+      "desc": [
+        "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "armor",
+        "name": "armor",
+        "url": "public/assets/atlas/equipment_categories/armor"
+      },
+      "armor_category": "Light",
+      "armor_class": {
+        "base": 11,
+        "dex_bonus": true
+      },
+      "str_minimum": 0,
+      "stealth_disadvantage": false,
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-15T07:04:03.712Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/leather_armor.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "category": "Armor",
+      "slot": "chest",
+      "last_updated": "15-4-2026",
+      "chest_slot": "leather armor"
+    },
+    "main-hand": {
+      "id": "dagger",
+      "index": "dagger",
+      "name": "dagger",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/dagger.json",
+      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fdagger.webp?t=1777540335759",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "public/assets/atlas/weapon_properties/finesse"
+        },
+        {
+          "index": "light",
+          "name": "light",
+          "url": "public/assets/atlas/weapon_properties/light"
+        },
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "updated_at": "2026-04-28T13:26:26.921Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/dagger.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "background_type": "land_forest",
+      "slot": "main-hand",
+      "category": "Simple Melee Weapons",
+      "last_updated": "28-4-2026",
+      "main_hand_slot": "dagger"
+    },
+    "off-hand": {
+      "id": "longsword",
+      "index": "longsword",
+      "name": "longsword",
+      "quantity": 1,
+      "weight": 3,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/longsword.json",
+      "image_url": "public/assets/atlas/equipment/images/longsword.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Flongsword.webp?t=1777540339901",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Martial",
+      "weapon_range": "Melee",
+      "category_range": "Martial Melee",
+      "cost": {
+        "quantity": 15,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d8",
+        "damage_type": {
+          "index": "slashing",
+          "name": "slashing",
+          "url": "public/assets/atlas/damage_types/slashing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "versatile",
+          "name": "versatile",
+          "url": "public/assets/atlas/weapon_properties/versatile"
+        }
+      ],
+      "two_handed_damage": {
+        "damage_dice": "1d10",
+        "damage_type": {
+          "index": "slashing",
+          "name": "slashing",
+          "url": "public/assets/atlas/damage_types/slashing"
+        }
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/longsword.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+      "off_hand_slot": "longsword",
+      "slot": "off-hand"
+    },
+    "clothes": {
+      "id": "clothes_costume",
+      "index": "clothes_costume",
+      "name": "clothes, costume",
+      "quantity": 2,
+      "weight": 4,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/clothes_costume.json",
+      "image_url": "public/assets/atlas/equipment/images/clothes_costume.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_costume.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/clothes_costume.webp",
+      "sprite_index": 10,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "clothes_slot": "clothes, costume",
+      "slot": "clothes"
+    }
+  },
+  "spells": [
+    {
+      "higher_level": [],
+      "index": "chill_touch",
+      "name": "chill touch",
+      "desc": [
+        "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.",
+        "If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.",
+        "This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+      ],
+      "range": "120 feet",
+      "components": [
+        "V",
+        "S"
+      ],
+      "ritual": false,
+      "duration": "1 round",
+      "concentration": false,
+      "casting_time": "1 action",
+      "level": 0,
+      "attack_type": "ranged",
+      "damage": {
+        "damage_type": {
+          "index": "necrotic",
+          "name": "necrotic",
+          "url": "public/assets/atlas/damage_types/necrotic"
+        },
+        "damage_at_character_level": {
+          "1": "1d8",
+          "5": "2d8",
+          "11": "3d8",
+          "17": "4d8"
+        }
+      },
+      "school": {
+        "index": "necromancy",
+        "name": "necromancy",
+        "url": "public/assets/atlas/magic_schools/necromancy"
+      },
+      "classes": [
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "public/assets/atlas/classes/sorcerer"
+        },
+        {
+          "index": "warlock",
+          "name": "warlock",
+          "url": "public/assets/atlas/classes/warlock"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "public/assets/atlas/classes/wizard"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "public/assets/atlas/subclasses/lore"
+        }
+      ],
+      "url": "public/assets/atlas/spell/json/chill_touch.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "public/assets/atlas/spell/chill_touch.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet2.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fchill_touch.webp?t=1777540358209"
+    },
+    {
+      "higher_level": [],
+      "index": "eldritch_blast",
+      "name": "eldritch blast",
+      "desc": [
+        "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage. The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam."
+      ],
+      "range": "120 feet",
+      "components": [
+        "V",
+        "S"
+      ],
+      "ritual": false,
+      "duration": "Instantaneous",
+      "concentration": false,
+      "casting_time": "1 action",
+      "level": 0,
+      "attack_type": "ranged",
+      "damage": {
+        "damage_type": {
+          "index": "force",
+          "name": "force",
+          "url": "public/assets/atlas/damage_types/force"
+        },
+        "damage_at_character_level": {
+          "1": "1d10",
+          "5": "1d10",
+          "11": "1d10",
+          "17": "1d10"
+        }
+      },
+      "school": {
+        "index": "evocation",
+        "name": "evocation",
+        "url": "public/assets/atlas/magic_schools/evocation"
+      },
+      "classes": [
+        {
+          "index": "warlock",
+          "name": "warlock",
+          "url": "public/assets/atlas/classes/warlock"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "public/assets/atlas/subclasses/lore"
+        }
+      ],
+      "url": "public/assets/atlas/spell/json/eldritch_blast.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "public/assets/atlas/spell/eldritch_blast.webp",
+      "sprite_index": 20,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet4.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Feldritch_blast.webp?t=1777540358209"
+    },
+    {
+      "higher_level": [],
+      "index": "mending",
+      "name": "mending",
+      "desc": [
+        "This spell repairs a single break or tear in an object you touch, such as a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no longer than 1 foot in any dimension, you mend it, leaving no trace of the former damage.",
+        "This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object."
+      ],
+      "range": "Touch",
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "material": "Two lodestones.",
+      "ritual": false,
+      "duration": "Instantaneous",
+      "concentration": false,
+      "casting_time": "1 minute",
+      "level": 0,
+      "school": {
+        "index": "transmutation",
+        "name": "transmutation",
+        "url": "public/assets/atlas/magic_schools/transmutation"
+      },
+      "classes": [
+        {
+          "index": "cleric",
+          "name": "cleric",
+          "url": "public/assets/atlas/classes/cleric"
+        },
+        {
+          "index": "bard",
+          "name": "bard",
+          "url": "public/assets/atlas/classes/bard"
+        },
+        {
+          "index": "druid",
+          "name": "druid",
+          "url": "public/assets/atlas/classes/druid"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "public/assets/atlas/classes/sorcerer"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "public/assets/atlas/classes/wizard"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "public/assets/atlas/subclasses/lore"
+        }
+      ],
+      "url": "public/assets/atlas/spell/json/mending.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "public/assets/atlas/spell/mending.webp",
+      "sprite_index": 0,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet9.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fmending.webp?t=1777540358385"
+    },
+    {
+      "higher_level": [],
+      "index": "poison_spray",
+      "name": "poison spray",
+      "desc": [
+        "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a constitution saving throw or take 1d12 poison damage.",
+        "This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12)."
+      ],
+      "range": "10 feet",
+      "components": [
+        "V",
+        "S"
+      ],
+      "ritual": false,
+      "duration": "Instantaneous",
+      "concentration": false,
+      "casting_time": "1 action",
+      "level": 0,
+      "damage": {
+        "damage_type": {
+          "index": "poison",
+          "name": "poison",
+          "url": "public/assets/atlas/damage_types/poison"
+        },
+        "damage_at_character_level": {
+          "1": "1d12",
+          "5": "2d12",
+          "11": "3d12",
+          "17": "4d12"
+        }
+      },
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "con",
+          "url": "public/assets/atlas/ability_scores/constitution"
+        },
+        "dc_success": "none"
+      },
+      "school": {
+        "index": "conjuration",
+        "name": "conjuration",
+        "url": "public/assets/atlas/magic_schools/constitutionjuration"
+      },
+      "classes": [
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "public/assets/atlas/classes/sorcerer"
+        },
+        {
+          "index": "warlock",
+          "name": "warlock",
+          "url": "public/assets/atlas/classes/warlock"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "public/assets/atlas/classes/wizard"
+        },
+        {
+          "index": "druid",
+          "name": "druid",
+          "url": "public/assets/atlas/classes/druid"
+        }
+      ],
+      "subclasses": [],
+      "url": "public/assets/atlas/spell/json/poison_spray.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "public/assets/atlas/spell/poison_spray.webp",
+      "sprite_index": 21,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet9.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fpoison_spray.webp?t=1777540358390"
+    },
+    {
+      "higher_level": [],
+      "index": "prestidigitation",
+      "name": "prestidigitation",
+      "desc": [
+        "This spell is a minor magical trick that novice spellcasters use for practice. You create one of the following magical effects within 'range':",
+        "You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor.",
+        "You instantaneously light or snuff out a candle, a torch, or a small campfire.",
+        "You instantaneously clean or soil an object no larger than 1 cubic foot.",
+        "You chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour.",
+        "You make a color, a small mark, or a symbol appear on an object or a surface for 1 hour.",
+        "You create a nonmagical trinket or an illusory image that can fit in your hand and that lasts until the end of your next turn.",
+        "If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action."
+      ],
+      "range": "10 feet",
+      "components": [
+        "V",
+        "S"
+      ],
+      "ritual": false,
+      "duration": "1 hour",
+      "concentration": false,
+      "casting_time": "1 action",
+      "level": 0,
+      "school": {
+        "index": "transmutation",
+        "name": "transmutation",
+        "url": "public/assets/atlas/magic_schools/transmutation"
+      },
+      "classes": [
+        {
+          "index": "bard",
+          "name": "bard",
+          "url": "public/assets/atlas/classes/bard"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "public/assets/atlas/classes/sorcerer"
+        },
+        {
+          "index": "warlock",
+          "name": "warlock",
+          "url": "public/assets/atlas/classes/warlock"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "public/assets/atlas/classes/wizard"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "public/assets/atlas/subclasses/lore"
+        }
+      ],
+      "url": "public/assets/atlas/spell/json/prestidigitation.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "public/assets/atlas/spell/prestidigitation.webp",
+      "sprite_index": 1,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet10.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fprestidigitation.webp?t=1777540358399"
+    },
+    {
+      "higher_level": [],
+      "index": "produce_flame",
+      "name": "produce flame",
+      "desc": [
+        "A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.",
+        "You can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 1d8 fire damage.",
+        "This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+      ],
+      "range": "Self",
+      "components": [
+        "V",
+        "S"
+      ],
+      "ritual": false,
+      "duration": "10 minutes",
+      "concentration": false,
+      "casting_time": "1 action",
+      "level": 0,
+      "attack_type": "ranged",
+      "damage": {
+        "damage_type": {
+          "index": "fire",
+          "name": "fire",
+          "url": "public/assets/atlas/damage_types/fire"
+        },
+        "damage_at_character_level": {
+          "1": "1d8",
+          "5": "2d8",
+          "11": "3d8",
+          "17": "4d8"
+        }
+      },
+      "school": {
+        "index": "conjuration",
+        "name": "conjuration",
+        "url": "public/assets/atlas/magic_schools/constitutionjuration"
+      },
+      "classes": [
+        {
+          "index": "druid",
+          "name": "druid",
+          "url": "public/assets/atlas/classes/druid"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "public/assets/atlas/subclasses/lore"
+        }
+      ],
+      "url": "public/assets/atlas/spell/json/produce_flame.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "public/assets/atlas/spell/produce_flame.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet10.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fproduce_flame.webp?t=1777540358410"
+    }
+  ],
+  "choices": {},
+  "race": "half_elf",
+  "class": "bard",
+  "background": "folk_hero",
+  "alignment": "lawful_good",
+  "name": "jhv",
+  "imageUrl": "data/character_save/images/slot1/slot1_portrait.webp",
+  "avatarUrl": "data/character_save/images/slot1/slot1_avatar.webp",
+  "matrixUrl": "data/character_save/images/slot1/slot1_matrix.webp",
+  "id": "slot1",
+  "hp": 9,
+  "maxHp": 9,
+  "lastSaved": "2026-04-30T09:15:16.357Z"
+}
