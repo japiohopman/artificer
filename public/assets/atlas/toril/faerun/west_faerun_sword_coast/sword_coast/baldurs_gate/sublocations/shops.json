@@ -1,633 +1,1615 @@
 {
-  "locationName": "baldurs_gate",
-  "category": "shops",
+  "locationName": "baldurs gate",
+  "category": "shop",
   "subLocations": [
     {
-      "id": "wiki_34",
-      "name": "The Smilin' Boar",
-      "lore": "One of Bloomridge's most trendy eateries, serving bawdier versions of traditional morningfeast dishes such as \"[[sow's delight]]\" and \"[[three pigs in a blanket]]\", and [[coffee]] and [[tea]] was served in mugs that were shaped like a [[pig]]'s head.",
-      "x": 18.0665513286646,
-      "y": 45.1739582984132,
-      "category": "shops",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Smilin' Boar"
-      ]
-      "architect": "elven",
-      "locationType": "arcane_shop",
+      "tags": [],
       "npcs": [],
-      "ambientSound": ""
+      "locationType": "tavern",
+      "architect": "arcane",
+      "name": "pearl jam",
+      "y": 1762,
+      "x": 766,
+      "id": "4b6ba0ea-2854-4ef5-a942-ce381feba754",
+      "ambientSound": "",
+      "category": "shop",
+      "lore": "shop for stones pearls and jams"
     },
     {
-      "id": "wiki_58",
-      "name": "Blushing Mermaid",
-      "lore": "A famous lower-class tavern that provided drinks and food and was known for its shady associations, rumors of secret smuggling passages, and hidden vaults underneath.",
-      "x": 29.462792342403727,
-      "y": 56.51723036337473,
-      "category": "tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Blushing Mermaid"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-    {
-      "id": "wiki_62",
-      "name": "Elfsong Tavern",
-      "lore": "A well-known tavern famed for its singing [[ghost]], [[Elfsong Cider|cider]], and a stuffed baby [[beholder]].",
-      "x": 36.628122499503625,
-      "y": 51.41068838966967,
-      "category": "tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Elfsong Tavern"
-      ]
-      "architect": "",
-      "locationType": "arcane_shop",
-      "npcs": [],
-      "ambientSound": ""
-    },
-    {
-      "id": "wiki_63",
-      "name": "Low Lantern",
-      "lore": "A three-mast ship converted to be used as a [[festhall]], tavern, and gambling house.",
-      "x": 36.500006924671425,
-      "y": 43.33000895017378,
-      "category": "shops",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Low Lantern"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-    {
-      "id": "wiki_67",
-      "name": "Jopalin's",
-      "lore": "Once a seedy tavern serving sailors, turned into a [[tea]] and [[coffee]]-sipping cafe after such establishments became popular in the 15{{th}} century [[DR]].",
-      "x": 32.55,
-      "y": 49.761747395540105,
-      "category": "shops",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Jopalin's"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-    {
-      "id": "wiki_68",
-      "name": "Garmult's House of Mastery",
-      "lore": "An academy that specialized in tutoring pupils on how to improve their martial prowess and combat skills and a social club for the members of the [[Bannerless Legion]] crew.",
-      "x": 39.18333333333333,
-      "y": 45.54920438311914,
-      "category": "shops",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Garmult's House of Mastery"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-    {
-      "id": "wiki_109",
-      "name": "Undercellar's Main Entrance",
-      "lore": "A clump of chambers in a network of storage cellars beneath [[Baldur's Gate]] that housed a sleazy tavern and [[festhall]]; there existed at least twenty-four ways in and out of this popular establishment, half of which connected to other buildings.",
-      "x": 24.6,
-      "y": 56.9646818923235,
-      "category": "shops",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Undercellar"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-    {
-      "id": "wiki_113",
-      "name": "House of the Lute",
-      "lore": "A modest [[kaeth]] house and [[minstrel]]s' gallery that offered classes from master musicians to its customers.",
-      "x": 18.809022344623216,
-      "y": 47.221765504225196,
-      "category": "shops",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/House of the Lute"
-      ]
-        "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-    {
-      "id": "wiki_183",
-      "name": "The House of the Lion",
-      "lore": "An opulent festhall that counted \"blades\" and \"lacethroats\"  – youths of money and means, among its patrons.",
-      "x": 14.866741940414956,
-      "y": 53.730699030020475,
-      "category": "shops",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The House of the Lion"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-    {
-      "id": "wiki_198",
-      "name": "The Singing Lute",
-      "lore": "A small tavern and an eatery that offered local brews and a grumpy proprietor.{{approx}}",
-      "x": 22.716666666666665,
-      "y": 48.23853182711276,
-      "category": "shops",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Singing Lute"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-    {
-      "id": "wiki_207",
-      "name": "Sharess' Caress",
-      "lore": "A 15{{th}} century [[DR]] [[festhall]] where one could find consorts, musicians, drinks, food, lodgings, and more thematic coinlassess who catered to specific tastes.{{approx}}",
-      "x": 89.9676038413476,
-      "y": 20.0802818728238,
-      "category": "shops",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sharess' Caress"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    }
-    {
-      "id": "wiki_203",
-      "name": "The Glitter Gala",
-      "lore": "A shop that traded in [[gemstone]]s and jewelry from [[Amn]], [[Cormyr]], and [[Damara]] and shared the building with [[Chromatic Scale]] musical instrument shop.{{approx}}",
-      "x": 17.01666125316197,
-      "y": 43.48984923643681,
+      "id": "wiki_338",
+      "name": "Selchoun's Sundries Shop",
+      "lore": "Selchoun's Sundries Shop was a prosperous general store. The proprietor, [[Osbrin Selchoun]], sold tourist trinkets and mundane useful items.",
+      "x": 34.38895979170666,
+      "y": 106.61530660351646,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Glitter Gala"
+        "https://forgottenrealms.fandom.com/wiki/Selchoun's Sundries Shop"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_204",
-      "name": "Chromatic Scale",
-      "lore": "A shop that dealt in quality musical instruments, run by [[Thomas C. Quirkilious]] in the late 15{{th}} century [[DR]].{{approx}}",
-      "x": 16.891660350911188,
-      "y": 43.64970097842629,
+      "id": "wiki_358",
+      "name": "Halazar's Fine Gems",
+      "lore": "Halazar's Fine Gems was a jewelry shop. The finest gems could be found in the shop, expertly cut and presented in simple glass cases.",
+      "x": 43.48706704297333,
+      "y": 95.97367777925248,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Chromatic Scale"
+        "https://forgottenrealms.fandom.com/wiki/Halazar's Fine Gems"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_206",
-      "name": "Facemaker's Boutique",
-      "lore": "An upscale clothier, barber, makeup artist, stylist, and disguises shop.{{approx}}",
-      "x": 16.766669679622378,
-      "y": 44.48657051906475,
+      "id": "wiki_389",
+      "name": "Nestaur's Ropes",
+      "lore": "Nestaur's Ropes sold gear for [[adventurer]]s, primarily specializing in [[rope]]s.",
+      "x": 55.11897359349,
+      "y": 35.12088720880063,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Facemaker's Boutique"
+        "https://forgottenrealms.fandom.com/wiki/Nestaur's Ropes"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_208",
-      "name": "Crimson Draughts",
-      "lore": "[[Araj Oblodra]]'s [[alchemist]] shop located on [[Stormshore Street]] across from [[Beehive Goods and Wares]] general store in the late 15{{th}} century DR.{{approx}}",
-      "x": 31.041666666666668,
-      "y": 55.2626629889669,
+      "id": "wiki_395",
+      "name": "Torpus's Tannery",
+      "lore": "Torpus's Tannery was a tannery owned by [[Torpus the Tanner]].",
+      "x": 59.82123368838334,
+      "y": 32.61559725457349,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Crimson Draughts"
+        "https://forgottenrealms.fandom.com/wiki/Torpus's Tannery"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_209",
-      "name": "Beehive Goods and Wares",
-      "lore": "A general store run by [[Oliver Tefoco]] in the late 15{{th}} century [[DR]] and offered food, [[potion]]s, [[wine]]s, and some general miscellany.{{approx}}",
-      "x": 31.175,
-      "y": 54.88653460381144,
+      "id": "wiki_398",
+      "name": "Telethar Leatherworks",
+      "lore": "Telethar Leatherworks was a leather goods store owned and operated by [[Orgul Telethar]].",
+      "x": 60.78761295600333,
+      "y": 30.9766225181627,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Beehive Goods and Wares"
+        "https://forgottenrealms.fandom.com/wiki/Telethar Leatherworks"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_211",
-      "name": "Sword Coast Couriers",
-      "lore": "A courier, shipping, and postal agency that operated in the environs and within the city of [[Baldur's Gate]], located in the [[Rivington]] neighborhood in the late 15{{th}} century [[DR]].",
-      "x": 90.93333333333334,
-      "y": 18.449059331347524,
+      "id": "wiki_399",
+      "name": "Fellowship Warehouse",
+      "lore": "The Fellowship Warehouse, also known as the Fish Warehouse, was a warehouse that was owned by the [[Fishmongers' Fellowship]].",
+      "x": 61.494719737189996,
+      "y": 30.227376924374923,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sword Coast Couriers"
+        "https://forgottenrealms.fandom.com/wiki/Fellowship Warehouse"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    }
-        {
-      "id": "wiki_49",
-      "name": "Helm and Cloak",
-      "lore": "A high-end inn, rooming house, and [[festhall]], popular both with travelers and with local residents, who enjoyed its resplendent dining room. It was also home to the majority of the [[Knights of the Unicorn]], who rented most of the upper floor. ",
-      "x": 16.599982688321425,
-      "y": 51.73647835839846,
-      "category": "inn",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Helm and Cloak"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_53",
-      "name": "Three Old Kegs",
-      "lore": "A well-known inn widely regarded as one of the best establishments in all of [[Faerûn]], and was known for its comfortable furnishings and generally somnific atmosphere.",
-      "x": 17.22984350857495,
-      "y": 57.20861319623841,
-      "category": "inn",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Three Old Kegs"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-    {
-      "id": "wiki_65",
-      "name": "Blade and Stars",
-      "lore": "A quiet inn known for its high-quality foodstuffs, and a legend of a [[yuan-ti]] being trapped within the inn's walls, imprisoned while fighting a [[wizard]].",
-      "x": 38.28332294632619,
-      "y": 51.36031201271489,
-      "category": "inn",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Blade and Stars"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-        {
-      "id": "wiki_184",
-      "name": "Drakon Tavern",
-      "lore": "A relatively small inn and tavern located next door to the [[Gist]] family estate with a small park plaza at the building's back.{{approx}}",
-      "x": 12.810417852496284,
-      "y": 43.47166803507858,
-      "category": "tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Drakon Tavern"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-    {
-      "id": "wiki_185",
-      "name": "Keexie Tavern",
-      "lore": "A simple tavern and inn that served as a front for [[Baldur's Gate]]'s thieves guild in the 14{{th}} century [[DR]], located across the plaza from [[Sorcerous Sundries]].{{approx}}",
-      "x": 36.62813126546316,
-      "y": 57.634214281853076,
-      "category": "tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Keexie Tavern"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-     {
-      "id": "wiki_197",
-      "name": "Rivington General",
-      "lore": "A smithy that dealt in [[weapon]]s and [[armor]], run by [[Gyldro Angleiron]] after [[1477 DR]]. Its shop area was a building to the north, with the southern connected structure being the workshop and the proprietor's home.{{approx}}",
-      "x": 92.17012651252045,
-      "y": 15.731191965144726,
+      "id": "wiki_400",
+      "name": "Smokehouse",
+      "lore": "The Smokehouse was a smokehouse that was owned by the [[Fishmongers' Fellowship]].",
+      "x": 62.025049823079996,
+      "y": 29.89958197709283,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Rivington General"
+        "https://forgottenrealms.fandom.com/wiki/Smokehouse (Waterdeep)"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_200",
-      "name": "Bonecloak's Apothecary",
-      "lore": "A [[potion]] brewer's shop run by [[Derryth Bonecloak]] and [[Baelen Bonecloak]] ''circa'' [[1492 DR]].{{approx}}",
-      "x": 35.54999126215232,
-      "y": 57.086918872433,
+      "id": "wiki_406",
+      "name": "Gelfuril the Trader",
+      "lore": "Gelfuril the Trader was an unusual shop that was owned by the merchant [[Gelfuril]] in the 14th century DR. It was a similar to a pawnshop, though its owner was adamant about it not being one.",
+      "x": 63.309627142236664,
+      "y": 29.513252217795948,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Bonecloak's Apothecary"
+        "https://forgottenrealms.fandom.com/wiki/Gelfuril the Trader"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_55",
-      "name": "Harbreeze Bakery",
-      "lore": "A bakery offered such favorite delicacies as [[cinnamon]] [[cookie]]s and full loaves of [[sugarbread]] highlighted by the flavors of foreign [[tea]]s and [[spice]]s.",
-      "x": 22.780608777780227,
-      "y": 61.570492513754516,
+      "id": "wiki_410",
+      "name": "Orm's Highbench",
+      "lore": "Orm's Highbench was the headquarters of a trading company.",
+      "x": 64.74741093064667,
+      "y": 33.739465645254654,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Harbreeze Bakery"
+        "https://forgottenrealms.fandom.com/wiki/Orm's Highbench"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_56",
-      "name": "Felogyr's Fireworks",
-      "lore": "A four-story stone shop on [[Bindle Street]] that traded in [[fireworks]], [[torch]]es, [[candle]] wicks, and other lesser alchemical items, and as of the late 15{{th}} century [[DR]], the sole producer of [[smokepowder]] within [[Baldur's Gate]].",
-      "x": 27.08217013351627,
-      "y": 56.91610765561789,
+      "id": "wiki_411",
+      "name": "Bellister's House",
+      "lore": "Bellister's House was a storage warehouse that was privately owned by the business [[Bellister's Hand]] in the mid–14th century DR.",
+      "x": 64.72384070461,
+      "y": 34.39505553981817,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Felogyr's Fireworks"
+        "https://forgottenrealms.fandom.com/wiki/Bellister's House"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_60",
-      "name": "Counting House",
-      "lore": "The center of trade and business in [[Baldur's Gate]], serving as both a bank and establishment that facilitated the exchange of various currencies.",
-      "x": 25.41665627965952,
-      "y": 48.57697145269646,
+      "id": "wiki_412",
+      "name": "Athal's Stables",
+      "lore": "Athal's Stables were a stables. [[Mount]]s and gear related to them, such as [[bit and bridle|bits, bridles]], and [[saddle]]s, could be purchased here.",
+      "x": 66.57410344871333,
+      "y": 33.42337766037605,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Counting House"
+        "https://forgottenrealms.fandom.com/wiki/Athal's Stables"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_61",
-      "name": "Sorcerous Sundries",
-      "lore": "A magic shop on [[Stormshore Street]] in the [[Heapside]] district.",
-      "x": 36.168524214874594,
-      "y": 56.75647621228011,
+      "id": "wiki_413",
+      "name": "Bellister's Hand",
+      "lore": "Bellister's Hand was a store. This business sold general goods. It was also possible to find stolen goods here.",
+      "x": 64.31136174891667,
+      "y": 34.418469464624486,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sorcerous Sundries"
+        "https://forgottenrealms.fandom.com/wiki/Bellister's Hand"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_64",
-      "name": "Eastway Expeditions",
-      "lore": "A shop that specialized in selling equipment to those who sought exploration or adventure, particularly those ''en route'' to the [[Chultan Peninsula]].",
-      "x": 39.300051935035725,
-      "y": 49.46092060847194,
+      "id": "wiki_414",
+      "name": "Melgard's Fine Leathers",
+      "lore": "Melgard's Fine Leathers was a clothing store.",
+      "x": 63.88709768020333,
+      "y": 32.48682066814108,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Eastway Expeditions"
+        "https://forgottenrealms.fandom.com/wiki/Melgard's Fine Leathers"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_66",
-      "name": "Candulhallow's Funeral Arrangements",
-      "lore": "A city-sponsored business that specialized in the transportation and occasionally sale of corpses to cemeteries or temples.",
-      "x": 39.4329685782413,
-      "y": 55.18736202038017,
+      "id": "wiki_415",
+      "name": "Thomm Warehouse",
+      "lore": "The Thomm Warehouse was a storage warehouse that was privately owned by [[Haerlit Thomm]] in the mid–14th century DR.",
+      "x": 63.451048498473334,
+      "y": 32.557062442558696,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Candulhallow's Funeral Arrangements"
+        "https://forgottenrealms.fandom.com/wiki/Thomm Warehouse"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_107",
-      "name": "Garynmor Stables",
+      "id": "wiki_416",
+      "name": "Pelauvir's Counter",
+      "lore": "Pelauvir's Counter was a general store and the site of a former warehouse.",
+      "x": 63.23891646411666,
+      "y": 33.80970741967359,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Pelauvir's Counter"
+      ]
+    },
+    {
+      "id": "wiki_443",
+      "name": "Turnstone Plumbing and Pipefitting",
+      "lore": "Turnstone Plumbing and Pipefitting was a plumbing business that was owned by [[Jhalossan Turnstone]].",
+      "x": 45.43161069123666,
+      "y": 54.63639353449166,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Turnstone Plumbing and Pipefitting"
+      ]
+    },
+    {
+      "id": "wiki_451",
+      "name": "Serpentil Books & Folios",
+      "lore": "Serpentil Books & Folios was a [[book]] shop.",
+      "x": 54.02295808265333,
+      "y": 51.534048497714785,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Serpentil Books & Folios"
+      ]
+    },
+    {
+      "id": "wiki_460",
+      "name": "Surtlan's Metalwares",
+      "lore": "Surtlan's Metalwares sold metal products and equipment. It was owned by [[Baerhar Surtlan]] in the 14th century DR.",
+      "x": 61.24723236377333,
+      "y": 59.31917849566486,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Surtlan's Metalwares"
+      ]
+    },
+    {
+      "id": "wiki_468",
+      "name": "The Redbridle Stables",
+      "lore": "The Redbridle Stables were a stables that was owned by [[Rhazbos Redbridle]]. [[Mount]]s and gear related to them, such as [[bit and bridle|bits, bridles]], and [[saddle]]s, could be purchased here.",
+      "x": 64.79455138272667,
+      "y": 51.68623900895251,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Redbridle Stables"
+      ]
+    },
+    {
+      "id": "wiki_470",
+      "name": "Helmstar Warehouse",
+      "lore": "The Helmstar Warehouse was an old storage warehouse that was privately owned by [[Chuldan Helmstar]] in the mid–14th century DR.",
+      "x": 44.93663594440667,
+      "y": 43.26893304124192,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Helmstar Warehouse"
+      ]
+    },
+    {
+      "id": "wiki_472",
+      "name": "Red Sails Warehouse",
+      "lore": "The Red Sails Warehouse was a public storage warehouse.",
+      "x": 48.97892971018667,
+      "y": 40.59974561337522,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Red Sails Warehouse"
+      ]
+    },
+    {
+      "id": "wiki_474",
+      "name": "Arnagus the Shipwright",
+      "lore": "This was a large shipbuilding shed owned by [[Arnagus the Shipwright]].",
+      "x": 49.22641708360333,
+      "y": 37.8017815990738,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Arnagus the Shipwright's residence"
+      ]
+    },
+    {
+      "id": "wiki_479",
+      "name": "Warehouse of the Salters",
       "lore": "",
-      "x": 5.468292441175967,
-      "y": 65.29394000543344,
+      "x": 51.66593547869666,
+      "y": 39.05442657618836,
       "category": "shop",
-      "grounding": []
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Warehouse of the Salters"
+      ]
     },
     {
-      "id": "wiki_108",
-      "name": "Garynmor Stables",
+      "id": "wiki_480",
+      "name": "House of Rumagus",
       "lore": "",
-      "x": 6.764645080387054,
-      "y": 63.83111703871562,
+      "x": 52.13733999948667,
+      "y": 38.668096816890824,
       "category": "shop",
-      "grounding": []
-            "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/House of Rumagus"
+      ]
     },
     {
-      "id": "wiki_119",
-      "name": "Candlekeep Chandlery",
-      "lore": "A shop that sold beautifying products and [[candle]]s, both mundane and magical in nature.",
-      "x": 13.716362447789036,
-      "y": 33.19345336168625,
+      "id": "wiki_487",
+      "name": "Lanternmaker Zorth Ulmaril",
+      "lore": "Lanternmaker Zorth Ulmaril's shop was owned by its namesake, [[Zorth Ulmaril]].",
+      "x": 49.768532282513334,
+      "y": 44.26402484549367,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Candlekeep Chandlery"
+        "https://forgottenrealms.fandom.com/wiki/Lanternmaker Zorth Ulmaril"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_186",
-      "name": "Lucky Aello's Discount Store",
-      "lore": "A store that sold heavily marked-down goods that ranged from [[potion]]s of reliable quality to ''[[curse]]d'' [[weapon]]s and [[scroll]]s of magic protection.{{approx}}",
-      "x": 40.94720764554042,
-      "y": 53.89002665837571,
+      "id": "wiki_495",
+      "name": "House of Pride",
+      "lore": "House of Pride was a [[perfume]] shop.",
+      "x": 56.08535286111333,
+      "y": 40.21341585407768,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Lucky Aello's Discount Store"
+        "https://forgottenrealms.fandom.com/wiki/House of Pride"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_187",
-      "name": "Maltz's Weapon Shop",
-      "lore": "A merchant who dealt in mandate weapons, ran by [[Maltz]] in the 14{{th}} century [[DR]], located just to the northwest of the [[Elfsong Tavern]].{{approx}}",
-      "x": 35.862160971648315,
-      "y": 51.251063656868595,
+      "id": "wiki_496",
+      "name": "Fine Nuts",
+      "lore": "Fine Nuts, which was also called Khostal Hannass Fine Nuts, was a shop.",
+      "x": 56.29748489547,
+      "y": 38.211525283174346,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Maltz's Weapon Shop"
+        "https://forgottenrealms.fandom.com/wiki/Fine Nuts"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_188",
-      "name": "Well-Adjusted Al's General Store",
-      "lore": "The general store located to the west of the [[Low Lantern]]; it traded in mundane goods and [[weapon]]s and run by eccentric [[Well-Adjusted Al]] in the 14{{th}} century [[DR]].{{approx}}",
-      "x": 37.299882707590385,
-      "y": 43.27219583627345,
+      "id": "wiki_497",
+      "name": "Felhaur's Fine Fish",
+      "lore": "Felhaur's Fine Fish was a [[fish]] store. There were persistent rumors that the proprietor of this establishment was involved in smuggling.",
+      "x": 55.272180062749996,
+      "y": 38.012506922327304,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Well-Adjusted Al's General Store"
+        "https://forgottenrealms.fandom.com/wiki/Felhaur's Fine Fish"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_190",
-      "name": "Alabaster Stonecrafts",
-      "lore": "An open-air stonemason's workshop run by twin [[dwarf|dwarven]] siblings in the late 15{{th}} century [[DR]].{{approx}}",
-      "x": 52.32590798639586,
-      "y": 40.70564012390733,
+      "id": "wiki_506",
+      "name": "Nelkaush the Weaver",
+      "lore": "Nelkaush the Weaver was a textiles shop.",
+      "x": 65.69021997223,
+      "y": 40.740229162209786,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Alabaster Stonecrafts"
+        "https://forgottenrealms.fandom.com/wiki/Nelkaush the Weaver"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-      {
-      "id": "wiki_71",
-      "name": "Danthelon's Dancing Axe",
-      "lore": "A general store that sold good quality secondhand wares, from pots and pans to [[rope]], [[armor]], and [[weapons]].",
-      "x": 86.4555550808224,
-      "y": 30.02720157239244,
-      "category": "shop",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Danthelon's Dancing Axe"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_74",
-      "name": "Hamhocks Slaughterhouse",
-      "lore": "A massive compound composed of a number of animal pens, knackeries, and butcheries, its foul stench drove away the animals of the herders and wranglers.",
-      "x": 81,
-      "y": 52.88370789365073,
+      "id": "wiki_509",
+      "name": "Hlakken Stables",
+      "lore": "The Hlakken Stables were a stables. [[Mount]]s and gear related to them, such as [[bit and bridle|bits, bridles,]] and [[saddle]]s, could be purchased here.",
+      "x": 65.57236884203333,
+      "y": 38.35200883201222,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hamhocks Slaughterhouse"
+        "https://forgottenrealms.fandom.com/wiki/Hlakken Stables"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_76",
-      "name": "Garynmor Stables and Menagerie",
-      "lore": "A business that specialized in the handling and care of mundane beasts of burden, as well as the exhibition of all manner of exotic and fantastical creatures.",
-      "x": 46.56666666666666,
-      "y": 55.178034102306924,
+      "id": "wiki_512",
+      "name": "Old Monster Shop",
+      "lore": "The shop specialized in [[poison]]s and other extraordinary items.",
+      "x": 64.78276626970667,
+      "y": 46.96833316056985,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Garynmor Stables and Menagerie"
+        "https://forgottenrealms.fandom.com/wiki/Old Monster Shop"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
-    },
-     {
-      "id": "wiki_98",
-      "name": "Gray Harbor",
-      "lore": "The harbor of [[Baldur's Gate]] on [[River Chionthar]], one of the busiest and deepest natural harbors in [[Faerûn]].",
-      "x": 28.23714817435131,
-      "y": 40.26708312907787,
-      "category": "shop",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Gray Harbor"
-      ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
     {
-      "id": "wiki_99",
-      "name": "Calim Jewel Emporium",
-      "lore": "Shop and home to the most well-regarded [[Baldurian]] jeweler of the late 15{{th}} century [[DR]] and a forum for local agents of the criminal organization known as [[the Guild]].",
-      "x": 58.133097894504736,
-      "y": 66.83828925595515,
+      "id": "wiki_514",
+      "name": "Prestar's Furniture",
+      "lore": "Prestar's Furniture was a furniture shop.",
+      "x": 66.06734358886334,
+      "y": 34.25457199098361,
       "category": "shop",
       "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Calim Jewel Emporium"
+        "https://forgottenrealms.fandom.com/wiki/Prestar's Furniture"
       ]
-      "architect": "",
-      "locationType": "",
-      "npcs": [],
-      "ambientSound": ""
     },
+    {
+      "id": "wiki_517",
+      "name": "Balthorr's Rare & Wondrous Treasures",
+      "lore": "",
+      "x": 45.58481716049334,
+      "y": 74.03483023615443,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Balthorr's Rare & Wondrous Treasures"
+      ]
+    },
+    {
+      "id": "wiki_519",
+      "name": "Riven Shield Shop",
+      "lore": "The shop sold [[armor]] that was both mundance and magical.",
+      "x": 51.22988629696667,
+      "y": 75.84940940860727,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Riven Shield Shop"
+      ]
+    },
+    {
+      "id": "wiki_522",
+      "name": "Hriiat Fine Pastries",
+      "lore": "",
+      "x": 56.792459642299995,
+      "y": 83.6696602937668,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Hriiat Fine Pastries"
+      ]
+    },
+    {
+      "id": "wiki_535",
+      "name": "Halambar Lutes & Harps",
+      "lore": "Halambar Lutes & Harps was a musical instrument shop.",
+      "x": 45.99729611618333,
+      "y": 68.93059462847422,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Halambar Lutes & Harps"
+      ]
+    },
+    {
+      "id": "wiki_537",
+      "name": "Halls of Hilmer",
+      "lore": "",
+      "x": 47.24651809628,
+      "y": 70.2066535303951,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Halls of Hilmer"
+      ]
+    },
+    {
+      "id": "wiki_538",
+      "name": "Hilmer Warehouse",
+      "lore": "",
+      "x": 46.574766654153336,
+      "y": 70.04275605675421,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Hilmer Warehouse"
+      ]
+    },
+    {
+      "id": "wiki_539",
+      "name": "Olmhazan's Jewels",
+      "lore": "Olmhazan's Jewels was a jewelry shop.",
+      "x": 50.21636657726334,
+      "y": 67.81843320019422,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Olmhazan's Jewels"
+      ]
+    },
+    {
+      "id": "wiki_540",
+      "name": "Phalantar's Philtres & Components",
+      "lore": "Phalantar's Philtres & Components was a shop that specialized in medicines, [[herb]]s, [[spices]], rare substances, and [[spell]] [[Material component|components]].",
+      "x": 48.76679767583333,
+      "y": 66.36676986223262,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Phalantar's Philtres & Components"
+      ]
+    },
+    {
+      "id": "wiki_555",
+      "name": "Meiroth's Fine Silks",
+      "lore": "Meiroth's Fine Silks was a clothing shop.",
+      "x": 52.44375293800333,
+      "y": 61.61374312664048,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Meiroth's Fine Silks"
+      ]
+    },
+    {
+      "id": "wiki_558",
+      "name": "Saern's Fine Swords",
+      "lore": "The shop dealt in weaponry to include the occasional magical variety.",
+      "x": 51.37130765320333,
+      "y": 69.69154718466615,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Saern's Fine Swords"
+      ]
+    },
+    {
+      "id": "wiki_561",
+      "name": "Thentavva's Boots",
+      "lore": "Thentavva's Boots was rather small,  narrow, and stood only one story tall. The exterior of the store was notably adorned with carved stone images of frolicking [[nymph]]s and pegasi.",
+      "x": 52.47910827705999,
+      "y": 66.61261607269228,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thentavva's Boots"
+      ]
+    },
+    {
+      "id": "wiki_562",
+      "name": "Riautar's Weaponry",
+      "lore": "Riautar's Weaponry was a weapons shop owned by [[Zarondar Riautar]] in the mid-to-late 14th century DR.",
+      "x": 53.06836392805,
+      "y": 63.93172168242243,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Riautar's Weaponry"
+      ]
+    },
+    {
+      "id": "wiki_564",
+      "name": "Dunblast Roofing Company",
+      "lore": "Dunblast Roofing Company was a carpentry business that was owned by [[Elemos Dunblast]] in the 14th century DR",
+      "x": 54.63578395968,
+      "y": 73.3558264167846,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Dunblast Roofing Company"
+      ]
+    },
+    {
+      "id": "wiki_568",
+      "name": "Orsabbas's Fine Imports",
+      "lore": "In addition to their normal business, Orsabbas's Fine Imports also dealt in stolen property.",
+      "x": 53.89332183943333,
+      "y": 65.79312870448788,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Orsabbas's Fine Imports"
+      ]
+    },
+    {
+      "id": "wiki_570",
+      "name": "Patient Fingers Finework",
+      "lore": "Patient Fingers Finework was a woodcraft shop owned by [[Dannath Lisosar]] in the 14th century DR.",
+      "x": 56.32105512151,
+      "y": 65.28972932116208,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Patient Fingers Finework"
+      ]
+    },
+    {
+      "id": "wiki_572",
+      "name": "Thond Glass and Glazing",
+      "lore": "Thond Glass and Glazing was a glass shop owned by [[Jhalassan Thond]] in the 14th century DR.",
+      "x": 56.08535286111333,
+      "y": 64.3063444793168,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thond Glass and Glazing"
+      ]
+    },
+    {
+      "id": "wiki_573",
+      "name": "Belmonder's Meats",
+      "lore": "Belmonder's Meats was a butcher shop.",
+      "x": 55.7200143575,
+      "y": 63.70928939676576,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Belmonder's Meats"
+      ]
+    },
+    {
+      "id": "wiki_575",
+      "name": "Warehouse of the League",
+      "lore": "",
+      "x": 58.32452433487,
+      "y": 66.33164897502314,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Warehouse of the League"
+      ]
+    },
+    {
+      "id": "wiki_579",
+      "name": "Gentle Rest Stables",
+      "lore": "",
+      "x": 58.66629261244333,
+      "y": 62.92492291576752,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Gentle Rest Stables"
+      ]
+    },
+    {
+      "id": "wiki_609",
+      "name": "Cliffwatch Stables",
+      "lore": "",
+      "x": 62.967858864663334,
+      "y": 98.10434493658394,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Cliffwatch Stables"
+      ]
+    },
+    {
+      "id": "wiki_618",
+      "name": "Sulmest's Splendid Shoes & Boots",
+      "lore": "Sulmest's Splendid Shoes & Boots was a high-quality shoe store.",
+      "x": 48.60180609355667,
+      "y": 91.27918585567613,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sulmest's Splendid Shoes & Boots"
+      ]
+    },
+    {
+      "id": "wiki_619",
+      "name": "Meraedos Fine Furs",
+      "lore": "Meraedos Fine Furs was a furrier shop operated by [[Shalrin Meraedos]] in the mid–14th century DR.",
+      "x": 48.66073165865333,
+      "y": 92.30939854713405,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Meraedos Fine Furs"
+      ]
+    },
+    {
+      "id": "wiki_623",
+      "name": "House of Crystal Storage",
+      "lore": "House of Crystal Storage was a warehouse in Waterdeep that was owned by the [[Guild of Glassblowers, Glaziers, and Spectacle-Makers]].",
+      "x": 45.40804046519667,
+      "y": 92.0284314494616,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/House of Crystal Storage"
+      ]
+    },
+    {
+      "id": "wiki_657",
+      "name": "Dhaermos Warehouse",
+      "lore": "The Dhaermos Warehouse was a storage warehouse that was privately owned by [[Lhund Dhaermos]] in the mid–14th century DR.",
+      "x": 39.71583087664333,
+      "y": 53.21985108373621,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Dhaermos Warehouse"
+      ]
+    },
+    {
+      "id": "wiki_670",
+      "name": "Palace Warehouse",
+      "lore": "",
+      "x": 32.904035551214,
+      "y": 70.67493202651143,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Palace Warehouse"
+      ]
+    },
+    {
+      "id": "wiki_675",
+      "name": "The Golden Key Locksmiths",
+      "lore": "The Golden Key Locksmiths, also known as The Golden Key, was a business owned by the locksmith [[Ansilver]] in the 14th century DR.",
+      "x": 43.38100102579333,
+      "y": 67.65453572655335,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Golden Key Locksmiths"
+      ]
+    },
+    {
+      "id": "wiki_686",
+      "name": "Crommor's Warehouse",
+      "lore": "Crommor's Warehouse was a storage warehouse that was privately owned by the [[Crommor]] noble family in the mid–14th century DR.[",
+      "x": 35.11666666666667,
+      "y": 55.479641909814326,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Crommor's Warehouse"
+      ]
+    },
+    {
+      "id": "wiki_691",
+      "name": "Gerin's Breads",
+      "lore": "Gerin's Breads was a bakery.",
+      "x": 28.28333333333333,
+      "y": 125.97570733863839,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Gerin's Breads"
+      ]
+    },
+    {
+      "id": "wiki_699",
+      "name": "Velatha’s Delights",
+      "lore": "",
+      "x": 23.47594513539333,
+      "y": 110.7829852189607,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Velatha’s Delights"
+      ]
+    },
+    {
+      "id": "wiki_701",
+      "name": "Aurora's Realms Shop, Singing Dolphin Counter",
+      "lore": "Aurora's Realms Shop, Singing Dolphin Catalogue Counter was an outlet of the [[Aurora's Emporium]] retail chain.",
+      "x": 28.066666666666666,
+      "y": 110.54538019451813,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Aurora's Realms Shop, Singing Dolphin Catalog Counter"
+      ]
+    },
+    {
+      "id": "wiki_702",
+      "name": "Melvar’s Chapbooks and Folios",
+      "lore": "",
+      "x": 27.7,
+      "y": 111.52219274977897,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Melvar’s Chapbooks and Folios"
+      ]
+    },
+    {
+      "id": "wiki_704",
+      "name": "Tammerbund's Glasswares",
+      "lore": "Tammerbund's Glasswares was a glass goods shop.",
+      "x": 38.266666666666666,
+      "y": 107.25070733863838,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Tammerbund's Glasswares"
+      ]
+    },
+    {
+      "id": "wiki_712",
+      "name": "Bent Nail",
+      "lore": "The Bent Nail was a carpentry shop.",
+      "x": 55.93333333333333,
+      "y": 107.00236516357207,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Bent Nail"
+      ]
+    },
+    {
+      "id": "wiki_713",
+      "name": "Taurntyrith Adornments",
+      "lore": "Taurntyrith dealed in door panels and wall panels of both painted and iridescent acid-treated copper and enamel. These predominantly depicted blue-green or blue-and-silver forest scenes.",
+      "x": 47.11666666666667,
+      "y": 101.8699602122016,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Taurntyrith Adornments"
+      ]
+    },
+    {
+      "id": "wiki_726",
+      "name": "Paethier's Pipeweed",
+      "lore": "Paethier's Pipeweed was a [[pipeweed]] shop.",
+      "x": 39.63333333333333,
+      "y": 91.00912908930151,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Paethier's Pipeweed"
+      ]
+    },
+    {
+      "id": "wiki_727",
+      "name": "Eilean's Maztica Delights",
+      "lore": "The shop specialized in exotic goods from distant [[Maztica]].",
+      "x": 41.7,
+      "y": 89.7343059239611,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Eilean's Maztica Delights"
+      ]
+    },
+    {
+      "id": "wiki_728",
+      "name": "“Sharkroar” Horth Shalark's Broadsheets",
+      "lore": "",
+      "x": 42.78333333333333,
+      "y": 89.48596374889479,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/“Sharkroar” Horth Shalark's Broadsheets"
+      ]
+    },
+    {
+      "id": "wiki_733",
+      "name": "Sorynth’s Silverware",
+      "lore": "",
+      "x": 43.32207546069667,
+      "y": 82.40530835425238,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sorynth’s Silverware"
+      ]
+    },
+    {
+      "id": "wiki_734",
+      "name": "Curious Past",
+      "lore": "The Curious Past was the antiquities store of [[Bronwyn Caradoon]].",
+      "x": 36.65170149150333,
+      "y": 76.09525561907024,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Curious Past"
+      ]
+    },
+    {
+      "id": "wiki_740",
+      "name": "Diloontier's Apothecary",
+      "lore": "This store specialized in herbal and magical balms, [[potion]]s, and perfumes.",
+      "x": 42.95673695708333,
+      "y": 74.60847139389585,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Diloontier's Apothecary"
+      ]
+    },
+    {
+      "id": "wiki_741",
+      "name": "Rebeleigh's Elegant Headwear",
+      "lore": "The shop sold clothing and specialized in fabulous headwear.",
+      "x": 44.94842105742333,
+      "y": 65.80483566689104,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Rebeleigh's Elegant Headwear"
+      ]
+    },
+    {
+      "id": "wiki_742",
+      "name": "Old Knot Shop",
+      "lore": "",
+      "x": 45.47875114331333,
+      "y": 75.73233978457901,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Old Knot Shop"
+      ]
+    },
+    {
+      "id": "wiki_743",
+      "name": "Bhephel's Bottles",
+      "lore": "",
+      "x": 48.11861645974333,
+      "y": 100.83206717646974,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Bhephel's Bottles"
+      ]
+    },
+    {
+      "id": "wiki_744",
+      "name": "Tirelessly Turning Wheel",
+      "lore": "",
+      "x": 48.09504623370666,
+      "y": 94.4634796292718,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Tirelessly Turning Wheel"
+      ]
+    },
+    {
+      "id": "wiki_746",
+      "name": "Ragathan Furriers",
+      "lore": "Ragathan Furriers was a furrier shop.",
+      "x": 62.72037149124667,
+      "y": 95.34150180949199,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Ragathan Furriers"
+      ]
+    },
+    {
+      "id": "wiki_748",
+      "name": "Millomyr Harps",
+      "lore": "Millomyr Harps was an instrument shop specializing in [[harps]].",
+      "x": 55.531452549183335,
+      "y": 86.86566102976893,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Millomyr Harps"
+      ]
+    },
+    {
+      "id": "wiki_752",
+      "name": "Fallen Stars Fish",
+      "lore": "All of the fish sold here came from the [[Sea of Fallen Stars]].",
+      "x": 50.95882869750999,
+      "y": 89.07827692392246,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Fallen Stars Fish"
+      ]
+    },
+    {
+      "id": "wiki_754",
+      "name": "Aurora's Realms Shop High Road Counter",
+      "lore": "Aurora's Realms Shop, High Road Catalogue Counter was an outlet of the [[Aurora's Emporium]] retail chain.",
+      "x": 50.08673033404667,
+      "y": 91.267478893273,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Aurora's Realms Shop, High Road Catalogue Counter"
+      ]
+    },
+    {
+      "id": "wiki_755",
+      "name": "Downybeard Tobacconist",
+      "lore": "Downybeard Tobacconist was a shop that specialized in the sale of [[tobacco]] products.",
+      "x": 54.91862667215666,
+      "y": 85.71837871428276,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Downybeard Tobacconist"
+      ]
+    },
+    {
+      "id": "wiki_758",
+      "name": "Lightsinger Theater",
+      "lore": "",
+      "x": 46.244783489599996,
+      "y": 84.86377045886559,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Lightsinger Theater"
+      ]
+    },
+    {
+      "id": "wiki_761",
+      "name": "Aurora's Realms Shop, Waterdeep Way Counter",
+      "lore": "Aurora's Realms Shop, Waterdeep Way Catalogue Counter was an outlet of the [[Aurora's Emporium]] retail chain.",
+      "x": 49.650681152316665,
+      "y": 65.46533375720612,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Aurora's Realms Shop, Waterdeep Way Catalogue Counter"
+      ]
+    },
+    {
+      "id": "wiki_763",
+      "name": "Khammeral's Coins",
+      "lore": "Khammeral's Coins was a currency exchange.",
+      "x": 50.88333333333333,
+      "y": 78.9396993810787,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Khammeral's Coins"
+      ]
+    },
+    {
+      "id": "wiki_764",
+      "name": "Henndever's Coffins and Coffers",
+      "lore": "Henndever's Coffins and Coffers was a shop.",
+      "x": 52.38333333333333,
+      "y": 73.59206454465075,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Henndever's Coffins and Coffers"
+      ]
+    },
+    {
+      "id": "wiki_765",
+      "name": "Rejviik's Mortuary",
+      "lore": "Rejviik's Mortuary was a business.",
+      "x": 54.22330500399,
+      "y": 70.76858772573337,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Rejviik's Mortuary"
+      ]
+    },
+    {
+      "id": "wiki_767",
+      "name": "Aurora's Realms Shop, Street of the Tusks Counter",
+      "lore": "Aurora's Realms Shop, Street of the Tusks Catalogue Counter was an outlet of the [[Aurora's Emporium]] retail chain.",
+      "x": 52.785521215576665,
+      "y": 65.48874768201243,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Aurora's Realms Shop, Street of the Tusks Catalogue Counter"
+      ]
+    },
+    {
+      "id": "wiki_768",
+      "name": "Huulfor Manor",
+      "lore": "",
+      "x": 60.38691911333,
+      "y": 65.48874768201243,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Huulfor Manor"
+      ]
+    },
+    {
+      "id": "wiki_777",
+      "name": "Alex Lenter's Storage",
+      "lore": "Alex Lenter's Storage was a warehouse.",
+      "x": 39.52726906832667,
+      "y": 54.9407745569671,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Alex Lenter's Storage"
+      ]
+    },
+    {
+      "id": "wiki_786",
+      "name": "House of Light Storage",
+      "lore": "House of Light Storage was a warehouse that was owned by the [[Guild of Chandlers and Lamplighters]].",
+      "x": 54.55328816854333,
+      "y": 62.11714250996628,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/House of Light Storage"
+      ]
+    },
+    {
+      "id": "wiki_795",
+      "name": "Ralagut's Wheelhouse",
+      "lore": "Ralagut's Wheelhouse was a general store.",
+      "x": 50.88811801939333,
+      "y": 53.55935299342113,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Ralagut's Wheelhouse"
+      ]
+    },
+    {
+      "id": "wiki_796",
+      "name": "Whistling Blades",
+      "lore": "Whistling Blades was a weapons shop.",
+      "x": 50.35778793350333,
+      "y": 53.126195384514276,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Whistling Blades"
+      ]
+    },
+    {
+      "id": "wiki_799",
+      "name": "Talnu's Ropeworks",
+      "lore": "The shop specialized in the sale of [[rope]]s and other gear suitable for [[adventurer]]s",
+      "x": 44.99556150950333,
+      "y": 49.12241424271091,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Talnu's Ropeworks"
+      ]
+    },
+    {
+      "id": "wiki_801",
+      "name": "Old Xoblob Shop",
+      "lore": "The Old Xoblob Shop was a curiosity shop.It was famous for the stuffed [[beholder]] that hung above its front window by the main counter.",
+      "x": 55.02469268933333,
+      "y": 41.337284244757534,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Old Xoblob Shop"
+      ]
+    },
+    {
+      "id": "wiki_802",
+      "name": "Aurora's Realms Shop, Slut Street Counter",
+      "lore": "Aurora's Realms Shop, Slut Street Catalogue Counter was an outlet of the [[Aurora's Emporium]] retail chain.",
+      "x": 54.906841559136666,
+      "y": 42.390910861021744,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Aurora's Realms Shop, Slut Street Catalogue Counter"
+      ]
+    },
+    {
+      "id": "wiki_803",
+      "name": "Alex Lenter's Storage",
+      "lore": "",
+      "x": 55.602163227303336,
+      "y": 47.7995274911774,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Alex Lenter's Storage"
+      ]
+    },
+    {
+      "id": "wiki_804",
+      "name": "Maernath Storage",
+      "lore": "",
+      "x": 55.33110562784667,
+      "y": 48.326340799309506,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Maernath Storage"
+      ]
+    },
+    {
+      "id": "wiki_805",
+      "name": "Mother Jatha's",
+      "lore": "",
+      "x": 50.28707725538333,
+      "y": 47.413197731883166,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Mother Jatha's"
+      ]
+    },
+    {
+      "id": "wiki_806",
+      "name": "Fishscale Smithy",
+      "lore": "",
+      "x": 46.940105157766666,
+      "y": 47.98683888962459,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Fishscale Smithy"
+      ]
+    },
+    {
+      "id": "wiki_808",
+      "name": "Merlook Nets & Knotware",
+      "lore": "",
+      "x": 56.60389783398333,
+      "y": 38.925649989753644,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Merlook Nets & Knotware"
+      ]
+    },
+    {
+      "id": "wiki_809",
+      "name": "Hlethvagi's Coins",
+      "lore": "Hlethvagi's Coins was a moneychanging house.",
+      "x": 65.00668341708334,
+      "y": 32.76778776581154,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Hlethvagi's Coins"
+      ]
+    },
+    {
+      "id": "wiki_810",
+      "name": "Aurora's Realms Shop, South High Road Counter",
+      "lore": "Aurora's Realms Shop, South High Road Catalogue Counter was an outlet of the [[Aurora's Emporium]] retail chain.",
+      "x": 60.045150835756665,
+      "y": 35.460389118485544,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Aurora's Realms Shop, South High Road Catalogue Counter"
+      ]
+    },
+    {
+      "id": "wiki_812",
+      "name": "Nueth's Fine Nets",
+      "lore": "In addition to finely made ropes, Nueth's Fine Nets sold such rope-related products as gauze, [[hammock]]s, [[net]]s, tarp and window mesh, tow rope, rope bridges, ship shrouds and lines. The store also sold thin, waxed climbing cables that were popular among [[thieves]].",
+      "x": 60.068721061796666,
+      "y": 36.39694611072151,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Nueth's Fine Nets"
+      ]
+    },
+    {
+      "id": "wiki_813",
+      "name": "The Medusa's Glare",
+      "lore": "The Medusa's Glare was a sculptor's shop.",
+      "x": 60.91724919922,
+      "y": 36.607671433975014,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Medusa's Glare"
+      ]
+    },
+    {
+      "id": "wiki_814",
+      "name": "Berendarr's World of Words",
+      "lore": "Berendarr's specialized in selling [[broadsheet]]s.",
+      "x": 63.09749510788,
+      "y": 35.00381758477237,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Berendarr's World of Words"
+      ]
+    },
+    {
+      "id": "wiki_815",
+      "name": "Tehmak's Coaches",
+      "lore": "Tehma's Coaches provided coach and transportation services with the southern regions of Waterdeep.",
+      "x": 63.451048498473334,
+      "y": 37.696418937445394,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Tehmak's Coaches"
+      ]
+    },
+    {
+      "id": "wiki_816",
+      "name": "Flame of Hope",
+      "lore": "",
+      "x": 61.75399222362666,
+      "y": 49.49703703960529,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Flame of Hope"
+      ]
+    },
+    {
+      "id": "wiki_817",
+      "name": "Brian the Swordmaster's Smithy",
+      "lore": "Brian the Swordmaster's Smithy was a blacksmith shop.",
+      "x": 59.13769713323334,
+      "y": 48.45511738574423,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Brian the Swordmaster's Smithy"
+      ]
+    },
+    {
+      "id": "wiki_819",
+      "name": "Essimuth's Equipment",
+      "lore": "Essimuth's Equipment was a shop that sold tools and adventuring gear.",
+      "x": 58.80833333333333,
+      "y": 44.78023320070734,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Essimuth's Equipment"
+      ]
+    },
+    {
+      "id": "wiki_823",
+      "name": "Amrani's Laundry",
+      "lore": "Amrani's Laundry was a business owned by [[Amrani]].",
+      "x": 59.479166666666664,
+      "y": 44.61881078691424,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Amrani's Laundry"
+      ]
+    },
+    {
+      "id": "wiki_824",
+      "name": "Hemmerem's Stables",
+      "lore": "Hemmerem's Stables was a shop owned and run by [[Hemmerem]].",
+      "x": 59.94166666666666,
+      "y": 44.30838306808135,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Hemmerem's Stables"
+      ]
+    },
+    {
+      "id": "wiki_825",
+      "name": "Piatran's Clothiers",
+      "lore": "As its name implied, the shop was owned and run by [[Piatran]].",
+      "x": 59.38333333333333,
+      "y": 44.40358090185677,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Piatran's Clothiers"
+      ]
+    },
+    {
+      "id": "wiki_828",
+      "name": "Ingerr & Ingerr Warehouses",
+      "lore": "Ingerr & Ingerr Warehouses was a warehouse compound",
+      "x": 60.141666666666666,
+      "y": 42.70243700265252,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Ingerr & Ingerr Warehouses"
+      ]
+    },
+    {
+      "id": "wiki_830",
+      "name": "Krabbellor Silversmiths",
+      "lore": "",
+      "x": 59.795833333333334,
+      "y": 43.377099911582675,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Krabbellor Silversmiths"
+      ]
+    },
+    {
+      "id": "wiki_831",
+      "name": "Laran's Cartographers",
+      "lore": "",
+      "x": 59.4125,
+      "y": 43.32743147656941,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Laran's Cartographers"
+      ]
+    },
+    {
+      "id": "wiki_832",
+      "name": "Waukeen's Wares",
+      "lore": "",
+      "x": 58.958333333333336,
+      "y": 43.3191534040672,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Waukeen's Wares"
+      ]
+    },
+    {
+      "id": "wiki_835",
+      "name": "Garrulous Grocer",
+      "lore": "",
+      "x": 58.8375,
+      "y": 43.877923297966404,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Garrulous Grocer"
+      ]
+    },
+    {
+      "id": "wiki_837",
+      "name": "The Medusa's Glare",
+      "lore": "The Medusa's Glare was a sculptor's shop",
+      "x": 58.21666666666667,
+      "y": 42.884554597701154,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/The Medusa's Glare"
+      ]
+    },
+    {
+      "id": "wiki_846",
+      "name": "Snobeedle Orchard and Meadery",
+      "lore": "An orchard, shop, and drinking hall operated by the [[Snobeedle]] family of [[halfling]]s. Tourists were able to pick their own fruit during the appropriate seasons.",
+      "x": 89.53333333333333,
+      "y": 90.82701149425289,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Snobeedle Orchard and Meadery"
+      ]
+    },
+    {
+      "id": "wiki_848",
+      "name": "Ilmar Gaukul Silversmith",
+      "lore": "",
+      "x": 58.4375,
+      "y": 46.37376215738285,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Ilmar Gaukul Silversmith"
+      ]
+    },
+    {
+      "id": "wiki_933",
+      "name": "Thrakkus's Butcher Shop",
+      "lore": "",
+      "x": 47.88333333333333,
+      "y": 121.21995468611848,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thrakkus"
+      ]
+    },
+    {
+      "id": "wiki_951",
+      "name": "Steam and Steel",
+      "lore": "Steam and Steel was a smithy. Operating during daylight hours, this smithy offered a wide variety of armors, shields, metal tools, and weaponry.",
+      "x": 55.81429526165667,
+      "y": 106.41628824266942,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Steam and Steel"
+      ]
+    },
+    {
+      "id": "wiki_952",
+      "name": "Seven Masks Theater",
+      "lore": "The Seven Masks Theater was a theater that catered to the masses typically found in the neighborhood. Ship captains and sailors were admitted for free.",
+      "x": 41.04754864788,
+      "y": 52.06086180584689,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Seven Masks Theater"
+      ]
+    },
+    {
+      "id": "wiki_953",
+      "name": "Weirdbottle's Concoctions",
+      "lore": "",
+      "x": 52.29054646874667,
+      "y": 81.39850958759749,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Weirdbottle's Concoctions"
+      ]
+    },
+    {
+      "id": "wiki_954",
+      "name": "Nurneene's Marvelous Masks",
+      "lore": "Nurneene's Marvelous Masks was a clothing boutique that sold stylish hand-made custom masks and costume accessories to the Waterdhavian elite.",
+      "x": 48.55466564147666,
+      "y": 73.82410491290094,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Nurneene's Marvelous Masks"
+      ]
+    },
+    {
+      "id": "wiki_956",
+      "name": "Thantilvur Investments",
+      "lore": "",
+      "x": 50.93525847147,
+      "y": 92.42646817116231,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Thantilvur Investments"
+      ]
+    },
+    {
+      "id": "wiki_959",
+      "name": "Blackwell's Fine Books and Good Tomes",
+      "lore": "",
+      "x": 38.714096269963335,
+      "y": 93.6674061858737,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Blackwell's Fine Books and Good Tomes"
+      ]
+    },
+    {
+      "id": "wiki_960",
+      "name": "Book Wyrm's Treasure",
+      "lore": "",
+      "x": 53.17442994523,
+      "y": 107.66893321978067,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Book Wyrm's Treasure"
+      ]
+    },
+    {
+      "id": "wiki_963",
+      "name": "Bronzeleaf Bowyers",
+      "lore": "",
+      "x": 51.029539375629994,
+      "y": 110.95858965500474,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Bronzeleaf Bowyers"
+      ]
+    },
+    {
+      "id": "wiki_965",
+      "name": "Chanszobur's Manywares",
+      "lore": "",
+      "x": 40.38758231877,
+      "y": 109.98691177556262,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Chanszobur's Manywares"
+      ]
+    },
+    {
+      "id": "wiki_967",
+      "name": "Corellon's Crown",
+      "lore": "",
+      "x": 55.001122463293335,
+      "y": 106.73237622754803,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Corellon's Crown"
+      ]
+    },
+    {
+      "id": "wiki_968",
+      "name": "Dandy Mops",
+      "lore": "",
+      "x": 53.30833333333333,
+      "y": 67.97953138815208,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Dandy Mops"
+      ]
+    },
+    {
+      "id": "wiki_969",
+      "name": "Dauntlyn’s Doors",
+      "lore": "",
+      "x": 48.09504623370666,
+      "y": 80.11074372327676,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Dauntlyn’s Doors"
+      ]
+    },
+    {
+      "id": "wiki_973",
+      "name": "Horizon's Sails",
+      "lore": "",
+      "x": 48.40833333333333,
+      "y": 44.999602122015915,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Horizon's Sails"
+      ]
+    },
+    {
+      "id": "wiki_975",
+      "name": "Kiana's Mystericum",
+      "lore": "",
+      "x": 55.416666666666664,
+      "y": 65.1318744473917,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Kiana's Mystericum"
+      ]
+    },
+    {
+      "id": "wiki_981",
+      "name": "Ohmtalakar's Fine Gems",
+      "lore": "",
+      "x": 40.4,
+      "y": 110.44604332449161,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Ohmtalakar's Fine Gems"
+      ]
+    },
+    {
+      "id": "wiki_982",
+      "name": "Pink Flumph",
+      "lore": "",
+      "x": 42.75,
+      "y": 80.82709991158268,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Pink Flumph"
+      ]
+    },
+    {
+      "id": "wiki_983",
+      "name": "Sarsantyr's Tapestries & Draperies",
+      "lore": "",
+      "x": 48.53333333333333,
+      "y": 109.22088859416446,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sarsantyr's Tapestries & Draperies"
+      ]
+    },
+    {
+      "id": "wiki_987",
+      "name": "Sword Coast Traders' Bank",
+      "lore": "",
+      "x": 63.05,
+      "y": 40.26454465075155,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Sword Coast Traders' Bank"
+      ]
+    },
+    {
+      "id": "wiki_990",
+      "name": "Telvar's Tipples",
+      "lore": "",
+      "x": 61.86595079731333,
+      "y": 53.524232106211656,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Telvar's Tipples"
+      ]
+    },
+    {
+      "id": "wiki_991",
+      "name": "Daily Trumpet",
+      "lore": "",
+      "x": 58.67807772546333,
+      "y": 41.805562740877164,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Daily Trumpet"
+      ]
+    },
+    {
+      "id": "wiki_999",
+      "name": "Verdas' potions and poisons",
+      "lore": "",
+      "x": 63.89888279322333,
+      "y": 43.24551911643893,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Verdas' potions and poisons"
+      ]
+    },
+    {
+      "id": "wiki_1000",
+      "name": "Waterdeep Wazoo",
+      "lore": "",
+      "x": 61.152951459616666,
+      "y": 109.5654611290556,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Waterdeep Wazoo"
+      ]
+    },
+    {
+      "id": "wiki_1004",
+      "name": "Hardyn Glorjarn's Business Rentals",
+      "lore": "A three-story building that housed several shops in the late 15{{th}} century [[DR]]: [[Laskalan's Lamps and Lanterns]], [[Erro Alhandrar's Nets]], [[Demra Samdro's Best Beds]], [[Tantra Jaressra's Fine Gowns]], and [[Vressa's Sweep Begone]], as well as [[Tiger's Eye (shop)|Tiger's Eye]].",
+      "x": 54.28518033964052,
+      "y": 108.02071060566323,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Tantra Jaressra's Fine Gowns"
+      ]
+    },
+    {
+      "id": "wiki_1006",
+      "name": "Alkul's Ice Storage",
+      "lore": "An icehouse that stood along [[Odd Street]] in [[1367 DR]].",
+      "x": 44.81466593647024,
+      "y": 44.902427410330965,
+      "category": "shop",
+      "grounding": [
+        "https://forgottenrealms.fandom.com/wiki/Alkul's Ice Storage"
+      ]
+    }
   ],
-  "updatedAt": "2026-04-28T06:34:17.679Z"
+  "updatedAt": "2026-04-30T13:14:39.993Z"
 }
