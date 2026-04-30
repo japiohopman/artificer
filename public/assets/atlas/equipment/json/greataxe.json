@@ -40,9 +40,18 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/greataxe.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-04-30T10:34:22.621Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/greataxe.webp",
   "sprite_index": 20,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/greataxe.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "category": "Martial Melee Weapons",
+  "last_updated": "30-4-2026"
 }
