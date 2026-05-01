@@ -17,6 +17,14 @@
     "While focusing on a creature with detect thoughts, you can use an action to cast the suggestion spell (save DC 13) from the helm on that creature. Once used, the suggestion property can't be used again until the next dawn."
   ],
   "url": "public/assets/atlas/magic_items/json/helm_of_telepathy.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/helm_of_telepathy.webp"
+  "updated_at": "2026-05-01T08:50:32.053Z",
+  "image": "public/assets/atlas/magic_items/helm_of_telepathy.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/helm_of_telepathy.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "head"
+  ],
+  "category": "Wondrous Items",
+  "last_updated": "1-5-2026"
 }
