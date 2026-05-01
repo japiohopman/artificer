@@ -21,10 +21,18 @@
     "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
   ],
   "url": "public/assets/atlas/equipment/json/pouch.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-01T07:55:16.273Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/pouch.webp",
   "sprite_index": 14,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Adventuring Gear",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "1-5-2026"
 }
