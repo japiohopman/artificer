@@ -21,10 +21,17 @@
     "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook (described later in this section)."
   ],
   "url": "public/assets/atlas/equipment/json/book.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-01T09:04:11.871Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/book.webp",
   "sprite_index": 10,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/images/book.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "1-5-2026"
 }
