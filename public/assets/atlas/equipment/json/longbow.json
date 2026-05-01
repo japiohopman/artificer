@@ -46,9 +46,17 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/longbow.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-01T08:07:00.617Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/longbow.webp",
   "sprite_index": 3,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/images/longbow.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "last_updated": "1-5-2026"
 }
