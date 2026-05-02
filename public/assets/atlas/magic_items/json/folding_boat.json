@@ -20,6 +20,11 @@
     "The third command word causes the folding boat to fold back into a box, provided that no creatures are aboard. Any objects in the vessel that can't fit inside the box remain outside the box as it folds. Any objects in the vessel that can fit inside the box do so."
   ],
   "url": "public/assets/atlas/magic_items/json/folding_boat.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/folding_boat.webp"
+  "updated_at": "2026-05-02T06:52:07.553Z",
+  "image": "public/assets/atlas/magic_items/folding_boat.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/folding_boat.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Wondrous Items",
+  "last_updated": "2-5-2026"
 }
