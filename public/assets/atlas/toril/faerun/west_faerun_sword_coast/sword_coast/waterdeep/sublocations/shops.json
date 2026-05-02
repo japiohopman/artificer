@@ -1316,13 +1316,15 @@
     {
       "id": "wiki_846",
       "name": "Snobeedle Orchard and Meadery",
-      "lore": "An orchard, shop, and drinking hall operated by the [[Snobeedle]] family of [[halfling]]s. Tourists were able to pick their own fruit during the appropriate seasons.",
+      "lore": "An orchard, shop, and drinking hall operated by the [[Snobeedle]] family of [[halfling]]s. Tourists were able to pick their own fruit during the appropriate seasons. The Snobeedles were a family of halflings who owned and ran the Snobeedle Orchard and Meadery in Undercliff just outside of Waterdeep.[2] By 1492 DR,[note 1] they were Waterdeep's richest halfling family",
       "x": 89.53333333333333,
       "y": 90.82701149425289,
       "category": "shop",
       "grounding": [
         "https://forgottenrealms.fandom.com/wiki/Snobeedle Orchard and Meadery"
-      ]
+      ],
+      "species": "halfling",
+      "classJob": "noble"
     },
     {
       "id": "wiki_848",
@@ -1611,5 +1613,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-05-02T05:32:30.731Z"
+  "updatedAt": "2026-05-02T06:23:35.701Z"
 }
