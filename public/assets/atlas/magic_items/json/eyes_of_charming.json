@@ -6,9 +6,7 @@
     "name": "wondrous items",
     "url": "public/assets/atlas/equipment_categories/wondrous_items"
   },
-  "rarity": {
-    "name": "uncommon"
-  },
+  "rarity": "Uncommon",
   "variants": [],
   "variant": false,
   "desc": [
@@ -16,6 +14,14 @@
     "These crystal lenses fit over the eyes. They have 3 charges. While wearing them, you can expend 1 charge as an action to cast the charm person spell (save DC 13) on a humanoid within 30 feet of you, provided that you and the target can see each other. The lenses regain all expended charges daily at dawn."
   ],
   "url": "public/assets/atlas/magic_items/json/eyes_of_charming.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/eyes_of_charming.webp"
+  "updated_at": "2026-05-03T19:22:38.855Z",
+  "image": "public/assets/atlas/magic_items/eyes_of_charming.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/eyes_of_charming.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "category": "Wondrous Items",
+  "last_updated": "3-5-2026"
 }
