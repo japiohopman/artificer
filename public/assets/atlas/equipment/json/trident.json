@@ -52,9 +52,17 @@
     }
   },
   "url": "public/assets/atlas/equipment/json/trident.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-03T19:20:43.564Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/trident.webp",
   "sprite_index": 20,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/images/trident.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Martial Melee Weapons",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "3-5-2026"
 }
