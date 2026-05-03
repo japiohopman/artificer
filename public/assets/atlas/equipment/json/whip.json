@@ -40,9 +40,17 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/whip.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-03T17:37:58.343Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/whip.webp",
   "sprite_index": 8,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp",
+  "imageUrl": "/assets/atlas/equipment/images/whip.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "3-5-2026"
 }
