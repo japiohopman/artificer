@@ -6,9 +6,7 @@
     "name": "rod",
     "url": "public/assets/atlas/equipment_categories/rod"
   },
-  "rarity": {
-    "name": "very rare"
-  },
+  "rarity": "Very Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -19,6 +17,14 @@
     "A newly found rod has 1d10 levels of spell energy stored in it already. A rod that can no longer absorb spell energy and has no energy remaining becomes nonmagical."
   ],
   "url": "public/assets/atlas/magic_items/json/rod_of_absorption.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/rod_of_absorption.webp"
+  "updated_at": "2026-05-03T19:39:57.074Z",
+  "image": "public/assets/atlas/magic_items/rod_of_absorption.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/rod_of_absorption.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Rod",
+  "slot": [
+    "focus"
+  ],
+  "last_updated": "3-5-2026"
 }
