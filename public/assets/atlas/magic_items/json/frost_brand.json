@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "very rare"
-  },
+  "rarity": "Very Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -18,6 +16,14 @@
     "When you draw this weapon, you can extinguish all nonmagical flames within 30 feet of you. This property can be used no more than once per hour."
   ],
   "url": "public/assets/atlas/magic_items/json/frost_brand.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/frost_brand.webp"
+  "updated_at": "2026-05-03T17:39:16.681Z",
+  "image": "public/assets/atlas/magic_items/frost_brand.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/frost_brand.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "category": "Weapon",
+  "last_updated": "3-5-2026"
 }
