@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "legendary"
-  },
+  "rarity": "Legendary",
   "variants": [],
   "variant": false,
   "desc": [
@@ -18,6 +16,13 @@
     "***Wish.*** The sword has 1d4 - 1 charges. While holding it, you can use an action to expend 1 charge and cast the wish spell from it. This property can't be used again until the next dawn. The sword loses this property if it has no charges."
   ],
   "url": "public/assets/atlas/magic_items/json/luck_blade.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/luck_blade.webp"
+  "updated_at": "2026-05-03T19:30:49.833Z",
+  "image": "public/assets/atlas/magic_items/luck_blade.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/luck_blade.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "3-5-2026"
 }
