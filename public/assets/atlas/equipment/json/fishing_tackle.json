@@ -21,10 +21,18 @@
     "This kit includes a wooden rod, silken line, corkwood bobbers, steel hooks, lead sinkers, velvet lures, and narrow netting."
   ],
   "url": "public/assets/atlas/equipment/json/fishing_tackle.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-03T14:15:07.466Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/fishing_tackle.webp",
   "sprite_index": 11,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/fishing_tackle.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "category": "Adventuring Gear",
+  "last_updated": "3-5-2026"
 }
