@@ -17,10 +17,18 @@
     "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
   ],
   "url": "public/assets/atlas/equipment/json/drum.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-03T19:29:30.156Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/drum.webp",
   "sprite_index": 4,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/drum.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Tools",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "3-5-2026"
 }
