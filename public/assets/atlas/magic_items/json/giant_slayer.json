@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "rare"
-  },
+  "rarity": "Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -17,6 +15,15 @@
     "When you hit a giant with it, the giant takes an extra 2d6 damage of the weapon's type and must succeed on a DC 15 Strength saving throw or fall prone. For the purpose of this weapon, \"giant\" refers to any creature with the giant type, including ettins and trolls."
   ],
   "url": "public/assets/atlas/magic_items/json/giant_slayer.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/giant_slayer.webp"
+  "updated_at": "2026-05-03T19:26:05.054Z",
+  "image": "public/assets/atlas/magic_items/giant_slayer.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/giant_slayer.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "category": "Weapon",
+  "last_updated": "3-5-2026"
 }
