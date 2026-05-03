@@ -19,10 +19,18 @@
   },
   "weight": 1,
   "url": "public/assets/atlas/equipment/json/whetstone.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-03T19:31:58.440Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/whetstone.webp",
   "sprite_index": 7,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp",
+  "imageUrl": "/assets/atlas/equipment/images/whetstone.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Adventuring Gear",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "3-5-2026"
 }
