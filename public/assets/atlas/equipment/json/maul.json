@@ -40,9 +40,17 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/maul.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-03T19:45:10.371Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/maul.webp",
   "sprite_index": 13,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/images/maul.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "category": "Weapon",
+  "last_updated": "3-5-2026"
 }
