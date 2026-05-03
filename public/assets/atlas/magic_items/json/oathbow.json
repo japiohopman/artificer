@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "very rare"
-  },
+  "rarity": "Very Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -18,6 +16,14 @@
     "While your sworn enemy lives, you have disadvantage on attack rolls with all other weapons."
   ],
   "url": "public/assets/atlas/magic_items/json/oathbow.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/oathbow.webp"
+  "updated_at": "2026-05-03T17:30:05.249Z",
+  "image": "public/assets/atlas/magic_items/oathbow.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/oathbow.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "last_updated": "3-5-2026"
 }
