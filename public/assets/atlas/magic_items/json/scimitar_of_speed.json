@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "very rare"
-  },
+  "rarity": "Very Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -16,6 +14,14 @@
     "You gain a +2 bonus to attack and damage rolls made with this magic weapon. In addition, you can make one attack with it as a bonus action on each of your turns."
   ],
   "url": "public/assets/atlas/magic_items/json/scimitar_of_speed.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/scimitar_of_speed.webp"
+  "updated_at": "2026-05-03T19:33:40.634Z",
+  "image": "public/assets/atlas/magic_items/scimitar_of_speed.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/scimitar_of_speed.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "3-5-2026"
 }
