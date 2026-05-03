@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "legendary"
-  },
+  "rarity": "Legendary",
   "variants": [],
   "variant": false,
   "desc": [
@@ -18,6 +16,14 @@
     "The hammer also has 5 charges. While attuned to it, you can expend 1 charge and make a ranged weapon attack with the hammer, hurling it as if it had the thrown property with a normal range of 20 feet and a long range of 60 feet. If the attack hits, the hammer unleashes a thunderclap audible out to 300 feet. The target and every creature within 30 feet of it must succeed on a DC 17 Constitution saving throw or be stunned until the end of your next turn. The hammer regains 1d4 + 1 expended charges daily at dawn."
   ],
   "url": "public/assets/atlas/magic_items/json/hammer_of_thunderbolts.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/hammer_of_thunderbolts.webp"
+  "updated_at": "2026-05-03T17:31:28.032Z",
+  "image": "public/assets/atlas/magic_items/hammer_of_thunderbolts.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/hammer_of_thunderbolts.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "category": "Weapon",
+  "last_updated": "3-5-2026"
 }
