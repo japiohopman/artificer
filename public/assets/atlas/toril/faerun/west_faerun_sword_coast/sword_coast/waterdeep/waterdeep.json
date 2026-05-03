@@ -1,5 +1,5 @@
 {
-  "name": "waterdeep",
+  "name": "Waterdeep",
   "path": [
     "toril",
     "faerun",
@@ -13,8 +13,14 @@
     "y": 2453,
     "name": "waterdeep"
   },
-  "lore": "",
+  "lore": "Waterdeep, also known as the City of Splendors or the Crown of the North, was the most important and influential city in the North and perhaps in all Faerûn. It was a truly marvelous cosmopolitan city of great culture that attracted the most talented artisans, artists, and scholars from across the Realms, as well as a commercial hub for financial interests along the coast and beyond.\n\nIt was one of if not the most powerful and influential member-states of the Lords' Alliance, the coalition of nations and city-states that sought to maintain order along the Sword Coast and the North.",
   "grounding": [],
+  "population": "1,347,680[note 1] in 1372 DRup to 2,000,000[note 2] in the 15th century DR",
+  "races": "Humans   64%   Dwarves   10%   Elves   10%   Halflings   5%   Half-elves   5%  Gnomes  3%  Half-orcs  2%  Others  1%",
+  "size": "metropolis ",
+  "region": "Sword Coast North, northwest Faerûn",
+  "imports": "Grain, livestock, leather, ore, timber, and exotic goods from other lands",
+  "exports": "Ale, arms, cloth, fish, furnishings, leather goods, pottery, refined metals, and all other sorts of finished goods",
   "entrancePoint": {
     "x": 60.80710647649062,
     "y": 148.5631224719841
@@ -11093,5 +11099,5 @@
   ],
   "subPaths": [],
   "image": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/waterdeep/waterdeep.webp",
-  "updatedAt": "2026-05-02T06:23:25.326Z"
+  "updatedAt": "2026-05-03T06:25:35.278Z"
 }
