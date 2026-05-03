@@ -49,9 +49,17 @@
     "long": 60
   },
   "url": "public/assets/atlas/equipment/json/light_hammer.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-03T17:43:31.535Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/light_hammer.webp",
   "sprite_index": 0,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/images/light_hammer.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "category": "Weapon",
+  "last_updated": "3-5-2026"
 }
