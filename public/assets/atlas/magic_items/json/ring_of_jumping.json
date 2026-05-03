@@ -6,9 +6,7 @@
     "name": "ring",
     "url": "public/assets/atlas/equipment_categories/ring"
   },
-  "rarity": {
-    "name": "uncommon"
-  },
+  "rarity": "Uncommon",
   "variants": [],
   "variant": false,
   "desc": [
@@ -16,6 +14,14 @@
     "While wearing this ring, you can cast the jump spell from it as a bonus action at will, but can target only yourself when you do so."
   ],
   "url": "public/assets/atlas/magic_items/json/ring_of_jumping.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/ring_of_jumping.webp"
+  "updated_at": "2026-05-03T19:23:54.271Z",
+  "image": "public/assets/atlas/magic_items/ring_of_jumping.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/ring_of_jumping.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "ring-1",
+    "ring-2"
+  ],
+  "last_updated": "3-5-2026"
 }
