@@ -6,9 +6,7 @@
     "name": "wondrous items",
     "url": "public/assets/atlas/equipment_categories/wondrous_items"
   },
-  "rarity": {
-    "name": "uncommon"
-  },
+  "rarity": "Uncommon",
   "variants": [],
   "variant": false,
   "desc": [
@@ -17,6 +15,13 @@
     "The cloud persists as long as the bottle is open. Closing the bottle requires you to speak its command word as an action. Once the bottle is closed, the cloud disperses after 10 minutes. A moderate wind (11 to 20 miles per hour) can also disperse the smoke after 1 minute, and a strong wind (21 or more miles per hour) can do so after 1 round."
   ],
   "url": "public/assets/atlas/magic_items/json/eversmoking_bottle.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/eversmoking_bottle.webp"
+  "updated_at": "2026-05-04T17:14:25.802Z",
+  "image": "public/assets/atlas/magic_items/eversmoking_bottle.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/eversmoking_bottle.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "4-5-2026"
 }
