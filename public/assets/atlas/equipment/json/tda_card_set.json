@@ -1,0 +1,30 @@
+{
+  "special": [],
+  "index": "playing_card_set",
+  "name": "playing card set",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "public/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Gaming Sets",
+  "cost": {
+    "quantity": 28,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "These weathered cards are stained with the copper tang of dried blood dragons, and it is said that those who lose a hand to their grim portraits often find their very souls shuffled into the deck. Each face stares back with unnerving intent, waiting for the moment a desperate gambler finally draws the Ace of Crows."
+  ],
+  "image": "public/assets/atlas/equipment/tda_card_set.webp",
+  "url": "public/assets/atlas/equipment/json/tda_card_set.json",
+  "updated_at": "2026-04-11T16:20:03.846Z",
+  "contents": [],
+  "properties": [],
+  "sprite_index": 17,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/playing_card_set.webp",
+  "_type": "equipment",
+  "category": "Gaming Sets",
+  "last_updated": "11-5-2026"
+}
