@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "rare"
-  },
+  "rarity": "Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -17,6 +15,14 @@
     "When you roll a 20 on an attack roll made with this weapon, the target takes an extra 2d6 bludgeoning damage, or 4d6 bludgeoning damage if it's a construct. If a construct has 25 hit points or fewer after taking this damage, it is destroyed."
   ],
   "url": "public/assets/atlas/magic_items/json/mace_of_smiting.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/mace_of_smiting.webp"
+  "updated_at": "2026-05-04T17:32:08.715Z",
+  "image": "public/assets/atlas/magic_items/mace_of_smiting.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/mace_of_smiting.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "4-5-2026"
 }
