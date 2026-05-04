@@ -1,0 +1,1315 @@
+{
+  "level": 1,
+  "xp": 0,
+  "gender": "Male",
+  "stats": {
+    "str": 10,
+    "dex": 12,
+    "con": 13,
+    "int": 14,
+    "wis": 5,
+    "cha": 12
+  },
+  "proficiencies": [
+    "light armor",
+    "medium armor",
+    "shields",
+    "simple weapons",
+    "martial weapons",
+    "saving throw: dex",
+    "saving throw: str",
+    "skill-animal-handling",
+    "skill-survival",
+    "vehicles-land",
+    "skill-insight",
+    "skill-persuasion"
+  ],
+  "traits": [
+    "I judge people by their actions, not their words."
+  ],
+  "features": [
+    {
+      "name": "Rustic Hospitality",
+      "index": "folk-hero-feature",
+      "desc": "Since you come from the ranks of the common folk, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you.",
+      "source": "Background"
+    },
+    {
+      "name": "Guild Membership",
+      "index": "guild-artisan-feature",
+      "desc": "As an established and respected member of a guild, you can rely on certain benefits that membership provides. Your fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings.\nGuilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or if the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild's coffers.\nYou must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild's good graces.",
+      "source": "Background"
+    }
+  ],
+  "flaws": [
+    "I have trouble trusting in my allies."
+  ],
+  "ideals": [
+    "Respect. People deserve to be treated with dignity and respect. (Good)"
+  ],
+  "bonds": [
+    "I have a family, but I have no idea where they are. One day, I hope to see them again."
+  ],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 10,
+    "pp": 0
+  },
+  "appearance": {
+    "hairColor": "Snow White",
+    "hairStyle": "Short",
+    "bodyType": "Medium",
+    "eyeColor": "Draconic Red",
+    "skinColor": "#748d61",
+    "height": "5'10\"",
+    "weight": "160 lbs"
+  },
+  "backpack": [
+    {
+      "id": "arrow",
+      "index": "arrow",
+      "name": "arrow",
+      "quantity": 20,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/arrow.json",
+      "image_url": "public/assets/atlas/equipment/images/arrow.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2F%2Fapi%2Fraw%3Furl%3Dhttps%253A%252F%252Fraw.githubusercontent.com%252Fjapiohopman%252Fartificer%252Fmain%252Fpublic%252Fassets%252Fatlas%252Fequipment%252Fimages%252Farrow.webp%253Ft%253D1776783598208&t=1777918149295",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "ammunition",
+        "name": "ammunition",
+        "url": "public/assets/atlas/equipment_categories/ammunition"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-21T15:00:29.569Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/arrow.webp",
+      "sprite_index": 8,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+      "background_type": "land_forest",
+      "category": "Ammunition",
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "backpack",
+      "index": "backpack",
+      "name": "backpack",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/backpack.json",
+      "image_url": "public/assets/atlas/equipment/images/backpack.webp",
+      "imageUrl": "/assets/atlas/equipment/images/backpack.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-21T14:08:31.097Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/backpack.webp",
+      "sprite_index": 9,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "back"
+      ],
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "bedroll",
+      "index": "bedroll",
+      "name": "bedroll",
+      "quantity": 1,
+      "weight": 7,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/bedroll.json",
+      "image_url": "public/assets/atlas/equipment/images/bedroll.webp",
+      "imageUrl": "/assets/atlas/equipment/bedroll.webp",
+      "desc": [
+        "A typical bedroll consisted of a sack that could contain a human-sized creature, with an opening on the side. Some variants consisted of several layers to provide waterproofing, warmth, and comfort"
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-11T15:14:56.995Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/bedroll.webp",
+      "sprite_index": 2,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
+      "category": "Adventuring Gear",
+      "last_updated": "11-4-2026"
+    },
+    {
+      "id": "mess_kit",
+      "index": "mess_kit",
+      "name": "mess kit",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/mess_kit.json",
+      "image_url": "public/assets/atlas/equipment/images/mess_kit.webp",
+      "imageUrl": "/assets/atlas/equipment/mess_kit.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "kits",
+        "name": "kits",
+        "url": "public/assets/atlas/equipment_categories/kits"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "sp"
+      },
+      "desc": [
+        "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl."
+      ],
+      "updated_at": "2026-04-12T08:02:03.666Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/mess_kit.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+      "category": "Kits",
+      "last_updated": "12-4-2026"
+    },
+    {
+      "id": "tinderbox",
+      "index": "tinderbox",
+      "name": "tinderbox",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/tinderbox.json",
+      "image_url": "public/assets/atlas/equipment/images/tinderbox.webp",
+      "imageUrl": "/assets/atlas/equipment/tinderbox.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch--or anything else with abundant, exposed fuel--takes an action.",
+        "Lighting any other fire takes 1 minute."
+      ],
+      "updated_at": "2026-04-15T13:57:41.365Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/tinderbox.webp",
+      "sprite_index": 16,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "category": "Adventuring Gear",
+      "last_updated": "15-4-2026"
+    },
+    {
+      "id": "torch",
+      "index": "torch",
+      "name": "torch",
+      "quantity": 10,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/torch.json",
+      "image_url": "public/assets/atlas/equipment/images/torch.webp",
+      "imageUrl": "/assets/atlas/equipment/images/torch.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "cp"
+      },
+      "desc": [
+        "A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
+      ],
+      "updated_at": "2026-04-24T03:30:26.922Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/torch.webp",
+      "sprite_index": 18,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "off-hand"
+      ],
+      "last_updated": "24-4-2026"
+    },
+    {
+      "id": "rations_1_day",
+      "index": "rations_1_day",
+      "name": "rations (1 day)",
+      "quantity": 10,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/rations_1_day.json",
+      "image_url": "public/assets/atlas/equipment/images/rations_1_day.webp",
+      "imageUrl": "/assets/atlas/equipment/images/rations_1_day.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts."
+      ],
+      "updated_at": "2026-04-30T10:37:09.792Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/rations_1_day.webp",
+      "sprite_index": 20,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "extra"
+      ],
+      "last_updated": "30-4-2026"
+    },
+    {
+      "id": "waterskin",
+      "index": "waterskin",
+      "name": "waterskin",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/waterskin.json",
+      "image_url": "public/assets/atlas/equipment/images/waterskin.webp",
+      "imageUrl": "/assets/atlas/equipment/images/waterskin.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "sp"
+      },
+      "updated_at": "2026-04-21T14:20:07.679Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/waterskin.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "extra"
+      ],
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "rope_hempen_50_feet",
+      "index": "rope_hempen_50_feet",
+      "name": "rope, hempen (50 feet)",
+      "quantity": 1,
+      "weight": 10,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/rope_hempen_50_feet.json",
+      "image_url": "public/assets/atlas/equipment/images/rope_hempen_50_feet.webp",
+      "imageUrl": "/assets/atlas/equipment/images/rope_hempen_50_feet.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "desc": [
+        "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check."
+      ],
+      "updated_at": "2026-04-30T10:51:30.498Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/rope_hempen_50_feet.webp",
+      "sprite_index": 0,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "extra"
+      ],
+      "category": "Adventuring Gear",
+      "last_updated": "30-4-2026"
+    },
+    {
+      "id": "shovel",
+      "index": "shovel",
+      "name": "Shovel",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "/api/equipment/shovel",
+      "image_url": "public/assets/atlas/equipment/images/shovel.webp",
+      "imageUrl": "/assets/atlas/equipment/images/shovel.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/shovel.webp",
+      "sprite_index": 19,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+    },
+    {
+      "id": "iron-pot",
+      "index": "iron-pot",
+      "name": "Iron Pot",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/iron-pot",
+      "image_url": "public/assets/atlas/equipment/images/iron_pot.webp",
+      "imageUrl": "/assets/atlas/equipment/images/iron_pot.webp"
+    },
+    {
+      "id": "common-clothes",
+      "index": "common-clothes",
+      "name": "Common Clothes",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/common-clothes",
+      "image_url": "public/assets/atlas/equipment/images/common_clothes.webp",
+      "imageUrl": "/assets/atlas/equipment/images/common_clothes.webp",
+      "slot": "clothes"
+    },
+    {
+      "id": "pouch",
+      "index": "pouch",
+      "name": "Pouch",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "/api/equipment/pouch",
+      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
+      ],
+      "updated_at": "2026-05-01T07:55:16.273Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/pouch.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+      "background_type": "land_forest",
+      "category": "Adventuring Gear",
+      "last_updated": "1-5-2026"
+    },
+    {
+      "id": "letter-of-introduction",
+      "index": "letter-of-introduction",
+      "name": "Letter of Introduction from your Guild",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/letter-of-introduction",
+      "image_url": "public/assets/atlas/equipment/images/letter_of_introduction.webp",
+      "imageUrl": "/assets/atlas/equipment/images/letter_of_introduction.webp"
+    },
+    {
+      "id": "travelers-clothes",
+      "index": "travelers-clothes",
+      "name": "Traveler's Clothes",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/travelers-clothes",
+      "image_url": "public/assets/atlas/equipment/images/travelers_clothes.webp",
+      "imageUrl": "/assets/atlas/equipment/images/travelers_clothes.webp",
+      "slot": "clothes"
+    },
+    {
+      "id": "pouch",
+      "index": "pouch",
+      "name": "Pouch",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "/api/equipment/pouch",
+      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
+      ],
+      "updated_at": "2026-05-01T07:55:16.273Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/pouch.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+      "background_type": "land_forest",
+      "category": "Adventuring Gear",
+      "last_updated": "1-5-2026"
+    },
+    {
+      "id": "letter-of-introduction",
+      "index": "letter-of-introduction",
+      "name": "Letter of Introduction from your Guild",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/letter-of-introduction",
+      "image_url": "public/assets/atlas/equipment/images/letter_of_introduction.webp",
+      "imageUrl": "/assets/atlas/equipment/images/letter_of_introduction.webp"
+    },
+    {
+      "id": "travelers-clothes",
+      "index": "travelers-clothes",
+      "name": "Traveler's Clothes",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/travelers-clothes",
+      "image_url": "public/assets/atlas/equipment/images/travelers_clothes.webp",
+      "imageUrl": "/assets/atlas/equipment/images/travelers_clothes.webp",
+      "slot": "clothes"
+    },
+    {
+      "id": "pouch",
+      "index": "pouch",
+      "name": "Pouch",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "/api/equipment/pouch",
+      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
+      ],
+      "updated_at": "2026-05-01T07:55:16.273Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/pouch.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+      "background_type": "land_forest",
+      "category": "Adventuring Gear",
+      "last_updated": "1-5-2026"
+    },
+    {
+      "id": "shovel",
+      "index": "shovel",
+      "name": "Shovel",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "/api/equipment/shovel",
+      "image_url": "public/assets/atlas/equipment/images/shovel.webp",
+      "imageUrl": "/assets/atlas/equipment/images/shovel.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/shovel.webp",
+      "sprite_index": 19,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+    },
+    {
+      "id": "iron-pot",
+      "index": "iron-pot",
+      "name": "Iron Pot",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/iron-pot",
+      "image_url": "public/assets/atlas/equipment/images/iron_pot.webp",
+      "imageUrl": "/assets/atlas/equipment/images/iron_pot.webp"
+    },
+    {
+      "id": "common-clothes",
+      "index": "common-clothes",
+      "name": "Common Clothes",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/common-clothes",
+      "image_url": "public/assets/atlas/equipment/images/common_clothes.webp",
+      "imageUrl": "/assets/atlas/equipment/images/common_clothes.webp",
+      "slot": "clothes"
+    },
+    {
+      "id": "pouch",
+      "index": "pouch",
+      "name": "Pouch",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "/api/equipment/pouch",
+      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
+      ],
+      "updated_at": "2026-05-01T07:55:16.273Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/pouch.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+      "background_type": "land_forest",
+      "category": "Adventuring Gear",
+      "last_updated": "1-5-2026"
+    },
+    {
+      "id": "leather_armor",
+      "index": "leather_armor",
+      "name": "leather armor",
+      "quantity": 1,
+      "weight": 10,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/leather_armor.json",
+      "image_url": "public/assets/atlas/equipment/images/leather_armor.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fleather_armor.webp?t=1777918158306",
+      "desc": [
+        "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "armor",
+        "name": "armor",
+        "url": "public/assets/atlas/equipment_categories/armor"
+      },
+      "armor_category": "Light",
+      "armor_class": {
+        "base": 11,
+        "dex_bonus": true
+      },
+      "str_minimum": 0,
+      "stealth_disadvantage": false,
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-15T07:04:03.712Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/leather_armor.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "category": "Armor",
+      "slot": [
+        "chest"
+      ],
+      "last_updated": "15-4-2026"
+    }
+  ],
+  "inventory": {
+    "main-hand": {
+      "id": "longbow",
+      "index": "longbow",
+      "name": "longbow",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/longbow.json",
+      "image_url": "public/assets/atlas/equipment/images/longbow.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Flongbow.webp?t=1777918149210",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Martial",
+      "weapon_range": "Ranged",
+      "category_range": "Martial Ranged",
+      "cost": {
+        "quantity": 50,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d8",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 150,
+        "long": 600
+      },
+      "properties": [
+        {
+          "index": "ammunition",
+          "name": "ammunition",
+          "url": "public/assets/atlas/weapon_properties/ammunition"
+        },
+        {
+          "index": "heavy",
+          "name": "heavy",
+          "url": "public/assets/atlas/weapon_properties/heavy"
+        },
+        {
+          "index": "two_handed",
+          "name": "two_handed",
+          "url": "public/assets/atlas/weapon_properties/two_handed"
+        }
+      ],
+      "updated_at": "2026-05-01T08:07:00.617Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/longbow.webp",
+      "sprite_index": 3,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+      "background_type": "land_forest",
+      "slot": "main-hand",
+      "last_updated": "1-5-2026",
+      "main_hand_slot": "longbow"
+    },
+    "chest": {
+      "id": "leather_armor",
+      "index": "leather_armor",
+      "name": "leather armor",
+      "quantity": 1,
+      "weight": 10,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/leather_armor.json",
+      "image_url": "public/assets/atlas/equipment/images/leather_armor.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fleather_armor.webp?t=1777918158306",
+      "desc": [
+        "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "armor",
+        "name": "armor",
+        "url": "public/assets/atlas/equipment_categories/armor"
+      },
+      "armor_category": "Light",
+      "armor_class": {
+        "base": 11,
+        "dex_bonus": true
+      },
+      "str_minimum": 0,
+      "stealth_disadvantage": false,
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-15T07:04:03.712Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/leather_armor.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "category": "Armor",
+      "slot": "chest",
+      "last_updated": "15-4-2026",
+      "chest_slot": "leather armor"
+    },
+    "off-hand": {
+      "id": "longbow",
+      "index": "longbow",
+      "name": "longbow",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/longbow.json",
+      "image_url": "public/assets/atlas/equipment/images/longbow.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Flongbow.webp?t=1777918149210",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Martial",
+      "weapon_range": "Ranged",
+      "category_range": "Martial Ranged",
+      "cost": {
+        "quantity": 50,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d8",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 150,
+        "long": 600
+      },
+      "properties": [
+        {
+          "index": "ammunition",
+          "name": "ammunition",
+          "url": "public/assets/atlas/weapon_properties/ammunition"
+        },
+        {
+          "index": "heavy",
+          "name": "heavy",
+          "url": "public/assets/atlas/weapon_properties/heavy"
+        },
+        {
+          "index": "two_handed",
+          "name": "two_handed",
+          "url": "public/assets/atlas/weapon_properties/two_handed"
+        }
+      ],
+      "updated_at": "2026-05-01T08:07:00.617Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/longbow.webp",
+      "sprite_index": 3,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+      "background_type": "land_forest",
+      "slot": "off-hand",
+      "last_updated": "1-5-2026",
+      "off_hand_slot": "longbow"
+    }
+  },
+  "spells": [
+    {
+      "higher_level": [],
+      "index": "alarm",
+      "name": "alarm",
+      "desc": [
+        "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won't set off the alarm. You also choose whether the alarm is mental or audible.",
+        "A mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area. This ping awakens you if you are sleeping.",
+        "An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet."
+      ],
+      "range": "30 feet",
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "material": "A tiny bell and a piece of fine silver wire.",
+      "ritual": true,
+      "duration": "8 hours",
+      "concentration": false,
+      "casting_time": "1 minute",
+      "level": 1,
+      "area_of_effect": {
+        "type": "cube",
+        "size": 20
+      },
+      "school": {
+        "index": "abjuration",
+        "name": "abjuration",
+        "url": "public/assets/atlas/magic_schools/abjuration"
+      },
+      "classes": [
+        {
+          "index": "ranger",
+          "name": "ranger",
+          "url": "public/assets/atlas/classes/ranger"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "public/assets/atlas/classes/wizard"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "public/assets/atlas/subclasses/lore"
+        }
+      ],
+      "url": "public/assets/atlas/spell/json/alarm.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "public/assets/atlas/spell/alarm.webp",
+      "sprite_index": 3,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet1.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Falarm.webp?t=1777918201122"
+    },
+    {
+      "higher_level": [],
+      "index": "animal_friendship",
+      "name": "animal friendship",
+      "desc": [
+        "This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a wisdom saving throw or be charmed by you for the spell's duration. If you or one of your companions harms the target, the spells ends."
+      ],
+      "range": "30 feet",
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "material": "A morsel of food.",
+      "ritual": false,
+      "duration": "24 hours",
+      "concentration": false,
+      "casting_time": "1 action",
+      "level": 1,
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        "dc_success": "none"
+      },
+      "school": {
+        "index": "enchantment",
+        "name": "enchantment",
+        "url": "public/assets/atlas/magic_schools/enchantment"
+      },
+      "classes": [
+        {
+          "index": "bard",
+          "name": "bard",
+          "url": "public/assets/atlas/classes/bard"
+        },
+        {
+          "index": "druid",
+          "name": "druid",
+          "url": "public/assets/atlas/classes/druid"
+        },
+        {
+          "index": "ranger",
+          "name": "ranger",
+          "url": "public/assets/atlas/classes/ranger"
+        }
+      ],
+      "subclasses": [],
+      "url": "public/assets/atlas/spell/json/animal_friendship.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "public/assets/atlas/spell/animal_friendship.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet1.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fanimal_friendship.webp?t=1777918201122"
+    },
+    {
+      "index": "bane",
+      "name": "bane",
+      "desc": [
+        "Up to three creatures of your choice that you can see within range must make charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw."
+      ],
+      "higher_level": [
+        "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+      ],
+      "range": "30 feet",
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "material": "A drop of blood.",
+      "ritual": false,
+      "duration": "Up to 1 minute",
+      "concentration": true,
+      "casting_time": "1 action",
+      "level": 1,
+      "dc": {
+        "dc_type": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/charisma"
+        },
+        "dc_success": "none"
+      },
+      "school": {
+        "index": "enchantment",
+        "name": "enchantment",
+        "url": "public/assets/atlas/magic_schools/enchantment"
+      },
+      "classes": [
+        {
+          "index": "bard",
+          "name": "bard",
+          "url": "public/assets/atlas/classes/bard"
+        },
+        {
+          "index": "cleric",
+          "name": "cleric",
+          "url": "public/assets/atlas/classes/cleric"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "public/assets/atlas/subclasses/lore"
+        }
+      ],
+      "url": "public/assets/atlas/spell/json/bane.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "public/assets/atlas/spell/bane.webp",
+      "sprite_index": 21,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet1.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fbane.webp?t=1777918200807"
+    },
+    {
+      "index": "bless",
+      "name": "bless",
+      "desc": [
+        "You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw."
+      ],
+      "higher_level": [
+        "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+      ],
+      "range": "30 feet",
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "material": "A sprinkling of holy water.",
+      "ritual": false,
+      "duration": "Up to 1 minute",
+      "concentration": true,
+      "casting_time": "1 action",
+      "level": 1,
+      "school": {
+        "index": "enchantment",
+        "name": "enchantment",
+        "url": "public/assets/atlas/magic_schools/enchantment"
+      },
+      "classes": [
+        {
+          "index": "cleric",
+          "name": "cleric",
+          "url": "public/assets/atlas/classes/cleric"
+        },
+        {
+          "index": "paladin",
+          "name": "paladin",
+          "url": "public/assets/atlas/classes/paladin"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "public/assets/atlas/subclasses/lore"
+        },
+        {
+          "index": "life",
+          "name": "life",
+          "url": "public/assets/atlas/subclasses/life"
+        }
+      ],
+      "url": "public/assets/atlas/spell/json/bless.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "public/assets/atlas/spell/bless.webp",
+      "sprite_index": 3,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet2.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fbless.webp?t=1777918201362"
+    },
+    {
+      "index": "command",
+      "name": "command",
+      "desc": [
+        "You speak a one-word command to a creature you can see within range. The target must succeed on a wisdom saving throw or follow the command on its next turn. The spell has no effect if the target is undead, if it doesn't understand your language, or if your command is directly harmful to it.",
+        "Some typical commands and their effects follow. You might issue a command other than one described here. If you do so, the GM determines how the target behaves. If the target can't follow your command, the spell ends.",
+        "***Approach.*** The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you.",
+        "***Drop.*** The target drops whatever it is holding and then ends its turn.",
+        "***Flee.*** The target spends its turn moving away from you by the fastest available means.",
+        "***Grovel.*** The target falls prone and then ends its turn.",
+        "***Halt.*** The target doesn't move and takes no actions. A flying creature stays aloft, provided that it is able to do so. If it must move to stay aloft, it flies the minimum distance needed to remain in the air."
+      ],
+      "higher_level": [
+        "When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
+      ],
+      "range": "60 feet",
+      "components": [
+        "V"
+      ],
+      "ritual": false,
+      "duration": "1 round",
+      "concentration": false,
+      "casting_time": "1 action",
+      "level": 1,
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/wisdom"
+        },
+        "dc_success": "none"
+      },
+      "school": {
+        "index": "enchantment",
+        "name": "enchantment",
+        "url": "public/assets/atlas/magic_schools/enchantment"
+      },
+      "classes": [
+        {
+          "index": "cleric",
+          "name": "cleric",
+          "url": "public/assets/atlas/classes/cleric"
+        },
+        {
+          "index": "paladin",
+          "name": "paladin",
+          "url": "public/assets/atlas/classes/paladin"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "public/assets/atlas/subclasses/lore"
+        },
+        {
+          "index": "fiend",
+          "name": "fiend",
+          "url": "public/assets/atlas/subclasses/fiend"
+        }
+      ],
+      "url": "public/assets/atlas/spell/json/command.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "public/assets/atlas/spell/command.webp",
+      "sprite_index": 20,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet2.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fcommand.webp?t=1777918200792"
+    },
+    {
+      "index": "color_spray",
+      "name": "color spray",
+      "desc": [
+        "A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see).",
+        "Starting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected."
+      ],
+      "higher_level": [
+        "When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d10 for each slot level above 1st."
+      ],
+      "range": "Self",
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "material": "A pinch of powder or sand that is colored red, yellow, and blue.",
+      "ritual": false,
+      "duration": "1 round",
+      "concentration": false,
+      "casting_time": "1 action",
+      "level": 1,
+      "area_of_effect": {
+        "type": "cone",
+        "size": 15
+      },
+      "school": {
+        "index": "illusion",
+        "name": "illusion",
+        "url": "public/assets/atlas/magic_schools/illusion"
+      },
+      "classes": [
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "public/assets/atlas/classes/sorcerer"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "public/assets/atlas/classes/wizard"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "public/assets/atlas/subclasses/lore"
+        }
+      ],
+      "url": "public/assets/atlas/spell/json/color_spray.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "public/assets/atlas/spell/color_spray.webp",
+      "sprite_index": 19,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet2.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fcolor_spray.webp?t=1777918202159"
+    }
+  ],
+  "choices": {
+    "favored-enemy-1-type": [
+      "beasts"
+    ],
+    "natural-explorer-1-terrain-type": [
+      "forest"
+    ]
+  },
+  "race": "half_orc",
+  "class": "ranger",
+  "background": "folk_hero",
+  "backstory": "He was found amidst the smoldering ruins of a mountain caravan, a nameless babe with the blood of two worlds warring in his veins. Raised on the fringes of a nervous border-town, he was always a creature of the periphery, never truly welcomed until the night the Frost-Grave dead rose from their barrows. While the local militia faltered in the suffocating dark, he stepped into the fray, his darkvision cutting through the unnatural fog as if it were midday. With a savage, rhythmic brutality and a presence so menacing it seemed to chill the very air, he broke the siege single-handedly. He fell a dozen times and rose a dozen more, his relentless endurance turning a certain massacre into a miraculous victory. By sunrise, the town was saved, and though the villagers offered him a place at their hearths, he remained a stranger—a hero with no name, known only by the trail of splintered bone he left behind in the snow.\n\nThe wild became his sanctuary and his chapel, for only in the untamed reaches could a soul such as his find a reflection of its own restless nature. He embraced the path of the ranger, turning his survival instincts into a disciplined craft of tracking, trapping, and monster-slaying. He wanders the jagged edges of the map, driven by a silent, unshakable bond to protect the innocent from the horrors that dwell in the deep woods. His greatest flaw is the isolation he nurtures like a wound; he fears that if he ever accepts a name or a home, his savage edge will dull and he will fail when the next great darkness emerges. Thus, he remains a ghost of the frontier, a nameless guardian who expects no gratitude, seeking only the next hunt to justify the relentless fire that burns within his breast.",
+  "alignment": "chaotic_neutral",
+  "name": "knon",
+  "imageUrl": "data/character_save/images/slot3/slot3_portrait.webp",
+  "avatarUrl": "data/character_save/images/slot3/slot3_avatar.webp",
+  "matrixUrl": "data/character_save/images/slot3/slot3_matrix.webp",
+  "id": "slot3",
+  "hp": 12,
+  "maxHp": 12,
+  "lastSaved": "2026-05-04T18:14:26.565Z"
+}
