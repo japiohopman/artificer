@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "rare"
-  },
+  "rarity": "Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -18,5 +16,13 @@
   ],
   "image": "public/assets/atlas/magic_items/dagger_of_venom.webp",
   "url": "public/assets/atlas/magic_items/json/dagger_of_venom.json",
-  "updated_at": "2025-10-24T20:42:13.517Z"
+  "updated_at": "2026-05-04T17:16:50.385Z",
+  "imageUrl": "/assets/atlas/magic_items/images/dagger_of_venom.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "4-5-2026"
 }
