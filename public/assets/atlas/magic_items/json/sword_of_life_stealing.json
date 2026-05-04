@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "rare"
-  },
+  "rarity": "Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -16,6 +14,14 @@
     "When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain temporary hit points equal to the extra damage dealt."
   ],
   "url": "public/assets/atlas/magic_items/json/sword_of_life_stealing.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/sword_of_life_stealing.webp"
+  "updated_at": "2026-05-04T17:35:39.997Z",
+  "image": "public/assets/atlas/magic_items/sword_of_life_stealing.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/sword_of_life_stealing.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "4-5-2026"
 }
