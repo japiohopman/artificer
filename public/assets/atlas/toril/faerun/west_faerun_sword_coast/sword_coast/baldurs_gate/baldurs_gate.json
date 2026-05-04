@@ -8,6 +8,7 @@
     "baldurs_gate"
   ],
   "category": "city",
+  "size": "Metropolis",
   "coordinates": {
     "x": 5351,
     "y": 4270,
@@ -15,9 +16,20 @@
   },
   "lore": "",
   "grounding": [],
-  "size": "Metropolis",
   "overlayMapUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/baldurs_gate/baldurs_gate_submap.webp",
   "subLocationCount": 0,
   "subPaths": [],
+  "geography": "Baldur's Gate is located on the northern shore of the River Chionthar, about 20 miles (32 km) east of its mouth on the Sea of Swords.",
+  "history": "Founded by the legendary explorer Balduran, the city has grown from a small settlement into the greatest metropolis of the Sword Coast.",
+  "submapUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/toril/faerun/west_faerun_sword_coast/sword_coast/baldurs_gate/baldurs_gate_submap.webp",
+  "categories": [
+        { "id": "1", "name": "Districts" },
+        { "id": "5", "name": "Temples" },
+        { "id": "6", "name": "Landmarks" },
+        { "id": "7", "name": "Shops" },
+        { "id": "9", "name": "Taverns" },
+        { "id": "11", "name": "Gates" }
+    ],
+  "markers": []
   "updatedAt": "2026-05-02T04:43:57.998Z"
 }
