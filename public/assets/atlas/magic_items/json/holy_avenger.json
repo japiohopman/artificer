@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "legendary"
-  },
+  "rarity": "Legendary",
   "variants": [],
   "variant": false,
   "desc": [
@@ -17,6 +15,14 @@
     "While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet."
   ],
   "url": "public/assets/atlas/magic_items/json/holy_avenger.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/holy_avenger.webp"
+  "updated_at": "2026-05-04T17:23:16.460Z",
+  "image": "public/assets/atlas/magic_items/holy_avenger.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/holy_avenger.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "category": "Weapon",
+  "last_updated": "4-5-2026"
 }
