@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "rare"
-  },
+  "rarity": "Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -17,6 +15,14 @@
     "The mace regains 1d3 expended charges daily at dawn."
   ],
   "url": "public/assets/atlas/magic_items/json/mace_of_terror.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/mace_of_terror.webp"
+  "updated_at": "2026-05-04T17:33:18.448Z",
+  "image": "public/assets/atlas/magic_items/mace_of_terror.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/mace_of_terror.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "4-5-2026"
 }
