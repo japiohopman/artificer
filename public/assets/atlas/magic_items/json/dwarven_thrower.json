@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "very rare"
-  },
+  "rarity": "Very Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -17,5 +15,12 @@
   ],
   "image": "public/assets/atlas/magic_items/dwarven_thrower.webp",
   "url": "public/assets/atlas/magic_items/json/dwarven_thrower.json",
-  "updated_at": "2025-10-24T20:42:13.517Z"
+  "updated_at": "2026-05-04T17:20:37.042Z",
+  "imageUrl": "/assets/atlas/magic_items/images/dwarven_thrower.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "4-5-2026"
 }
