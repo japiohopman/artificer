@@ -21,10 +21,18 @@
     "This cylindrical leather case can hold up to ten rolled-up sheets of paper or five rolled-up sheets of parchment."
   ],
   "url": "public/assets/atlas/equipment/json/case_map_or_scroll.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-04T17:15:47.450Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/case_map_or_scroll.webp",
   "sprite_index": 0,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/equipment/images/case_map_or_scroll.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Adventuring Gear",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "4-5-2026"
 }
