@@ -45,9 +45,17 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/halberd.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-04T17:18:46.661Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/halberd.webp",
   "sprite_index": 23,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/halberd.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "4-5-2026"
 }
