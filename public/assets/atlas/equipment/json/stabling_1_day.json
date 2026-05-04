@@ -15,10 +15,18 @@
   },
   "weight": 0,
   "url": "public/assets/atlas/equipment/json/stabling_1_day.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-04T17:08:25.253Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/stabling_1_day.webp",
   "sprite_index": 10,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/images/stabling_1_day.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Mounts and Other Animals",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "4-5-2026"
 }
