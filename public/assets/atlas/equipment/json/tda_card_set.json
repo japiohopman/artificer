@@ -18,13 +18,17 @@
   ],
   "image": "public/assets/atlas/equipment/tda_card_set.webp",
   "url": "public/assets/atlas/equipment/json/tda_card_set.json",
-  "updated_at": "2026-04-11T16:20:03.846Z",
+  "updated_at": "2026-05-05T22:31:52.096Z",
   "contents": [],
   "properties": [],
   "sprite_index": 17,
   "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
-  "imageUrl": "/assets/atlas/equipment/tda_card_set.webp",
+  "imageUrl": "/assets/atlas/equipment/images/tda_card_set.webp",
   "_type": "equipment",
   "category": "Gaming Sets",
-  "last_updated": "11-5-2026"
+  "last_updated": "6-5-2026",
+  "background_type": "land_forest",
+  "slot": [
+    "tool"
+  ]
 }
