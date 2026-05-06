@@ -2037,10 +2037,13 @@
       "layer": "surface",
       "type": "marker",
       "source": "cities.json",
+      "wikiSlug": "Baldur%27s_Gate",
+      "locationUrl": "fearun/heartlands/baldurs_gate.json",
       "popup": {
         "title": "Baldur's Gate",
         "description": "A metropolis city-state, perhaps the most prosperous and influential merchant city on the western coast of [[Faerûn]].<br/><br/>Interactive map can be found [[Map:Baldur's Gate|here]]."
-      }
+      },
+      "region": "central_faerun_heartlands"
     },
     {
       "id": "822",
