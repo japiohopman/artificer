@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "rare"
-  },
+  "rarity": "Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -17,6 +15,14 @@
     "While you hold this weapon, it sheds bright light in a 20-foot radius and dim light for an additional 20 feet."
   ],
   "url": "public/assets/atlas/magic_items/json/mace_of_disruption.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/mace_of_disruption.webp"
+  "updated_at": "2026-05-06T04:43:38.747Z",
+  "image": "public/assets/atlas/magic_items/mace_of_disruption.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/mace_of_disruption.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "6-5-2026"
 }
