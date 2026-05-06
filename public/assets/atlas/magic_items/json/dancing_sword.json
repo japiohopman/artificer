@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "very rare"
-  },
+  "rarity": "Very Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -19,5 +17,13 @@
   ],
   "image": "public/assets/atlas/magic_items/dancing_sword.webp",
   "url": "public/assets/atlas/magic_items/json/dancing_sword.json",
-  "updated_at": "2025-10-24T20:42:13.517Z"
+  "updated_at": "2026-05-06T04:41:31.580Z",
+  "imageUrl": "/assets/atlas/magic_items/images/dancing_sword.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "6-5-2026"
 }
