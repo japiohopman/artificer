@@ -1,1 +1,17 @@
 
+{
+  "id": "the_savage_north",
+  "name": "Northwest Faerûn",
+  "type": "region",
+  "parent": "faerun",
+  "title": "Northwest Faerûn: The Savage North",
+  "description": "Northwest Faerûn, often referred to as the Savage North or the North, is a rugged and wild land of massive mountain ranges, vast forests, and bitter winters. It is home to rugged folk, ancient dwarven citadels, and the cosmopolitan city of Waterdeep.",
+  "wiki": "The North is a region of Faerûn that lies north of the High Moor. It is a place of frontier towns, monster-infested wilderness, and ancient ruins. Key locations include the Sword Coast North, the Silver Marches, and the Spine of the World. The folk of the North are known for their resilience and independent spirit.",
+  "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+  "tags": ["region", "faerun", "north", "wilderness"],
+  "metadata": {
+    "prominent_nations": ["Lords' Alliance", "Silver Marches"],
+    "landscape": "Mountains, tundra, coniferous forests",
+    "economy": "Mining, timber, fur trade"
+  }
+}
