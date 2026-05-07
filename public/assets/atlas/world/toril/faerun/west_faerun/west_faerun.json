@@ -1,23 +1,16 @@
 {
-  "id": "west_faerun",
-  "name": "The Heartlands",
+  "id": "central_faerun_heartlands",
+  "name": "West Faerûn",
   "type": "region",
   "parent": "faerun",
-  "title": "The Heartlands: Central Faerûn",
-  "description": "The Heartlands form the central core of Faerûn, stretching from the Sword Coast to the Sea of Fallen Stars. It is a region of prosperous kingdoms and ancient forests.",
-  "wiki": "The Heartlands is a broad geographic term for the central regions of Faerûn. It includes major powers like Cormyr and Sembia, as well as the Dalelands and the Western Heartlands.",
-  "image": "heartlands.webp",
-  "thumbnail": "heartlands_thumb.webp",
-  "banner": "heartlands_banner.webp",
-  "tags": ["region", "faerun", "core"],
-  "children": ["cormyr", "sembia", "dalelands", "western_heartlands"],
-  "coordinates": {
-    "lat": 0,
-    "lng": 0
-  },
+  "title": "West Faerûn: The Heartlands",
+  "description": "West Faerûn, also known as the Heartlands, is the central core of the continent. It stretches from the Sword Coast in the west to the Sea of Fallen Stars in the east. This region is a tapestry of powerful kingdoms, ancient forests, and bustling trade routes.",
+  "wiki": "The Heartlands is a broad geographic term for the central regions of Faerûn. It includes major powers like Cormyr and Sembia, as well as the Dalelands and the Western Heartlands. The region is known for its diverse cultures, rich history, and significant impact on the geopolitics of the continent. It is often seen as the cradle of civilization in northern Faerûn.",
+  "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+  "tags": ["region", "faerun", "core", "heartlands"],
   "metadata": {
-    "prominent_nations": ["Cormyr", "Sembia", "Dales"],
-    "landscape": "Rolling hills, fertile plains",
-    "economy": "Trade, Agriculture"
+    "prominent_nations": ["Cormyr", "Sembia", "The Dalelands"],
+    "landscape": "Rolling hills, fertile plains, dense forests",
+    "economy": "Intense trade, agriculture, manufacturing"
   }
 }
