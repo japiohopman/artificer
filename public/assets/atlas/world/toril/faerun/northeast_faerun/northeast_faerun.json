@@ -1,1 +1,17 @@
 
+{
+  "id": "northeast_faerun_forgotten_lands",
+  "name": "Northeast Faerûn",
+  "type": "region",
+  "parent": "faerun",
+  "title": "The Cold Reaches: Northeast Faerûn",
+  "description": "Northeast Faerûn is a harsh and unforgiving land of frozen plains, towering mountains, and ancient portals. It includes the lands of Narfell, Damara, and Vaasa.",
+  "wiki": "This region is known for its legendary demon-haunted ruins and the great glaciers that define its northern borders. Ancient empires once rose and fell here, leaving behind powerful relics and dangerous secrets. To the south lies the Great Dale and the Moonsea, areas of growing importance for trade and settlement.",
+  "image": "https://images.unsplash.com/photo-1502082553048-fb48740c0347?auto=format&fit=crop&w=800&q=80",
+  "tags": ["region", "faerun", "northeast", "frozen", "ruins"],
+  "metadata": {
+    "prominent_nations": ["Damara", "Narfell", "The Great Dale"],
+    "landscape": "Steppes, glaciers, rocky plateaus",
+    "economy": "Mining, mercenary work, ancient magic artifacts"
+  }
+}
