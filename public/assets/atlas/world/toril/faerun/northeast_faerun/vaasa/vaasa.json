@@ -1,1 +1,26 @@
 
+{
+  "id": "vaasa",
+  "name": "Vaasa",
+  "type": "subregion",
+  "parent": "northeast_faerun",
+  "title": "The Frozen Land: Vaasa",
+  "description": "A desolate, frozen land dominated by the Castle Perilous and the legacy of the Lich-King Zhengyi.",
+  "wiki": "Vaasa is a harsh and cold land in northeast Faerûn. It is a place of desolate moors, frozen tundras, and jagged mountains. For centuries, it was the seat of power for the Witch-King Zhengyi, who ruled from the Castle Perilous. Even after his fall, the land remains scarred by his dark magic and inhabited by his former servants.",
+  "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+  "tags": ["subregion", "faerun", "northeast", "frozen", "vaasa", "witch-king"],
+  "metadata": {
+    "capital": "None (formerly Castle Perilous)",
+    "climate": "Arctic",
+    "dangers": ["Undead", "Remorhaz", "White Dragons"]
+  },
+  "markers": [
+    {
+      "id": "castle_perilous",
+      "name": "Castle Perilous",
+      "type": "landmark",
+      "coords": { "x": 500, "y": 400 },
+      "description": "The ruined fortress of the Witch-King Zhengyi, built in a single night with demonic aid."
+    }
+  ]
+}
