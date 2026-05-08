@@ -1,1 +1,26 @@
 
+{
+  "id": "utter_north",
+  "name": "Utter North",
+  "type": "subregion",
+  "parent": "northwest_faerun",
+  "title": "Utter North: The Roof of the World",
+  "description": "The Utter North is the northernmost reach of Faerûn, a land of glaciers, icebergs, and eternal winter where only the hardwarest creatures survive.",
+  "wiki": "The Utter North encompasses the great glaciers of the High Ice and the Sea of Moving Ice. It is a region largely devoid of human settlement, though tribes of Frost Giants, orcs, and barbaric humans have been known to eke out an existence here.",
+  "image": "https://images.unsplash.com/photo-1548685913-fe6678babe8d?auto=format&fit=crop&w=1200&q=80",
+  "mapImage": "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?auto=format&fit=crop&w=1200&q=80",
+  "markers": [
+    {
+      "id": "sea_of_moving_ice",
+      "categoryId": "water",
+      "position": [200, 300],
+      "popup": { "title": "Sea of Moving Ice", "description": "A collection of icebergs and frost-covered isles." }
+    },
+    {
+      "id": "the_great_glacier",
+      "categoryId": "glaciers_tundras",
+      "position": [600, 200],
+      "popup": { "title": "The Great Glacier", "description": "A massive sheet of ice covering the northeastern reach." }
+    }
+  ]
+}
