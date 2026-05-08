@@ -21,10 +21,18 @@
     "For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet."
   ],
   "url": "public/assets/atlas/equipment/json/candle.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-08T04:36:10.603Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/candle.webp",
   "sprite_index": 19,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/images/candle.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "category": "Adventuring Gear",
+  "last_updated": "8-5-2026"
 }
