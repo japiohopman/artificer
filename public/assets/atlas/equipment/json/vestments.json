@@ -21,10 +21,18 @@
     "Religious clothing, typically found in a priest's pack."
   ],
   "url": "public/assets/atlas/equipment/json/vestments.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-08T04:53:02.037Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/vestments.webp",
   "sprite_index": 21,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/images/vestments.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "category": "Adventuring Gear",
+  "last_updated": "8-5-2026"
 }
