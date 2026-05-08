@@ -1,1 +1,31 @@
-
+{
+  "id": "the_frozenfar",
+  "name": "The Frozenfar",
+  "type": "subregion",
+  "parent": "northwest_faerun",
+  "title": "The Frozenfar: The Land of Ten-Towns",
+  "description": "The Frozenfar is the remote, frigid region north of the Spine of the World, dominated by the tundra of Icewind Dale.",
+  "wiki": "The Frozenfar is most famous for Icewind Dale and its Ten-Towns. It is a land of white dragons, frost giants, and survival at the edge of the world. The only connection to the south is through the treacherous mountain passes.",
+  "image": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1200&q=80",
+  "mapImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+  "markers": [
+    {
+      "id": "bryn_shander",
+      "categoryId": "towns_settlements",
+      "position": [400, 600],
+      "popup": { "title": "Bryn Shander", "description": "The largest and only walled town of the Ten-Towns." }
+    },
+    {
+      "id": "kuldahar",
+      "categoryId": "towns_settlements",
+      "position": [600, 400],
+      "popup": { "title": "Kuldahar", "description": "A haven built around a magical great oak that radiates warmth." }
+    },
+    {
+      "id": "spine_of_the_world",
+      "categoryId": "hills_mountains",
+      "position": [500, 800],
+      "popup": { "title": "Spine of the World", "description": "The massive mountain range that separates the Frozenfar from the rest of the North." }
+    }
+  ]
+}
