@@ -20,6 +20,14 @@
     "The rod's head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground. This property can't be used again until the next dawn."
   ],
   "url": "public/assets/atlas/magic_items/json/rod_of_alertness.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/rod_of_alertness.webp"
+  "updated_at": "2026-05-09T18:51:32.017Z",
+  "image": "public/assets/atlas/magic_items/rod_of_alertness.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/rod_of_alertness.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Rod",
+  "slot": [
+    "focus"
+  ],
+  "last_updated": "9-5-2026"
 }
