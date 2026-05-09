@@ -21,10 +21,15 @@
     "A set of pulleys with a cable threaded through them and a hook to attach to objects, a block and tackle allows you to hoist up to four times the weight you can normally lift."
   ],
   "url": "public/assets/atlas/equipment/json/block_and_tackle.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-09T18:45:07.463Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/block_and_tackle.webp",
   "sprite_index": 6,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/images/block_and_tackle.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Adventuring Gear",
+  "last_updated": "9-5-2026"
 }
