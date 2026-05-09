@@ -19,10 +19,17 @@
   },
   "weight": 4,
   "url": "public/assets/atlas/equipment/json/robes.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-09T18:39:43.152Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/robes.webp",
   "sprite_index": 23,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/robes.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "9-5-2026"
 }
