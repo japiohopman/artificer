@@ -21,10 +21,18 @@
     "A 10-foot length of string, typically found in a burglar's pack."
   ],
   "url": "public/assets/atlas/equipment/json/strengthing_10_feet.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-09T18:32:29.119Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/strengthing_10_feet.webp",
   "sprite_index": 12,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/images/string_10_feet.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Adventuring Gear",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "9-5-2026"
 }
