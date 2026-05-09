@@ -24,9 +24,16 @@
   ],
   "image": "public/assets/atlas/equipment/ball_bearings_bag_of_1000.webp",
   "url": "public/assets/atlas/equipment/json/ball_bearings_bag_of_1000.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-09T18:41:53.721Z",
   "contents": [],
   "properties": [],
   "sprite_index": 11,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+  "imageUrl": "/assets/atlas/equipment/images/ball_bearings_bag_of_1000.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "9-5-2026"
 }
