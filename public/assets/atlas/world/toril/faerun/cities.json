@@ -36,23 +36,16 @@
     },
     "id": "1"
   },
-  {
-    "categoryId": "cities",
-    "position": [
-      492.85,
-      2738.8
-    ],
-    "popup": {
-      "title": "Neverwinter",
-      "description": "The '''City of Skilled Hands''' and the '''Jewel of the North''', a major bustling, cultured, and cosmopolitan city-state in northwest [[Faerûn]].",
-      "link": {
-        "url": "Neverwinter",
-        "label": "Neverwinter"
-      },
-      "image": "File:NeverwinterHarbor.jpg"
-    },
-    "id": "2"
-  },
+{
+  "id": "neverwinter",
+  "categoryId": "cities",
+  "position": [412, 1285],
+  "url": "public/assets/atlas/world/toril/faerun/west_faerun/western_heartlands/neverwinter/neverwinter.json",
+  "popup": {
+    "title": "Neverwinter",
+    "description": "The City of Skilled Hands."
+  }
+},
   {
     "categoryId": "cities",
     "position": [
