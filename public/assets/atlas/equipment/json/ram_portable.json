@@ -21,10 +21,17 @@
     "You can use a portable ram to break down doors. When doing so, you gain a +4 bonus on the Strength check. One other character can help you use the ram, giving you advantage on this check."
   ],
   "url": "public/assets/atlas/equipment/json/ram_portable.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-09T18:40:39.090Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/ram_portable.webp",
   "sprite_index": 18,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/ram_portable.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "9-5-2026"
 }
