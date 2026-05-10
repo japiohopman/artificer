@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "monstrosity",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 19
-    }
-  ],
+  "armor_class": 19,
   "hit_points": 114,
   "hit_dice": "12d10",
   "hit_points_roll": "12d10+48",
@@ -47,7 +42,7 @@
     "passive_perception": 14
   },
   "languages": "",
-  "challenge_rating": 5,
+  "challenge_rating": "5",
   "proficiency_bonus": 3,
   "xp": 1800,
   "special_abilities": [
@@ -113,10 +108,24 @@
   ],
   "image": "public/assets/atlas/enemies/gorgon.webp",
   "url": "public/assets/atlas/enemies/json/gorgon.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-05-10T22:19:00.830Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 23,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.webp",
+  "stats": {
+    "str": 20,
+    "dex": 11,
+    "con": 18,
+    "int": 2,
+    "wis": 12,
+    "cha": 7
+  },
+  "imageUrl": "/assets/atlas/enemies/images/gorgon.webp",
+  "_type": "enemies",
+  "background_type": "land_mountains",
+  "lore": "/assets/atlas/enemies/enemies_wiki/gorgon.json",
+  "wikiData": {},
+  "last_updated": "11-5-2026"
 }
