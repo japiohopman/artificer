@@ -4,12 +4,7 @@
   "size": "Tiny",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 14
-    }
-  ],
+  "armor_class": 14,
   "hit_points": 2,
   "hit_dice": "1d4",
   "hit_points_roll": "1d4",
@@ -33,7 +28,7 @@
     "passive_perception": 9
   },
   "languages": "",
-  "challenge_rating": 0.125,
+  "challenge_rating": "0.125",
   "proficiency_bonus": 2,
   "xp": 25,
   "actions": [
@@ -56,11 +51,23 @@
   ],
   "image": "public/assets/atlas/enemies/stirge.webp",
   "url": "public/assets/atlas/enemies/json/stirge.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-10T21:04:11.732Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 13,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp",
+  "stats": {
+    "str": 4,
+    "dex": 16,
+    "con": 11,
+    "int": 2,
+    "wis": 8,
+    "cha": 6
+  },
+  "imageUrl": "/assets/atlas/enemies/images/stirge.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "10-5-2026"
 }
