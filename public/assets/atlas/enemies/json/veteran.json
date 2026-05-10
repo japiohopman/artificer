@@ -6,19 +6,7 @@
   "type": "humanoid",
   "subtype": "any race",
   "alignment": "any alignment",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 17,
-      "armor": [
-        {
-          "index": "splint_armor",
-          "name": "splint armor",
-          "url": "public/assets/atlas/equipment/splint_armor"
-        }
-      ]
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 58,
   "hit_dice": "9d8",
   "hit_points_roll": "9d8+18",
@@ -57,7 +45,7 @@
     "passive_perception": 12
   },
   "languages": "any one language (usually Common)",
-  "challenge_rating": 3,
+  "challenge_rating": "3",
   "proficiency_bonus": 2,
   "xp": 700,
   "actions": [
@@ -151,11 +139,24 @@
   ],
   "image": "public/assets/atlas/enemies/veteran.webp",
   "url": "public/assets/atlas/enemies/json/veteran.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-10T21:37:51.276Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 16,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet12.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet12.webp",
+  "stats": {
+    "str": 16,
+    "dex": 13,
+    "con": 14,
+    "int": 10,
+    "wis": 11,
+    "cha": 10
+  },
+  "imageUrl": "/assets/atlas/enemies/images/veteran.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "lore": "/assets/atlas/enemies/enemies_wiki/veteran.json",
+  "last_updated": "10-5-2026"
 }
