@@ -5,19 +5,7 @@
   "type": "humanoid",
   "subtype": "gnome",
   "alignment": "neutral good",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 15,
-      "armor": [
-        {
-          "index": "chain_shirt",
-          "name": "chain shirt",
-          "url": "public/assets/atlas/equipment/charismain_shirt"
-        }
-      ]
-    }
-  ],
+  "armor_class": 15,
   "hit_points": 16,
   "hit_dice": "3d6",
   "hit_points_roll": "3d6+6",
@@ -65,7 +53,7 @@
     "passive_perception": 12
   },
   "languages": "Gnomish, Terran, Undercommon",
-  "challenge_rating": 0.5,
+  "challenge_rating": "0.5",
   "proficiency_bonus": 2,
   "xp": 50,
   "special_abilities": [
@@ -175,10 +163,25 @@
   ],
   "image": "public/assets/atlas/enemies/deep_gnome_svirfneblin.webp",
   "url": "public/assets/atlas/enemies/json/deep_gnome_svirfneblin.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-05-10T21:33:03.968Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 2,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet4.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet4.webp",
+  "stats": {
+    "str": 15,
+    "dex": 14,
+    "con": 14,
+    "int": 12,
+    "wis": 10,
+    "cha": 9
+  },
+  "imageUrl": "/assets/atlas/enemies/images/deep_gnome_svirfneblin.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "lore": "/assets/atlas/enemies/enemies_wiki/deep_gnome_svirfneblin.json",
+  "wikiData": {},
+  "rarity": "Rare",
+  "last_updated": "10-5-2026"
 }
