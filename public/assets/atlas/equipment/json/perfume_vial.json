@@ -19,10 +19,18 @@
   },
   "weight": 0,
   "url": "public/assets/atlas/equipment/json/perfume_vial.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-10T07:27:24.347Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/perfume_vial.webp",
   "sprite_index": 2,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/perfume_vial.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Adventuring Gear",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "10-5-2026"
 }
