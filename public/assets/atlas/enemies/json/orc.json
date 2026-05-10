@@ -5,19 +5,7 @@
   "type": "humanoid",
   "subtype": "orc",
   "alignment": "chaotic evil",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 13,
-      "armor": [
-        {
-          "index": "hide_armor",
-          "name": "hide armor",
-          "url": "public/assets/atlas/equipment/hide_armor"
-        }
-      ]
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 15,
   "hit_dice": "2d8",
   "hit_points_roll": "2d8+6",
@@ -49,7 +37,7 @@
     "passive_perception": 10
   },
   "languages": "Common, Orc",
-  "challenge_rating": 0.5,
+  "challenge_rating": "0.5",
   "proficiency_bonus": 2,
   "xp": 100,
   "special_abilities": [
@@ -95,10 +83,24 @@
   ],
   "image": "public/assets/atlas/enemies/orc.webp",
   "url": "public/assets/atlas/enemies/json/orc.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-10T22:17:25.908Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 12,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp",
+  "stats": {
+    "str": 16,
+    "dex": 12,
+    "con": 16,
+    "int": 7,
+    "wis": 11,
+    "cha": 10
+  },
+  "imageUrl": "/assets/atlas/enemies/images/orc.webp",
+  "_type": "enemies",
+  "background_type": "underdark",
+  "lore": "/assets/atlas/enemies/enemies_wiki/orc.json",
+  "wikiData": {},
+  "last_updated": "11-5-2026"
 }
