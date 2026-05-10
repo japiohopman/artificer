@@ -4,12 +4,7 @@
   "size": "Tiny",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 10
-    }
-  ],
+  "armor_class": 10,
   "hit_points": 3,
   "hit_dice": "1d4",
   "hit_points_roll": "1d4+1",
@@ -33,7 +28,7 @@
     "passive_perception": 11
   },
   "languages": "",
-  "challenge_rating": 0,
+  "challenge_rating": "0",
   "proficiency_bonus": 2,
   "xp": 10,
   "special_abilities": [
@@ -63,10 +58,22 @@
   ],
   "image": "public/assets/atlas/enemies/badger.webp",
   "url": "public/assets/atlas/enemies/json/badger.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-05-10T20:53:19.045Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 9,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet2.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet2.webp",
+  "stats": {
+    "str": 4,
+    "dex": 11,
+    "con": 12,
+    "int": 2,
+    "wis": 12,
+    "cha": 5
+  },
+  "imageUrl": "/assets/atlas/enemies/images/badger.webp",
+  "_type": "enemies",
+  "background_type": "water4",
+  "last_updated": "10-5-2026"
 }
