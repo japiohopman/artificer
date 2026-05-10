@@ -14,7 +14,23 @@
       },
       "image": "File:Luskan - city of pirates.png"
     },
- https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/world/toril/faerun/cities.json
+ {
+            "categoryId": "1",
+            "position": [
+                492.85,
+                2738.8
+            ],
+            "popup": {
+                "title": "Neverwinter",
+                "description": "The '''City of Skilled Hands''' and the '''Jewel of the North''', a major bustling, cultured, and cosmopolitan city-state in northwest [[Faer\u00fbn]].",
+                "link": {
+                    "url": "Neverwinter",
+                    "label": "Neverwinter"
+                },
+                "image": "File:NeverwinterHarbor.jpg"
+            },
+            "id": "2"
+        },
   {
     "categoryId": "cities",
     "position": [
