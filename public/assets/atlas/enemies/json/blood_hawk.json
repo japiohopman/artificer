@@ -5,12 +5,7 @@
   "size": "Small",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 12
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 7,
   "hit_dice": "2d6",
   "hit_points_roll": "2d6",
@@ -42,7 +37,7 @@
     "passive_perception": 14
   },
   "languages": "",
-  "challenge_rating": 0.125,
+  "challenge_rating": "0.125",
   "proficiency_bonus": 2,
   "xp": 25,
   "special_abilities": [
@@ -77,14 +72,23 @@
   ],
   "image": "public/assets/atlas/enemies/blood_hawk.webp",
   "url": "public/assets/atlas/enemies/json/blood_hawk.json",
-  "updated_at": "2026-04-18T05:56:48.631Z",
+  "updated_at": "2026-05-10T20:55:21.711Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 23,
   "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet2.webp",
-  "imageUrl": "/assets/atlas/enemies/blood_hawk.webp",
+  "imageUrl": "/assets/atlas/enemies/images/blood_hawk.webp",
   "_type": "enemies",
   "background_type": "land_urban",
-  "last_updated": "18-4-2026"
+  "last_updated": "10-5-2026",
+  "stats": {
+    "str": 6,
+    "dex": 14,
+    "con": 10,
+    "int": 3,
+    "wis": 14,
+    "cha": 5
+  },
+  "rarity": "Uncommon"
 }
