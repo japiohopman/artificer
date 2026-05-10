@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 10
-    }
-  ],
+  "armor_class": 10,
   "hit_points": 13,
   "hit_dice": "2d8",
   "hit_points_roll": "2d8+4",
@@ -33,7 +28,7 @@
     "passive_perception": 11
   },
   "languages": "",
-  "challenge_rating": 0.25,
+  "challenge_rating": "0.25",
   "proficiency_bonus": 2,
   "xp": 50,
   "special_abilities": [
@@ -97,10 +92,23 @@
   ],
   "image": "public/assets/atlas/enemies/giant_badger.webp",
   "url": "public/assets/atlas/enemies/json/giant_badger.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-05-10T21:00:44.492Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 13,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp",
+  "stats": {
+    "str": 13,
+    "dex": 10,
+    "con": 15,
+    "int": 2,
+    "wis": 12,
+    "cha": 5
+  },
+  "imageUrl": "/assets/atlas/enemies/images/giant_badger.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "rarity": "Uncommon",
+  "last_updated": "10-5-2026"
 }
