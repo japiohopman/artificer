@@ -43,9 +43,17 @@
     }
   },
   "url": "public/assets/atlas/equipment/json/longsword.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-10T15:49:49.472Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/longsword.webp",
   "sprite_index": 5,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/images/longsword.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Simple Melee Weapons",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "10-5-2026"
 }
