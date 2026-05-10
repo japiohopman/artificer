@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 4,
   "hit_dice": "1d8",
   "hit_points_roll": "1d8",
@@ -31,7 +26,7 @@
     "passive_perception": 12
   },
   "languages": "",
-  "challenge_rating": 0,
+  "challenge_rating": "0",
   "proficiency_bonus": 2,
   "xp": 10,
   "actions": [
@@ -54,15 +49,23 @@
   ],
   "image": "public/assets/atlas/enemies/deer.webp",
   "url": "public/assets/atlas/enemies/json/deer.json",
-  "updated_at": "2026-04-19T09:38:12.922Z",
+  "updated_at": "2026-05-10T20:58:43.522Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 3,
   "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet4.webp",
-  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fdeer.webp%3Ft%3D1776591475023",
+  "imageUrl": "/assets/atlas/enemies/images/deer.webp",
   "_type": "enemies",
   "background_type": "land_plains4",
-  "last_updated": "19-4-2026"
+  "last_updated": "10-5-2026",
+  "stats": {
+    "str": 11,
+    "dex": 16,
+    "con": 11,
+    "int": 2,
+    "wis": 14,
+    "cha": 5
+  }
 }
