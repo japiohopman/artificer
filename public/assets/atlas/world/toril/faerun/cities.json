@@ -14,45 +14,20 @@
       },
       "image": "File:Luskan - city of pirates.png"
     },
-    "config": {
-      "hiddenCategories": [
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17"
-      ]
-    },
-    "id": "1"
-  },
- {
-            "categoryId": "1",
-            "position": [
-                492.85,
-                2738.8
-            ],
-            "popup": {
-                "title": "Neverwinter",
-                "description": "The '''City of Skilled Hands''' and the '''Jewel of the North''', a major bustling, cultured, and cosmopolitan city-state in northwest [[Faer\u00fbn]].",
-                "link": {
-                    "url": "Neverwinter",
-                    "label": "Neverwinter"
-                },
-                "image": "File:NeverwinterHarbor.jpg"
-            },
-            "id": "2"
-        },
+  {
+    "categoryId": "cities",
+     "position": [
+      492.85,
+      2738.8
+    ],
+      "popup": {
+      "title": "Neverwinter",
+     "url": "public/assets/atlas/world/toril/faerun/west_faerun/western_heartlands/neverwinter/neverwinter.json",
+  "popup": {
+    "title": "Neverwinter",
+    "description": "The City of Skilled Hands."
+  }
+      },
   {
     "categoryId": "cities",
     "position": [
