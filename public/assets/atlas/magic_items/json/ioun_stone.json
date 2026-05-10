@@ -107,6 +107,14 @@
     "***Sustenance (Rare).*** You don't need to eat or drink while this clear spindle orbits your head."
   ],
   "url": "public/assets/atlas/magic_items/json/ioun_stone.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/ioun_stone.webp"
+  "updated_at": "2026-05-10T15:48:13.969Z",
+  "image": "public/assets/atlas/magic_items/ioun_stone.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/ioun_stone.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Wondrous Items",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "10-5-2026"
 }
