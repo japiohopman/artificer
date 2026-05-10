@@ -5,12 +5,7 @@
   "type": "fiend",
   "subtype": "devil",
   "alignment": "lawful evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 18
-    }
-  ],
+  "armor_class": 18,
   "hit_points": 180,
   "hit_dice": "19d10",
   "hit_points_roll": "19d10+76",
@@ -78,7 +73,7 @@
     "passive_perception": 12
   },
   "languages": "Infernal, telepathy 120 ft.",
-  "challenge_rating": 14,
+  "challenge_rating": "14",
   "proficiency_bonus": 5,
   "xp": 11500,
   "special_abilities": [
@@ -198,10 +193,25 @@
   ],
   "image": "public/assets/atlas/enemies/ice_devil.webp",
   "url": "public/assets/atlas/enemies/json/ice_devil.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-10T21:19:33.917Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 21,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet7.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet7.webp",
+  "stats": {
+    "str": 21,
+    "dex": 14,
+    "con": 18,
+    "int": 18,
+    "wis": 15,
+    "cha": 18
+  },
+  "imageUrl": "/assets/atlas/enemies/images/ice_devil.webp",
+  "_type": "enemies",
+  "background_type": "snowy4",
+  "lore": "/assets/atlas/enemies/enemies_wiki/ice_devil.json",
+  "wikiData": {},
+  "rarity": "Rare",
+  "last_updated": "10-5-2026"
 }
