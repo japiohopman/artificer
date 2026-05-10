@@ -5,12 +5,7 @@
   "type": "fiend",
   "subtype": "demon",
   "alignment": "chaotic evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 18
-    }
-  ],
+  "armor_class": 18,
   "hit_points": 189,
   "hit_dice": "18d10",
   "hit_points_roll": "18d10+90",
@@ -79,7 +74,7 @@
     "passive_perception": 13
   },
   "languages": "Abyssal, telepathy 120 ft.",
-  "challenge_rating": 16,
+  "challenge_rating": "16",
   "proficiency_bonus": 5,
   "xp": 15000,
   "special_abilities": [
@@ -165,9 +160,23 @@
   ],
   "image": "public/assets/atlas/enemies/marilith.webp",
   "url": "public/assets/atlas/enemies/json/marilith.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-10T21:39:36.460Z",
   "forms": [],
   "legendary_actions": [],
   "sprite_index": 17,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp",
+  "stats": {
+    "str": 18,
+    "dex": 20,
+    "con": 20,
+    "int": 18,
+    "wis": 16,
+    "cha": 20
+  },
+  "imageUrl": "/assets/atlas/enemies/images/marilith.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "lore": "/assets/atlas/enemies/enemies_wiki/marilith.json",
+  "wikiData": {},
+  "last_updated": "10-5-2026"
 }
