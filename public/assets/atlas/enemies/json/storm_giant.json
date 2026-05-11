@@ -4,19 +4,7 @@
   "size": "Huge",
   "type": "giant",
   "alignment": "chaotic good",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 16,
-      "armor": [
-        {
-          "index": "scale_mail",
-          "name": "scale mail",
-          "url": "public/assets/atlas/equipment/scale_mail"
-        }
-      ]
-    }
-  ],
+  "armor_class": 16,
   "hit_points": 230,
   "hit_dice": "20d12",
   "hit_points_roll": "20d12+100",
@@ -109,7 +97,7 @@
     "passive_perception": 19
   },
   "languages": "Common, Giant",
-  "challenge_rating": 13,
+  "challenge_rating": "13",
   "proficiency_bonus": 5,
   "xp": 10000,
   "special_abilities": [
@@ -272,10 +260,22 @@
   ],
   "image": "public/assets/atlas/enemies/storm_giant.webp",
   "url": "public/assets/atlas/enemies/json/storm_giant.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-11T03:34:12.772Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 16,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp",
+  "stats": {
+    "str": 29,
+    "dex": 14,
+    "con": 20,
+    "int": 16,
+    "wis": 18,
+    "cha": 18
+  },
+  "imageUrl": "/assets/atlas/enemies/images/storm_giant.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "11-5-2026"
 }
