@@ -4,13 +4,7 @@
   "size": "Huge",
   "type": "giant",
   "alignment": "neutral evil",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 15,
-      "desc": "patchwork armor"
-    }
-  ],
+  "armor_class": 15,
   "hit_points": 138,
   "hit_dice": "12d12",
   "hit_points_roll": "12d12+60",
@@ -75,7 +69,7 @@
     "passive_perception": 13
   },
   "languages": "Giant",
-  "challenge_rating": 8,
+  "challenge_rating": "8",
   "proficiency_bonus": 3,
   "xp": 3900,
   "actions": [
@@ -127,11 +121,24 @@
   ],
   "image": "public/assets/atlas/enemies/frost_giant.webp",
   "url": "public/assets/atlas/enemies/json/frost_giant.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-05-11T03:32:46.440Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 6,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp",
+  "stats": {
+    "str": 23,
+    "dex": 9,
+    "con": 21,
+    "int": 9,
+    "wis": 10,
+    "cha": 12
+  },
+  "imageUrl": "/assets/atlas/enemies/images/frost_giant.webp",
+  "_type": "enemies",
+  "background_type": "snowy",
+  "rarity": "Very Rare",
+  "last_updated": "11-5-2026"
 }
