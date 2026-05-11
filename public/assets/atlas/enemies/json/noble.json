@@ -1,24 +1,12 @@
 {
   "index": "noble",
   "name": "noble",
-  "desc": "**Nobles** wield great authority and influence as members of the upper class, possessing wealth and connections that can make them as powerful as monarchs and generals. A noble often travels in the company of guards, as well as servants who are commoners.\n\nThe noble\u2019s statistics can also be used to represent **courtiers** who aren\u2019t of noble birth.",
+  "desc": "**Nobles** wield great authority and influence as members of the upper class, possessing wealth and connections that can make them as powerful as monarchs and generals. A noble often travels in the company of guards, as well as servants who are commoners.\n\nThe noble’s statistics can also be used to represent **courtiers** who aren’t of noble birth.",
   "size": "Medium",
   "type": "humanoid",
   "subtype": "any race",
   "alignment": "any alignment",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 15,
-      "armor": [
-        {
-          "index": "breastplate",
-          "name": "breastplate",
-          "url": "public/assets/atlas/equipment/breastplate"
-        }
-      ]
-    }
-  ],
+  "armor_class": 15,
   "hit_points": 9,
   "hit_dice": "2d8",
   "hit_points_roll": "2d8",
@@ -65,7 +53,7 @@
     "passive_perception": 12
   },
   "languages": "any two languages",
-  "challenge_rating": 0.125,
+  "challenge_rating": "0.125",
   "proficiency_bonus": 2,
   "xp": 25,
   "actions": [
@@ -94,10 +82,23 @@
   ],
   "image": "public/assets/atlas/enemies/noble.webp",
   "url": "public/assets/atlas/enemies/json/noble.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-11T03:58:01.718Z",
   "forms": [],
   "legendary_actions": [],
   "special_abilities": [],
   "sprite_index": 6,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp",
+  "stats": {
+    "str": 11,
+    "dex": 12,
+    "con": 11,
+    "int": 12,
+    "wis": 14,
+    "cha": 16
+  },
+  "imageUrl": "/assets/atlas/enemies/images/noble.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "rarity": "Uncommon",
+  "last_updated": "11-5-2026"
 }
