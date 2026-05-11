@@ -5,12 +5,7 @@
   "type": "fiend",
   "subtype": "demon",
   "alignment": "chaotic evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 157,
   "hit_dice": "15d10",
   "hit_points_roll": "15d10+75",
@@ -79,7 +74,7 @@
     "passive_perception": 13
   },
   "languages": "Abyssal, telepathy 120 ft.",
-  "challenge_rating": 9,
+  "challenge_rating": "9",
   "proficiency_bonus": 4,
   "xp": 5000,
   "special_abilities": [
@@ -251,10 +246,24 @@
   ],
   "image": "public/assets/atlas/enemies/glabrezu.webp",
   "url": "public/assets/atlas/enemies/json/glabrezu.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-05-11T03:40:15.499Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 17,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.webp",
+  "stats": {
+    "str": 20,
+    "dex": 15,
+    "con": 21,
+    "int": 19,
+    "wis": 17,
+    "cha": 16
+  },
+  "imageUrl": "/assets/atlas/enemies/images/glabrezu.webp",
+  "_type": "enemies",
+  "background_type": "land_mountains",
+  "lore": "/assets/atlas/enemies/enemies_wiki/glabrezu.json",
+  "wikiData": {},
+  "last_updated": "11-5-2026"
 }
