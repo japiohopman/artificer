@@ -1,24 +1,12 @@
 {
   "index": "cult_fanatic",
   "name": "cult fanatic",
-  "desc": "Fanatics are often part of a cult\u2019s leadership, using their charisma and dogma to influence and prey on those of weak will. Most are interested in personal power above all else.",
+  "desc": "Fanatics are often part of a cult’s leadership, using their charisma and dogma to influence and prey on those of weak will. Most are interested in personal power above all else.",
   "size": "Medium",
   "type": "humanoid",
   "subtype": "any race",
   "alignment": "any non-good alignment",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 13,
-      "armor": [
-        {
-          "index": "leather_armor",
-          "name": "leather armor",
-          "url": "public/assets/atlas/equipment/leather_armor"
-        }
-      ]
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 22,
   "hit_dice": "6d8",
   "hit_points_roll": "6d8-5",
@@ -65,7 +53,7 @@
     "passive_perception": 11
   },
   "languages": "any one language (usually Common)",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -175,10 +163,23 @@
   ],
   "image": "public/assets/atlas/enemies/cult_fanatic.webp",
   "url": "public/assets/atlas/enemies/json/cult_fanatic.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-05-11T03:38:10.464Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 23,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet3.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet3.webp",
+  "stats": {
+    "str": 11,
+    "dex": 14,
+    "con": 12,
+    "int": 10,
+    "wis": 13,
+    "cha": 14
+  },
+  "imageUrl": "/assets/atlas/enemies/images/cult_fanatic.webp",
+  "_type": "enemies",
+  "background_type": "church",
+  "rarity": "Uncommon",
+  "last_updated": "11-5-2026"
 }
