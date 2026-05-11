@@ -4,12 +4,7 @@
   "size": "Small",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 4,
   "hit_dice": "1d6",
   "hit_points_roll": "1d6+1",
@@ -33,7 +28,7 @@
     "passive_perception": 8
   },
   "languages": "",
-  "challenge_rating": 0.25,
+  "challenge_rating": "0.25",
   "proficiency_bonus": 2,
   "xp": 50,
   "actions": [
@@ -56,11 +51,23 @@
   ],
   "image": "public/assets/atlas/enemies/giant_centipede.webp",
   "url": "public/assets/atlas/enemies/json/giant_centipede.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-05-11T09:54:06.647Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 16,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp",
+  "stats": {
+    "str": 5,
+    "dex": 14,
+    "con": 12,
+    "int": 1,
+    "wis": 7,
+    "cha": 3
+  },
+  "imageUrl": "/assets/atlas/enemies/images/giant_centipede.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "11-5-2026"
 }
