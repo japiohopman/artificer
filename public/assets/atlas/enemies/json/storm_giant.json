@@ -260,7 +260,7 @@
   ],
   "image": "public/assets/atlas/enemies/storm_giant.webp",
   "url": "public/assets/atlas/enemies/json/storm_giant.json",
-  "updated_at": "2026-05-11T03:34:12.772Z",
+  "updated_at": "2026-05-11T03:34:30.344Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
@@ -277,5 +277,6 @@
   "imageUrl": "/assets/atlas/enemies/images/storm_giant.webp",
   "_type": "enemies",
   "background_type": "land_forest",
-  "last_updated": "11-5-2026"
+  "last_updated": "11-5-2026",
+  "rarity": "Very Rare"
 }
