@@ -29,9 +29,17 @@
   "weight": 2,
   "properties": [],
   "url": "public/assets/atlas/equipment/json/war_pick.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-15T05:04:02.961Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/war_pick.webp",
   "sprite_index": 1,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp",
+  "imageUrl": "/assets/atlas/equipment/images/war_pick.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "last_updated": "15-5-2026"
 }
