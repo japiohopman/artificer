@@ -6,9 +6,7 @@
     "name": "weapon",
     "url": "public/assets/atlas/equipment_categories/weapon"
   },
-  "rarity": {
-    "name": "very rare"
-  },
+  "rarity": "Very Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -18,6 +16,13 @@
     "In addition, you can speak the sword's command word to cause the blade to shed bright light in a 10 foot radius and dim light for an additional 10 feet. Speaking the command word again or sheathing the sword puts out the light."
   ],
   "url": "public/assets/atlas/magic_items/json/sword_of_sharpness.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/sword_of_sharpness.webp"
+  "updated_at": "2026-05-15T05:01:36.246Z",
+  "image": "public/assets/atlas/magic_items/sword_of_sharpness.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/sword_of_sharpness.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "15-5-2026"
 }
