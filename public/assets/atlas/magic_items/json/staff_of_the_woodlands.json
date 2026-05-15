@@ -20,6 +20,13 @@
     "The tree appears ordinary but radiates a faint aura of transmutation magic if targeted by detect magic. While touching the tree and using another action to speak its command word, you return the staff to its normal form. Any creature in the tree falls when it reverts to a staff."
   ],
   "url": "public/assets/atlas/magic_items/json/staff_of_the_woodlands.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/staff_of_the_woodlands.webp"
+  "updated_at": "2026-05-15T12:34:42.193Z",
+  "image": "public/assets/atlas/magic_items/staff_of_the_woodlands.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/staff_of_the_woodlands.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "15-5-2026"
 }
