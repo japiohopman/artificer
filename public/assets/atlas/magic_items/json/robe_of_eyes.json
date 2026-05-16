@@ -6,9 +6,7 @@
     "name": "wondrous items",
     "url": "public/assets/atlas/equipment_categories/wondrous_items"
   },
-  "rarity": {
-    "name": "rare"
-  },
+  "rarity": "Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -21,6 +19,13 @@
     "A light spell cast on the robe or a daylight spell cast within 5 feet of the robe causes you to be blinded for 1 minute. At the end of each of your turns, you can make a Constitution saving throw (DC 11 for light or DC 15 for daylight), ending the blindness on a success."
   ],
   "url": "public/assets/atlas/magic_items/json/robe_of_eyes.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/robe_of_eyes.webp"
+  "updated_at": "2026-05-16T07:26:11.469Z",
+  "image": "public/assets/atlas/magic_items/robe_of_eyes.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/robe_of_eyes.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "back"
+  ],
+  "last_updated": "16-5-2026"
 }
