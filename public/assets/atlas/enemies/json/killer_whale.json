@@ -4,12 +4,7 @@
   "size": "Huge",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 12
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 90,
   "hit_dice": "12d12",
   "hit_points_roll": "12d12+12",
@@ -41,7 +36,7 @@
     "passive_perception": 13
   },
   "languages": "",
-  "challenge_rating": 3,
+  "challenge_rating": "3",
   "proficiency_bonus": 2,
   "xp": 700,
   "special_abilities": [
@@ -81,10 +76,25 @@
   ],
   "image": "public/assets/atlas/enemies/killer_whale.webp",
   "url": "public/assets/atlas/enemies/json/killer_whale.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-16T11:14:54.418Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 2,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp",
+  "stats": {
+    "str": 19,
+    "dex": 10,
+    "con": 13,
+    "int": 3,
+    "wis": 12,
+    "cha": 7
+  },
+  "imageUrl": "/assets/atlas/enemies/images/killer_whale.webp",
+  "_type": "enemies",
+  "background_type": "water3",
+  "lore": "/assets/atlas/enemies/enemies_wiki/killer_whale.json",
+  "wikiData": {},
+  "rarity": "Rare",
+  "last_updated": "16-5-2026"
 }
