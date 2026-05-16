@@ -5,12 +5,7 @@
   "type": "monstrosity",
   "subtype": "titan",
   "alignment": "chaotic evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 18
-    }
-  ],
+  "armor_class": 18,
   "hit_points": 472,
   "hit_dice": "27d20",
   "hit_points_roll": "27d20+189",
@@ -89,7 +84,7 @@
     "passive_perception": 14
   },
   "languages": "understands Abyssal, Celestial, Infernal, and Primordial but can't speak, telepathy 120 ft.",
-  "challenge_rating": 23,
+  "challenge_rating": "23",
   "proficiency_bonus": 7,
   "xp": 50000,
   "special_abilities": [
@@ -274,9 +269,24 @@
   ],
   "image": "public/assets/atlas/enemies/kraken.webp",
   "url": "public/assets/atlas/enemies/json/kraken.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-16T10:12:10.614Z",
   "forms": [],
   "reactions": [],
   "sprite_index": 5,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp",
+  "stats": {
+    "str": 30,
+    "dex": 11,
+    "con": 25,
+    "int": 22,
+    "wis": 18,
+    "cha": 20
+  },
+  "imageUrl": "/assets/atlas/enemies/images/kraken.webp",
+  "_type": "enemies",
+  "background_type": "water3",
+  "lore": "/assets/atlas/enemies/enemies_wiki/kraken.json",
+  "wikiData": {},
+  "rarity": "Legendary",
+  "last_updated": "16-5-2026"
 }
