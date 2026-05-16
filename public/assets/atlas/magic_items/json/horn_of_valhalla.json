@@ -6,9 +6,7 @@
     "name": "wondrous items",
     "url": "public/assets/atlas/equipment_categories/wondrous_items"
   },
-  "rarity": {
-    "name": "varies"
-  },
+  "rarity": "Rare",
   "variants": [
     {
       "index": "horn_of_valhalla_silver",
@@ -45,6 +43,14 @@
     "If you blow the horn without meeting its requirement, the summoned berserkers attack you. If you meet the requirement, they are friendly to you and your companions and follow your commands."
   ],
   "url": "public/assets/atlas/magic_items/json/horn_of_valhalla.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/horn_of_valhalla.webp"
+  "updated_at": "2026-05-16T07:22:28.167Z",
+  "image": "public/assets/atlas/magic_items/horn_of_valhalla.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/horn_of_valhalla.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Wondrous Items",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "16-5-2026"
 }
