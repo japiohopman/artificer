@@ -6,9 +6,7 @@
     "name": "wondrous items",
     "url": "public/assets/atlas/equipment_categories/wondrous_items"
   },
-  "rarity": {
-    "name": "very rare"
-  },
+  "rarity": "Very Rare",
   "variants": [],
   "variant": true,
   "desc": [
@@ -19,6 +17,11 @@
     "***Strength.*** Your Strength score increases by 2, to a maximum of 20, while this pale blue rhomboid orbits your head."
   ],
   "url": "public/assets/atlas/magic_items/json/ioun_stone_of_strength.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/ioun_stone_of_strength.webp"
+  "updated_at": "2026-05-16T07:19:01.943Z",
+  "image": "public/assets/atlas/magic_items/ioun_stone_of_strength.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/ioun_stone_of_strength.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Wondrous Items",
+  "last_updated": "16-5-2026"
 }
