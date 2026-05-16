@@ -6,9 +6,7 @@
     "name": "wondrous items",
     "url": "public/assets/atlas/equipment_categories/wondrous_items"
   },
-  "rarity": {
-    "name": "very rare"
-  },
+  "rarity": "Very Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -16,6 +14,14 @@
     "This book contains health and diet tips, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Constitution score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century."
   ],
   "url": "public/assets/atlas/magic_items/json/manual_of_bodily_health.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/manual_of_bodily_health.webp"
+  "updated_at": "2026-05-16T07:20:43.995Z",
+  "image": "public/assets/atlas/magic_items/manual_of_bodily_health.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/manual_of_bodily_health.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "category": "Wondrous Items",
+  "last_updated": "16-5-2026"
 }
