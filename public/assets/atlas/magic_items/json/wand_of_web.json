@@ -17,6 +17,14 @@
     "The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed."
   ],
   "url": "public/assets/atlas/magic_items/json/wand_of_web.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/wand_of_web.webp"
+  "updated_at": "2026-05-17T22:25:20.679Z",
+  "image": "public/assets/atlas/magic_items/wand_of_web.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/wand_of_web.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Wand",
+  "slot": [
+    "focus"
+  ],
+  "last_updated": "18-5-2026"
 }
