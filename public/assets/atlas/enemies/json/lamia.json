@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "monstrosity",
   "alignment": "chaotic evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 97,
   "hit_dice": "13d10",
   "hit_points_roll": "13d10+26",
@@ -57,7 +52,7 @@
     "passive_perception": 12
   },
   "languages": "Abyssal, Common",
-  "challenge_rating": 4,
+  "challenge_rating": "4",
   "proficiency_bonus": 2,
   "xp": 1100,
   "special_abilities": [
@@ -243,10 +238,22 @@
   ],
   "image": "public/assets/atlas/enemies/lamia.webp",
   "url": "public/assets/atlas/enemies/json/lamia.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-17T06:46:38.435Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 6,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp",
+  "stats": {
+    "str": 16,
+    "dex": 13,
+    "con": 15,
+    "int": 14,
+    "wis": 15,
+    "cha": 16
+  },
+  "imageUrl": "/assets/atlas/enemies/images/lamia.webp",
+  "_type": "enemies",
+  "background_type": "land_mountains",
+  "last_updated": "17-5-2026"
 }
