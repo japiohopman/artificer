@@ -1,0 +1,40 @@
+{
+  "desc": [
+    "Forged in shadow and quenched in the blood of a fallen god, this arrow whispers promises of swift passage into oblivion, its +1 enchantment a subtle but undeniable caress of lingering darkness. Each flight is a dirge sung for the soon-to-be departed, guided by an unseen hand towards a destiny etched in pain.\n"
+  ],
+  "special": [],
+  "index": "arrow_1",
+  "name": "arrow, +1",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "ammunition",
+    "name": "ammunition",
+    "url": "public/assets/atlas/equipment_categories/ammunition"
+  },
+  "quantity": 20,
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "public/assets/atlas/equipment/json/arrow.json",
+  "updated_at": "2026-05-17T06:34:24.113Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/arrow.webp",
+  "sprite_index": 8,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/arrow_1.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Ammunition",
+  "last_updated": "17-5-2026",
+  "slot": [
+    "ammo"
+  ],
+  "rarity": "Uncommon"
+}
