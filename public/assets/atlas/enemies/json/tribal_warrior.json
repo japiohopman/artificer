@@ -6,19 +6,7 @@
   "type": "humanoid",
   "subtype": "any race",
   "alignment": "any alignment",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 12,
-      "armor": [
-        {
-          "index": "hide_armor",
-          "name": "hide armor",
-          "url": "public/assets/atlas/equipment/hide_armor"
-        }
-      ]
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 11,
   "hit_dice": "2d8",
   "hit_points_roll": "2d8+2",
@@ -40,7 +28,7 @@
     "passive_perception": 10
   },
   "languages": "any one language",
-  "challenge_rating": 0.125,
+  "challenge_rating": "0.125",
   "proficiency_bonus": 2,
   "xp": 25,
   "special_abilities": [
@@ -91,10 +79,22 @@
   ],
   "image": "public/assets/atlas/enemies/tribal_warrior.webp",
   "url": "public/assets/atlas/enemies/json/tribal_warrior.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-17T06:44:54.420Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 7,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet12.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet12.webp",
+  "stats": {
+    "str": 13,
+    "dex": 11,
+    "con": 12,
+    "int": 8,
+    "wis": 11,
+    "cha": 8
+  },
+  "imageUrl": "/assets/atlas/enemies/images/tribal_warrior.webp",
+  "_type": "enemies",
+  "background_type": "church",
+  "last_updated": "17-5-2026"
 }
