@@ -20,15 +20,18 @@
   },
   "weight": 1,
   "url": "public/assets/atlas/equipment/json/blowgun_needle.json",
-  "updated_at": "2026-04-21T15:01:47.878Z",
+  "updated_at": "2026-05-17T03:52:47.377Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/blowgun_needle.webp",
   "sprite_index": 8,
   "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
-  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fblowgun_needle.webp%3Ft%3D1776783693267",
+  "imageUrl": "/assets/atlas/equipment/images/blowgun_needle.webp",
   "_type": "equipment",
   "background_type": "land_forest",
   "category": "Ammunition",
-  "last_updated": "21-4-2026"
+  "last_updated": "17-5-2026",
+  "slot": [
+    "ammo"
+  ]
 }
