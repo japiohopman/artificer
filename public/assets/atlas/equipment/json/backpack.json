@@ -1,5 +1,7 @@
 {
-  "desc": [],
+  "desc": [
+    "Fashioned from the hide of a beast best left unnamed, this backpack whispers secrets of forgotten pilgrimages with every rustle, its depths a maw promising to swallow more than just supplies.\n"
+  ],
   "special": [],
   "index": "backpack",
   "name": "backpack",
@@ -19,17 +21,18 @@
   },
   "weight": 5,
   "url": "public/assets/atlas/equipment/json/backpack.json",
-  "updated_at": "2026-04-21T14:08:31.097Z",
+  "updated_at": "2026-05-17T06:32:30.427Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/backpack.webp",
   "sprite_index": 9,
   "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
-  "imageUrl": "/assets/atlas/equipment/images/backpack.webp",
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fbackpack.webp?t=1778999506173",
   "_type": "equipment",
   "background_type": "land_forest",
   "slot": [
     "back"
   ],
-  "last_updated": "21-4-2026"
+  "last_updated": "17-5-2026",
+  "category": "Adventuring Gear"
 }
