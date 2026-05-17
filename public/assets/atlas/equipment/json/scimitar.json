@@ -40,9 +40,17 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/scimitar.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-17T22:26:28.630Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/scimitar.webp",
   "sprite_index": 13,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/scimitar.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "18-5-2026"
 }
