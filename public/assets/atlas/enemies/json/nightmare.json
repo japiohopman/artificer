@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "fiend",
   "alignment": "neutral evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 68,
   "hit_dice": "8d10",
   "hit_points_roll": "8d10+24",
@@ -34,7 +29,7 @@
     "passive_perception": 11
   },
   "languages": "understands Abyssal, Common, and Infernal but can't speak",
-  "challenge_rating": 3,
+  "challenge_rating": "3",
   "proficiency_bonus": 2,
   "xp": 700,
   "special_abilities": [
@@ -83,10 +78,22 @@
   ],
   "image": "public/assets/atlas/enemies/nightmare.webp",
   "url": "public/assets/atlas/enemies/json/nightmare.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-17T06:49:09.421Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 5,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp",
+  "stats": {
+    "str": 18,
+    "dex": 15,
+    "con": 16,
+    "int": 10,
+    "wis": 13,
+    "cha": 15
+  },
+  "imageUrl": "/assets/atlas/enemies/images/nightmare.webp",
+  "_type": "enemies",
+  "background_type": "fort",
+  "last_updated": "17-5-2026"
 }
