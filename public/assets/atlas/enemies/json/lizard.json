@@ -4,12 +4,7 @@
   "size": "Tiny",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 10
-    }
-  ],
+  "armor_class": 10,
   "hit_points": 2,
   "hit_dice": "1d4",
   "hit_points_roll": "1d4",
@@ -33,7 +28,7 @@
     "passive_perception": 9
   },
   "languages": "",
-  "challenge_rating": 0,
+  "challenge_rating": "0",
   "proficiency_bonus": 2,
   "xp": 10,
   "actions": [
@@ -56,11 +51,23 @@
   ],
   "image": "public/assets/atlas/enemies/lizard.webp",
   "url": "public/assets/atlas/enemies/json/lizard.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-17T06:47:55.319Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 10,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp",
+  "stats": {
+    "str": 2,
+    "dex": 11,
+    "con": 10,
+    "int": 1,
+    "wis": 8,
+    "cha": 3
+  },
+  "imageUrl": "/assets/atlas/enemies/images/lizard.webp",
+  "_type": "enemies",
+  "background_type": "land_forest4",
+  "last_updated": "17-5-2026"
 }
