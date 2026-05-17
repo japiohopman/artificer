@@ -6,9 +6,7 @@
     "name": "potion",
     "url": "public/assets/atlas/equipment_categories/potion"
   },
-  "rarity": {
-    "name": "uncommon"
-  },
+  "rarity": "Uncommon",
   "variants": [],
   "variant": true,
   "desc": [
@@ -16,6 +14,13 @@
     "When you drink this potion, you gain resistance to psychic damage for 1 hour."
   ],
   "url": "public/assets/atlas/magic_items/json/potion_of_resistance_psychic.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/potion_of_resistance_psychic.webp"
+  "updated_at": "2026-05-17T11:07:41.276Z",
+  "image": "public/assets/atlas/magic_items/potion_of_resistance_psychic.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/potion_of_resistance_psychic.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "17-5-2026"
 }
