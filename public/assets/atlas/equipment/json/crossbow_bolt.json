@@ -20,18 +20,18 @@
   },
   "weight": 1.5,
   "url": "public/assets/atlas/equipment/json/crossbow_bolt.json",
-  "updated_at": "2026-04-30T11:39:52.074Z",
+  "updated_at": "2026-05-17T06:33:37.067Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/crossbow_bolt.webp",
   "sprite_index": 17,
   "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
-  "imageUrl": "/assets/atlas/equipment/images/crossbow_bolt.webp",
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fcrossbow_bolt.webp?t=1778999598798",
   "_type": "equipment",
   "background_type": "land_forest",
   "category": "Ammunition",
   "slot": [
-    "extra"
+    "ammo"
   ],
-  "last_updated": "30-4-2026"
+  "last_updated": "17-5-2026"
 }
