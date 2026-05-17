@@ -6,9 +6,7 @@
     "name": "armor",
     "url": "public/assets/atlas/equipment_categories/armor"
   },
-  "rarity": {
-    "name": "very rare"
-  },
+  "rarity": "Very Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -18,5 +16,15 @@
   ],
   "image": "public/assets/atlas/magic_items/demon_armor.webp",
   "url": "public/assets/atlas/magic_items/json/demon_armor.json",
-  "updated_at": "2025-10-24T20:42:13.517Z"
+  "updated_at": "2026-05-17T10:43:14.919Z",
+  "imageUrl": "/assets/atlas/magic_items/images/demon_armor.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "chest"
+  ],
+  "category": "Armor",
+  "weight": "25",
+  "cost": "250",
+  "last_updated": "17-5-2026"
 }
