@@ -1,0 +1,44 @@
+{
+  "name": "Myconid Sprout",
+  "index": "myconid-sprout",
+  "size": "Small",
+  "type": "plant",
+  "stats": {
+    "str": 2,
+    "wis": 10
+  },
+  "rarity": "Common",
+  "challenge_rating": "0",
+  "actions": [],
+  "special_abilities": [
+    {
+      "name": "Sunlight Sensitivity"
+    },
+    {
+      "name": "Pacifying Spores"
+    }
+  ],
+  "alignment": "lawful neutral",
+  "armor_class": 10,
+  "background_type": "underdark",
+  "card_color": "#556B2F",
+  "condition_immunities": [
+    {
+      "name": "poisoned"
+    }
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "hit_points": 7,
+  "item_drops": [
+    {
+      "name": "Myconid Cap",
+      "quantity": "1d4",
+      "rarity": "Common"
+    }
+  ],
+  "speed": "20 ft.",
+  "last_updated": "18-5-2026",
+  "updated_at": "2026-05-18T11:21:24.341Z"
+}
