@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "construct",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 142,
   "hit_dice": "15d10",
   "hit_points_roll": "15d10+60",
@@ -61,7 +56,7 @@
     "passive_perception": 10
   },
   "languages": "understands commands given in any language but can't speak",
-  "challenge_rating": 7,
+  "challenge_rating": "7",
   "proficiency_bonus": 3,
   "xp": 2900,
   "special_abilities": [
@@ -120,14 +115,24 @@
   ],
   "image": "public/assets/atlas/enemies/shield_guardian.webp",
   "url": "public/assets/atlas/enemies/json/shield_guardian.json",
-  "updated_at": "2026-04-16T06:52:05.694Z",
+  "updated_at": "2026-05-18T11:33:37.095Z",
   "forms": [],
   "legendary_actions": [],
   "sprite_index": 2,
   "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp",
-  "imageUrl": "/assets/atlas/enemies/shield_guardian.webp",
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fimages%2Fshield_guardian.webp?t=1779103938058",
   "_type": "enemies",
   "background_type": "land_urban",
   "rarity": "Very Rare",
-  "last_updated": "16-4-2026"
+  "last_updated": "18-5-2026",
+  "stats": {
+    "str": 18,
+    "dex": 8,
+    "con": 18,
+    "int": 7,
+    "wis": 10,
+    "cha": 3
+  },
+  "lore": "/assets/atlas/enemies/enemies_wiki/shield_guardian.json",
+  "wikiData": {}
 }
