@@ -17,10 +17,18 @@
     "An exotic saddle is required for riding any aquatic or flying mount."
   ],
   "url": "public/assets/atlas/equipment/json/saddle_exotic.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-05-18T23:57:24.555Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/saddle_exotic.webp",
   "sprite_index": 4,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/saddle_exotic.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Mounts and Other Animals",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "19-5-2026"
 }
