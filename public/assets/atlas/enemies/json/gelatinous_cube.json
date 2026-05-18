@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "ooze",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 6
-    }
-  ],
+  "armor_class": 6,
   "hit_points": 84,
   "hit_dice": "8d10",
   "hit_points_roll": "8d10+40",
@@ -63,7 +58,7 @@
     "passive_perception": 8
   },
   "languages": "",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -122,15 +117,25 @@
   ],
   "image": "public/assets/atlas/enemies/gelatinous_cube.webp",
   "url": "public/assets/atlas/enemies/json/gelatinous_cube.json",
-  "updated_at": "2026-04-14T19:34:11.775Z",
+  "updated_at": "2026-05-18T10:38:21.456Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 8,
   "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp",
-  "imageUrl": "/assets/atlas/enemies/gelatinous_cube.webp",
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fimages%2Fgelatinous_cube.webp?t=1779100643049",
   "_type": "enemies",
   "rarity": "Very Rare",
-  "background_type": "church",
-  "last_updated": "14-4-2026"
+  "background_type": "castle4",
+  "last_updated": "18-5-2026",
+  "stats": {
+    "str": 14,
+    "dex": 3,
+    "con": 20,
+    "int": 1,
+    "wis": 6,
+    "cha": 1
+  },
+  "lore": "/assets/atlas/enemies/enemies_wiki/gelatinous_cube.json",
+  "wikiData": {}
 }
