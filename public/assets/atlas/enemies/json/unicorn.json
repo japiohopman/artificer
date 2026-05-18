@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "celestial",
   "alignment": "lawful good",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 12
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 67,
   "hit_dice": "9d10",
   "hit_points_roll": "9d10+18",
@@ -50,7 +45,7 @@
     "passive_perception": 13
   },
   "languages": "Celestial, Elvish, Sylvan, telepathy 60 ft.",
-  "challenge_rating": 5,
+  "challenge_rating": "5",
   "proficiency_bonus": 3,
   "xp": 1800,
   "special_abilities": [
@@ -234,14 +229,23 @@
   ],
   "image": "public/assets/atlas/enemies/unicorn.webp",
   "url": "public/assets/atlas/enemies/json/unicorn.json",
-  "updated_at": "2026-04-16T12:20:36.005Z",
+  "updated_at": "2026-05-18T10:30:03.883Z",
   "forms": [],
   "reactions": [],
   "sprite_index": 11,
   "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet12.webp",
-  "wikiData": null,
-  "imageUrl": "/assets/atlas/enemies/unicorn.webp",
-  "last_updated": "16-4-2026",
+  "wikiData": {},
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fimages%2Funicorn.webp?t=1779100186635",
+  "last_updated": "18-5-2026",
   "_type": "enemies",
-  "background_type": "ethereal"
+  "background_type": "ethereal",
+  "stats": {
+    "str": 18,
+    "dex": 14,
+    "con": 15,
+    "int": 11,
+    "wis": 17,
+    "cha": 16
+  },
+  "lore": "/assets/atlas/enemies/enemies_wiki/unicorn.json"
 }
