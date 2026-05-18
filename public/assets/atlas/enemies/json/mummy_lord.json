@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "undead",
   "alignment": "lawful evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 97,
   "hit_dice": "13d8",
   "hit_points_roll": "13d8+39",
@@ -113,7 +108,7 @@
     "passive_perception": 14
   },
   "languages": "the languages it knew in life",
-  "challenge_rating": 15,
+  "challenge_rating": "15",
   "proficiency_bonus": 5,
   "xp": 13000,
   "special_abilities": [
@@ -340,14 +335,24 @@
   ],
   "image": "public/assets/atlas/enemies/mummy_lord.webp",
   "url": "public/assets/atlas/enemies/json/mummy_lord.json",
-  "updated_at": "2026-04-16T09:02:54.790Z",
+  "updated_at": "2026-05-18T10:52:00.785Z",
   "forms": [],
   "reactions": [],
   "sprite_index": 1,
   "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp",
-  "imageUrl": "/assets/atlas/enemies/mummy_lord.webp",
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fimages%2Fmummy_lord.webp?t=1779101500105",
   "_type": "enemies",
   "background_type": "desert3",
   "rarity": "Very Rare",
-  "last_updated": "16-4-2026"
+  "last_updated": "18-5-2026",
+  "stats": {
+    "str": 18,
+    "dex": 10,
+    "con": 17,
+    "int": 11,
+    "wis": 18,
+    "cha": 16
+  },
+  "lore": "/assets/atlas/enemies/enemies_wiki/mummy_lord.json",
+  "wikiData": {}
 }
