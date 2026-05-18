@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "celestial",
   "alignment": "lawful good",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 21
-    }
-  ],
+  "armor_class": 21,
   "hit_points": 243,
   "hit_dice": "18d10",
   "hit_points_roll": "18d10+144",
@@ -93,7 +88,7 @@
     "passive_perception": 24
   },
   "languages": "all, telepathy 120 ft.",
-  "challenge_rating": 21,
+  "challenge_rating": "21",
   "proficiency_bonus": 7,
   "xp": 33000,
   "special_abilities": [
@@ -334,14 +329,24 @@
   ],
   "image": "public/assets/atlas/enemies/solar.webp",
   "url": "public/assets/atlas/enemies/json/solar.json",
-  "updated_at": "2026-04-18T18:36:39.305Z",
+  "updated_at": "2026-05-18T10:27:17.631Z",
   "forms": [],
   "reactions": [],
   "sprite_index": 6,
   "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet11.webp",
-  "imageUrl": "/assets/atlas/enemies/solar.webp",
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fimages%2Fsolar.webp?t=1779100019411",
   "_type": "enemies",
   "background_type": "void",
-  "last_updated": "18-4-2026",
-  "rarity": "Legendary"
+  "last_updated": "18-5-2026",
+  "rarity": "Legendary",
+  "stats": {
+    "str": 26,
+    "dex": 22,
+    "con": 26,
+    "int": 25,
+    "wis": 25,
+    "cha": 30
+  },
+  "lore": "/assets/atlas/enemies/enemies_wiki/solar.json",
+  "wikiData": {}
 }
