@@ -5,12 +5,7 @@
   "type": "fiend",
   "subtype": "devil",
   "alignment": "lawful evil",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 7
-    }
-  ],
+  "armor_class": 7,
   "hit_points": 13,
   "hit_dice": "3d8",
   "hit_points_roll": "3d8",
@@ -54,7 +49,7 @@
     "passive_perception": 10
   },
   "languages": "understands infernal but can't speak",
-  "challenge_rating": 0,
+  "challenge_rating": "0",
   "proficiency_bonus": 2,
   "xp": 10,
   "special_abilities": [
@@ -89,10 +84,24 @@
   ],
   "image": "public/assets/atlas/enemies/lemure.webp",
   "url": "public/assets/atlas/enemies/json/lemure.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-18T11:17:45.231Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 7,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet8.webp",
+  "stats": {
+    "str": 10,
+    "dex": 5,
+    "con": 11,
+    "int": 1,
+    "wis": 11,
+    "cha": 3
+  },
+  "imageUrl": "/assets/atlas/enemies/images/lemure.webp",
+  "_type": "enemies",
+  "background_type": "land_forest3",
+  "lore": "/assets/atlas/enemies/enemies_wiki/lemure.json",
+  "wikiData": {},
+  "last_updated": "18-5-2026"
 }
