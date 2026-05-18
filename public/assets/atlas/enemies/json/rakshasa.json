@@ -237,7 +237,7 @@
   ],
   "image": "public/assets/atlas/enemies/rakshasa.webp",
   "url": "public/assets/atlas/enemies/json/rakshasa.json",
-  "updated_at": "2026-05-18T11:39:55.383Z",
+  "updated_at": "2026-05-18T11:40:38.548Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
@@ -251,9 +251,9 @@
     "wis": 16,
     "cha": 20
   },
-  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fimages%2Frakshasa.webp?t=1779104332819",
+  "imageUrl": "/assets/atlas/enemies/images/rakshasa.webp",
   "_type": "enemies",
-  "background_type": "land_forest",
+  "background_type": "volcano4",
   "lore": "/assets/atlas/enemies/enemies_wiki/rakshasa.json",
   "wikiData": {},
   "last_updated": "18-5-2026"
