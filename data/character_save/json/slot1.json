@@ -1,0 +1,1185 @@
+{
+  "level": 1,
+  "xp": 0,
+  "gender": "Female",
+  "stats": {
+    "str": 15,
+    "dex": 16,
+    "con": 17,
+    "int": 12,
+    "wis": 15,
+    "cha": 15
+  },
+  "proficiencies": [
+    "light armor",
+    "simple weapons",
+    "longswords",
+    "rapiers",
+    "shortswords",
+    "hand crossbows",
+    "thieves' tools",
+    "saving throw: dex",
+    "saving throw: int",
+    "skill-insight",
+    "skill-religion",
+    "skill-sleight-of-hand",
+    "skill-stealth",
+    "disguise-kit",
+    "thieves-tools",
+    "skill-athletics",
+    "skill-intimidation",
+    "vehicles-land",
+    "skill-perception",
+    "navigators-tools",
+    "vehicles-water",
+    "skill-arcana",
+    "skill-history",
+    "skill-survival",
+    "skill-persuasion",
+    "skill-medicine",
+    "herbalism-kit",
+    "skill-animal-handling",
+    "skill-acrobatics",
+    "skill-performance",
+    "skill-deception",
+    "forgery-kit"
+  ],
+  "traits": [
+    "I ask a lot of questions."
+  ],
+  "features": [
+    {
+      "name": "Shelter of the Faithful",
+      "index": "acolyte-feature",
+      "desc": "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.\nYou might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there. This could be the temple where you used to serve, if you remain on good terms with it, or a temple where you have found a new home. While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple.",
+      "source": "Background"
+    },
+    {
+      "name": "City Secrets",
+      "index": "urchin-feature",
+      "desc": "You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would otherwise allow.",
+      "source": "Background"
+    },
+    {
+      "name": "Military Rank",
+      "index": "soldier-feature",
+      "desc": "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized.",
+      "source": "Background"
+    },
+    {
+      "name": "Ship's Passage",
+      "index": "sailor-feature",
+      "desc": "When you need to, you can secure free passage on a sailing ship for yourself and your adventuring companions. You might sail on the ship you served on, or another ship you have good relations with (perhaps one captained by a former crewmate). Because you're calling in a favor, you can't be certain of a schedule or route that will meet your every need. Your DM will determine how long it takes to get where you need to go. In return for your passage, you and your companions are expected to assist the crew during the voyage.",
+      "source": "Background"
+    },
+    {
+      "name": "Researcher",
+      "index": "sage-feature",
+      "desc": "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign.",
+      "source": "Background"
+    },
+    {
+      "name": "Wanderer",
+      "index": "outlander-feature",
+      "desc": "You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, and so forth.",
+      "source": "Background"
+    },
+    {
+      "name": "Position of Privilege",
+      "index": "noble-feature",
+      "desc": "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to.",
+      "source": "Background"
+    },
+    {
+      "name": "Discovery",
+      "index": "hermit-feature",
+      "desc": "The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature. It could be a site that no one else has ever seen. You might have uncovered a fact that has long been forgotten, or unearthed some relic of the past that could rewrite history. Work with your DM to determine the details of your discovery and its impact on the campaign.",
+      "source": "Background"
+    },
+    {
+      "name": "Guild Membership",
+      "index": "guild-artisan-feature",
+      "desc": "As an established and respected member of a guild, you can rely on certain benefits that membership provides. Your fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings.\nGuilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or if the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild's coffers.\nYou must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild's good graces.",
+      "source": "Background"
+    },
+    {
+      "name": "Rustic Hospitality",
+      "index": "folk-hero-feature",
+      "desc": "Since you come from the ranks of the common folk, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you.",
+      "source": "Background"
+    },
+    {
+      "name": "By Popular Demand",
+      "index": "entertainer-feature",
+      "desc": "You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble's court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you.",
+      "source": "Background"
+    },
+    {
+      "name": "False Identity",
+      "index": "charlatan-feature",
+      "desc": "You have created a second identity that includes documentation, established acquaintances, and disguises that allow you to assume that persona. Additionally, you can forge documents including official papers and personal letters, as long as you have seen an example of the kind of document or the handwriting you are trying to copy.",
+      "source": "Background"
+    }
+  ],
+  "flaws": [
+    "I'm convinced that a powerful person is out to get me, and I'm probably right."
+  ],
+  "ideals": [
+    "Retribution. The rich need to be shown what it's like to went without and suffer. (Evil)"
+  ],
+  "bonds": [
+    "No one else should have to endure the hardships I've been through."
+  ],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 10,
+    "pp": 0
+  },
+  "appearance": {
+    "hairColor": "Midnight Obsidian",
+    "hairStyle": "Short",
+    "bodyType": "Medium",
+    "eyeColor": "Amethyst Light",
+    "skinColor": "#f1a1a1",
+    "height": "5'10\"",
+    "weight": "160 lbs"
+  },
+  "backpack": [
+    {
+      "id": "thieves_tools_40hvcanck",
+      "index": "thieves_tools",
+      "name": "thieves' tools",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/thieves_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/thieves_tools.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fthieves_tools.webp?t=1779088097693",
+      "special": [],
+      "equipment_category": {
+        "index": "tools",
+        "name": "tools",
+        "url": "public/assets/atlas/equipment_categories/tools"
+      },
+      "tool_category": "Other Tools",
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "desc": [
+        "This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks."
+      ],
+      "updated_at": "2026-05-04T20:40:21.383Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/thieves_tools.webp",
+      "sprite_index": 15,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "category": "Other Tools",
+      "last_updated": "4-5-2026",
+      "slot": [
+        "tool"
+      ],
+      "background_type": "land_forest"
+    },
+    {
+      "id": "holy-symbol_0um9eymip",
+      "index": "holy-symbol",
+      "name": "Holy Symbol",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/holy-symbol",
+      "image_url": "public/assets/atlas/equipment/images/holy_symbol.webp",
+      "imageUrl": "/assets/atlas/equipment/images/holy_symbol.webp",
+      "slot": "neck"
+    },
+    {
+      "id": "prayer-book_xl08bkvug",
+      "index": "prayer-book",
+      "name": "Prayer Book",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/prayer-book",
+      "image_url": "public/assets/atlas/equipment/images/prayer_book.webp",
+      "imageUrl": "/assets/atlas/equipment/images/prayer_book.webp"
+    },
+    {
+      "id": "stick-of-incense_xtgifvw82",
+      "index": "stick-of-incense",
+      "name": "Stick of Incense",
+      "quantity": 10,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/stick-of-incense",
+      "image_url": "public/assets/atlas/equipment/images/stick_of_incense.webp",
+      "imageUrl": "/assets/atlas/equipment/images/stick_of_incense.webp"
+    },
+    {
+      "id": "vestments_1k2kij08b",
+      "index": "vestments",
+      "name": "Vestments",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/vestments",
+      "image_url": "public/assets/atlas/equipment/images/vestments.webp",
+      "imageUrl": "/assets/atlas/equipment/images/vestments.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 0,
+        "unit": "cp"
+      },
+      "desc": [
+        "Religious clothing, typically found in a priest's pack."
+      ],
+      "updated_at": "2026-05-08T04:53:02.037Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/vestments.webp",
+      "sprite_index": 21,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "background_type": "land_forest",
+      "category": "Adventuring Gear",
+      "last_updated": "8-5-2026"
+    },
+    {
+      "id": "common-clothes_qubkudzfq",
+      "index": "common-clothes",
+      "name": "Common Clothes",
+      "quantity": 15,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/common-clothes",
+      "image_url": "public/assets/atlas/equipment/images/common_clothes.webp",
+      "imageUrl": "/assets/atlas/equipment/images/common_clothes.webp",
+      "slot": "clothes"
+    },
+    {
+      "id": "pouch_p1epuzyxg",
+      "index": "pouch",
+      "name": "Pouch",
+      "quantity": 21,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "/api/equipment/pouch",
+      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
+      ],
+      "updated_at": "2026-05-01T07:55:16.273Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/pouch.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+      "background_type": "land_forest",
+      "category": "Adventuring Gear",
+      "last_updated": "1-5-2026"
+    },
+    {
+      "id": "small-knife_swdxbg46c",
+      "index": "small-knife",
+      "name": "Small Knife",
+      "quantity": 5,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/small-knife",
+      "image_url": "public/assets/atlas/equipment/images/small_knife.webp",
+      "imageUrl": "/assets/atlas/equipment/images/small_knife.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 0,
+        "unit": "cp"
+      },
+      "desc": [
+        "A small knife, typically found in a scholar's pack."
+      ],
+      "updated_at": "2026-04-26T06:48:54.423Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/small_knife.webp",
+      "sprite_index": 1,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "background_type": "land_forest",
+      "slot": "off-hand",
+      "last_updated": "26-4-2026"
+    },
+    {
+      "id": "city-map_3hpktbwae",
+      "index": "city-map",
+      "name": "Map of the city you grew up in",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/city-map",
+      "image_url": "public/assets/atlas/equipment/images/city_map.webp",
+      "imageUrl": "/assets/atlas/equipment/images/city_map.webp"
+    },
+    {
+      "id": "pet-mouse_bqzntii62",
+      "index": "pet-mouse",
+      "name": "Pet Mouse",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/pet-mouse",
+      "image_url": "public/assets/atlas/equipment/images/pet_mouse.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pet_mouse.webp"
+    },
+    {
+      "id": "token-of-parents_l32yozqx2",
+      "index": "token-of-parents",
+      "name": "Token to remember your parents by",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/token-of-parents",
+      "image_url": "public/assets/atlas/equipment/images/token_of_parents.webp",
+      "imageUrl": "/assets/atlas/equipment/images/token_of_parents.webp"
+    },
+    {
+      "id": "insignia-of-rank_2rfqakkuy",
+      "index": "insignia-of-rank",
+      "name": "Insignia of Rank",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/insignia-of-rank",
+      "image_url": "public/assets/atlas/equipment/images/insignia_of_rank.webp",
+      "imageUrl": "/assets/atlas/equipment/images/insignia_of_rank.webp",
+      "slot": "acc-1"
+    },
+    {
+      "id": "trophy-from-fallen-enemy_wiru8h33z",
+      "index": "trophy-from-fallen-enemy",
+      "name": "Trophy from a fallen enemy",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/trophy-from-fallen-enemy",
+      "image_url": "public/assets/atlas/equipment/images/trophy_from_fallen_enemy.webp",
+      "imageUrl": "/assets/atlas/equipment/images/trophy_from_fallen_enemy.webp"
+    },
+    {
+      "id": "silk-rope-50ft_floc26bp4",
+      "index": "silk-rope-50ft",
+      "name": "Silk Rope (50 feet)",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/silk-rope-50ft",
+      "image_url": "public/assets/atlas/equipment/images/silk_rope_50ft.webp",
+      "imageUrl": "/assets/atlas/equipment/images/silk_rope_50ft.webp"
+    },
+    {
+      "id": "lucky-charm_sd96iuotp",
+      "index": "lucky-charm",
+      "name": "Lucky Charm",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/lucky-charm",
+      "image_url": "public/assets/atlas/equipment/images/lucky_charm.webp",
+      "imageUrl": "/assets/atlas/equipment/images/lucky_charm.webp"
+    },
+    {
+      "id": "ink-bottle_0rh4y4nla",
+      "index": "ink-bottle",
+      "name": "Bottle of Black Ink",
+      "quantity": 3,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/ink-bottle",
+      "image_url": "public/assets/atlas/equipment/images/ink_bottle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/ink_bottle.webp"
+    },
+    {
+      "id": "quill_drqpzo87d",
+      "index": "quill",
+      "name": "Quill",
+      "quantity": 3,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/quill",
+      "image_url": "public/assets/atlas/equipment/images/quill.webp",
+      "imageUrl": "/assets/atlas/equipment/images/quill.webp"
+    },
+    {
+      "id": "letter-from-dead-colleague_2rattxd78",
+      "index": "letter-from-dead-colleague",
+      "name": "Letter from a dead colleague",
+      "quantity": 3,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/letter-from-dead-colleague",
+      "image_url": "public/assets/atlas/equipment/images/letter_from_dead_colleague.webp",
+      "imageUrl": "/assets/atlas/equipment/images/letter_from_dead_colleague.webp"
+    },
+    {
+      "id": "staff_35m8gejso",
+      "index": "staff",
+      "name": "Staff",
+      "quantity": 2,
+      "weight": 4,
+      "_type": "equipment",
+      "url": "/api/equipment/staff",
+      "image_url": "public/assets/atlas/equipment/images/staff.webp",
+      "imageUrl": "/assets/atlas/equipment/images/staff.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "arcane_foci",
+        "name": "arcane foci",
+        "url": "public/assets/atlas/equipment_categories/arcane_foci"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "desc": [
+        "An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
+      ],
+      "updated_at": "2026-04-29T00:35:46.533Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/staff.webp",
+      "sprite_index": 11,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "background_type": "land_forest",
+      "last_updated": "29-4-2026",
+      "slot": "main-hand"
+    },
+    {
+      "id": "hunting-trap_7fgarnl0j",
+      "index": "hunting-trap",
+      "name": "Hunting Trap",
+      "quantity": 2,
+      "weight": 25,
+      "_type": "equipment",
+      "url": "/api/equipment/hunting-trap",
+      "image_url": "public/assets/atlas/equipment/images/hunting_trap.webp",
+      "imageUrl": "/assets/atlas/equipment/images/hunting_trap.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "desc": [
+        "When you use your action to set it, this trap forms a saw-toothed steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground.",
+        "A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 piercing damage and stop moving. Thereafter, until the creature breaks free of the trap, its movement is limited by the length of the chain (typically 3 feet long).",
+        "A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. Each failed check deals 1 piercing damage to the trapped creature."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/hunting_trap.webp",
+      "sprite_index": 11,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp"
+    },
+    {
+      "id": "trophy-from-fallen-animal_hxje74q0p",
+      "index": "trophy-from-fallen-animal",
+      "name": "Trophy from an animal you killed",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/trophy-from-fallen-animal",
+      "image_url": "public/assets/atlas/equipment/images/trophy_from_fallen_animal.webp",
+      "imageUrl": "/assets/atlas/equipment/images/trophy_from_fallen_animal.webp"
+    },
+    {
+      "id": "travelers-clothes_xv7omj5ow",
+      "index": "travelers-clothes",
+      "name": "Traveler's Clothes",
+      "quantity": 4,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/travelers-clothes",
+      "image_url": "public/assets/atlas/equipment/images/travelers_clothes.webp",
+      "imageUrl": "/assets/atlas/equipment/images/travelers_clothes.webp",
+      "slot": "clothes"
+    },
+    {
+      "id": "fine-clothes_tzpcy1acn",
+      "index": "fine-clothes",
+      "name": "Fine Clothes",
+      "quantity": 4,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/fine-clothes",
+      "image_url": "public/assets/atlas/equipment/images/fine_clothes.webp",
+      "imageUrl": "/assets/atlas/equipment/images/fine_clothes.webp",
+      "slot": "clothes"
+    },
+    {
+      "id": "scroll-of-pedigree_uoy2x6cbo",
+      "index": "scroll-of-pedigree",
+      "name": "Scroll of Pedigree",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/scroll-of-pedigree",
+      "image_url": "public/assets/atlas/equipment/images/scroll_of_pedigree.webp",
+      "imageUrl": "/assets/atlas/equipment/images/scroll_of_pedigree.webp"
+    },
+    {
+      "id": "purse_0ig80hu6d",
+      "index": "purse",
+      "name": "Purse",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/purse",
+      "image_url": "public/assets/atlas/equipment/images/purse.webp",
+      "imageUrl": "/assets/atlas/equipment/images/purse.webp",
+      "slot": "acc-1"
+    },
+    {
+      "id": "scroll-case_ir5qx3u9r",
+      "index": "scroll-case",
+      "name": "Scroll case stuffed full of notes",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/scroll-case",
+      "image_url": "public/assets/atlas/equipment/images/scroll_case.webp",
+      "imageUrl": "/assets/atlas/equipment/images/scroll_case.webp"
+    },
+    {
+      "id": "winter-blanket_jvzuis1o5",
+      "index": "winter-blanket",
+      "name": "Winter Blanket",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/winter-blanket",
+      "image_url": "public/assets/atlas/equipment/images/winter_blanket.webp",
+      "imageUrl": "/assets/atlas/equipment/images/winter_blanket.webp"
+    },
+    {
+      "id": "herbalism-kit_7ntefgray",
+      "index": "herbalism-kit",
+      "name": "Herbalism Kit",
+      "quantity": 2,
+      "weight": 3,
+      "_type": "equipment",
+      "url": "/api/equipment/herbalism-kit",
+      "image_url": "public/assets/atlas/equipment/images/herbalism_kit.webp",
+      "imageUrl": "/assets/atlas/equipment/herbalism_kit.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "kits",
+        "name": "kits",
+        "url": "public/assets/atlas/equipment_categories/kits"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "desc": [
+        "This leather-bound roll reeks of iron and loam, its stained glass vials holding tinctures distilled from grave-moss and night-blooming hemlock. Within, rusted silver shears rest beside a mortar caked in the dried, blackened residue of roots that only thrive where something has breathed its last."
+      ],
+      "updated_at": "2026-04-12T07:58:30.831Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/herbalism_kit.webp",
+      "sprite_index": 4,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "category": "Kits",
+      "last_updated": "12-4-2026"
+    },
+    {
+      "id": "letter-of-introduction_isxd0ioz3",
+      "index": "letter-of-introduction",
+      "name": "Letter of Introduction from your Guild",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/letter-of-introduction",
+      "image_url": "public/assets/atlas/equipment/images/letter_of_introduction.webp",
+      "imageUrl": "/assets/atlas/equipment/images/letter_of_introduction.webp"
+    },
+    {
+      "id": "shovel_lxt977wdi",
+      "index": "shovel",
+      "name": "Shovel",
+      "quantity": 2,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "/api/equipment/shovel",
+      "image_url": "public/assets/atlas/equipment/images/shovel.webp",
+      "imageUrl": "/assets/atlas/equipment/images/shovel.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2026-05-09T18:36:11.386Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/shovel.webp",
+      "sprite_index": 19,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+      "background_type": "land_forest",
+      "category": "Adventuring Gear",
+      "last_updated": "9-5-2026"
+    },
+    {
+      "id": "iron-pot_1wyjln7hx",
+      "index": "iron-pot",
+      "name": "Iron Pot",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/iron-pot",
+      "image_url": "public/assets/atlas/equipment/images/iron_pot.webp",
+      "imageUrl": "/assets/atlas/equipment/images/iron_pot.webp"
+    },
+    {
+      "id": "costume_rjuzxzotj",
+      "index": "costume",
+      "name": "Costume",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/costume",
+      "image_url": "public/assets/atlas/equipment/images/costume.webp",
+      "imageUrl": "/assets/atlas/equipment/images/costume.webp",
+      "slot": "clothes"
+    },
+    {
+      "id": "disguise-kit_8ouq10jfx",
+      "index": "disguise-kit",
+      "name": "Disguise Kit",
+      "quantity": 2,
+      "weight": 3,
+      "_type": "equipment",
+      "url": "/api/equipment/disguise-kit",
+      "image_url": "public/assets/atlas/equipment/images/disguise_kit.webp",
+      "imageUrl": "/assets/atlas/equipment/disguise_kit.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "kits",
+        "name": "kits",
+        "url": "public/assets/atlas/equipment_categories/kits"
+      },
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "desc": [
+        "This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise."
+      ],
+      "updated_at": "2026-04-12T07:52:45.598Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/disguise_kit.webp",
+      "sprite_index": 2,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+      "category": "Kits",
+      "last_updated": "12-4-2026"
+    },
+    {
+      "id": "signet-ring_klx2145m3",
+      "index": "signet-ring",
+      "name": "Signet Ring",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/signet-ring",
+      "image_url": "public/assets/atlas/equipment/images/signet_ring.webp",
+      "imageUrl": "/assets/atlas/equipment/images/signet_ring.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "updated_at": "2026-05-09T18:34:27.668Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/signet_ring.webp",
+      "sprite_index": 22,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+      "background_type": "land_forest",
+      "slot": "ring-1",
+      "last_updated": "9-5-2026"
+    },
+    {
+      "id": "club_fimlz2lps",
+      "index": "club",
+      "name": "Belaying Pin (Club)",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/api/equipment/club",
+      "image_url": "public/assets/atlas/equipment/images/club.webp",
+      "imageUrl": "/assets/atlas/equipment/images/club.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 1,
+        "unit": "sp"
+      },
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "bludgeoning",
+          "name": "bludgeoning",
+          "url": "public/assets/atlas/damage_types/bludgeoning"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "light",
+          "name": "light",
+          "url": "public/assets/atlas/weapon_properties/light"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "updated_at": "2025-10-24T20:42:12.925Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/club.webp",
+      "sprite_index": 13,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "slot": "main-hand"
+    },
+    {
+      "id": "leather_armor_ni1andxu5",
+      "index": "leather_armor",
+      "name": "leather armor",
+      "quantity": 1,
+      "weight": 10,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/leather_armor.json",
+      "image_url": "public/assets/atlas/equipment/images/leather_armor.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fleather_armor.webp?t=1779088097700",
+      "desc": [
+        "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "armor",
+        "name": "armor",
+        "url": "public/assets/atlas/equipment_categories/armor"
+      },
+      "armor_category": "Light",
+      "armor_class": {
+        "base": 11,
+        "dex_bonus": true
+      },
+      "str_minimum": 0,
+      "stealth_disadvantage": false,
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-15T07:04:03.712Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/leather_armor.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "category": "Armor",
+      "slot": [
+        "chest"
+      ],
+      "last_updated": "15-4-2026"
+    },
+    {
+      "id": "dagger_qua9h2ayk",
+      "index": "dagger",
+      "name": "dagger",
+      "quantity": 2,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/dagger.json",
+      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fdagger.webp?t=1779088098028",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "public/assets/atlas/weapon_properties/finesse"
+        },
+        {
+          "index": "light",
+          "name": "light",
+          "url": "public/assets/atlas/weapon_properties/light"
+        },
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "updated_at": "2026-04-28T13:26:26.921Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/dagger.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "main-hand"
+      ],
+      "category": "Simple Melee Weapons",
+      "last_updated": "28-4-2026"
+    }
+  ],
+  "inventory": {
+    "chest": {
+      "id": "leather_armor_glzzhhxix",
+      "index": "leather_armor",
+      "name": "leather armor",
+      "quantity": 1,
+      "weight": 10,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/leather_armor.json",
+      "image_url": "public/assets/atlas/equipment/images/leather_armor.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fleather_armor.webp?t=1779088097700",
+      "desc": [
+        "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "armor",
+        "name": "armor",
+        "url": "public/assets/atlas/equipment_categories/armor"
+      },
+      "armor_category": "Light",
+      "armor_class": {
+        "base": 11,
+        "dex_bonus": true
+      },
+      "str_minimum": 0,
+      "stealth_disadvantage": false,
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-15T07:04:03.712Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/leather_armor.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "category": "Armor",
+      "slot": "chest",
+      "last_updated": "15-4-2026",
+      "chest_slot": "leather armor"
+    },
+    "main-hand": {
+      "id": "dagger_h7uhk72r6",
+      "index": "dagger",
+      "name": "dagger",
+      "quantity": 2,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/dagger.json",
+      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fdagger.webp?t=1779088098028",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "public/assets/atlas/weapon_properties/finesse"
+        },
+        {
+          "index": "light",
+          "name": "light",
+          "url": "public/assets/atlas/weapon_properties/light"
+        },
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "updated_at": "2026-04-28T13:26:26.921Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/dagger.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "background_type": "land_forest",
+      "slot": "main-hand",
+      "category": "Simple Melee Weapons",
+      "last_updated": "28-4-2026",
+      "main_hand_slot": "dagger"
+    },
+    "off-hand": {
+      "id": "club_p3rwdvpi9",
+      "index": "club",
+      "name": "Belaying Pin (Club)",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/api/equipment/club",
+      "image_url": "public/assets/atlas/equipment/images/club.webp",
+      "imageUrl": "/assets/atlas/equipment/images/club.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 1,
+        "unit": "sp"
+      },
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "bludgeoning",
+          "name": "bludgeoning",
+          "url": "public/assets/atlas/damage_types/bludgeoning"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "light",
+          "name": "light",
+          "url": "public/assets/atlas/weapon_properties/light"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "updated_at": "2025-10-24T20:42:12.925Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/club.webp",
+      "sprite_index": 13,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "slot": "off-hand",
+      "off_hand_slot": "Belaying Pin (Club)"
+    },
+    "ring-1": {
+      "id": "signet-ring_dberq9tzm",
+      "index": "signet-ring",
+      "name": "Signet Ring",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/api/equipment/signet-ring",
+      "image_url": "public/assets/atlas/equipment/images/signet_ring.webp",
+      "imageUrl": "/assets/atlas/equipment/images/signet_ring.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "updated_at": "2026-05-09T18:34:27.668Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/signet_ring.webp",
+      "sprite_index": 22,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+      "background_type": "land_forest",
+      "slot": "ring-1",
+      "last_updated": "9-5-2026",
+      "ring_1_slot": "Signet Ring"
+    }
+  },
+  "spells": [],
+  "choices": {},
+  "race": "half_orc",
+  "class": "rogue",
+  "background": "urchin",
+  "alignment": "neutral",
+  "name": "willy",
+  "backstory": "In the soot-stained labyrinth of Oakhaven’s Lower Ward, the name Willy was a stark contrast to the hulking frame and protruding tusks that marked him as an outsider. Born to the gutter and raised by the indifferent stones of the city, he learned early that his orcish blood was both a curse and a gift. While other children feared the night, Willy’s eyes pierced the gloom with a natural darkvision, turning the lightless sewers into his personal highway. He survived on the periphery of society, a menacing figure whose mere presence silenced the taunts of cruel merchants. His childhood was not one of play, but of endurance; he possessed a relentless spirit that allowed him to rise from beatings that would have broken a common man, his body refusing to fail even when his stomach was hollow with hunger.\n\nWilly did not choose the path of the rogue for the sake of gold, but for the sanctuary of the silence it provided. In a world that looked at his green-tinted skin and saw only a monster, he realized that if he could not be loved, he would be unseen. He refined his natural savagery into a clinical, lethal precision, learning that a well-placed blade from the shadows was far more effective than the clumsy brawling of the docks. His savage attacks were not outbursts of mindless rage, but calculated strikes born of a desperate need to end a fight before it truly began. He became a ghost of the slums, a collector of secrets and a thief of necessities, driven by a burning desire to claw his way out of the filth and prove that he was more than the sum of his scars.\n\nThe call to adventure came when the shadows of the city grew too small for his ambitions. Willy realized that his unique blend of orcish might and street-honed guile could be the key to unlocking the ancient vaults and forgotten ruins that the \"civilized\" folk feared to tread. He seeks now to test his mettle against the greater world, driven by a hidden bond to the orphans he left behind in the gutters and a deep-seated mistrust for those who hide behind titles and coin. He walks the path of the adventurer not to seek redemption for his heritage, but to carve out a destiny where he is the master of his own fate, ensuring that the world will remember the name Willy not as a common urchin, but as a shadow they never saw coming.",
+  "imageUrl": "data/character_save/images/slot1/slot1_portrait.webp",
+  "avatarUrl": "data/character_save/images/slot1/slot1_avatar.webp",
+  "matrixUrl": "data/character_save/images/slot1/slot1_matrix.webp",
+  "id": "slot1",
+  "hp": 12,
+  "maxHp": 12,
+  "lastSaved": "2026-05-18T07:26:01.494Z"
+}
