@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "undead",
   "alignment": "any alignment",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 11
-    }
-  ],
+  "armor_class": 11,
   "hit_points": 45,
   "hit_dice": "10d8",
   "hit_points_roll": "10d8",
@@ -90,7 +85,7 @@
     "passive_perception": 11
   },
   "languages": "any languages it knew in life",
-  "challenge_rating": 4,
+  "challenge_rating": "4",
   "proficiency_bonus": 2,
   "xp": 1100,
   "special_abilities": [
@@ -131,7 +126,7 @@
     {
       "damage": [],
       "name": "horrifying visage",
-      "desc": "Each non-undead creature within 60 ft. of the ghost that can see it must succeed on a DC 13 Wisdom saving throw or be frightened for 1 minute. If the save fails by 5 or more, the target also ages 1d4 \u00d7 10 years. A frightened target can repeat the saving throw at the end of each of its turns, ending the frightened condition on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to this ghost's Horrifying Visage for the next 24 hours. The aging effect can be reversed with a greater restoration spell, but only within 24 hours of it occurring.",
+      "desc": "Each non-undead creature within 60 ft. of the ghost that can see it must succeed on a DC 13 Wisdom saving throw or be frightened for 1 minute. If the save fails by 5 or more, the target also ages 1d4 × 10 years. A frightened target can repeat the saving throw at the end of each of its turns, ending the frightened condition on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to this ghost's Horrifying Visage for the next 24 hours. The aging effect can be reversed with a greater restoration spell, but only within 24 hours of it occurring.",
       "dc": {
         "dc_type": {
           "index": "wis",
@@ -166,10 +161,22 @@
   ],
   "image": "public/assets/atlas/enemies/ghost.webp",
   "url": "public/assets/atlas/enemies/json/ghost.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-05-19T14:06:37.822Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 10,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet5.webp",
+  "stats": {
+    "str": 7,
+    "dex": 13,
+    "con": 10,
+    "int": 10,
+    "wis": 12,
+    "cha": 17
+  },
+  "imageUrl": "/assets/atlas/enemies/images/ghost.webp",
+  "_type": "enemies",
+  "background_type": "land_urban",
+  "last_updated": "19-5-2026"
 }
