@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "fey",
   "alignment": "chaotic evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 14
-    }
-  ],
+  "armor_class": 14,
   "hit_points": 52,
   "hit_dice": "7d8",
   "hit_points_roll": "7d8+21",
@@ -33,7 +28,7 @@
     "passive_perception": 11
   },
   "languages": "Aquan, Common, Giant",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -89,15 +84,25 @@
   ],
   "image": "public/assets/atlas/enemies/sea_hag.webp",
   "url": "public/assets/atlas/enemies/json/sea_hag.json",
-  "updated_at": "2026-04-16T05:53:46.438Z",
+  "updated_at": "2026-05-19T14:04:00.322Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 23,
   "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet10.webp",
-  "imageUrl": "/assets/atlas/enemies/sea_hag.webp",
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fimages%2Fsea_hag.webp?t=1779199419700",
   "_type": "enemies",
   "rarity": "Rare",
   "background_type": "water",
-  "last_updated": "16-4-2026"
+  "last_updated": "19-5-2026",
+  "stats": {
+    "str": 16,
+    "dex": 13,
+    "con": 16,
+    "int": 12,
+    "wis": 12,
+    "cha": 13
+  },
+  "lore": "/assets/atlas/enemies/enemies_wiki/sea_hag.json",
+  "wikiData": {}
 }
