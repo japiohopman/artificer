@@ -6,9 +6,7 @@
     "name": "ring",
     "url": "public/assets/atlas/equipment_categories/ring"
   },
-  "rarity": {
-    "name": "rare"
-  },
+  "rarity": "Rare",
   "variants": [],
   "variant": true,
   "desc": [
@@ -16,6 +14,14 @@
     "You have resistance to necrotic damage while wearing this jet ring."
   ],
   "url": "public/assets/atlas/magic_items/json/ring_of_resistance_necrotic.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/ring_of_resistance_necrotic.webp"
+  "updated_at": "2026-05-19T16:08:08.327Z",
+  "image": "public/assets/atlas/magic_items/ring_of_resistance_necrotic.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/ring_of_resistance_necrotic.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "ring-1",
+    "ring-2"
+  ],
+  "last_updated": "19-5-2026"
 }
