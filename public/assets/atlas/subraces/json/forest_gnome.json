@@ -1,0 +1,35 @@
+{
+  "index": "forest_gnome",
+  "name": "forest gnome",
+  "race": {
+    "index": "gnome",
+    "name": "gnome",
+    "url": "public/assets/atlas/species/json/gnome.json"
+  },
+  "desc": "As a forest gnome, you have a natural knack for illusion and inherent quickness and stealth.",
+  "ability_bonuses": [
+    {
+      "ability_score": {
+        "index": "dex",
+        "name": "dex",
+        "url": "public/assets/atlas/ability_scores/dexterity"
+      },
+      "bonus": 1
+    }
+  ],
+  "racial_traits": [
+    {
+      "index": "natural_illusionist",
+      "name": "natural illusionist",
+      "url": "public/assets/atlas/traits/natural_illusionist"
+    },
+    {
+      "index": "speak_with_small_beasts",
+      "name": "speak with small beasts",
+      "url": "public/assets/atlas/traits/speak_with_small_beasts"
+    }
+  ],
+  "url": "public/assets/atlas/subraces/json/forest_gnome.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "public/assets/atlas/subraces/forest_gnome.webp"
+}
