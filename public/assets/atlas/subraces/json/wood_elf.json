@@ -1,0 +1,40 @@
+{
+  "index": "wood_elf",
+  "name": "wood elf",
+  "race": {
+    "index": "elf",
+    "name": "elf",
+    "url": "public/assets/atlas/species/json/elf.json"
+  },
+  "desc": "As a wood elf, you have keen senses and intuition, and your fleet feet carry you quickly and stealthily through your native forests.",
+  "ability_bonuses": [
+    {
+      "ability_score": {
+        "index": "wis",
+        "name": "wis",
+        "url": "public/assets/atlas/ability_scores/wisdom"
+      },
+      "bonus": 1
+    }
+  ],
+  "racial_traits": [
+    {
+      "index": "elf_weapon_training",
+      "name": "elf weapon training",
+      "url": "public/assets/atlas/traits/elf_weapon_training"
+    },
+    {
+      "index": "fleet_of_foot",
+      "name": "fleet of foot",
+      "url": "public/assets/atlas/traits/fleet_of_foot"
+    },
+    {
+      "index": "mask_of_the_wild",
+      "name": "mask of the wild",
+      "url": "public/assets/atlas/traits/mask_of_the_wild"
+    }
+  ],
+  "url": "public/assets/atlas/subraces/json/wood_elf.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "public/assets/atlas/subraces/wood_elf.webp"
+}
