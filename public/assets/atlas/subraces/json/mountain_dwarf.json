@@ -1,0 +1,30 @@
+{
+  "index": "mountain_dwarf",
+  "name": "mountain dwarf",
+  "race": {
+    "index": "dwarf",
+    "name": "dwarf",
+    "url": "public/assets/atlas/species/json/dwarf.json"
+  },
+  "desc": "As a mountain dwarf, you're strong and hardy, accustomed to a difficult life in rugged terrain. You're probably on the tall side (for a dwarf), and tend toward lighter coloration.",
+  "ability_bonuses": [
+    {
+      "ability_score": {
+        "index": "str",
+        "name": "str",
+        "url": "public/assets/atlas/ability_scores/strength"
+      },
+      "bonus": 2
+    }
+  ],
+  "racial_traits": [
+    {
+      "index": "dwarven_armor_training",
+      "name": "dwarven armor training",
+      "url": "public/assets/atlas/traits/dwarven_armor_training"
+    }
+  ],
+  "url": "public/assets/atlas/subraces/json/mountain_dwarf.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "public/assets/atlas/subraces/mountain_dwarf.webp"
+}
