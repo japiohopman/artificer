@@ -6,9 +6,7 @@
     "name": "wondrous items",
     "url": "public/assets/atlas/equipment_categories/wondrous_items"
   },
-  "rarity": {
-    "name": "rare"
-  },
+  "rarity": "Rare",
   "variants": [],
   "variant": true,
   "desc": [
@@ -17,5 +15,10 @@
   ],
   "image": "public/assets/atlas/magic_items/belt_of_giant_strength_hill.webp",
   "url": "public/assets/atlas/magic_items/json/belt_of_giant_strength_hill.json",
-  "updated_at": "2025-10-24T20:42:13.517Z"
+  "updated_at": "2026-05-20T10:39:34.076Z",
+  "imageUrl": "/assets/atlas/magic_items/images/belt_of_giant_strength_hill.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Wondrous Items",
+  "last_updated": "20-5-2026"
 }
