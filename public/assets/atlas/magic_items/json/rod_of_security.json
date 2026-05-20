@@ -6,9 +6,7 @@
     "name": "rod",
     "url": "public/assets/atlas/equipment_categories/rod"
   },
-  "rarity": {
-    "name": "very rare"
-  },
+  "rarity": "Very Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -18,6 +16,13 @@
     "When the time runs out or you use an action to end it, all visitors reappear in the location they occupied when you activated the rod, or an unoccupied space nearest that location. The rod can't be used again until ten days have passed."
   ],
   "url": "public/assets/atlas/magic_items/json/rod_of_security.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/rod_of_security.webp"
+  "updated_at": "2026-05-20T10:10:22.322Z",
+  "image": "public/assets/atlas/magic_items/rod_of_security.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/rod_of_security.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "focus"
+  ],
+  "last_updated": "20-5-2026"
 }
