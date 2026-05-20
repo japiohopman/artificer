@@ -6,9 +6,7 @@
     "name": "staff",
     "url": "public/assets/atlas/equipment_categories/staff"
   },
-  "rarity": {
-    "name": "rare"
-  },
+  "rarity": "Rare",
   "variants": [],
   "variant": false,
   "desc": [
@@ -17,6 +15,13 @@
     "The staff can be wielded as a magic quarterstaff. On a hit, it deals damage as a normal quarterstaff, and you can expend 1 charge to deal an extra 2d10 necrotic damage to the target. In addition, the target must succeed on a DC 15 Constitution saving throw or have disadvantage for 1 hour on any ability check or saving throw that uses Strength or Constitution."
   ],
   "url": "public/assets/atlas/magic_items/json/staff_of_withering.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/staff_of_withering.webp"
+  "updated_at": "2026-05-20T10:11:49.035Z",
+  "image": "public/assets/atlas/magic_items/staff_of_withering.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/staff_of_withering.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "20-5-2026"
 }
