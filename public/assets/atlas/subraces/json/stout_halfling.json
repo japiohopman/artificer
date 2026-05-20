@@ -1,0 +1,30 @@
+{
+  "index": "stout_halfling",
+  "name": "stout halfling",
+  "race": {
+    "index": "halfling",
+    "name": "halfling",
+    "url": "public/assets/atlas/species/json/halfling.json"
+  },
+  "desc": "As a stout halfling, you're hardier than average and have some resistance to poison. Some say that stouts have dwarven blood. In the Forgotten Realms, these halflings are called stronghearts, and they're most common in the south.",
+  "ability_bonuses": [
+    {
+      "ability_score": {
+        "index": "con",
+        "name": "con",
+        "url": "public/assets/atlas/ability_scores/constitution"
+      },
+      "bonus": 1
+    }
+  ],
+  "racial_traits": [
+    {
+      "index": "stout_resilience",
+      "name": "stout resilience",
+      "url": "public/assets/atlas/traits/stout_resilience"
+    }
+  ],
+  "url": "public/assets/atlas/subraces/json/stout_halfling.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "public/assets/atlas/subraces/stout_halfling.webp"
+}
