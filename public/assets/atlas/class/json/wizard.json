@@ -15,7 +15,7 @@
             "item": {
               "index": "skill_arcana",
               "name": "skill: arcana",
-              "url": "public/assets/atlas/proficiencies/skill_arcana"
+              "url": "public/assets/atlas/proficiencies/json/skill_arcana.json"
             }
           },
           {
@@ -23,7 +23,7 @@
             "item": {
               "index": "skill_history",
               "name": "skill: history",
-              "url": "public/assets/atlas/proficiencies/skill_history"
+              "url": "public/assets/atlas/proficiencies/json/skill_history.json"
             }
           },
           {
@@ -31,7 +31,7 @@
             "item": {
               "index": "skill_insight",
               "name": "skill: insight",
-              "url": "public/assets/atlas/proficiencies/skill_insight"
+              "url": "public/assets/atlas/proficiencies/json/skill_insight.json"
             }
           },
           {
@@ -39,7 +39,7 @@
             "item": {
               "index": "skill_investigation",
               "name": "skill: investigation",
-              "url": "public/assets/atlas/proficiencies/skill_investigation"
+              "url": "public/assets/atlas/proficiencies/json/skill_investigation.json"
             }
           },
           {
@@ -47,7 +47,7 @@
             "item": {
               "index": "skill_medicine",
               "name": "skill: medicine",
-              "url": "public/assets/atlas/proficiencies/skill_medicine"
+              "url": "public/assets/atlas/proficiencies/json/skill_medicine.json"
             }
           },
           {
@@ -55,7 +55,7 @@
             "item": {
               "index": "skill_religion",
               "name": "skill: religion",
-              "url": "public/assets/atlas/proficiencies/skill_religion"
+              "url": "public/assets/atlas/proficiencies/json/skill_religion.json"
             }
           }
         ]
@@ -66,49 +66,49 @@
     {
       "index": "daggers",
       "name": "daggers",
-      "url": "public/assets/atlas/proficiencies/daggers"
+      "url": "public/assets/atlas/proficiencies/json/daggers.json"
     },
     {
       "index": "darts",
       "name": "darts",
-      "url": "public/assets/atlas/proficiencies/darts"
+      "url": "public/assets/atlas/proficiencies/json/darts.json"
     },
     {
       "index": "slings",
       "name": "slings",
-      "url": "public/assets/atlas/proficiencies/slings"
+      "url": "public/assets/atlas/proficiencies/json/slings.json"
     },
     {
       "index": "quarterstaffs",
       "name": "quarterstaffs",
-      "url": "public/assets/atlas/proficiencies/quarterstaffs"
+      "url": "public/assets/atlas/proficiencies/json/quarterstaffs.json"
     },
     {
       "index": "crossbows_light",
       "name": "crossbows, light",
-      "url": "public/assets/atlas/proficiencies/crossbows_light"
+      "url": "public/assets/atlas/proficiencies/json/crossbows_light.json"
     },
     {
       "index": "saving_throw_int",
       "name": "saving throw: int",
-      "url": "public/assets/atlas/proficiencies/saving_throw_int"
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_int.json"
     },
     {
       "index": "saving_throw_wis",
       "name": "saving throw: wis",
-      "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_wis.json"
     }
   ],
   "saving_throws": [
     {
       "index": "int",
       "name": "int",
-      "url": "public/assets/atlas/ability_scores/intelligence"
+      "url": "public/assets/atlas/ability_scores/json/intelligence.json"
     },
     {
       "index": "wis",
       "name": "wis",
-      "url": "public/assets/atlas/ability_scores/wisdom"
+      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
     }
   ],
   "starting_equipment": [
@@ -116,7 +116,7 @@
       "equipment": {
         "index": "spellbook",
         "name": "spellbook",
-        "url": "public/assets/atlas/equipment/spellbook"
+        "url": "public/assets/atlas/equipment/json/spellbook.json"
       },
       "quantity": 1
     }
@@ -135,7 +135,7 @@
             "of": {
               "index": "quarterstaff",
               "name": "quarterstaff",
-              "url": "public/assets/atlas/equipment/quarterstaff"
+              "url": "public/assets/atlas/equipment/json/quarterstaff.json"
             }
           },
           {
@@ -144,7 +144,7 @@
             "of": {
               "index": "dagger",
               "name": "dagger",
-              "url": "public/assets/atlas/equipment/dagger"
+              "url": "public/assets/atlas/equipment/json/dagger.json"
             }
           }
         ]
@@ -163,7 +163,7 @@
             "of": {
               "index": "component_pouch",
               "name": "component pouch",
-              "url": "public/assets/atlas/equipment/component_pouch"
+              "url": "public/assets/atlas/equipment/json/component_pouch.json"
             }
           },
           {
@@ -198,7 +198,7 @@
             "of": {
               "index": "scholars_pack",
               "name": "scholar's pack",
-              "url": "public/assets/atlas/equipment/scholars_pack"
+              "url": "public/assets/atlas/equipment/json/scholars_pack.json"
             }
           },
           {
@@ -207,7 +207,7 @@
             "of": {
               "index": "explorers_pack",
               "name": "explorer's pack",
-              "url": "public/assets/atlas/equipment/explorers_pack"
+              "url": "public/assets/atlas/equipment/json/explorers_pack.json"
             }
           }
         ]
@@ -221,7 +221,7 @@
         "ability_score": {
           "index": "int",
           "name": "int",
-          "url": "public/assets/atlas/ability_scores/intelligence"
+          "url": "public/assets/atlas/ability_scores/json/intelligence.json"
         },
         "minimum_score": 13
       }
@@ -232,7 +232,7 @@
     {
       "index": "evocation",
       "name": "evocation",
-      "url": "public/assets/atlas/subclasses/evocation"
+      "url": "public/assets/atlas/class/json/evocation.json"
     }
   ],
   "spellcasting": {
@@ -240,7 +240,7 @@
     "spellcasting_ability": {
       "index": "int",
       "name": "int",
-      "url": "public/assets/atlas/ability_scores/intelligence"
+      "url": "public/assets/atlas/ability_scores/json/intelligence.json"
     },
     "info": [
       {
@@ -287,7 +287,7 @@
     ]
   },
   "spells": "public/assets/atlas/classes/wizard/spells",
-  "url": "public/assets/atlas/classes/json/wizard.json",
+  "url": "public/assets/atlas/class/json/wizard.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
   "image": "public/assets/atlas/classes/wizard.webp"
 }
