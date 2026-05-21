@@ -1,0 +1,24 @@
+{
+  "index": "stout_resilience",
+  "races": [
+    {
+      "index": "halfling",
+      "name": "halfling",
+      "url": "public/assets/atlas/species/json/halfling.json"
+    }
+  ],
+  "subraces": [
+    {
+      "index": "stout_halfling",
+      "name": "stout halfling",
+      "url": "public/assets/atlas/subraces/json/stout_halfling.json"
+    }
+  ],
+  "name": "stout resilience",
+  "desc": [
+    "You have advantage on saving throws against poison, and you have resistance against poison damage."
+  ],
+  "url": "public/assets/atlas/traits/json/stout_resilience.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "public/assets/atlas/traits/stout_resilience.webp"
+}
