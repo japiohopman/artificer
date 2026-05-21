@@ -1,32 +1,114 @@
 {
   "index": "archaeologist",
   "name": "Archaeologist",
-  "description": "An archaeologist learns about the long-lost and fallen civilizations of the past by excavating their ruins. You have spent years digging through the dust of dead empires, searching for artifacts that tell the story of how people lived and died long before your time.",
   "starting_proficiencies": [
-    { "index": "skill-history", "name": "Skill: History" },
-    { "index": "skill-survival", "name": "Skill: Survival" },
-    { "index": "cartographers-tools", "name": "Cartographer's Tools" }
+    {
+      "index": "skill_history",
+      "name": "Skill: History"
+    },
+    {
+      "index": "skill_survival",
+      "name": "Skill: Survival"
+    },
+    {
+      "index": "cartographers_tools",
+      "name": "Cartographer's Tools"
+    }
   ],
   "language_options": {
     "choose": 1,
     "from": {
       "option_set_type": "options_array",
       "options": [
-        { "option_type": "reference", "item": { "index": "draconic", "name": "Draconic" } },
-        { "option_type": "reference", "item": { "index": "dwarvish", "name": "Dwarvish" } },
-        { "option_type": "reference", "item": { "index": "elvish", "name": "Elvish" } },
-        { "option_type": "reference", "item": { "index": "giant", "name": "Giant" } }
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "draconic",
+            "name": "Draconic"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "dwarvish",
+            "name": "Dwarvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "elvish",
+            "name": "Elvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "giant",
+            "name": "Giant"
+          }
+        }
       ]
     }
   },
   "starting_equipment": [
-    { "equipment": { "index": "wooden-case", "name": "Wooden case containing a map to a ruin", "url": "/api/equipment/wooden-case" }, "quantity": 1 },
-    { "equipment": { "index": "bullseye-lantern", "name": "Bullseye Lantern", "url": "/api/equipment/bullseye-lantern" }, "quantity": 1 },
-    { "equipment": { "index": "miners-pick", "name": "Miner's Pick", "url": "/api/equipment/miners-pick" }, "quantity": 1 },
-    { "equipment": { "index": "travelers-clothes", "name": "Traveler's Clothes", "url": "/api/equipment/travelers-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "shovel", "name": "Shovel", "url": "/api/equipment/shovel" }, "quantity": 1 },
-    { "equipment": { "index": "two-person-tent", "name": "Two-person Tent", "url": "/api/equipment/two-person-tent" }, "quantity": 1 },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "case_map_or_scroll",
+        "name": "Wooden case containing a map to a ruin",
+        "url": "public/assets/atlas/equipment/json/case_map_or_scroll.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "lantern_bullseye",
+        "name": "Bullseye Lantern",
+        "url": "public/assets/atlas/equipment/json/lantern_bullseye.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "pick_miners",
+        "name": "Miner's Pick",
+        "url": "public/assets/atlas/equipment/json/pick_miners.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Traveler's Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "shovel",
+        "name": "Shovel",
+        "url": "public/assets/atlas/equipment/json/shovel.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "tent_two_person",
+        "name": "Two-person Tent",
+        "url": "public/assets/atlas/equipment/json/tent_two_person.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [],
   "feature": {
@@ -38,12 +120,12 @@
   "suggested_characteristics": {
     "traits": [
       "I love a good puzzle or mystery.",
-      "I’m a bit of a snob about 'real' history versus folklore.",
+      "I\u2019m a bit of a snob about 'real' history versus folklore.",
       "I share my knowledge with anyone who will listen.",
       "I am constantly taking notes and sketching ruins.",
       "I have no respect for those who would loot a site for profit.",
       "I am always looking for the next big discovery.",
-      "I’m comfortable in tight, dark spaces.",
+      "I\u2019m comfortable in tight, dark spaces.",
       "I tend to talk about the past as if I were there."
     ],
     "ideals": [
@@ -51,7 +133,7 @@
       "Knowledge. The past is a teacher we must all listen to. (Neutral)",
       "Discovery. I want my name to be remembered alongside the great finds. (Any)",
       "Greed. Artifacts are just things waiting to be sold to the highest bidder. (Evil)",
-      "Tradition. The old ways are the best ways because they đã worked for so long. (Lawful)",
+      "Tradition. The old ways are the best ways because they \u0111\u00e3 worked for so long. (Lawful)",
       "Change. By understanding the past, we can bring about a new future. (Chaotic)"
     ],
     "bonds": [
@@ -63,12 +145,16 @@
       "I seek a specific crown or scepter that belonged to a forgotten king."
     ],
     "flaws": [
-      "I’m so obsessed with finding the past that I often ignore the present.",
+      "I\u2019m so obsessed with finding the past that I often ignore the present.",
       "I have a secret collection of artifacts that should be in a museum.",
-      "I’m prone to take risks if it means seeing a new ruin.",
+      "I\u2019m prone to take risks if it means seeing a new ruin.",
       "I judge people based on their knowledge of history.",
-      "I’m suspicious of anyone else interested in my current project.",
+      "I\u2019m suspicious of anyone else interested in my current project.",
       "I once accidentally destroyed a significant archaeological site."
     ]
-  }
+  },
+  "desc": [
+    "An archaeologist learns about the long-lost and fallen civilizations of the past by excavating their ruins. You have spent years digging through the dust of dead empires, searching for artifacts that tell the story of how people lived and died long before your time."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/archaeologist.json"
 }
