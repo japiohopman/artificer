@@ -6,14 +6,17 @@
     "name": "standard gear",
     "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
   },
-  "cost": {
-    "quantity": 1,
-    "unit": "gp"
-  },
+  "cost": "",
   "weight": 0.02,
   "desc": [
     "The standard unit of currency in the game."
   ],
   "url": "public/assets/atlas/equipment/json/gold.json",
-  "image": "public/assets/atlas/equipment/images/gold.webp"
+  "image": "public/assets/atlas/equipment/images/gold.webp",
+  "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Standard Gear",
+  "last_updated": "21-5-2026",
+  "updated_at": "2026-05-21T01:11:21.699Z"
 }
