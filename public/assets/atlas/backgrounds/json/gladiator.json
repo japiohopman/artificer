@@ -1,15 +1,38 @@
 {
   "index": "gladiator",
   "name": "Gladiator",
-  "description": "A gladiator is as much an entertainer as any minstrel or circus performer, trained to make the arts of combat into a spectacle for the crowd to enjoy. This kind of fighting is a form of performance, and you are its star.",
   "starting_proficiencies": [
-    { "index": "skill-acrobatics", "name": "Skill: Acrobatics" },
-    { "index": "skill-performance", "name": "Skill: Performance" },
-    { "index": "disguise-kit", "name": "Disguise Kit" }
+    {
+      "index": "skill_acrobatics",
+      "name": "Skill: Acrobatics"
+    },
+    {
+      "index": "skill_performance",
+      "name": "Skill: Performance"
+    },
+    {
+      "index": "disguise_kit",
+      "name": "Disguise Kit"
+    }
   ],
   "starting_equipment": [
-    { "equipment": { "index": "costume", "name": "Costume", "url": "/api/equipment/costume" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "clothes_costume",
+        "name": "Costume",
+        "url": "public/assets/atlas/equipment/json/clothes_costume.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [
     {
@@ -19,9 +42,27 @@
       "from": {
         "option_set_type": "options_array",
         "options": [
-          { "option_type": "reference", "item": { "index": "trident", "name": "Trident" } },
-          { "option_type": "reference", "item": { "index": "net", "name": "Net" } },
-          { "option_type": "reference", "item": { "index": "shortsword", "name": "Shortsword" } }
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "trident",
+              "name": "Trident"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "net",
+              "name": "Net"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "shortsword",
+              "name": "Shortsword"
+            }
+          }
         ]
       }
     },
@@ -32,9 +73,27 @@
       "from": {
         "option_set_type": "options_array",
         "options": [
-          { "option_type": "reference", "item": { "index": "love-letter", "name": "Love Letter" } },
-          { "option_type": "reference", "item": { "index": "lock-of-hair", "name": "Lock of Hair" } },
-          { "option_type": "reference", "item": { "index": "trinket", "name": "Trinket" } }
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "love_letter",
+              "name": "Love Letter"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "lock_of_hair",
+              "name": "Lock of Hair"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "trinket",
+              "name": "Trinket"
+            }
+          }
         ]
       }
     }
@@ -80,5 +139,9 @@
       "I have trouble keeping my true feelings hidden.",
       "Despite my best efforts, I am unreliable to my friends."
     ]
-  }
+  },
+  "desc": [
+    "A gladiator is as much an entertainer as any minstrel or circus performer, trained to make the arts of combat into a spectacle for the crowd to enjoy. This kind of fighting is a form of performance, and you are its star."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/gladiator.json"
 }
