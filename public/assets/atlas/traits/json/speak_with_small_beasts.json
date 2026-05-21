@@ -1,0 +1,24 @@
+{
+  "index": "speak_with_small_beasts",
+  "races": [
+    {
+      "index": "gnome",
+      "name": "gnome",
+      "url": "public/assets/atlas/species/json/gnome.json"
+    }
+  ],
+  "subraces": [
+    {
+      "index": "forest_gnome",
+      "name": "forest gnome",
+      "url": "public/assets/atlas/subraces/json/forest_gnome.json"
+    }
+  ],
+  "name": "speak with small beasts",
+  "desc": [
+    "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Forest gnomes love animals and often keep guinea pigs, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets."
+  ],
+  "url": "public/assets/atlas/traits/json/speak_with_small_beasts.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "public/assets/atlas/traits/speak_with_small_beasts.webp"
+}
