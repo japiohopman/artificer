@@ -1,17 +1,50 @@
 {
   "index": "charlatan",
   "name": "Charlatan",
-  "description": "You have always had a way with people. You know what makes them tick, you can tease out their hearts' desires after a few minutes of conversation, and with a few leading questions you can read them like they were children's books. It's a useful talent, and one that you're perfectly willing to use for your advantage.",
   "starting_proficiencies": [
-    { "index": "skill-deception", "name": "Skill: Deception" },
-    { "index": "skill-sleight-of-hand", "name": "Skill: Sleight of Hand" },
-    { "index": "disguise-kit", "name": "Disguise Kit" },
-    { "index": "forgery-kit", "name": "Forgery Kit" }
+    {
+      "index": "skill_deception",
+      "name": "Skill: Deception"
+    },
+    {
+      "index": "skill_sleight_of_hand",
+      "name": "Skill: Sleight of Hand"
+    },
+    {
+      "index": "disguise_kit",
+      "name": "Disguise Kit"
+    },
+    {
+      "index": "forgery_kit",
+      "name": "Forgery Kit"
+    }
   ],
   "starting_equipment": [
-    { "equipment": { "index": "fine-clothes", "name": "Fine Clothes", "url": "/api/equipment/fine-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "disguise-kit", "name": "Disguise Kit", "url": "/api/equipment/disguise-kit" }, "quantity": 1 },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "clothes_fine",
+        "name": "Fine Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_fine.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "disguise_kit",
+        "name": "Disguise Kit",
+        "url": "public/assets/atlas/equipment/json/disguise_kit.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [
     {
@@ -21,10 +54,34 @@
       "from": {
         "option_set_type": "options_array",
         "options": [
-          { "option_type": "reference", "item": { "index": "stoppered-bottles", "name": "Ten stoppered bottles filled with colored liquid" } },
-          { "option_type": "reference", "item": { "index": "weighted-dice", "name": "A set of weighted dice" } },
-          { "option_type": "reference", "item": { "index": "marked-cards", "name": "A deck of marked cards" } },
-          { "option_type": "reference", "item": { "index": "fake-signet-ring", "name": "A signet ring of an imaginary duke" } }
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "stoppered_bottles",
+              "name": "Ten stoppered bottles filled with colored liquid"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "weighted_dice",
+              "name": "A set of weighted dice"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "marked_cards",
+              "name": "A deck of marked cards"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fake_signet_ring",
+              "name": "A signet ring of an imaginary duke"
+            }
+          }
         ]
       }
     }
@@ -47,7 +104,7 @@
       "I pocket anything I see that might have some value."
     ],
     "ideals": [
-      "Independence. I am a free spirit — no one tells me what to do. (Chaotic)",
+      "Independence. I am a free spirit \u2014 no one tells me what to do. (Chaotic)",
       "Fairness. I never target people who can't afford to lose a few coins. (Lawful)",
       "Charity. I distribute the money I acquire to the people who really need it. (Good)",
       "Creativity. I never run the same con twice. (Chaotic)",
@@ -56,7 +113,7 @@
     ],
     "bonds": [
       "I fleeced the wrong person and must work to ensure that this individual never crosses my path again.",
-      "I owe everything I am to my mentor — a horrible person who's probably rotting in jail somewhere.",
+      "I owe everything I am to my mentor \u2014 a horrible person who's probably rotting in jail somewhere.",
       "I'm trying to pay off an old debt I owe to a generous benefactor.",
       "A powerful person killed someone I love. Some day soon, I'll have my revenge.",
       "I swindled and ruined a person who didn't deserve it. I seek to atone for my misdeeds but might never be able to forgive myself.",
@@ -70,5 +127,9 @@
       "I can't resist swindling people who are more powerful than me.",
       "I hate to admit it and will hate myself for it, but I'll run and preserve my own hide if the going gets tough."
     ]
-  }
+  },
+  "desc": [
+    "You have always had a way with people. You know what makes them tick, you can tease out their hearts' desires after a few minutes of conversation, and with a few leading questions you can read them like they were children's books. It's a useful talent, and one that you're perfectly willing to use for your advantage."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/charlatan.json"
 }
