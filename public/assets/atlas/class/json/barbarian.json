@@ -15,7 +15,7 @@
             "item": {
               "index": "skill_animal_handling",
               "name": "skill: animal handling",
-              "url": "public/assets/atlas/proficiencies/skill_animal_handling"
+              "url": "public/assets/atlas/proficiencies/json/skill_animal_handling.json"
             }
           },
           {
@@ -23,7 +23,7 @@
             "item": {
               "index": "skill_athletics",
               "name": "skill: athletics",
-              "url": "public/assets/atlas/proficiencies/skill_athletics"
+              "url": "public/assets/atlas/proficiencies/json/skill_athletics.json"
             }
           },
           {
@@ -31,7 +31,7 @@
             "item": {
               "index": "skill_intimidation",
               "name": "skill: intimidation",
-              "url": "public/assets/atlas/proficiencies/skill_intimidation"
+              "url": "public/assets/atlas/proficiencies/json/skill_intimidation.json"
             }
           },
           {
@@ -39,7 +39,7 @@
             "item": {
               "index": "skill_nature",
               "name": "skill: nature",
-              "url": "public/assets/atlas/proficiencies/skill_nature"
+              "url": "public/assets/atlas/proficiencies/json/skill_nature.json"
             }
           },
           {
@@ -47,7 +47,7 @@
             "item": {
               "index": "skill_perception",
               "name": "skill: perception",
-              "url": "public/assets/atlas/proficiencies/skill_perception"
+              "url": "public/assets/atlas/proficiencies/json/skill_perception.json"
             }
           },
           {
@@ -55,7 +55,7 @@
             "item": {
               "index": "skill_survival",
               "name": "skill: survival",
-              "url": "public/assets/atlas/proficiencies/skill_survival"
+              "url": "public/assets/atlas/proficiencies/json/skill_survival.json"
             }
           }
         ]
@@ -66,49 +66,49 @@
     {
       "index": "light_armor",
       "name": "light armor",
-      "url": "public/assets/atlas/proficiencies/light_armor"
+      "url": "public/assets/atlas/proficiencies/json/light_armor.json"
     },
     {
       "index": "medium_armor",
       "name": "medium armor",
-      "url": "public/assets/atlas/proficiencies/medium_armor"
+      "url": "public/assets/atlas/proficiencies/json/medium_armor.json"
     },
     {
       "index": "shields",
       "name": "shields",
-      "url": "public/assets/atlas/proficiencies/shields"
+      "url": "public/assets/atlas/proficiencies/json/shields.json"
     },
     {
       "index": "simple_weapons",
       "name": "simple weapons",
-      "url": "public/assets/atlas/proficiencies/simple_weapons"
+      "url": "public/assets/atlas/proficiencies/json/simple_weapons.json"
     },
     {
       "index": "martial_weapons",
       "name": "martial weapons",
-      "url": "public/assets/atlas/proficiencies/martial_weapons"
+      "url": "public/assets/atlas/proficiencies/json/martial_weapons.json"
     },
     {
       "index": "saving_throw_str",
       "name": "saving throw: str",
-      "url": "public/assets/atlas/proficiencies/saving_throw_str"
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_str.json"
     },
     {
       "index": "saving_throw_con",
       "name": "saving throw: con",
-      "url": "public/assets/atlas/proficiencies/saving_throw_con"
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_con.json"
     }
   ],
   "saving_throws": [
     {
       "index": "str",
       "name": "str",
-      "url": "public/assets/atlas/ability_scores/strength"
+      "url": "public/assets/atlas/ability_scores/json/strength.json"
     },
     {
       "index": "con",
       "name": "con",
-      "url": "public/assets/atlas/ability_scores/constitution"
+      "url": "public/assets/atlas/ability_scores/json/constitution.json"
     }
   ],
   "starting_equipment": [
@@ -116,7 +116,7 @@
       "equipment": {
         "index": "explorers_pack",
         "name": "explorer's pack",
-        "url": "public/assets/atlas/equipment/explorers_pack"
+        "url": "public/assets/atlas/equipment/json/explorers_pack.json"
       },
       "quantity": 1
     },
@@ -124,7 +124,7 @@
       "equipment": {
         "index": "javelin",
         "name": "javelin",
-        "url": "public/assets/atlas/equipment/javelin"
+        "url": "public/assets/atlas/equipment/json/javelin.json"
       },
       "quantity": 4
     }
@@ -143,7 +143,7 @@
             "of": {
               "index": "greataxe",
               "name": "greataxe",
-              "url": "public/assets/atlas/equipment/greataxe"
+              "url": "public/assets/atlas/equipment/json/greataxe.json"
             }
           },
           {
@@ -178,7 +178,7 @@
             "of": {
               "index": "handaxe",
               "name": "handaxe",
-              "url": "public/assets/atlas/equipment/handaxe"
+              "url": "public/assets/atlas/equipment/json/handaxe.json"
             }
           },
           {
@@ -208,7 +208,7 @@
         "ability_score": {
           "index": "str",
           "name": "str",
-          "url": "public/assets/atlas/ability_scores/strength"
+          "url": "public/assets/atlas/ability_scores/json/strength.json"
         },
         "minimum_score": 13
       }
@@ -217,17 +217,17 @@
       {
         "index": "shields",
         "name": "shields",
-        "url": "public/assets/atlas/proficiencies/shields"
+        "url": "public/assets/atlas/proficiencies/json/shields.json"
       },
       {
         "index": "simple_weapons",
         "name": "simple weapons",
-        "url": "public/assets/atlas/proficiencies/simple_weapons"
+        "url": "public/assets/atlas/proficiencies/json/simple_weapons.json"
       },
       {
         "index": "martial_weapons",
         "name": "martial weapons",
-        "url": "public/assets/atlas/proficiencies/martial_weapons"
+        "url": "public/assets/atlas/proficiencies/json/martial_weapons.json"
       }
     ]
   },
@@ -235,10 +235,10 @@
     {
       "index": "berserker",
       "name": "berserker",
-      "url": "public/assets/atlas/subclasses/berserker"
+      "url": "public/assets/atlas/class/json/berserker.json"
     }
   ],
-  "url": "public/assets/atlas/classes/json/barbarian.json",
+  "url": "public/assets/atlas/class/json/barbarian.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
   "image": "public/assets/atlas/classes/barbarian.webp"
 }
