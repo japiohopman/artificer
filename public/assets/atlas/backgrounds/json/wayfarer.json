@@ -5,17 +5,73 @@
     "You grew up on the streets surrounded by similarly ill-fated castoffs, a few of them friends and a few of them rivals. You slept where you could and did odd jobs for food. At times, when the hunger became unbearable, you resorted to theft. Still, you never lost your pride and never abandoned hope."
   ],
   "starting_proficiencies": [
-    { "index": "skill_insight", "name": "Skill: Insight", "url": "public/assets/atlas/proficiencies/json/skill_insight.json" },
-    { "index": "skill_stealth", "name": "Skill: Stealth", "url": "public/assets/atlas/proficiencies/json/skill_stealth.json" },
-    { "index": "thieves_tools", "name": "Thieves' Tools", "url": "public/assets/atlas/proficiencies/json/thieves_tools.json" }
+    {
+      "index": "skill_insight",
+      "name": "Skill: Insight",
+      "url": "public/assets/atlas/proficiencies/json/skill_insight.json.json"
+    },
+    {
+      "index": "skill_stealth",
+      "name": "Skill: Stealth",
+      "url": "public/assets/atlas/proficiencies/json/skill_stealth.json.json"
+    },
+    {
+      "index": "thieves_tools",
+      "name": "Thieves' Tools",
+      "url": "public/assets/atlas/proficiencies/json/thieves_tools.json.json"
+    }
   ],
   "starting_equipment": [
-    { "equipment": { "index": "dagger", "name": "Dagger", "url": "public/assets/atlas/equipment/json/dagger.json" }, "quantity": 2 },
-    { "equipment": { "index": "thieves_tools", "name": "Thieves' Tools", "url": "public/assets/atlas/equipment/json/thieves_tools.json" }, "quantity": 1 },
-    { "equipment": { "index": "bedroll", "name": "Bedroll", "url": "public/assets/atlas/equipment/json/bedroll.json" }, "quantity": 1 },
-    { "equipment": { "index": "clothes_travelers", "name": "Traveler's Clothes", "url": "public/assets/atlas/equipment/json/clothes_travelers.json" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "public/assets/atlas/equipment/json/pouch.json" }, "quantity": 2 },
-    { "equipment": { "index": "gold", "name": "Gold Pieces", "url": "public/assets/atlas/equipment/json/gold.json" }, "quantity": 16, "unit": "gp" }
+    {
+      "equipment": {
+        "index": "dagger",
+        "name": "Dagger",
+        "url": "public/assets/atlas/equipment/json/dagger.json"
+      },
+      "quantity": 2
+    },
+    {
+      "equipment": {
+        "index": "thieves_tools",
+        "name": "Thieves' Tools",
+        "url": "public/assets/atlas/equipment/json/thieves_tools.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "bedroll",
+        "name": "Bedroll",
+        "url": "public/assets/atlas/equipment/json/bedroll.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Traveler's Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 2
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold Pieces",
+        "url": "public/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 16,
+      "unit": "gp"
+    }
   ],
   "starting_equipment_options": [],
   "feature": {
@@ -40,7 +96,7 @@
       "Community. We have to take care of each other, because no one else is going to do it. (Lawful)",
       "Change. The low are lifted up, and the high and mighty are brought low. Change is the nature of things. (Chaotic)",
       "Retribution. The rich need to be shown what it's like to have went without and suffer. (Evil)",
-      "People. I'm loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. (Neutral)",
+      "People. I'm loyal to my friends, not to any ideals. (Neutral)",
       "Aspiration. I'm going to prove that I'm worthy of a better life. (Any)"
     ],
     "bonds": [
