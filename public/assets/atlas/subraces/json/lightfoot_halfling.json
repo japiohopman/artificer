@@ -4,7 +4,7 @@
   "race": {
     "index": "halfling",
     "name": "halfling",
-    "url": "public/assets/atlas/races/halfling"
+    "url": "public/assets/atlas/species/json/halfling.json"
   },
   "desc": "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You're inclined to be affable and get along well with others. Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.",
   "ability_bonuses": [
@@ -12,7 +12,7 @@
       "ability_score": {
         "index": "cha",
         "name": "cha",
-        "url": "public/assets/atlas/ability_scores/charisma"
+        "url": "public/assets/atlas/ability_scores/json/charisma.json"
       },
       "bonus": 1
     }
@@ -21,10 +21,10 @@
     {
       "index": "naturally_stealthy",
       "name": "naturally stealthy",
-      "url": "public/assets/atlas/traits/naturally_stealthy"
+      "url": "public/assets/atlas/traits/json/naturally_stealthy.json"
     }
   ],
-  "url": "public/assets/atlas/subraces/json/lightfoot_halfling.json",
+  "url": "public/assets/atlas/species/json/lightfoot_halfling.json",
   "updated_at": "2025-10-24T20:42:14.841Z",
   "image": "public/assets/atlas/subraces/lightfoot_halfling.webp"
 }
