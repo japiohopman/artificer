@@ -5,20 +5,97 @@
     "You were trained to keep one eye looking outside the wall, watching for marauders sweeping from the nearby forest, and your other eye looking inside the wall, searching for cutpurses and troublemakers."
   ],
   "starting_proficiencies": [
-    { "index": "skill_athletics", "name": "Skill: Athletics", "url": "public/assets/atlas/proficiencies/skill_athletics" },
-    { "index": "skill_perception", "name": "Skill: Perception", "url": "public/assets/atlas/proficiencies/skill_perception" },
-    { "index": "dice_set", "name": "Dice Set", "url": "public/assets/atlas/proficiencies/dice_set" }
+    {
+      "index": "skill_athletics",
+      "name": "Skill: Athletics",
+      "url": "public/assets/atlas/proficiencies/json/skill_athletics.json.json"
+    },
+    {
+      "index": "skill_perception",
+      "name": "Skill: Perception",
+      "url": "public/assets/atlas/proficiencies/json/skill_perception.json.json"
+    },
+    {
+      "index": "dice_set",
+      "name": "Dice Set",
+      "url": "public/assets/atlas/proficiencies/json/dice_set.json.json"
+    }
   ],
   "starting_equipment": [
-    { "equipment": { "index": "spear", "name": "Spear", "url": "public/assets/atlas/equipment/spear" }, "quantity": 1 },
-    { "equipment": { "index": "crossbow_light", "name": "Light Crossbow", "url": "public/assets/atlas/equipment/crossbow_light" }, "quantity": 1 },
-    { "equipment": { "index": "crossbow_bolt", "name": "Crossbow Bolt", "url": "public/assets/atlas/equipment/crossbow_bolt" }, "quantity": 20 },
-    { "equipment": { "index": "lantern_hooded", "name": "Hooded Lantern", "url": "public/assets/atlas/equipment/lantern_hooded" }, "quantity": 1 },
-    { "equipment": { "index": "manacles", "name": "Manacles", "url": "public/assets/atlas/equipment/manacles" }, "quantity": 1 },
-    { "equipment": { "index": "quiver", "name": "Quiver", "url": "public/assets/atlas/equipment/quiver" }, "quantity": 1 },
-    { "equipment": { "index": "clothes_travelers", "name": "Traveler's Clothes", "url": "public/assets/atlas/equipment/clothes_travelers" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "public/assets/atlas/equipment/pouch" }, "quantity": 1 },
-    { "equipment": { "index": "gold", "name": "Gold Pieces", "url": "public/assets/atlas/equipment/gold" }, "quantity": 12, "unit": "gp" }
+    {
+      "equipment": {
+        "index": "spear",
+        "name": "Spear",
+        "url": "public/assets/atlas/equipment/json/spear.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "crossbow_light",
+        "name": "Light Crossbow",
+        "url": "public/assets/atlas/equipment/json/crossbow_light.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "crossbow_bolt",
+        "name": "Crossbow Bolt",
+        "url": "public/assets/atlas/equipment/json/crossbow_bolt.json"
+      },
+      "quantity": 20
+    },
+    {
+      "equipment": {
+        "index": "lantern_hooded",
+        "name": "Hooded Lantern",
+        "url": "public/assets/atlas/equipment/json/lantern_hooded.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "manacles",
+        "name": "Manacles",
+        "url": "public/assets/atlas/equipment/json/manacles.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "quiver",
+        "name": "Quiver",
+        "url": "public/assets/atlas/equipment/json/quiver.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Traveler's Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold Pieces",
+        "url": "public/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 12,
+      "unit": "gp"
+    }
   ],
   "starting_equipment_options": [
     {
@@ -28,10 +105,38 @@
       "from": {
         "option_set_type": "options_array",
         "options": [
-          { "option_type": "reference", "item": { "index": "dice_set", "name": "Dice Set", "url": "public/assets/atlas/equipment/dice_set" } },
-          { "option_type": "reference", "item": { "index": "dragonchess_set", "name": "Dragonchess Set", "url": "public/assets/atlas/equipment/dragonchess_set" } },
-          { "option_type": "reference", "item": { "index": "playing_card_set", "name": "Playing Card Set", "url": "public/assets/atlas/equipment/playing_card_set" } },
-          { "option_type": "reference", "item": { "index": "tda_card_set", "name": "Three-Dragon Ante Set", "url": "public/assets/atlas/equipment/tda_card_set" } }
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dice_set",
+              "name": "Dice Set",
+              "url": "public/assets/atlas/equipment/json/dice_set.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragonchess_set",
+              "name": "Dragonchess Set",
+              "url": "public/assets/atlas/equipment/json/dragonchess_set.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "playing_card_set",
+              "name": "Playing Card Set",
+              "url": "public/assets/atlas/equipment/json/playing_card_set.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "tda_card_set",
+              "name": "Three-Dragon Ante Set",
+              "url": "public/assets/atlas/equipment/json/tda_card_set.json"
+            }
+          }
         ]
       }
     }
