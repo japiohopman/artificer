@@ -1,0 +1,1047 @@
+{
+  "level": 1,
+  "xp": 0,
+  "gender": "Female",
+  "stats": {
+    "str": 13,
+    "dex": 13,
+    "con": 13,
+    "int": 13,
+    "wis": 9,
+    "cha": 7
+  },
+  "proficiencies": [
+    "light armor",
+    "simple weapons",
+    "longswords",
+    "rapiers",
+    "shortswords",
+    "hand crossbows",
+    "thieves' tools",
+    "saving throw: dex",
+    "saving throw: int",
+    "Deception",
+    "Sleight of Hand",
+    "Stealth",
+    "Perception"
+  ],
+  "traits": [
+    "I've read every book in the world's greatest libraries — or I like to boast that I have."
+  ],
+  "features": [
+    {
+      "name": "Researcher",
+      "index": "sage-feature",
+      "desc": "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign.",
+      "source": "Background"
+    }
+  ],
+  "flaws": [
+    "Most people scream and run when they see a demon. I stop and take notes on its anatomy."
+  ],
+  "ideals": [
+    "Power. Knowledge is the path to power and domination. (Evil)"
+  ],
+  "bonds": [
+    "My life's work is a series of tomes related to a specific field of lore."
+  ],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 10,
+    "pp": 0
+  },
+  "appearance": {
+    "hairColor": "Verdant Forest",
+    "hairStyle": "Short",
+    "bodyType": "Medium",
+    "eyeColor": "Emerald Glint",
+    "skinColor": "#ffdbac",
+    "height": "5'10\"",
+    "weight": "160 lbs"
+  },
+  "backpack": [
+    {
+      "id": "thieves_tools_gmgn3j3mu",
+      "index": "thieves_tools",
+      "name": "thieves' tools",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/thieves_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/thieves_tools.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fthieves_tools.webp%3Ft%3D1779345562423",
+      "special": [],
+      "equipment_category": {
+        "index": "tools",
+        "name": "tools",
+        "url": "public/assets/atlas/equipment_categories/tools"
+      },
+      "tool_category": "Other Tools",
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "desc": [
+        "This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks."
+      ],
+      "updated_at": "2026-05-04T20:40:21.383Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/thieves_tools.webp",
+      "sprite_index": 15,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "category": "Other Tools",
+      "last_updated": "4-5-2026",
+      "slot": [
+        "tool"
+      ],
+      "background_type": "land_forest"
+    },
+    {
+      "id": "shortbow_54ggucko6",
+      "index": "shortbow",
+      "name": "shortbow",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/shortbow.json",
+      "image_url": "public/assets/atlas/equipment/images/shortbow.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fshortbow.webp%3Ft%3D1779345572633",
+      "desc": [
+        "The wood of this bow is perpetually cold to the touch, carved from the gnarled marrow-root of a hangman’s tree that has tasted nothing but shadow. Each drawn string hums with the low, discordant vibration of a death rattle, eager to trade the breath in a target's lungs for the silence of the grave."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Ranged",
+      "category_range": "Simple Ranged",
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d6",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 80,
+        "long": 320
+      },
+      "properties": [
+        {
+          "index": "ammunition",
+          "name": "ammunition",
+          "url": "public/assets/atlas/weapon_properties/ammunition"
+        },
+        {
+          "index": "two_handed",
+          "name": "two_handed",
+          "url": "public/assets/atlas/weapon_properties/two_handed"
+        }
+      ],
+      "updated_at": "2026-04-12T08:12:42.550Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/shortbow.webp",
+      "sprite_index": 17,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+      "category": "Simple Ranged Weapons",
+      "last_updated": "12-4-2026"
+    },
+    {
+      "id": "arrow_ayitiyo3h",
+      "index": "arrow",
+      "name": "arrow",
+      "quantity": 20,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/arrow.json",
+      "image_url": "public/assets/atlas/equipment/images/arrow.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Farrow.webp%3Ft%3D1779345572834",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "ammunition",
+        "name": "ammunition",
+        "url": "public/assets/atlas/equipment_categories/ammunition"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "updated_at": "2026-05-17T03:51:57.696Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/arrow.webp",
+      "sprite_index": 8,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+      "background_type": "land_forest",
+      "category": "Ammunition",
+      "last_updated": "17-5-2026",
+      "slot": [
+        "ammo"
+      ]
+    },
+    {
+      "id": "backpack_2wv7cuthy",
+      "index": "backpack",
+      "name": "backpack",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/backpack.json",
+      "image_url": "public/assets/atlas/equipment/images/backpack.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fbackpack.webp?t=1778999506173",
+      "desc": [
+        "Fashioned from the hide of a beast best left unnamed, this backpack whispers secrets of forgotten pilgrimages with every rustle, its depths a maw promising to swallow more than just supplies.\n"
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2026-05-17T06:32:30.427Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/backpack.webp",
+      "sprite_index": 9,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "back"
+      ],
+      "last_updated": "17-5-2026",
+      "category": "Adventuring Gear"
+    },
+    {
+      "id": "crowbar_3nm5euyxm",
+      "index": "crowbar",
+      "name": "crowbar",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/crowbar.json",
+      "image_url": "public/assets/atlas/equipment/images/crowbar.webp",
+      "imageUrl": "/assets/atlas/equipment/images/crowbar.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "desc": [
+        "Using a crowbar grants advantage to Strength checks where the crowbar's leverage can be applied."
+      ],
+      "updated_at": "2026-04-21T14:16:41.674Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/crowbar.webp",
+      "sprite_index": 21,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "background_type": "land_forest",
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "hammer_y0yip26ay",
+      "index": "hammer",
+      "name": "hammer",
+      "quantity": 1,
+      "weight": 3,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/hammer.json",
+      "image_url": "public/assets/atlas/equipment/images/hammer.webp",
+      "imageUrl": "/assets/atlas/equipment/images/hammer.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-30T11:29:25.846Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/hammer.webp",
+      "sprite_index": 1,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "tool"
+      ],
+      "last_updated": "30-4-2026"
+    },
+    {
+      "id": "piton_iobqowqon",
+      "index": "piton",
+      "name": "piton",
+      "quantity": 10,
+      "weight": 0.25,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/piton.json",
+      "image_url": "public/assets/atlas/equipment/images/piton.webp",
+      "imageUrl": "/assets/atlas/equipment/images/piton.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "cp"
+      },
+      "updated_at": "2026-04-30T11:34:53.117Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/piton.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "extra"
+      ],
+      "last_updated": "30-4-2026"
+    },
+    {
+      "id": "torch_mmt3mfc88",
+      "index": "torch",
+      "name": "torch",
+      "quantity": 10,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/torch.json",
+      "image_url": "public/assets/atlas/equipment/images/torch.webp",
+      "imageUrl": "/assets/atlas/equipment/images/torch.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "cp"
+      },
+      "desc": [
+        "A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
+      ],
+      "updated_at": "2026-04-24T03:30:26.922Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/torch.webp",
+      "sprite_index": 18,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "off-hand"
+      ],
+      "last_updated": "24-4-2026"
+    },
+    {
+      "id": "tinderbox_xrdxzecwv",
+      "index": "tinderbox",
+      "name": "tinderbox",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/tinderbox.json",
+      "image_url": "public/assets/atlas/equipment/images/tinderbox.webp",
+      "imageUrl": "/assets/atlas/equipment/tinderbox.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch--or anything else with abundant, exposed fuel--takes an action.",
+        "Lighting any other fire takes 1 minute."
+      ],
+      "updated_at": "2026-04-15T13:57:41.365Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/tinderbox.webp",
+      "sprite_index": 16,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "category": "Adventuring Gear",
+      "last_updated": "15-4-2026"
+    },
+    {
+      "id": "rations_1_day_z2f83zrkj",
+      "index": "rations_1_day",
+      "name": "rations (1 day)",
+      "quantity": 10,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/rations_1_day.json",
+      "image_url": "public/assets/atlas/equipment/images/rations_1_day.webp",
+      "imageUrl": "/assets/atlas/equipment/images/rations_1_day.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts."
+      ],
+      "updated_at": "2026-04-30T10:37:09.792Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/rations_1_day.webp",
+      "sprite_index": 20,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "extra"
+      ],
+      "last_updated": "30-4-2026"
+    },
+    {
+      "id": "waterskin_agh27s38d",
+      "index": "waterskin",
+      "name": "waterskin",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/waterskin.json",
+      "image_url": "public/assets/atlas/equipment/images/waterskin.webp",
+      "imageUrl": "/assets/atlas/equipment/images/waterskin.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "sp"
+      },
+      "updated_at": "2026-04-21T14:20:07.679Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/waterskin.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "extra"
+      ],
+      "last_updated": "21-4-2026"
+    },
+    {
+      "id": "rope_hempen_50_feet_vykux0d01",
+      "index": "rope_hempen_50_feet",
+      "name": "rope, hempen (50 feet)",
+      "quantity": 1,
+      "weight": 10,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/rope_hempen_50_feet.json",
+      "image_url": "public/assets/atlas/equipment/images/rope_hempen_50_feet.webp",
+      "imageUrl": "/assets/atlas/equipment/images/rope_hempen_50_feet.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "desc": [
+        "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check."
+      ],
+      "updated_at": "2026-04-30T10:51:30.498Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/rope_hempen_50_feet.webp",
+      "sprite_index": 0,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "extra"
+      ],
+      "category": "Adventuring Gear",
+      "last_updated": "30-4-2026"
+    },
+    {
+      "id": "ink_1_ounce_bottle_oywm6i8f2",
+      "index": "ink_1_ounce_bottle",
+      "name": "Bottle of Black Ink",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
+      "image_url": "public/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
+      "desc": [
+        "This viscous ink, drawn from the pallid veins of a drowned kraken, whispers secrets on the page, but each stroke draws the writer closer to the abyss. It is said that pacts sealed with this ink bind not just the signatory, but their very soul to the unseen horrors that lurk beneath the waves.\n"
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-23T09:40:01.455Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/ink_1_ounce_bottle.webp",
+      "sprite_index": 12,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "background_type": "land_forest",
+      "last_updated": "23-4-2026",
+      "category": "Adventuring Gear"
+    },
+    {
+      "id": "quill_tymdobzea",
+      "index": "quill",
+      "name": "Quill",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/quill.json",
+      "image_url": "public/assets/atlas/equipment/images/quill.webp",
+      "imageUrl": "/assets/atlas/equipment/images/quill.webp"
+    },
+    {
+      "id": "small_knife_b301yp05o",
+      "index": "small_knife",
+      "name": "Small Knife",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/small_knife.json",
+      "image_url": "public/assets/atlas/equipment/images/small_knife.webp",
+      "imageUrl": "/assets/atlas/equipment/images/small_knife.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 0,
+        "unit": "cp"
+      },
+      "desc": [
+        "A small knife, typically found in a scholar's pack."
+      ],
+      "updated_at": "2026-04-26T06:48:54.423Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/small_knife.webp",
+      "sprite_index": 1,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "background_type": "land_forest",
+      "slot": "off-hand",
+      "last_updated": "26-4-2026"
+    },
+    {
+      "id": "letter_from_dead_colleague_tfh7aa4rc",
+      "index": "letter_from_dead_colleague",
+      "name": "Letter from a dead colleague",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/letter_from_dead_colleague.json",
+      "image_url": "public/assets/atlas/equipment/images/letter_from_dead_colleague.webp",
+      "imageUrl": "/assets/atlas/equipment/images/letter_from_dead_colleague.webp"
+    },
+    {
+      "id": "pouch_w9jg2pqcn",
+      "index": "pouch",
+      "name": "Pouch",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/pouch.json",
+      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "desc": [
+        "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
+      ],
+      "updated_at": "2026-05-01T07:55:16.273Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/pouch.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+      "background_type": "land_forest",
+      "category": "Adventuring Gear",
+      "last_updated": "1-5-2026"
+    },
+    {
+      "id": "leather_armor_t9ia6ubfn",
+      "index": "leather_armor",
+      "name": "leather armor",
+      "quantity": 1,
+      "weight": 10,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/leather_armor.json",
+      "image_url": "public/assets/atlas/equipment/images/leather_armor.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fleather_armor.webp%3Ft%3D1779345562664",
+      "desc": [
+        "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "armor",
+        "name": "armor",
+        "url": "public/assets/atlas/equipment_categories/armor"
+      },
+      "armor_category": "Light",
+      "armor_class": {
+        "base": 11,
+        "dex_bonus": true
+      },
+      "str_minimum": 0,
+      "stealth_disadvantage": false,
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-15T07:04:03.712Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/leather_armor.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "category": "Armor",
+      "slot": [
+        "chest"
+      ],
+      "last_updated": "15-4-2026"
+    },
+    {
+      "id": "dagger_4f92qfxzk",
+      "index": "dagger",
+      "name": "dagger",
+      "quantity": 2,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/dagger.json",
+      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fdagger.webp%3Ft%3D1779345562389",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "public/assets/atlas/weapon_properties/finesse"
+        },
+        {
+          "index": "light",
+          "name": "light",
+          "url": "public/assets/atlas/weapon_properties/light"
+        },
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "updated_at": "2026-04-28T13:26:26.921Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/dagger.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "background_type": "land_forest",
+      "slot": [
+        "main-hand"
+      ],
+      "category": "Simple Melee Weapons",
+      "last_updated": "28-4-2026"
+    }
+  ],
+  "inventory": {
+    "chest": {
+      "id": "leather_armor_9dt1nzgmj",
+      "index": "leather_armor",
+      "name": "leather armor",
+      "quantity": 1,
+      "weight": 10,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/leather_armor.json",
+      "image_url": "public/assets/atlas/equipment/images/leather_armor.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fleather_armor.webp%3Ft%3D1779345562664",
+      "desc": [
+        "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "armor",
+        "name": "armor",
+        "url": "public/assets/atlas/equipment_categories/armor"
+      },
+      "armor_category": "Light",
+      "armor_class": {
+        "base": 11,
+        "dex_bonus": true
+      },
+      "str_minimum": 0,
+      "stealth_disadvantage": false,
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-15T07:04:03.712Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/leather_armor.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+      "category": "Armor",
+      "slot": "chest",
+      "last_updated": "15-4-2026",
+      "chest_slot": "leather armor"
+    },
+    "main-hand": {
+      "id": "dagger_bjz5mp06w",
+      "index": "dagger",
+      "name": "dagger",
+      "quantity": 2,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/dagger.json",
+      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fdagger.webp%3Ft%3D1779345562389",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "public/assets/atlas/weapon_properties/finesse"
+        },
+        {
+          "index": "light",
+          "name": "light",
+          "url": "public/assets/atlas/weapon_properties/light"
+        },
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "updated_at": "2026-04-28T13:26:26.921Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/dagger.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "background_type": "land_forest",
+      "slot": "main-hand",
+      "category": "Simple Melee Weapons",
+      "last_updated": "28-4-2026",
+      "main_hand_slot": "dagger"
+    },
+    "off-hand": {
+      "id": "shortsword_0lc5ab8m6",
+      "index": "shortsword",
+      "name": "shortsword",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/shortsword.json",
+      "image_url": "public/assets/atlas/equipment/images/shortsword.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fshortsword.webp%3Ft%3D1779345569719",
+      "desc": [
+        "Forged in the shadow of a dying god, the shortsword whispers promises of swift, brutal ends, its blackened steel stained with the echoes of forgotten sacrifices. Each swing leaves a trail of phantom agony in the air, a chilling testament to the countless souls claimed by its razor-sharp edge.\n"
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Martial",
+      "weapon_range": "Melee",
+      "category_range": "Martial Melee",
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d6",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "public/assets/atlas/weapon_properties/finesse"
+        },
+        {
+          "index": "light",
+          "name": "light",
+          "url": "public/assets/atlas/weapon_properties/light"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "updated_at": "2026-04-19T14:46:32.723Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/shortsword.webp",
+      "sprite_index": 18,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+      "background_type": "land_forest",
+      "category": "Simple Melee Weapons",
+      "slot": "off-hand",
+      "last_updated": "19-4-2026",
+      "off_hand_slot": "shortsword"
+    },
+    "clothes": {
+      "id": "clothes_common_136qhljef",
+      "index": "clothes_common",
+      "name": "Common Clothes",
+      "quantity": 1,
+      "weight": 3,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/clothes_common.json",
+      "image_url": "public/assets/atlas/equipment/images/clothes_common.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_common.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "sp"
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/clothes_common.webp",
+      "sprite_index": 9,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp",
+      "slot": "clothes",
+      "clothes_slot": "Common Clothes"
+    }
+  },
+  "knownSpells": [],
+  "languages": [
+    "common",
+    "elvish",
+    "celestial",
+    "abyssal",
+    "draconic",
+    "dwarvish",
+    "goblin",
+    "gnomish",
+    "orc",
+    "primordial"
+  ],
+  "preparedSpells": [],
+  "spellSlots": {},
+  "choices": {},
+  "race": "half_elf",
+  "class": "rogue",
+  "spellcastingAbility": "cha",
+  "background": "sage",
+  "backstory": "They never spoke their name within the hallowed, dust-choked halls of the Great Archive, for they believed that to name a thing is to limit its potential. Born of a restless union between a human scholar and an elven exile, they spent their formative years not in the sun, but beneath the flickering glow of enchanted candles, devouring scrolls that others feared to touch. While their peers studied history to learn from the past, this silent seeker studied it to find the keys to the future. They frequently boasted of having read every volume within the world’s greatest repositories, a claim punctuated by a cold, calculating gaze that suggested they had not just read the words, but had dissected the very souls of the authors who wrote them.\n\nThe transition from scholar to rogue was not a loss of discipline, but a practical refinement of it. They realized early on that the most potent secrets are kept behind iron grates, complex locks, and lethal traps. To master the world, one must first master the art of treading where one is not invited. They trade in the currency of shadows, using a blade not for simple malice, but with the surgical precision of an anatomist. While others recoil in terror at the sight of a rift-born horror, they are the one standing in the fray, ink-stained fingers dancing across parchment as they record the rhythmic pulsing of a demon’s secondary heart. To them, every monster is a lesson, and every drop of ichor is a vital footnote in their growing magnum opus.\n\nThis lifelong obsession has culminated in a series of leather-bound tomes—a definitive codex on the forbidden lore of the planes—which they carry with the reverence of a holy relic. This work is not merely a collection of facts, but a roadmap to ultimate dominion. They adventure not for gold or the hollow praise of heroes, but for the missing chapters that can only be found in the blood-stained ruins and darkest corners of the earth. They believe that once the final word is written and the last anatomical secret is bared, the laws of reality will bow to their whim. Knowledge is the only true path to power, and they will pick every lock and slit every throat necessary to claim the throne that hidden truth provides.",
+  "alignment": "chaotic_evil",
+  "name": "ljn",
+  "imageUrl": "data/character_save/images/slot3/slot3_portrait.webp",
+  "avatarUrl": "data/character_save/images/slot3/slot3_avatar.webp",
+  "matrixUrl": "data/character_save/images/slot3/slot3_matrix.webp",
+  "id": "slot3",
+  "hp": 9,
+  "maxHp": 9,
+  "lastSaved": "2026-05-21T06:43:29.702Z"
+}
