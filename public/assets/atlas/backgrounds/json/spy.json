@@ -1,16 +1,46 @@
 {
   "index": "spy",
   "name": "Spy",
-  "description": "You have a history of breaking the law, but you have put your skills to use for a more honorable cause: the defense of your nation or the service of a powerful figure. You are an experienced operative with a history of espionage, and you still have contacts within the network you served. You're far closer than most people to the world of secrets, theft, and deception.",
   "starting_proficiencies": [
-    { "index": "skill-deception", "name": "Skill: Deception" },
-    { "index": "skill-stealth", "name": "Skill: Stealth" },
-    { "index": "thieves-tools", "name": "Thieves' Tools" }
+    {
+      "index": "skill_deception",
+      "name": "Skill: Deception"
+    },
+    {
+      "index": "skill_stealth",
+      "name": "Skill: Stealth"
+    },
+    {
+      "index": "thieves_tools",
+      "name": "Thieves' Tools"
+    }
   ],
   "starting_equipment": [
-    { "equipment": { "index": "crowbar", "name": "Crowbar", "url": "/api/equipment/crowbar" }, "quantity": 1 },
-    { "equipment": { "index": "common-clothes", "name": "Dark Common Clothes with Hood", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "crowbar",
+        "name": "Crowbar",
+        "url": "public/assets/atlas/equipment/json/crowbar.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Dark Common Clothes with Hood",
+        "url": "public/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [
     {
@@ -20,10 +50,34 @@
       "from": {
         "option_set_type": "options_array",
         "options": [
-          { "option_type": "reference", "item": { "index": "dice-set", "name": "Dice Set" } },
-          { "option_type": "reference", "item": { "index": "dragonchess-set", "name": "Dragonchess Set" } },
-          { "option_type": "reference", "item": { "index": "playing-card-set", "name": "Playing Card Set" } },
-          { "option_type": "reference", "item": { "index": "three-dragon-ante-set", "name": "Three-Dragon Ante Set" } }
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dice_set",
+              "name": "Dice Set"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragonchess_set",
+              "name": "Dragonchess Set"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "playing_card_set",
+              "name": "Playing Card Set"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "three_dragon_ante_set",
+              "name": "Three-Dragon Ante Set"
+            }
+          }
         ]
       }
     }
@@ -69,5 +123,9 @@
       "I turn tail and run when things look bad.",
       "An innocent person is in prison for a crime that I committed."
     ]
-  }
+  },
+  "desc": [
+    "You have a history of breaking the law, but you have put your skills to use for a more honorable cause: the defense of your nation or the service of a powerful figure. You are an experienced operative with a history of espionage, and you still have contacts within the network you served. You're far closer than most people to the world of secrets, theft, and deception."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/spy.json"
 }
