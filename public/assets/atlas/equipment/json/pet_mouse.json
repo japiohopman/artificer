@@ -1,0 +1,19 @@
+{
+  "index": "pet_mouse",
+  "name": "Pet mouse",
+  "equipment_category": {
+    "index": "adventure_gear",
+    "name": "adventure gear",
+    "url": "public/assets/atlas/equipment_categories/json/adventure_gear.json"
+  },
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 0.,
+  "desc": [
+    "a tiny pet mouse"
+  ],
+  "url": "public/assets/atlas/equipment/json/pet_mouse.json",
+  "image": "public/assets/atlas/equipment/images/pet_mouse.webp"
+}
