@@ -1,9 +1,63 @@
 {
   "index": "merchant",
-  "name": "merchant",
+  "name": "Merchant",
   "desc": [
-    "Je hebt je leven doorgebracht met handel drijven, het inkopen en verkopen van goederen en het onderhandelen over de beste prijzen op markten."
+    "You were apprenticed to a trader, caravan master, or shopkeeper, learning the fundamentals of commerce. You traveled broadly, and you earned a living by buying and selling the raw materials artisans need to practice their craft or finished works from such crafters."
   ],
+  "starting_proficiencies": [
+    { "index": "skill_animal_handling", "name": "Skill: Animal Handling", "url": "public/assets/atlas/proficiencies/json/skill_animal_handling.json" },
+    { "index": "skill_persuasion", "name": "Skill: Persuasion", "url": "public/assets/atlas/proficiencies/json/skill_persuasion.json" },
+    { "index": "navigators_tools", "name": "Navigator's Tools", "url": "public/assets/atlas/proficiencies/json/navigators_tools.json" }
+  ],
+  "starting_equipment": [
+    { "equipment": { "index": "navigators_tools", "name": "Navigator's Tools", "url": "public/assets/atlas/equipment/json/navigators_tools.json" }, "quantity": 1 },
+    { "equipment": { "index": "clothes_travelers", "name": "Traveler's Clothes", "url": "public/assets/atlas/equipment/json/clothes_travelers.json" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "public/assets/atlas/equipment/json/pouch.json" }, "quantity": 2 },
+    { "equipment": { "index": "gold", "name": "Gold Pieces", "url": "public/assets/atlas/equipment/json/gold.json" }, "quantity": 22, "unit": "gp" }
+  ],
+  "starting_equipment_options": [],
+  "feature": {
+    "name": "Lucky",
+    "desc": [
+      "You have inexplicable luck that seems to kick in at just the right moment. You have 3 Luck Points. Whenever you make an d20 Test, you can spend 1 Luck Point to give yourself Advantage on the roll. Alternatively, when a creature rolls a d20 for an attack roll against you, you can spend 1 Luck Point to give that creature Disadvantage on the roll. You regain all spent Luck Points when you finish a Long Rest."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I'm always looking for a bargain.",
+      "I have a story for every coin I've earned.",
+      "I'm full of witty aphorisms.",
+      "I don't part with my money easily.",
+      "I'm a bit of a snob who looks down on those who can't appreciate fine goods.",
+      "I believe that anything worth doing is worth doing for a profit.",
+      "I'm well known for my fair (or unfair) dealings.",
+      "I like to talk at length about my travels."
+    ],
+    "ideals": [
+      "Prosperity. Wealth is the key to a better life for everyone. (Good)",
+      "Fairness. A deal is a deal, and both sides should benefit. (Lawful)",
+      "Freedom. Everyone should be free to pursue their own livelihood. (Chaotic)",
+      "Greed. I'm only in it for the money. (Evil)",
+      "People. I'm loyal to my friends and family; the business comes second. (Neutral)",
+      "Aspiration. I work hard to be the wealthiest merchant in the land. (Any)"
+    ],
+    "bonds": [
+      "I'm trying to rebuild the family business that was destroyed.",
+      "I owe a great debt to the guild that trained me.",
+      "My life's work is to find the rarest spice in the world.",
+      "I pursue wealth to secure the love of my life.",
+      "One day I will return to my home and prove I'm more than just a street peddler.",
+      "I will get revenge on the rival who ruined my reputation."
+    ],
+    "flaws": [
+      "I'm quick to assume that someone is trying to cheat me.",
+      "I'll do anything to get my hands on something rare or priceless.",
+      "I'm horribly jealous of anyone who can outshine my success.",
+      "I'm soft-hearted and can't resist a hard-luck story.",
+      "No one must ever learn that I once sold counterfeit goods.",
+      "I'm a perfectionist who can't finish a deal until it's flawless."
+    ]
+  },
   "image": "public/assets/atlas/backgrounds/merchant.webp",
   "url": "public/assets/atlas/backgrounds/json/merchant.json"
 }
