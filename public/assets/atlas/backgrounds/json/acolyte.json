@@ -1,42 +1,187 @@
 {
   "index": "acolyte",
   "name": "Acolyte",
-  "description": "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshippers into the presence of the divine. You are not necessarily a cleric — performing sacred rites is not the same thing as channeling divine power.",
   "starting_proficiencies": [
-    { "index": "skill-insight", "name": "Skill: Insight" },
-    { "index": "skill-religion", "name": "Skill: Religion" }
+    {
+      "index": "skill_insight",
+      "name": "Skill: Insight"
+    },
+    {
+      "index": "skill_religion",
+      "name": "Skill: Religion"
+    }
   ],
   "language_options": {
     "choose": 2,
     "from": {
       "option_set_type": "options_array",
       "options": [
-        { "option_type": "reference", "item": { "index": "common", "name": "Common" } },
-        { "option_type": "reference", "item": { "index": "dwarvish", "name": "Dwarvish" } },
-        { "option_type": "reference", "item": { "index": "elvish", "name": "Elvish" } },
-        { "option_type": "reference", "item": { "index": "giant", "name": "Giant" } },
-        { "option_type": "reference", "item": { "index": "gnomish", "name": "Gnomish" } },
-        { "option_type": "reference", "item": { "index": "goblin", "name": "Goblin" } },
-        { "option_type": "reference", "item": { "index": "halfling", "name": "Halfling" } },
-        { "option_type": "reference", "item": { "index": "orc", "name": "Orc" } },
-        { "option_type": "reference", "item": { "index": "abyssal", "name": "Abyssal" } },
-        { "option_type": "reference", "item": { "index": "celestial", "name": "Celestial" } },
-        { "option_type": "reference", "item": { "index": "draconic", "name": "Draconic" } },
-        { "option_type": "reference", "item": { "index": "deep-speech", "name": "Deep Speech" } },
-        { "option_type": "reference", "item": { "index": "infernal", "name": "Infernal" } },
-        { "option_type": "reference", "item": { "index": "primordial", "name": "Primordial" } },
-        { "option_type": "reference", "item": { "index": "sylvan", "name": "Sylvan" } },
-        { "option_type": "reference", "item": { "index": "undercommon", "name": "Undercommon" } }
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "common",
+            "name": "Common"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "dwarvish",
+            "name": "Dwarvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "elvish",
+            "name": "Elvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "giant",
+            "name": "Giant"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "gnomish",
+            "name": "Gnomish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "goblin",
+            "name": "Goblin"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "halfling",
+            "name": "Halfling"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "orc",
+            "name": "Orc"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "abyssal",
+            "name": "Abyssal"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "celestial",
+            "name": "Celestial"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "draconic",
+            "name": "Draconic"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "deep_speech",
+            "name": "Deep Speech"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "infernal",
+            "name": "Infernal"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "primordial",
+            "name": "Primordial"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "sylvan",
+            "name": "Sylvan"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "undercommon",
+            "name": "Undercommon"
+          }
+        }
       ]
     }
   },
   "starting_equipment": [
-    { "equipment": { "index": "holy-symbol", "name": "Holy Symbol", "url": "/api/equipment/holy-symbol" }, "quantity": 1, "slot": "neck" },
-    { "equipment": { "index": "prayer-book", "name": "Prayer Book", "url": "/api/equipment/prayer-book" }, "quantity": 1 },
-    { "equipment": { "index": "stick-of-incense", "name": "Stick of Incense", "url": "/api/equipment/stick-of-incense" }, "quantity": 5 },
-    { "equipment": { "index": "vestments", "name": "Vestments", "url": "/api/equipment/vestments" }, "quantity": 1 },
-    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "amulet",
+        "name": "Holy Symbol",
+        "url": "public/assets/atlas/equipment/json/amulet.json"
+      },
+      "quantity": 1,
+      "slot": "neck"
+    },
+    {
+      "equipment": {
+        "index": "book",
+        "name": "Prayer Book",
+        "url": "public/assets/atlas/equipment/json/book.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "block_of_incense",
+        "name": "Stick of Incense",
+        "url": "public/assets/atlas/equipment/json/block_of_incense.json"
+      },
+      "quantity": 5
+    },
+    {
+      "equipment": {
+        "index": "vestments",
+        "name": "Vestments",
+        "url": "public/assets/atlas/equipment/json/vestments.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Common Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [],
   "feature": {
@@ -81,5 +226,9 @@
       "I am suspicious of strangers and expect the worst of them.",
       "Once I pick a goal, I become obsessed with it to the detriment of everything else in my life."
     ]
-  }
+  },
+  "desc": [
+    "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshippers into the presence of the divine. You are not necessarily a cleric \u2014 performing sacred rites is not the same thing as channeling divine power."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/acolyte.json"
 }
