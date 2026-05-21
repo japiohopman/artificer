@@ -1,20 +1,75 @@
 {
   "index": "urchin",
   "name": "Urchin",
-  "description": "You grew up on the streets alone, orphaned, and poor. You had no one to watch over you or provide for you, so you learned to provide for yourself. You fought fiercely for every scrap of food and kept a constant watch out for other urchins who might steal from you. You slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the help of a doctor or a temple. You've survived despite all odds, and you did it through cunning, strength, speed, or some combination of each.",
   "starting_proficiencies": [
-    { "index": "skill-sleight-of-hand", "name": "Skill: Sleight of Hand" },
-    { "index": "skill-stealth", "name": "Skill: Stealth" },
-    { "index": "disguise-kit", "name": "Disguise Kit" },
-    { "index": "thieves-tools", "name": "Thieves' Tools" }
+    {
+      "index": "skill_sleight_of_hand",
+      "name": "Skill: Sleight of Hand"
+    },
+    {
+      "index": "skill_stealth",
+      "name": "Skill: Stealth"
+    },
+    {
+      "index": "disguise_kit",
+      "name": "Disguise Kit"
+    },
+    {
+      "index": "thieves_tools",
+      "name": "Thieves' Tools"
+    }
   ],
   "starting_equipment": [
-    { "equipment": { "index": "small-knife", "name": "Small Knife", "url": "/api/equipment/small-knife" }, "quantity": 1, "slot": "off-hand" },
-    { "equipment": { "index": "city-map", "name": "Map of the city you grew up in", "url": "/api/equipment/city-map" }, "quantity": 1 },
-    { "equipment": { "index": "pet-mouse", "name": "Pet Mouse", "url": "/api/equipment/pet-mouse" }, "quantity": 1 },
-    { "equipment": { "index": "token-of-parents", "name": "Token to remember your parents by", "url": "/api/equipment/token-of-parents" }, "quantity": 1 },
-    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "small_knife",
+        "name": "Small Knife",
+        "url": "public/assets/atlas/equipment/json/small_knife.json"
+      },
+      "quantity": 1,
+      "slot": "off-hand"
+    },
+    {
+      "equipment": {
+        "index": "city_map",
+        "name": "Map of the city you grew up in",
+        "url": "public/assets/atlas/equipment/json/city_map.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "pet_mouse",
+        "name": "Pet Mouse",
+        "url": "public/assets/atlas/equipment/json/pet_mouse.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "token_of_parents",
+        "name": "Token to remember your parents by",
+        "url": "public/assets/atlas/equipment/json/token_of_parents.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Common Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [],
   "feature": {
@@ -58,5 +113,9 @@
       "I'm too greedy for my own good. I can't resist taking a risk if there's money involved.",
       "It's not stealing if I need it more than they do."
     ]
-  }
+  },
+  "desc": [
+    "You grew up on the streets alone, orphaned, and poor. You had no one to watch over you or provide for you, so you learned to provide for yourself. You fought fiercely for every scrap of food and kept a constant watch out for other urchins who might steal from you. You slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the help of a doctor or a temple. You've survived despite all odds, and you did it through cunning, strength, speed, or some combination of each."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/urchin.json"
 }
