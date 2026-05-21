@@ -1,0 +1,24 @@
+{
+  "index": "drow_magic",
+  "races": [
+    {
+      "index": "elf",
+      "name": "elf",
+      "url": "public/assets/atlas/species/json/elf.json"
+    }
+  ],
+  "subraces": [
+    {
+      "index": "drow",
+      "name": "drow",
+      "url": "public/assets/atlas/subraces/json/drow.json"
+    }
+  ],
+  "name": "drow magic",
+  "desc": [
+    "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+  ],
+  "url": "public/assets/atlas/traits/json/drow_magic.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "public/assets/atlas/traits/drow_magic.webp"
+}
