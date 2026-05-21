@@ -1,17 +1,54 @@
 {
-  "index": "folk-hero",
+  "index": "folk_hero",
   "name": "Folk Hero",
-  "description": "You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.",
   "starting_proficiencies": [
-    { "index": "skill-animal-handling", "name": "Skill: Animal Handling" },
-    { "index": "skill-survival", "name": "Skill: Survival" },
-    { "index": "vehicles-land", "name": "Vehicles (Land)" }
+    {
+      "index": "skill_animal_handling",
+      "name": "Skill: Animal Handling"
+    },
+    {
+      "index": "skill_survival",
+      "name": "Skill: Survival"
+    },
+    {
+      "index": "vehicles_land",
+      "name": "Vehicles (Land)"
+    }
   ],
   "starting_equipment": [
-    { "equipment": { "index": "shovel", "name": "Shovel", "url": "/api/equipment/shovel" }, "quantity": 1 },
-    { "equipment": { "index": "iron-pot", "name": "Iron Pot", "url": "/api/equipment/iron-pot" }, "quantity": 1 },
-    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "shovel",
+        "name": "Shovel",
+        "url": "public/assets/atlas/equipment/json/shovel.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "pot_iron",
+        "name": "Iron Pot",
+        "url": "public/assets/atlas/equipment/json/pot_iron.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Common Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [
     {
@@ -21,23 +58,125 @@
       "from": {
         "option_set_type": "options_array",
         "options": [
-          { "option_type": "reference", "item": { "index": "alchemists-supplies", "name": "Alchemist's Supplies" } },
-          { "option_type": "reference", "item": { "index": "brewers-supplies", "name": "Brewer's Supplies" } },
-          { "option_type": "reference", "item": { "index": "calligraphers-supplies", "name": "Calligrapher's Supplies" } },
-          { "option_type": "reference", "item": { "index": "carpenters-tools", "name": "Carpenter's Tools" } },
-          { "option_type": "reference", "item": { "index": "cartographers-tools", "name": "Cartographer's Tools" } },
-          { "option_type": "reference", "item": { "index": "cobblers-tools", "name": "Cobbler's Tools" } },
-          { "option_type": "reference", "item": { "index": "cooks-utensils", "name": "Cook's Utensils" } },
-          { "option_type": "reference", "item": { "index": "glassblowers-tools", "name": "Glassblower's Tools" } },
-          { "option_type": "reference", "item": { "index": "jewelers-tools", "name": "Jeweler's Tools" } },
-          { "option_type": "reference", "item": { "index": "leatherworkers-tools", "name": "Leatherworker's Tools" } },
-          { "option_type": "reference", "item": { "index": "masons-tools", "name": "Mason's Tools" } },
-          { "option_type": "reference", "item": { "index": "painters-supplies", "name": "Painter's Supplies" } },
-          { "option_type": "reference", "item": { "index": "potters-tools", "name": "Potter's Tools" } },
-          { "option_type": "reference", "item": { "index": "smiths-tools", "name": "Smith's Tools" } },
-          { "option_type": "reference", "item": { "index": "tinkers-tools", "name": "Tinker's Tools" } },
-          { "option_type": "reference", "item": { "index": "weavers-tools", "name": "Weaver's Tools" } },
-          { "option_type": "reference", "item": { "index": "woodcarvers-tools", "name": "Woodcarver's Tools" } }
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "alchemists_supplies",
+              "name": "Alchemist's Supplies"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "brewers_supplies",
+              "name": "Brewer's Supplies"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "calligraphers_supplies",
+              "name": "Calligrapher's Supplies"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "carpenters_tools",
+              "name": "Carpenter's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "cartographers_tools",
+              "name": "Cartographer's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "cobblers_tools",
+              "name": "Cobbler's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "cooks_utensils",
+              "name": "Cook's Utensils"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "glassblowers_tools",
+              "name": "Glassblower's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "jewelers_tools",
+              "name": "Jeweler's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "leatherworkers_tools",
+              "name": "Leatherworker's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "masons_tools",
+              "name": "Mason's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "painters_supplies",
+              "name": "Painter's Supplies"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "potters_tools",
+              "name": "Potter's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "smiths_tools",
+              "name": "Smith's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "tinkers_tools",
+              "name": "Tinker's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "weavers_tools",
+              "name": "Weaver's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "woodcarvers_tools",
+              "name": "Woodcarver's Tools"
+            }
+          }
         ]
       }
     }
@@ -63,7 +202,7 @@
       "Respect. People deserve to be treated with dignity and respect. (Good)",
       "Fairness. No one should get preferential treatment before the law, and no one is above the law. (Lawful)",
       "Freedom. Tyrants must not be allowed to oppress the people. (Chaotic)",
-      "Might. If I become strong, I can take what I want — what I deserve. (Evil)",
+      "Might. If I become strong, I can take what I want \u2014 what I deserve. (Evil)",
       "Sincerity. There's no good in pretending to be something I'm not. (Neutral)",
       "Destiny. Nothing and no one can steer me away from my higher calling. (Any)"
     ],
@@ -83,5 +222,9 @@
       "Secretly, I believe that things would be better if I were a tyrant lording over the land.",
       "I have trouble trusting in my allies."
     ]
-  }
+  },
+  "desc": [
+    "You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/folk_hero.json"
 }
