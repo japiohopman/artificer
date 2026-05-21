@@ -1,32 +1,116 @@
 {
   "index": "knight",
   "name": "Knight",
-  "description": "You are a member of a noble house, but your status is not just one of birth but of service. You have been a knight in training for much of your life, learning the ways of combat, honor, and duty. You might be a landless knight serving as a protector to a powerful lord, or a member of a knightly order dedicated to a specific cause.",
   "starting_proficiencies": [
-    { "index": "skill-history", "name": "Skill: History" },
-    { "index": "skill-persuasion", "name": "Skill: Persuasion" }
+    {
+      "index": "skill_history",
+      "name": "Skill: History"
+    },
+    {
+      "index": "skill_persuasion",
+      "name": "Skill: Persuasion"
+    }
   ],
   "language_options": {
     "choose": 1,
     "from": {
       "option_set_type": "options_array",
       "options": [
-        { "option_type": "reference", "item": { "index": "common", "name": "Common" } },
-        { "option_type": "reference", "item": { "index": "dwarvish", "name": "Dwarvish" } },
-        { "option_type": "reference", "item": { "index": "elvish", "name": "Elvish" } },
-        { "option_type": "reference", "item": { "index": "giant", "name": "Giant" } },
-        { "option_type": "reference", "item": { "index": "gnomish", "name": "Gnomish" } },
-        { "option_type": "reference", "item": { "index": "goblin", "name": "Goblin" } },
-        { "option_type": "reference", "item": { "index": "halfling", "name": "Halfling" } },
-        { "option_type": "reference", "item": { "index": "orc", "name": "Orc" } }
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "common",
+            "name": "Common"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "dwarvish",
+            "name": "Dwarvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "elvish",
+            "name": "Elvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "giant",
+            "name": "Giant"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "gnomish",
+            "name": "Gnomish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "goblin",
+            "name": "Goblin"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "halfling",
+            "name": "Halfling"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "orc",
+            "name": "Orc"
+          }
+        }
       ]
     }
   },
   "starting_equipment": [
-    { "equipment": { "index": "fine-clothes", "name": "Fine Clothes", "url": "/api/equipment/fine-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "signet-ring", "name": "Signet Ring", "url": "/api/equipment/signet-ring" }, "quantity": 1, "slot": "ring-1" },
-    { "equipment": { "index": "scroll-of-pedigree", "name": "Scroll of Pedigree", "url": "/api/equipment/scroll-of-pedigree" }, "quantity": 1 },
-    { "equipment": { "index": "purse", "name": "Purse", "url": "/api/equipment/purse" }, "quantity": 1, "slot": "acc-1" }
+    {
+      "equipment": {
+        "index": "clothes_fine",
+        "name": "Fine Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_fine.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "signet_ring",
+        "name": "Signet Ring",
+        "url": "public/assets/atlas/equipment/json/signet_ring.json"
+      },
+      "quantity": 1,
+      "slot": "ring-1"
+    },
+    {
+      "equipment": {
+        "index": "scroll_of_pedigree",
+        "name": "Scroll of Pedigree",
+        "url": "public/assets/atlas/equipment/json/scroll_of_pedigree.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "purse",
+        "name": "Purse",
+        "url": "public/assets/atlas/equipment/json/purse.json"
+      },
+      "quantity": 1,
+      "slot": "acc-1"
+    }
   ],
   "starting_equipment_options": [
     {
@@ -36,10 +120,34 @@
       "from": {
         "option_set_type": "options_array",
         "options": [
-          { "option_type": "reference", "item": { "index": "dice-set", "name": "Dice Set" } },
-          { "option_type": "reference", "item": { "index": "dragonchess-set", "name": "Dragonchess Set" } },
-          { "option_type": "reference", "item": { "index": "playing-card-set", "name": "Playing Card Set" } },
-          { "option_type": "reference", "item": { "index": "three-dragon-ante-set", "name": "Three-Dragon Ante Set" } }
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dice_set",
+              "name": "Dice Set"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragonchess_set",
+              "name": "Dragonchess Set"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "playing_card_set",
+              "name": "Playing Card Set"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "three_dragon_ante_set",
+              "name": "Three-Dragon Ante Set"
+            }
+          }
         ]
       }
     }
@@ -85,5 +193,9 @@
       "In fact, the world does revolve around me.",
       "By my words and actions, I often bring shame to my family."
     ]
-  }
+  },
+  "desc": [
+    "You are a member of a noble house, but your status is not just one of birth but of service. You have been a knight in training for much of your life, learning the ways of combat, honor, and duty. You might be a landless knight serving as a protector to a powerful lord, or a member of a knightly order dedicated to a specific cause."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/knight.json"
 }
