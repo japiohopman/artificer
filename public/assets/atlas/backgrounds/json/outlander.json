@@ -1,33 +1,123 @@
 {
   "index": "outlander",
   "name": "Outlander",
-  "description": "You grew up in the wilds, far from civilization and the comforts of town and technology. You've witnessed the migration of great herds, survived weather more terrible than any city-dweller could comprehend, and enjoyed the solitude of being the only thinking creature for miles in any direction. The wilds are in your blood, whether you were a nomad, an explorer, a recluse, a hunter-gatherer, or even a marauder.",
   "starting_proficiencies": [
-    { "index": "skill-athletics", "name": "Skill: Athletics" },
-    { "index": "skill-survival", "name": "Skill: Survival" }
+    {
+      "index": "skill_athletics",
+      "name": "Skill: Athletics"
+    },
+    {
+      "index": "skill_survival",
+      "name": "Skill: Survival"
+    }
   ],
   "language_options": {
     "choose": 1,
     "from": {
       "option_set_type": "options_array",
       "options": [
-        { "option_type": "reference", "item": { "index": "common", "name": "Common" } },
-        { "option_type": "reference", "item": { "index": "dwarvish", "name": "Dwarvish" } },
-        { "option_type": "reference", "item": { "index": "elvish", "name": "Elvish" } },
-        { "option_type": "reference", "item": { "index": "giant", "name": "Giant" } },
-        { "option_type": "reference", "item": { "index": "gnomish", "name": "Gnomish" } },
-        { "option_type": "reference", "item": { "index": "goblin", "name": "Goblin" } },
-        { "option_type": "reference", "item": { "index": "halfling", "name": "Halfling" } },
-        { "option_type": "reference", "item": { "index": "orc", "name": "Orc" } }
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "common",
+            "name": "Common"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "dwarvish",
+            "name": "Dwarvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "elvish",
+            "name": "Elvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "giant",
+            "name": "Giant"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "gnomish",
+            "name": "Gnomish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "goblin",
+            "name": "Goblin"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "halfling",
+            "name": "Halfling"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "orc",
+            "name": "Orc"
+          }
+        }
       ]
     }
   },
   "starting_equipment": [
-    { "equipment": { "index": "staff", "name": "Staff", "url": "/api/equipment/staff" }, "quantity": 1, "slot": "main-hand" },
-    { "equipment": { "index": "hunting-trap", "name": "Hunting Trap", "url": "/api/equipment/hunting-trap" }, "quantity": 1 },
-    { "equipment": { "index": "trophy-from-fallen-animal", "name": "Trophy from an animal you killed", "url": "/api/equipment/trophy-from-fallen-animal" }, "quantity": 1 },
-    { "equipment": { "index": "travelers-clothes", "name": "Traveler's Clothes", "url": "/api/equipment/travelers-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "staff",
+        "name": "Staff",
+        "url": "public/assets/atlas/equipment/json/staff.json"
+      },
+      "quantity": 1,
+      "slot": "main-hand"
+    },
+    {
+      "equipment": {
+        "index": "hunting_trap",
+        "name": "Hunting Trap",
+        "url": "public/assets/atlas/equipment/json/hunting_trap.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "trophy_from_fallen_animal",
+        "name": "Trophy from an animal you killed",
+        "url": "public/assets/atlas/equipment/json/trophy_from_fallen_animal.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Traveler's Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [
     {
@@ -37,16 +127,76 @@
       "from": {
         "option_set_type": "options_array",
         "options": [
-          { "option_type": "reference", "item": { "index": "bagpipes", "name": "Bagpipes" } },
-          { "option_type": "reference", "item": { "index": "drum", "name": "Drum" } },
-          { "option_type": "reference", "item": { "index": "dulcimer", "name": "Dulcimer" } },
-          { "option_type": "reference", "item": { "index": "flute", "name": "Flute" } },
-          { "option_type": "reference", "item": { "index": "lute", "name": "Lute" } },
-          { "option_type": "reference", "item": { "index": "lyre", "name": "Lyre" } },
-          { "option_type": "reference", "item": { "index": "horn", "name": "Horn" } },
-          { "option_type": "reference", "item": { "index": "pan-flute", "name": "Pan Flute" } },
-          { "option_type": "reference", "item": { "index": "shawm", "name": "Shawm" } },
-          { "option_type": "reference", "item": { "index": "viol", "name": "Viol" } }
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "bagpipes",
+              "name": "Bagpipes"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "drum",
+              "name": "Drum"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dulcimer",
+              "name": "Dulcimer"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "flute",
+              "name": "Flute"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "lute",
+              "name": "Lute"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "lyre",
+              "name": "Lyre"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "horn",
+              "name": "Horn"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "pan_flute",
+              "name": "Pan Flute"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "shawm",
+              "name": "Shawm"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "viol",
+              "name": "Viol"
+            }
+          }
         ]
       }
     }
@@ -92,5 +242,9 @@
       "Violence is my answer to almost any challenge.",
       "Don't expect me to save those who can't save themselves. It is nature's way that the strong thrive and the weak perish."
     ]
-  }
+  },
+  "desc": [
+    "You grew up in the wilds, far from civilization and the comforts of town and technology. You've witnessed the migration of great herds, survived weather more terrible than any city-dweller could comprehend, and enjoyed the solitude of being the only thinking creature for miles in any direction. The wilds are in your blood, whether you were a nomad, an explorer, a recluse, a hunter-gatherer, or even a marauder."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/outlander.json"
 }
