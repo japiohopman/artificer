@@ -5,18 +5,81 @@
     "You spent formative years in a scriptorium, a monastery dedicated to the preservation of knowledge, or a government agency, where you learned to write with a clear hand and produce finely written texts. Perhaps you scribed government documents or copied tomes of literature. You might have some skill as a writer of poetry, narrative, or scholarly research."
   ],
   "starting_proficiencies": [
-    { "index": "skill_investigation", "name": "Skill: Investigation", "url": "public/assets/atlas/proficiencies/json/skill_investigation.json" },
-    { "index": "skill_perception", "name": "Skill: Perception", "url": "public/assets/atlas/proficiencies/json/skill_perception.json" },
-    { "index": "calligraphers_supplies", "name": "Calligrapher's Supplies", "url": "public/assets/atlas/proficiencies/json/calligraphers_supplies.json" }
+    {
+      "index": "skill_investigation",
+      "name": "Skill: Investigation",
+      "url": "public/assets/atlas/proficiencies/json/skill_investigation.json.json"
+    },
+    {
+      "index": "skill_perception",
+      "name": "Skill: Perception",
+      "url": "public/assets/atlas/proficiencies/json/skill_perception.json.json"
+    },
+    {
+      "index": "calligraphers_supplies",
+      "name": "Calligrapher's Supplies",
+      "url": "public/assets/atlas/proficiencies/json/calligraphers_supplies.json.json"
+    }
   ],
   "starting_equipment": [
-    { "equipment": { "index": "calligraphers_supplies", "name": "Calligrapher's Supplies", "url": "public/assets/atlas/equipment/json/calligraphers_supplies.json" }, "quantity": 1 },
-    { "equipment": { "index": "lamp", "name": "Lamp", "url": "public/assets/atlas/equipment/json/lamp.json" }, "quantity": 1 },
-    { "equipment": { "index": "oil_flask", "name": "Flask of Oil", "url": "public/assets/atlas/equipment/json/oil_flask.json" }, "quantity": 3 },
-    { "equipment": { "index": "parchment_one_sheet", "name": "Parchment (sheet)", "url": "public/assets/atlas/equipment/json/parchment_one_sheet.json" }, "quantity": 12 },
-    { "equipment": { "index": "clothes_fine", "name": "Fine Clothes", "url": "public/assets/atlas/equipment/json/clothes_fine.json" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "public/assets/atlas/equipment/json/pouch.json" }, "quantity": 1 },
-    { "equipment": { "index": "gold", "name": "Gold Pieces", "url": "public/assets/atlas/equipment/json/gold.json" }, "quantity": 23, "unit": "gp" }
+    {
+      "equipment": {
+        "index": "calligraphers_supplies",
+        "name": "Calligrapher's Supplies",
+        "url": "public/assets/atlas/equipment/json/calligraphers_supplies.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "lamp",
+        "name": "Lamp",
+        "url": "public/assets/atlas/equipment/json/lamp.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "oil_flask",
+        "name": "Flask of Oil",
+        "url": "public/assets/atlas/equipment/json/oil_flask.json"
+      },
+      "quantity": 3
+    },
+    {
+      "equipment": {
+        "index": "parchment_one_sheet",
+        "name": "Parchment (sheet)",
+        "url": "public/assets/atlas/equipment/json/parchment_one_sheet.json"
+      },
+      "quantity": 12
+    },
+    {
+      "equipment": {
+        "index": "clothes_fine",
+        "name": "Fine Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_fine.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold Pieces",
+        "url": "public/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 23,
+      "unit": "gp"
+    }
   ],
   "starting_equipment_options": [],
   "feature": {
@@ -29,7 +92,7 @@
     "traits": [
       "I use polysyllabic words that convey the impression of great erudition.",
       "I'm a perfectionist who can't finish a task until it's flawless.",
-      "I've read every book in the world's greatest libraries — or I like to boast that I have.",
+      "I've read every book in the world's greatest libraries \u2014 or I like to boast that I have.",
       "I'm used to helping out those who aren't as bright as I am.",
       "There's nothing I like more than a good mystery.",
       "I am horribly, horribly awkward in social situations.",
