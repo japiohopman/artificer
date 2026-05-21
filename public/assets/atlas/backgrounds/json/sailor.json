@@ -1,19 +1,67 @@
 {
   "index": "sailor",
   "name": "Sailor",
-  "description": "You sailed on a seagoing vessel for years. In that time, you faced down mighty storms, monsters of the deep, and those who wanted to sink your craft to the ocean's floor. Your first love is the distant line of the horizon, but the time has come to try your luck on land.",
   "starting_proficiencies": [
-    { "index": "skill-athletics", "name": "Skill: Athletics" },
-    { "index": "skill-perception", "name": "Skill: Perception" },
-    { "index": "navigators-tools", "name": "Navigator's Tools" },
-    { "index": "vehicles-water", "name": "Vehicles (Water)" }
+    {
+      "index": "skill_athletics",
+      "name": "Skill: Athletics"
+    },
+    {
+      "index": "skill_perception",
+      "name": "Skill: Perception"
+    },
+    {
+      "index": "navigators_tools",
+      "name": "Navigator's Tools"
+    },
+    {
+      "index": "vehicles_water",
+      "name": "Vehicles (Water)"
+    }
   ],
   "starting_equipment": [
-    { "equipment": { "index": "club", "name": "Belaying Pin (Club)", "url": "/api/equipment/club" }, "quantity": 1, "slot": "main-hand" },
-    { "equipment": { "index": "silk-rope-50ft", "name": "Silk Rope (50 feet)", "url": "/api/equipment/silk-rope-50ft" }, "quantity": 1 },
-    { "equipment": { "index": "lucky-charm", "name": "Lucky Charm", "url": "/api/equipment/lucky-charm" }, "quantity": 1 },
-    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "club",
+        "name": "Belaying Pin (Club)",
+        "url": "public/assets/atlas/equipment/json/club.json"
+      },
+      "quantity": 1,
+      "slot": "main-hand"
+    },
+    {
+      "equipment": {
+        "index": "rope_silk_50_feet",
+        "name": "Silk Rope (50 feet)",
+        "url": "public/assets/atlas/equipment/json/rope_silk_50_feet.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "lucky_charm",
+        "name": "Lucky Charm",
+        "url": "public/assets/atlas/equipment/json/lucky_charm.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Common Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [],
   "feature": {
@@ -36,7 +84,7 @@
     "ideals": [
       "Respect. The thing that keeps a ship together is mutual respect between captain and crew. (Good)",
       "Fairness. We all do the work, so we all share in the rewards. (Lawful)",
-      "Freedom. The sea is freedom — the freedom to go anywhere and do anything. (Chaotic)",
+      "Freedom. The sea is freedom \u2014 the freedom to go anywhere and do anything. (Chaotic)",
       "Mastery. I'm a master of my craft who wants to be better. (Any)",
       "People. I'm committed to my crewmates, not to ideals. (Neutral)",
       "Aspiration. Someday I'll own my own ship and chart my own destiny. (Any)"
@@ -57,5 +105,9 @@
       "My pride will probably lead to my destruction.",
       "I'll wait until my comrades are asleep to steal their shares."
     ]
-  }
+  },
+  "desc": [
+    "You sailed on a seagoing vessel for years. In that time, you faced down mighty storms, monsters of the deep, and those who wanted to sink your craft to the ocean's floor. Your first love is the distant line of the horizon, but the time has come to try your luck on land."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/sailor.json"
 }
