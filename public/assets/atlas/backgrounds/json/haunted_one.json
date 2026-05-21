@@ -1,27 +1,60 @@
 {
-  "index": "haunted-one",
+  "index": "haunted_one",
   "name": "Haunted One",
-  "description": "You are haunted by something so terrible that you dare not speak of it. You’ve tried to bury it and forget it, but it follows you wherever you go and colors your every thought.",
   "starting_proficiencies": [
-    { "index": "skill-investigation", "name": "Skill: Investigation" },
-    { "index": "skill-survival", "name": "Skill: Survival" }
+    {
+      "index": "skill_investigation",
+      "name": "Skill: Investigation"
+    },
+    {
+      "index": "skill_survival",
+      "name": "Skill: Survival"
+    }
   ],
   "starting_equipment": [
-    { "equipment": { "index": "monster-hunters-pack", "name": "Monster Hunter's Pack", "url": "/api/equipment/monster-hunters-pack" }, "quantity": 1 },
-    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "monster_hunters_pack",
+        "name": "Monster Hunter's Pack",
+        "url": "public/assets/atlas/equipment/json/monster_hunters_pack.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Common Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [
     {
-       "desc": "A harrowing memento",
-       "choose": 1,
-       "type": "equipment",
-       "from": {
-         "option_set_type": "options_array",
-         "options": [
-           { "option_type": "reference", "item": { "index": "trinket", "name": "Trinket" } }
-         ]
-       }
+      "desc": "A harrowing memento",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "trinket",
+              "name": "Trinket"
+            }
+          }
+        ]
+      }
     }
   ],
   "feature": {
@@ -34,11 +67,11 @@
     "traits": [
       "I don't run from my problems. My problems run from me.",
       "I like to read and memorize my favorite passages from scary stories.",
-      "I’m a curse-breaker, and I’m always looking for signs of dark magic.",
+      "I\u2019m a curse-breaker, and I\u2019m always looking for signs of dark magic.",
       "I have a nervous habit that I can't quite shake.",
-      "I’m always looking over my shoulder.",
+      "I\u2019m always looking over my shoulder.",
       "I don't trust anyone who isn't as scarred as I am.",
-      "I’m prone to long silences and staring into the distance.",
+      "I\u2019m prone to long silences and staring into the distance.",
       "I take everything far too seriously."
     ],
     "ideals": [
@@ -51,19 +84,23 @@
     ],
     "bonds": [
       "I keep a diary of my experiences to ensure I never forget.",
-      "I’m searching for the person who saved me from the darkness.",
+      "I\u2019m searching for the person who saved me from the darkness.",
       "I seek to protect a specific innocent person from the shadows.",
       "I have a recurring dream that I believe is a vision of the future.",
       "My weapon is the only thing that makes me feel safe.",
       "I will find the truth behind my harrowing event, no matter the cost."
     ],
     "flaws": [
-      "I’m convinced that I’m cursed and that everyone around me is in danger.",
-      "I’m easily startled by sudden noises or movements.",
+      "I\u2019m convinced that I\u2019m cursed and that everyone around me is in danger.",
+      "I\u2019m easily startled by sudden noises or movements.",
       "I have difficulty sleeping and often stay awake for days.",
-      "I’m prone to bouts of intense and irrational anger.",
-      "I’m terrified of my own potential for darkness.",
+      "I\u2019m prone to bouts of intense and irrational anger.",
+      "I\u2019m terrified of my own potential for darkness.",
       "I find it hard to care about mundane things."
     ]
-  }
+  },
+  "desc": [
+    "You are haunted by something so terrible that you dare not speak of it. You\u2019ve tried to bury it and forget it, but it follows you wherever you go and colors your every thought."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/haunted_one.json"
 }
