@@ -1,9 +1,65 @@
 {
   "index": "wayfarer",
-  "name": "wayfarer",
+  "name": "Wayfarer",
   "desc": [
-    "Je bent een zwerver die gewend is om te overleven in de straten van steden of op de wegen daartussen, altijd onderweg en vindingrijk in het vinden van onderdak."
+    "You grew up on the streets surrounded by similarly ill-fated castoffs, a few of them friends and a few of them rivals. You slept where you could and did odd jobs for food. At times, when the hunger became unbearable, you resorted to theft. Still, you never lost your pride and never abandoned hope."
   ],
+  "starting_proficiencies": [
+    { "index": "skill_insight", "name": "Skill: Insight", "url": "public/assets/atlas/proficiencies/json/skill_insight.json" },
+    { "index": "skill_stealth", "name": "Skill: Stealth", "url": "public/assets/atlas/proficiencies/json/skill_stealth.json" },
+    { "index": "thieves_tools", "name": "Thieves' Tools", "url": "public/assets/atlas/proficiencies/json/thieves_tools.json" }
+  ],
+  "starting_equipment": [
+    { "equipment": { "index": "dagger", "name": "Dagger", "url": "public/assets/atlas/equipment/json/dagger.json" }, "quantity": 2 },
+    { "equipment": { "index": "thieves_tools", "name": "Thieves' Tools", "url": "public/assets/atlas/equipment/json/thieves_tools.json" }, "quantity": 1 },
+    { "equipment": { "index": "bedroll", "name": "Bedroll", "url": "public/assets/atlas/equipment/json/bedroll.json" }, "quantity": 1 },
+    { "equipment": { "index": "clothes_travelers", "name": "Traveler's Clothes", "url": "public/assets/atlas/equipment/json/clothes_travelers.json" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "public/assets/atlas/equipment/json/pouch.json" }, "quantity": 2 },
+    { "equipment": { "index": "gold", "name": "Gold Pieces", "url": "public/assets/atlas/equipment/json/gold.json" }, "quantity": 16, "unit": "gp" }
+  ],
+  "starting_equipment_options": [],
+  "feature": {
+    "name": "Lucky",
+    "desc": [
+      "You have inexplicable luck that seems to kick in at just the right moment. You have 3 Luck Points. Whenever you make an d20 Test, you can spend 1 Luck Point to give yourself Advantage on the roll. Alternatively, when a creature rolls a d20 for an attack roll against you, you can spend 1 Luck Point to give that creature Disadvantage on the roll. You regain all spent Luck Points when you finish a Long Rest."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I hide scraps of food and trinkets away in my pockets.",
+      "I ask a lot of questions.",
+      "I like to squeeze into small places where no one else can get to me.",
+      "I sleep with my back to a wall or tree, with everything I own wrapped in my arms.",
+      "I think anyone who's nice to me is hiding an evil motive.",
+      "I say exactly what I'm thinking, no matter how rude it is.",
+      "I have a story for every scar.",
+      "I don't like to bathe."
+    ],
+    "ideals": [
+      "Respect. All people, regardless of station, deserve to be treated with dignity. (Good)",
+      "Community. We have to take care of each other, because no one else is going to do it. (Lawful)",
+      "Change. The low are lifted up, and the high and mighty are brought low. Change is the nature of things. (Chaotic)",
+      "Retribution. The rich need to be shown what it's like to have went without and suffer. (Evil)",
+      "People. I'm loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. (Neutral)",
+      "Aspiration. I'm going to prove that I'm worthy of a better life. (Any)"
+    ],
+    "bonds": [
+      "My town or city is my home, and I'll fight to defend it.",
+      "I sponsor an orphanage to keep others from enduring what I was forced to endure.",
+      "I owe my survival to another wayfarer who taught me how to live on the streets.",
+      "I owe a debt I can never repay to the person who took pity on me.",
+      "I escaped my life of poverty by robbing an important person, and I'm wanted for it.",
+      "No one else should have to endure the hardships I've been through."
+    ],
+    "flaws": [
+      "If I'm outmatched, I'll run away in a heartbeat.",
+      "An innocent person is in prison for a crime that I committed. I'm okay with that.",
+      "I'll never fully trust anyone other than myself.",
+      "I'm convinced that a powerful person is out to get me, and I'm probably right.",
+      "I'm too greedy for my own good. I can't resist taking a risk if there's money involved.",
+      "It's not stealing if I need it more than they do."
+    ]
+  },
   "image": "public/assets/atlas/backgrounds/wayfarer.webp",
   "url": "public/assets/atlas/backgrounds/json/wayfarer.json"
 }
