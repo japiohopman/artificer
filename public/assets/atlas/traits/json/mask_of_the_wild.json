@@ -1,0 +1,24 @@
+{
+  "index": "mask_of_the_wild",
+  "races": [
+    {
+      "index": "elf",
+      "name": "elf",
+      "url": "public/assets/atlas/species/json/elf.json"
+    }
+  ],
+  "subraces": [
+    {
+      "index": "wood_elf",
+      "name": "wood elf",
+      "url": "public/assets/atlas/subraces/json/wood_elf.json"
+    }
+  ],
+  "name": "mask of the wild",
+  "desc": [
+    "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+  ],
+  "url": "public/assets/atlas/traits/json/mask_of_the_wild.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "public/assets/atlas/traits/mask_of_the_wild.webp"
+}
