@@ -1,15 +1,38 @@
 {
   "index": "smuggler",
   "name": "Smuggler",
-  "description": "You have spent your life moving goods illegally, avoiding patrols and taxes to turn a profit. Whether you were running medicine to the needy or weapons to rebels, you know how to stay 'down low' and get things where they need to go.",
   "starting_proficiencies": [
-    { "index": "skill-athletics", "name": "Skill: Athletics" },
-    { "index": "skill-deception", "name": "Skill: Deception" },
-    { "index": "vehicles-water", "name": "Vehicles (Water)" }
+    {
+      "index": "skill_athletics",
+      "name": "Skill: Athletics"
+    },
+    {
+      "index": "skill_deception",
+      "name": "Skill: Deception"
+    },
+    {
+      "index": "vehicles_water",
+      "name": "Vehicles (Water)"
+    }
   ],
   "starting_equipment": [
-    { "equipment": { "index": "leather-pouch", "name": "Leather Pouch", "url": "/api/equipment/leather-pouch" }, "quantity": 1 },
-    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" }
+    {
+      "equipment": {
+        "index": "leather_pouch",
+        "name": "Leather Pouch",
+        "url": "public/assets/atlas/equipment/json/leather_pouch.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Common Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    }
   ],
   "starting_equipment_options": [],
   "feature": {
@@ -20,38 +43,42 @@
   },
   "suggested_characteristics": {
     "traits": [
-      "I’m always looking for the nearest exit.",
+      "I\u2019m always looking for the nearest exit.",
       "I have a contact in every port.",
       "I never tell the whole truth if a half-truth will do.",
       "I'm incredibly observant of my surroundings.",
       "I love the thrill of a narrow escape.",
       "I'm a bit cynical about the law and those who enforce it.",
       "I can't resist a good bargain.",
-      "I'm always ready to move at a moment’s notice."
+      "I'm always ready to move at a moment\u2019s notice."
     ],
     "ideals": [
       "Freedom. No one should be able to tell me where I can or can't go. (Chaotic)",
       "Profit. The only thing that matters is the bottom line. (Neutral)",
       "Community. We have to look out for our own. (Lawful)",
       "Charity. I smuggle what people need, not what the law says they can have. (Good)",
-      "Greed. I’ll move anything for the right price. (Evil)",
+      "Greed. I\u2019ll move anything for the right price. (Evil)",
       "Discovery. I want to see every corner of the world. (Any)"
     ],
     "bonds": [
       "I owe a debt to a powerful crime lord.",
       "My ship is my home and my crew is my family.",
-      "I’m trying to go straight for the sake of someone I love.",
+      "I\u2019m trying to go straight for the sake of someone I love.",
       "I have a secret stash of goods that I need to recover.",
       "I was betrayed by my former partner, and I want revenge.",
-      "I’m searching for the legendary 'Smuggler’s Run'."
+      "I\u2019m searching for the legendary 'Smuggler\u2019s Run'."
     ],
     "flaws": [
       "I have a price, and I can be bought.",
-      "I’m prone to taking unnecessary risks for extra profit.",
+      "I\u2019m prone to taking unnecessary risks for extra profit.",
       "I don't trust anyone who works for the government.",
       "I have a reputation that precedes me in all the wrong ways.",
-      "I’m a bit too fond of the goods I’m supposed to be moving.",
+      "I\u2019m a bit too fond of the goods I\u2019m supposed to be moving.",
       "I turn tail and run at the first sign of trouble."
     ]
-  }
+  },
+  "desc": [
+    "You have spent your life moving goods illegally, avoiding patrols and taxes to turn a profit. Whether you were running medicine to the needy or weapons to rebels, you know how to stay 'down low' and get things where they need to go."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/smuggler.json"
 }
