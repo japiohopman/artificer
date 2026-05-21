@@ -1,0 +1,19 @@
+{
+  "index": "gold",
+  "name": "Gold Pieces",
+  "equipment_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0.02,
+  "desc": [
+    "The standard unit of currency in the game."
+  ],
+  "url": "public/assets/atlas/equipment/json/gold.json",
+  "image": "public/assets/atlas/equipment/images/gold.webp"
+}
