@@ -1,18 +1,62 @@
 {
-  "index": "guild-merchant",
+  "index": "guild_merchant",
   "name": "Guild Merchant",
-  "description": "Instead of an artisan's guild, you belong to a guild of traders, caravan masters, or shopkeepers. You don't craft items yourself but sell them for profit. Your guild has provided you with the skills to survive in the mercantile world.",
   "starting_proficiencies": [
-    { "index": "skill-insight", "name": "Skill: Insight" },
-    { "index": "skill-persuasion", "name": "Skill: Persuasion" },
-    { "index": "navigators-tools", "name": "Navigator's Tools" }
+    {
+      "index": "skill_insight",
+      "name": "Skill: Insight"
+    },
+    {
+      "index": "skill_persuasion",
+      "name": "Skill: Persuasion"
+    },
+    {
+      "index": "navigators_tools",
+      "name": "Navigator's Tools"
+    }
   ],
   "starting_equipment": [
-    { "equipment": { "index": "mule", "name": "Mule", "url": "/api/equipment/mule" }, "quantity": 1 },
-    { "equipment": { "index": "cart", "name": "Cart", "url": "/api/equipment/cart" }, "quantity": 1 },
-    { "equipment": { "index": "letter-of-introduction", "name": "Letter of Introduction from your Guild", "url": "/api/equipment/letter-of-introduction" }, "quantity": 1 },
-    { "equipment": { "index": "travelers-clothes", "name": "Traveler's Clothes", "url": "/api/equipment/travelers-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "mule",
+        "name": "Mule",
+        "url": "public/assets/atlas/equipment/json/mule.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "cart",
+        "name": "Cart",
+        "url": "public/assets/atlas/equipment/json/cart.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "letter_of_introduction",
+        "name": "Letter of Introduction from your Guild",
+        "url": "public/assets/atlas/equipment/json/letter_of_introduction.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Traveler's Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [],
   "feature": {
@@ -58,5 +102,9 @@
       "I'm soft-hearted and can't resist a hard-luck story.",
       "I'm a perfectionist who can't finish a task until it's flawless."
     ]
-  }
+  },
+  "desc": [
+    "Instead of an artisan's guild, you belong to a guild of traders, caravan masters, or shopkeepers. You don't craft items yourself but sell them for profit. Your guild has provided you with the skills to survive in the mercantile world."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/guild_merchant.json"
 }
