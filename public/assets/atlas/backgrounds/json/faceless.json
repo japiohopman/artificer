@@ -1,33 +1,118 @@
 {
   "index": "faceless",
   "name": "Faceless",
-  "description": "Being who you are, you could never be a hero. Whether you're a criminal, a monster, or just a social outcast, your true identity is a secret you must keep at all costs. You have created a second identity that you use when you go out into the world, a mask that allows you to act as a hero while your true self remains hidden.",
   "starting_proficiencies": [
-    { "index": "skill-deception", "name": "Skill: Deception" },
-    { "index": "skill-intimidation", "name": "Skill: Intimidation" },
-    { "index": "disguise-kit", "name": "Disguise Kit" }
+    {
+      "index": "skill_deception",
+      "name": "Skill: Deception"
+    },
+    {
+      "index": "skill_intimidation",
+      "name": "Skill: Intimidation"
+    },
+    {
+      "index": "disguise_kit",
+      "name": "Disguise Kit"
+    }
   ],
   "language_options": {
     "choose": 1,
     "from": {
       "option_set_type": "options_array",
       "options": [
-        { "option_type": "reference", "item": { "index": "common", "name": "Common" } },
-        { "option_type": "reference", "item": { "index": "dwarvish", "name": "Dwarvish" } },
-        { "option_type": "reference", "item": { "index": "elvish", "name": "Elvish" } },
-        { "option_type": "reference", "item": { "index": "giant", "name": "Giant" } },
-        { "option_type": "reference", "item": { "index": "gnomish", "name": "Gnomish" } },
-        { "option_type": "reference", "item": { "index": "goblin", "name": "Goblin" } },
-        { "option_type": "reference", "item": { "index": "halfling", "name": "Halfling" } },
-        { "option_type": "reference", "item": { "index": "orc", "name": "Orc" } }
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "common",
+            "name": "Common"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "dwarvish",
+            "name": "Dwarvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "elvish",
+            "name": "Elvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "giant",
+            "name": "Giant"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "gnomish",
+            "name": "Gnomish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "goblin",
+            "name": "Goblin"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "halfling",
+            "name": "Halfling"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "orc",
+            "name": "Orc"
+          }
+        }
       ]
     }
   },
   "starting_equipment": [
-    { "equipment": { "index": "disguise-kit", "name": "Disguise Kit", "url": "/api/equipment/disguise-kit" }, "quantity": 1 },
-    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 },
-    { "equipment": { "index": "costume", "name": "A costume", "url": "/api/equipment/costume" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "disguise_kit",
+        "name": "Disguise Kit",
+        "url": "public/assets/atlas/equipment/json/disguise_kit.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Common Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_costume",
+        "name": "A costume",
+        "url": "public/assets/atlas/equipment/json/clothes_costume.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [],
   "feature": {
@@ -71,5 +156,9 @@
       "I'm prone to keeping secrets that aren't mine to keep.",
       "I'm always looking for an escape if the going gets tough."
     ]
-  }
+  },
+  "desc": [
+    "Being who you are, you could never be a hero. Whether you're a criminal, a monster, or just a social outcast, your true identity is a secret you must keep at all costs. You have created a second identity that you use when you go out into the world, a mask that allows you to act as a hero while your true self remains hidden."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/faceless.json"
 }
