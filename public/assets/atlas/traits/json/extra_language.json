@@ -24,7 +24,8 @@
           "item": {
             "index": "dwarvish",
             "name": "dwarvish",
-            "url": "public/assets/atlas/languages/dwarvish"
+            "url": "public/assets/atlas/languages/json/dwarvish.json",
+            "ttf": "public/assets/atlas/languages/Dwarven-Regular.ttf"
           }
         },
         {
@@ -32,7 +33,8 @@
           "item": {
             "index": "giant",
             "name": "giant",
-            "url": "public/assets/atlas/languages/giant"
+            "url": "public/assets/atlas/languages/json/giant.json",
+            "ttf": "public/assets/atlas/languages/Giant-Regular.ttf"
           }
         },
         {
@@ -40,7 +42,8 @@
           "item": {
             "index": "gnomish",
             "name": "gnomish",
-            "url": "public/assets/atlas/languages/gnomish"
+            "url": "public/assets/atlas/languages/json/gnomish.json"
+            "ttf": "public/assets/atlas/languages/Gnomish-Regular.ttf"
           }
         },
         {
@@ -48,7 +51,8 @@
           "item": {
             "index": "goblin",
             "name": "goblin",
-            "url": "public/assets/atlas/languages/goblin"
+            "url": "public/assets/atlas/languages/json/goblin.json",
+             "ttf": "public/assets/atlas/languages/Goblin-Regular.ttf"
           }
         },
         {
@@ -56,7 +60,8 @@
           "item": {
             "index": "halfling",
             "name": "halfling",
-            "url": "public/assets/atlas/languages/halfling"
+            "url": "public/assets/atlas/languages/json/halfling.json",
+             "ttf": "public/assets/atlas/languages/Halfling-Regular.ttf"
           }
         },
         {
@@ -64,7 +69,8 @@
           "item": {
             "index": "orc",
             "name": "orc",
-            "url": "public/assets/atlas/languages/orc"
+            "url": "public/assets/atlas/languages/json/orc.json",
+             "ttf": "public/assets/atlas/languages/Orcish-Regular.ttf"
           }
         },
         {
@@ -72,7 +78,8 @@
           "item": {
             "index": "abyssal",
             "name": "abyssal",
-            "url": "public/assets/atlas/languages/abyssal"
+            "url": "public/assets/atlas/languages/json/abyssal.json",
+             "ttf": "public/assets/atlas/languages/Abyssal-Regular.ttf"
           }
         },
         {
@@ -80,7 +87,8 @@
           "item": {
             "index": "celestial",
             "name": "celestial",
-            "url": "public/assets/atlas/languages/celestial"
+            "url": "public/assets/atlas/languages/json/celestial.json",
+             "ttf": "public/assets/atlas/languages/Celestial-Regular.ttf"
           }
         },
         {
@@ -88,7 +96,8 @@
           "item": {
             "index": "draconic",
             "name": "draconic",
-            "url": "public/assets/atlas/languages/draconic"
+            "url": "public/assets/atlas/languages/json/draconic.json",
+            "ttf": "public/assets/atlas/languages/Dragonic-Regular.ttf"
           }
         },
         {
@@ -96,7 +105,9 @@
           "item": {
             "index": "deep_speech",
             "name": "deep speech",
-            "url": "public/assets/atlas/languages/deep_speech"
+            "url": "public/assets/atlas/languages/json/deep_speech.json",
+             "ttf": "public/assets/atlas/languages/Ingan-Regular.ttf"
+           
           }
         },
         {
@@ -104,7 +115,8 @@
           "item": {
             "index": "infernal",
             "name": "infernal",
-            "url": "public/assets/atlas/languages/infernal"
+            "url": "public/assets/atlas/languages/json/infernal.json",
+            "ttf": "public/assets/atlas/languages/Infernal-Regular.ttf"
           }
         },
         {
@@ -112,7 +124,8 @@
           "item": {
             "index": "primordial",
             "name": "primordial",
-            "url": "public/assets/atlas/languages/primordial"
+            "url": "public/assets/atlas/languages/json/primordial.json",
+             "ttf": "public/assets/atlas/languages/Primordial-Regular.ttf"
           }
         },
         {
@@ -120,7 +133,8 @@
           "item": {
             "index": "sylvan",
             "name": "sylvan",
-            "url": "public/assets/atlas/languages/sylvan"
+            "url": "public/assets/atlas/languages/json/sylvan.json",
+             "ttf": "public/assets/atlas/languages/Sylvan-Regular.ttf"
           }
         },
         {
@@ -128,7 +142,8 @@
           "item": {
             "index": "undercommon",
             "name": "undercommon",
-            "url": "public/assets/atlas/languages/undercommon"
+            "url": "public/assets/atlas/languages/json/undercommon.json",
+             "ttf": "public/assets/atlas/languages/Undercommon-Regular.ttf"
           }
         }
       ]
