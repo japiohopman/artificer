@@ -14,7 +14,7 @@
     "An effect that removes exhaustion reduces its level as specified in the effect's description, with all exhaustion effects ending if a creature's exhaustion level is reduced below 1.",
     "Finishing a long rest reduces a creature's exhaustion level by 1, provided that the creature has also ingested some food and drink."
   ],
-  "url": "public/assets/atlas/constitutionditions/json/exhaustion.json",
+  "url": "public/assets/atlas/conditions/json/exhaustion.json",
   "updated_at": "2025-10-24T20:42:12.637Z",
-  "image": "public/assets/atlas/constitutionditions/exhaustion.webp"
+  "image": "public/assets/atlas/conditions/exhaustion.webp"
 }
