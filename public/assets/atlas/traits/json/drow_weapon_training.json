@@ -1,0 +1,41 @@
+{
+  "index": "drow_weapon_training",
+  "races": [
+    {
+      "index": "elf",
+      "name": "elf",
+      "url": "public/assets/atlas/species/json/elf.json"
+    }
+  ],
+  "subraces": [
+    {
+      "index": "drow",
+      "name": "drow",
+      "url": "public/assets/atlas/subraces/json/drow.json"
+    }
+  ],
+  "name": "drow weapon training",
+  "desc": [
+    "You have proficiency with rapiers, shortswords, and hand crossbows."
+  ],
+  "proficiencies": [
+    {
+      "index": "rapiers",
+      "name": "rapiers",
+      "url": "public/assets/atlas/proficiencies/json/rapiers.json"
+    },
+    {
+      "index": "shortswords",
+      "name": "shortswords",
+      "url": "public/assets/atlas/proficiencies/json/shortswords.json"
+    },
+    {
+      "index": "hand_crossbows",
+      "name": "hand crossbows",
+      "url": "public/assets/atlas/proficiencies/json/hand_crossbows.json"
+    }
+  ],
+  "url": "public/assets/atlas/traits/json/drow_weapon_training.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "public/assets/atlas/traits/drow_weapon_training.webp"
+}
