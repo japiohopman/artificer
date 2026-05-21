@@ -1,31 +1,106 @@
 {
-  "index": "guild-artisan",
+  "index": "guild_artisan",
   "name": "Guild Artisan",
-  "description": "You are a member of an artisan's guild, skilled in a particular field and closely associated with other artisans. You are a well-established part of the mercantile world, freed by talent and wealth from the constraints of a feudal social order. You learned your skills as an apprentice to a master artificer, assisting with your master's work until you mastered the basics of your craft and were admitted to the guild as a master in your own right.",
   "starting_proficiencies": [
-    { "index": "skill-insight", "name": "Skill: Insight" },
-    { "index": "skill-persuasion", "name": "Skill: Persuasion" }
+    {
+      "index": "skill_insight",
+      "name": "Skill: Insight"
+    },
+    {
+      "index": "skill_persuasion",
+      "name": "Skill: Persuasion"
+    }
   ],
   "language_options": {
     "choose": 1,
     "from": {
       "option_set_type": "options_array",
       "options": [
-        { "option_type": "reference", "item": { "index": "common", "name": "Common" } },
-        { "option_type": "reference", "item": { "index": "dwarvish", "name": "Dwarvish" } },
-        { "option_type": "reference", "item": { "index": "elvish", "name": "Elvish" } },
-        { "option_type": "reference", "item": { "index": "giant", "name": "Giant" } },
-        { "option_type": "reference", "item": { "index": "gnomish", "name": "Gnomish" } },
-        { "option_type": "reference", "item": { "index": "goblin", "name": "Goblin" } },
-        { "option_type": "reference", "item": { "index": "halfling", "name": "Halfling" } },
-        { "option_type": "reference", "item": { "index": "orc", "name": "Orc" } }
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "common",
+            "name": "Common"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "dwarvish",
+            "name": "Dwarvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "elvish",
+            "name": "Elvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "giant",
+            "name": "Giant"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "gnomish",
+            "name": "Gnomish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "goblin",
+            "name": "Goblin"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "halfling",
+            "name": "Halfling"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "orc",
+            "name": "Orc"
+          }
+        }
       ]
     }
   },
   "starting_equipment": [
-    { "equipment": { "index": "letter-of-introduction", "name": "Letter of Introduction from your Guild", "url": "/api/equipment/letter-of-introduction" }, "quantity": 1 },
-    { "equipment": { "index": "travelers-clothes", "name": "Traveler's Clothes", "url": "/api/equipment/travelers-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "pouch", "name": "Pouch", "url": "/api/equipment/pouch" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "letter_of_introduction",
+        "name": "Letter of Introduction from your Guild",
+        "url": "public/assets/atlas/equipment/json/letter_of_introduction.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Traveler's Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [
     {
@@ -35,23 +110,125 @@
       "from": {
         "option_set_type": "options_array",
         "options": [
-          { "option_type": "reference", "item": { "index": "alchemists-supplies", "name": "Alchemist's Supplies" } },
-          { "option_type": "reference", "item": { "index": "brewers-supplies", "name": "Brewer's Supplies" } },
-          { "option_type": "reference", "item": { "index": "calligraphers-supplies", "name": "Calligrapher's Supplies" } },
-          { "option_type": "reference", "item": { "index": "carpenters-tools", "name": "Carpenter's Tools" } },
-          { "option_type": "reference", "item": { "index": "cartographers-tools", "name": "Cartographer's Tools" } },
-          { "option_type": "reference", "item": { "index": "cobblers-tools", "name": "Cobbler's Tools" } },
-          { "option_type": "reference", "item": { "index": "cooks-utensils", "name": "Cook's Utensils" } },
-          { "option_type": "reference", "item": { "index": "glassblowers-tools", "name": "Glassblower's Tools" } },
-          { "option_type": "reference", "item": { "index": "jewelers-tools", "name": "Jeweler's Tools" } },
-          { "option_type": "reference", "item": { "index": "leatherworkers-tools", "name": "Leatherworker's Tools" } },
-          { "option_type": "reference", "item": { "index": "masons-tools", "name": "Mason's Tools" } },
-          { "option_type": "reference", "item": { "index": "painters-supplies", "name": "Painter's Supplies" } },
-          { "option_type": "reference", "item": { "index": "potters-tools", "name": "Potter's Tools" } },
-          { "option_type": "reference", "item": { "index": "smiths-tools", "name": "Smith's Tools" } },
-          { "option_type": "reference", "item": { "index": "tinkers-tools", "name": "Tinker's Tools" } },
-          { "option_type": "reference", "item": { "index": "weavers-tools", "name": "Weaver's Tools" } },
-          { "option_type": "reference", "item": { "index": "woodcarvers-tools", "name": "Woodcarver's Tools" } }
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "alchemists_supplies",
+              "name": "Alchemist's Supplies"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "brewers_supplies",
+              "name": "Brewer's Supplies"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "calligraphers_supplies",
+              "name": "Calligrapher's Supplies"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "carpenters_tools",
+              "name": "Carpenter's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "cartographers_tools",
+              "name": "Cartographer's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "cobblers_tools",
+              "name": "Cobbler's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "cooks_utensils",
+              "name": "Cook's Utensils"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "glassblowers_tools",
+              "name": "Glassblower's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "jewelers_tools",
+              "name": "Jeweler's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "leatherworkers_tools",
+              "name": "Leatherworker's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "masons_tools",
+              "name": "Mason's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "painters_supplies",
+              "name": "Painter's Supplies"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "potters_tools",
+              "name": "Potter's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "smiths_tools",
+              "name": "Smith's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "tinkers_tools",
+              "name": "Tinker's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "weavers_tools",
+              "name": "Weaver's Tools"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "woodcarvers_tools",
+              "name": "Woodcarver's Tools"
+            }
+          }
         ]
       }
     }
@@ -66,7 +243,7 @@
   },
   "suggested_characteristics": {
     "traits": [
-      "I believe that anything worth doing is worth doing right. I can't help it — I'm a perfectionist.",
+      "I believe that anything worth doing is worth doing right. I can't help it \u2014 I'm a perfectionist.",
       "I'm a snob who looks down on those who can't appreciate fine art.",
       "I always want to know how things work and what makes people tick.",
       "I'm full of witty aphorisms and have a proverb for every occasion.",
@@ -99,5 +276,9 @@
       "I'm soft-hearted and can't resist a hard-luck story.",
       "I'm a perfectionist who can't finish a task until it's flawless."
     ]
-  }
+  },
+  "desc": [
+    "You are a member of an artisan's guild, skilled in a particular field and closely associated with other artisans. You are a well-established part of the mercantile world, freed by talent and wealth from the constraints of a feudal social order. You learned your skills as an apprentice to a master artificer, assisting with your master's work until you mastered the basics of your craft and were admitted to the guild as a master in your own right."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/guild_artisan.json"
 }
