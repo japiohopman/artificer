@@ -9,11 +9,12 @@
       "title": "Mount Thulbane",
       "description": "A once-dormant volcano located in [[Threskel]].",
       "link": {
-        "url": "Mount Thulbane",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_thulbane/mount_thulbane.json",
         "label": "Mount Thulbane"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_thulbane/mount_thulbane.webp"
     },
-    "id": "110"
+    "id": "mount_thulbane"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -25,12 +26,12 @@
       "title": "Dragonback Mountain",
       "description": "A massive mountain and a long-dormant volcano - the northernmost peak of the [[Riders to the Sky]] that was the lair of [[Alasklerbanbastos]], the Great Bone Wyrm until [[1479 DR]].",
       "link": {
-        "url": "Dragonback Mountain",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/dragonback_mountain/dragonback_mountain.json",
         "label": "Dragonback Mountain"
       },
-      "image": "File:Dragonback Mtn.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/dragonback_mountain/dragonback_mountain.webp"
     },
-    "id": "114"
+    "id": "dragonback_mountain"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -42,12 +43,12 @@
       "title": "Mount Fussel",
       "description": "Or '''Mount Fussell''' – the westernmost volcanic peak found within the [[Smoky Mountains]].",
       "link": {
-        "url": "Mount Fussel",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_fussel/mount_fussel.json",
         "label": "Mount Fussel"
       },
-      "image": "File:SmokyMountains.JPG"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_fussel/mount_fussel.webp"
     },
-    "id": "135"
+    "id": "mount_fussel"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -59,12 +60,12 @@
       "title": "Mount Temmikant",
       "description": "A volcanic peak found within the [[Smoky Mountains]], home of an old blind [[red dragon]] [[Guyanothaz]].",
       "link": {
-        "url": "Mount Temmikant",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_temmikant/mount_temmikant.json",
         "label": "Mount Temmikant"
       },
-      "image": "File:SmokyMountains.JPG"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_temmikant/mount_temmikant.webp"
     },
-    "id": "136"
+    "id": "mount_temmikant"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -76,12 +77,12 @@
       "title": "Cliffs of Leaping Horses",
       "description": "A stretch of seaside cliffs in [[Mulhorand]], south of the [[River Rauthenflow]]'s mouth.",
       "link": {
-        "url": "Cliffs of Leaping Horses",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/cliffs_of_leaping_horses/cliffs_of_leaping_horses.json",
         "label": "Cliffs of Leaping Horses"
       },
-      "image": "File:Mulhorand1357DR.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/cliffs_of_leaping_horses/cliffs_of_leaping_horses.webp"
     },
-    "id": "141"
+    "id": "cliffs_of_leaping_horses"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -93,12 +94,12 @@
       "title": "Fuirgar",
       "description": "Or the '''Land of the Stone Giants''' – a small mountain range and surrounding lowland found in the [[Hordelands]] and [[east Faerûn]]. Not surprisingly, home to hundreds of [[stone giant]]s.",
       "link": {
-        "url": "Fuirgar",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/fuirgar/fuirgar.json",
         "label": "Fuirgar"
       },
-      "image": "File:Raurin.JPG"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/fuirgar/fuirgar.webp"
     },
-    "id": "185"
+    "id": "fuirgar"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -110,12 +111,12 @@
       "title": "Landrise",
       "description": "A large, sprawling cliff that speared through the middle of the [[Shaar]].",
       "link": {
-        "url": "Landrise",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/landrise/landrise.json",
         "label": "Landrise"
       },
-      "image": "File:Landrise-Richard-Sardinha.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/landrise/landrise.webp"
     },
-    "id": "193"
+    "id": "landrise"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -127,11 +128,12 @@
       "title": "Breaker's Rocks",
       "description": "A dangerous and infamous reef resting in the [[Lake of Mists]] at the mouth of the unnamed bay upon which the city of [[Almorel]] was founded.",
       "link": {
-        "url": "Breaker's Rocks",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/breakers_rocks/breakers_rocks.json",
         "label": "Breaker's Rocks"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/breakers_rocks/breakers_rocks.webp"
     },
-    "id": "230"
+    "id": "breakers_rocks"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -143,12 +145,12 @@
       "title": "Mount Hazail",
       "description": "The highest peak of the [[Gnollwatch Mountains]], with the elevation of 11,500 ft. (3,500 m).",
       "link": {
-        "url": "Mount Hazail",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_hazail/mount_hazail.json",
         "label": "Mount Hazail"
       },
-      "image": "File:ForestOfAmtar.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_hazail/mount_hazail.webp"
     },
-    "id": "296"
+    "id": "mount_hazail"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -160,12 +162,12 @@
       "title": "Cliffs of Talar",
       "description": "The cliffs towering above the [[River Talar]] where it crossed the [[Misty Vale]].",
       "link": {
-        "url": "Cliffs of Talar",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/cliffs_of_talar/cliffs_of_talar.json",
         "label": "Cliffs of Talar"
       },
-      "image": "File:Fryndul.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/cliffs_of_talar/cliffs_of_talar.webp"
     },
-    "id": "342"
+    "id": "cliffs_of_talar"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -177,12 +179,12 @@
       "title": "Ash Ridge",
       "description": "A dangerous mountain ridge, part of the [[Thunderhoof Pass‎]] that led towards the [[Old Owl Well]].",
       "link": {
-        "url": "Ash Ridge",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/ash_ridge/ash_ridge.json",
         "label": "Ash Ridge"
       },
-      "image": "File:Sword Mountains Adventures.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/ash_ridge/ash_ridge.webp"
     },
-    "id": "368"
+    "id": "ash_ridge"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -194,12 +196,12 @@
       "title": "Mount Alue",
       "description": "The dominant peak found in the [[Nathaghal Mountains]] in [[Halruaa]].",
       "link": {
-        "url": "Mount Alue",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_alue/mount_alue.json",
         "label": "Mount Alue"
       },
-      "image": "File:Halruaa.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_alue/mount_alue.webp"
     },
-    "id": "376"
+    "id": "mount_alue"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -211,11 +213,12 @@
       "title": "Mount Talath",
       "description": "One of the tallest mountains in the western half of the [[Nathaghal]] range of [[Halruaa]] and the site of the [[High Temple of Mystra]].",
       "link": {
-        "url": "Mount Talath",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_talath/mount_talath.json",
         "label": "Mount Talath"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_talath/mount_talath.webp"
     },
-    "id": "382"
+    "id": "mount_talath"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -227,12 +230,12 @@
       "title": "Mount Ulaarn",
       "description": "A major peak in the central [[Alimir Mountains]], famous for being the site of the [[Azure Falls]].",
       "link": {
-        "url": "Mount Ulaarn",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_ulaarn/mount_ulaarn.json",
         "label": "Mount Ulaarn"
       },
-      "image": "File:AlimirMtns.JPG"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_ulaarn/mount_ulaarn.webp"
     },
-    "id": "502"
+    "id": "mount_ulaarn"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -244,12 +247,12 @@
       "title": "Mount Phevos",
       "description": "The tallest peak in the [[Alimir Mountains]] with its west-facing cliffs' carvings known as the [[Eye Tyrant Cliffs]].",
       "link": {
-        "url": "Mount Phevos",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_phevos/mount_phevos.json",
         "label": "Mount Phevos"
       },
-      "image": "File:AlimirMtns.JPG"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_phevos/mount_phevos.webp"
     },
-    "id": "503"
+    "id": "mount_phevos"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -261,12 +264,12 @@
       "title": "Mount Kahdas",
       "description": "The second tallest peak in the [[Alimir Mountains]], famous for the second half of the [[Eye Tyrant Cliffs]].",
       "link": {
-        "url": "Mount Kahdas",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_kahdas/mount_kahdas.json",
         "label": "Mount Kahdas"
       },
-      "image": "File:AlimirMtns.JPG"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_kahdas/mount_kahdas.webp"
     },
-    "id": "504"
+    "id": "mount_kahdas"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -278,12 +281,12 @@
       "title": "Mount Sarengard",
       "description": "One of the tallest peaks in the eastern [[Marching Mountains]] and the site of the [[Vault of Cloaked Midnight]] – the holiest temple to [[Vhaeraun]].",
       "link": {
-        "url": "Mount Sarengard",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_sarengard/mount_sarengard.json",
         "label": "Mount Sarengard"
       },
-      "image": "File:Marching mountains 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_sarengard/mount_sarengard.webp"
     },
-    "id": "559"
+    "id": "mount_sarengard"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -295,12 +298,12 @@
       "title": "Ruler's Ridge",
       "description": "Also known as '''Calim's See''', a peak where a grand battle against a powerful [[genie]] once took place, and a rumored habitat of a giant [[dragon]]-sized [[aurumvorax]].",
       "link": {
-        "url": "Ruler's Ridge",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/rulers_ridge/rulers_ridge.json",
         "label": "Ruler's Ridge"
       },
-      "image": "File:Marching mountains 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/rulers_ridge/rulers_ridge.webp"
     },
-    "id": "561"
+    "id": "rulers_ridge"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -312,12 +315,12 @@
       "title": "Mount Abbalayat",
       "description": "An isolated peak in the western [[Marching Mountains]], famous for being the home of the race of oracles called the [[Abbalayar]].",
       "link": {
-        "url": "Mount Abbalayat",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_abbalayat/mount_abbalayat.json",
         "label": "Mount Abbalayat"
       },
-      "image": "File:Marching mountains 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_abbalayat/mount_abbalayat.webp"
     },
-    "id": "564"
+    "id": "mount_abbalayat"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -329,12 +332,12 @@
       "title": "Surague Escarpment",
       "description": "The eastern border of [[Pyarados]] – a sheer cliff face that further elevated the [[Sunrise Mountains]] above the [[Thayan Plateau]].",
       "link": {
-        "url": "Surague Escarpment",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/surague_escarpment/surague_escarpment.json",
         "label": "Surague Escarpment"
       },
-      "image": "File:Surague Escarpment.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/surague_escarpment/surague_escarpment.webp"
     },
-    "id": "611"
+    "id": "surague_escarpment"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -346,11 +349,12 @@
       "title": "First Escarpment",
       "description": "",
       "link": {
-        "url": "First Escarpment",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/first_escarpment/first_escarpment.json",
         "label": "First Escarpment"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/first_escarpment/first_escarpment.webp"
     },
-    "id": "632"
+    "id": "first_escarpment"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -362,11 +366,12 @@
       "title": "Second Escarpment",
       "description": "",
       "link": {
-        "url": "Second Escarpment",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/second_escarpment/second_escarpment.json",
         "label": "Second Escarpment"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/second_escarpment/second_escarpment.webp"
     },
-    "id": "633"
+    "id": "second_escarpment"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -378,11 +383,12 @@
       "title": "Gorge of Gauros",
       "description": "A rocky canyon that encompassed a stretch of the [[First Escarpment]].",
       "link": {
-        "url": "Gorge of Gauros",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/gorge_of_gauros/gorge_of_gauros.json",
         "label": "Gorge of Gauros"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/gorge_of_gauros/gorge_of_gauros.webp"
     },
-    "id": "656"
+    "id": "gorge_of_gauros"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -394,12 +400,12 @@
       "title": "Umbergoth",
       "description": "The tallest mountain in [[Aglarond]]. As of [[1368 DR]], it had never been scaled.",
       "link": {
-        "url": "Umbergoth",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/umbergoth/umbergoth.json",
         "label": "Umbergoth"
       },
-      "image": "File:Umber Marshes.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/umbergoth/umbergoth.webp"
     },
-    "id": "722"
+    "id": "umbergoth"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -411,11 +417,12 @@
       "title": "Eldath's Mount",
       "description": "A peak in the [[Troll Mountains]] at which the great [[Green Goddess Falls]] was located. The falls were a part of the [[River Rimril]], and the [[Duskwood Dell]] into which the waters flowed was a sacred site to the goddess [[Eldath]].{{approx}}",
       "link": {
-        "url": "Eldath's Mount",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/eldaths_mount/eldaths_mount.json",
         "label": "Eldath's Mount"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/eldaths_mount/eldaths_mount.webp"
     },
-    "id": "752"
+    "id": "eldaths_mount"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -427,12 +434,12 @@
       "title": "Mount Speartop",
       "description": "The tallest mountain of the [[Cloud Peaks]], home to [[Icehauptannarthanyx]] and other gigantic sleeping [[dragon]]s.",
       "link": {
-        "url": "Mount Speartop",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_speartop/mount_speartop.json",
         "label": "Mount Speartop"
       },
-      "image": "File:Zehoarastria.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_speartop/mount_speartop.webp"
     },
-    "id": "812"
+    "id": "mount_speartop"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -444,12 +451,12 @@
       "title": "The Fangs",
       "description": "A pair of extremely steep mountains that marked the northern border of [[Amn]].",
       "link": {
-        "url": "The Fangs",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/the_fangs/the_fangs.json",
         "label": "The Fangs"
       },
-      "image": "File:Bitten Road.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/the_fangs/the_fangs.webp"
     },
-    "id": "826"
+    "id": "the_fangs"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -461,12 +468,12 @@
       "title": "Scarsiir's Crag",
       "description": "The crag that once was [[silver dragon]] [[Eacoathildarandus]]'s lair.",
       "link": {
-        "url": "Scarsiir's Crag",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/scarsiirs_crag/scarsiirs_crag.json",
         "label": "Scarsiir's Crag"
       },
-      "image": "File:Bitten Road.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/scarsiirs_crag/scarsiirs_crag.webp"
     },
-    "id": "828"
+    "id": "scarsiirs_crag"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -478,12 +485,12 @@
       "title": "Mount Adiir",
       "description": "One of the highest peaks in the [[Starspires]], the location of the [[Cloister of St. Ramedar]].",
       "link": {
-        "url": "Mount Adiir",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_adiir/mount_adiir.json",
         "label": "Mount Adiir"
       },
-      "image": "File:Kirgard.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_adiir/mount_adiir.webp"
     },
-    "id": "843"
+    "id": "mount_adiir"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -495,12 +502,12 @@
       "title": "Deny Ridge",
       "description": "A high rock ridge in the of the [[Forest of Shadows]] – a defensive lookout for the [[elves]].<br/><br/>'''Note: This map shows the incorrect geography of the region. Please refer to 2{{nd}} edition maps.'''",
       "link": {
-        "url": "Deny Ridge",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/deny_ridge/deny_ridge.json",
         "label": "Deny Ridge"
       },
-      "image": "File:In Sylvan Shadows Snowflake Mountains.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/deny_ridge/deny_ridge.webp"
     },
-    "id": "872"
+    "id": "deny_ridge"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -512,11 +519,12 @@
       "title": "Assar's Peak",
       "description": "A mountain in the [[Troll Mountains]] of [[Amn]] overlooking the valley known as the [[Gulf of Storms]].{{approx}}",
       "link": {
-        "url": "Assar's Peak",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/assars_peak/assars_peak.json",
         "label": "Assar's Peak"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/assars_peak/assars_peak.webp"
     },
-    "id": "892"
+    "id": "assars_peak"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -528,12 +536,12 @@
       "title": "Mount Batyr",
       "description": "The peak in the [[Troll Mountains]] into which the famed [[Wailing Dwarf]] was carved.",
       "link": {
-        "url": "Mount Batyr",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_batyr/mount_batyr.json",
         "label": "Mount Batyr"
       },
-      "image": "File:TrollMountains2e.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_batyr/mount_batyr.webp"
     },
-    "id": "893"
+    "id": "mount_batyr"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -545,11 +553,12 @@
       "title": "Brigands' Gorge",
       "description": "The four-mile-long deep canyon in the northern part of the [[Troll Mountains]].\n",
       "link": {
-        "url": "Brigands' Gorge",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/brigands_gorge/brigands_gorge.json",
         "label": "Brigands' Gorge"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/brigands_gorge/brigands_gorge.webp"
     },
-    "id": "894"
+    "id": "brigands_gorge"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -561,12 +570,12 @@
       "title": "Mount Sklagarra",
       "description": "A peak in the [[Troll Mountains]] east of the [[Smokespire]] volcano.",
       "link": {
-        "url": "Mount Sklagarra",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_sklagarra/mount_sklagarra.json",
         "label": "Mount Sklagarra"
       },
-      "image": "File:TrollMountains2e.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_sklagarra/mount_sklagarra.webp"
     },
-    "id": "895"
+    "id": "mount_sklagarra"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -578,11 +587,12 @@
       "title": "Smokespire",
       "description": "An extinct volcano in the [[Troll Mountains]] and home of the great [[dragon]] [[Balagos]].{{approx}}",
       "link": {
-        "url": "Smokespire",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/smokespire/smokespire.json",
         "label": "Smokespire"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/smokespire/smokespire.webp"
     },
-    "id": "896"
+    "id": "smokespire"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -594,11 +604,12 @@
       "title": "Mount Thalangar",
       "description": "One of the mountains overlooking the [[Gulf of Storms]].{{approx}}\n",
       "link": {
-        "url": "Mount Thalangar",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_thalangar/mount_thalangar.json",
         "label": "Mount Thalangar"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_thalangar/mount_thalangar.webp"
     },
-    "id": "898"
+    "id": "mount_thalangar"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -610,12 +621,12 @@
       "title": "Mount Dodild",
       "description": "The peak beneath which the city of [[Cairnheim]] was located.",
       "link": {
-        "url": "Mount Dodild",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_dodild/mount_dodild.json",
         "label": "Mount Dodild"
       },
-      "image": "File:Lake of the Snake and Lake of Snows.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_dodild/mount_dodild.webp"
     },
-    "id": "914"
+    "id": "mount_dodild"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -627,12 +638,12 @@
       "title": "Spotter's Peak",
       "description": "The peak that rose above [[Castle Crag]] and the [[Gnoll Pass]].",
       "link": {
-        "url": "Spotter's Peak",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/spotters_peak/spotters_peak.json",
         "label": "Spotter's Peak"
       },
-      "image": "File:Castle Kilgrave.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/spotters_peak/spotters_peak.webp"
     },
-    "id": "959"
+    "id": "spotters_peak"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -644,12 +655,12 @@
       "title": "Twin Peaks of Urlspur",
       "description": "A duo of mountains in the [[Thunder Peaks]] where the [[Immerflow]] began.",
       "link": {
-        "url": "Twin Peaks of Urlspur",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/twin_peaks_of_urlspur/twin_peaks_of_urlspur.json",
         "label": "Twin Peaks of Urlspur"
       },
-      "image": "File:Cormyr - 1479 DR.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/twin_peaks_of_urlspur/twin_peaks_of_urlspur.webp"
     },
-    "id": "961"
+    "id": "twin_peaks_of_urlspur"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -661,12 +672,12 @@
       "title": "Black Mountain",
       "description": "A peak on the southern side of the [[Hooknose Crag]].",
       "link": {
-        "url": "Black Mountain",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/black_mountain/black_mountain.json",
         "label": "Black Mountain"
       },
-      "image": "File:Black Mountain.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/black_mountain/black_mountain.webp"
     },
-    "id": "1002"
+    "id": "black_mountain"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -678,12 +689,12 @@
       "title": "Bloodhorn",
       "description": "A great mountain crag overlooking [[Sessrendale]], lair of [[red dragon]] [[Thraxata]].",
       "link": {
-        "url": "Bloodhorn",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/bloodhorn/bloodhorn.json",
         "label": "Bloodhorn"
       },
-      "image": "File:Sessrendale.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/bloodhorn/bloodhorn.webp"
     },
-    "id": "1046"
+    "id": "bloodhorn"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -695,12 +706,12 @@
       "title": "Wyvernfang",
       "description": "A large stone summit amid the [[Thunder Peaks]] located just a bit northeast of [[High Dale]] and inhabited by a particularly dangerous roost of [[wyvern]]s.",
       "link": {
-        "url": "Wyvernfang",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/wyvernfang/wyvernfang.json",
         "label": "Wyvernfang"
       },
-      "image": "File:High Dales.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/wyvernfang/wyvernfang.webp"
     },
-    "id": "1056"
+    "id": "wyvernfang"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -712,11 +723,12 @@
       "title": "Mount Thalagbror",
       "description": "The mountain named after an [[ogre mage]] named [[Thalagbror]], the starting point for the [[River Arkhen]] in the [[Thunder Peaks]].",
       "link": {
-        "url": "Mount Thalagbror",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_thalagbror/mount_thalagbror.json",
         "label": "Mount Thalagbror"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_thalagbror/mount_thalagbror.webp"
     },
-    "id": "1067"
+    "id": "mount_thalagbror"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -728,12 +740,12 @@
       "title": "Mount Drakkor Rouge",
       "description": "A semi-extinct, partially flooded volcano in the southern [[Thunder Peaks]].",
       "link": {
-        "url": "Mount Drakkor Rouge",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_drakkor_rouge/mount_drakkor_rouge.json",
         "label": "Mount Drakkor Rouge"
       },
-      "image": "File:MountDrakkor-Map.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_drakkor_rouge/mount_drakkor_rouge.webp"
     },
-    "id": "1069"
+    "id": "mount_drakkor_rouge"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -745,12 +757,12 @@
       "title": "Lightning Peak",
       "description": "A tall peak on note at the heart of the [[Stormhorns]].",
       "link": {
-        "url": "Lightning Peak",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/lightning_peak/lightning_peak.json",
         "label": "Lightning Peak"
       },
-      "image": "File:South Storm Horns.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/lightning_peak/lightning_peak.webp"
     },
-    "id": "1124"
+    "id": "lightning_peak"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -762,11 +774,12 @@
       "title": "Stonecliff",
       "description": "A perilous rocky escarpment that formed a natural wall along the north side of The [[High Road]] with the [[Eveningstar Gorge]] being the only route that mounts and livestock could take up or down across.",
       "link": {
-        "url": "Stonecliff",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/stonecliff/stonecliff.json",
         "label": "Stonecliff"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/stonecliff/stonecliff.webp"
     },
-    "id": "1147"
+    "id": "stonecliff"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -778,12 +791,12 @@
       "title": "Cliff of Lost Lovers",
       "description": "A cliff landmark of note.",
       "link": {
-        "url": "Cliff of Lost Lovers",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/cliff_of_lost_lovers/cliff_of_lost_lovers.json",
         "label": "Cliff of Lost Lovers"
       },
-      "image": "File:Hullack forest 2e cormyr.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/cliff_of_lost_lovers/cliff_of_lost_lovers.webp"
     },
-    "id": "1183"
+    "id": "cliff_of_lost_lovers"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -795,12 +808,12 @@
       "title": "Cliffs of Karthaut",
       "description": "Coastal cliffs of note.",
       "link": {
-        "url": "Cliffs of Karthaut",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/cliffs_of_karthaut/cliffs_of_karthaut.json",
         "label": "Cliffs of Karthaut"
       },
-      "image": "File:Redwater.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/cliffs_of_karthaut/cliffs_of_karthaut.webp"
     },
-    "id": "1203"
+    "id": "cliffs_of_karthaut"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -812,12 +825,12 @@
       "title": "Burning Eye",
       "description": "A tall mountain of the [[Sunset Mountains]] with a large signal tower at its summit used to alert settlements, including [[Easting (town)|Easting]].{{approx}}",
       "link": {
-        "url": "Burning Eye",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/burning_eye/burning_eye.json",
         "label": "Burning Eye"
       },
-      "image": "File:BurningEye.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/burning_eye/burning_eye.webp"
     },
-    "id": "1225"
+    "id": "burning_eye"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -829,11 +842,12 @@
       "title": "Grey Watcher",
       "description": "The mountain where the infamous citadel of the [[Darkhold]] stood within the [[Darkhold Vale]].",
       "link": {
-        "url": "Grey Watcher",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/grey_watcher/grey_watcher.json",
         "label": "Grey Watcher"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/grey_watcher/grey_watcher.webp"
     },
-    "id": "1229"
+    "id": "grey_watcher"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -845,11 +859,12 @@
       "title": "Skull Gorge",
       "description": "A long, steep, and narrow gorge that ran along the northernmost stretch of the [[River Reaching]] just downstream of the [[Misty Stair]] waterfalls.",
       "link": {
-        "url": "Skull Gorge",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/skull_gorge/skull_gorge.json",
         "label": "Skull Gorge"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/skull_gorge/skull_gorge.webp"
     },
-    "id": "1254"
+    "id": "skull_gorge"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -861,12 +876,12 @@
       "title": "Mount Hlim",
       "description": "The southernmost peak of the [[Greypeak Mountains]] that towered over the village of [[Xonthal's Tower (village)|Xonthal's Tower]].",
       "link": {
-        "url": "Mount Hlim",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_hlim/mount_hlim.json",
         "label": "Mount Hlim"
       },
-      "image": "File:Hammer Hall.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_hlim/mount_hlim.webp"
     },
-    "id": "1268"
+    "id": "mount_hlim"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -878,12 +893,12 @@
       "title": "Hill of Lost Souls",
       "description": "A lone mountain that stood in the middle of [[Pelleor's Prairie]] in the [[Backlands]], haunted by the [[ghost]]s of fallen [[human]], [[goblin]], and [[orc]] soldiers.",
       "link": {
-        "url": "Hill of Lost Souls",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/hill_of_lost_souls/hill_of_lost_souls.json",
         "label": "Hill of Lost Souls"
       },
-      "image": "File:Hill of Lost Souls treasure map.PNG"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/hill_of_lost_souls/hill_of_lost_souls.webp"
     },
-    "id": "1272"
+    "id": "hill_of_lost_souls"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -895,12 +910,12 @@
       "title": "Mount Shalandragar",
       "description": "A mountain of note, south of the [[High Horn]] and west of [[Espar]].",
       "link": {
-        "url": "Mount Shalandragar",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_shalandragar/mount_shalandragar.json",
         "label": "Mount Shalandragar"
       },
-      "image": "File:Mount Shalandragar.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_shalandragar/mount_shalandragar.webp"
     },
-    "id": "1315"
+    "id": "mount_shalandragar"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -912,12 +927,12 @@
       "title": "Mmount Ugruth",
       "description": "A mountain of note, home to the fearsome [[Candlekairn]] clan of [[orc]]s.",
       "link": {
-        "url": "Mmount Ugruth",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mmount_ugruth/mmount_ugruth.json",
         "label": "Mmount Ugruth"
       },
-      "image": "File:Hlondeth VR.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mmount_ugruth/mmount_ugruth.webp"
     },
-    "id": "1339"
+    "id": "mmount_ugruth"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -929,12 +944,12 @@
       "title": "Mount Kolimnis",
       "description": "Or '''Eversmoke''', a well-known active volcano in the [[Aphrunn Mountains]] of [[Turmish]].",
       "link": {
-        "url": "Mount Kolimnis",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_kolimnis/mount_kolimnis.json",
         "label": "Mount Kolimnis"
       },
-      "image": "File:Torl.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_kolimnis/mount_kolimnis.webp"
     },
-    "id": "1343"
+    "id": "mount_kolimnis"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -946,12 +961,12 @@
       "title": "Blade Cliffs",
       "description": "A chain of dangerous high cliffs with its lands belonging to the [[Exeltis]] family.",
       "link": {
-        "url": "Blade Cliffs",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/blade_cliffs/blade_cliffs.json",
         "label": "Blade Cliffs"
       },
-      "image": "File:Blade cliffs nwn.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/blade_cliffs/blade_cliffs.webp"
     },
-    "id": "1364"
+    "id": "blade_cliffs"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -963,12 +978,12 @@
       "title": "Crab's Claw Coast",
       "description": "A wild patch of crooked coastal cliffs and steep ridges, named not for crabs but for the cliffs' shape. Its many coastal caves and grottoes were popular among pirates and smuggles.",
       "link": {
-        "url": "Crab's Claw Coast",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/crabs_claw_coast/crabs_claw_coast.json",
         "label": "Crab's Claw Coast"
       },
-      "image": "File:Blade cliffs nwn.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/crabs_claw_coast/crabs_claw_coast.webp"
     },
-    "id": "1366"
+    "id": "crabs_claw_coast"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -980,12 +995,12 @@
       "title": "Machran Spire",
       "description": "A mountainous outcropping of [[granite]] found near the village of [[Gurnth]].",
       "link": {
-        "url": "Machran Spire",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/machran_spire/machran_spire.json",
         "label": "Machran Spire"
       },
-      "image": "File:Vamar's Tower-Machran Spire-Gurnth.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/machran_spire/machran_spire.webp"
     },
-    "id": "1390"
+    "id": "machran_spire"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -997,12 +1012,12 @@
       "title": "Cliffs of Atin",
       "description": "Sea-cliffs on the border of [[Turmish]].",
       "link": {
-        "url": "Cliffs of Atin",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/cliffs_of_atin/cliffs_of_atin.json",
         "label": "Cliffs of Atin"
       },
-      "image": "File:Cliffs of Atin.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/cliffs_of_atin/cliffs_of_atin.webp"
     },
-    "id": "1403"
+    "id": "cliffs_of_atin"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1014,12 +1029,12 @@
       "title": "Mount Andrus",
       "description": "A semi-active volcano, sacred to the [[Church of Talos]], located in the [[Mountains of the Alaoreum]] in [[Turmish]].",
       "link": {
-        "url": "Mount Andrus",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_andrus/mount_andrus.json",
         "label": "Mount Andrus"
       },
-      "image": "File:Mount Andrus.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_andrus/mount_andrus.webp"
     },
-    "id": "1420"
+    "id": "mount_andrus"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1031,11 +1046,12 @@
       "title": "Mount Illefarn",
       "description": "A peak under which [[Clan Ironeater]] stood against Illefarn's destruction.",
       "link": {
-        "url": "Mount Illefarn",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_illefarn/mount_illefarn.json",
         "label": "Mount Illefarn"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_illefarn/mount_illefarn.webp"
     },
-    "id": "1497"
+    "id": "mount_illefarn"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1047,12 +1063,12 @@
       "title": "Sarcrag",
       "description": "A small jutting crag that formed a perfect natural lookout and a clearly-visible from afar landmark.",
       "link": {
-        "url": "Sarcrag",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/sarcrag/sarcrag.json",
         "label": "Sarcrag"
       },
-      "image": "File:WaterdeepEnvirons2.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/sarcrag/sarcrag.webp"
     },
-    "id": "1550"
+    "id": "sarcrag"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1064,12 +1080,12 @@
       "title": "Redcliffs",
       "description": "The cliffs along the coast northwest of [[Waterdeep]], famed for their red hue in the light of the setting sun.",
       "link": {
-        "url": "Redcliffs",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/redcliffs/redcliffs.json",
         "label": "Redcliffs"
       },
-      "image": "File:WaterdeepEnvirons2.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/redcliffs/redcliffs.webp"
     },
-    "id": "1552"
+    "id": "redcliffs"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1081,12 +1097,12 @@
       "title": "Red Rocks",
       "description": "A tiny archipelago in the [[Sea of Swords]] just to the northwest of [[Waterdeep]]. The rocky outcroppings were inhabited by [[harpies]]. [[peryton]]s, and at least one known [[manticore]].",
       "link": {
-        "url": "Red Rocks",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/red_rocks/red_rocks.json",
         "label": "Red Rocks"
       },
-      "image": "File:Thornhold map.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/red_rocks/red_rocks.webp"
     },
-    "id": "1553"
+    "id": "red_rocks"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1098,12 +1114,12 @@
       "title": "Alsapir's Rock",
       "description": "A former lair of the [[copper dragon]] [[Gaulauntyr]], afterward occupied by a [[deepspawn]] and its offspring.",
       "link": {
-        "url": "Alsapir's Rock",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/alsapirs_rock/alsapirs_rock.json",
         "label": "Alsapir's Rock"
       },
-      "image": "File:Thornhold map.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/alsapirs_rock/alsapirs_rock.webp"
     },
-    "id": "1554"
+    "id": "alsapirs_rock"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1115,11 +1131,12 @@
       "title": " Mount Araddyn",
       "description": "The mountain inhabited by  an unusual [[blue dragon]] [[Olothontor]].",
       "link": {
-        "url": " Mount Araddyn",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_araddyn/mount_araddyn.json",
         "label": " Mount Araddyn"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_araddyn/mount_araddyn.webp"
     },
-    "id": "1565"
+    "id": "mount_araddyn"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1131,12 +1148,12 @@
       "title": "Mount Helimbrar",
       "description": "The southernmost peak of the [[Sword Mountains]].",
       "link": {
-        "url": "Mount Helimbrar",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_helimbrar/mount_helimbrar.json",
         "label": "Mount Helimbrar"
       },
-      "image": "File:WaterdeepEnvirons2.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_helimbrar/mount_helimbrar.webp"
     },
-    "id": "1567"
+    "id": "mount_helimbrar"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1148,12 +1165,12 @@
       "title": "Mount Sar",
       "description": "A mountain peak in the [[Sword Mountains]], the second most southern in the entire range.",
       "link": {
-        "url": "Mount Sar",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_sar/mount_sar.json",
         "label": "Mount Sar"
       },
-      "image": "File:WaterdeepEnvirons2.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_sar/mount_sar.webp"
     },
-    "id": "1569"
+    "id": "mount_sar"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1165,12 +1182,12 @@
       "title": "Earthspur",
       "description": "The 8,000-foot-high (2,438 meters) mountain at the southern end of the [[Dragonisle]] in the [[Pirate Isles]].",
       "link": {
-        "url": "Earthspur",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/earthspur/earthspur.json",
         "label": "Earthspur"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/earthspur/earthspur.webp"
     },
-    "id": "1580"
+    "id": "earthspur"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1182,12 +1199,12 @@
       "title": "Umberlee's Talons",
       "description": "A naval landmark of protruding sharp rocks.",
       "link": {
-        "url": "Umberlee's Talons",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/umberlees_talons/umberlees_talons.json",
         "label": "Umberlee's Talons"
       },
-      "image": "File:Corsair moonsea map.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/umberlees_talons/umberlees_talons.webp"
     },
-    "id": "1634"
+    "id": "umberlees_talons"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1199,12 +1216,12 @@
       "title": "Mount Wolf",
       "description": "A mountain that towered over the [[North Road]], south of [[Maskyr's Eye]], known for ravenous packs of [[wolves]] in the past.",
       "link": {
-        "url": "Mount Wolf",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_wolf/mount_wolf.json",
         "label": "Mount Wolf"
       },
-      "image": "File:CoRB Map of the Vast.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_wolf/mount_wolf.webp"
     },
-    "id": "1678"
+    "id": "mount_wolf"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1216,12 +1233,12 @@
       "title": "Hollow Mountain",
       "description": "Also known as '''Mount Grimmerfang''', at one point in history, the capital of both the [[orc]] kingdom of [[Vastar]] and the [[dwarf]] kingdom of [[Roldilar]].",
       "link": {
-        "url": "Hollow Mountain",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/hollow_mountain/hollow_mountain.json",
         "label": "Hollow Mountain"
       },
-      "image": "File:CoRB Map of the Vast.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/hollow_mountain/hollow_mountain.webp"
     },
-    "id": "1679"
+    "id": "hollow_mountain"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1233,12 +1250,12 @@
       "title": "Mount Dread",
       "description": "A mountain that hid the dungeon that once belonged to the [[wizard|sorcerer]] named [[Azazabus]].",
       "link": {
-        "url": "Mount Dread",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_dread/mount_dread.json",
         "label": "Mount Dread"
       },
-      "image": "File:Freedale0001.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_dread/mount_dread.webp"
     },
-    "id": "1715"
+    "id": "mount_dread"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1250,12 +1267,12 @@
       "title": "Moonrise Crag",
       "description": "A great and ancient [[wyvern]]-infested rock knob.",
       "link": {
-        "url": "Moonrise Crag",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/moonrise_crag/moonrise_crag.json",
         "label": "Moonrise Crag"
       },
-      "image": "File:The Annotated Elminster map.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/moonrise_crag/moonrise_crag.webp"
     },
-    "id": "1751"
+    "id": "moonrise_crag"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1267,12 +1284,12 @@
       "title": "The Scar",
       "description": "Also known as '''Wyvern's Rift''', the massive, eponymous gorge that spanned the width of [[Scardale]] within the southern [[Dalelands]].",
       "link": {
-        "url": "Scar",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/the_scar/the_scar.json",
         "label": "The Scar"
       },
-      "image": "File:The Annotated Elminster map.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/the_scar/the_scar.webp"
     },
-    "id": "1756"
+    "id": "the_scar"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1284,12 +1301,12 @@
       "title": "Haptooth Hill",
       "description": "The inactive volcano and the location of the village of [[Hap]].",
       "link": {
-        "url": "Haptooth Hill",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/haptooth_hill/haptooth_hill.json",
         "label": "Haptooth Hill"
       },
-      "image": "File:Black Hound loc13.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/haptooth_hill/haptooth_hill.webp"
     },
-    "id": "1779"
+    "id": "haptooth_hill"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1301,12 +1318,12 @@
       "title": "Mount Tesh",
       "description": "Or '''Trollgaunt Mountain''', a mountain in [[Teshendale]], known for disappearances and reports of ghostly ''[[dancing lights]]''.",
       "link": {
-        "url": "Mount Tesh",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_tesh/mount_tesh.json",
         "label": "Mount Tesh"
       },
-      "image": "File:ZhentilKeepWest.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_tesh/mount_tesh.webp"
     },
-    "id": "1796"
+    "id": "mount_tesh"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1318,11 +1335,12 @@
       "title": "Mount Rausrawna",
       "description": "A mountain of note, north of [[Griffon Hill]].",
       "link": {
-        "url": "Mount Rausrawna",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_rausrawna/mount_rausrawna.json",
         "label": "Mount Rausrawna"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_rausrawna/mount_rausrawna.webp"
     },
-    "id": "1837"
+    "id": "mount_rausrawna"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1334,12 +1352,12 @@
       "title": "Mount Shaddath",
       "description": "A mountain at the eastern edges of the [[Desertsmouth Mountains]] with the [[Shaddath]] just to its south.",
       "link": {
-        "url": "Mount Shaddath",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_shaddath/mount_shaddath.json",
         "label": "Mount Shaddath"
       },
-      "image": "File:SEAnauroch.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_shaddath/mount_shaddath.webp"
     },
-    "id": "1862"
+    "id": "mount_shaddath"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1351,12 +1369,12 @@
       "title": "Ironthrone Mountain",
       "description": "The northernmost peak on the [[Desertsmouth Mountains]].",
       "link": {
-        "url": "Ironthrone Mountain",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/ironthrone_mountain/ironthrone_mountain.json",
         "label": "Ironthrone Mountain"
       },
-      "image": "File:SEAnauroch.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/ironthrone_mountain/ironthrone_mountain.webp"
     },
-    "id": "1870"
+    "id": "ironthrone_mountain"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1368,11 +1386,12 @@
       "title": "Dragondoom",
       "description": "The mountain location of [[Morueme's Cave]] in the eastern end of the Nether Mountains.",
       "link": {
-        "url": "Dragondoom",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/dragondoom/dragondoom.json",
         "label": "Dragondoom"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/dragondoom/dragondoom.webp"
     },
-    "id": "1892"
+    "id": "dragondoom"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1384,12 +1403,12 @@
       "title": "Ataaz Kahakla",
       "description": "Or the '''Gorge of Death''', a high river canyon on the [[River Tath]].",
       "link": {
-        "url": "Ataaz Kahakla",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/ataaz_kahakla/ataaz_kahakla.json",
         "label": "Ataaz Kahakla"
       },
-      "image": "File:Aldani Basin map.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/ataaz_kahakla/ataaz_kahakla.webp"
     },
-    "id": "1972"
+    "id": "ataaz_kahakla"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1401,12 +1420,12 @@
       "title": "Ataaz Yklwazi",
       "description": "Also known as the '''Gorge of Blades''', a volcanic canyon north of the [[Valley of Lost Honor]], named after its jagged shards of [[basalt]] that shot up from the ground.",
       "link": {
-        "url": "Ataaz Yklwazi",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/ataaz_yklwazi/ataaz_yklwazi.json",
         "label": "Ataaz Yklwazi"
       },
-      "image": "File:Wyrmheart Mine - Tomb of Annihilation map.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/ataaz_yklwazi/ataaz_yklwazi.webp"
     },
-    "id": "1976"
+    "id": "ataaz_yklwazi"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1418,12 +1437,12 @@
       "title": "Mount Thorog",
       "description": "One of the two tallest mountains east of the [[Moon Pass]], named after a deceased [[orc]] chieftain.",
       "link": {
-        "url": "Mount Thorog",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_thorog/mount_thorog.json",
         "label": "Mount Thorog"
       },
-      "image": "File:Far Forest 3e.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_thorog/mount_thorog.webp"
     },
-    "id": "1994"
+    "id": "mount_thorog"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1435,12 +1454,12 @@
       "title": "Mount Ieldroun",
       "description": "One of the two tallest mountains east of the [[Moon Pass]], named for a long-dead [[orc]] chieftain.",
       "link": {
-        "url": "Mount Ieldroun",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_ieldroun/mount_ieldroun.json",
         "label": "Mount Ieldroun"
       },
-      "image": "File:Far Forest 3e.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_ieldroun/mount_ieldroun.webp"
     },
-    "id": "1996"
+    "id": "mount_ieldroun"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1452,12 +1471,12 @@
       "title": "Mount Hotenow",
       "description": "Known to the ancient [[dwarves]] as '''Glaurimm''', a volcano deep in [[Neverwinter Wood]] that was the reason the [[Neverwinter River]] never froze over.",
       "link": {
-        "url": "Mount Hotenow",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_hotenow/mount_hotenow.json",
         "label": "Mount Hotenow"
       },
-      "image": "File:Mount Hotenow NCS.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_hotenow/mount_hotenow.webp"
     },
-    "id": "2097"
+    "id": "mount_hotenow"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1469,12 +1488,12 @@
       "title": "Ataaz Muhahah",
       "description": "Also known as the '''Laughing Gorge''' in the [[Chultan language]], a canyon on the [[River Olung]], a deep chasm over 100 feet (30.5 meters) in depth, at one point, crossed by the [[Monkey Bridge]].",
       "link": {
-        "url": "Ataaz Muhahah",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/ataaz_muhahah/ataaz_muhahah.json",
         "label": "Ataaz Muhahah"
       },
-      "image": "File:The dawn warrior 5e.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/ataaz_muhahah/ataaz_muhahah.webp"
     },
-    "id": "2109"
+    "id": "ataaz_muhahah"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1486,12 +1505,12 @@
       "title": "Tor of Swords",
       "description": "A [[granite]] upcropping on [[Pelleor's Praire]], where the abbey of [[Endar Aglandtor]], dedicated to [[Haela Brightaxe]], was dug into a series of caverns at the base of the Tor.",
       "link": {
-        "url": "Tor of Swords",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/tor_of_swords/tor_of_swords.json",
         "label": "Tor of Swords"
       },
-      "image": "File:SerpentKingdoms Map-a-week Lazzaretti.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/tor_of_swords/tor_of_swords.webp"
     },
-    "id": "2123"
+    "id": "tor_of_swords"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1503,12 +1522,12 @@
       "title": "Wyvern Tor",
       "description": "A crag in the [[Lost Hills]], northeast of the [[Sword Mountains]], and was easily seen by any on the [[Triboar Trail]] near the vicinity of [[Conyberry]].",
       "link": {
-        "url": "Wyvern Tor",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/wyvern_tor/wyvern_tor.json",
         "label": "Wyvern Tor"
       },
-      "image": "File:MapLostMine.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/wyvern_tor/wyvern_tor.webp"
     },
-    "id": "2142"
+    "id": "wyvern_tor"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1520,12 +1539,12 @@
       "title": "Icespire Peak",
       "description": "A mountain home to a fortress of [[frost giant]]s, and the ancestral home of a clan of [[dwarves]] that had ties to an ancient [[artifact]] that granted power over frost and cold.",
       "link": {
-        "url": "Icespire Peak",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/icespire_peak/icespire_peak.json",
         "label": "Icespire Peak"
       },
-      "image": "File:Icespire Peak.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/icespire_peak/icespire_peak.webp"
     },
-    "id": "2144"
+    "id": "icespire_peak"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1537,12 +1556,12 @@
       "title": "Kelvin's Cairn",
       "description": "A lone 1,000-foot-tall mountain fronted by a river valley about as deep as the mount was high. The mountain top was always capped with snow and ice even through the short summer.",
       "link": {
-        "url": "Kelvin's Cairn",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/kelvins_cairn/kelvins_cairn.json",
         "label": "Kelvin's Cairn"
       },
-      "image": "File:Ten Towns.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/kelvins_cairn/kelvins_cairn.webp"
     },
-    "id": "2191"
+    "id": "kelvins_cairn"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1554,12 +1573,12 @@
       "title": "Maerlon Mountain",
       "description": "A mountain to the northeast of the town of [[Auckney]].",
       "link": {
-        "url": "Maerlon Mountain",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/maerlon_mountain/maerlon_mountain.json",
         "label": "Maerlon Mountain"
       },
-      "image": "File:Auckney.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/maerlon_mountain/maerlon_mountain.webp"
     },
-    "id": "2195"
+    "id": "maerlon_mountain"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1571,11 +1590,12 @@
       "title": "Fourthpeak",
       "description": "One of four sister mountains in the [[Spine of the World]], the location of the [[Mithral Hall]] stronghold.",
       "link": {
-        "url": "Fourthpeak",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/fourthpeak/fourthpeak.json",
         "label": "Fourthpeak"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/fourthpeak/fourthpeak.webp"
     },
-    "id": "2212"
+    "id": "fourthpeak"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1587,12 +1607,12 @@
       "title": "Skullmount",
       "description": "A mountain of note.",
       "link": {
-        "url": "Skullmount",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/skullmount/skullmount.json",
         "label": "Skullmount"
       },
-      "image": "File:Aquatic kingdoms -sea of fallen stars.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/skullmount/skullmount.webp"
     },
-    "id": "2294"
+    "id": "skullmount"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1604,12 +1624,12 @@
       "title": "Purple Cliffs",
       "description": "High coastal cliffs, colored purply by flowers and [[quartz]] deposits.",
       "link": {
-        "url": "Purple Cliffs",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/purple_cliffs/purple_cliffs.json",
         "label": "Purple Cliffs"
       },
-      "image": "File:PurpleHills-LoI.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/purple_cliffs/purple_cliffs.webp"
     },
-    "id": "2313"
+    "id": "purple_cliffs"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1621,11 +1641,12 @@
       "title": "Mount Nar",
       "description": "A massive snowcapped mountain in the [[Firward Mountains]], visible across most of [[Narfell]].",
       "link": {
-        "url": "Mount Nar",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_nar/mount_nar.json",
         "label": "Mount Nar"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_nar/mount_nar.webp"
     },
-    "id": "2397"
+    "id": "mount_nar"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1637,12 +1658,12 @@
       "title": "Hark's Finger",
       "description": "Also known as '''Mount Jiksidur''' to the [[Nar]], the most prominent landmark found in the flatlands of central [[Narfell]].",
       "link": {
-        "url": "Hark's Finger",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/harks_finger/harks_finger.json",
         "label": "Hark's Finger"
       },
-      "image": "File:HarksFinger.JPG"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/harks_finger/harks_finger.webp"
     },
-    "id": "2409"
+    "id": "harks_finger"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1654,12 +1675,12 @@
       "title": "Mulsanyaar Plateau",
       "description": "A stretch of rugged terrain that sat in the shadow of the [[Sunrise Mountains]] to the east and was actually just a continuation of the northernmost branch of the [[Thayan Plateau]].",
       "link": {
-        "url": "Mulsanyaar Plateau",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mulsanyaar_plateau/mulsanyaar_plateau.json",
         "label": "Mulsanyaar Plateau"
       },
-      "image": "File:Thay endless wastes.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mulsanyaar_plateau/mulsanyaar_plateau.webp"
     },
-    "id": "2431"
+    "id": "mulsanyaar_plateau"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1671,12 +1692,12 @@
       "title": "Mount Omvulag",
       "description": "A prominent peak located within the [[Sunrise Mountains]] between [[Rashemen]] and [[Thay]].",
       "link": {
-        "url": "Mount Omvulag",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_omvulag/mount_omvulag.json",
         "label": "Mount Omvulag"
       },
-      "image": "File:Rashemen.JPG"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_omvulag/mount_omvulag.webp"
     },
-    "id": "2444"
+    "id": "mount_omvulag"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1688,11 +1709,12 @@
       "title": "Snowcat Mountain",
       "description": "A mountain in the vicinity of the village of [[Dernovia]].{{approx}}",
       "link": {
-        "url": "Snowcat Mountain",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/snowcat_mountain/snowcat_mountain.json",
         "label": "Snowcat Mountain"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/snowcat_mountain/snowcat_mountain.webp"
     },
-    "id": "2447"
+    "id": "snowcat_mountain"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1704,12 +1726,12 @@
       "title": "Mount Okk",
       "description": "A 12,000 feet (3,700 meters) mountain in the [[Alpuk]] region of the [[Great Glacier]].",
       "link": {
-        "url": "Mount Okk",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_okk/mount_okk.json",
         "label": "Mount Okk"
       },
-      "image": "File:Ahtitlak.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_okk/mount_okk.webp"
     },
-    "id": "2525"
+    "id": "mount_okk"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1721,12 +1743,12 @@
       "title": "Redcliffs",
       "description": "Dangerous sea rock cliffs just north of the [[Red Rocks]].",
       "link": {
-        "url": "Redcliffs",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/redcliffs_2/redcliffs_2.json",
         "label": "Redcliffs"
       },
-      "image": "File:Westwood savage frontier.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/redcliffs_2/redcliffs_2.webp"
     },
-    "id": "2561"
+    "id": "redcliffs_2"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1738,12 +1760,12 @@
       "title": "Mount Horgrymborr",
       "description": "A mountain of note.",
       "link": {
-        "url": "Mount Horgrymborr",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_horgrymborr/mount_horgrymborr.json",
         "label": "Mount Horgrymborr"
       },
-      "image": "File:MoonseaNorth Dungeon170 lowres.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_horgrymborr/mount_horgrymborr.webp"
     },
-    "id": "2583"
+    "id": "mount_horgrymborr"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1755,12 +1777,12 @@
       "title": "Camnod's Cairn",
       "description": "A mountain of note.",
       "link": {
-        "url": "Camnod's Cairn",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/camnods_cairn/camnods_cairn.json",
         "label": "Camnod's Cairn"
       },
-      "image": "File:MoonseaNorth Dungeon170 lowres.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/camnods_cairn/camnods_cairn.webp"
     },
-    "id": "2592"
+    "id": "camnods_cairn"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1772,12 +1794,12 @@
       "title": "Whitehorn Mountain",
       "description": "A mountain of note.",
       "link": {
-        "url": "Whitehorn Mountain",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/whitehorn_mountain/whitehorn_mountain.json",
         "label": "Whitehorn Mountain"
       },
-      "image": "File:MoonseaNorth Dungeon170 lowres.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/whitehorn_mountain/whitehorn_mountain.webp"
     },
-    "id": "2597"
+    "id": "whitehorn_mountain"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1789,12 +1811,12 @@
       "title": "Mount Launt",
       "description": "A mountain of note.",
       "link": {
-        "url": "Mount Launt",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_launt/mount_launt.json",
         "label": "Mount Launt"
       },
-      "image": "File:MoonseaNorth Dungeon170 lowres.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_launt/mount_launt.webp"
     },
-    "id": "2608"
+    "id": "mount_launt"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1806,12 +1828,12 @@
       "title": "Mount Ombaddor",
       "description": "A mountain of note.",
       "link": {
-        "url": "Mount Ombaddor",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_ombaddor/mount_ombaddor.json",
         "label": "Mount Ombaddor"
       },
-      "image": "File:MoonseaNorth Dungeon170 lowres.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_ombaddor/mount_ombaddor.webp"
     },
-    "id": "2609"
+    "id": "mount_ombaddor"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1823,12 +1845,12 @@
       "title": "Glass Mesa",
       "description": "An enormous piece of translucent [[quartz]] which was forbidden to approach.",
       "link": {
-        "url": "Glass Mesa",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/glass_mesa/glass_mesa.json",
         "label": "Glass Mesa"
       },
-      "image": "File:Akanul 4E.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/glass_mesa/glass_mesa.webp"
     },
-    "id": "2620"
+    "id": "glass_mesa"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1840,12 +1862,12 @@
       "title": "Gorge of the Fallen Idol",
       "description": "Also known as the '''Gorge of Nomog-Geaya the Warrior''', a deep canyon carved by the [[River Ith]] in the county of [[Hazamarch]] in [[Tethyr]].<br/><br/>'''Note: This map shows the incorrect geography of the region. Please refer to 2{{nd}} edition maps.'''",
       "link": {
-        "url": "Gorge of the Fallen Idol",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/gorge_of_the_fallen_idol/gorge_of_the_fallen_idol.json",
         "label": "Gorge of the Fallen Idol"
       },
-      "image": "File:Gorge of Nomog-Geaya the Warrior.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/gorge_of_the_fallen_idol/gorge_of_the_fallen_idol.webp"
     },
-    "id": "2626"
+    "id": "gorge_of_the_fallen_idol"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1857,12 +1879,12 @@
       "title": "The Great Mount of Ghaethluntar",
       "description": "A massive mountain in the extreme [[north Faerûn]], inhabited by [[gnoll]] miners who sent caravans down the [[Remorhaz Ride]] through the icy tundra, hauling 40 to 60 ore-laden sleds at a time from [[Mount Ghaethluntar]] to [[Frozen Flindyke]].",
       "link": {
-        "url": "Great Mount of Ghaethluntar",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/the_great_mount_of_ghaethluntar/the_great_mount_of_ghaethluntar.json",
         "label": "The Great Mount of Ghaethluntar"
       },
-      "image": "File:Taurax Mountains.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/the_great_mount_of_ghaethluntar/the_great_mount_of_ghaethluntar.webp"
     },
-    "id": "2628"
+    "id": "the_great_mount_of_ghaethluntar"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1874,12 +1896,12 @@
       "title": "Mount Nirg",
       "description": "A mountain of note.",
       "link": {
-        "url": "Mount Nirg",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_nirg/mount_nirg.json",
         "label": "Mount Nirg"
       },
-      "image": "File:Thesk 14th century.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_nirg/mount_nirg.webp"
     },
-    "id": "2634"
+    "id": "mount_nirg"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1891,12 +1913,12 @@
       "title": "Surtr's Maw",
       "description": "The mountain that covered the southern half of [[Llorgh]].",
       "link": {
-        "url": "Surtr's Maw",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/surtrs_maw/surtrs_maw.json",
         "label": "Surtr's Maw"
       },
-      "image": "File:Norheim.JPG"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/surtrs_maw/surtrs_maw.webp"
     },
-    "id": "2659"
+    "id": "surtrs_maw"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1908,12 +1930,12 @@
       "title": "Horn Cliffs",
       "description": "High and mostly uninhabited sea-cave-riddled coastal cliffs of [[County Firedrake]].",
       "link": {
-        "url": "Horn Cliffs",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/horn_cliffs/horn_cliffs.json",
         "label": "Horn Cliffs"
       },
-      "image": "File:Dragon's Head Peninsula.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/horn_cliffs/horn_cliffs.webp"
     },
-    "id": "2683"
+    "id": "horn_cliffs"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1925,12 +1947,12 @@
       "title": "Kossuth's Ire",
       "description": "A long-dormant volcano located in the [[White Peaks]].",
       "link": {
-        "url": "Kossuth's Ire",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/kossuths_ire/kossuths_ire.json",
         "label": "Kossuth's Ire"
       },
-      "image": "File:MoonseaNorth Dungeon170 lowres.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/kossuths_ire/kossuths_ire.webp"
     },
-    "id": "2686"
+    "id": "kossuths_ire"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1942,12 +1964,12 @@
       "title": "Mount Akoro",
       "description": "The peak that was the home to the [[Akoro]] tribe of [[goliath]]s, a group that fought the ancient [[Maram of the Great Spear]] centuries before [[Dale Reckoning]].",
       "link": {
-        "url": "Mount Akoro",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_akoro/mount_akoro.json",
         "label": "Mount Akoro"
       },
-      "image": "File:MoonseaNorth Dungeon170 lowres.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_akoro/mount_akoro.webp"
     },
-    "id": "2690"
+    "id": "mount_akoro"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1959,12 +1981,12 @@
       "title": "Turnback Mountain",
       "description": "The southernmost peak in the [[Abbey Mountains]].",
       "link": {
-        "url": "Turnback Mountain",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/turnback_mountain/turnback_mountain.json",
         "label": "Turnback Mountain"
       },
-      "image": "File:MoonseaNorth Dungeon170 lowres.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/turnback_mountain/turnback_mountain.webp"
     },
-    "id": "2691"
+    "id": "turnback_mountain"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1976,12 +1998,12 @@
       "title": "Kossuth's Eyes",
       "description": "A pair of dormant volcanoes in the [[Small Teeth]] mountains.",
       "link": {
-        "url": "Kossuth's Eyes",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/kossuths_eyes/kossuths_eyes.json",
         "label": "Kossuth's Eyes"
       },
-      "image": "File:Harvest house amn.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/kossuths_eyes/kossuths_eyes.webp"
     },
-    "id": "2729"
+    "id": "kossuths_eyes"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -1993,12 +2015,12 @@
       "title": "Mount Turbold",
       "description": "A mountain in the [[Kuldin Peaks]] and the site of an ancient battle.<br/><br/>'''Note: This map shows the incorrect geography of the region. Please refer to 2{{nd}} edition maps.'''",
       "link": {
-        "url": "Mount Turbold",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_turbold/mount_turbold.json",
         "label": "Mount Turbold"
       },
-      "image": "File:KuldinPeaks.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_turbold/mount_turbold.webp"
     },
-    "id": "2809"
+    "id": "mount_turbold"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2010,12 +2032,12 @@
       "title": "Mount Noblesse",
       "description": "A mountain of note.<br/><br/>'''Note: This map shows the incorrect geography of the region. Please refer to 2{{nd}} edition maps.'''",
       "link": {
-        "url": "Mount Noblesse",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_noblesse/mount_noblesse.json",
         "label": "Mount Noblesse"
       },
-      "image": "File:Omlarandin Mountains.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_noblesse/mount_noblesse.webp"
     },
-    "id": "2812"
+    "id": "mount_noblesse"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2027,12 +2049,12 @@
       "title": "The Grim Jaws",
       "description": "A collection of four peaks over a mile high in the western [[Starspire Mountains]] – the tallest mountains in the Starspires.",
       "link": {
-        "url": "Grim Jaws",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/the_grim_jaws/the_grim_jaws.json",
         "label": "The Grim Jaws"
       },
-      "image": "File:East starspire.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/the_grim_jaws/the_grim_jaws.webp"
     },
-    "id": "2813"
+    "id": "the_grim_jaws"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2044,12 +2066,12 @@
       "title": "Mount Thargill",
       "description": "An extinct volcano and the easternmost peak of the [[Starspire Mountains]].",
       "link": {
-        "url": "Mount Thargill",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_thargill/mount_thargill.json",
         "label": "Mount Thargill"
       },
-      "image": "File:East starspire.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_thargill/mount_thargill.webp"
     },
-    "id": "2817"
+    "id": "mount_thargill"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2061,12 +2083,12 @@
       "title": "Hardangheight",
       "description": "A large mountain range located in the kingdom of [[Gnarhelm]].",
       "link": {
-        "url": "Hardangheight",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/hardangheight/hardangheight.json",
         "label": "Hardangheight"
       },
-      "image": "File:Gnarhelm.JPG"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/hardangheight/hardangheight.webp"
     },
-    "id": "2879"
+    "id": "hardangheight"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2078,12 +2100,12 @@
       "title": "Mount Throndor",
       "description": "A peak of note.",
       "link": {
-        "url": "Mount Throndor",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_throndor/mount_throndor.json",
         "label": "Mount Throndor"
       },
-      "image": "File:Sulasspryn Du177.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_throndor/mount_throndor.webp"
     },
-    "id": "2931"
+    "id": "mount_throndor"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2095,12 +2117,12 @@
       "title": "Suncatcher Mountain",
       "description": "A tall peak in the [[Galena Mountains]] that in the mid-to-late 14{{th}} century [[DR]], hosted a cloud-top kingdom of [[cloud giant]]s who kept [[cloud dragon]]s as pets.",
       "link": {
-        "url": "Suncatcher Mountain",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/suncatcher_mountain/suncatcher_mountain.json",
         "label": "Suncatcher Mountain"
       },
-      "image": "File:Sulasspryn Du177.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/suncatcher_mountain/suncatcher_mountain.webp"
     },
-    "id": "2935"
+    "id": "suncatcher_mountain"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2112,12 +2134,12 @@
       "title": "Ice Gorge",
       "description": "A gorge of note.",
       "link": {
-        "url": "Ice Gorge",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/ice_gorge/ice_gorge.json",
         "label": "Ice Gorge"
       },
-      "image": "File:Sulasspryn Du177.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/ice_gorge/ice_gorge.webp"
     },
-    "id": "2941"
+    "id": "ice_gorge"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2129,12 +2151,12 @@
       "title": "Mount Akka",
       "description": "A prominent mountain in the [[Alpuk]] region up to 1,000 feet (300 meters) in elevation.",
       "link": {
-        "url": "Mount Akka",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_akka/mount_akka.json",
         "label": "Mount Akka"
       },
-      "image": "File:Taak Lake.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_akka/mount_akka.webp"
     },
-    "id": "2951"
+    "id": "mount_akka"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2146,11 +2168,12 @@
       "title": "Gull Cliffs",
       "description": "Jugged shoreline cliffs on the area known as [[Gull Cape]].",
       "link": {
-        "url": "Gull Cliffs",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/gull_cliffs/gull_cliffs.json",
         "label": "Gull Cliffs"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/gull_cliffs/gull_cliffs.webp"
     },
-    "id": "3004"
+    "id": "gull_cliffs"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2162,12 +2185,12 @@
       "title": "Nar-Sek Qu'Istrade",
       "description": "A neutral meeting ground of the tribes of [[Narfell]], also known as the '''Horseshoe Canyon'''.",
       "link": {
-        "url": "Nar-Sek Qu'Istrade",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/nar_sek_quistrade/nar_sek_quistrade.json",
         "label": "Nar-Sek Qu'Istrade"
       },
-      "image": "File:Damara narfell map.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/nar_sek_quistrade/nar_sek_quistrade.webp"
     },
-    "id": "3106"
+    "id": "nar_sek_quistrade"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2179,12 +2202,12 @@
       "title": "Axe Rock",
       "description": "A projecting crag of rock that travelers on the [[Evermoor Way]] used as a landmark.",
       "link": {
-        "url": "Axe Rock",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/axe_rock/axe_rock.json",
         "label": "Axe Rock"
       },
-      "image": "File:DragonWood-map.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/axe_rock/axe_rock.webp"
     },
-    "id": "3141"
+    "id": "axe_rock"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2196,12 +2219,12 @@
       "title": "Startop Tor",
       "description": "A tor landmark named for how starlight danced reflecting off it.",
       "link": {
-        "url": "Startop Tor",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/startop_tor/startop_tor.json",
         "label": "Startop Tor"
       },
-      "image": "File:DragonWood-map.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/startop_tor/startop_tor.webp"
     },
-    "id": "3143"
+    "id": "startop_tor"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2213,12 +2236,12 @@
       "title": "The Old Man Tor",
       "description": "A tor landmark of note.",
       "link": {
-        "url": "The Old Man Tori",
-        "label": "The Old Man Tori"
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/the_old_man_tor/the_old_man_tor.json",
+        "label": "The Old Man Tor"
       },
-      "image": "File:DragonWood-map.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/the_old_man_tor/the_old_man_tor.webp"
     },
-    "id": "3144"
+    "id": "the_old_man_tor"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2230,12 +2253,12 @@
       "title": "Icepeak",
       "description": "A picturesque peak in the [[Grampalt Highlands]], the highest point of [[Oman's Isle]] and the legendary land of [[firbolg]]s origin.",
       "link": {
-        "url": "Icepeak (Oman's Isle)",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/icepeak/icepeak.json",
         "label": "Icepeak"
       },
-      "image": "File:Druid Queen Myloch Vale.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/icepeak/icepeak.webp"
     },
-    "id": "3149"
+    "id": "icepeak"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2247,12 +2270,12 @@
       "title": "Cambro Mountains",
       "description": "A mountain range located on the island of [[Gwynneth]], the location of the [[dwarven]] settlement of [[Highhome]], founded in [[-7000 DR]].",
       "link": {
-        "url": "Cambro Mountains",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/cambro_mountains/cambro_mountains.json",
         "label": "Cambro Mountains"
       },
-      "image": "File:CentralGwynneth.JPG"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/cambro_mountains/cambro_mountains.webp"
     },
-    "id": "3150"
+    "id": "cambro_mountains"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2264,11 +2287,12 @@
       "title": "Old Blind Mage Mountain",
       "description": "A mountain north of [[Skull Crag]], mined for [[iron]], [[nickel]], and [[copper]], with green rolling fields nearby used by the hamlet's shepherds.{{approx}}",
       "link": {
-        "url": "Old Blind Mage Mountain",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/old_blind_mage_mountain/old_blind_mage_mountain.json",
         "label": "Old Blind Mage Mountain"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/old_blind_mage_mountain/old_blind_mage_mountain.webp"
     },
-    "id": "3171"
+    "id": "old_blind_mage_mountain"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2280,12 +2304,12 @@
       "title": "Orator's Crag",
       "description": "A crag of note.<br/><br/>'''Note: This map shows the incorrect geography of the region. Please refer to 2{{nd}} edition maps.'''",
       "link": {
-        "url": "Orator's Crag",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/orators_crag/orators_crag.json",
         "label": "Orator's Crag"
       },
-      "image": "File:Southeastern tethyr.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/orators_crag/orators_crag.webp"
     },
-    "id": "3215"
+    "id": "orators_crag"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2297,12 +2321,12 @@
       "title": "Clefts of Razack",
       "description": "Also known as '''Razack's Scar''', a long gorge that wounded through central [[Vaasa]], through which the [[Beaumaris River]] ran.",
       "link": {
-        "url": "Clefts of Razack",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/clefts_of_razack/clefts_of_razack.json",
         "label": "Clefts of Razack"
       },
-      "image": "File:Vaasa - 1480 DR - Mike Schley.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/clefts_of_razack/clefts_of_razack.webp"
     },
-    "id": "3236"
+    "id": "clefts_of_razack"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2314,12 +2338,12 @@
       "title": "Turogor Crevasse",
       "description": "A crevasse of note.",
       "link": {
-        "url": "Turogor Crevasse",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/turogor_crevasse/turogor_crevasse.json",
         "label": "Turogor Crevasse"
       },
-      "image": "File:Vaasa - 1480 DR - Mike Schley.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/turogor_crevasse/turogor_crevasse.webp"
     },
-    "id": "3242"
+    "id": "turogor_crevasse"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2331,12 +2355,12 @@
       "title": "Inscribed Cliff",
       "description": "A landmark of note.",
       "link": {
-        "url": "Inscribed Cliff",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/inscribed_cliff/inscribed_cliff.json",
         "label": "Inscribed Cliff"
       },
-      "image": "File:Veilstone Peaks.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/inscribed_cliff/inscribed_cliff.webp"
     },
-    "id": "3248"
+    "id": "inscribed_cliff"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2348,12 +2372,12 @@
       "title": "Shunned Mountain",
       "description": "A peak of note.",
       "link": {
-        "url": "Shunned Mountain",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/shunned_mountain/shunned_mountain.json",
         "label": "Shunned Mountain"
       },
-      "image": "File:Anauroch west.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/shunned_mountain/shunned_mountain.webp"
     },
-    "id": "3351"
+    "id": "shunned_mountain"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2365,12 +2389,12 @@
       "title": "Mount Hans",
       "description": "A peak of note and the locations of the [[Singing Cave]].",
       "link": {
-        "url": "Mount Hans",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_hans/mount_hans.json",
         "label": "Mount Hans"
       },
-      "image": "File:Anauroch west.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_hans/mount_hans.webp"
     },
-    "id": "3365"
+    "id": "mount_hans"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2382,12 +2406,12 @@
       "title": "Mount Dix",
       "description": "A peak of note.",
       "link": {
-        "url": "Mount Dix",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_dix/mount_dix.json",
         "label": "Mount Dix"
       },
-      "image": "File:Anauroch west.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_dix/mount_dix.webp"
     },
-    "id": "3366"
+    "id": "mount_dix"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2399,12 +2423,12 @@
       "title": "Mount Andria",
       "description": "A peak of note.",
       "link": {
-        "url": "Mount Andria",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_andria/mount_andria.json",
         "label": "Mount Andria"
       },
-      "image": "File:Anauroch west.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/mount_andria/mount_andria.webp"
     },
-    "id": "3367"
+    "id": "mount_andria"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2416,12 +2440,12 @@
       "title": "The Dragon's Tooth",
       "description": "A mount of note.",
       "link": {
-        "url": "The Dragon's Tooth",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/the_dragons_tooth/the_dragons_tooth.json",
         "label": "The Dragon's Tooth"
       },
-      "image": "File:Thesk 14th century.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/the_dragons_tooth/the_dragons_tooth.webp"
     },
-    "id": "3445"
+    "id": "the_dragons_tooth"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2433,12 +2457,12 @@
       "title": "Old Sword",
       "description": "A peak of note.",
       "link": {
-        "url": "Old Sword",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/old_sword/old_sword.json",
         "label": "Old Sword"
       },
-      "image": "File:Thesk 14th century.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/old_sword/old_sword.webp"
     },
-    "id": "3446"
+    "id": "old_sword"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2450,12 +2474,12 @@
       "title": "Highpeak",
       "description": "One of the peaks of the [[Orcskull Mountains]], haunted by the maiden of Highpeak, who cried out for her children's lost souls at night.",
       "link": {
-        "url": "Highpeak",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/highpeak/highpeak.json",
         "label": "Highpeak"
       },
-      "image": "File:Moray.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/highpeak/highpeak.webp"
     },
-    "id": "3477"
+    "id": "highpeak"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2467,12 +2491,12 @@
       "title": "Hjalmaren",
       "description": "A peak of note in the [[South Jotunhammer Mountains]].",
       "link": {
-        "url": "Hjalmaren",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/hjalmaren/hjalmaren.json",
         "label": "Hjalmaren"
       },
-      "image": "File:Northern Moonshaes.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/hjalmaren/hjalmaren.webp"
     },
-    "id": "3500"
+    "id": "hjalmaren"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2484,12 +2508,12 @@
       "title": "Tuuru Cliffs",
       "description": "Cliffs on the southern edge of the [[Riders to the Sky]] mountain chain.",
       "link": {
-        "url": "Tuuru Cliffs",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/tuuru_cliffs/tuuru_cliffs.json",
         "label": "Tuuru Cliffs"
       },
-      "image": "File:Chessenta - 1480 DR - Mike Schley.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/tuuru_cliffs/tuuru_cliffs.webp"
     },
-    "id": "3520"
+    "id": "tuuru_cliffs"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2501,12 +2525,12 @@
       "title": "The Crag",
       "description": "A crag of note.",
       "link": {
-        "url": "The Crag",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/the_crag/the_crag.json",
         "label": "The Crag"
       },
-      "image": "File:Daggerford 5e.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/the_crag/the_crag.webp"
     },
-    "id": "3546"
+    "id": "the_crag"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2518,12 +2542,12 @@
       "title": "Pyramid Cairn",
       "description": "A cairn of a notably pyramid shape along the road across the [[Stonelands]].",
       "link": {
-        "url": "Pyramid cairn",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/pyramid_cairn/pyramid_cairn.json",
         "label": "Pyramid Cairn"
       },
-      "image": "File:Blister.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/pyramid_cairn/pyramid_cairn.webp"
     },
-    "id": "3601"
+    "id": "pyramid_cairn"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2535,12 +2559,12 @@
       "title": "Maedrin's Rift",
       "description": "A massive rift in the [[High Ice]].",
       "link": {
-        "url": "Maedrin's Rift",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/maedrins_rift/maedrins_rift.json",
         "label": "Maedrin's Rift"
       },
-      "image": "File:Smokeholes.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/maedrins_rift/maedrins_rift.webp"
     },
-    "id": "3624"
+    "id": "maedrins_rift"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2552,12 +2576,12 @@
       "title": "Wyrm Rift",
       "description": "A massive rift in the [[High Ice]].",
       "link": {
-        "url": "Wyrm Rift",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/wyrm_rift/wyrm_rift.json",
         "label": "Wyrm Rift"
       },
-      "image": "File:Smokeholes.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/wyrm_rift/wyrm_rift.webp"
     },
-    "id": "3625"
+    "id": "wyrm_rift"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2569,11 +2593,12 @@
       "title": "Oume Rift",
       "description": "A massive rift in the [[High Ice]].",
       "link": {
-        "url": "Oume Rift",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/oume_rift/oume_rift.json",
         "label": "Oume Rift"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/oume_rift/oume_rift.webp"
     },
-    "id": "3626"
+    "id": "oume_rift"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2585,12 +2610,12 @@
       "title": "The Long Rift",
       "description": "An impressively long rift in the [[High Ice]].",
       "link": {
-        "url": "Long Rift",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/the_long_rift/the_long_rift.json",
         "label": "The Long Rift"
       },
-      "image": "File:Smokeholes.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/the_long_rift/the_long_rift.webp"
     },
-    "id": "3627"
+    "id": "the_long_rift"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2602,11 +2627,12 @@
       "title": "Malkyn's Rift",
       "description": "A large rift in the [[High Ice]].",
       "link": {
-        "url": "Malkyn's Rift",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/malkyns_rift/malkyns_rift.json",
         "label": "Malkyn's Rift"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/malkyns_rift/malkyns_rift.webp"
     },
-    "id": "3628"
+    "id": "malkyns_rift"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2618,11 +2644,12 @@
       "title": "Blind Rift",
       "description": "A thin and long rift at the very edge of the [[High Ice]].",
       "link": {
-        "url": "Blind Rift",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/blind_rift/blind_rift.json",
         "label": "Blind Rift"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/blind_rift/blind_rift.webp"
     },
-    "id": "3629"
+    "id": "blind_rift"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2634,11 +2661,12 @@
       "title": "The Shattered Tower",
       "description": "A landmark peak of note.",
       "link": {
-        "url": "The Shattered Tower",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/the_shattered_tower/the_shattered_tower.json",
         "label": "The Shattered Tower"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/the_shattered_tower/the_shattered_tower.webp"
     },
-    "id": "3635"
+    "id": "the_shattered_tower"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2650,11 +2678,12 @@
       "title": "The Tall",
       "description": "A peak of note.",
       "link": {
-        "url": "The Tall",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/the_tall/the_tall.json",
         "label": "The Tall"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/the_tall/the_tall.webp"
     },
-    "id": "3637"
+    "id": "the_tall"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2666,11 +2695,12 @@
       "title": "Dry Rift",
       "description": "A massive crevice of note in [[Anauroch]].",
       "link": {
-        "url": "Dry Rift",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/dry_rift/dry_rift.json",
         "label": "Dry Rift"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/dry_rift/dry_rift.webp"
     },
-    "id": "3638"
+    "id": "dry_rift"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2682,11 +2712,12 @@
       "title": "Helm Rift",
       "description": "A massive crevice of note in [[Anauroch]].",
       "link": {
-        "url": "Helm Rift",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/helm_rift/helm_rift.json",
         "label": "Helm Rift"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/helm_rift/helm_rift.webp"
     },
-    "id": "3639"
+    "id": "helm_rift"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2698,11 +2729,12 @@
       "title": "Heroes' Helm",
       "description": "A mountain of note.",
       "link": {
-        "url": "Heroes' Helm",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/heroes_helm/heroes_helm.json",
         "label": "Heroes' Helm"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/heroes_helm/heroes_helm.webp"
     },
-    "id": "3641"
+    "id": "heroes_helm"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2714,12 +2746,12 @@
       "title": "Aerithae's Res",
       "description": "A peak of note.",
       "link": {
-        "url": "Aerithae's Res",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/aerithaes_res/aerithaes_res.json",
         "label": "Aerithae's Res"
       },
-      "image": "File:Anauroch Map DR 1374.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/aerithaes_res/aerithaes_res.webp"
     },
-    "id": "3643"
+    "id": "aerithaes_res"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2731,11 +2763,12 @@
       "title": "The Ice Wall",
       "description": "The ice cliff that separated the [[Plain of Standing Stones]] and the frozen desert of the [[High Ice]].",
       "link": {
-        "url": "Ice Wall",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/the_ice_wall/the_ice_wall.json",
         "label": "The Ice Wall"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/the_ice_wall/the_ice_wall.webp"
     },
-    "id": "3644"
+    "id": "the_ice_wall"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2747,12 +2780,12 @@
       "title": "The Swordpoint",
       "description": "A huge needle-shaped mountain inhabited by [[manticore]]s.",
       "link": {
-        "url": "Swordpoint (peak)",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/the_swordpoint/the_swordpoint.json",
         "label": "The Swordpoint"
       },
-      "image": "File:Swordpoint.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/the_swordpoint/the_swordpoint.webp"
     },
-    "id": "3646"
+    "id": "the_swordpoint"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2764,12 +2797,12 @@
       "title": "Dark Bones Rift",
       "description": "A massive rift of note.",
       "link": {
-        "url": "Dark Bones Rift",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/dark_bones_rift/dark_bones_rift.json",
         "label": "Dark Bones Rift"
       },
-      "image": "File:Swordpoint.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/dark_bones_rift/dark_bones_rift.webp"
     },
-    "id": "3647"
+    "id": "dark_bones_rift"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2781,11 +2814,12 @@
       "title": "The Pillar of Tauros",
       "description": "A peak of note.",
       "link": {
-        "url": "Pillar of Tauros",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/the_pillar_of_tauros/the_pillar_of_tauros.json",
         "label": "The Pillar of Tauros"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/the_pillar_of_tauros/the_pillar_of_tauros.webp"
     },
-    "id": "3648"
+    "id": "the_pillar_of_tauros"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2797,12 +2831,12 @@
       "title": "Fallen Giant Rift",
       "description": "A crack in the earth, crooked and branched canyon or ravine that stretched for nearly 24 miles (39 kilometers) and more than three miles (five kilometers) wide.",
       "link": {
-        "url": "Fallen Giant Rift",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/fallen_giant_rift/fallen_giant_rift.json",
         "label": "Fallen Giant Rift"
       },
-      "image": "File:Location of Orem in Relation to Anauroch Map DR 1374.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/fallen_giant_rift/fallen_giant_rift.webp"
     },
-    "id": "3650"
+    "id": "fallen_giant_rift"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2814,12 +2848,12 @@
       "title": "Lammar Rift",
       "description": "A massive frozen crevasse of note.",
       "link": {
-        "url": "Lammar Rift",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/lammar_rift/lammar_rift.json",
         "label": "Lammar Rift"
       },
-      "image": "File:Smokeholes.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/lammar_rift/lammar_rift.webp"
     },
-    "id": "3652"
+    "id": "lammar_rift"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2831,12 +2865,12 @@
       "title": "Dagger Rift",
       "description": "A smaller crevasse in the [[High Ice]].",
       "link": {
-        "url": "Dagger Rift",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/dagger_rift/dagger_rift.json",
         "label": "Dagger Rift"
       },
-      "image": "File:Smokeholes.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/dagger_rift/dagger_rift.webp"
     },
-    "id": "3653"
+    "id": "dagger_rift"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2848,12 +2882,12 @@
       "title": "Black Wing Rift",
       "description": "A rift in the [[High Ice]] of note.",
       "link": {
-        "url": "Black Wing Rift",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/black_wing_rift/black_wing_rift.json",
         "label": "Black Wing Rift"
       },
-      "image": "File:Smokeholes.png"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/black_wing_rift/black_wing_rift.webp"
     },
-    "id": "3654"
+    "id": "black_wing_rift"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2865,12 +2899,12 @@
       "title": "Ladypeak",
       "description": "A mountain located at the westernmost end of the [[Nether Mountains]].",
       "link": {
-        "url": "Ladypeak",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/ladypeak/ladypeak.json",
         "label": "Ladypeak"
       },
-      "image": "File:War of Everlasting Darkness Luruar.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/ladypeak/ladypeak.webp"
     },
-    "id": "3694"
+    "id": "ladypeak"
   },
   {
     "categoryId": "peaks_cliffs",
@@ -2882,11 +2916,11 @@
       "title": "Dalagar's Dagger",
       "description": "The highest peak in the northeast section of the [[Nether Mountains]], named after [[Dalagar]], a [[dwarf]] who tried to climb the mountain sometime before the late 4{{th}} century [[DR]] and fell to his death.",
       "link": {
-        "url": "Dalagar's Dagger",
+        "url": "assets/atlas/world/toril/faerun/peaks_cliffs/dalagars_dagger/dalagars_dagger.json",
         "label": "Dalagar's Dagger"
       },
-      "image": "File:War of Everlasting Darkness Luruar.jpg"
+      "image": "assets/atlas/world/toril/faerun/peaks_cliffs/dalagars_dagger/dalagars_dagger.webp"
     },
-    "id": "3697"
+    "id": "dalagars_dagger"
   }
 ]

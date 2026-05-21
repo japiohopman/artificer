@@ -9,11 +9,12 @@
       "title": "Fort Arran",
       "description": "Previously known as '''Arranford''' – a small town, turned outpost that stood on the [[Golden Road]] between [[Sespech]] and the the capital of [[Chondath]] – [[Arrabar]].",
       "link": {
-        "url": "Fort Arran",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_arran/fort_arran.json",
         "label": "Fort Arran"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_arran/fort_arran.webp"
     },
-    "id": "50"
+    "id": "fort_arran"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -25,12 +26,12 @@
       "title": "Nagaflow Keep",
       "description": "A small keep, more of an outpost.",
       "link": {
-        "url": "Nagaflow Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/nagaflow_keep/nagaflow_keep.json",
         "label": "Nagaflow Keep"
       },
-      "image": "File:Whisper of Waves.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/nagaflow_keep/nagaflow_keep.webp"
     },
-    "id": "53"
+    "id": "nagaflow_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -42,12 +43,12 @@
       "title": "Bridge Keep",
       "description": "A keep of note along the [[Golden Road]].",
       "link": {
-        "url": "Bridge Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/bridge_keep/bridge_keep.json",
         "label": "Bridge Keep"
       },
-      "image": "File:Whisper of Waves.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/bridge_keep/bridge_keep.webp"
     },
-    "id": "54"
+    "id": "bridge_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -59,12 +60,12 @@
       "title": "Firesteap Citadel",
       "description": "A military fortress under the control of [[Innarlith]].",
       "link": {
-        "url": "Firesteap Citadel",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/firesteap_citadel/firesteap_citadel.json",
         "label": "Firesteap Citadel"
       },
-      "image": "File:Whisper of Waves.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/firesteap_citadel/firesteap_citadel.webp"
     },
-    "id": "56"
+    "id": "firesteap_citadel"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -76,12 +77,12 @@
       "title": "Citadel of Black Ash",
       "description": "The underground temple to [[Gilgeam]] located in the eastern [[Smoking Mountains]]. ",
       "link": {
-        "url": "Citadel of Black Ash",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_of_black_ash/citadel_of_black_ash.json",
         "label": "Citadel of Black Ash"
       },
-      "image": "File:CitadelOfBlackAsh.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_of_black_ash/citadel_of_black_ash.webp"
     },
-    "id": "137"
+    "id": "citadel_of_black_ash"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -93,12 +94,12 @@
       "title": "Shield of the Rathgaunt Hills",
       "description": "Also known as the '''Rathguant Mote''' during the [[Spellplague]] years, a  [[gnomish]] abbey dedicated to [[Gaerdal Ironhand]].",
       "link": {
-        "url": "Shield of the Rathgaunt Hills",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/shield_of_the_rathgaunt_hills/shield_of_the_rathgaunt_hills.json",
         "label": "Shield of the Rathgaunt Hills"
       },
-      "image": "File:ThreeSwords-ShiningSouth-p156-7-Todd Gamble.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/shield_of_the_rathgaunt_hills/shield_of_the_rathgaunt_hills.webp"
     },
-    "id": "295"
+    "id": "shield_of_the_rathgaunt_hills"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -110,12 +111,12 @@
       "title": "Talathgard",
       "description": "A fortress located in northwest [[Halruaa]] that guarded the entrance to the [[High Temple of Mystra]] deep underneath [[Mount Talath]].",
       "link": {
-        "url": "Talathgard",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/talathgard/talathgard.json",
         "label": "Talathgard"
       },
-      "image": "File:Halruaa.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/talathgard/talathgard.webp"
     },
-    "id": "381"
+    "id": "talathgard"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -127,12 +128,12 @@
       "title": "Corsairs' Enclave",
       "description": "A fortification of note.",
       "link": {
-        "url": "Corsairs' Enclave",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/corsairs_enclave/corsairs_enclave.json",
         "label": "Corsairs' Enclave"
       },
-      "image": "File:Corsairs' Enclave.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/corsairs_enclave/corsairs_enclave.webp"
     },
-    "id": "477"
+    "id": "corsairs_enclave"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -144,12 +145,12 @@
       "title": "Praskallest",
       "description": "Once the estate manor of Baron [[Laxaella Bronshield]], later a garrison that protected the borders of the barony and [[Erlkazar]].",
       "link": {
-        "url": "Praskallest",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/praskallest/praskallest.json",
         "label": "Praskallest"
       },
-      "image": "File:Pehrrifaal.JPG"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/praskallest/praskallest.webp"
     },
-    "id": "521"
+    "id": "praskallest"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -161,11 +162,12 @@
       "title": "Mistletoe Keep",
       "description": "Home to the [[druid]] [[Yuldar Llistiin]] – the lord protector and count of [[Mirkazar]] in the late 14{{th}} century [[DR]].",
       "link": {
-        "url": "Mistletoe Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/mistletoe_keep/mistletoe_keep.json",
         "label": "Mistletoe Keep"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/mistletoe_keep/mistletoe_keep.webp"
     },
-    "id": "529"
+    "id": "mistletoe_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -177,12 +179,12 @@
       "title": "Khanall",
       "description": "The chief enclave of the [[Janessar]] in the northern foothills of the [[Marching Mountains]].\n",
       "link": {
-        "url": "Khanall",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/khanall/khanall.json",
         "label": "Khanall"
       },
-      "image": "File:Marching mountains 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/khanall/khanall.webp"
     },
-    "id": "533"
+    "id": "khanall"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -194,12 +196,12 @@
       "title": "Rutawwa",
       "description": "The easternmost enclave of the [[Janessar]] in the [[Marching Mountains]].\n",
       "link": {
-        "url": "Rutawwa",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/rutawwa/rutawwa.json",
         "label": "Rutawwa"
       },
-      "image": "File:Marching mountains 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/rutawwa/rutawwa.webp"
     },
-    "id": "540"
+    "id": "rutawwa"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -211,12 +213,12 @@
       "title": "Faeressar",
       "description": "The westernmost enclave of the [[Janessar]] in the [[Marching Mountains]].",
       "link": {
-        "url": "Faeressar",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/faeressar/faeressar.json",
         "label": "Faeressar"
       },
-      "image": "File:Marching mountains 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/faeressar/faeressar.webp"
     },
-    "id": "565"
+    "id": "faeressar"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -228,12 +230,12 @@
       "title": "Maratimmir",
       "description": "The ducal seat of [[Ankaram]] and, once, the official home of Duchess [[Vajra Valmeyjar]] of [[Tethyr]].",
       "link": {
-        "url": "Maratimmir",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/maratimmir/maratimmir.json",
         "label": "Maratimmir"
       },
-      "image": "File:PurpleHills-LoI.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/maratimmir/maratimmir.webp"
     },
-    "id": "592"
+    "id": "maratimmir"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -245,12 +247,12 @@
       "title": "Daraqadim",
       "description": "A former [[Calishite]] manor, located in the [[Calimmon County]] of [[Tethyr]]. After the [[Tethyrian Interregnum#Reclamation Wars|Reclamation Wars]], the keep became the county seat of Calimmon and the home of Her Excellency [[Kyrin Hawkwinter]].",
       "link": {
-        "url": "Daraqadim",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/daraqadim/daraqadim.json",
         "label": "Daraqadim"
       },
-      "image": "File:Calimshan 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/daraqadim/daraqadim.webp"
     },
-    "id": "596"
+    "id": "daraqadim"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -262,12 +264,12 @@
       "title": "Fort Agis",
       "description": "Also known as the [[Memnonnar Citadel]] – one of the border keeps of [[Tethyr]], collectively known as the [[Calimmon Garrisons]].",
       "link": {
-        "url": "Fort Agis",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_agis/fort_agis.json",
         "label": "Fort Agis"
       },
-      "image": "File:Calimshan 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_agis/fort_agis.webp"
     },
-    "id": "597"
+    "id": "fort_agis"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -279,12 +281,12 @@
       "title": "Fort Tufenk",
       "description": "A garrison fort located in southern [[Tethyr]]. It was also known as the '''Fortress of Fire.'''",
       "link": {
-        "url": "Fort Tufenk",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_tufenk/fort_tufenk.json",
         "label": "Fort Tufenk"
       },
-      "image": "File:Calimshan 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_tufenk/fort_tufenk.webp"
     },
-    "id": "598"
+    "id": "fort_tufenk"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -296,12 +298,12 @@
       "title": "Iltakar Garrison",
       "description": "One of the border keeps along the [[River Agis]].",
       "link": {
-        "url": "Iltakar Garrison",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/iltakar_garrison/iltakar_garrison.json",
         "label": "Iltakar Garrison"
       },
-      "image": "File:Calimshan 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/iltakar_garrison/iltakar_garrison.webp"
     },
-    "id": "599"
+    "id": "iltakar_garrison"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -313,12 +315,12 @@
       "title": "Fort Calim",
       "description": "One of the forts along the [[River Agis]].",
       "link": {
-        "url": "Fort Calim",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_calim/fort_calim.json",
         "label": "Fort Calim"
       },
-      "image": "File:Calimshan 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_calim/fort_calim.webp"
     },
-    "id": "600"
+    "id": "fort_calim"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -330,12 +332,12 @@
       "title": "Fort Teqlar",
       "description": "One of the forts along the [[River Agis]].",
       "link": {
-        "url": "Fort Teqlar",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_teqlar/fort_teqlar.json",
         "label": "Fort Teqlar"
       },
-      "image": "File:Calimshan 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_teqlar/fort_teqlar.webp"
     },
-    "id": "602"
+    "id": "fort_teqlar"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -347,12 +349,12 @@
       "title": "Qian Hillfort",
       "description": "One of the forts along the [[River Agis]].",
       "link": {
-        "url": "Qian Hillfort",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/qian_hillfort/qian_hillfort.json",
         "label": "Qian Hillfort"
       },
-      "image": "File:Marching mountains 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/qian_hillfort/qian_hillfort.webp"
     },
-    "id": "604"
+    "id": "qian_hillfort"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -364,12 +366,12 @@
       "title": "Gauros Keep",
       "description": "A [[Thay]]an keep on the eastern shore of the [[River Gauros]].",
       "link": {
-        "url": "Gauros Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/gauros_keep/gauros_keep.json",
         "label": "Gauros Keep"
       },
-      "image": "File:Denzar.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/gauros_keep/gauros_keep.webp"
     },
-    "id": "642"
+    "id": "gauros_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -381,12 +383,12 @@
       "title": "Chur Gathos",
       "description": "The [[Thay]]an keep situated in the [[Daggertooth Pass]] across the [[Sunrise Mountains]].",
       "link": {
-        "url": "Chur Gathos",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/chur_gathos/chur_gathos.json",
         "label": "Chur Gathos"
       },
-      "image": "File:Denzar.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/chur_gathos/chur_gathos.webp"
     },
-    "id": "644"
+    "id": "chur_gathos"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -398,12 +400,12 @@
       "title": "The Citadel",
       "description": "An ancient fortress carved into one of the highest peaks of [[Thaymount]] that predated [[human]]s.",
       "link": {
-        "url": "The Citadel",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/the_citadel/the_citadel.json",
         "label": "The Citadel"
       },
-      "image": "File:Thaymount.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/the_citadel/the_citadel.webp"
     },
-    "id": "651"
+    "id": "the_citadel"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -415,11 +417,12 @@
       "title": "Emmech",
       "description": "Also known as '''Undumor''' – a fortress town in [[Aglarond]] that fell under [[Thay]]an control in the 15{{th}} [[DR]].",
       "link": {
-        "url": "Emmech",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/emmech/emmech.json",
         "label": "Emmech"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/emmech/emmech.webp"
     },
-    "id": "686"
+    "id": "emmech"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -431,12 +434,12 @@
       "title": "Kingdom of Mertwig",
       "description": "A small kingdom once ruled by beloved King [[Mertwig]]. The location of the [[Last Pyramid in the Sand]], [[Mertwig's Maze]], the [[Purple Castle]], and the [[Royal Palace of Mertwig]].",
       "link": {
-        "url": "Kingdom of Mertwig",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/kingdom_of_mertwig/kingdom_of_mertwig.json",
         "label": "Kingdom of Mertwig"
       },
-      "image": "File:Kingdom of Mertwig Map.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/kingdom_of_mertwig/kingdom_of_mertwig.webp"
     },
-    "id": "707"
+    "id": "kingdom_of_mertwig"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -448,11 +451,12 @@
       "title": "Glarondar",
       "description": "A fortress town of black stone and the childhood home of a [[Harper]] agent [[Brenna Graycloak]].",
       "link": {
-        "url": "Glarondar",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/glarondar/glarondar.json",
         "label": "Glarondar"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/glarondar/glarondar.webp"
     },
-    "id": "720"
+    "id": "glarondar"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -464,11 +468,12 @@
       "title": "Citadel of the Raven",
       "description": "A fortress of the [[Zhentarim]].",
       "link": {
-        "url": "Citadel of the Raven",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_of_the_raven/citadel_of_the_raven.json",
         "label": "Citadel of the Raven"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_of_the_raven/citadel_of_the_raven.webp"
     },
-    "id": "725"
+    "id": "citadel_of_the_raven"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -480,12 +485,12 @@
       "title": "Castle Spulzeer",
       "description": "Once home of the [[Spellseer]] family, the castle was transported to the [[Demiplane of Dread]] ''circa'' [[1367 DR]].",
       "link": {
-        "url": "Castle Spulzeer",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_spulzeer/castle_spulzeer.json",
         "label": "Castle Spulzeer"
       },
-      "image": "File:Castle Spulzeer.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_spulzeer/castle_spulzeer.webp"
     },
-    "id": "733"
+    "id": "castle_spulzeer"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -497,12 +502,12 @@
       "title": "Hillfort of Torbold",
       "description": "One of [[Amn]]'s [[Hillfort]]s.",
       "link": {
-        "url": "Torbold",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/hillfort_of_torbold/hillfort_of_torbold.json",
         "label": "Hillfort of Torbold"
       },
-      "image": "File:Castle Spulzeer map amn.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/hillfort_of_torbold/hillfort_of_torbold.webp"
     },
-    "id": "736"
+    "id": "hillfort_of_torbold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -514,12 +519,12 @@
       "title": "Dark Redoubt",
       "description": "A secluded and hidden fortification of the [[Church of Cyric]].",
       "link": {
-        "url": "Dark Redoubt",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/dark_redoubt/dark_redoubt.json",
         "label": "Dark Redoubt"
       },
-      "image": "File:Dark Redoubt.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/dark_redoubt/dark_redoubt.webp"
     },
-    "id": "738"
+    "id": "dark_redoubt"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -531,12 +536,12 @@
       "title": "Hillfort of Keshla",
       "description": "One of [[Amn]]'s [[Hillfort]]s.",
       "link": {
-        "url": "Keshla",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/hillfort_of_keshla/hillfort_of_keshla.json",
         "label": "Hillfort of Keshla"
       },
-      "image": "File:Castle Spulzeer map amn.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/hillfort_of_keshla/hillfort_of_keshla.webp"
     },
-    "id": "740"
+    "id": "hillfort_of_keshla"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -548,12 +553,12 @@
       "title": "Hillfort of Ishla",
       "description": "One of Amn's Hillforts.",
       "link": {
-        "url": "Ishla",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/hillfort_of_ishla/hillfort_of_ishla.json",
         "label": "Hillfort of Ishla"
       },
-      "image": "File:Castle Spulzeer map amn.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/hillfort_of_ishla/hillfort_of_ishla.webp"
     },
-    "id": "777"
+    "id": "hillfort_of_ishla"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -565,12 +570,12 @@
       "title": "Citadel Amnur",
       "description": "A citadel established in the century that followed King [[Esmel Torlath]]'s death.",
       "link": {
-        "url": "Citadel Amnur",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_amnur/citadel_amnur.json",
         "label": "Citadel Amnur"
       },
-      "image": "File:Cloud Peaks 2e.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_amnur/citadel_amnur.webp"
     },
-    "id": "786"
+    "id": "citadel_amnur"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -582,12 +587,12 @@
       "title": "Citadel Rashturl",
       "description": "One of two [[Amn]]ian outposts built to defend against [[orc]]s in the north.",
       "link": {
-        "url": "Citadel Rashturl",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_rashturl/citadel_rashturl.json",
         "label": "Citadel Rashturl"
       },
-      "image": "File:Cloud Peaks 2e.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_rashturl/citadel_rashturl.webp"
     },
-    "id": "790"
+    "id": "citadel_rashturl"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -599,12 +604,12 @@
       "title": "Battles' End",
       "description": "An old [[Calishite]] castle that stood on a high hill, 25 miles west of [[Port Kir]].",
       "link": {
-        "url": "Battles' End",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/battles_end/battles_end.json",
         "label": "Battles' End"
       },
-      "image": "File:Kirgard.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/battles_end/battles_end.webp"
     },
-    "id": "841"
+    "id": "battles_end"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -616,12 +621,12 @@
       "title": "Kirgard",
       "description": "A fort used by forces of [[Mosstone]] and [[Port Kir]], as well as the residence of the Count of County [[Greenshores]] in [[Tethyr]].",
       "link": {
-        "url": "Kirgard",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/kirgard/kirgard.json",
         "label": "Kirgard"
       },
-      "image": "File:Kirgard.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/kirgard/kirgard.webp"
     },
-    "id": "844"
+    "id": "kirgard"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -633,12 +638,12 @@
       "title": "Uluran Keep",
       "description": "A fort that occasionally served as home to the count of [[Uluran]].\n",
       "link": {
-        "url": "Uluran Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/uluran_keep/uluran_keep.json",
         "label": "Uluran Keep"
       },
-      "image": "File:East starspire.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/uluran_keep/uluran_keep.webp"
     },
-    "id": "850"
+    "id": "uluran_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -650,12 +655,12 @@
       "title": "Bunlap's Fort",
       "description": "Fort that was once occupied by a mercenary named [[Bunlap]], who ran a logging operation that murdered and enslaved [[elves]] of [[Weldath]].",
       "link": {
-        "url": "Bunlap's Fort",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/bunlaps_fort/bunlaps_fort.json",
         "label": "Bunlap's Fort"
       },
-      "image": "File:Silver Shadows map tethyr.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/bunlaps_fort/bunlaps_fort.webp"
     },
-    "id": "857"
+    "id": "bunlaps_fort"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -667,12 +672,12 @@
       "title": "Castle Trinity",
       "description": "The headquarters of a sect worshiping the goddess [[Talona]], the Mother of all Plagues. The castle's main body was built underground.<br/><br/>'''Note: This map shows the incorrect geography of the region. Please refer to 2{{nd}} edition maps.'''",
       "link": {
-        "url": "Castle Trinity",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_trinity/castle_trinity.json",
         "label": "Castle Trinity"
       },
-      "image": "File:In Sylvan Shadows Snowflake Mountains.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_trinity/castle_trinity.webp"
     },
-    "id": "868"
+    "id": "castle_trinity"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -684,12 +689,12 @@
       "title": "Durlag's Tower",
       "description": "A large tower that once belonged to [[Durlag Trollkiller]], said to be haunted by a powerful entity.",
       "link": {
-        "url": "Durlag's Tower",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/durlags_tower/durlags_tower.json",
         "label": "Durlag's Tower"
       },
-      "image": "File:Command Tower.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/durlags_tower/durlags_tower.webp"
     },
-    "id": "926"
+    "id": "durlags_tower"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -701,12 +706,12 @@
       "title": "Castle Crag",
       "description": "A castle in northern [[Cormyr]] designed to protect it from the threats of the [[Stonelands]].",
       "link": {
-        "url": "Castle Crag",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_crag/castle_crag.json",
         "label": "Castle Crag"
       },
-      "image": "File:HullackForest.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_crag/castle_crag.webp"
     },
-    "id": "958"
+    "id": "castle_crag"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -718,12 +723,12 @@
       "title": "Lost Refuge",
       "description": "A [[Cormyrean]] keep placed near the border of the [[Vast Swamp]], claimed by the [[Church of Shar]] and their allies in the [[Shadowscale]] [[lizardfolk]] tribe and a band of [[shadar-kai]] in the early 1370s DR.",
       "link": {
-        "url": "Lost Refuge",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/lost_refuge/lost_refuge.json",
         "label": "Lost Refuge"
       },
-      "image": "File:Lost Refuge.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/lost_refuge/lost_refuge.webp"
     },
-    "id": "982"
+    "id": "lost_refuge"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -735,12 +740,12 @@
       "title": "Azoun's Hold",
       "description": "A keep of note.",
       "link": {
-        "url": "Azoun's Hold",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/azouns_hold/azouns_hold.json",
         "label": "Azoun's Hold"
       },
-      "image": "File:VastSwamp-Wheloon-Daerlun.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/azouns_hold/azouns_hold.webp"
     },
-    "id": "996"
+    "id": "azouns_hold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -752,12 +757,12 @@
       "title": "Candlekeep",
       "description": "The famous library-fortress that stood proud as a bastion of enlightenment and knowledge on the [[Sword Coast]].",
       "link": {
-        "url": "Candlekeep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/candlekeep/candlekeep.json",
         "label": "Candlekeep"
       },
-      "image": "File:Candlekeep from the air CM.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/candlekeep/candlekeep.webp"
     },
-    "id": "1025"
+    "id": "candlekeep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -769,12 +774,12 @@
       "title": "Bandit City",
       "description": "Or the '''City of the Grey Ghosts''', a fortress of the largest bandit tribe in the region – the [[Grey Ghosts]], led by\nthe outcast [[Chessenta]]n mercenary\n[[Furifax]] in the mid 14{{th}} century [[DR]].",
       "link": {
-        "url": "City of the Grey Ghosts",
-        "label": "City of the Grey Ghosts"
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/bandit_city/bandit_city.json",
+        "label": "Bandit City"
       },
-      "image": "File:UthangolMountains.JPG"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/bandit_city/bandit_city.webp"
     },
-    "id": "1028"
+    "id": "bandit_city"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -786,12 +791,12 @@
       "title": "Fort Helm",
       "description": "A [[Cormyr]]ean fortress of note.",
       "link": {
-        "url": "Fort Helm (Cormyr)",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_helm/fort_helm.json",
         "label": "Fort Helm"
       },
-      "image": "File:Proskur.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_helm/fort_helm.webp"
     },
-    "id": "1111"
+    "id": "fort_helm"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -803,12 +808,12 @@
       "title": "High Horn ",
       "description": "A huge [[Cormyte]] military stronghold at the top of [[High Horn mountain]] that guarded the road to the west through [[High Horn Pass]].",
       "link": {
-        "url": "High Horn (hold)",
-        "label": "High Horn"
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/high_horn/high_horn.json",
+        "label": "High Horn "
       },
-      "image": "File:HighHorn-2e.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/high_horn/high_horn.webp"
     },
-    "id": "1122"
+    "id": "high_horn"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -820,12 +825,12 @@
       "title": "Keep of Sir Dirlar",
       "description": "A keep on the edge of the [[Vast Sawmp]].",
       "link": {
-        "url": "Keep of Sir Dirlar",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/keep_of_sir_dirlar/keep_of_sir_dirlar.json",
         "label": "Keep of Sir Dirlar"
       },
-      "image": "File:Keep of Sir Dirlar.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/keep_of_sir_dirlar/keep_of_sir_dirlar.webp"
     },
-    "id": "1180"
+    "id": "keep_of_sir_dirlar"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -837,12 +842,12 @@
       "title": "Goblin Burial Ground",
       "description": "A stronghold of note.",
       "link": {
-        "url": "Goblin Burial Ground",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/goblin_burial_ground/goblin_burial_ground.json",
         "label": "Goblin Burial Ground"
       },
-      "image": "File:Halfhap.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/goblin_burial_ground/goblin_burial_ground.webp"
     },
-    "id": "1186"
+    "id": "goblin_burial_ground"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -854,12 +859,12 @@
       "title": "Shouk's Ambush",
       "description": "A fortification of note.",
       "link": {
-        "url": "Shouk's Ambush",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/shouks_ambush/shouks_ambush.json",
         "label": "Shouk's Ambush"
       },
-      "image": "File:Halfhap.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/shouks_ambush/shouks_ambush.webp"
     },
-    "id": "1187"
+    "id": "shouks_ambush"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -871,12 +876,12 @@
       "title": "Battle of Broken Bones",
       "description": "A fortification of note.",
       "link": {
-        "url": "Battle of Broken Bones",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/battle_of_broken_bones/battle_of_broken_bones.json",
         "label": "Battle of Broken Bones"
       },
-      "image": "File:Stonelands 2e.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/battle_of_broken_bones/battle_of_broken_bones.webp"
     },
-    "id": "1188"
+    "id": "battle_of_broken_bones"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -888,12 +893,12 @@
       "title": "Mage Keep",
       "description": "A keep of note.",
       "link": {
-        "url": "Mage Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/mage_keep/mage_keep.json",
         "label": "Mage Keep"
       },
-      "image": "File:Skull Crag.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/mage_keep/mage_keep.webp"
     },
-    "id": "1210"
+    "id": "mage_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -905,12 +910,12 @@
       "title": "Darkhold",
       "description": "The westernmost of three strongholds within which the [[Zhentarim]] consolidated their power. It stood on the side of the [[Grey Watcher]] mountain.",
       "link": {
-        "url": "Darkhold",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/darkhold/darkhold.json",
         "label": "Darkhold"
       },
-      "image": "File:Darkhold 4e.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/darkhold/darkhold.webp"
     },
-    "id": "1228"
+    "id": "darkhold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -922,11 +927,12 @@
       "title": "Warlock's Crypt",
       "description": "The keep home to the ancient [[lich]] [[wizard]] [[Larloch]], the Shadow King, a survivor of the fallen empire of [[Netheril]].",
       "link": {
-        "url": "Warlock's Crypt",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/warlocks_crypt/warlocks_crypt.json",
         "label": "Warlock's Crypt"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/warlocks_crypt/warlocks_crypt.webp"
     },
-    "id": "1237"
+    "id": "warlocks_crypt"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -938,12 +944,12 @@
       "title": "The Friendly Arm Inn",
       "description": "A walled fortress and a hamlet with the inn rising high above the town walls, with its serving wenches rumored to be magically disguised [[iron golem]]s.",
       "link": {
-        "url": "Friendly Arm",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/the_friendly_arm_inn/the_friendly_arm_inn.json",
         "label": "The Friendly Arm Inn"
       },
-      "image": "File:NatArtFAI.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/the_friendly_arm_inn/the_friendly_arm_inn.webp"
     },
-    "id": "1244"
+    "id": "the_friendly_arm_inn"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -955,12 +961,12 @@
       "title": "The Stronghold",
       "description": "A small keep that once was used as a monastery and a hidden temple of [[Bhaal]], abandoned during the [[Time of Troubles]] and later gifted to the [[Hero of Daggerford]] in [[1372 DR]].",
       "link": {
-        "url": "Stronghold (Liam's Hold)",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/the_stronghold/the_stronghold.json",
         "label": "The Stronghold"
       },
-      "image": "File:Stronghold (Liam's Hold).png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/the_stronghold/the_stronghold.webp"
     },
-    "id": "1249"
+    "id": "the_stronghold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -972,12 +978,12 @@
       "title": "Halls of the Hammer",
       "description": "An old [[dwarf|dwarven]] stronghold that had been long-abandoned by the mid—14{{th}} century [[DR]].",
       "link": {
-        "url": "Halls of the Hammer",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/halls_of_the_hammer/halls_of_the_hammer.json",
         "label": "Halls of the Hammer"
       },
-      "image": "File:Hammer Hall.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/halls_of_the_hammer/halls_of_the_hammer.webp"
     },
-    "id": "1265"
+    "id": "halls_of_the_hammer"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -989,12 +995,12 @@
       "title": "Well of Dragons",
       "description": "The fortress operated by the [[Cult of the Dragon]], built within a dormant volcano that once served as an ancient [[dragon]] graveyard.",
       "link": {
-        "url": "Well of Dragons",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/well_of_dragons/well_of_dragons.json",
         "label": "Well of Dragons"
       },
-      "image": "File:Well of Dragons.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/well_of_dragons/well_of_dragons.webp"
     },
-    "id": "1282"
+    "id": "well_of_dragons"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1006,12 +1012,12 @@
       "title": "Dungeon of the Hark",
       "description": "An underground bandit stronghold beneath the ruined village of [[Moorsedge]], on the northern edge of the plateau that held the [[High Moor]].",
       "link": {
-        "url": "Dungeon of the Hark",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/dungeon_of_the_hark/dungeon_of_the_hark.json",
         "label": "Dungeon of the Hark"
       },
-      "image": "File:Delimbiyr Crescent.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/dungeon_of_the_hark/dungeon_of_the_hark.webp"
     },
-    "id": "1286"
+    "id": "dungeon_of_the_hark"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1023,12 +1029,12 @@
       "title": "Fort Tamal",
       "description": "Formerly known as [[Bridgefort]], a fortified keep rebuilt and strengthened ''circa'' [[1450 DR]].",
       "link": {
-        "url": "Fort Tamal",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_tamal/fort_tamal.json",
         "label": "Fort Tamal"
       },
-      "image": "File:Bridgefort.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_tamal/fort_tamal.webp"
     },
-    "id": "1354"
+    "id": "fort_tamal"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1040,12 +1046,12 @@
       "title": "Dragonspear Castle",
       "description": "A [[dwarf|dwarven]] fortress with a tumultuous history, serving as home to [[monstrous humanoid]]s, becoming the battleground for two wars between [[Faerûn]]ians and [[devil]]s from the [[Nine Hells]], and used as a stronghold by the [[angel]]ic [[Shining Lady]] during her crusade against Hells.",
       "link": {
-        "url": "Dragonspear Castle",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/dragonspear_castle/dragonspear_castle.json",
         "label": "Dragonspear Castle"
       },
-      "image": "File:SOD Dragonspear.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/dragonspear_castle/dragonspear_castle.webp"
     },
-    "id": "1360"
+    "id": "dragonspear_castle"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1057,12 +1063,12 @@
       "title": "Castle Exeltis",
       "description": "The estate of the [[Exeltis]] family and a once-famed winery that produced [[Exeltis Ice Wine]] from a species of unique local [[grape]]s.",
       "link": {
-        "url": "Castle Exeltis",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_exeltis/castle_exeltis.json",
         "label": "Castle Exeltis"
       },
-      "image": "File:Castle Exeltis.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_exeltis/castle_exeltis.webp"
     },
-    "id": "1365"
+    "id": "castle_exeltis"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1074,12 +1080,12 @@
       "title": "Border Outpost",
       "description": "A fort of note, west of [[Ironguard (tomb)|Ironguard]] and north of [[Arabel]].",
       "link": {
-        "url": "Border Outpost (Cormyr)",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/border_outpost/border_outpost.json",
         "label": "Border Outpost"
       },
-      "image": "File:Ironguard and arabel springs.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/border_outpost/border_outpost.webp"
     },
-    "id": "1376"
+    "id": "border_outpost"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1091,11 +1097,12 @@
       "title": "Skull Crag Keep",
       "description": "The keep of the [[Roadwarden Guard]], the patrolmen of the [[High Road (Cormyr)|High Road]].",
       "link": {
-        "url": "Skull Crag Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/skull_crag_keep/skull_crag_keep.json",
         "label": "Skull Crag Keep"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/skull_crag_keep/skull_crag_keep.webp"
     },
-    "id": "1394"
+    "id": "skull_crag_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1107,11 +1114,12 @@
       "title": "Ironfang Deep",
       "description": "Sometimes mistakenly labeled as '''Ironfang Keep''', or called the '''Kingdom of Ironfang''' by the dwarves, was the main underground settlement in the [[Mountains of the Alaoreum]].",
       "link": {
-        "url": "Ironfang Deep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/ironfang_deep/ironfang_deep.json",
         "label": "Ironfang Deep"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/ironfang_deep/ironfang_deep.webp"
     },
-    "id": "1422"
+    "id": "ironfang_deep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1123,12 +1131,12 @@
       "title": "Ironfang Keep",
       "description": "An ancient keep that already existed by [[-25000 DR]].",
       "link": {
-        "url": "Ironfang Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/ironfang_keep/ironfang_keep.json",
         "label": "Ironfang Keep"
       },
-      "image": "File:IronfangKeep 20071107 Dien.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/ironfang_keep/ironfang_keep.webp"
     },
-    "id": "1469"
+    "id": "ironfang_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1140,12 +1148,12 @@
       "title": "Phylund Hunting Lodge",
       "description": "A stone keep in the western [[Ardeep Forest]], once used by the noble [[Phylund]] family, abandoned and taken over by the [[Red Wizard]] named [[Thegger Grynn]] in the late 15{{th}} century [[DR]].",
       "link": {
-        "url": "Phylund Hunting Lodge",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/phylund_hunting_lodge/phylund_hunting_lodge.json",
         "label": "Phylund Hunting Lodge"
       },
-      "image": "File:PhylundLodge-lower.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/phylund_hunting_lodge/phylund_hunting_lodge.webp"
     },
-    "id": "1485"
+    "id": "phylund_hunting_lodge"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1157,12 +1165,12 @@
       "title": "Torstultok",
       "description": "The keep controlled by the [[cleric]]s of [[Haela Brightaxe]].",
       "link": {
-        "url": "Torstultok",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/torstultok/torstultok.json",
         "label": "Torstultok"
       },
-      "image": "File:WaterdeepEnvirons-ForlornHills.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/torstultok/torstultok.webp"
     },
-    "id": "1505"
+    "id": "torstultok"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1174,12 +1182,12 @@
       "title": "Thornhold",
       "description": "Also known as the '''Stoneshaft Hold''', a fortress home of the [[dwarven]] [[Clan Stoneshaft]].",
       "link": {
-        "url": "Thornhold",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/thornhold/thornhold.json",
         "label": "Thornhold"
       },
-      "image": "File:Thornhold map.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/thornhold/thornhold.webp"
     },
-    "id": "1559"
+    "id": "thornhold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1191,12 +1199,12 @@
       "title": "Marune's Stronghold",
       "description": "The underground stronghold once occupied by [[Shadow Thief]] [[Marune]], on the [[Mount Helimbrar]].",
       "link": {
-        "url": "Marune's Stronghold",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/marunes_stronghold/marunes_stronghold.json",
         "label": "Marune's Stronghold"
       },
-      "image": "File:WaterdeepEnvirons2.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/marunes_stronghold/marunes_stronghold.webp"
     },
-    "id": "1566"
+    "id": "marunes_stronghold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1208,12 +1216,12 @@
       "title": "Nasaqh Estates",
       "description": "Fortified family home of the [[Nasaqh]] family.",
       "link": {
-        "url": "Nasaqh Estates",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/nasaqh_estates/nasaqh_estates.json",
         "label": "Nasaqh Estates"
       },
-      "image": "File:WaterdeepEnvirons2.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/nasaqh_estates/nasaqh_estates.webp"
     },
-    "id": "1570"
+    "id": "nasaqh_estates"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1225,12 +1233,12 @@
       "title": "Hillsafar",
       "description": "The largest of the three major [[dwarf|dwarven]] holds in the [[Galena Mountains]], famed for its production of piles of [[gem]]s exported throughout the [[Moonsea]].",
       "link": {
-        "url": "Hillsafar",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/hillsafar/hillsafar.json",
         "label": "Hillsafar"
       },
-      "image": "File:Grambles climb 2e.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/hillsafar/hillsafar.webp"
     },
-    "id": "1645"
+    "id": "hillsafar"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1242,12 +1250,12 @@
       "title": "Bone Tower",
       "description": "A fortified keep of note.",
       "link": {
-        "url": "Bone Tower",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/bone_tower/bone_tower.json",
         "label": "Bone Tower"
       },
-      "image": "File:Thar2.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/bone_tower/bone_tower.webp"
     },
-    "id": "1671"
+    "id": "bone_tower"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1259,12 +1267,12 @@
       "title": "Castle Daggerdale",
       "description": "A ruined castle of the [[Morn]] family, rumored to hold vast hidden treasure, rebuilt in [[1407 DR]] by the [[Cormaeril]] family.",
       "link": {
-        "url": "Castle Daggerdale",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_daggerdale/castle_daggerdale.json",
         "label": "Castle Daggerdale"
       },
-      "image": "File:Daggerdale 1368 DR.gif"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_daggerdale/castle_daggerdale.webp"
     },
-    "id": "1713"
+    "id": "castle_daggerdale"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1276,12 +1284,12 @@
       "title": "Orc Fort",
       "description": "An [[orc]]ish fortification in the 14{{th}} century [[DR]].",
       "link": {
-        "url": "Orc Fort",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/orc_fort/orc_fort.json",
         "label": "Orc Fort"
       },
-      "image": "File:Phlan zhentil keep 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/orc_fort/orc_fort.webp"
     },
-    "id": "1792"
+    "id": "orc_fort"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1293,12 +1301,12 @@
       "title": "Crossroad Keep",
       "description": "An old fortress once controlled by [[Neverwinter]], a base for the [[Graycloaks of Neverwinter]], and a trading hub on the [[Sword Coast]].",
       "link": {
-        "url": "Crossroad Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/crossroad_keep/crossroad_keep.json",
         "label": "Crossroad Keep"
       },
-      "image": "File:Crossroad Keep.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/crossroad_keep/crossroad_keep.webp"
     },
-    "id": "1808"
+    "id": "crossroad_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1310,12 +1318,12 @@
       "title": "Fangjaws Hold",
       "description": "A dozen of stone and turf lodges encircled by a palisade, home to the [[Skullsmashers]] [[orge]]s.",
       "link": {
-        "url": "Fangjaws Hold",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/fangjaws_hold/fangjaws_hold.json",
         "label": "Fangjaws Hold"
       },
-      "image": "File:Thar2.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/fangjaws_hold/fangjaws_hold.webp"
     },
-    "id": "1820"
+    "id": "fangjaws_hold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1327,12 +1335,12 @@
       "title": "Bloodskull Keep",
       "description": "A fortified keep of the [[Bloody Skull]] [[orc]] tribe.",
       "link": {
-        "url": "Bloodskull Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/bloodskull_keep/bloodskull_keep.json",
         "label": "Bloodskull Keep"
       },
-      "image": "File:Thar2.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/bloodskull_keep/bloodskull_keep.webp"
     },
-    "id": "1822"
+    "id": "bloodskull_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1344,11 +1352,12 @@
       "title": "Aris",
       "description": "A fortification of note.",
       "link": {
-        "url": "Aris",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/aris/aris.json",
         "label": "Aris"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/aris/aris.webp"
     },
-    "id": "1833"
+    "id": "aris"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1360,11 +1369,12 @@
       "title": "Castle Nacacia",
       "description": "A stronghold of note.",
       "link": {
-        "url": "Castle Nacacia",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_nacacia/castle_nacacia.json",
         "label": "Castle Nacacia"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_nacacia/castle_nacacia.webp"
     },
-    "id": "1838"
+    "id": "castle_nacacia"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1376,11 +1386,12 @@
       "title": "Citadel Adbar",
       "description": "The [[dwarf|dwarven]] fortress named for [[King Adbar]], built in [[-272 DR]].",
       "link": {
-        "url": "Citadel Adbar",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_adbar/citadel_adbar.json",
         "label": "Citadel Adbar"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_adbar/citadel_adbar.webp"
     },
-    "id": "1899"
+    "id": "citadel_adbar"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1392,12 +1403,12 @@
       "title": "Deadsnows",
       "description": "A fortress town filled with visitors and travelers thanks to a [[gold]] rush. It was ruined in the [[Spellplague]] but by the late 15{{th}} century [[DR]], it was resettled and active once again.",
       "link": {
-        "url": "Deadsnows",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/deadsnows/deadsnows.json",
         "label": "Deadsnows"
       },
-      "image": "File:Deadsnows-p141-Richard Sardinha.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/deadsnows/deadsnows.webp"
     },
-    "id": "1900"
+    "id": "deadsnows"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1409,12 +1420,12 @@
       "title": "Castle Vathar",
       "description": "A massive fortress located among the hills east of the [[Dragonspine Mountains]] that housed a host of soldiers from the city-state of [[Phlan]].",
       "link": {
-        "url": "Castle Vathar",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_vathar/castle_vathar.json",
         "label": "Castle Vathar"
       },
-      "image": "File:Dungeon177-Ilinver-Mike Schley.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_vathar/castle_vathar.webp"
     },
-    "id": "1917"
+    "id": "castle_vathar"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1426,12 +1437,12 @@
       "title": "Ahoyhoy",
       "description": "A fort [[tortle]] settlement established after the [[Spellplague]].",
       "link": {
-        "url": "Ahoyhoy",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/ahoyhoy/ahoyhoy.json",
         "label": "Ahoyhoy"
       },
-      "image": "File:Ahoyhoy.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/ahoyhoy/ahoyhoy.webp"
     },
-    "id": "1937"
+    "id": "ahoyhoy"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1443,11 +1454,12 @@
       "title": "Palace of Ras Nsi",
       "description": "The stone keep taken over by the warlord [[Ras Nsi]] and his [[undead]] horde.",
       "link": {
-        "url": "Palace of Ras Nsi",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/palace_of_ras_nsi/palace_of_ras_nsi.json",
         "label": "Palace of Ras Nsi"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/palace_of_ras_nsi/palace_of_ras_nsi.webp"
     },
-    "id": "1978"
+    "id": "palace_of_ras_nsi"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1459,12 +1471,12 @@
       "title": "Citadel of the Mists",
       "description": "The castle dwelling of the mysterious lord known as [[Mistmaster]]. ",
       "link": {
-        "url": "Citadel of the Mists",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_of_the_mists/citadel_of_the_mists.json",
         "label": "Citadel of the Mists"
       },
-      "image": "File:Moon Pass.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_of_the_mists/citadel_of_the_mists.webp"
     },
-    "id": "1987"
+    "id": "citadel_of_the_mists"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1476,12 +1488,12 @@
       "title": "Nar Kerymhoarth",
       "description": "Also known as the '''Nameless Dungeon''' or the '''Sleeping Citadel''', an underground fortress below a stone bluff in the [[igh Forest]] near to [[Elven Port]].",
       "link": {
-        "url": "Nar Kerymhoarth",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/nar_kerymhoarth/nar_kerymhoarth.json",
         "label": "Nar Kerymhoarth"
       },
-      "image": "File:High Forest 2e canon.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/nar_kerymhoarth/nar_kerymhoarth.webp"
     },
-    "id": "1992"
+    "id": "nar_kerymhoarth"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1493,12 +1505,12 @@
       "title": "Telkoun's Tower",
       "description": "A [[wizard]] stronghold consisting of one building with two double towers.",
       "link": {
-        "url": "Telkoun's Tower",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/telkouns_tower/telkouns_tower.json",
         "label": "Telkoun's Tower"
       },
-      "image": "File:Far Forest 3e.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/telkouns_tower/telkouns_tower.webp"
     },
-    "id": "1995"
+    "id": "telkouns_tower"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1510,12 +1522,12 @@
       "title": "Rauvinwatch Keep",
       "description": "The headquarters for the [[Argent Legion]], the grand army that comprised soldiers from the member-cities of the [[Confederacy of the Silver Marches]].",
       "link": {
-        "url": "Rauvinwatch Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/rauvinwatch_keep/rauvinwatch_keep.json",
         "label": "Rauvinwatch Keep"
       },
-      "image": "File:MoonwyvernInn-map.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/rauvinwatch_keep/rauvinwatch_keep.webp"
     },
-    "id": "2009"
+    "id": "rauvinwatch_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1527,12 +1539,12 @@
       "title": "Olostin's Hold",
       "description": "A fortified keep home to about 200 people and provided security for about 600 farmers and ranchers in the surrounding area.",
       "link": {
-        "url": "Olostin's Hold",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/olostins_hold/olostins_hold.json",
         "label": "Olostin's Hold"
       },
-      "image": "File:High Forest 2e canon.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/olostins_hold/olostins_hold.webp"
     },
-    "id": "2023"
+    "id": "olostins_hold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1544,11 +1556,12 @@
       "title": "Fort Beluarian",
       "description": "A trade fort run by the [[Flaming Fist]] on behalf of the city-state of [[Baldur's Gate]].",
       "link": {
-        "url": "Fort Beluarian",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_beluarian/fort_beluarian.json",
         "label": "Fort Beluarian"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_beluarian/fort_beluarian.webp"
     },
-    "id": "2107"
+    "id": "fort_beluarian"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1560,12 +1573,12 @@
       "title": "Camp Vengeance",
       "description": "A forward camp for the [[Order of the Gauntlet]] for their operations in [[Chult]].",
       "link": {
-        "url": "Camp Vengeance",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/camp_vengeance/camp_vengeance.json",
         "label": "Camp Vengeance"
       },
-      "image": "File:Chult-small.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/camp_vengeance/camp_vengeance.webp"
     },
-    "id": "2115"
+    "id": "camp_vengeance"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1577,12 +1590,12 @@
       "title": "Lyran's Hold",
       "description": "A fortification of note.",
       "link": {
-        "url": "Lyran's Hold",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/lyrans_hold/lyrans_hold.json",
         "label": "Lyran's Hold"
       },
-      "image": "File:SerpentKingdoms Map-a-week Lazzaretti.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/lyrans_hold/lyrans_hold.webp"
     },
-    "id": "2133"
+    "id": "lyrans_hold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1594,12 +1607,12 @@
       "title": "Svardborg",
       "description": "A [[frost giant]] fortress built atop an iceberg in the [[Sea of Moving Ice]].",
       "link": {
-        "url": "Svardborg",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/svardborg/svardborg.json",
         "label": "Svardborg"
       },
-      "image": "File:Svardborg.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/svardborg/svardborg.webp"
     },
-    "id": "2208"
+    "id": "svardborg"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1611,12 +1624,12 @@
       "title": "Citadel Felbarr",
       "description": "Originally a [[dwarven]] citadel of over 25,000 souls that at different times in history had belonged to dwarves, [[human]]s, [[orc]]s, and, since [[1367 DR]], once again – the dwarves.",
       "link": {
-        "url": "Citadel Felbarr",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_felbarr/citadel_felbarr.json",
         "label": "Citadel Felbarr"
       },
-      "image": "File:Citadel Felbarr.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_felbarr/citadel_felbarr.webp"
     },
-    "id": "2214"
+    "id": "citadel_felbarr"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1628,12 +1641,12 @@
       "title": "Castle of Illusion",
       "description": "A remote keep protected by [[illusion]]s and [[glamer]]s, [[ward]]s, traps, and subtle yet deadly puzzles all through, below, and outside.",
       "link": {
-        "url": "Castle of Illusion",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_of_illusion/castle_of_illusion.json",
         "label": "Castle of Illusion"
       },
-      "image": "File:River Khedrun.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_of_illusion/castle_of_illusion.webp"
     },
-    "id": "2226"
+    "id": "castle_of_illusion"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1645,12 +1658,12 @@
       "title": "Herald's Holdfast",
       "description": "A spellguarded library complex that belonged to the [[Heralds of Faerûn]] and their primary repository of heraldic lore, history, genealogy, and artifacts from nearly all the [[humanoid]] races native to [[Faerûn]].",
       "link": {
-        "url": "Herald's Holdfast",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/heralds_holdfast/heralds_holdfast.json",
         "label": "Herald's Holdfast"
       },
-      "image": "File:One Stone.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/heralds_holdfast/heralds_holdfast.webp"
     },
-    "id": "2231"
+    "id": "heralds_holdfast"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1662,12 +1675,12 @@
       "title": "Fortress Faithful",
       "description": "A cliffside fortress that contained a castle, an abbey, and a garrison.",
       "link": {
-        "url": "Fortress Faithful",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/fortress_faithful/fortress_faithful.json",
         "label": "Fortress Faithful"
       },
-      "image": "File:PurpleHills-LoI.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/fortress_faithful/fortress_faithful.webp"
     },
-    "id": "2314"
+    "id": "fortress_faithful"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1679,12 +1692,12 @@
       "title": "Saharkhan",
       "description": "A [[granite]] keep that once belonged to Count of [[Bashyrvale]].",
       "link": {
-        "url": "Saharkhan",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/saharkhan/saharkhan.json",
         "label": "Saharkhan"
       },
-      "image": "File:PurpleHills-LoI.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/saharkhan/saharkhan.webp"
     },
-    "id": "2316"
+    "id": "saharkhan"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1696,12 +1709,12 @@
       "title": "Krennasar",
       "description": "The castle built for the Count of [[Tellyshal]], which changed hands in the 14{{th}} century [[DR]], becoming home to Duchess [[Marilyn Haresdown]].",
       "link": {
-        "url": "Krennasar",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/krennasar/krennasar.json",
         "label": "Krennasar"
       },
-      "image": "File:PurpleHills-LoI.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/krennasar/krennasar.webp"
     },
-    "id": "2324"
+    "id": "krennasar"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1713,12 +1726,12 @@
       "title": "Citadel of Conjurers",
       "description": "A dark tower built in the final years of the [[Narfelli]] empire, taken by [[Eltab]] in [[1373 DR]].",
       "link": {
-        "url": "Citadel of Conjurers",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_of_conjurers/citadel_of_conjurers.json",
         "label": "Citadel of Conjurers"
       },
-      "image": "File:Dragon346-CitadelOfConjurers.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_of_conjurers/citadel_of_conjurers.webp"
     },
-    "id": "2366"
+    "id": "citadel_of_conjurers"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1730,12 +1743,12 @@
       "title": "Helm's Hold",
       "description": "A fortified cathedral dedicated to [[Helm]].",
       "link": {
-        "url": "Helm's Hold",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/helms_hold/helms_hold.json",
         "label": "Helm's Hold"
       },
-      "image": "File:Helms hold.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/helms_hold/helms_hold.webp"
     },
-    "id": "2389"
+    "id": "helms_hold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1747,11 +1760,12 @@
       "title": "Citadel Tralkarn",
       "description": "The seat of power of the [[durthans]] in [[Rashemen]] during the late 14{{th}} century [[DR]], constructed in secret without alerting the hated [[hathran]]s.{{approx}}",
       "link": {
-        "url": "Citadel Tralkarn",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_tralkarn/citadel_tralkarn.json",
         "label": "Citadel Tralkarn"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_tralkarn/citadel_tralkarn.webp"
     },
-    "id": "2410"
+    "id": "citadel_tralkarn"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1763,12 +1777,12 @@
       "title": "Omvudurth",
       "description": "A sprawling black many-towered fortress owned by a small army of [[goblin]]s under the command of their chieftain [[Omvurr]] in the late 14{{th}} century [[DR]].",
       "link": {
-        "url": "Omvudurth",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/omvudurth/omvudurth.json",
         "label": "Omvudurth"
       },
-      "image": "File:Rashemen.JPG"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/omvudurth/omvudurth.webp"
     },
-    "id": "2442"
+    "id": "omvudurth"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1780,12 +1794,12 @@
       "title": "Szass Tam's Keep",
       "description": "A personal fortress of [[Szass Tam]]'s.",
       "link": {
-        "url": "Szass Tam's Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/szass_tams_keep/szass_tams_keep.json",
         "label": "Szass Tam's Keep"
       },
-      "image": "File:Thaylambar.JPG"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/szass_tams_keep/szass_tams_keep.webp"
     },
-    "id": "2460"
+    "id": "szass_tams_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1797,12 +1811,12 @@
       "title": "Citadel of the Collector",
       "description": "A landmark of note.",
       "link": {
-        "url": "Citadel of the Collector",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_of_the_collector/citadel_of_the_collector.json",
         "label": "Citadel of the Collector"
       },
-      "image": "File:5eMapRiverPelauvir.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_of_the_collector/citadel_of_the_collector.webp"
     },
-    "id": "2521"
+    "id": "citadel_of_the_collector"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1814,12 +1828,12 @@
       "title": "Ice Castle",
       "description": "A massive castle constructed of ice that stood within a fissure at the base of the northern side of [[Mount Okk]], built by a group of evil [[Vaasa]]n [[wizard]]s.",
       "link": {
-        "url": "Ice Castle",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/ice_castle/ice_castle.json",
         "label": "Ice Castle"
       },
-      "image": "File:Ahtitlak.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/ice_castle/ice_castle.webp"
     },
-    "id": "2526"
+    "id": "ice_castle"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1831,12 +1845,12 @@
       "title": "Damaran Gate",
       "description": "A massive fortification in [[Damara]] that completely spanned the eastern end of [[Bloodstone Pass]].",
       "link": {
-        "url": "Damaran Gate",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/damaran_gate/damaran_gate.json",
         "label": "Damaran Gate"
       },
-      "image": "File:Bloodstone Village Map.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/damaran_gate/damaran_gate.webp"
     },
-    "id": "2532"
+    "id": "damaran_gate"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1848,12 +1862,12 @@
       "title": "Vaasan Gate",
       "description": "Or '''Iron Divide''', a massive fortification in [[Vaasa]] that completely spanned the western end of the [[Bloodstone Pass]].",
       "link": {
-        "url": "Vaasan Gate",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/vaasan_gate/vaasan_gate.json",
         "label": "Vaasan Gate"
       },
-      "image": "File:Vaasa - 1480 DR - Mike Schley.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/vaasan_gate/vaasan_gate.webp"
     },
-    "id": "2533"
+    "id": "vaasan_gate"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1865,12 +1879,12 @@
       "title": "Frost Keep",
       "description": "A [[frost giant]] fortress inhabited by seventeen frost giants, one of which was a powerful leader that commanded the others.",
       "link": {
-        "url": "Frost Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/frost_keep/frost_keep.json",
         "label": "Frost Keep"
       },
-      "image": "File:Frost Keep.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/frost_keep/frost_keep.webp"
     },
-    "id": "2542"
+    "id": "frost_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1882,12 +1896,12 @@
       "title": "Castle Naerytar",
       "description": "A swamp castle that served as the base of operations of the [[Academy of Stargazers]] in the 14{{th}} century [[DR]] and as an outpost of the [[Cult of the Dragon]] in the late 15{{th}} century DR.",
       "link": {
-        "url": "Castle Naerytar",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_naerytar/castle_naerytar.json",
         "label": "Castle Naerytar"
       },
-      "image": "File:Castle Naeytar-5e.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_naerytar/castle_naerytar.webp"
     },
-    "id": "2553"
+    "id": "castle_naerytar"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1899,12 +1913,12 @@
       "title": "Citadel Ankhalus",
       "description": "A keep north of the [[Vanishing Hills]], just southeast of [[Glumpen Swamp]], the base of the [[Masked Wizards of Ankhalus]] in the 14{{th}} century [[DR]].",
       "link": {
-        "url": "Citadel Ankhalus",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_ankhalus/citadel_ankhalus.json",
         "label": "Citadel Ankhalus"
       },
-      "image": "File:MoonseaNorth Dungeon170 lowres.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_ankhalus/citadel_ankhalus.webp"
     },
-    "id": "2599"
+    "id": "citadel_ankhalus"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1916,12 +1930,12 @@
       "title": "Citadel of Strategic Militancy",
       "description": "A fortress dedicated to the [[Red Knight]] and the heart of the [[Church of the Red Knight]] – its most major center of worship. ",
       "link": {
-        "url": "Citadel of Strategic Militancy",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_of_strategic_militancy/citadel_of_strategic_militancy.json",
         "label": "Citadel of Strategic Militancy"
       },
-      "image": "File:MoonriseTowers riverChionthar.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_of_strategic_militancy/citadel_of_strategic_militancy.webp"
     },
-    "id": "2613"
+    "id": "citadel_of_strategic_militancy"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1933,12 +1947,12 @@
       "title": "Fort Morninglord",
       "description": "A keep in [[Elturgard]] garrisoned by the [[paladin]]s of the [[Order of the Companion]].",
       "link": {
-        "url": "Fort Morninglord",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_morninglord/fort_morninglord.json",
         "label": "Fort Morninglord"
       },
-      "image": "File:1479-Elturgard.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_morninglord/fort_morninglord.webp"
     },
-    "id": "2618"
+    "id": "fort_morninglord"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1950,12 +1964,12 @@
       "title": "Cragmyr Keep",
       "description": "A fortress of note.",
       "link": {
-        "url": "Cragmyr Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/cragmyr_keep/cragmyr_keep.json",
         "label": "Cragmyr Keep"
       },
-      "image": "File:Cragmyr Keep.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/cragmyr_keep/cragmyr_keep.webp"
     },
-    "id": "2661"
+    "id": "cragmyr_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1967,12 +1981,12 @@
       "title": "Monguldarath",
       "description": "A small fortified keep that belonged to [[Tethyr]]ean Counts of [[Fyraven]], built atop a ridge just five miles southeast of the town of Tulmene, overlooking the waters of the [[Firedrake Bay]]",
       "link": {
-        "url": "Monguldarath",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/monguldarath/monguldarath.json",
         "label": "Monguldarath"
       },
-      "image": "File:Firedrake Road end.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/monguldarath/monguldarath.webp"
     },
-    "id": "2666"
+    "id": "monguldarath"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -1984,12 +1998,12 @@
       "title": "Arnise Hold",
       "description": "The familial keep and homestead of the noble [[Arnise]] family that opened its guest house to travelers, offering them inn-like services.",
       "link": {
-        "url": "Arnise Hold",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/arnise_hold/arnise_hold.json",
         "label": "Arnise Hold"
       },
-      "image": "File:De'Arnise Hold.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/arnise_hold/arnise_hold.webp"
     },
-    "id": "2677"
+    "id": "arnise_hold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2001,12 +2015,12 @@
       "title": "Tordraken",
       "description": "The ducal keep of the [[Duchy of Draknor]] and later the [[Cape Velen]] duchy, nestled on the northern seaside of the [[Dragon's Head Peninsula]] in [[Tethyr]].",
       "link": {
-        "url": "Tordraken",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/tordraken/tordraken.json",
         "label": "Tordraken"
       },
-      "image": "File:Dragon's Head Peninsula.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/tordraken/tordraken.webp"
     },
-    "id": "2681"
+    "id": "tordraken"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2018,12 +2032,12 @@
       "title": "Blackthorn Manor",
       "description": "A fortified ducal manor of the Duchy of [[Cape Velen]].",
       "link": {
-        "url": "Blackthorn Manor",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/blackthorn_manor/blackthorn_manor.json",
         "label": "Blackthorn Manor"
       },
-      "image": "File:Firedrake Road end.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/blackthorn_manor/blackthorn_manor.webp"
     },
-    "id": "2696"
+    "id": "blackthorn_manor"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2035,12 +2049,12 @@
       "title": "Sentinel Tower",
       "description": "One of [[Amn]]'s outpost towers.",
       "link": {
-        "url": "Sentinel Towers",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/sentinel_tower/sentinel_tower.json",
         "label": "Sentinel Tower"
       },
-      "image": "File:Amn sentinel towers.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/sentinel_tower/sentinel_tower.webp"
     },
-    "id": "2717"
+    "id": "sentinel_tower"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2052,12 +2066,12 @@
       "title": "Sentinel Tower",
       "description": "One of [[Amn]]'s outpost towers.",
       "link": {
-        "url": "Sentinel Towers",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/sentinel_tower_2/sentinel_tower_2.json",
         "label": "Sentinel Tower"
       },
-      "image": "File:Amn sentinel towers.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/sentinel_tower_2/sentinel_tower_2.webp"
     },
-    "id": "2718"
+    "id": "sentinel_tower_2"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2069,12 +2083,12 @@
       "title": "Sentinel Tower",
       "description": "One of [[Amn]]'s outpost towers.\n\n",
       "link": {
-        "url": "Sentinel Towers",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/sentinel_tower_3/sentinel_tower_3.json",
         "label": "Sentinel Tower"
       },
-      "image": "File:Amn sentinel towers.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/sentinel_tower_3/sentinel_tower_3.webp"
     },
-    "id": "2719"
+    "id": "sentinel_tower_3"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2086,12 +2100,12 @@
       "title": "Sentinel Tower",
       "description": "One of [[Amn]]'s outpost towers.",
       "link": {
-        "url": "Sentinel Towers",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/sentinel_tower_4/sentinel_tower_4.json",
         "label": "Sentinel Tower"
       },
-      "image": "File:Amn sentinel towers.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/sentinel_tower_4/sentinel_tower_4.webp"
     },
-    "id": "2720"
+    "id": "sentinel_tower_4"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2103,12 +2117,12 @@
       "title": "Sentinel Tower",
       "description": "One of [[Amn]]'s outpost towers.",
       "link": {
-        "url": "Sentinel Towers",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/sentinel_tower_5/sentinel_tower_5.json",
         "label": "Sentinel Tower"
       },
-      "image": "File:Amn sentinel towers.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/sentinel_tower_5/sentinel_tower_5.webp"
     },
-    "id": "2721"
+    "id": "sentinel_tower_5"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2120,12 +2134,12 @@
       "title": "Sentinel Tower",
       "description": "One of [[Amn]]'s outpost towers.",
       "link": {
-        "url": "Sentinel Towers",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/sentinel_tower_6/sentinel_tower_6.json",
         "label": "Sentinel Tower"
       },
-      "image": "File:Amn sentinel towers.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/sentinel_tower_6/sentinel_tower_6.webp"
     },
-    "id": "2722"
+    "id": "sentinel_tower_6"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2137,12 +2151,12 @@
       "title": "Garrison Innocence",
       "description": "A fort of note.",
       "link": {
-        "url": "Garrison Innocence",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/garrison_innocence/garrison_innocence.json",
         "label": "Garrison Innocence"
       },
-      "image": "File:Garrison Innocence.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/garrison_innocence/garrison_innocence.webp"
     },
-    "id": "2742"
+    "id": "garrison_innocence"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2154,12 +2168,12 @@
       "title": "Tor Arcana",
       "description": "A fortified keep home of Count [[Dancon Riiklass]] and his wife [[Iimvara Riiklass]] in the 14{{th}} century [[DR]].",
       "link": {
-        "url": "Tor Arcana",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/tor_arcana/tor_arcana.json",
         "label": "Tor Arcana"
       },
-      "image": "File:Garrison Innocence.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/tor_arcana/tor_arcana.webp"
     },
-    "id": "2744"
+    "id": "tor_arcana"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2171,12 +2185,12 @@
       "title": "Shelshyr House",
       "description": "The fortified ducal seat of the [[Golden Marches]].",
       "link": {
-        "url": "Shelshyr House",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/shelshyr_house/shelshyr_house.json",
         "label": "Shelshyr House"
       },
-      "image": "File:Garrison Innocence.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/shelshyr_house/shelshyr_house.webp"
     },
-    "id": "2745"
+    "id": "shelshyr_house"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2188,12 +2202,12 @@
       "title": "Morninggold Keep",
       "description": "Also called '''Gold Keep''' and '''Castle Morninggold''', the county seat of [[County Morninggold]] in the [[Golden Marches]] of [[Tethyr]]. It was the former home of then-countess and later queen [[Zaranda Star]].",
       "link": {
-        "url": "Morninggold Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/morninggold_keep/morninggold_keep.json",
         "label": "Morninggold Keep"
       },
-      "image": "File:Garrison Innocence.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/morninggold_keep/morninggold_keep.webp"
     },
-    "id": "2746"
+    "id": "morninggold_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2205,11 +2219,12 @@
       "title": "The Keep",
       "description": "A small keep with a moat, just half a mile into the [[Kryptgarden Forest]] atop a hill in the middle of a clearing, captured by the [[Lostafinga]] [[hobgoblin]]s for a short time in the mid-14{{th}} century [[DR]].",
       "link": {
-        "url": "The Keep (Kryptgarden Forest)",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/the_keep/the_keep.json",
         "label": "The Keep"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/the_keep/the_keep.webp"
     },
-    "id": "2749"
+    "id": "the_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2221,12 +2236,12 @@
       "title": "Iron Keep",
       "description": "A fortress on [[Iron Bay]] and the ancestral seat of power for the [[Northlander]] rulers of [[Oman]]. ",
       "link": {
-        "url": "Iron Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/iron_keep/iron_keep.json",
         "label": "Iron Keep"
       },
-      "image": "File:OmanIsle.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/iron_keep/iron_keep.webp"
     },
-    "id": "2776"
+    "id": "iron_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2238,12 +2253,12 @@
       "title": "Veaddakar",
       "description": "The fortified manse located in [[Alonmarch]], owned by Duke [[Tardeth Llanistaph]], [[just chancellor]] of [[Tethyr]] in the 14{{th}} century [[DR]].",
       "link": {
-        "url": "Veaddakar",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/veaddakar/veaddakar.json",
         "label": "Veaddakar"
       },
-      "image": "File:Garrison Innocence.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/veaddakar/veaddakar.webp"
     },
-    "id": "2799"
+    "id": "veaddakar"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2255,12 +2270,12 @@
       "title": "Iltarghal Keep",
       "description": "A keep of note.",
       "link": {
-        "url": "Iltarghal Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/iltarghal_keep/iltarghal_keep.json",
         "label": "Iltarghal Keep"
       },
-      "image": "File:Garrison Innocence.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/iltarghal_keep/iltarghal_keep.webp"
     },
-    "id": "2801"
+    "id": "iltarghal_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2272,12 +2287,12 @@
       "title": "Thrynnar's Hold",
       "description": "A keep of note.",
       "link": {
-        "url": "Thrynnar's Hold",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/thrynnars_hold/thrynnars_hold.json",
         "label": "Thrynnar's Hold"
       },
-      "image": "File:Garrison Innocence.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/thrynnars_hold/thrynnars_hold.webp"
     },
-    "id": "2802"
+    "id": "thrynnars_hold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2289,12 +2304,12 @@
       "title": "Loranse",
       "description": "The fortified manor home of Count and Countess [[Malcor Grannox]] and [[Shyrr Grannox]] in the 14{{th}} century [[DR]], and the county seat of [[Ithmonn]] in [[Tethyr]].",
       "link": {
-        "url": "Loranse",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/loranse/loranse.json",
         "label": "Loranse"
       },
-      "image": "File:Seminary of St. Ostus.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/loranse/loranse.webp"
     },
-    "id": "2804"
+    "id": "loranse"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2306,12 +2321,12 @@
       "title": "Lhestyn's Hearth",
       "description": "The fortified manse of Count [[Zelphar Thann]], an older brother of a [[Harper]] and a [[Masked Lord]] of [[Waterdeep]], [[Danilo Thann]] in the 14{{th}} century [[DR]].",
       "link": {
-        "url": "Lhestyn's Hearth",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/lhestyns_hearth/lhestyns_hearth.json",
         "label": "Lhestyn's Hearth"
       },
-      "image": "File:Seminary of St. Ostus.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/lhestyns_hearth/lhestyns_hearth.webp"
     },
-    "id": "2805"
+    "id": "lhestyns_hearth"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2323,12 +2338,12 @@
       "title": "Colbertann",
       "description": "The fortified seat of power of the County [[Surkazar]] in [[Tethyr]].<br/><br/>'''Note: This map shows the incorrect geography of the region. Please refer to 2{{nd}} edition maps.'''",
       "link": {
-        "url": "Colbertann",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/colbertann/colbertann.json",
         "label": "Colbertann"
       },
-      "image": "File:Pehrrifaal.JPG"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/colbertann/colbertann.webp"
     },
-    "id": "2807"
+    "id": "colbertann"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2340,12 +2355,12 @@
       "title": "Tresper Hall",
       "description": "The fortified mase – the official seat as Duke of [[Kamlann]].",
       "link": {
-        "url": "Tresper Hall",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/tresper_hall/tresper_hall.json",
         "label": "Tresper Hall"
       },
-      "image": "File:East starspire.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/tresper_hall/tresper_hall.webp"
     },
-    "id": "2816"
+    "id": "tresper_hall"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2357,12 +2372,12 @@
       "title": "Cayr Thalwood",
       "description": "The base of operations of the famed adventuring band and defenders of [[Weldath]] – [[Company of Eight]], in the 14{{th}} century [[DR]].",
       "link": {
-        "url": "Cayr Thalwood",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/cayr_thalwood/cayr_thalwood.json",
         "label": "Cayr Thalwood"
       },
-      "image": "File:Western wealdath.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/cayr_thalwood/cayr_thalwood.webp"
     },
-    "id": "2819"
+    "id": "cayr_thalwood"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2374,11 +2389,12 @@
       "title": "Castle Lutwill",
       "description": "The fortified manor of Baron [[Lutwill]], one of the many petty barons of [[Tethyr]] during that country's [[Tethyrian Interregnum|Interregnum]] period.",
       "link": {
-        "url": "Castle Lutwill",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_lutwill/castle_lutwill.json",
         "label": "Castle Lutwill"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_lutwill/castle_lutwill.webp"
     },
-    "id": "2856"
+    "id": "castle_lutwill"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2390,12 +2406,12 @@
       "title": "Granite Tower",
       "description": "Also called '''Granite Keep'' and ''Keep Bodvar''', a secluded fortress of black [[granite]], home to the descendants of [[Bodvar the Black]] and his [[Moor Eagle]] tribe.",
       "link": {
-        "url": "Granite Tower",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/granite_tower/granite_tower.json",
         "label": "Granite Tower"
       },
-      "image": "File:Sulasspryn Du177.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/granite_tower/granite_tower.webp"
     },
-    "id": "2933"
+    "id": "granite_tower"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2407,12 +2423,12 @@
       "title": "Caer Allisynn",
       "description": "A keep built on a small island in the [[Strait of Alaron]], which, thanks to [[druidic]] magic, was submerged permanently except for four days a year.",
       "link": {
-        "url": "Caer Allisynn",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/caer_allisynn/caer_allisynn.json",
         "label": "Caer Allisynn"
       },
-      "image": "File:Southern Alaron.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/caer_allisynn/caer_allisynn.webp"
     },
-    "id": "2975"
+    "id": "caer_allisynn"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2424,12 +2440,12 @@
       "title": "Citadel Umbra",
       "description": "A castle in the middle of [[Winterglen]], home to many dark [[fey]], ruled by [[Urphania]] the [[hag]].",
       "link": {
-        "url": "Citadel Umbra",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_umbra/citadel_umbra.json",
         "label": "Citadel Umbra"
       },
-      "image": "File:Dungeon196-Mike Schley-Alaron.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/citadel_umbra/citadel_umbra.webp"
     },
-    "id": "2999"
+    "id": "citadel_umbra"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2441,12 +2457,12 @@
       "title": "Revel's End",
       "description": "A prison built on a cliff-side overlooking the [[Sea of Moving Ice]], used to hold some of the [[Sword Coast]]'s most heinous criminals.",
       "link": {
-        "url": "Revel's End",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/revels_end/revels_end.json",
         "label": "Revel's End"
       },
-      "image": "File:Revels End RotF.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/revels_end/revels_end.webp"
     },
-    "id": "3016"
+    "id": "revels_end"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2458,12 +2474,12 @@
       "title": "Sunblight",
       "description": "The fortress of the [[Sunblight]] [[duergar]] clan, connected to the [[Underdark]].",
       "link": {
-        "url": "Sunblight",
-        "label": "Sunblight (fortress)"
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/sunblight/sunblight.json",
+        "label": "Sunblight"
       },
-      "image": "File:Sunblight fortress.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/sunblight/sunblight.webp"
     },
-    "id": "3018"
+    "id": "sunblight"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2475,12 +2491,12 @@
       "title": "Mak'kat's Fort",
       "description": "A wooden prison fort occupied by [[Mak'kat]] in the mid-14{{th}} century [[DR]].",
       "link": {
-        "url": "Mak'kat's Fort",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/makkats_fort/makkats_fort.json",
         "label": "Mak'kat's Fort"
       },
-      "image": "File:The Warts.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/makkats_fort/makkats_fort.webp"
     },
-    "id": "3059"
+    "id": "makkats_fort"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2492,12 +2508,12 @@
       "title": "Quomec",
       "description": "A large ziggurat crypt that sat in the jungles of northern [[Chult]] and stood twenty-eight levels tall.",
       "link": {
-        "url": "Quomec Ziggurat",
-        "label": "Quomec Ziggurat"
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/quomec/quomec.json",
+        "label": "Quomec"
       },
-      "image": "File:Chult 1479 DR.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/quomec/quomec.webp"
     },
-    "id": "3099"
+    "id": "quomec"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2509,12 +2525,12 @@
       "title": "Underwatch",
       "description": "A huge fortress, erected by [[dwarves]] to guard the entrance to [[Underhome]].",
       "link": {
-        "url": "Underwatch",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/underwatch/underwatch.json",
         "label": "Underwatch"
       },
-      "image": "File:EastRift 4E.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/underwatch/underwatch.webp"
     },
-    "id": "3104"
+    "id": "underwatch"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2526,12 +2542,12 @@
       "title": "Highwatch",
       "description": "A fortress of note.",
       "link": {
-        "url": "Highwatch",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/highwatch/highwatch.json",
         "label": "Highwatch"
       },
-      "image": "File:Damara narfell map.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/highwatch/highwatch.webp"
     },
-    "id": "3108"
+    "id": "highwatch"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2543,12 +2559,12 @@
       "title": "Bloodgate Keep",
       "description": " A small fortress claimed by the [[Thayan]]s in the late 15{{th}} century [[DR]].",
       "link": {
-        "url": "Bloodgate Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/bloodgate_keep/bloodgate_keep.json",
         "label": "Bloodgate Keep"
       },
-      "image": "File:DelimbiyrVale.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/bloodgate_keep/bloodgate_keep.webp"
     },
-    "id": "3120"
+    "id": "bloodgate_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2560,12 +2576,12 @@
       "title": "Cromm's Hold",
       "description": "A keep near the northeastern region of the [[Lizard Marsh]], run by Baroness [[Wynne Cromm]] in the late 15{{th}} century [[DR]].",
       "link": {
-        "url": "Cromm's Hold",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/cromms_hold/cromms_hold.json",
         "label": "Cromm's Hold"
       },
-      "image": "File:DelimbiyrVale.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/cromms_hold/cromms_hold.webp"
     },
-    "id": "3121"
+    "id": "cromms_hold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2577,12 +2593,12 @@
       "title": "Summit Hall",
       "description": "The base and training monastery for the [[Knights of Samular]], an order dedicated to [[Tyr]].",
       "link": {
-        "url": "Summit Hall",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/summit_hall/summit_hall.json",
         "label": "Summit Hall"
       },
-      "image": "File:DessarinRoad-DragonPlus-1.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/summit_hall/summit_hall.webp"
     },
-    "id": "3122"
+    "id": "summit_hall"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2594,12 +2610,12 @@
       "title": "Rivergard Keep",
       "description": "A stone fortification on the banks of the [[River Dessarin]], inhabited by the [[Cult of the Crushing Wave]] in [[1491 DR]].",
       "link": {
-        "url": "Rivergard Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/rivergard_keep/rivergard_keep.json",
         "label": "Rivergard Keep"
       },
-      "image": "File:Rivergard-keep.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/rivergard_keep/rivergard_keep.webp"
     },
-    "id": "3123"
+    "id": "rivergard_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2611,12 +2627,12 @@
       "title": "Feathergale Spire",
       "description": "A fortified tower occupied by the [[Feathergale Knights]] of [[Waterdeep]] in [[1491 DR]].",
       "link": {
-        "url": "Feathergale Spire",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/feathergale_spire/feathergale_spire.json",
         "label": "Feathergale Spire"
       },
-      "image": "File:Feathergale.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/feathergale_spire/feathergale_spire.webp"
     },
-    "id": "3124"
+    "id": "feathergale_spire"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2628,12 +2644,12 @@
       "title": "Maligor's Tower",
       "description": "The residence and a stronghold of sorts for [[Maligor]], the [[Zulkir]] of [[Alteration]] until his apparent death in [[1362 DR]]. ",
       "link": {
-        "url": "Maligor's Tower",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/maligors_tower/maligors_tower.json",
         "label": "Maligor's Tower"
       },
-      "image": "File:Maligor's Tower MAP.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/maligors_tower/maligors_tower.webp"
     },
-    "id": "3139"
+    "id": "maligors_tower"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2645,11 +2661,12 @@
       "title": "Rurethtowers",
       "description": "A four-towered castle in the northernmost edge of the [[Arch Wood]], right across the border into [[Sembia]], rumored to house dangerous creatures and a passage into the [[Underdark]].",
       "link": {
-        "url": "Rurethtowers",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/rurethtowers/rurethtowers.json",
         "label": "Rurethtowers"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/rurethtowers/rurethtowers.webp"
     },
-    "id": "3145"
+    "id": "rurethtowers"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2661,11 +2678,12 @@
       "title": "Faereld's Hold",
       "description": "A keep in the western part of [[Sembia]] near its border with its cellars connected to the [[Underdark]].{{approx}}",
       "link": {
-        "url": "Faereld's Hold",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/faerelds_hold/faerelds_hold.json",
         "label": "Faereld's Hold"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/faerelds_hold/faerelds_hold.webp"
     },
-    "id": "3147"
+    "id": "faerelds_hold"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2677,12 +2695,12 @@
       "title": "Swordcrag",
       "description": "A small mining village that was reformed as an [[orc]] fortress.",
       "link": {
-        "url": "Swordcrag",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/swordcrag/swordcrag.json",
         "label": "Swordcrag"
       },
-      "image": "File:Tarkhaldale.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/swordcrag/swordcrag.webp"
     },
-    "id": "3168"
+    "id": "swordcrag"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2694,12 +2712,12 @@
       "title": "Fort Blood",
       "description": "A fortification of note.",
       "link": {
-        "url": "Fort Blood",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_blood/fort_blood.json",
         "label": "Fort Blood"
       },
-      "image": "File:Southeastern tethyr.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_blood/fort_blood.webp"
     },
-    "id": "3212"
+    "id": "fort_blood"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2711,11 +2729,12 @@
       "title": "Assassins Guild of the Galenas",
       "description": "Or the '''Citadel of Assassins''', was an assassins guild based in the [[Galena Mountains]] in [[Damara]].",
       "link": {
-        "url": "Citadel of Assassins",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/assassins_guild_of_the_galenas/assassins_guild_of_the_galenas.json",
         "label": "Assassins Guild of the Galenas"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/assassins_guild_of_the_galenas/assassins_guild_of_the_galenas.webp"
     },
-    "id": "3265"
+    "id": "assassins_guild_of_the_galenas"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2727,12 +2746,12 @@
       "title": "Keep of Pale Night",
       "description": "A [[vampire]]-infested keep of [[Mordoc SeLanmere]] built on the edge of the [[Battle of Bones]] and guarded by his [[nightwalker]] army.{{approx}}",
       "link": {
-        "url": "Keep of Pale Night",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/keep_of_pale_night/keep_of_pale_night.json",
         "label": "Keep of Pale Night"
       },
-      "image": "File:Keep of Pale Night.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/keep_of_pale_night/keep_of_pale_night.webp"
     },
-    "id": "3273"
+    "id": "keep_of_pale_night"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2744,12 +2763,12 @@
       "title": "Castle of Skulls",
       "description": "An abandoned castle built entirely of skulls.",
       "link": {
-        "url": "Castle of Skulls",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_of_skulls/castle_of_skulls.json",
         "label": "Castle of Skulls"
       },
-      "image": "File:Gwynneth.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/castle_of_skulls/castle_of_skulls.webp"
     },
-    "id": "3287"
+    "id": "castle_of_skulls"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2761,12 +2780,12 @@
       "title": "Darkhorn Castle",
       "description": "A castle of note.",
       "link": {
-        "url": "Darkhorn Castle",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/darkhorn_castle/darkhorn_castle.json",
         "label": "Darkhorn Castle"
       },
-      "image": "File:Sarifal.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/darkhorn_castle/darkhorn_castle.webp"
     },
-    "id": "3334"
+    "id": "darkhorn_castle"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2778,12 +2797,12 @@
       "title": "Highhome",
       "description": "A [[dwarf|dwarven]] fortress naturally protected by the surrounding mountains.",
       "link": {
-        "url": "Highhome",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/highhome/highhome.json",
         "label": "Highhome"
       },
-      "image": "File:CentralGwynneth.JPG"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/highhome/highhome.webp"
     },
-    "id": "3341"
+    "id": "highhome"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2795,11 +2814,12 @@
       "title": "Lake of Tears Garrison",
       "description": "A small fort on the shores of the [[Lake of Tears]] and the edge of the [[Ashenwood]], run by [[wychlaran]] named [[Dalenka]] in the late 14{{th}} century [[DR]].",
       "link": {
-        "url": "Lake of Tears Garrison",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/lake_of_tears_garrison/lake_of_tears_garrison.json",
         "label": "Lake of Tears Garrison"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/lake_of_tears_garrison/lake_of_tears_garrison.webp"
     },
-    "id": "3387"
+    "id": "lake_of_tears_garrison"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2811,12 +2831,12 @@
       "title": "Headquarters of the Enclave",
       "description": "One of the rumored home to a secretive cabal of [[wizard]]s that opposed [[Gilgeam]] in the late 14{{th}} century [[DR]]. [[The Enclave]] had two other possible headquarters in the region.",
       "link": {
-        "url": "Headquarters of the Enclave",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/headquarters_of_the_enclave/headquarters_of_the_enclave.json",
         "label": "Headquarters of the Enclave"
       },
-      "image": "File:Unther late 14th DR.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/headquarters_of_the_enclave/headquarters_of_the_enclave.webp"
     },
-    "id": "3388"
+    "id": "headquarters_of_the_enclave"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2828,12 +2848,12 @@
       "title": "Headquarters of the Enclave",
       "description": "One of the rumored home to a secretive cabal of [[wizard]]s that opposed [[Gilgeam]] in the late 14{{th}} century [[DR]]. [[The Enclave]] had two other possible headquarters in the region.",
       "link": {
-        "url": "Headquarters of the Enclave",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/headquarters_of_the_enclave_2/headquarters_of_the_enclave_2.json",
         "label": "Headquarters of the Enclave"
       },
-      "image": "File:Unther late 14th DR.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/headquarters_of_the_enclave_2/headquarters_of_the_enclave_2.webp"
     },
-    "id": "3389"
+    "id": "headquarters_of_the_enclave_2"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2845,12 +2865,12 @@
       "title": "Headquarters of the Enclave",
       "description": "One of the rumored home to a secretive cabal of [[wizard]]s that opposed [[Gilgeam]] in the late 14{{th}} century [[DR]]. [[The Enclave]] had two other possible headquarters in the region.",
       "link": {
-        "url": "Headquarters of the Enclave",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/headquarters_of_the_enclave_3/headquarters_of_the_enclave_3.json",
         "label": "Headquarters of the Enclave"
       },
-      "image": "File:Unther late 14th DR.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/headquarters_of_the_enclave_3/headquarters_of_the_enclave_3.webp"
     },
-    "id": "3390"
+    "id": "headquarters_of_the_enclave_3"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2862,12 +2882,12 @@
       "title": "The Smoking Keep",
       "description": "A fortress of note.",
       "link": {
-        "url": "Smoking Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/the_smoking_keep/the_smoking_keep.json",
         "label": "The Smoking Keep"
       },
-      "image": "File:Thay 3e.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/the_smoking_keep/the_smoking_keep.webp"
     },
-    "id": "3396"
+    "id": "the_smoking_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2879,12 +2899,12 @@
       "title": "Thralgard Keep",
       "description": "A fortress of note.",
       "link": {
-        "url": "Thralgard Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/thralgard_keep/thralgard_keep.json",
         "label": "Thralgard Keep"
       },
-      "image": "File:Thay 3e.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/thralgard_keep/thralgard_keep.webp"
     },
-    "id": "3401"
+    "id": "thralgard_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2896,12 +2916,12 @@
       "title": "Nethwatch Keep",
       "description": "A fortress of note.",
       "link": {
-        "url": "Nethwatch Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/nethwatch_keep/nethwatch_keep.json",
         "label": "Nethwatch Keep"
       },
-      "image": "File:Thay 3e.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/nethwatch_keep/nethwatch_keep.webp"
     },
-    "id": "3403"
+    "id": "nethwatch_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2913,12 +2933,12 @@
       "title": "Keep of Sorrows",
       "description": "A fortress of note.",
       "link": {
-        "url": "Keep of Sorrows",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/keep_of_sorrows/keep_of_sorrows.json",
         "label": "Keep of Sorrows"
       },
-      "image": "File:Thay 3e.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/keep_of_sorrows/keep_of_sorrows.webp"
     },
-    "id": "3405"
+    "id": "keep_of_sorrows"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2930,12 +2950,12 @@
       "title": "Moszabbar",
       "description": "A fortress of note.",
       "link": {
-        "url": "Moszabbar",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/moszabbar/moszabbar.json",
         "label": "Moszabbar"
       },
-      "image": "File:Thay 3e.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/moszabbar/moszabbar.webp"
     },
-    "id": "3417"
+    "id": "moszabbar"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2947,12 +2967,12 @@
       "title": "Thazar Keep",
       "description": "A fortress of note.",
       "link": {
-        "url": "Thazar Keep",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/thazar_keep/thazar_keep.json",
         "label": "Thazar Keep"
       },
-      "image": "File:Thay 3e.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/thazar_keep/thazar_keep.webp"
     },
-    "id": "3418"
+    "id": "thazar_keep"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2964,12 +2984,12 @@
       "title": "Chelm's Roost",
       "description": "A fortification of note.",
       "link": {
-        "url": "Chelm's Roost",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/chelms_roost/chelms_roost.json",
         "label": "Chelm's Roost"
       },
-      "image": "File:Chessenta - 1480 DR - Mike Schley.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/chelms_roost/chelms_roost.webp"
     },
-    "id": "3439"
+    "id": "chelms_roost"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2981,12 +3001,12 @@
       "title": "Caerhuan the Storm Tower",
       "description": "A fortification of note.",
       "link": {
-        "url": "Caerhuan the Storm Tower",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/caerhuan_the_storm_tower/caerhuan_the_storm_tower.json",
         "label": "Caerhuan the Storm Tower"
       },
-      "image": "File:Chessenta - 1480 DR - Mike Schley.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/caerhuan_the_storm_tower/caerhuan_the_storm_tower.webp"
     },
-    "id": "3443"
+    "id": "caerhuan_the_storm_tower"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -2998,12 +3018,12 @@
       "title": "Fort Thesk",
       "description": "A fortress of note.",
       "link": {
-        "url": "Fort Thesk",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_thesk/fort_thesk.json",
         "label": "Fort Thesk"
       },
-      "image": "File:Thesk 14th century.png"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/fort_thesk/fort_thesk.webp"
     },
-    "id": "3452"
+    "id": "fort_thesk"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -3015,12 +3035,12 @@
       "title": "Caer Moray",
       "description": "A fortified coastal town where the [[Shannyth River]] met the sea.",
       "link": {
-        "url": "Caer Moray",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/caer_moray/caer_moray.json",
         "label": "Caer Moray"
       },
-      "image": "File:Moray.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/caer_moray/caer_moray.webp"
     },
-    "id": "3481"
+    "id": "caer_moray"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -3032,12 +3052,12 @@
       "title": "Methegrist",
       "description": "A fortress in the [[Moonwood]] that served as the headquarters of the [[Moonwatchers]], a small group of [[paladin]]s devoted to [[Helm]] in the 15{{th}} century [[DR]].",
       "link": {
-        "url": "Methegrist",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/methegrist/methegrist.json",
         "label": "Methegrist"
       },
-      "image": "File:War of Everlasting Darkness Luruar.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/methegrist/methegrist.webp"
     },
-    "id": "3677"
+    "id": "methegrist"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -3049,12 +3069,12 @@
       "title": "Claw Hollow",
       "description": "A fortress hideout of the [[People of the Black Blood]] marked with splashes of \"blood-wine\", which consisted of both boiled [[wine]] and blood of their kills.",
       "link": {
-        "url": "Claw Hollow",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/claw_hollow/claw_hollow.json",
         "label": "Claw Hollow"
       },
-      "image": "File:War of Everlasting Darkness Luruar.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/claw_hollow/claw_hollow.webp"
     },
-    "id": "3678"
+    "id": "claw_hollow"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -3066,12 +3086,12 @@
       "title": "Hawk's Nest",
       "description": "A small watchtower near the top of the [[Silverymoon Pass]], manned by a dozen [[Knights in Silver]].",
       "link": {
-        "url": "Hawk's Nest",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/hawks_nest/hawks_nest.json",
         "label": "Hawk's Nest"
       },
-      "image": "File:War of Everlasting Darkness Luruar.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/hawks_nest/hawks_nest.webp"
     },
-    "id": "3687"
+    "id": "hawks_nest"
   },
   {
     "categoryId": "fortresses_keeps",
@@ -3083,11 +3103,11 @@
       "title": "Baraskur",
       "description": "The mountainside stronghold of the [[Ripped Gut]] [[orc]]ish tribe during the 14{{th}} century [[DR]].",
       "link": {
-        "url": "Baraskur",
+        "url": "assets/atlas/world/toril/faerun/fortresses_keeps/baraskur/baraskur.json",
         "label": "Baraskur"
       },
-      "image": "File:War of Everlasting Darkness Luruar.jpg"
+      "image": "assets/atlas/world/toril/faerun/fortresses_keeps/baraskur/baraskur.webp"
     },
-    "id": "3696"
+    "id": "baraskur"
   }
 ]

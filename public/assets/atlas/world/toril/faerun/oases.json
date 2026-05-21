@@ -9,11 +9,12 @@
       "title": "Lonely Lake",
       "description": "A small oasis found within the [[Plains of Purple Dust]] in [[east Faerûn]] and the [[Hordelands]].",
       "link": {
-        "url": "Lonely Lake",
+        "url": "assets/atlas/world/toril/faerun/oases/lonely_lake/lonely_lake.json",
         "label": "Lonely Lake"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/oases/lonely_lake/lonely_lake.webp"
     },
-    "id": "170"
+    "id": "lonely_lake"
   },
   {
     "categoryId": "oases",
@@ -25,12 +26,12 @@
       "title": "Grinning Skull Oasis",
       "description": "The oasis, named because it was shielded from the harsh wind by the skull of a long-dead great [[dragon]].",
       "link": {
-        "url": "Grinning Skull",
-        "label": "Grinning Skull"
+        "url": "assets/atlas/world/toril/faerun/oases/grinning_skull_oasis/grinning_skull_oasis.json",
+        "label": "Grinning Skull Oasis"
       },
-      "image": "File:Raurin.JPG"
+      "image": "assets/atlas/world/toril/faerun/oases/grinning_skull_oasis/grinning_skull_oasis.webp"
     },
-    "id": "187"
+    "id": "grinning_skull_oasis"
   },
   {
     "categoryId": "oases",
@@ -42,12 +43,12 @@
       "title": "Lion's Eye Oasis",
       "description": "The lushest of the oases found in the entirety of the desert; at its center was a small lake encircled by ascending grasslands dotted with wildflowers and large boulders.",
       "link": {
-        "url": "Lion's Eye Oasis",
+        "url": "assets/atlas/world/toril/faerun/oases/lions_eye_oasis/lions_eye_oasis.json",
         "label": "Lion's Eye Oasis"
       },
-      "image": "File:Anauroch trade map.png"
+      "image": "assets/atlas/world/toril/faerun/oases/lions_eye_oasis/lions_eye_oasis.webp"
     },
-    "id": "2248"
+    "id": "lions_eye_oasis"
   },
   {
     "categoryId": "oases",
@@ -59,12 +60,12 @@
       "title": "Hlaunga",
       "description": "A secret, [[Zhentarim]]-manufactured oasis that served as a waypoint for Zhent caravans that traveled across the [[Great Grand Sea]] via the [[Black Road]]. ",
       "link": {
-        "url": "Hlaunga",
+        "url": "assets/atlas/world/toril/faerun/oases/hlaunga/hlaunga.json",
         "label": "Hlaunga"
       },
-      "image": "File:Anauroch IA.png"
+      "image": "assets/atlas/world/toril/faerun/oases/hlaunga/hlaunga.webp"
     },
-    "id": "2250"
+    "id": "hlaunga"
   },
   {
     "categoryId": "oases",
@@ -76,12 +77,12 @@
       "title": "Bitter Well",
       "description": "An oasis occupied by the [[Zhentarim]] spellcaster [[Yhekal]] in the late 14{{th}} century [[DR]].",
       "link": {
-        "url": "Bitter Well (Anauroch)",
+        "url": "assets/atlas/world/toril/faerun/oases/bitter_well/bitter_well.json",
         "label": "Bitter Well"
       },
-      "image": "File:Anauroch IA.png"
+      "image": "assets/atlas/world/toril/faerun/oases/bitter_well/bitter_well.webp"
     },
-    "id": "2254"
+    "id": "bitter_well"
   },
   {
     "categoryId": "oases",
@@ -93,12 +94,12 @@
       "title": "El Rahalt",
       "description": "An oasis of note.",
       "link": {
-        "url": "El Rahalt",
+        "url": "assets/atlas/world/toril/faerun/oases/el_rahalt/el_rahalt.json",
         "label": "El Rahalt"
       },
-      "image": "File:Anauroch west.png"
+      "image": "assets/atlas/world/toril/faerun/oases/el_rahalt/el_rahalt.webp"
     },
-    "id": "3350"
+    "id": "el_rahalt"
   },
   {
     "categoryId": "oases",
@@ -110,12 +111,12 @@
       "title": "Colored Waters",
       "description": "A grand oasis and settlement in [[Anauroch]], home of the [[Mahwa]] tribe of the [[Bedine]] people.",
       "link": {
-        "url": "Colored Waters",
+        "url": "assets/atlas/world/toril/faerun/oases/colored_waters/colored_waters.json",
         "label": "Colored Waters"
       },
-      "image": "File:Anauroch west.png"
+      "image": "assets/atlas/world/toril/faerun/oases/colored_waters/colored_waters.webp"
     },
-    "id": "3353"
+    "id": "colored_waters"
   },
   {
     "categoryId": "oases",
@@ -127,12 +128,12 @@
       "title": "El Ma'ra",
       "description": "An oasis and a settlement found in the [[Anauroch]] desert, home to the [[Qahtan]] tribe the [[Bedine]] people.",
       "link": {
-        "url": "El Ma'ra",
+        "url": "assets/atlas/world/toril/faerun/oases/el_mara/el_mara.json",
         "label": "El Ma'ra"
       },
-      "image": "File:Anauroch west.png"
+      "image": "assets/atlas/world/toril/faerun/oases/el_mara/el_mara.webp"
     },
-    "id": "3369"
+    "id": "el_mara"
   },
   {
     "categoryId": "oases",
@@ -144,12 +145,12 @@
       "title": "Well of the Chasm",
       "description": "A deep canyon within the [[Scimitar Spires]] with a source of fresh water found within its depths.",
       "link": {
-        "url": "Well of the Chasm",
+        "url": "assets/atlas/world/toril/faerun/oases/well_of_the_chasm/well_of_the_chasm.json",
         "label": "Well of the Chasm"
       },
-      "image": "File:Anauroch west.png"
+      "image": "assets/atlas/world/toril/faerun/oases/well_of_the_chasm/well_of_the_chasm.webp"
     },
-    "id": "3370"
+    "id": "well_of_the_chasm"
   },
   {
     "categoryId": "oases",
@@ -161,12 +162,12 @@
       "title": "Well of the Cloven Rock",
       "description": "A popular oasis located in the [[Hills of Scent]] with a crescent-shaped lake, surrounded by many varieties of t[[ree]]s, within a grass-filled, bowl-shaped valley in the hills.",
       "link": {
-        "url": "Well of the Cloven Rock",
+        "url": "assets/atlas/world/toril/faerun/oases/well_of_the_cloven_rock/well_of_the_cloven_rock.json",
         "label": "Well of the Cloven Rock"
       },
-      "image": "File:Anauroch west.png"
+      "image": "assets/atlas/world/toril/faerun/oases/well_of_the_cloven_rock/well_of_the_cloven_rock.webp"
     },
-    "id": "3374"
+    "id": "well_of_the_cloven_rock"
   },
   {
     "categoryId": "oases",
@@ -178,12 +179,12 @@
       "title": "Sister of Rains",
       "description": "A canyon-oasis used as a refuge for those [[Bedine]] who were outcasts from their tribes, such as [[witch]]es, [[wizard]]s, and other spellcasters.",
       "link": {
-        "url": "Sister of Rains",
+        "url": "assets/atlas/world/toril/faerun/oases/sister_of_rains/sister_of_rains.json",
         "label": "Sister of Rains"
       },
-      "image": "File:Anauroch west.png"
+      "image": "assets/atlas/world/toril/faerun/oases/sister_of_rains/sister_of_rains.webp"
     },
-    "id": "3377"
+    "id": "sister_of_rains"
   },
   {
     "categoryId": "oases",
@@ -195,12 +196,12 @@
       "title": "Bhaerlith",
       "description": "A secret, manufactured oasis rich with a variety of fruiting [[tree]]s, within an underground stone structure used by the [[Zhentilar]] soldiers.",
       "link": {
-        "url": "Bhaerlith",
+        "url": "assets/atlas/world/toril/faerun/oases/bhaerlith/bhaerlith.json",
         "label": "Bhaerlith"
       },
-      "image": "File:Gap of Skulls.png"
+      "image": "assets/atlas/world/toril/faerun/oases/bhaerlith/bhaerlith.webp"
     },
-    "id": "3382"
+    "id": "bhaerlith"
   },
   {
     "categoryId": "oases",
@@ -212,12 +213,12 @@
       "title": "Unnamed Oasis",
       "description": "An unnamed oasis of note.",
       "link": {
-        "url": "",
-        "label": ""
+        "url": "assets/atlas/world/toril/faerun/oases/unnamed_oasis/unnamed_oasis.json",
+        "label": "Unnamed Oasis"
       },
-      "image": "File:Murghom new.png"
+      "image": "assets/atlas/world/toril/faerun/oases/unnamed_oasis/unnamed_oasis.webp"
     },
-    "id": "3609"
+    "id": "unnamed_oasis"
   },
   {
     "categoryId": "oases",
@@ -229,12 +230,12 @@
       "title": "Unnamed Oasis",
       "description": "An unnamed oasis of note.",
       "link": {
-        "url": "",
-        "label": ""
+        "url": "assets/atlas/world/toril/faerun/oases/unnamed_oasis_2/unnamed_oasis_2.json",
+        "label": "Unnamed Oasis"
       },
-      "image": "File:Murghom new.png"
+      "image": "assets/atlas/world/toril/faerun/oases/unnamed_oasis_2/unnamed_oasis_2.webp"
     },
-    "id": "3610"
+    "id": "unnamed_oasis_2"
   },
   {
     "categoryId": "oases",
@@ -246,12 +247,12 @@
       "title": "Vuerthyl",
       "description": "An artificially-created oasis in the [[Anauroch]] created by the [[Zhentarim]] via a ''[[decanter of endless water]]''.",
       "link": {
-        "url": "Vuerthyl",
+        "url": "assets/atlas/world/toril/faerun/oases/vuerthyl/vuerthyl.json",
         "label": "Vuerthyl"
       },
-      "image": "File:Anauroch trade map.png"
+      "image": "assets/atlas/world/toril/faerun/oases/vuerthyl/vuerthyl.webp"
     },
-    "id": "3619"
+    "id": "vuerthyl"
   },
   {
     "categoryId": "oases",
@@ -263,12 +264,12 @@
       "title": "Olomaa",
       "description": "An artificially-created oasis splayed out over two hills and the valley that lay tween them utilized by the [[Zhentarim]].",
       "link": {
-        "url": "Olomaa",
+        "url": "assets/atlas/world/toril/faerun/oases/olomaa/olomaa.json",
         "label": "Olomaa"
       },
-      "image": "File:Anauroch trade map.png"
+      "image": "assets/atlas/world/toril/faerun/oases/olomaa/olomaa.webp"
     },
-    "id": "3620"
+    "id": "olomaa"
   },
   {
     "categoryId": "oases",
@@ -280,12 +281,12 @@
       "title": "Yliyl",
       "description": "A minor oasis found in [[the Sword]] comprised a small pool of water surrounded by some palm trees and desert shrubs.",
       "link": {
-        "url": "Yliyl",
+        "url": "assets/atlas/world/toril/faerun/oases/yliyl/yliyl.json",
         "label": "Yliyl"
       },
-      "image": "File:Anauroch trade map.png"
+      "image": "assets/atlas/world/toril/faerun/oases/yliyl/yliyl.webp"
     },
-    "id": "3621"
+    "id": "yliyl"
   },
   {
     "categoryId": "oases",
@@ -297,12 +298,12 @@
       "title": "The Oasis of Vipers",
       "description": "An old, well-watered set of three pools in [[Anauroch]] that was mostly ignored by the [[Bedine]].",
       "link": {
-        "url": "Oasis of Vipers",
-        "label": "Oasis of Vipers"
+        "url": "assets/atlas/world/toril/faerun/oases/the_oasis_of_vipers/the_oasis_of_vipers.json",
+        "label": "The Oasis of Vipers"
       },
-      "image": "File:Anauroch trade map.png"
+      "image": "assets/atlas/world/toril/faerun/oases/the_oasis_of_vipers/the_oasis_of_vipers.webp"
     },
-    "id": "3622"
+    "id": "the_oasis_of_vipers"
   },
   {
     "categoryId": "oases",
@@ -314,11 +315,11 @@
       "title": "Ma'atar",
       "description": "An artificially created, [[Zhentarim]]-controlled oasis beneath which were tunnels that stored an arsenal of supplies, weapons, and magical armaments.",
       "link": {
-        "url": "Ma'atar",
+        "url": "assets/atlas/world/toril/faerun/oases/maatar/maatar.json",
         "label": "Ma'atar"
       },
-      "image": "File:Anauroch trade map.png"
+      "image": "assets/atlas/world/toril/faerun/oases/maatar/maatar.webp"
     },
-    "id": "3623"
+    "id": "maatar"
   }
 ]
