@@ -1,0 +1,13 @@
+{
+  "id": "public/assets/atlas/world/toril/faerun/cities/baldurs_gate/baldurs_gate.json",
+  "name": "baldurs_gate",
+  "type": "settlement",
+  "parent": "cities",
+  "title": "Baldur's Gate",
+  "description": "A metropolis city-state, perhaps the most prosperous and influential merchant city on the western coast of [[Faer\u00fbn]].<br/><br/>Interactive map can be found [[Map:Baldur's Gate|here]].",
+  "image": "baldurs_gate.webp",
+  "coordinates": {
+    "lat": 1035.5,
+    "lng": 2029.5
+  }
+}
