@@ -1,26 +1,35 @@
 {
-  "index": "smuggler",
-  "name": "Smuggler",
+  "index": "soldier",
+  "name": "Soldier",
   "starting_proficiencies": [
     {
       "index": "skill_athletics",
       "name": "Skill: Athletics"
     },
     {
-      "index": "skill_deception",
-      "name": "Skill: Deception"
+      "index": "skill_intimidation",
+      "name": "Skill: Intimidation"
     },
     {
-      "index": "vehicles_water",
-      "name": "Vehicles (Water)"
+      "index": "vehicles_land",
+      "name": "Vehicles (Land)"
     }
   ],
   "starting_equipment": [
     {
       "equipment": {
-        "index": "leather_pouch",
-        "name": "Leather Pouch",
-        "url": "public/assets/atlas/equipment/json/leather_pouch.json"
+        "index": "insignia_of_rank",
+        "name": "Insignia of Rank",
+        "url": "public/assets/atlas/equipment/json/insignia_of_rank.json"
+      },
+      "quantity": 1,
+      "slot": "acc-1"
+    },
+    {
+      "equipment": {
+        "index": "trophy_from_fallen_enemy",
+        "name": "Trophy from a fallen enemy",
+        "url": "public/assets/atlas/equipment/json/trophy_from_fallen_enemy.json"
       },
       "quantity": 1
     },
@@ -32,53 +41,100 @@
       },
       "quantity": 1,
       "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "public/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 1
     }
   ],
-  "starting_equipment_options": [],
+  "starting_equipment_options": [
+    {
+      "desc": "One type of gaming set",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dice_set",
+              "name": "Dice Set"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragonchess_set",
+              "name": "Dragonchess Set"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "playing_card_set",
+              "name": "Playing Card Set"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "three_dragon_ante_set",
+              "name": "Three-Dragon Ante Set"
+            }
+          }
+        ]
+      }
+    }
+  ],
   "feature": {
-    "name": "Down Low",
+    "name": "Military Rank",
     "desc": [
-      "You are adept at finding hidden passages and secret routes through the wild or urban areas that others would miss. When you are in a settlement, you can find a safe place for you and your companions to stay and hide for as long as you need, provided you can pay for it or provide a service in return."
+      "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized."
     ]
   },
   "suggested_characteristics": {
     "traits": [
-      "I\u2019m always looking for the nearest exit.",
-      "I have a contact in every port.",
-      "I never tell the whole truth if a half-truth will do.",
-      "I'm incredibly observant of my surroundings.",
-      "I love the thrill of a narrow escape.",
-      "I'm a bit cynical about the law and those who enforce it.",
-      "I can't resist a good bargain.",
-      "I'm always ready to move at a moment\u2019s notice."
+      "I'm always polite and respectful.",
+      "I'm haunted by memories of war. I can't get the images of violence out of my mind.",
+      "I've lost too many friends, and I'm slow to make new ones.",
+      "I'm full of inspiring cautionary tales from my military experience relevant to almost every combat situation.",
+      "I can stare down a hell hound without flinching.",
+      "I enjoy being strong and like to break things.",
+      "I have a crude sense of humor.",
+      "I face problems head-on. A simple, direct solution is the best path to success."
     ],
     "ideals": [
-      "Freedom. No one should be able to tell me where I can or can't go. (Chaotic)",
-      "Profit. The only thing that matters is the bottom line. (Neutral)",
-      "Community. We have to look out for our own. (Lawful)",
-      "Charity. I smuggle what people need, not what the law says they can have. (Good)",
-      "Greed. I\u2019ll move anything for the right price. (Evil)",
-      "Discovery. I want to see every corner of the world. (Any)"
+      "Greater Good. Our lot is to lay down our lives in defense of others. (Good)",
+      "Responsibility. I do what I must and obey just authority. (Lawful)",
+      "Independence. When people follow orders blindly, they embrace a kind of tyranny. (Chaotic)",
+      "Might. In life as in war, the stronger force prevails. (Evil)",
+      "Live and Let Live. Ideals aren't worth killing over or going to war for. (Neutral)",
+      "Nation. My city, nation, or people are all that matter. (Any)"
     ],
     "bonds": [
-      "I owe a debt to a powerful crime lord.",
-      "My ship is my home and my crew is my family.",
-      "I\u2019m trying to go straight for the sake of someone I love.",
-      "I have a secret stash of goods that I need to recover.",
-      "I was betrayed by my former partner, and I want revenge.",
-      "I\u2019m searching for the legendary 'Smuggler\u2019s Run'."
+      "I would still lay down my life for the people I served with.",
+      "Someone saved my life on the battlefield. To this day, I will never leave a friend behind.",
+      "My honor is my life.",
+      "I'll never forget the crushing defeat my company suffered or the enemies who dealt it.",
+      "Those who fight beside me are those worth dying for.",
+      "I fight for those who cannot fight for themselves."
     ],
     "flaws": [
-      "I have a price, and I can be bought.",
-      "I\u2019m prone to taking unnecessary risks for extra profit.",
-      "I don't trust anyone who works for the government.",
-      "I have a reputation that precedes me in all the wrong ways.",
-      "I\u2019m a bit too fond of the goods I\u2019m supposed to be moving.",
-      "I turn tail and run at the first sign of trouble."
+      "The monstrous enemy we faced in battle still leaves me quivering with fear.",
+      "I have little respect for anyone who is not a proven warrior.",
+      "I made a terrible mistake in battle that cost many lives \u2014 and I would do anything to keep that mistake secret.",
+      "My hatred of my enemies is blind and unreasoning.",
+      "I obey the law, even if the law causes misery.",
+      "I'd rather eat my armor than admit when I'm wrong."
     ]
   },
   "desc": [
-    "You have spent your life moving goods illegally, avoiding patrols and taxes to turn a profit. Whether you were running medicine to the needy or weapons to rebels, you know how to stay 'down low' and get things where they need to go."
+    "War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war."
   ],
-  "url": "public/assets/atlas/backgrounds/json/smuggler.json"
+  "url": "public/assets/atlas/backgrounds/json/soldier.json"
 }
