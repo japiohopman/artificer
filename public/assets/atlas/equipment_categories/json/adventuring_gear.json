@@ -5,12 +5,17 @@
     {
       "index": "abacus",
       "name": "abacus",
-      "url": "public/assets/atlas/equipment/abacus"
+      "url": "public/assets/atlas/equipment/json/abacus.json"
+    },
+    {
+      "index": "pet_mouse",
+      "name": "Pet mouse",
+      "url": "public/assets/atlas/equipment/json/pet_mouse.json"
     },
     {
       "index": "acid_vial",
       "name": "acid (vial)",
-      "url": "public/assets/atlas/equipment/acid_vial"
+      "url": "public/assets/atlas/equipment/json/acid_vial.json"
     },
     {
       "index": "alchemists_fire_flask",
