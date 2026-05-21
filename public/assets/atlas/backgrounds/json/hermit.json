@@ -1,33 +1,118 @@
 {
   "index": "hermit",
   "name": "Hermit",
-  "description": "You lived in seclusion — either in a sheltered community such as a monastery, or entirely alone — for a formative part of your life. In your time apart from the clamor of society, you found quiet, solitude, and perhaps some of the answers you were looking for.",
   "starting_proficiencies": [
-    { "index": "skill-medicine", "name": "Skill: Medicine" },
-    { "index": "skill-religion", "name": "Skill: Religion" },
-    { "index": "herbalism-kit", "name": "Herbalism Kit" }
+    {
+      "index": "skill_medicine",
+      "name": "Skill: Medicine"
+    },
+    {
+      "index": "skill_religion",
+      "name": "Skill: Religion"
+    },
+    {
+      "index": "herbalism_kit",
+      "name": "Herbalism Kit"
+    }
   ],
   "language_options": {
     "choose": 1,
     "from": {
       "option_set_type": "options_array",
       "options": [
-        { "option_type": "reference", "item": { "index": "common", "name": "Common" } },
-        { "option_type": "reference", "item": { "index": "dwarvish", "name": "Dwarvish" } },
-        { "option_type": "reference", "item": { "index": "elvish", "name": "Elvish" } },
-        { "option_type": "reference", "item": { "index": "giant", "name": "Giant" } },
-        { "option_type": "reference", "item": { "index": "gnomish", "name": "Gnomish" } },
-        { "option_type": "reference", "item": { "index": "goblin", "name": "Goblin" } },
-        { "option_type": "reference", "item": { "index": "halfling", "name": "Halfling" } },
-        { "option_type": "reference", "item": { "index": "orc", "name": "Orc" } }
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "common",
+            "name": "Common"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "dwarvish",
+            "name": "Dwarvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "elvish",
+            "name": "Elvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "giant",
+            "name": "Giant"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "gnomish",
+            "name": "Gnomish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "goblin",
+            "name": "Goblin"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "halfling",
+            "name": "Halfling"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "orc",
+            "name": "Orc"
+          }
+        }
       ]
     }
   },
   "starting_equipment": [
-    { "equipment": { "index": "scroll-case", "name": "Scroll case stuffed full of notes", "url": "/api/equipment/scroll-case" }, "quantity": 1 },
-    { "equipment": { "index": "winter-blanket", "name": "Winter Blanket", "url": "/api/equipment/winter-blanket" }, "quantity": 1 },
-    { "equipment": { "index": "common-clothes", "name": "Common Clothes", "url": "/api/equipment/common-clothes" }, "quantity": 1, "slot": "clothes" },
-    { "equipment": { "index": "herbalism-kit", "name": "Herbalism Kit", "url": "/api/equipment/herbalism-kit" }, "quantity": 1 }
+    {
+      "equipment": {
+        "index": "scroll_case",
+        "name": "Scroll case stuffed full of notes",
+        "url": "public/assets/atlas/equipment/json/scroll_case.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "blanket",
+        "name": "Winter Blanket",
+        "url": "public/assets/atlas/equipment/json/blanket.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Common Clothes",
+        "url": "public/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1,
+      "slot": "clothes"
+    },
+    {
+      "equipment": {
+        "index": "herbalism_kit",
+        "name": "Herbalism Kit",
+        "url": "public/assets/atlas/equipment/json/herbalism_kit.json"
+      },
+      "quantity": 1
+    }
   ],
   "starting_equipment_options": [],
   "feature": {
@@ -71,5 +156,9 @@
       "I'd risk too much to uncover a lost bit of knowledge.",
       "I like keeping secrets and won't share them with anyone."
     ]
-  }
+  },
+  "desc": [
+    "You lived in seclusion \u2014 either in a sheltered community such as a monastery, or entirely alone \u2014 for a formative part of your life. In your time apart from the clamor of society, you found quiet, solitude, and perhaps some of the answers you were looking for."
+  ],
+  "url": "public/assets/atlas/backgrounds/json/hermit.json"
 }
