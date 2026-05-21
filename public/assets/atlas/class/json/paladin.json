@@ -15,7 +15,7 @@
             "item": {
               "index": "skill_athletics",
               "name": "skill: athletics",
-              "url": "public/assets/atlas/proficiencies/skill_athletics"
+              "url": "public/assets/atlas/proficiencies/json/skill_athletics.json"
             }
           },
           {
@@ -23,7 +23,7 @@
             "item": {
               "index": "skill_insight",
               "name": "skill: insight",
-              "url": "public/assets/atlas/proficiencies/skill_insight"
+              "url": "public/assets/atlas/proficiencies/json/skill_insight.json"
             }
           },
           {
@@ -31,7 +31,7 @@
             "item": {
               "index": "skill_intimidation",
               "name": "skill: intimidation",
-              "url": "public/assets/atlas/proficiencies/skill_intimidation"
+              "url": "public/assets/atlas/proficiencies/json/skill_intimidation.json"
             }
           },
           {
@@ -39,7 +39,7 @@
             "item": {
               "index": "skill_medicine",
               "name": "skill: medicine",
-              "url": "public/assets/atlas/proficiencies/skill_medicine"
+              "url": "public/assets/atlas/proficiencies/json/skill_medicine.json"
             }
           },
           {
@@ -47,7 +47,7 @@
             "item": {
               "index": "skill_persuasion",
               "name": "skill: persuasion",
-              "url": "public/assets/atlas/proficiencies/skill_persuasion"
+              "url": "public/assets/atlas/proficiencies/json/skill_persuasion.json"
             }
           },
           {
@@ -55,7 +55,7 @@
             "item": {
               "index": "skill_religion",
               "name": "skill: religion",
-              "url": "public/assets/atlas/proficiencies/skill_religion"
+              "url": "public/assets/atlas/proficiencies/json/skill_religion.json"
             }
           }
         ]
@@ -66,44 +66,44 @@
     {
       "index": "all_armor",
       "name": "all armor",
-      "url": "public/assets/atlas/proficiencies/all_armor"
+      "url": "public/assets/atlas/proficiencies/json/all_armor.json"
     },
     {
       "index": "shields",
       "name": "shields",
-      "url": "public/assets/atlas/proficiencies/shields"
+      "url": "public/assets/atlas/proficiencies/json/shields.json"
     },
     {
       "index": "simple_weapons",
       "name": "simple weapons",
-      "url": "public/assets/atlas/proficiencies/simple_weapons"
+      "url": "public/assets/atlas/proficiencies/json/simple_weapons.json"
     },
     {
       "index": "martial_weapons",
       "name": "martial weapons",
-      "url": "public/assets/atlas/proficiencies/martial_weapons"
+      "url": "public/assets/atlas/proficiencies/json/martial_weapons.json"
     },
     {
       "index": "saving_throw_wis",
       "name": "saving throw: wis",
-      "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_wis.json"
     },
     {
       "index": "saving_throw_cha",
       "name": "saving throw: cha",
-      "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_cha.json"
     }
   ],
   "saving_throws": [
     {
       "index": "wis",
       "name": "wis",
-      "url": "public/assets/atlas/ability_scores/wisdom"
+      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
     },
     {
       "index": "cha",
       "name": "cha",
-      "url": "public/assets/atlas/ability_scores/charisma"
+      "url": "public/assets/atlas/ability_scores/json/charisma.json"
     }
   ],
   "starting_equipment": [
@@ -111,7 +111,7 @@
       "equipment": {
         "index": "chain_mail",
         "name": "chain mail",
-        "url": "public/assets/atlas/equipment/charismain_mail"
+        "url": "public/assets/atlas/equipment/json/charismain_mail.json"
       },
       "quantity": 1
     }
@@ -149,7 +149,7 @@
                 "of": {
                   "index": "shield",
                   "name": "shield",
-                  "url": "public/assets/atlas/equipment/shield"
+                  "url": "public/assets/atlas/equipment/json/shield.json"
                 }
               }
             ]
@@ -186,7 +186,7 @@
             "of": {
               "index": "javelin",
               "name": "javelin",
-              "url": "public/assets/atlas/equipment/javelin"
+              "url": "public/assets/atlas/equipment/json/javelin.json"
             }
           },
           {
@@ -221,7 +221,7 @@
             "of": {
               "index": "priests_pack",
               "name": "priest's pack",
-              "url": "public/assets/atlas/equipment/priests_pack"
+              "url": "public/assets/atlas/equipment/json/priests_pack.json"
             }
           },
           {
@@ -230,7 +230,7 @@
             "of": {
               "index": "explorers_pack",
               "name": "explorer's pack",
-              "url": "public/assets/atlas/equipment/explorers_pack"
+              "url": "public/assets/atlas/equipment/json/explorers_pack.json"
             }
           }
         ]
@@ -257,7 +257,7 @@
         "ability_score": {
           "index": "str",
           "name": "str",
-          "url": "public/assets/atlas/ability_scores/strength"
+          "url": "public/assets/atlas/ability_scores/json/strength.json"
         },
         "minimum_score": 13
       },
@@ -265,7 +265,7 @@
         "ability_score": {
           "index": "cha",
           "name": "cha",
-          "url": "public/assets/atlas/ability_scores/charisma"
+          "url": "public/assets/atlas/ability_scores/json/charisma.json"
         },
         "minimum_score": 13
       }
@@ -274,27 +274,27 @@
       {
         "index": "light_armor",
         "name": "light armor",
-        "url": "public/assets/atlas/proficiencies/light_armor"
+        "url": "public/assets/atlas/proficiencies/json/light_armor.json"
       },
       {
         "index": "medium_armor",
         "name": "medium armor",
-        "url": "public/assets/atlas/proficiencies/medium_armor"
+        "url": "public/assets/atlas/proficiencies/json/medium_armor.json"
       },
       {
         "index": "shields",
         "name": "shields",
-        "url": "public/assets/atlas/proficiencies/shields"
+        "url": "public/assets/atlas/proficiencies/json/shields.json"
       },
       {
         "index": "simple_weapons",
         "name": "simple weapons",
-        "url": "public/assets/atlas/proficiencies/simple_weapons"
+        "url": "public/assets/atlas/proficiencies/json/simple_weapons.json"
       },
       {
         "index": "martial_weapons",
         "name": "martial weapons",
-        "url": "public/assets/atlas/proficiencies/martial_weapons"
+        "url": "public/assets/atlas/proficiencies/json/martial_weapons.json"
       }
     ]
   },
@@ -302,7 +302,7 @@
     {
       "index": "devotion",
       "name": "devotion",
-      "url": "public/assets/atlas/subclasses/devotion"
+      "url": "public/assets/atlas/class/json/devotion.json"
     }
   ],
   "spellcasting": {
@@ -310,7 +310,7 @@
     "spellcasting_ability": {
       "index": "cha",
       "name": "cha",
-      "url": "public/assets/atlas/ability_scores/charisma"
+      "url": "public/assets/atlas/ability_scores/json/charisma.json"
     },
     "info": [
       {
@@ -339,7 +339,7 @@
     ]
   },
   "spells": "public/assets/atlas/classes/paladin/spells",
-  "url": "public/assets/atlas/classes/json/paladin.json",
+  "url": "public/assets/atlas/class/json/paladin.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
   "image": "public/assets/atlas/classes/paladin.webp"
 }
