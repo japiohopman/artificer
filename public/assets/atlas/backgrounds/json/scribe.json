@@ -1,9 +1,66 @@
 {
   "index": "scribe",
-  "name": "scribe",
+  "name": "Scribe",
   "desc": [
-    "Je bent een expert in het schrijven en kopi\u00ebren van documenten, vaak werkzaam in een administratieve of juridische rol voor de overheid of de kerk."
+    "You spent formative years in a scriptorium, a monastery dedicated to the preservation of knowledge, or a government agency, where you learned to write with a clear hand and produce finely written texts. Perhaps you scribed government documents or copied tomes of literature. You might have some skill as a writer of poetry, narrative, or scholarly research."
   ],
+  "starting_proficiencies": [
+    { "index": "skill_investigation", "name": "Skill: Investigation", "url": "public/assets/atlas/proficiencies/json/skill_investigation.json" },
+    { "index": "skill_perception", "name": "Skill: Perception", "url": "public/assets/atlas/proficiencies/json/skill_perception.json" },
+    { "index": "calligraphers_supplies", "name": "Calligrapher's Supplies", "url": "public/assets/atlas/proficiencies/json/calligraphers_supplies.json" }
+  ],
+  "starting_equipment": [
+    { "equipment": { "index": "calligraphers_supplies", "name": "Calligrapher's Supplies", "url": "public/assets/atlas/equipment/json/calligraphers_supplies.json" }, "quantity": 1 },
+    { "equipment": { "index": "lamp", "name": "Lamp", "url": "public/assets/atlas/equipment/json/lamp.json" }, "quantity": 1 },
+    { "equipment": { "index": "oil_flask", "name": "Flask of Oil", "url": "public/assets/atlas/equipment/json/oil_flask.json" }, "quantity": 3 },
+    { "equipment": { "index": "parchment_one_sheet", "name": "Parchment (sheet)", "url": "public/assets/atlas/equipment/json/parchment_one_sheet.json" }, "quantity": 12 },
+    { "equipment": { "index": "clothes_fine", "name": "Fine Clothes", "url": "public/assets/atlas/equipment/json/clothes_fine.json" }, "quantity": 1, "slot": "clothes" },
+    { "equipment": { "index": "pouch", "name": "Pouch", "url": "public/assets/atlas/equipment/json/pouch.json" }, "quantity": 1 },
+    { "equipment": { "index": "gold", "name": "Gold Pieces", "url": "public/assets/atlas/equipment/json/gold.json" }, "quantity": 23, "unit": "gp" }
+  ],
+  "starting_equipment_options": [],
+  "feature": {
+    "name": "Skilled",
+    "desc": [
+      "You have exceptionally broad learning. You gain proficiency in any combination of three skills or tools of your choice."
+    ]
+  },
+  "suggested_characteristics": {
+    "traits": [
+      "I use polysyllabic words that convey the impression of great erudition.",
+      "I'm a perfectionist who can't finish a task until it's flawless.",
+      "I've read every book in the world's greatest libraries — or I like to boast that I have.",
+      "I'm used to helping out those who aren't as bright as I am.",
+      "There's nothing I like more than a good mystery.",
+      "I am horribly, horribly awkward in social situations.",
+      "I speak slowly when talking to people who don't understand the intricacies of my work.",
+      "I'm convinced that people are always trying to steal my research."
+    ],
+    "ideals": [
+      "Knowledge. The path to power and self-improvement is through knowledge. (Neutral)",
+      "Accuracy. Truth is the most important thing; we must record it faithfully. (Lawful)",
+      "Creativity. The written word is a tool for expression and change. (Chaotic)",
+      "Power. Information is power, and I intend to have it all. (Evil)",
+      "Preservation. We must protect the records of the past for the future. (Any)",
+      "Self-Improvement. The goal of study is the betterment of oneself. (Any)"
+    ],
+    "bonds": [
+      "I work to preserve a library, university, or scriptorium.",
+      "My life's work is a series of tomes related to a specific field of lore.",
+      "I have an ancient text that holds terrible secrets that must not fall into the wrong hands.",
+      "I'm trying to find the one who burned down my master's library.",
+      "I owe my education to a generous benefactor who I hope to make proud.",
+      "Everything I do is for the pursuit of truth."
+    ],
+    "flaws": [
+      "I overlook obvious solutions in favor of complicated ones.",
+      "I can't keep a secret to save my life, or anyone else's.",
+      "I am easily distracted by the promise of new information.",
+      "I speak without really thinking through my words, step on toes, and irritate people.",
+      "Unlocking an ancient mystery is worth the price of a civilization.",
+      "I judge others harshly based on their literacy and grammar."
+    ]
+  },
   "image": "public/assets/atlas/backgrounds/scribe.webp",
   "url": "public/assets/atlas/backgrounds/json/scribe.json"
 }
