@@ -13,8 +13,17 @@
   },
   "weight": 0.5,
   "desc": [
-    "A game of strategy and tactics played on three overlapping boards."
+    "Crafted from the petrified remains of a dragon whose strategic brilliance rivaled the gods themselves, the Dragonchess Set hums with a silent, predatory energy. Each piece whispers forgotten war strategies to those who dare touch it, driving them to madness and bloodshed in their obsessive pursuit of victory on the checkered battlefield. But beware, for the set remembers its owner, and seeks to reclaim a living dragon's soul to complete its terrible transformation.\n"
   ],
   "url": "public/assets/atlas/equipment/json/dragonchess_set.json",
-  "image": "public/assets/atlas/equipment/images/dragonchess_set.webp"
+  "image": "public/assets/atlas/equipment/images/dragonchess_set.webp",
+  "imageUrl": "/assets/atlas/equipment/images/dragonchess_set.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Gaming Sets",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "21-5-2026",
+  "updated_at": "2026-05-21T00:34:39.367Z"
 }
