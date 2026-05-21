@@ -1,0 +1,20 @@
+{
+  "index": "dragonchess_set",
+  "name": "Dragonchess Set",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "public/assets/atlas/equipment_categories/json/tools.json"
+  },
+  "tool_category": "Gaming Sets",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "A game of strategy and tactics played on three overlapping boards."
+  ],
+  "url": "public/assets/atlas/equipment/json/dragonchess_set.json",
+  "image": "public/assets/atlas/equipment/images/dragonchess_set.webp"
+}
