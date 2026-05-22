@@ -1,1239 +1,2251 @@
 {
-  "locationName": "baldurs gate",
-  "category": "inn_tavern",
-  "subLocations": [
+  "category": "inns_taverns",
+  "updatedAt": "2026-04-30T13:14:38.640Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
     {
-      "id": "wiki_23",
-      "name": "Endshift Tavern",
-      "lore": "The Endshift Tavern was a frequent stop for off-duty members of the [[City Guard (Waterdeep)|City Guard]].",
-      "x": 62.520833333333336,
-      "y": 114.37812776304156,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Endshift Tavern"
-      ]
-    },
-    {
-      "id": "wiki_28",
+      "id": "demondraught",
       "name": "Demondraught",
-      "lore": "",
-      "x": 31.666598684137668,
-      "y": 121.5533906296627,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Demondraught"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 31.666598684137668,
+        "y": 121.5533906296627
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_318",
+      "id": "the_ships_wheel",
       "name": "The Ship's Wheel",
-      "lore": "The Ship's Wheel had a reputation for being one of the safest taverns around. Most activity within the tavern never got more exciting than the old patrons watching each others hair fall out.",
-      "x": 23.004540614602334,
-      "y": 104.3324489349473,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Ship's Wheel"
-      ]
+      "type": "inn_tavern",
+      "description": "The Ship's Wheel had a reputation for being one of the safest taverns around. Most activity within the tavern never got more exciting than the old patrons watching each others hair fall out.",
+      "coordinates": {
+        "x": 23.004540614602334,
+        "y": 104.3324489349473
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_319",
-      "name": "The Pilgrim's Rest",
-      "lore": "This comfortable inn was moderately priced, at least by Waterdeep standards. Many of the patrons stayed here while visiting Waterdeep's temples. A private room could be had for 9 gp per night and included stabling and a meal. ",
-      "x": 24.041630560342664,
-      "y": 104.40269070936291,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Pilgrim's Rest"
-      ]
-    },
-    {
-      "id": "wiki_320",
+      "id": "the_wandering_wemic",
       "name": "The Wandering Wemic",
-      "lore": "Rooms could be had at the Wandering Wemic at a rate of 10 gp per night and included stabling, a valet service used for cleaning or repairing gear, and one bottle of wine per person per evening.",
-      "x": 24.807662906627996,
-      "y": 104.53146729579434,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Wandering Wemic"
-      ]
+      "type": "inn_tavern",
+      "description": "Rooms could be had at the Wandering Wemic at a rate of 10 gp per night and included stabling, a valet service used for cleaning or repairing gear, and one bottle of wine per person per evening.",
+      "coordinates": {
+        "x": 24.807662906627996,
+        "y": 104.53146729579434
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_321",
+      "id": "house_of_purple_silks",
       "name": "House of Purple Silks",
-      "lore": "",
-      "x": 25.196571636280666,
-      "y": 103.06809699542957,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/House of Purple Silks"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 25.196571636280666,
+        "y": 103.06809699542957
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_324",
+      "id": "fiery_flagon",
       "name": "Fiery Flagon",
-      "lore": "The Fiery Flagon was a stately old tavern that served excellent food.",
-      "x": 24.442324403015,
-      "y": 107.3996730845147,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Fiery Flagon"
-      ]
+      "type": "inn_tavern",
+      "description": "The Fiery Flagon was a stately old tavern that served excellent food.",
+      "coordinates": {
+        "x": 24.442324403015,
+        "y": 107.3996730845147
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_325",
+      "id": "dacers_inn",
       "name": "Dacer's Inn",
-      "lore": "",
-      "x": 25.337992992517997,
-      "y": 106.43970216747242,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Dacer's Inn"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 25.337992992517997,
+        "y": 106.43970216747242
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_326",
+      "id": "gournars_tavern",
       "name": "Gournar's Tavern",
-      "lore": "",
-      "x": 25.79761240028933,
-      "y": 103.65344511557416,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Gournar's Tavern"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 25.79761240028933,
+        "y": 103.65344511557416
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_329",
+      "id": "maerghouns_inn",
       "name": "Maerghoun's Inn",
-      "lore": "",
-      "x": 26.870057685088668,
-      "y": 105.35095466400205,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Maerghoun's Inn"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 26.870057685088668,
+        "y": 105.35095466400205
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_391",
+      "id": "the_sleeping_snake",
       "name": "The Sleeping Snake",
-      "lore": "Rowdy tavern for dockhands and dancers, owner by [[Alard Belaerl]].",
-      "x": 56.07356774809333,
-      "y": 35.35502645686045,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Sleeping Snake"
-      ]
+      "type": "inn_tavern",
+      "description": "Rowdy tavern for dockhands and dancers, owner by [[Alard Belaerl]].",
+      "coordinates": {
+        "x": 56.07356774809333,
+        "y": 35.35502645686045
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_392",
+      "id": "shipmasters_hall",
       "name": "Shipmasters' Hall",
-      "lore": "Shipmasters' Hall was an inn. ",
-      "x": 57.81776447502,
-      "y": 34.86333403593781,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Shipmasters' Hall"
-      ]
+      "type": "inn_tavern",
+      "description": "Shipmasters' Hall was an inn. ",
+      "coordinates": {
+        "x": 57.81776447502,
+        "y": 34.86333403593781
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_393",
-      "name": "Selûne's Smile",
-      "lore": "Selûne's Smile, also known as the Inn of the Crescent Moon, was a tavern and inn devoted to [[Selûne]]. Uniquely, it was established and run by an [[avatar]] of the goddess Selûne.",
-      "x": 42.63333333333333,
-      "y": 49.60221043324492,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Selûne's Smile"
-      ]
+      "id": "selunes_smile",
+      "name": "Sel\u00fbne's Smile",
+      "type": "inn_tavern",
+      "description": "Sel\u00fbne's Smile, also known as the Inn of the Crescent Moon, was a tavern and inn devoted to [[Sel\u00fbne]]. Uniquely, it was established and run by an [[avatar]] of the goddess Sel\u00fbne.",
+      "coordinates": {
+        "x": 42.63333333333333,
+        "y": 49.60221043324492
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_404",
+      "id": "the_red_gauntlet",
       "name": "The Red Gauntlet",
-      "lore": "Food served here consisted mostly of dried fish, waybread, and rabbit-and-fowl stew. Drink consisted of a house wine. The fares were cheap in the Red Gauntlet with a plate of food running just 3 cp and a tankard 2 cp.",
-      "x": 61.07045566847666,
-      "y": 34.82821314872834,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Red Gauntlet"
-      ]
+      "type": "inn_tavern",
+      "description": "Food served here consisted mostly of dried fish, waybread, and rabbit-and-fowl stew. Drink consisted of a house wine. The fares were cheap in the Red Gauntlet with a plate of food running just 3 cp and a tankard 2 cp.",
+      "coordinates": {
+        "x": 61.07045566847666,
+        "y": 34.82821314872834
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_407",
+      "id": "copper_cup",
       "name": "Copper Cup",
-      "lore": "The Copper Cup was a [[festhall]]. ",
-      "x": 64.59420446139,
-      "y": 31.11710606699793,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Copper Cup"
-      ]
+      "type": "inn_tavern",
+      "description": "The Copper Cup was a [[festhall]]. ",
+      "coordinates": {
+        "x": 64.59420446139,
+        "y": 31.11710606699793
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_434",
+      "id": "yawning_portal",
       "name": "Yawning Portal",
-      "lore": "The Yawning Portal inn gained most of its renown for being the primary open route to the [[Undermountain]].",
-      "x": 48.84929346697,
-      "y": 57.82068730809062,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Yawning Portal"
-      ]
+      "type": "inn_tavern",
+      "description": "The Yawning Portal inn gained most of its renown for being the primary open route to the [[Undermountain]].",
+      "coordinates": {
+        "x": 48.84929346697,
+        "y": 57.82068730809062
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_437",
+      "id": "the_red_eyed_owl",
       "name": "The Red-Eyed Owl",
-      "lore": "",
-      "x": 50.510994402760005,
-      "y": 57.293873999958514,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Red-Eyed Owl"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 50.510994402760005,
+        "y": 57.293873999958514
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_438",
+      "id": "the_sleepy_sylph",
       "name": "The Sleepy Sylph",
-      "lore": "",
-      "x": 51.01775426261,
-      "y": 57.563134135224495,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Sleepy Sylph"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 51.01775426261,
+        "y": 57.563134135224495
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_440",
+      "id": "bowels_of_the_earth",
       "name": "Bowels of the Earth",
-      "lore": "The tavern was a well-known spot for hiring [[mercenaries]].",
-      "x": 52.20805067760667,
-      "y": 60.04501016464731,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Bowels of the Earth"
-      ]
+      "type": "inn_tavern",
+      "description": "The tavern was a well-known spot for hiring [[mercenaries]].",
+      "coordinates": {
+        "x": 52.20805067760667,
+        "y": 60.04501016464731
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_442",
+      "id": "rearing_hippocampus",
       "name": "Rearing Hippocampus",
-      "lore": "The Rearing Hippocampus was an inn.",
-      "x": 44.795214588166665,
-      "y": 49.98872946052793,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Rearing Hippocampus"
-      ]
+      "type": "inn_tavern",
+      "description": "The Rearing Hippocampus was an inn.",
+      "coordinates": {
+        "x": 44.795214588166665,
+        "y": 49.98872946052793
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_444",
+      "id": "the_blackstar_inn",
       "name": "The Blackstar Inn",
-      "lore": "The Blackstar Inn was owned by [[Asiyra Boldwinter]] during the mid-to-late 14th century DR. Armed guards protected the entryway and the stables.",
-      "x": 49.89816852572999,
-      "y": 51.03064911438899,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Blackstar Inn"
-      ]
+      "type": "inn_tavern",
+      "description": "The Blackstar Inn was owned by [[Asiyra Boldwinter]] during the mid-to-late 14th century DR. Armed guards protected the entryway and the stables.",
+      "coordinates": {
+        "x": 49.89816852572999,
+        "y": 51.03064911438899
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_449",
-      "name": "Gray Serpent",
-      "lore": "The Gray Serpent, which was also seen as the Grey Serpent, was an inn located in Waterdeep during the mid-to-late 14th century DR.",
-      "x": 56.22677421735,
-      "y": 54.43737517364131,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Gray Serpent"
-      ]
-    },
-    {
-      "id": "wiki_450",
+      "id": "swords_rest",
       "name": "Swords' Rest",
-      "lore": "Swords' Rest was a tavern and a good place to hire [[mercenaries]].",
-      "x": 59.880159253479995,
-      "y": 53.617887805436915,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Swords' Rest"
-      ]
+      "type": "inn_tavern",
+      "description": "Swords' Rest was a tavern and a good place to hire [[mercenaries]].",
+      "coordinates": {
+        "x": 59.880159253479995,
+        "y": 53.617887805436915
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_459",
+      "id": "felzouns_folly",
       "name": "Felzoun's Folly",
-      "lore": "This tavern was frequently quite crowded and noisy, but overall was a casual place where merchants and consumers alike stopped for a quick bite or drink.",
-      "x": 60.45762979145,
-      "y": 60.17378675107872,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Felzoun's Folly"
-      ]
+      "type": "inn_tavern",
+      "description": "This tavern was frequently quite crowded and noisy, but overall was a casual place where merchants and consumers alike stopped for a quick bite or drink.",
+      "coordinates": {
+        "x": 60.45762979145,
+        "y": 60.17378675107872
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_471",
+      "id": "ships_prow",
       "name": "Ship's Prow",
-      "lore": "The inn's name derived from the fact that it was converted into a building from the prow of a ship.",
-      "x": 46.20942815054,
-      "y": 45.14204702571386,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Ship's Prow"
-      ]
+      "type": "inn_tavern",
+      "description": "The inn's name derived from the fact that it was converted into a building from the prow of a ship.",
+      "coordinates": {
+        "x": 46.20942815054,
+        "y": 45.14204702571386
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_473",
+      "id": "the_mermaids_arms",
       "name": "The Mermaid's Arms",
-      "lore": "The Mermaid's Arms was a pricey and busy tavern, inn, and festhall.",
-      "x": 48.55466564147666,
-      "y": 38.668096816890824,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Mermaid's Arms"
-      ]
+      "type": "inn_tavern",
+      "description": "The Mermaid's Arms was a pricey and busy tavern, inn, and festhall.",
+      "coordinates": {
+        "x": 48.55466564147666,
+        "y": 38.668096816890824
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_477",
+      "id": "blue_mermaid",
       "name": "Blue Mermaid",
-      "lore": "The tavern was well appointed and clean, if a bit tired.",
-      "x": 50.89990313241,
-      "y": 39.37051456106697,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Blue Mermaid"
-      ]
+      "type": "inn_tavern",
+      "description": "The tavern was well appointed and clean, if a bit tired.",
+      "coordinates": {
+        "x": 50.89990313241,
+        "y": 39.37051456106697
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_482",
+      "id": "hanging_lantern",
       "name": "Hanging Lantern",
-      "lore": "The Hanging Lantern was a [[festhall]]. The building stood an impressive six storys tall.",
-      "x": 51.58343968756,
-      "y": 40.822177899028574,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hanging Lantern"
-      ]
+      "type": "inn_tavern",
+      "description": "The Hanging Lantern was a [[festhall]]. The building stood an impressive six storys tall.",
+      "coordinates": {
+        "x": 51.58343968756,
+        "y": 40.822177899028574
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_483",
+      "id": "sleeping_wench",
       "name": "Sleeping Wench",
-      "lore": "This tavern could be rather rowdy, but less so compared to the [[Sleeping Snake]] and had a comparably better clientele.",
-      "x": 52.82087655463667,
-      "y": 40.36560636531541,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sleeping Wench"
-      ]
+      "type": "inn_tavern",
+      "description": "This tavern could be rather rowdy, but less so compared to the [[Sleeping Snake]] and had a comparably better clientele.",
+      "coordinates": {
+        "x": 52.82087655463667,
+        "y": 40.36560636531541
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_484",
+      "id": "thirsty_sailor",
       "name": "Thirsty Sailor",
-      "lore": "The Thirsty Sailor was an infamous dive bar.",
-      "x": 47.234732983259995,
-      "y": 45.62203248423334,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Thirsty Sailor"
-      ]
+      "type": "inn_tavern",
+      "description": "The Thirsty Sailor was an infamous dive bar.",
+      "coordinates": {
+        "x": 47.234732983259995,
+        "y": 45.62203248423334
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_486",
+      "id": "warm_beds",
       "name": "Warm Beds",
-      "lore": "Warm Beds was an [[inn]].",
-      "x": 48.83750835395,
-      "y": 43.64355583813631,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Warm Beds"
-      ]
+      "type": "inn_tavern",
+      "description": "Warm Beds was an [[inn]].",
+      "coordinates": {
+        "x": 48.83750835395,
+        "y": 43.64355583813631
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_488",
+      "id": "bloody_fist",
       "name": "Bloody Fist",
-      "lore": "The Bloody Fist was a [[tavern]].",
-      "x": 52.00770375627,
-      "y": 44.790838153625785,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Bloody Fist"
-      ]
+      "type": "inn_tavern",
+      "description": "The Bloody Fist was a [[tavern]].",
+      "coordinates": {
+        "x": 52.00770375627,
+        "y": 44.790838153625785
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_489",
-      "name": "Hanged Man",
-      "lore": "This tavern offered a fine selection of [[wine]]s, far better than one might suspect it to have, as well as a wide variety of [[ale]]s.",
-      "x": 53.42191731864333,
-      "y": 38.98418480176943,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hanged Man (Waterdeep)"
-      ]
-    },
-    {
-      "id": "wiki_491",
+      "id": "three_pearls_nightclub",
       "name": "Three Pearls Nightclub",
-      "lore": "The Three Pearls Nightclub was a [[festhall]] and nightclub.",
-      "x": 53.53976844883999,
-      "y": 45.6337394466365,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Three Pearls Nightclub"
-      ]
+      "type": "inn_tavern",
+      "description": "The Three Pearls Nightclub was a [[festhall]] and nightclub.",
+      "coordinates": {
+        "x": 53.53976844883999,
+        "y": 45.6337394466365
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_493",
+      "id": "purple_palace",
       "name": "Purple Palace",
-      "lore": "The Purple Palace was a [[festhall]].",
-      "x": 54.98933735027333,
-      "y": 41.7704418536677,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Purple Palace"
-      ]
+      "type": "inn_tavern",
+      "description": "The Purple Palace was a [[festhall]].",
+      "coordinates": {
+        "x": 54.98933735027333,
+        "y": 41.7704418536677
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_494",
+      "id": "thirsty_throat",
       "name": "Thirsty Throat",
-      "lore": "The Thirsty Throat was a [[tavern]].",
-      "x": 56.16784865225,
-      "y": 48.16244332566863,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Thirsty Throat"
-      ]
+      "type": "inn_tavern",
+      "description": "The Thirsty Throat was a [[tavern]].",
+      "coordinates": {
+        "x": 56.16784865225,
+        "y": 48.16244332566863
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_498",
-      "name": "Blushing Mermaid",
-      "lore": "The Blushing Mermaid was a tavern, inn, and festhall managed by Lady [[Alathene Moonstar]] circa the Year of Wild Magic, [[1372 DR]].",
-      "x": 53.6929749181,
-      "y": 37.450572726985726,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Blushing Mermaid (Waterdeep)"
-      ]
-    },
-    {
-      "id": "wiki_499",
+      "id": "jade_dancer",
       "name": "Jade Dancer",
-      "lore": "The Jade Dancer was a [[festhall]] and [[tavern]].",
-      "x": 61.31794304189333,
-      "y": 37.71983286225171,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Jade Dancer"
-      ]
+      "type": "inn_tavern",
+      "description": "The Jade Dancer was a [[festhall]] and [[tavern]].",
+      "coordinates": {
+        "x": 61.31794304189333,
+        "y": 37.71983286225171
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_507",
+      "id": "the_full_cup",
       "name": "The Full Cup",
-      "lore": "The Full Cup's patrons were mostly caravan drovers. Brawls were a common occurrence in this seedy [[tavern]].",
-      "x": 65.04203875614333,
-      "y": 40.0495183804368,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Full Cup"
-      ]
+      "type": "inn_tavern",
+      "description": "The Full Cup's patrons were mostly caravan drovers. Brawls were a common occurrence in this seedy [[tavern]].",
+      "coordinates": {
+        "x": 65.04203875614333,
+        "y": 40.0495183804368
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_515",
+      "id": "pampered_traveler",
       "name": "Pampered Traveler",
-      "lore": "Pampered Traveler was a fine establishment with large, well-furnished rooms, a play area for children, and a library that guests could peruse.",
-      "x": 48.17754202484333,
-      "y": 78.01519745315149,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Pampered Traveler"
-      ]
+      "type": "inn_tavern",
+      "description": "Pampered Traveler was a fine establishment with large, well-furnished rooms, a play area for children, and a library that guests could peruse.",
+      "coordinates": {
+        "x": 48.17754202484333,
+        "y": 78.01519745315149
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_518",
+      "id": "inn_of_the_dripping_dagger",
       "name": "Inn of the Dripping Dagger",
-      "lore": "The Inn of the Dripping Dagger was the favored bar and home to many adventurers, mercenaries, misfits and soldiers.",
-      "x": 51.22988629696667,
-      "y": 76.17720435588903,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Inn of the Dripping Dagger"
-      ]
+      "type": "inn_tavern",
+      "description": "The Inn of the Dripping Dagger was the favored bar and home to many adventurers, mercenaries, misfits and soldiers.",
+      "coordinates": {
+        "x": 51.22988629696667,
+        "y": 76.17720435588903
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_531",
+      "id": "mother_tathlorns_house_of_pleasure_and_healing",
       "name": "Mother Tathlorn's House of Pleasure and Healing",
-      "lore": "Mother Tathlorn's House of Pleasure and Healing was a festhall and spa.",
-      "x": 43.81705020752667,
-      "y": 63.2995457126619,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Mother Tathlorn's House of Pleasure and Healing"
-      ]
+      "type": "inn_tavern",
+      "description": "Mother Tathlorn's House of Pleasure and Healing was a festhall and spa.",
+      "coordinates": {
+        "x": 43.81705020752667,
+        "y": 63.2995457126619
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_533",
+      "id": "elfstone_tavern",
       "name": "Elfstone Tavern",
-      "lore": "The Elfstone Tavern was a tavern. It catered to elves and half-elves in the city.",
-      "x": 46.23299837658,
-      "y": 66.82334139594579,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Elfstone Tavern"
-      ]
+      "type": "inn_tavern",
+      "description": "The Elfstone Tavern was a tavern. It catered to elves and half-elves in the city.",
+      "coordinates": {
+        "x": 46.23299837658,
+        "y": 66.82334139594579
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_542",
+      "id": "jade_jug",
       "name": "Jade Jug",
-      "lore": "",
-      "x": 50.31064748142333,
-      "y": 65.53557553162176,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Jade Jug"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 50.31064748142333,
+        "y": 65.53557553162176
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_543",
+      "id": "blue_jack",
       "name": "Blue Jack",
-      "lore": "",
-      "x": 50.28707725538333,
-      "y": 66.0038540277414,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Blue Jack"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 50.28707725538333,
+        "y": 66.0038540277414
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_549",
+      "id": "golden_horn_gambling_house",
       "name": "Golden Horn Gambling House",
-      "lore": "The Golden Horn Gambling House, which was also simply called the Golden Horn, was a [[festhall]].",
-      "x": 50.62884553295667,
-      "y": 63.54539192312488,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Golden Horn Gambling House"
-      ]
+      "type": "inn_tavern",
+      "description": "The Golden Horn Gambling House, which was also simply called the Golden Horn, was a [[festhall]].",
+      "coordinates": {
+        "x": 50.62884553295667,
+        "y": 63.54539192312488
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_556",
+      "id": "unicorns_horn",
       "name": "Unicorn's Horn",
-      "lore": "The Unicorn's Horn was an [[inn]].",
-      "x": 51.55833333333333,
-      "y": 65.73617374005306,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Unicorn's Horn"
-      ]
+      "type": "inn_tavern",
+      "description": "The Unicorn's Horn was an [[inn]].",
+      "coordinates": {
+        "x": 51.55833333333333,
+        "y": 65.73617374005306
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_559",
+      "id": "gondalims",
       "name": "Gondalim's",
-      "lore": "Gondalim's was an [[inn]].",
-      "x": 51.84271217399333,
-      "y": 70.48762062806424,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Gondalim's"
-      ]
+      "type": "inn_tavern",
+      "description": "Gondalim's was an [[inn]].",
+      "coordinates": {
+        "x": 51.84271217399333,
+        "y": 70.48762062806424
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_578",
+      "id": "gentle_rest",
       "name": "Gentle Rest",
-      "lore": "The Gentle Rest was an [[inn]].",
-      "x": 57.90026026616,
-      "y": 62.9834577277833,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Gentle Rest"
-      ]
+      "type": "inn_tavern",
+      "description": "The Gentle Rest was an [[inn]].",
+      "coordinates": {
+        "x": 57.90026026616,
+        "y": 62.9834577277833
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_591",
-      "name": "The Gentle Mermaid",
-      "lore": "The Gentle Mermaid was a tavern, festhall, and gambling hall. The Gentle Mermaid had the largest gambling room throughout Waterdeep, and perhaps even throughout [[Faerûn]].",
-      "x": 47.81220352123,
-      "y": 99.9657519586527,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Gentle Mermaid"
-      ]
-    },
-    {
-      "id": "wiki_604",
-      "name": "The Raging Lion",
-      "lore": "The Raging Lion was owned by a man named [[Lhaerhlin Masram]]. Several [[dwarves]] and female [[adventurer]]s used the inn as their home. They helped Lhaerhlin maintain order during their stays between outings.",
-      "x": 62.696801265206666,
-      "y": 105.64362872407433,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Raging Lion (Waterdeep)"
-      ]
-    },
-    {
-      "id": "wiki_605",
+      "id": "a_maidens_tears",
       "name": "A Maiden's Tears",
-      "lore": "A Maiden's Tears, which was also simply called the Tears, was a tavern. The tavern was quiet compared to others located in this part of the North Ward and patrons appreciated its private booths.",
-      "x": 62.578950135010004,
-      "y": 104.29732804773782,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/A Maiden's Tears"
-      ]
+      "type": "inn_tavern",
+      "description": "A Maiden's Tears, which was also simply called the Tears, was a tavern. The tavern was quiet compared to others located in this part of the North Ward and patrons appreciated its private booths.",
+      "coordinates": {
+        "x": 62.578950135010004,
+        "y": 104.29732804773782
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_611",
+      "id": "the_misty_beard",
       "name": "The Misty Beard",
-      "lore": "Part of what made the Misty Beard famous up and down the [[Sword Coast]] was the staff which was composed of exotic or monstrous creatures from all over [[Faerûn]].",
-      "x": 63.839957228126664,
-      "y": 100.1764772819029,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Misty Beard"
-      ]
+      "type": "inn_tavern",
+      "description": "Part of what made the Misty Beard famous up and down the [[Sword Coast]] was the staff which was composed of exotic or monstrous creatures from all over [[Faer\u00fbn]].",
+      "coordinates": {
+        "x": 63.839957228126664,
+        "y": 100.1764772819029
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_614",
-      "name": "Singing Sword",
-      "lore": "",
-      "x": 46.48048574999667,
-      "y": 86.72517748093436,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Singing Sword (Waterdeep)"
-      ]
-    },
-    {
-      "id": "wiki_620",
+      "id": "galloping_minotaur",
       "name": "Galloping Minotaur",
-      "lore": "Galloping Minotaur was an [[inn]] that was widely known and frequented by merchants and travelers.",
-      "x": 47.24651809628,
-      "y": 92.39134728395284,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Galloping Minotaur"
-      ]
+      "type": "inn_tavern",
+      "description": "Galloping Minotaur was an [[inn]] that was widely known and frequented by merchants and travelers.",
+      "coordinates": {
+        "x": 47.24651809628,
+        "y": 92.39134728395284
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_656",
+      "id": "the_sailors_own",
       "name": "The Sailors' Own",
-      "lore": "The Sailors' Own was a rather shabby tavern near the docks.",
-      "x": 34.683587617200004,
-      "y": 50.960407339970054,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Sailors' Own"
-      ]
+      "type": "inn_tavern",
+      "description": "The Sailors' Own was a rather shabby tavern near the docks.",
+      "coordinates": {
+        "x": 34.683587617200004,
+        "y": 50.960407339970054
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_674",
+      "id": "dragons_head",
       "name": "Dragon's Head",
-      "lore": "",
-      "x": 36.32171832695,
-      "y": 66.94041101997405,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Dragon's Head"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 36.32171832695,
+        "y": 66.94041101997405
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_677",
+      "id": "crawling_spider",
       "name": "Crawling Spider",
-      "lore": "The Crawling Spider was a [[tavern]]. The tavern had a mock underground decor made from plaster and rock rubble. Stuffed spiders hung from the ceiling, giving the tavern its namesake.",
-      "x": 44.07632269396,
-      "y": 70.44079277845161,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Crawling Spider"
-      ]
+      "type": "inn_tavern",
+      "description": "The Crawling Spider was a [[tavern]]. The tavern had a mock underground decor made from plaster and rock rubble. Stuffed spiders hung from the ceiling, giving the tavern its namesake.",
+      "coordinates": {
+        "x": 44.07632269396,
+        "y": 70.44079277845161
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_690",
+      "id": "sated_satyr",
       "name": "Sated Satyr",
-      "lore": "The Sated Satyr was a two-story, irregularly shaped building that fronted the streets or the alley on all sides but one.",
-      "x": 31.266666666666666,
-      "y": 126.85318302387269,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sated Satyr"
-      ]
+      "type": "inn_tavern",
+      "description": "The Sated Satyr was a two-story, irregularly shaped building that fronted the streets or the alley on all sides but one.",
+      "coordinates": {
+        "x": 31.266666666666666,
+        "y": 126.85318302387269
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_692",
+      "id": "wyverns_rest",
       "name": "Wyvern's Rest",
-      "lore": "The Wyvern's Rest was an inn. Originally constructed as a stone watch house, the Wyvern's Rest was a favorite of guards and watchmen.",
-      "x": 28,
-      "y": 122.21746242263484,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Wyvern's Rest"
-      ]
+      "type": "inn_tavern",
+      "description": "The Wyvern's Rest was an inn. Originally constructed as a stone watch house, the Wyvern's Rest was a favorite of guards and watchmen.",
+      "coordinates": {
+        "x": 28,
+        "y": 122.21746242263484
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_700",
+      "id": "silken_slyph",
       "name": "Silken Slyph",
-      "lore": "",
-      "x": 25.95,
-      "y": 110.95928381962865,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Silken Slyph"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 25.95,
+        "y": 110.95928381962865
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_706",
+      "id": "golden_harp_inn",
       "name": "Golden Harp Inn",
-      "lore": "The Golden Harp Inn was an [[inn]].",
-      "x": 47.61666666666667,
-      "y": 117.46584880636605,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Golden Harp Inn"
-      ]
+      "type": "inn_tavern",
+      "description": "The Golden Harp Inn was an [[inn]].",
+      "coordinates": {
+        "x": 47.61666666666667,
+        "y": 117.46584880636605
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_707",
+      "id": "high_flagon",
       "name": "High Flagon",
-      "lore": "The High Flagon was a gambling hall and inn.",
-      "x": 48.46666666666667,
-      "y": 115.26388152077809,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/High Flagon"
-      ]
+      "type": "inn_tavern",
+      "description": "The High Flagon was a gambling hall and inn.",
+      "coordinates": {
+        "x": 48.46666666666667,
+        "y": 115.26388152077809
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_711",
+      "id": "silent_shield",
       "name": "Silent Shield",
-      "lore": "",
-      "x": 55.85,
-      "y": 109.05532714412026,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Silent Shield"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 55.85,
+        "y": 109.05532714412026
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_714",
+      "id": "twilight_hunters",
       "name": "Twilight Hunters",
-      "lore": "Twilight Hunters was a tavern.",
-      "x": 61.71666666666667,
-      "y": 102.28386383731213,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Twilight Hunters"
-      ]
+      "type": "inn_tavern",
+      "description": "Twilight Hunters was a tavern.",
+      "coordinates": {
+        "x": 61.71666666666667,
+        "y": 102.28386383731213
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_716",
+      "id": "broken_lance",
       "name": "Broken Lance",
-      "lore": "",
-      "x": 32.45,
-      "y": 99.71766136162688,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Broken Lance"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 32.45,
+        "y": 99.71766136162688
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_723",
+      "id": "sapphire_house",
       "name": "Sapphire House",
-      "lore": "Sapphire House was an expensive rooming house.",
-      "x": 31.45,
-      "y": 86.25751547303273,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sapphire House"
-      ]
+      "type": "inn_tavern",
+      "description": "Sapphire House was an expensive rooming house.",
+      "coordinates": {
+        "x": 31.45,
+        "y": 86.25751547303273
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_724",
+      "id": "tavern_of_the_flagon_dragon",
       "name": "Tavern of the Flagon Dragon",
-      "lore": "The Tavern of the Flagon Dragon was a tavern.",
-      "x": 31.666666666666668,
-      "y": 85.90983642793988,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Tavern of the Flagon Dragon"
-      ]
+      "type": "inn_tavern",
+      "description": "The Tavern of the Flagon Dragon was a tavern.",
+      "coordinates": {
+        "x": 31.666666666666668,
+        "y": 85.90983642793988
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_725",
+      "id": "jhruals_dance",
       "name": "Jhrual's Dance",
-      "lore": "Jhrual's Dance was a [[festhall]].",
-      "x": 30.95,
-      "y": 85.2972590627763,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Jhrual's Dance"
-      ]
+      "type": "inn_tavern",
+      "description": "Jhrual's Dance was a [[festhall]].",
+      "coordinates": {
+        "x": 30.95,
+        "y": 85.2972590627763
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_732",
+      "id": "smiling_siren",
       "name": "Smiling Siren",
-      "lore": "The Smiling Siren was a bawdy tavern/nightclub and theater that later became a [[festhall]] run by the church of [[Sune]].",
-      "x": 36.51028013526666,
-      "y": 83.11943306082838,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Smiling Siren"
-      ]
+      "type": "inn_tavern",
+      "description": "The Smiling Siren was a bawdy tavern/nightclub and theater that later became a [[festhall]] run by the church of [[Sune]].",
+      "coordinates": {
+        "x": 36.51028013526666,
+        "y": 83.11943306082838
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_735",
+      "id": "mighty_manticore",
       "name": "Mighty Manticore",
-      "lore": "This tavern was known for its thick and flavorful stew, sharp [[cheese]], fresh black bread, and hearty ale.",
-      "x": 38.26626197521333,
-      "y": 76.06013473186077,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Mighty Manticore"
-      ]
+      "type": "inn_tavern",
+      "description": "This tavern was known for its thick and flavorful stew, sharp [[cheese]], fresh black bread, and hearty ale.",
+      "coordinates": {
+        "x": 38.26626197521333,
+        "y": 76.06013473186077
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_738",
+      "id": "the_asps_strike",
       "name": "The Asp's Strike",
-      "lore": "The Asp's Strike was a [[tavern]].",
-      "x": 35.03714100779334,
-      "y": 64.86827867465507,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Asp's Strike"
-      ]
+      "type": "inn_tavern",
+      "description": "The Asp's Strike was a [[tavern]].",
+      "coordinates": {
+        "x": 35.03714100779334,
+        "y": 64.86827867465507
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_745",
+      "id": "cliffwatch_inn",
       "name": "Cliffwatch Inn",
-      "lore": "",
-      "x": 63.36855270733333,
-      "y": 97.26144364357323,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Cliffwatch Inn"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 63.36855270733333,
+        "y": 97.26144364357323
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_749",
+      "id": "grinning_lion",
       "name": "Grinning Lion",
-      "lore": "The Grinning Lion was a [[tavern]].",
-      "x": 56.36819557358666,
-      "y": 89.28900224717596,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Grinning Lion"
-      ]
+      "type": "inn_tavern",
+      "description": "The Grinning Lion was a [[tavern]].",
+      "coordinates": {
+        "x": 56.36819557358666,
+        "y": 89.28900224717596
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_753",
+      "id": "greenglade_tower",
       "name": "Greenglade Tower",
-      "lore": "Greenglade Tower was a popular and rather clean rooming house.",
-      "x": 51.654150365676664,
-      "y": 88.50463576617771,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Greenglade Tower"
-      ]
+      "type": "inn_tavern",
+      "description": "Greenglade Tower was a popular and rather clean rooming house.",
+      "coordinates": {
+        "x": 51.654150365676664,
+        "y": 88.50463576617771
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_759",
+      "id": "wyrmbones_inn",
       "name": "Wyrmbones Inn",
-      "lore": "",
-      "x": 50.00423454291,
-      "y": 73.49630996561916,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Wyrmbones Inn"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 50.00423454291,
+        "y": 73.49630996561916
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_766",
+      "id": "maelstroms_notch",
       "name": "Maelstrom's Notch",
-      "lore": "The Maelstrom's Notch was an [[inn]].",
-      "x": 55.42538653200667,
-      "y": 67.27991292965896,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Maelstrom's Notch"
-      ]
+      "type": "inn_tavern",
+      "description": "The Maelstrom's Notch was an [[inn]].",
+      "coordinates": {
+        "x": 55.42538653200667,
+        "y": 67.27991292965896
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_778",
+      "id": "quaffing_quaggoth",
       "name": "Quaffing Quaggoth",
-      "lore": "",
-      "x": 35.15499213799,
-      "y": 53.96909667752499,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Quaffing Quaggoth"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 35.15499213799,
+        "y": 53.96909667752499
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_779",
+      "id": "pickled_fisherman",
       "name": "Pickled Fisherman",
-      "lore": "The Pickled Fisherman was a tavern.",
-      "x": 38.63160047882666,
-      "y": 51.2647883624455,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Pickled Fisherman"
-      ]
+      "type": "inn_tavern",
+      "description": "The Pickled Fisherman was a tavern.",
+      "coordinates": {
+        "x": 38.63160047882666,
+        "y": 51.2647883624455
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_780",
+      "id": "soaring_pegasus",
       "name": "Soaring Pegasus",
-      "lore": "The Soaring Pegasus was a tavern.",
-      "x": 40.116524719316665,
-      "y": 50.7613889791197,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Soaring Pegasus"
-      ]
+      "type": "inn_tavern",
+      "description": "The Soaring Pegasus was a tavern.",
+      "coordinates": {
+        "x": 40.116524719316665,
+        "y": 50.7613889791197
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_781",
-      "name": "Sailor’s Corner",
-      "lore": "",
-      "x": 41.99035768946,
-      "y": 47.97513192722143,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sailor’s Corner"
-      ]
+      "id": "sailors_corner",
+      "name": "Sailor\u2019s Corner",
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 41.99035768946,
+        "y": 47.97513192722143
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_782",
+      "id": "the_grey_griffon",
       "name": "The Grey Griffon",
-      "lore": "",
-      "x": 40.77649104842333,
-      "y": 55.736848000368504,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Grey Griffon"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 40.77649104842333,
+        "y": 55.736848000368504
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_783",
+      "id": "angry_coxswain",
       "name": "Angry Coxswain",
-      "lore": "A [[magical]] ''[[Angry Coxswain Portal|portal]]'' existed within the tavern that Ramas and Orth used to ferry slaves to [[Mulhorand]]. The portal connected directly to a prison cell located in a market in [[Skuld]].",
-      "x": 44.38273563247667,
-      "y": 44.603526755178585,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Angry Coxswain"
-      ]
+      "type": "inn_tavern",
+      "description": "A [[magical]] ''[[Angry Coxswain Portal|portal]]'' existed within the tavern that Ramas and Orth used to ferry slaves to [[Mulhorand]]. The portal connected directly to a prison cell located in a market in [[Skuld]].",
+      "coordinates": {
+        "x": 44.38273563247667,
+        "y": 44.603526755178585
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_787",
+      "id": "singed_bolt",
       "name": "Singed Bolt",
-      "lore": "The Singed Bolt was a tavern.",
-      "x": 60.56369580862667,
-      "y": 58.65188163869818,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Singed Bolt"
-      ]
+      "type": "inn_tavern",
+      "description": "The Singed Bolt was a tavern.",
+      "coordinates": {
+        "x": 60.56369580862667,
+        "y": 58.65188163869818
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_789",
-      "name": "Blackstone House",
-      "lore": "Mercenaries could be hired at Blackstone House.",
-      "x": 56.627468060023325,
-      "y": 53.26667893334884,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Blackstone House (Waterdeep)"
-      ]
+      "id": "azuths_mug",
+      "name": "Azuth\u2019s Mug",
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 47.65899705197333,
+        "y": 58.61676075148871
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_791",
-      "name": "Azuth’s Mug",
-      "lore": "",
-      "x": 47.65899705197333,
-      "y": 58.61676075148871,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Azuth’s Mug"
-      ]
-    },
-    {
-      "id": "wiki_792",
+      "id": "blushing_nymph",
       "name": "Blushing Nymph",
-      "lore": "The Blushing Nymph, or just the Nymph, was a festhall.",
-      "x": 47.01081583588667,
-      "y": 57.78556642088115,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Blushing Nymph"
-      ]
+      "type": "inn_tavern",
+      "description": "The Blushing Nymph, or just the Nymph, was a festhall.",
+      "coordinates": {
+        "x": 47.01081583588667,
+        "y": 57.78556642088115
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_793",
+      "id": "underdark",
       "name": "Underdark",
-      "lore": "The Underdark tavern had a secret passage that led to [[Undermountain]] in the back of the establishment's basement.",
-      "x": 58.73700329056333,
-      "y": 53.840320091093574,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Underdark (tavern) "
-      ]
+      "type": "inn_tavern",
+      "description": "The Underdark tavern had a secret passage that led to [[Undermountain]] in the back of the establishment's basement.",
+      "coordinates": {
+        "x": 58.73700329056333,
+        "y": 53.840320091093574
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_794",
+      "id": "sleepy_slyph",
       "name": "Sleepy Slyph",
-      "lore": "",
-      "x": 50.95882869750999,
-      "y": 54.601272647282194,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sleepy Slyph"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 50.95882869750999,
+        "y": 54.601272647282194
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_798",
+      "id": "darths_dolphyntyde",
       "name": "Darth's Dolphyntyde",
-      "lore": "",
-      "x": 45.455180917276664,
-      "y": 52.66962385079779,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Darth's Dolphyntyde"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 45.455180917276664,
+        "y": 52.66962385079779
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_807",
+      "id": "the_splintered_stair",
       "name": "The Splintered Stair",
-      "lore": "A large spiraling staircase overlooked by balconies dominated the entry of the inn. The stairway was badly damaged during an epic brawl between adventurers, giving the inn its name. The rooms for rent were large, but also dark and cold.",
-      "x": 47.57650126083333,
-      "y": 48.84144714503846,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Splintered Stair"
-      ]
+      "type": "inn_tavern",
+      "description": "A large spiraling staircase overlooked by balconies dominated the entry of the inn. The stairway was badly damaged during an epic brawl between adventurers, giving the inn its name. The rooms for rent were large, but also dark and cold.",
+      "coordinates": {
+        "x": 47.57650126083333,
+        "y": 48.84144714503846
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_811",
-      "name": "The Spouting Fish",
-      "lore": "The Spouting Fish was a popular tavern.",
-      "x": 59.09055668115666,
-      "y": 35.98720242661765,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Spouting Fish (Waterdeep)"
-      ]
-    },
-    {
-      "id": "wiki_818",
+      "id": "the_midnight_sun",
       "name": "The Midnight Sun",
-      "lore": "",
-      "x": 59.302688715513334,
-      "y": 45.703981221052125,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Midnight Sun"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 59.302688715513334,
+        "y": 45.703981221052125
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_822",
+      "id": "madame_garahs_boarding_house",
       "name": "Madame Garah's Boarding House",
-      "lore": "Madame Garah's Boarding House was a row house used as a boarding house.",
-      "x": 59.23197803739333,
-      "y": 44.68547549199737,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Madame Garah's Boarding House"
-      ]
+      "type": "inn_tavern",
+      "description": "Madame Garah's Boarding House was a row house used as a boarding house.",
+      "coordinates": {
+        "x": 59.23197803739333,
+        "y": 44.68547549199737
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_827",
+      "id": "safehaven_inn",
       "name": "Safehaven Inn",
-      "lore": "",
-      "x": 60.262499999999996,
-      "y": 43.12047966401415,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Safehaven Inn"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 60.262499999999996,
+        "y": 43.12047966401415
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_829",
+      "id": "beer_golem",
       "name": "Beer Golem",
-      "lore": "",
-      "x": 59.8375,
-      "y": 42.50376326259947,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Beer Golem"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 59.8375,
+        "y": 42.50376326259947
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_838",
+      "id": "tymoras_blessing",
       "name": "Tymora's Blessing",
-      "lore": "",
-      "x": 58.229166666666664,
-      "y": 42.66104664014147,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Tymora's Blessing"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 58.229166666666664,
+        "y": 42.66104664014147
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_856",
+      "id": "soaring_delights",
       "name": "Soaring Delights",
-      "lore": "Soaring Delights was a [[:category:restaurants|restaurant]] built on the first floor of the hollow [[Hawk Man]].",
-      "x": 44.241314276236665,
-      "y": 69.56277059823142,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Soaring Delights"
-      ]
+      "type": "inn_tavern",
+      "description": "Soaring Delights was a [[:category:restaurants|restaurant]] built on the first floor of the hollow [[Hawk Man]].",
+      "coordinates": {
+        "x": 44.241314276236665,
+        "y": 69.56277059823142
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_950",
+      "id": "skewered_dragon",
       "name": "Skewered Dragon",
-      "lore": "The Skewered Dragon was a tavern. The clientele was primarily made up of dock workers that were suspicious of strangers.",
-      "x": 54.03474319567333,
-      "y": 40.68169435019401,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Skewered Dragon"
-      ]
+      "type": "inn_tavern",
+      "description": "The Skewered Dragon was a tavern. The clientele was primarily made up of dock workers that were suspicious of strangers.",
+      "coordinates": {
+        "x": 54.03474319567333,
+        "y": 40.68169435019401
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_958",
+      "id": "bard_inn",
       "name": "Bard Inn",
-      "lore": "",
-      "x": 41.25968068223666,
-      "y": 50.18774782137828,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Bard Inn"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 41.25968068223666,
+        "y": 50.18774782137828
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_971",
+      "id": "frewns_brews",
       "name": "Frewn's Brews",
-      "lore": "",
-      "x": 52.583333333333336,
-      "y": 107.19276083112291,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Frewn's Brews"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 52.583333333333336,
+        "y": 107.19276083112291
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_976",
+      "id": "knightn_shadow",
       "name": "Knight'n Shadow",
-      "lore": "",
-      "x": 52.083333333333336,
-      "y": 47.08567639257295,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Knight'n Shadow"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 52.083333333333336,
+        "y": 47.08567639257295
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_977",
+      "id": "mermaid_on_a_dolphin",
       "name": "Mermaid on a Dolphin",
-      "lore": "",
-      "x": 36.333333333333336,
-      "y": 109.27055702917772,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Mermaid on a Dolphin"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 36.333333333333336,
+        "y": 109.27055702917772
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_978",
+      "id": "mother_salinkas_house_of_pleasures",
       "name": "Mother Salinka's House of Pleasures",
-      "lore": "",
-      "x": 49.2,
-      "y": 57.86372679045093,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Mother Salinka's House of Pleasures"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 49.2,
+        "y": 57.86372679045093
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_980",
+      "id": "oblarths_gryphon",
       "name": "Oblarth's Gryphon",
-      "lore": "",
-      "x": 47.28333333333333,
-      "y": 102.48253757736516,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Oblarth's Gryphon"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 47.28333333333333,
+        "y": 102.48253757736516
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_984",
+      "id": "silavenes",
       "name": "Silavene's",
-      "lore": "",
-      "x": 24.133333333333333,
-      "y": 91.48925729442972,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Silavene's"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 24.133333333333333,
+        "y": 91.48925729442972
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_985",
+      "id": "slaked_sylph",
       "name": "Slaked Sylph",
-      "lore": "",
-      "x": 29.016666666666666,
-      "y": 96.0753094606543,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Slaked Sylph"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 29.016666666666666,
+        "y": 96.0753094606543
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_989",
+      "id": "tarths_towers",
       "name": "Tarth's Towers",
-      "lore": "",
-      "x": 34.43333333333333,
-      "y": 105.8434350132626,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Tarth's Towers"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 34.43333333333333,
+        "y": 105.8434350132626
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_994",
+      "id": "empty_keg",
       "name": "Empty Keg",
-      "lore": "",
-      "x": 49.53283002211666,
-      "y": 57.867515157703245,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Empty Keg"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 49.53283002211666,
+        "y": 57.867515157703245
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_995",
+      "id": "friendly_flounder",
       "name": "Friendly Flounder",
-      "lore": "",
-      "x": 53.72833025715667,
-      "y": 49.71946932525864,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Friendly Flounder"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 53.72833025715667,
+        "y": 49.71946932525864
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_997",
+      "id": "tao_wall_streets_pub",
       "name": "Tao Wall Street's Pub",
-      "lore": "",
-      "x": 64.53527889629333,
-      "y": 57.6684967968529,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Tao Wall Street's Pub"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 64.53527889629333,
+        "y": 57.6684967968529
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_998",
+      "id": "smiling_succubus",
       "name": "Smiling Succubus",
-      "lore": "",
-      "x": 56.39176579962667,
-      "y": 36.50230877234661,
-      "category": "inn_tavern",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Smiling Succubus"
-      ]
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 56.39176579962667,
+        "y": 36.50230877234661
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     }
-  ],
-  "updatedAt": "2026-04-30T13:14:38.640Z"
+  ]
 }

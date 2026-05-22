@@ -1,1468 +1,2669 @@
 {
-  "locationName": "baldurs gate",
   "category": "government",
-  "subLocations": [
+  "updatedAt": "2026-04-30T13:14:37.348Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
     {
-      "id": "wiki_322",
+      "id": "tchazzam_villa",
       "name": "Tchazzam Villa",
-      "lore": "Tchazzam Villa was the family estate of the Waterdhavian noble house [[Tchazzam]].",
-      "x": 25.726901722170666,
-      "y": 105.42119643841767,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Tchazzam Villa"
-      ]
+      "type": "government",
+      "description": "Tchazzam Villa was the family estate of the Waterdhavian noble house [[Tchazzam]].",
+      "coordinates": {
+        "x": 25.726901722170666,
+        "y": 105.42119643841767
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_330",
+      "id": "urmbrusk_villa",
       "name": "Urmbrusk Villa",
-      "lore": "Urmbrusk Villa was the family estate of the Waterdhavian noble house [[Urmbrusk]].",
-      "x": 28.991378028648334,
-      "y": 105.6553356864775,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Urmbrusk Villa"
-      ]
+      "type": "government",
+      "description": "Urmbrusk Villa was the family estate of the Waterdhavian noble house [[Urmbrusk]].",
+      "coordinates": {
+        "x": 28.991378028648334,
+        "y": 105.6553356864775
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_331",
+      "id": "moonstar_villa",
       "name": "Moonstar Villa",
-      "lore": "Moonstar Villa was the family estate of the Waterdhavian noble house [[Moonstar]].",
-      "x": 29.722055035874664,
-      "y": 103.27882231868307,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Moonstar Villa"
-      ]
+      "type": "government",
+      "description": "Moonstar Villa was the family estate of the Waterdhavian noble house [[Moonstar]].",
+      "coordinates": {
+        "x": 29.722055035874664,
+        "y": 103.27882231868307
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_332",
+      "id": "ilzimmer_villa",
       "name": "Ilzimmer Villa",
-      "lore": "Ilzimmer Villa was the family estate of the Waterdhavian noble house [[Ilzimmer]].",
-      "x": 28.472833055778334,
-      "y": 106.65042749072592,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Ilzimmer Villa"
-      ]
+      "type": "government",
+      "description": "Ilzimmer Villa was the family estate of the Waterdhavian noble house [[Ilzimmer]].",
+      "coordinates": {
+        "x": 28.472833055778334,
+        "y": 106.65042749072592
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_333",
+      "id": "dragon_tower_of_maaril",
       "name": "Dragon Tower of Maaril",
-      "lore": "",
-      "x": 28.001428534987333,
-      "y": 109.05035478332665,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Dragon Tower of Maaril"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 28.001428534987333,
+        "y": 109.05035478332665
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_334",
+      "id": "husteem_villa",
       "name": "Husteem Villa",
-      "lore": "Husteem Villa was the family estate of the Waterdhavian noble house [[Husteem]].",
-      "x": 29.639559244736,
-      "y": 109.36644276820857,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Husteem Villa"
-      ]
+      "type": "government",
+      "description": "Husteem Villa was the family estate of the Waterdhavian noble house [[Husteem]].",
+      "coordinates": {
+        "x": 29.639559244736,
+        "y": 109.36644276820857
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_335",
+      "id": "assumbar_villa",
       "name": "Assumbar Villa",
-      "lore": "Assumbar Villa was the family estate of the Waterdhavian noble house [[Assumbar]].",
-      "x": 31.430896423742002,
-      "y": 105.87776797213415,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Assumbar Villa"
-      ]
+      "type": "government",
+      "description": "Assumbar Villa was the family estate of the Waterdhavian noble house [[Assumbar]].",
+      "coordinates": {
+        "x": 31.430896423742002,
+        "y": 105.87776797213415
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_336",
+      "id": "cassalanter_villa",
       "name": "Cassalanter Villa",
-      "lore": "Cassalanter Villa was the family estate of the Waterdhavian noble house [[Cassalanter]].",
-      "x": 33.03367179443167,
-      "y": 106.34604646825048,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Cassalanter Villa"
-      ]
+      "type": "government",
+      "description": "Cassalanter Villa was the family estate of the Waterdhavian noble house [[Cassalanter]].",
+      "coordinates": {
+        "x": 33.03367179443167,
+        "y": 106.34604646825048
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_337",
+      "id": "zulpair_villa",
       "name": "Zulpair Villa",
-      "lore": "Zulpair Villa was the family estate of the Waterdhavian noble house [[Zulpair]].",
-      "x": 32.99831645537233,
-      "y": 108.50012755039155,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Zulpair Villa"
-      ]
+      "type": "government",
+      "description": "Zulpair Villa was the family estate of the Waterdhavian noble house [[Zulpair]].",
+      "coordinates": {
+        "x": 32.99831645537233,
+        "y": 108.50012755039155
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_339",
+      "id": "thongolir_villa",
       "name": "Thongolir Villa",
-      "lore": "Thongolir Villa was the family estate of the Waterdhavian noble house [[Thongolir]].",
-      "x": 33.49329120220333,
-      "y": 103.60661726596484,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Thongolir Villa"
-      ]
+      "type": "government",
+      "description": "Thongolir Villa was the family estate of the Waterdhavian noble house [[Thongolir]].",
+      "coordinates": {
+        "x": 33.49329120220333,
+        "y": 103.60661726596484
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_340",
+      "id": "tespergates",
       "name": "Tespergates",
-      "lore": "Tespergates, which was also called Tesper Villa, was the family estate of the Waterdhavian noble house [[Tesper]].",
-      "x": 34.38895979170666,
-      "y": 103.09151092023589,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Tespergates"
-      ]
+      "type": "government",
+      "description": "Tespergates, which was also called Tesper Villa, was the family estate of the Waterdhavian noble house [[Tesper]].",
+      "coordinates": {
+        "x": 34.38895979170666,
+        "y": 103.09151092023589
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_341",
+      "id": "irlingstar_villa",
       "name": "Irlingstar Villa",
-      "lore": "Irlingstar Villa was the family estate of the Waterdhavian noble house [[Irlingstar]].",
-      "x": 40.281516301593335,
-      "y": 106.40458128026626,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Irlingstar Villa"
-      ]
+      "type": "government",
+      "description": "Irlingstar Villa was the family estate of the Waterdhavian noble house [[Irlingstar]].",
+      "coordinates": {
+        "x": 40.281516301593335,
+        "y": 106.40458128026626
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_343",
+      "id": "dezlentyr_villa",
       "name": "Dezlentyr Villa",
-      "lore": "Dezlentyr Villa was the family estate of the Waterdhavian noble house [[Dezlentyr]].",
-      "x": 36.569205700363334,
-      "y": 105.53826606244924,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Dezlentyr Villa"
-      ]
+      "type": "government",
+      "description": "Dezlentyr Villa was the family estate of the Waterdhavian noble house [[Dezlentyr]].",
+      "coordinates": {
+        "x": 36.569205700363334,
+        "y": 105.53826606244924
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_344",
+      "id": "tesper_villa",
       "name": "Tesper Villa",
-      "lore": "Family estate of the Waterdhavian noble house [[Tesper]].",
-      "x": 36.39242900506667,
-      "y": 106.94310155080153,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Tesper Villa"
-      ]
+      "type": "government",
+      "description": "Family estate of the Waterdhavian noble house [[Tesper]].",
+      "coordinates": {
+        "x": 36.39242900506667,
+        "y": 106.94310155080153
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_345",
+      "id": "belabranta_villa",
       "name": "Belabranta Villa",
-      "lore": "Belabranta Villa was the family estate of the Waterdhavian noble house [[Belabranta]].",
-      "x": 38.41946844447,
-      "y": 103.12663180744205,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Belabranta Villa"
-      ]
+      "type": "government",
+      "description": "Belabranta Villa was the family estate of the Waterdhavian noble house [[Belabranta]].",
+      "coordinates": {
+        "x": 38.41946844447,
+        "y": 103.12663180744205
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_347",
+      "id": "bladesemmer_villa",
       "name": "Bladesemmer Villa",
-      "lore": "Bladesemmer Villa was the family estate of the Waterdhavian noble house [[Bladesemmer]].",
-      "x": 42.85067093990333,
-      "y": 103.17345965705466,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Bladesemmer Villa"
-      ]
+      "type": "government",
+      "description": "Bladesemmer Villa was the family estate of the Waterdhavian noble house [[Bladesemmer]].",
+      "coordinates": {
+        "x": 42.85067093990333,
+        "y": 103.17345965705466
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_348",
+      "id": "manthar_villa",
       "name": "Manthar Villa",
-      "lore": "Manthar Villa was the family estate of the Waterdhavian noble house [[Manthar]].",
-      "x": 43.35743079975667,
-      "y": 107.22406864847066,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Manthar Villa"
-      ]
+      "type": "government",
+      "description": "Manthar Villa was the family estate of the Waterdhavian noble house [[Manthar]].",
+      "coordinates": {
+        "x": 43.35743079975667,
+        "y": 107.22406864847066
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_349",
+      "id": "sultlue_villa",
       "name": "Sultlue Villa",
-      "lore": "Sultlue Villa was the family estate of the Waterdhavian noble house [[Sultlue]].",
-      "x": 45.33732978707667,
-      "y": 108.73426679844805,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sultlue Villa"
-      ]
+      "type": "government",
+      "description": "Sultlue Villa was the family estate of the Waterdhavian noble house [[Sultlue]].",
+      "coordinates": {
+        "x": 45.33732978707667,
+        "y": 108.73426679844805
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_350",
+      "id": "agundar_villa",
       "name": "Agundar Villa",
-      "lore": "Agundar Villa was the family estate of the Waterdhavian noble house [[Agundar]].",
-      "x": 45.82051942088666,
-      "y": 98.17458671100287,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Agundar Villa"
-      ]
+      "type": "government",
+      "description": "Agundar Villa was the family estate of the Waterdhavian noble house [[Agundar]].",
+      "coordinates": {
+        "x": 45.82051942088666,
+        "y": 98.17458671100287
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_352",
+      "id": "fair_winds",
       "name": "Fair Winds",
-      "lore": "Rental Villa",
-      "x": 22.980970388562664,
-      "y": 91.23235800606352,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Fair Winds"
-      ]
+      "type": "government",
+      "description": "Rental Villa",
+      "coordinates": {
+        "x": 22.980970388562664,
+        "y": 91.23235800606352
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_353",
+      "id": "marblehearth",
       "name": "Marblehearth",
-      "lore": "Rental Villa",
-      "x": 24.45,
-      "y": 90.57866931918657,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Marblehearth"
-      ]
+      "type": "government",
+      "description": "Rental Villa",
+      "coordinates": {
+        "x": 24.45,
+        "y": 90.57866931918657
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_356",
-      "name": "Blackstaff Tower",
-      "lore": "Blackstaff Tower (previously Arunsun Tower; renamed by Khelben in [[1322 DR]]) was the home of Khelben \"Blackstaff\" Arunsun in Waterdeep. The foreboding structure was one of the most recognizable landmarks in Waterdeep's [[Castle Ward]].",
-      "x": 30.48808738216,
-      "y": 85.88227618792365,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Blackstaff Tower"
-      ]
-    },
-    {
-      "id": "wiki_359",
+      "id": "adarbrent_villa",
       "name": "Adarbrent Villa",
-      "lore": "Adarbrent Villa was the family estate of the Waterdhavian noble house [[Adarbrent]].",
-      "x": 44.97199128346333,
-      "y": 94.01861505796178,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Adarbrent Villa"
-      ]
+      "type": "government",
+      "description": "Adarbrent Villa was the family estate of the Waterdhavian noble house [[Adarbrent]].",
+      "coordinates": {
+        "x": 44.97199128346333,
+        "y": 94.01861505796178
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_370",
+      "id": "naingate",
       "name": "Naingate",
-      "lore": "Naingate was the tower of the [[wizard]] [[Nain Keenwhistler]] who was a former member of the [[Company of Crazed Venturers]].",
-      "x": 24.972654488905,
-      "y": 110.88834788058912,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Naingate"
-      ]
+      "type": "government",
+      "description": "Naingate was the tower of the [[wizard]] [[Nain Keenwhistler]] who was a former member of the [[Company of Crazed Venturers]].",
+      "coordinates": {
+        "x": 24.972654488905,
+        "y": 110.88834788058912
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_371",
+      "id": "melshimber_villa",
       "name": "Melshimber Villa",
-      "lore": "Melshimber Villa was the family estate of the Waterdhavian noble house [[Melshimber]].",
-      "x": 25.8,
-      "y": 111.93609637488949,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Melshimber Villa"
-      ]
+      "type": "government",
+      "description": "Melshimber Villa was the family estate of the Waterdhavian noble house [[Melshimber]].",
+      "coordinates": {
+        "x": 25.8,
+        "y": 111.93609637488949
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_372",
+      "id": "ruldegost_villa",
       "name": "Ruldegost Villa",
-      "lore": "Ruldegost Villa was the family estate of the Waterdhavian noble house [[Ruldegost]].",
-      "x": 25.066935393062998,
-      "y": 109.91667000114367,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Ruldegost Villa"
-      ]
+      "type": "government",
+      "description": "Ruldegost Villa was the family estate of the Waterdhavian noble house [[Ruldegost]].",
+      "coordinates": {
+        "x": 25.066935393062998,
+        "y": 109.91667000114367
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_373",
+      "id": "emveolstone_villa",
       "name": "Emveolstone Villa",
-      "lore": "Emveolstone Villa was the family estate of the Waterdhavian noble house [[Emveolstone]].",
-      "x": 27.105759945484333,
-      "y": 114.14288342860371,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Emveolstone Villa"
-      ]
+      "type": "government",
+      "description": "Emveolstone Villa was the family estate of the Waterdhavian noble house [[Emveolstone]].",
+      "coordinates": {
+        "x": 27.105759945484333,
+        "y": 114.14288342860371
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_374",
+      "id": "hiilgauntlet_villa",
       "name": "Hiilgauntlet Villa",
-      "lore": "Hiilgauntlet Villa was the family estate of the Waterdhavian noble house [[Hiilgauntlet]].",
-      "x": 29.521708114538335,
-      "y": 113.744846706903,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hiilgauntlet Villa"
-      ]
+      "type": "government",
+      "description": "Hiilgauntlet Villa was the family estate of the Waterdhavian noble house [[Hiilgauntlet]].",
+      "coordinates": {
+        "x": 29.521708114538335,
+        "y": 113.744846706903
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_376",
+      "id": "wavesilver_villa",
       "name": "Wavesilver Villa",
-      "lore": "Wavesilver Villa was the family estate of the Waterdhavian noble house [[Wavesilver]].",
-      "x": 31.654813571117664,
-      "y": 112.72634097784825,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Wavesilver Villa"
-      ]
+      "type": "government",
+      "description": "Wavesilver Villa was the family estate of the Waterdhavian noble house [[Wavesilver]].",
+      "coordinates": {
+        "x": 31.654813571117664,
+        "y": 112.72634097784825
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_378",
+      "id": "gauntyl_villa",
       "name": "Gauntyl Villa",
-      "lore": "Gauntyl Villa was the family estate of the Waterdhavian noble house [[Gauntyl]].",
-      "x": 33.222233602748,
-      "y": 114.65798977433265,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Gauntyl Villa"
-      ]
+      "type": "government",
+      "description": "Gauntyl Villa was the family estate of the Waterdhavian noble house [[Gauntyl]].",
+      "coordinates": {
+        "x": 33.222233602748,
+        "y": 114.65798977433265
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_379",
+      "id": "eltorchul_villa",
       "name": "Eltorchul Villa",
-      "lore": "Eltorchul Villa was the family estate of the Waterdhavian noble house [[Eltorchul]] and the home of the [[Eltorchul Academy]].",
-      "x": 34.223968209430005,
-      "y": 113.744846706903,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Eltorchul Villa"
-      ]
+      "type": "government",
+      "description": "Eltorchul Villa was the family estate of the Waterdhavian noble house [[Eltorchul]] and the home of the [[Eltorchul Academy]].",
+      "coordinates": {
+        "x": 34.223968209430005,
+        "y": 113.744846706903
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_381",
+      "id": "ilitul_villa",
       "name": "Ilitul Villa",
-      "lore": "Ilitul Villa was the family estate of the Waterdhavian noble house [[Ilitul]].",
-      "x": 26.610785198653666,
-      "y": 113.31168909799615,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Ilitul Villa"
-      ]
+      "type": "government",
+      "description": "Ilitul Villa was the family estate of the Waterdhavian noble house [[Ilitul]].",
+      "coordinates": {
+        "x": 26.610785198653666,
+        "y": 113.31168909799615
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_382",
+      "id": "brokengulf_villa",
       "name": "Brokengulf Villa",
-      "lore": "Brokengulf Villa was the family estate of the Waterdhavian noble house [[Brokengulf]].",
-      "x": 36.81669307378,
-      "y": 115.32528663129933,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Brokengulf Villa"
-      ]
+      "type": "government",
+      "description": "Brokengulf Villa was the family estate of the Waterdhavian noble house [[Brokengulf]].",
+      "coordinates": {
+        "x": 36.81669307378,
+        "y": 115.32528663129933
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_383",
+      "id": "raventree_villa",
       "name": "Raventree Villa",
-      "lore": "Raventree Villa was the family estate of the Waterdhavian noble house [[Raventree]].",
-      "x": 40.09295449327667,
-      "y": 114.28336697743828,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Raventree Villa"
-      ]
+      "type": "government",
+      "description": "Raventree Villa was the family estate of the Waterdhavian noble house [[Raventree]].",
+      "coordinates": {
+        "x": 40.09295449327667,
+        "y": 114.28336697743828
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_384",
+      "id": "nesher_villa",
       "name": "Nesher Villa",
-      "lore": "Nesher Villa was the family estate of the Waterdhavian noble house [[Nesher]].",
-      "x": 37.11132089927333,
-      "y": 112.57415046661055,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Nesher Villa"
-      ]
+      "type": "government",
+      "description": "Nesher Villa was the family estate of the Waterdhavian noble house [[Nesher]].",
+      "coordinates": {
+        "x": 37.11132089927333,
+        "y": 112.57415046661055
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_385",
+      "id": "tessalars_tower",
       "name": "Tessalar's Tower",
-      "lore": "The tower was home to a wizard named [[Tessalar Hulicorm]].",
-      "x": 40.26973118857334,
-      "y": 112.30489033134455,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Tessalar's Tower"
-      ]
+      "type": "government",
+      "description": "The tower was home to a wizard named [[Tessalar Hulicorm]].",
+      "coordinates": {
+        "x": 40.26973118857334,
+        "y": 112.30489033134455
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_386",
+      "id": "gundwynd_villa",
       "name": "Gundwynd Villa",
-      "lore": "Gundwynd Villa was the family estate of the Waterdhavian noble house [[Gundwynd]].",
-      "x": 39.09121988659666,
-      "y": 110.43177634687595,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Gundwynd Villa"
-      ]
+      "type": "government",
+      "description": "Gundwynd Villa was the family estate of the Waterdhavian noble house [[Gundwynd]].",
+      "coordinates": {
+        "x": 39.09121988659666,
+        "y": 110.43177634687595
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_387",
+      "id": "artemel_villa",
       "name": "Artemel Villa",
-      "lore": "Artemel Villa was the family estate of the Waterdhavian noble house [[Artemel]].",
-      "x": 42.17891949777666,
-      "y": 110.46689723408211,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Artemel Villa"
-      ]
+      "type": "government",
+      "description": "Artemel Villa was the family estate of the Waterdhavian noble house [[Artemel]].",
+      "coordinates": {
+        "x": 42.17891949777666,
+        "y": 110.46689723408211
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_388",
+      "id": "ammakyl_villa",
       "name": "Ammakyl Villa",
-      "lore": "Ammakyl Villa was the family estate of the Waterdhavian noble house [[Ammakyl]].",
-      "x": 45.36090001311666,
-      "y": 111.12248712864893,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Ammakyl Villa"
-      ]
+      "type": "government",
+      "description": "Ammakyl Villa was the family estate of the Waterdhavian noble house [[Ammakyl]].",
+      "coordinates": {
+        "x": 45.36090001311666,
+        "y": 111.12248712864893
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_403",
+      "id": "jemurils_residence",
       "name": "Jemuril's residence",
-      "lore": "Jemuril's residence was a the home of a [[dwarf]] warrior named [[Jemuril]].",
-      "x": 62.74394171728667,
-      "y": 30.449809210030924,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Jemuril's residence"
-      ]
+      "type": "government",
+      "description": "Jemuril's residence was a the home of a [[dwarf]] warrior named [[Jemuril]].",
+      "coordinates": {
+        "x": 62.74394171728667,
+        "y": 30.449809210030924
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_504",
+      "id": "flurmastyr_residence",
       "name": "Flurmastyr residence",
-      "lore": "The Flurmastyr residence was a row house and the home of [[Kappiyan Flurmastyr]].",
-      "x": 63.014999316739996,
-      "y": 44.80254511602894,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Flurmastyr residence"
-      ]
+      "type": "government",
+      "description": "The Flurmastyr residence was a row house and the home of [[Kappiyan Flurmastyr]].",
+      "coordinates": {
+        "x": 63.014999316739996,
+        "y": 44.80254511602894
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_520",
+      "id": "splendons_house",
       "name": "Splendon's House",
-      "lore": "",
-      "x": 52.396612485923335,
-      "y": 74.77236886753674,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Splendon's House"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 52.396612485923335,
+        "y": 74.77236886753674
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_521",
+      "id": "mhairs_tower",
       "name": "Mhair's Tower",
-      "lore": "Mhair's Tower was the tower home of the wizard [[Mhair Szeltune]] in the 14th century DR.",
-      "x": 53.36299175354333,
-      "y": 75.1001638148218,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Mhair's Tower"
-      ]
+      "type": "government",
+      "description": "Mhair's Tower was the tower home of the wizard [[Mhair Szeltune]] in the 14th century DR.",
+      "coordinates": {
+        "x": 53.36299175354333,
+        "y": 75.1001638148218
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_527",
+      "id": "leones_house",
       "name": "Leone's House",
-      "lore": "",
-      "x": 46.044436568263336,
-      "y": 64.3063444793168,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Leone's House"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 46.044436568263336,
+        "y": 64.3063444793168
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_528",
+      "id": "shyrrhrs_house",
       "name": "Shyrrhr's House",
-      "lore": "",
-      "x": 45.01913173554333,
-      "y": 64.3063444793168,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Shyrrhr's House"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 45.01913173554333,
+        "y": 64.3063444793168
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_532",
+      "id": "lharilstars_house",
       "name": "Lharilstar's House",
-      "lore": "",
-      "x": 45.95015566410667,
-      "y": 63.31125267506506,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Lharilstar's House"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 45.95015566410667,
+        "y": 63.31125267506506
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_536",
+      "id": "velstrodes_house",
       "name": "Velstrode's House",
-      "lore": "",
-      "x": 47.54114592177667,
-      "y": 68.0642794106572,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Velstrode's House"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 47.54114592177667,
+        "y": 68.0642794106572
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_586",
+      "id": "kothont_villa",
       "name": "Kothont Villa",
-      "lore": "Kothont Villa was the family estate of the Waterdhavian noble house [[Kothont]].",
-      "x": 45.84408964692667,
-      "y": 105.23388503997049,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Kothont Villa"
-      ]
+      "type": "government",
+      "description": "Kothont Villa was the family estate of the Waterdhavian noble house [[Kothont]].",
+      "coordinates": {
+        "x": 45.84408964692667,
+        "y": 105.23388503997049
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_587",
+      "id": "cragsmere_villa",
       "name": "Cragsmere Villa",
-      "lore": "Cragsmere Villa was the family estate of the Waterdhavian noble house [[Cragsmere]].",
-      "x": 47.423294791576666,
-      "y": 108.66402502403243,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Cragsmere Villa"
-      ]
+      "type": "government",
+      "description": "Cragsmere Villa was the family estate of the Waterdhavian noble house [[Cragsmere]].",
+      "coordinates": {
+        "x": 47.423294791576666,
+        "y": 108.66402502403243
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_588",
+      "id": "massalan_villa",
       "name": "Massalan Villa",
-      "lore": "Massalan Villa was the family estate of the Waterdhavian noble house [[Massalan]].",
-      "x": 50.346002820483335,
-      "y": 106.81432496436682,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Massalan Villa"
-      ]
+      "type": "government",
+      "description": "Massalan Villa was the family estate of the Waterdhavian noble house [[Massalan]].",
+      "coordinates": {
+        "x": 50.346002820483335,
+        "y": 106.81432496436682
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_590",
+      "id": "lanngolyn_villa",
       "name": "Lanngolyn Villa",
-      "lore": "Lanngolyn Villa was the family estate of the Waterdhavian noble house [[Lanngolyn]].",
-      "x": 50.08673033404667,
-      "y": 105.60850783686486,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Lanngolyn Villa"
-      ]
+      "type": "government",
+      "description": "Lanngolyn Villa was the family estate of the Waterdhavian noble house [[Lanngolyn]].",
+      "coordinates": {
+        "x": 50.08673033404667,
+        "y": 105.60850783686486
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_592",
+      "id": "hunabar_villa",
       "name": "Hunabar Villa",
-      "lore": "Hunabar Villa was the family estate of the Waterdhavian noble house [[Hunabar]].",
-      "x": 52.349472033843334,
-      "y": 98.04581012457146,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hunabar Villa"
-      ]
+      "type": "government",
+      "description": "Hunabar Villa was the family estate of the Waterdhavian noble house [[Hunabar]].",
+      "coordinates": {
+        "x": 52.349472033843334,
+        "y": 98.04581012457146
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_593",
+      "id": "durinbold_villa",
       "name": "Durinbold Villa",
-      "lore": "Durinbold Villa was the family estate of the Waterdhavian noble house [[Durinbold]].",
-      "x": 52.090199547409995,
-      "y": 100.60963489081306,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Durinbold Villa"
-      ]
+      "type": "government",
+      "description": "Durinbold Villa was the family estate of the Waterdhavian noble house [[Durinbold]].",
+      "coordinates": {
+        "x": 52.090199547409995,
+        "y": 100.60963489081306
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_594",
+      "id": "ulbrinter_villa",
       "name": "Ulbrinter Villa",
-      "lore": "Ulbrinter Villa was the family estate of the Waterdhavian noble house [[Ulbrinter]].",
-      "x": 53.90510695245334,
-      "y": 105.53826606244924,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Ulbrinter Villa"
-      ]
+      "type": "government",
+      "description": "Ulbrinter Villa was the family estate of the Waterdhavian noble house [[Ulbrinter]].",
+      "coordinates": {
+        "x": 53.90510695245334,
+        "y": 105.53826606244924
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_595",
+      "id": "maerklos_villa",
       "name": "Maerklos Villa",
-      "lore": "Maerklos Villa was the family estate of the Waterdhavian noble house [[Maerklos]].",
-      "x": 54.12902409983,
-      "y": 101.85057290552447,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Maerklos Villa"
-      ]
+      "type": "government",
+      "description": "Maerklos Villa was the family estate of the Waterdhavian noble house [[Maerklos]].",
+      "coordinates": {
+        "x": 54.12902409983,
+        "y": 101.85057290552447
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_596",
+      "id": "estelmer_villa",
       "name": "Estelmer Villa",
-      "lore": "Estelmer Villa was the family estate of the Waterdhavian noble house [[Estelmer]].",
-      "x": 53.775470709236664,
-      "y": 99.20479940246076,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Estelmer Villa"
-      ]
+      "type": "government",
+      "description": "Estelmer Villa was the family estate of the Waterdhavian noble house [[Estelmer]].",
+      "coordinates": {
+        "x": 53.775470709236664,
+        "y": 99.20479940246076
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_597",
+      "id": "thorp_villa",
       "name": "Thorp Villa",
-      "lore": "Thorp Villa was the family estate of the Waterdhavian noble house [[Thorp]].",
-      "x": 53.79904093527667,
-      "y": 97.20290883156075,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Thorp Villa"
-      ]
+      "type": "government",
+      "description": "Thorp Villa was the family estate of the Waterdhavian noble house [[Thorp]].",
+      "coordinates": {
+        "x": 53.79904093527667,
+        "y": 97.20290883156075
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_599",
+      "id": "nandar_villa",
       "name": "Nandar Villa",
-      "lore": "Nandar Villa was the family estate of the Waterdhavian noble house [[Nandar]].",
-      "x": 55.578593001263336,
-      "y": 103.47784067953012,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Nandar Villa"
-      ]
+      "type": "government",
+      "description": "Nandar Villa was the family estate of the Waterdhavian noble house [[Nandar]].",
+      "coordinates": {
+        "x": 55.578593001263336,
+        "y": 103.47784067953012
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_600",
+      "id": "stormweather_villa",
       "name": "Stormweather Villa",
-      "lore": "Stormweather Villa was the family estate of the Waterdhavian noble house [[Stormweather]].",
-      "x": 58.890209759819996,
-      "y": 103.54808245394906,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Stormweather Villa"
-      ]
+      "type": "government",
+      "description": "Stormweather Villa was the family estate of the Waterdhavian noble house [[Stormweather]].",
+      "coordinates": {
+        "x": 58.890209759819996,
+        "y": 103.54808245394906
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_601",
+      "id": "tarm_villa",
       "name": "Tarm Villa",
-      "lore": "Tarm Villa was the family estate of the Waterdhavian noble house [[Tarm]].",
-      "x": 57.923830492196664,
-      "y": 100.45744437957535,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Tarm Villa"
-      ]
+      "type": "government",
+      "description": "Tarm Villa was the family estate of the Waterdhavian noble house [[Tarm]].",
+      "coordinates": {
+        "x": 57.923830492196664,
+        "y": 100.45744437957535
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_602",
+      "id": "jardeth_villa",
       "name": "Jardeth Villa",
-      "lore": "Jardeth Villa was the family estate of the Waterdhavian noble house [[Jardeth]].",
-      "x": 58.619152160363335,
-      "y": 105.99483759616241,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Jardeth Villa"
-      ]
+      "type": "government",
+      "description": "Jardeth Villa was the family estate of the Waterdhavian noble house [[Jardeth]].",
+      "coordinates": {
+        "x": 58.619152160363335,
+        "y": 105.99483759616241
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_603",
+      "id": "gralhund_villa",
       "name": "Gralhund Villa",
-      "lore": "Gralhund Villa was the family estate of the Waterdhavian noble house [[Gralhund]].",
-      "x": 59.444110071749996,
-      "y": 106.67384141553225,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Gralhund Villa"
-      ]
+      "type": "government",
+      "description": "Gralhund Villa was the family estate of the Waterdhavian noble house [[Gralhund]].",
+      "coordinates": {
+        "x": 59.444110071749996,
+        "y": 106.67384141553225
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_606",
+      "id": "majarra_villa",
       "name": "Majarra Villa",
-      "lore": "Majarra Villa was the family estate of the Waterdhavian noble house [[Majarra]].",
-      "x": 60.03336572273667,
-      "y": 100.32866779314392,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Majarra Villa"
-      ]
+      "type": "government",
+      "description": "Majarra Villa was the family estate of the Waterdhavian noble house [[Majarra]].",
+      "coordinates": {
+        "x": 60.03336572273667,
+        "y": 100.32866779314392
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_607",
+      "id": "kormallis_villa",
       "name": "Kormallis Villa",
-      "lore": "Kormallis Villa was the family estate of the Waterdhavian noble house [[Kormallis]].",
-      "x": 60.210142418033335,
-      "y": 97.64777340287077,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Kormallis Villa"
-      ]
+      "type": "government",
+      "description": "Kormallis Villa was the family estate of the Waterdhavian noble house [[Kormallis]].",
+      "coordinates": {
+        "x": 60.210142418033335,
+        "y": 97.64777340287077
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_612",
+      "id": "lathkule_villa",
       "name": "Lathkule Villa",
-      "lore": "Lathkule Villa was the family estate of the Waterdhavian noble house [[Lathkule]].",
-      "x": 57.299219502149995,
-      "y": 97.82337783891481,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Lathkule Villa"
-      ]
+      "type": "government",
+      "description": "Lathkule Villa was the family estate of the Waterdhavian noble house [[Lathkule]].",
+      "coordinates": {
+        "x": 57.299219502149995,
+        "y": 97.82337783891481
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_615",
+      "id": "wands_villa",
       "name": "Wands Villa",
-      "lore": "Wands Villa was the family estate of the Waterdhavian noble house [[Wands]].",
-      "x": 53.65761957904,
-      "y": 89.04315603671299,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Wands Villa"
-      ]
+      "type": "government",
+      "description": "Wands Villa was the family estate of the Waterdhavian noble house [[Wands]].",
+      "coordinates": {
+        "x": 53.65761957904,
+        "y": 89.04315603671299
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_616",
+      "id": "hothemer_villa",
       "name": "Hothemer Villa",
-      "lore": "Hothemer Villa was the family estate of the Waterdhavian noble house [[Hothemer]].",
-      "x": 54.36472636022667,
-      "y": 91.5835668781516,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hothemer Villa"
-      ]
+      "type": "government",
+      "description": "Hothemer Villa was the family estate of the Waterdhavian noble house [[Hothemer]].",
+      "coordinates": {
+        "x": 54.36472636022667,
+        "y": 91.5835668781516
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_621",
+      "id": "phylund_villa",
       "name": "Phylund Villa",
-      "lore": "Phylund Villa was the family estate of the Waterdhavian noble house [[Phylund]].",
-      "x": 47.3172287744,
-      "y": 94.58054925330336,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Phylund Villa"
-      ]
+      "type": "government",
+      "description": "Phylund Villa was the family estate of the Waterdhavian noble house [[Phylund]].",
+      "coordinates": {
+        "x": 47.3172287744,
+        "y": 94.58054925330336
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_624",
+      "id": "amcathra_villa",
       "name": "Amcathra Villa",
-      "lore": "Amcathra Villa was the family estate of the Waterdhavian noble house [[Amcathra]].",
-      "x": 50.56991996785666,
-      "y": 96.44195627536882,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Amcathra Villa"
-      ]
+      "type": "government",
+      "description": "Amcathra Villa was the family estate of the Waterdhavian noble house [[Amcathra]].",
+      "coordinates": {
+        "x": 50.56991996785666,
+        "y": 96.44195627536882
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_625",
+      "id": "margaster_villa",
       "name": "Margaster Villa",
-      "lore": "Margaster Villa was the family estate of the Waterdhavian noble house [[Margaster]].",
-      "x": 54.812560654976664,
-      "y": 94.54542836609389,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Margaster Villa"
-      ]
+      "type": "government",
+      "description": "Margaster Villa was the family estate of the Waterdhavian noble house [[Margaster]].",
+      "coordinates": {
+        "x": 54.812560654976664,
+        "y": 94.54542836609389
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_627",
+      "id": "roaringhorn_villa",
       "name": "Roaringhorn Villa",
-      "lore": "",
-      "x": 60.44584467843,
-      "y": 95.22443218546373,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Roaringhorn Villa"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 60.44584467843,
+        "y": 95.22443218546373
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_628",
+      "id": "helmfast_villa",
       "name": "Helmfast Villa",
-      "lore": "Helmfast Villa was the family estate of the Waterdhavian noble house [[Helmfast]].",
-      "x": 59.73873789724333,
-      "y": 89.82752251771123,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Helmfast Villa"
-      ]
+      "type": "government",
+      "description": "Helmfast Villa was the family estate of the Waterdhavian noble house [[Helmfast]].",
+      "coordinates": {
+        "x": 59.73873789724333,
+        "y": 89.82752251771123
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_629",
+      "id": "ilvastarr_villa",
       "name": "Ilvastarr Villa",
-      "lore": "Ilvastarr Villa was the family estate of the Waterdhavian noble house [[Ilvastarr]].",
-      "x": 62.44931389179333,
-      "y": 92.28598462232775,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Ilvastarr Villa"
-      ]
+      "type": "government",
+      "description": "Ilvastarr Villa was the family estate of the Waterdhavian noble house [[Ilvastarr]].",
+      "coordinates": {
+        "x": 62.44931389179333,
+        "y": 92.28598462232775
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_630",
+      "id": "husteems_house",
       "name": "Husteem's House",
-      "lore": "",
-      "x": 62.779297056346664,
-      "y": 88.35244525494001,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Husteem's House"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 62.779297056346664,
+        "y": 88.35244525494001
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_631",
+      "id": "zun_villa",
       "name": "Zun Villa",
-      "lore": "Zun Villa was the family estate of the Waterdhavian noble house [[Zun]].",
-      "x": 64.14637016664,
-      "y": 95.79807334320846,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Zun Villa"
-      ]
+      "type": "government",
+      "description": "Zun Villa was the family estate of the Waterdhavian noble house [[Zun]].",
+      "coordinates": {
+        "x": 64.14637016664,
+        "y": 95.79807334320846
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_636",
+      "id": "rosznar_villa",
       "name": "Rosznar Villa",
-      "lore": "Rosznar Villa was the family estate of the Waterdhavian noble house [[Rosznar]].",
-      "x": 46.05622168128333,
-      "y": 115.61796069137493,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Rosznar Villa"
-      ]
+      "type": "government",
+      "description": "Rosznar Villa was the family estate of the Waterdhavian noble house [[Rosznar]].",
+      "coordinates": {
+        "x": 46.05622168128333,
+        "y": 115.61796069137493
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_637",
+      "id": "jhansczil_villa",
       "name": "Jhansczil Villa",
-      "lore": "Jhansczil Villa was the family estate of the Waterdhavian noble house [[Jhansczil]].",
-      "x": 47.423294791576666,
-      "y": 115.88722082664091,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Jhansczil Villa"
-      ]
+      "type": "government",
+      "description": "Jhansczil Villa was the family estate of the Waterdhavian noble house [[Jhansczil]].",
+      "coordinates": {
+        "x": 47.423294791576666,
+        "y": 115.88722082664091
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_638",
+      "id": "silmerhelve_villa",
       "name": "Silmerhelve Villa",
-      "lore": "Silmerhelve Villa was the family estate of the Waterdhavian noble house [[Silmerhelve]].",
-      "x": 48.04790578162667,
-      "y": 112.17611374490984,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Silmerhelve Villa"
-      ]
+      "type": "government",
+      "description": "Silmerhelve Villa was the family estate of the Waterdhavian noble house [[Silmerhelve]].",
+      "coordinates": {
+        "x": 48.04790578162667,
+        "y": 112.17611374490984
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_639",
+      "id": "talmost_villa",
       "name": "Talmost Villa",
-      "lore": "Talmost Villa was the family estate of the Waterdhavian noble house [[Talmost]].",
-      "x": 49.980664316870005,
-      "y": 110.72445040694822,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Talmost Villa"
-      ]
+      "type": "government",
+      "description": "Talmost Villa was the family estate of the Waterdhavian noble house [[Talmost]].",
+      "coordinates": {
+        "x": 49.980664316870005,
+        "y": 110.72445040694822
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_640",
+      "id": "crommor_villa",
       "name": "Crommor Villa",
-      "lore": "Crommor Villa was the family estate of the Waterdhavian noble house [[Crommor]].",
-      "x": 50.499209289739994,
-      "y": 112.96048022590809,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Crommor Villa"
-      ]
+      "type": "government",
+      "description": "Crommor Villa was the family estate of the Waterdhavian noble house [[Crommor]].",
+      "coordinates": {
+        "x": 50.499209289739994,
+        "y": 112.96048022590809
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_641",
+      "id": "thunderstaff_villa",
       "name": "Thunderstaff Villa",
-      "lore": "Thunderstaff Villa was the family estate of the Waterdhavian noble house [[Thunderstaff]].",
-      "x": 53.480842883743335,
-      "y": 113.5107074588465,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Thunderstaff Villa"
-      ]
+      "type": "government",
+      "description": "Thunderstaff Villa was the family estate of the Waterdhavian noble house [[Thunderstaff]].",
+      "coordinates": {
+        "x": 53.480842883743335,
+        "y": 113.5107074588465
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_642",
+      "id": "brossfeather_villa",
       "name": "Brossfeather Villa",
-      "lore": "Brossfeather Villa was the family estate of the Waterdhavian noble house [[Brossfeather]].",
-      "x": 52.04305909533,
-      "y": 116.12136007470072,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Brossfeather Villa"
-      ]
+      "type": "government",
+      "description": "Brossfeather Villa was the family estate of the Waterdhavian noble house [[Brossfeather]].",
+      "coordinates": {
+        "x": 52.04305909533,
+        "y": 116.12136007470072
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_643",
+      "id": "anteos_villa",
       "name": "Anteos Villa",
-      "lore": "Anteos Villa was the family estate of the Waterdhavian noble house Anteos.",
-      "x": 55.460741871063334,
-      "y": 116.14477399950705,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Anteos Villa"
-      ]
+      "type": "government",
+      "description": "Anteos Villa was the family estate of the Waterdhavian noble house Anteos.",
+      "coordinates": {
+        "x": 55.460741871063334,
+        "y": 116.14477399950705
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_644",
+      "id": "phull_villa",
       "name": "Phull Villa",
-      "lore": "Phull Villa was the family estate of the Waterdhavian noble house [[Phull]].",
-      "x": 56.29748489547,
-      "y": 115.7818581650158,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Phull Villa"
-      ]
+      "type": "government",
+      "description": "Phull Villa was the family estate of the Waterdhavian noble house [[Phull]].",
+      "coordinates": {
+        "x": 56.29748489547,
+        "y": 115.7818581650158
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_645",
+      "id": "snome_villa",
       "name": "Snome Villa",
-      "lore": "Snome Villa was the family estate of the Waterdhavian noble house [[Snome]].",
-      "x": 57.86490492709999,
-      "y": 114.01410684217228,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Snome Villa"
-      ]
+      "type": "government",
+      "description": "Snome Villa was the family estate of the Waterdhavian noble house [[Snome]].",
+      "coordinates": {
+        "x": 57.86490492709999,
+        "y": 114.01410684217228
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_646",
+      "id": "thann_villa",
       "name": "Thann Villa",
-      "lore": "Thann Villa was the family estate of the Waterdhavian noble house [[Thann]].",
-      "x": 54.977552237253335,
-      "y": 111.6024725871684,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Thann Villa"
-      ]
+      "type": "government",
+      "description": "Thann Villa was the family estate of the Waterdhavian noble house [[Thann]].",
+      "coordinates": {
+        "x": 54.977552237253335,
+        "y": 111.6024725871684
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_647",
+      "id": "hawkwinter_villa",
       "name": "Hawkwinter Villa",
-      "lore": "",
-      "x": 57.464211084426665,
-      "y": 110.91176180539543,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hawkwinter Villa"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 57.464211084426665,
+        "y": 110.91176180539543
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_654",
+      "id": "mirts_mansion",
       "name": "Mirt's Mansion",
-      "lore": "",
-      "x": 26.716851215831664,
-      "y": 53.79349224148095,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Mirt's Mansion"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 26.716851215831664,
+        "y": 53.79349224148095
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_664",
-      "name": "Palace of Waterdeep",
-      "lore": "The Palace of Waterdeep, also known as the Lords' Palace and previously often called Piergeiron's Palace, was the residence of the [[Open Lord]] of Waterdeep.",
-      "x": 32.91582066423367,
-      "y": 67.52575914012193,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Palace of Waterdeep"
-      ]
+      "id": "furjur_the_flippants_residence",
+      "name": "Furjur the Flippant\u2019s residence",
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 29.5,
+        "y": 117.31684350132628
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_694",
-      "name": "Furjur the Flippant’s residence",
-      "lore": "",
-      "x": 29.5,
-      "y": 117.31684350132628,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Furjur the Flippant’s residence"
-      ]
-    },
-    {
-      "id": "wiki_695",
+      "id": "stagdown_manse",
       "name": "Stagdown Manse",
-      "lore": "",
-      "x": 32.016666666666666,
-      "y": 116.10824491600354,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Stagdown Manse"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 32.016666666666666,
+        "y": 116.10824491600354
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_696",
+      "id": "blue_alley",
       "name": "Blue Alley",
-      "lore": "",
-      "x": 30.633333333333333,
-      "y": 113.6910477453581,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Blue Alley"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 30.633333333333333,
+        "y": 113.6910477453581
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_697",
-      "name": "Myrna Cassalanter’s residence",
-      "lore": "",
-      "x": 32.9,
-      "y": 113.19436339522547,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Myrna Cassalanter"
-      ]
+      "id": "myrna_cassalanters_residence",
+      "name": "Myrna Cassalanter\u2019s residence",
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 32.9,
+        "y": 113.19436339522547
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_703",
+      "id": "eirontalar_villa",
       "name": "Eirontalar Villa",
-      "lore": "Eirontalar Villa was the family estate of the Waterdhavian noble house of [[Eirontalar]].",
-      "x": 35.266666666666666,
-      "y": 108.60831122900089,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Eirontalar Villa"
-      ]
+      "type": "government",
+      "description": "Eirontalar Villa was the family estate of the Waterdhavian noble house of [[Eirontalar]].",
+      "coordinates": {
+        "x": 35.266666666666666,
+        "y": 108.60831122900089
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_709",
+      "id": "piiradost_villa",
       "name": "Piiradost Villa",
-      "lore": "Piiradost Villa was the family estate of the Waterdhavian noble house [[Piiradost]].",
-      "x": 51.266666666666666,
-      "y": 111.80364721485412,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Piiradost Villa"
-      ]
+      "type": "government",
+      "description": "Piiradost Villa was the family estate of the Waterdhavian noble house [[Piiradost]].",
+      "coordinates": {
+        "x": 51.266666666666666,
+        "y": 111.80364721485412
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_710",
+      "id": "firesong_villa",
       "name": "Firesong Villa",
-      "lore": "",
-      "x": 52.266666666666666,
-      "y": 103.84014146772768,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Firesong Villa"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 52.266666666666666,
+        "y": 103.84014146772768
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_721",
+      "id": "irlingstar_residence",
       "name": "Irlingstar residence",
-      "lore": "",
-      "x": 31.15,
-      "y": 86.7873121131742,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Irlingstar"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 31.15,
+        "y": 86.7873121131742
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_722",
+      "id": "delzimmer_residence",
       "name": "Delzimmer residence",
-      "lore": "The Delzimmers' townhouse was an opulent four-story row-house building.",
-      "x": 31.15,
-      "y": 86.48930150309461,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Delzimmer (family)"
-      ]
+      "type": "government",
+      "description": "The Delzimmers' townhouse was an opulent four-story row-house building.",
+      "coordinates": {
+        "x": 31.15,
+        "y": 86.48930150309461
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_730",
+      "id": "syndra_wands_tower",
       "name": "Syndra Wands' Tower",
-      "lore": "Syndra Wands' Tower (also known as the Eightower) was the tower of [[Syndra Wands]].",
-      "x": 32.56226727364067,
-      "y": 83.52917674493223,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Syndra Wands' Tower"
-      ]
+      "type": "government",
+      "description": "Syndra Wands' Tower (also known as the Eightower) was the tower of [[Syndra Wands]].",
+      "coordinates": {
+        "x": 32.56226727364067,
+        "y": 83.52917674493223
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_731",
-      "name": "Ammathair Hawkfeather’s residence",
-      "lore": "",
-      "x": 33.528646541263335,
-      "y": 80.43853867055851,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Ammathair Hawkfeather"
-      ]
+      "id": "ammathair_hawkfeathers_residence",
+      "name": "Ammathair Hawkfeather\u2019s residence",
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 33.528646541263335,
+        "y": 80.43853867055851
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_736",
-      "name": "Caladorn Cassalanter’s residence",
-      "lore": "",
-      "x": 34.56573648700333,
-      "y": 71.24857318425616,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Caladorn Cassalanter"
-      ]
+      "id": "caladorn_cassalanters_residence",
+      "name": "Caladorn Cassalanter\u2019s residence",
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 34.56573648700333,
+        "y": 71.24857318425616
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_737",
-      "name": "Larissa Neathal’s residence",
-      "lore": "",
-      "x": 38.089485279916666,
-      "y": 69.56277059823142,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Larissa Neathal"
-      ]
+      "id": "larissa_neathals_residence",
+      "name": "Larissa Neathal\u2019s residence",
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 38.089485279916666,
+        "y": 69.56277059823142
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_747",
-      "name": "Brianne’s Tower",
-      "lore": "",
-      "x": 60.280853096153336,
-      "y": 92.85962578006915,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Brianne’s Tower"
-      ]
+      "id": "briannes_tower",
+      "name": "Brianne\u2019s Tower",
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 60.280853096153336,
+        "y": 92.85962578006915
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_750",
+      "id": "gost_villa",
       "name": "Gost Villa",
-      "lore": "Gost Villa was the family estate of the Waterdhavian noble house [[Gost]].",
-      "x": 57.21672371101,
-      "y": 89.68703896887666,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Gost Villa"
-      ]
+      "type": "government",
+      "description": "Gost Villa was the family estate of the Waterdhavian noble house [[Gost]].",
+      "coordinates": {
+        "x": 57.21672371101,
+        "y": 89.68703896887666
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_751",
-      "name": "Danilo Thann’s residence",
-      "lore": "",
-      "x": 55.967501730916666,
-      "y": 93.03523021611319,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Danilo Thann"
-      ]
+      "id": "danilo_thanns_residence",
+      "name": "Danilo Thann\u2019s residence",
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 55.967501730916666,
+        "y": 93.03523021611319
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_757",
-      "name": "Simon Ilzimmer’s residence",
-      "lore": "",
-      "x": 55.23682472369,
-      "y": 84.72328691003102,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Simon Ilzimmer"
-      ]
+      "id": "simon_ilzimmers_residence",
+      "name": "Simon Ilzimmer\u2019s residence",
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 55.23682472369,
+        "y": 84.72328691003102
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_760",
-      "name": "Haerun Mhammaster’s residence",
-      "lore": "",
-      "x": 48.613591206576665,
-      "y": 69.75008199667863,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Haerun Mhammaster"
-      ]
+      "id": "haerun_mhammasters_residence",
+      "name": "Haerun Mhammaster\u2019s residence",
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 48.613591206576665,
+        "y": 69.75008199667863
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_784",
-      "name": "Zeltabbar Iliphar’s residence",
-      "lore": "",
-      "x": 60.51969537407666,
-      "y": 63.087400164687615,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Zeltabbar Iliphar"
-      ]
+      "id": "zeltabbar_iliphars_residence",
+      "name": "Zeltabbar Iliphar\u2019s residence",
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 60.51969537407666,
+        "y": 63.087400164687615
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_788",
-      "name": "Scirkhel Wands’ residence",
-      "lore": "",
-      "x": 62.248966970456664,
-      "y": 58.55822593947624,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Scirkhel Wands"
-      ]
+      "id": "scirkhel_wands_residence",
+      "name": "Scirkhel Wands\u2019 residence",
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 62.248966970456664,
+        "y": 58.55822593947624
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_797",
-      "name": "Gathgaer Milomynt’s residence",
-      "lore": "",
-      "x": 47.930054651426666,
-      "y": 51.5574624225211,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Gathgaer Milomynt"
-      ]
+      "id": "gathgaer_milomynts_residence",
+      "name": "Gathgaer Milomynt\u2019s residence",
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 47.930054651426666,
+        "y": 51.5574624225211
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_826",
+      "id": "kolat_towers",
       "name": "Kolat Towers",
-      "lore": "Kolat Towers was a wizard's residence.",
-      "x": 59.57083333333333,
-      "y": 43.956564986737405,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Kolat Towers"
-      ]
+      "type": "government",
+      "description": "Kolat Towers was a wizard's residence.",
+      "coordinates": {
+        "x": 59.57083333333333,
+        "y": 43.956564986737405
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_834",
-      "name": "Rokkek Ingerr’s residenc",
-      "lore": "",
-      "x": 58.8,
-      "y": 44.382885720601244,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Rokkek Ingerr"
-      ]
+      "id": "rokkek_ingerrs_residenc",
+      "name": "Rokkek Ingerr\u2019s residenc",
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 58.8,
+        "y": 44.382885720601244
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_934",
+      "id": "grinda_garloth_residence",
       "name": "Grinda Garloth residence",
-      "lore": "",
-      "x": 27.659660257413666,
-      "y": 48.31463383690635,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Grinda Garloth"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 27.659660257413666,
+        "y": 48.31463383690635
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_936",
+      "id": "fenerus_stormcastle_residence",
       "name": "Fenerus Stormcastle residence",
-      "lore": "",
-      "x": 57.52313664952667,
-      "y": 52.271587129100396,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Fenerus Stormcastle"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 57.52313664952667,
+        "y": 52.271587129100396
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_938",
-      "name": "Mistshore",
-      "lore": "Mistshore was the name given to the dilapidated north shore of Waterdeep's harbor in the late 15th century DR.[",
-      "x": 27.647875144394,
-      "y": 49.4150883027832,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Mistshore"
-      ]
-    },
-    {
-      "id": "wiki_939",
-      "name": "Dock Ward",
-      "lore": "The Dock Ward of Waterdeep was situated on the Great Harbor of Waterdeep. It contained the docks, shipbuilding yards, and warehouses for the sea trade. Compared to the rest of the city it was exceptionally dirty, smelly, and particularly dangerous.",
-      "x": 50.6,
-      "y": 46.39031830238727,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Waterdeep/Dock Ward"
-      ]
-    },
-    {
-      "id": "wiki_940",
-      "name": "Southern Ward",
-      "lore": "Southern Ward was the southeastern sector of the city of Waterdeep.",
-      "x": 62.13333333333333,
-      "y": 38.77449160035367,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Waterdeep/Southern Ward"
-      ]
-    },
-    {
-      "id": "wiki_941",
-      "name": "Trades Ward",
-      "lore": "The Trades Ward was one of the seven wards of the city of Waterdeep. It was the main shopping district of Waterdeep and housed many of the city's guildhalls.",
-      "x": 57.43333333333333,
-      "y": 59.70145888594165,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Waterdeep/Trades Ward"
-      ]
-    },
-    {
-      "id": "wiki_942",
-      "name": "Castle Ward",
-      "lore": "The Castle Ward was the central ward of the city of Waterdeep.",
-      "x": 44.9,
-      "y": 76.52250221043325,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Waterdeep/Castle Ward"
-      ]
-    },
-    {
-      "id": "wiki_944",
-      "name": "City of the Dead",
-      "lore": "The City of the Dead was a large cemetery and ward in Waterdeep. Most of the city's dead were buried here. By day, it also doubled as the city's major public park picnic area.",
-      "x": 59.5,
-      "y": 75.33045977011494,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Waterdeep/City of the Dead"
-      ]
-    },
-    {
-      "id": "wiki_945",
-      "name": "North Ward",
-      "lore": "The North Ward was the northeastern sector of Waterdeep. It was famous for being the quietest ward of the city, consisting mostly of residential areas.",
-      "x": 51.733333333333334,
-      "y": 99.60176834659595,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Waterdeep/North Ward"
-      ]
-    },
-    {
-      "id": "wiki_946",
-      "name": "Sea Ward",
-      "lore": "The Sea Ward of Waterdeep was the wealthiest ward in Waterdeep and located in the northwest of the city.",
-      "x": 31.833333333333332,
-      "y": 101.42294429708224,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Waterdeep/Sea Ward"
-      ]
-    },
-    {
-      "id": "wiki_947",
-      "name": "Field Ward",
-      "lore": "The Field Ward of Waterdeep was an unofficial ward of the city, located between the inner and outer walls on the north side of town. It was in fact the city's slums — possessing the poorest living conditions within the city.",
-      "x": 48.96666666666667,
-      "y": 122.48236074270558,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Waterdeep/Field Ward"
-      ]
-    },
-    {
-      "id": "wiki_948",
-      "name": "Undercliff ",
-      "lore": "Undercliff was a rural community just outside the walls of Waterdeep, located east of the city proper. Along with the Field Ward, it was considered an unofficial ward of the city.",
-      "x": 76.53333333333333,
-      "y": 87.71445623342176,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Undercliff"
-      ]
-    },
-    {
-      "id": "wiki_955",
+      "id": "yellowcrest_manor",
       "name": "Yellowcrest Manor",
-      "lore": "",
-      "x": 55.7200143575,
-      "y": 105.56167998725223,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Yellowcrest Manor"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 55.7200143575,
+        "y": 105.56167998725223
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_957",
+      "id": "roarke_house",
       "name": "Roarke House",
-      "lore": "",
-      "x": 40.65863991822666,
-      "y": 118.83737535218006,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Roarke House"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 40.65863991822666,
+        "y": 118.83737535218006
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_961",
+      "id": "brandarthall",
       "name": "Brandarthall",
-      "lore": "",
-      "x": 37.193816690413335,
-      "y": 98.02239619976514,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Brandarthall"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 37.193816690413335,
+        "y": 98.02239619976514
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_966",
+      "id": "chazlauth_yarghorn_residence",
       "name": "Chazlauth Yarghorn Residence",
-      "lore": "",
-      "x": 50.110300560086664,
-      "y": 93.40985301300759,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Chazlauth Yarghorn"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 50.110300560086664,
+        "y": 93.40985301300759
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_974",
+      "id": "irbryth_authamauns_residence",
       "name": "Irbryth Authamaun's residence",
-      "lore": "",
-      "x": 54.56507328156333,
-      "y": 113.08925681233949,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Irbryth Authamaun"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 54.56507328156333,
+        "y": 113.08925681233949
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_979",
+      "id": "obelos_braerils_residence",
       "name": "Obelos Braeril's residence",
-      "lore": "",
-      "x": 44.63333333333333,
-      "y": 103.95603448275862,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Obelos Braeril"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 44.63333333333333,
+        "y": 103.95603448275862
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_988",
+      "id": "talebran_house",
       "name": "Talebran House",
-      "lore": "",
-      "x": 50.95,
-      "y": 39.99964633068082,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Talebran House"
-      ]
+      "type": "government",
+      "description": "",
+      "coordinates": {
+        "x": 50.95,
+        "y": 39.99964633068082
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_1003",
+      "id": "eirontalar_villa",
       "name": "Eirontalar Villa",
-      "lore": "A second [[Eirontalar Villa]].",
-      "x": 42.49711754931,
-      "y": 99.07602281602937,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Eirontalar Villa"
-      ]
+      "type": "government",
+      "description": "A second [[Eirontalar Villa]].",
+      "coordinates": {
+        "x": 42.49711754931,
+        "y": 99.07602281602937
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_1005",
+      "id": "trollskull_manor",
       "name": "Trollskull Manor",
-      "lore": "Four stories tall and boasting balconies, a turret, and five chimneys, the abandoned building is one of the grandest in Trollskull Alley.",
-      "x": 55.083333333333336,
-      "y": 107.63149867374005,
-      "category": "government",
-      "grounding": []
+      "type": "government",
+      "description": "Four stories tall and boasting balconies, a turret, and five chimneys, the abandoned building is one of the grandest in Trollskull Alley.",
+      "coordinates": {
+        "x": 55.083333333333336,
+        "y": 107.63149867374005
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     }
-  ],
-  "updatedAt": "2026-04-30T13:14:37.348Z"
+  ]
 }

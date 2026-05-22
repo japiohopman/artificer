@@ -1,194 +1,381 @@
 {
-  "locationName": "baldurs_gate",
   "category": "landmarks",
-  "subLocations": [
+  "updatedAt": "2026-04-28T06:34:15.638Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
     {
-      "id": "wiki_26",
+      "id": "sewer_keep",
       "name": "Sewer Keep",
-      "lore": "The tower complex used as a magic water treatment facility that purified sewage waste before it is washed into the [[River Chionthar]].",
-      "x": 15.226370918032448,
-      "y": 30.080474685180985,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sewer Keep"
-      ]
+      "type": "landmarks",
+      "description": "The tower complex used as a magic water treatment facility that purified sewage waste before it is washed into the [[River Chionthar]].",
+      "coordinates": {
+        "x": 15.226370918032448,
+        "y": 30.080474685180985
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_27",
+      "id": "seatower_of_balduran",
       "name": "Seatower of Balduran",
-      "lore": "The massive sea-fortress that rested on a rocky island in the city's bay that served as the headquarters of the [[Flaming Fist]] in the 15{{th}} century [[DR]].",
-      "x": 23.758735252110796,
-      "y": 38.03299450246039,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Seatower of Balduran"
-      ]
+      "type": "landmarks",
+      "description": "The massive sea-fortress that rested on a rocky island in the city's bay that served as the headquarters of the [[Flaming Fist]] in the 15{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 23.758735252110796,
+        "y": 38.03299450246039
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_28",
+      "id": "high_hall",
       "name": "High Hall",
-      "lore": "Also known as the '''Ducal Palace'', the seat of the [[Council of Four]] in which city business was conducted.",
-      "x": 16.05004095254122,
-      "y": 53.880391173520565,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/High Hall"
-      ]
+      "type": "landmarks",
+      "description": "Also known as the '''Ducal Palace'', the seat of the [[Council of Four]] in which city business was conducted.",
+      "coordinates": {
+        "x": 16.05004095254122,
+        "y": 53.880391173520565
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_29",
+      "id": "watch_citadel",
       "name": "Watch Citadel",
-      "lore": "Also known as '''Stormkeep''', the headquarters of [[the Watch]] in [[Baldur's Gate]] that served as a staging area, training grounds, and a temporary holding area, when needed.",
-      "x": 11.066654269727806,
-      "y": 54.463466091567746,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Watch Citadel"
-      ]
+      "type": "landmarks",
+      "description": "Also known as '''Stormkeep''', the headquarters of [[the Watch]] in [[Baldur's Gate]] that served as a staging area, training grounds, and a temporary holding area, when needed.",
+      "coordinates": {
+        "x": 11.066654269727806,
+        "y": 54.463466091567746
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_59",
+      "id": "baldurs_mouth",
       "name": "Baldur's Mouth",
-      "lore": "A narrow, five-story printshop that disseminated news via [[broadsheet]]s and town criers.",
-      "x": 30.570576994707054,
-      "y": 52.421313977598786,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Baldur's Mouth"
-      ]
+      "type": "landmarks",
+      "description": "A narrow, five-story printshop that disseminated news via [[broadsheet]]s and town criers.",
+      "coordinates": {
+        "x": 30.570576994707054,
+        "y": 52.421313977598786
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_69",
+      "id": "harborside_hospital",
       "name": "Harborside Hospital",
-      "lore": "Formerly [[Scarbradro's Haven]], a hospital within the [[Brampton]] district with its [[cleric]]al staff offering medical services to anyone regardless of faith. Quality of service varied depending on the patient's wealth.",
-      "x": 44.90128060534576,
-      "y": 43.139294896843886,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Harborside Hospital"
-      ]
+      "type": "landmarks",
+      "description": "Formerly [[Scarbradro's Haven]], a hospital within the [[Brampton]] district with its [[cleric]]al staff offering medical services to anyone regardless of faith. Quality of service varied depending on the patient's wealth.",
+      "coordinates": {
+        "x": 44.90128060534576,
+        "y": 43.139294896843886
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_72",
+      "id": "wyrms_rock",
       "name": "Wyrm's Rock",
-      "lore": "A [[granite]] fortress that loomed over the small islet that connected the bridges of [[Wyrm's Crossing]].",
-      "x": 87.35124017065911,
-      "y": 26.915582902839997,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Wyrm's Rock"
-      ]
+      "type": "landmarks",
+      "description": "A [[granite]] fortress that loomed over the small islet that connected the bridges of [[Wyrm's Crossing]].",
+      "coordinates": {
+        "x": 87.35124017065911,
+        "y": 26.915582902839997
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_91",
+      "id": "old_wall",
       "name": "Old Wall",
-      "lore": "The wall that encircled the affluent [[Upper City]] of [[Baldur's Gate]]. ",
-      "x": 23.733320936394474,
-      "y": 55.32854239716127,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Old Wall (Baldur's Gate)"
-      ]
+      "type": "landmarks",
+      "description": "The wall that encircled the affluent [[Upper City]] of [[Baldur's Gate]]. ",
+      "coordinates": {
+        "x": 23.733320936394474,
+        "y": 55.32854239716127
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_92",
+      "id": "harbormasters_office",
       "name": "Harbormaster's Office",
-      "lore": "The main civic building in the harbours of [[Baldur's Gate]].",
-      "x": 33.116167585569976,
-      "y": 48.431903554179705,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Harbormaster's Office"
-      ]
-    }
-     {
-      "id": "wiki_85",
+      "type": "landmarks",
+      "description": "The main civic building in the harbours of [[Baldur's Gate]].",
+      "coordinates": {
+        "x": 33.116167585569976,
+        "y": 48.431903554179705
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "fishers_wharf",
       "name": "Fisher's Wharf",
-      "lore": "A pier used by fishing vessels and an occasional live-in boat roped to the docks.",
-      "x": 32.350043689238404,
-      "y": 48.63343816112992,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Fisher's Wharf"
-      ]
+      "type": "landmarks",
+      "description": "A pier used by fishing vessels and an occasional live-in boat roped to the docks.",
+      "coordinates": {
+        "x": 32.350043689238404,
+        "y": 48.63343816112992
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_86",
+      "id": "silver_crescent_beach",
       "name": "Silver Crescent Beach",
-      "lore": "A southwestern beach in the city and the location of a washed ashore corpse – part of a series of grizzly murders, in [[1477 DR]].",
-      "x": 19.966694365352385,
-      "y": 32.27183442660307,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Silver Crescent Beach"
-      ]
+      "type": "landmarks",
+      "description": "A southwestern beach in the city and the location of a washed ashore corpse \u2013 part of a series of grizzly murders, in [[1477 DR]].",
+      "coordinates": {
+        "x": 19.966694365352385,
+        "y": 32.27183442660307
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_96",
+      "id": "stormshore_street_dock",
       "name": "Stormshore Street Dock",
-      "lore": "Docks at the southern end of [[Stormshore Street]].",
-      "x": 35.97261668850412,
-      "y": 42.364959725643025,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Stormshore Street Dock"
-      ]
+      "type": "landmarks",
+      "description": "Docks at the southern end of [[Stormshore Street]].",
+      "coordinates": {
+        "x": 35.97261668850412,
+        "y": 42.364959725643025
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_157",
+      "id": "waendels_wharf",
       "name": "Waendel's Wharf",
-      "lore": "A wharf of note.",
-      "x": 32.105955160761084,
-      "y": 43.82806437493889,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Waendel's Wharf"
-      ]
+      "type": "landmarks",
+      "description": "A wharf of note.",
+      "coordinates": {
+        "x": 32.105955160761084,
+        "y": 43.82806437493889
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_158",
+      "id": "stormwynd_dock",
       "name": "Stormwynd Dock",
-      "lore": "A dock of note.",
-      "x": 36.793131121402766,
-      "y": 38.85726485368021,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Stormwynd Dock"
-      ]
+      "type": "landmarks",
+      "description": "A dock of note.",
+      "coordinates": {
+        "x": 36.793131121402766,
+        "y": 38.85726485368021
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_159",
+      "id": "athcaulyrs_stand",
       "name": "Athcaulyr's Stand",
-      "lore": "A wide and legless dock of note.",
-      "x": 28.40208928300868,
-      "y": 46.88938565545378,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Athcaulyr's Stand"
-      ]
+      "type": "landmarks",
+      "description": "A wide and legless dock of note.",
+      "coordinates": {
+        "x": 28.40208928300868,
+        "y": 46.88938565545378
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_160",
+      "id": "glaezels_dock",
       "name": "Glaezel's Dock",
-      "lore": "A small dock that had changed many owners and names over the years. It was ran by [[Manthuran Glaezel]] of the wealthy [[Glaezel]] family in the late 14{{th}} century [[DR]].",
-      "x": 20.43332163260727,
-      "y": 39.8508878184099,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Glaezel's Dock"
-      ]
+      "type": "landmarks",
+      "description": "A small dock that had changed many owners and names over the years. It was ran by [[Manthuran Glaezel]] of the wealthy [[Glaezel]] family in the late 14{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 20.43332163260727,
+        "y": 39.8508878184099
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_161",
+      "id": "hethkantles_jetty",
       "name": "Hethkantle's Jetty",
-      "lore": "A dock of note.",
-      "x": 22.040259654357623,
-      "y": 41.856294333272686,
-      "category": "landmarks",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hethkantle's Jetty"
-      ]
+      "type": "landmarks",
+      "description": "A dock of note.",
+      "coordinates": {
+        "x": 22.040259654357623,
+        "y": 41.856294333272686
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     }
-  ],
-  "updatedAt": "2026-04-28T06:34:15.638Z"
+  ]
 }
