@@ -1,128 +1,183 @@
 {
-  "locationName": "baldurs gate",
-  "category": "ruin",
-  "subLocations": [
+  "category": "ruins",
+  "updatedAt": "2026-04-30T13:14:41.223Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
     {
-      "id": "wiki_523",
-      "name": "House of the Homeless",
-      "lore": "The House of the Homeless was a large mausoleum.\n\nThe dead of Waterdeep were interred within the House of the Homeless if they died without laying claim, or payment, to any other burial site. ",
-      "x": 55.991071956953334,
-      "y": 75.2055264764469,
-      "category": "ruin",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/House of the Homeless"
-      ]
-    },
-    {
-      "id": "wiki_524",
+      "id": "merchants_rest",
       "name": "Merchants' Rest",
-      "lore": "Merchants' Rest, which was also known as the Coinscoffin, was a tomb. Despite its name, Merchants' Rest was reserved for anyone, whether they were a merchant or not, who prepaid to be interred within.",
-      "x": 57.629202666703335,
-      "y": 74.22214163460163,
-      "category": "ruin",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Merchants' Rest"
-      ]
+      "type": "ruin",
+      "description": "Merchants' Rest, which was also known as the Coinscoffin, was a tomb. Despite its name, Merchants' Rest was reserved for anyone, whether they were a merchant or not, who prepaid to be interred within.",
+      "coordinates": {
+        "x": 57.629202666703335,
+        "y": 74.22214163460163
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_565",
+      "id": "hall_of_the_sages",
       "name": "Hall of the Sages",
-      "lore": "The Hall of the Sages was a tomb. As its name implied, the Hall of the Sages was reserved specifically for [[sage]]s.",
-      "x": 58.79592885566,
-      "y": 69.3871661621874,
-      "category": "ruin",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hall of the Sages"
-      ]
+      "type": "ruin",
+      "description": "The Hall of the Sages was a tomb. As its name implied, the Hall of the Sages was reserved specifically for [[sage]]s.",
+      "coordinates": {
+        "x": 58.79592885566,
+        "y": 69.3871661621874
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_566",
+      "id": "hall_of_heroes",
       "name": "Hall of Heroes",
-      "lore": "The Hall of Heroes was a tomb. \n\nBlue [[marble]] was used for the tomb's walls. The interior was decorated with trophies of famous fallen warriors including the sword hilt of [[Raurlor]].",
-      "x": 60.79939806902333,
-      "y": 67.80672623779107,
-      "category": "ruin",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hall of Heroes (tomb)"
-      ]
+      "type": "ruin",
+      "description": "The Hall of Heroes was a tomb. \n\nBlue [[marble]] was used for the tomb's walls. The interior was decorated with trophies of famous fallen warriors including the sword hilt of [[Raurlor]].",
+      "coordinates": {
+        "x": 60.79939806902333,
+        "y": 67.80672623779107
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_567",
+      "id": "mariners_rest",
       "name": "Mariners' Rest",
-      "lore": "Mariners' Rest was a tomb. As its name implied, the tomb was reserved sailors and seamen who prepaid to be interred within.",
-      "x": 62.01326471006,
-      "y": 66.0272679525477,
-      "category": "ruin",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Mariners' Rest"
-      ]
+      "type": "ruin",
+      "description": "Mariners' Rest was a tomb. As its name implied, the tomb was reserved sailors and seamen who prepaid to be interred within.",
+      "coordinates": {
+        "x": 62.01326471006,
+        "y": 66.0272679525477
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_772",
-      "name": "Deepwinter Vault",
-      "lore": "The Deepwinter Vault was a mausoleum that belonged to the defunct noble [[Deepwinter (family) |Deepwinter]] family. It was also one of the entrances to the former lair of [[Artor Morlin]], the [[vampire lord]] of Waterdeep.",
-      "x": 59.43232495873,
-      "y": 82.28823873022081,
-      "category": "ruin",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Deepwinter Vault"
-      ]
-    },
-    {
-      "id": "wiki_773",
+      "id": "roads_end",
       "name": "Roads' End",
-      "lore": "The tomb was used as a communal burial site for travelers who perished while visiting the City of Splendors.",
-      "x": 61.83648801476333,
-      "y": 77.8278860547043,
-      "category": "ruin",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Roads' End"
-      ]
+      "type": "ruin",
+      "description": "The tomb was used as a communal burial site for travelers who perished while visiting the City of Splendors.",
+      "coordinates": {
+        "x": 61.83648801476333,
+        "y": 77.8278860547043
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_774",
+      "id": "sultlue_vault",
       "name": "Sultlue Vault",
-      "lore": "The tomb was heavily warded with magic.",
-      "x": 56.863170320416664,
-      "y": 78.30787151322377,
-      "category": "ruin",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sultlue Vault"
-      ]
+      "type": "ruin",
+      "description": "The tomb was heavily warded with magic.",
+      "coordinates": {
+        "x": 56.863170320416664,
+        "y": 78.30787151322377
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_775",
-      "name": "Lords' Respite",
-      "lore": "The Lords' Respite was reserved for any Lords of Waterdeep who wished to be buried there.",
-      "x": 60.83475340808333,
-      "y": 70.3939649288423,
-      "category": "ruin",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Lords' Respite"
-      ]
-    },
-    {
-      "id": "wiki_935",
+      "id": "cassalanter_mausoleum",
       "name": "Cassalanter mausoleum",
-      "lore": "",
-      "x": 60.10407640085667,
-      "y": 79.82977662560432,
-      "category": "ruin",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Cassalanter"
-      ]
+      "type": "ruin",
+      "description": "",
+      "coordinates": {
+        "x": 60.10407640085667,
+        "y": 79.82977662560432
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_962",
+      "id": "brandath_mausoleum",
       "name": "Brandath Mausoleum",
-      "lore": "",
-      "x": 61.16473657263667,
-      "y": 80.35658993373643,
-      "category": "ruin",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Brandath mausoleum"
-      ]
+      "type": "ruin",
+      "description": "",
+      "coordinates": {
+        "x": 61.16473657263667,
+        "y": 80.35658993373643
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     }
-  ],
-  "updatedAt": "2026-04-30T13:14:41.223Z"
+  ]
 }

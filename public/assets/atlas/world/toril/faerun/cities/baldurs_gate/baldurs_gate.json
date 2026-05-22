@@ -13,6 +13,18 @@
   "tags": ["city", "metropolis", "port"],
   "map": "assets/atlas/world/toril/faerun/cities/baldurs_gate/baldurs_gate_map.json",
   "children": ["upper_city", "lower_city", "outer_city"],
+  "sub_location_files": [
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/districts.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/estate.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/government.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/inns_taverns.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/landmarks.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/points_of_interest.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/roads.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/ruins.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/shops.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/temples_shrines.json"
+  ],
   "coordinates": {
     "lat": 1035.5,
     "lng": 2029.5

@@ -1,480 +1,931 @@
 {
-  "locationName": "baldurs_gate",
   "category": "estate",
-  "subLocations": [
+  "updatedAt": "2026-04-28T06:34:16.577Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
     {
-      "id": "wiki_32",
+      "id": "mandorcais_mansion",
       "name": "Mandorcai's Mansion",
-      "lore": "A mysterious manor in the [[Bloomridge]] neighborhood, believed to have been built by its namesake – [[tiefling]] [[wizard]] [[Mandorcai]], in reality, its origin was much more [[fiend]]ish in nature.",
-      "x": 16.6169918259648,
-      "y": 40.346724376792295,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Mandorcai's mansion"
-      ]
+      "type": "estate",
+      "description": "A mysterious manor in the [[Bloomridge]] neighborhood, believed to have been built by its namesake \u2013 [[tiefling]] [[wizard]] [[Mandorcai]], in reality, its origin was much more [[fiend]]ish in nature.",
+      "coordinates": {
+        "x": 16.6169918259648,
+        "y": 40.346724376792295
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_33",
+      "id": "seskergates",
       "name": "Seskergates",
-      "lore": "A tower of a manse of the [[Sesker]] mercantile clan, purchased by the eccentric Baldurian court-[[mage]] named [[Imbralym Skoond]] in the 15{{th}} century [[DR]].",
-      "x": 17.335889010884877,
-      "y": 41.96907812879724,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Seskergates"
-      ]
+      "type": "estate",
+      "description": "A tower of a manse of the [[Sesker]] mercantile clan, purchased by the eccentric Baldurian court-[[mage]] named [[Imbralym Skoond]] in the 15{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 17.335889010884877,
+        "y": 41.96907812879724
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_44",
+      "id": "bormul_house",
       "name": "Bormul House",
-      "lore": "The elegant three-story townhouse of yellow [[granite]], home to the Baldurian branch of the [[Amn]]ian [[Bormul Dynasty]].",
-      "x": 14.35,
-      "y": 43.818994831139946,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Bormul House"
-      ]
+      "type": "estate",
+      "description": "The elegant three-story townhouse of yellow [[granite]], home to the Baldurian branch of the [[Amn]]ian [[Bormul Dynasty]].",
+      "coordinates": {
+        "x": 14.35,
+        "y": 43.818994831139946
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_45",
+      "id": "hhune_house",
       "name": "Hhune House",
-      "lore": "The palatial manse home of the influential [[patriar]] [[Hhune]] family, relatives of the royal house of [[Tethyr]].",
-      "x": 13.266628580973803,
-      "y": 42.27684947173847,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hhune House"
-      ]
+      "type": "estate",
+      "description": "The palatial manse home of the influential [[patriar]] [[Hhune]] family, relatives of the royal house of [[Tethyr]].",
+      "coordinates": {
+        "x": 13.266628580973803,
+        "y": 42.27684947173847
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_46",
+      "id": "eomane_house",
       "name": "Eomane House",
-      "lore": "The estate home of the [[Eomane]] family that controlled the most elite [[perfume]]ry in the city as well as [[fish]] and lamp [[fish oil]] processing factories.",
-      "x": 15.316654965940605,
-      "y": 46.22619751587087,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Eomane House"
-      ]
+      "type": "estate",
+      "description": "The estate home of the [[Eomane]] family that controlled the most elite [[perfume]]ry in the city as well as [[fish]] and lamp [[fish oil]] processing factories.",
+      "coordinates": {
+        "x": 15.316654965940605,
+        "y": 46.22619751587087
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_47",
+      "id": "rillyn_house",
       "name": "Rillyn House",
-      "lore": "The house of the [[Rillyn]] [[patriar]] family of '''[[Baldur's Gate]]''', built on wealth gained through adventuring.",
-      "x": 11.891668397834522,
-      "y": 47.46743067701595,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Rillyn House"
-      ]
+      "type": "estate",
+      "description": "The house of the [[Rillyn]] [[patriar]] family of '''[[Baldur's Gate]]''', built on wealth gained through adventuring.",
+      "coordinates": {
+        "x": 11.891668397834522,
+        "y": 47.46743067701595
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_48",
+      "id": "vanthampur_villa",
       "name": "Vanthampur Villa",
-      "lore": "Home to the wealthy [[patriar]] noble [[Vanthampur]] family in [[Baldur's Gate]].",
-      "x": 15.916652817323808,
-      "y": 51.98095231861748,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Vanthampur Villa"
-      ]
+      "type": "estate",
+      "description": "Home to the wealthy [[patriar]] noble [[Vanthampur]] family in [[Baldur's Gate]].",
+      "coordinates": {
+        "x": 15.916652817323808,
+        "y": 51.98095231861748
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_52",
+      "id": "ramaziths_tower",
       "name": "Ramazith's Tower",
-      "lore": "The landmark tower built by renowned [[sage]] and zoologist, [[Ramazith Flamesinger]], sometime before [[1368 DR]]; it was purchased by the [[Athkatlan]] [[mage]] [[Lorroakan]] in  [[1492 DR]].",
-      "x": 18.533308539455614,
-      "y": 57.848640538230995,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Ramazith's tower"
-      ]
+      "type": "estate",
+      "description": "The landmark tower built by renowned [[sage]] and zoologist, [[Ramazith Flamesinger]], sometime before [[1368 DR]]; it was purchased by the [[Athkatlan]] [[mage]] [[Lorroakan]] in  [[1492 DR]].",
+      "coordinates": {
+        "x": 18.533308539455614,
+        "y": 57.848640538230995
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_75",
+      "id": "whitkeep_hostel",
       "name": "Whitkeep Hostel",
-      "lore": "A large manor that served a number of purposes throughout its existence; during the later 15{{th}} century [[DR]], a [[gnome|gnomish]] artists' commune resided within.",
-      "x": 69.29646455628165,
-      "y": 61.11838908247977,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Whitkeep Hostel"
-      ]
+      "type": "estate",
+      "description": "A large manor that served a number of purposes throughout its existence; during the later 15{{th}} century [[DR]], a [[gnome|gnomish]] artists' commune resided within.",
+      "coordinates": {
+        "x": 69.29646455628165,
+        "y": 61.11838908247977
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_90",
+      "id": "silvershield_estate",
       "name": "Silvershield Estate",
-      "lore": "The family home of the [[Silvershield]] [[patriar]] family of [[Baldur's Gate]] – a massive grand complex nearly the size of an entire city block that offered little comfort and coziness to its inhabitants and visitors.",
-      "x": 9.10001239693886,
-      "y": 39.15502183547622,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Silvershield estate"
-      ]
+      "type": "estate",
+      "description": "The family home of the [[Silvershield]] [[patriar]] family of [[Baldur's Gate]] \u2013 a massive grand complex nearly the size of an entire city block that offered little comfort and coziness to its inhabitants and visitors.",
+      "coordinates": {
+        "x": 9.10001239693886,
+        "y": 39.15502183547622
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_102",
+      "id": "omduils_manor",
       "name": "Omduil's Manor",
-      "lore": "Home to [[Omduil]], sage and seer for hire in the 14{{th}} century [[DR]].",
-      "x": 11.55832987099762,
-      "y": 46.11335900032423,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Omduil's manor"
-      ]
+      "type": "estate",
+      "description": "Home to [[Omduil]], sage and seer for hire in the 14{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 11.55832987099762,
+        "y": 46.11335900032423
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_111",
+      "id": "jhasso_estate",
       "name": "Jhasso Estate",
-      "lore": "The home of the [[Jhasso]] [[patria]]r family of [[Baldur's Gate]], part-owners of the [[Seven Suns Trading Coster]].",
-      "x": 20.164325928595318,
-      "y": 62.47471279737744,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Jhasso"
-      ]
+      "type": "estate",
+      "description": "The home of the [[Jhasso]] [[patria]]r family of [[Baldur's Gate]], part-owners of the [[Seven Suns Trading Coster]].",
+      "coordinates": {
+        "x": 20.164325928595318,
+        "y": 62.47471279737744
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_118",
+      "id": "corans_manor",
       "name": "Coran's Manor",
-      "lore": "Home to the wealthy adventurer-turned-politician named [[Coran]], until his death in [[1492 DR]].",
-      "x": 18.975,
-      "y": 46.64934194917077,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Coran"
-      ]
+      "type": "estate",
+      "description": "Home to the wealthy adventurer-turned-politician named [[Coran]], until his death in [[1492 DR]].",
+      "coordinates": {
+        "x": 18.975,
+        "y": 46.64934194917077
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_120",
+      "id": "hullhollyn_estate",
       "name": "Hullhollyn Estate",
-      "lore": "The family manse of a prominent [[patriar]] family – House [[Hullhollyn]], that ran a sizable merchant fleet.",
-      "x": 14.033327482970302,
-      "y": 40.09530483783677,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hullhollyn"
-      ]
+      "type": "estate",
+      "description": "The family manse of a prominent [[patriar]] family \u2013 House [[Hullhollyn]], that ran a sizable merchant fleet.",
+      "coordinates": {
+        "x": 14.033327482970302,
+        "y": 40.09530483783677
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_121",
+      "id": "sashenstar_estate",
       "name": "Sashenstar Estate",
-      "lore": "The home to the wealthy [[Sashenstar]] [[patriar]] family, members of the [[Merchant's League]], who owned shipping, mining, and textile operations.",
-      "x": 13.916666666666666,
-      "y": 41.242572333617154,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sashenstar"
-      ]
+      "type": "estate",
+      "description": "The home to the wealthy [[Sashenstar]] [[patriar]] family, members of the [[Merchant's League]], who owned shipping, mining, and textile operations.",
+      "coordinates": {
+        "x": 13.916666666666666,
+        "y": 41.242572333617154
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_122",
+      "id": "shattershield_estate",
       "name": "Shattershield Estate",
-      "lore": "\nThe home to the only non-[[human]] [[patriar]] family – [[Shattershield]], that was instrumental in building the city's [[Old Walls (Baldur's Gate)|Old Walls]].",
-      "x": 15.08902322126633,
-      "y": 41.722933848153936,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Shattershield"
-      ]
+      "type": "estate",
+      "description": "\nThe home to the only non-[[human]] [[patriar]] family \u2013 [[Shattershield]], that was instrumental in building the city's [[Old Walls (Baldur's Gate)|Old Walls]].",
+      "coordinates": {
+        "x": 15.08902322126633,
+        "y": 41.722933848153936
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_123",
+      "id": "vannath_estate",
       "name": "Vannath Estate",
-      "lore": "The manse that belongs to the [[Vannath]] [[patriar]] family that fled to [[Baldur's Gate]] from [[Neverwinter]] after the [[Spellplague]].",
-      "x": 12.966666666666667,
-      "y": 39.96369786356046,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Vannath"
-      ]
+      "type": "estate",
+      "description": "The manse that belongs to the [[Vannath]] [[patriar]] family that fled to [[Baldur's Gate]] from [[Neverwinter]] after the [[Spellplague]].",
+      "coordinates": {
+        "x": 12.966666666666667,
+        "y": 39.96369786356046
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_124",
+      "id": "oberon_estate",
       "name": "Oberon Estate",
-      "lore": "The home of the [[Oberon (family)|Oberon]] [[patriar]] family of [[Baldur's Gate]] that owned the majority of the city's dry docks.",
-      "x": 11.620117300667557,
-      "y": 38.937006759445296,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Oberon (family)"
-      ]
+      "type": "estate",
+      "description": "The home of the [[Oberon (family)|Oberon]] [[patriar]] family of [[Baldur's Gate]] that owned the majority of the city's dry docks.",
+      "coordinates": {
+        "x": 11.620117300667557,
+        "y": 38.937006759445296
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_125",
+      "id": "belt_estate",
       "name": "Belt Estate",
-      "lore": "The manse of the [[Belt (family)|Belt]] [[patriar]] family that built its wealth via the business holdings related to the sale and exchange of horses.",
-      "x": 10.748035484529638,
-      "y": 39.94764576844783,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Belt (family)"
-      ]
+      "type": "estate",
+      "description": "The manse of the [[Belt (family)|Belt]] [[patriar]] family that built its wealth via the business holdings related to the sale and exchange of horses.",
+      "coordinates": {
+        "x": 10.748035484529638,
+        "y": 39.94764576844783
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_126",
+      "id": "eltan_estate",
       "name": "Eltan Estate",
-      "lore": "The home of the [[Eltan]] [[patriar]] family that was connected to the founding of the [[Flaming Fist]].",
-      "x": 11.433333333333334,
-      "y": 40.734732582733095,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Eltan"
-      ]
+      "type": "estate",
+      "description": "The home of the [[Eltan]] [[patriar]] family that was connected to the founding of the [[Flaming Fist]].",
+      "coordinates": {
+        "x": 11.433333333333334,
+        "y": 40.734732582733095
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_127",
+      "id": "ravenshade_estate",
       "name": "Ravenshade Estate",
-      "lore": "The home of the [[Ravenshade]] [[patriar]] family that dealt in [[ink]]s, [[dye]]s, [[gem]]s, and jewelry.",
-      "x": 12.433339183696365,
-      "y": 42.44614520558654,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Ravenshade"
-      ]
+      "type": "estate",
+      "description": "The home of the [[Ravenshade]] [[patriar]] family that dealt in [[ink]]s, [[dye]]s, [[gem]]s, and jewelry.",
+      "coordinates": {
+        "x": 12.433339183696365,
+        "y": 42.44614520558654
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_128",
-      "name": "Durinbold Estate",
-      "lore": "The estate of the [[Durinbold]] [[patriar]] family that owned numerous [[sheep]] herds and was related to the nobility of [[Waterdeep]].",
-      "x": 11.154644679442061,
-      "y": 42.702497788684255,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Durinbold"
-      ]
-    },
-    {
-      "id": "wiki_129",
+      "id": "caldwell_estate",
       "name": "Caldwell Estate",
-      "lore": "Home of the [[Caldwell]] clan – one of the oldest and richest [[patriar]] families of [[Baldur's Gate]].",
-      "x": 13.766649115577572,
-      "y": 43.4616918455063,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Caldwell"
-      ]
+      "type": "estate",
+      "description": "Home of the [[Caldwell]] clan \u2013 one of the oldest and richest [[patriar]] families of [[Baldur's Gate]].",
+      "coordinates": {
+        "x": 13.766649115577572,
+        "y": 43.4616918455063
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_130",
+      "id": "gist_estate",
       "name": "Gist Estate",
-      "lore": "The estate of the [[Gist]] [[patriar]] family.",
-      "x": 12.866695918481822,
-      "y": 43.9882146439318,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Gist"
-      ]
+      "type": "estate",
+      "description": "The estate of the [[Gist]] [[patriar]] family.",
+      "coordinates": {
+        "x": 12.866695918481822,
+        "y": 43.9882146439318
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_131",
+      "id": "vammas_estate",
       "name": "Vammas Estate",
-      "lore": "The home of the [[Vammas]] [[patriar]] family. ",
-      "x": 15.583327482970303,
-      "y": 48.68986690903526,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Vammas"
-      ]
+      "type": "estate",
+      "description": "The home of the [[Vammas]] [[patriar]] family. ",
+      "coordinates": {
+        "x": 15.583327482970303,
+        "y": 48.68986690903526
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_132",
+      "id": "redlocks_estate",
       "name": "Redlocks Estate",
-      "lore": "The [[Redlocks]] [[patriar]] family manse, the clan that was rumored to have had an affiliation with piracy.",
-      "x": 12.44999414963697,
-      "y": 46.564751023038895,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Redlocks"
-      ]
+      "type": "estate",
+      "description": "The [[Redlocks]] [[patriar]] family manse, the clan that was rumored to have had an affiliation with piracy.",
+      "coordinates": {
+        "x": 12.44999414963697,
+        "y": 46.564751023038895
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_133",
+      "id": "nurthammas_estate",
       "name": "Nurthammas Estate",
-      "lore": "The Estate of the [[Nurthammas]] [[patriar]] family that dealt in supplying ships for long voyages.",
-      "x": 19.09997074818484,
-      "y": 49.53614628550304,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Nurthammas"
-      ]
+      "type": "estate",
+      "description": "The Estate of the [[Nurthammas]] [[patriar]] family that dealt in supplying ships for long voyages.",
+      "coordinates": {
+        "x": 19.09997074818484,
+        "y": 49.53614628550304
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_134",
+      "id": "whitburn_estate",
       "name": "Whitburn Estate",
-      "lore": "The home of the [[Whitburn]] [[patriar]] family that owned a [[slate]] quarry.",
-      "x": 13.505756067988543,
-      "y": 51.90273323446242,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Whitburn"
-      ]
+      "type": "estate",
+      "description": "The home of the [[Whitburn]] [[patriar]] family that owned a [[slate]] quarry.",
+      "coordinates": {
+        "x": 13.505756067988543,
+        "y": 51.90273323446242
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_135",
+      "id": "provoss_estate",
       "name": "Provoss Estate",
-      "lore": "The estate of the [[Provoss]] [[patriar]] family that faced hardships after dire cattle herd losses in the 15{{th}} century [[DR]].",
-      "x": 14.316649115577572,
-      "y": 54.632714374755686,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Provoss"
-      ]
+      "type": "estate",
+      "description": "The estate of the [[Provoss]] [[patriar]] family that faced hardships after dire cattle herd losses in the 15{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 14.316649115577572,
+        "y": 54.632714374755686
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_136",
+      "id": "portyr_estate",
       "name": "Portyr Estate",
-      "lore": "The estate of a ruling Ducal [[Portyr]] family of [[Baldur's Gate]] in the late 15{{th}} century [[DR]].",
-      "x": 17.233333333333334,
-      "y": 52.75204397858227,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Portyr"
-      ]
+      "type": "estate",
+      "description": "The estate of a ruling Ducal [[Portyr]] family of [[Baldur's Gate]] in the late 15{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 17.233333333333334,
+        "y": 52.75204397858227
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_137",
+      "id": "stelmane_estate",
       "name": "Stelmane Estate",
-      "lore": "The estate of a ruling Ducal [[Stelmane]] family of [[Baldur's Gate]] in the late 15{{th}} century [[DR]].",
-      "x": 17.65001170072606,
-      "y": 52.52639541788507,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Stelmane"
-      ]
+      "type": "estate",
+      "description": "The estate of a ruling Ducal [[Stelmane]] family of [[Baldur's Gate]] in the late 15{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 17.65001170072606,
+        "y": 52.52639541788507
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_138",
+      "id": "linnacker_estate",
       "name": "Linnacker Estate",
-      "lore": "The home manse of the [[Linnacker]]  [[patriar]] that made wealth from [[gem]] mines in [[Tethyr]].",
-      "x": 19.083345034059395,
-      "y": 52.99647997827319,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Linnacker"
-      ]
+      "type": "estate",
+      "description": "The home manse of the [[Linnacker]]  [[patriar]] that made wealth from [[gem]] mines in [[Tethyr]].",
+      "coordinates": {
+        "x": 19.083345034059395,
+        "y": 52.99647997827319
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_139",
+      "id": "jannath_estate",
       "name": "Jannath Estate",
-      "lore": "The estate of the [[Jannath]] [[patriar]] family that owned profitable [[copper]] mines.",
-      "x": 16.633333333333333,
-      "y": 55.15919921265307,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Jannath (family)"
-      ]
+      "type": "estate",
+      "description": "The estate of the [[Jannath]] [[patriar]] family that owned profitable [[copper]] mines.",
+      "coordinates": {
+        "x": 16.633333333333333,
+        "y": 55.15919921265307
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_140",
+      "id": "miyar_estate",
       "name": "Miyar Estate",
-      "lore": "Home to a family member of the [[Merchant’s League]] – the [[Miyar]] [[patriar]] family that controlled the caravan supply and repair businesses.",
-      "x": 17.45,
-      "y": 58.563237019366255,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Miyar"
-      ]
+      "type": "estate",
+      "description": "Home to a family member of the [[Merchant\u2019s League]] \u2013 the [[Miyar]] [[patriar]] family that controlled the caravan supply and repair businesses.",
+      "coordinates": {
+        "x": 17.45,
+        "y": 58.563237019366255
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_141",
+      "id": "oathoon_estate",
       "name": "Oathoon Estate",
-      "lore": "The manse of the [[Oathoon]] [[patriar]] family that traded in [[wine]]s and spirits.",
-      "x": 19.899982448910908,
-      "y": 56.851843376776856,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Oathoon"
-      ]
+      "type": "estate",
+      "description": "The manse of the [[Oathoon]] [[patriar]] family that traded in [[wine]]s and spirits.",
+      "coordinates": {
+        "x": 19.899982448910908,
+        "y": 56.851843376776856
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_142",
+      "id": "hlath_estate",
       "name": "Hlath Estate",
-      "lore": "The home estate of the influential [[Hlath (family)|Hlath]] [[patriar]] family.",
-      "x": 20.416666666666668,
-      "y": 55.42255551318608,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hlath (family)"
-      ]
+      "type": "estate",
+      "description": "The home estate of the influential [[Hlath (family)|Hlath]] [[patriar]] family.",
+      "coordinates": {
+        "x": 20.416666666666668,
+        "y": 55.42255551318608
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_143",
+      "id": "tillerturn_estate",
       "name": "Tillerturn Estate",
-      "lore": "The home of the [[Tillerturn]] [[patria]]r family of [[Baldur's Gate]] that owned the lion's share of the city's buildings.",
-      "x": 24.8,
-      "y": 59.465935653607346,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Tillertum"
-      ]
+      "type": "estate",
+      "description": "The home of the [[Tillerturn]] [[patria]]r family of [[Baldur's Gate]] that owned the lion's share of the city's buildings.",
+      "coordinates": {
+        "x": 24.8,
+        "y": 59.465935653607346
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_144",
+      "id": "dlusker_estate",
       "name": "Dlusker Estate",
-      "lore": "The home of the [[Dlusker]] textile [[patriar]] family, down on its luck in the late 15{{th}} century [[DR]].",
-      "x": 26.48330993188121,
-      "y": 59.55998673016026,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Dlusker"
-      ]
+      "type": "estate",
+      "description": "The home of the [[Dlusker]] textile [[patriar]] family, down on its luck in the late 15{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 26.48330993188121,
+        "y": 59.55998673016026
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_145",
+      "id": "guthmere_estate",
       "name": "Guthmere Estate",
-      "lore": "The family estate of the [[Guthmere]] [[patriar]] family that owned many butcheries and tanneries.",
-      "x": 26.56668421775576,
-      "y": 60.575447958891786,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Guthmere"
-      ]
+      "type": "estate",
+      "description": "The family estate of the [[Guthmere]] [[patriar]] family that owned many butcheries and tanneries.",
+      "coordinates": {
+        "x": 26.56668421775576,
+        "y": 60.575447958891786
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_147",
+      "id": "home_of_krammoch_arkhstaff",
       "name": "Home of Krammoch Arkhstaff",
-      "lore": "The office and home of [[sage]] and retired adventurer Krammoch Arkhstaff in the late 14{{th}} century [[DR]].",
-      "x": 16.117485208686215,
-      "y": 47.534447389844416,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Krammoch Arkhstaff"
-      ]
+      "type": "estate",
+      "description": "The office and home of [[sage]] and retired adventurer Krammoch Arkhstaff in the late 14{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 16.117485208686215,
+        "y": 47.534447389844416
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_148",
+      "id": "home_of_ragefast",
       "name": "Home of Ragefast",
-      "lore": "The office and home of the well-respected sage named [[Ragefast]] in the late 14th century [[DR]].",
-      "x": 14.233333333333333,
-      "y": 45.342343261415664,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Ragefast"
-      ]
+      "type": "estate",
+      "description": "The office and home of the well-respected sage named [[Ragefast]] in the late 14th century [[DR]].",
+      "coordinates": {
+        "x": 14.233333333333333,
+        "y": 45.342343261415664
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_201",
+      "id": "highberry_home",
       "name": "Highberry Home",
-      "lore": "The manse home of [[Cora Highberry]] and [[Roger Highberry]] ''circa'' [[1492 DR]], and the site of their lavish [[wine]] festivals.{{approx}}",
-      "x": 35.56746491509199,
-      "y": 57.44135760365789,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Highberry Home"
-      ]
+      "type": "estate",
+      "description": "The manse home of [[Cora Highberry]] and [[Roger Highberry]] ''circa'' [[1492 DR]], and the site of their lavish [[wine]] festivals.{{approx}}",
+      "coordinates": {
+        "x": 35.56746491509199,
+        "y": 57.44135760365789
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_210",
+      "id": "fauragates",
       "name": "Fauragates",
-      "lore": "The mansion home of the reclusive moneylender Lord [[Erevvus Qwulthurr]] and his consort, magical [[tattoo]]ist, [[Valanthia Harvonth]] in the late 15{{th}} century [[DR]].",
-      "x": 14.275,
-      "y": 43.245361083249755,
-      "category": "estate",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Fauragates"
-      ]
+      "type": "estate",
+      "description": "The mansion home of the reclusive moneylender Lord [[Erevvus Qwulthurr]] and his consort, magical [[tattoo]]ist, [[Valanthia Harvonth]] in the late 15{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 14.275,
+        "y": 43.245361083249755
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     }
-  ],
-  "updatedAt": "2026-04-28T06:34:16.577Z"
+  ]
 }

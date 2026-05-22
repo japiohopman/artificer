@@ -1,568 +1,1107 @@
 {
-  "locationName": "baldurs_gate",
-  "category": "landmark",
-  "subLocations": [
+  "category": "roads",
+  "updatedAt": "2026-04-28T06:34:19.612Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
     {
-      "id": "wiki_83",
+      "id": "sailors_crossing",
       "name": "Sailor's Crossing",
-      "lore": "A pier-side cobblestone plaza with a fountain at its center and the site of a grizzly murder in [[1477 DR]].",
-      "x": 34.30001239693886,
-      "y": 45.699560835861064,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sailor's Crossing"
-      ]
+      "type": "roads",
+      "description": "A pier-side cobblestone plaza with a fountain at its center and the site of a grizzly murder in [[1477 DR]].",
+      "coordinates": {
+        "x": 34.30001239693886,
+        "y": 45.699560835861064
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_84",
+      "id": "admirals_way",
       "name": "Admiral's Way",
-      "lore": "A dockside [[salt]]-strewn street with the [[Low Lantern]] located at its eastern end.",
-      "x": 34.56673290756517,
-      "y": 44.2326791140188,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Admiral's Way"
-      ]
+      "type": "roads",
+      "description": "A dockside [[salt]]-strewn street with the [[Low Lantern]] located at its eastern end.",
+      "coordinates": {
+        "x": 34.56673290756517,
+        "y": 44.2326791140188
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_87",
+      "id": "loklee_street",
       "name": "Loklee Street",
-      "lore": "The street that owed its name to the small fishing village that eventually grew to be known as [[Baldur's Gate]]; it crossed with [[Stormshore Street]] in the north.",
-      "x": 34.212187354535345,
-      "y": 52.23513321484395,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Loklee Street"
-      ]
+      "type": "roads",
+      "description": "The street that owed its name to the small fishing village that eventually grew to be known as [[Baldur's Gate]]; it crossed with [[Stormshore Street]] in the north.",
+      "coordinates": {
+        "x": 34.212187354535345,
+        "y": 52.23513321484395
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_88",
+      "id": "trade_way",
       "name": "Trade Way",
-      "lore": "An ancient, long, well-traveled trade road along the west coast of [[Faerûn]].",
-      "x": 8.739723097396652,
-      "y": 64.99959577775437,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Trade Way"
-      ]
+      "type": "roads",
+      "description": "An ancient, long, well-traveled trade road along the west coast of [[Faer\u00fbn]].",
+      "coordinates": {
+        "x": 8.739723097396652,
+        "y": 64.99959577775437
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_89",
-      "name": "Coast Way",
-      "lore": "A long, well-traveled part of the much larger [[Trade Way]] that started at [[Calimport]] in the south and went along the coastline all the way north to [[Waterdeep]].",
-      "x": 94.28141258385931,
-      "y": 11.116472124480984,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Coast Way"
-      ]
-    },
-    {
-      "id": "wiki_93",
+      "id": "stormshore_street",
       "name": "Stormshore Street",
-      "lore": "A street that began in the northernmost top of the harbors, circled the [[Heapside]], passed [[Sorcerous Sundries]], hooked back west, and ended at the [[Stormshore Street Dock]] where the [[Low Lantern]] was [[anchor]]ed.",
-      "x": 38.96159240933831,
-      "y": 53.43199324982159,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Stormshore Street"
-      ]
+      "type": "roads",
+      "description": "A street that began in the northernmost top of the harbors, circled the [[Heapside]], passed [[Sorcerous Sundries]], hooked back west, and ended at the [[Stormshore Street Dock]] where the [[Low Lantern]] was [[anchor]]ed.",
+      "coordinates": {
+        "x": 38.96159240933831,
+        "y": 53.43199324982159
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_94",
+      "id": "stormshore_street",
       "name": "Stormshore Street",
-      "lore": "A street that began in the northernmost top of the harbors, circled the [[Heapside]], passed [[Sorcerous Sundries]], hooked back west, and ended at the [[Stormshore Street Dock]] where the [[Low Lantern]] was [[anchor]]ed.",
-      "x": 38.37229292855184,
-      "y": 43.830717992927816,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Stormshore Street"
-      ]
+      "type": "roads",
+      "description": "A street that began in the northernmost top of the harbors, circled the [[Heapside]], passed [[Sorcerous Sundries]], hooked back west, and ended at the [[Stormshore Street Dock]] where the [[Low Lantern]] was [[anchor]]ed.",
+      "coordinates": {
+        "x": 38.37229292855184,
+        "y": 43.830717992927816
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_95",
+      "id": "stormshore_street",
       "name": "Stormshore Street",
-      "lore": "A street that began in the northernmost top of the harbors, crossed [[Loklee Street]], circled the [[Heapside]], passed [[Sorcerous Sundries]], hooked back west, and ended at the [[Stormshore Street Dock]] where the [[Low Lantern]] was [[anchor]]ed.",
-      "x": 29.58036437312035,
-      "y": 54.78824314881544,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Stormshore Street"
-      ]
+      "type": "roads",
+      "description": "A street that began in the northernmost top of the harbors, crossed [[Loklee Street]], circled the [[Heapside]], passed [[Sorcerous Sundries]], hooked back west, and ended at the [[Stormshore Street Dock]] where the [[Low Lantern]] was [[anchor]]ed.",
+      "coordinates": {
+        "x": 29.58036437312035,
+        "y": 54.78824314881544
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_97",
+      "id": "bindle_street",
       "name": "Bindle Street",
-      "lore": "The street that began at the [[Old Wall (Baldur's Gate)|Old Wall]] by [[Felogyr's Fireworks]], ran south with a slight curve, passed the [[Blushing Mermaid]], crossed [[Stormshore Street]], and, eventually, ended at a dock near [[Fisher's Wharf]].",
-      "x": 31.371970858643156,
-      "y": 53.08625485963278,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Bindle Street"
-      ]
+      "type": "roads",
+      "description": "The street that began at the [[Old Wall (Baldur's Gate)|Old Wall]] by [[Felogyr's Fireworks]], ran south with a slight curve, passed the [[Blushing Mermaid]], crossed [[Stormshore Street]], and, eventually, ended at a dock near [[Fisher's Wharf]].",
+      "coordinates": {
+        "x": 31.371970858643156,
+        "y": 53.08625485963278
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_100",
+      "id": "splurging_sturgeon",
       "name": "Splurging Sturgeon",
-      "lore": "Once a threadbare inn and tavern, turned into a fanciful eatery specializing in seafood, both exotic and local in [[1482 DR]].",
-      "x": 31.478034427580074,
-      "y": 55.61287586901761,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Splurging Sturgeon"
-      ]
+      "type": "roads",
+      "description": "Once a threadbare inn and tavern, turned into a fanciful eatery specializing in seafood, both exotic and local in [[1482 DR]].",
+      "coordinates": {
+        "x": 31.478034427580074,
+        "y": 55.61287586901761
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_101",
+      "id": "purple_wyrm_inn_and_tavern",
       "name": "Purple Wyrm Inn and Tavern",
-      "lore": "A very famous inn and tavern frequented by merchants, business owners, and adventurers.",
-      "x": 11.360813842506937,
-      "y": 45.430312674548844,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Purple Wyrm Inn and Tavern"
-      ]
+      "type": "roads",
+      "description": "A very famous inn and tavern frequented by merchants, business owners, and adventurers.",
+      "coordinates": {
+        "x": 11.360813842506937,
+        "y": 45.430312674548844
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_112",
+      "id": "ulvurs_lane",
       "name": "Ulvur's Lane",
-      "lore": "A short lane that rang along the southern side of the [[Old Wall (Baldur's Gate)|Old Wall]] from two city blocks west of the [[Gond Gate]].",
-      "x": 19.516714230390388,
-      "y": 47.90001628047283,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Ulvur's Lane"
-      ]
+      "type": "roads",
+      "description": "A short lane that rang along the southern side of the [[Old Wall (Baldur's Gate)|Old Wall]] from two city blocks west of the [[Gond Gate]].",
+      "coordinates": {
+        "x": 19.516714230390388,
+        "y": 47.90001628047283
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_114",
+      "id": "hammaskarls_ride",
       "name": "Hammaskarl's Ride",
-      "lore": "The street that began at the [[Basilisk Gate]], curved south, then moved west past [[Eastway Expeditions]], and ended on an interception with [[Loklee Street]].",
-      "x": 38.13662573199446,
-      "y": 49.46914556689297,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hammaskarl's Ride"
-      ]
+      "type": "roads",
+      "description": "The street that began at the [[Basilisk Gate]], curved south, then moved west past [[Eastway Expeditions]], and ended on an interception with [[Loklee Street]].",
+      "coordinates": {
+        "x": 38.13662573199446,
+        "y": 49.46914556689297
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_115",
+      "id": "talankars_lane",
       "name": "Talankar's Lane",
-      "lore": "The street that began at the [[Basilisk Gate]] and ran northwest, passing the [[Blade and Stars]], the [[Elfsong Tavern]], and ended at the [[Heap Gate]].",
-      "x": 35.02539726308737,
-      "y": 54.1500529022998,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Talankar's Lane"
-      ]
+      "type": "roads",
+      "description": "The street that began at the [[Basilisk Gate]] and ran northwest, passing the [[Blade and Stars]], the [[Elfsong Tavern]], and ended at the [[Heap Gate]].",
+      "coordinates": {
+        "x": 35.02539726308737,
+        "y": 54.1500529022998
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_116",
+      "id": "ascloakans_fine_inn",
       "name": "Ascloakan's Fine Inn",
-      "lore": "An inn of note at the meeting of [[Hammaskarl's Ride]] and [[Talankar's Lane]].",
-      "x": 41.4,
-      "y": 52.33830275491126,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Ascloakan's Fine Inn"
-      ]
+      "type": "roads",
+      "description": "An inn of note at the meeting of [[Hammaskarl's Ride]] and [[Talankar's Lane]].",
+      "coordinates": {
+        "x": 41.4,
+        "y": 52.33830275491126
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_149",
+      "id": "windspell_street",
       "name": "Windspell Street",
-      "lore": "The street that stretched from the [[Citadel Gate]], passed [[Helm and Cloak]],  and separated the [[High House of Wonders]] from the [[Hall of Wonders]].",
-      "x": 15.633342366183127,
-      "y": 52.58276722499826,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Windspell Street"
-      ]
+      "type": "roads",
+      "description": "The street that stretched from the [[Citadel Gate]], passed [[Helm and Cloak]],  and separated the [[High House of Wonders]] from the [[Hall of Wonders]].",
+      "coordinates": {
+        "x": 15.633342366183127,
+        "y": 52.58276722499826
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_150",
+      "id": "belltoll_street",
       "name": "Belltoll Street",
-      "lore": "The street that began at [[The Wide]] by the [[Hlath (family)|Hlath Estate]], moved southwest past the [[High Hall]] and the [[Helm and Cloak]] inn, and ended soon after after crossing [[Sornbanner Street]].",
-      "x": 15.650605269274019,
-      "y": 50.40001582798359,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Belltoll Street"
-      ]
+      "type": "roads",
+      "description": "The street that began at [[The Wide]] by the [[Hlath (family)|Hlath Estate]], moved southwest past the [[High Hall]] and the [[Helm and Cloak]] inn, and ended soon after after crossing [[Sornbanner Street]].",
+      "coordinates": {
+        "x": 15.650605269274019,
+        "y": 50.40001582798359
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_151",
+      "id": "wendserpent_street",
       "name": "Wendserpent Street",
-      "lore": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
-      "x": 18.338901729170928,
-      "y": 39.73134568074621,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Wendserpent Street"
-      ]
+      "type": "roads",
+      "description": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
+      "coordinates": {
+        "x": 18.338901729170928,
+        "y": 39.73134568074621
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_152",
+      "id": "the_run",
       "name": "The Run",
-      "lore": "Thr road that stretched from the [[Watch Citadel]] to the [[Black Dragon Gate]].",
-      "x": 14.650011700726061,
-      "y": 57.923828254733984,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Run (Baldur's Gate)"
-      ]
+      "type": "roads",
+      "description": "Thr road that stretched from the [[Watch Citadel]] to the [[Black Dragon Gate]].",
+      "coordinates": {
+        "x": 14.650011700726061,
+        "y": 57.923828254733984
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_153",
+      "id": "canary_lane",
       "name": "Canary Lane",
-      "lore": "A short shady lane with dark alleys that offered hiding spots for ne'er-do-well and an access point to the [[Baldur's Gate/Sewers|sewers]].",
-      "x": 34.956686456140005,
-      "y": 47.351337046184334,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Canary Lane"
-      ]
+      "type": "roads",
+      "description": "A short shady lane with dark alleys that offered hiding spots for ne'er-do-well and an access point to the [[Baldur's Gate/Sewers|sewers]].",
+      "coordinates": {
+        "x": 34.956686456140005,
+        "y": 47.351337046184334
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_154",
+      "id": "market_street",
       "name": "Market Street",
-      "lore": "The street with a butcher shop, rumored to serve monster meat in [[1477 DR]].",
-      "x": 40.11666666666667,
-      "y": 47.42975140757621,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Market Street (Baldur's Gate)"
-      ]
+      "type": "roads",
+      "description": "The street with a butcher shop, rumored to serve monster meat in [[1477 DR]].",
+      "coordinates": {
+        "x": 40.11666666666667,
+        "y": 47.42975140757621
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_155",
+      "id": "the_western_wet",
       "name": "The Western Wet",
-      "lore": "The road that ran alongside the docks from the [[Seatower of Balduran]] to the [[Water Queen's House]].",
-      "x": 19.610436338569663,
-      "y": 44.73499196084442,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Western Wet"
-      ]
+      "type": "roads",
+      "description": "The road that ran alongside the docks from the [[Seatower of Balduran]] to the [[Water Queen's House]].",
+      "coordinates": {
+        "x": 19.610436338569663,
+        "y": 44.73499196084442
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_156",
+      "id": "the_eastern_wet",
       "name": "The Eastern Wet",
-      "lore": "The street that ran alongside the docks and hugged the harbors from the drydocks on the northern edge of the [[Gray Harbor]] and ended at [[Waendel's Wharf]].",
-      "x": 29.727514933726717,
-      "y": 52.90107396684775,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Eastern Wet"
-      ]
+      "type": "roads",
+      "description": "The street that ran alongside the docks and hugged the harbors from the drydocks on the northern edge of the [[Gray Harbor]] and ended at [[Waendel's Wharf]].",
+      "coordinates": {
+        "x": 29.727514933726717,
+        "y": 52.90107396684775
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_162",
+      "id": "black_eel_street",
       "name": "Black Eel Street",
-      "lore": "The road that began at [[Glaezel's Dock]] and moved in a straight line to the west until it ended at the city walls.",
-      "x": 14.483333333333333,
-      "y": 37.500066430924186,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Black Eel Street"
-      ]
+      "type": "roads",
+      "description": "The road that began at [[Glaezel's Dock]] and moved in a straight line to the west until it ended at the city walls.",
+      "coordinates": {
+        "x": 14.483333333333333,
+        "y": 37.500066430924186
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_163",
+      "id": "caundorl_street",
       "name": "Caundorl Street",
-      "lore": "The road that began at [[Hethkantle's Jetty]] and moved in a straight line to the west until it ended at the city walls.",
-      "x": 15.072048491850678,
-      "y": 39.54312374483062,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Caundorl Street"
-      ]
+      "type": "roads",
+      "description": "The road that began at [[Hethkantle's Jetty]] and moved in a straight line to the west until it ended at the city walls.",
+      "coordinates": {
+        "x": 15.072048491850678,
+        "y": 39.54312374483062
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_164",
+      "id": "wendserpent_street",
       "name": "Wendserpent Street",
-      "lore": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
-      "x": 15.957229186188156,
-      "y": 45.39895310451874,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Wendserpent Street"
-      ]
+      "type": "roads",
+      "description": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
+      "coordinates": {
+        "x": 15.957229186188156,
+        "y": 45.39895310451874
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_165",
+      "id": "wendserpent_street",
       "name": "Wendserpent Street",
-      "lore": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
-      "x": 15.80494889831969,
-      "y": 56.528983525562026,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Wendserpent Street"
-      ]
+      "type": "roads",
+      "description": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
+      "coordinates": {
+        "x": 15.80494889831969,
+        "y": 56.528983525562026
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_166",
+      "id": "wendserpent_street",
       "name": "Wendserpent Street",
-      "lore": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
-      "x": 19.233271353623117,
-      "y": 62.44812321474013,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Wendserpent Street"
-      ]
+      "type": "roads",
+      "description": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
+      "coordinates": {
+        "x": 19.233271353623117,
+        "y": 62.44812321474013
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_167",
+      "id": "wendserpent_street",
       "name": "Wendserpent Street",
-      "lore": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
-      "x": 24.300919594103167,
-      "y": 61.03850625544377,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Wendserpent Street"
-      ]
+      "type": "roads",
+      "description": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
+      "coordinates": {
+        "x": 24.300919594103167,
+        "y": 61.03850625544377
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_168",
+      "id": "nuthkhals_way",
       "name": "Nuthkhal's Way",
-      "lore": "The street that curved, connecting the [[Manycoins House]] with the [[Cliffgate]].",
-      "x": 39.371857667949705,
-      "y": 48.161686142165365,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Nuthkhal's Way"
-      ]
+      "type": "roads",
+      "description": "The street that curved, connecting the [[Manycoins House]] with the [[Cliffgate]].",
+      "coordinates": {
+        "x": 39.371857667949705,
+        "y": 48.161686142165365
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_169",
+      "id": "nuthkhals_way",
       "name": "Nuthkhal's Way",
-      "lore": "The street that curved, connecting the [[Manycoins House]] with the [[Cliffgate]].",
-      "x": 43.133505378716656,
-      "y": 42.953053739258664,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Nuthkhal's Way"
-      ]
+      "type": "roads",
+      "description": "The street that curved, connecting the [[Manycoins House]] with the [[Cliffgate]].",
+      "coordinates": {
+        "x": 43.133505378716656,
+        "y": 42.953053739258664
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_170",
+      "id": "manyspears_lane",
       "name": "Manyspears Lane",
-      "lore": "The long lane that began at the [[Counting House]], passed the [[Baldur's Gate (gate)|Baldur's Gate]] and encircled [[The Wide]].",
-      "x": 23.321715021157893,
-      "y": 51.63881154154358,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Manyspears Lane"
-      ]
+      "type": "roads",
+      "description": "The long lane that began at the [[Counting House]], passed the [[Baldur's Gate (gate)|Baldur's Gate]] and encircled [[The Wide]].",
+      "coordinates": {
+        "x": 23.321715021157893,
+        "y": 51.63881154154358
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_171",
+      "id": "manyspears_lane",
       "name": "Manyspears Lane",
-      "lore": "The long lane that began at the [[Counting House]], passed the [[Baldur's Gate (gate)|Baldur's Gate]] and encircled [[The Wide]].",
-      "x": 19.58689093351834,
-      "y": 60.24087246061824,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Manyspears Lane"
-      ]
+      "type": "roads",
+      "description": "The long lane that began at the [[Counting House]], passed the [[Baldur's Gate (gate)|Baldur's Gate]] and encircled [[The Wide]].",
+      "coordinates": {
+        "x": 19.58689093351834,
+        "y": 60.24087246061824
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_172",
+      "id": "manyspears_lane",
       "name": "Manyspears Lane",
-      "lore": "The long lane that began at the [[Counting House]], passed the [[Baldur's Gate (gate)|Baldur's Gate]] and encircled [[The Wide]].",
-      "x": 25.90752890841652,
-      "y": 58.351896555346435,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Manyspears Lane"
-      ]
+      "type": "roads",
+      "description": "The long lane that began at the [[Counting House]], passed the [[Baldur's Gate (gate)|Baldur's Gate]] and encircled [[The Wide]].",
+      "coordinates": {
+        "x": 25.90752890841652,
+        "y": 58.351896555346435
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_173",
+      "id": "three_spires",
       "name": "Three Spires",
-      "lore": "One of three major moots in [[Baldur's Gate]] – the intersection of [[Hauth Lane]], [[Wendserpent Street]], and [[Blackraven Lane]].",
-      "x": 15.615270614371552,
-      "y": 46.64992506937368,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Three Spires"
-      ]
+      "type": "roads",
+      "description": "One of three major moots in [[Baldur's Gate]] \u2013 the intersection of [[Hauth Lane]], [[Wendserpent Street]], and [[Blackraven Lane]].",
+      "coordinates": {
+        "x": 15.615270614371552,
+        "y": 46.64992506937368
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_174",
+      "id": "hauth_lane",
       "name": "Hauth Lane",
-      "lore": "A short street that moved roughly north to south across the [[Three Spires]] intersection.",
-      "x": 15.049589326253685,
-      "y": 46.6765213625477,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hauth Lane"
-      ]
+      "type": "roads",
+      "description": "A short street that moved roughly north to south across the [[Three Spires]] intersection.",
+      "coordinates": {
+        "x": 15.049589326253685,
+        "y": 46.6765213625477
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_175",
+      "id": "blackraven_lane",
       "name": "Blackraven Lane",
-      "lore": "A short street that moved roughly east to west across the [[Three Spires]] intersection, from the [[Sashenstar]] family estate to [[Chalsendace Street]].",
-      "x": 15.061374439273461,
-      "y": 45.054140768395925,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Blackraven Lane"
-      ]
+      "type": "roads",
+      "description": "A short street that moved roughly east to west across the [[Three Spires]] intersection, from the [[Sashenstar]] family estate to [[Chalsendace Street]].",
+      "coordinates": {
+        "x": 15.061374439273461,
+        "y": 45.054140768395925
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_176",
+      "id": "chalsendace_street",
       "name": "Chalsendace Street",
-      "lore": "A street of wealth mansions; it stretched from the city walls to [[Stormcanter Street]] by the [[Old Wall (Baldur's Gate)|Old Wall]].",
-      "x": 17.216678367392728,
-      "y": 48.55814605317463,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Chalsendace Street"
-      ]
+      "type": "roads",
+      "description": "A street of wealth mansions; it stretched from the city walls to [[Stormcanter Street]] by the [[Old Wall (Baldur's Gate)|Old Wall]].",
+      "coordinates": {
+        "x": 17.216678367392728,
+        "y": 48.55814605317463
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_177",
+      "id": "stormcanter_street",
       "name": "Stormcanter Street",
-      "lore": "A short street on the southern end of [[Chalsendace Street]].",
-      "x": 18.399976598547877,
-      "y": 47.956359617189946,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Stormcanter Street"
-      ]
+      "type": "roads",
+      "description": "A short street on the southern end of [[Chalsendace Street]].",
+      "coordinates": {
+        "x": 18.399976598547877,
+        "y": 47.956359617189946
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_178",
+      "id": "fox_bottom",
       "name": "Fox Bottom",
-      "lore": "One of three major moots in [[Baldur's Gate]]; it was located two city blocks south of [[Manycoins House]] along the [[Stormshore Street]] (formerly known as Long Lane) in a slummy area of run-down rooming-houses.",
-      "x": 40.6333274829703,
-      "y": 46.03813332329314,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Fox Bottom"
-      ]
+      "type": "roads",
+      "description": "One of three major moots in [[Baldur's Gate]]; it was located two city blocks south of [[Manycoins House]] along the [[Stormshore Street]] (formerly known as Long Lane) in a slummy area of run-down rooming-houses.",
+      "coordinates": {
+        "x": 40.6333274829703,
+        "y": 46.03813332329314
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_179",
+      "id": "lathdell",
       "name": "Lathdell",
-      "lore": "The small open plaza, or strake, in front of the [[Shrine of the Suffering]].",
-      "x": 33.1,
-      "y": 59.25906504177184,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Lathdell"
-      ]
+      "type": "roads",
+      "description": "The small open plaza, or strake, in front of the [[Shrine of the Suffering]].",
+      "coordinates": {
+        "x": 33.1,
+        "y": 59.25906504177184
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_180",
+      "id": "hulkael_street",
       "name": "Hulkael Street",
-      "lore": "The street that once ran to and past the [[Manycoins House]], later, just stretched between the [[Lathdell]] plaza and [[Murl's Rest]] where the [[Sorcerous Sundries]] store was located.",
-      "x": 34.49997074818484,
-      "y": 58.055454209274345,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hulkael Street"
-      ]
+      "type": "roads",
+      "description": "The street that once ran to and past the [[Manycoins House]], later, just stretched between the [[Lathdell]] plaza and [[Murl's Rest]] where the [[Sorcerous Sundries]] store was located.",
+      "coordinates": {
+        "x": 34.49997074818484,
+        "y": 58.055454209274345
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_181",
+      "id": "murls_rest",
       "name": "Murl's Rest",
-      "lore": "The triangular plaza, or strake, in front of [[Sorcerous Sundries]].",
-      "x": 36.01143962170057,
-      "y": 57.150857548628025,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Murl's Rest"
-      ]
+      "type": "roads",
+      "description": "The triangular plaza, or strake, in front of [[Sorcerous Sundries]].",
+      "coordinates": {
+        "x": 36.01143962170057,
+        "y": 57.150857548628025
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_182",
+      "id": "lionsmoot",
       "name": "Lionsmoot",
-      "lore": "One of three major moots in [[Baldur's Gate]], named after [[The House of the Lion]] [[festhall]] located on its eastern angle.",
-      "x": 14.950156569396439,
-      "y": 52.978205006408885,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The_House_of_the_Lion"
-      ]
+      "type": "roads",
+      "description": "One of three major moots in [[Baldur's Gate]], named after [[The House of the Lion]] [[festhall]] located on its eastern angle.",
+      "coordinates": {
+        "x": 14.950156569396439,
+        "y": 52.978205006408885
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_189",
+      "id": "misty_court",
       "name": "Misty Court",
-      "lore": "A street of note where the open-air stonemason's workshop, [[Alabaster Stonecrafts]], could be found.",
-      "x": 52.738434542304496,
-      "y": 41.13117410415491,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Misty Court"
-      ]
+      "type": "roads",
+      "description": "A street of note where the open-air stonemason's workshop, [[Alabaster Stonecrafts]], could be found.",
+      "coordinates": {
+        "x": 52.738434542304496,
+        "y": 41.13117410415491
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_191",
+      "id": "trident_lane",
       "name": "Trident Lane",
-      "lore": "An area in the [[Seatower]] that housed many weapon smiths who serviced the [[Flaming Fist]]. One such shop was run by an automaton in the late 15{{th}} century [[DR]].",
-      "x": 20.099993978100137,
-      "y": 35.50658598960021,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Trident Lane"
-      ]
+      "type": "roads",
+      "description": "An area in the [[Seatower]] that housed many weapon smiths who serviced the [[Flaming Fist]]. One such shop was run by an automaton in the late 15{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 20.099993978100137,
+        "y": 35.50658598960021
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_192",
+      "id": "saint_sollars_way",
       "name": "Saint Sollars Way",
-      "lore": "The street of note on which stood the home ot Mrs. [[Leventide]] in the late 15{{th}} century [[DR]].",
-      "x": 35.383336344283265,
-      "y": 55.6669535523489,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Saint Sollars Way"
-      ]
+      "type": "roads",
+      "description": "The street of note on which stood the home ot Mrs. [[Leventide]] in the late 15{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 35.383336344283265,
+        "y": 55.6669535523489
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_193",
+      "id": "old_town_avenue",
       "name": "Old Town Avenue",
-      "lore": "A street in the [[Lower City]] known for its expensive apartments and lodgings.",
-      "x": 37.071114348433746,
-      "y": 54.70282487062468,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Old Town Avenue"
-      ]
+      "type": "roads",
+      "description": "A street in the [[Lower City]] known for its expensive apartments and lodgings.",
+      "coordinates": {
+        "x": 37.071114348433746,
+        "y": 54.70282487062468
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_194",
+      "id": "long_lane",
       "name": "Long Lane",
-      "lore": "A short street that crossed [[Stormshore Street]] at the moot known as [[Fox Bottom]].",
-      "x": 41.021282961629915,
-      "y": 45.4148642508193,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Long Lane"
-      ]
+      "type": "roads",
+      "description": "A short street that crossed [[Stormshore Street]] at the moot known as [[Fox Bottom]].",
+      "coordinates": {
+        "x": 41.021282961629915,
+        "y": 45.4148642508193
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_199",
+      "id": "nortales_hostel",
       "name": "Nortale's Hostel",
-      "lore": "Cheap temporary lodgings, used to house refugees during the [[Absolute crisis]] of [[1492 DR]].{{approx}}",
-      "x": 30.829874195507514,
-      "y": 52.554275311858746,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Nortale's Hostel"
-      ]
+      "type": "roads",
+      "description": "Cheap temporary lodgings, used to house refugees during the [[Absolute crisis]] of [[1492 DR]].{{approx}}",
+      "coordinates": {
+        "x": 30.829874195507514,
+        "y": 52.554275311858746
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_205",
+      "id": "sornbanner_street",
       "name": "Sornbanner Street",
-      "lore": "The street that joined [[Belltoll Street]] at a moot in the west and [[Wendserpent Street]] at another moot to the east.",
-      "x": 14.955305923465756,
-      "y": 47.38129229902365,
-      "category": "roads",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Sornbanner Street"
-      ]
+      "type": "roads",
+      "description": "The street that joined [[Belltoll Street]] at a moot in the west and [[Wendserpent Street]] at another moot to the east.",
+      "coordinates": {
+        "x": 14.955305923465756,
+        "y": 47.38129229902365
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     }
-  ],
-  "updatedAt": "2026-04-28T06:34:19.612Z"
+  ]
 }
