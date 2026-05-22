@@ -9,10 +9,10 @@
       "title": "Luskan",
       "description": "The '''City of Sails''' , was the northernmost major port city ruled by pirate [[High Captains]] and the [[Host Tower of the Arcane]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/luskan/luskan.json",
+        "url": "assets/atlas/world/toril/faerun/cities/luskan/luskan.json",
         "label": "Luskan"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/luskan/luskan.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/luskan/luskan.webp"
     },
     "config": {
       "hiddenCategories": [
@@ -44,12 +44,12 @@
     ],
     "popup": {
       "title": "Neverwinter",
-      "description": "The '''City of Skilled Hands''' and the '''Jewel of the North''', a major bustling, cultured, and cosmopolitan city-state in northwest [[Faer\u00fbn]].",
+      "description": "The '''City of Skilled Hands''' and the '''Jewel of the North''', a major bustling, cultured, and cosmopolitan city-state in northwest [[Faerûn]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/neverwinter/neverwinter.json",
+        "url": "assets/atlas/world/toril/faerun/cities/neverwinter/neverwinter.json",
         "label": "Neverwinter"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/neverwinter/neverwinter.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/neverwinter/neverwinter.webp"
     },
     "id": "neverwinter"
   },
@@ -61,12 +61,12 @@
     ],
     "popup": {
       "title": "Waterdeep",
-      "description": "The famed '''City of Splendors''' \u2013 the most important and influential city in all of [[Faer\u00fbn]]. A marvelous cosmopolitan city of great culture, arts, and academia. Its cultural impact was as grand as its trade.<br/><br/>Interactive map can be found [[Map:Waterdeep|here]].",
+      "description": "The famed '''City of Splendors''' – the most important and influential city in all of [[Faerûn]]. A marvelous cosmopolitan city of great culture, arts, and academia. Its cultural impact was as grand as its trade.<br/><br/>Interactive map can be found [[Map:Waterdeep|here]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep.json",
+        "url": "assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep.json",
         "label": "Waterdeep"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep.webp"
     },
     "id": "waterdeep"
   },
@@ -80,10 +80,10 @@
       "title": "Reth",
       "description": "One of the largest and most powerful city-states in the [[Vilhon Reach]]. It was a high-walled and fast-growing trading port city of [[Chessenta]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/reth/reth.json",
+        "url": "assets/atlas/world/toril/faerun/cities/reth/reth.json",
         "label": "Reth"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/reth/reth.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/reth/reth.webp"
     },
     "id": "reth"
   },
@@ -95,12 +95,12 @@
     ],
     "popup": {
       "title": "Hlath",
-      "description": "A powerful [[Chondath]]sn port city-state that ran on two industries \u2013 fishing and logging.",
+      "description": "A powerful [[Chondath]]sn port city-state that ran on two industries – fishing and logging.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/hlath/hlath.json",
+        "url": "assets/atlas/world/toril/faerun/cities/hlath/hlath.json",
         "label": "Hlath"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/hlath/hlath.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/hlath/hlath.webp"
     },
     "id": "hlath"
   },
@@ -112,12 +112,12 @@
     ],
     "popup": {
       "title": "Sapra",
-      "description": "The only port city on the isle of [[Iligh\u00f4n]], ruled and guarded by the [[druid]]s of the [[Emerald Enclave]].",
+      "description": "The only port city on the isle of [[Ilighôn]], ruled and guarded by the [[druid]]s of the [[Emerald Enclave]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/sapra/sapra.json",
+        "url": "assets/atlas/world/toril/faerun/cities/sapra/sapra.json",
         "label": "Sapra"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/sapra/sapra.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/sapra/sapra.webp"
     },
     "id": "sapra"
   },
@@ -131,10 +131,10 @@
       "title": "Iljak",
       "description": "A powerful city-state that participated in trade and exported fish and grains.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/iljak/iljak.json",
+        "url": "assets/atlas/world/toril/faerun/cities/iljak/iljak.json",
         "label": "Iljak"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/iljak/iljak.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/iljak/iljak.webp"
     },
     "id": "iljak"
   },
@@ -148,10 +148,10 @@
       "title": "Shamph",
       "description": "The metropolis known as the '''Crossroads City''' that grew fat and wealthy off of the [[Emerald Way]] trade.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/shamph/shamph.json",
+        "url": "assets/atlas/world/toril/faerun/cities/shamph/shamph.json",
         "label": "Shamph"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/shamph/shamph.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/shamph/shamph.webp"
     },
     "id": "shamph"
   },
@@ -165,10 +165,10 @@
       "title": "Arrabar",
       "description": "The capital city of [[Chondath]] and one of the primary port cities of the [[Vilhon Reach]], known for its crime and corruption. The heraldic symbol of the city was three golden balls on a white background.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/arrabar/arrabar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/arrabar/arrabar.json",
         "label": "Arrabar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/arrabar/arrabar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/arrabar/arrabar.webp"
     },
     "id": "arrabar"
   },
@@ -182,10 +182,10 @@
       "title": "Mimph",
       "description": "A coastal metropolis of [[Sespech]], only reachable by sea or overland travel as no road led to this city.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/mimph/mimph.json",
+        "url": "assets/atlas/world/toril/faerun/cities/mimph/mimph.json",
         "label": "Mimph"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/mimph/mimph.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/mimph/mimph.webp"
     },
     "id": "mimph"
   },
@@ -199,10 +199,10 @@
       "title": "Nimpeth",
       "description": "One of the [[Free Cities of the Vilhon Reach]] built on the back of slaves, renowned for its high quality [[wine]] from [[Woren Vineyards]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/nimpeth/nimpeth.json",
+        "url": "assets/atlas/world/toril/faerun/cities/nimpeth/nimpeth.json",
         "label": "Nimpeth"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/nimpeth/nimpeth.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/nimpeth/nimpeth.webp"
     },
     "id": "nimpeth"
   },
@@ -216,10 +216,10 @@
       "title": "Ormpetarr",
       "description": "The capital city of [[Sespech]] that was known as the '''City of the Scar''' during the century that followed the [[Spellplague]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/ormpetarr/ormpetarr.json",
+        "url": "assets/atlas/world/toril/faerun/cities/ormpetarr/ormpetarr.json",
         "label": "Ormpetarr"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/ormpetarr/ormpetarr.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/ormpetarr/ormpetarr.webp"
     },
     "id": "ormpetarr"
   },
@@ -233,10 +233,10 @@
       "title": "Innarlith",
       "description": "The city-state located on the eastern tip of the [[Lake of Steam]] and renowned for its access to goods of any type, mostly acquired through illegal means.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/innarlith/innarlith.json",
+        "url": "assets/atlas/world/toril/faerun/cities/innarlith/innarlith.json",
         "label": "Innarlith"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/innarlith/innarlith.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/innarlith/innarlith.webp"
     },
     "id": "innarlith"
   },
@@ -250,10 +250,10 @@
       "title": "Akanax",
       "description": "A harsh, warlike city in the [[Akanal]] region of [[Chessenta]], known for its talented smiths, its rigid military structure, and its intolerance of outsiders.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/akanax/akanax.json",
+        "url": "assets/atlas/world/toril/faerun/cities/akanax/akanax.json",
         "label": "Akanax"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/akanax/akanax.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/akanax/akanax.webp"
     },
     "id": "akanax"
   },
@@ -267,10 +267,10 @@
       "title": "Heptios",
       "description": "A city-state in [[Chessenta]] controlled by [[Luthcheq]] in the 15{{th}} century [[DR]]. It was renowned for its academia and trade.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/heptios/heptios.json",
+        "url": "assets/atlas/world/toril/faerun/cities/heptios/heptios.json",
         "label": "Heptios"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/heptios/heptios.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/heptios/heptios.webp"
     },
     "id": "heptios"
   },
@@ -282,12 +282,12 @@
     ],
     "popup": {
       "title": "Luthcheq",
-      "description": "The '''City of Madness''' \u2013 a port city that valued its martial culture.<br/><br/>Interactive map can be found [[Map:Luthcheq|here]].",
+      "description": "The '''City of Madness''' – a port city that valued its martial culture.<br/><br/>Interactive map can be found [[Map:Luthcheq|here]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/luthcheq/luthcheq.json",
+        "url": "assets/atlas/world/toril/faerun/cities/luthcheq/luthcheq.json",
         "label": "Luthcheq"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/luthcheq/luthcheq.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/luthcheq/luthcheq.webp"
     },
     "id": "luthcheq"
   },
@@ -301,10 +301,10 @@
       "title": "Cimbar",
       "description": "A city-state in the [[Old Empires]] and a sometimes-capital of the empire of [[Chessenta]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/cimbar/cimbar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/cimbar/cimbar.json",
         "label": "Cimbar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/cimbar/cimbar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/cimbar/cimbar.webp"
     },
     "id": "cimbar"
   },
@@ -318,10 +318,10 @@
       "title": "Airspur",
       "description": "A powerful trading port city in western [[Chessenta]] in the [[Old Empires]] and a highly cosmopolitan and multiracial city, with an impressively high population of [[orc]]s and [[half-orc]]s.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/airspur/airspur.json",
+        "url": "assets/atlas/world/toril/faerun/cities/airspur/airspur.json",
         "label": "Airspur"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/airspur/airspur.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/airspur/airspur.webp"
     },
     "id": "airspur"
   },
@@ -335,10 +335,10 @@
       "title": "Soorenar",
       "description": "A city-state located on the western coast of the [[Bay of Chessenta]] that headed the [[Northern Alliance]], one of the three most powerful alliances in [[Chessenta]] as of the mid-to-late 14{{th}} century [[DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/soorenar/soorenar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/soorenar/soorenar.json",
         "label": "Soorenar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/soorenar/soorenar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/soorenar/soorenar.webp"
     },
     "id": "soorenar"
   },
@@ -352,10 +352,10 @@
       "title": "Messemprar",
       "description": "A city in [[Unther]] that, at some point during the country's history, was its largest city, but by the 14{{th}} century [[DR]] had shrunk both in importance and in size.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/messemprar/messemprar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/messemprar/messemprar.json",
         "label": "Messemprar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/messemprar/messemprar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/messemprar/messemprar.webp"
     },
     "id": "messemprar"
   },
@@ -369,10 +369,10 @@
       "title": "Unthalass",
       "description": "The capital of [[Unther]] and one of the grandest cities in [[Faerun]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/unthalass/unthalass.json",
+        "url": "assets/atlas/world/toril/faerun/cities/unthalass/unthalass.json",
         "label": "Unthalass"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/unthalass/unthalass.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/unthalass/unthalass.webp"
     },
     "id": "unthalass"
   },
@@ -386,10 +386,10 @@
       "title": "Gheldaneth",
       "description": "The second largest city in the nation of [[Mulhorand]], as well as one of its sixteen governments.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/gheldaneth/gheldaneth.json",
+        "url": "assets/atlas/world/toril/faerun/cities/gheldaneth/gheldaneth.json",
         "label": "Gheldaneth"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/gheldaneth/gheldaneth.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/gheldaneth/gheldaneth.webp"
     },
     "id": "gheldaneth"
   },
@@ -403,10 +403,10 @@
       "title": "Aleaxtis",
       "description": "The underwater '''Kingdom of the Sahuagin'''.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/aleaxtis/aleaxtis.json",
+        "url": "assets/atlas/world/toril/faerun/cities/aleaxtis/aleaxtis.json",
         "label": "Aleaxtis"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/aleaxtis/aleaxtis.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/aleaxtis/aleaxtis.webp"
     },
     "id": "aleaxtis"
   },
@@ -420,10 +420,10 @@
       "title": "Hilbrand",
       "description": "An independent city located just south of the country of [[Aglarond]] with a population of 20,000 in the mid-14{{th}} century [[DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/hilbrand/hilbrand.json",
+        "url": "assets/atlas/world/toril/faerun/cities/hilbrand/hilbrand.json",
         "label": "Hilbrand"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/hilbrand/hilbrand.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/hilbrand/hilbrand.webp"
     },
     "id": "hilbrand"
   },
@@ -437,10 +437,10 @@
       "title": "Murbant",
       "description": "A previously independent coastal city that came under the control of [[Thay]] during the 14{{th}} century [[DR]], under the greater [[tharch]] of [[Priador]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/murbant/murbant.json",
+        "url": "assets/atlas/world/toril/faerun/cities/murbant/murbant.json",
         "label": "Murbant"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/murbant/murbant.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/murbant/murbant.webp"
     },
     "id": "murbant"
   },
@@ -452,12 +452,12 @@
     ],
     "popup": {
       "title": "Neldorild",
-      "description": "Or '''Neldorild''' \u2013 the fourth largest city in [[Mulhorand]].",
+      "description": "Or '''Neldorild''' – the fourth largest city in [[Mulhorand]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/neldorild/neldorild.json",
+        "url": "assets/atlas/world/toril/faerun/cities/neldorild/neldorild.json",
         "label": "Neldorild"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/neldorild/neldorild.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/neldorild/neldorild.webp"
     },
     "id": "neldorild"
   },
@@ -471,10 +471,10 @@
       "title": "Surbroar",
       "description": "A city located in the country of [[Mulhorand]] that sat on the [[River of Spears]] and on the [[Great South Road]] due north of [[Ulzel]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/surbroar/surbroar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/surbroar/surbroar.json",
         "label": "Surbroar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/surbroar/surbroar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/surbroar/surbroar.webp"
     },
     "id": "surbroar"
   },
@@ -488,10 +488,10 @@
       "title": "Jhalhoran",
       "description": "A major center of worship for [[Osiris]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/jhalhoran/jhalhoran.json",
+        "url": "assets/atlas/world/toril/faerun/cities/jhalhoran/jhalhoran.json",
         "label": "Jhalhoran"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/jhalhoran/jhalhoran.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/jhalhoran/jhalhoran.webp"
     },
     "id": "jhalhoran"
   },
@@ -503,12 +503,12 @@
     ],
     "popup": {
       "title": "Mishtan",
-      "description": "One of [[Mulhorand]]'s sixteen preceptual governments and one of the centers of [[Osiris]] worship. It was the gateway to the [[Land of the Dead]]\u2014the resting place of Mulhorand's pharaohs and their families.",
+      "description": "One of [[Mulhorand]]'s sixteen preceptual governments and one of the centers of [[Osiris]] worship. It was the gateway to the [[Land of the Dead]]—the resting place of Mulhorand's pharaohs and their families.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/mishtan/mishtan.json",
+        "url": "assets/atlas/world/toril/faerun/cities/mishtan/mishtan.json",
         "label": "Mishtan"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/mishtan/mishtan.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/mishtan/mishtan.webp"
     },
     "id": "mishtan"
   },
@@ -522,10 +522,10 @@
       "title": "Skuld",
       "description": "The '''City of Eternity''' - the capital of [[Mulhorand]]. Survivors of the [[Spellplague]] were rebuilding the nation in the 15{{th}} century [[DR]].<br/><br/>Interactive map can be found [[Map:Skuld|here]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/skuld/skuld.json",
+        "url": "assets/atlas/world/toril/faerun/cities/skuld/skuld.json",
         "label": "Skuld"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/skuld/skuld.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/skuld/skuld.webp"
     },
     "id": "skuld"
   },
@@ -539,10 +539,10 @@
       "title": "Maerlar",
       "description": "The city on the crossroads of the [[Great South Road]], [[Great East Road]], and the [[Road to the Dawn]] in north [[Mulhorand]]. The city's main duty was to maintain guards at the crossroads and protect incoming trade. ",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/maerlar/maerlar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/maerlar/maerlar.json",
         "label": "Maerlar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/maerlar/maerlar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/maerlar/maerlar.webp"
     },
     "id": "maerlar"
   },
@@ -553,13 +553,13 @@
       860.19
     ],
     "popup": {
-      "title": "Kh\u00f4ltar",
-      "description": "A small city on the edge of the [[Great Rift]] in south [[Faer\u00fbn]], known as the '''Iron City''' because of its high walls covered in [[iron]].",
+      "title": "Khôltar",
+      "description": "A small city on the edge of the [[Great Rift]] in south [[Faerûn]], known as the '''Iron City''' because of its high walls covered in [[iron]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/kholtar/kholtar.json",
-        "label": "Kh\u00f4ltar"
+        "url": "assets/atlas/world/toril/faerun/cities/kholtar/kholtar.json",
+        "label": "Khôltar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/kholtar/kholtar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/kholtar/kholtar.webp"
     },
     "id": "kholtar"
   },
@@ -573,10 +573,10 @@
       "title": "Delthuntle",
       "description": "THe commercial center and port in [[Aglarond]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/delthuntle/delthuntle.json",
+        "url": "assets/atlas/world/toril/faerun/cities/delthuntle/delthuntle.json",
         "label": "Delthuntle"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/delthuntle/delthuntle.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/delthuntle/delthuntle.webp"
     },
     "id": "delthuntle"
   },
@@ -590,10 +590,10 @@
       "title": "Laothkund",
       "description": "A city of 50,000 inhabitants.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/laothkund/laothkund.json",
+        "url": "assets/atlas/world/toril/faerun/cities/laothkund/laothkund.json",
         "label": "Laothkund"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/laothkund/laothkund.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/laothkund/laothkund.webp"
     },
     "id": "laothkund"
   },
@@ -607,10 +607,10 @@
       "title": "Escalant",
       "description": "A prosperous coastal city situated on the mouth of the [[River Lapendrar]], that received trade from [[Chessenta]], [[Mulhorand]], [[Turmish]], and beyond.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/escalant/escalant.json",
+        "url": "assets/atlas/world/toril/faerun/cities/escalant/escalant.json",
         "label": "Escalant"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/escalant/escalant.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/escalant/escalant.webp"
     },
     "id": "escalant"
   },
@@ -624,10 +624,10 @@
       "title": "Thasselen",
       "description": "An independent city located just south of the country of [[Aglarond]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/thasselen/thasselen.json",
+        "url": "assets/atlas/world/toril/faerun/cities/thasselen/thasselen.json",
         "label": "Thasselen"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/thasselen/thasselen.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/thasselen/thasselen.webp"
     },
     "id": "thasselen"
   },
@@ -641,10 +641,10 @@
       "title": "Bezantur",
       "description": "The '''City of a Thousand Temples''' and the '''Citadel of Thieves''', a foreboding but prosperous port city located on the southern coast of the Thayan tharch of [[Priador]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/bezantur/bezantur.json",
+        "url": "assets/atlas/world/toril/faerun/cities/bezantur/bezantur.json",
         "label": "Bezantur"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/bezantur/bezantur.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/bezantur/bezantur.webp"
     },
     "id": "bezantur"
   },
@@ -658,10 +658,10 @@
       "title": "Sultim",
       "description": "A city and a major center of worship for [[Anhur]].\n",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/sultim/sultim.json",
+        "url": "assets/atlas/world/toril/faerun/cities/sultim/sultim.json",
         "label": "Sultim"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/sultim/sultim.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/sultim/sultim.webp"
     },
     "id": "sultim"
   },
@@ -673,12 +673,12 @@
     ],
     "popup": {
       "title": "Murghyr",
-      "description": "The capital city of the country of [[Murgh\u00f4m]].",
+      "description": "The capital city of the country of [[Murghôm]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/murghyr/murghyr.json",
+        "url": "assets/atlas/world/toril/faerun/cities/murghyr/murghyr.json",
         "label": "Murghyr"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/murghyr/murghyr.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/murghyr/murghyr.webp"
     },
     "id": "murghyr"
   },
@@ -692,10 +692,10 @@
       "title": "Almorel",
       "description": "A cosmopolitan yet primarily [[human]] trade city on the [[Golden Way]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/almorel/almorel.json",
+        "url": "assets/atlas/world/toril/faerun/cities/almorel/almorel.json",
         "label": "Almorel"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/almorel/almorel.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/almorel/almorel.webp"
     },
     "id": "almorel"
   },
@@ -709,10 +709,10 @@
       "title": "Turelve",
       "description": "A large city and a major launching point for caravans heading north or west out of [[Durpar]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/turelve/turelve.json",
+        "url": "assets/atlas/world/toril/faerun/cities/turelve/turelve.json",
         "label": "Turelve"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/turelve/turelve.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/turelve/turelve.webp"
     },
     "id": "turelve"
   },
@@ -726,10 +726,10 @@
       "title": "Sezilinta",
       "description": "A large city in [[Durpar]] of 17,000 due to its proximity to the extensively-mined [[Giant's Belt Mountains]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/sezilinta/sezilinta.json",
+        "url": "assets/atlas/world/toril/faerun/cities/sezilinta/sezilinta.json",
         "label": "Sezilinta"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/sezilinta/sezilinta.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/sezilinta/sezilinta.webp"
     },
     "id": "sezilinta"
   },
@@ -743,10 +743,10 @@
       "title": "Assur",
       "description": "A small port city in [[Durpar]] that once was destroyed by [[giant]]s from the [[Beastlands]] but was rebuilt as a fortress city with a large garrison.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/assur/assur.json",
+        "url": "assets/atlas/world/toril/faerun/cities/assur/assur.json",
         "label": "Assur"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/assur/assur.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/assur/assur.webp"
     },
     "id": "assur"
   },
@@ -760,10 +760,10 @@
       "title": "Vaelan",
       "description": "A huge city in [[Durpar]], made the nation's capital in [[1371 DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/vaelan/vaelan.json",
+        "url": "assets/atlas/world/toril/faerun/cities/vaelan/vaelan.json",
         "label": "Vaelan"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/vaelan/vaelan.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/vaelan/vaelan.webp"
     },
     "id": "vaelan"
   },
@@ -774,13 +774,13 @@
       1021.41
     ],
     "popup": {
-      "title": "Ormp\u00e9",
+      "title": "Ormpé",
       "description": "A large coastal city that dealt in trade, fishery, and mining of the [[Curna Mountains]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/ormpe/ormpe.json",
-        "label": "Ormp\u00e9"
+        "url": "assets/atlas/world/toril/faerun/cities/ormpe/ormpe.json",
+        "label": "Ormpé"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/ormpe/ormpe.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/ormpe/ormpe.webp"
     },
     "id": "ormpe"
   },
@@ -794,10 +794,10 @@
       "title": "Pyratar",
       "description": "The capital of [[Var the Golden]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/pyratar/pyratar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/pyratar/pyratar.json",
         "label": "Pyratar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/pyratar/pyratar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/pyratar/pyratar.webp"
     },
     "id": "pyratar"
   },
@@ -809,12 +809,12 @@
     ],
     "popup": {
       "title": "Chavyondat",
-      "description": "Previously known as '''Klionna''' \u2013 a port city and the capital of [[Estagund]].",
+      "description": "Previously known as '''Klionna''' – a port city and the capital of [[Estagund]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/chavyondat/chavyondat.json",
+        "url": "assets/atlas/world/toril/faerun/cities/chavyondat/chavyondat.json",
         "label": "Chavyondat"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/chavyondat/chavyondat.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/chavyondat/chavyondat.webp"
     },
     "id": "chavyondat"
   },
@@ -828,10 +828,10 @@
       "title": "Fasruil",
       "description": "The northernmost city in [[Luiren]], famous for the tasty red [[rhubarb]] that was traded across all of Luiren and other countries of the [[Shining South]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/fasruil/fasruil.json",
+        "url": "assets/atlas/world/toril/faerun/cities/fasruil/fasruil.json",
         "label": "Fasruil"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/fasruil/fasruil.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/fasruil/fasruil.webp"
     },
     "id": "fasruil"
   },
@@ -845,10 +845,10 @@
       "title": "Beluir",
       "description": "The largest city (usually considered the capital) of the [[halfling]] realm of [[Luiren]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/beluir/beluir.json",
+        "url": "assets/atlas/world/toril/faerun/cities/beluir/beluir.json",
         "label": "Beluir"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/beluir/beluir.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/beluir/beluir.webp"
     },
     "id": "beluir"
   },
@@ -862,10 +862,10 @@
       "title": "Chethel",
       "description": "A coastal trading and shipbuilding city in the [[halfling]] realm of [[Luiren]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/chethel/chethel.json",
+        "url": "assets/atlas/world/toril/faerun/cities/chethel/chethel.json",
         "label": "Chethel"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/chethel/chethel.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/chethel/chethel.webp"
     },
     "id": "chethel"
   },
@@ -879,10 +879,10 @@
       "title": "Krenadir",
       "description": "Also seen as '''Krenalir''', a coastal city in the [[halfling]] realm of [[Luiren]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/krenadir/krenadir.json",
+        "url": "assets/atlas/world/toril/faerun/cities/krenadir/krenadir.json",
         "label": "Krenadir"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/krenadir/krenadir.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/krenadir/krenadir.webp"
     },
     "id": "krenadir"
   },
@@ -894,12 +894,12 @@
     ],
     "popup": {
       "title": "Delzimmer",
-      "description": "A trade city in southeast Faer\u00fbn.",
+      "description": "A trade city in southeast Faerûn.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/delzimmer/delzimmer.json",
+        "url": "assets/atlas/world/toril/faerun/cities/delzimmer/delzimmer.json",
         "label": "Delzimmer"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/delzimmer/delzimmer.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/delzimmer/delzimmer.webp"
     },
     "id": "delzimmer"
   },
@@ -913,10 +913,10 @@
       "title": "Hazuth",
       "description": "A city in [[Dambrath]], home to 20,000 people of various races that sold [[horse]]s as far as [[Westgate]] and [[Chondath]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/hazuth/hazuth.json",
+        "url": "assets/atlas/world/toril/faerun/cities/hazuth/hazuth.json",
         "label": "Hazuth"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/hazuth/hazuth.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/hazuth/hazuth.webp"
     },
     "id": "hazuth"
   },
@@ -930,10 +930,10 @@
       "title": "Ammathtar",
       "description": "A city located in northeastern [[Dambrath]], home of the nation's largest [[horse]] pens.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/ammathtar/ammathtar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/ammathtar/ammathtar.json",
         "label": "Ammathtar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/ammathtar/ammathtar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/ammathtar/ammathtar.webp"
     },
     "id": "ammathtar"
   },
@@ -947,10 +947,10 @@
       "title": "Luenath",
       "description": "The second-largest city in [[Dambrath]], a favorite location for wealthy [[crinti]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/luenath/luenath.json",
+        "url": "assets/atlas/world/toril/faerun/cities/luenath/luenath.json",
         "label": "Luenath"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/luenath/luenath.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/luenath/luenath.webp"
     },
     "id": "luenath"
   },
@@ -964,10 +964,10 @@
       "title": "Herath",
       "description": "The city that stood on the shores of the [[Dolphin's Climb]] river, where it merged with the [[River Dambron]]. It was [[Dambrath]]'s major source of mints for [[electrum]] and [[silver]] [[coins]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/herath/herath.json",
+        "url": "assets/atlas/world/toril/faerun/cities/herath/herath.json",
         "label": "Herath"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/herath/herath.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/herath/herath.webp"
     },
     "id": "herath"
   },
@@ -981,10 +981,10 @@
       "title": "Prastuil",
       "description": "The oldest and the most beautiful city in [[Dambrath]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/prastuil/prastuil.json",
+        "url": "assets/atlas/world/toril/faerun/cities/prastuil/prastuil.json",
         "label": "Prastuil"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/prastuil/prastuil.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/prastuil/prastuil.webp"
     },
     "id": "prastuil"
   },
@@ -998,10 +998,10 @@
       "title": "Hethar",
       "description": "A city in [[Dambrath]], a prime position to defend the southern portion of Dambrath from attack, with its smiths fully dedicated to field artillery.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/hethar/hethar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/hethar/hethar.json",
         "label": "Hethar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/hethar/hethar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/hethar/hethar.webp"
     },
     "id": "hethar"
   },
@@ -1015,10 +1015,10 @@
       "title": "Cathyr",
       "description": "The metropolis capital city of [[Dambrath]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/cathyr/cathyr.json",
+        "url": "assets/atlas/world/toril/faerun/cities/cathyr/cathyr.json",
         "label": "Cathyr"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/cathyr/cathyr.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/cathyr/cathyr.webp"
     },
     "id": "cathyr"
   },
@@ -1032,10 +1032,10 @@
       "title": "Kormul",
       "description": "A village that grew to be the '''City of Cults''' in the 15{{th}} century [[DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/kormul/kormul.json",
+        "url": "assets/atlas/world/toril/faerun/cities/kormul/kormul.json",
         "label": "Kormul"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/kormul/kormul.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/kormul/kormul.webp"
     },
     "id": "kormul"
   },
@@ -1049,10 +1049,10 @@
       "title": "Uzurr",
       "description": "Or the '''City of Toiling Monks''', a member of the [[Lapal League]] and one of the [[Cities of the Seabreeze]]. It was devoted to [[Ilmater]], the Crying God.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/uzurr/uzurr.json",
+        "url": "assets/atlas/world/toril/faerun/cities/uzurr/uzurr.json",
         "label": "Uzurr"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/uzurr/uzurr.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/uzurr/uzurr.webp"
     },
     "id": "uzurr"
   },
@@ -1066,10 +1066,10 @@
       "title": "Maeruhal",
       "description": "A city located in eastern [[Halruaa]] famed for its [[electrum]] mines and its five ''[[skyship]]''s permanently docked there.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/maeruhal/maeruhal.json",
+        "url": "assets/atlas/world/toril/faerun/cities/maeruhal/maeruhal.json",
         "label": "Maeruhal"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/maeruhal/maeruhal.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/maeruhal/maeruhal.webp"
     },
     "id": "maeruhal"
   },
@@ -1083,10 +1083,10 @@
       "title": "Aluarim",
       "description": "A city located in the center of [[Halruaa]], where [[electrum]] was minted into coinage called [[skie]] in the Halruaan [[Royal Mint]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/aluarim/aluarim.json",
+        "url": "assets/atlas/world/toril/faerun/cities/aluarim/aluarim.json",
         "label": "Aluarim"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/aluarim/aluarim.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/aluarim/aluarim.webp"
     },
     "id": "aluarim"
   },
@@ -1100,10 +1100,10 @@
       "title": "Galdel",
       "description": "A quiet city in central [[Halruaa]] known for its electrum master smiths.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/galdel/galdel.json",
+        "url": "assets/atlas/world/toril/faerun/cities/galdel/galdel.json",
         "label": "Galdel"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/galdel/galdel.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/galdel/galdel.webp"
     },
     "id": "galdel"
   },
@@ -1117,10 +1117,10 @@
       "title": "Zalazuu",
       "description": "A city of rich green gardens and villas, located in southeast [[Halruaa]] nestled in the [[Bay of Azuth]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/zalazuu/zalazuu.json",
+        "url": "assets/atlas/world/toril/faerun/cities/zalazuu/zalazuu.json",
         "label": "Zalazuu"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/zalazuu/zalazuu.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/zalazuu/zalazuu.webp"
     },
     "id": "zalazuu"
   },
@@ -1132,12 +1132,12 @@
     ],
     "popup": {
       "title": "Halarahh",
-      "description": "A busy port city of majestic buildings and plazas \u2013 the capital of the wizard nation of [[Halruaa]].",
+      "description": "A busy port city of majestic buildings and plazas – the capital of the wizard nation of [[Halruaa]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/halarahh/halarahh.json",
+        "url": "assets/atlas/world/toril/faerun/cities/halarahh/halarahh.json",
         "label": "Halarahh"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/halarahh/halarahh.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/halarahh/halarahh.webp"
     },
     "id": "halarahh"
   },
@@ -1151,10 +1151,10 @@
       "title": "Khaerbaal",
       "description": "The coastal city that was one of two bases for [[Halruaa]]'s navy, housing 50 ships, and 20 skyships, with most of its population working in the trade and shipping industries.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/khaerbaal/khaerbaal.json",
+        "url": "assets/atlas/world/toril/faerun/cities/khaerbaal/khaerbaal.json",
         "label": "Khaerbaal"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/khaerbaal/khaerbaal.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/khaerbaal/khaerbaal.webp"
     },
     "id": "khaerbaal"
   },
@@ -1168,10 +1168,10 @@
       "title": "Halagard",
       "description": "The capital city of [[Halruaa]] up until the mid-1200's [[DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/halagard/halagard.json",
+        "url": "assets/atlas/world/toril/faerun/cities/halagard/halagard.json",
         "label": "Halagard"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/halagard/halagard.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/halagard/halagard.webp"
     },
     "id": "halagard"
   },
@@ -1185,10 +1185,10 @@
       "title": "Mhairhetel",
       "description": "The '''City of Renegades''' of the [[Serpentes]] nation of the [[Mhair Jungles]], populated by [[human]]s and [[yuan-ti]] alike.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/mhairhetel/mhairhetel.json",
+        "url": "assets/atlas/world/toril/faerun/cities/mhairhetel/mhairhetel.json",
         "label": "Mhairhetel"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/mhairhetel/mhairhetel.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/mhairhetel/mhairhetel.webp"
     },
     "id": "mhairhetel"
   },
@@ -1200,12 +1200,12 @@
     ],
     "popup": {
       "title": "Yallasch",
-      "description": "A city in the [[Border Kingdoms]] near its trade partner \u2013 the realm of [[Adaerglast]].",
+      "description": "A city in the [[Border Kingdoms]] near its trade partner – the realm of [[Adaerglast]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/yallasch/yallasch.json",
+        "url": "assets/atlas/world/toril/faerun/cities/yallasch/yallasch.json",
         "label": "Yallasch"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/yallasch/yallasch.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/yallasch/yallasch.webp"
     },
     "id": "yallasch"
   },
@@ -1219,10 +1219,10 @@
       "title": "Ormpur",
       "description": "An independent city-state also known as '''the City of Saffron'''.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/ormpur/ormpur.json",
+        "url": "assets/atlas/world/toril/faerun/cities/ormpur/ormpur.json",
         "label": "Ormpur"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/ormpur/ormpur.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/ormpur/ormpur.webp"
     },
     "id": "ormpur"
   },
@@ -1236,10 +1236,10 @@
       "title": "Sheirtalar",
       "description": "The capital of [[Lapaliiya]] also known as the '''Shining City by the Sea'''.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/sheirtalar/sheirtalar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/sheirtalar/sheirtalar.json",
         "label": "Sheirtalar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/sheirtalar/sheirtalar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/sheirtalar/sheirtalar.webp"
     },
     "id": "sheirtalar"
   },
@@ -1253,10 +1253,10 @@
       "title": "Sheirlantar",
       "description": "The''' Tomb City''' of [[Lapaliiya]] on the  [[Lapal Way]] by the [[River Talar]], dedicated to the worship of the gods of the dead.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/sheirlantar/sheirlantar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/sheirlantar/sheirlantar.json",
         "label": "Sheirlantar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/sheirlantar/sheirlantar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/sheirlantar/sheirlantar.webp"
     },
     "id": "sheirlantar"
   },
@@ -1270,10 +1270,10 @@
       "title": "Lushpool",
       "description": "The '''City of Shimmering Pools''' of [[Lapaliiya]], by the mouth of [[Talar Bay]] of the [[Ithmong Peninsula]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/lushpool/lushpool.json",
+        "url": "assets/atlas/world/toril/faerun/cities/lushpool/lushpool.json",
         "label": "Lushpool"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/lushpool/lushpool.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/lushpool/lushpool.webp"
     },
     "id": "lushpool"
   },
@@ -1287,10 +1287,10 @@
       "title": "Ithmong",
       "description": "The '''Stormwracked City''' in [[Lapaliiya]] that stood atop a 50-foot high cliff.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/ithmong/ithmong.json",
+        "url": "assets/atlas/world/toril/faerun/cities/ithmong/ithmong.json",
         "label": "Ithmong"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/ithmong/ithmong.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/ithmong/ithmong.webp"
     },
     "id": "ithmong"
   },
@@ -1304,10 +1304,10 @@
       "title": "Sammaresh",
       "description": "The '''City of Dancing Dolphins''', famed for its [[emerald oyster]]s and [[pearl]]s that traded with nearby [[aquatic elves]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/sammaresh/sammaresh.json",
+        "url": "assets/atlas/world/toril/faerun/cities/sammaresh/sammaresh.json",
         "label": "Sammaresh"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/sammaresh/sammaresh.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/sammaresh/sammaresh.webp"
     },
     "id": "sammaresh"
   },
@@ -1319,12 +1319,12 @@
     ],
     "popup": {
       "title": "Tashluta",
-      "description": "The '''City of Slithering Vines''' \u2013 the capital city of [[Tashalar]], constructed within and atop a volcanic crater that opened up into the [[Shining Sea]].",
+      "description": "The '''City of Slithering Vines''' – the capital city of [[Tashalar]], constructed within and atop a volcanic crater that opened up into the [[Shining Sea]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/tashluta/tashluta.json",
+        "url": "assets/atlas/world/toril/faerun/cities/tashluta/tashluta.json",
         "label": "Tashluta"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/tashluta/tashluta.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/tashluta/tashluta.webp"
     },
     "id": "tashluta"
   },
@@ -1338,10 +1338,10 @@
       "title": "Derlusk",
       "description": "A city of music that grew up around one of the busiest harbors in the [[Border Kingdoms]] southeast of the [[Dragonsmoke Ridge]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/derlusk/derlusk.json",
+        "url": "assets/atlas/world/toril/faerun/cities/derlusk/derlusk.json",
         "label": "Derlusk"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/derlusk/derlusk.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/derlusk/derlusk.webp"
     },
     "id": "derlusk"
   },
@@ -1355,10 +1355,10 @@
       "title": "Ankhapur",
       "description": "A metropolis that thrived on [[pearl]] industry.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/ankhapur/ankhapur.json",
+        "url": "assets/atlas/world/toril/faerun/cities/ankhapur/ankhapur.json",
         "label": "Ankhapur"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/ankhapur/ankhapur.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/ankhapur/ankhapur.webp"
     },
     "id": "ankhapur"
   },
@@ -1372,10 +1372,10 @@
       "title": "Saelmur",
       "description": "A city on the [[Lake of Steam]], responsible for supplying the construction of the canal between the Lake of Steam and the [[Nagaflow]] with migrant workers in the mid-1360s [[DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/saelmur/saelmur.json",
+        "url": "assets/atlas/world/toril/faerun/cities/saelmur/saelmur.json",
         "label": "Saelmur"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/saelmur/saelmur.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/saelmur/saelmur.webp"
     },
     "id": "saelmur"
   },
@@ -1389,10 +1389,10 @@
       "title": "Mintar",
       "description": "A large city conquered by the [[Church of Bane]] in [[1362 DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/mintar/mintar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/mintar/mintar.json",
         "label": "Mintar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/mintar/mintar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/mintar/mintar.webp"
     },
     "id": "mintar"
   },
@@ -1406,10 +1406,10 @@
       "title": "Tulmon",
       "description": "A stone metropolis ruled by [[sorcerer]] [[Arkanuirr Tchallem]] in the late 14{{th}} century [[DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/tulmon/tulmon.json",
+        "url": "assets/atlas/world/toril/faerun/cities/tulmon/tulmon.json",
         "label": "Tulmon"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/tulmon/tulmon.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/tulmon/tulmon.webp"
     },
     "id": "tulmon"
   },
@@ -1421,12 +1421,12 @@
     ],
     "popup": {
       "title": "Yeshpek",
-      "description": "A large fortified city \u2013 a major center of the fishing trade, chain, and lock-making.",
+      "description": "A large fortified city – a major center of the fishing trade, chain, and lock-making.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/yeshpek/yeshpek.json",
+        "url": "assets/atlas/world/toril/faerun/cities/yeshpek/yeshpek.json",
         "label": "Yeshpek"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/yeshpek/yeshpek.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/yeshpek/yeshpek.webp"
     },
     "id": "yeshpek"
   },
@@ -1440,10 +1440,10 @@
       "title": "Torich",
       "description": "A city of modest size in the [[Sanrach Mountains]], known for exporting high quality [[salt]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/torich/torich.json",
+        "url": "assets/atlas/world/toril/faerun/cities/torich/torich.json",
         "label": "Torich"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/torich/torich.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/torich/torich.webp"
     },
     "id": "torich"
   },
@@ -1457,10 +1457,10 @@
       "title": "Almraiven",
       "description": "A port city that hosted [[Calimshan]]'s largest shipbuilding facility and the regional center for magical studies.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/almraiven/almraiven.json",
+        "url": "assets/atlas/world/toril/faerun/cities/almraiven/almraiven.json",
         "label": "Almraiven"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/almraiven/almraiven.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/almraiven/almraiven.webp"
     },
     "id": "almraiven"
   },
@@ -1474,10 +1474,10 @@
       "title": "Volothamp",
       "description": "The Gem City of Calimshan, built upon the side of a cliff overlooking the [[Shining Sea]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/volothamp/volothamp.json",
+        "url": "assets/atlas/world/toril/faerun/cities/volothamp/volothamp.json",
         "label": "Volothamp"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/volothamp/volothamp.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/volothamp/volothamp.webp"
     },
     "id": "volothamp"
   },
@@ -1491,10 +1491,10 @@
       "title": "Saradush",
       "description": "Once a great bureaucratic center of [[Tethyr]], later a busy waystation for trade in the area surrounding the [[Lake of Steam]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/saradush/saradush.json",
+        "url": "assets/atlas/world/toril/faerun/cities/saradush/saradush.json",
         "label": "Saradush"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/saradush/saradush.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/saradush/saradush.webp"
     },
     "id": "saradush"
   },
@@ -1506,12 +1506,12 @@
     ],
     "popup": {
       "title": "Schamedar",
-      "description": "A large city \u2013 center for religious diversity in that country of [[Calimshan]].",
+      "description": "A large city – center for religious diversity in that country of [[Calimshan]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/schamedar/schamedar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/schamedar/schamedar.json",
         "label": "Schamedar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/schamedar/schamedar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/schamedar/schamedar.webp"
     },
     "id": "schamedar"
   },
@@ -1523,12 +1523,12 @@
     ],
     "popup": {
       "title": "Manshaka",
-      "description": "A metropolis in [[Calimshan]], the second largest gambling city in [[Faer\u00fbn]], infamous for its [[Blood Arenas]] and slavery.",
+      "description": "A metropolis in [[Calimshan]], the second largest gambling city in [[Faerûn]], infamous for its [[Blood Arenas]] and slavery.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/manshaka/manshaka.json",
+        "url": "assets/atlas/world/toril/faerun/cities/manshaka/manshaka.json",
         "label": "Manshaka"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/manshaka/manshaka.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/manshaka/manshaka.webp"
     },
     "id": "manshaka"
   },
@@ -1540,12 +1540,12 @@
     ],
     "popup": {
       "title": "Keltar",
-      "description": "One of the oldest cities in [[Faer\u00fbn]], located in [[Calimshan]], famous for being the site of the [[House of the Broken God]].",
+      "description": "One of the oldest cities in [[Faerûn]], located in [[Calimshan]], famous for being the site of the [[House of the Broken God]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/keltar/keltar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/keltar/keltar.json",
         "label": "Keltar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/keltar/keltar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/keltar/keltar.webp"
     },
     "id": "keltar"
   },
@@ -1559,10 +1559,10 @@
       "title": "Calimport",
       "description": "The sprawling capital city of [[Calimshan]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/calimport/calimport.json",
+        "url": "assets/atlas/world/toril/faerun/cities/calimport/calimport.json",
         "label": "Calimport"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/calimport/calimport.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/calimport/calimport.webp"
     },
     "id": "calimport"
   },
@@ -1576,10 +1576,10 @@
       "title": "Memnon",
       "description": "A key port of trade for [[Calimshan]] and the former capital of the [[efreeti]] kingdom of [[Memnonnar]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/memnon/memnon.json",
+        "url": "assets/atlas/world/toril/faerun/cities/memnon/memnon.json",
         "label": "Memnon"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/memnon/memnon.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/memnon/memnon.webp"
     },
     "id": "memnon"
   },
@@ -1593,10 +1593,10 @@
       "title": "Myratma",
       "description": "One of the most important cities in [[Tethyr]], known for its s textiles.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/myratma/myratma.json",
+        "url": "assets/atlas/world/toril/faerun/cities/myratma/myratma.json",
         "label": "Myratma"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/myratma/myratma.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/myratma/myratma.webp"
     },
     "id": "myratma"
   },
@@ -1610,10 +1610,10 @@
       "title": "Pyarados",
       "description": "A lawless metropolis with its walled inner-city dotted with beautiful parks, luxurious establishments, and grand palaces. Outside of the inner-city walls were winding mud-covered streets and ramshackle sheds.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/pyarados/pyarados.json",
+        "url": "assets/atlas/world/toril/faerun/cities/pyarados/pyarados.json",
         "label": "Pyarados"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/pyarados/pyarados.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/pyarados/pyarados.webp"
     },
     "id": "pyarados"
   },
@@ -1627,10 +1627,10 @@
       "title": "Tyraturos",
       "description": "The city founded during an age of expansion of [[Mulhorand]], eventually claimed by [[Thay]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/tyraturos/tyraturos.json",
+        "url": "assets/atlas/world/toril/faerun/cities/tyraturos/tyraturos.json",
         "label": "Tyraturos"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/tyraturos/tyraturos.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/tyraturos/tyraturos.webp"
     },
     "id": "tyraturos"
   },
@@ -1644,10 +1644,10 @@
       "title": "Nethjet",
       "description": "A city in [[Thay]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/nethjet/nethjet.json",
+        "url": "assets/atlas/world/toril/faerun/cities/nethjet/nethjet.json",
         "label": "Nethjet"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/nethjet/nethjet.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/nethjet/nethjet.webp"
     },
     "id": "nethjet"
   },
@@ -1661,10 +1661,10 @@
       "title": "Eltabbar",
       "description": "The former capital of [[Thay]] and the second largest city in the nation.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/eltabbar/eltabbar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/eltabbar/eltabbar.json",
         "label": "Eltabbar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/eltabbar/eltabbar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/eltabbar/eltabbar.webp"
     },
     "id": "eltabbar"
   },
@@ -1678,10 +1678,10 @@
       "title": "Surthay",
       "description": "The capital of the [[tharch]] of the same name and [[Thay]]'s natural harbor within [[Lake Mulsantir]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/surthay/surthay.json",
+        "url": "assets/atlas/world/toril/faerun/cities/surthay/surthay.json",
         "label": "Surthay"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/surthay/surthay.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/surthay/surthay.webp"
     },
     "id": "surthay"
   },
@@ -1695,10 +1695,10 @@
       "title": "Mulsantir",
       "description": "A great and prosperous city in southwest [[Rashemen]], located at the end of the [[Golden Way]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/mulsantir/mulsantir.json",
+        "url": "assets/atlas/world/toril/faerun/cities/mulsantir/mulsantir.json",
         "label": "Mulsantir"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/mulsantir/mulsantir.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/mulsantir/mulsantir.webp"
     },
     "id": "mulsantir"
   },
@@ -1712,10 +1712,10 @@
       "title": "Phsant",
       "description": "A large trading city if [[Thesk]] where the [[Tuigan Horde]] was defeated. It was renowned for its multicultural diversity and high population of [[Shou]], as well as [[orc]]s.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/phsant/phsant.json",
+        "url": "assets/atlas/world/toril/faerun/cities/phsant/phsant.json",
         "label": "Phsant"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/phsant/phsant.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/phsant/phsant.webp"
     },
     "id": "phsant"
   },
@@ -1729,10 +1729,10 @@
       "title": "Phent",
       "description": "A fortress city in [[Thesk]], along the [[Golden Way]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/phent/phent.json",
+        "url": "assets/atlas/world/toril/faerun/cities/phent/phent.json",
         "label": "Phent"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/phent/phent.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/phent/phent.webp"
     },
     "id": "phent"
   },
@@ -1746,10 +1746,10 @@
       "title": "Nyth",
       "description": "A small city under the control of [[Telflamm]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/nyth/nyth.json",
+        "url": "assets/atlas/world/toril/faerun/cities/nyth/nyth.json",
         "label": "Nyth"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/nyth/nyth.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/nyth/nyth.webp"
     },
     "id": "nyth"
   },
@@ -1763,10 +1763,10 @@
       "title": "Thassalra",
       "description": "A city of note in [[Thesk]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/thassalra/thassalra.json",
+        "url": "assets/atlas/world/toril/faerun/cities/thassalra/thassalra.json",
         "label": "Thassalra"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/thassalra/thassalra.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/thassalra/thassalra.webp"
     },
     "id": "thassalra"
   },
@@ -1780,10 +1780,10 @@
       "title": "Culmaster",
       "description": "A settlement in [[Thesk]], a subject-city to [[Telflamm]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/culmaster/culmaster.json",
+        "url": "assets/atlas/world/toril/faerun/cities/culmaster/culmaster.json",
         "label": "Culmaster"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/culmaster/culmaster.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/culmaster/culmaster.webp"
     },
     "id": "culmaster"
   },
@@ -1797,10 +1797,10 @@
       "title": "Milvarune",
       "description": "A major multi-cultural port city in [[Thesk]] with trade and fishing being its main industries.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/milvarune/milvarune.json",
+        "url": "assets/atlas/world/toril/faerun/cities/milvarune/milvarune.json",
         "label": "Milvarune"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/milvarune/milvarune.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/milvarune/milvarune.webp"
     },
     "id": "milvarune"
   },
@@ -1814,10 +1814,10 @@
       "title": "Nethentir",
       "description": "A city in [[Thay]] located just at the foot of the [[First Escarpment]] inhabited by [[human]]s, Thayan legionnaires, and unruly [[gnoll]]s.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/nethentir/nethentir.json",
+        "url": "assets/atlas/world/toril/faerun/cities/nethentir/nethentir.json",
         "label": "Nethentir"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/nethentir/nethentir.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/nethentir/nethentir.webp"
     },
     "id": "nethentir"
   },
@@ -1831,10 +1831,10 @@
       "title": "Telflamm",
       "description": "The biggest and most important port city in [[Thesk]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/telflamm/telflamm.json",
+        "url": "assets/atlas/world/toril/faerun/cities/telflamm/telflamm.json",
         "label": "Telflamm"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/telflamm/telflamm.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/telflamm/telflamm.webp"
     },
     "id": "telflamm"
   },
@@ -1846,12 +1846,12 @@
     ],
     "popup": {
       "title": "Sarshel",
-      "description": "A walled port city of [[Impiltur]], home to the [[Marhymbel House Shipways]] \u2013 the fastest ship-builder on the [[Sea of Fallen Stars]] in the late 15{{th}} century [[DR]].",
+      "description": "A walled port city of [[Impiltur]], home to the [[Marhymbel House Shipways]] – the fastest ship-builder on the [[Sea of Fallen Stars]] in the late 15{{th}} century [[DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/sarshel/sarshel.json",
+        "url": "assets/atlas/world/toril/faerun/cities/sarshel/sarshel.json",
         "label": "Sarshel"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/sarshel/sarshel.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/sarshel/sarshel.webp"
     },
     "id": "sarshel"
   },
@@ -1865,10 +1865,10 @@
       "title": "Dilpur",
       "description": "An important [[Impilturian]] city of swelling numbers,",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/dilpur/dilpur.json",
+        "url": "assets/atlas/world/toril/faerun/cities/dilpur/dilpur.json",
         "label": "Dilpur"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/dilpur/dilpur.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/dilpur/dilpur.webp"
     },
     "id": "dilpur"
   },
@@ -1882,10 +1882,10 @@
       "title": "Hlammach",
       "description": "A bustling port city in [[Impiltur]] and the location of the nation's royal mint.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/hlammach/hlammach.json",
+        "url": "assets/atlas/world/toril/faerun/cities/hlammach/hlammach.json",
         "label": "Hlammach"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/hlammach/hlammach.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/hlammach/hlammach.webp"
     },
     "id": "hlammach"
   },
@@ -1899,10 +1899,10 @@
       "title": "Lyrabar",
       "description": "Previously known as '''Impil's Tor''', a great port city that served as the capital of [[Impiltur]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/lyrabar/lyrabar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/lyrabar/lyrabar.json",
         "label": "Lyrabar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/lyrabar/lyrabar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/lyrabar/lyrabar.webp"
     },
     "id": "lyrabar"
   },
@@ -1916,10 +1916,10 @@
       "title": "Spandeliyon",
       "description": "A busy port city of note in [[Aglarond]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/spandeliyon/spandeliyon.json",
+        "url": "assets/atlas/world/toril/faerun/cities/spandeliyon/spandeliyon.json",
         "label": "Spandeliyon"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/spandeliyon/spandeliyon.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/spandeliyon/spandeliyon.webp"
     },
     "id": "spandeliyon"
   },
@@ -1933,10 +1933,10 @@
       "title": "Veltalar",
       "description": "Formerly '''Velprintalar'''', the primary port of [[Aglarond]], founded by colonists from [[Chessenta]] in [[756 DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/veltalar/veltalar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/veltalar/veltalar.json",
         "label": "Veltalar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/veltalar/veltalar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/veltalar/veltalar.webp"
     },
     "id": "veltalar"
   },
@@ -1950,10 +1950,10 @@
       "title": "Furthinghome",
       "description": "A trading port city in [[Aglarond]] and one of the oldest cities in the nation that exported [[fish]], flowers, [[herb]]s, and timber.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/furthinghome/furthinghome.json",
+        "url": "assets/atlas/world/toril/faerun/cities/furthinghome/furthinghome.json",
         "label": "Furthinghome"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/furthinghome/furthinghome.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/furthinghome/furthinghome.webp"
     },
     "id": "furthinghome"
   },
@@ -1967,10 +1967,10 @@
       "title": "Relkath's Foot",
       "description": "The largest permanent settlement in and the unofficial [[half-elven]] capital of the [[Yuirwood]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/relkaths_foot/relkaths_foot.json",
+        "url": "assets/atlas/world/toril/faerun/cities/relkaths_foot/relkaths_foot.json",
         "label": "Relkath's Foot"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/relkaths_foot/relkaths_foot.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/relkaths_foot/relkaths_foot.webp"
     },
     "id": "relkaths_foot"
   },
@@ -1982,12 +1982,12 @@
     ],
     "popup": {
       "title": "Riatavin",
-      "description": "A city in [[Amn]] and later \u2013 [[Tethyr]], governed by a group of merchants known as the [[Chosen Council]] in the 15{{th}} century [[DR]].",
+      "description": "A city in [[Amn]] and later – [[Tethyr]], governed by a group of merchants known as the [[Chosen Council]] in the 15{{th}} century [[DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/riatavin/riatavin.json",
+        "url": "assets/atlas/world/toril/faerun/cities/riatavin/riatavin.json",
         "label": "Riatavin"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/riatavin/riatavin.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/riatavin/riatavin.webp"
     },
     "id": "riatavin"
   },
@@ -2001,10 +2001,10 @@
       "title": "Eshpurta",
       "description": "Or the '''\"Shield City\"''' of [[Amn]], a bustling military trade town in eastern [[Amn]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/eshpurta/eshpurta.json",
+        "url": "assets/atlas/world/toril/faerun/cities/eshpurta/eshpurta.json",
         "label": "Eshpurta"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/eshpurta/eshpurta.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/eshpurta/eshpurta.webp"
     },
     "id": "eshpurta"
   },
@@ -2018,10 +2018,10 @@
       "title": "Keczulla",
       "description": "A prosperous city that was the home of a diverse and rich mining industry.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/keczulla/keczulla.json",
+        "url": "assets/atlas/world/toril/faerun/cities/keczulla/keczulla.json",
         "label": "Keczulla"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/keczulla/keczulla.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/keczulla/keczulla.webp"
     },
     "id": "keczulla"
   },
@@ -2035,10 +2035,10 @@
       "title": "Amnwater",
       "description": "A small walled trade city on the [[Eshpurta Road]] between [[Crimmor]] and [[Keczulla]]  and the exporter of [[beer]] called [[Amnwater No.1]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/amnwater/amnwater.json",
+        "url": "assets/atlas/world/toril/faerun/cities/amnwater/amnwater.json",
         "label": "Amnwater"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/amnwater/amnwater.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/amnwater/amnwater.webp"
     },
     "id": "amnwater"
   },
@@ -2052,10 +2052,10 @@
       "title": "Esmeltaran",
       "description": "A [[halfling]]-dominated city in eastern [[Amn]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/esmeltaran/esmeltaran.json",
+        "url": "assets/atlas/world/toril/faerun/cities/esmeltaran/esmeltaran.json",
         "label": "Esmeltaran"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/esmeltaran/esmeltaran.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/esmeltaran/esmeltaran.webp"
     },
     "id": "esmeltaran"
   },
@@ -2069,10 +2069,10 @@
       "title": "Crimmor",
       "description": "A fortified city known as the '''City of Caravans''' or the '''Caravan Capital of Amn'''.<br/>Interactive map can be found [[Map:Crimmor (14th Century DR)|here]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/crimmor/crimmor.json",
+        "url": "assets/atlas/world/toril/faerun/cities/crimmor/crimmor.json",
         "label": "Crimmor"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/crimmor/crimmor.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/crimmor/crimmor.webp"
     },
     "id": "crimmor"
   },
@@ -2086,10 +2086,10 @@
       "title": "Purskul",
       "description": "A granary city and a caravan stop with high [[half-orc]] and [[hin]] populations.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/purskul/purskul.json",
+        "url": "assets/atlas/world/toril/faerun/cities/purskul/purskul.json",
         "label": "Purskul"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/purskul/purskul.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/purskul/purskul.webp"
     },
     "id": "purskul"
   },
@@ -2103,10 +2103,10 @@
       "title": "Murann",
       "description": "The '''Sailors' City''' metropolis that had a fruitful trade with the continent of [[Maztica]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/murann/murann.json",
+        "url": "assets/atlas/world/toril/faerun/cities/murann/murann.json",
         "label": "Murann"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/murann/murann.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/murann/murann.webp"
     },
     "id": "murann"
   },
@@ -2120,10 +2120,10 @@
       "title": "Silverymoon",
       "description": "The '''Gem of the North''', the green city and the prime signatory state of the Confederation of the [[Silver Marches]].<br/><br/>Interactive map can be found [[Map:Silverymoon 15th century DR|here]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/silverymoon/silverymoon.json",
+        "url": "assets/atlas/world/toril/faerun/cities/silverymoon/silverymoon.json",
         "label": "Silverymoon"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/silverymoon/silverymoon.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/silverymoon/silverymoon.webp"
     },
     "id": "silverymoon"
   },
@@ -2135,12 +2135,12 @@
     ],
     "popup": {
       "title": "Baldur's Gate",
-      "description": "A metropolis city-state, perhaps the most prosperous and influential merchant city on the western coast of [[Faer\u00fbn]].<br/><br/>Interactive map can be found [[Map:Baldur's Gate|here]].",
+      "description": "A metropolis city-state, perhaps the most prosperous and influential merchant city on the western coast of [[Faerûn]].<br/><br/>Interactive map can be found [[Map:Baldur's Gate|here]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/baldurs_gate/baldurs_gate.json",
+        "url": "assets/atlas/world/toril/faerun/cities/baldurs_gate/baldurs_gate.json",
         "label": "Baldur's Gate"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/baldurs_gate/baldurs_gate.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/baldurs_gate/baldurs_gate.webp"
     },
     "id": "baldurs_gate"
   },
@@ -2152,12 +2152,12 @@
     ],
     "popup": {
       "title": "Athkatla",
-      "description": "The '''City of Coin''' \u2013 the oldest settlement and capital of the mercantile nation of [[Amn]].<br/><br/>Interactive map can be found [[Map:Athkatla|here]].",
+      "description": "The '''City of Coin''' – the oldest settlement and capital of the mercantile nation of [[Amn]].<br/><br/>Interactive map can be found [[Map:Athkatla|here]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/athkatla/athkatla.json",
+        "url": "assets/atlas/world/toril/faerun/cities/athkatla/athkatla.json",
         "label": "Athkatla"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/athkatla/athkatla.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/athkatla/athkatla.webp"
     },
     "id": "athkatla"
   },
@@ -2171,10 +2171,10 @@
       "title": "Zazesspur",
       "description": "The ancient port city, the former capital of [[Tethyr]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/zazesspur/zazesspur.json",
+        "url": "assets/atlas/world/toril/faerun/cities/zazesspur/zazesspur.json",
         "label": "Zazesspur"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/zazesspur/zazesspur.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/zazesspur/zazesspur.webp"
     },
     "id": "zazesspur"
   },
@@ -2186,12 +2186,12 @@
     ],
     "popup": {
       "title": "Suldanessellar",
-      "description": "An [[elven]] city in the [[Forest of Tethir]] and the site of the [[Tree of Life]] \u2013 a colossal tree and the source of great magical power.",
+      "description": "An [[elven]] city in the [[Forest of Tethir]] and the site of the [[Tree of Life]] – a colossal tree and the source of great magical power.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/suldanessellar/suldanessellar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/suldanessellar/suldanessellar.json",
         "label": "Suldanessellar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/suldanessellar/suldanessellar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/suldanessellar/suldanessellar.webp"
     },
     "id": "suldanessellar"
   },
@@ -2205,10 +2205,10 @@
       "title": "Assam",
       "description": "Also known as the \"oasis in the plains.\" A small city and a caravan center, surrounded by herd animals and numerous caravans and their beasts of burden.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/assam/assam.json",
+        "url": "assets/atlas/world/toril/faerun/cities/assam/assam.json",
         "label": "Assam"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/assam/assam.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/assam/assam.webp"
     },
     "id": "assam"
   },
@@ -2222,10 +2222,10 @@
       "title": "Lheshayl",
       "description": "A small city of the [[Shining Plains]] that prided itself on its cavalry and the [[Plainsteed]] [[horse]] export.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/lheshayl/lheshayl.json",
+        "url": "assets/atlas/world/toril/faerun/cities/lheshayl/lheshayl.json",
         "label": "Lheshayl"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/lheshayl/lheshayl.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/lheshayl/lheshayl.webp"
     },
     "id": "lheshayl"
   },
@@ -2239,10 +2239,10 @@
       "title": "Ormath",
       "description": "A small city of the [[Shining Plains]] that used mercenary companies such as the  cavalry-based [[Order of the Silver Lance]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/ormath/ormath.json",
+        "url": "assets/atlas/world/toril/faerun/cities/ormath/ormath.json",
         "label": "Ormath"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/ormath/ormath.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/ormath/ormath.webp"
     },
     "id": "ormath"
   },
@@ -2256,10 +2256,10 @@
       "title": "Llorbauth",
       "description": "The the capital of the kingdom of [[Erlkazar]] in [[Shalanar]] Barony, known for its [[Old One Eye]] [[beer]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/llorbauth/llorbauth.json",
+        "url": "assets/atlas/world/toril/faerun/cities/llorbauth/llorbauth.json",
         "label": "Llorbauth"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/llorbauth/llorbauth.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/llorbauth/llorbauth.webp"
     },
     "id": "llorbauth"
   },
@@ -2273,10 +2273,10 @@
       "title": "Duhlnarim",
       "description": "A port city to the north of the [[Cloven Mountains]] in [[Erlkazar]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/duhlnarim/duhlnarim.json",
+        "url": "assets/atlas/world/toril/faerun/cities/duhlnarim/duhlnarim.json",
         "label": "Duhlnarim"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/duhlnarim/duhlnarim.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/duhlnarim/duhlnarim.webp"
     },
     "id": "duhlnarim"
   },
@@ -2290,10 +2290,10 @@
       "title": "Surkh",
       "description": "The '''City of Lizards''', a small city inhabited by [[lizardmen]] and [[lizard king]]s, governed by King [[Griss'tok]] in the 14{{th}} century [[DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/surkh/surkh.json",
+        "url": "assets/atlas/world/toril/faerun/cities/surkh/surkh.json",
         "label": "Surkh"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/surkh/surkh.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/surkh/surkh.webp"
     },
     "id": "surkh"
   },
@@ -2307,10 +2307,10 @@
       "title": "Wheloon",
       "description": "A small city on the junction of the [[Wyvernflow River]] and the [[Way of the Manticore]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/wheloon/wheloon.json",
+        "url": "assets/atlas/world/toril/faerun/cities/wheloon/wheloon.json",
         "label": "Wheloon"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/wheloon/wheloon.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/wheloon/wheloon.webp"
     },
     "id": "wheloon"
   },
@@ -2324,10 +2324,10 @@
       "title": "Daerlun",
       "description": "A [[Sembia]]n city surrounded by a huge 500-foot-tall curtain wall erected by the [[Netherese Empire]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/daerlun/daerlun.json",
+        "url": "assets/atlas/world/toril/faerun/cities/daerlun/daerlun.json",
         "label": "Daerlun"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/daerlun/daerlun.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/daerlun/daerlun.webp"
     },
     "id": "daerlun"
   },
@@ -2339,12 +2339,12 @@
     ],
     "popup": {
       "title": "Urmlaspyr",
-      "description": "A [[Sembia]]n city known for having some of the best glassblowers in [[Faer\u00fbn]].",
+      "description": "A [[Sembia]]n city known for having some of the best glassblowers in [[Faerûn]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/urmlaspyr/urmlaspyr.json",
+        "url": "assets/atlas/world/toril/faerun/cities/urmlaspyr/urmlaspyr.json",
         "label": "Urmlaspyr"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/urmlaspyr/urmlaspyr.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/urmlaspyr/urmlaspyr.webp"
     },
     "id": "urmlaspyr"
   },
@@ -2358,10 +2358,10 @@
       "title": "Lachom",
       "description": "A free city that worked bountiful fiends in the valley between the [[Deepwing Mountains]] and the [[Cloven Mountains]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/lachom/lachom.json",
+        "url": "assets/atlas/world/toril/faerun/cities/lachom/lachom.json",
         "label": "Lachom"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/lachom/lachom.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/lachom/lachom.webp"
     },
     "id": "lachom"
   },
@@ -2375,10 +2375,10 @@
       "title": "Berdusk",
       "description": "Also known as the '''Jewel of the Vale''', a city in the [[Sunset Vale]] and the location of the [[Harper]] [[Twilight Hall]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/berdusk/berdusk.json",
+        "url": "assets/atlas/world/toril/faerun/cities/berdusk/berdusk.json",
         "label": "Berdusk"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/berdusk/berdusk.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/berdusk/berdusk.webp"
     },
     "id": "berdusk"
   },
@@ -2392,10 +2392,10 @@
       "title": "Archenbridge",
       "description": "The only major settlement in [[Archendale]] and one of the most important trading hubs in the [[Dalelands]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/archenbridge/archenbridge.json",
+        "url": "assets/atlas/world/toril/faerun/cities/archenbridge/archenbridge.json",
         "label": "Archenbridge"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/archenbridge/archenbridge.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/archenbridge/archenbridge.webp"
     },
     "id": "archenbridge"
   },
@@ -2409,10 +2409,10 @@
       "title": "Marsember",
       "description": "The '''City of Spices''', a metropolis and the busiest port in the entire kingdom of [[Cormyr]].<br/><br/>Interactive map can be found [[Map:Marsember|here]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/marsember/marsember.json",
+        "url": "assets/atlas/world/toril/faerun/cities/marsember/marsember.json",
         "label": "Marsember"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/marsember/marsember.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/marsember/marsember.webp"
     },
     "id": "marsember"
   },
@@ -2424,12 +2424,12 @@
     ],
     "popup": {
       "title": "Suzail",
-      "description": "The capital of [[Cormyr]] and the seat of power, named after [[Suzara Obarskyr]], the mother of the first king.<br/><br/>Interactive map can be found [[Map:Suzail \u2013 15th Century DR|here]].",
+      "description": "The capital of [[Cormyr]] and the seat of power, named after [[Suzara Obarskyr]], the mother of the first king.<br/><br/>Interactive map can be found [[Map:Suzail – 15th Century DR|here]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/suzail/suzail.json",
+        "url": "assets/atlas/world/toril/faerun/cities/suzail/suzail.json",
         "label": "Suzail"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/suzail/suzail.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/suzail/suzail.webp"
     },
     "id": "suzail"
   },
@@ -2441,12 +2441,12 @@
     ],
     "popup": {
       "title": "Westgate",
-      "description": "A seedy and squalid metropolis\u2014with a history of piracy, powerful crime syndicates, and nameless vampiric crime-lords.<br/><br/>Interactive map can be found [[Map:Westgate|here]].",
+      "description": "A seedy and squalid metropolis—with a history of piracy, powerful crime syndicates, and nameless vampiric crime-lords.<br/><br/>Interactive map can be found [[Map:Westgate|here]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/westgate/westgate.json",
+        "url": "assets/atlas/world/toril/faerun/cities/westgate/westgate.json",
         "label": "Westgate"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/westgate/westgate.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/westgate/westgate.webp"
     },
     "id": "westgate"
   },
@@ -2460,10 +2460,10 @@
       "title": "Teziir",
       "description": "A small city protectorate of [[Cormyr]], protected by a force of 500 warriors of the [[Watch of Teziir]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/teziir/teziir.json",
+        "url": "assets/atlas/world/toril/faerun/cities/teziir/teziir.json",
         "label": "Teziir"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/teziir/teziir.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/teziir/teziir.webp"
     },
     "id": "teziir"
   },
@@ -2477,10 +2477,10 @@
       "title": "Elversult",
       "description": "A rich community and an important trading up and mercantile center that facilitated both honest and illegitimate trade across the [[Eastern Heartlands]] and beyond.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/elversult/elversult.json",
+        "url": "assets/atlas/world/toril/faerun/cities/elversult/elversult.json",
         "label": "Elversult"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/elversult/elversult.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/elversult/elversult.webp"
     },
     "id": "elversult"
   },
@@ -2494,10 +2494,10 @@
       "title": "Proskur",
       "description": "A trading city in [[Cormyr]] with a long-standing history of thieves' guilds that operated out in the open and a haven for the unscrupulous [[Red Wizards]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/proskur/proskur.json",
+        "url": "assets/atlas/world/toril/faerun/cities/proskur/proskur.json",
         "label": "Proskur"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/proskur/proskur.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/proskur/proskur.webp"
     },
     "id": "proskur"
   },
@@ -2511,10 +2511,10 @@
       "title": "Arabel",
       "description": "A fortified metropolis known as the '''Caravan City''' of [[Cormyr]] that stood  at an important crossroads of the [[High Road (Cormyr)|High Road]], [[Calantar's Way]], the [[East Way]], and the [[Moonsea Ride]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/arabel/arabel.json",
+        "url": "assets/atlas/world/toril/faerun/cities/arabel/arabel.json",
         "label": "Arabel"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/arabel/arabel.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/arabel/arabel.webp"
     },
     "id": "arabel"
   },
@@ -2528,10 +2528,10 @@
       "title": "Telvanlu",
       "description": "The capital city of the [[aquatic elf]] kingdom of [[Naramyr]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/telvanlu/telvanlu.json",
+        "url": "assets/atlas/world/toril/faerun/cities/telvanlu/telvanlu.json",
         "label": "Telvanlu"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/telvanlu/telvanlu.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/telvanlu/telvanlu.webp"
     },
     "id": "telvanlu"
   },
@@ -2545,10 +2545,10 @@
       "title": "Iriaebor",
       "description": "The '''City of a Thousand Spires''', a large city-state within the nation of [[Elturgard]], known for its political squabbles all well documented in the local [[chapbook]] called ''[[Malanxer's Tongue]].''",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/iriaebor/iriaebor.json",
+        "url": "assets/atlas/world/toril/faerun/cities/iriaebor/iriaebor.json",
         "label": "Iriaebor"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/iriaebor/iriaebor.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/iriaebor/iriaebor.webp"
     },
     "id": "iriaebor"
   },
@@ -2562,10 +2562,10 @@
       "title": "Elturel",
       "description": "A city-state on the [[River Chionthar]], the center of agriculture and trade in the region.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/elturel/elturel.json",
+        "url": "assets/atlas/world/toril/faerun/cities/elturel/elturel.json",
         "label": "Elturel"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/elturel/elturel.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/elturel/elturel.webp"
     },
     "id": "elturel"
   },
@@ -2579,10 +2579,10 @@
       "title": "Hill's Edge",
       "description": "A city on the [[Dusk Road]] also known as the '''Forgotten City of Sunset Vale'''.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/hills_edge/hills_edge.json",
+        "url": "assets/atlas/world/toril/faerun/cities/hills_edge/hills_edge.json",
         "label": "Hill's Edge"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/hills_edge/hills_edge.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/hills_edge/hills_edge.webp"
     },
     "id": "hills_edge"
   },
@@ -2596,10 +2596,10 @@
       "title": "Evereska",
       "description": "The hidden city-fortress of the [[elves]] in the North.<br/><br/>'''Note: This map shows the incorrect geography of the region. Please refer to 2{{nd}} edition maps.'''",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/evereska/evereska.json",
+        "url": "assets/atlas/world/toril/faerun/cities/evereska/evereska.json",
         "label": "Evereska"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/evereska/evereska.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/evereska/evereska.webp"
     },
     "id": "evereska"
   },
@@ -2613,10 +2613,10 @@
       "title": "Loudwater",
       "description": "Also known as the ''City of Grottos''', a picturesque garden city home to a pleasant and thriving cosmopolitan community of [[human]]s, [[half-elves]], and [[elves]] venerating [[Mielikki]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/loudwater/loudwater.json",
+        "url": "assets/atlas/world/toril/faerun/cities/loudwater/loudwater.json",
         "label": "Loudwater"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/loudwater/loudwater.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/loudwater/loudwater.webp"
     },
     "id": "loudwater"
   },
@@ -2630,10 +2630,10 @@
       "title": "Nathlekh",
       "description": "The '''City of Cats''', the capital of the [[Shou]] nation of [[Nathlan]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/nathlekh/nathlekh.json",
+        "url": "assets/atlas/world/toril/faerun/cities/nathlekh/nathlekh.json",
         "label": "Nathlekh"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/nathlekh/nathlekh.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/nathlekh/nathlekh.webp"
     },
     "id": "nathlekh"
   },
@@ -2647,10 +2647,10 @@
       "title": "Cedarsproke",
       "description": "Also known as the '''Garden of Eldath''', a small, independent city in the middle of the [[Gulthmere Forest]], inhabited and ruled by [[druids]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/cedarsproke/cedarsproke.json",
+        "url": "assets/atlas/world/toril/faerun/cities/cedarsproke/cedarsproke.json",
         "label": "Cedarsproke"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/cedarsproke/cedarsproke.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/cedarsproke/cedarsproke.webp"
     },
     "id": "cedarsproke"
   },
@@ -2664,10 +2664,10 @@
       "title": "Nleeth",
       "description": "A [[Turmish]]-sponsored tourism-financed city-state, one of the [[Free Cities of the Vilhon Reach]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/nleeth/nleeth.json",
+        "url": "assets/atlas/world/toril/faerun/cities/nleeth/nleeth.json",
         "label": "Nleeth"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/nleeth/nleeth.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/nleeth/nleeth.webp"
     },
     "id": "nleeth"
   },
@@ -2681,10 +2681,10 @@
       "title": "Amah",
       "description": "A city-state of the [[Free Cities of the Vilhon Reach]] that maintained neutrality between [[Turmish]] and [[Chondath]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/amah/amah.json",
+        "url": "assets/atlas/world/toril/faerun/cities/amah/amah.json",
         "label": "Amah"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/amah/amah.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/amah/amah.webp"
     },
     "id": "amah"
   },
@@ -2698,10 +2698,10 @@
       "title": "Hlondeth",
       "description": "The '''City of Serpents''', an ancient and powerful city-state ruled by the [[Extaminos]] family, with mixed blood that was not quite [[human]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/hlondeth/hlondeth.json",
+        "url": "assets/atlas/world/toril/faerun/cities/hlondeth/hlondeth.json",
         "label": "Hlondeth"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/hlondeth/hlondeth.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/hlondeth/hlondeth.webp"
     },
     "id": "hlondeth"
   },
@@ -2715,10 +2715,10 @@
       "title": "Scornubel",
       "description": "Also known as the [[Caravan City]], a major tradestop for caravans and merchant barges.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/scornubel/scornubel.json",
+        "url": "assets/atlas/world/toril/faerun/cities/scornubel/scornubel.json",
         "label": "Scornubel"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/scornubel/scornubel.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/scornubel/scornubel.webp"
     },
     "id": "scornubel"
   },
@@ -2729,13 +2729,13 @@
       1893.05
     ],
     "popup": {
-      "title": "Alagh\u00f4n",
+      "title": "Alaghôn",
       "description": "An ancient metropolis and the capital of [[Turmish]] and a busy port hub.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/alaghon/alaghon.json",
-        "label": "Alagh\u00f4n"
+        "url": "assets/atlas/world/toril/faerun/cities/alaghon/alaghon.json",
+        "label": "Alaghôn"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/alaghon/alaghon.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/alaghon/alaghon.webp"
     },
     "id": "alaghon"
   },
@@ -2749,10 +2749,10 @@
       "title": "Anaxadren",
       "description": "One of the Six Holy Cities of the [[ixitxachitl]] nation in the [[Sea of Fallen Stars]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/anaxadren/anaxadren.json",
+        "url": "assets/atlas/world/toril/faerun/cities/anaxadren/anaxadren.json",
         "label": "Anaxadren"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/anaxadren/anaxadren.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/anaxadren/anaxadren.webp"
     },
     "id": "anaxadren"
   },
@@ -2766,10 +2766,10 @@
       "title": "Xyladren",
       "description": "One of the Six Holy Cities of the [[ixitxachitl]] nation in the [[Sea of Fallen Stars]], known as the [[Xedran Reefs]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/xyladren/xyladren.json",
+        "url": "assets/atlas/world/toril/faerun/cities/xyladren/xyladren.json",
         "label": "Xyladren"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/xyladren/xyladren.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/xyladren/xyladren.webp"
     },
     "id": "xyladren"
   },
@@ -2783,10 +2783,10 @@
       "title": "Xedras",
       "description": "An aquatic city of note.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/xedras/xedras.json",
+        "url": "assets/atlas/world/toril/faerun/cities/xedras/xedras.json",
         "label": "Xedras"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/xedras/xedras.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/xedras/xedras.webp"
     },
     "id": "xedras"
   },
@@ -2800,10 +2800,10 @@
       "title": "Berydren",
       "description": "One of the Six Holy Cities of the [[ixitxachitl]] nation in the [[Sea of Fallen Stars]], known as the [[Xedran Reefs]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/berydren/berydren.json",
+        "url": "assets/atlas/world/toril/faerun/cities/berydren/berydren.json",
         "label": "Berydren"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/berydren/berydren.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/berydren/berydren.webp"
     },
     "id": "berydren"
   },
@@ -2815,12 +2815,12 @@
     ],
     "popup": {
       "title": "Xorhun",
-      "description": "Also known as '''Corellon's Cradle''' and '''Lifeblood Falls''', a city inhabited by [[elves]] and [[gnome]]s \u2013 a community that hearkened back to an ancient elven civilization.",
+      "description": "Also known as '''Corellon's Cradle''' and '''Lifeblood Falls''', a city inhabited by [[elves]] and [[gnome]]s – a community that hearkened back to an ancient elven civilization.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/xorhun/xorhun.json",
+        "url": "assets/atlas/world/toril/faerun/cities/xorhun/xorhun.json",
         "label": "Xorhun"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/xorhun/xorhun.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/xorhun/xorhun.webp"
     },
     "id": "xorhun"
   },
@@ -2834,10 +2834,10 @@
       "title": "Nonthal",
       "description": "A city, reputed for being the most peaceful and stable in the nation of [[Turmish]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/nonthal/nonthal.json",
+        "url": "assets/atlas/world/toril/faerun/cities/nonthal/nonthal.json",
         "label": "Nonthal"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/nonthal/nonthal.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/nonthal/nonthal.webp"
     },
     "id": "nonthal"
   },
@@ -2851,10 +2851,10 @@
       "title": "Urbeth",
       "description": "The largest city of [[Tharsult]] and the island's main port.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/urbeth/urbeth.json",
+        "url": "assets/atlas/world/toril/faerun/cities/urbeth/urbeth.json",
         "label": "Urbeth"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/urbeth/urbeth.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/urbeth/urbeth.webp"
     },
     "id": "urbeth"
   },
@@ -2868,10 +2868,10 @@
       "title": "Hillsfar",
       "description": "A powerful metropolis city-state infamous for its xenophobia and [[human]]-first politics.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/hillsfar/hillsfar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/hillsfar/hillsfar.json",
         "label": "Hillsfar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/hillsfar/hillsfar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/hillsfar/hillsfar.webp"
     },
     "id": "hillsfar"
   },
@@ -2885,10 +2885,10 @@
       "title": "Mulmaster",
       "description": "The '''City of Danger''', an independent city-state, led by the [[High Blade]] and the council of the [[Blades (Mulmaster)|Blades]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/mulmaster/mulmaster.json",
+        "url": "assets/atlas/world/toril/faerun/cities/mulmaster/mulmaster.json",
         "label": "Mulmaster"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/mulmaster/mulmaster.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/mulmaster/mulmaster.webp"
     },
     "id": "mulmaster"
   },
@@ -2902,10 +2902,10 @@
       "title": "Phlan",
       "description": "A city-state trapped in a cycle of ruination and rebuilding across centuries. The city was dedicated to the deity [[Tyr]] and its spiritual and physical well-being to the artifact of the ''[[Hammer of Tyr]]''.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/phlan/phlan.json",
+        "url": "assets/atlas/world/toril/faerun/cities/phlan/phlan.json",
         "label": "Phlan"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/phlan/phlan.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/phlan/phlan.webp"
     },
     "id": "phlan"
   },
@@ -2919,10 +2919,10 @@
       "title": "Thentia",
       "description": "A metropolis of folk with an impassioned sense of self-determination and a significant population of [[arcane]] spellcasters, guarded by a cavalry known as the [[Riders of Thentia]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/thentia/thentia.json",
+        "url": "assets/atlas/world/toril/faerun/cities/thentia/thentia.json",
         "label": "Thentia"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/thentia/thentia.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/thentia/thentia.webp"
     },
     "id": "thentia"
   },
@@ -2936,10 +2936,10 @@
       "title": "Melvaunt",
       "description": "A city of smithing and mercantile services, as well as factories serving as the port of entry to many travelers coming to the region.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/melvaunt/melvaunt.json",
+        "url": "assets/atlas/world/toril/faerun/cities/melvaunt/melvaunt.json",
         "label": "Melvaunt"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/melvaunt/melvaunt.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/melvaunt/melvaunt.webp"
     },
     "id": "melvaunt"
   },
@@ -2953,10 +2953,10 @@
       "title": "Yhaunn",
       "description": "A major coastal city in [[Sembia]] with its summer nights being especially hot due to densely-packed buildings blocking any cooling breeze from the sea.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/yhaunn/yhaunn.json",
+        "url": "assets/atlas/world/toril/faerun/cities/yhaunn/yhaunn.json",
         "label": "Yhaunn"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/yhaunn/yhaunn.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/yhaunn/yhaunn.webp"
     },
     "id": "yhaunn"
   },
@@ -2970,10 +2970,10 @@
       "title": "Immurk's Hold",
       "description": "The largest city found within the [[Pirate Isles]] ruled in accordance with a set of pirate traditions, known as [[Immurk's Code]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/immurks_hold/immurks_hold.json",
+        "url": "assets/atlas/world/toril/faerun/cities/immurks_hold/immurks_hold.json",
         "label": "Immurk's Hold"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/immurks_hold/immurks_hold.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/immurks_hold/immurks_hold.webp"
     },
     "id": "immurks_hold"
   },
@@ -2987,10 +2987,10 @@
       "title": "Myth Nantar",
       "description": "Also known as the '''City of Destinies''', an underwater city about 56-64km (35-40 miles) west of the [[Whamite Isles]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/myth_nantar/myth_nantar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/myth_nantar/myth_nantar.json",
         "label": "Myth Nantar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/myth_nantar/myth_nantar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/myth_nantar/myth_nantar.webp"
     },
     "id": "myth_nantar"
   },
@@ -3004,10 +3004,10 @@
       "title": "Procampur",
       "description": "Formerly known as '''Proeskampalar''', the richest city-state on the north coast of the [[Inner Sea]], a proud, well-mannered, and orderly city with its districts dividing it by function and occupation.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/procampur/procampur.json",
+        "url": "assets/atlas/world/toril/faerun/cities/procampur/procampur.json",
         "label": "Procampur"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/procampur/procampur.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/procampur/procampur.webp"
     },
     "id": "procampur"
   },
@@ -3021,10 +3021,10 @@
       "title": "Tsurlagol",
       "description": "'''The Gateway to the Unapproachable East''', a persevering trade city.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/tsurlagol/tsurlagol.json",
+        "url": "assets/atlas/world/toril/faerun/cities/tsurlagol/tsurlagol.json",
         "label": "Tsurlagol"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/tsurlagol/tsurlagol.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/tsurlagol/tsurlagol.webp"
     },
     "id": "tsurlagol"
   },
@@ -3038,10 +3038,10 @@
       "title": "Ravens Bluff",
       "description": "The metropolis known as the '''Living City''', known for its industries, spectator sports, competitive events, gambling, and rich culture of arts.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/ravens_bluff/ravens_bluff.json",
+        "url": "assets/atlas/world/toril/faerun/cities/ravens_bluff/ravens_bluff.json",
         "label": "Ravens Bluff"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/ravens_bluff/ravens_bluff.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/ravens_bluff/ravens_bluff.webp"
     },
     "id": "ravens_bluff"
   },
@@ -3055,10 +3055,10 @@
       "title": "Hulburg",
       "description": "A once small city on the northeastern shore of the [[Moonsea]], it regained a portion of its population in the late 15{{th}} century [[DR]], following ruination that lasted several decades.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/hulburg/hulburg.json",
+        "url": "assets/atlas/world/toril/faerun/cities/hulburg/hulburg.json",
         "label": "Hulburg"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/hulburg/hulburg.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/hulburg/hulburg.webp"
     },
     "id": "hulburg"
   },
@@ -3072,10 +3072,10 @@
       "title": "Ordulin",
       "description": "The capital of [[Sembia]], destroyed in a planar rift summoned by [[Elyril Hraven]] in [[1484 DR]], rebuilt and proclaimed a capital once again by [[1499 DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/ordulin/ordulin.json",
+        "url": "assets/atlas/world/toril/faerun/cities/ordulin/ordulin.json",
         "label": "Ordulin"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/ordulin/ordulin.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/ordulin/ordulin.webp"
     },
     "id": "ordulin"
   },
@@ -3089,10 +3089,10 @@
       "title": "Calaunt",
       "description": "A city-state that grew out of the village of '''Vespermouth''' to become the largest and the most influential in [[the Vast]] by [[1372 DR]], only for the title to be reclaimed by [[Ravens Bluff]] by [[1479 DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/calaunt/calaunt.json",
+        "url": "assets/atlas/world/toril/faerun/cities/calaunt/calaunt.json",
         "label": "Calaunt"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/calaunt/calaunt.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/calaunt/calaunt.webp"
     },
     "id": "calaunt"
   },
@@ -3106,10 +3106,10 @@
       "title": "Tantras",
       "description": "A large and influential oligarchic city-state of [[the Vast]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/tantras/tantras.json",
+        "url": "assets/atlas/world/toril/faerun/cities/tantras/tantras.json",
         "label": "Tantras"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/tantras/tantras.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/tantras/tantras.webp"
     },
     "id": "tantras"
   },
@@ -3123,10 +3123,10 @@
       "title": "Selgaunt",
       "description": "Once known as '''Chancelgaunt''', a major trade port city and the capital of [[Sembia]].\n.<br/><br/>Interactive map can be found [[Map:Selgaunt|here]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/selgaunt/selgaunt.json",
+        "url": "assets/atlas/world/toril/faerun/cities/selgaunt/selgaunt.json",
         "label": "Selgaunt"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/selgaunt/selgaunt.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/selgaunt/selgaunt.webp"
     },
     "id": "selgaunt"
   },
@@ -3140,10 +3140,10 @@
       "title": "Saerloon",
       "description": "Once known as '''Chondathan''', an old [[Sembia]]n city known for its exotic tastes and gothic architecture, sprinkled throughout with [[gargoyle]]s and other decorations, and for its mercantile activity, seasoned by thievery and intrigue.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/saerloon/saerloon.json",
+        "url": "assets/atlas/world/toril/faerun/cities/saerloon/saerloon.json",
         "label": "Saerloon"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/saerloon/saerloon.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/saerloon/saerloon.webp"
     },
     "id": "saerloon"
   },
@@ -3157,10 +3157,10 @@
       "title": "Sundabar",
       "description": "Also known as '''Citadel Sundbarr''', one of the wealthiest and most militaristic cities within the nation of [[Luruar]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/sundabar/sundabar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/sundabar/sundabar.json",
         "label": "Sundabar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/sundabar/sundabar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/sundabar/sundabar.webp"
     },
     "id": "sundabar"
   },
@@ -3174,10 +3174,10 @@
       "title": "Samargol",
       "description": "The '''City of Veils''', the tropical capital city of [[Samarach]] that housed a quarter of the Samarachan population.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/samargol/samargol.json",
+        "url": "assets/atlas/world/toril/faerun/cities/samargol/samargol.json",
         "label": "Samargol"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/samargol/samargol.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/samargol/samargol.webp"
     },
     "id": "samargol"
   },
@@ -3191,10 +3191,10 @@
       "title": "Taruin",
       "description": "The '''City of Seven Spices''', a large city that stood on the junction of the creeks that merged, forming the [[River Samar]], renowned for its [[spice]]s and [[salt]] production.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/taruin/taruin.json",
+        "url": "assets/atlas/world/toril/faerun/cities/taruin/taruin.json",
         "label": "Taruin"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/taruin/taruin.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/taruin/taruin.webp"
     },
     "id": "taruin"
   },
@@ -3208,10 +3208,10 @@
       "title": "Rassatan",
       "description": "Or '''The City of Gilded Pearls''', a city atop a cliff of buildings carved into the walls of the [[Sanrach Basin]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/rassatan/rassatan.json",
+        "url": "assets/atlas/world/toril/faerun/cities/rassatan/rassatan.json",
         "label": "Rassatan"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/rassatan/rassatan.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/rassatan/rassatan.webp"
     },
     "id": "rassatan"
   },
@@ -3225,10 +3225,10 @@
       "title": "Narubel",
       "description": "Also known as '''The City of Seasnakes''', the city built into a series of sea caves that honeycombed the cliffs of a natural harbor.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/narubel/narubel.json",
+        "url": "assets/atlas/world/toril/faerun/cities/narubel/narubel.json",
         "label": "Narubel"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/narubel/narubel.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/narubel/narubel.webp"
     },
     "id": "narubel"
   },
@@ -3242,10 +3242,10 @@
       "title": "Delselar",
       "description": "The '''City of Succulent Jewels''', a large unwalled city on the water.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/delselar/delselar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/delselar/delselar.json",
         "label": "Delselar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/delselar/delselar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/delselar/delselar.webp"
     },
     "id": "delselar"
   },
@@ -3259,10 +3259,10 @@
       "title": "Lundeth",
       "description": "Or the '''City of Whirring Waters''', a large city in the foothills of the [[Hazur Mountains]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/lundeth/lundeth.json",
+        "url": "assets/atlas/world/toril/faerun/cities/lundeth/lundeth.json",
         "label": "Lundeth"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/lundeth/lundeth.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/lundeth/lundeth.webp"
     },
     "id": "lundeth"
   },
@@ -3276,10 +3276,10 @@
       "title": "Thindar",
       "description": "A large unwalled city and the capital of [[Thindol]], sprawled across a filled-in marsh.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/thindar/thindar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/thindar/thindar.json",
         "label": "Thindar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/thindar/thindar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/thindar/thindar.webp"
     },
     "id": "thindar"
   },
@@ -3293,10 +3293,10 @@
       "title": "Gurdeth",
       "description": "Or the '''City of Stilts''', a small, regularly flooded city of buildings perched atop poles and tied to each other for stability.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/gurdeth/gurdeth.json",
+        "url": "assets/atlas/world/toril/faerun/cities/gurdeth/gurdeth.json",
         "label": "Gurdeth"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/gurdeth/gurdeth.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/gurdeth/gurdeth.webp"
     },
     "id": "gurdeth"
   },
@@ -3310,10 +3310,10 @@
       "title": "Everlund",
       "description": "A city of merchant traders and caravan teams and was one of the greatest supporters of the league of the [[Silver Marches]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/everlund/everlund.json",
+        "url": "assets/atlas/world/toril/faerun/cities/everlund/everlund.json",
         "label": "Everlund"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/everlund/everlund.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/everlund/everlund.webp"
     },
     "id": "everlund"
   },
@@ -3327,10 +3327,10 @@
       "title": "Menzoberranzan",
       "description": "The '''City of Spiders''', located deep in the [[Underdark]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/menzoberranzan/menzoberranzan.json",
+        "url": "assets/atlas/world/toril/faerun/cities/menzoberranzan/menzoberranzan.json",
         "label": "Menzoberranzan"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/menzoberranzan/menzoberranzan.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/menzoberranzan/menzoberranzan.webp"
     },
     "id": "menzoberranzan"
   },
@@ -3344,10 +3344,10 @@
       "title": "Yartar",
       "description": "A fortified city member city of the [[Lords' Alliance]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/yartar/yartar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/yartar/yartar.json",
         "label": "Yartar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/yartar/yartar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/yartar/yartar.webp"
     },
     "id": "yartar"
   },
@@ -3361,10 +3361,10 @@
       "title": "Port Nyanzaru",
       "description": "A port city and an [[Amn]]ian colony that gained independence in late 1480s [[DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/port_nyanzaru/port_nyanzaru.json",
+        "url": "assets/atlas/world/toril/faerun/cities/port_nyanzaru/port_nyanzaru.json",
         "label": "Port Nyanzaru"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/port_nyanzaru/port_nyanzaru.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/port_nyanzaru/port_nyanzaru.webp"
     },
     "id": "port_nyanzaru"
   },
@@ -3376,12 +3376,12 @@
     ],
     "popup": {
       "title": "Mezro",
-      "description": "The site of the great city of the [[Tabaxi (tribe)|Tabaxi humans]] of [[Chult]], transported to a pocket plane by its deity \u2013 [[Ubtao]] to protect it from the destruction of the [[Spellplague]].",
+      "description": "The site of the great city of the [[Tabaxi (tribe)|Tabaxi humans]] of [[Chult]], transported to a pocket plane by its deity – [[Ubtao]] to protect it from the destruction of the [[Spellplague]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/mezro/mezro.json",
+        "url": "assets/atlas/world/toril/faerun/cities/mezro/mezro.json",
         "label": "Mezro"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/mezro/mezro.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/mezro/mezro.webp"
     },
     "id": "mezro"
   },
@@ -3395,10 +3395,10 @@
       "title": "Ss'zuraass'nee",
       "description": "'''The City of Abominations''', a large [[yuan-ti]] city in the [[Underdark]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/sszuraassnee/sszuraassnee.json",
+        "url": "assets/atlas/world/toril/faerun/cities/sszuraassnee/sszuraassnee.json",
         "label": "Ss'zuraass'nee"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/sszuraassnee/sszuraassnee.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/sszuraassnee/sszuraassnee.webp"
     },
     "id": "sszuraassnee"
   },
@@ -3412,10 +3412,10 @@
       "title": "Ss'essethen'aa",
       "description": "A city of twisting tunnels inhabited by [[yuan-ti]] [[cleric]]s of [[Sseth]] and [[ophidian]] laborers.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/ssessethenaa/ssessethenaa.json",
+        "url": "assets/atlas/world/toril/faerun/cities/ssessethenaa/ssessethenaa.json",
         "label": "Ss'essethen'aa"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/ssessethenaa/ssessethenaa.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/ssessethenaa/ssessethenaa.webp"
     },
     "id": "ssessethenaa"
   },
@@ -3429,10 +3429,10 @@
       "title": "Ss'khanaja",
       "description": "An [[Underdark]] city inhabited mainly by high-class [[naga]]s and their staff.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/sskhanaja/sskhanaja.json",
+        "url": "assets/atlas/world/toril/faerun/cities/sskhanaja/sskhanaja.json",
         "label": "Ss'khanaja"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/sskhanaja/sskhanaja.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/sskhanaja/sskhanaja.webp"
     },
     "id": "sskhanaja"
   },
@@ -3446,10 +3446,10 @@
       "title": "Tsenviilyq",
       "description": "A [[derro]] city in the [[Underdark]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/tsenviilyq/tsenviilyq.json",
+        "url": "assets/atlas/world/toril/faerun/cities/tsenviilyq/tsenviilyq.json",
         "label": "Tsenviilyq"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/tsenviilyq/tsenviilyq.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/tsenviilyq/tsenviilyq.webp"
     },
     "id": "tsenviilyq"
   },
@@ -3463,10 +3463,10 @@
       "title": "Anchoril",
       "description": "A port city of note.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/anchoril/anchoril.json",
+        "url": "assets/atlas/world/toril/faerun/cities/anchoril/anchoril.json",
         "label": "Anchoril"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/anchoril/anchoril.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/anchoril/anchoril.webp"
     },
     "id": "anchoril"
   },
@@ -3480,10 +3480,10 @@
       "title": "Illul",
       "description": "The center of the faith of [[Gond]] in the [[Realms]] and the site of the [[High Holy Crafthouse of Inspiration]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/illul/illul.json",
+        "url": "assets/atlas/world/toril/faerun/cities/illul/illul.json",
         "label": "Illul"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/illul/illul.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/illul/illul.webp"
     },
     "id": "illul"
   },
@@ -3497,10 +3497,10 @@
       "title": "Sambar",
       "description": "The capital city of [[Lantan]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/sambar/sambar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/sambar/sambar.json",
         "label": "Sambar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/sambar/sambar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/sambar/sambar.webp"
     },
     "id": "sambar"
   },
@@ -3514,10 +3514,10 @@
       "title": "Sundrah",
       "description": "A city of note.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/sundrah/sundrah.json",
+        "url": "assets/atlas/world/toril/faerun/cities/sundrah/sundrah.json",
         "label": "Sundrah"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/sundrah/sundrah.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/sundrah/sundrah.webp"
     },
     "id": "sundrah"
   },
@@ -3531,10 +3531,10 @@
       "title": "Gauntlgrym",
       "description": "The capital of the [[Delzoun]], reclaimed and ruled by King [[Bruenor Battlehammer]] in the late 15{{th}} century [[DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/gauntlgrym/gauntlgrym.json",
+        "url": "assets/atlas/world/toril/faerun/cities/gauntlgrym/gauntlgrym.json",
         "label": "Gauntlgrym"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/gauntlgrym/gauntlgrym.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/gauntlgrym/gauntlgrym.webp"
     },
     "id": "gauntlgrym"
   },
@@ -3548,10 +3548,10 @@
       "title": "Tupaal",
       "description": "An underwater city of note.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/tupaal/tupaal.json",
+        "url": "assets/atlas/world/toril/faerun/cities/tupaal/tupaal.json",
         "label": "Tupaal"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/tupaal/tupaal.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/tupaal/tupaal.webp"
     },
     "id": "tupaal"
   },
@@ -3565,10 +3565,10 @@
       "title": "Orilidren",
       "description": "One of the Six Holy Cities of the [[ixitxachitl]] nation in the [[Sea of Fallen Stars]] known as the [[Xedran Reefs]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/orilidren/orilidren.json",
+        "url": "assets/atlas/world/toril/faerun/cities/orilidren/orilidren.json",
         "label": "Orilidren"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/orilidren/orilidren.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/orilidren/orilidren.webp"
     },
     "id": "orilidren"
   },
@@ -3582,10 +3582,10 @@
       "title": "Thuridru",
       "description": "An underwater settlement of note.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/thuridru/thuridru.json",
+        "url": "assets/atlas/world/toril/faerun/cities/thuridru/thuridru.json",
         "label": "Thuridru"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/thuridru/thuridru.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/thuridru/thuridru.webp"
     },
     "id": "thuridru"
   },
@@ -3599,10 +3599,10 @@
       "title": "Grand Tor Arcanal",
       "description": "The capital of the underwater [[kuo-toa]]n nation of [[Olleth]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/grand_tor_arcanal/grand_tor_arcanal.json",
+        "url": "assets/atlas/world/toril/faerun/cities/grand_tor_arcanal/grand_tor_arcanal.json",
         "label": "Grand Tor Arcanal"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/grand_tor_arcanal/grand_tor_arcanal.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/grand_tor_arcanal/grand_tor_arcanal.webp"
     },
     "id": "grand_tor_arcanal"
   },
@@ -3616,10 +3616,10 @@
       "title": "Pumanath",
       "description": "An underwater city, [[triton]] protectorate. ",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/pumanath/pumanath.json",
+        "url": "assets/atlas/world/toril/faerun/cities/pumanath/pumanath.json",
         "label": "Pumanath"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/pumanath/pumanath.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/pumanath/pumanath.webp"
     },
     "id": "pumanath"
   },
@@ -3633,10 +3633,10 @@
       "title": "Ahlorsath",
       "description": "The capital of one of the three [[triton]] kingdoms in the [[Trench of Lopok]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/ahlorsath/ahlorsath.json",
+        "url": "assets/atlas/world/toril/faerun/cities/ahlorsath/ahlorsath.json",
         "label": "Ahlorsath"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/ahlorsath/ahlorsath.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/ahlorsath/ahlorsath.webp"
     },
     "id": "ahlorsath"
   },
@@ -3650,10 +3650,10 @@
       "title": "Vuuvaxath",
       "description": "The capital of one of the three [[triton]] kingdoms in the [[Trench of Lopok]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/vuuvaxath/vuuvaxath.json",
+        "url": "assets/atlas/world/toril/faerun/cities/vuuvaxath/vuuvaxath.json",
         "label": "Vuuvaxath"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/vuuvaxath/vuuvaxath.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/vuuvaxath/vuuvaxath.webp"
     },
     "id": "vuuvaxath"
   },
@@ -3667,10 +3667,10 @@
       "title": "Us'rath",
       "description": "An underwater city of note.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/usrath/usrath.json",
+        "url": "assets/atlas/world/toril/faerun/cities/usrath/usrath.json",
         "label": "Us'rath"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/usrath/usrath.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/usrath/usrath.webp"
     },
     "id": "usrath"
   },
@@ -3684,10 +3684,10 @@
       "title": "Us'holm",
       "description": "An underwater city of note.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/usholm/usholm.json",
+        "url": "assets/atlas/world/toril/faerun/cities/usholm/usholm.json",
         "label": "Us'holm"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/usholm/usholm.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/usholm/usholm.webp"
     },
     "id": "usholm"
   },
@@ -3701,10 +3701,10 @@
       "title": "Mulptan",
       "description": "The great vast, wind-battered trade city of [[Rashemen]], overflowing with tents and stalls.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/mulptan/mulptan.json",
+        "url": "assets/atlas/world/toril/faerun/cities/mulptan/mulptan.json",
         "label": "Mulptan"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/mulptan/mulptan.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/mulptan/mulptan.webp"
     },
     "id": "mulptan"
   },
@@ -3718,10 +3718,10 @@
       "title": "Immilmar",
       "description": "The capital city of [[Rashemen]] and seat of power for the nation's [[Iron Lord]], famous for its great crafters, whose goods were renowned across the [[Unapproachable East]] and the [[Cold Lands]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/immilmar/immilmar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/immilmar/immilmar.json",
         "label": "Immilmar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/immilmar/immilmar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/immilmar/immilmar.webp"
     },
     "id": "immilmar"
   },
@@ -3735,10 +3735,10 @@
       "title": "Bildoobaris",
       "description": "Also called '''the Trade Fair'', a large seasonal tent city and the unofficial capital of [[Narfell]] as of [[1479 DR]], that dominated the plains for one tenday each summer.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/bildoobaris/bildoobaris.json",
+        "url": "assets/atlas/world/toril/faerun/cities/bildoobaris/bildoobaris.json",
         "label": "Bildoobaris"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/bildoobaris/bildoobaris.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/bildoobaris/bildoobaris.webp"
     },
     "id": "bildoobaris"
   },
@@ -3752,10 +3752,10 @@
       "title": "Helgabal",
       "description": "The metropolis formerly known as '''Heliogabalus''', once the seat of government until King [[Gareth]] moved the capital to [[Bloodstone Village]] in the mid-to-late 14{{th}} century [[DR]], and later, moved back to Helgabal in the mid-to-late 15{{th}} century DR.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/helgabal/helgabal.json",
+        "url": "assets/atlas/world/toril/faerun/cities/helgabal/helgabal.json",
         "label": "Helgabal"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/helgabal/helgabal.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/helgabal/helgabal.webp"
     },
     "id": "helgabal"
   },
@@ -3767,12 +3767,12 @@
     ],
     "popup": {
       "title": "Trailsend",
-      "description": "The capital of the [[Barony of Polten]] \u2013 the center for travel of the surrounding region, and appealed to adventuring parties looking for work or seeking to explore the ruins in [[Rawlinswood]] or the [[Giantspire Mountains]].",
+      "description": "The capital of the [[Barony of Polten]] – the center for travel of the surrounding region, and appealed to adventuring parties looking for work or seeking to explore the ruins in [[Rawlinswood]] or the [[Giantspire Mountains]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/trailsend/trailsend.json",
+        "url": "assets/atlas/world/toril/faerun/cities/trailsend/trailsend.json",
         "label": "Trailsend"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/trailsend/trailsend.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/trailsend/trailsend.webp"
     },
     "id": "trailsend"
   },
@@ -3786,10 +3786,10 @@
       "title": "Praka",
       "description": "One of the larger cities in the [[Barony of Ostel]] in [[Damara]], known for its stout outer walls and mighty towers.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/praka/praka.json",
+        "url": "assets/atlas/world/toril/faerun/cities/praka/praka.json",
         "label": "Praka"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/praka/praka.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/praka/praka.webp"
     },
     "id": "praka"
   },
@@ -3803,10 +3803,10 @@
       "title": "Velen",
       "description": "A port city on the [[Tethyrian Peninsula]], overlooking the [[Sea of Swords]], that served as the capital of the duchy of [[Cape Velen]], within the [[Kingdom of Tethyr]] in the 14{{th}} century [[DR]] and onward into the 15{{th}} century after the realm's independence was declared.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/velen/velen.json",
+        "url": "assets/atlas/world/toril/faerun/cities/velen/velen.json",
         "label": "Velen"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/velen/velen.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/velen/velen.webp"
     },
     "id": "velen"
   },
@@ -3820,10 +3820,10 @@
       "title": "Darromar",
       "description": "The metropolis formerly known as '''Ithmong''' and '''Calimaronn'''.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/darromar/darromar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/darromar/darromar.json",
         "label": "Darromar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/darromar/darromar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/darromar/darromar.webp"
     },
     "id": "darromar"
   },
@@ -3837,10 +3837,10 @@
       "title": "Erebos",
       "description": "A large city on the [[Sea of Fallen Stars]] that could call up 8,000 troops and had a large fleet of ships with 5,000 marine soldiers.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/erebos/erebos.json",
+        "url": "assets/atlas/world/toril/faerun/cities/erebos/erebos.json",
         "label": "Erebos"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/erebos/erebos.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/erebos/erebos.webp"
     },
     "id": "erebos"
   },
@@ -3854,10 +3854,10 @@
       "title": "Hammerstaad",
       "description": "A fortified [[Northlander]] city and the seat of power for the king of [[Norheim]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/hammerstaad/hammerstaad.json",
+        "url": "assets/atlas/world/toril/faerun/cities/hammerstaad/hammerstaad.json",
         "label": "Hammerstaad"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/hammerstaad/hammerstaad.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/hammerstaad/hammerstaad.webp"
     },
     "id": "hammerstaad"
   },
@@ -3871,10 +3871,10 @@
       "title": "Gnarhelm",
       "description": "The capital city of the kingdom of [[Gnarhelm]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/gnarhelm/gnarhelm.json",
+        "url": "assets/atlas/world/toril/faerun/cities/gnarhelm/gnarhelm.json",
         "label": "Gnarhelm"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/gnarhelm/gnarhelm.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/gnarhelm/gnarhelm.webp"
     },
     "id": "gnarhelm"
   },
@@ -3888,10 +3888,10 @@
       "title": "Caer Callidyrr",
       "description": "The capital city of the [[Ffolk]] people on the [[Moonshaes island]] of [[Alaron]], and an [[alabaster]] castle that rose high above the settlement.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/caer_callidyrr/caer_callidyrr.json",
+        "url": "assets/atlas/world/toril/faerun/cities/caer_callidyrr/caer_callidyrr.json",
         "label": "Caer Callidyrr"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/caer_callidyrr/caer_callidyrr.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/caer_callidyrr/caer_callidyrr.webp"
     },
     "id": "caer_callidyrr"
   },
@@ -3905,10 +3905,10 @@
       "title": "Darmshall",
       "description": "A small commercial hub city in the hostile lands of [[Vaasa]] surrounded by farmland and ranches.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/darmshall/darmshall.json",
+        "url": "assets/atlas/world/toril/faerun/cities/darmshall/darmshall.json",
         "label": "Darmshall"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/darmshall/darmshall.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/darmshall/darmshall.webp"
     },
     "id": "darmshall"
   },
@@ -3922,10 +3922,10 @@
       "title": "Palischuk",
       "description": "A city in the northeastern corner of [[Vaasa]] populated predominantly by [[half-orc]]s.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/palischuk/palischuk.json",
+        "url": "assets/atlas/world/toril/faerun/cities/palischuk/palischuk.json",
         "label": "Palischuk"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/palischuk/palischuk.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/palischuk/palischuk.webp"
     },
     "id": "palischuk"
   },
@@ -3939,10 +3939,10 @@
       "title": "Telos City",
       "description": "The largest and newest city in [[Vaasa]] in the late 15{{th}} century [[DR]] that served as the realm's capital and the seat of power for the [[Warlock Knights]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/telos_city/telos_city.json",
+        "url": "assets/atlas/world/toril/faerun/cities/telos_city/telos_city.json",
         "label": "Telos City"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/telos_city/telos_city.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/telos_city/telos_city.webp"
     },
     "id": "telos_city"
   },
@@ -3956,10 +3956,10 @@
       "title": "Kressilacc",
       "description": "A [[sahuagin]] city in the [[Sea of Moonshae]], off the east coast of [[Oman's Isle]], the north coast of [[Gwynneth]], and the west coast of [[Alaron]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/kressilacc/kressilacc.json",
+        "url": "assets/atlas/world/toril/faerun/cities/kressilacc/kressilacc.json",
         "label": "Kressilacc"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/kressilacc/kressilacc.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/kressilacc/kressilacc.webp"
     },
     "id": "kressilacc"
   },
@@ -3973,10 +3973,10 @@
       "title": "Blackalblade",
       "description": "A small city and the capital of [[Ondeeme]], one of the wealthiest cities in the [[Border Kingdoms]] famed for its [[gem]]cutters.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/blackalblade/blackalblade.json",
+        "url": "assets/atlas/world/toril/faerun/cities/blackalblade/blackalblade.json",
         "label": "Blackalblade"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/blackalblade/blackalblade.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/blackalblade/blackalblade.webp"
     },
     "id": "blackalblade"
   },
@@ -3988,12 +3988,12 @@
     ],
     "popup": {
       "title": "Oeble",
-      "description": "A well-known trade center and a haven for criminal activity in the region \u2013 a place built on the bones of betrayed men.<br/><br/>Interactive map can be found [[Map:Oeble|here]].",
+      "description": "A well-known trade center and a haven for criminal activity in the region – a place built on the bones of betrayed men.<br/><br/>Interactive map can be found [[Map:Oeble|here]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/oeble/oeble.json",
+        "url": "assets/atlas/world/toril/faerun/cities/oeble/oeble.json",
         "label": "Oeble"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/oeble/oeble.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/oeble/oeble.webp"
     },
     "id": "oeble"
   },
@@ -4007,10 +4007,10 @@
       "title": "Tirumala",
       "description": "Also known as the '''Holy City''' of the [[rakshasa]]s, a rich city-state built atop [[Durpari]] ruins. It was a trading partner of [[Estagund]] by [[1474 DR]]. ",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/tirumala/tirumala.json",
+        "url": "assets/atlas/world/toril/faerun/cities/tirumala/tirumala.json",
         "label": "Tirumala"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/tirumala/tirumala.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/tirumala/tirumala.webp"
     },
     "id": "tirumala"
   },
@@ -4024,10 +4024,10 @@
       "title": "Underhome",
       "description": "The surface entrance into the '''Great City of the Dwarves''', the capital city of the [[Deep Realm]] of the [[gold dwarves]] located within the [[Great Rift]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/underhome/underhome.json",
+        "url": "assets/atlas/world/toril/faerun/cities/underhome/underhome.json",
         "label": "Underhome"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/underhome/underhome.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/underhome/underhome.webp"
     },
     "id": "underhome"
   },
@@ -4041,10 +4041,10 @@
       "title": "Rogarsheim",
       "description": "The [[Northlander]] capital located on the [[Bay of Norland]], with its industry centered around [[fish]]ing, hunting, and shipbuilding.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/rogarsheim/rogarsheim.json",
+        "url": "assets/atlas/world/toril/faerun/cities/rogarsheim/rogarsheim.json",
         "label": "Rogarsheim"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/rogarsheim/rogarsheim.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/rogarsheim/rogarsheim.webp"
     },
     "id": "rogarsheim"
   },
@@ -4058,10 +4058,10 @@
       "title": "Caer Corwell",
       "description": "Also known as '''Corwell Town''', a small city and a castle of the same name.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/caer_corwell/caer_corwell.json",
+        "url": "assets/atlas/world/toril/faerun/cities/caer_corwell/caer_corwell.json",
         "label": "Caer Corwell"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/caer_corwell/caer_corwell.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/caer_corwell/caer_corwell.webp"
     },
     "id": "caer_corwell"
   },
@@ -4073,12 +4073,12 @@
     ],
     "popup": {
       "title": "Sorath-Nu-Sum",
-      "description": "A city \u2013 the center of [[kuo-toa]] politics in the [[Underdark]].",
+      "description": "A city – the center of [[kuo-toa]] politics in the [[Underdark]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/sorath_nu_sum/sorath_nu_sum.json",
+        "url": "assets/atlas/world/toril/faerun/cities/sorath_nu_sum/sorath_nu_sum.json",
         "label": "Sorath-Nu-Sum"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/sorath_nu_sum/sorath_nu_sum.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/sorath_nu_sum/sorath_nu_sum.webp"
     },
     "id": "sorath_nu_sum"
   },
@@ -4092,10 +4092,10 @@
       "title": "Caer Westphal",
       "description": "A fortified castle that overlooked the city of Westphal on [[Snowdown Ride]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/caer_westphal/caer_westphal.json",
+        "url": "assets/atlas/world/toril/faerun/cities/caer_westphal/caer_westphal.json",
         "label": "Caer Westphal"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/caer_westphal/caer_westphal.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/caer_westphal/caer_westphal.webp"
     },
     "id": "caer_westphal"
   },
@@ -4109,10 +4109,10 @@
       "title": "Synnoria",
       "description": "An ancient [[elf|elven]] kingdom hidden in the mountains bordering the [[Myrloch Vale]] and sheltered by a powerful ''mass illusion'' [[spell]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/synnoria/synnoria.json",
+        "url": "assets/atlas/world/toril/faerun/cities/synnoria/synnoria.json",
         "label": "Synnoria"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/synnoria/synnoria.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/synnoria/synnoria.webp"
     },
     "id": "synnoria"
   },
@@ -4126,10 +4126,10 @@
       "title": "Us'holm",
       "description": "An underwater city of note.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/usholm_2/usholm_2.json",
+        "url": "assets/atlas/world/toril/faerun/cities/usholm_2/usholm_2.json",
         "label": "Us'holm"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/usholm_2/usholm_2.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/usholm_2/usholm_2.webp"
     },
     "id": "usholm_2"
   },
@@ -4143,10 +4143,10 @@
       "title": "Karador",
       "description": "A small [[fey]] city located in the middle of the [[Myrloch]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/karador/karador.json",
+        "url": "assets/atlas/world/toril/faerun/cities/karador/karador.json",
         "label": "Karador"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/karador/karador.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/karador/karador.webp"
     },
     "id": "karador"
   },
@@ -4160,10 +4160,10 @@
       "title": "Anhaurz",
       "description": "A city that was melted down overnights in the [[Spellplague]] and was rebuilt into a fortress city with a massive garrison by [[1478 DR]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/anhaurz/anhaurz.json",
+        "url": "assets/atlas/world/toril/faerun/cities/anhaurz/anhaurz.json",
         "label": "Anhaurz"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/anhaurz/anhaurz.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/anhaurz/anhaurz.webp"
     },
     "id": "anhaurz"
   },
@@ -4177,10 +4177,10 @@
       "title": "Djerad Thymar",
       "description": "Thr citadel-city of [[Tymanther]] and its [[Abeir]]an [[dragonborn]], brought to [[Toril]] by the [[Spellplague]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/djerad_thymar/djerad_thymar.json",
+        "url": "assets/atlas/world/toril/faerun/cities/djerad_thymar/djerad_thymar.json",
         "label": "Djerad Thymar"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/djerad_thymar/djerad_thymar.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/djerad_thymar/djerad_thymar.webp"
     },
     "id": "djerad_thymar"
   },
@@ -4192,12 +4192,12 @@
     ],
     "popup": {
       "title": "Skalnaedyr",
-      "description": "The second-largest city in [[Murgh\u00f4m]], formerly known as '''Phannaskul the Iron'''.",
+      "description": "The second-largest city in [[Murghôm]], formerly known as '''Phannaskul the Iron'''.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/skalnaedyr/skalnaedyr.json",
+        "url": "assets/atlas/world/toril/faerun/cities/skalnaedyr/skalnaedyr.json",
         "label": "Skalnaedyr"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/skalnaedyr/skalnaedyr.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/skalnaedyr/skalnaedyr.webp"
     },
     "id": "skalnaedyr"
   },
@@ -4209,12 +4209,12 @@
     ],
     "popup": {
       "title": "Port Ghaast",
-      "description": "A large city in [[Murgh\u00f4m]] that stood along the western bank of the [[River Ghaast]] and a prime military location for incursions into neighboring [[Semphar]].",
+      "description": "A large city in [[Murghôm]] that stood along the western bank of the [[River Ghaast]] and a prime military location for incursions into neighboring [[Semphar]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/port_ghaast/port_ghaast.json",
+        "url": "assets/atlas/world/toril/faerun/cities/port_ghaast/port_ghaast.json",
         "label": "Port Ghaast"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/port_ghaast/port_ghaast.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/port_ghaast/port_ghaast.webp"
     },
     "id": "port_ghaast"
   },
@@ -4226,12 +4226,12 @@
     ],
     "popup": {
       "title": "Zindalankh",
-      "description": "A coastal caravan city of [[Murgh\u00f4m]] and the site of a large [[Shou]] Town.",
+      "description": "A coastal caravan city of [[Murghôm]] and the site of a large [[Shou]] Town.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/zindalankh/zindalankh.json",
+        "url": "assets/atlas/world/toril/faerun/cities/zindalankh/zindalankh.json",
         "label": "Zindalankh"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/zindalankh/zindalankh.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/zindalankh/zindalankh.webp"
     },
     "id": "zindalankh"
   },
@@ -4245,10 +4245,10 @@
       "title": "Dhaztanar the Crystal-Towered",
       "description": "The capital city of [[Semphar]] that stood on one end of the [[Silk Road]], making it a bustling epicenter of trade and commerce.",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/dhaztanar_the_crystal_towered/dhaztanar_the_crystal_towered.json",
+        "url": "assets/atlas/world/toril/faerun/cities/dhaztanar_the_crystal_towered/dhaztanar_the_crystal_towered.json",
         "label": "Dhaztanar the Crystal-Towered"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/dhaztanar_the_crystal_towered/dhaztanar_the_crystal_towered.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/dhaztanar_the_crystal_towered/dhaztanar_the_crystal_towered.webp"
     },
     "id": "dhaztanar_the_crystal_towered"
   },
@@ -4262,10 +4262,10 @@
       "title": "Semlithol",
       "description": "A major coastal city in [[Semphar]].",
       "link": {
-        "url": "public/assets/atlas/world/toril/faerun/cities/semlithol/semlithol.json",
+        "url": "assets/atlas/world/toril/faerun/cities/semlithol/semlithol.json",
         "label": "Semlithol"
       },
-      "image": "public/assets/atlas/world/toril/faerun/cities/semlithol/semlithol.webp"
+      "image": "assets/atlas/world/toril/faerun/cities/semlithol/semlithol.webp"
     },
     "id": "semlithol"
   }

@@ -9,12 +9,12 @@
       "title": "Reghed Glacier",
       "description": "A glacial wasteland north of the Spine of the World and the namesake of the [[Reghedman]] [[barbarian]]s.",
       "link": {
-        "url": "Reghed Glacier",
+        "url": "assets/atlas/world/toril/faerun/glaciers_tundras/reghed_glacier/reghed_glacier.json",
         "label": "Reghed Glacier"
       },
-      "image": "File:Reghedglacier.jpg"
+      "image": "assets/atlas/world/toril/faerun/glaciers_tundras/reghed_glacier/reghed_glacier.webp"
     },
-    "id": "16"
+    "id": "reghed_glacier"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -26,11 +26,12 @@
       "title": "Glacier of the White Worm",
       "description": "The glacier – a great river of ice, situated high in the [[Earthspur Mountains]] between the [[Moonsea]], [[Damara]], [[Impiltur]], and [[the Vast]].",
       "link": {
-        "url": "Glacier of the White Worm",
+        "url": "assets/atlas/world/toril/faerun/glaciers_tundras/glacier_of_the_white_worm/glacier_of_the_white_worm.json",
         "label": "Glacier of the White Worm"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/glaciers_tundras/glacier_of_the_white_worm/glacier_of_the_white_worm.webp"
     },
-    "id": "1613"
+    "id": "glacier_of_the_white_worm"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -42,12 +43,12 @@
       "title": "Cold Run",
       "description": "A large stretch of frigid tundra that ran from the mouth of the [[Iceflow]] to [[Icewind Dale]].",
       "link": {
-        "url": "Cold Run",
+        "url": "assets/atlas/world/toril/faerun/glaciers_tundras/cold_run/cold_run.json",
         "label": "Cold Run"
       },
-      "image": "File:Iceflow.png"
+      "image": "assets/atlas/world/toril/faerun/glaciers_tundras/cold_run/cold_run.webp"
     },
-    "id": "2197"
+    "id": "cold_run"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -59,12 +60,12 @@
       "title": "Fields of Slaughter",
       "description": "A large plot of tundra land that ran between the [[Spine of the World]] an the ruins of the [[Severed Hand]] by its edge.",
       "link": {
-        "url": "Fields of Slaughter",
+        "url": "assets/atlas/world/toril/faerun/glaciers_tundras/fields_of_slaughter/fields_of_slaughter.json",
         "label": "Fields of Slaughter"
       },
-      "image": "File:FieldsOfSlaughter.png"
+      "image": "assets/atlas/world/toril/faerun/glaciers_tundras/fields_of_slaughter/fields_of_slaughter.webp"
     },
-    "id": "2205"
+    "id": "fields_of_slaughter"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -76,11 +77,12 @@
       "title": "High Ice",
       "description": "A desolate monster-infested glacier, found directly north of the [[Anauroch]] desert that had been extended from its original size by the magic of the [[phaerimm]].",
       "link": {
-        "url": "High Ice",
+        "url": "assets/atlas/world/toril/faerun/glaciers_tundras/high_ice/high_ice.json",
         "label": "High Ice"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/glaciers_tundras/high_ice/high_ice.webp"
     },
-    "id": "2234"
+    "id": "high_ice"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -92,12 +94,12 @@
       "title": "Wyrm's Tooth Glacier",
       "description": "A glacier carved out by the [[dwarves]] of [[Dorn's Deep]] into a massive, open-air temple complex dedicated to [[Dugmaren Brightmantle]].",
       "link": {
-        "url": "Dorn's Deep",
+        "url": "assets/atlas/world/toril/faerun/glaciers_tundras/wyrms_tooth_glacier/wyrms_tooth_glacier.json",
         "label": "Wyrm's Tooth Glacier"
       },
-      "image": "File:WyrmsTooth.png"
+      "image": "assets/atlas/world/toril/faerun/glaciers_tundras/wyrms_tooth_glacier/wyrms_tooth_glacier.webp"
     },
-    "id": "2358"
+    "id": "wyrms_tooth_glacier"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -109,12 +111,12 @@
       "title": "The Great Glacier",
       "description": "Also called '''Pelvuria''', a large mass of frozen land created in [[-2550 DR]] by the god [[Ulutiu]].",
       "link": {
-        "url": "Great Glacier",
+        "url": "assets/atlas/world/toril/faerun/glaciers_tundras/the_great_glacier/the_great_glacier.json",
         "label": "The Great Glacier"
       },
-      "image": "File:Great Glacier 2e.jpg"
+      "image": "assets/atlas/world/toril/faerun/glaciers_tundras/the_great_glacier/the_great_glacier.webp"
     },
-    "id": "2484"
+    "id": "the_great_glacier"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -126,12 +128,12 @@
       "title": "Glacier of the Silver Blades",
       "description": "A glacier of note.",
       "link": {
-        "url": "Glacier of the Silver Blades",
+        "url": "assets/atlas/world/toril/faerun/glaciers_tundras/glacier_of_the_silver_blades/glacier_of_the_silver_blades.json",
         "label": "Glacier of the Silver Blades"
       },
-      "image": "File:MoonseaNorth Dungeon170 lowres.png"
+      "image": "assets/atlas/world/toril/faerun/glaciers_tundras/glacier_of_the_silver_blades/glacier_of_the_silver_blades.webp"
     },
-    "id": "2606"
+    "id": "glacier_of_the_silver_blades"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -143,11 +145,11 @@
       "title": "Cold Vale",
       "description": "A wild and desolate region between the southern edge of the [[Cold Wood]] and the northern spur of the [[Rauvin Mountains]].",
       "link": {
-        "url": "Cold Vale",
+        "url": "assets/atlas/world/toril/faerun/glaciers_tundras/cold_vale/cold_vale.json",
         "label": "Cold Vale"
       },
-      "image": "File:ColdVale-MMwe-map.jpg"
+      "image": "assets/atlas/world/toril/faerun/glaciers_tundras/cold_vale/cold_vale.webp"
     },
-    "id": "3100"
+    "id": "cold_vale"
   }
 ]

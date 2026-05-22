@@ -9,11 +9,12 @@
       "title": "Wavecrest",
       "description": "One of two islands that made up the [[Eyes of Silvanus]] on the [[Sea of Fallen Stars]], protected by reefs and also the magic of the [[Emerald Enclave]].",
       "link": {
-        "url": "Wavecrest",
+        "url": "assets/atlas/world/toril/faerun/islands/wavecrest/wavecrest.json",
         "label": "Wavecrest"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/islands/wavecrest/wavecrest.webp"
     },
-    "id": "23"
+    "id": "wavecrest"
   },
   {
     "categoryId": "islands",
@@ -25,12 +26,12 @@
       "title": "Ilighôn",
       "description": "The island home of the [[Emerald Enclave]].",
       "link": {
-        "url": "Ilighôn",
+        "url": "assets/atlas/world/toril/faerun/islands/ilighon/ilighon.json",
         "label": "Ilighôn"
       },
-      "image": "File:Ilighôn.png"
+      "image": "assets/atlas/world/toril/faerun/islands/ilighon/ilighon.webp"
     },
-    "id": "24"
+    "id": "ilighon"
   },
   {
     "categoryId": "islands",
@@ -42,11 +43,12 @@
       "title": "Ixinos",
       "description": "The island home to a matriarchal tribe comprised almost entirely of women and ruled by the [[amazon]] Queen.",
       "link": {
-        "url": "Ixinos",
+        "url": "assets/atlas/world/toril/faerun/islands/ixinos/ixinos.json",
         "label": "Ixinos"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/islands/ixinos/ixinos.webp"
     },
-    "id": "25"
+    "id": "ixinos"
   },
   {
     "categoryId": "islands",
@@ -58,11 +60,12 @@
       "title": "Alaor",
       "description": "A pair of islands on the [[Alamber Sea]] that, for many years, was considered a tharch of [[Thay]] and served as a strategical naval stronghold for the magocratic nation.",
       "link": {
-        "url": "Alaor",
+        "url": "assets/atlas/world/toril/faerun/islands/alaor/alaor.json",
         "label": "Alaor"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/islands/alaor/alaor.webp"
     },
-    "id": "147"
+    "id": "alaor"
   },
   {
     "categoryId": "islands",
@@ -74,12 +77,12 @@
       "title": "Ship of the Gods",
       "description": "A volcanic island on the [[Alamber Sea]] and the cite of a secret temple to [[Geb]] called the [[Golden Forge]].",
       "link": {
-        "url": "Ship of the Gods",
+        "url": "assets/atlas/world/toril/faerun/islands/ship_of_the_gods/ship_of_the_gods.json",
         "label": "Ship of the Gods"
       },
-      "image": "File:Threskel low res.png"
+      "image": "assets/atlas/world/toril/faerun/islands/ship_of_the_gods/ship_of_the_gods.webp"
     },
-    "id": "148"
+    "id": "ship_of_the_gods"
   },
   {
     "categoryId": "islands",
@@ -91,12 +94,12 @@
       "title": "Vathal",
       "description": "A small island located on the [[Golden Water]] bay. It had no permanent settlements during the 14{{th}} century [[DR]]. ",
       "link": {
-        "url": "Vathal",
+        "url": "assets/atlas/world/toril/faerun/islands/vathal/vathal.json",
         "label": "Vathal"
       },
-      "image": "File:VarIA.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/vathal/vathal.webp"
     },
-    "id": "247"
+    "id": "vathal"
   },
   {
     "categoryId": "islands",
@@ -108,12 +111,12 @@
       "title": "Mordyr",
       "description": "A small island located on the [[Golden Water]] with no permanent settlements as of the 14{{th}} century [[DR]].",
       "link": {
-        "url": "Mordyr",
+        "url": "assets/atlas/world/toril/faerun/islands/mordyr/mordyr.json",
         "label": "Mordyr"
       },
-      "image": "File:VarIA.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/mordyr/mordyr.webp"
     },
-    "id": "248"
+    "id": "mordyr"
   },
   {
     "categoryId": "islands",
@@ -125,12 +128,12 @@
       "title": "Naarlith",
       "description": "A small group of islands located in the Great Sea, roughly 120 miles (190 km) south of the [[Shining Lands]].",
       "link": {
-        "url": "Naarlith",
+        "url": "assets/atlas/world/toril/faerun/islands/naarlith/naarlith.json",
         "label": "Naarlith"
       },
-      "image": "File:Naarlith.png"
+      "image": "assets/atlas/world/toril/faerun/islands/naarlith/naarlith.webp"
     },
-    "id": "264"
+    "id": "naarlith"
   },
   {
     "categoryId": "islands",
@@ -142,12 +145,12 @@
       "title": "White Rocks",
       "description": "A single island in the [[Great Sea]], roughly 250 miles off the coast, south of the town of [[Zabbasz]].",
       "link": {
-        "url": "White Rocks",
+        "url": "assets/atlas/world/toril/faerun/islands/white_rocks/white_rocks.json",
         "label": "White Rocks"
       },
-      "image": "File:Naarlith.png"
+      "image": "assets/atlas/world/toril/faerun/islands/white_rocks/white_rocks.webp"
     },
-    "id": "265"
+    "id": "white_rocks"
   },
   {
     "categoryId": "islands",
@@ -159,11 +162,12 @@
       "title": "Isle of Quelthiir",
       "description": "Or '''Passion Island''', was a 100-mile-long and 10-miles-wide large sandbar, with low hills and sea grass with only the occasional stunted tree.",
       "link": {
-        "url": "Isle of Quelthiir",
+        "url": "assets/atlas/world/toril/faerun/islands/isle_of_quelthiir/isle_of_quelthiir.json",
         "label": "Isle of Quelthiir"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/islands/isle_of_quelthiir/isle_of_quelthiir.webp"
     },
-    "id": "273"
+    "id": "isle_of_quelthiir"
   },
   {
     "categoryId": "islands",
@@ -175,12 +179,12 @@
       "title": "Talagath",
       "description": "A small heavily forested island at the center of the strait known as [[Talagath's Gauntlet]].",
       "link": {
-        "url": "Talagath",
+        "url": "assets/atlas/world/toril/faerun/islands/talagath/talagath.json",
         "label": "Talagath"
       },
-      "image": "File:TalagathGauntlet.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/talagath/talagath.webp"
     },
-    "id": "422"
+    "id": "talagath"
   },
   {
     "categoryId": "islands",
@@ -192,11 +196,12 @@
       "title": "Stormwall",
       "description": "The narrow islet that extended out from the sea at the edge of the harbor, shielding the bay of [[Tashluta]] from storms coming landward from the sea.",
       "link": {
-        "url": "Stormwall",
+        "url": "assets/atlas/world/toril/faerun/islands/stormwall/stormwall.json",
         "label": "Stormwall"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/islands/stormwall/stormwall.webp"
     },
-    "id": "458"
+    "id": "stormwall"
   },
   {
     "categoryId": "islands",
@@ -208,12 +213,12 @@
       "title": "Arnrock",
       "description": "An active volcano and the largest island in the [[Lake of Steam]], once – home to a population of [[strongheart]] [[halfling]]s who collectively called themselves the [[Arn]].",
       "link": {
-        "url": "Arnrock",
+        "url": "assets/atlas/world/toril/faerun/islands/arnrock/arnrock.json",
         "label": "Arnrock"
       },
-      "image": "File:The arnrock.PNG"
+      "image": "assets/atlas/world/toril/faerun/islands/arnrock/arnrock.webp"
     },
-    "id": "479"
+    "id": "arnrock"
   },
   {
     "categoryId": "islands",
@@ -225,11 +230,12 @@
       "title": "Felmer's Keep",
       "description": "An island of note in the [[Lake of Steam]].",
       "link": {
-        "url": "Felmer's Keep",
+        "url": "assets/atlas/world/toril/faerun/islands/felmers_keep/felmers_keep.json",
         "label": "Felmer's Keep"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/islands/felmers_keep/felmers_keep.webp"
     },
-    "id": "497"
+    "id": "felmers_keep"
   },
   {
     "categoryId": "islands",
@@ -241,12 +247,12 @@
       "title": "Olodel",
       "description": "An island, once a private hunting preserve for some eccentric, self-made [[Calishite]] merchants. ",
       "link": {
-        "url": "Olodel",
+        "url": "assets/atlas/world/toril/faerun/islands/olodel/olodel.json",
         "label": "Olodel"
       },
-      "image": "File:Olodel.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/olodel/olodel.webp"
     },
-    "id": "505"
+    "id": "olodel"
   },
   {
     "categoryId": "islands",
@@ -258,12 +264,12 @@
       "title": "Narruth",
       "description": "The southwestern island sister of [[Olodel]].",
       "link": {
-        "url": "Narruth",
+        "url": "assets/atlas/world/toril/faerun/islands/narruth/narruth.json",
         "label": "Narruth"
       },
-      "image": "File:Olodel.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/narruth/narruth.webp"
     },
-    "id": "506"
+    "id": "narruth"
   },
   {
     "categoryId": "islands",
@@ -275,12 +281,12 @@
       "title": "Nykkar, the Isle of Memory",
       "description": "An island off the southern shores of Calimshan that was the central burial site of the nation's rulers and some of its nobility.",
       "link": {
-        "url": "Nykkar (island)",
-        "label": "Nykkar"
+        "url": "assets/atlas/world/toril/faerun/islands/nykkar_the_isle_of_memory/nykkar_the_isle_of_memory.json",
+        "label": "Nykkar, the Isle of Memory"
       },
-      "image": "File:SpiderSwamp.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/nykkar_the_isle_of_memory/nykkar_the_isle_of_memory.webp"
     },
-    "id": "549"
+    "id": "nykkar_the_isle_of_memory"
   },
   {
     "categoryId": "islands",
@@ -292,12 +298,12 @@
       "title": "Singing Rocks",
       "description": "A collection of small islands off the coast of [[Calimshan]].",
       "link": {
-        "url": "Singing Rocks",
+        "url": "assets/atlas/world/toril/faerun/islands/singing_rocks/singing_rocks.json",
         "label": "Singing Rocks"
       },
-      "image": "File:Singing rocks.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/singing_rocks/singing_rocks.webp"
     },
-    "id": "569"
+    "id": "singing_rocks"
   },
   {
     "categoryId": "islands",
@@ -309,12 +315,12 @@
       "title": "Iyritrastrul",
       "description": "The southern island of the duo known as [[the Tusks]], used as a stop to repair ships due to its abundant [[shadowtop]]s, [[duskwood]]s, and [[blueleaf]] [[tree]]s.",
       "link": {
-        "url": "Iyritrastrul",
+        "url": "assets/atlas/world/toril/faerun/islands/iyritrastrul/iyritrastrul.json",
         "label": "Iyritrastrul"
       },
-      "image": "File:The Tusks.png"
+      "image": "assets/atlas/world/toril/faerun/islands/iyritrastrul/iyritrastrul.webp"
     },
-    "id": "573"
+    "id": "iyritrastrul"
   },
   {
     "categoryId": "islands",
@@ -326,12 +332,12 @@
       "title": "Borammur",
       "description": "The bigger northern island of [[the Tusks]] that once was a site of a prosperous [[copper]] mine, abandoned by the late 14{{th}} century [[DR]].",
       "link": {
-        "url": "Borammur",
+        "url": "assets/atlas/world/toril/faerun/islands/borammur/borammur.json",
         "label": "Borammur"
       },
-      "image": "File:The Tusks.png"
+      "image": "assets/atlas/world/toril/faerun/islands/borammur/borammur.webp"
     },
-    "id": "574"
+    "id": "borammur"
   },
   {
     "categoryId": "islands",
@@ -343,12 +349,12 @@
       "title": "Isle of the Circle",
       "description": "An island of note in the [[Korinn Archipelago]].",
       "link": {
-        "url": "Isle of the Circle",
+        "url": "assets/atlas/world/toril/faerun/islands/isle_of_the_circle/isle_of_the_circle.json",
         "label": "Isle of the Circle"
       },
-      "image": "File:Stone of Tymora (omnibus) map.png"
+      "image": "assets/atlas/world/toril/faerun/islands/isle_of_the_circle/isle_of_the_circle.webp"
     },
-    "id": "803"
+    "id": "isle_of_the_circle"
   },
   {
     "categoryId": "islands",
@@ -360,12 +366,12 @@
       "title": "Thelve",
       "description": "The largest island located immediately west off the shores of [[Candlekeep]], covered in fissured granite, temperate woodlands, and thousands of seabirds.",
       "link": {
-        "url": "Thelve",
+        "url": "assets/atlas/world/toril/faerun/islands/thelve/thelve.json",
         "label": "Thelve"
       },
-      "image": "File:Thelve.png"
+      "image": "assets/atlas/world/toril/faerun/islands/thelve/thelve.webp"
     },
-    "id": "1011"
+    "id": "thelve"
   },
   {
     "categoryId": "islands",
@@ -377,12 +383,12 @@
       "title": "Arthoum",
       "description": "The smallest of the islands west of the shores of the fortress library of [[Candlekeep]], known for its geyser-like blowholes that released clouds of steam and water mist during storms.\n",
       "link": {
-        "url": "Arthoum",
+        "url": "assets/atlas/world/toril/faerun/islands/arthoum/arthoum.json",
         "label": "Arthoum"
       },
-      "image": "File:Thelve.png"
+      "image": "assets/atlas/world/toril/faerun/islands/arthoum/arthoum.webp"
     },
-    "id": "1012"
+    "id": "arthoum"
   },
   {
     "categoryId": "islands",
@@ -394,12 +400,12 @@
       "title": "Nairn's Tomb",
       "description": "A small island honeycombed by ancient dwarven tunnels that descended deep into the [[Underdark]].",
       "link": {
-        "url": "Nairn's Tomb",
+        "url": "assets/atlas/world/toril/faerun/islands/nairns_tomb/nairns_tomb.json",
         "label": "Nairn's Tomb"
       },
-      "image": "File:Thelve.png"
+      "image": "assets/atlas/world/toril/faerun/islands/nairns_tomb/nairns_tomb.webp"
     },
-    "id": "1013"
+    "id": "nairns_tomb"
   },
   {
     "categoryId": "islands",
@@ -411,12 +417,12 @@
       "title": "Askalet",
       "description": "The island named after [[Askalath]], the wizard who once occupied a ruined tower on the island with a long shaft that connected it to the [[Underdark]].",
       "link": {
-        "url": "Askalet",
+        "url": "assets/atlas/world/toril/faerun/islands/askalet/askalet.json",
         "label": "Askalet"
       },
-      "image": "File:Thelve.png"
+      "image": "assets/atlas/world/toril/faerun/islands/askalet/askalet.webp"
     },
-    "id": "1014"
+    "id": "askalet"
   },
   {
     "categoryId": "islands",
@@ -428,12 +434,12 @@
       "title": "Sklorn",
       "description": "A shipwreck-littered pirate island, home to a species of dimwitted fat [[gray coaster]] seabirds.",
       "link": {
-        "url": "Sklorn",
+        "url": "assets/atlas/world/toril/faerun/islands/sklorn/sklorn.json",
         "label": "Sklorn"
       },
-      "image": "File:Thelve.png"
+      "image": "assets/atlas/world/toril/faerun/islands/sklorn/sklorn.webp"
     },
-    "id": "1017"
+    "id": "sklorn"
   },
   {
     "categoryId": "islands",
@@ -445,12 +451,12 @@
       "title": "Unglur",
       "description": "The middle of the three islands of the [[Crab Reach]] located west of Thelve, haunted by the dreaded [[Spirit of Unglur]].",
       "link": {
-        "url": "Unglur",
+        "url": "assets/atlas/world/toril/faerun/islands/unglur/unglur.json",
         "label": "Unglur"
       },
-      "image": "File:Thelve.png"
+      "image": "assets/atlas/world/toril/faerun/islands/unglur/unglur.webp"
     },
-    "id": "1018"
+    "id": "unglur"
   },
   {
     "categoryId": "islands",
@@ -462,12 +468,12 @@
       "title": "Raerest",
       "description": "The westernmost island of the [[Crab Reach]] once dominated by pirates, later claimed by [[lizardfolk]] of its large unnamed swamp.",
       "link": {
-        "url": "Raerest",
+        "url": "assets/atlas/world/toril/faerun/islands/raerest/raerest.json",
         "label": "Raerest"
       },
-      "image": "File:Thelve.png"
+      "image": "assets/atlas/world/toril/faerun/islands/raerest/raerest.webp"
     },
-    "id": "1019"
+    "id": "raerest"
   },
   {
     "categoryId": "islands",
@@ -479,11 +485,12 @@
       "title": "Hunters' Isle",
       "description": "A small forested island at the center of a small lake – [[Ongul's Water]]'s namesake, that drained into the [[Starwater River]].",
       "link": {
-        "url": "Hunters' Isle",
+        "url": "assets/atlas/world/toril/faerun/islands/hunters_isle/hunters_isle.json",
         "label": "Hunters' Isle"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/islands/hunters_isle/hunters_isle.webp"
     },
-    "id": "1085"
+    "id": "hunters_isle"
   },
   {
     "categoryId": "islands",
@@ -495,12 +502,12 @@
       "title": "Storna",
       "description": "An island in the [[Sea of Fallen Stars]] not far from [[Telpir]], used as a monster-breeding ground by [[Endreth Molipher]] and three [[wizard]] business partners starting around [[1359 DR]].",
       "link": {
-        "url": "Storna",
+        "url": "assets/atlas/world/toril/faerun/islands/storna/storna.json",
         "label": "Storna"
       },
-      "image": "File:Storna-Pirate Isles-2e.png"
+      "image": "assets/atlas/world/toril/faerun/islands/storna/storna.webp"
     },
-    "id": "1325"
+    "id": "storna"
   },
   {
     "categoryId": "islands",
@@ -512,12 +519,12 @@
       "title": "Whamite Isles",
       "description": "A cluster of small islands in the [[Sea of Fallen Stars]], controlled by the [[Emerald Enclave]] after [[1370 DR]].",
       "link": {
-        "url": "Whamite Isles",
+        "url": "assets/atlas/world/toril/faerun/islands/whamite_isles/whamite_isles.json",
         "label": "Whamite Isles"
       },
-      "image": "File:Storna-Pirate Isles-2e.png"
+      "image": "assets/atlas/world/toril/faerun/islands/whamite_isles/whamite_isles.webp"
     },
-    "id": "1326"
+    "id": "whamite_isles"
   },
   {
     "categoryId": "islands",
@@ -529,12 +536,12 @@
       "title": "Wayrock",
       "description": "An island and an 11,000-ft. (3,400-m) mountain in the [[Sea of Fallen Stars]]. It held ruins, and a temple of [[Cyric]] the Mad God.",
       "link": {
-        "url": "Wayrock",
+        "url": "assets/atlas/world/toril/faerun/islands/wayrock/wayrock.json",
         "label": "Wayrock"
       },
-      "image": "File:Midnight's Mask Sembia map.png"
+      "image": "assets/atlas/world/toril/faerun/islands/wayrock/wayrock.webp"
     },
-    "id": "1327"
+    "id": "wayrock"
   },
   {
     "categoryId": "islands",
@@ -546,12 +553,12 @@
       "title": "Prespur",
       "description": "A duo of islands with the [[Cormyer]]ean town of [[Palaggar]] located on the larger one and [[Sembian]] town of [[Uarhold]] on the smaller one – the [[Traitor's Isle]].",
       "link": {
-        "url": "Prespur",
+        "url": "assets/atlas/world/toril/faerun/islands/prespur/prespur.json",
         "label": "Prespur"
       },
-      "image": "File:Midnight's Mask Sembia map.png"
+      "image": "assets/atlas/world/toril/faerun/islands/prespur/prespur.webp"
     },
-    "id": "1347"
+    "id": "prespur"
   },
   {
     "categoryId": "islands",
@@ -563,11 +570,12 @@
       "title": "Orlumbor",
       "description": "A small rocky barren island and a city-state famed for its skilled, in-demand shipwrights.",
       "link": {
-        "url": "Orlumbor",
+        "url": "assets/atlas/world/toril/faerun/islands/orlumbor/orlumbor.json",
         "label": "Orlumbor"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/islands/orlumbor/orlumbor.webp"
     },
-    "id": "1363"
+    "id": "orlumbor"
   },
   {
     "categoryId": "islands",
@@ -579,11 +587,12 @@
       "title": "Tharsult",
       "description": "An independent island nation in the [[Shining Sea]] that grew bigger in the century that followed the [[Spellplague]], only to return to its former state with the [[Second Sundering]].",
       "link": {
-        "url": "Tharsult",
+        "url": "assets/atlas/world/toril/faerun/islands/tharsult/tharsult.json",
         "label": "Tharsult"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/islands/tharsult/tharsult.webp"
     },
-    "id": "1452"
+    "id": "tharsult"
   },
   {
     "categoryId": "islands",
@@ -595,12 +604,12 @@
       "title": "Sorcerer's Isle",
       "description": "An island located on the [[Stojanow River]] with the river splitting around the island, with a large [[silver]] pyramid occupying most of the island.",
       "link": {
-        "url": "Sorcerer's Isle",
+        "url": "assets/atlas/world/toril/faerun/islands/sorcerers_isle/sorcerers_isle.json",
         "label": "Sorcerer's Isle"
       },
-      "image": "File:Phlan-atlas.png"
+      "image": "assets/atlas/world/toril/faerun/islands/sorcerers_isle/sorcerers_isle.webp"
     },
-    "id": "1522"
+    "id": "sorcerers_isle"
   },
   {
     "categoryId": "islands",
@@ -612,12 +621,12 @@
       "title": "Dragonisle",
       "description": "The largest island in the [[Pirate Isles]], populated by around 4,000 pirates and was geographically dominated by the [[Earthspur]].",
       "link": {
-        "url": "Dragonisle",
+        "url": "assets/atlas/world/toril/faerun/islands/dragonisle/dragonisle.json",
         "label": "Dragonisle"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/dragonisle/dragonisle.webp"
     },
-    "id": "1579"
+    "id": "dragonisle"
   },
   {
     "categoryId": "islands",
@@ -629,12 +638,12 @@
       "title": "Ulgar's Isle",
       "description": "Also known as '''Ulgar Isle''', home to the [[Chessenta]]n [[vampire]] [[Ulgar]] and his [[undead]] minions.",
       "link": {
-        "url": "Ulgar's Isle",
+        "url": "assets/atlas/world/toril/faerun/islands/ulgars_isle/ulgars_isle.json",
         "label": "Ulgar's Isle"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/ulgars_isle/ulgars_isle.webp"
     },
-    "id": "1583"
+    "id": "ulgars_isle"
   },
   {
     "categoryId": "islands",
@@ -646,12 +655,12 @@
       "title": "Fang Rocks",
       "description": "A dangerous reef formation situated near the halfway point in the waters between [[Kelthann]] and the [[Dragonisle]].",
       "link": {
-        "url": "Fang Rocks",
+        "url": "assets/atlas/world/toril/faerun/islands/fang_rocks/fang_rocks.json",
         "label": "Fang Rocks"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/fang_rocks/fang_rocks.webp"
     },
-    "id": "1584"
+    "id": "fang_rocks"
   },
   {
     "categoryId": "islands",
@@ -663,12 +672,12 @@
       "title": "Hawk's Isle",
       "description": "A forest-covered island in the [[Pirate Isles]], inhabited by deformed victims of an old plague.",
       "link": {
-        "url": "Hawk's Isle",
+        "url": "assets/atlas/world/toril/faerun/islands/hawks_isle/hawks_isle.json",
         "label": "Hawk's Isle"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/hawks_isle/hawks_isle.webp"
     },
-    "id": "1585"
+    "id": "hawks_isle"
   },
   {
     "categoryId": "islands",
@@ -680,12 +689,12 @@
       "title": "Kelthann",
       "description": "The island also known as the '''Gateway to Sembia''', a smuggling port inhabited by [[human]] and [[hin]] worshipers of [[Grumbar]].",
       "link": {
-        "url": "Kelthann",
+        "url": "assets/atlas/world/toril/faerun/islands/kelthann/kelthann.json",
         "label": "Kelthann"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/kelthann/kelthann.webp"
     },
-    "id": "1586"
+    "id": "kelthann"
   },
   {
     "categoryId": "islands",
@@ -697,12 +706,12 @@
       "title": "Mirg Isle",
       "description": "An island and a pirate stronghold.",
       "link": {
-        "url": "Mirg Isle",
+        "url": "assets/atlas/world/toril/faerun/islands/mirg_isle/mirg_isle.json",
         "label": "Mirg Isle"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/mirg_isle/mirg_isle.webp"
     },
-    "id": "1592"
+    "id": "mirg_isle"
   },
   {
     "categoryId": "islands",
@@ -714,12 +723,12 @@
       "title": "Telfar",
       "description": "A small island in the southern [[Pirate Isles]] with an excellent natural harbor that made it a popular resting point for pirates returning from the open sea.",
       "link": {
-        "url": "Telfar",
+        "url": "assets/atlas/world/toril/faerun/islands/telfar/telfar.json",
         "label": "Telfar"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/telfar/telfar.webp"
     },
-    "id": "1593"
+    "id": "telfar"
   },
   {
     "categoryId": "islands",
@@ -731,12 +740,12 @@
       "title": "Sarr",
       "description": "A tiny storm-battered island with. a ruined lighthouse.",
       "link": {
-        "url": "Sarr",
+        "url": "assets/atlas/world/toril/faerun/islands/sarr/sarr.json",
         "label": "Sarr"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/sarr/sarr.webp"
     },
-    "id": "1594"
+    "id": "sarr"
   },
   {
     "categoryId": "islands",
@@ -748,12 +757,12 @@
       "title": "Sumbar",
       "description": "An island near the center of the [[Pirate Isles]] along the northwest edge of [[the Bowl]] inhabited by the mysterious [[Oracle of Nasmen]].",
       "link": {
-        "url": "Sumbar",
+        "url": "assets/atlas/world/toril/faerun/islands/sumbar/sumbar.json",
         "label": "Sumbar"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/sumbar/sumbar.webp"
     },
-    "id": "1595"
+    "id": "sumbar"
   },
   {
     "categoryId": "islands",
@@ -765,12 +774,12 @@
       "title": "Lith",
       "description": "An unsettled island inhabited by a brood of ravenous [[neogi]].",
       "link": {
-        "url": "Lith (island)",
+        "url": "assets/atlas/world/toril/faerun/islands/lith/lith.json",
         "label": "Lith"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/lith/lith.webp"
     },
-    "id": "1596"
+    "id": "lith"
   },
   {
     "categoryId": "islands",
@@ -782,12 +791,12 @@
       "title": "Lurath",
       "description": "A small island of roughly 20 square miles, populated by primitive but friendly [[elvish]] creatures and several types of dangerous [[dinosaur]]s.",
       "link": {
-        "url": "Lurath",
+        "url": "assets/atlas/world/toril/faerun/islands/lurath/lurath.json",
         "label": "Lurath"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/lurath/lurath.webp"
     },
-    "id": "1597"
+    "id": "lurath"
   },
   {
     "categoryId": "islands",
@@ -799,12 +808,12 @@
       "title": "Ilthan",
       "description": "A medium-sized storm-battered island with no major settlements but an old ruin in the center and a population of [[cyclopskin]].",
       "link": {
-        "url": "Ilthan",
+        "url": "assets/atlas/world/toril/faerun/islands/ilthan/ilthan.json",
         "label": "Ilthan"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/ilthan/ilthan.webp"
     },
-    "id": "1598"
+    "id": "ilthan"
   },
   {
     "categoryId": "islands",
@@ -816,12 +825,12 @@
       "title": "Alphar Isle",
       "description": "A large island of several friendly harbors, populated by around 3,000 pirates.",
       "link": {
-        "url": "Alphar Isle",
+        "url": "assets/atlas/world/toril/faerun/islands/alphar_isle/alphar_isle.json",
         "label": "Alphar Isle"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/alphar_isle/alphar_isle.webp"
     },
-    "id": "1599"
+    "id": "alphar_isle"
   },
   {
     "categoryId": "islands",
@@ -833,12 +842,12 @@
       "title": "Bulta",
       "description": "A small and mysterious island inhabited by a wide assortment of half-sized animals called the [[minimal]]s.",
       "link": {
-        "url": "Bulta",
+        "url": "assets/atlas/world/toril/faerun/islands/bulta/bulta.json",
         "label": "Bulta"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/bulta/bulta.webp"
     },
-    "id": "1601"
+    "id": "bulta"
   },
   {
     "categoryId": "islands",
@@ -850,12 +859,12 @@
       "title": "Oresk",
       "description": "A small island with several natural harbors and three pirate strongholds.",
       "link": {
-        "url": "Oresk",
+        "url": "assets/atlas/world/toril/faerun/islands/oresk/oresk.json",
         "label": "Oresk"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/oresk/oresk.webp"
     },
-    "id": "1602"
+    "id": "oresk"
   },
   {
     "categoryId": "islands",
@@ -867,12 +876,12 @@
       "title": "Paldir",
       "description": "A small island with a large mountain dominating its landscape, mostly inhabited by ex-pirates and fortune seekers.",
       "link": {
-        "url": "Paldir",
+        "url": "assets/atlas/world/toril/faerun/islands/paldir/paldir.json",
         "label": "Paldir"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/paldir/paldir.webp"
     },
-    "id": "1603"
+    "id": "paldir"
   },
   {
     "categoryId": "islands",
@@ -884,12 +893,12 @@
       "title": "Tan",
       "description": "A small volcanic island with a large smoking crater at its center, that rumbled occasionally.",
       "link": {
-        "url": "Tan",
+        "url": "assets/atlas/world/toril/faerun/islands/tan/tan.json",
         "label": "Tan"
       },
-      "image": "File:The Pirate Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/tan/tan.webp"
     },
-    "id": "1604"
+    "id": "tan"
   },
   {
     "categoryId": "islands",
@@ -901,12 +910,12 @@
       "title": "Sylkiir",
       "description": "An island of note.",
       "link": {
-        "url": "Sylkiir",
+        "url": "assets/atlas/world/toril/faerun/islands/sylkiir/sylkiir.json",
         "label": "Sylkiir"
       },
-      "image": "File:Threat from the Sea of fallen stars map.png"
+      "image": "assets/atlas/world/toril/faerun/islands/sylkiir/sylkiir.webp"
     },
-    "id": "1608"
+    "id": "sylkiir"
   },
   {
     "categoryId": "islands",
@@ -918,12 +927,12 @@
       "title": "Lone Rock",
       "description": "A tiny island known for its [[juniper]] plants.",
       "link": {
-        "url": "Lone Rock",
+        "url": "assets/atlas/world/toril/faerun/islands/lone_rock/lone_rock.json",
         "label": "Lone Rock"
       },
-      "image": "File:LoneRock.png"
+      "image": "assets/atlas/world/toril/faerun/islands/lone_rock/lone_rock.webp"
     },
-    "id": "1615"
+    "id": "lone_rock"
   },
   {
     "categoryId": "islands",
@@ -935,12 +944,12 @@
       "title": "Sauros Island",
       "description": "The island at the center of the [[Glumpen Swamp]], the location of a ruined keep taken over by [[lizardfolk]] sometime before the mid-14{{th}} century [[DR]].",
       "link": {
-        "url": "Sauros Island",
+        "url": "assets/atlas/world/toril/faerun/islands/sauros_island/sauros_island.json",
         "label": "Sauros Island"
       },
-      "image": "File:Twilight Marsh.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/sauros_island/sauros_island.webp"
     },
-    "id": "1651"
+    "id": "sauros_island"
   },
   {
     "categoryId": "islands",
@@ -952,12 +961,12 @@
       "title": "Isle of Moas",
       "description": "A mysterious island in the [[Moonsea]].",
       "link": {
-        "url": "Isle of Moas",
+        "url": "assets/atlas/world/toril/faerun/islands/isle_of_moas/isle_of_moas.json",
         "label": "Isle of Moas"
       },
-      "image": "File:Isle of Moans.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/isle_of_moas/isle_of_moas.webp"
     },
-    "id": "1799"
+    "id": "isle_of_moas"
   },
   {
     "categoryId": "islands",
@@ -969,12 +978,12 @@
       "title": "The Dawn Warrior",
       "description": "A small and dangerous uncalled island of overgrown jungles that repelled numerous attempts to settle it since the 700s [[DR]].",
       "link": {
-        "url": "The Dawn Warrior",
+        "url": "assets/atlas/world/toril/faerun/islands/the_dawn_warrior/the_dawn_warrior.json",
         "label": "The Dawn Warrior"
       },
-      "image": "File:Refuge bay chult Nsi Wastes.png"
+      "image": "assets/atlas/world/toril/faerun/islands/the_dawn_warrior/the_dawn_warrior.webp"
     },
-    "id": "1979"
+    "id": "the_dawn_warrior"
   },
   {
     "categoryId": "islands",
@@ -986,12 +995,12 @@
       "title": "Umbarra",
       "description": "An island of note.",
       "link": {
-        "url": "Umbarra",
+        "url": "assets/atlas/world/toril/faerun/islands/umbarra/umbarra.json",
         "label": "Umbarra"
       },
-      "image": "File:Thindol samarach lapaliiya.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/umbarra/umbarra.webp"
     },
-    "id": "2059"
+    "id": "umbarra"
   },
   {
     "categoryId": "islands",
@@ -1003,12 +1012,12 @@
       "title": "Mother-Of-Mists",
       "description": "An island in the [[Trackless Sea]] lying some way south of [[Lantan]] and west of [[Chult]].",
       "link": {
-        "url": "Mother-Of-Mists",
+        "url": "assets/atlas/world/toril/faerun/islands/mother_of_mists/mother_of_mists.json",
         "label": "Mother-Of-Mists"
       },
-      "image": "File:Lantan.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/mother_of_mists/mother_of_mists.webp"
     },
-    "id": "2101"
+    "id": "mother_of_mists"
   },
   {
     "categoryId": "islands",
@@ -1020,12 +1029,12 @@
       "title": "Ssan",
       "description": "Also called '''the Daughters''', a small archipelago near the [[Mother-Of-Mists]].",
       "link": {
-        "url": "Ssan",
+        "url": "assets/atlas/world/toril/faerun/islands/ssan/ssan.json",
         "label": "Ssan"
       },
-      "image": "File:Lantan.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/ssan/ssan.webp"
     },
-    "id": "2102"
+    "id": "ssan"
   },
   {
     "categoryId": "islands",
@@ -1037,12 +1046,12 @@
       "title": "Suj",
       "description": "The southern companion of the island of [[Lantan]], a fairly hilly land with rocky pinnacles emerging from lush jungles.",
       "link": {
-        "url": "Suj",
+        "url": "assets/atlas/world/toril/faerun/islands/suj/suj.json",
         "label": "Suj"
       },
-      "image": "File:Lantan.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/suj/suj.webp"
     },
-    "id": "2158"
+    "id": "suj"
   },
   {
     "categoryId": "islands",
@@ -1054,12 +1063,12 @@
       "title": "Lantan",
       "description": "An island-nation in the [[Trackless Sea]], known for its advanced technology and the population's devout worship of [[Gond]].",
       "link": {
-        "url": "Lantan",
+        "url": "assets/atlas/world/toril/faerun/islands/lantan/lantan.json",
         "label": "Lantan"
       },
-      "image": "File:Lantan.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/lantan/lantan.webp"
     },
-    "id": "2159"
+    "id": "lantan"
   },
   {
     "categoryId": "islands",
@@ -1071,12 +1080,12 @@
       "title": "Orlil",
       "description": "A small rocky island located off of the southeastern coast of [[Lantan]], another significantly smaller island off of Orlil's shores was home to a population of sentient [[wombat]]s and [[platypus]]es.",
       "link": {
-        "url": "Orlil",
+        "url": "assets/atlas/world/toril/faerun/islands/orlil/orlil.json",
         "label": "Orlil"
       },
-      "image": "File:Lantan.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/orlil/orlil.webp"
     },
-    "id": "2160"
+    "id": "orlil"
   },
   {
     "categoryId": "islands",
@@ -1088,12 +1097,12 @@
       "title": "The Icepeak",
       "description": "An island that was mostly made up of a huge volcano.",
       "link": {
-        "url": "Icepeak",
+        "url": "assets/atlas/world/toril/faerun/islands/the_icepeak/the_icepeak.json",
         "label": "The Icepeak"
       },
-      "image": "File:Umukek.png"
+      "image": "assets/atlas/world/toril/faerun/islands/the_icepeak/the_icepeak.webp"
     },
-    "id": "2186"
+    "id": "the_icepeak"
   },
   {
     "categoryId": "islands",
@@ -1105,12 +1114,12 @@
       "title": "Altarn",
       "description": "One of the [[Brokenshores]] islands.",
       "link": {
-        "url": "Altarn",
+        "url": "assets/atlas/world/toril/faerun/islands/altarn/altarn.json",
         "label": "Altarn"
       },
-      "image": "File:Aquatic kingdoms -sea of fallen stars.png"
+      "image": "assets/atlas/world/toril/faerun/islands/altarn/altarn.webp"
     },
-    "id": "2291"
+    "id": "altarn"
   },
   {
     "categoryId": "islands",
@@ -1122,12 +1131,12 @@
       "title": "Brokenshores",
       "description": "Also known as '''The Thousand Swords''', an archipelago off the shores of [[Altumbel]].",
       "link": {
-        "url": "Brokenshores",
+        "url": "assets/atlas/world/toril/faerun/islands/brokenshores/brokenshores.json",
         "label": "Brokenshores"
       },
-      "image": "File:Aquatic kingdoms -sea of fallen stars.png"
+      "image": "assets/atlas/world/toril/faerun/islands/brokenshores/brokenshores.webp"
     },
-    "id": "2292"
+    "id": "brokenshores"
   },
   {
     "categoryId": "islands",
@@ -1139,12 +1148,12 @@
       "title": "Gundarlun Island",
       "description": "A subarctic island lashed with long winter storms inhabited largely by [[Northmen]]; with [[Gundbarg]], the Gateway Port on the island's eastern shores.",
       "link": {
-        "url": "Gundarlun Island",
+        "url": "assets/atlas/world/toril/faerun/islands/gundarlun_island/gundarlun_island.json",
         "label": "Gundarlun Island"
       },
-      "image": "File:Gundarlun.png"
+      "image": "assets/atlas/world/toril/faerun/islands/gundarlun_island/gundarlun_island.webp"
     },
-    "id": "2562"
+    "id": "gundarlun_island"
   },
   {
     "categoryId": "islands",
@@ -1156,12 +1165,12 @@
       "title": "Purple Rocks",
       "description": "A small archipelago of rocky outcroppings that sheltered its verdant valleys from the storms behind their sparse forested peaks.",
       "link": {
-        "url": "Purple Rocks",
+        "url": "assets/atlas/world/toril/faerun/islands/purple_rocks/purple_rocks.json",
         "label": "Purple Rocks"
       },
-      "image": "File:PurpleRocks.png"
+      "image": "assets/atlas/world/toril/faerun/islands/purple_rocks/purple_rocks.webp"
     },
-    "id": "2563"
+    "id": "purple_rocks"
   },
   {
     "categoryId": "islands",
@@ -1173,11 +1182,12 @@
       "title": "Whalebones",
       "description": "A small archipelago named after the [[whale]] skeletons that could be found on the islands' beaches.",
       "link": {
-        "url": "Whalebones",
+        "url": "assets/atlas/world/toril/faerun/islands/whalebones/whalebones.json",
         "label": "Whalebones"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/islands/whalebones/whalebones.webp"
     },
-    "id": "2564"
+    "id": "whalebones"
   },
   {
     "categoryId": "islands",
@@ -1189,12 +1199,12 @@
       "title": "Ioma",
       "description": "One of the larger islands in the [[Nelanther Isles]] with only one town, appropriately called [[Ioma Town]].",
       "link": {
-        "url": "Ioma",
+        "url": "assets/atlas/world/toril/faerun/islands/ioma/ioma.json",
         "label": "Ioma"
       },
-      "image": "File:Nelanther-Toaridge.png"
+      "image": "assets/atlas/world/toril/faerun/islands/ioma/ioma.webp"
     },
-    "id": "2565"
+    "id": "ioma"
   },
   {
     "categoryId": "islands",
@@ -1206,12 +1216,12 @@
       "title": "Skaug",
       "description": "A small island in the [[Nelanther Isles]] with a single settlement also called [[Skaug (port)|Skaug]].",
       "link": {
-        "url": "Skaug",
+        "url": "assets/atlas/world/toril/faerun/islands/skaug/skaug.json",
         "label": "Skaug"
       },
-      "image": "File:Rising Tide Map sea of swords.png"
+      "image": "assets/atlas/world/toril/faerun/islands/skaug/skaug.webp"
     },
-    "id": "2566"
+    "id": "skaug"
   },
   {
     "categoryId": "islands",
@@ -1223,12 +1233,12 @@
       "title": "Ruathym",
       "description": "One of the larger islands north of the [[Moonshae Isles]] in the [[Trackless Sea]]; a rocky island with rugged coasts, narrow coves, green hills, forested purple mountains, and a few villages.",
       "link": {
-        "url": "Ruathym",
+        "url": "assets/atlas/world/toril/faerun/islands/ruathym/ruathym.json",
         "label": "Ruathym"
       },
-      "image": "File:Ruathym 5e map.png"
+      "image": "assets/atlas/world/toril/faerun/islands/ruathym/ruathym.webp"
     },
-    "id": "2568"
+    "id": "ruathym"
   },
   {
     "categoryId": "islands",
@@ -1240,12 +1250,12 @@
       "title": "Dennik",
       "description": "One of the larger but relatively featureless ilands of the [[Korinn Archipelago]] with its central plateau was prime land for grazing herds of animals.",
       "link": {
-        "url": "Dennik",
+        "url": "assets/atlas/world/toril/faerun/islands/dennik/dennik.json",
         "label": "Dennik"
       },
-      "image": "File:KorinnAtlas.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/dennik/dennik.webp"
     },
-    "id": "2573"
+    "id": "dennik"
   },
   {
     "categoryId": "islands",
@@ -1257,12 +1267,12 @@
       "title": "Dragonshome",
       "description": "An island of note.",
       "link": {
-        "url": "Dragonshome",
+        "url": "assets/atlas/world/toril/faerun/islands/dragonshome/dragonshome.json",
         "label": "Dragonshome"
       },
-      "image": "File:Island grotto-1e.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/dragonshome/dragonshome.webp"
     },
-    "id": "2574"
+    "id": "dragonshome"
   },
   {
     "categoryId": "islands",
@@ -1274,12 +1284,12 @@
       "title": "Nerth",
       "description": "An island of note.",
       "link": {
-        "url": "Nerth",
+        "url": "assets/atlas/world/toril/faerun/islands/nerth/nerth.json",
         "label": "Nerth"
       },
-      "image": "File:Island grotto-1e.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/nerth/nerth.webp"
     },
-    "id": "2575"
+    "id": "nerth"
   },
   {
     "categoryId": "islands",
@@ -1291,12 +1301,12 @@
       "title": "The Whale's Flukes",
       "description": "A tiny archipelago, west of [[Chult]]'s shores.",
       "link": {
-        "url": "Whale's Flukes",
+        "url": "assets/atlas/world/toril/faerun/islands/the_whales_flukes/the_whales_flukes.json",
         "label": "The Whale's Flukes"
       },
-      "image": "File:The Whale's Flukes.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/the_whales_flukes/the_whales_flukes.webp"
     },
-    "id": "2621"
+    "id": "the_whales_flukes"
   },
   {
     "categoryId": "islands",
@@ -1308,12 +1318,12 @@
       "title": "Mintarn",
       "description": "A popular and beautiful safe haven for those fleeing the authorities as well as neutral ground for conflicting parties to come to an accord; popular for its [[almond brandy]], [[lager]], and [[green wine]].",
       "link": {
-        "url": "Mintarn",
+        "url": "assets/atlas/world/toril/faerun/islands/mintarn/mintarn.json",
         "label": "Mintarn"
       },
-      "image": "File:Mintarn harbor.png"
+      "image": "assets/atlas/world/toril/faerun/islands/mintarn/mintarn.webp"
     },
-    "id": "2622"
+    "id": "mintarn"
   },
   {
     "categoryId": "islands",
@@ -1325,12 +1335,12 @@
       "title": "Flamsterd",
       "description": "A [[wizard]]-settled isle, named after the [[WAterdhavian]] mage named [[Flamsterd]].",
       "link": {
-        "url": "Flamsterd (isle)",
+        "url": "assets/atlas/world/toril/faerun/islands/flamsterd/flamsterd.json",
         "label": "Flamsterd"
       },
-      "image": "File:Flamsterd.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/flamsterd/flamsterd.webp"
     },
-    "id": "2623"
+    "id": "flamsterd"
   },
   {
     "categoryId": "islands",
@@ -1342,12 +1352,12 @@
       "title": "Carcathen",
       "description": "A small western island in the [[Nelanther Isles]] with no noticeable ports, riddled with coastal caves.",
       "link": {
-        "url": "Carcathen",
+        "url": "assets/atlas/world/toril/faerun/islands/carcathen/carcathen.json",
         "label": "Carcathen"
       },
-      "image": "File:Carcathen.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/carcathen/carcathen.webp"
     },
-    "id": "2624"
+    "id": "carcathen"
   },
   {
     "categoryId": "islands",
@@ -1359,12 +1369,12 @@
       "title": "Pandira",
       "description": "An island within the [[Korinn Archipelago]] with the settlement of note named [[Westhaven]] as its port.",
       "link": {
-        "url": "Pandira",
+        "url": "assets/atlas/world/toril/faerun/islands/pandira/pandira.json",
         "label": "Pandira"
       },
-      "image": "File:Map of Korinn Archipelago 2nd edition.png"
+      "image": "assets/atlas/world/toril/faerun/islands/pandira/pandira.webp"
     },
-    "id": "2641"
+    "id": "pandira"
   },
   {
     "categoryId": "islands",
@@ -1376,12 +1386,12 @@
       "title": "Tetris",
       "description": "A small southernmost island in the [[Korinn Archipelago]] inhabited by [[ffolk]] [[human]]s.",
       "link": {
-        "url": "Tetris",
+        "url": "assets/atlas/world/toril/faerun/islands/tetris/tetris.json",
         "label": "Tetris"
       },
-      "image": "File:Map of Korinn Archipelago 2nd edition.png"
+      "image": "assets/atlas/world/toril/faerun/islands/tetris/tetris.webp"
     },
-    "id": "2642"
+    "id": "tetris"
   },
   {
     "categoryId": "islands",
@@ -1393,12 +1403,12 @@
       "title": "Island of Viledel",
       "description": "A tiny and mostly abandoned island – the location of the [[Island of Viledel]] and warring groups of [[orc]]s.",
       "link": {
-        "url": "Island of Viledel",
+        "url": "assets/atlas/world/toril/faerun/islands/island_of_viledel/island_of_viledel.json",
         "label": "Island of Viledel"
       },
-      "image": "File:Map of Korinn Archipelago 2nd edition.png"
+      "image": "assets/atlas/world/toril/faerun/islands/island_of_viledel/island_of_viledel.webp"
     },
-    "id": "2643"
+    "id": "island_of_viledel"
   },
   {
     "categoryId": "islands",
@@ -1410,12 +1420,12 @@
       "title": "Jacaman",
       "description": "A small elongated isle located south of [[Dennik]].",
       "link": {
-        "url": "Jacaman",
+        "url": "assets/atlas/world/toril/faerun/islands/jacaman/jacaman.json",
         "label": "Jacaman"
       },
-      "image": "File:Map of Korinn Archipelago 2nd edition.png"
+      "image": "assets/atlas/world/toril/faerun/islands/jacaman/jacaman.webp"
     },
-    "id": "2644"
+    "id": "jacaman"
   },
   {
     "categoryId": "islands",
@@ -1427,12 +1437,12 @@
       "title": "Rabin's Reef",
       "description": "A forested island that was a popular summer destination for wealthy families, especially those of [[Ventris]].",
       "link": {
-        "url": "Rabin's Reef",
+        "url": "assets/atlas/world/toril/faerun/islands/rabins_reef/rabins_reef.json",
         "label": "Rabin's Reef"
       },
-      "image": "File:Map of Korinn Archipelago 2nd edition.png"
+      "image": "assets/atlas/world/toril/faerun/islands/rabins_reef/rabins_reef.webp"
     },
-    "id": "2645"
+    "id": "rabins_reef"
   },
   {
     "categoryId": "islands",
@@ -1444,12 +1454,12 @@
       "title": "Ventris",
       "description": "A major island within the [[Korinn Archipelago]] inhabited by [[human]]s, [[dwarves]], [[halfling]]s, and [[elves]].",
       "link": {
-        "url": "Ventris",
+        "url": "assets/atlas/world/toril/faerun/islands/ventris/ventris.json",
         "label": "Ventris"
       },
-      "image": "File:Map of Korinn Archipelago 2nd edition.png"
+      "image": "assets/atlas/world/toril/faerun/islands/ventris/ventris.webp"
     },
-    "id": "2646"
+    "id": "ventris"
   },
   {
     "categoryId": "islands",
@@ -1461,12 +1471,12 @@
       "title": "Chawdik",
       "description": "A poor island that was part of the [[Korinn Archipelago]] that housed the the largest [[gnome|gnomish]] community among all the archipelago islands.",
       "link": {
-        "url": "Chawdik",
+        "url": "assets/atlas/world/toril/faerun/islands/chawdik/chawdik.json",
         "label": "Chawdik"
       },
-      "image": "File:Map of Korinn Archipelago 2nd edition.png"
+      "image": "assets/atlas/world/toril/faerun/islands/chawdik/chawdik.webp"
     },
-    "id": "2647"
+    "id": "chawdik"
   },
   {
     "categoryId": "islands",
@@ -1478,12 +1488,12 @@
       "title": "Highport",
       "description": "An island within the [[Korinn Archipelago]] in the [[Moonshae Isles]].",
       "link": {
-        "url": "Highport",
+        "url": "assets/atlas/world/toril/faerun/islands/highport/highport.json",
         "label": "Highport"
       },
-      "image": "File:KorinnAtlas.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/highport/highport.webp"
     },
-    "id": "2648"
+    "id": "highport"
   },
   {
     "categoryId": "islands",
@@ -1495,12 +1505,12 @@
       "title": "Caftenor",
       "description": "An island populated by [[halfling]]s with its one major settlement being [[Caftenor (town)|Caftenor Town]].",
       "link": {
-        "url": "Caftenor",
+        "url": "assets/atlas/world/toril/faerun/islands/caftenor/caftenor.json",
         "label": "Caftenor"
       },
-      "image": "File:KorinnAtlas.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/caftenor/caftenor.webp"
     },
-    "id": "2649"
+    "id": "caftenor"
   },
   {
     "categoryId": "islands",
@@ -1512,12 +1522,12 @@
       "title": "Barret's Quay",
       "description": "A small island in the eastern part of the Korinn Archipelago within the Moonshae Isles. Lacking any major port cities, it was mostly known for its reserved and secretive population of dwarves and humans.",
       "link": {
-        "url": "Barret's Quay",
+        "url": "assets/atlas/world/toril/faerun/islands/barrets_quay/barrets_quay.json",
         "label": "Barret's Quay"
       },
-      "image": "File:KorinnAtlas.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/barrets_quay/barrets_quay.webp"
     },
-    "id": "2651"
+    "id": "barrets_quay"
   },
   {
     "categoryId": "islands",
@@ -1529,12 +1539,12 @@
       "title": "Finback",
       "description": "The southernmost isle of the [[Whale Bones]].",
       "link": {
-        "url": "Finback",
+        "url": "assets/atlas/world/toril/faerun/islands/finback/finback.json",
         "label": "Finback"
       },
-      "image": "File:SeaOfSwords-1489DR.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/finback/finback.webp"
     },
-    "id": "2652"
+    "id": "finback"
   },
   {
     "categoryId": "islands",
@@ -1546,12 +1556,12 @@
       "title": "Skadaurak Island",
       "description": "The volcanic island home to [[Hoondarrh]], an ancient and powerful [[red dragon]].",
       "link": {
-        "url": "Skadaurak Island",
+        "url": "assets/atlas/world/toril/faerun/islands/skadaurak_island/skadaurak_island.json",
         "label": "Skadaurak Island"
       },
-      "image": "File:Shadaurak island.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/skadaurak_island/skadaurak_island.webp"
     },
-    "id": "2653"
+    "id": "skadaurak_island"
   },
   {
     "categoryId": "islands",
@@ -1563,12 +1573,12 @@
       "title": "Graygruun",
       "description": "An island within the kingdom of [[Norheim]] in the [[Moonshae Isles]].",
       "link": {
-        "url": "Graygruun",
+        "url": "assets/atlas/world/toril/faerun/islands/graygruun/graygruun.json",
         "label": "Graygruun"
       },
-      "image": "File:Norheim.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/graygruun/graygruun.webp"
     },
-    "id": "2655"
+    "id": "graygruun"
   },
   {
     "categoryId": "islands",
@@ -1580,12 +1590,12 @@
       "title": "Llorgh",
       "description": "A large island within the kingdom of [[Norheim]].",
       "link": {
-        "url": "Llorgh",
+        "url": "assets/atlas/world/toril/faerun/islands/llorgh/llorgh.json",
         "label": "Llorgh"
       },
-      "image": "File:Norheim.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/llorgh/llorgh.webp"
     },
-    "id": "2658"
+    "id": "llorgh"
   },
   {
     "categoryId": "islands",
@@ -1597,11 +1607,12 @@
       "title": "Irphong",
       "description": "An island that was only used as a marker to show the northern end of [[Asavir’s Channel]] with It's only notable feature being one of the [[Sea Towers]].",
       "link": {
-        "url": "Irphong",
+        "url": "assets/atlas/world/toril/faerun/islands/irphong/irphong.json",
         "label": "Irphong"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/islands/irphong/irphong.webp"
     },
-    "id": "2732"
+    "id": "irphong"
   },
   {
     "categoryId": "islands",
@@ -1613,11 +1624,12 @@
       "title": "Nemessor",
       "description": "A small island located in the [[Nelanther Isles]] that housed only one settlement –  [[Black Skull Cove]].",
       "link": {
-        "url": "Nemessor",
+        "url": "assets/atlas/world/toril/faerun/islands/nemessor/nemessor.json",
         "label": "Nemessor"
-      }
+      },
+      "image": "assets/atlas/world/toril/faerun/islands/nemessor/nemessor.webp"
     },
-    "id": "2735"
+    "id": "nemessor"
   },
   {
     "categoryId": "islands",
@@ -1629,12 +1641,12 @@
       "title": "Canthrell",
       "description": "An island of note.",
       "link": {
-        "url": "Canthrell",
+        "url": "assets/atlas/world/toril/faerun/islands/canthrell/canthrell.json",
         "label": "Canthrell"
       },
-      "image": "File:Norheim.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/canthrell/canthrell.webp"
     },
-    "id": "2755"
+    "id": "canthrell"
   },
   {
     "categoryId": "islands",
@@ -1646,12 +1658,12 @@
       "title": "Giantspine",
       "description": "The largest island within the kingdom of [[Norheim]] in the [[Moonshae Isles]].",
       "link": {
-        "url": "Giantspine",
+        "url": "assets/atlas/world/toril/faerun/islands/giantspine/giantspine.json",
         "label": "Giantspine"
       },
-      "image": "File:Norheim.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/giantspine/giantspine.webp"
     },
-    "id": "2759"
+    "id": "giantspine"
   },
   {
     "categoryId": "islands",
@@ -1663,12 +1675,12 @@
       "title": "Oman's Isle",
       "description": "A n island that was a part of the kingdom of [[Oman]].",
       "link": {
-        "url": "Oman's Isle",
+        "url": "assets/atlas/world/toril/faerun/islands/omans_isle/omans_isle.json",
         "label": "Oman's Isle"
       },
-      "image": "File:OmanIsle.png"
+      "image": "assets/atlas/world/toril/faerun/islands/omans_isle/omans_isle.webp"
     },
-    "id": "2761"
+    "id": "omans_isle"
   },
   {
     "categoryId": "islands",
@@ -1680,12 +1692,12 @@
       "title": "Toaridge-at-the-Sun's-Setting",
       "description": "The island that played an important role in the history of a powerful magic sword known as ''[[Taragarth]]''.",
       "link": {
-        "url": "Toaridge-at-the-Sun's-Setting",
+        "url": "assets/atlas/world/toril/faerun/islands/toaridge_at_the_suns_setting/toaridge_at_the_suns_setting.json",
         "label": "Toaridge-at-the-Sun's-Setting"
       },
-      "image": "File:Nelanther-Toaridge.png"
+      "image": "assets/atlas/world/toril/faerun/islands/toaridge_at_the_suns_setting/toaridge_at_the_suns_setting.webp"
     },
-    "id": "2777"
+    "id": "toaridge_at_the_suns_setting"
   },
   {
     "categoryId": "islands",
@@ -1697,12 +1709,12 @@
       "title": "The Rookery",
       "description": "Also known as '''Pelath's Isle''', a low island had a thin grove of trees, a stone cottage with a garden, and numerous large rooks, inhabited by an old hermit [[mage]], [[Pelath]].",
       "link": {
-        "url": "Pelath's Isle",
+        "url": "assets/atlas/world/toril/faerun/islands/the_rookery/the_rookery.json",
         "label": "The Rookery"
       },
-      "image": "File:Nelanther Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/the_rookery/the_rookery.webp"
     },
-    "id": "2778"
+    "id": "the_rookery"
   },
   {
     "categoryId": "islands",
@@ -1714,12 +1726,12 @@
       "title": "Hook Isle",
       "description": "A hook-shaped island, part of the [[Nelanther Isles]]; the [[Bay of Skulls]] near the center of the island gave it its noticeable crescent shape.",
       "link": {
-        "url": "Hook Isle",
+        "url": "assets/atlas/world/toril/faerun/islands/hook_isle/hook_isle.json",
         "label": "Hook Isle"
       },
-      "image": "File:Nelanther Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/hook_isle/hook_isle.webp"
     },
-    "id": "2779"
+    "id": "hook_isle"
   },
   {
     "categoryId": "islands",
@@ -1731,12 +1743,12 @@
       "title": "Thordentor",
       "description": "One of the largest islands by landmass in the [[Nelanther Isles]], it scared most pirates in the area off as each year, anywhere from 5–30 [[whale]]s beached themselves and died on its eastern and southern shores. Underneath the island stood a major stronghold of the [[Twisted Rune]].",
       "link": {
-        "url": "Thordentor",
+        "url": "assets/atlas/world/toril/faerun/islands/thordentor/thordentor.json",
         "label": "Thordentor"
       },
-      "image": "File:Nelanther Isles.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/thordentor/thordentor.webp"
     },
-    "id": "2780"
+    "id": "thordentor"
   },
   {
     "categoryId": "islands",
@@ -1748,12 +1760,12 @@
       "title": "Amarune",
       "description": "A small island found directly off the east coast of the kingdom of [[Gnarhelm]], just 5 miles (8 kilometers) off shore.",
       "link": {
-        "url": "Amarune (island)",
+        "url": "assets/atlas/world/toril/faerun/islands/amarune/amarune.json",
         "label": "Amarune"
       },
-      "image": "File:Amarune.JPG"
+      "image": "assets/atlas/world/toril/faerun/islands/amarune/amarune.webp"
     },
-    "id": "2877"
+    "id": "amarune"
   },
   {
     "categoryId": "islands",
@@ -1765,12 +1777,12 @@
       "title": "Alaron",
       "description": "The largest and most populous island in the [[Moonshae Isles]].",
       "link": {
-        "url": "Alaron",
+        "url": "assets/atlas/world/toril/faerun/islands/alaron/alaron.json",
         "label": "Alaron"
       },
-      "image": "File:Dungeon196-Mike Schley-Alaron.png"
+      "image": "assets/atlas/world/toril/faerun/islands/alaron/alaron.webp"
     },
-    "id": "2973"
+    "id": "alaron"
   },
   {
     "categoryId": "islands",
@@ -1782,12 +1794,12 @@
       "title": "Island of Solstice",
       "description": "The snowflake-shaped island where [[Grimskalle]], a frost giant fortress, stood way north in the [[Sea of Moving Ice]].",
       "link": {
-        "url": "Island of Solstice",
+        "url": "assets/atlas/world/toril/faerun/islands/island_of_solstice/island_of_solstice.json",
         "label": "Island of Solstice"
       },
-      "image": "File:Grimskalle.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/island_of_solstice/island_of_solstice.webp"
     },
-    "id": "3017"
+    "id": "island_of_solstice"
   },
   {
     "categoryId": "islands",
@@ -1799,12 +1811,12 @@
       "title": "Norland",
       "description": "An island in the [[Moonshae Isles]] that was inhabited primarily by [[Northlander]] [[human]]s.",
       "link": {
-        "url": "Norland",
+        "url": "assets/atlas/world/toril/faerun/islands/norland/norland.json",
         "label": "Norland"
       },
-      "image": "File:Norland darkened wish.png"
+      "image": "assets/atlas/world/toril/faerun/islands/norland/norland.webp"
     },
-    "id": "3110"
+    "id": "norland"
   },
   {
     "categoryId": "islands",
@@ -1816,12 +1828,12 @@
       "title": "Moray",
       "description": "The westernmost territory of the [[Ffolk]] and the wildest of the southern [[Moonshae Isles]].",
       "link": {
-        "url": "Moray",
+        "url": "assets/atlas/world/toril/faerun/islands/moray/moray.json",
         "label": "Moray"
       },
-      "image": "File:Moray.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/moray/moray.webp"
     },
-    "id": "3113"
+    "id": "moray"
   },
   {
     "categoryId": "islands",
@@ -1833,12 +1845,12 @@
       "title": "Gwynneth",
       "description": "Also known as '''Sarifal''', the largest of the southern islands.",
       "link": {
-        "url": "Gwynneth",
+        "url": "assets/atlas/world/toril/faerun/islands/gwynneth/gwynneth.json",
         "label": "Gwynneth"
       },
-      "image": "File:Darkwell novel map.png"
+      "image": "assets/atlas/world/toril/faerun/islands/gwynneth/gwynneth.webp"
     },
-    "id": "3115"
+    "id": "gwynneth"
   },
   {
     "categoryId": "islands",
@@ -1850,12 +1862,12 @@
       "title": "Forgotten Island",
       "description": "A small uninhabited island in the [[Shining Sea]], far to the south of [[Calimshan]] and off the coast of [[Chult]] – the hiding place of the [[Sunite]] relic called ''[[The Sacred Heart of the Beast]]''.{{approx}}",
       "link": {
-        "url": "Forgotten Island",
+        "url": "assets/atlas/world/toril/faerun/islands/forgotten_island/forgotten_island.json",
         "label": "Forgotten Island"
       },
-      "image": "File:ForgottenIslandMap.png"
+      "image": "assets/atlas/world/toril/faerun/islands/forgotten_island/forgotten_island.webp"
     },
-    "id": "3162"
+    "id": "forgotten_island"
   },
   {
     "categoryId": "islands",
@@ -1867,12 +1879,12 @@
       "title": "Tuern",
       "description": "An island in the [[Frozenfar]] in the [[Trackless Sea]].",
       "link": {
-        "url": "Tuern",
+        "url": "assets/atlas/world/toril/faerun/islands/tuern/tuern.json",
         "label": "Tuern"
       },
-      "image": "File:Islands tuern uttersea.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/tuern/tuern.webp"
     },
-    "id": "3169"
+    "id": "tuern"
   },
   {
     "categoryId": "islands",
@@ -1884,12 +1896,12 @@
       "title": "Island of Coral",
       "description": "The island home of the [[reef giant]] [[Coral (reef giant)|Coral]].",
       "link": {
-        "url": "Island of Coral",
+        "url": "assets/atlas/world/toril/faerun/islands/island_of_coral/island_of_coral.json",
         "label": "Island of Coral"
       },
-      "image": "File:Dragon's reach underwater map.png"
+      "image": "assets/atlas/world/toril/faerun/islands/island_of_coral/island_of_coral.webp"
     },
-    "id": "3190"
+    "id": "island_of_coral"
   },
   {
     "categoryId": "islands",
@@ -1901,12 +1913,12 @@
       "title": "Snowdown",
       "description": "One of the most temperate islands of the [[Moonshaes]], characterized by rolling hills and good roads.",
       "link": {
-        "url": "Snowdown",
+        "url": "assets/atlas/world/toril/faerun/islands/snowdown/snowdown.json",
         "label": "Snowdown"
       },
-      "image": "File:Snowdown.jpg"
+      "image": "assets/atlas/world/toril/faerun/islands/snowdown/snowdown.webp"
     },
-    "id": "3303"
+    "id": "snowdown"
   },
   {
     "categoryId": "islands",
@@ -1918,12 +1930,12 @@
       "title": "Umukek",
       "description": "The northernmost named but uninhabited island in [[Faerûn]].",
       "link": {
-        "url": "Umukek",
+        "url": "assets/atlas/world/toril/faerun/islands/umukek/umukek.json",
         "label": "Umukek"
       },
-      "image": "File:Umukek.png"
+      "image": "assets/atlas/world/toril/faerun/islands/umukek/umukek.webp"
     },
-    "id": "3328"
+    "id": "umukek"
   },
   {
     "categoryId": "islands",
@@ -1935,12 +1947,12 @@
       "title": "Ghevden",
       "description": "A large island of note in [[the Thousand Swords]].",
       "link": {
-        "url": "Ghevden",
+        "url": "assets/atlas/world/toril/faerun/islands/ghevden/ghevden.json",
         "label": "Ghevden"
       },
-      "image": "File:Urbryur-UEp97-Lazzaretti-Kauth.png"
+      "image": "assets/atlas/world/toril/faerun/islands/ghevden/ghevden.webp"
     },
-    "id": "3363"
+    "id": "ghevden"
   },
   {
     "categoryId": "islands",
@@ -1952,11 +1964,11 @@
       "title": "Sunset Isle",
       "description": "An island of note west of [[Moray]].",
       "link": {
-        "url": "Sunset Isle",
+        "url": "assets/atlas/world/toril/faerun/islands/sunset_isle/sunset_isle.json",
         "label": "Sunset Isle"
       },
-      "image": "File:Sunset.png"
+      "image": "assets/atlas/world/toril/faerun/islands/sunset_isle/sunset_isle.webp"
     },
-    "id": "3673"
+    "id": "sunset_isle"
   }
 ]
