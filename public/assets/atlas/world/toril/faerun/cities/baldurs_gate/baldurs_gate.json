@@ -1,13 +1,24 @@
+
 {
   "id": "baldurs_gate",
-  "name": "baldurs_gate",
-  "type": "metropolis",
+  "name": "Baldur's Gate",
+  "type": "settlement",
   "parent": "cities",
-  "title": "Baldur's Gate",
-  "description": "A metropolis city-state, perhaps the most prosperous and influential merchant city on the western coast of [[Faerûn]].<br/><br/>Interactive map can be found [[Map:Baldur's Gate|here]].",
+  "title": "Baldur's Gate: Metropolis of the Coast",
+  "description": "Baldur's Gate is the largest metropolis on the Sword Coast. A city of history and ambition, it stands as a gateway to the western heartlands.",
+  "wiki": "Located at the mouth of the River Chionthar, Baldur's Gate is a massive trading city regulated by the Council of Four. It is divided into the Upper, Lower, and Outer Cities.",
   "image": "baldurs_gate.webp",
+  "thumbnail": "baldurs_gate_thumb.webp",
+  "banner": "baldurs_gate_banner.webp",
+  "tags": ["city", "metropolis", "port"],
+  "children": ["upper_city", "lower_city", "outer_city"],
   "coordinates": {
     "lat": 1035.5,
     "lng": 2029.5
+  },
+  "metadata": {
+    "government": "The Council of Four",
+    "military": "The Flaming Fist",
+    "population": "125,000+"
   }
 }
