@@ -11,6 +11,7 @@
   "thumbnail": "baldurs_gate_thumb.webp",
   "banner": "baldurs_gate_banner.webp",
   "tags": ["city", "metropolis", "port"],
+  "map": "assets/atlas/world/toril/faerun/cities/baldurs_gate/baldurs_gate_map.json",
   "children": ["upper_city", "lower_city", "outer_city"],
   "coordinates": {
     "lat": 1035.5,
