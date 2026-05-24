@@ -5,14 +5,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "otherworldly-patron",
+        "index": "otherworldly_patron",
         "name": "Otherworldly Patron",
-        "url": "/assets/atlas/features/otherworldly-patron"
+        "url": "public/assets/atlas/features/json/otherworldly_patron.json"
       },
       {
-        "index": "pact-magic",
+        "index": "pact_magic",
         "name": "Pact Magic",
-        "url": "/assets/atlas/features/pact-magic"
+        "url": "public/assets/atlas/features/json/pact_magic.json"
       }
     ],
     "spellcasting": {
@@ -35,13 +35,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-1",
+    "index": "warlock_1",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/1",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -50,9 +50,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "eldritch-invocations",
+        "index": "eldritch_invocations",
         "name": "Eldritch Invocations",
-        "url": "/assets/atlas/features/eldritch-invocations"
+        "url": "public/assets/atlas/features/json/eldritch_invocations.json"
       }
     ],
     "spellcasting": {
@@ -75,13 +75,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-2",
+    "index": "warlock_2",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/2",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -90,9 +90,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "pact-boon",
+        "index": "pact_boon",
         "name": "Pact Boon",
-        "url": "/assets/atlas/features/pact-boon"
+        "url": "public/assets/atlas/features/json/pact_boon.json"
       }
     ],
     "spellcasting": {
@@ -115,13 +115,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-3",
+    "index": "warlock_3",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/3",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -130,9 +130,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "warlock-ability-score-improvement-1",
+        "index": "warlock_ability_score_improvement_1",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/warlock-ability-score-improvement-1"
+        "url": "public/assets/atlas/features/json/warlock_ability_score_improvement_1.json"
       }
     ],
     "spellcasting": {
@@ -155,13 +155,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-4",
+    "index": "warlock_4",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/4",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -189,13 +189,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-5",
+    "index": "warlock_5",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/5",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -204,9 +204,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "otherworldly-patron-improvement-1",
+        "index": "otherworldly_patron_improvement_1",
         "name": "Otherworldly Patron feature",
-        "url": "/assets/atlas/features/otherworldly-patron-improvement-1"
+        "url": "public/assets/atlas/features/json/otherworldly_patron_improvement_1.json"
       }
     ],
     "spellcasting": {
@@ -229,13 +229,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-6",
+    "index": "warlock_6",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/6",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -263,13 +263,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-7",
+    "index": "warlock_7",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/7",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -278,9 +278,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "warlock-ability-score-improvement-2",
+        "index": "warlock_ability_score_improvement_2",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/warlock-ability-score-improvement-2"
+        "url": "public/assets/atlas/features/json/warlock_ability_score_improvement_2.json"
       }
     ],
     "spellcasting": {
@@ -303,13 +303,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-8",
+    "index": "warlock_8",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/8",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -337,13 +337,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-9",
+    "index": "warlock_9",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/9",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -352,9 +352,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "otherworldly-patron-improvement-2",
+        "index": "otherworldly_patron_improvement_2",
         "name": "Otherworldly Patron feature",
-        "url": "/assets/atlas/features/otherworldly-patron-improvement-2"
+        "url": "public/assets/atlas/features/json/otherworldly_patron_improvement_2.json"
       }
     ],
     "spellcasting": {
@@ -377,13 +377,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-10",
+    "index": "warlock_10",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/10",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -392,9 +392,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "mystic-arcanum-6th-level",
+        "index": "mystic_arcanum_6th_level",
         "name": "Mystic Arcanum (6th level)",
-        "url": "/assets/atlas/features/mystic-arcanum-6th-level"
+        "url": "public/assets/atlas/features/json/mystic_arcanum_6th_level.json"
       }
     ],
     "spellcasting": {
@@ -417,13 +417,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-11",
+    "index": "warlock_11",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/11",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -432,9 +432,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "warlock-ability-score-improvement-3",
+        "index": "warlock_ability_score_improvement_3",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/warlock-ability-score-improvement-3"
+        "url": "public/assets/atlas/features/json/warlock_ability_score_improvement_3.json"
       }
     ],
     "spellcasting": {
@@ -457,13 +457,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-12",
+    "index": "warlock_12",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/12",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -472,9 +472,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "mystic-arcanum-7th-level",
+        "index": "mystic_arcanum_7th_level",
         "name": "Mystic Arcanum (7th level)",
-        "url": "/assets/atlas/features/mystic-arcanum-7th-level"
+        "url": "public/assets/atlas/features/json/mystic_arcanum_7th_level.json"
       }
     ],
     "spellcasting": {
@@ -497,13 +497,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-13",
+    "index": "warlock_13",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/13",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -512,9 +512,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "otherworldly-patron-improvement-3",
+        "index": "otherworldly_patron_improvement_3",
         "name": "Otherworldly Patron feature",
-        "url": "/assets/atlas/features/otherworldly-patron-improvement-3"
+        "url": "public/assets/atlas/features/json/otherworldly_patron_improvement_3.json"
       }
     ],
     "spellcasting": {
@@ -537,13 +537,13 @@
       "mystic_arcanum_level_8": 0,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-14",
+    "index": "warlock_14",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/14",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -552,9 +552,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "mystic-arcanum-8th-level",
+        "index": "mystic_arcanum_8th_level",
         "name": "Mystic Arcanum (8th level)",
-        "url": "/assets/atlas/features/mystic-arcanum-8th-level"
+        "url": "public/assets/atlas/features/json/mystic_arcanum_8th_level.json"
       }
     ],
     "spellcasting": {
@@ -577,13 +577,13 @@
       "mystic_arcanum_level_8": 1,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-15",
+    "index": "warlock_15",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/15",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -592,9 +592,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "warlock-ability-score-improvement-4",
+        "index": "warlock_ability_score_improvement_4",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/warlock-ability-score-improvement-4"
+        "url": "public/assets/atlas/features/json/warlock_ability_score_improvement_4.json"
       }
     ],
     "spellcasting": {
@@ -617,13 +617,13 @@
       "mystic_arcanum_level_8": 1,
       "mystic_arcanum_level_9": 0
     },
-    "index": "warlock-16",
+    "index": "warlock_16",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/16",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -632,9 +632,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "mystic-arcanum-9th-level",
+        "index": "mystic_arcanum_9th_level",
         "name": "Mystic Arcanum (9th level)",
-        "url": "/assets/atlas/features/mystic-arcanum-9th-level"
+        "url": "public/assets/atlas/features/json/mystic_arcanum_9th_level.json"
       }
     ],
     "spellcasting": {
@@ -657,13 +657,13 @@
       "mystic_arcanum_level_8": 1,
       "mystic_arcanum_level_9": 1
     },
-    "index": "warlock-17",
+    "index": "warlock_17",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/17",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -691,13 +691,13 @@
       "mystic_arcanum_level_8": 1,
       "mystic_arcanum_level_9": 1
     },
-    "index": "warlock-18",
+    "index": "warlock_18",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/18",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -706,9 +706,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "warlock-ability-score-improvement-5",
+        "index": "warlock_ability_score_improvement_5",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/warlock-ability-score-improvement-5"
+        "url": "public/assets/atlas/features/json/warlock_ability_score_improvement_5.json"
       }
     ],
     "spellcasting": {
@@ -731,13 +731,13 @@
       "mystic_arcanum_level_8": 1,
       "mystic_arcanum_level_9": 1
     },
-    "index": "warlock-19",
+    "index": "warlock_19",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/19",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -746,9 +746,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "eldritch-master",
+        "index": "eldritch_master",
         "name": "Eldritch Master",
-        "url": "/assets/atlas/features/eldritch-master"
+        "url": "public/assets/atlas/features/json/eldritch_master.json"
       }
     ],
     "spellcasting": {
@@ -771,13 +771,13 @@
       "mystic_arcanum_level_8": 1,
       "mystic_arcanum_level_9": 1
     },
-    "index": "warlock-20",
+    "index": "warlock_20",
     "class": {
       "index": "warlock",
       "name": "Warlock",
-      "url": "/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
-    "url": "/assets/atlas/classes/warlock/levels/20",
+    "url": "public/assets/atlas/class/levels/warlock.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   }
 ]
