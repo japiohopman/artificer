@@ -1,11 +1,22 @@
 {
   "id": "suzail",
   "name": "suzail",
-  "type": "settlement",
+  "type": "metropolis",
   "parent": "cities",
   "title": "Suzail",
   "description": "The capital of [[Cormyr]] and the seat of power, named after [[Suzara Obarskyr]], the mother of the first king.<br/><br/>Interactive map can be found [[Map:Suzail – 15th Century DR|here]].",
   "image": "suzail.webp",
+  "sub_location_files": [
+    "assets/atlas/world/toril/faerun/cities/suzail/sublocations/government.json",
+    "assets/atlas/world/toril/faerun/cities/suzail/sublocations/inns_taverns.json",
+    "assets/atlas/world/toril/faerun/cities/suzail/sublocations/landmark.json",
+    "assets/atlas/world/toril/faerun/cities/suzail/sublocations/landmarks.json",
+    "assets/atlas/world/toril/faerun/cities/suzail/sublocations/palaces_estates_civic.json",
+    "assets/atlas/world/toril/faerun/cities/suzail/sublocations/points_of_interest.json",
+    "assets/atlas/world/toril/faerun/cities/suzail/sublocations/roads.json",
+    "assets/atlas/world/toril/faerun/cities/suzail/sublocations/shops.json",
+    "assets/atlas/world/toril/faerun/cities/suzail/sublocations/temples_shrines.json"
+  ],
   "coordinates": {
     "lat": 1900.25,
     "lng": 2137.75
