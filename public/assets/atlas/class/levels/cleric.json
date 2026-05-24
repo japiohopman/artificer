@@ -5,19 +5,19 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "spellcasting-cleric",
+        "index": "spellcasting_cleric",
         "name": "Spellcasting: Cleric",
-        "url": "/assets/atlas/features/spellcasting-cleric"
+        "url": "public/assets/atlas/features/json/spellcasting_cleric.json"
       },
       {
-        "index": "divine-domain",
+        "index": "divine_domain",
         "name": "Divine Domain",
-        "url": "/assets/atlas/features/divine-domain"
+        "url": "public/assets/atlas/features/json/divine_domain.json"
       },
       {
-        "index": "domain-spells-1",
+        "index": "domain_spells_1",
         "name": "Domain Spells",
-        "url": "/assets/atlas/features/domain-spells-1"
+        "url": "public/assets/atlas/features/json/domain_spells_1.json"
       }
     ],
     "spellcasting": {
@@ -36,13 +36,13 @@
       "channel_divinity_charges": 0,
       "destroy_undead_cr": 0
     },
-    "index": "cleric-1",
+    "index": "cleric_1",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/1",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -51,19 +51,19 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "channel-divinity-1-rest",
+        "index": "channel_divinity_1_rest",
         "name": "Channel Divinity (1/rest)",
-        "url": "/assets/atlas/features/channel-divinity-1-rest"
+        "url": "public/assets/atlas/features/json/channel_divinity_1_rest.json"
       },
       {
-        "index": "channel-divinity-turn-undead",
+        "index": "channel_divinity_turn_undead",
         "name": "Channel Divinity: Turn Undead",
-        "url": "/assets/atlas/features/channel-divinity-turn-undead"
+        "url": "public/assets/atlas/features/json/channel_divinity_turn_undead.json"
       },
       {
-        "index": "divine-domain-improvement-1",
+        "index": "divine_domain_improvement_1",
         "name": "Divine Domain feature",
-        "url": "/assets/atlas/features/divine-domain-improvement-1"
+        "url": "public/assets/atlas/features/json/divine_domain_improvement_1.json"
       }
     ],
     "spellcasting": {
@@ -82,13 +82,13 @@
       "channel_divinity_charges": 1,
       "destroy_undead_cr": 0
     },
-    "index": "cleric-2",
+    "index": "cleric_2",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/2",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -97,9 +97,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "domain-spells-2",
+        "index": "domain_spells_2",
         "name": "Domain Spells",
-        "url": "/assets/atlas/features/domain-spells-2"
+        "url": "public/assets/atlas/features/json/domain_spells_2.json"
       }
     ],
     "spellcasting": {
@@ -118,13 +118,13 @@
       "channel_divinity_charges": 1,
       "destroy_undead_cr": 0
     },
-    "index": "cleric-3",
+    "index": "cleric_3",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/3",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -133,9 +133,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "cleric-ability-score-improvement-1",
+        "index": "cleric_ability_score_improvement_1",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/cleric-ability-score-improvement-1"
+        "url": "public/assets/atlas/features/json/cleric_ability_score_improvement_1.json"
       }
     ],
     "spellcasting": {
@@ -154,13 +154,13 @@
       "channel_divinity_charges": 1,
       "destroy_undead_cr": 0
     },
-    "index": "cleric-4",
+    "index": "cleric_4",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/4",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -169,14 +169,14 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "domain-spells-3",
+        "index": "domain_spells_3",
         "name": "Domain Spells",
-        "url": "/assets/atlas/features/domain-spells-3"
+        "url": "public/assets/atlas/features/json/domain_spells_3.json"
       },
       {
-        "index": "destroy-undead-cr-1-2-or-below",
+        "index": "destroy_undead_cr_1_2_or_below",
         "name": "Destroy Undead (CR 1/2 or below)",
-        "url": "/assets/atlas/features/destroy-undead-cr-1-2-or-below"
+        "url": "public/assets/atlas/features/json/destroy_undead_cr_1_2_or_below.json"
       }
     ],
     "spellcasting": {
@@ -195,13 +195,13 @@
       "channel_divinity_charges": 1,
       "destroy_undead_cr": 0.5
     },
-    "index": "cleric-5",
+    "index": "cleric_5",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/5",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -210,14 +210,14 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "channel-divinity-2-rest",
+        "index": "channel_divinity_2_rest",
         "name": "Channel Divinity (2/rest)",
-        "url": "/assets/atlas/features/channel-divinity-2-rest"
+        "url": "public/assets/atlas/features/json/channel_divinity_2_rest.json"
       },
       {
-        "index": "divine-domain-improvement-2",
+        "index": "divine_domain_improvement_2",
         "name": "Divine Domain feature",
-        "url": "/assets/atlas/features/divine-domain-improvement-2"
+        "url": "public/assets/atlas/features/json/divine_domain_improvement_2.json"
       }
     ],
     "spellcasting": {
@@ -236,13 +236,13 @@
       "channel_divinity_charges": 2,
       "destroy_undead_cr": 0.5
     },
-    "index": "cleric-6",
+    "index": "cleric_6",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/6",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -251,9 +251,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "domain-spells-4",
+        "index": "domain_spells_4",
         "name": "Domain Spells",
-        "url": "/assets/atlas/features/domain-spells-4"
+        "url": "public/assets/atlas/features/json/domain_spells_4.json"
       }
     ],
     "spellcasting": {
@@ -272,13 +272,13 @@
       "channel_divinity_charges": 2,
       "destroy_undead_cr": 0.5
     },
-    "index": "cleric-7",
+    "index": "cleric_7",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/7",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -287,19 +287,19 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "cleric-ability-score-improvement-2",
+        "index": "cleric_ability_score_improvement_2",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/cleric-ability-score-improvement-2"
+        "url": "public/assets/atlas/features/json/cleric_ability_score_improvement_2.json"
       },
       {
-        "index": "destroy-undead-cr-1-or-below",
+        "index": "destroy_undead_cr_1_or_below",
         "name": "Destroy Undead (CR 1 or below)",
-        "url": "/assets/atlas/features/destroy-undead-cr-1-or-below"
+        "url": "public/assets/atlas/features/json/destroy_undead_cr_1_or_below.json"
       },
       {
-        "index": "divine-domain-improvement-3",
+        "index": "divine_domain_improvement_3",
         "name": "Divine Domain feature",
-        "url": "/assets/atlas/features/divine-domain-improvement-3"
+        "url": "public/assets/atlas/features/json/divine_domain_improvement_3.json"
       }
     ],
     "spellcasting": {
@@ -318,13 +318,13 @@
       "channel_divinity_charges": 2,
       "destroy_undead_cr": 1
     },
-    "index": "cleric-8",
+    "index": "cleric_8",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/8",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -333,9 +333,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "domain-spells-5",
+        "index": "domain_spells_5",
         "name": "Domain Spells",
-        "url": "/assets/atlas/features/domain-spells-5"
+        "url": "public/assets/atlas/features/json/domain_spells_5.json"
       }
     ],
     "spellcasting": {
@@ -354,13 +354,13 @@
       "channel_divinity_charges": 2,
       "destroy_undead_cr": 1
     },
-    "index": "cleric-9",
+    "index": "cleric_9",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/9",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -369,9 +369,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "divine-intervention",
+        "index": "divine_intervention",
         "name": "Divine Intervention",
-        "url": "/assets/atlas/features/divine-intervention"
+        "url": "public/assets/atlas/features/json/divine_intervention.json"
       }
     ],
     "spellcasting": {
@@ -390,13 +390,13 @@
       "channel_divinity_charges": 2,
       "destroy_undead_cr": 1
     },
-    "index": "cleric-10",
+    "index": "cleric_10",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/10",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -405,9 +405,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "destroy-undead-cr-2-or-below",
+        "index": "destroy_undead_cr_2_or_below",
         "name": "Destroy Undead (CR 2 or below)",
-        "url": "/assets/atlas/features/destroy-undead-cr-2-or-below"
+        "url": "public/assets/atlas/features/json/destroy_undead_cr_2_or_below.json"
       }
     ],
     "spellcasting": {
@@ -426,13 +426,13 @@
       "channel_divinity_charges": 2,
       "destroy_undead_cr": 2
     },
-    "index": "cleric-11",
+    "index": "cleric_11",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/11",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -441,9 +441,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "cleric-ability-score-improvement-3",
+        "index": "cleric_ability_score_improvement_3",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/cleric-ability-score-improvement-3"
+        "url": "public/assets/atlas/features/json/cleric_ability_score_improvement_3.json"
       }
     ],
     "spellcasting": {
@@ -462,13 +462,13 @@
       "channel_divinity_charges": 2,
       "destroy_undead_cr": 2
     },
-    "index": "cleric-12",
+    "index": "cleric_12",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/12",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -492,13 +492,13 @@
       "channel_divinity_charges": 2,
       "destroy_undead_cr": 2
     },
-    "index": "cleric-13",
+    "index": "cleric_13",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/13",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -507,9 +507,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "destroy-undead-cr-3-or-below",
+        "index": "destroy_undead_cr_3_or_below",
         "name": "Destroy Undead (CR 3 or below)",
-        "url": "/assets/atlas/features/destroy-undead-cr-3-or-below"
+        "url": "public/assets/atlas/features/json/destroy_undead_cr_3_or_below.json"
       }
     ],
     "spellcasting": {
@@ -528,13 +528,13 @@
       "channel_divinity_charges": 2,
       "destroy_undead_cr": 3
     },
-    "index": "cleric-14",
+    "index": "cleric_14",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/14",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -558,13 +558,13 @@
       "channel_divinity_charges": 2,
       "destroy_undead_cr": 3
     },
-    "index": "cleric-15",
+    "index": "cleric_15",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/15",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -573,9 +573,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "cleric-ability-score-improvement-4",
+        "index": "cleric_ability_score_improvement_4",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/cleric-ability-score-improvement-4"
+        "url": "public/assets/atlas/features/json/cleric_ability_score_improvement_4.json"
       }
     ],
     "spellcasting": {
@@ -594,13 +594,13 @@
       "channel_divinity_charges": 2,
       "destroy_undead_cr": 3
     },
-    "index": "cleric-16",
+    "index": "cleric_16",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/16",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -609,14 +609,14 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "destroy-undead-cr-4-or-below",
+        "index": "destroy_undead_cr_4_or_below",
         "name": "Destroy Undead (CR 4 or below)",
-        "url": "/assets/atlas/features/destroy-undead-cr-4-or-below"
+        "url": "public/assets/atlas/features/json/destroy_undead_cr_4_or_below.json"
       },
       {
-        "index": "divine-domain-improvement-4",
+        "index": "divine_domain_improvement_4",
         "name": "Divine Domain feature",
-        "url": "/assets/atlas/features/divine-domain-improvement-4"
+        "url": "public/assets/atlas/features/json/divine_domain_improvement_4.json"
       }
     ],
     "spellcasting": {
@@ -635,13 +635,13 @@
       "channel_divinity_charges": 2,
       "destroy_undead_cr": 4
     },
-    "index": "cleric-17",
+    "index": "cleric_17",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/17",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -650,9 +650,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "channel-divinity-3-rest",
+        "index": "channel_divinity_3_rest",
         "name": "Channel Divinity (3/rest)",
-        "url": "/assets/atlas/features/channel-divinity-3-rest"
+        "url": "public/assets/atlas/features/json/channel_divinity_3_rest.json"
       }
     ],
     "spellcasting": {
@@ -671,13 +671,13 @@
       "channel_divinity_charges": 3,
       "destroy_undead_cr": 4
     },
-    "index": "cleric-18",
+    "index": "cleric_18",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/18",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -686,9 +686,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "cleric-ability-score-improvement-5",
+        "index": "cleric_ability_score_improvement_5",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/cleric-ability-score-improvement-5"
+        "url": "public/assets/atlas/features/json/cleric_ability_score_improvement_5.json"
       }
     ],
     "spellcasting": {
@@ -707,13 +707,13 @@
       "channel_divinity_charges": 3,
       "destroy_undead_cr": 4
     },
-    "index": "cleric-19",
+    "index": "cleric_19",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/19",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -722,9 +722,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "divine-intervention-improvement",
+        "index": "divine_intervention_improvement",
         "name": "Divine Intervention Improvement",
-        "url": "/assets/atlas/features/divine-intervention-improvement"
+        "url": "public/assets/atlas/features/json/divine_intervention_improvement.json"
       }
     ],
     "spellcasting": {
@@ -743,13 +743,13 @@
       "channel_divinity_charges": 3,
       "destroy_undead_cr": 4
     },
-    "index": "cleric-20",
+    "index": "cleric_20",
     "class": {
       "index": "cleric",
       "name": "Cleric",
-      "url": "/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
-    "url": "/assets/atlas/classes/cleric/levels/20",
+    "url": "public/assets/atlas/class/levels/cleric.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   }
 ]
