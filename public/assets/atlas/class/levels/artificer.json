@@ -5,14 +5,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "magical-tinkering",
+        "index": "magical_tinkering",
         "name": "Magical Tinkering",
-        "url": "/assets/atlas/features/magical-tinkering"
+        "url": "public/assets/atlas/features/json/magical_tinkering.json"
       },
       {
-        "index": "spellcasting-artificer",
+        "index": "spellcasting_artificer",
         "name": "Spellcasting: Artificer",
-        "url": "/assets/atlas/features/spellcasting-artificer"
+        "url": "public/assets/atlas/features/json/spellcasting_artificer.json"
       }
     ],
     "spellcasting": {
@@ -31,13 +31,13 @@
       "infusions_known": 0,
       "infused_items": 0
     },
-    "index": "artificer-1",
+    "index": "artificer_1",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/1"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 2,
@@ -45,9 +45,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "infuse-item",
+        "index": "infuse_item",
         "name": "Infuse Item",
-        "url": "/assets/atlas/features/infuse-item"
+        "url": "public/assets/atlas/features/json/infuse_item.json"
       }
     ],
     "spellcasting": {
@@ -66,13 +66,13 @@
       "infusions_known": 4,
       "infused_items": 2
     },
-    "index": "artificer-2",
+    "index": "artificer_2",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/2"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 3,
@@ -80,14 +80,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "artificer-specialist",
+        "index": "artificer_specialist",
         "name": "Artificer Specialist",
-        "url": "/assets/atlas/features/artificer-specialist"
+        "url": "public/assets/atlas/features/json/artificer_specialist.json"
       },
       {
-        "index": "the-right-tool-for-the-job",
+        "index": "the_right_tool_for_the_job",
         "name": "The Right Tool for the Job",
-        "url": "/assets/atlas/features/the-right-tool-for-the-job"
+        "url": "public/assets/atlas/features/json/the_right_tool_for_the_job.json"
       }
     ],
     "spellcasting": {
@@ -106,13 +106,13 @@
       "infusions_known": 4,
       "infused_items": 2
     },
-    "index": "artificer-3",
+    "index": "artificer_3",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/3"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 4,
@@ -120,9 +120,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "artificer-ability-score-improvement-1",
+        "index": "artificer_ability_score_improvement_1",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/artificer-ability-score-improvement-1"
+        "url": "public/assets/atlas/features/json/artificer_ability_score_improvement_1.json"
       }
     ],
     "spellcasting": {
@@ -141,13 +141,13 @@
       "infusions_known": 4,
       "infused_items": 2
     },
-    "index": "artificer-4",
+    "index": "artificer_4",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/4"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 5,
@@ -170,13 +170,13 @@
       "infusions_known": 4,
       "infused_items": 2
     },
-    "index": "artificer-5",
+    "index": "artificer_5",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/5"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 6,
@@ -184,9 +184,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "tool-expertise",
+        "index": "tool_expertise",
         "name": "Tool Expertise",
-        "url": "/assets/atlas/features/tool-expertise"
+        "url": "public/assets/atlas/features/json/tool_expertise.json"
       }
     ],
     "spellcasting": {
@@ -205,13 +205,13 @@
       "infusions_known": 6,
       "infused_items": 3
     },
-    "index": "artificer-6",
+    "index": "artificer_6",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/6"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 7,
@@ -219,9 +219,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "flash-of-genius",
+        "index": "flash_of_genius",
         "name": "Flash of Genius",
-        "url": "/assets/atlas/features/flash-of-genius"
+        "url": "public/assets/atlas/features/json/flash_of_genius.json"
       }
     ],
     "spellcasting": {
@@ -240,13 +240,13 @@
       "infusions_known": 6,
       "infused_items": 3
     },
-    "index": "artificer-7",
+    "index": "artificer_7",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/7"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 8,
@@ -254,9 +254,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "artificer-ability-score-improvement-2",
+        "index": "artificer_ability_score_improvement_2",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/artificer-ability-score-improvement-2"
+        "url": "public/assets/atlas/features/json/artificer_ability_score_improvement_2.json"
       }
     ],
     "spellcasting": {
@@ -275,13 +275,13 @@
       "infusions_known": 6,
       "infused_items": 3
     },
-    "index": "artificer-8",
+    "index": "artificer_8",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/8"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 9,
@@ -304,13 +304,13 @@
       "infusions_known": 6,
       "infused_items": 3
     },
-    "index": "artificer-9",
+    "index": "artificer_9",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/9"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 10,
@@ -318,9 +318,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "magic-item-adept",
+        "index": "magic_item_adept",
         "name": "Magic Item Adept",
-        "url": "/assets/atlas/features/magic-item-adept"
+        "url": "public/assets/atlas/features/json/magic_item_adept.json"
       }
     ],
     "spellcasting": {
@@ -339,13 +339,13 @@
       "infusions_known": 8,
       "infused_items": 4
     },
-    "index": "artificer-10",
+    "index": "artificer_10",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/10"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 11,
@@ -353,9 +353,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "spell-storing-item",
+        "index": "spell_storing_item",
         "name": "Spell-Storing Item",
-        "url": "/assets/atlas/features/spell-storing-item"
+        "url": "public/assets/atlas/features/json/spell_storing_item.json"
       }
     ],
     "spellcasting": {
@@ -374,13 +374,13 @@
       "infusions_known": 8,
       "infused_items": 4
     },
-    "index": "artificer-11",
+    "index": "artificer_11",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/11"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 12,
@@ -388,9 +388,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "artificer-ability-score-improvement-3",
+        "index": "artificer_ability_score_improvement_3",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/artificer-ability-score-improvement-3"
+        "url": "public/assets/atlas/features/json/artificer_ability_score_improvement_3.json"
       }
     ],
     "spellcasting": {
@@ -409,13 +409,13 @@
       "infusions_known": 8,
       "infused_items": 4
     },
-    "index": "artificer-12",
+    "index": "artificer_12",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/12"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 13,
@@ -438,13 +438,13 @@
       "infusions_known": 8,
       "infused_items": 4
     },
-    "index": "artificer-13",
+    "index": "artificer_13",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/13"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 14,
@@ -452,9 +452,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "magic-item-savant",
+        "index": "magic_item_savant",
         "name": "Magic Item Savant",
-        "url": "/assets/atlas/features/magic-item-savant"
+        "url": "public/assets/atlas/features/json/magic_item_savant.json"
       }
     ],
     "spellcasting": {
@@ -473,13 +473,13 @@
       "infusions_known": 10,
       "infused_items": 5
     },
-    "index": "artificer-14",
+    "index": "artificer_14",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/14"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 15,
@@ -502,13 +502,13 @@
       "infusions_known": 10,
       "infused_items": 5
     },
-    "index": "artificer-15",
+    "index": "artificer_15",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/15"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 16,
@@ -516,9 +516,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "artificer-ability-score-improvement-4",
+        "index": "artificer_ability_score_improvement_4",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/artificer-ability-score-improvement-4"
+        "url": "public/assets/atlas/features/json/artificer_ability_score_improvement_4.json"
       }
     ],
     "spellcasting": {
@@ -537,13 +537,13 @@
       "infusions_known": 10,
       "infused_items": 5
     },
-    "index": "artificer-16",
+    "index": "artificer_16",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/16"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 17,
@@ -566,13 +566,13 @@
       "infusions_known": 10,
       "infused_items": 5
     },
-    "index": "artificer-17",
+    "index": "artificer_17",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/17"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 18,
@@ -580,9 +580,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "magic-item-master",
+        "index": "magic_item_master",
         "name": "Magic Item Master",
-        "url": "/assets/atlas/features/magic-item-master"
+        "url": "public/assets/atlas/features/json/magic_item_master.json"
       }
     ],
     "spellcasting": {
@@ -601,13 +601,13 @@
       "infusions_known": 12,
       "infused_items": 6
     },
-    "index": "artificer-18",
+    "index": "artificer_18",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/18"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 19,
@@ -615,9 +615,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "artificer-ability-score-improvement-5",
+        "index": "artificer_ability_score_improvement_5",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/artificer-ability-score-improvement-5"
+        "url": "public/assets/atlas/features/json/artificer_ability_score_improvement_5.json"
       }
     ],
     "spellcasting": {
@@ -636,13 +636,13 @@
       "infusions_known": 12,
       "infused_items": 6
     },
-    "index": "artificer-19",
+    "index": "artificer_19",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/19"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   },
   {
     "level": 20,
@@ -650,9 +650,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "soul-of-artifice",
+        "index": "soul_of_artifice",
         "name": "Soul of Artifice",
-        "url": "/assets/atlas/features/soul-of-artifice"
+        "url": "public/assets/atlas/features/json/soul_of_artifice.json"
       }
     ],
     "spellcasting": {
@@ -671,12 +671,12 @@
       "infusions_known": 12,
       "infused_items": 6
     },
-    "index": "artificer-20",
+    "index": "artificer_20",
     "class": {
       "index": "artificer",
       "name": "Artificer",
-      "url": "/assets/atlas/classes/artificer"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
-    "url": "/assets/atlas/classes/artificer/levels/20"
+    "url": "public/assets/atlas/class/levels/artificer.json"
   }
 ]
