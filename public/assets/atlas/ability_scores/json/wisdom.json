@@ -10,30 +10,30 @@
     {
       "name": "animal handling",
       "index": "animal_handling",
-      "url": "public/assets/atlas/skills/animal_handling"
+      "url": "assets/atlas/skills/json/animal_handling.json"
     },
     {
       "name": "insight",
       "index": "insight",
-      "url": "public/assets/atlas/skills/insight"
+      "url": "assets/atlas/skills/json/insight.json"
     },
     {
       "name": "medicine",
       "index": "medicine",
-      "url": "public/assets/atlas/skills/medicine"
+      "url": "assets/atlas/skills/json/medicine.json"
     },
     {
       "name": "perception",
       "index": "perception",
-      "url": "public/assets/atlas/skills/perception"
+      "url": "assets/atlas/skills/json/perception.json"
     },
     {
       "name": "survival",
       "index": "survival",
-      "url": "public/assets/atlas/skills/survival"
+      "url": "assets/atlas/skills/json/survival.json"
     }
   ],
-  "url": "public/assets/atlas/ability_scores/json/wisdomdom.json",
+  "url": "assets/atlas/ability_scores/json/wisdom.json",
   "updated_at": "2025-10-24T20:42:12.130Z",
-  "image": "public/assets/atlas/ability_scores/wisdom.webp"
+  "image": "assets/atlas/ability_scores/images/wisdom.webp"
 }
