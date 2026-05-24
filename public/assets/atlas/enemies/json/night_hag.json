@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "fiend",
   "alignment": "neutral evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 112,
   "hit_dice": "15d8",
   "hit_points_roll": "15d8+45",
@@ -75,7 +70,7 @@
     "passive_perception": 16
   },
   "languages": "Abyssal, Common, Infernal, Primordial",
-  "challenge_rating": 5,
+  "challenge_rating": "5",
   "proficiency_bonus": 3,
   "xp": 1800,
   "special_abilities": [
@@ -201,10 +196,24 @@
   ],
   "image": "public/assets/atlas/enemies/night_hag.webp",
   "url": "public/assets/atlas/enemies/json/night_hag.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-05-24T04:30:50.784Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 4,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.0webp",
+  "stats": {
+    "str": 18,
+    "dex": 15,
+    "con": 16,
+    "int": 16,
+    "wis": 14,
+    "cha": 16
+  },
+  "imageUrl": "/assets/atlas/enemies/images/night_hag.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "lore": "/assets/atlas/enemies/enemies_wiki/night_hag.json",
+  "wikiData": {},
+  "last_updated": "24-5-2026"
 }
