@@ -5,14 +5,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "divine-sense",
+        "index": "divine_sense",
         "name": "Divine Sense",
-        "url": "/assets/atlas/features/divine-sense"
+        "url": "public/assets/atlas/features/json/divine_sense.json"
       },
       {
-        "index": "lay-on-hands",
+        "index": "lay_on_hands",
         "name": "Lay on Hands",
-        "url": "/assets/atlas/features/lay-on-hands"
+        "url": "public/assets/atlas/features/json/lay_on_hands.json"
       }
     ],
     "spellcasting": {
@@ -25,13 +25,13 @@
     "class_specific": {
       "aura_range": 0
     },
-    "index": "paladin-1",
+    "index": "paladin_1",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/1",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -40,19 +40,19 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "paladin-fighting-style",
+        "index": "paladin_fighting_style",
         "name": "Fighting Style",
-        "url": "/assets/atlas/features/paladin-fighting-style"
+        "url": "public/assets/atlas/features/json/paladin_fighting_style.json"
       },
       {
-        "index": "spellcasting-paladin",
+        "index": "spellcasting_paladin",
         "name": "Spellcasting: Paladin",
-        "url": "/assets/atlas/features/spellcasting-paladin"
+        "url": "public/assets/atlas/features/json/spellcasting_paladin.json"
       },
       {
-        "index": "divine-smite",
+        "index": "divine_smite",
         "name": "Divine Smite",
-        "url": "/assets/atlas/features/divine-smite"
+        "url": "public/assets/atlas/features/json/divine_smite.json"
       }
     ],
     "spellcasting": {
@@ -65,13 +65,13 @@
     "class_specific": {
       "aura_range": 0
     },
-    "index": "paladin-2",
+    "index": "paladin_2",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/2",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -80,24 +80,24 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "divine-health",
+        "index": "divine_health",
         "name": "Divine Health",
-        "url": "/assets/atlas/features/divine-health"
+        "url": "public/assets/atlas/features/json/divine_health.json"
       },
       {
-        "index": "sacred-oath",
+        "index": "sacred_oath",
         "name": "Sacred Oath",
-        "url": "/assets/atlas/features/sacred-oath"
+        "url": "public/assets/atlas/features/json/sacred_oath.json"
       },
       {
-        "index": "oath-spells",
+        "index": "oath_spells",
         "name": "Oath Spells",
-        "url": "/assets/atlas/features/oath-spells"
+        "url": "public/assets/atlas/features/json/oath_spells.json"
       },
       {
-        "index": "channel-divinity",
+        "index": "channel_divinity",
         "name": "Channel Divinity",
-        "url": "/assets/atlas/features/channel-divinity"
+        "url": "public/assets/atlas/features/json/channel_divinity.json"
       }
     ],
     "spellcasting": {
@@ -110,13 +110,13 @@
     "class_specific": {
       "aura_range": 0
     },
-    "index": "paladin-3",
+    "index": "paladin_3",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/3",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -125,9 +125,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "paladin-ability-score-improvement-1",
+        "index": "paladin_ability_score_improvement_1",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/paladin-ability-score-improvement-1"
+        "url": "public/assets/atlas/features/json/paladin_ability_score_improvement_1.json"
       }
     ],
     "spellcasting": {
@@ -140,13 +140,13 @@
     "class_specific": {
       "aura_range": 0
     },
-    "index": "paladin-4",
+    "index": "paladin_4",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/4",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -155,9 +155,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "paladin-extra-attack",
+        "index": "paladin_extra_attack",
         "name": "Extra Attack",
-        "url": "/assets/atlas/features/paladin-extra-attack"
+        "url": "public/assets/atlas/features/json/paladin_extra_attack.json"
       }
     ],
     "spellcasting": {
@@ -170,13 +170,13 @@
     "class_specific": {
       "aura_range": 0
     },
-    "index": "paladin-5",
+    "index": "paladin_5",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/5",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -185,9 +185,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "aura-of-protection",
+        "index": "aura_of_protection",
         "name": "Aura of Protection",
-        "url": "/assets/atlas/features/aura-of-protection"
+        "url": "public/assets/atlas/features/json/aura_of_protection.json"
       }
     ],
     "spellcasting": {
@@ -200,13 +200,13 @@
     "class_specific": {
       "aura_range": 10
     },
-    "index": "paladin-6",
+    "index": "paladin_6",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/6",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -215,9 +215,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "sacred-oath-improvement-1",
+        "index": "sacred_oath_improvement_1",
         "name": "Sacred Oath feature",
-        "url": "/assets/atlas/features/sacred-oath-improvement-1"
+        "url": "public/assets/atlas/features/json/sacred_oath_improvement_1.json"
       }
     ],
     "spellcasting": {
@@ -230,13 +230,13 @@
     "class_specific": {
       "aura_range": 10
     },
-    "index": "paladin-7",
+    "index": "paladin_7",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/7",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -245,9 +245,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "paladin-ability-score-improvement-2",
+        "index": "paladin_ability_score_improvement_2",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/paladin-ability-score-improvement-2"
+        "url": "public/assets/atlas/features/json/paladin_ability_score_improvement_2.json"
       }
     ],
     "spellcasting": {
@@ -260,13 +260,13 @@
     "class_specific": {
       "aura_range": 10
     },
-    "index": "paladin-8",
+    "index": "paladin_8",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/8",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -284,13 +284,13 @@
     "class_specific": {
       "aura_range": 10
     },
-    "index": "paladin-9",
+    "index": "paladin_9",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/9",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -299,9 +299,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "aura-of-courage",
+        "index": "aura_of_courage",
         "name": "Aura of Courage",
-        "url": "/assets/atlas/features/aura-of-courage"
+        "url": "public/assets/atlas/features/json/aura_of_courage.json"
       }
     ],
     "spellcasting": {
@@ -314,13 +314,13 @@
     "class_specific": {
       "aura_range": 10
     },
-    "index": "paladin-10",
+    "index": "paladin_10",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/10",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -329,9 +329,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "improved-divine-smite",
+        "index": "improved_divine_smite",
         "name": "Improved Divine Smite",
-        "url": "/assets/atlas/features/improved-divine-smite"
+        "url": "public/assets/atlas/features/json/improved_divine_smite.json"
       }
     ],
     "spellcasting": {
@@ -344,13 +344,13 @@
     "class_specific": {
       "aura_range": 10
     },
-    "index": "paladin-11",
+    "index": "paladin_11",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/11",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -359,9 +359,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "paladin-ability-score-improvement-3",
+        "index": "paladin_ability_score_improvement_3",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/paladin-ability-score-improvement-3"
+        "url": "public/assets/atlas/features/json/paladin_ability_score_improvement_3.json"
       }
     ],
     "spellcasting": {
@@ -374,13 +374,13 @@
     "class_specific": {
       "aura_range": 10
     },
-    "index": "paladin-12",
+    "index": "paladin_12",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/12",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -398,13 +398,13 @@
     "class_specific": {
       "aura_range": 10
     },
-    "index": "paladin-13",
+    "index": "paladin_13",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/13",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -413,9 +413,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "cleansing-touch",
+        "index": "cleansing_touch",
         "name": "Cleansing Touch",
-        "url": "/assets/atlas/features/cleansing-touch"
+        "url": "public/assets/atlas/features/json/cleansing_touch.json"
       }
     ],
     "spellcasting": {
@@ -428,13 +428,13 @@
     "class_specific": {
       "aura_range": 10
     },
-    "index": "paladin-14",
+    "index": "paladin_14",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/14",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -443,9 +443,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "sacred-oath-improvement-2",
+        "index": "sacred_oath_improvement_2",
         "name": "Sacred Oath feature",
-        "url": "/assets/atlas/features/sacred-oath-improvement-2"
+        "url": "public/assets/atlas/features/json/sacred_oath_improvement_2.json"
       }
     ],
     "spellcasting": {
@@ -458,13 +458,13 @@
     "class_specific": {
       "aura_range": 10
     },
-    "index": "paladin-15",
+    "index": "paladin_15",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/15",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -473,9 +473,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "paladin-ability-score-improvement-4",
+        "index": "paladin_ability_score_improvement_4",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/paladin-ability-score-improvement-4"
+        "url": "public/assets/atlas/features/json/paladin_ability_score_improvement_4.json"
       }
     ],
     "spellcasting": {
@@ -488,13 +488,13 @@
     "class_specific": {
       "aura_range": 10
     },
-    "index": "paladin-16",
+    "index": "paladin_16",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/16",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -512,13 +512,13 @@
     "class_specific": {
       "aura_range": 10
     },
-    "index": "paladin-17",
+    "index": "paladin_17",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/17",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -527,9 +527,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "aura-improvements",
+        "index": "aura_improvements",
         "name": "Aura improvements",
-        "url": "/assets/atlas/features/aura-improvements"
+        "url": "public/assets/atlas/features/json/aura_improvements.json"
       }
     ],
     "spellcasting": {
@@ -542,13 +542,13 @@
     "class_specific": {
       "aura_range": 30
     },
-    "index": "paladin-18",
+    "index": "paladin_18",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/18",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -557,9 +557,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "paladin-ability-score-improvement-5",
+        "index": "paladin_ability_score_improvement_5",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/paladin-ability-score-improvement-5"
+        "url": "public/assets/atlas/features/json/paladin_ability_score_improvement_5.json"
       }
     ],
     "spellcasting": {
@@ -572,13 +572,13 @@
     "class_specific": {
       "aura_range": 30
     },
-    "index": "paladin-19",
+    "index": "paladin_19",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/19",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -587,9 +587,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "sacred-oath-improvement-3",
+        "index": "sacred_oath_improvement_3",
         "name": "Sacred Oath feature",
-        "url": "/assets/atlas/features/sacred-oath-improvement-3"
+        "url": "public/assets/atlas/features/json/sacred_oath_improvement_3.json"
       }
     ],
     "spellcasting": {
@@ -602,13 +602,13 @@
     "class_specific": {
       "aura_range": 30
     },
-    "index": "paladin-20",
+    "index": "paladin_20",
     "class": {
       "index": "paladin",
       "name": "Paladin",
-      "url": "/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
-    "url": "/assets/atlas/classes/paladin/levels/20",
+    "url": "public/assets/atlas/class/levels/paladin.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   }
 ]
