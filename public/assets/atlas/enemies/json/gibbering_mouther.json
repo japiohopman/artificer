@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "aberration",
   "alignment": "neutral",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 9
-    }
-  ],
+  "armor_class": 9,
   "hit_points": 67,
   "hit_dice": "9d8",
   "hit_points_roll": "9d8+27",
@@ -39,7 +34,7 @@
     "passive_perception": 10
   },
   "languages": "",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -121,14 +116,24 @@
   ],
   "image": "public/assets/atlas/enemies/gibbering_mouther.webp",
   "url": "public/assets/atlas/enemies/json/gibbering_mouther.json",
-  "updated_at": "2026-04-18T03:54:29.837Z",
+  "updated_at": "2026-05-24T09:37:19.784Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 16,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.webp",
-  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/enemies/gibbering_mouther.webp?t=1776484446048",
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.0webp",
+  "imageUrl": "/assets/atlas/enemies/images/gibbering_mouther.webp",
   "_type": "enemies",
   "background_type": "swamp",
-  "last_updated": "18-4-2026"
+  "last_updated": "24-5-2026",
+  "stats": {
+    "str": 10,
+    "dex": 8,
+    "con": 16,
+    "int": 3,
+    "wis": 10,
+    "cha": 6
+  },
+  "lore": "/assets/atlas/enemies/enemies_wiki/gibbering_mouther.json",
+  "wikiData": {}
 }
