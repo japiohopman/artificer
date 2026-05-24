@@ -5,14 +5,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "spellcasting-bard",
+        "index": "spellcasting_bard",
         "name": "Spellcasting: Bard",
-        "url": "/assets/atlas/features/spellcasting-bard"
+        "url": "public/assets/atlas/features/json/spellcasting_bard.json"
       },
       {
-        "index": "bardic-inspiration-d6",
+        "index": "bardic_inspiration_d6",
         "name": "Bardic Inspiration (d6)",
-        "url": "/assets/atlas/features/bardic-inspiration-d6"
+        "url": "public/assets/atlas/features/json/bardic_inspiration_d6.json"
       }
     ],
     "spellcasting": {
@@ -35,13 +35,13 @@
       "magical_secrets_max_7": 0,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-1",
+    "index": "bard_1",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/1",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -50,14 +50,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "jack-of-all-trades",
+        "index": "jack_of_all_trades",
         "name": "Jack of All Trades",
-        "url": "/assets/atlas/features/jack-of-all-trades"
+        "url": "public/assets/atlas/features/json/jack_of_all_trades.json"
       },
       {
-        "index": "song-of-rest-d6",
+        "index": "song_of_rest_d6",
         "name": "Song of Rest (d6)",
-        "url": "/assets/atlas/features/song-of-rest-d6"
+        "url": "public/assets/atlas/features/json/song_of_rest_d6.json"
       }
     ],
     "spellcasting": {
@@ -80,13 +80,13 @@
       "magical_secrets_max_7": 0,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-2",
+    "index": "bard_2",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/2",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -95,14 +95,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "bard-expertise-1",
+        "index": "bard_expertise_1",
         "name": "Expertise",
-        "url": "/assets/atlas/features/bard-expertise-1"
+        "url": "public/assets/atlas/features/json/bard_expertise_1.json"
       },
       {
-        "index": "bard-college",
+        "index": "bard_college",
         "name": "Bard College",
-        "url": "/assets/atlas/features/bard-college"
+        "url": "public/assets/atlas/features/json/bard_college.json"
       }
     ],
     "spellcasting": {
@@ -125,13 +125,13 @@
       "magical_secrets_max_7": 0,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-3",
+    "index": "bard_3",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/3",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -140,9 +140,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "bard-ability-score-improvement-1",
+        "index": "bard_ability_score_improvement_1",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/bard-ability-score-improvement-1"
+        "url": "public/assets/atlas/features/json/bard_ability_score_improvement_1.json"
       }
     ],
     "spellcasting": {
@@ -165,13 +165,13 @@
       "magical_secrets_max_7": 0,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-4",
+    "index": "bard_4",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/4",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -180,14 +180,14 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "bardic-inspiration-d8",
+        "index": "bardic_inspiration_d8",
         "name": "Bardic Inspiration (d8)",
-        "url": "/assets/atlas/features/bardic-inspiration-d8"
+        "url": "public/assets/atlas/features/json/bardic_inspiration_d8.json"
       },
       {
-        "index": "font-of-inspiration",
+        "index": "font_of_inspiration",
         "name": "Font of Inspiration",
-        "url": "/assets/atlas/features/font-of-inspiration"
+        "url": "public/assets/atlas/features/json/font_of_inspiration.json"
       }
     ],
     "spellcasting": {
@@ -210,13 +210,13 @@
       "magical_secrets_max_7": 0,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-5",
+    "index": "bard_5",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/5",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -227,12 +227,12 @@
       {
         "index": "countercharm",
         "name": "Countercharm",
-        "url": "/assets/atlas/features/countercharm"
+        "url": "public/assets/atlas/features/json/countercharm.json"
       },
       {
-        "index": "bard-college-improvement-1",
+        "index": "bard_college_improvement_1",
         "name": "Bard College feature",
-        "url": "/assets/atlas/features/bard-college-improvement-1"
+        "url": "public/assets/atlas/features/json/bard_college_improvement_1.json"
       }
     ],
     "spellcasting": {
@@ -255,13 +255,13 @@
       "magical_secrets_max_7": 0,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-6",
+    "index": "bard_6",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/6",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -289,13 +289,13 @@
       "magical_secrets_max_7": 0,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-7",
+    "index": "bard_7",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/7",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -304,9 +304,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "bard-ability-score-improvement-2",
+        "index": "bard_ability_score_improvement_2",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/bard-ability-score-improvement-2"
+        "url": "public/assets/atlas/features/json/bard_ability_score_improvement_2.json"
       }
     ],
     "spellcasting": {
@@ -329,13 +329,13 @@
       "magical_secrets_max_7": 0,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-8",
+    "index": "bard_8",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/8",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -344,9 +344,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "song-of-rest-d8",
+        "index": "song_of_rest_d8",
         "name": "Song of Rest (d8)",
-        "url": "/assets/atlas/features/song-of-rest-d8"
+        "url": "public/assets/atlas/features/json/song_of_rest_d8.json"
       }
     ],
     "spellcasting": {
@@ -369,13 +369,13 @@
       "magical_secrets_max_7": 0,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-9",
+    "index": "bard_9",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/9",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -384,19 +384,19 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "bard-expertise-2",
+        "index": "bard_expertise_2",
         "name": "Expertise",
-        "url": "/assets/atlas/features/bard-expertise-2"
+        "url": "public/assets/atlas/features/json/bard_expertise_2.json"
       },
       {
-        "index": "bardic-inspiration-d10",
+        "index": "bardic_inspiration_d10",
         "name": "Bardic Inspiration (d10)",
-        "url": "/assets/atlas/features/bardic-inspiration-d10"
+        "url": "public/assets/atlas/features/json/bardic_inspiration_d10.json"
       },
       {
-        "index": "magical-secrets-1",
+        "index": "magical_secrets_1",
         "name": "Magical Secrets",
-        "url": "/assets/atlas/features/magical-secrets-1"
+        "url": "public/assets/atlas/features/json/magical_secrets_1.json"
       }
     ],
     "spellcasting": {
@@ -419,13 +419,13 @@
       "magical_secrets_max_7": 0,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-10",
+    "index": "bard_10",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/10",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -453,13 +453,13 @@
       "magical_secrets_max_7": 0,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-11",
+    "index": "bard_11",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/11",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -468,9 +468,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "bard-ability-score-improvement-3",
+        "index": "bard_ability_score_improvement_3",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/bard-ability-score-improvement-3"
+        "url": "public/assets/atlas/features/json/bard_ability_score_improvement_3.json"
       }
     ],
     "spellcasting": {
@@ -493,13 +493,13 @@
       "magical_secrets_max_7": 0,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-12",
+    "index": "bard_12",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/12",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -508,9 +508,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "song-of-rest-d10",
+        "index": "song_of_rest_d10",
         "name": "Song of Rest (d10)",
-        "url": "/assets/atlas/features/song-of-rest-d10"
+        "url": "public/assets/atlas/features/json/song_of_rest_d10.json"
       }
     ],
     "spellcasting": {
@@ -533,13 +533,13 @@
       "magical_secrets_max_7": 0,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-13",
+    "index": "bard_13",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/13",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -548,14 +548,14 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "magical-secrets-2",
+        "index": "magical_secrets_2",
         "name": "Magical Secrets",
-        "url": "/assets/atlas/features/magical-secrets-2"
+        "url": "public/assets/atlas/features/json/magical_secrets_2.json"
       },
       {
-        "index": "bard-college-improvement-2",
+        "index": "bard_college_improvement_2",
         "name": "Bard College feature",
-        "url": "/assets/atlas/features/bard-college-improvement-2"
+        "url": "public/assets/atlas/features/json/bard_college_improvement_2.json"
       }
     ],
     "spellcasting": {
@@ -578,13 +578,13 @@
       "magical_secrets_max_7": 2,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-14",
+    "index": "bard_14",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/14",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -593,9 +593,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "bardic-inspiration-d12",
+        "index": "bardic_inspiration_d12",
         "name": "Bardic Inspiration (d12)",
-        "url": "/assets/atlas/features/bardic-inspiration-d12"
+        "url": "public/assets/atlas/features/json/bardic_inspiration_d12.json"
       }
     ],
     "spellcasting": {
@@ -618,13 +618,13 @@
       "magical_secrets_max_7": 2,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-15",
+    "index": "bard_15",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/15",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -633,9 +633,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "bard-ability-score-improvement-4",
+        "index": "bard_ability_score_improvement_4",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/bard-ability-score-improvement-4"
+        "url": "public/assets/atlas/features/json/bard_ability_score_improvement_4.json"
       }
     ],
     "spellcasting": {
@@ -658,13 +658,13 @@
       "magical_secrets_max_7": 2,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-16",
+    "index": "bard_16",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/16",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -673,9 +673,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "song-of-rest-d12",
+        "index": "song_of_rest_d12",
         "name": "Song of Rest (d12)",
-        "url": "/assets/atlas/features/song-of-rest-d12"
+        "url": "public/assets/atlas/features/json/song_of_rest_d12.json"
       }
     ],
     "spellcasting": {
@@ -698,13 +698,13 @@
       "magical_secrets_max_7": 2,
       "magical_secrets_max_9": 0
     },
-    "index": "bard-17",
+    "index": "bard_17",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/17",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -713,9 +713,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "magical-secrets-3",
+        "index": "magical_secrets_3",
         "name": "Magical Secrets",
-        "url": "/assets/atlas/features/magical-secrets-3"
+        "url": "public/assets/atlas/features/json/magical_secrets_3.json"
       }
     ],
     "spellcasting": {
@@ -738,13 +738,13 @@
       "magical_secrets_max_7": 2,
       "magical_secrets_max_9": 2
     },
-    "index": "bard-18",
+    "index": "bard_18",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/18",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -753,9 +753,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "bard-ability-score-improvement-5",
+        "index": "bard_ability_score_improvement_5",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/bard-ability-score-improvement-5"
+        "url": "public/assets/atlas/features/json/bard_ability_score_improvement_5.json"
       }
     ],
     "spellcasting": {
@@ -778,13 +778,13 @@
       "magical_secrets_max_7": 2,
       "magical_secrets_max_9": 2
     },
-    "index": "bard-19",
+    "index": "bard_19",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/19",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -793,9 +793,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "superior-inspiration",
+        "index": "superior_inspiration",
         "name": "Superior Inspiration",
-        "url": "/assets/atlas/features/superior-inspiration"
+        "url": "public/assets/atlas/features/json/superior_inspiration.json"
       }
     ],
     "spellcasting": {
@@ -818,13 +818,13 @@
       "magical_secrets_max_7": 2,
       "magical_secrets_max_9": 2
     },
-    "index": "bard-20",
+    "index": "bard_20",
     "class": {
       "index": "bard",
       "name": "Bard",
-      "url": "/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
-    "url": "/assets/atlas/classes/bard/levels/20",
+    "url": "public/assets/atlas/class/levels/bard.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   }
 ]
