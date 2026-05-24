@@ -2,7 +2,7 @@
   "name": "underwater combat",
   "index": "underwater_combat",
   "desc": "## Underwater Combat\n\nWhen adventurers pursue sahuagin back to their undersea homes, fight off sharks in an ancient shipwreck, or find themselves in a flooded dungeon room, they must fight in a challenging environment. Underwater the following rules apply.\n\nWhen making a **melee weapon attack**, a creature that doesn't have a swimming speed (either natural or granted by magic) has disadvantage on the attack roll unless the weapon is a dagger, javelin, shortsword, spear, or trident.\n\nA **ranged weapon attack** automatically misses a target beyond the weapon's normal range. Even against a target within normal range, the attack roll has disadvantage unless the weapon is a crossbow, a net, or a weapon that is thrown like a javelin (including a spear, trident, or dart).\n\nCreatures and objects that are fully immersed in water have resistance to fire damage.",
-  "url": "public/assets/atlas/rule_sections/json/underwater_combat.json",
+  "url": "assets/atlas/mechanic/rule_sections/json/underwater_combat.json",
   "updated_at": "2025-10-24T20:42:14.314Z",
-  "image": "public/assets/atlas/rule_sections/underwater_combat.webp"
+  "image": "assets/atlas/mechanic/rule_sections/underwater_combat.webp"
 }
