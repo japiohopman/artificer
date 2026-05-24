@@ -10,25 +10,25 @@
     {
       "name": "deception",
       "index": "deception",
-      "url": "public/assets/atlas/skills/deception"
+      "url": "assets/atlas/skills/json/deception.json"
     },
     {
       "name": "intimidation",
       "index": "intimidation",
-      "url": "public/assets/atlas/skills/intelligenceimidation"
+      "url": "assets/atlas/skills/json/intimidation.json"
     },
     {
       "name": "performance",
       "index": "performance",
-      "url": "public/assets/atlas/skills/performance"
+      "url": "assets/atlas/skills/json/performance.json"
     },
     {
       "name": "persuasion",
       "index": "persuasion",
-      "url": "public/assets/atlas/skills/persuasion"
+      "url": "assets/atlas/skills/json/persuasion.json"
     }
   ],
-  "url": "public/assets/atlas/ability_scores/json/charismarisma.json",
+  "url": "assets/atlas/ability_scores/json/charisma.json",
   "updated_at": "2025-10-24T20:42:12.130Z",
-  "image": "public/assets/atlas/ability_scores/charisma.webp"
+  "image": "assets/atlas/ability_scores/images/charisma.webp"
 }
