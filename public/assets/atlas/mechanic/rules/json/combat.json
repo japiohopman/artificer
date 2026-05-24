@@ -6,45 +6,45 @@
     {
       "name": "the order of combat",
       "index": "the_order_of_combat",
-      "url": "public/assets/atlas/rule_sections/the_order_of_combat"
+      "url": "assets/atlas/mechanic/rule_sections/json/the_order_of_combat.json"
     },
     {
       "name": "movement and position",
       "index": "movement_and_position",
-      "url": "public/assets/atlas/rule_sections/movement_and_position"
+      "url": "assets/atlas/mechanic/rule_sections/json/movement_and_position.json"
     },
     {
       "name": "actions in combat",
       "index": "actions_in_combat",
-      "url": "public/assets/atlas/rule_sections/actions_in_combat"
+      "url": "assets/atlas/mechanic/rule_sections/json/actions_in_combat.json"
     },
     {
       "name": "making an attack",
       "index": "making_an_attack",
-      "url": "public/assets/atlas/rule_sections/making_an_attack"
+      "url": "assets/atlas/mechanic/rule_sections/json/making_an_attack.json"
     },
     {
       "name": "cover",
       "index": "cover",
-      "url": "public/assets/atlas/rule_sections/cover"
+      "url": "assets/atlas/mechanic/rule_sections/json/cover.json"
     },
     {
       "name": "damage and healing",
       "index": "damage_and_healing",
-      "url": "public/assets/atlas/rule_sections/damage_and_healing"
+      "url": "assets/atlas/mechanic/rule_sections/json/damage_and_healing.json"
     },
     {
       "name": "mounted combat",
       "index": "mounted_combat",
-      "url": "public/assets/atlas/rule_sections/mounted_combat"
+      "url": "assets/atlas/mechanic/rule_sections/json/mounted_combat.json"
     },
     {
       "name": "underwater combat",
       "index": "underwater_combat",
-      "url": "public/assets/atlas/rule_sections/underwater_combat"
+      "url": "assets/atlas/mechanic/rule_sections/json/underwater_combat.json"
     }
   ],
-  "url": "public/assets/atlas/rules/json/combat.json",
+  "url": "assets/atlas/mechanic/rules/json/combat.json",
   "updated_at": "2025-10-24T20:42:14.409Z",
-  "image": "public/assets/atlas/rules/combat.webp"
+  "image": "assets/atlas/mechanic/rules/combat.webp"
 }

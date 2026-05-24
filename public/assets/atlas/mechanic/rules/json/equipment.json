@@ -6,40 +6,40 @@
     {
       "name": "standard exchange rates",
       "index": "standard_exchange_rates",
-      "url": "public/assets/atlas/rule_sections/standard_exchange_rates"
+      "url": "assets/atlas/mechanic/rule_sections/json/standard_exchange_rates.json"
     },
     {
       "name": "objects",
       "index": "objects",
-      "url": "public/assets/atlas/rule_sections/objects"
+      "url": "assets/atlas/mechanic/rule_sections/json/objects.json"
     },
     {
       "name": "poisons",
       "index": "poisons",
-      "url": "public/assets/atlas/rule_sections/poisons"
+      "url": "assets/atlas/mechanic/rule_sections/json/poisons.json"
     },
     {
       "name": "attunement",
       "index": "attunement",
-      "url": "public/assets/atlas/rule_sections/attunement"
+      "url": "assets/atlas/mechanic/rule_sections/json/attunement.json"
     },
     {
       "name": "wearing and wielding items",
       "index": "wearing_and_wielding_items",
-      "url": "public/assets/atlas/rule_sections/wearing_and_wielding_items"
+      "url": "assets/atlas/mechanic/rule_sections/json/wearing_and_wielding_items.json"
     },
     {
       "name": "activating an item",
       "index": "activating_an_item",
-      "url": "public/assets/atlas/rule_sections/activating_an_item"
+      "url": "assets/atlas/mechanic/rule_sections/json/activating_an_item.json"
     },
     {
       "name": "sentient magic items",
       "index": "sentient_magic_items",
-      "url": "public/assets/atlas/rule_sections/sentient_magic_items"
+      "url": "assets/atlas/mechanic/rule_sections/json/sentient_magic_items.json"
     }
   ],
-  "url": "public/assets/atlas/rules/json/equipment.json",
+  "url": "assets/atlas/mechanic/rules/json/equipment.json",
   "updated_at": "2025-10-24T20:42:14.409Z",
-  "image": "public/assets/atlas/rules/equipment.webp"
+  "image": "assets/atlas/mechanic/rules/equipment.webp"
 }

@@ -6,35 +6,35 @@
     {
       "name": "ability scores and modifiers",
       "index": "ability_scores_and_modifiers",
-      "url": "public/assets/atlas/rule_sections/ability_scores_and_modifiers"
+      "url": "assets/atlas/mechanic/rule_sections/json/ability_scores_and_modifiers.json"
     },
     {
       "name": "advantage and disadvantage",
       "index": "advantage_and_disadvantage",
-      "url": "public/assets/atlas/rule_sections/advantage_and_disadvantage"
+      "url": "assets/atlas/mechanic/rule_sections/json/advantage_and_disadvantage.json"
     },
     {
       "name": "proficiency bonus",
       "index": "proficiency_bonus",
-      "url": "public/assets/atlas/rule_sections/proficiency_bonus"
+      "url": "assets/atlas/mechanic/rule_sections/json/proficiency_bonus.json"
     },
     {
       "name": "ability checks",
       "index": "ability_checks",
-      "url": "public/assets/atlas/rule_sections/ability_checks"
+      "url": "assets/atlas/mechanic/rule_sections/json/ability_checks.json"
     },
     {
       "name": "using each ability",
       "index": "using_each_ability",
-      "url": "public/assets/atlas/rule_sections/using_each_ability"
+      "url": "assets/atlas/mechanic/rule_sections/json/using_each_ability.json"
     },
     {
       "name": "saving throws",
       "index": "saving_throws",
-      "url": "public/assets/atlas/rule_sections/saving_throws"
+      "url": "assets/atlas/mechanic/rule_sections/json/saving_throws.json"
     }
   ],
-  "url": "public/assets/atlas/rules/json/using_ability_scores.json",
+  "url": "assets/atlas/mechanic/rules/json/using_ability_scores.json",
   "updated_at": "2025-10-24T20:42:14.409Z",
-  "image": "public/assets/atlas/rules/using_ability_scores.webp"
+  "image": "assets/atlas/mechanic/rules/using_ability_scores.webp"
 }

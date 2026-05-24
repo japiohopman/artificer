@@ -6,15 +6,15 @@
     {
       "name": "what is a spell?",
       "index": "what_is_a_spell",
-      "url": "public/assets/atlas/rule_sections/what_is_a_spell"
+      "url": "assets/atlas/mechanic/rule_sections/json/what_is_a_spell.json"
     },
     {
       "name": "casting a spell",
       "index": "casting_a_spell",
-      "url": "public/assets/atlas/rule_sections/casting_a_spell"
+      "url": "assets/atlas/mechanic/rule_sections/json/casting_a_spell.json"
     }
   ],
-  "url": "public/assets/atlas/rules/json/spellcasting.json",
+  "url": "assets/atlas/mechanic/rules/json/spellcasting.json",
   "updated_at": "2025-10-24T20:42:14.409Z",
-  "image": "public/assets/atlas/rules/spellcasting.webp"
+  "image": "assets/atlas/mechanic/rules/spellcasting.webp"
 }

@@ -6,45 +6,45 @@
     {
       "name": "time",
       "index": "time",
-      "url": "public/assets/atlas/rule_sections/time"
+      "url": "assets/atlas/mechanic/rule_sections/json/time.json"
     },
     {
       "name": "movement",
       "index": "movement",
-      "url": "public/assets/atlas/rule_sections/movement"
+      "url": "assets/atlas/mechanic/rule_sections/json/movement.json"
     },
     {
       "name": "the environment",
       "index": "the_environment",
-      "url": "public/assets/atlas/rule_sections/the_environment"
+      "url": "assets/atlas/mechanic/rule_sections/json/the_environment.json"
     },
     {
       "name": "traps",
       "index": "traps",
-      "url": "public/assets/atlas/rule_sections/traps"
+      "url": "assets/atlas/mechanic/rule_sections/json/traps.json"
     },
     {
       "name": "diseases",
       "index": "diseases",
-      "url": "public/assets/atlas/rule_sections/diseases"
+      "url": "assets/atlas/mechanic/rule_sections/json/diseases.json"
     },
     {
       "name": "madness",
       "index": "madness",
-      "url": "public/assets/atlas/rule_sections/madness"
+      "url": "assets/atlas/mechanic/rule_sections/json/madness.json"
     },
     {
       "name": "resting",
       "index": "resting",
-      "url": "public/assets/atlas/rule_sections/resting"
+      "url": "assets/atlas/mechanic/rule_sections/json/resting.json"
     },
     {
       "name": "between adventures",
       "index": "between_adventures",
-      "url": "public/assets/atlas/rule_sections/between_adventures"
+      "url": "assets/atlas/mechanic/rule_sections/json/between_adventures.json"
     }
   ],
-  "url": "public/assets/atlas/rules/json/adventuring.json",
+  "url": "assets/atlas/mechanic/rules/json/adventuring.json",
   "updated_at": "2025-10-24T20:42:14.409Z",
-  "image": "public/assets/atlas/rules/adventuring.webp"
+  "image": "assets/atlas/mechanic/rules/adventuring.webp"
 }
