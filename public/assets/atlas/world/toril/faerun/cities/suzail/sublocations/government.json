@@ -1,227 +1,227 @@
 {
-  "locationName": "Suzail",
   "category": "government",
-  "subLocations": [
+  "updatedAt": "2026-05-03T05:02:01.417Z",
+  "location_id": "suzail",
+  "sub_locations": [
     {
-      "id": "wiki_36",
+      "id": "dragonriders_club",
       "name": "Dragonriders Club",
-      "lore": "Private club famed for its beautiful Mask Dancers.",
-      "x": 31.419143897088002,
-      "y": 47.026758243282416,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Dragonriders Club"
-      ]
+      "type": "government",
+      "description": "Private club famed for its beautiful Mask Dancers.",
+      "coordinates": {
+        "x": 31.419143897088002,
+        "y": 47.026758243282416
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_41",
+      "id": "bindles",
       "name": "Bindle's",
-      "lore": "A drinking club popular with merchants.",
-      "x": 72.97344588754332,
-      "y": 47.80155144371816,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Bindle's"
-      ]
+      "type": "government",
+      "description": "A drinking club popular with merchants.",
+      "coordinates": {
+        "x": 72.97344588754332,
+        "y": 47.80155144371816
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_43",
+      "id": "society_of_stalwart_adventurers",
       "name": "Society of Stalwart Adventurers",
-      "lore": "The exclusive club for adventuring nobles, archeologists, and stalwart heroes. Entrance on [[Swordstars Lane]].",
-      "x": 76.43335176696667,
-      "y": 55.914082427091216,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Society of Stalwart Adventurers"
-      ]
+      "type": "government",
+      "description": "The exclusive club for adventuring nobles, archeologists, and stalwart heroes. Entrance on [[Swordstars Lane]].",
+      "coordinates": {
+        "x": 76.43335176696667,
+        "y": 55.914082427091216
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_62",
+      "id": "the_osculatory",
       "name": "The Osculatory",
-      "lore": "Also known as the kissing club, a meeting place for single folk in search of companionship.",
-      "x": 51.46674040119666,
-      "y": 19.623030269090215,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Osculatory"
-      ]
+      "type": "government",
+      "description": "Also known as the kissing club, a meeting place for single folk in search of companionship.",
+      "coordinates": {
+        "x": 51.46674040119666,
+        "y": 19.623030269090215
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_150",
+      "id": "the_old_kings_favorite",
       "name": "The Old King's Favorite",
-      "lore": "Rich and glittering lounge frequented by wealthy socialites and nobles.",
-      "x": 43.173368971116666,
-      "y": 40.28097617006172,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Old King's Favorite"
-      ]
+      "type": "government",
+      "description": "Rich and glittering lounge frequented by wealthy socialites and nobles.",
+      "coordinates": {
+        "x": 43.173368971116666,
+        "y": 40.28097617006172
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_151",
+      "id": "house_of_the_lynx",
       "name": "House of the Lynx",
-      "lore": "An establishment where interested could hire courtesan or companions.",
-      "x": 38.04236437965667,
-      "y": 40.42939908052578,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/House of the Lynx"
-      ]
+      "type": "government",
+      "description": "An establishment where interested could hire courtesan or companions.",
+      "coordinates": {
+        "x": 38.04236437965667,
+        "y": 40.42939908052578
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_152",
+      "id": "the_gilded_feather",
       "name": "The Gilded Feather",
-      "lore": "The most expensive pretty-parlor in [[Suzail]].",
-      "x": 35.36387866270666,
-      "y": 42.791002146040235,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Gilded Feather"
-      ]
+      "type": "government",
+      "description": "The most expensive pretty-parlor in [[Suzail]].",
+      "coordinates": {
+        "x": 35.36387866270666,
+        "y": 42.791002146040235
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_157",
+      "id": "the_willing_smile",
       "name": "The Willing Smile",
-      "lore": "A seedy low-[[coin]] rundown brothel, a once-fashionable destination on a once-fashionable street.",
-      "x": 19.091896126583,
-      "y": 51.74586736694355,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Willing Smile"
-      ]
+      "type": "government",
+      "description": "A seedy low-[[coin]] rundown brothel, a once-fashionable destination on a once-fashionable street.",
+      "coordinates": {
+        "x": 19.091896126583,
+        "y": 51.74586736694355
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_158",
+      "id": "the_bold_archer",
       "name": "The Bold Archer",
-      "lore": "A boisterous club with a sign depicting a woman with a bent [[bow]] surrounded by hungry [[wolves]].",
-      "x": 27.15,
-      "y": 56.9599609375,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Bold Archer"
-      ]
+      "type": "government",
+      "description": "A boisterous club with a sign depicting a woman with a bent [[bow]] surrounded by hungry [[wolves]].",
+      "coordinates": {
+        "x": 27.15,
+        "y": 56.9599609375
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_160",
+      "id": "the_lady_murmurs_yes",
       "name": "The Lady Murmurs Yes",
-      "lore": "A brothel of note.",
-      "x": 34.333333333333336,
-      "y": 54.5859375,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Lady Murmurs Yes"
-      ]
-    },
-    {
-      "id": "wiki_36",
-      "name": "Dragonriders Club",
-      "lore": "Private club famed for its beautiful Mask Dancers.",
-      "x": 31.419143897088002,
-      "y": 47.026758243282416,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Dragonriders Club"
-      ]
-    },
-    {
-      "id": "wiki_41",
-      "name": "Bindle's",
-      "lore": "A drinking club popular with merchants.",
-      "x": 72.97344588754332,
-      "y": 47.80155144371816,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Bindle's"
-      ]
-    },
-    {
-      "id": "wiki_43",
-      "name": "Society of Stalwart Adventurers",
-      "lore": "The exclusive club for adventuring nobles, archeologists, and stalwart heroes. Entrance on [[Swordstars Lane]].",
-      "x": 76.43335176696667,
-      "y": 55.914082427091216,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Society of Stalwart Adventurers"
-      ]
-    },
-    {
-      "id": "wiki_62",
-      "name": "The Osculatory",
-      "lore": "Also known as the kissing club, a meeting place for single folk in search of companionship.",
-      "x": 51.46674040119666,
-      "y": 19.623030269090215,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Osculatory"
-      ]
-    },
-    {
-      "id": "wiki_150",
-      "name": "The Old King's Favorite",
-      "lore": "Rich and glittering lounge frequented by wealthy socialites and nobles.",
-      "x": 43.173368971116666,
-      "y": 40.28097617006172,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Old King's Favorite"
-      ]
-    },
-    {
-      "id": "wiki_151",
-      "name": "House of the Lynx",
-      "lore": "An establishment where interested could hire courtesan or companions.",
-      "x": 38.04236437965667,
-      "y": 40.42939908052578,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/House of the Lynx"
-      ]
-    },
-    {
-      "id": "wiki_152",
-      "name": "The Gilded Feather",
-      "lore": "The most expensive pretty-parlor in [[Suzail]].",
-      "x": 35.36387866270666,
-      "y": 42.791002146040235,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Gilded Feather"
-      ]
-    },
-    {
-      "id": "wiki_157",
-      "name": "The Willing Smile",
-      "lore": "A seedy low-[[coin]] rundown brothel, a once-fashionable destination on a once-fashionable street.",
-      "x": 19.091896126583,
-      "y": 51.74586736694355,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Willing Smile"
-      ]
-    },
-    {
-      "id": "wiki_158",
-      "name": "The Bold Archer",
-      "lore": "A boisterous club with a sign depicting a woman with a bent [[bow]] surrounded by hungry [[wolves]].",
-      "x": 27.15,
-      "y": 56.9599609375,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Bold Archer"
-      ]
-    },
-    {
-      "id": "wiki_160",
-      "name": "The Lady Murmurs Yes",
-      "lore": "A brothel of note.",
-      "x": 34.333333333333336,
-      "y": 54.5859375,
-      "category": "government",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Lady Murmurs Yes"
-      ]
+      "type": "government",
+      "description": "A brothel of note.",
+      "coordinates": {
+        "x": 34.333333333333336,
+        "y": 54.5859375
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     }
-  ],
-  "updatedAt": "2026-05-03T05:02:01.417Z"
+  ]
 }
