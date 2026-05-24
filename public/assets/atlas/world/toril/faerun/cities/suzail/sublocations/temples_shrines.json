@@ -1,302 +1,535 @@
 {
-  "locationName": "Suzail",
-  "category": "temple",
-  "subLocations": [
+  "category": "temples_shrines",
+  "updatedAt": "2026-04-28T05:46:12.303Z",
+  "location_id": "suzail",
+  "sub_locations": [
     {
-      "id": "wiki_8",
+      "id": "calantars_way",
       "name": "Calantar's Way",
-      "lore": "The road that started at the [[Eastgate (Suzail|Eastgate]] and went north past [[Calantar's Bridge]] and towards [[Arabel]].",
-      "x": 82.28669960514,
-      "y": 75.36849226106739,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Calantar's Way"
-      ]
+      "type": "temple",
+      "description": "The road that started at the [[Eastgate (Suzail|Eastgate]] and went north past [[Calantar's Bridge]] and towards [[Arabel]].",
+      "coordinates": {
+        "x": 82.28669960514,
+        "y": 75.36849226106739
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_33",
+      "id": "way_of_the_dragon",
       "name": "Way of the Dragon",
-      "lore": "The road that started at the [[Horngate]], cut through the [[King's Forest]] and reached the town of [[Waymoot]].",
-      "x": 17.544434845260334,
-      "y": 68.12947478232891,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Way of the Dragon"
-      ]
+      "type": "temple",
+      "description": "The road that started at the [[Horngate]], cut through the [[King's Forest]] and reached the town of [[Waymoot]].",
+      "coordinates": {
+        "x": 17.544434845260334,
+        "y": 68.12947478232891
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_39",
+      "id": "the_promenade",
       "name": "The Promenade",
-      "lore": "Once known as '''The March''', the wide and semi-circular street arching the [[Royal Court]] district. It was one of the best shopping strolls on [[Toril]].",
-      "x": 56.68463940714333,
-      "y": 40.50530557255468,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Promenade (Suzail)"
-      ]
+      "type": "temple",
+      "description": "Once known as '''The March''', the wide and semi-circular street arching the [[Royal Court]] district. It was one of the best shopping strolls on [[Toril]].",
+      "coordinates": {
+        "x": 56.68463940714333,
+        "y": 40.50530557255468
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_80",
+      "id": "garth_street",
       "name": "Garth Street",
-      "lore": "The street that stretched from the [[Market (Suzail)|Market]] to the [[Promenade (Suzail) |Promenade]].",
-      "x": 19.045685754357,
-      "y": 35.78038320918535,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Garth Street"
-      ]
+      "type": "temple",
+      "description": "The street that stretched from the [[Market (Suzail)|Market]] to the [[Promenade (Suzail) |Promenade]].",
+      "coordinates": {
+        "x": 19.045685754357,
+        "y": 35.78038320918535
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_81",
+      "id": "hunt_bide",
       "name": "Hunt Bide",
-      "lore": "The street that stretched from [[the Basin]] to the [[Promenade (Suzail)|Promenade]].",
-      "x": 26.015198496581334,
-      "y": 41.83166767622031,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Hunt Bide"
-      ]
+      "type": "temple",
+      "description": "The street that stretched from [[the Basin]] to the [[Promenade (Suzail)|Promenade]].",
+      "coordinates": {
+        "x": 26.015198496581334,
+        "y": 41.83166767622031
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_86",
+      "id": "tholone_lane",
       "name": "Tholone Lane",
-      "lore": "A short arc street between [[Nerester's Run]] and [[Silverscales Street]].",
-      "x": 41.36743338808,
-      "y": 26.39679169983988,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Tholone Lane"
-      ]
+      "type": "temple",
+      "description": "A short arc street between [[Nerester's Run]] and [[Silverscales Street]].",
+      "coordinates": {
+        "x": 41.36743338808,
+        "y": 26.39679169983988
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_87",
+      "id": "neresters_run",
       "name": "Nerester's Run",
-      "lore": "The street at the western end of [[Tholone Lane]].",
-      "x": 36.300696487390006,
-      "y": 28.488227214863162,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Nerester's Run"
-      ]
+      "type": "temple",
+      "description": "The street at the western end of [[Tholone Lane]].",
+      "coordinates": {
+        "x": 36.300696487390006,
+        "y": 28.488227214863162
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_88",
+      "id": "silverscales_street",
       "name": "Silverscales Street",
-      "lore": "The street at the eastern end of [[Tholone Lane]].",
-      "x": 37.66566583184333,
-      "y": 22.844449079581114,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Silverscales Street"
-      ]
+      "type": "temple",
+      "description": "The street at the eastern end of [[Tholone Lane]].",
+      "coordinates": {
+        "x": 37.66566583184333,
+        "y": 22.844449079581114
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_103",
+      "id": "swordstars_lane",
       "name": "Swordstars Lane",
-      "lore": "The street that ended in a \"Y\" junction to the north and a \"T\" junction to the south.",
-      "x": 79.93324554080667,
-      "y": 50.90031632668593,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Swordstars Lane"
-      ]
+      "type": "temple",
+      "description": "The street that ended in a \"Y\" junction to the north and a \"T\" junction to the south.",
+      "coordinates": {
+        "x": 79.93324554080667,
+        "y": 50.90031632668593
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_106",
+      "id": "cart_alley",
       "name": "Cart alley",
-      "lore": "A busy cart alley for the warehouses on the block that connected to [[Swordstars Lane]].",
-      "x": 78.98332882251,
-      "y": 52.502470727544534,
-      "category": "temple",
-      "grounding": []
+      "type": "temple",
+      "description": "A busy cart alley for the warehouses on the block that connected to [[Swordstars Lane]].",
+      "coordinates": {
+        "x": 78.98332882251,
+        "y": 52.502470727544534
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_112",
+      "id": "royal_ride",
       "name": "Royal Ride",
-      "lore": "A rich street that began on the [[Promenade (Suzail)|Promenade]] by the [[Towers of Good Fortune]] and ran west.",
-      "x": 57.11232833915,
-      "y": 67.43417183222128,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Royal Ride"
-      ]
+      "type": "temple",
+      "description": "A rich street that began on the [[Promenade (Suzail)|Promenade]] by the [[Towers of Good Fortune]] and ran west.",
+      "coordinates": {
+        "x": 57.11232833915,
+        "y": 67.43417183222128
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_113",
+      "id": "stonebow_street",
       "name": "Stonebow Street",
-      "lore": "A street that began on the [[Promenade (Suzail)|Promenade]] and housed the [[Shrine to Lliira (Suzail)|Shrine to Lliira]] on its northern side.",
-      "x": 76.0000353359604,
-      "y": 48.41018281945583,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Stonebow Street"
-      ]
+      "type": "temple",
+      "description": "A street that began on the [[Promenade (Suzail)|Promenade]] and housed the [[Shrine to Lliira (Suzail)|Shrine to Lliira]] on its northern side.",
+      "coordinates": {
+        "x": 76.0000353359604,
+        "y": 48.41018281945583
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_114",
+      "id": "torch_street",
       "name": "Torch Street",
-      "lore": "A street that crossed [[Stonebow Street]], west of the [[Shrine to Lliira (Suzail)|Shrine to Lliira]].",
-      "x": 79.30814356196667,
-      "y": 44.456396918840234,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Torch Street"
-      ]
+      "type": "temple",
+      "description": "A street that crossed [[Stonebow Street]], west of the [[Shrine to Lliira (Suzail)|Shrine to Lliira]].",
+      "coordinates": {
+        "x": 79.30814356196667,
+        "y": 44.456396918840234
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_115",
+      "id": "blade_lane",
       "name": "Blade Lane",
-      "lore": "A curved street at the eastern end of [[Stonebow Street]].",
-      "x": 84.07489216832667,
-      "y": 43.892193706347854,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Blade Lane"
-      ]
+      "type": "temple",
+      "description": "A curved street at the eastern end of [[Stonebow Street]].",
+      "coordinates": {
+        "x": 84.07489216832667,
+        "y": 43.892193706347854
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_116",
+      "id": "coachwheels_way",
       "name": "Coachwheels Way",
-      "lore": "A straight street with the Shrine to Milil on its west side.",
-      "x": 87.10860593595,
-      "y": 50.59996456228242,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Coachwheels Way"
-      ]
+      "type": "temple",
+      "description": "A straight street with the Shrine to Milil on its west side.",
+      "coordinates": {
+        "x": 87.10860593595,
+        "y": 50.59996456228242
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_124",
+      "id": "dancing_druid_lane",
       "name": "Dancing Druid Lane",
-      "lore": "The street with the entrance to The [[Osculatory]] at its northern end.",
-      "x": 47.56666666666666,
-      "y": 17.9462890625,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Dancing Druid Lane"
-      ]
+      "type": "temple",
+      "description": "The street with the entrance to The [[Osculatory]] at its northern end.",
+      "coordinates": {
+        "x": 47.56666666666666,
+        "y": 17.9462890625
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_125",
+      "id": "street_of_staves",
       "name": "Street of Staves",
-      "lore": "The street that met with the [[Promenade (Suzail)|Promenade]] right by the [[Dragon's Jaws]] tavern.",
-      "x": 71.14883617734665,
-      "y": 40.90158166708789,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Street of Staves"
-      ]
+      "type": "temple",
+      "description": "The street that met with the [[Promenade (Suzail)|Promenade]] right by the [[Dragon's Jaws]] tavern.",
+      "coordinates": {
+        "x": 71.14883617734665,
+        "y": 40.90158166708789
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_126",
+      "id": "court_close",
       "name": "Court Close",
-      "lore": "The street that passed immediately east of The [[Winking Eye]], looped around the next block and ran all the way to [[Bolliver's Wharf]].",
-      "x": 45.733286510650004,
-      "y": 32.20695019729508,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Court Close"
-      ]
+      "type": "temple",
+      "description": "The street that passed immediately east of The [[Winking Eye]], looped around the next block and ran all the way to [[Bolliver's Wharf]].",
+      "coordinates": {
+        "x": 45.733286510650004,
+        "y": 32.20695019729508
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_127",
-      "name": "Court Close",
-      "lore": "The street that passed immediately east of The [[Winking Eye]], looped around the next block and ran all the way to [[Bolliver's Wharf]].",
-      "x": 41.43324145983627,
-      "y": 47.18163066145407,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Court Close"
-      ]
-    },
-    {
-      "id": "wiki_128",
-      "name": "Court Close",
-      "lore": "The street that passed immediately east of The [[Winking Eye]], looped around the next block and ran all the way to [[Bolliver's Wharf]].",
-      "x": 46.549515106233336,
-      "y": 49.733964145475,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Court Close"
-      ]
-    },
-    {
-      "id": "wiki_129",
-      "name": "Court Close",
-      "lore": "The street that passed immediately east of The [[Winking Eye]], looped around the next block and ran all the way to [[Bolliver's Wharf]].",
-      "x": 49.12037713551666,
-      "y": 44.13885595711035,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Court Close"
-      ]
-    },
-    {
-      "id": "wiki_132",
+      "id": "mayhap_lane",
       "name": "Mayhap Lane",
-      "lore": "The street that crossed with [[Hunt Bide]] and the [[Promenade (Suzail)|Promenade]] on the corner where The [[The Six Candles|Six Candles]] stood.",
-      "x": 23.617366491630683,
-      "y": 49.609341185550726,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Mayhap Lane"
-      ]
+      "type": "temple",
+      "description": "The street that crossed with [[Hunt Bide]] and the [[Promenade (Suzail)|Promenade]] on the corner where The [[The Six Candles|Six Candles]] stood.",
+      "coordinates": {
+        "x": 23.617366491630683,
+        "y": 49.609341185550726
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_133",
+      "id": "stables_of_the_six_candles_inn",
       "name": "Stables of the Six Candles inn",
-      "lore": "Located in the middle of the block with its entry on [[Windever Street]].",
-      "x": 24.348043498856786,
-      "y": 52.30932899262046,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/The Six Candles"
-      ]
+      "type": "temple",
+      "description": "Located in the middle of the block with its entry on [[Windever Street]].",
+      "coordinates": {
+        "x": 24.348043498856786,
+        "y": 52.30932899262046
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_134",
+      "id": "windever_street",
       "name": "Windever Street",
-      "lore": "The street ending at the [[Promenade (Suzail)|Promenade]] with the entry to the stables of the [[The Six Candles|Six Candles]] inn.  ",
-      "x": 21.807043228944668,
-      "y": 53.58837752292676,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Windever Street"
-      ]
+      "type": "temple",
+      "description": "The street ending at the [[Promenade (Suzail)|Promenade]] with the entry to the stables of the [[The Six Candles|Six Candles]] inn.  ",
+      "coordinates": {
+        "x": 21.807043228944668,
+        "y": 53.58837752292676
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_147",
+      "id": "doloph_street",
       "name": "Doloph Street",
-      "lore": "A short street that began at a crossing with [[Mayhap Lane]] in the north and ended at [[Garth Street]] in the south.",
-      "x": 18.413547997049,
-      "y": 43.09410914617441,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Doloph Street"
-      ]
+      "type": "temple",
+      "description": "A short street that began at a crossing with [[Mayhap Lane]] in the north and ended at [[Garth Street]] in the south.",
+      "coordinates": {
+        "x": 18.413547997049,
+        "y": 43.09410914617441
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_164",
+      "id": "minstrels_ride",
       "name": "Minstrel's Ride",
-      "lore": "A street that crossed [[Nerester's Run]] and ended at the [[Court Close]].",
-      "x": 39.64512019852577,
-      "y": 30.850390245866063,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Minstrel's Ride"
-      ]
+      "type": "temple",
+      "description": "A street that crossed [[Nerester's Run]] and ended at the [[Court Close]].",
+      "coordinates": {
+        "x": 39.64512019852577,
+        "y": 30.850390245866063
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     },
     {
-      "id": "wiki_165",
+      "id": "dunstans_way",
       "name": "Dunstan's Way",
-      "lore": "A short street that began across the way from where the [[Hunt Bide]] began and ended on a moot with [[Nerester's Run]] and [[Silverscales Street]].",
-      "x": 32.29120316158048,
-      "y": 29.045554142925162,
-      "category": "temple",
-      "grounding": [
-        "https://forgottenrealms.fandom.com/wiki/Dunstan's Way"
-      ]
+      "type": "temple",
+      "description": "A short street that began across the way from where the [[Hunt Bide]] began and ended on a moot with [[Nerester's Run]] and [[Silverscales Street]].",
+      "coordinates": {
+        "x": 32.29120316158048,
+        "y": 29.045554142925162
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
     }
-  ],
-  "updatedAt": "2026-04-28T05:46:12.303Z"
+  ]
 }
