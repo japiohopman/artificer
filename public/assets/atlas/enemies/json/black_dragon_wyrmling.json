@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "dragon",
   "alignment": "chaotic evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 33,
   "hit_dice": "6d8",
   "hit_points_roll": "6d8+6",
@@ -86,7 +81,7 @@
     "passive_perception": 14
   },
   "languages": "Draconic",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -153,10 +148,22 @@
   ],
   "image": "public/assets/atlas/enemies/black_dragon_wyrmling.webp",
   "url": "public/assets/atlas/enemies/json/black_dragon_wyrmling.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-05-24T04:34:31.318Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 20,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet2.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet2.0webp",
+  "stats": {
+    "str": 15,
+    "dex": 14,
+    "con": 13,
+    "int": 10,
+    "wis": 11,
+    "cha": 13
+  },
+  "imageUrl": "/assets/atlas/enemies/images/black_dragon_wyrmling.webp",
+  "_type": "enemies",
+  "background_type": "land_mountains",
+  "last_updated": "24-5-2026"
 }
