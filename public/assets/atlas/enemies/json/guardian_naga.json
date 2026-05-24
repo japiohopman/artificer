@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "monstrosity",
   "alignment": "lawful good",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 18
-    }
-  ],
+  "armor_class": 18,
   "hit_points": 127,
   "hit_dice": "15d10",
   "hit_points_roll": "15d10+45",
@@ -86,7 +81,7 @@
     "passive_perception": 14
   },
   "languages": "Celestial, Common",
-  "challenge_rating": 10,
+  "challenge_rating": "10",
   "proficiency_bonus": 4,
   "xp": 5900,
   "special_abilities": [
@@ -227,15 +222,25 @@
   ],
   "image": "public/assets/atlas/enemies/guardian_naga.webp",
   "url": "public/assets/atlas/enemies/json/guardian_naga.json",
-  "updated_at": "2026-04-17T08:57:04.161Z",
+  "updated_at": "2026-05-24T04:23:00.247Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 6,
   "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet7.webp",
-  "imageUrl": "/assets/atlas/enemies/guardian_naga.webp",
+  "imageUrl": "/assets/atlas/enemies/images/guardian_naga.webp",
   "_type": "enemies",
   "background_type": "ethereal",
   "rarity": "Legendary",
-  "last_updated": "17-4-2026"
+  "last_updated": "24-5-2026",
+  "stats": {
+    "str": 19,
+    "dex": 18,
+    "con": 16,
+    "int": 16,
+    "wis": 19,
+    "cha": 18
+  },
+  "lore": "/assets/atlas/enemies/enemies_wiki/guardian_naga.json",
+  "wikiData": {}
 }
