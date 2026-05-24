@@ -5,14 +5,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "spellcasting-sorcerer",
+        "index": "spellcasting_sorcerer",
         "name": "Spellcasting: Sorcerer",
-        "url": "/assets/atlas/features/spellcasting-sorcerer"
+        "url": "public/assets/atlas/features/json/spellcasting_sorcerer.json"
       },
       {
-        "index": "sorcerous-origin",
+        "index": "sorcerous_origin",
         "name": "Sorcerous Origin",
-        "url": "/assets/atlas/features/sorcerous-origin"
+        "url": "public/assets/atlas/features/json/sorcerous_origin.json"
       }
     ],
     "spellcasting": {
@@ -33,13 +33,13 @@
       "metamagic_known": 0,
       "creating_spell_slots": []
     },
-    "index": "sorcerer-1",
+    "index": "sorcerer_1",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/1",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -48,19 +48,19 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "font-of-magic",
+        "index": "font_of_magic",
         "name": "Font of Magic",
-        "url": "/assets/atlas/features/font-of-magic"
+        "url": "public/assets/atlas/features/json/font_of_magic.json"
       },
       {
-        "index": "flexible-casting-creating-spell-slots",
+        "index": "flexible_casting_creating_spell_slots",
         "name": "Flexible Casting: Creating Spell Slots",
-        "url": "/assets/atlas/features/flexible-casting-creating-spell-slots"
+        "url": "public/assets/atlas/features/json/flexible_casting_creating_spell_slots.json"
       },
       {
-        "index": "flexible-casting-converting-spell-slot",
+        "index": "flexible_casting_converting_spell_slot",
         "name": "Flexible Casting: Converting Spell Slot",
-        "url": "/assets/atlas/features/flexible-casting-converting-spell-slot"
+        "url": "public/assets/atlas/features/json/flexible_casting_converting_spell_slot.json"
       }
     ],
     "spellcasting": {
@@ -102,13 +102,13 @@
         }
       ]
     },
-    "index": "sorcerer-2",
+    "index": "sorcerer_2",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/2",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -117,9 +117,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "metamagic-1",
+        "index": "metamagic_1",
         "name": "Metamagic",
-        "url": "/assets/atlas/features/metamagic-1"
+        "url": "public/assets/atlas/features/json/metamagic_1.json"
       }
     ],
     "spellcasting": {
@@ -161,13 +161,13 @@
         }
       ]
     },
-    "index": "sorcerer-3",
+    "index": "sorcerer_3",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/3",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -176,9 +176,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "sorcerer-ability-score-improvement-1",
+        "index": "sorcerer_ability_score_improvement_1",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/sorcerer-ability-score-improvement-1"
+        "url": "public/assets/atlas/features/json/sorcerer_ability_score_improvement_1.json"
       }
     ],
     "spellcasting": {
@@ -220,13 +220,13 @@
         }
       ]
     },
-    "index": "sorcerer-4",
+    "index": "sorcerer_4",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/4",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -273,13 +273,13 @@
         }
       ]
     },
-    "index": "sorcerer-5",
+    "index": "sorcerer_5",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/5",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -288,9 +288,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "sorcerous-origin-improvement-1",
+        "index": "sorcerous_origin_improvement_1",
         "name": "Sorcerous Origin feature",
-        "url": "/assets/atlas/features/sorcerous-origin-improvement-1"
+        "url": "public/assets/atlas/features/json/sorcerous_origin_improvement_1.json"
       }
     ],
     "spellcasting": {
@@ -332,13 +332,13 @@
         }
       ]
     },
-    "index": "sorcerer-6",
+    "index": "sorcerer_6",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/6",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -385,13 +385,13 @@
         }
       ]
     },
-    "index": "sorcerer-7",
+    "index": "sorcerer_7",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/7",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -400,9 +400,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "sorcerer-ability-score-improvement-2",
+        "index": "sorcerer_ability_score_improvement_2",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/sorcerer-ability-score-improvement-2"
+        "url": "public/assets/atlas/features/json/sorcerer_ability_score_improvement_2.json"
       }
     ],
     "spellcasting": {
@@ -444,13 +444,13 @@
         }
       ]
     },
-    "index": "sorcerer-8",
+    "index": "sorcerer_8",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/8",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -497,13 +497,13 @@
         }
       ]
     },
-    "index": "sorcerer-9",
+    "index": "sorcerer_9",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/9",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -512,9 +512,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "metamagic-2",
+        "index": "metamagic_2",
         "name": "Metamagic",
-        "url": "/assets/atlas/features/metamagic-2"
+        "url": "public/assets/atlas/features/json/metamagic_2.json"
       }
     ],
     "spellcasting": {
@@ -556,13 +556,13 @@
         }
       ]
     },
-    "index": "sorcerer-10",
+    "index": "sorcerer_10",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/10",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -609,13 +609,13 @@
         }
       ]
     },
-    "index": "sorcerer-11",
+    "index": "sorcerer_11",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/11",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -624,9 +624,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "sorcerer-ability-score-improvement-3",
+        "index": "sorcerer_ability_score_improvement_3",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/sorcerer-ability-score-improvement-3"
+        "url": "public/assets/atlas/features/json/sorcerer_ability_score_improvement_3.json"
       }
     ],
     "spellcasting": {
@@ -668,13 +668,13 @@
         }
       ]
     },
-    "index": "sorcerer-12",
+    "index": "sorcerer_12",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/12",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -721,13 +721,13 @@
         }
       ]
     },
-    "index": "sorcerer-13",
+    "index": "sorcerer_13",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/13",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -736,9 +736,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "sorcerous-origin-improvement-2",
+        "index": "sorcerous_origin_improvement_2",
         "name": "Sorcerous Origin feature",
-        "url": "/assets/atlas/features/sorcerous-origin-improvement-2"
+        "url": "public/assets/atlas/features/json/sorcerous_origin_improvement_2.json"
       }
     ],
     "spellcasting": {
@@ -780,13 +780,13 @@
         }
       ]
     },
-    "index": "sorcerer-14",
+    "index": "sorcerer_14",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/14",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -833,13 +833,13 @@
         }
       ]
     },
-    "index": "sorcerer-15",
+    "index": "sorcerer_15",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/15",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -848,9 +848,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "sorcerer-ability-score-improvement-4",
+        "index": "sorcerer_ability_score_improvement_4",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/sorcerer-ability-score-improvement-4"
+        "url": "public/assets/atlas/features/json/sorcerer_ability_score_improvement_4.json"
       }
     ],
     "spellcasting": {
@@ -892,13 +892,13 @@
         }
       ]
     },
-    "index": "sorcerer-16",
+    "index": "sorcerer_16",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/16",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -907,9 +907,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "metamagic-3",
+        "index": "metamagic_3",
         "name": "Metamagic",
-        "url": "/assets/atlas/features/metamagic-3"
+        "url": "public/assets/atlas/features/json/metamagic_3.json"
       }
     ],
     "spellcasting": {
@@ -951,13 +951,13 @@
         }
       ]
     },
-    "index": "sorcerer-17",
+    "index": "sorcerer_17",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/17",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -966,9 +966,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "sorcerous-origin-improvement-3",
+        "index": "sorcerous_origin_improvement_3",
         "name": "Sorcerous Origin feature",
-        "url": "/assets/atlas/features/sorcerous-origin-improvement-3"
+        "url": "public/assets/atlas/features/json/sorcerous_origin_improvement_3.json"
       }
     ],
     "spellcasting": {
@@ -1010,13 +1010,13 @@
         }
       ]
     },
-    "index": "sorcerer-18",
+    "index": "sorcerer_18",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/18",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -1025,9 +1025,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "sorcerer-ability-score-improvement-5",
+        "index": "sorcerer_ability_score_improvement_5",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/sorcerer-ability-score-improvement-5"
+        "url": "public/assets/atlas/features/json/sorcerer_ability_score_improvement_5.json"
       }
     ],
     "spellcasting": {
@@ -1069,13 +1069,13 @@
         }
       ]
     },
-    "index": "sorcerer-19",
+    "index": "sorcerer_19",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/19",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -1084,9 +1084,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "sorcerous-restoration",
+        "index": "sorcerous_restoration",
         "name": "Sorcerous Restoration",
-        "url": "/assets/atlas/features/sorcerous-restoration"
+        "url": "public/assets/atlas/features/json/sorcerous_restoration.json"
       }
     ],
     "spellcasting": {
@@ -1128,13 +1128,13 @@
         }
       ]
     },
-    "index": "sorcerer-20",
+    "index": "sorcerer_20",
     "class": {
       "index": "sorcerer",
       "name": "Sorcerer",
-      "url": "/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
-    "url": "/assets/atlas/classes/sorcerer/levels/20",
+    "url": "public/assets/atlas/class/levels/sorcerer.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   }
 ]
