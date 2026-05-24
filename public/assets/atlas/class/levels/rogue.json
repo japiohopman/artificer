@@ -5,19 +5,19 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "rogue-expertise-1",
+        "index": "rogue_expertise_1",
         "name": "Expertise",
-        "url": "/assets/atlas/features/rogue-expertise-1"
+        "url": "public/assets/atlas/features/json/rogue_expertise_1.json"
       },
       {
-        "index": "sneak-attack",
+        "index": "sneak_attack",
         "name": "Sneak Attack",
-        "url": "/assets/atlas/features/sneak-attack"
+        "url": "public/assets/atlas/features/json/sneak_attack.json"
       },
       {
-        "index": "thieves-cant",
+        "index": "thieves_cant",
         "name": "Thieves' Cant",
-        "url": "/assets/atlas/features/thieves-cant"
+        "url": "public/assets/atlas/features/json/thieves_cant.json"
       }
     ],
     "class_specific": {
@@ -26,13 +26,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-1",
+    "index": "rogue_1",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/1",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -41,9 +41,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "cunning-action",
+        "index": "cunning_action",
         "name": "Cunning Action",
-        "url": "/assets/atlas/features/cunning-action"
+        "url": "public/assets/atlas/features/json/cunning_action.json"
       }
     ],
     "class_specific": {
@@ -52,13 +52,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-2",
+    "index": "rogue_2",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/2",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -67,9 +67,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "roguish-archetype",
+        "index": "roguish_archetype",
         "name": "Roguish Archetype",
-        "url": "/assets/atlas/features/roguish-archetype"
+        "url": "public/assets/atlas/features/json/roguish_archetype.json"
       }
     ],
     "class_specific": {
@@ -78,13 +78,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-3",
+    "index": "rogue_3",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/3",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -93,9 +93,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "rogue-ability-score-improvement-1",
+        "index": "rogue_ability_score_improvement_1",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/rogue-ability-score-improvement-1"
+        "url": "public/assets/atlas/features/json/rogue_ability_score_improvement_1.json"
       }
     ],
     "class_specific": {
@@ -104,13 +104,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-4",
+    "index": "rogue_4",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/4",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -119,9 +119,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "uncanny-dodge",
+        "index": "uncanny_dodge",
         "name": "Uncanny Dodge",
-        "url": "/assets/atlas/features/uncanny-dodge"
+        "url": "public/assets/atlas/features/json/uncanny_dodge.json"
       }
     ],
     "class_specific": {
@@ -130,13 +130,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-5",
+    "index": "rogue_5",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/5",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -145,9 +145,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "rogue-expertise-2",
+        "index": "rogue_expertise_2",
         "name": "Expertise",
-        "url": "/assets/atlas/features/rogue-expertise-2"
+        "url": "public/assets/atlas/features/json/rogue_expertise_2.json"
       }
     ],
     "class_specific": {
@@ -156,13 +156,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-6",
+    "index": "rogue_6",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/6",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -171,9 +171,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "rogue-evasion",
+        "index": "rogue_evasion",
         "name": "Evasion",
-        "url": "/assets/atlas/features/rogue-evasion"
+        "url": "public/assets/atlas/features/json/rogue_evasion.json"
       }
     ],
     "class_specific": {
@@ -182,13 +182,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-7",
+    "index": "rogue_7",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/7",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -197,9 +197,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "rogue-ability-score-improvement-2",
+        "index": "rogue_ability_score_improvement_2",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/rogue-ability-score-improvement-2"
+        "url": "public/assets/atlas/features/json/rogue_ability_score_improvement_2.json"
       }
     ],
     "class_specific": {
@@ -208,13 +208,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-8",
+    "index": "rogue_8",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/8",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -223,9 +223,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "roguish-archetype-improvement-1",
+        "index": "roguish_archetype_improvement_1",
         "name": "Roguish Archetype feature",
-        "url": "/assets/atlas/features/roguish-archetype-improvement-1"
+        "url": "public/assets/atlas/features/json/roguish_archetype_improvement_1.json"
       }
     ],
     "class_specific": {
@@ -234,13 +234,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-9",
+    "index": "rogue_9",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/9",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -249,9 +249,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "rogue-ability-score-improvement-3",
+        "index": "rogue_ability_score_improvement_3",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/rogue-ability-score-improvement-3"
+        "url": "public/assets/atlas/features/json/rogue_ability_score_improvement_3.json"
       }
     ],
     "class_specific": {
@@ -260,13 +260,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-10",
+    "index": "rogue_10",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/10",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -275,9 +275,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "reliable-talent",
+        "index": "reliable_talent",
         "name": "Reliable Talent",
-        "url": "/assets/atlas/features/reliable-talent"
+        "url": "public/assets/atlas/features/json/reliable_talent.json"
       }
     ],
     "class_specific": {
@@ -286,13 +286,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-11",
+    "index": "rogue_11",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/11",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -301,9 +301,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "rogue-ability-score-improvement-4",
+        "index": "rogue_ability_score_improvement_4",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/rogue-ability-score-improvement-4"
+        "url": "public/assets/atlas/features/json/rogue_ability_score_improvement_4.json"
       }
     ],
     "class_specific": {
@@ -312,13 +312,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-12",
+    "index": "rogue_12",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/12",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -327,9 +327,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "roguish-archetype-improvement-2",
+        "index": "roguish_archetype_improvement_2",
         "name": "Roguish Archetype feature",
-        "url": "/assets/atlas/features/roguish-archetype-improvement-2"
+        "url": "public/assets/atlas/features/json/roguish_archetype_improvement_2.json"
       }
     ],
     "class_specific": {
@@ -338,13 +338,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-13",
+    "index": "rogue_13",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/13",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -355,7 +355,7 @@
       {
         "index": "blindsense",
         "name": "Blindsense",
-        "url": "/assets/atlas/features/blindsense"
+        "url": "public/assets/atlas/features/json/blindsense.json"
       }
     ],
     "class_specific": {
@@ -364,13 +364,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-14",
+    "index": "rogue_14",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/14",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -379,9 +379,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "slippery-mind",
+        "index": "slippery_mind",
         "name": "Slippery Mind",
-        "url": "/assets/atlas/features/slippery-mind"
+        "url": "public/assets/atlas/features/json/slippery_mind.json"
       }
     ],
     "class_specific": {
@@ -390,13 +390,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-15",
+    "index": "rogue_15",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/15",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -405,9 +405,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "rogue-ability-score-improvement-5",
+        "index": "rogue_ability_score_improvement_5",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/rogue-ability-score-improvement-5"
+        "url": "public/assets/atlas/features/json/rogue_ability_score_improvement_5.json"
       }
     ],
     "class_specific": {
@@ -416,13 +416,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-16",
+    "index": "rogue_16",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/16",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -431,9 +431,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "roguish-archetype-improvement-3",
+        "index": "roguish_archetype_improvement_3",
         "name": "Roguish Archetype feature",
-        "url": "/assets/atlas/features/roguish-archetype-improvement-3"
+        "url": "public/assets/atlas/features/json/roguish_archetype_improvement_3.json"
       }
     ],
     "class_specific": {
@@ -442,13 +442,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-17",
+    "index": "rogue_17",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/17",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -459,7 +459,7 @@
       {
         "index": "elusive",
         "name": "Elusive",
-        "url": "/assets/atlas/features/elusive"
+        "url": "public/assets/atlas/features/json/elusive.json"
       }
     ],
     "class_specific": {
@@ -468,13 +468,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-18",
+    "index": "rogue_18",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/18",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -483,9 +483,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "rogue-ability-score-improvement-6",
+        "index": "rogue_ability_score_improvement_6",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/rogue-ability-score-improvement-6"
+        "url": "public/assets/atlas/features/json/rogue_ability_score_improvement_6.json"
       }
     ],
     "class_specific": {
@@ -494,13 +494,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-19",
+    "index": "rogue_19",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/19",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -509,9 +509,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "stroke-of-luck",
+        "index": "stroke_of_luck",
         "name": "Stroke of Luck",
-        "url": "/assets/atlas/features/stroke-of-luck"
+        "url": "public/assets/atlas/features/json/stroke_of_luck.json"
       }
     ],
     "class_specific": {
@@ -520,13 +520,13 @@
         "dice_value": 6
       }
     },
-    "index": "rogue-20",
+    "index": "rogue_20",
     "class": {
       "index": "rogue",
       "name": "Rogue",
-      "url": "/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
-    "url": "/assets/atlas/classes/rogue/levels/20",
+    "url": "public/assets/atlas/class/levels/rogue.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   }
 ]
