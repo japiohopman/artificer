@@ -5,14 +5,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "favored-enemy-1-type",
+        "index": "favored_enemy_1_type",
         "name": "Favored Enemy (1 type)",
-        "url": "/assets/atlas/features/favored-enemy-1-type"
+        "url": "public/assets/atlas/features/json/favored_enemy_1_type.json"
       },
       {
-        "index": "natural-explorer-1-terrain-type",
+        "index": "natural_explorer_1_terrain_type",
         "name": "Natural Explorer (1 terrain type)",
-        "url": "/assets/atlas/features/natural-explorer-1-terrain-type"
+        "url": "public/assets/atlas/features/json/natural_explorer_1_terrain_type.json"
       }
     ],
     "spellcasting": {
@@ -27,13 +27,13 @@
       "favored_enemies": 1,
       "favored_terrain": 1
     },
-    "index": "ranger-1",
+    "index": "ranger_1",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/1",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -42,14 +42,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "ranger-fighting-style",
+        "index": "ranger_fighting_style",
         "name": "Fighting Style",
-        "url": "/assets/atlas/features/ranger-fighting-style"
+        "url": "public/assets/atlas/features/json/ranger_fighting_style.json"
       },
       {
-        "index": "spellcasting-ranger",
+        "index": "spellcasting_ranger",
         "name": "Spellcasting: Ranger",
-        "url": "/assets/atlas/features/spellcasting-ranger"
+        "url": "public/assets/atlas/features/json/spellcasting_ranger.json"
       }
     ],
     "spellcasting": {
@@ -64,13 +64,13 @@
       "favored_enemies": 1,
       "favored_terrain": 1
     },
-    "index": "ranger-2",
+    "index": "ranger_2",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/2",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -79,14 +79,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "ranger-archetype",
+        "index": "ranger_archetype",
         "name": "Ranger Archetype",
-        "url": "/assets/atlas/features/ranger-archetype"
+        "url": "public/assets/atlas/features/json/ranger_archetype.json"
       },
       {
-        "index": "primeval-awareness",
+        "index": "primeval_awareness",
         "name": "Primeval Awareness",
-        "url": "/assets/atlas/features/primeval-awareness"
+        "url": "public/assets/atlas/features/json/primeval_awareness.json"
       }
     ],
     "spellcasting": {
@@ -101,13 +101,13 @@
       "favored_enemies": 1,
       "favored_terrain": 1
     },
-    "index": "ranger-3",
+    "index": "ranger_3",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/3",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -116,9 +116,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "ranger-ability-score-improvement-1",
+        "index": "ranger_ability_score_improvement_1",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/ranger-ability-score-improvement-1"
+        "url": "public/assets/atlas/features/json/ranger_ability_score_improvement_1.json"
       }
     ],
     "spellcasting": {
@@ -133,13 +133,13 @@
       "favored_enemies": 1,
       "favored_terrain": 1
     },
-    "index": "ranger-4",
+    "index": "ranger_4",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/4",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -148,9 +148,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "ranger-extra-attack",
+        "index": "ranger_extra_attack",
         "name": "Extra Attack",
-        "url": "/assets/atlas/features/ranger-extra-attack"
+        "url": "public/assets/atlas/features/json/ranger_extra_attack.json"
       }
     ],
     "spellcasting": {
@@ -165,13 +165,13 @@
       "favored_enemies": 1,
       "favored_terrain": 1
     },
-    "index": "ranger-5",
+    "index": "ranger_5",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/5",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -180,14 +180,14 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "favored-enemy-2-types",
+        "index": "favored_enemy_2_types",
         "name": "Favored Enemy (2 types)",
-        "url": "/assets/atlas/features/favored-enemy-2-types"
+        "url": "public/assets/atlas/features/json/favored_enemy_2_types.json"
       },
       {
-        "index": "natural-explorer-2-terrain-types",
+        "index": "natural_explorer_2_terrain_types",
         "name": "Natural Explorer (2 terrain types)",
-        "url": "/assets/atlas/features/natural-explorer-2-terrain-types"
+        "url": "public/assets/atlas/features/json/natural_explorer_2_terrain_types.json"
       }
     ],
     "spellcasting": {
@@ -202,13 +202,13 @@
       "favored_enemies": 2,
       "favored_terrain": 2
     },
-    "index": "ranger-6",
+    "index": "ranger_6",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/6",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -217,9 +217,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "ranger-archetype-improvement-1",
+        "index": "ranger_archetype_improvement_1",
         "name": "Ranger Archetype feature",
-        "url": "/assets/atlas/features/ranger-archetype-improvement-1"
+        "url": "public/assets/atlas/features/json/ranger_archetype_improvement_1.json"
       }
     ],
     "spellcasting": {
@@ -234,13 +234,13 @@
       "favored_enemies": 2,
       "favored_terrain": 2
     },
-    "index": "ranger-7",
+    "index": "ranger_7",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/7",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -249,14 +249,14 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "ranger-ability-score-improvement-2",
+        "index": "ranger_ability_score_improvement_2",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/ranger-ability-score-improvement-2"
+        "url": "public/assets/atlas/features/json/ranger_ability_score_improvement_2.json"
       },
       {
-        "index": "ranger-lands-stride",
+        "index": "ranger_lands_stride",
         "name": "Land's Stride",
-        "url": "/assets/atlas/features/ranger-lands-stride"
+        "url": "public/assets/atlas/features/json/ranger_lands_stride.json"
       }
     ],
     "spellcasting": {
@@ -271,13 +271,13 @@
       "favored_enemies": 2,
       "favored_terrain": 2
     },
-    "index": "ranger-8",
+    "index": "ranger_8",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/8",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -297,13 +297,13 @@
       "favored_enemies": 2,
       "favored_terrain": 2
     },
-    "index": "ranger-9",
+    "index": "ranger_9",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/9",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -312,14 +312,14 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "natural-explorer-3-terrain-types",
+        "index": "natural_explorer_3_terrain_types",
         "name": "Natural Explorer (3 terrain types)",
-        "url": "/assets/atlas/features/natural-explorer-3-terrain-types"
+        "url": "public/assets/atlas/features/json/natural_explorer_3_terrain_types.json"
       },
       {
-        "index": "hide-in-plain-sight",
+        "index": "hide_in_plain_sight",
         "name": "Hide in Plain Sight",
-        "url": "/assets/atlas/features/hide-in-plain-sight"
+        "url": "public/assets/atlas/features/json/hide_in_plain_sight.json"
       }
     ],
     "spellcasting": {
@@ -334,13 +334,13 @@
       "favored_enemies": 2,
       "favored_terrain": 3
     },
-    "index": "ranger-10",
+    "index": "ranger_10",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/10",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -349,9 +349,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "ranger-archetype-improvement-2",
+        "index": "ranger_archetype_improvement_2",
         "name": "Ranger Archetype feature",
-        "url": "/assets/atlas/features/ranger-archetype-improvement-2"
+        "url": "public/assets/atlas/features/json/ranger_archetype_improvement_2.json"
       }
     ],
     "spellcasting": {
@@ -366,13 +366,13 @@
       "favored_enemies": 2,
       "favored_terrain": 3
     },
-    "index": "ranger-11",
+    "index": "ranger_11",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/11",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -381,9 +381,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "ranger-ability-score-improvement-3",
+        "index": "ranger_ability_score_improvement_3",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/ranger-ability-score-improvement-3"
+        "url": "public/assets/atlas/features/json/ranger_ability_score_improvement_3.json"
       }
     ],
     "spellcasting": {
@@ -398,13 +398,13 @@
       "favored_enemies": 2,
       "favored_terrain": 3
     },
-    "index": "ranger-12",
+    "index": "ranger_12",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/12",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -424,13 +424,13 @@
       "favored_enemies": 2,
       "favored_terrain": 3
     },
-    "index": "ranger-13",
+    "index": "ranger_13",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/13",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -439,14 +439,14 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "favored-enemy-3-enemies",
+        "index": "favored_enemy_3_enemies",
         "name": "Favored Enemy (3 enemies)",
-        "url": "/assets/atlas/features/favored-enemy-3-enemies"
+        "url": "public/assets/atlas/features/json/favored_enemy_3_enemies.json"
       },
       {
         "index": "vanish",
         "name": "Vanish",
-        "url": "/assets/atlas/features/vanish"
+        "url": "public/assets/atlas/features/json/vanish.json"
       }
     ],
     "spellcasting": {
@@ -461,13 +461,13 @@
       "favored_enemies": 3,
       "favored_terrain": 3
     },
-    "index": "ranger-14",
+    "index": "ranger_14",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/14",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -476,9 +476,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "ranger-archetype-improvement-3",
+        "index": "ranger_archetype_improvement_3",
         "name": "Ranger Archetype feature",
-        "url": "/assets/atlas/features/ranger-archetype-improvement-3"
+        "url": "public/assets/atlas/features/json/ranger_archetype_improvement_3.json"
       }
     ],
     "spellcasting": {
@@ -493,13 +493,13 @@
       "favored_enemies": 3,
       "favored_terrain": 3
     },
-    "index": "ranger-15",
+    "index": "ranger_15",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/15",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -508,9 +508,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "ranger-ability-score-improvement-4",
+        "index": "ranger_ability_score_improvement_4",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/ranger-ability-score-improvement-4"
+        "url": "public/assets/atlas/features/json/ranger_ability_score_improvement_4.json"
       }
     ],
     "spellcasting": {
@@ -525,13 +525,13 @@
       "favored_enemies": 3,
       "favored_terrain": 3
     },
-    "index": "ranger-16",
+    "index": "ranger_16",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/16",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -551,13 +551,13 @@
       "favored_enemies": 3,
       "favored_terrain": 3
     },
-    "index": "ranger-17",
+    "index": "ranger_17",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/17",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -566,9 +566,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "feral-senses",
+        "index": "feral_senses",
         "name": "Feral Senses",
-        "url": "/assets/atlas/features/feral-senses"
+        "url": "public/assets/atlas/features/json/feral_senses.json"
       }
     ],
     "spellcasting": {
@@ -583,13 +583,13 @@
       "favored_enemies": 3,
       "favored_terrain": 3
     },
-    "index": "ranger-18",
+    "index": "ranger_18",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/18",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -598,9 +598,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "ranger-ability-score-improvement-5",
+        "index": "ranger_ability_score_improvement_5",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/ranger-ability-score-improvement-5"
+        "url": "public/assets/atlas/features/json/ranger_ability_score_improvement_5.json"
       }
     ],
     "spellcasting": {
@@ -615,13 +615,13 @@
       "favored_enemies": 3,
       "favored_terrain": 3
     },
-    "index": "ranger-19",
+    "index": "ranger_19",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/19",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -630,9 +630,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "foe-slayer",
+        "index": "foe_slayer",
         "name": "Foe Slayer",
-        "url": "/assets/atlas/features/foe-slayer"
+        "url": "public/assets/atlas/features/json/foe_slayer.json"
       }
     ],
     "spellcasting": {
@@ -647,13 +647,13 @@
       "favored_enemies": 3,
       "favored_terrain": 3
     },
-    "index": "ranger-20",
+    "index": "ranger_20",
     "class": {
       "index": "ranger",
       "name": "Ranger",
-      "url": "/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
-    "url": "/assets/atlas/classes/ranger/levels/20",
+    "url": "public/assets/atlas/class/levels/ranger.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   }
 ]
