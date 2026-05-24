@@ -5,14 +5,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "monk-unarmored-defense",
+        "index": "monk_unarmored_defense",
         "name": "Unarmored Defense",
-        "url": "/assets/atlas/features/monk-unarmored-defense"
+        "url": "public/assets/atlas/features/json/monk_unarmored_defense.json"
       },
       {
-        "index": "martial-arts",
+        "index": "martial_arts",
         "name": "Martial Arts",
-        "url": "/assets/atlas/features/martial-arts"
+        "url": "public/assets/atlas/features/json/martial_arts.json"
       }
     ],
     "class_specific": {
@@ -23,13 +23,13 @@
       "ki_points": 0,
       "unarmored_movement": 0
     },
-    "index": "monk-1",
+    "index": "monk_1",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/1",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -40,27 +40,27 @@
       {
         "index": "ki",
         "name": "Ki",
-        "url": "/assets/atlas/features/ki"
+        "url": "public/assets/atlas/features/json/ki.json"
       },
       {
-        "index": "flurry-of-blows",
+        "index": "flurry_of_blows",
         "name": "Flurry of Blows",
-        "url": "/assets/atlas/features/flurry-of-blows"
+        "url": "public/assets/atlas/features/json/flurry_of_blows.json"
       },
       {
-        "index": "patient-defense",
+        "index": "patient_defense",
         "name": "Patient Defense",
-        "url": "/assets/atlas/features/patient-defense"
+        "url": "public/assets/atlas/features/json/patient_defense.json"
       },
       {
-        "index": "step-of-the-wind",
+        "index": "step_of_the_wind",
         "name": "Step of the Wind",
-        "url": "/assets/atlas/features/step-of-the-wind"
+        "url": "public/assets/atlas/features/json/step_of_the_wind.json"
       },
       {
-        "index": "unarmored-movement-1",
+        "index": "unarmored_movement_1",
         "name": "Unarmored Movement",
-        "url": "/assets/atlas/features/unarmored-movement-1"
+        "url": "public/assets/atlas/features/json/unarmored_movement_1.json"
       }
     ],
     "class_specific": {
@@ -71,13 +71,13 @@
       "ki_points": 2,
       "unarmored_movement": 10
     },
-    "index": "monk-2",
+    "index": "monk_2",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/2",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -86,14 +86,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "monastic-tradition",
+        "index": "monastic_tradition",
         "name": "Monastic Tradition",
-        "url": "/assets/atlas/features/monastic-tradition"
+        "url": "public/assets/atlas/features/json/monastic_tradition.json"
       },
       {
-        "index": "deflect-missiles",
+        "index": "deflect_missiles",
         "name": "Deflect Missiles",
-        "url": "/assets/atlas/features/deflect-missiles"
+        "url": "public/assets/atlas/features/json/deflect_missiles.json"
       }
     ],
     "class_specific": {
@@ -104,13 +104,13 @@
       "ki_points": 3,
       "unarmored_movement": 10
     },
-    "index": "monk-3",
+    "index": "monk_3",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/3",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -119,14 +119,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "monk-ability-score-improvement-1",
+        "index": "monk_ability_score_improvement_1",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/monk-ability-score-improvement-1"
+        "url": "public/assets/atlas/features/json/monk_ability_score_improvement_1.json"
       },
       {
-        "index": "slow-fall",
+        "index": "slow_fall",
         "name": "Slow Fall",
-        "url": "/assets/atlas/features/slow-fall"
+        "url": "public/assets/atlas/features/json/slow_fall.json"
       }
     ],
     "class_specific": {
@@ -137,13 +137,13 @@
       "ki_points": 4,
       "unarmored_movement": 10
     },
-    "index": "monk-4",
+    "index": "monk_4",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/4",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -152,14 +152,14 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "monk-extra-attack",
+        "index": "monk_extra_attack",
         "name": "Extra Attack",
-        "url": "/assets/atlas/features/monk-extra-attack"
+        "url": "public/assets/atlas/features/json/monk_extra_attack.json"
       },
       {
-        "index": "stunning-strike",
+        "index": "stunning_strike",
         "name": "Stunning Strike",
-        "url": "/assets/atlas/features/stunning-strike"
+        "url": "public/assets/atlas/features/json/stunning_strike.json"
       }
     ],
     "class_specific": {
@@ -170,13 +170,13 @@
       "ki_points": 5,
       "unarmored_movement": 10
     },
-    "index": "monk-5",
+    "index": "monk_5",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/5",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -185,14 +185,14 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "ki-empowered-strikes",
+        "index": "ki_empowered_strikes",
         "name": "Ki Empowered Strikes",
-        "url": "/assets/atlas/features/ki-empowered-strikes"
+        "url": "public/assets/atlas/features/json/ki_empowered_strikes.json"
       },
       {
-        "index": "monastic-tradition-improvement-1",
+        "index": "monastic_tradition_improvement_1",
         "name": "Monastic Tradition feature",
-        "url": "/assets/atlas/features/monastic-tradition-improvement-1"
+        "url": "public/assets/atlas/features/json/monastic_tradition_improvement_1.json"
       }
     ],
     "class_specific": {
@@ -203,13 +203,13 @@
       "ki_points": 6,
       "unarmored_movement": 15
     },
-    "index": "monk-6",
+    "index": "monk_6",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/6",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -218,14 +218,14 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "monk-evasion",
+        "index": "monk_evasion",
         "name": "Evasion",
-        "url": "/assets/atlas/features/monk-evasion"
+        "url": "public/assets/atlas/features/json/monk_evasion.json"
       },
       {
-        "index": "stillness-of-mind",
+        "index": "stillness_of_mind",
         "name": "Stillness of Mind",
-        "url": "/assets/atlas/features/stillness-of-mind"
+        "url": "public/assets/atlas/features/json/stillness_of_mind.json"
       }
     ],
     "class_specific": {
@@ -236,13 +236,13 @@
       "ki_points": 7,
       "unarmored_movement": 15
     },
-    "index": "monk-7",
+    "index": "monk_7",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/7",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -251,9 +251,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "monk-ability-score-improvement-2",
+        "index": "monk_ability_score_improvement_2",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/monk-ability-score-improvement-2"
+        "url": "public/assets/atlas/features/json/monk_ability_score_improvement_2.json"
       }
     ],
     "class_specific": {
@@ -264,13 +264,13 @@
       "ki_points": 8,
       "unarmored_movement": 15
     },
-    "index": "monk-8",
+    "index": "monk_8",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/8",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -279,9 +279,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "unarmored-movement-2",
+        "index": "unarmored_movement_2",
         "name": "Unarmored Movement",
-        "url": "/assets/atlas/features/unarmored-movement-2"
+        "url": "public/assets/atlas/features/json/unarmored_movement_2.json"
       }
     ],
     "class_specific": {
@@ -292,13 +292,13 @@
       "ki_points": 9,
       "unarmored_movement": 15
     },
-    "index": "monk-9",
+    "index": "monk_9",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/9",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -307,9 +307,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "purity-of-body",
+        "index": "purity_of_body",
         "name": "Purity of Body",
-        "url": "/assets/atlas/features/purity-of-body"
+        "url": "public/assets/atlas/features/json/purity_of_body.json"
       }
     ],
     "class_specific": {
@@ -320,13 +320,13 @@
       "ki_points": 10,
       "unarmored_movement": 20
     },
-    "index": "monk-10",
+    "index": "monk_10",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/10",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -335,9 +335,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "monastic-tradition-improvement-2",
+        "index": "monastic_tradition_improvement_2",
         "name": "Monastic Tradition feature",
-        "url": "/assets/atlas/features/monastic-tradition-improvement-2"
+        "url": "public/assets/atlas/features/json/monastic_tradition_improvement_2.json"
       }
     ],
     "class_specific": {
@@ -348,13 +348,13 @@
       "ki_points": 11,
       "unarmored_movement": 20
     },
-    "index": "monk-11",
+    "index": "monk_11",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/11",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -363,9 +363,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "monk-ability-score-improvement-3",
+        "index": "monk_ability_score_improvement_3",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/monk-ability-score-improvement-3"
+        "url": "public/assets/atlas/features/json/monk_ability_score_improvement_3.json"
       }
     ],
     "class_specific": {
@@ -376,13 +376,13 @@
       "ki_points": 12,
       "unarmored_movement": 20
     },
-    "index": "monk-12",
+    "index": "monk_12",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/12",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -391,9 +391,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "tongue-of-the-sun-and-moon",
+        "index": "tongue_of_the_sun_and_moon",
         "name": "Tongue of the Sun and Moon",
-        "url": "/assets/atlas/features/tongue-of-the-sun-and-moon"
+        "url": "public/assets/atlas/features/json/tongue_of_the_sun_and_moon.json"
       }
     ],
     "class_specific": {
@@ -404,13 +404,13 @@
       "ki_points": 13,
       "unarmored_movement": 20
     },
-    "index": "monk-13",
+    "index": "monk_13",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/13",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -419,9 +419,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "diamond-soul",
+        "index": "diamond_soul",
         "name": "Diamond Soul",
-        "url": "/assets/atlas/features/diamond-soul"
+        "url": "public/assets/atlas/features/json/diamond_soul.json"
       }
     ],
     "class_specific": {
@@ -432,13 +432,13 @@
       "ki_points": 14,
       "unarmored_movement": 25
     },
-    "index": "monk-14",
+    "index": "monk_14",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/14",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -447,9 +447,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "monk-timeless-body",
+        "index": "monk_timeless_body",
         "name": "Timeless Body",
-        "url": "/assets/atlas/features/monk-timeless-body"
+        "url": "public/assets/atlas/features/json/monk_timeless_body.json"
       }
     ],
     "class_specific": {
@@ -460,13 +460,13 @@
       "ki_points": 15,
       "unarmored_movement": 25
     },
-    "index": "monk-15",
+    "index": "monk_15",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/15",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -475,9 +475,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "monk-ability-score-improvement-4",
+        "index": "monk_ability_score_improvement_4",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/monk-ability-score-improvement-4"
+        "url": "public/assets/atlas/features/json/monk_ability_score_improvement_4.json"
       }
     ],
     "class_specific": {
@@ -488,13 +488,13 @@
       "ki_points": 16,
       "unarmored_movement": 25
     },
-    "index": "monk-16",
+    "index": "monk_16",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/16",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -503,9 +503,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "monastic-tradition-improvement-3",
+        "index": "monastic_tradition_improvement_3",
         "name": "Monastic Tradition feature",
-        "url": "/assets/atlas/features/monastic-tradition-improvement-3"
+        "url": "public/assets/atlas/features/json/monastic_tradition_improvement_3.json"
       }
     ],
     "class_specific": {
@@ -516,13 +516,13 @@
       "ki_points": 17,
       "unarmored_movement": 25
     },
-    "index": "monk-17",
+    "index": "monk_17",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/17",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -531,9 +531,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "empty-body",
+        "index": "empty_body",
         "name": "Empty Body",
-        "url": "/assets/atlas/features/empty-body"
+        "url": "public/assets/atlas/features/json/empty_body.json"
       }
     ],
     "class_specific": {
@@ -544,13 +544,13 @@
       "ki_points": 18,
       "unarmored_movement": 30
     },
-    "index": "monk-18",
+    "index": "monk_18",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/18",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -559,9 +559,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "monk-ability-score-improvement-5",
+        "index": "monk_ability_score_improvement_5",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/monk-ability-score-improvement-5"
+        "url": "public/assets/atlas/features/json/monk_ability_score_improvement_5.json"
       }
     ],
     "class_specific": {
@@ -572,13 +572,13 @@
       "ki_points": 19,
       "unarmored_movement": 30
     },
-    "index": "monk-19",
+    "index": "monk_19",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/19",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -587,9 +587,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "perfect-self",
+        "index": "perfect_self",
         "name": "Perfect Self",
-        "url": "/assets/atlas/features/perfect-self"
+        "url": "public/assets/atlas/features/json/perfect_self.json"
       }
     ],
     "class_specific": {
@@ -600,13 +600,13 @@
       "ki_points": 20,
       "unarmored_movement": 30
     },
-    "index": "monk-20",
+    "index": "monk_20",
     "class": {
       "index": "monk",
       "name": "Monk",
-      "url": "/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
-    "url": "/assets/atlas/classes/monk/levels/20",
+    "url": "public/assets/atlas/class/levels/monk.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   }
 ]
