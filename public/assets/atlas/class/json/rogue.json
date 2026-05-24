@@ -259,7 +259,7 @@
       }
     },
     {
-      "desc": "(a) a burglar\u2019s pack, (b) a dungeoneer\u2019s pack, or (c) an explorer\u2019s pack",
+      "desc": "(a) a burglar’s pack, (b) a dungeoneer’s pack, or (c) an explorer’s pack",
       "choose": 1,
       "type": "equipment",
       "from": {
@@ -296,7 +296,7 @@
       }
     }
   ],
-  "class_levels": "public/assets/atlas/classes/rogue/levels",
+  "class_levels": "public/assets/atlas/class/levels/rogue.json",
   "multi_classing": {
     "prerequisites": [
       {
@@ -424,10 +424,10 @@
     {
       "index": "thief",
       "name": "thief",
-      "url": "public/assets/atlas/class/json/thief.json"
+      "url": "public/assets/atlas/subclasses/json/thief.json"
     }
   ],
   "url": "public/assets/atlas/class/json/rogue.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
-  "image": "public/assets/atlas/classes/rogue.webp"
+  "image": "public/assets/atlas/class/wiki_image/rogue.webp"
 }
