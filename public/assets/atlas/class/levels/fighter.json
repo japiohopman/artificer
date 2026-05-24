@@ -5,14 +5,14 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "fighter-fighting-style",
+        "index": "fighter_fighting_style",
         "name": "Fighting Style",
-        "url": "/assets/atlas/features/fighter-fighting-style"
+        "url": "public/assets/atlas/features/json/fighter_fighting_style.json"
       },
       {
-        "index": "second-wind",
+        "index": "second_wind",
         "name": "Second Wind",
-        "url": "/assets/atlas/features/second-wind"
+        "url": "public/assets/atlas/features/json/second_wind.json"
       }
     ],
     "class_specific": {
@@ -20,13 +20,13 @@
       "indomitable_uses": 0,
       "extra_attacks": 0
     },
-    "index": "fighter-1",
+    "index": "fighter_1",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/1",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -35,9 +35,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "action-surge-1-use",
+        "index": "action_surge_1_use",
         "name": "Action Surge (1 use)",
-        "url": "/assets/atlas/features/action-surge-1-use"
+        "url": "public/assets/atlas/features/json/action_surge_1_use.json"
       }
     ],
     "class_specific": {
@@ -45,13 +45,13 @@
       "indomitable_uses": 0,
       "extra_attacks": 0
     },
-    "index": "fighter-2",
+    "index": "fighter_2",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/2",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -60,9 +60,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "martial-archetype",
+        "index": "martial_archetype",
         "name": "Martial Archetype",
-        "url": "/assets/atlas/features/martial-archetype"
+        "url": "public/assets/atlas/features/json/martial_archetype.json"
       }
     ],
     "class_specific": {
@@ -70,13 +70,13 @@
       "indomitable_uses": 0,
       "extra_attacks": 0
     },
-    "index": "fighter-3",
+    "index": "fighter_3",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/3",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -85,9 +85,9 @@
     "prof_bonus": 2,
     "features": [
       {
-        "index": "fighter-ability-score-improvement-1",
+        "index": "fighter_ability_score_improvement_1",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/fighter-ability-score-improvement-1"
+        "url": "public/assets/atlas/features/json/fighter_ability_score_improvement_1.json"
       }
     ],
     "class_specific": {
@@ -95,13 +95,13 @@
       "indomitable_uses": 0,
       "extra_attacks": 0
     },
-    "index": "fighter-4",
+    "index": "fighter_4",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/4",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -110,9 +110,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "extra-attack-1",
+        "index": "extra_attack_1",
         "name": "Extra Attack",
-        "url": "/assets/atlas/features/extra-attack-1"
+        "url": "public/assets/atlas/features/json/extra_attack_1.json"
       }
     ],
     "class_specific": {
@@ -120,13 +120,13 @@
       "indomitable_uses": 0,
       "extra_attacks": 1
     },
-    "index": "fighter-5",
+    "index": "fighter_5",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/5",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -135,9 +135,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "fighter-ability-score-improvement-2",
+        "index": "fighter_ability_score_improvement_2",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/fighter-ability-score-improvement-2"
+        "url": "public/assets/atlas/features/json/fighter_ability_score_improvement_2.json"
       }
     ],
     "class_specific": {
@@ -145,13 +145,13 @@
       "indomitable_uses": 0,
       "extra_attacks": 1
     },
-    "index": "fighter-6",
+    "index": "fighter_6",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/6",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -160,9 +160,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "martial-archetype-improvement-1",
+        "index": "martial_archetype_improvement_1",
         "name": "Martial Archetype feature",
-        "url": "/assets/atlas/features/martial-archetype-improvement-1"
+        "url": "public/assets/atlas/features/json/martial_archetype_improvement_1.json"
       }
     ],
     "class_specific": {
@@ -170,13 +170,13 @@
       "indomitable_uses": 0,
       "extra_attacks": 1
     },
-    "index": "fighter-7",
+    "index": "fighter_7",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/7",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -185,9 +185,9 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "fighter-ability-score-improvement-3",
+        "index": "fighter_ability_score_improvement_3",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/fighter-ability-score-improvement-3"
+        "url": "public/assets/atlas/features/json/fighter_ability_score_improvement_3.json"
       }
     ],
     "class_specific": {
@@ -195,13 +195,13 @@
       "indomitable_uses": 0,
       "extra_attacks": 1
     },
-    "index": "fighter-8",
+    "index": "fighter_8",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/8",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -210,9 +210,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "indomitable-1-use",
+        "index": "indomitable_1_use",
         "name": "Indomitable (1 use)",
-        "url": "/assets/atlas/features/indomitable-1-use"
+        "url": "public/assets/atlas/features/json/indomitable_1_use.json"
       }
     ],
     "class_specific": {
@@ -220,13 +220,13 @@
       "indomitable_uses": 1,
       "extra_attacks": 1
     },
-    "index": "fighter-9",
+    "index": "fighter_9",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/9",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -235,9 +235,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "martial-archetype-improvement-2",
+        "index": "martial_archetype_improvement_2",
         "name": "Martial Archetype feature",
-        "url": "/assets/atlas/features/martial-archetype-improvement-2"
+        "url": "public/assets/atlas/features/json/martial_archetype_improvement_2.json"
       }
     ],
     "class_specific": {
@@ -245,13 +245,13 @@
       "indomitable_uses": 1,
       "extra_attacks": 1
     },
-    "index": "fighter-10",
+    "index": "fighter_10",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/10",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -260,9 +260,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "extra-attack-2",
+        "index": "extra_attack_2",
         "name": "Extra Attack (2)",
-        "url": "/assets/atlas/features/extra-attack-2"
+        "url": "public/assets/atlas/features/json/extra_attack_2.json"
       }
     ],
     "class_specific": {
@@ -270,13 +270,13 @@
       "indomitable_uses": 1,
       "extra_attacks": 2
     },
-    "index": "fighter-11",
+    "index": "fighter_11",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/11",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -285,9 +285,9 @@
     "prof_bonus": 4,
     "features": [
       {
-        "index": "fighter-ability-score-improvement-4",
+        "index": "fighter_ability_score_improvement_4",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/fighter-ability-score-improvement-4"
+        "url": "public/assets/atlas/features/json/fighter_ability_score_improvement_4.json"
       }
     ],
     "class_specific": {
@@ -295,13 +295,13 @@
       "indomitable_uses": 1,
       "extra_attacks": 2
     },
-    "index": "fighter-12",
+    "index": "fighter_12",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/12",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -310,9 +310,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "indomitable-2-uses",
+        "index": "indomitable_2_uses",
         "name": "Indomitable (2 uses)",
-        "url": "/assets/atlas/features/indomitable-2-uses"
+        "url": "public/assets/atlas/features/json/indomitable_2_uses.json"
       }
     ],
     "class_specific": {
@@ -320,13 +320,13 @@
       "indomitable_uses": 2,
       "extra_attacks": 2
     },
-    "index": "fighter-13",
+    "index": "fighter_13",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/13",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -335,9 +335,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "fighter-ability-score-improvement-5",
+        "index": "fighter_ability_score_improvement_5",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/fighter-ability-score-improvement-5"
+        "url": "public/assets/atlas/features/json/fighter_ability_score_improvement_5.json"
       }
     ],
     "class_specific": {
@@ -345,13 +345,13 @@
       "indomitable_uses": 2,
       "extra_attacks": 2
     },
-    "index": "fighter-14",
+    "index": "fighter_14",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/14",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -360,9 +360,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "martial-archetype-improvement-3",
+        "index": "martial_archetype_improvement_3",
         "name": "Martial Archetype feature",
-        "url": "/assets/atlas/features/martial-archetype-improvement-3"
+        "url": "public/assets/atlas/features/json/martial_archetype_improvement_3.json"
       }
     ],
     "class_specific": {
@@ -370,13 +370,13 @@
       "indomitable_uses": 2,
       "extra_attacks": 2
     },
-    "index": "fighter-15",
+    "index": "fighter_15",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/15",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -385,9 +385,9 @@
     "prof_bonus": 5,
     "features": [
       {
-        "index": "fighter-ability-score-improvement-6",
+        "index": "fighter_ability_score_improvement_6",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/fighter-ability-score-improvement-6"
+        "url": "public/assets/atlas/features/json/fighter_ability_score_improvement_6.json"
       }
     ],
     "class_specific": {
@@ -395,13 +395,13 @@
       "indomitable_uses": 2,
       "extra_attacks": 2
     },
-    "index": "fighter-16",
+    "index": "fighter_16",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/16",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -410,14 +410,14 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "action-surge-2-uses",
+        "index": "action_surge_2_uses",
         "name": "Action Surge (2 uses)",
-        "url": "/assets/atlas/features/action-surge-2-uses"
+        "url": "public/assets/atlas/features/json/action_surge_2_uses.json"
       },
       {
-        "index": "indomitable-3-uses",
+        "index": "indomitable_3_uses",
         "name": "Indomitable (3 uses)",
-        "url": "/assets/atlas/features/indomitable-3-uses"
+        "url": "public/assets/atlas/features/json/indomitable_3_uses.json"
       }
     ],
     "class_specific": {
@@ -425,13 +425,13 @@
       "indomitable_uses": 3,
       "extra_attacks": 2
     },
-    "index": "fighter-17",
+    "index": "fighter_17",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/17",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -440,9 +440,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "martial-archetype-improvement-4",
+        "index": "martial_archetype_improvement_4",
         "name": "Martial Archetype feature",
-        "url": "/assets/atlas/features/martial-archetype-improvement-4"
+        "url": "public/assets/atlas/features/json/martial_archetype_improvement_4.json"
       }
     ],
     "class_specific": {
@@ -450,13 +450,13 @@
       "indomitable_uses": 3,
       "extra_attacks": 2
     },
-    "index": "fighter-18",
+    "index": "fighter_18",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/18",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -465,9 +465,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "fighter-ability-score-improvement-7",
+        "index": "fighter_ability_score_improvement_7",
         "name": "Ability Score Improvement",
-        "url": "/assets/atlas/features/fighter-ability-score-improvement-7"
+        "url": "public/assets/atlas/features/json/fighter_ability_score_improvement_7.json"
       }
     ],
     "class_specific": {
@@ -475,13 +475,13 @@
       "indomitable_uses": 3,
       "extra_attacks": 2
     },
-    "index": "fighter-19",
+    "index": "fighter_19",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/19",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   },
   {
@@ -490,9 +490,9 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "extra-attack-3",
+        "index": "extra_attack_3",
         "name": "Extra Attack (3)",
-        "url": "/assets/atlas/features/extra-attack-3"
+        "url": "public/assets/atlas/features/json/extra_attack_3.json"
       }
     ],
     "class_specific": {
@@ -500,13 +500,13 @@
       "indomitable_uses": 3,
       "extra_attacks": 3
     },
-    "index": "fighter-20",
+    "index": "fighter_20",
     "class": {
       "index": "fighter",
       "name": "Fighter",
-      "url": "/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
-    "url": "/assets/atlas/classes/fighter/levels/20",
+    "url": "public/assets/atlas/class/levels/fighter.json",
     "updated_at": "2026-04-01T20:35:37.787Z"
   }
 ]
