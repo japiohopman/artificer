@@ -1,5 +1,5 @@
 {
-  "index": "improved_critical",
+  "index": "heroic_warrior",
   "class": {
     "index": "fighter",
     "name": "fighter",
@@ -10,13 +10,13 @@
     "name": "champion",
     "url": "assets/atlas/subclasses/json/champion.json"
   },
-  "name": "improved critical",
-  "level": 3,
+  "name": "heroic warrior",
+  "level": 10,
   "prerequisites": [],
   "desc": [
-    "Beginning when you choose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20."
+    "Starting at 10th level, you gain Heroic Inspiration whenever you start your turn without it."
   ],
-  "url": "assets/atlas/features/json/improved_critical.json",
+  "url": "assets/atlas/features/json/heroic_warrior.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
-  "image": "assets/atlas/features/improved_critical.webp"
+  "image": "assets/atlas/features/heroic_warrior.webp"
 }

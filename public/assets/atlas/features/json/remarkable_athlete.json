@@ -3,20 +3,20 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "public/assets/atlas/classes/fighter"
+    "url": "assets/atlas/class/json/fighter.json"
   },
   "subclass": {
     "index": "champion",
     "name": "champion",
-    "url": "public/assets/atlas/subclasses/charismampion"
+    "url": "assets/atlas/subclasses/json/champion.json"
   },
   "name": "remarkable athlete",
-  "level": 7,
+  "level": 3,
   "prerequisites": [],
   "desc": [
-    "Starting at 7th level, you can add half your proficiency bonus (round up) to any Strength, Dexterity, or Constitution check you make that doesn't already use your proficiency bonus. In addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength modifier."
+    "Starting at 3rd level, you have advantage on Initiative rolls and Strength (Athletics) checks. In addition, when you score a Critical Hit, you can move half your Speed without provoking Opportunity Attacks."
   ],
-  "url": "public/assets/atlas/features/json/remarkable_athlete.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/remarkable_athlete.webp"
+  "url": "assets/atlas/features/json/remarkable_athlete.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "assets/atlas/features/remarkable_athlete.webp"
 }

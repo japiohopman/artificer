@@ -1,0 +1,18 @@
+{
+  "index": "psi_warrior",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "assets/atlas/class/json/fighter.json"
+  },
+  "name": "psi warrior",
+  "subclass_flavor": "Martial Archetype",
+  "desc": [
+    "Psi Warriors augment their physical might with the power of their minds. They use psionic energy to strike with greater force, shield themselves and others, and even move objects with a thought."
+  ],
+  "subclass_levels": "assets/atlas/subclasses/psi_warrior/levels",
+  "url": "assets/atlas/subclasses/json/psi_warrior.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "spells": [],
+  "image": "assets/atlas/subclasses/psi_warrior.webp"
+}
