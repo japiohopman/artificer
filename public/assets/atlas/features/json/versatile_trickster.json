@@ -1,0 +1,22 @@
+{
+  "index": "versatile_trickster",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "assets/atlas/class/json/rogue.json"
+  },
+  "subclass": {
+    "index": "arcane_trickster",
+    "name": "arcane trickster",
+    "url": "assets/atlas/subclasses/json/arcane_trickster.json"
+  },
+  "name": "versatile trickster",
+  "level": 13,
+  "prerequisites": [],
+  "desc": [
+    "At 13th level, you gain the ability to distract targets with your mage hand. As a bonus action on your turn, you can designate a creature within 5 feet of the spectral hand created by the spell. Until the end of the turn, you have advantage on attack rolls against that creature."
+  ],
+  "url": "assets/atlas/features/json/versatile_trickster.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "assets/atlas/features/versatile_trickster.webp"
+}
