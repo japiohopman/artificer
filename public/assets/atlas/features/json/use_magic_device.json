@@ -3,12 +3,12 @@
   "class": {
     "index": "rogue",
     "name": "rogue",
-    "url": "public/assets/atlas/classes/rogue"
+    "url": "assets/atlas/class/json/rogue.json"
   },
   "subclass": {
     "index": "thief",
     "name": "thief",
-    "url": "public/assets/atlas/subclasses/thief"
+    "url": "assets/atlas/subclasses/json/thief.json"
   },
   "name": "use magic device",
   "level": 13,
@@ -16,7 +16,7 @@
   "desc": [
     "By 13th level, you have learned enough about the workings of magic that you can improvise the use of items even when they are not intended for you. You ignore all class, race, and level requirements on the use of magic items."
   ],
-  "url": "public/assets/atlas/features/json/use_magic_device.json",
+  "url": "assets/atlas/features/json/use_magic_device.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/use_magic_device.webp"
+  "image": "assets/atlas/features/use_magic_device.webp"
 }
