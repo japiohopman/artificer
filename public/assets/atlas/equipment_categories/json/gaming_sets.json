@@ -8,6 +8,16 @@
       "url": "public/assets/atlas/equipment/json/dice_set.json"
     },
     {
+      "index": "dragonchess_set",
+      "name": "dragonchess set",
+      "url": "public/assets/atlas/equipment/json/dragonchess_set.json"
+    },
+    {
+      "index": "marked_cards",
+      "name": "marked cards",
+      "url": "public/assets/atlas/equipment/json/marked_cards.json"
+    },
+    {
       "index": "playing_card_set",
       "name": "playing card set",
       "url": "public/assets/atlas/equipment/json/playing_card_set.json"
@@ -18,9 +28,14 @@
       "url": "public/assets/atlas/equipment/json/tda_card_set.json"
     },
     {
-      "index": "dragonchess_set",
-      "name": "dragonchess set",
-      "url": "public/assets/atlas/equipment/json/dragonchess_set.json"
+      "index": "three_dragon_ante_set",
+      "name": "three-dragon ante set",
+      "url": "public/assets/atlas/equipment/json/three_dragon_ante_set.json"
+    },
+    {
+      "index": "weighted_dice",
+      "name": "weighted dice",
+      "url": "public/assets/atlas/equipment/json/weighted_dice.json"
     }
   ],
   "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json",

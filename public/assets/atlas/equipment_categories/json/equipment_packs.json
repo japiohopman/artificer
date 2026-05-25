@@ -5,37 +5,42 @@
     {
       "index": "burglars_pack",
       "name": "burglar's pack",
-      "url": "public/assets/atlas/equipment/burglars_pack"
+      "url": "public/assets/atlas/equipment/json/burglars_pack.json"
     },
     {
       "index": "diplomats_pack",
       "name": "diplomat's pack",
-      "url": "public/assets/atlas/equipment/diplomats_pack"
+      "url": "public/assets/atlas/equipment/json/diplomats_pack.json"
     },
     {
       "index": "dungeoneers_pack",
       "name": "dungeoneer's pack",
-      "url": "public/assets/atlas/equipment/dungeoneers_pack"
+      "url": "public/assets/atlas/equipment/json/dungeoneers_pack.json"
     },
     {
       "index": "entertainers_pack",
       "name": "entertainer's pack",
-      "url": "public/assets/atlas/equipment/entertainers_pack"
+      "url": "public/assets/atlas/equipment/json/entertainers_pack.json"
     },
     {
       "index": "explorers_pack",
       "name": "explorer's pack",
-      "url": "public/assets/atlas/equipment/explorers_pack"
+      "url": "public/assets/atlas/equipment/json/explorers_pack.json"
+    },
+    {
+      "index": "monster_hunters_pack",
+      "name": "monster hunter's pack",
+      "url": "public/assets/atlas/equipment/json/monster_hunters_pack.json"
     },
     {
       "index": "priests_pack",
       "name": "priest's pack",
-      "url": "public/assets/atlas/equipment/priests_pack"
+      "url": "public/assets/atlas/equipment/json/priests_pack.json"
     },
     {
       "index": "scholars_pack",
       "name": "scholar's pack",
-      "url": "public/assets/atlas/equipment/scholars_pack"
+      "url": "public/assets/atlas/equipment/json/scholars_pack.json"
     }
   ],
   "url": "public/assets/atlas/equipment_categories/json/equipment_packs.json",

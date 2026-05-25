@@ -1,0 +1,37 @@
+{
+  "desc": [
+    "A set of dice that have been weighted to roll specific numbers."
+  ],
+  "special": [],
+  "index": "weighted_dice",
+  "name": "weighted dice",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "public/assets/atlas/equipment_categories/tools"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "public/assets/atlas/equipment/json/weighted_dice.json",
+  "updated_at": "2026-05-25T12:18:36.860965Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/weighted_dice.webp",
+  "imageUrl": "/assets/atlas/equipment/images/weighted_dice.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "25-5-2026",
+  "gear_category": {
+    "index": "gaming_sets",
+    "name": "gaming sets",
+    "url": "public/assets/atlas/equipment_categories/gaming_sets"
+  },
+  "category": "Gaming Sets",
+  "tool_category": "Gaming Sets"
+}
