@@ -1,0 +1,22 @@
+{
+  "index": "magical_ambush",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "assets/atlas/class/json/rogue.json"
+  },
+  "subclass": {
+    "index": "arcane_trickster",
+    "name": "arcane trickster",
+    "url": "assets/atlas/subclasses/json/arcane_trickster.json"
+  },
+  "name": "magical ambush",
+  "level": 9,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 9th level, if you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn."
+  ],
+  "url": "assets/atlas/features/json/magical_ambush.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "assets/atlas/features/magical_ambush.webp"
+}
