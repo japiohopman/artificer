@@ -1,0 +1,26 @@
+{
+  "index": "mage_hand_legerdemain",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "assets/atlas/class/json/rogue.json"
+  },
+  "subclass": {
+    "index": "arcane_trickster",
+    "name": "arcane trickster",
+    "url": "assets/atlas/subclasses/json/arcane_trickster.json"
+  },
+  "name": "mage hand legerdemain",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 3rd level, when you cast mage hand, you can make the spectral hand invisible, and you can perform the following additional tasks with it:",
+    "• You can stow one object the hand is holding in a container worn or carried by another creature.",
+    "• You can retrieve an object in a container worn or carried by another creature.",
+    "• You can use thieves' tools to pick locks and disarm traps at range.",
+    "You can perform one of these tasks without being noticed by a creature if you succeed on a Dexterity (Sleight of Hand) check contested by the creature's Wisdom (Perception) check. In addition, you can use the bonus action granted by your Cunning Action to control the hand."
+  ],
+  "url": "assets/atlas/features/json/mage_hand_legerdemain.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "assets/atlas/features/mage_hand_legerdemain.webp"
+}
