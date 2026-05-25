@@ -1,0 +1,22 @@
+{
+  "index": "improved_combat_superiority",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "assets/atlas/class/json/fighter.json"
+  },
+  "subclass": {
+    "index": "battle_master",
+    "name": "battle master",
+    "url": "assets/atlas/subclasses/json/battle_master.json"
+  },
+  "name": "improved combat superiority",
+  "level": 10,
+  "prerequisites": [],
+  "desc": [
+    "At 10th level, your superiority dice turn into d10s. At 18th level, they turn into d12s."
+  ],
+  "url": "assets/atlas/features/json/improved_combat_superiority.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "assets/atlas/features/improved_combat_superiority.webp"
+}

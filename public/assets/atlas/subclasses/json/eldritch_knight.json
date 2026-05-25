@@ -1,0 +1,18 @@
+{
+  "index": "eldritch_knight",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "assets/atlas/class/json/fighter.json"
+  },
+  "name": "eldritch knight",
+  "subclass_flavor": "Martial Archetype",
+  "desc": [
+    "Eldritch Knights combine the martial mastery common to all fighters with a careful study of magic. They use magical techniques similar to those practiced by wizards, weaving spells into their combat style to enhance their offensive and defensive capabilities."
+  ],
+  "subclass_levels": "assets/atlas/subclasses/eldritch_knight/levels",
+  "url": "assets/atlas/subclasses/json/eldritch_knight.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "spells": [],
+  "image": "assets/atlas/subclasses/eldritch_knight.webp"
+}

@@ -1,0 +1,18 @@
+{
+  "index": "battle_master",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "assets/atlas/class/json/fighter.json"
+  },
+  "name": "battle master",
+  "subclass_flavor": "Martial Archetype",
+  "desc": [
+    "Battle Masters are students of the art of war. They view combat as a field of study, and they use maneuvers—specialized combat techniques—to control the battlefield and support their allies."
+  ],
+  "subclass_levels": "assets/atlas/subclasses/battle_master/levels",
+  "url": "assets/atlas/subclasses/json/battle_master.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "spells": [],
+  "image": "assets/atlas/subclasses/battle_master.webp"
+}

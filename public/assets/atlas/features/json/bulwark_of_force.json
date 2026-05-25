@@ -1,0 +1,22 @@
+{
+  "index": "bulwark_of_force",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "assets/atlas/class/json/fighter.json"
+  },
+  "subclass": {
+    "index": "psi_warrior",
+    "name": "psi warrior",
+    "url": "assets/atlas/subclasses/json/psi_warrior.json"
+  },
+  "name": "bulwark of force",
+  "level": 15,
+  "prerequisites": [],
+  "desc": [
+    "At 15th level, you can shield yourself and others with force. As a bonus action, you can choose a number of creatures, which can include yourself, that you can see within 30 feet of you, up to a number of creatures equal to your Intelligence modifier (minimum of one). Each of the chosen creatures is protected by half cover for 1 minute or until you're incapacitated. Once you take this bonus action, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to take it again."
+  ],
+  "url": "assets/atlas/features/json/bulwark_of_force.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "assets/atlas/features/bulwark_of_force.webp"
+}
