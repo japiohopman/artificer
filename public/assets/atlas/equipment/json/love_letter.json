@@ -1,0 +1,36 @@
+{
+  "desc": [
+    "A letter from a lover."
+  ],
+  "special": [],
+  "index": "love_letter",
+  "name": "love letter",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "public/assets/atlas/equipment/json/love_letter.json",
+  "updated_at": "2026-05-25T12:18:36.860965Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/equipment/love_letter.webp",
+  "imageUrl": "/assets/atlas/equipment/images/love_letter.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "25-5-2026",
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "public/assets/atlas/equipment_categories/standard_gear"
+  },
+  "category": "Standard Gear"
+}
