@@ -15,7 +15,7 @@
             "item": {
               "index": "skill_acrobatics",
               "name": "skill: acrobatics",
-              "url": "public/assets/atlas/proficiencies/json/skill_acrobatics.json"
+              "url": "assets/atlas/proficiencies/json/skill_acrobatics.json"
             }
           },
           {
@@ -23,7 +23,7 @@
             "item": {
               "index": "skill_athletics",
               "name": "skill: athletics",
-              "url": "public/assets/atlas/proficiencies/json/skill_athletics.json"
+              "url": "assets/atlas/proficiencies/json/skill_athletics.json"
             }
           },
           {
@@ -31,7 +31,7 @@
             "item": {
               "index": "skill_deception",
               "name": "skill: deception",
-              "url": "public/assets/atlas/proficiencies/json/skill_deception.json"
+              "url": "assets/atlas/proficiencies/json/skill_deception.json"
             }
           },
           {
@@ -39,7 +39,7 @@
             "item": {
               "index": "skill_insight",
               "name": "skill: insight",
-              "url": "public/assets/atlas/proficiencies/json/skill_insight.json"
+              "url": "assets/atlas/proficiencies/json/skill_insight.json"
             }
           },
           {
@@ -47,7 +47,7 @@
             "item": {
               "index": "skill_intimidation",
               "name": "skill: intimidation",
-              "url": "public/assets/atlas/proficiencies/json/skill_intimidation.json"
+              "url": "assets/atlas/proficiencies/json/skill_intimidation.json"
             }
           },
           {
@@ -55,7 +55,7 @@
             "item": {
               "index": "skill_investigation",
               "name": "skill: investigation",
-              "url": "public/assets/atlas/proficiencies/json/skill_investigation.json"
+              "url": "assets/atlas/proficiencies/json/skill_investigation.json"
             }
           },
           {
@@ -63,7 +63,7 @@
             "item": {
               "index": "skill_perception",
               "name": "skill: perception",
-              "url": "public/assets/atlas/proficiencies/json/skill_perception.json"
+              "url": "assets/atlas/proficiencies/json/skill_perception.json"
             }
           },
           {
@@ -71,7 +71,7 @@
             "item": {
               "index": "skill_performance",
               "name": "skill: performance",
-              "url": "public/assets/atlas/proficiencies/json/skill_performance.json"
+              "url": "assets/atlas/proficiencies/json/skill_performance.json"
             }
           },
           {
@@ -79,7 +79,7 @@
             "item": {
               "index": "skill_persuasion",
               "name": "skill: persuasion",
-              "url": "public/assets/atlas/proficiencies/json/skill_persuasion.json"
+              "url": "assets/atlas/proficiencies/json/skill_persuasion.json"
             }
           },
           {
@@ -87,7 +87,7 @@
             "item": {
               "index": "skill_sleight_of_hand",
               "name": "skill: sleight of hand",
-              "url": "public/assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
+              "url": "assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
             }
           },
           {
@@ -95,7 +95,7 @@
             "item": {
               "index": "skill_stealth",
               "name": "skill: stealth",
-              "url": "public/assets/atlas/proficiencies/json/skill_stealth.json"
+              "url": "assets/atlas/proficiencies/json/skill_stealth.json"
             }
           }
         ]
@@ -106,59 +106,59 @@
     {
       "index": "light_armor",
       "name": "light armor",
-      "url": "public/assets/atlas/proficiencies/json/light_armor.json"
+      "url": "assets/atlas/proficiencies/json/light_armor.json"
     },
     {
       "index": "simple_weapons",
       "name": "simple weapons",
-      "url": "public/assets/atlas/proficiencies/json/simple_weapons.json"
+      "url": "assets/atlas/proficiencies/json/simple_weapons.json"
     },
     {
       "index": "longswords",
       "name": "longswords",
-      "url": "public/assets/atlas/proficiencies/json/longswords.json"
+      "url": "assets/atlas/proficiencies/json/longswords.json"
     },
     {
       "index": "rapiers",
       "name": "rapiers",
-      "url": "public/assets/atlas/proficiencies/json/rapiers.json"
+      "url": "assets/atlas/proficiencies/json/rapiers.json"
     },
     {
       "index": "shortswords",
       "name": "shortswords",
-      "url": "public/assets/atlas/proficiencies/json/shortswords.json"
+      "url": "assets/atlas/proficiencies/json/shortswords.json"
     },
     {
       "index": "hand_crossbows",
       "name": "hand crossbows",
-      "url": "public/assets/atlas/proficiencies/json/hand_crossbows.json"
+      "url": "assets/atlas/proficiencies/json/hand_crossbows.json"
     },
     {
       "index": "thieves_tools",
       "name": "thieves' tools",
-      "url": "public/assets/atlas/proficiencies/json/thieves_tools.json"
+      "url": "assets/atlas/proficiencies/json/thieves_tools.json"
     },
     {
       "index": "saving_throw_dex",
       "name": "saving throw: dex",
-      "url": "public/assets/atlas/proficiencies/json/saving_throw_dex.json"
+      "url": "assets/atlas/proficiencies/json/saving_throw_dex.json"
     },
     {
       "index": "saving_throw_int",
       "name": "saving throw: int",
-      "url": "public/assets/atlas/proficiencies/json/saving_throw_int.json"
+      "url": "assets/atlas/proficiencies/json/saving_throw_int.json"
     }
   ],
   "saving_throws": [
     {
       "index": "dex",
       "name": "dex",
-      "url": "public/assets/atlas/ability_scores/json/dexterity.json"
+      "url": "assets/atlas/ability_scores/json/dexterity.json"
     },
     {
       "index": "int",
       "name": "int",
-      "url": "public/assets/atlas/ability_scores/json/intelligence.json"
+      "url": "assets/atlas/ability_scores/json/intelligence.json"
     }
   ],
   "starting_equipment": [
@@ -166,7 +166,7 @@
       "equipment": {
         "index": "leather_armor",
         "name": "leather armor",
-        "url": "public/assets/atlas/equipment/json/leather_armor.json"
+        "url": "assets/atlas/equipment/json/leather_armor.json"
       },
       "quantity": 1
     },
@@ -174,7 +174,7 @@
       "equipment": {
         "index": "dagger",
         "name": "dagger",
-        "url": "public/assets/atlas/equipment/json/dagger.json"
+        "url": "assets/atlas/equipment/json/dagger.json"
       },
       "quantity": 2
     },
@@ -182,7 +182,7 @@
       "equipment": {
         "index": "thieves_tools",
         "name": "thieves' tools",
-        "url": "public/assets/atlas/equipment/json/thieves_tools.json"
+        "url": "assets/atlas/equipment/json/thieves_tools.json"
       },
       "quantity": 1
     }
@@ -201,7 +201,7 @@
             "of": {
               "index": "rapier",
               "name": "rapier",
-              "url": "public/assets/atlas/equipment/json/rapier.json"
+              "url": "assets/atlas/equipment/json/rapier.json"
             }
           },
           {
@@ -210,7 +210,7 @@
             "of": {
               "index": "shortsword",
               "name": "shortsword",
-              "url": "public/assets/atlas/equipment/json/shortsword.json"
+              "url": "assets/atlas/equipment/json/shortsword.json"
             }
           }
         ]
@@ -232,7 +232,7 @@
                 "of": {
                   "index": "shortbow",
                   "name": "shortbow",
-                  "url": "public/assets/atlas/equipment/json/shortbow.json"
+                  "url": "assets/atlas/equipment/json/shortbow.json"
                 }
               },
               {
@@ -241,7 +241,7 @@
                 "of": {
                   "index": "arrow",
                   "name": "arrow",
-                  "url": "public/assets/atlas/equipment/json/arrow.json"
+                  "url": "assets/atlas/equipment/json/arrow.json"
                 }
               }
             ]
@@ -252,7 +252,7 @@
             "of": {
               "index": "shortsword",
               "name": "shortsword",
-              "url": "public/assets/atlas/equipment/json/shortsword.json"
+              "url": "assets/atlas/equipment/json/shortsword.json"
             }
           }
         ]
@@ -271,7 +271,7 @@
             "of": {
               "index": "burglars_pack",
               "name": "burglar's pack",
-              "url": "public/assets/atlas/equipment/json/burglars_pack.json"
+              "url": "assets/atlas/equipment/json/burglars_pack.json"
             }
           },
           {
@@ -280,7 +280,7 @@
             "of": {
               "index": "dungeoneers_pack",
               "name": "dungeoneer's pack",
-              "url": "public/assets/atlas/equipment/json/dungeoneers_pack.json"
+              "url": "assets/atlas/equipment/json/dungeoneers_pack.json"
             }
           },
           {
@@ -289,21 +289,21 @@
             "of": {
               "index": "explorers_pack",
               "name": "explorer's pack",
-              "url": "public/assets/atlas/equipment/json/explorers_pack.json"
+              "url": "assets/atlas/equipment/json/explorers_pack.json"
             }
           }
         ]
       }
     }
   ],
-  "class_levels": "public/assets/atlas/class/levels/rogue.json",
+  "class_levels": "assets/atlas/class/levels/rogue.json",
   "multi_classing": {
     "prerequisites": [
       {
         "ability_score": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/json/dexterity.json"
+          "url": "assets/atlas/ability_scores/json/dexterity.json"
         },
         "minimum_score": 13
       }
@@ -312,12 +312,12 @@
       {
         "index": "light_armor",
         "name": "light armor",
-        "url": "public/assets/atlas/proficiencies/json/light_armor.json"
+        "url": "assets/atlas/proficiencies/json/light_armor.json"
       },
       {
         "index": "thieves_tools",
         "name": "thieves' tools",
-        "url": "public/assets/atlas/proficiencies/json/thieves_tools.json"
+        "url": "assets/atlas/proficiencies/json/thieves_tools.json"
       }
     ],
     "proficiency_choices": [
@@ -332,7 +332,7 @@
               "item": {
                 "index": "skill_acrobatics",
                 "name": "skill: acrobatics",
-                "url": "public/assets/atlas/proficiencies/json/skill_acrobatics.json"
+                "url": "assets/atlas/proficiencies/json/skill_acrobatics.json"
               }
             },
             {
@@ -340,7 +340,7 @@
               "item": {
                 "index": "skill_athletics",
                 "name": "skill: athletics",
-                "url": "public/assets/atlas/proficiencies/json/skill_athletics.json"
+                "url": "assets/atlas/proficiencies/json/skill_athletics.json"
               }
             },
             {
@@ -348,7 +348,7 @@
               "item": {
                 "index": "skill_deception",
                 "name": "skill: deception",
-                "url": "public/assets/atlas/proficiencies/json/skill_deception.json"
+                "url": "assets/atlas/proficiencies/json/skill_deception.json"
               }
             },
             {
@@ -356,7 +356,7 @@
               "item": {
                 "index": "skill_insight",
                 "name": "skill: insight",
-                "url": "public/assets/atlas/proficiencies/json/skill_insight.json"
+                "url": "assets/atlas/proficiencies/json/skill_insight.json"
               }
             },
             {
@@ -364,7 +364,7 @@
               "item": {
                 "index": "skill_intimidation",
                 "name": "skill: intimidation",
-                "url": "public/assets/atlas/proficiencies/json/skill_intimidation.json"
+                "url": "assets/atlas/proficiencies/json/skill_intimidation.json"
               }
             },
             {
@@ -372,7 +372,7 @@
               "item": {
                 "index": "skill_investigation",
                 "name": "skill: investigation",
-                "url": "public/assets/atlas/proficiencies/json/skill_investigation.json"
+                "url": "assets/atlas/proficiencies/json/skill_investigation.json"
               }
             },
             {
@@ -380,7 +380,7 @@
               "item": {
                 "index": "skill_perception",
                 "name": "skill: perception",
-                "url": "public/assets/atlas/proficiencies/json/skill_perception.json"
+                "url": "assets/atlas/proficiencies/json/skill_perception.json"
               }
             },
             {
@@ -388,7 +388,7 @@
               "item": {
                 "index": "skill_performance",
                 "name": "skill: performance",
-                "url": "public/assets/atlas/proficiencies/json/skill_performance.json"
+                "url": "assets/atlas/proficiencies/json/skill_performance.json"
               }
             },
             {
@@ -396,7 +396,7 @@
               "item": {
                 "index": "skill_persuasion",
                 "name": "skill: persuasion",
-                "url": "public/assets/atlas/proficiencies/json/skill_persuasion.json"
+                "url": "assets/atlas/proficiencies/json/skill_persuasion.json"
               }
             },
             {
@@ -404,7 +404,7 @@
               "item": {
                 "index": "skill_sleight_of_hand",
                 "name": "skill: sleight of hand",
-                "url": "public/assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
+                "url": "assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
               }
             },
             {
@@ -412,7 +412,7 @@
               "item": {
                 "index": "skill_stealth",
                 "name": "skill: stealth",
-                "url": "public/assets/atlas/proficiencies/json/skill_stealth.json"
+                "url": "assets/atlas/proficiencies/json/skill_stealth.json"
               }
             }
           ]
@@ -424,10 +424,20 @@
     {
       "index": "thief",
       "name": "thief",
-      "url": "public/assets/atlas/subclasses/json/thief.json"
+      "url": "assets/atlas/subclasses/json/thief.json"
+    },
+    {
+      "index": "assassin",
+      "name": "assassin",
+      "url": "assets/atlas/subclasses/json/assassin.json"
+    },
+    {
+      "index": "arcane_trickster",
+      "name": "arcane trickster",
+      "url": "assets/atlas/subclasses/json/arcane_trickster.json"
     }
   ],
-  "url": "public/assets/atlas/class/json/rogue.json",
+  "url": "assets/atlas/class/json/rogue.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
-  "image": "public/assets/atlas/class/wiki_image/rogue.webp"
+  "image": "assets/atlas/class/wiki_image/rogue.webp"
 }
