@@ -1,7 +1,12 @@
 {
   "name": "elf",
   "type": "race",
+  "height": "Under 5' to over 6'",
+  "skin_color": "Varies (pale, copper, or dark)",
+  "special_features": "Slender build, pointed ears, keen senses, trance (no sleep)",
+  "age": "Adulthood at 100, live to 750 years",
+  "size": "m",
   "lore": "To the wandering soul seeking knowledge of the Fair Folk, understand this: to look upon an Elf is to glimpse the world as it was in its first dawn.\n\n**Appearance**\nElves are beings of ethereal grace, possessing lithe frames that seem to defy the heavy pull of the earth. Their features are finely chiseled, marked by high cheekbones and almond-shaped eyes that shimmer with an inner luminescence. Most distinct are their elongated, tapered ears\u2014keen instruments tuned to the subtle whispers of the wind. They do not wither as mortals do; a centuries-old Elf may appear as a youth in their prime, their vast age reflected only in the profound, often haunting depth of their gaze.\n\n**Origins**\nThe chronicles of the ancients suggest Elves were not born of clay, but sung into existence by the stars or distilled from the primal dews of the Feywild. They are the \"First Born,\" a bridge between the material realm and the shimmering echoes of the spirit world. While humanity rose from the soil, Elves descended from the celestial canopy, forever carrying a trace of that primordial, starlight magic in their very marrow.\n\n**Culture**\nTo an Elf, time is a vast, still ocean rather than a rushing stream. This perspective fosters a culture of painstaking perfection; they do not merely build, they compose. Their dwellings are often woven into the living boughs of ancient forests or carved from marble that vibrates with song. They are masters of the \"Long Arts\"\u2014archery, poetry, and high sorcery\u2014refined over centuries of study. Though they may appear aloof or cold to the \"short-lived\" races, this is often a shield against the melancholy of witnessing a world that changes and dies while they remain, the eternal stewards of a fading beauty.",
-  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/race/elf.webp",
+  "imageUrl": "public/assets/atlas/species/wiki_image/elf.webp",
   "bakedAt": 1767607048056
 }

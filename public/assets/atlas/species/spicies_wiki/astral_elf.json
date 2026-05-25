@@ -1,7 +1,12 @@
 {
   "name": "astral elf",
   "type": "race",
+  "height": "5' - 6'+ (Elven profile)",
+  "skin_color": "Pearlescent or twilight hues",
+  "special_features": "Constellation eyes, shimmering skin, ethereal lightness",
+  "age": "Timeless (don't age in the Astral Sea)",
+  "size": "m",
   "lore": "To those who wander the Silver Void, the Astral Elves are as much a part of the firmament as the stars themselves. \n\n**Appearance**\nThey possess a haunting, celestial beauty that sets them apart from their terrestrial kin. Their skin often shimmers with a faint, pearlescent luster or the deep hue of twilight, while their eyes contain the swirling nebulae and distant constellations of the Astral Sea. They move with an ethereal lightness, as if the gravity of the Material Plane is merely a suggestion they choose to humor.\n\n**Origins**\nEons ago, a faction of elves ventured beyond the world of their birth, seeking the dwelling places of the gods. They settled in the Astral Plane\u2014a realm of timelessness and thought. Bathed in the raw essence of the cosmos for millennia, they were fundamentally altered. They no longer age in the traditional sense; a child born in the Silver Void might remain a youth for centuries, their spirit sustained by the very vacuum of the \"Between.\"\n\n**Culture**\nBecause time has little meaning to them, Astral Elves possess a perspective that can seem cold or detached to shorter-lived races. They are a people of profound patience, dedicating decades to perfecting a single poem or mastering a specific blade-stroke. Their society is one of quiet contemplation and grand exploration, centered around magnificent citadels carved from the petrified remains of forgotten deities. While they value individual enlightenment, they are bound by a shared reverence for the cosmos, navigating the silver mists in ships of crystal and light. To an Astral Elf, life is not a race toward an end, but a slow, beautiful dance across the infinite dark.",
-  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/race/astral-elf.webp",
+  "imageUrl": "public/assets/atlas/species/wiki_image/astral_elf.webp",
   "bakedAt": 1767621654284
 }

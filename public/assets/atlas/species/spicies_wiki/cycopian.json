@@ -1,16 +1,12 @@
 {
-  "index": "cycopian",
   "name": "cycopian",
-  "speed": 30,
-  "alignment": "Varied",
-  "age": "Varied",
-  "size": "Medium",
-  "size_description": "Size varies by individual.",
-  "ability_bonuses": [],
-  "starting_proficiencies": [],
-  "languages": [],
-  "traits": [],
+  "type": "race",
+  "height": "Nearly 10 feet",
+  "skin_color": "Weathered basalt (gray/stony)",
+  "special_features": "Single amber eye, monolithic brow, stony flesh",
+  "age": "Centuries (slowly petrify over time)",
+  "size": "l",
   "lore": "To the wandering soul, the Cycopian is often mistaken for a mere brute, yet to the learned eye, they are the living memory of the mountains.\n\n**Appearance**\nStanding nearly ten feet tall, a Cycopian possesses a frame of corded muscle and skin the color of weathered basalt. Their most arresting feature is the singular, amber eye set beneath a heavy, monolithic brow. This eye lacks the flickering distraction of binocular vision, granting them an unnerving, motionless stare and a supernatural focus for stationary detail. They rarely wear more than cured hides and heavy leather aprons, for their stony flesh is armor enough against the elements.\n\n**Origins**\nOral traditions suggest the Cycopians were struck from the living rock by the first lightning bolts of the world\u2019s creation. Born in the subterranean cathedrals of the Iron-Veined Crags, they are literally children of the earth. They do not age in the manner of men; instead, they slowly petrify over centuries. A Cycopian at the end of their life does not die, but becomes a statue of unmoving stone, returning to the mountain from which they sprang.\n\n**Culture**\nCycopian society is built upon the \"Rhythmic Craft.\" They are master smiths and masons who believe that every strike of a hammer is a syllable in a divine poem. To them, silence is the highest form of prayer; they speak only when necessary, preferring the resonant language of stone on stone. Though solitary by nature, they are not inherently hostile. They value honest trade and the preservation of ancient lore, often etching their history into the very walls of their canyon homes. To win the trust of a Cycopian is to gain a friend as enduring as the peaks themselves.",
-  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/race/cycopian.webp",
+  "imageUrl": "public/assets/atlas/species/wiki_image/cycopian.webp",
   "bakedAt": 1774313859713
 }
