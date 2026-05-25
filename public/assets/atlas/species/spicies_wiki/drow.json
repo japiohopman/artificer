@@ -1,7 +1,12 @@
 {
   "name": "drow",
   "type": "race",
+  "height": "Under 5' to over 6' (Elven profile)",
+  "skin_color": "Polished obsidian to bruised twilight charcoal",
+  "special_features": "Bone-white hair, glowing predatory eyes, lithe build",
+  "age": "Adulthood at 100, live to 750 years",
+  "size": "m",
   "lore": "To look upon the Drow is to behold the night given form. Their skin ranges from the hue of polished obsidian to a bruised, twilight charcoal, contrasting sharply with tresses of bone-white or silver hair. Their eyes, adapted for the lightless depths, often glow with a faint, predatory luminescence in shades of blood-red, pale violet, or icy blue. They possess the lithe grace of their surface kin, yet it is a cold, sharpened elegance born of a life in the shadows.\n\nTheir origins are steeped in the blood of an ancient schism. Once inhabitants of the sunlit forests, they were driven into the lightless bowels of the earth following catastrophic wars. In the crushing silence of the Underdark, they were claimed and reshaped by the Spider Queen, Lolth. Under her malevolent gaze, they traded the sun for the eternal dark, becoming the masters of the subterranean world.\n\nDrow culture is a web of lethal sophistication. It is a rigid matriarchy where high priestesses rule through divine terror and political guile. Their cities are masterpieces of stonework and sorcery, yet they are also arenas of endless betrayal. In Drow society, ambition is the only law; one ascends the social hierarchy by silken words or poisoned daggers. They revere the spider as the ultimate paragon of patience and lethality. To the unwary traveler, a Drow is a shadow that breathes\u2014a creature of exquisite beauty and absolute, unblinking cruelty. Seek them not, for to find them is to find your end.",
-  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/race/drow.webp",
+  "imageUrl": "public/assets/atlas/species/wiki_image/drow.webp",
   "bakedAt": 1767608118140
 }

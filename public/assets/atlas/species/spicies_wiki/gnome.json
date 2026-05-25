@@ -1,7 +1,12 @@
 {
   "name": "gnome",
   "type": "race",
-  "lore": "Disruption in the weave detected.",
-  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/race/gnome.webp",
+  "height": "3' - 4'",
+  "skin_color": "Tan, brown, or grayish blue",
+  "special_features": "Small build, large noses, bright eyes, expressive faces",
+  "age": "Adulthood at 40, live 350 to 500 years",
+  "size": "s",
+  "lore": "A gnome\u2019s energy and enthusiasm for living shines through every inch of his or her tiny body. Gnomes average slightly over 3 feet tall and weigh 40 to 45 pounds. Their tanned or brown faces are usually adorned with broad smiles beneath their surprisingly large noses, and their bright eyes shine with excitement. Their fair hair has a tendency to stick out in every direction, as if embodying the gnome\u2019s insatiable curiosity.\n\n**Origins**\nGnomes are a people of invention and delight. Some myths say they were born from the laughter of the gods as they watched the first crystals form in the deep earth. They are the cousins of dwarves and share their love of the earth, but they prefer the intricate mechanisms of the surface and the subtle magics of the mind over the heavy labor of the forge.\n\n**Culture**\nTo a gnome, life is a grand experiment. They are a race of scholars, inventors, and pranksters. Their homes are filled with the sounds of whirring gears and the smells of strange concoctions. They value discovery above all else, often spending decades perfecting a single clockwork bird or cataloging every species of mushroom in a forest. They are gregarious and good-hearted, always willing to share a story or a new invention with a curious traveler.",
+  "imageUrl": "public/assets/atlas/species/wiki_image/gnome.webp",
   "bakedAt": 1767595304701
 }
