@@ -3,16 +3,16 @@
   "class": {
     "index": "rogue",
     "name": "rogue",
-    "url": "public/assets/atlas/classes/rogue"
+    "url": "assets/atlas/class/json/rogue.json"
   },
   "name": "thief",
   "subclass_flavor": "Roguish Archetype",
   "desc": [
     "You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ."
   ],
-  "subclass_levels": "public/assets/atlas/subclasses/thief/levels",
-  "url": "public/assets/atlas/subclasses/json/thief.json",
+  "subclass_levels": "assets/atlas/subclasses/thief/levels",
+  "url": "assets/atlas/subclasses/json/thief.json",
   "updated_at": "2025-10-24T20:42:14.748Z",
   "spells": [],
-  "image": "public/assets/atlas/subclasses/thief.webp"
+  "image": "assets/atlas/subclasses/thief.webp"
 }
