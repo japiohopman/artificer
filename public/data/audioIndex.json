@@ -16,6 +16,23 @@
         "createdAt": "2026-05-26T03:50:36.049Z"
       },
       "file": "public/assets/sounds/sfx/sfx_secret_room.wav"
+    },
+    "sfx_level_up": {
+      "type": "sfx",
+      "category": "SFX",
+      "layer": 7,
+      "volume": 1,
+      "loop": false,
+      "priority": 1,
+      "tags": [],
+      "meta": {
+        "prompt": "Arcane mage level-up sound effect. Ethereal magical energy, enchanted rune hum, layered spell resonance, sparkling high frequencies with deep magical bass. Mature fantasy atmosphere, cinematic RPG progression sound, mysterious and intelligent rather than cheerful. No cartoon style.",
+        "duration": 3,
+        "influence": 0.6,
+        "createdBy": "ElevenLabs SFX v2",
+        "createdAt": "2026-05-26T03:51:54.707Z"
+      },
+      "file": "public/assets/sounds/sfx/sfx_level_up.wav"
     }
   }
 }
