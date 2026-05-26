@@ -23,55 +23,60 @@
   "school": {
     "index": "divination",
     "name": "divination",
-    "url": "public/assets/atlas/magic_schools/divination"
+    "url": "assets/atlas/magic_schools/json/divination.json"
   },
   "classes": [
     {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "assets/atlas/class/json/artificer.json"
+    },
+    {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "assets/atlas/classes/json/bard.json"
     },
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "assets/atlas/classes/json/cleric.json"
     },
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "assets/atlas/classes/json/druid.json"
     },
     {
       "index": "paladin",
       "name": "paladin",
-      "url": "public/assets/atlas/classes/paladin"
+      "url": "assets/atlas/classes/json/paladin.json"
     },
     {
       "index": "ranger",
       "name": "ranger",
-      "url": "public/assets/atlas/classes/ranger"
+      "url": "assets/atlas/classes/json/ranger.json"
     },
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "assets/atlas/classes/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "assets/atlas/classes/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "assets/atlas/subclasses/json/lore.json"
     }
   ],
-  "url": "public/assets/atlas/spell/json/detect_magic.json",
+  "url": "assets/atlas/spell/json/detect_magic.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/detect_magic.webp",
+  "image": "assets/atlas/spell/images/detect_magic.webp",
   "sprite_index": 3,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet4.webp"
 }
