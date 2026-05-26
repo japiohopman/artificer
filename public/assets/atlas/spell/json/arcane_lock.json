@@ -21,25 +21,30 @@
   "school": {
     "index": "abjuration",
     "name": "abjuration",
-    "url": "public/assets/atlas/magic_schools/abjuration"
+    "url": "assets/atlas/magic_schools/json/abjuration.json"
   },
   "classes": [
     {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "assets/atlas/class/json/artificer.json"
+    },
+    {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "assets/atlas/classes/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "assets/atlas/subclasses/json/lore.json"
     }
   ],
-  "url": "public/assets/atlas/spell/json/arcane_lock.json",
+  "url": "assets/atlas/spell/json/arcane_lock.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/arcane_lock.webp",
+  "image": "assets/atlas/spell/arcane_lock.webp",
   "sprite_index": 15,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet1.webp"
 }
