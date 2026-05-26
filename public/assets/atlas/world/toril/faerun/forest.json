@@ -1,0 +1,2212 @@
+[
+  {
+    "categoryId": "forest",
+    "position": [
+      2917.18,
+      1762.51
+    ],
+    "popup": {
+      "title": "Nunwood",
+      "description": "The main source of lumber for [[Reth]] and [[Hlath]], protected by the [[Emerald Enclave]] and creatures that used hit-and-run tactics during the night.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/nunwood/nunwood.json",
+        "label": "Nunwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/nunwood/nunwood.webp"
+    },
+    "id": "nunwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2907.67,
+      1325.22
+    ],
+    "popup": {
+      "title": "Chondalwood",
+      "description": "Also known as the '''Satyrwood''', the large forest was located in [[Chondath]] in the [[Vilhon Reach]], stretching from the [[Nunwood]] to the [[Nagaflow River]]. It is also known as Satyrwood.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/chondalwood/chondalwood.json",
+        "label": "Chondalwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/chondalwood/chondalwood.webp"
+    },
+    "id": "chondalwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3250.56,
+      1472.9
+    ],
+    "popup": {
+      "title": "Maerchwood",
+      "description": "The forest in the southern heartlands of [[Chessenta]], between the [[Adder River]] and the [[Winding River]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/maerchwood/maerchwood.json",
+        "label": "Maerchwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/maerchwood/maerchwood.webp"
+    },
+    "id": "maerchwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3439.3,
+      1501.32
+    ],
+    "popup": {
+      "title": "Methwood",
+      "description": "A dense forest located in the frontier between the nations of [[Chessenta]] and [[Unther]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/methwood/methwood.json",
+        "label": "Methwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/methwood/methwood.webp"
+    },
+    "id": "methwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      4118.17,
+      1109.15
+    ],
+    "popup": {
+      "title": "Sharawood",
+      "description": "A haunted forest also knoen as the '''Drakewood''', located along the coast of the [[Gulf of Luiren]], overrun with monsters and [[undead]]. ",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/sharawood/sharawood.json",
+        "label": "Sharawood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/sharawood/sharawood.webp"
+    },
+    "id": "sharawood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3625.88,
+      918.49
+    ],
+    "popup": {
+      "title": "Riftwood",
+      "description": "An isolated forest located about 50 miles (80.5 kilometers) east of the [[Great Rift]], home to a variety of animals and beasts, including [[snake]]s, [[panther]]s, and [[giant beetle]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/riftwood/riftwood.json",
+        "label": "Riftwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/riftwood/riftwood.webp"
+    },
+    "id": "riftwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      4089.71,
+      2017.52
+    ],
+    "popup": {
+      "title": "Ganathwood",
+      "description": "A small forest found in the northern regions of [[Murgh\u00f4m]], a minor source of wood for [[Mulhorand]], exporting it to [[Thay]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/ganathwood/ganathwood.json",
+        "label": "Ganathwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/ganathwood/ganathwood.webp"
+    },
+    "id": "ganathwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      4452.89,
+      1219.83
+    ],
+    "popup": {
+      "title": "Aerilpar Forest",
+      "description": "Or the '''Wood of Dark Trees''' a monster-infested forest rumored to have its trees animated by a foul [[wizard]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/aerilpar_forest/aerilpar_forest.json",
+        "label": "Aerilpar Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/aerilpar_forest/aerilpar_forest.webp"
+    },
+    "id": "aerilpar_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      4565.87,
+      879.61
+    ],
+    "popup": {
+      "title": "Gundar Forest",
+      "description": "A small forest at the mouth of the [[River Gundar]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/gundar_forest/gundar_forest.json",
+        "label": "Gundar Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/gundar_forest/gundar_forest.webp"
+    },
+    "id": "gundar_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3973.38,
+      810.58
+    ],
+    "popup": {
+      "title": "Lluirwood",
+      "description": "Also known as the '''Long Fores'''. It spanned 300 miles (480 km) east to west across [[Luiren]] and was roughly 90 miles (145 km) wide.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/lluirwood/lluirwood.json",
+        "label": "Lluirwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/lluirwood/lluirwood.webp"
+    },
+    "id": "lluirwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3815.62,
+      569.31
+    ],
+    "popup": {
+      "title": "Southern Lluirwood",
+      "description": "Or the '''Granuin Forest''', a mostly untamed wood, although the eastern border was patrolled by militia and [[halfling]] [[ranger]]s and [[druid]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/southern_lluirwood/southern_lluirwood.json",
+        "label": "Southern Lluirwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/southern_lluirwood/southern_lluirwood.webp"
+    },
+    "id": "southern_lluirwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3312.69,
+      577.76
+    ],
+    "popup": {
+      "title": "Forest of Amtar",
+      "description": "A lush forest of heat and humidity, majority of which trees were [[suthwood]]. The dangerous woods were filled with [[choke creepers]], [[assassin vines]], [[roper]]s, and [[giant rhinoceros beetle]]s among other creatures.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/forest_of_amtar/forest_of_amtar.json",
+        "label": "Forest of Amtar"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/forest_of_amtar/forest_of_amtar.webp"
+    },
+    "id": "forest_of_amtar"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2610,
+      1024.62
+    ],
+    "popup": {
+      "title": "Duskwood",
+      "description": "The deepest and most untamed forest in the [[Border Kingdoms]] between the [[Realm of the Smoking Star]] and the [[Realm of the Ready Sword]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/duskwood/duskwood.json",
+        "label": "Duskwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/duskwood/duskwood.webp"
+    },
+    "id": "duskwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2960.57,
+      995.04
+    ],
+    "popup": {
+      "title": "Shaarwood",
+      "description": "A small forest found in the western [[Shaar]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/shaarwood/shaarwood.json",
+        "label": "Shaarwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/shaarwood/shaarwood.webp"
+    },
+    "id": "shaarwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3056.74,
+      714.98
+    ],
+    "popup": {
+      "title": "Channathwood",
+      "description": "A small forest found in the southern [[Shaar]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/channathwood/channathwood.json",
+        "label": "Channathwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/channathwood/channathwood.webp"
+    },
+    "id": "channathwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2520.05,
+      730.53
+    ],
+    "popup": {
+      "title": "Misty Vale",
+      "description": "A hot, dense jungle east of the [[Dun Hills]] and north of the [[Bandit Wastes]], home to predatory horrors descended from [[Ilythiiri]] [[sorcerer]]s' castoff experiments.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/misty_vale/misty_vale.json",
+        "label": "Misty Vale"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/misty_vale/misty_vale.webp"
+    },
+    "id": "misty_vale"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2780.91,
+      676.84
+    ],
+    "popup": {
+      "title": "Shaareach Forest",
+      "description": "A small forest found in the southern [[Shaar]] near the plains of the [[Shaareach]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/shaareach_forest/shaareach_forest.json",
+        "label": "Shaareach Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/shaareach_forest/shaareach_forest.webp"
+    },
+    "id": "shaareach_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2049.22,
+      227.17
+    ],
+    "popup": {
+      "title": "Mhair Jungles",
+      "description": "A prominent jungle forest found in southern [[Tashalar]] on the [[Chultan Peninsula]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/mhair_jungles/mhair_jungles.json",
+        "label": "Mhair Jungles"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/mhair_jungles/mhair_jungles.webp"
+    },
+    "id": "mhair_jungles"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2150,
+      948.5
+    ],
+    "popup": {
+      "title": "Neth Stand",
+      "description": "A dark, thick forest on the [[Lake of Steam]] that contained underground volcanic vents that emitted sulfurous mists.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/neth_stand/neth_stand.json",
+        "label": "Neth Stand"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/neth_stand/neth_stand.webp"
+    },
+    "id": "neth_stand"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1682.46,
+      240.61
+    ],
+    "popup": {
+      "title": "Black Jungles",
+      "description": "A heavily forested region of southern [[Tashalar]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/black_jungles/black_jungles.json",
+        "label": "Black Jungles"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/black_jungles/black_jungles.webp"
+    },
+    "id": "black_jungles"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2466.29,
+      1240.74
+    ],
+    "popup": {
+      "title": "Ankhwood",
+      "description": "A forest whose insect, animal, and plant populations mutated by ''[[wild magic]]'' and ''[[dead magic]]'' areas orbiting one another.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/ankhwood/ankhwood.json",
+        "label": "Ankhwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/ankhwood/ankhwood.webp"
+    },
+    "id": "ankhwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2361.09,
+      1376.72
+    ],
+    "popup": {
+      "title": "Winterwood",
+      "description": "A [[pine]] and [[oak]]-filled woodland inhabited by [[orc]]s, [[green dragon]]s, and [[green elves]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/winterwood/winterwood.json",
+        "label": "Winterwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/winterwood/winterwood.webp"
+    },
+    "id": "winterwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2105.11,
+      1321.54
+    ],
+    "popup": {
+      "title": "Thornwood",
+      "description": "The forest to the north of the city of [[Ankhapur]], known for its deadly flora - [[thornslinger]]s, [[choke creeper]]s, [[retch plant]]s, [[yellow musk creeper]]s, and many more dangerous and more intelligent plants.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/thornwood/thornwood.json",
+        "label": "Thornwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/thornwood/thornwood.webp"
+    },
+    "id": "thornwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2448,
+      996.31
+    ],
+    "popup": {
+      "title": "Qurth Forest",
+      "description": "A wild forest that bordered the forest with the [[Barony of the Great Oak]], surrounded by many towns and ruins.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/qurth_forest/qurth_forest.json",
+        "label": "Qurth Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/qurth_forest/qurth_forest.webp"
+    },
+    "id": "qurth_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2202,
+      834
+    ],
+    "popup": {
+      "title": "Jundarwood",
+      "description": "A forest of note in the [[Border Kingdoms]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/jundarwood/jundarwood.json",
+        "label": "Jundarwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/jundarwood/jundarwood.webp"
+    },
+    "id": "jundarwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3311.5,
+      2594
+    ],
+    "popup": {
+      "title": "Forest of Lethyr",
+      "description": "One of the two forests that comprised the borders of the [[Great Dale]], guarded by [[druid]]s and [[ranger]]s as well as a few [[treant]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/forest_of_lethyr/forest_of_lethyr.json",
+        "label": "Forest of Lethyr"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/forest_of_lethyr/forest_of_lethyr.webp"
+    },
+    "id": "forest_of_lethyr"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2865,
+      2389
+    ],
+    "popup": {
+      "title": "Gray Forest",
+      "description": "Also known as the '''Tsurlar Forest''' with circles of the grand, gray-barked [[tree]]s with dark leaves that the [[moon elves]] who once dwelt here had turned themselves into.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/gray_forest/gray_forest.json",
+        "label": "Gray Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/gray_forest/gray_forest.webp"
+    },
+    "id": "gray_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3337.54,
+      2120.61
+    ],
+    "popup": {
+      "title": "Yuirwood",
+      "description": "The ancient forest at the center of the nation of [[Aglarond]], named after the [[Yuir]], an ancient race of [[star elves]] who once dwelled in the forest.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/yuirwood/yuirwood.json",
+        "label": "Yuirwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/yuirwood/yuirwood.webp"
+    },
+    "id": "yuirwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2050,
+      2777.25
+    ],
+    "popup": {
+      "title": "Border Forest",
+      "description": "Also known as the '''Rystall Woos''', a large forest of [[pine]]s, [[oak]]s, and other deciduous trees with thick hard-to-traverse undergrowth, inhabited mostly by [[fey]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/border_forest/border_forest.json",
+        "label": "Border Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/border_forest/border_forest.webp"
+    },
+    "id": "border_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1416.33,
+      1373.9
+    ],
+    "popup": {
+      "title": "Forest of Tethir",
+      "description": "Also known as [[Wealdath]], the largest forest in the [[Lands of Intrigue]] and the \"single most important thing\" that set the culture of [[Tethyr]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/forest_of_tethir/forest_of_tethir.json",
+        "label": "Forest of Tethir"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/forest_of_tethir/forest_of_tethir.webp"
+    },
+    "id": "forest_of_tethir"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1603.36,
+      1772
+    ],
+    "popup": {
+      "title": "Duskwood Dell",
+      "description": "The most sacred site of [[Eldath]] located in [[Faer\u00fbn]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/duskwood_dell/duskwood_dell.json",
+        "label": "Duskwood Dell"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/duskwood_dell/duskwood_dell.webp"
+    },
+    "id": "duskwood_dell"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1522.04,
+      1809.48
+    ],
+    "popup": {
+      "title": "Snakewood",
+      "description": "A relatively small forest located in eastern [[Amn]], named after a great number of black and green [[snake]]s that lived there.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/snakewood/snakewood.json",
+        "label": "Snakewood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/snakewood/snakewood.webp"
+    },
+    "id": "snakewood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1131.37,
+      2755.94
+    ],
+    "popup": {
+      "title": "High Forest",
+      "description": "A a vast forested remnant of the days of old, when all of [[Faer\u00fbn]] was covered in green and [[elves]], [[giant]]s, and [[dragon]]s ruled the world. ",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/high_forest/high_forest.json",
+        "label": "High Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/high_forest/high_forest.webp"
+    },
+    "id": "high_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1493.76,
+      1322.28
+    ],
+    "popup": {
+      "title": "Swanmay's Glade",
+      "description": "A portion of the [[Wealdath]] forest where the [[Nebulae Pool]] and the [[Calathalureenteir]] could be found.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/swanmays_glade/swanmays_glade.json",
+        "label": "Swanmay's Glade"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/swanmays_glade/swanmays_glade.webp"
+    },
+    "id": "swanmays_glade"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1599.12,
+      1329
+    ],
+    "popup": {
+      "title": "Moonglade",
+      "description": "Or the '''Seeding Forest''' as of the late 14{{th}} century [[DR]].\n",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/moonglade/moonglade.json",
+        "label": "Moonglade"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/moonglade/moonglade.webp"
+    },
+    "id": "moonglade"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1795.5,
+      1528
+    ],
+    "popup": {
+      "title": "Syldritch Trea",
+      "description": "Ancient trees within the [[Shilmista]] forest, once menaced by evil [[wizard]] [[Dorigen Kel Lamond]] in [[1361 DR]].<br/><br/>'''Note: This map shows the incorrect geography of the region. Please refer to 2{{nd}} edition maps.'''",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/syldritch_trea/syldritch_trea.json",
+        "label": "Syldritch Trea"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/syldritch_trea/syldritch_trea.webp"
+    },
+    "id": "syldritch_trea"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1785.5,
+      1468
+    ],
+    "popup": {
+      "title": "Shilmista",
+      "description": "Or the '''Forest of Shadows''' that encompassed the kingdom of the [[wild elf]] [[Elbereth]].<br/><br/>'''Note: This map shows the incorrect geography of the region. Please refer to 2{{nd}} edition maps.'''",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/shilmista/shilmista.json",
+        "label": "Shilmista"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/shilmista/shilmista.webp"
+    },
+    "id": "shilmista"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1771.5,
+      1420
+    ],
+    "popup": {
+      "title": "Bowgentle's Grove",
+      "description": "A calm glade in the south of the forest and the burial place of the [[wizard]] [[Bowgentle]].<br/><br/>'''Note: This map shows the incorrect geography of the region. Please refer to 2{{nd}} edition maps.'''",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/bowgentles_grove/bowgentles_grove.json",
+        "label": "Bowgentle's Grove"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/bowgentles_grove/bowgentles_grove.webp"
+    },
+    "id": "bowgentles_grove"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1014.5,
+      1965.5
+    ],
+    "popup": {
+      "title": "Cloak Wood",
+      "description": "An ancient, thickly grown forest in the [[Western Heartlands]], infested by [[giant spider]]s, [[korred]]s, [[kampfult]]s, [[quickling]]s, [[satyr]]s, [[stirge]]s, and other deadly creatures.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/cloak_wood/cloak_wood.json",
+        "label": "Cloak Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/cloak_wood/cloak_wood.webp"
+    },
+    "id": "cloak_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2066.51,
+      2291.37
+    ],
+    "popup": {
+      "title": "Hullack Forest",
+      "description": "A forest that was once a part of the huge forest of [[Cormanthor]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/hullack_forest/hullack_forest.json",
+        "label": "Hullack Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/hullack_forest/hullack_forest.webp"
+    },
+    "id": "hullack_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1211.98,
+      1933.93
+    ],
+    "popup": {
+      "title": "Wood of Sharp Teeth",
+      "description": "Or '''Glimmerwood''', a dense forest where one could gather [[maiden's milk]] and [[bellows root]] [[herb]]s, inhabited by  [[satyr]]s, [[dryad]]s, and a small number of [[werewolves]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/wood_of_sharp_teeth/wood_of_sharp_teeth.json",
+        "label": "Wood of Sharp Teeth"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/wood_of_sharp_teeth/wood_of_sharp_teeth.webp"
+    },
+    "id": "wood_of_sharp_teeth"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1981.75,
+      2150.5
+    ],
+    "popup": {
+      "title": "Hermit's Wood",
+      "description": "A large forest in southern [[Cormyr]], lying southwest of [[Wheloon]] \u2013 a common destination for foragers, hunters, and loggers.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/hermits_wood/hermits_wood.json",
+        "label": "Hermit's Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/hermits_wood/hermits_wood.webp"
+    },
+    "id": "hermits_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1929.87,
+      2295.09
+    ],
+    "popup": {
+      "title": "The Redwoods",
+      "description": "A. small forest at the [[River Arabel]]'s begging on the edge of the [[Helmhands]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/the_redwoods/the_redwoods.json",
+        "label": "The Redwoods"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/the_redwoods/the_redwoods.webp"
+    },
+    "id": "the_redwoods"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1858.27,
+      2212.89
+    ],
+    "popup": {
+      "title": "King's Forest",
+      "description": "The forest that belonged to the Crown of [[Cormyr]], once home to [[elves]] but abandoned to humankind.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/kings_forest/kings_forest.json",
+        "label": "King's Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/kings_forest/kings_forest.webp"
+    },
+    "id": "kings_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      989.94,
+      2415.47
+    ],
+    "popup": {
+      "title": "Misty Forest",
+      "description": "A fog-filled, rainy forest, west of the [[High Moor]], that was also an [[elf|elven]] kingdom.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/misty_forest/misty_forest.json",
+        "label": "Misty Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/misty_forest/misty_forest.webp"
+    },
+    "id": "misty_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1459.46,
+      2129.45
+    ],
+    "popup": {
+      "title": "Reaching Woods",
+      "description": "A large forest in the [[Western Heartlands]] with its northern offshoot being called the '''Northdark Wood'''.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/reaching_woods/reaching_woods.json",
+        "label": "Reaching Woods"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/reaching_woods/reaching_woods.webp"
+    },
+    "id": "reaching_woods"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1340.67,
+      2222.43
+    ],
+    "popup": {
+      "title": "Forest of Wyrms",
+      "description": "Also known as '''Ss'kowlyn'raa'' by the [[yuan-ti]], a dark and dangerous forest of  [[pine]]s and tall [[redwood]] [[tree]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/forest_of_wyrms/forest_of_wyrms.json",
+        "label": "Forest of Wyrms"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/forest_of_wyrms/forest_of_wyrms.webp"
+    },
+    "id": "forest_of_wyrms"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1164.95,
+      2544.52
+    ],
+    "popup": {
+      "title": "South Wood",
+      "description": "A forest within the [[Triangle of Trees]] in the [[Savage Frontier]], a popular stomping grounds for the outdoorsmen of [[Gray Vale]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/south_wood/south_wood.json",
+        "label": "South Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/south_wood/south_wood.webp"
+    },
+    "id": "south_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1187.93,
+      2604.98
+    ],
+    "popup": {
+      "title": "Tanglefork Woods",
+      "description": "A small forest in the [[Grayvale]], at the southwestern fringe of the great [[High Forest]], between it and the [[River Delimbiyr]] and the [[Delimbiyr Road]] and just east of the [[Heartblood River]] where it joined the Delimbiyr.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/tanglefork_woods/tanglefork_woods.json",
+        "label": "Tanglefork Woods"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/tanglefork_woods/tanglefork_woods.webp"
+    },
+    "id": "tanglefork_woods"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1457.7,
+      2487.24
+    ],
+    "popup": {
+      "title": "Forgotten Forest",
+      "description": "A small but mysterious forest of [[treant]]s and [[fey]] creatures found in the [[Backlands]] of the [[Western Heartlands]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/forgotten_forest/forgotten_forest.json",
+        "label": "Forgotten Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/forgotten_forest/forgotten_forest.webp"
+    },
+    "id": "forgotten_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2467.44,
+      1944.54
+    ],
+    "popup": {
+      "title": "Gulthmere Forest",
+      "description": "The forest that served as the rough boundary between the [[Dragon Coast]] and the [[Vilhon Reach]]. Overgrown with [[pine]] and [[cedar]], it was the \"seat of power\" for the Vilhonese [[druid]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/gulthmere_forest/gulthmere_forest.json",
+        "label": "Gulthmere Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/gulthmere_forest/gulthmere_forest.webp"
+    },
+    "id": "gulthmere_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1223.5,
+      2158.25
+    ],
+    "popup": {
+      "title": "Troll Claw Woods",
+      "description": "A small forested area of the [[Troll Claws]] infested with giant [[boring beetle|boring]] and [[bombardier beetle]]s, [[monstrous humanoid]]s, [[giant spider]], and, of corse, [[troll]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/troll_claw_woods/troll_claw_woods.json",
+        "label": "Troll Claw Woods"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/troll_claw_woods/troll_claw_woods.webp"
+    },
+    "id": "troll_claw_woods"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1129.95,
+      2130.15
+    ],
+    "popup": {
+      "title": "Coast Way Forest",
+      "description": "A minor forested area west of the [[Coast Way crossing]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/coast_way_forest/coast_way_forest.json",
+        "label": "Coast Way Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/coast_way_forest/coast_way_forest.webp"
+    },
+    "id": "coast_way_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1115.46,
+      2254.96
+    ],
+    "popup": {
+      "title": "Bloodbark Grove",
+      "description": "A grove of [[blackthorn tree]]s and [[belladonna]] plants in the southern stretch of the [[High Moor]], inhabited by greater [[basilisk]]s, [[dire wolves|dire]], as well as [[dread wolves]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/bloodbark_grove/bloodbark_grove.json",
+        "label": "Bloodbark Grove"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/bloodbark_grove/bloodbark_grove.webp"
+    },
+    "id": "bloodbark_grove"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1006.5,
+      2250
+    ],
+    "popup": {
+      "title": "Trollbark Forest",
+      "description": "A forest with low vales that hid a multitude of bogs and swamps, inhabited by [[giant slug]]s, [[fell troll]]s, and [[choker]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/trollbark_forest/trollbark_forest.json",
+        "label": "Trollbark Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/trollbark_forest/trollbark_forest.webp"
+    },
+    "id": "trollbark_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      932.25,
+      2393.25
+    ],
+    "popup": {
+      "title": "Brush of Barbs",
+      "description": "A secluded and thorny overgrown forest, home of [[Govan Irfandel|Irfandel]]'s druidic [[Stone Circle of Govan]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/brush_of_barbs/brush_of_barbs.json",
+        "label": "Brush of Barbs"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/brush_of_barbs/brush_of_barbs.webp"
+    },
+    "id": "brush_of_barbs"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2672.33,
+      1855.09
+    ],
+    "popup": {
+      "title": "Dancing Forest",
+      "description": "A small forest that grew along the [[Turmway]] and sheltered the town of [[Centaur Bridge]], notable for its seemingly permanent thick white mist.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/dancing_forest/dancing_forest.json",
+        "label": "Dancing Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/dancing_forest/dancing_forest.webp"
+    },
+    "id": "dancing_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2553.25,
+      1790.25
+    ],
+    "popup": {
+      "title": "The Faraway",
+      "description": "A great forest in [[Turmish]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/the_faraway/the_faraway.json",
+        "label": "The Faraway"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/the_faraway/the_faraway.webp"
+    },
+    "id": "the_faraway"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      777.81,
+      2484.06
+    ],
+    "popup": {
+      "title": "Ardeep Forest",
+      "description": "Or the '''Faraway Forest''', a small but thick woodland that once encompassed much of the [[Sword Coast]], famed for its legendary [[Cloud palace|floating towers]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/ardeep_forest/ardeep_forest.json",
+        "label": "Ardeep Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/ardeep_forest/ardeep_forest.webp"
+    },
+    "id": "ardeep_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      848.5,
+      2416.25
+    ],
+    "popup": {
+      "title": "Laughing Hollow",
+      "description": "A preternatural valley upriver from [[Daggerford]], filled with trees so dense, they created a day's twilight underneath.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/laughing_hollow/laughing_hollow.json",
+        "label": "Laughing Hollow"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/laughing_hollow/laughing_hollow.webp"
+    },
+    "id": "laughing_hollow"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2077.83,
+      2529.32
+    ],
+    "popup": {
+      "title": "Spiderhaunt Wood",
+      "description": "A dangerous forest where spellcasters of all types came to gather [[spider]]-related [[spell component]]s.\n",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/spiderhaunt_wood/spiderhaunt_wood.json",
+        "label": "Spiderhaunt Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/spiderhaunt_wood/spiderhaunt_wood.webp"
+    },
+    "id": "spiderhaunt_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2384.18,
+      2831.25
+    ],
+    "popup": {
+      "title": "Quivering Forest",
+      "description": "A forest stretching from the city of [[Phlan]] to the [[Dragonspine Mountains]], forming a border with the great gray waste of [[Thar]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/quivering_forest/quivering_forest.json",
+        "label": "Quivering Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/quivering_forest/quivering_forest.webp"
+    },
+    "id": "quivering_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      667.86,
+      2560.43
+    ],
+    "popup": {
+      "title": "Westwood",
+      "description": "A part of a group of forests referred to by some as the [[Other Woods]] and others as the [[Moonwoods]].The forests in this group were [[Lurkwood]], [[Southkrypt Garden]], [[Southwood]], [[Moonwood]], and [[Westwood]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/westwood/westwood.json",
+        "label": "Westwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/westwood/westwood.webp"
+    },
+    "id": "westwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      676.34,
+      2639.98
+    ],
+    "popup": {
+      "title": "Kryptgarden Forest",
+      "description": "Also known as '''Tsordvudd''', was a small but ancient and foreboding forest, once a site that once housed long-lost realms of the [[elves]] and [[dwarves]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/kryptgarden_forest/kryptgarden_forest.json",
+        "label": "Kryptgarden Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/kryptgarden_forest/kryptgarden_forest.webp"
+    },
+    "id": "kryptgarden_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2792.25,
+      2410.75
+    ],
+    "popup": {
+      "title": "Adhe Wood",
+      "description": "A forest infected with numerous arachnid monsters.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/adhe_wood/adhe_wood.json",
+        "label": "Adhe Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/adhe_wood/adhe_wood.webp"
+    },
+    "id": "adhe_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2741.5,
+      2380.75
+    ],
+    "popup": {
+      "title": "Brynwood",
+      "description": "The forest that covered a large area between the [[Earthfast Mountains]] and the [[North Road]], lying north of the towns of [[Maerstar]] and [[Sevenecho]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/brynwood/brynwood.json",
+        "label": "Brynwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/brynwood/brynwood.webp"
+    },
+    "id": "brynwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2540.25,
+      2562.5
+    ],
+    "popup": {
+      "title": "Velarswood",
+      "description": "A forest near the center of [[Harrowdale]] with a temple to [[Eilistraee]] located in the north, which was guarded by a number of goodly [[drow]]. ",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/velarswood/velarswood.json",
+        "label": "Velarswood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/velarswood/velarswood.webp"
+    },
+    "id": "velarswood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2713.78,
+      2461.7
+    ],
+    "popup": {
+      "title": "Highbank Forest",
+      "description": "A steeply sloped and wooded hill that laid just to the north of the Highbank Forest\nVillage; it provided shelter to the village against the strongest winter winds.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/highbank_forest/highbank_forest.json",
+        "label": "Highbank Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/highbank_forest/highbank_forest.webp"
+    },
+    "id": "highbank_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2386.83,
+      2634.67
+    ],
+    "popup": {
+      "title": "Monarch's Fall Glade",
+      "description": "The part of [[Cormanthor]] where the [[green dragon|green]] [[dracolich]] named [[Dretchroyaster]] laired in the 1400s DR.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/monarchs_fall_glade/monarchs_fall_glade.json",
+        "label": "Monarch's Fall Glade"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/monarchs_fall_glade/monarchs_fall_glade.webp"
+    },
+    "id": "monarchs_fall_glade"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2447.25,
+      2631
+    ],
+    "popup": {
+      "title": "The Darkwoods",
+      "description": "The part of [[Cormanthor]] infamous for the [[Darkwoods Massacre]] [[orc]]s and [[elves]] in [[335 DR]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/the_darkwoods/the_darkwoods.json",
+        "label": "The Darkwoods"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/the_darkwoods/the_darkwoods.webp"
+    },
+    "id": "the_darkwoods"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2301.5,
+      2507.75
+    ],
+    "popup": {
+      "title": "Grove of Darkness",
+      "description": "A grove of note.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/grove_of_darkness/grove_of_darkness.json",
+        "label": "Grove of Darkness"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/grove_of_darkness/grove_of_darkness.webp"
+    },
+    "id": "grove_of_darkness"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2295.26,
+      2362.09
+    ],
+    "popup": {
+      "title": "Corellon's Glen",
+      "description": "A border portion of greater [[Cormanthor]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/corellons_glen/corellons_glen.json",
+        "label": "Corellon's Glen"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/corellons_glen/corellons_glen.webp"
+    },
+    "id": "corellons_glen"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2421.25,
+      2514.5
+    ],
+    "popup": {
+      "title": "Tangled Vale",
+      "description": "A notable part of [[Cormanthor]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/tangled_vale/tangled_vale.json",
+        "label": "Tangled Vale"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/tangled_vale/tangled_vale.webp"
+    },
+    "id": "tangled_vale"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2279.5,
+      2316.5
+    ],
+    "popup": {
+      "title": "Arch Wood",
+      "description": "A dark and dense logging forest in [[Archendale]] filled with [[oak]]s, [[ash]]es, [[elm]]s, [[shadowtop]]s, and [[duskwood]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/arch_wood/arch_wood.json",
+        "label": "Arch Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/arch_wood/arch_wood.webp"
+    },
+    "id": "arch_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1910,
+      2393.25
+    ],
+    "popup": {
+      "title": "Stonewoods",
+      "description": "A small forest in [[Hunter's Hills]], on the edge of the [[Stonelands]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/stonewoods/stonewoods.json",
+        "label": "Stonewoods"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/stonewoods/stonewoods.webp"
+    },
+    "id": "stonewoods"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1899.99,
+      2405.22
+    ],
+    "popup": {
+      "title": "Orlath Wood",
+      "description": "Woods on the edge of the [[Great Sand Sea]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/orlath_wood/orlath_wood.json",
+        "label": "Orlath Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/orlath_wood/orlath_wood.webp"
+    },
+    "id": "orlath_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2333.5,
+      2545
+    ],
+    "popup": {
+      "title": "Vale of Lost Voices",
+      "description": "A sacred part of [[Cormanthor]] used as a burial place for honored [[elf]] [[warriors]] with [[Rauthauvyr's Road]] passing through the middle of it.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/vale_of_lost_voices/vale_of_lost_voices.json",
+        "label": "Vale of Lost Voices"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/vale_of_lost_voices/vale_of_lost_voices.webp"
+    },
+    "id": "vale_of_lost_voices"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1353,
+      2852
+    ],
+    "popup": {
+      "title": "Far Forest",
+      "description": "One of a group of three forests named the [[Triangle of Trees]]; it was full of small lakes, some of which had become stinking marshes infested by [[will-o'-wisp]]s and a few [[chuul]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/far_forest/far_forest.json",
+        "label": "Far Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/far_forest/far_forest.webp"
+    },
+    "id": "far_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1384.5,
+      3096
+    ],
+    "popup": {
+      "title": "Vordrorn Forest",
+      "description": "A small but dangerous forest of [[pine]] trees and muskeg bogs at the base of the [[Ice Mountains]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/vordrorn_forest/vordrorn_forest.json",
+        "label": "Vordrorn Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/vordrorn_forest/vordrorn_forest.webp"
+    },
+    "id": "vordrorn_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1184.25,
+      3167.25
+    ],
+    "popup": {
+      "title": "Cold Wood",
+      "description": "Or '''Glimmerwood''', a forest on the edge of the [[Silver Marches]] inhabited by [[barbarian]]s, [[ettin]]s, [[bebilith]]s, and various predatory beasts.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/cold_wood/cold_wood.json",
+        "label": "Cold Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/cold_wood/cold_wood.webp"
+    },
+    "id": "cold_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2422.54,
+      2985.75
+    ],
+    "popup": {
+      "title": "Vercy Wood",
+      "description": "A forest of note on the border of the wider [[Ride]] and the Fallen Kingdom of [[Barze]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/vercy_wood/vercy_wood.json",
+        "label": "Vercy Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/vercy_wood/vercy_wood.webp"
+    },
+    "id": "vercy_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1008,
+      189.5
+    ],
+    "popup": {
+      "title": "Samarlogh",
+      "description": "A dense and dangerous ruin-littered jungle that covered the northern rim of [[Samarach]], inhabited by [[corollax]]es and large carnivorous [[sloth]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/samarlogh/samarlogh.json",
+        "label": "Samarlogh"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/samarlogh/samarlogh.webp"
+    },
+    "id": "samarlogh"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      991.36,
+      2914.16
+    ],
+    "popup": {
+      "title": "Everwood",
+      "description": "Or '''Silverwood''', a small forest east of the [[Evermoors]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/everwood/everwood.json",
+        "label": "Everwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/everwood/everwood.webp"
+    },
+    "id": "everwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1408.75,
+      2633
+    ],
+    "popup": {
+      "title": "Weathercote Wood",
+      "description": "A forest of the [[Triangle of Trees]], located in the great expanse known as the [[Savage Frontier]] that existed from before the rise of [[Netheril]] and continued to endure despite the advancing of the desert of [[Anauroch]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/weathercote_wood/weathercote_wood.json",
+        "label": "Weathercote Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/weathercote_wood/weathercote_wood.webp"
+    },
+    "id": "weathercote_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1163.89,
+      2631.49
+    ],
+    "popup": {
+      "title": "The Dire Wood",
+      "description": "Also known as the '''Enchanted Wood''', an ancient and supernatural area within the [[High Forest]] found in the North.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/the_dire_wood/the_dire_wood.json",
+        "label": "The Dire Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/the_dire_wood/the_dire_wood.webp"
+    },
+    "id": "the_dire_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1061.54,
+      2854.59
+    ],
+    "popup": {
+      "title": "The Woods of Turlang",
+      "description": "A thicket located amongst the northwestern grouping of trees in the [[High Forest]], watched over by [[Turlang]], and over 100 other [[treant]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/the_woods_of_turlang/the_woods_of_turlang.json",
+        "label": "The Woods of Turlang"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/the_woods_of_turlang/the_woods_of_turlang.webp"
+    },
+    "id": "the_woods_of_turlang"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1220.11,
+      2856.35
+    ],
+    "popup": {
+      "title": "Tall Trees",
+      "description": "The northeastern section of the [[High Forest]] believed to contain the oldest [[tree]]s in the [[High Forest]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/tall_trees/tall_trees.json",
+        "label": "Tall Trees"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/tall_trees/tall_trees.webp"
+    },
+    "id": "tall_trees"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1015.75,
+      324.91
+    ],
+    "popup": {
+      "title": "The Chultengar",
+      "description": "The branch of the main jungle of [[Chult]] that encroached on Thindol and Samarach, inhabited by [[spirit naga]]s, [[pterafolk]], [[wild dwarves]], [[wyvern]]s, and [[Batiri]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/the_chultengar/the_chultengar.json",
+        "label": "The Chultengar"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/the_chultengar/the_chultengar.webp"
+    },
+    "id": "the_chultengar"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      569,
+      2737.25
+    ],
+    "popup": {
+      "title": "Charwood",
+      "description": "A southeastern portion of the [[Neverwinter Wood]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/charwood/charwood.json",
+        "label": "Charwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/charwood/charwood.webp"
+    },
+    "id": "charwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      476.75,
+      2827
+    ],
+    "popup": {
+      "title": "Neverwinter Wood",
+      "description": "Previously called '''Llewyrrwood''', a dense forest that possessed a sense of magic within it.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/neverwinter_wood/neverwinter_wood.json",
+        "label": "Neverwinter Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/neverwinter_wood/neverwinter_wood.webp"
+    },
+    "id": "neverwinter_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1013,
+      3071.75
+    ],
+    "popup": {
+      "title": "Moonwood",
+      "description": "Part of the [[Glimmerwood]], joined with the [[Cold Wood]], dominated by [[evergreen]]s, [[shadowtop]]s, and [[duskwood]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/moonwood/moonwood.json",
+        "label": "Moonwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/moonwood/moonwood.webp"
+    },
+    "id": "moonwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      726.5,
+      3031.5
+    ],
+    "popup": {
+      "title": "Lurkwood",
+      "description": "Also known as '''Vurykvudd''' in the [[dwarven]] tongue, home to the [[Thunderbeast tribe]] dwelled within the wood.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/lurkwood/lurkwood.json",
+        "label": "Lurkwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/lurkwood/lurkwood.webp"
+    },
+    "id": "lurkwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1072,
+      3177.5
+    ],
+    "popup": {
+      "title": "Druarwood",
+      "description": "A hillside forest, sparse and narrow, full of [[pine]], [[spruce]] firs, and [[conifer]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/druarwood/druarwood.json",
+        "label": "Druarwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/druarwood/druarwood.webp"
+    },
+    "id": "druarwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2849.99,
+      2693.01
+    ],
+    "popup": {
+      "title": "Earthwood",
+      "description": "A thick and fertile swiftly-growing forest that grew out of stony, hilly soil, ensorcelled by an ancient [[druid]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/earthwood/earthwood.json",
+        "label": "Earthwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/earthwood/earthwood.webp"
+    },
+    "id": "earthwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3117.28,
+      2792.36
+    ],
+    "popup": {
+      "title": "Dunwood",
+      "description": "Also known as '''The Rawlinswood''' prior to [[1479 DR]], a large forest in the north of the [[Great Dale]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/dunwood/dunwood.json",
+        "label": "Dunwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/dunwood/dunwood.webp"
+    },
+    "id": "dunwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      369,
+      3006.5
+    ],
+    "popup": {
+      "title": "Fell Wood",
+      "description": "A small haunted monster-infested wood in the mountains of the [[Spine of the World]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/fell_wood/fell_wood.json",
+        "label": "Fell Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/fell_wood/fell_wood.webp"
+    },
+    "id": "fell_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      541,
+      2719.75
+    ],
+    "popup": {
+      "title": "Watcher's Forest",
+      "description": "The part of the [[Neverwinter Wood]], tended by some residents of nearby [[Helm's Hold]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/watchers_forest/watchers_forest.json",
+        "label": "Watcher's Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/watchers_forest/watchers_forest.webp"
+    },
+    "id": "watchers_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3651.75,
+      2933.25
+    ],
+    "popup": {
+      "title": "Erech Forest",
+      "description": "A dark and isolated forest on the edge of [[Rashemen]], inhabited by [[assassin vine]]s and s[[hambling mound]]s, as well as fearsome beasts like [[owlbear]]s, [[night hunter]]s, and at least one [[gray render]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/erech_forest/erech_forest.json",
+        "label": "Erech Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/erech_forest/erech_forest.webp"
+    },
+    "id": "erech_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3332.5,
+      2757.5
+    ],
+    "popup": {
+      "title": "Denderdale",
+      "description": "The narrowest point in [[Dunwood]], sometimes used by travelers as a shortcut through the forest.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/denderdale/denderdale.json",
+        "label": "Denderdale"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/denderdale/denderdale.webp"
+    },
+    "id": "denderdale"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3782.5,
+      2921
+    ],
+    "popup": {
+      "title": "Urlingwood",
+      "description": "A wild, untamed forest that was considered to be of great importance to the [[Wychlaran]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/urlingwood/urlingwood.json",
+        "label": "Urlingwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/urlingwood/urlingwood.webp"
+    },
+    "id": "urlingwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3700.64,
+      2812.51
+    ],
+    "popup": {
+      "title": "Ashenwood",
+      "description": "A wild evergreen forest known for its large number of [[fey]] inhabitants and considered a sacred site filled with ancient magic.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/ashenwood/ashenwood.json",
+        "label": "Ashenwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/ashenwood/ashenwood.webp"
+    },
+    "id": "ashenwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2779.63,
+      2891.88
+    ],
+    "popup": {
+      "title": "Waukeshire",
+      "description": "A small forest found within the [[Bloodstone Pass]] with the tunnel complexes of the [[Warren]] hidden underneath.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/waukeshire/waukeshire.json",
+        "label": "Waukeshire"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/waukeshire/waukeshire.webp"
+    },
+    "id": "waukeshire"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2777.69,
+      2875.98
+    ],
+    "popup": {
+      "title": "Warrenwood",
+      "description": "Previously known as '''Sleepy Wood''', a small but densely overgrown forest within the [[Bloodstone Pass]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/warrenwood/warrenwood.json",
+        "label": "Warrenwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/warrenwood/warrenwood.webp"
+    },
+    "id": "warrenwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      827.62,
+      1362.75
+    ],
+    "popup": {
+      "title": "Banshee's Point",
+      "description": "The small forest on the southernmost point of [[Cape Velen]] with terrifying whaling heard by passing ships.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/banshees_point/banshees_point.json",
+        "label": "Banshee's Point"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/banshees_point/banshees_point.webp"
+    },
+    "id": "banshees_point"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      926.66,
+      1383.45
+    ],
+    "popup": {
+      "title": "Downdragon Rise",
+      "description": "The forest that grew at the heart of the [[Dragon's Head]] behind the ruined villas.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/downdragon_rise/downdragon_rise.json",
+        "label": "Downdragon Rise"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/downdragon_rise/downdragon_rise.webp"
+    },
+    "id": "downdragon_rise"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      365.87,
+      1769.12
+    ],
+    "popup": {
+      "title": "Old Stone Wood",
+      "description": "A forest that contained the island's only ''[[moonwell]]'', located near the [[Cairn of Thelgaar Ironhand]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/old_stone_wood/old_stone_wood.json",
+        "label": "Old Stone Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/old_stone_wood/old_stone_wood.webp"
+    },
+    "id": "old_stone_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2203.34,
+      2641.04
+    ],
+    "popup": {
+      "title": "Greentree",
+      "description": "The northwestern part of [[Cormanthor]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/greentree/greentree.json",
+        "label": "Greentree"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/greentree/greentree.webp"
+    },
+    "id": "greentree"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2552.25,
+      2602.75
+    ],
+    "popup": {
+      "title": "Halvan's Wood",
+      "description": "The eastern part of [[Cormanthor]] that laid beyond river [[Duathamper]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/halvans_wood/halvans_wood.json",
+        "label": "Halvan's Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/halvans_wood/halvans_wood.webp"
+    },
+    "id": "halvans_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1352.69,
+      1393
+    ],
+    "popup": {
+      "title": "Mytharan Woods",
+      "description": "An ancient deep woods that surrounded an ancient [[elf|elven]] tomb city \u2013 [[Myth Rhynn]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/mytharan_woods/mytharan_woods.json",
+        "label": "Mytharan Woods"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/mytharan_woods/mytharan_woods.webp"
+    },
+    "id": "mytharan_woods"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      570.63,
+      1836.88
+    ],
+    "popup": {
+      "title": "Torriage Wood",
+      "description": "A small forest located in the kingdom of [[Callidyrr]] on the island of [[Alaron]] that sheltered a single ''[[moonwell]]''.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/torriage_wood/torriage_wood.json",
+        "label": "Torriage Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/torriage_wood/torriage_wood.webp"
+    },
+    "id": "torriage_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      569.92,
+      1780.67
+    ],
+    "popup": {
+      "title": "Rushdown Wood",
+      "description": "A small forest located in the kingdom of [[Callidyrr]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/rushdown_wood/rushdown_wood.json",
+        "label": "Rushdown Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/rushdown_wood/rushdown_wood.webp"
+    },
+    "id": "rushdown_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      447.24,
+      1713.85
+    ],
+    "popup": {
+      "title": "Winterglen",
+      "description": "The large forest that dominated the northeast corner of [[Gwynneth]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/winterglen/winterglen.json",
+        "label": "Winterglen"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/winterglen/winterglen.webp"
+    },
+    "id": "winterglen"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      710.46,
+      2664.2
+    ],
+    "popup": {
+      "title": "Pink Trees",
+      "description": "The outcropping of hot pink [[alder]]s, permanently transformed by [[Elistar Els'edranor]], a brilliant but scatter-brined [[wizard]], sometime before the mid-14{{th}} century [[DR]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/pink_trees/pink_trees.json",
+        "label": "Pink Trees"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/pink_trees/pink_trees.webp"
+    },
+    "id": "pink_trees"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      944.34,
+      2901.08
+    ],
+    "popup": {
+      "title": "The Dragon Wood",
+      "description": "A wooded ravine deep in the [[Evermoors]], named after the unusual megalith that floated at its center, called the [[Sleeping Dragon (artifact)|Sleeping Dragon]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/the_dragon_wood/the_dragon_wood.json",
+        "label": "The Dragon Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/the_dragon_wood/the_dragon_wood.webp"
+    },
+    "id": "the_dragon_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      2648.49,
+      2431.99
+    ],
+    "popup": {
+      "title": "Kelp Forest",
+      "description": "A deep underwater forest of [[kelp]] that belonged to the [[Dragon Reach]]'s [[aquatic elves]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/kelp_forest/kelp_forest.json",
+        "label": "Kelp Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/kelp_forest/kelp_forest.webp"
+    },
+    "id": "kelp_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      478,
+      1564.12
+    ],
+    "popup": {
+      "title": "Llyrath Forest",
+      "description": "The large forest that blanketed the southern coast of the isle of [[Gwynneth]], inhabited by few [[human]]s and wild animals such as [[boar]]s and [[bear]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/llyrath_forest/llyrath_forest.json",
+        "label": "Llyrath Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/llyrath_forest/llyrath_forest.webp"
+    },
+    "id": "llyrath_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      465.27,
+      1656.04
+    ],
+    "popup": {
+      "title": "Sacred Grove of the Earthmothe",
+      "description": "A small forest sacred to the [[Earthmother]] that contained one ''[[moonwell]]''.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/sacred_grove_of_the_earthmothe/sacred_grove_of_the_earthmothe.json",
+        "label": "Sacred Grove of the Earthmothe"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/sacred_grove_of_the_earthmothe/sacred_grove_of_the_earthmothe.webp"
+    },
+    "id": "sacred_grove_of_the_earthmothe"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      446,
+      1630.23
+    ],
+    "popup": {
+      "title": "Oakvale",
+      "description": "A small forest within the [[Myrloch Vale]] due west of the [[Fens of the Fallen]] and surrounded to the south by [[the Highlands]] mountains.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/oakvale/oakvale.json",
+        "label": "Oakvale"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/oakvale/oakvale.webp"
+    },
+    "id": "oakvale"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      361.5,
+      1625.63
+    ],
+    "popup": {
+      "title": "Toadstool Thicket",
+      "description": "A small forest in the shadow of the southern slopes of [[Aspenheight]] in western [[Gwynneth]] and a location of one of the ''[[moonwell]]s''.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/toadstool_thicket/toadstool_thicket.json",
+        "label": "Toadstool Thicket"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/toadstool_thicket/toadstool_thicket.webp"
+    },
+    "id": "toadstool_thicket"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      268,
+      1649.75
+    ],
+    "popup": {
+      "title": "Shannyth Forest",
+      "description": "A woodland that provided the village of [[Farview]] with timber for the construction of fine [[longship]]s.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/shannyth_forest/shannyth_forest.json",
+        "label": "Shannyth Forest"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/shannyth_forest/shannyth_forest.webp"
+    },
+    "id": "shannyth_forest"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      810.16,
+      2449.94
+    ],
+    "popup": {
+      "title": "Elfwood",
+      "description": "A small wood of note.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/elfwood/elfwood.json",
+        "label": "Elfwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/elfwood/elfwood.webp"
+    },
+    "id": "elfwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      821.3,
+      2434.03
+    ],
+    "popup": {
+      "title": "Blackbranch",
+      "description": "A small forest of note.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/blackbranch/blackbranch.json",
+        "label": "Blackbranch"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/blackbranch/blackbranch.webp"
+    },
+    "id": "blackbranch"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      819,
+      2446.05
+    ],
+    "popup": {
+      "title": "Blightwood",
+      "description": "A small forest of note.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/blightwood/blightwood.json",
+        "label": "Blightwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/blightwood/blightwood.webp"
+    },
+    "id": "blightwood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      836.5,
+      2411.23
+    ],
+    "popup": {
+      "title": "Warden's Wood",
+      "description": "A tiny wood by the hamlet of [[Warden]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/wardens_wood/wardens_wood.json",
+        "label": "Warden's Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/wardens_wood/wardens_wood.webp"
+    },
+    "id": "wardens_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      796.5,
+      2424
+    ],
+    "popup": {
+      "title": "Gerid's Trees",
+      "description": "A small forest that separated the hamlets of [[Shimmer Lake]] and [[Rushville]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/gerids_trees/gerids_trees.json",
+        "label": "Gerid's Trees"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/gerids_trees/gerids_trees.webp"
+    },
+    "id": "gerids_trees"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      835.5,
+      2386.25
+    ],
+    "popup": {
+      "title": "Ghostlight Wood",
+      "description": "A small wood surrounded by farming hamlets.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/ghostlight_wood/ghostlight_wood.json",
+        "label": "Ghostlight Wood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/ghostlight_wood/ghostlight_wood.webp"
+    },
+    "id": "ghostlight_wood"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      4702.96,
+      2190.61
+    ],
+    "popup": {
+      "title": "The Shalhoond",
+      "description": "Also called '''the Great Wild Wood''', claimed by no nation yet both [[Semphar]] and [[Murghom]] had settlements on the edges of the forest that produced lumber.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/the_shalhoond/the_shalhoond.json",
+        "label": "The Shalhoond"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/the_shalhoond/the_shalhoond.webp"
+    },
+    "id": "the_shalhoond"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1091.58,
+      3142.35
+    ],
+    "popup": {
+      "title": "Laednon",
+      "description": "A small wild forest northeast of the [[Moonwood]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/laednon/laednon.json",
+        "label": "Laednon"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/laednon/laednon.webp"
+    },
+    "id": "laednon"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      1761,
+      972.5
+    ],
+    "popup": {
+      "title": "Forest of Mir",
+      "description": "A dense forest named after the lost [[elven]] kingdom of [[Keltormir]] and the later [[human]] [[First Kingdom of Mir]].",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/forest_of_mir/forest_of_mir.json",
+        "label": "Forest of Mir"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/forest_of_mir/forest_of_mir.webp"
+    },
+    "id": "forest_of_mir"
+  },
+  {
+    "categoryId": "forest",
+    "position": [
+      3814.25,
+      2804.25
+    ],
+    "popup": {
+      "title": "Urlingwood",
+      "description": "A wild, untamed forest in north [[Rashemen]] that was considered to be of great importance to the [[Wychlaran]], the order of witches that held great influence in the nation of the east.",
+      "link": {
+        "url": "assets/atlas/world/toril/faerun/forest/urlingwood_2/urlingwood_2.json",
+        "label": "Urlingwood"
+      },
+      "image": "assets/atlas/world/toril/faerun/forest/urlingwood_2/urlingwood_2.webp"
+    },
+    "id": "urlingwood_2"
+  }
+]
