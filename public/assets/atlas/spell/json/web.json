@@ -28,35 +28,40 @@
   "school": {
     "index": "conjuration",
     "name": "conjuration",
-    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+    "url": "assets/atlas/magic_schools/json/conjuration.json"
   },
   "classes": [
     {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "assets/atlas/class/json/json/artificer.json"
+    },
+    {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "assets/atlas/classes/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "assets/atlas/classes/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     },
     {
       "index": "land",
       "name": "land",
-      "url": "public/assets/atlas/subclasses/land"
+      "url": "assets/atlas/subclasses/json/land.json"
     }
   ],
-  "url": "public/assets/atlas/spell/json/web.json",
+  "url": "assets/atlas/spell/json/web.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/web.webp",
+  "image": "assets/atlas/spell/images/web.webp",
   "sprite_index": 12,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet13.webp"
 }
