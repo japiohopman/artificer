@@ -3,7 +3,7 @@
   "class": {
     "index": "rogue",
     "name": "rogue",
-    "url": "public/assets/atlas/classes/rogue"
+    "url": "public/assets/atlas/class/json/rogue.json"
   },
   "name": "roguish archetype",
   "level": 3,
@@ -11,6 +11,41 @@
   "desc": [
     "At 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities, such as Thief. Additional archetypes are available in the original source material. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level."
   ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "subclass",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "thief",
+              "name": "thief",
+              "url": "public/assets/atlas/subclasses/json/thief.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "assassin",
+              "name": "assassin",
+              "url": "public/assets/atlas/subclasses/json/assassin.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "arcane_trickster",
+              "name": "arcane trickster",
+              "url": "public/assets/atlas/subclasses/json/arcane_trickster.json"
+            }
+          }
+        ]
+      }
+    }
+  },
   "url": "public/assets/atlas/features/json/roguish_archetype.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
   "image": "public/assets/atlas/features/roguish_archetype.webp"
