@@ -1,0 +1,21 @@
+{
+  "sounds": {
+    "sfx_secret_room": {
+      "type": "sfx",
+      "category": "SFX",
+      "layer": 7,
+      "volume": 1,
+      "loop": false,
+      "priority": 1,
+      "tags": [],
+      "meta": {
+        "prompt": "Heroic fantasy RPG level-up sound. Warm orchestral swell, holy magical energy, ancient bell tones, deep bass pulse, subtle choir, noble and mature emotional tone. Feels rewarding and prestigious in a serious D&D-inspired world.",
+        "duration": 3,
+        "influence": 0.6,
+        "createdBy": "ElevenLabs SFX v2",
+        "createdAt": "2026-05-26T03:50:36.049Z"
+      },
+      "file": "public/assets/sounds/sfx/sfx_secret_room.wav"
+    }
+  }
+}
