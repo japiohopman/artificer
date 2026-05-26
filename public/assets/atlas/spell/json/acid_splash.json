@@ -20,7 +20,7 @@
     "damage_type": {
       "index": "acid",
       "name": "acid",
-      "url": "public/assets/atlas/damage_types/acid"
+      "url": "public/assets/atlas/damage_types/json/acid.json"
     },
     "damage_at_character_level": {
       "1": "1d6",
@@ -33,32 +33,37 @@
     "dc_type": {
       "index": "dex",
       "name": "dex",
-      "url": "public/assets/atlas/ability_scores/dexterity"
+      "url": "public/assets/atlas/ability_scores/json/dexterity.json"
     },
     "dc_success": "none"
   },
   "school": {
     "index": "conjuration",
     "name": "conjuration",
-    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+    "url": "public/assets/atlas/magic_schools/json/conjuration.json"
   },
   "classes": [
     {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "public/assets/atlas/class/json/artificer.json"
+    },
+    {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/classes/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/classes/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/acid_splash.json",
