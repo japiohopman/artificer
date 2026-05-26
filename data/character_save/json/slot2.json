@@ -1,66 +1,45 @@
 {
-  "level": 1,
+  "level": 0,
   "xp": 0,
   "gender": "Female",
   "stats": {
-    "str": 11,
-    "dex": 15,
-    "con": 15,
-    "int": 15,
+    "str": 9,
+    "dex": 12,
+    "con": 14,
+    "int": 14,
     "wis": 14,
-    "cha": 9
+    "cha": 13
   },
   "proficiencies": [
-    "skill-acrobatics",
-    "skill-performance",
-    "disguise-kit",
-    "skill-sleight-of-hand",
-    "skill-stealth",
-    "thieves-tools",
-    "skill-athletics",
-    "skill-intimidation",
-    "vehicles-land",
-    "Survival",
-    "Stealth",
-    "Performance",
-    "Investigation",
-    "Deception",
-    "Acrobatics",
-    "Persuasion",
-    "Medicine",
+    "daggers",
+    "darts",
+    "slings",
+    "quarterstaffs",
+    "crossbows, light",
+    "saving throw: int",
+    "saving throw: wis",
+    "Nature",
     "History"
   ],
   "traits": [
-    "I'm always polite and respectful."
+    "I am always looking for the next big discovery."
   ],
   "features": [
     {
-      "name": "By Popular Demand",
-      "index": "entertainer-feature",
-      "desc": "You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble's court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you.",
-      "source": "Background"
-    },
-    {
-      "name": "City Secrets",
-      "index": "urchin-feature",
-      "desc": "You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would otherwise allow.",
-      "source": "Background"
-    },
-    {
-      "name": "Military Rank",
-      "index": "soldier-feature",
-      "desc": "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized.",
+      "name": "Historical Knowledge",
+      "index": "archaeologist-feature",
+      "desc": "When you enter a ruin or dungeon, you can correctly ascertain its original purpose and determine which entity built it (for example, dwarves, elves, or humans). In addition, you can determine the monetary value of art objects more than a century old.",
       "source": "Background"
     }
   ],
   "flaws": [
-    "I made a terrible mistake in battle that cost many lives — and I would do anything to keep that mistake secret."
+    "I’m suspicious of anyone else interested in my current project."
   ],
   "ideals": [
-    "Might. In life as in war, the stronger force prevails. (Evil)"
+    "Greed. Artifacts are just things waiting to be sold to the highest bidder. (Evil)"
   ],
   "bonds": [
-    "My honor is my life."
+    "I seek a specific crown or scepter that belonged to a forgotten king."
   ],
   "money": {
     "cp": 0,
@@ -74,65 +53,21 @@
     "hairStyle": "Short",
     "bodyType": "Medium",
     "eyeColor": "Brown",
-    "skinColor": "#e0ac69",
+    "skinColor": "#ffdbac",
     "height": "5'10\"",
     "weight": "160 lbs"
   },
   "backpack": [
     {
-      "id": "backpack_tyv9iepqh",
-      "index": "backpack",
-      "name": "backpack",
+      "id": "case_map_or_scroll_ghsx3p3rs",
+      "index": "case_map_or_scroll",
+      "name": "Wooden case containing a map to a ruin",
       "quantity": 1,
-      "weight": 5,
+      "weight": 1,
       "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/backpack.json",
-      "image_url": "public/assets/atlas/equipment/images/backpack.webp",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fbackpack.webp?t=1778999506173",
-      "desc": [
-        "Fashioned from the hide of a beast best left unnamed, this backpack whispers secrets of forgotten pilgrimages with every rustle, its depths a maw promising to swallow more than just supplies.\n"
-      ],
-      "special": [],
-      "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
-      },
-      "gear_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "public/assets/atlas/equipment_categories/standard_gear"
-      },
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "updated_at": "2026-05-17T06:32:30.427Z",
-      "contents": [],
-      "properties": [],
-      "image": "public/assets/atlas/equipment/backpack.webp",
-      "sprite_index": 9,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
-      "background_type": "land_forest",
-      "slot": [
-        "back"
-      ],
-      "last_updated": "17-5-2026",
-      "category": "Adventuring Gear"
-    },
-    {
-      "id": "bedroll_fmwb499x8",
-      "index": "bedroll",
-      "name": "bedroll",
-      "quantity": 1,
-      "weight": 7,
-      "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/bedroll.json",
-      "image_url": "public/assets/atlas/equipment/images/bedroll.webp",
-      "imageUrl": "/assets/atlas/equipment/bedroll.webp",
-      "desc": [
-        "A typical bedroll consisted of a sack that could contain a human-sized creature, with an opening on the side. Some variants consisted of several layers to provide waterproofing, warmth, and comfort"
-      ],
+      "url": "public/assets/atlas/equipment/json/case_map_or_scroll.json",
+      "image_url": "public/assets/atlas/equipment/images/case_map_or_scroll.webp",
+      "imageUrl": "/assets/atlas/equipment/images/case_map_or_scroll.webp",
       "special": [],
       "equipment_category": {
         "index": "adventuring_gear",
@@ -148,140 +83,29 @@
         "quantity": 1,
         "unit": "gp"
       },
-      "updated_at": "2026-04-11T15:14:56.995Z",
-      "contents": [],
-      "properties": [],
-      "image": "public/assets/atlas/equipment/bedroll.webp",
-      "sprite_index": 2,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet2.webp",
-      "category": "Adventuring Gear",
-      "last_updated": "11-4-2026"
-    },
-    {
-      "id": "mess_kit_w5p81kav9",
-      "index": "mess_kit",
-      "name": "mess kit",
-      "quantity": 1,
-      "weight": 1,
-      "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/mess_kit.json",
-      "image_url": "public/assets/atlas/equipment/images/mess_kit.webp",
-      "imageUrl": "/assets/atlas/equipment/mess_kit.webp",
-      "special": [],
-      "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
-      },
-      "gear_category": {
-        "index": "kits",
-        "name": "kits",
-        "url": "public/assets/atlas/equipment_categories/kits"
-      },
-      "cost": {
-        "quantity": 2,
-        "unit": "sp"
-      },
       "desc": [
-        "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl."
+        "This cylindrical leather case can hold up to ten rolled-up sheets of paper or five rolled-up sheets of parchment."
       ],
-      "updated_at": "2026-04-12T08:02:03.666Z",
+      "updated_at": "2026-05-04T17:15:47.450Z",
       "contents": [],
       "properties": [],
-      "image": "public/assets/atlas/equipment/mess_kit.webp",
-      "sprite_index": 14,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
-      "category": "Kits",
-      "last_updated": "12-4-2026"
-    },
-    {
-      "id": "tinderbox_ir935rehr",
-      "index": "tinderbox",
-      "name": "tinderbox",
-      "quantity": 1,
-      "weight": 1,
-      "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/tinderbox.json",
-      "image_url": "public/assets/atlas/equipment/images/tinderbox.webp",
-      "imageUrl": "/assets/atlas/equipment/tinderbox.webp",
-      "special": [],
-      "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
-      },
-      "gear_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "public/assets/atlas/equipment_categories/standard_gear"
-      },
-      "cost": {
-        "quantity": 5,
-        "unit": "sp"
-      },
-      "desc": [
-        "This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch--or anything else with abundant, exposed fuel--takes an action.",
-        "Lighting any other fire takes 1 minute."
-      ],
-      "updated_at": "2026-04-15T13:57:41.365Z",
-      "contents": [],
-      "properties": [],
-      "image": "public/assets/atlas/equipment/tinderbox.webp",
-      "sprite_index": 16,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
-      "category": "Adventuring Gear",
-      "last_updated": "15-4-2026"
-    },
-    {
-      "id": "torch_pbbevnrv5",
-      "index": "torch",
-      "name": "torch",
-      "quantity": 10,
-      "weight": 1,
-      "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/torch.json",
-      "image_url": "public/assets/atlas/equipment/images/torch.webp",
-      "imageUrl": "/assets/atlas/equipment/images/torch.webp",
-      "special": [],
-      "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
-      },
-      "gear_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "public/assets/atlas/equipment_categories/standard_gear"
-      },
-      "cost": {
-        "quantity": 1,
-        "unit": "cp"
-      },
-      "desc": [
-        "A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
-      ],
-      "updated_at": "2026-04-24T03:30:26.922Z",
-      "contents": [],
-      "properties": [],
-      "image": "public/assets/atlas/equipment/torch.webp",
-      "sprite_index": 18,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "image": "public/assets/atlas/equipment/case_map_or_scroll.webp",
+      "sprite_index": 0,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.0webp",
       "background_type": "land_forest",
-      "slot": [
-        "off-hand"
-      ],
-      "last_updated": "24-4-2026"
+      "category": "Adventuring Gear",
+      "last_updated": "4-5-2026"
     },
     {
-      "id": "rations_1_day_e1xzc044n",
-      "index": "rations_1_day",
-      "name": "rations (1 day)",
-      "quantity": 10,
+      "id": "lantern_bullseye_zhuf70g8e",
+      "index": "lantern_bullseye",
+      "name": "Bullseye Lantern",
+      "quantity": 1,
       "weight": 2,
       "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/rations_1_day.json",
-      "image_url": "public/assets/atlas/equipment/images/rations_1_day.webp",
-      "imageUrl": "/assets/atlas/equipment/images/rations_1_day.webp",
+      "url": "public/assets/atlas/equipment/json/lantern_bullseye.json",
+      "image_url": "public/assets/atlas/equipment/images/lantern_bullseye.webp",
+      "imageUrl": "/assets/atlas/equipment/images/lantern_bullseye.webp",
       "special": [],
       "equipment_category": {
         "index": "adventuring_gear",
@@ -294,34 +118,29 @@
         "url": "public/assets/atlas/equipment_categories/standard_gear"
       },
       "cost": {
-        "quantity": 5,
-        "unit": "sp"
+        "quantity": 10,
+        "unit": "gp"
       },
       "desc": [
-        "Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts."
+        "A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
       ],
-      "updated_at": "2026-04-30T10:37:09.792Z",
+      "updated_at": "2025-10-24T20:42:12.926Z",
       "contents": [],
       "properties": [],
-      "image": "public/assets/atlas/equipment/rations_1_day.webp",
-      "sprite_index": 20,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
-      "background_type": "land_forest",
-      "slot": [
-        "extra"
-      ],
-      "last_updated": "30-4-2026"
+      "image": "public/assets/atlas/equipment/lantern_bullseye.webp",
+      "sprite_index": 21,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.0webp"
     },
     {
-      "id": "waterskin_mwm83kstb",
-      "index": "waterskin",
-      "name": "waterskin",
+      "id": "pick_miners_6keikrl34",
+      "index": "pick_miners",
+      "name": "Miner's Pick",
       "quantity": 1,
-      "weight": 5,
+      "weight": 10,
       "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/waterskin.json",
-      "image_url": "public/assets/atlas/equipment/images/waterskin.webp",
-      "imageUrl": "/assets/atlas/equipment/images/waterskin.webp",
+      "url": "public/assets/atlas/equipment/json/pick_miners.json",
+      "image_url": "public/assets/atlas/equipment/images/pick_miners.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pick_miners.webp",
       "desc": [],
       "special": [],
       "equipment_category": {
@@ -336,30 +155,29 @@
       },
       "cost": {
         "quantity": 2,
-        "unit": "sp"
+        "unit": "gp"
       },
-      "updated_at": "2026-04-21T14:20:07.679Z",
+      "updated_at": "2026-05-09T18:44:17.500Z",
       "contents": [],
       "properties": [],
-      "image": "public/assets/atlas/equipment/waterskin.webp",
-      "sprite_index": 5,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet10.webp",
+      "image": "public/assets/atlas/equipment/pick_miners.webp",
+      "sprite_index": 3,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.0webp",
       "background_type": "land_forest",
-      "slot": [
-        "extra"
-      ],
-      "last_updated": "21-4-2026"
+      "category": "Adventuring Gear",
+      "last_updated": "9-5-2026"
     },
     {
-      "id": "rope_hempen_50_feet_8h8gnlo64",
-      "index": "rope_hempen_50_feet",
-      "name": "rope, hempen (50 feet)",
+      "id": "shovel_6nc8jrn28",
+      "index": "shovel",
+      "name": "Shovel",
       "quantity": 1,
-      "weight": 10,
+      "weight": 5,
       "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/rope_hempen_50_feet.json",
-      "image_url": "public/assets/atlas/equipment/images/rope_hempen_50_feet.webp",
-      "imageUrl": "/assets/atlas/equipment/images/rope_hempen_50_feet.webp",
+      "url": "public/assets/atlas/equipment/json/shovel.json",
+      "image_url": "public/assets/atlas/equipment/images/shovel.webp",
+      "imageUrl": "/assets/atlas/equipment/images/shovel.webp",
+      "desc": [],
       "special": [],
       "equipment_category": {
         "index": "adventuring_gear",
@@ -372,45 +190,64 @@
         "url": "public/assets/atlas/equipment_categories/standard_gear"
       },
       "cost": {
-        "quantity": 1,
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2026-05-09T18:36:11.386Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/shovel.webp",
+      "sprite_index": 19,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.0webp",
+      "background_type": "land_forest",
+      "category": "Adventuring Gear",
+      "last_updated": "9-5-2026"
+    },
+    {
+      "id": "tent_two_person_q3ceb647q",
+      "index": "tent_two_person",
+      "name": "Two-person Tent",
+      "quantity": 1,
+      "weight": 20,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/tent_two_person.json",
+      "image_url": "public/assets/atlas/equipment/images/tent_two_person.webp",
+      "imageUrl": "/assets/atlas/equipment/images/tent_two_person.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
         "unit": "gp"
       },
       "desc": [
-        "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check."
+        "A simple and portable canvas shelter, a tent sleeps two."
       ],
-      "updated_at": "2026-04-30T10:51:30.498Z",
+      "updated_at": "2026-04-24T03:29:16.508Z",
       "contents": [],
       "properties": [],
-      "image": "public/assets/atlas/equipment/rope_hempen_50_feet.webp",
-      "sprite_index": 0,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+      "image": "public/assets/atlas/equipment/tent_two_person.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.0webp",
       "background_type": "land_forest",
-      "slot": [
-        "extra"
-      ],
-      "category": "Adventuring Gear",
-      "last_updated": "30-4-2026"
+      "last_updated": "24-4-2026"
     },
     {
-      "id": "costume_cq22rt6im",
-      "index": "costume",
-      "name": "Costume",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/api/equipment/costume",
-      "image_url": "public/assets/atlas/equipment/images/costume.webp",
-      "imageUrl": "/assets/atlas/equipment/images/costume.webp",
-      "slot": "clothes"
-    },
-    {
-      "id": "pouch_uak8qkd5w",
+      "id": "pouch_l74icvvo3",
       "index": "pouch",
       "name": "Pouch",
-      "quantity": 3,
+      "quantity": 1,
       "weight": 1,
       "_type": "equipment",
-      "url": "/api/equipment/pouch",
+      "url": "public/assets/atlas/equipment/json/pouch.json",
       "image_url": "public/assets/atlas/equipment/images/pouch.webp",
       "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
       "special": [],
@@ -436,21 +273,21 @@
       "properties": [],
       "image": "public/assets/atlas/equipment/pouch.webp",
       "sprite_index": 14,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.0webp",
       "background_type": "land_forest",
       "category": "Adventuring Gear",
       "last_updated": "1-5-2026"
     },
     {
-      "id": "small-knife_aoo6ilk7t",
-      "index": "small-knife",
-      "name": "Small Knife",
+      "id": "spellbook_fi1fdvctb",
+      "index": "spellbook",
+      "name": "spellbook",
       "quantity": 1,
-      "weight": 0,
+      "weight": 3,
       "_type": "equipment",
-      "url": "/api/equipment/small-knife",
-      "image_url": "public/assets/atlas/equipment/images/small_knife.webp",
-      "imageUrl": "/assets/atlas/equipment/images/small_knife.webp",
+      "url": "public/assets/atlas/equipment/json/spellbook.json",
+      "image_url": "public/assets/atlas/equipment/images/spellbook.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fspellbook.webp%3Ft%3D1779790265834",
       "special": [],
       "equipment_category": {
         "index": "adventuring_gear",
@@ -463,283 +300,267 @@
         "url": "public/assets/atlas/equipment_categories/standard_gear"
       },
       "cost": {
-        "quantity": 0,
-        "unit": "cp"
+        "quantity": 50,
+        "unit": "gp"
       },
       "desc": [
-        "A small knife, typically found in a scholar's pack."
+        "Essential for wizards, a spellbook is a leather-bound tome with 100 blank vellum pages suitable for recording spells."
       ],
-      "updated_at": "2026-04-26T06:48:54.423Z",
+      "updated_at": "2026-04-23T05:51:35.706Z",
       "contents": [],
       "properties": [],
-      "image": "public/assets/atlas/equipment/small_knife.webp",
-      "sprite_index": 1,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.webp",
+      "image": "public/assets/atlas/equipment/spellbook.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.0webp",
       "background_type": "land_forest",
-      "slot": "off-hand",
-      "last_updated": "26-4-2026"
-    },
-    {
-      "id": "city-map_somw3sxmm",
-      "index": "city-map",
-      "name": "Map of the city you grew up in",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/api/equipment/city-map",
-      "image_url": "public/assets/atlas/equipment/images/city_map.webp",
-      "imageUrl": "/assets/atlas/equipment/images/city_map.webp"
-    },
-    {
-      "id": "pet-mouse_af4so378s",
-      "index": "pet-mouse",
-      "name": "Pet Mouse",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/api/equipment/pet-mouse",
-      "image_url": "public/assets/atlas/equipment/images/pet_mouse.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pet_mouse.webp"
-    },
-    {
-      "id": "token-of-parents_4s6ce049g",
-      "index": "token-of-parents",
-      "name": "Token to remember your parents by",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/api/equipment/token-of-parents",
-      "image_url": "public/assets/atlas/equipment/images/token_of_parents.webp",
-      "imageUrl": "/assets/atlas/equipment/images/token_of_parents.webp"
-    },
-    {
-      "id": "common-clothes_zwoxtvr39",
-      "index": "common-clothes",
-      "name": "Common Clothes",
-      "quantity": 2,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/api/equipment/common-clothes",
-      "image_url": "public/assets/atlas/equipment/images/common_clothes.webp",
-      "imageUrl": "/assets/atlas/equipment/images/common_clothes.webp",
-      "slot": "clothes"
-    },
-    {
-      "id": "insignia-of-rank_jsjk2o4e6",
-      "index": "insignia-of-rank",
-      "name": "Insignia of Rank",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/api/equipment/insignia-of-rank",
-      "image_url": "public/assets/atlas/equipment/images/insignia_of_rank.webp",
-      "imageUrl": "/assets/atlas/equipment/images/insignia_of_rank.webp",
-      "slot": "acc-1"
-    },
-    {
-      "id": "trophy-from-fallen-enemy_gmx7p63cb",
-      "index": "trophy-from-fallen-enemy",
-      "name": "Trophy from a fallen enemy",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/api/equipment/trophy-from-fallen-enemy",
-      "image_url": "public/assets/atlas/equipment/images/trophy_from_fallen_enemy.webp",
-      "imageUrl": "/assets/atlas/equipment/images/trophy_from_fallen_enemy.webp"
-    },
-    {
-      "id": "leather_armor_gpzsi7gw9",
-      "index": "leather_armor",
-      "name": "leather armor",
-      "quantity": 1,
-      "weight": 10,
-      "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/leather_armor.json",
-      "image_url": "public/assets/atlas/equipment/images/leather_armor.webp",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fleather_armor.webp?t=1779173685533",
-      "desc": [
-        "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
-      ],
-      "special": [],
-      "equipment_category": {
-        "index": "armor",
-        "name": "armor",
-        "url": "public/assets/atlas/equipment_categories/armor"
-      },
-      "armor_category": "Light",
-      "armor_class": {
-        "base": 11,
-        "dex_bonus": true
-      },
-      "str_minimum": 0,
-      "stealth_disadvantage": false,
-      "cost": {
-        "quantity": 10,
-        "unit": "gp"
-      },
-      "updated_at": "2026-04-15T07:04:03.712Z",
-      "contents": [],
-      "properties": [],
-      "image": "public/assets/atlas/equipment/leather_armor.webp",
-      "sprite_index": 23,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
-      "category": "Armor",
-      "slot": "chest",
-      "last_updated": "15-4-2026",
-      "chest_slot": "leather armor"
-    },
-    {
-      "id": "shield_dpa4sdxgn",
-      "index": "shield",
-      "name": "shield",
-      "quantity": 1,
-      "weight": 6,
-      "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/shield.json",
-      "image_url": "public/assets/atlas/equipment/images/shield.webp",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fshield.webp?t=1779173723914",
-      "desc": [
-        "Forged from cold, light-drinking iron, this shield bears the weeping face of a martyr whose final, silent scream still vibrates against the arm of its bearer. Its surface is perpetually slick with a phantom gore that refuses to be wiped away, feeding on the life-force of those who seek refuge behind its wall of sorrow."
-      ],
-      "special": [],
-      "equipment_category": {
-        "index": "armor",
-        "name": "armor",
-        "url": "public/assets/atlas/equipment_categories/armor"
-      },
-      "armor_category": "Shield",
-      "armor_class": {
-        "base": 2,
-        "dex_bonus": false
-      },
-      "str_minimum": 0,
-      "stealth_disadvantage": false,
-      "cost": {
-        "quantity": 10,
-        "unit": "gp"
-      },
-      "updated_at": "2026-04-12T08:06:36.452Z",
-      "contents": [],
-      "properties": [],
-      "image": "public/assets/atlas/equipment/shield.webp",
-      "sprite_index": 16,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
-      "category": "Shields",
-      "last_updated": "12-4-2026",
-      "off_hand_slot": "shield",
-      "slot": "off-hand"
+      "last_updated": "23-4-2026"
     }
   ],
   "inventory": {
-    "chest": {
-      "id": "leather_armor_ojn30vpu3",
-      "index": "leather_armor",
-      "name": "leather armor",
+    "focus": {
+      "id": "spellbook_g19kjz37g",
+      "index": "spellbook",
+      "name": "spellbook",
       "quantity": 1,
-      "weight": 10,
+      "weight": 3,
       "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/leather_armor.json",
-      "image_url": "public/assets/atlas/equipment/images/leather_armor.webp",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fleather_armor.webp?t=1779173685533",
-      "desc": [
-        "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
-      ],
+      "url": "public/assets/atlas/equipment/json/spellbook.json",
+      "image_url": "public/assets/atlas/equipment/images/spellbook.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fspellbook.webp%3Ft%3D1779790265834",
       "special": [],
       "equipment_category": {
-        "index": "armor",
-        "name": "armor",
-        "url": "public/assets/atlas/equipment_categories/armor"
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
       },
-      "armor_category": "Light",
-      "armor_class": {
-        "base": 11,
-        "dex_bonus": true
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
       },
-      "str_minimum": 0,
-      "stealth_disadvantage": false,
       "cost": {
-        "quantity": 10,
+        "quantity": 50,
         "unit": "gp"
       },
-      "updated_at": "2026-04-15T07:04:03.712Z",
+      "desc": [
+        "Essential for wizards, a spellbook is a leather-bound tome with 100 blank vellum pages suitable for recording spells."
+      ],
+      "updated_at": "2026-04-23T05:51:35.706Z",
       "contents": [],
       "properties": [],
-      "image": "public/assets/atlas/equipment/leather_armor.webp",
+      "image": "public/assets/atlas/equipment/spellbook.webp",
+      "sprite_index": 5,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet9.0webp",
+      "background_type": "land_forest",
+      "last_updated": "23-4-2026",
+      "focus_slot": "spellbook",
+      "slot": "focus"
+    },
+    "main-hand": {
+      "id": "dagger_i3bbetjix",
+      "index": "dagger",
+      "name": "dagger",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/dagger.json",
+      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fdagger.webp%3Ft%3D1779790270529",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "public/assets/atlas/weapon_properties/finesse"
+        },
+        {
+          "index": "light",
+          "name": "light",
+          "url": "public/assets/atlas/weapon_properties/light"
+        },
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "updated_at": "2026-04-28T13:26:26.921Z",
+      "contents": [],
+      "image": "public/assets/atlas/equipment/dagger.webp",
       "sprite_index": 23,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
-      "category": "Armor",
-      "slot": "chest",
-      "last_updated": "15-4-2026",
-      "chest_slot": "leather armor"
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.0webp",
+      "background_type": "land_forest",
+      "slot": "main-hand",
+      "category": "Simple Melee Weapons",
+      "last_updated": "28-4-2026",
+      "main_hand_slot": "dagger"
+    },
+    "clothes": {
+      "id": "clothes_travelers_xpnijylf9",
+      "index": "clothes_travelers",
+      "name": "Traveler's Clothes",
+      "quantity": 1,
+      "weight": 4,
+      "_type": "equipment",
+      "url": "public/assets/atlas/equipment/json/clothes_travelers.json",
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "public/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "public/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "public/assets/atlas/equipment/clothes_travelers.webp",
+      "sprite_index": 12,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.0webp",
+      "slot": "clothes",
+      "clothes_slot": "Traveler's Clothes"
     },
     "off-hand": {
-      "id": "shield_ohiwclyro",
-      "index": "shield",
-      "name": "shield",
+      "id": "dagger_17bcu6lpr",
+      "index": "dagger",
+      "name": "dagger",
       "quantity": 1,
-      "weight": 6,
+      "weight": 1,
       "_type": "equipment",
-      "url": "public/assets/atlas/equipment/json/shield.json",
-      "image_url": "public/assets/atlas/equipment/images/shield.webp",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fshield.webp?t=1779173723914",
-      "desc": [
-        "Forged from cold, light-drinking iron, this shield bears the weeping face of a martyr whose final, silent scream still vibrates against the arm of its bearer. Its surface is perpetually slick with a phantom gore that refuses to be wiped away, feeding on the life-force of those who seek refuge behind its wall of sorrow."
-      ],
+      "url": "public/assets/atlas/equipment/json/dagger.json",
+      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fequipment%2Fimages%2Fdagger.webp%3Ft%3D1779790270529",
+      "desc": [],
       "special": [],
       "equipment_category": {
-        "index": "armor",
-        "name": "armor",
-        "url": "public/assets/atlas/equipment_categories/armor"
+        "index": "weapon",
+        "name": "weapon",
+        "url": "public/assets/atlas/equipment_categories/weapon"
       },
-      "armor_category": "Shield",
-      "armor_class": {
-        "base": 2,
-        "dex_bonus": false
-      },
-      "str_minimum": 0,
-      "stealth_disadvantage": false,
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
       "cost": {
-        "quantity": 10,
+        "quantity": 2,
         "unit": "gp"
       },
-      "updated_at": "2026-04-12T08:06:36.452Z",
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "public/assets/atlas/damage_types/piercing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "public/assets/atlas/weapon_properties/finesse"
+        },
+        {
+          "index": "light",
+          "name": "light",
+          "url": "public/assets/atlas/weapon_properties/light"
+        },
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "public/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "public/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "updated_at": "2026-04-28T13:26:26.921Z",
       "contents": [],
-      "properties": [],
-      "image": "public/assets/atlas/equipment/shield.webp",
-      "sprite_index": 16,
-      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
-      "category": "Shields",
-      "last_updated": "12-4-2026",
-      "off_hand_slot": "shield",
-      "slot": "off-hand"
+      "image": "public/assets/atlas/equipment/dagger.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.0webp",
+      "background_type": "land_forest",
+      "slot": "off-hand",
+      "category": "Simple Melee Weapons",
+      "last_updated": "28-4-2026",
+      "off_hand_slot": "dagger"
     }
   },
-  "spells": [
+  "knownSpells": [
     {
       "higher_level": [],
-      "index": "produce_flame",
-      "name": "produce flame",
+      "index": "ray_of_frost",
+      "name": "ray of frost",
       "desc": [
-        "A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.",
-        "You can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 1d8 fire damage.",
-        "This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+        "A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn.",
+        "The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
       ],
-      "range": "Self",
+      "range": "60 feet",
       "components": [
         "V",
         "S"
       ],
       "ritual": false,
-      "duration": "10 minutes",
+      "duration": "Instantaneous",
       "concentration": false,
       "casting_time": "1 action",
       "level": 0,
       "attack_type": "ranged",
       "damage": {
         "damage_type": {
-          "index": "fire",
-          "name": "fire",
-          "url": "public/assets/atlas/damage_types/fire"
+          "index": "cold",
+          "name": "cold",
+          "url": "public/assets/atlas/damage_types/cold"
         },
         "damage_at_character_level": {
           "1": "1d8",
@@ -749,65 +570,25 @@
         }
       },
       "school": {
-        "index": "conjuration",
-        "name": "conjuration",
-        "url": "public/assets/atlas/magic_schools/constitutionjuration"
+        "index": "evocation",
+        "name": "evocation",
+        "url": "public/assets/atlas/magic_schools/evocation"
       },
       "classes": [
         {
-          "index": "druid",
-          "name": "druid",
-          "url": "public/assets/atlas/classes/druid"
-        }
-      ],
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "public/assets/atlas/subclasses/lore"
-        }
-      ],
-      "url": "public/assets/atlas/spell/json/produce_flame.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "image": "public/assets/atlas/spell/produce_flame.webp",
-      "sprite_index": 5,
-      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet10.webp",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fproduce_flame.webp?t=1779173958980"
-    },
-    {
-      "higher_level": [],
-      "index": "resistance",
-      "name": "resistance",
-      "desc": [
-        "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after making the saving throw. The spell then ends."
-      ],
-      "range": "Touch",
-      "components": [
-        "V",
-        "S",
-        "M"
-      ],
-      "material": "A miniature cloak.",
-      "ritual": false,
-      "duration": "Up to 1 minute",
-      "concentration": true,
-      "casting_time": "1 action",
-      "level": 0,
-      "school": {
-        "index": "abjuration",
-        "name": "abjuration",
-        "url": "public/assets/atlas/magic_schools/abjuration"
-      },
-      "classes": [
-        {
-          "index": "cleric",
-          "name": "cleric",
-          "url": "public/assets/atlas/classes/cleric"
+          "index": "artificer",
+          "name": "artificer",
+          "url": "public/assets/atlas/class/json/artificer.json"
         },
         {
-          "index": "druid",
-          "name": "druid",
-          "url": "public/assets/atlas/classes/druid"
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "public/assets/atlas/classes/sorcerer"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "public/assets/atlas/classes/wizard"
         }
       ],
       "subclasses": [
@@ -817,12 +598,12 @@
           "url": "public/assets/atlas/subclasses/lore"
         }
       ],
-      "url": "public/assets/atlas/spell/json/resistance.json",
+      "url": "public/assets/atlas/spell/json/ray_of_frost.json",
       "updated_at": "2025-10-24T20:42:14.619Z",
-      "image": "public/assets/atlas/spell/resistance.webp",
-      "sprite_index": 19,
-      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet10.webp",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fresistance.webp?t=1779173959094"
+      "image": "public/assets/atlas/spell/ray_of_frost.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet10.0webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fray_of_frost.webp%3Ft%3D1779790278228"
     },
     {
       "higher_level": [],
@@ -850,6 +631,11 @@
         "url": "public/assets/atlas/magic_schools/transmutation"
       },
       "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "public/assets/atlas/class/json/artificer.json"
+        },
         {
           "index": "cleric",
           "name": "cleric",
@@ -887,67 +673,24 @@
       "updated_at": "2025-10-24T20:42:14.619Z",
       "image": "public/assets/atlas/spell/mending.webp",
       "sprite_index": 0,
-      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet9.webp",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fmending.webp?t=1779173958927"
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet9.0webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fmending.webp%3Ft%3D1779790278270"
     },
     {
       "higher_level": [],
-      "index": "guidance",
-      "name": "guidance",
+      "index": "prestidigitation",
+      "name": "prestidigitation",
       "desc": [
-        "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends."
+        "This spell is a minor magical trick that novice spellcasters use for practice. You create one of the following magical effects within 'range':",
+        "You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor.",
+        "You instantaneously light or snuff out a candle, a torch, or a small campfire.",
+        "You instantaneously clean or soil an object no larger than 1 cubic foot.",
+        "You chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour.",
+        "You make a color, a small mark, or a symbol appear on an object or a surface for 1 hour.",
+        "You create a nonmagical trinket or an illusory image that can fit in your hand and that lasts until the end of your next turn.",
+        "If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action."
       ],
-      "range": "Touch",
-      "components": [
-        "V",
-        "S"
-      ],
-      "ritual": false,
-      "duration": "Up to 1 minute",
-      "concentration": true,
-      "casting_time": "1 action",
-      "level": 0,
-      "school": {
-        "index": "divination",
-        "name": "divination",
-        "url": "public/assets/atlas/magic_schools/divination"
-      },
-      "classes": [
-        {
-          "index": "cleric",
-          "name": "cleric",
-          "url": "public/assets/atlas/classes/cleric"
-        },
-        {
-          "index": "druid",
-          "name": "druid",
-          "url": "public/assets/atlas/classes/druid"
-        }
-      ],
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "public/assets/atlas/subclasses/lore"
-        }
-      ],
-      "url": "public/assets/atlas/spell/json/guidance.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "image": "public/assets/atlas/spell/guidance.webp",
-      "sprite_index": 20,
-      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet6.webp",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fguidance.webp?t=1779173958832"
-    },
-    {
-      "index": "charm_person",
-      "name": "charm person",
-      "desc": [
-        "You attempt to charm a humanoid you can see within range. It must make a wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you."
-      ],
-      "higher_level": [
-        "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
-      ],
-      "range": "30 feet",
+      "range": "10 feet",
       "components": [
         "V",
         "S"
@@ -956,30 +699,22 @@
       "duration": "1 hour",
       "concentration": false,
       "casting_time": "1 action",
-      "level": 1,
-      "dc": {
-        "dc_type": {
-          "index": "wis",
-          "name": "wis",
-          "url": "public/assets/atlas/ability_scores/wisdom"
-        },
-        "dc_success": "none"
-      },
+      "level": 0,
       "school": {
-        "index": "enchantment",
-        "name": "enchantment",
-        "url": "public/assets/atlas/magic_schools/enchantment"
+        "index": "transmutation",
+        "name": "transmutation",
+        "url": "public/assets/atlas/magic_schools/transmutation"
       },
       "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "public/assets/atlas/class/json/artificer.json"
+        },
         {
           "index": "bard",
           "name": "bard",
           "url": "public/assets/atlas/classes/bard"
-        },
-        {
-          "index": "druid",
-          "name": "druid",
-          "url": "public/assets/atlas/classes/druid"
         },
         {
           "index": "sorcerer",
@@ -1004,54 +739,181 @@
           "url": "public/assets/atlas/subclasses/lore"
         }
       ],
-      "url": "public/assets/atlas/spell/json/charismarm_person.json",
+      "url": "public/assets/atlas/spell/json/prestidigitation.json",
       "updated_at": "2025-10-24T20:42:14.619Z",
-      "image": "public/assets/atlas/spell/charismarm_person.webp",
-      "sprite_index": 13,
-      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet2.webp",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fcharismarm_person.webp?t=1779173958583"
+      "image": "public/assets/atlas/spell/prestidigitation.webp",
+      "sprite_index": 1,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet10.0webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fprestidigitation.webp%3Ft%3D1779790278108"
     },
     {
       "higher_level": [],
-      "index": "entangle",
-      "name": "entangle",
+      "index": "alarm",
+      "name": "alarm",
       "desc": [
-        "Grasping weeds and vines sprout from the ground in a 20-foot square starting form a point within range. For the duration, these plants turn the ground in the area into difficult terrain.",
-        "A creature in the area when you cast the spell must succeed on a strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.",
-        "When the spell ends, the conjured plants wilt away."
+        "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won't set off the alarm. You also choose whether the alarm is mental or audible.",
+        "A mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area. This ping awakens you if you are sleeping.",
+        "An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet."
       ],
-      "range": "90 feet",
+      "range": "30 feet",
       "components": [
         "V",
-        "S"
+        "S",
+        "M"
       ],
-      "ritual": false,
-      "duration": "Up to 1 minute",
-      "concentration": true,
-      "casting_time": "1 action",
+      "material": "A tiny bell and a piece of fine silver wire.",
+      "ritual": true,
+      "duration": "8 hours",
+      "concentration": false,
+      "casting_time": "1 minute",
       "level": 1,
-      "dc": {
-        "dc_type": {
-          "index": "str",
-          "name": "str",
-          "url": "public/assets/atlas/ability_scores/strength"
-        },
-        "dc_success": "none"
-      },
       "area_of_effect": {
         "type": "cube",
         "size": 20
       },
       "school": {
-        "index": "conjuration",
-        "name": "conjuration",
-        "url": "public/assets/atlas/magic_schools/constitutionjuration"
+        "index": "abjuration",
+        "name": "abjuration",
+        "url": "assets/atlas/magic_schools/json/abjuration.json"
       },
       "classes": [
         {
-          "index": "druid",
-          "name": "druid",
-          "url": "public/assets/atlas/classes/druid"
+          "index": "artificer",
+          "name": "artificer",
+          "url": "assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "ranger",
+          "name": "ranger",
+          "url": "assets/atlas/classes/json/ranger.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "assets/atlas/classes/wizard"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "assets/atlas/subclasses/json/lore.json"
+        }
+      ],
+      "url": "assets/atlas/spell/json/alarm.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "assets/atlas/spell/images/alarm.webp",
+      "sprite_index": 3,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet1.0webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Falarm.webp%3Ft%3D1779790277652"
+    },
+    {
+      "index": "catapult",
+      "name": "catapult",
+      "desc": [
+        "Choose one object weighing between 1 and 5 pounds within range that isn't being worn or carried. The object flies in a straight line up to 90 feet in a direction you choose before falling to the ground, stopping early if it impacts against a solid surface. If the object would strike a creature, that creature must make a Dexterity saving throw. On a failed save, the object strikes the target and stops moving. In either case, both the object and the creature or solid surface take 3d8 bludgeoning damage."
+      ],
+      "higher_level": [
+        "When you cast this spell using a spell slot of 2nd level or higher, the maximum weight of an object that you can target increases by 5 pounds, and the damage increases by 1d8, for each slot level above 1st."
+      ],
+      "range": "60 feet",
+      "components": [
+        "S"
+      ],
+      "ritual": false,
+      "duration": "Instantaneous",
+      "concentration": false,
+      "casting_time": "1 action",
+      "level": 1,
+      "damage": {
+        "damage_type": {
+          "index": "bludgeoning",
+          "name": "bludgeoning",
+          "url": "assets/atlas/damage_types/json/bludgeoning.json"
+        },
+        "damage_at_slot_level": {
+          "1": "3d8"
+        }
+      },
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "assets/atlas/ability_scores/json/dexterity.json"
+        },
+        "dc_success": "none"
+      },
+      "school": {
+        "index": "transmutation",
+        "name": "transmutation",
+        "url": "assets/atlas/magic_schools/json/transmutation.json"
+      },
+      "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "assets/atlas/classes/json/sorcerer.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "assets/atlas/classes/json/wizard.json"
+        }
+      ],
+      "subclasses": [],
+      "url": "assets/atlas/spell/json/catapult.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "assets/atlas/spell/images/catapult.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fcatapult.webp%3Ft%3D1779790277812"
+    },
+    {
+      "higher_level": [],
+      "index": "feather_fall",
+      "name": "feather fall",
+      "desc": [
+        "Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature."
+      ],
+      "range": "60 feet",
+      "components": [
+        "V",
+        "M"
+      ],
+      "material": "A small feather or a piece of down.",
+      "ritual": false,
+      "duration": "1 minute",
+      "concentration": false,
+      "casting_time": "1 reaction",
+      "level": 1,
+      "school": {
+        "index": "transmutation",
+        "name": "transmutation",
+        "url": "public/assets/atlas/magic_schools/transmutation"
+      },
+      "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "public/assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "bard",
+          "name": "bard",
+          "url": "public/assets/atlas/classes/bard"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "public/assets/atlas/classes/sorcerer"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "public/assets/atlas/classes/wizard"
         }
       ],
       "subclasses": [
@@ -1061,27 +923,47 @@
           "url": "public/assets/atlas/subclasses/lore"
         }
       ],
-      "url": "public/assets/atlas/spell/json/entangle.json",
+      "url": "public/assets/atlas/spell/json/feather_fall.json",
       "updated_at": "2025-10-24T20:42:14.619Z",
-      "image": "public/assets/atlas/spell/entangle.webp",
-      "sprite_index": 23,
-      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet4.webp",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fentangle.webp?t=1779173958754"
+      "image": "public/assets/atlas/spell/feather_fall.webp",
+      "sprite_index": 8,
+      "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet5.0webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Ffeather_fall.webp%3Ft%3D1779790278130"
     }
   ],
+  "languages": [
+    "common",
+    "halfling",
+    "orc"
+  ],
+  "preparedSpells": [
+    "ray_of_frost",
+    "mending",
+    "prestidigitation",
+    "alarm",
+    "catapult",
+    "feather_fall"
+  ],
+  "spellSlots": {
+    "1": {
+      "current": 0,
+      "max": 0
+    }
+  },
   "choices": {},
-  "race": "gnome",
-  "subrace": "rock_gnome",
-  "class": "druid",
-  "background": "soldier",
-  "backstory": "He was once a celebrated tactician within the Ironbound Legion, a rock gnome whose mind for siegecraft and battlefield geometry was whispered to be unmatched. Known for his soft-spoken grace and impeccable manners, he treated even his enemies with a courtier’s respect, believing that a disciplined soul was the mark of a true warrior. However, his obsession with perfection led to the catastrophe at the Blackvale Crossing. A single, calculated risk—a misjudged structural weakness in a bridge intended to trap the enemy—resulted in the drowning of an entire battalion of his own kin. Consumed by the weight of a failure that would destroy his standing and his honor, he stripped himself of his rank and his very name, vanishing into the untamed wilds before the true cause of the tragedy could be uncovered.\n\nIn the crushing silence of the deep forests, he found a new philosophy to replace his shattered pride: the cold, unyielding hierarchy of the natural world. He observed that nature does not offer mercy, only the cold truth that the strong consume the weak to fuel the next cycle of life. He embraced the druidic arts not out of a love for the wild, but out of a desire to master the apex forces that had once humbled him. To him, the storm, the predator, and the earthquake are the ultimate soldiers, and he treats them with the same polite reverence he once gave his generals. He views his magic as a weapon of absolute efficiency, believing that in the grand design of the world, might is the only mandate that matters.\n\nNow a nameless wanderer, he carries himself with the quiet dignity of a man who has nothing left but his word and his power. He adventures to test his resolve and to ensure that his past remains buried beneath the earth he now commands. His honor is a brittle, desperate thing, an armor he wears to hide the rot of his secret shame. He is a companion of impeccable courtesy, always bowing before a fray and speaking with a gentle tongue, yet those who watch him closely see the flint in his eyes. He will never again be the weaker force in any conflict, and he will go to any length—no matter how ruthless—to ensure that the ghosts of Blackvale stay silent forever.",
-  "alignment": "chaotic_neutral",
-  "name": "joni",
+  "race": "halfling",
+  "subrace": "stout_halfling",
+  "class": "wizard",
+  "spellcastingAbility": "int",
+  "background": "archaeologist",
+  "backstory": "Deep within the sun-drenched vales of the Stoutlands, while others of his kin were content to tend to their barley and brew, the halfling who would eventually discard his name was busy unearthing the bones of the past. He was born with a shovel in one hand and an insatiable hunger for what lay beneath the loam. His transition into the arcane arts was not born of academic wonder, but of ruthless pragmatism; after discovering a singed, leather-bound grimoire in the crumbling remains of a long-forgotten barrow, he realized that magic was the ultimate tool for a tomb-breaker. To him, spells are not mysteries of the cosmos, but silver keys and invisible hands used to bypass the ancient wards that guard the world's hidden treasures.\n\nHe moves through the world under a shroud of anonymity, a nameless shadow in the dusty corners of great libraries and the mud-slicked trenches of excavation sites. His ambition is singularly focused on the legendary Scepter of the Obsidian King, a relic spoken of in hushed whispers by those who study the dead. While others might seek such an item to restore a kingdom or honor a legacy, he sees only the staggering weight of its platinum filigree and the black-market fortunes it would command in the hands of a desperate collector. To him, history is not a teacher, but a vault waiting to be emptied, and he views every traveling companion as a potential thief waiting to snatch the glory and gold of his next great discovery.",
+  "alignment": "neutral_good",
+  "name": "joli",
   "imageUrl": "data/character_save/images/slot2/slot2_portrait.webp",
   "avatarUrl": "data/character_save/images/slot2/slot2_avatar.webp",
   "matrixUrl": "data/character_save/images/slot2/slot2_matrix.webp",
   "id": "slot2",
-  "hp": 11,
-  "maxHp": 11,
-  "lastSaved": "2026-05-19T07:00:24.997Z"
+  "hp": 5,
+  "maxHp": 5,
+  "lastSaved": "2026-05-26T10:15:29.336Z"
 }
