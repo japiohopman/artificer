@@ -1,12 +1,12 @@
 {
-  "index": "arcane_tradition_improvement_1",
+  "index": "arcane_tradition",
   "class": {
     "index": "wizard",
     "name": "wizard",
     "url": "public/assets/atlas/class/json/wizard.json"
   },
-  "name": "arcane tradition feature",
-  "level": 6,
+  "name": "arcane tradition",
+  "level": 2,
   "prerequisites": [],
   "desc": [
     "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of eight schools, such as Evocation.",
@@ -87,7 +87,7 @@
       }
     }
   },
-  "url": "public/assets/atlas/features/json/arcane_tradition_improvement_1.json",
+  "url": "public/assets/atlas/features/json/arcane_tradition.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/arcane_tradition_improvement_1.webp"
+  "image": "public/assets/atlas/features/arcane_tradition.webp"
 }
