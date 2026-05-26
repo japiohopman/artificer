@@ -1,0 +1,19 @@
+{
+  "index": "magic_item_savant",
+  "class": {
+    "index": "artificer",
+    "name": "artificer",
+    "url": "public/assets/atlas/class/json/artificer.json"
+  },
+  "name": "magic item savant",
+  "level": 14,
+  "prerequisites": [],
+  "desc": [
+    "At 14th level, your skill with magic items deepens:",
+    "• You can attune to up to five magic items at once.",
+    "• You ignore all class, race, spell, and level requirements on attuning to or using a magic item."
+  ],
+  "url": "public/assets/atlas/features/json/magic_item_savant.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "public/assets/atlas/features/magic_item_savant.webp"
+}
