@@ -28,19 +28,24 @@
   "school": {
     "index": "evocation",
     "name": "evocation",
-    "url": "public/assets/atlas/magic_schools/evocation"
+    "url": "assets/atlas/magic_schools/json/evocation.json"
   },
   "classes": [
     {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "assets/atlas/class/json/artificer.json"
+    },
+    {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "assets/atlas/classes/json/wizard.json"
     }
   ],
   "subclasses": [],
-  "url": "public/assets/atlas/spell/json/arcane_hand.json",
+  "url": "assets/atlas/spell/json/arcane_hand.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/arcane_hand.webp",
+  "image": "assets/atlas/spell/images/arcane_hand.webp",
   "sprite_index": 14,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet1.webp"
 }
