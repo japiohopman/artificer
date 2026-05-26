@@ -31,29 +31,34 @@
   "school": {
     "index": "transmutation",
     "name": "transmutation",
-    "url": "public/assets/atlas/magic_schools/transmutation"
+    "url": "assets/atlas/magic_schools/json/transmutation.json"
   },
   "classes": [
     {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "assets/atlas/class/json/artificer.json"
+    },
+    {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "assets/atlas/classes/json/bard.json"
     },
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "assets/atlas/classes/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "assets/atlas/classes/json/wizard.json"
     }
   ],
   "subclasses": [],
-  "url": "public/assets/atlas/spell/json/animate_objects.json",
+  "url": "assets/atlas/spell/json/animate_objects.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/animate_objects.webp",
+  "image": "assets/atlas/spell/images/animate_objects.webp",
   "sprite_index": 9,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet1.webp"
 }
