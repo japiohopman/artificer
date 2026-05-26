@@ -3,12 +3,12 @@
   "class": {
     "index": "barbarian",
     "name": "barbarian",
-    "url": "public/assets/atlas/classes/barbarian"
+    "url": "public/assets/atlas/classes/json/barbarian.json"
   },
   "subclass": {
     "index": "berserker",
     "name": "berserker",
-    "url": "public/assets/atlas/subclasses/berserker"
+    "url": "public/assets/atlas/subclasses/json/berserker.json"
   },
   "name": "frenzy",
   "level": 3,
@@ -18,5 +18,5 @@
   ],
   "url": "public/assets/atlas/features/json/frenzy.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/frenzy.webp"
+  "image": "public/assets/atlas/features/images/frenzy.webp"
 }
