@@ -41,7 +41,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d4+2"
         }
@@ -49,8 +49,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/giant_centipede.webp",
-  "url": "public/assets/atlas/enemies/json/giant_centipede.json",
+  "image": "assets/atlas/enemies/images/giant_centipede.webp",
+  "url": "assets/atlas/enemies/json/giant_centipede.json",
   "updated_at": "2026-05-11T09:54:06.647Z",
   "forms": [],
   "legendary_actions": [],

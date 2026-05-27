@@ -24,7 +24,7 @@
       "proficiency": {
         "index": "saving_throw_str",
         "name": "saving throw: str",
-        "url": "public/assets/atlas/proficiencies/saving_throw_str"
+        "url": "assets/atlas/proficiencies/json/saving_throw_str.json"
       }
     },
     {
@@ -32,7 +32,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -40,7 +40,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     }
   ],
@@ -66,7 +66,7 @@
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -122,7 +122,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d8+4"
         }
@@ -138,7 +138,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d10+4"
         }
@@ -158,8 +158,8 @@
       "desc": "The marilith adds 5 to its AC against one melee attack that would hit it. To do so, the marilith must see the attacker and be wielding a melee weapon."
     }
   ],
-  "image": "public/assets/atlas/enemies/marilith.webp",
-  "url": "public/assets/atlas/enemies/json/marilith.json",
+  "image": "assets/atlas/enemies/images/marilith.webp",
+  "url": "assets/atlas/enemies/json/marilith.json",
   "updated_at": "2026-05-10T21:39:36.460Z",
   "forms": [],
   "legendary_actions": [],

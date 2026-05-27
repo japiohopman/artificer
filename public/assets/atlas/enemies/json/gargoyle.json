@@ -35,17 +35,17 @@
     {
       "index": "exhaustion",
       "name": "exhaustion",
-      "url": "public/assets/atlas/constitutionditions/exhaustion"
+      "url": "assets/atlas/constitutionditions/json/exhaustion.json"
     },
     {
       "index": "petrified",
       "name": "petrified",
-      "url": "public/assets/atlas/constitutionditions/petrified"
+      "url": "assets/atlas/constitutionditions/json/petrified.json"
     },
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -91,7 +91,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d6+2"
         }
@@ -107,7 +107,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "1d6+2"
         }
@@ -115,8 +115,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/gargoyle.webp",
-  "url": "public/assets/atlas/enemies/json/gargoyle.json",
+  "image": "assets/atlas/enemies/images/gargoyle.webp",
+  "url": "assets/atlas/enemies/json/gargoyle.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

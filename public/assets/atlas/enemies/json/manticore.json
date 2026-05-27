@@ -92,7 +92,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d8+3"
         }
@@ -108,7 +108,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "1d6+3"
         }
@@ -124,7 +124,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d8+3"
         }
@@ -132,8 +132,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/manticore.webp",
-  "url": "public/assets/atlas/enemies/json/manticore.json",
+  "image": "assets/atlas/enemies/images/manticore.webp",
+  "url": "assets/atlas/enemies/json/manticore.json",
   "updated_at": "2025-10-24T20:42:13.742Z",
   "forms": [],
   "legendary_actions": [],

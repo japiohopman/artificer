@@ -30,7 +30,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -74,7 +74,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d8+3"
         }
@@ -94,8 +94,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/giant_spider.webp",
-  "url": "public/assets/atlas/enemies/json/giant_spider.json",
+  "image": "assets/atlas/enemies/images/giant_spider.webp",
+  "url": "assets/atlas/enemies/json/giant_spider.json",
   "updated_at": "2026-04-14T21:23:38.684Z",
   "forms": [],
   "legendary_actions": [],

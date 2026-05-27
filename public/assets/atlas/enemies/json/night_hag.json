@@ -4,7 +4,12 @@
   "size": "Medium",
   "type": "fiend",
   "alignment": "neutral evil",
-  "armor_class": 17,
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
   "hit_points": 112,
   "hit_dice": "15d8",
   "hit_points_roll": "15d8+45",
@@ -23,7 +28,7 @@
       "proficiency": {
         "index": "skill_deception",
         "name": "skill: deception",
-        "url": "public/assets/atlas/proficiencies/skill_deception"
+        "url": "assets/atlas/proficiencies/json/skill_deception.json"
       }
     },
     {
@@ -31,7 +36,7 @@
       "proficiency": {
         "index": "skill_insight",
         "name": "skill: insight",
-        "url": "public/assets/atlas/proficiencies/skill_insight"
+        "url": "assets/atlas/proficiencies/json/skill_insight.json"
       }
     },
     {
@@ -39,7 +44,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -47,7 +52,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -62,7 +67,7 @@
     {
       "index": "charmed",
       "name": "charmed",
-      "url": "public/assets/atlas/constitutionditions/charismarmed"
+      "url": "assets/atlas/constitutionditions/json/charismarmed.json"
     }
   ],
   "senses": {
@@ -70,7 +75,7 @@
     "passive_perception": 16
   },
   "languages": "Abyssal, Common, Infernal, Primordial",
-  "challenge_rating": "5",
+  "challenge_rating": 5,
   "proficiency_bonus": 3,
   "xp": 1800,
   "special_abilities": [
@@ -81,7 +86,7 @@
         "ability": {
           "index": "cha",
           "name": "cha",
-          "url": "public/assets/atlas/ability_scores/charisma"
+          "url": "assets/atlas/ability_scores/json/charisma.json"
         },
         "dc": 14,
         "modifier": 6,
@@ -93,7 +98,7 @@
           {
             "name": "detect magic",
             "level": 1,
-            "url": "public/assets/atlas/spells/detect_magic",
+            "url": "assets/atlas/spells/json/detect_magic.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -102,7 +107,7 @@
           {
             "name": "magic missile",
             "level": 1,
-            "url": "public/assets/atlas/spells/magic_missile",
+            "url": "assets/atlas/spells/json/magic_missile.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -112,7 +117,7 @@
             "name": "plane shift",
             "level": 7,
             "notes": "Self Only",
-            "url": "public/assets/atlas/spells/plane_shift",
+            "url": "assets/atlas/spells/json/plane_shift.json",
             "usage": {
               "type": "per day",
               "times": 2,
@@ -122,7 +127,7 @@
           {
             "name": "ray of enfeeblement",
             "level": 2,
-            "url": "public/assets/atlas/spells/ray_of_enfeeblement",
+            "url": "assets/atlas/spells/json/ray_of_enfeeblement.json",
             "usage": {
               "type": "per day",
               "times": 2,
@@ -132,7 +137,7 @@
           {
             "name": "sleep",
             "level": 1,
-            "url": "public/assets/atlas/spells/sleep",
+            "url": "assets/atlas/spells/json/sleep.json",
             "usage": {
               "type": "per day",
               "times": 2,
@@ -164,7 +169,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d8+4"
         }
@@ -194,26 +199,12 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/night_hag.webp",
-  "url": "public/assets/atlas/enemies/json/night_hag.json",
-  "updated_at": "2026-05-24T04:30:50.784Z",
+  "image": "assets/atlas/enemies/images/night_hag.webp",
+  "url": "assets/atlas/enemies/json/night_hag.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 4,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.0webp",
-  "stats": {
-    "str": 18,
-    "dex": 15,
-    "con": 16,
-    "int": 16,
-    "wis": 14,
-    "cha": 16
-  },
-  "imageUrl": "/assets/atlas/enemies/images/night_hag.webp",
-  "_type": "enemies",
-  "background_type": "land_forest",
-  "lore": "/assets/atlas/enemies/enemies_wiki/night_hag.json",
-  "wikiData": {},
-  "last_updated": "24-5-2026"
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet9.webp"
 }

@@ -14,12 +14,12 @@
         {
           "index": "studded_leather_armor",
           "name": "studded leather armor",
-          "url": "public/assets/atlas/equipment/studded_leather_armor"
+          "url": "assets/atlas/equipment/json/studded_leather_armor.json"
         },
         {
           "index": "shield",
           "name": "shield",
-          "url": "public/assets/atlas/equipment/shield"
+          "url": "assets/atlas/equipment/json/shield.json"
         }
       ]
     }
@@ -42,7 +42,7 @@
       "proficiency": {
         "index": "saving_throw_str",
         "name": "saving throw: str",
-        "url": "public/assets/atlas/proficiencies/saving_throw_str"
+        "url": "assets/atlas/proficiencies/json/saving_throw_str.json"
       }
     },
     {
@@ -50,7 +50,7 @@
       "proficiency": {
         "index": "saving_throw_dex",
         "name": "saving throw: dex",
-        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+        "url": "assets/atlas/proficiencies/json/saving_throw_dex.json"
       }
     },
     {
@@ -58,7 +58,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -66,7 +66,7 @@
       "proficiency": {
         "index": "skill_athletics",
         "name": "skill: athletics",
-        "url": "public/assets/atlas/proficiencies/skill_athletics"
+        "url": "assets/atlas/proficiencies/json/skill_athletics.json"
       }
     },
     {
@@ -74,7 +74,7 @@
       "proficiency": {
         "index": "skill_intimidation",
         "name": "skill: intimidation",
-        "url": "public/assets/atlas/proficiencies/skill_intimidation"
+        "url": "assets/atlas/proficiencies/json/skill_intimidation.json"
       }
     }
   ],
@@ -187,7 +187,7 @@
                 "damage_type": {
                   "index": "piercing",
                   "name": "piercing",
-                  "url": "public/assets/atlas/damage_types/piercing"
+                  "url": "assets/atlas/damage_types/json/piercing.json"
                 },
                 "damage_dice": "2d6+4"
               },
@@ -197,7 +197,7 @@
                 "damage_type": {
                   "index": "piercing",
                   "name": "piercing",
-                  "url": "public/assets/atlas/damage_types/piercing"
+                  "url": "assets/atlas/damage_types/json/piercing.json"
                 },
                 "damage_dice": "2d8+4"
               }
@@ -216,7 +216,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d4+4"
         }
@@ -230,8 +230,8 @@
       "desc": "The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon."
     }
   ],
-  "image": "public/assets/atlas/enemies/gladiator.webp",
-  "url": "public/assets/atlas/enemies/json/gladiator.json",
+  "image": "assets/atlas/enemies/images/gladiator.webp",
+  "url": "assets/atlas/enemies/json/gladiator.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

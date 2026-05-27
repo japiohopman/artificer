@@ -37,47 +37,47 @@
     {
       "index": "charmed",
       "name": "charmed",
-      "url": "public/assets/atlas/constitutionditions/charismarmed"
+      "url": "assets/atlas/constitutionditions/json/charismarmed.json"
     },
     {
       "index": "exhaustion",
       "name": "exhaustion",
-      "url": "public/assets/atlas/constitutionditions/exhaustion"
+      "url": "assets/atlas/constitutionditions/json/exhaustion.json"
     },
     {
       "index": "frightened",
       "name": "frightened",
-      "url": "public/assets/atlas/constitutionditions/frightened"
+      "url": "assets/atlas/constitutionditions/json/frightened.json"
     },
     {
       "index": "grappled",
       "name": "grappled",
-      "url": "public/assets/atlas/constitutionditions/grappled"
+      "url": "assets/atlas/constitutionditions/json/grappled.json"
     },
     {
       "index": "paralyzed",
       "name": "paralyzed",
-      "url": "public/assets/atlas/constitutionditions/paralyzed"
+      "url": "assets/atlas/constitutionditions/json/paralyzed.json"
     },
     {
       "index": "petrified",
       "name": "petrified",
-      "url": "public/assets/atlas/constitutionditions/petrified"
+      "url": "assets/atlas/constitutionditions/json/petrified.json"
     },
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     },
     {
       "index": "prone",
       "name": "prone",
-      "url": "public/assets/atlas/constitutionditions/prone"
+      "url": "assets/atlas/constitutionditions/json/prone.json"
     },
     {
       "index": "restrained",
       "name": "restrained",
-      "url": "public/assets/atlas/constitutionditions/restrained"
+      "url": "assets/atlas/constitutionditions/json/restrained.json"
     }
   ],
   "senses": {
@@ -110,7 +110,7 @@
           "damage_type": {
             "index": "necrotic",
             "name": "necrotic",
-            "url": "public/assets/atlas/damage_types/necrotic"
+            "url": "assets/atlas/damage_types/json/necrotic.json"
           },
           "damage_dice": "4d6+3"
         }
@@ -126,12 +126,12 @@
     {
       "damage": [],
       "name": "horrifying visage",
-      "desc": "Each non-undead creature within 60 ft. of the ghost that can see it must succeed on a DC 13 Wisdom saving throw or be frightened for 1 minute. If the save fails by 5 or more, the target also ages 1d4 × 10 years. A frightened target can repeat the saving throw at the end of each of its turns, ending the frightened condition on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to this ghost's Horrifying Visage for the next 24 hours. The aging effect can be reversed with a greater restoration spell, but only within 24 hours of it occurring.",
+      "desc": "Each non-undead creature within 60 ft. of the ghost that can see it must succeed on a DC 13 Wisdom saving throw or be frightened for 1 minute. If the save fails by 5 or more, the target also ages 1d4 \u00d7 10 years. A frightened target can repeat the saving throw at the end of each of its turns, ending the frightened condition on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to this ghost's Horrifying Visage for the next 24 hours. The aging effect can be reversed with a greater restoration spell, but only within 24 hours of it occurring.",
       "dc": {
         "dc_type": {
           "index": "wis",
           "name": "wis",
-          "url": "public/assets/atlas/ability_scores/wisdom"
+          "url": "assets/atlas/ability_scores/json/wisdom.json"
         },
         "dc_value": 13,
         "success_type": "none"
@@ -151,7 +151,7 @@
         "dc_type": {
           "index": "cha",
           "name": "cha",
-          "url": "public/assets/atlas/ability_scores/charisma"
+          "url": "assets/atlas/ability_scores/json/charisma.json"
         },
         "dc_value": 13,
         "success_type": "none"
@@ -159,8 +159,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/ghost.webp",
-  "url": "public/assets/atlas/enemies/json/ghost.json",
+  "image": "assets/atlas/enemies/images/ghost.webp",
+  "url": "assets/atlas/enemies/json/ghost.json",
   "updated_at": "2026-05-19T14:06:37.822Z",
   "forms": [],
   "legendary_actions": [],

@@ -23,7 +23,7 @@
       "proficiency": {
         "index": "skill_deception",
         "name": "skill: deception",
-        "url": "public/assets/atlas/proficiencies/skill_deception"
+        "url": "assets/atlas/proficiencies/json/skill_deception.json"
       }
     },
     {
@@ -31,7 +31,7 @@
       "proficiency": {
         "index": "skill_insight",
         "name": "skill: insight",
-        "url": "public/assets/atlas/proficiencies/skill_insight"
+        "url": "assets/atlas/proficiencies/json/skill_insight.json"
       }
     },
     {
@@ -39,7 +39,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -47,7 +47,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -71,7 +71,7 @@
         "dc_type": {
           "index": "con",
           "name": "con",
-          "url": "public/assets/atlas/ability_scores/constitution"
+          "url": "assets/atlas/ability_scores/json/constitution.json"
         },
         "dc_value": 14,
         "success_type": "none"
@@ -128,7 +128,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d4+2"
         },
@@ -136,7 +136,7 @@
           "damage_type": {
             "index": "poison",
             "name": "poison",
-            "url": "public/assets/atlas/damage_types/poison"
+            "url": "assets/atlas/damage_types/json/poison.json"
           },
           "damage_dice": "4d6"
         }
@@ -152,7 +152,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d6+2"
         }
@@ -168,7 +168,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d8+2"
         },
@@ -176,7 +176,7 @@
           "damage_type": {
             "index": "poison",
             "name": "poison",
-            "url": "public/assets/atlas/damage_types/poison"
+            "url": "assets/atlas/damage_types/json/poison.json"
           },
           "damage_dice": "2d6"
         }
@@ -184,8 +184,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/medusa.webp",
-  "url": "public/assets/atlas/enemies/json/medusa.json",
+  "image": "assets/atlas/enemies/images/medusa.webp",
+  "url": "assets/atlas/enemies/json/medusa.json",
   "updated_at": "2026-05-10T21:35:19.328Z",
   "forms": [],
   "legendary_actions": [],

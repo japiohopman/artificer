@@ -58,7 +58,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "1d6+1"
         }
@@ -66,8 +66,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/giant_sea_horse.webp",
-  "url": "public/assets/atlas/enemies/json/giant_sea_horse.json",
+  "image": "assets/atlas/enemies/images/giant_sea_horse.webp",
+  "url": "assets/atlas/enemies/json/giant_sea_horse.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

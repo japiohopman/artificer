@@ -27,17 +27,17 @@
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     },
     {
       "index": "charmed",
       "name": "charmed",
-      "url": "public/assets/atlas/constitutionditions/charismarmed"
+      "url": "assets/atlas/constitutionditions/json/charismarmed.json"
     },
     {
       "index": "exhaustion",
       "name": "exhaustion",
-      "url": "public/assets/atlas/constitutionditions/exhaustion"
+      "url": "assets/atlas/constitutionditions/json/exhaustion.json"
     }
   ],
   "senses": {
@@ -58,7 +58,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d6+2"
         }
@@ -74,7 +74,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d4+2"
         }
@@ -82,8 +82,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/ghoul.webp",
-  "url": "public/assets/atlas/enemies/json/ghoul.json",
+  "image": "assets/atlas/enemies/images/ghoul.webp",
+  "url": "assets/atlas/enemies/json/ghoul.json",
   "updated_at": "2026-05-18T10:54:22.408Z",
   "forms": [],
   "legendary_actions": [],

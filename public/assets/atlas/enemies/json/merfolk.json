@@ -30,7 +30,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -70,7 +70,7 @@
                 "damage_type": {
                   "index": "piercing",
                   "name": "piercing",
-                  "url": "public/assets/atlas/damage_types/piercing"
+                  "url": "assets/atlas/damage_types/json/piercing.json"
                 },
                 "damage_dice": "1d6"
               },
@@ -80,7 +80,7 @@
                 "damage_type": {
                   "index": "piercing",
                   "name": "piercing",
-                  "url": "public/assets/atlas/damage_types/piercing"
+                  "url": "assets/atlas/damage_types/json/piercing.json"
                 },
                 "damage_dice": "1d8"
               }
@@ -91,8 +91,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/merfolk.webp",
-  "url": "public/assets/atlas/enemies/json/merfolk.json",
+  "image": "assets/atlas/enemies/images/merfolk.webp",
+  "url": "assets/atlas/enemies/json/merfolk.json",
   "updated_at": "2026-04-14T06:06:53.080Z",
   "forms": [],
   "legendary_actions": [],

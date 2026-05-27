@@ -63,7 +63,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d6+3"
         }
@@ -71,8 +71,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/giant_boar.webp",
-  "url": "public/assets/atlas/enemies/json/giant_boar.json",
+  "image": "assets/atlas/enemies/images/giant_boar.webp",
+  "url": "assets/atlas/enemies/json/giant_boar.json",
   "updated_at": "2026-04-14T21:11:56.618Z",
   "forms": [],
   "legendary_actions": [],

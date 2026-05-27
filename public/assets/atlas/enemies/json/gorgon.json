@@ -23,7 +23,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -34,7 +34,7 @@
     {
       "index": "petrified",
       "name": "petrified",
-      "url": "public/assets/atlas/constitutionditions/petrified"
+      "url": "assets/atlas/constitutionditions/json/petrified.json"
     }
   ],
   "senses": {
@@ -62,7 +62,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d12+5"
         }
@@ -78,7 +78,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d10+5"
         }
@@ -98,7 +98,7 @@
         "dc_type": {
           "index": "con",
           "name": "con",
-          "url": "public/assets/atlas/ability_scores/constitution"
+          "url": "assets/atlas/ability_scores/json/constitution.json"
         },
         "dc_value": 13,
         "success_type": "none"
@@ -106,8 +106,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/gorgon.webp",
-  "url": "public/assets/atlas/enemies/json/gorgon.json",
+  "image": "assets/atlas/enemies/images/gorgon.webp",
+  "url": "assets/atlas/enemies/json/gorgon.json",
   "updated_at": "2026-05-10T22:19:00.830Z",
   "forms": [],
   "legendary_actions": [],

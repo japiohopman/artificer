@@ -28,7 +28,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -36,7 +36,7 @@
       "proficiency": {
         "index": "saving_throw_int",
         "name": "saving throw: int",
-        "url": "public/assets/atlas/proficiencies/saving_throw_int"
+        "url": "assets/atlas/proficiencies/json/saving_throw_int.json"
       }
     },
     {
@@ -44,7 +44,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -52,7 +52,7 @@
       "proficiency": {
         "index": "skill_arcana",
         "name": "skill: arcana",
-        "url": "public/assets/atlas/proficiencies/skill_arcana"
+        "url": "assets/atlas/proficiencies/json/skill_arcana.json"
       }
     },
     {
@@ -60,7 +60,7 @@
       "proficiency": {
         "index": "skill_history",
         "name": "skill: history",
-        "url": "public/assets/atlas/proficiencies/skill_history"
+        "url": "assets/atlas/proficiencies/json/skill_history.json"
       }
     },
     {
@@ -68,7 +68,7 @@
       "proficiency": {
         "index": "skill_insight",
         "name": "skill: insight",
-        "url": "public/assets/atlas/proficiencies/skill_insight"
+        "url": "assets/atlas/proficiencies/json/skill_insight.json"
       }
     },
     {
@@ -76,7 +76,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -94,27 +94,27 @@
     {
       "index": "charmed",
       "name": "charmed",
-      "url": "public/assets/atlas/constitutionditions/charismarmed"
+      "url": "assets/atlas/constitutionditions/json/charismarmed.json"
     },
     {
       "index": "exhaustion",
       "name": "exhaustion",
-      "url": "public/assets/atlas/constitutionditions/exhaustion"
+      "url": "assets/atlas/constitutionditions/json/exhaustion.json"
     },
     {
       "index": "frightened",
       "name": "frightened",
-      "url": "public/assets/atlas/constitutionditions/frightened"
+      "url": "assets/atlas/constitutionditions/json/frightened.json"
     },
     {
       "index": "paralyzed",
       "name": "paralyzed",
-      "url": "public/assets/atlas/constitutionditions/paralyzed"
+      "url": "assets/atlas/constitutionditions/json/paralyzed.json"
     },
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -149,7 +149,7 @@
         "ability": {
           "index": "int",
           "name": "int",
-          "url": "public/assets/atlas/ability_scores/intelligence"
+          "url": "assets/atlas/ability_scores/json/intelligence.json"
         },
         "dc": 20,
         "modifier": 12,
@@ -174,132 +174,132 @@
           {
             "name": "mage hand",
             "level": 0,
-            "url": "public/assets/atlas/spells/mage_hand"
+            "url": "assets/atlas/spells/json/mage_hand.json"
           },
           {
             "name": "prestidigitation",
             "level": 0,
-            "url": "public/assets/atlas/spells/prestidigitation"
+            "url": "assets/atlas/spells/json/prestidigitation.json"
           },
           {
             "name": "ray of frost",
             "level": 0,
-            "url": "public/assets/atlas/spells/ray_of_frost"
+            "url": "assets/atlas/spells/json/ray_of_frost.json"
           },
           {
             "name": "detect magic",
             "level": 1,
-            "url": "public/assets/atlas/spells/detect_magic"
+            "url": "assets/atlas/spells/json/detect_magic.json"
           },
           {
             "name": "magic missile",
             "level": 1,
-            "url": "public/assets/atlas/spells/magic_missile"
+            "url": "assets/atlas/spells/json/magic_missile.json"
           },
           {
             "name": "shield",
             "level": 1,
-            "url": "public/assets/atlas/spells/shield"
+            "url": "assets/atlas/spells/json/shield.json"
           },
           {
             "name": "thunderwave",
             "level": 1,
-            "url": "public/assets/atlas/spells/thunderwave"
+            "url": "assets/atlas/spells/json/thunderwave.json"
           },
           {
             "name": "acid arrow",
             "level": 2,
-            "url": "public/assets/atlas/spells/acid_arrow"
+            "url": "assets/atlas/spells/json/acid_arrow.json"
           },
           {
             "name": "detect thoughts",
             "level": 2,
-            "url": "public/assets/atlas/spells/detect_thoughts"
+            "url": "assets/atlas/spells/json/detect_thoughts.json"
           },
           {
             "name": "invisibility",
             "level": 2,
-            "url": "public/assets/atlas/spells/invisibility"
+            "url": "assets/atlas/spells/json/invisibility.json"
           },
           {
             "name": "mirror image",
             "level": 2,
-            "url": "public/assets/atlas/spells/mirror_image"
+            "url": "assets/atlas/spells/json/mirror_image.json"
           },
           {
             "name": "animate dead",
             "level": 3,
-            "url": "public/assets/atlas/spells/animate_dead"
+            "url": "assets/atlas/spells/json/animate_dead.json"
           },
           {
             "name": "counterspell",
             "level": 3,
-            "url": "public/assets/atlas/spells/counterspell"
+            "url": "assets/atlas/spells/json/counterspell.json"
           },
           {
             "name": "dispel magic",
             "level": 3,
-            "url": "public/assets/atlas/spells/dispel_magic"
+            "url": "assets/atlas/spells/json/dispel_magic.json"
           },
           {
             "name": "fireball",
             "level": 3,
-            "url": "public/assets/atlas/spells/fireball"
+            "url": "assets/atlas/spells/json/fireball.json"
           },
           {
             "name": "blight",
             "level": 4,
-            "url": "public/assets/atlas/spells/blight"
+            "url": "assets/atlas/spells/json/blight.json"
           },
           {
             "name": "dimension door",
             "level": 4,
-            "url": "public/assets/atlas/spells/dimension_door"
+            "url": "assets/atlas/spells/json/dimension_door.json"
           },
           {
             "name": "cloudkill",
             "level": 5,
-            "url": "public/assets/atlas/spells/cloudkill"
+            "url": "assets/atlas/spells/json/cloudkill.json"
           },
           {
             "name": "scrying",
             "level": 5,
-            "url": "public/assets/atlas/spells/scrying"
+            "url": "assets/atlas/spells/json/scrying.json"
           },
           {
             "name": "disintegrate",
             "level": 6,
-            "url": "public/assets/atlas/spells/disintegrate"
+            "url": "assets/atlas/spells/json/disintegrate.json"
           },
           {
             "name": "globe of invulnerability",
             "level": 6,
-            "url": "public/assets/atlas/spells/globe_of_invulnerability"
+            "url": "assets/atlas/spells/json/globe_of_invulnerability.json"
           },
           {
             "name": "finger of death",
             "level": 7,
-            "url": "public/assets/atlas/spells/finger_of_death"
+            "url": "assets/atlas/spells/json/finger_of_death.json"
           },
           {
             "name": "plane shift",
             "level": 7,
-            "url": "public/assets/atlas/spells/plane_shift"
+            "url": "assets/atlas/spells/json/plane_shift.json"
           },
           {
             "name": "dominate monster",
             "level": 8,
-            "url": "public/assets/atlas/spells/dominate_monster"
+            "url": "assets/atlas/spells/json/dominate_monster.json"
           },
           {
             "name": "power word stun",
             "level": 8,
-            "url": "public/assets/atlas/spells/power_word_stun"
+            "url": "assets/atlas/spells/json/power_word_stun.json"
           },
           {
             "name": "power word kill",
             "level": 9,
-            "url": "public/assets/atlas/spells/power_word_kill"
+            "url": "assets/atlas/spells/json/power_word_kill.json"
           }
         ]
       },
@@ -321,7 +321,7 @@
           "damage_type": {
             "index": "cold",
             "name": "cold",
-            "url": "public/assets/atlas/damage_types/cold"
+            "url": "assets/atlas/damage_types/json/cold.json"
           },
           "damage_dice": "3d6"
         }
@@ -347,7 +347,7 @@
         "dc_type": {
           "index": "wis",
           "name": "wis",
-          "url": "public/assets/atlas/ability_scores/wisdom"
+          "url": "assets/atlas/ability_scores/json/wisdom.json"
         },
         "dc_value": 18,
         "success_type": "none"
@@ -361,7 +361,7 @@
         "dc_type": {
           "index": "con",
           "name": "con",
-          "url": "public/assets/atlas/ability_scores/constitution"
+          "url": "assets/atlas/ability_scores/json/constitution.json"
         },
         "dc_value": 18,
         "success_type": "none"
@@ -371,15 +371,15 @@
           "damage_type": {
             "index": "necrotic",
             "name": "necrotic",
-            "url": "public/assets/atlas/damage_types/necrotic"
+            "url": "assets/atlas/damage_types/json/necrotic.json"
           },
           "damage_dice": "6d6"
         }
       ]
     }
   ],
-  "image": "public/assets/atlas/enemies/lich.webp",
-  "url": "public/assets/atlas/enemies/json/lich.json",
+  "image": "assets/atlas/enemies/images/lich.webp",
+  "url": "assets/atlas/enemies/json/lich.json",
   "updated_at": "2026-04-18T03:58:31.983Z",
   "forms": [],
   "reactions": [],

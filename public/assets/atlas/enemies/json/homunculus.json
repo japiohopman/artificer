@@ -28,12 +28,12 @@
     {
       "index": "charmed",
       "name": "charmed",
-      "url": "public/assets/atlas/constitutionditions/charismarmed"
+      "url": "assets/atlas/constitutionditions/json/charismarmed.json"
     },
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -61,7 +61,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1"
         }
@@ -69,8 +69,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/homunculus.webp",
-  "url": "public/assets/atlas/enemies/json/homunculus.json",
+  "image": "assets/atlas/enemies/images/homunculus.webp",
+  "url": "assets/atlas/enemies/json/homunculus.json",
   "updated_at": "2026-05-18T10:13:31.602Z",
   "forms": [],
   "legendary_actions": [],

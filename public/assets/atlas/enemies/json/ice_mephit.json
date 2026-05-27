@@ -29,7 +29,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -37,7 +37,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -54,7 +54,7 @@
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -73,7 +73,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/dexterity"
+          "url": "assets/atlas/ability_scores/json/dexterity.json"
         },
         "dc_value": 10,
         "success_type": "half"
@@ -83,7 +83,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "1d8"
         }
@@ -101,7 +101,7 @@
         "ability": {
           "index": "cha",
           "name": "cha",
-          "url": "public/assets/atlas/ability_scores/charisma"
+          "url": "assets/atlas/ability_scores/json/charisma.json"
         },
         "components_required": [
           "V",
@@ -111,7 +111,7 @@
           {
             "name": "fog cloud",
             "level": 1,
-            "url": "public/assets/atlas/spells/fog_cloud",
+            "url": "assets/atlas/spells/json/fog_cloud.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -133,7 +133,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "1d4+1"
         },
@@ -141,7 +141,7 @@
           "damage_type": {
             "index": "cold",
             "name": "cold",
-            "url": "public/assets/atlas/damage_types/cold"
+            "url": "assets/atlas/damage_types/json/cold.json"
           },
           "damage_dice": "1d4"
         }
@@ -160,7 +160,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/dexterity"
+          "url": "assets/atlas/ability_scores/json/dexterity.json"
         },
         "dc_value": 10,
         "success_type": "half"
@@ -170,7 +170,7 @@
           "damage_type": {
             "index": "cold",
             "name": "cold",
-            "url": "public/assets/atlas/damage_types/cold"
+            "url": "assets/atlas/damage_types/json/cold.json"
           },
           "damage_dice": "2d4"
         }
@@ -178,8 +178,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/ice_mephit.webp",
-  "url": "public/assets/atlas/enemies/json/ice_mephit.json",
+  "image": "assets/atlas/enemies/images/ice_mephit.webp",
+  "url": "assets/atlas/enemies/json/ice_mephit.json",
   "updated_at": "2025-10-24T20:42:13.742Z",
   "forms": [],
   "legendary_actions": [],

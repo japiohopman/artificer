@@ -25,7 +25,7 @@
       "proficiency": {
         "index": "saving_throw_str",
         "name": "saving throw: str",
-        "url": "public/assets/atlas/proficiencies/saving_throw_str"
+        "url": "assets/atlas/proficiencies/json/saving_throw_str.json"
       }
     },
     {
@@ -33,7 +33,7 @@
       "proficiency": {
         "index": "saving_throw_dex",
         "name": "saving throw: dex",
-        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+        "url": "assets/atlas/proficiencies/json/saving_throw_dex.json"
       }
     },
     {
@@ -41,7 +41,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -49,7 +49,7 @@
       "proficiency": {
         "index": "saving_throw_int",
         "name": "saving throw: int",
-        "url": "public/assets/atlas/proficiencies/saving_throw_int"
+        "url": "assets/atlas/proficiencies/json/saving_throw_int.json"
       }
     },
     {
@@ -57,7 +57,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     }
   ],
@@ -71,12 +71,12 @@
     {
       "index": "frightened",
       "name": "frightened",
-      "url": "public/assets/atlas/constitutionditions/frightened"
+      "url": "assets/atlas/constitutionditions/json/frightened.json"
     },
     {
       "index": "paralyzed",
       "name": "paralyzed",
-      "url": "public/assets/atlas/constitutionditions/paralyzed"
+      "url": "assets/atlas/constitutionditions/json/paralyzed.json"
     }
   ],
   "senses": {
@@ -176,7 +176,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "3d8+10"
         }
@@ -192,7 +192,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "3d6+10"
         }
@@ -212,7 +212,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/dexterity"
+          "url": "assets/atlas/ability_scores/json/dexterity.json"
         },
         "dc_value": 23,
         "success_type": "half"
@@ -222,7 +222,7 @@
           "damage_type": {
             "index": "lightning",
             "name": "lightning",
-            "url": "public/assets/atlas/damage_types/lightning"
+            "url": "assets/atlas/damage_types/json/lightning.json"
           },
           "damage_dice": "4d10"
         }
@@ -250,7 +250,7 @@
         "dc_type": {
           "index": "con",
           "name": "con",
-          "url": "public/assets/atlas/ability_scores/constitution"
+          "url": "assets/atlas/ability_scores/json/constitution.json"
         },
         "dc_value": 23,
         "success_type": "half"
@@ -260,15 +260,15 @@
           "damage_type": {
             "index": "poison",
             "name": "poison",
-            "url": "public/assets/atlas/damage_types/poison"
+            "url": "assets/atlas/damage_types/json/poison.json"
           },
           "damage_dice": "3d10"
         }
       ]
     }
   ],
-  "image": "public/assets/atlas/enemies/kraken.webp",
-  "url": "public/assets/atlas/enemies/json/kraken.json",
+  "image": "assets/atlas/enemies/images/kraken.webp",
+  "url": "assets/atlas/enemies/json/kraken.json",
   "updated_at": "2026-05-16T10:12:10.614Z",
   "forms": [],
   "reactions": [],

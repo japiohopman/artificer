@@ -23,7 +23,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     }
   ],
@@ -36,7 +36,7 @@
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -64,7 +64,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d8+4"
         }
@@ -72,8 +72,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/ogre_zombie.webp",
-  "url": "public/assets/atlas/enemies/json/ogre_zombie.json",
+  "image": "assets/atlas/enemies/images/ogre_zombie.webp",
+  "url": "assets/atlas/enemies/json/ogre_zombie.json",
   "updated_at": "2026-05-11T03:30:57.750Z",
   "forms": [],
   "legendary_actions": [],

@@ -13,7 +13,7 @@
         {
           "index": "plate_armor",
           "name": "plate armor",
-          "url": "public/assets/atlas/equipment/plate_armor"
+          "url": "assets/atlas/equipment/json/plate_armor.json"
         }
       ]
     }
@@ -82,7 +82,7 @@
                 "damage_type": {
                   "index": "slashing",
                   "name": "slashing",
-                  "url": "public/assets/atlas/damage_types/slashing"
+                  "url": "assets/atlas/damage_types/json/slashing.json"
                 },
                 "damage_dice": "1d8+3"
               },
@@ -92,7 +92,7 @@
                 "damage_type": {
                   "index": "slashing",
                   "name": "slashing",
-                  "url": "public/assets/atlas/damage_types/slashing"
+                  "url": "assets/atlas/damage_types/json/slashing.json"
                 },
                 "damage_dice": "1d10+3"
               }
@@ -111,7 +111,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d6+3"
         }
@@ -127,7 +127,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d10+1"
         }
@@ -146,7 +146,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/dexterity"
+          "url": "assets/atlas/ability_scores/json/dexterity.json"
         },
         "dc_value": 15,
         "success_type": "half"
@@ -156,7 +156,7 @@
           "damage_type": {
             "index": "fire",
             "name": "fire",
-            "url": "public/assets/atlas/damage_types/fire"
+            "url": "assets/atlas/damage_types/json/fire.json"
           },
           "damage_dice": "7d6"
         }
@@ -164,8 +164,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/half_red_dragon_veteran.webp",
-  "url": "public/assets/atlas/enemies/json/half_red_dragon_veteran.json",
+  "image": "assets/atlas/enemies/images/half_red_dragon_veteran.webp",
+  "url": "assets/atlas/enemies/json/half_red_dragon_veteran.json",
   "updated_at": "2026-04-14T06:02:15.012Z",
   "forms": [],
   "legendary_actions": [],

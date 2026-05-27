@@ -34,17 +34,17 @@
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     },
     {
       "index": "charmed",
       "name": "charmed",
-      "url": "public/assets/atlas/constitutionditions/charismarmed"
+      "url": "assets/atlas/constitutionditions/json/charismarmed.json"
     },
     {
       "index": "exhaustion",
       "name": "exhaustion",
-      "url": "public/assets/atlas/constitutionditions/exhaustion"
+      "url": "assets/atlas/constitutionditions/json/exhaustion.json"
     }
   ],
   "senses": {
@@ -63,7 +63,7 @@
         "dc_type": {
           "index": "con",
           "name": "con",
-          "url": "public/assets/atlas/ability_scores/constitution"
+          "url": "assets/atlas/ability_scores/json/constitution.json"
         },
         "dc_value": 10,
         "success_type": "none"
@@ -86,7 +86,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d8+3"
         }
@@ -102,7 +102,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d6+3"
         }
@@ -110,8 +110,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/ghast.webp",
-  "url": "public/assets/atlas/enemies/json/ghast.json",
+  "image": "assets/atlas/enemies/images/ghast.webp",
+  "url": "assets/atlas/enemies/json/ghast.json",
   "updated_at": "2026-04-18T03:56:22.256Z",
   "forms": [],
   "legendary_actions": [],

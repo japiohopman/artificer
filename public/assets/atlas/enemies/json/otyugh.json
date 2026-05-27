@@ -28,7 +28,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     }
   ],
@@ -79,7 +79,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d8+3"
         }
@@ -95,7 +95,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "1d8+3"
         },
@@ -103,7 +103,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d8"
         }
@@ -118,7 +118,7 @@
         "dc_type": {
           "index": "con",
           "name": "con",
-          "url": "public/assets/atlas/ability_scores/constitution"
+          "url": "assets/atlas/ability_scores/json/constitution.json"
         },
         "dc_value": 14,
         "success_type": "half"
@@ -126,8 +126,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/otyugh.webp",
-  "url": "public/assets/atlas/enemies/json/otyugh.json",
+  "image": "assets/atlas/enemies/images/otyugh.webp",
+  "url": "assets/atlas/enemies/json/otyugh.json",
   "updated_at": "2026-04-16T07:46:41.720Z",
   "forms": [],
   "legendary_actions": [],

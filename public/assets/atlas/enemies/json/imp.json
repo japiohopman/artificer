@@ -30,7 +30,7 @@
       "proficiency": {
         "index": "skill_deception",
         "name": "skill: deception",
-        "url": "public/assets/atlas/proficiencies/skill_deception"
+        "url": "assets/atlas/proficiencies/json/skill_deception.json"
       }
     },
     {
@@ -38,7 +38,7 @@
       "proficiency": {
         "index": "skill_insight",
         "name": "skill: insight",
-        "url": "public/assets/atlas/proficiencies/skill_insight"
+        "url": "assets/atlas/proficiencies/json/skill_insight.json"
       }
     },
     {
@@ -46,7 +46,7 @@
       "proficiency": {
         "index": "skill_persuasion",
         "name": "skill: persuasion",
-        "url": "public/assets/atlas/proficiencies/skill_persuasion"
+        "url": "assets/atlas/proficiencies/json/skill_persuasion.json"
       }
     },
     {
@@ -54,7 +54,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -71,7 +71,7 @@
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -109,7 +109,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d4+3"
         }
@@ -123,8 +123,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/imp.webp",
-  "url": "public/assets/atlas/enemies/json/imp.json",
+  "image": "assets/atlas/enemies/images/imp.webp",
+  "url": "assets/atlas/enemies/json/imp.json",
   "updated_at": "2026-04-13T10:19:32.031Z",
   "forms": [],
   "legendary_actions": [],

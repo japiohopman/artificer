@@ -24,7 +24,7 @@
       "proficiency": {
         "index": "skill_intimidation",
         "name": "skill: intimidation",
-        "url": "public/assets/atlas/proficiencies/skill_intimidation"
+        "url": "assets/atlas/proficiencies/json/skill_intimidation.json"
       }
     }
   ],
@@ -57,7 +57,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "1d12+3"
         }
@@ -73,7 +73,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d6+3"
         }
@@ -81,8 +81,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/orc.webp",
-  "url": "public/assets/atlas/enemies/json/orc.json",
+  "image": "assets/atlas/enemies/images/orc.webp",
+  "url": "assets/atlas/enemies/json/orc.json",
   "updated_at": "2026-05-10T22:17:25.908Z",
   "forms": [],
   "legendary_actions": [],

@@ -1,7 +1,7 @@
 {
   "index": "noble",
   "name": "noble",
-  "desc": "**Nobles** wield great authority and influence as members of the upper class, possessing wealth and connections that can make them as powerful as monarchs and generals. A noble often travels in the company of guards, as well as servants who are commoners.\n\nThe noble’s statistics can also be used to represent **courtiers** who aren’t of noble birth.",
+  "desc": "**Nobles** wield great authority and influence as members of the upper class, possessing wealth and connections that can make them as powerful as monarchs and generals. A noble often travels in the company of guards, as well as servants who are commoners.\n\nThe noble\u2019s statistics can also be used to represent **courtiers** who aren\u2019t of noble birth.",
   "size": "Medium",
   "type": "humanoid",
   "subtype": "any race",
@@ -25,7 +25,7 @@
       "proficiency": {
         "index": "skill_deception",
         "name": "skill: deception",
-        "url": "public/assets/atlas/proficiencies/skill_deception"
+        "url": "assets/atlas/proficiencies/json/skill_deception.json"
       }
     },
     {
@@ -33,7 +33,7 @@
       "proficiency": {
         "index": "skill_insight",
         "name": "skill: insight",
-        "url": "public/assets/atlas/proficiencies/skill_insight"
+        "url": "assets/atlas/proficiencies/json/skill_insight.json"
       }
     },
     {
@@ -41,7 +41,7 @@
       "proficiency": {
         "index": "skill_persuasion",
         "name": "skill: persuasion",
-        "url": "public/assets/atlas/proficiencies/skill_persuasion"
+        "url": "assets/atlas/proficiencies/json/skill_persuasion.json"
       }
     }
   ],
@@ -66,7 +66,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "1d8+1"
         }
@@ -80,8 +80,8 @@
       "desc": "The noble adds 2 to its AC against one melee attack that would hit it. To do so, the noble must see the attacker and be wielding a melee weapon."
     }
   ],
-  "image": "public/assets/atlas/enemies/noble.webp",
-  "url": "public/assets/atlas/enemies/json/noble.json",
+  "image": "assets/atlas/enemies/images/noble.webp",
+  "url": "assets/atlas/enemies/json/noble.json",
   "updated_at": "2026-05-11T03:58:01.718Z",
   "forms": [],
   "legendary_actions": [],

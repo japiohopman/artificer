@@ -28,7 +28,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -36,7 +36,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -69,7 +69,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d4+3"
         }
@@ -77,8 +77,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/giant_weasel.webp",
-  "url": "public/assets/atlas/enemies/json/giant_weasel.json",
+  "image": "assets/atlas/enemies/images/giant_weasel.webp",
+  "url": "assets/atlas/enemies/json/giant_weasel.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

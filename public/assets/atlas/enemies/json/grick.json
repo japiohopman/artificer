@@ -73,7 +73,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d6+2"
         }
@@ -89,7 +89,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d6+2"
         }
@@ -97,8 +97,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/grick.webp",
-  "url": "public/assets/atlas/enemies/json/grick.json",
+  "image": "assets/atlas/enemies/images/grick.webp",
+  "url": "assets/atlas/enemies/json/grick.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

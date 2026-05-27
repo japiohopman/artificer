@@ -28,7 +28,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -66,7 +66,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "3d8+5"
         }
@@ -82,7 +82,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "3d10+5"
         }
@@ -90,8 +90,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/hill_giant.webp",
-  "url": "public/assets/atlas/enemies/json/hill_giant.json",
+  "image": "assets/atlas/enemies/images/hill_giant.webp",
+  "url": "assets/atlas/enemies/json/hill_giant.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

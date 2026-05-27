@@ -53,7 +53,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "1d6-1"
         }
@@ -61,8 +61,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/giant_fire_beetle.webp",
-  "url": "public/assets/atlas/enemies/json/giant_fire_beetle.json",
+  "image": "assets/atlas/enemies/images/giant_fire_beetle.webp",
+  "url": "assets/atlas/enemies/json/giant_fire_beetle.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

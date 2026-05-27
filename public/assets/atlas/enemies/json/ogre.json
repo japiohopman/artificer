@@ -40,7 +40,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d8+4"
         }
@@ -56,7 +56,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d6+4"
         }
@@ -64,8 +64,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/ogre.webp",
-  "url": "public/assets/atlas/enemies/json/ogre.json",
+  "image": "assets/atlas/enemies/images/ogre.webp",
+  "url": "assets/atlas/enemies/json/ogre.json",
   "updated_at": "2026-05-11T03:49:25.294Z",
   "forms": [],
   "legendary_actions": [],

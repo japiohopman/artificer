@@ -30,7 +30,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -85,7 +85,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d4+2"
         }
@@ -101,7 +101,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d6+2"
         }
@@ -109,8 +109,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/giant_vulture.webp",
-  "url": "public/assets/atlas/enemies/json/giant_vulture.json",
+  "image": "assets/atlas/enemies/images/giant_vulture.webp",
+  "url": "assets/atlas/enemies/json/giant_vulture.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

@@ -23,7 +23,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -31,7 +31,7 @@
       "proficiency": {
         "index": "saving_throw_int",
         "name": "saving throw: int",
-        "url": "public/assets/atlas/proficiencies/saving_throw_int"
+        "url": "assets/atlas/proficiencies/json/saving_throw_int.json"
       }
     },
     {
@@ -39,7 +39,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -47,7 +47,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     },
     {
@@ -55,7 +55,7 @@
       "proficiency": {
         "index": "skill_history",
         "name": "skill: history",
-        "url": "public/assets/atlas/proficiencies/skill_history"
+        "url": "assets/atlas/proficiencies/json/skill_history.json"
       }
     },
     {
@@ -63,7 +63,7 @@
       "proficiency": {
         "index": "skill_religion",
         "name": "skill: religion",
-        "url": "public/assets/atlas/proficiencies/skill_religion"
+        "url": "assets/atlas/proficiencies/json/skill_religion.json"
       }
     }
   ],
@@ -80,27 +80,27 @@
     {
       "index": "charmed",
       "name": "charmed",
-      "url": "public/assets/atlas/constitutionditions/charismarmed"
+      "url": "assets/atlas/constitutionditions/json/charismarmed.json"
     },
     {
       "index": "exhaustion",
       "name": "exhaustion",
-      "url": "public/assets/atlas/constitutionditions/exhaustion"
+      "url": "assets/atlas/constitutionditions/json/exhaustion.json"
     },
     {
       "index": "frightened",
       "name": "frightened",
-      "url": "public/assets/atlas/constitutionditions/frightened"
+      "url": "assets/atlas/constitutionditions/json/frightened.json"
     },
     {
       "index": "paralyzed",
       "name": "paralyzed",
-      "url": "public/assets/atlas/constitutionditions/paralyzed"
+      "url": "assets/atlas/constitutionditions/json/paralyzed.json"
     },
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -130,7 +130,7 @@
         "ability": {
           "index": "wis",
           "name": "wis",
-          "url": "public/assets/atlas/ability_scores/wisdom"
+          "url": "assets/atlas/ability_scores/json/wisdom.json"
         },
         "dc": 17,
         "modifier": 9,
@@ -152,77 +152,77 @@
           {
             "name": "sacred flame",
             "level": 0,
-            "url": "public/assets/atlas/spells/sacred_flame"
+            "url": "assets/atlas/spells/json/sacred_flame.json"
           },
           {
             "name": "thaumaturgy",
             "level": 0,
-            "url": "public/assets/atlas/spells/thaumaturgy"
+            "url": "assets/atlas/spells/json/thaumaturgy.json"
           },
           {
             "name": "command",
             "level": 1,
-            "url": "public/assets/atlas/spells/command"
+            "url": "assets/atlas/spells/json/command.json"
           },
           {
             "name": "guiding bolt",
             "level": 1,
-            "url": "public/assets/atlas/spells/guiding_bolt"
+            "url": "assets/atlas/spells/json/guiding_bolt.json"
           },
           {
             "name": "shield of faith",
             "level": 1,
-            "url": "public/assets/atlas/spells/shield_of_faith"
+            "url": "assets/atlas/spells/json/shield_of_faith.json"
           },
           {
             "name": "hold person",
             "level": 2,
-            "url": "public/assets/atlas/spells/hold_person"
+            "url": "assets/atlas/spells/json/hold_person.json"
           },
           {
             "name": "silence",
             "level": 2,
-            "url": "public/assets/atlas/spells/silence"
+            "url": "assets/atlas/spells/json/silence.json"
           },
           {
             "name": "spiritual weapon",
             "level": 2,
-            "url": "public/assets/atlas/spells/spiritual_weapon"
+            "url": "assets/atlas/spells/json/spiritual_weapon.json"
           },
           {
             "name": "animate dead",
             "level": 3,
-            "url": "public/assets/atlas/spells/animate_dead"
+            "url": "assets/atlas/spells/json/animate_dead.json"
           },
           {
             "name": "dispel magic",
             "level": 3,
-            "url": "public/assets/atlas/spells/dispel_magic"
+            "url": "assets/atlas/spells/json/dispel_magic.json"
           },
           {
             "name": "divination",
             "level": 4,
-            "url": "public/assets/atlas/spells/divination"
+            "url": "assets/atlas/spells/json/divination.json"
           },
           {
             "name": "guardian of faith",
             "level": 4,
-            "url": "public/assets/atlas/spells/guardian_of_faith"
+            "url": "assets/atlas/spells/json/guardian_of_faith.json"
           },
           {
             "name": "contagion",
             "level": 5,
-            "url": "public/assets/atlas/spells/constitutiontagion"
+            "url": "assets/atlas/spells/json/constitutiontagion.json"
           },
           {
             "name": "insect plague",
             "level": 5,
-            "url": "public/assets/atlas/spells/insect_plague"
+            "url": "assets/atlas/spells/json/insect_plague.json"
           },
           {
             "name": "harm",
             "level": 6,
-            "url": "public/assets/atlas/spells/harm"
+            "url": "assets/atlas/spells/json/harm.json"
           }
         ]
       },
@@ -257,7 +257,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "3d6+4"
         },
@@ -265,7 +265,7 @@
           "damage_type": {
             "index": "necrotic",
             "name": "necrotic",
-            "url": "public/assets/atlas/damage_types/necrotic"
+            "url": "assets/atlas/damage_types/json/necrotic.json"
           },
           "damage_dice": "6d6"
         }
@@ -280,7 +280,7 @@
         "dc_type": {
           "index": "wis",
           "name": "wis",
-          "url": "public/assets/atlas/ability_scores/wisdom"
+          "url": "assets/atlas/ability_scores/json/wisdom.json"
         },
         "dc_value": 16,
         "success_type": "none"
@@ -301,7 +301,7 @@
         "dc_type": {
           "index": "con",
           "name": "con",
-          "url": "public/assets/atlas/ability_scores/constitution"
+          "url": "assets/atlas/ability_scores/json/constitution.json"
         },
         "dc_value": 16,
         "success_type": "none"
@@ -315,7 +315,7 @@
         "dc_type": {
           "index": "con",
           "name": "con",
-          "url": "public/assets/atlas/ability_scores/constitution"
+          "url": "assets/atlas/ability_scores/json/constitution.json"
         },
         "dc_value": 16,
         "success_type": "none"
@@ -333,8 +333,8 @@
       "damage": []
     }
   ],
-  "image": "public/assets/atlas/enemies/mummy_lord.webp",
-  "url": "public/assets/atlas/enemies/json/mummy_lord.json",
+  "image": "assets/atlas/enemies/images/mummy_lord.webp",
+  "url": "assets/atlas/enemies/json/mummy_lord.json",
   "updated_at": "2026-05-18T10:52:00.785Z",
   "forms": [],
   "reactions": [],

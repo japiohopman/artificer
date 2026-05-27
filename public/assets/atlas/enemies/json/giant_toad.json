@@ -58,7 +58,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d10+2"
         },
@@ -66,7 +66,7 @@
           "damage_type": {
             "index": "poison",
             "name": "poison",
-            "url": "public/assets/atlas/damage_types/poison"
+            "url": "assets/atlas/damage_types/json/poison.json"
           },
           "damage_dice": "1d10"
         }
@@ -80,8 +80,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/giant_toad.webp",
-  "url": "public/assets/atlas/enemies/json/giant_toad.json",
+  "image": "assets/atlas/enemies/images/giant_toad.webp",
+  "url": "assets/atlas/enemies/json/giant_toad.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

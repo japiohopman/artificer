@@ -54,7 +54,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d8+4"
         },
@@ -62,7 +62,7 @@
           "damage_type": {
             "index": "fire",
             "name": "fire",
-            "url": "public/assets/atlas/damage_types/fire"
+            "url": "assets/atlas/damage_types/json/fire.json"
           },
           "damage_dice": "2d6"
         }
@@ -76,8 +76,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/nightmare.webp",
-  "url": "public/assets/atlas/enemies/json/nightmare.json",
+  "image": "assets/atlas/enemies/images/nightmare.webp",
+  "url": "assets/atlas/enemies/json/nightmare.json",
   "updated_at": "2026-05-18T11:47:15.261Z",
   "forms": [],
   "legendary_actions": [],

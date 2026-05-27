@@ -28,7 +28,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -71,7 +71,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d12+4"
         }
@@ -87,7 +87,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d8+4"
         }
@@ -95,8 +95,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/minotaur.webp",
-  "url": "public/assets/atlas/enemies/json/minotaur.json",
+  "image": "assets/atlas/enemies/images/minotaur.webp",
+  "url": "assets/atlas/enemies/json/minotaur.json",
   "updated_at": "2026-04-22T13:16:21.465Z",
   "forms": [],
   "legendary_actions": [],

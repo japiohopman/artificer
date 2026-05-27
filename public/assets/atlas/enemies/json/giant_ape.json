@@ -29,7 +29,7 @@
       "proficiency": {
         "index": "skill_athletics",
         "name": "skill: athletics",
-        "url": "public/assets/atlas/proficiencies/skill_athletics"
+        "url": "assets/atlas/proficiencies/json/skill_athletics.json"
       }
     },
     {
@@ -37,7 +37,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -75,7 +75,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "3d10+6"
         }
@@ -91,7 +91,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "7d6+6"
         }
@@ -99,8 +99,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/giant_ape.webp",
-  "url": "public/assets/atlas/enemies/json/giant_ape.json",
+  "image": "assets/atlas/enemies/images/giant_ape.webp",
+  "url": "assets/atlas/enemies/json/giant_ape.json",
   "updated_at": "2026-04-24T17:52:31.964Z",
   "forms": [],
   "legendary_actions": [],

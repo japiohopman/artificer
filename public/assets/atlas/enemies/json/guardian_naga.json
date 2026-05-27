@@ -4,7 +4,12 @@
   "size": "Large",
   "type": "monstrosity",
   "alignment": "lawful good",
-  "armor_class": 18,
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
   "hit_points": 127,
   "hit_dice": "15d10",
   "hit_points_roll": "15d10+45",
@@ -23,7 +28,7 @@
       "proficiency": {
         "index": "saving_throw_dex",
         "name": "saving throw: dex",
-        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+        "url": "assets/atlas/proficiencies/json/saving_throw_dex.json"
       }
     },
     {
@@ -31,7 +36,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -39,7 +44,7 @@
       "proficiency": {
         "index": "saving_throw_int",
         "name": "saving throw: int",
-        "url": "public/assets/atlas/proficiencies/saving_throw_int"
+        "url": "assets/atlas/proficiencies/json/saving_throw_int.json"
       }
     },
     {
@@ -47,7 +52,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -55,7 +60,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     }
   ],
@@ -68,12 +73,12 @@
     {
       "index": "charmed",
       "name": "charmed",
-      "url": "public/assets/atlas/constitutionditions/charismarmed"
+      "url": "assets/atlas/constitutionditions/json/charismarmed.json"
     },
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -81,7 +86,7 @@
     "passive_perception": 14
   },
   "languages": "Celestial, Common",
-  "challenge_rating": "10",
+  "challenge_rating": 10,
   "proficiency_bonus": 4,
   "xp": 5900,
   "special_abilities": [
@@ -98,7 +103,7 @@
         "ability": {
           "index": "wis",
           "name": "wis",
-          "url": "public/assets/atlas/ability_scores/wisdom"
+          "url": "assets/atlas/ability_scores/json/wisdom.json"
         },
         "dc": 16,
         "modifier": 8,
@@ -118,77 +123,77 @@
           {
             "name": "mending",
             "level": 0,
-            "url": "public/assets/atlas/spells/mending"
+            "url": "assets/atlas/spells/json/mending.json"
           },
           {
             "name": "sacred flame",
             "level": 0,
-            "url": "public/assets/atlas/spells/sacred_flame"
+            "url": "assets/atlas/spells/json/sacred_flame.json"
           },
           {
             "name": "thaumaturgy",
             "level": 0,
-            "url": "public/assets/atlas/spells/thaumaturgy"
+            "url": "assets/atlas/spells/json/thaumaturgy.json"
           },
           {
             "name": "command",
             "level": 1,
-            "url": "public/assets/atlas/spells/command"
+            "url": "assets/atlas/spells/json/command.json"
           },
           {
             "name": "cure wounds",
             "level": 1,
-            "url": "public/assets/atlas/spells/cure_wounds"
+            "url": "assets/atlas/spells/json/cure_wounds.json"
           },
           {
             "name": "shield of faith",
             "level": 1,
-            "url": "public/assets/atlas/spells/shield_of_faith"
+            "url": "assets/atlas/spells/json/shield_of_faith.json"
           },
           {
             "name": "calm emotions",
             "level": 2,
-            "url": "public/assets/atlas/spells/calm_emotions"
+            "url": "assets/atlas/spells/json/calm_emotions.json"
           },
           {
             "name": "hold person",
             "level": 2,
-            "url": "public/assets/atlas/spells/hold_person"
+            "url": "assets/atlas/spells/json/hold_person.json"
           },
           {
             "name": "bestow curse",
             "level": 3,
-            "url": "public/assets/atlas/spells/bestow_curse"
+            "url": "assets/atlas/spells/json/bestow_curse.json"
           },
           {
             "name": "clairvoyance",
             "level": 3,
-            "url": "public/assets/atlas/spells/clairvoyance"
+            "url": "assets/atlas/spells/json/clairvoyance.json"
           },
           {
             "name": "banishment",
             "level": 4,
-            "url": "public/assets/atlas/spells/banishment"
+            "url": "assets/atlas/spells/json/banishment.json"
           },
           {
             "name": "freedom of movement",
             "level": 4,
-            "url": "public/assets/atlas/spells/freedom_of_movement"
+            "url": "assets/atlas/spells/json/freedom_of_movement.json"
           },
           {
             "name": "flame strike",
             "level": 5,
-            "url": "public/assets/atlas/spells/flame_strike"
+            "url": "assets/atlas/spells/json/flame_strike.json"
           },
           {
             "name": "geas",
             "level": 5,
-            "url": "public/assets/atlas/spells/geas"
+            "url": "assets/atlas/spells/json/geas.json"
           },
           {
             "name": "true seeing",
             "level": 6,
-            "url": "public/assets/atlas/spells/true_seeing"
+            "url": "assets/atlas/spells/json/true_seeing.json"
           }
         ]
       },
@@ -205,7 +210,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d8+4"
         }
@@ -220,27 +225,17 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/guardian_naga.webp",
-  "url": "public/assets/atlas/enemies/json/guardian_naga.json",
-  "updated_at": "2026-05-24T04:23:00.247Z",
+  "image": "assets/atlas/enemies/images/guardian_naga.webp",
+  "url": "assets/atlas/enemies/json/guardian_naga.json",
+  "updated_at": "2026-04-17T08:57:04.161Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 6,
   "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet7.webp",
-  "imageUrl": "/assets/atlas/enemies/images/guardian_naga.webp",
+  "imageUrl": "/assets/atlas/enemies/guardian_naga.webp",
   "_type": "enemies",
   "background_type": "ethereal",
   "rarity": "Legendary",
-  "last_updated": "24-5-2026",
-  "stats": {
-    "str": 19,
-    "dex": 18,
-    "con": 16,
-    "int": 16,
-    "wis": 19,
-    "cha": 18
-  },
-  "lore": "/assets/atlas/enemies/enemies_wiki/guardian_naga.json",
-  "wikiData": {}
+  "last_updated": "17-4-2026"
 }

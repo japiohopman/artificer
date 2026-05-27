@@ -4,7 +4,12 @@
   "size": "Medium",
   "type": "aberration",
   "alignment": "neutral",
-  "armor_class": 9,
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 9
+    }
+  ],
   "hit_points": 67,
   "hit_dice": "9d8",
   "hit_points_roll": "9d8+27",
@@ -26,7 +31,7 @@
     {
       "index": "prone",
       "name": "prone",
-      "url": "public/assets/atlas/constitutionditions/prone"
+      "url": "assets/atlas/constitutionditions/json/prone.json"
     }
   ],
   "senses": {
@@ -34,7 +39,7 @@
     "passive_perception": 10
   },
   "languages": "",
-  "challenge_rating": "2",
+  "challenge_rating": 2,
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -50,7 +55,7 @@
         "dc_type": {
           "index": "wis",
           "name": "wis",
-          "url": "public/assets/atlas/ability_scores/wisdom"
+          "url": "assets/atlas/ability_scores/json/wisdom.json"
         },
         "dc_value": 10,
         "success_type": "none"
@@ -86,7 +91,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "5d6"
         }
@@ -106,7 +111,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/dexterity"
+          "url": "assets/atlas/ability_scores/json/dexterity.json"
         },
         "dc_value": 13,
         "success_type": "none"
@@ -114,26 +119,16 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/gibbering_mouther.webp",
-  "url": "public/assets/atlas/enemies/json/gibbering_mouther.json",
-  "updated_at": "2026-05-24T09:37:19.784Z",
+  "image": "assets/atlas/enemies/images/gibbering_mouther.webp",
+  "url": "assets/atlas/enemies/json/gibbering_mouther.json",
+  "updated_at": "2026-04-18T03:54:29.837Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 16,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.0webp",
-  "imageUrl": "/assets/atlas/enemies/images/gibbering_mouther.webp",
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet6.webp",
+  "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/enemies/gibbering_mouther.webp?t=1776484446048",
   "_type": "enemies",
   "background_type": "swamp",
-  "last_updated": "24-5-2026",
-  "stats": {
-    "str": 10,
-    "dex": 8,
-    "con": 16,
-    "int": 3,
-    "wis": 10,
-    "cha": 6
-  },
-  "lore": "/assets/atlas/enemies/enemies_wiki/gibbering_mouther.json",
-  "wikiData": {}
+  "last_updated": "18-4-2026"
 }

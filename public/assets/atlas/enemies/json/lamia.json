@@ -23,7 +23,7 @@
       "proficiency": {
         "index": "skill_deception",
         "name": "skill: deception",
-        "url": "public/assets/atlas/proficiencies/skill_deception"
+        "url": "assets/atlas/proficiencies/json/skill_deception.json"
       }
     },
     {
@@ -31,7 +31,7 @@
       "proficiency": {
         "index": "skill_insight",
         "name": "skill: insight",
-        "url": "public/assets/atlas/proficiencies/skill_insight"
+        "url": "assets/atlas/proficiencies/json/skill_insight.json"
       }
     },
     {
@@ -39,7 +39,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -63,7 +63,7 @@
         "ability": {
           "index": "cha",
           "name": "cha",
-          "url": "public/assets/atlas/ability_scores/charisma"
+          "url": "assets/atlas/ability_scores/json/charisma.json"
         },
         "dc": 13,
         "components_required": [
@@ -74,7 +74,7 @@
           {
             "name": "disguise self",
             "level": 1,
-            "url": "public/assets/atlas/spells/disguise_self",
+            "url": "assets/atlas/spells/json/disguise_self.json",
             "notes": "Any Humanoid Form",
             "usage": {
               "type": "at will",
@@ -84,7 +84,7 @@
           {
             "name": "major image",
             "level": 3,
-            "url": "public/assets/atlas/spells/major_image",
+            "url": "assets/atlas/spells/json/major_image.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -93,7 +93,7 @@
           {
             "name": "charm person",
             "level": 1,
-            "url": "public/assets/atlas/spells/charismarm_person",
+            "url": "assets/atlas/spells/json/charismarm_person.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -103,7 +103,7 @@
           {
             "name": "mirror image",
             "level": 2,
-            "url": "public/assets/atlas/spells/mirror_image",
+            "url": "assets/atlas/spells/json/mirror_image.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -113,7 +113,7 @@
           {
             "name": "scrying",
             "level": 5,
-            "url": "public/assets/atlas/spells/scrying",
+            "url": "assets/atlas/spells/json/scrying.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -123,7 +123,7 @@
           {
             "name": "suggestion",
             "level": 2,
-            "url": "public/assets/atlas/spells/suggestion",
+            "url": "assets/atlas/spells/json/suggestion.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -133,7 +133,7 @@
           {
             "name": "geas",
             "level": 5,
-            "url": "public/assets/atlas/spells/geas",
+            "url": "assets/atlas/spells/json/geas.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -205,7 +205,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d10+3"
         }
@@ -221,7 +221,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d4+3"
         }
@@ -236,8 +236,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/lamia.webp",
-  "url": "public/assets/atlas/enemies/json/lamia.json",
+  "image": "assets/atlas/enemies/images/lamia.webp",
+  "url": "assets/atlas/enemies/json/lamia.json",
   "updated_at": "2026-05-17T06:46:38.435Z",
   "forms": [],
   "legendary_actions": [],

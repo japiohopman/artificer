@@ -24,7 +24,7 @@
       "proficiency": {
         "index": "saving_throw_str",
         "name": "saving throw: str",
-        "url": "public/assets/atlas/proficiencies/saving_throw_str"
+        "url": "assets/atlas/proficiencies/json/saving_throw_str.json"
       }
     },
     {
@@ -32,7 +32,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -40,7 +40,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     }
   ],
@@ -66,7 +66,7 @@
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -85,7 +85,7 @@
         "ability": {
           "index": "int",
           "name": "int",
-          "url": "public/assets/atlas/ability_scores/intelligence"
+          "url": "assets/atlas/ability_scores/json/intelligence.json"
         },
         "dc": 16,
         "components_required": [
@@ -96,7 +96,7 @@
           {
             "name": "darkness",
             "level": 2,
-            "url": "public/assets/atlas/spells/darkness",
+            "url": "assets/atlas/spells/json/darkness.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -105,7 +105,7 @@
           {
             "name": "detect magic",
             "level": 1,
-            "url": "public/assets/atlas/spells/detect_magic",
+            "url": "assets/atlas/spells/json/detect_magic.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -114,7 +114,7 @@
           {
             "name": "dispel magic",
             "level": 3,
-            "url": "public/assets/atlas/spells/dispel_magic",
+            "url": "assets/atlas/spells/json/dispel_magic.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -123,7 +123,7 @@
           {
             "name": "confusion",
             "level": 4,
-            "url": "public/assets/atlas/spells/constitutionfusion",
+            "url": "assets/atlas/spells/json/constitutionfusion.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -133,7 +133,7 @@
           {
             "name": "fly",
             "level": 3,
-            "url": "public/assets/atlas/spells/fly",
+            "url": "assets/atlas/spells/json/fly.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -143,7 +143,7 @@
           {
             "name": "power word stun",
             "level": 8,
-            "url": "public/assets/atlas/spells/power_word_stun",
+            "url": "assets/atlas/spells/json/power_word_stun.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -220,7 +220,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d10+5"
         }
@@ -236,7 +236,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d4+2"
         }
@@ -244,8 +244,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/glabrezu.webp",
-  "url": "public/assets/atlas/enemies/json/glabrezu.json",
+  "image": "assets/atlas/enemies/images/glabrezu.webp",
+  "url": "assets/atlas/enemies/json/glabrezu.json",
   "updated_at": "2026-05-11T03:40:15.499Z",
   "forms": [],
   "legendary_actions": [],

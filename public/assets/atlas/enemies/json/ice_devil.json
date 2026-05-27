@@ -24,7 +24,7 @@
       "proficiency": {
         "index": "saving_throw_dex",
         "name": "saving throw: dex",
-        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+        "url": "assets/atlas/proficiencies/json/saving_throw_dex.json"
       }
     },
     {
@@ -32,7 +32,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -40,7 +40,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     }
   ],
@@ -64,7 +64,7 @@
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -121,7 +121,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d6+5"
         },
@@ -129,7 +129,7 @@
           "damage_type": {
             "index": "cold",
             "name": "cold",
-            "url": "public/assets/atlas/damage_types/cold"
+            "url": "assets/atlas/damage_types/json/cold.json"
           },
           "damage_dice": "3d6"
         }
@@ -145,7 +145,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d4+5"
         },
@@ -153,7 +153,7 @@
           "damage_type": {
             "index": "cold",
             "name": "cold",
-            "url": "public/assets/atlas/damage_types/cold"
+            "url": "assets/atlas/damage_types/json/cold.json"
           },
           "damage_dice": "3d6"
         }
@@ -169,7 +169,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d6+5"
         },
@@ -177,7 +177,7 @@
           "damage_type": {
             "index": "cold",
             "name": "cold",
-            "url": "public/assets/atlas/damage_types/cold"
+            "url": "assets/atlas/damage_types/json/cold.json"
           },
           "damage_dice": "3d6"
         }
@@ -191,8 +191,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/ice_devil.webp",
-  "url": "public/assets/atlas/enemies/json/ice_devil.json",
+  "image": "assets/atlas/enemies/images/ice_devil.webp",
+  "url": "assets/atlas/enemies/json/ice_devil.json",
   "updated_at": "2026-05-10T21:19:33.917Z",
   "forms": [],
   "legendary_actions": [],

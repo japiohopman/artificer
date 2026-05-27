@@ -29,7 +29,7 @@
       "proficiency": {
         "index": "skill_athletics",
         "name": "skill: athletics",
-        "url": "public/assets/atlas/proficiencies/skill_athletics"
+        "url": "assets/atlas/proficiencies/json/skill_athletics.json"
       }
     },
     {
@@ -37,7 +37,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -45,7 +45,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -56,7 +56,7 @@
     {
       "index": "blinded",
       "name": "blinded",
-      "url": "public/assets/atlas/constitutionditions/blinded"
+      "url": "assets/atlas/constitutionditions/json/blinded.json"
     }
   ],
   "senses": {
@@ -94,7 +94,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "1d4+3"
         },
@@ -102,7 +102,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d4"
         }
@@ -110,8 +110,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/grimlock.webp",
-  "url": "public/assets/atlas/enemies/json/grimlock.json",
+  "image": "assets/atlas/enemies/images/grimlock.webp",
+  "url": "assets/atlas/enemies/json/grimlock.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

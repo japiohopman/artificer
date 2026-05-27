@@ -13,12 +13,12 @@
         {
           "index": "hide_armor",
           "name": "hide armor",
-          "url": "public/assets/atlas/equipment/hide_armor"
+          "url": "assets/atlas/equipment/json/hide_armor.json"
         },
         {
           "index": "shield",
           "name": "shield",
-          "url": "public/assets/atlas/equipment/shield"
+          "url": "assets/atlas/equipment/json/shield.json"
         }
       ]
     }
@@ -65,7 +65,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d4+2"
         }
@@ -89,7 +89,7 @@
                 "damage_type": {
                   "index": "piercing",
                   "name": "piercing",
-                  "url": "public/assets/atlas/damage_types/piercing"
+                  "url": "assets/atlas/damage_types/json/piercing.json"
                 },
                 "damage_dice": "1d6+2"
               },
@@ -99,7 +99,7 @@
                 "damage_type": {
                   "index": "piercing",
                   "name": "piercing",
-                  "url": "public/assets/atlas/damage_types/piercing"
+                  "url": "assets/atlas/damage_types/json/piercing.json"
                 },
                 "damage_dice": "1d8+2"
               }
@@ -118,7 +118,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d8+1"
         }
@@ -126,8 +126,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/gnoll.webp",
-  "url": "public/assets/atlas/enemies/json/gnoll.json",
+  "image": "assets/atlas/enemies/images/gnoll.webp",
+  "url": "assets/atlas/enemies/json/gnoll.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

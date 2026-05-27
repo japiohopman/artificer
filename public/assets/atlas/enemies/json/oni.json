@@ -12,7 +12,7 @@
         {
           "index": "chain_mail",
           "name": "chain mail",
-          "url": "public/assets/atlas/equipment/charismain_mail"
+          "url": "assets/atlas/equipment/json/charismain_mail.json"
         }
       ]
     }
@@ -36,7 +36,7 @@
       "proficiency": {
         "index": "saving_throw_dex",
         "name": "saving throw: dex",
-        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+        "url": "assets/atlas/proficiencies/json/saving_throw_dex.json"
       }
     },
     {
@@ -44,7 +44,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -52,7 +52,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -60,7 +60,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     },
     {
@@ -68,7 +68,7 @@
       "proficiency": {
         "index": "skill_arcana",
         "name": "skill: arcana",
-        "url": "public/assets/atlas/proficiencies/skill_arcana"
+        "url": "assets/atlas/proficiencies/json/skill_arcana.json"
       }
     },
     {
@@ -76,7 +76,7 @@
       "proficiency": {
         "index": "skill_deception",
         "name": "skill: deception",
-        "url": "public/assets/atlas/proficiencies/skill_deception"
+        "url": "assets/atlas/proficiencies/json/skill_deception.json"
       }
     },
     {
@@ -84,7 +84,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -108,7 +108,7 @@
         "ability": {
           "index": "cha",
           "name": "cha",
-          "url": "public/assets/atlas/ability_scores/charisma"
+          "url": "assets/atlas/ability_scores/json/charisma.json"
         },
         "dc": 13,
         "components_required": [
@@ -119,7 +119,7 @@
           {
             "name": "darkness",
             "level": 2,
-            "url": "public/assets/atlas/spells/darkness",
+            "url": "assets/atlas/spells/json/darkness.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -128,7 +128,7 @@
           {
             "name": "invisibility",
             "level": 2,
-            "url": "public/assets/atlas/spells/invisibility",
+            "url": "assets/atlas/spells/json/invisibility.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -137,7 +137,7 @@
           {
             "name": "charm person",
             "level": 1,
-            "url": "public/assets/atlas/spells/charismarm_person",
+            "url": "assets/atlas/spells/json/charismarm_person.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -147,7 +147,7 @@
           {
             "name": "cone of cold",
             "level": 5,
-            "url": "public/assets/atlas/spells/constitutione_of_cold",
+            "url": "assets/atlas/spells/json/constitutione_of_cold.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -157,7 +157,7 @@
           {
             "name": "gaseous form",
             "level": 3,
-            "url": "public/assets/atlas/spells/gaseous_form",
+            "url": "assets/atlas/spells/json/gaseous_form.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -167,7 +167,7 @@
           {
             "name": "sleep",
             "level": 1,
-            "url": "public/assets/atlas/spells/sleep",
+            "url": "assets/atlas/spells/json/sleep.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -246,7 +246,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "1d8+4"
         }
@@ -262,7 +262,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d10+4"
         }
@@ -276,8 +276,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/oni.webp",
-  "url": "public/assets/atlas/enemies/json/oni.json",
+  "image": "assets/atlas/enemies/images/oni.webp",
+  "url": "assets/atlas/enemies/json/oni.json",
   "updated_at": "2026-04-22T13:04:20.515Z",
   "forms": [],
   "legendary_actions": [],

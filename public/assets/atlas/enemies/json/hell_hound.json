@@ -28,7 +28,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -68,7 +68,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d8+3"
         },
@@ -76,7 +76,7 @@
           "damage_type": {
             "index": "fire",
             "name": "fire",
-            "url": "public/assets/atlas/damage_types/fire"
+            "url": "assets/atlas/damage_types/json/fire.json"
           },
           "damage_dice": "2d6"
         }
@@ -95,7 +95,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/dexterity"
+          "url": "assets/atlas/ability_scores/json/dexterity.json"
         },
         "dc_value": 12,
         "success_type": "half"
@@ -105,7 +105,7 @@
           "damage_type": {
             "index": "fire",
             "name": "fire",
-            "url": "public/assets/atlas/damage_types/fire"
+            "url": "assets/atlas/damage_types/json/fire.json"
           },
           "damage_dice": "6d6"
         }
@@ -113,8 +113,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/hell_hound.webp",
-  "url": "public/assets/atlas/enemies/json/hell_hound.json",
+  "image": "assets/atlas/enemies/images/hell_hound.webp",
+  "url": "assets/atlas/enemies/json/hell_hound.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

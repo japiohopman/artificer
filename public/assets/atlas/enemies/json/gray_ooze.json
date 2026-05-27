@@ -29,7 +29,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -44,32 +44,32 @@
     {
       "index": "blinded",
       "name": "blinded",
-      "url": "public/assets/atlas/constitutionditions/blinded"
+      "url": "assets/atlas/constitutionditions/json/blinded.json"
     },
     {
       "index": "charmed",
       "name": "charmed",
-      "url": "public/assets/atlas/constitutionditions/charismarmed"
+      "url": "assets/atlas/constitutionditions/json/charismarmed.json"
     },
     {
       "index": "deafened",
       "name": "deafened",
-      "url": "public/assets/atlas/constitutionditions/deafened"
+      "url": "assets/atlas/constitutionditions/json/deafened.json"
     },
     {
       "index": "exhaustion",
       "name": "exhaustion",
-      "url": "public/assets/atlas/constitutionditions/exhaustion"
+      "url": "assets/atlas/constitutionditions/json/exhaustion.json"
     },
     {
       "index": "frightened",
       "name": "frightened",
-      "url": "public/assets/atlas/constitutionditions/frightened"
+      "url": "assets/atlas/constitutionditions/json/frightened.json"
     },
     {
       "index": "prone",
       "name": "prone",
-      "url": "public/assets/atlas/constitutionditions/prone"
+      "url": "assets/atlas/constitutionditions/json/prone.json"
     }
   ],
   "senses": {
@@ -107,7 +107,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "1d6+1"
         },
@@ -115,7 +115,7 @@
           "damage_type": {
             "index": "acid",
             "name": "acid",
-            "url": "public/assets/atlas/damage_types/acid"
+            "url": "assets/atlas/damage_types/json/acid.json"
           },
           "damage_dice": "2d6"
         }
@@ -123,8 +123,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/gray_ooze.webp",
-  "url": "public/assets/atlas/enemies/json/gray_ooze.json",
+  "image": "assets/atlas/enemies/images/gray_ooze.webp",
+  "url": "assets/atlas/enemies/json/gray_ooze.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

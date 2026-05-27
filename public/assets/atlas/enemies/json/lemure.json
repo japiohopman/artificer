@@ -31,17 +31,17 @@
     {
       "index": "charmed",
       "name": "charmed",
-      "url": "public/assets/atlas/constitutionditions/charismarmed"
+      "url": "assets/atlas/constitutionditions/json/charismarmed.json"
     },
     {
       "index": "frightened",
       "name": "frightened",
-      "url": "public/assets/atlas/constitutionditions/frightened"
+      "url": "assets/atlas/constitutionditions/json/frightened.json"
     },
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -74,7 +74,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "1d4"
         }
@@ -82,8 +82,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/lemure.webp",
-  "url": "public/assets/atlas/enemies/json/lemure.json",
+  "image": "assets/atlas/enemies/images/lemure.webp",
+  "url": "assets/atlas/enemies/json/lemure.json",
   "updated_at": "2026-05-18T11:17:45.231Z",
   "forms": [],
   "legendary_actions": [],

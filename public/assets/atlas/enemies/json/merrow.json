@@ -120,7 +120,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d8+4"
         }
@@ -136,7 +136,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d4+4"
         }
@@ -152,7 +152,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d6+4"
         }
@@ -160,8 +160,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/merrow.webp",
-  "url": "public/assets/atlas/enemies/json/merrow.json",
+  "image": "assets/atlas/enemies/images/merrow.webp",
+  "url": "assets/atlas/enemies/json/merrow.json",
   "updated_at": "2026-04-14T06:09:10.250Z",
   "forms": [],
   "legendary_actions": [],

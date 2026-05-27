@@ -23,7 +23,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -66,7 +66,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "5d6+4"
         }
@@ -74,8 +74,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/killer_whale.webp",
-  "url": "public/assets/atlas/enemies/json/killer_whale.json",
+  "image": "assets/atlas/enemies/images/killer_whale.webp",
+  "url": "assets/atlas/enemies/json/killer_whale.json",
   "updated_at": "2026-05-16T11:14:54.418Z",
   "forms": [],
   "legendary_actions": [],

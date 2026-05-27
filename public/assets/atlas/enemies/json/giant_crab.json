@@ -29,7 +29,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -62,7 +62,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "1d6+1"
         }
@@ -70,8 +70,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/giant_crab.webp",
-  "url": "public/assets/atlas/enemies/json/giant_crab.json",
+  "image": "assets/atlas/enemies/images/giant_crab.webp",
+  "url": "assets/atlas/enemies/json/giant_crab.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],
