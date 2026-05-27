@@ -1,0 +1,84 @@
+{
+  "index": "necklace",
+  "name": "necklace",
+  "equipment": [
+    {
+      "index": "amulet_of_health",
+      "name": "amulet of health",
+      "url": "public/assets/atlas/magic_items/json/amulet_of_health.json"
+    },
+    {
+      "index": "amulet_of_proof_against_detection_and_location",
+      "name": "amulet of proof against detection and location",
+      "url": "public/assets/atlas/magic_items/json/amulet_of_proof_against_detection_and_location.json"
+    },
+    {
+      "index": "amulet_of_the_planes",
+      "name": "amulet of the planes",
+      "url": "public/assets/atlas/magic_items/json/amulet_of_the_planes.json"
+    },
+    {
+      "index": "brooch_of_shielding",
+      "name": "brooch of shielding",
+      "url": "public/assets/atlas/magic_items/json/brooch_of_shielding.json"
+    },
+    {
+      "index": "medallion_of_thoughts",
+      "name": "medallion of thoughts",
+      "url": "public/assets/atlas/magic_items/json/medallion_of_thoughts.json"
+    },
+    {
+      "index": "necklace_of_adaptation",
+      "name": "necklace of adaptation",
+      "url": "public/assets/atlas/magic_items/json/necklace_of_adaptation.json"
+    },
+    {
+      "index": "necklace_of_fireballs",
+      "name": "necklace of fireballs",
+      "url": "public/assets/atlas/magic_items/json/necklace_of_fireballs.json"
+    },
+    {
+      "index": "necklace_of_prayer_beads",
+      "name": "necklace of prayer beads",
+      "url": "public/assets/atlas/magic_items/json/necklace_of_prayer_beads.json"
+    },
+    {
+      "index": "periapt_of_health",
+      "name": "periapt of health",
+      "url": "public/assets/atlas/magic_items/json/periapt_of_health.json"
+    },
+    {
+      "index": "periapt_of_proof_against_poison",
+      "name": "periapt of proof against poison",
+      "url": "public/assets/atlas/magic_items/json/periapt_of_proof_against_poison.json"
+    },
+    {
+      "index": "periapt_of_wound_closure",
+      "name": "periapt of wound closure",
+      "url": "public/assets/atlas/magic_items/json/periapt_of_wound_closure.json"
+    },
+    {
+      "index": "scarab_of_protection",
+      "name": "scarab of protection",
+      "url": "public/assets/atlas/magic_items/json/scarab_of_protection.json"
+    },
+    {
+      "index": "talisman_of_pure_good",
+      "name": "talisman of pure good",
+      "url": "public/assets/atlas/magic_items/json/talisman_of_pure_good.json"
+    },
+    {
+      "index": "talisman_of_the_sphere",
+      "name": "talisman of the sphere",
+      "url": "public/assets/atlas/magic_items/json/talisman_of_the_sphere.json"
+    },
+    {
+      "index": "talisman_of_ultimate_evil",
+      "name": "talisman of ultimate evil",
+      "url": "public/assets/atlas/magic_items/json/talisman_of_ultimate_evil.json"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/necklace.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/necklace.webp"
+}
