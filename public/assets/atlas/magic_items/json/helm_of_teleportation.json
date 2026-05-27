@@ -16,6 +16,27 @@
     "This helm has 3 charges. While wearing it, you can use an action and expend 1 charge to cast the teleport spell from it. The helm regains 1d3",
     "expended charges daily at dawn."
   ],
+  "feature_specific": {
+    "charges": {
+      "max": 3,
+      "recovery": "1d3",
+      "type": "day"
+    },
+    "spells": [
+      {
+        "spell": {
+          "index": "teleport",
+          "name": "teleport",
+          "url": "public/assets/atlas/spell/json/teleport.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "charge"
+        },
+        "special_action": "action"
+      }
+    ]
+  },
   "url": "public/assets/atlas/magic_items/json/helm_of_teleportation.json",
   "updated_at": "2026-04-19T10:45:46.584Z",
   "image": "public/assets/atlas/magic_items/helm_of_teleportation.webp",

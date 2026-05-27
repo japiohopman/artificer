@@ -42,6 +42,22 @@
     "| Red corundum | Fire elemental |",
     "| Emerald | Water elemental |"
   ],
+  "feature_specific": {
+    "spells": [
+      {
+        "spell": {
+          "index": "conjure_elemental",
+          "name": "conjure elemental",
+          "url": "public/assets/atlas/spell/json/conjure_elemental.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "total"
+        },
+        "special_action": "action"
+      }
+    ]
+  },
   "image": "public/assets/atlas/magic_items/elemental_gem.webp",
   "url": "public/assets/atlas/magic_items/json/elemental_gem.json",
   "updated_at": "2025-10-24T20:42:13.517Z"

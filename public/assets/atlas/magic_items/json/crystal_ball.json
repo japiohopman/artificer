@@ -35,6 +35,22 @@
     "***Crystal Ball of Telepathy.*** While scrying with the crystal ball, you can communicate telepathically with creatures you can see within 30 feet of the spell's sensor. You can also use an action to cast the suggestion spell (save DC 17) through the sensor on one of those creatures. You don't need to concentrate on this suggestion to maintain it during its duration, but it ends if scrying ends. Once used, the suggestion power of the crystal ball can't be used again until the next dawn.",
     "***Crystal Ball of True Seeing.*** While scrying with the crystal ball, you have truesight with a radius of 120 feet centered on the spell's sensor."
   ],
+  "feature_specific": {
+    "spells": [
+      {
+        "spell": {
+          "index": "scrying",
+          "name": "scrying",
+          "url": "public/assets/atlas/spell/json/scrying.json"
+        },
+        "usage": {
+          "type": "at_will"
+        },
+        "special_action": "action",
+        "fixed_dc": 17
+      }
+    ]
+  },
   "image": "public/assets/atlas/magic_items/crystal_ball.webp",
   "url": "public/assets/atlas/magic_items/json/crystal_ball.json",
   "updated_at": "2025-10-24T20:42:13.517Z"

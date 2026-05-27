@@ -16,6 +16,22 @@
     "While this bowl is filled with water, you can use an action to speak the bowl's command word and summon a water elemental, as if you had cast the conjure elemental spell. The bowl can't be used this way again until the next dawn.",
     "The bowl is about 1 foot in diameter and half as deep. It weighs 3 pounds and holds about 3 gallons."
   ],
+  "feature_specific": {
+    "spells": [
+      {
+        "spell": {
+          "index": "conjure_elemental",
+          "name": "conjure elemental",
+          "url": "public/assets/atlas/spell/json/conjure_elemental.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "day"
+        },
+        "special_action": "action"
+      }
+    ]
+  },
   "url": "public/assets/atlas/magic_items/json/bowl_of_commanding_water_elementals.json",
   "updated_at": "2025-10-24T20:42:13.517Z",
   "image": "public/assets/atlas/magic_items/bowl_of_commanding_water_elementals.webp"

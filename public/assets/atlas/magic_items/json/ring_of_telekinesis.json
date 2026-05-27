@@ -15,6 +15,21 @@
     "Ring, very rare (requires attunement)",
     "While wearing this ring, you can cast the telekinesis spell at will, but you can target only objects that aren't being worn or carried."
   ],
+  "feature_specific": {
+    "spells": [
+      {
+        "spell": {
+          "index": "telekinesis",
+          "name": "telekinesis",
+          "url": "public/assets/atlas/spell/json/telekinesis.json"
+        },
+        "usage": {
+          "type": "at_will"
+        },
+        "special_action": "action"
+      }
+    ]
+  },
   "url": "public/assets/atlas/magic_items/json/ring_of_telekinesis.json",
   "updated_at": "2025-10-24T20:42:13.517Z",
   "image": "public/assets/atlas/magic_items/ring_of_telekinesis.webp"

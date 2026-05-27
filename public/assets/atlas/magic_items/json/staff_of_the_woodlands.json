@@ -19,6 +19,115 @@
     "You can also use an action to cast the pass without trace spell from the staff without using any charges. Tree Form. You can use an action to plant one end of the staff in fertile earth and expend 1 charge to transform the staff into a healthy tree. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius.",
     "The tree appears ordinary but radiates a faint aura of transmutation magic if targeted by detect magic. While touching the tree and using another action to speak its command word, you return the staff to its normal form. Any creature in the tree falls when it reverts to a staff."
   ],
+  "feature_specific": {
+    "charges": {
+      "max": 10,
+      "recovery": "1d6 + 4",
+      "type": "day"
+    },
+    "spells": [
+      {
+        "spell": {
+          "index": "animal_friendship",
+          "name": "animal friendship",
+          "url": "public/assets/atlas/spell/json/animal_friendship.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "awaken",
+          "name": "awaken",
+          "url": "public/assets/atlas/spell/json/awaken.json"
+        },
+        "usage": {
+          "times": 5,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "barkskin",
+          "name": "barkskin",
+          "url": "public/assets/atlas/spell/json/barkskin.json"
+        },
+        "usage": {
+          "times": 2,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "locate_animals_or_plants",
+          "name": "locate animals or plants",
+          "url": "public/assets/atlas/spell/json/locate_animals_or_plants.json"
+        },
+        "usage": {
+          "times": 2,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "speak_with_animals",
+          "name": "speak with animals",
+          "url": "public/assets/atlas/spell/json/speak_with_animals.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "speak_with_plants",
+          "name": "speak with plants",
+          "url": "public/assets/atlas/spell/json/speak_with_plants.json"
+        },
+        "usage": {
+          "times": 3,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "wall_of_thorns",
+          "name": "wall of thorns",
+          "url": "public/assets/atlas/spell/json/wall_of_thorns.json"
+        },
+        "usage": {
+          "times": 6,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "pass_without_trace",
+          "name": "pass without trace",
+          "url": "public/assets/atlas/spell/json/pass_without_trace.json"
+        },
+        "usage": {
+          "type": "at_will"
+        },
+        "special_action": "action"
+      }
+    ],
+    "passive_modifiers": {
+      "attack_bonus": 2,
+      "damage_bonus": 2,
+      "spell_attack_bonus": 2
+    }
+  },
   "url": "public/assets/atlas/magic_items/json/staff_of_the_woodlands.json",
   "updated_at": "2026-05-15T12:34:42.193Z",
   "image": "public/assets/atlas/magic_items/staff_of_the_woodlands.webp",

@@ -16,6 +16,28 @@
     "This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cast the polymorph spell (save DC 15) from it.",
     "The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed."
   ],
+  "feature_specific": {
+    "charges": {
+      "max": 7,
+      "recovery": "1d6 + 1",
+      "type": "day"
+    },
+    "spells": [
+      {
+        "spell": {
+          "index": "polymorph",
+          "name": "polymorph",
+          "url": "public/assets/atlas/spell/json/polymorph.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "charge"
+        },
+        "special_action": "action",
+        "fixed_dc": 15
+      }
+    ]
+  },
   "url": "public/assets/atlas/magic_items/json/wand_of_polymorph.json",
   "updated_at": "2025-10-24T20:42:13.517Z",
   "image": "public/assets/atlas/magic_items/wand_of_polymorph.webp"

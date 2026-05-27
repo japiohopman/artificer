@@ -15,6 +15,27 @@
     "Wand, uncommon",
     "This wand has 3 charges. While holding it, you can expend 1 charge as an action to cast the detect magic spell from it. The wand regains 1d3 expended charges daily at dawn."
   ],
+  "feature_specific": {
+    "charges": {
+      "max": 3,
+      "recovery": "1d3",
+      "type": "day"
+    },
+    "spells": [
+      {
+        "spell": {
+          "index": "detect_magic",
+          "name": "detect magic",
+          "url": "public/assets/atlas/spell/json/detect_magic.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "charge"
+        },
+        "special_action": "action"
+      }
+    ]
+  },
   "url": "public/assets/atlas/magic_items/json/wand_of_magic_detection.json",
   "updated_at": "2025-10-24T20:42:13.517Z",
   "image": "public/assets/atlas/magic_items/wand_of_magic_detection.webp"
