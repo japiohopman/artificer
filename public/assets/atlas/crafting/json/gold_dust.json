@@ -8,7 +8,7 @@
   },
   "material_category": "Metal",
   "material_sub_category": "Processed",
-  "rarity": "Uncommon",
+  "rarity": "Rare",
   "cost": {
     "quantity": 25,
     "unit": "gp"
@@ -23,10 +23,11 @@
   ],
   "source": "5e SRD",
   "url": "public/assets/atlas/crafting/json/gold_dust.json",
-  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "updated_at": "2026-05-27T12:06:34.899Z",
   "image": "public/assets/atlas/crafting/gold_dust.webp",
   "category": "Refined Materials",
-  "last_updated": "27-05-2026",
-  "imageUrl": "/assets/atlas/crafting/gold_dust.webp",
-  "_type": "materials"
+  "last_updated": "27-5-2026",
+  "imageUrl": "/assets/atlas/crafting/images/gold_dust.webp",
+  "_type": "materials",
+  "background_type": "land_forest"
 }
