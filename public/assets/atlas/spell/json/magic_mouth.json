@@ -23,7 +23,7 @@
   "school": {
     "index": "illusion",
     "name": "illusion",
-    "url": "public/assets/atlas/magic_schools/illusion"
+    "url": "public/assets/atlas/magic_schools/json/illusion.json"
   },
   "classes": [
     {
@@ -34,24 +34,24 @@
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/magic_mouth.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/magic_mouth.webp",
+  "image": "public/assets/atlas/spell/images/magic_mouth.webp",
   "sprite_index": 15,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet8.webp"
 }

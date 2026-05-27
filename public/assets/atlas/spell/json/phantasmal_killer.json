@@ -21,7 +21,7 @@
     "damage_type": {
       "index": "psychic",
       "name": "psychic",
-      "url": "public/assets/atlas/damage_types/psychic"
+      "url": "public/assets/atlas/damage_types/json/psychic.json"
     },
     "damage_at_slot_level": {
       "4": "4d10"
@@ -31,26 +31,26 @@
     "dc_type": {
       "index": "wis",
       "name": "wis",
-      "url": "public/assets/atlas/ability_scores/wisdom"
+      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
     },
     "dc_success": "none"
   },
   "school": {
     "index": "illusion",
     "name": "illusion",
-    "url": "public/assets/atlas/magic_schools/illusion"
+    "url": "public/assets/atlas/magic_schools/json/illusion.json"
   },
   "classes": [
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/phantasmal_killer.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/phantasmal_killer.webp",
+  "image": "public/assets/atlas/spell/images/phantasmal_killer.webp",
   "sprite_index": 15,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet9.webp"
 }

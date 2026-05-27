@@ -26,7 +26,7 @@
     "damage_type": {
       "index": "radiant",
       "name": "radiant",
-      "url": "public/assets/atlas/damage_types/radiant"
+      "url": "public/assets/atlas/damage_types/json/radiant.json"
     },
     "damage_at_slot_level": {
       "2": "2d10",
@@ -43,7 +43,7 @@
     "dc_type": {
       "index": "con",
       "name": "con",
-      "url": "public/assets/atlas/ability_scores/constitution"
+      "url": "public/assets/atlas/ability_scores/json/constitution.json"
     },
     "dc_success": "half"
   },
@@ -54,25 +54,25 @@
   "school": {
     "index": "evocation",
     "name": "evocation",
-    "url": "public/assets/atlas/magic_schools/evocation"
+    "url": "public/assets/atlas/magic_schools/json/evocation.json"
   },
   "classes": [
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/moonbeam.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/moonbeam.webp",
+  "image": "public/assets/atlas/spell/images/moonbeam.webp",
   "sprite_index": 10,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet9.webp"
 }

@@ -20,7 +20,7 @@
     "damage_type": {
       "index": "poison",
       "name": "poison",
-      "url": "public/assets/atlas/damage_types/poison"
+      "url": "public/assets/atlas/damage_types/json/poison.json"
     },
     "damage_at_character_level": {
       "1": "1d12",
@@ -33,14 +33,14 @@
     "dc_type": {
       "index": "con",
       "name": "con",
-      "url": "public/assets/atlas/ability_scores/constitution"
+      "url": "public/assets/atlas/ability_scores/json/constitution.json"
     },
     "dc_success": "none"
   },
   "school": {
     "index": "conjuration",
     "name": "conjuration",
-    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+    "url": "public/assets/atlas/magic_schools/json/conjuration.json"
   },
   "classes": [
     {
@@ -51,28 +51,28 @@
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     },
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/poison_spray.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/poison_spray.webp",
+  "image": "public/assets/atlas/spell/images/poison_spray.webp",
   "sprite_index": 21,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet9.webp"
 }

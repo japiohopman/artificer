@@ -21,7 +21,7 @@
     "damage_type": {
       "index": "cold",
       "name": "cold",
-      "url": "public/assets/atlas/damage_types/cold"
+      "url": "public/assets/atlas/damage_types/json/cold.json"
     },
     "damage_at_character_level": {
       "1": "1d8",
@@ -33,7 +33,7 @@
   "school": {
     "index": "evocation",
     "name": "evocation",
-    "url": "public/assets/atlas/magic_schools/evocation"
+    "url": "public/assets/atlas/magic_schools/json/evocation.json"
   },
   "classes": [
     {
@@ -44,24 +44,24 @@
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/ray_of_frost.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/ray_of_frost.webp",
+  "image": "public/assets/atlas/spell/images/ray_of_frost.webp",
   "sprite_index": 14,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet10.webp"
 }

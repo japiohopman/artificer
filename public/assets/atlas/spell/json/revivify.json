@@ -20,7 +20,7 @@
   "school": {
     "index": "conjuration",
     "name": "conjuration",
-    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+    "url": "public/assets/atlas/magic_schools/json/conjuration.json"
   },
   "classes": [
     {
@@ -31,29 +31,29 @@
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "paladin",
       "name": "paladin",
-      "url": "public/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     },
     {
       "index": "life",
       "name": "life",
-      "url": "public/assets/atlas/subclasses/life"
+      "url": "public/assets/atlas/subclasses/json/life.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/revivify.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/revivify.webp",
+  "image": "public/assets/atlas/spell/images/revivify.webp",
   "sprite_index": 22,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet10.webp"
 }
