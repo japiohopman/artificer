@@ -1,0 +1,44 @@
+{
+  "index": "boots",
+  "name": "boots",
+  "equipment": [
+    {
+      "index": "boots_of_elvenkind",
+      "name": "boots of elvenkind",
+      "url": "public/assets/atlas/magic_items/json/boots_of_elvenkind.json"
+    },
+    {
+      "index": "boots_of_levitation",
+      "name": "boots of levitation",
+      "url": "public/assets/atlas/magic_items/json/boots_of_levitation.json"
+    },
+    {
+      "index": "boots_of_speed",
+      "name": "boots of speed",
+      "url": "public/assets/atlas/magic_items/json/boots_of_speed.json"
+    },
+    {
+      "index": "boots_of_striding_and_springing",
+      "name": "boots of striding and springing",
+      "url": "public/assets/atlas/magic_items/json/boots_of_striding_and_springing.json"
+    },
+    {
+      "index": "boots_of_the_winterlands",
+      "name": "boots of the winterlands",
+      "url": "public/assets/atlas/magic_items/json/boots_of_the_winterlands.json"
+    },
+    {
+      "index": "slippers_of_spider_climbing",
+      "name": "slippers of spider climbing",
+      "url": "public/assets/atlas/magic_items/json/slippers_of_spider_climbing.json"
+    },
+    {
+      "index": "winged_boots",
+      "name": "winged boots",
+      "url": "public/assets/atlas/magic_items/json/winged_boots.json"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/boots.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/boots.webp"
+}

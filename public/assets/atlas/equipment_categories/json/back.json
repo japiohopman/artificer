@@ -1,0 +1,54 @@
+{
+  "index": "back",
+  "name": "back",
+  "equipment": [
+    {
+      "index": "cape_of_the_mountebank",
+      "name": "cape of the mountebank",
+      "url": "public/assets/atlas/magic_items/json/cape_of_the_mountebank.json"
+    },
+    {
+      "index": "cloak_of_arachnida",
+      "name": "cloak of arachnida",
+      "url": "public/assets/atlas/magic_items/json/cloak_of_arachnida.json"
+    },
+    {
+      "index": "cloak_of_displacement",
+      "name": "cloak of displacement",
+      "url": "public/assets/atlas/magic_items/json/cloak_of_displacement.json"
+    },
+    {
+      "index": "cloak_of_elvenkind",
+      "name": "cloak of elvenkind",
+      "url": "public/assets/atlas/magic_items/json/cloak_of_elvenkind.json"
+    },
+    {
+      "index": "cloak_of_protection",
+      "name": "cloak of protection",
+      "url": "public/assets/atlas/magic_items/json/cloak_of_protection.json"
+    },
+    {
+      "index": "cloak_of_the_bat",
+      "name": "cloak of the bat",
+      "url": "public/assets/atlas/magic_items/json/cloak_of_the_bat.json"
+    },
+    {
+      "index": "cloak_of_the_manta_ray",
+      "name": "cloak of the manta ray",
+      "url": "public/assets/atlas/magic_items/json/cloak_of_the_manta_ray.json"
+    },
+    {
+      "index": "mantle_of_spell_resistance",
+      "name": "mantle of spell resistance",
+      "url": "public/assets/atlas/magic_items/json/mantle_of_spell_resistance.json"
+    },
+    {
+      "index": "wings_of_flying",
+      "name": "wings of flying",
+      "url": "public/assets/atlas/magic_items/json/wings_of_flying.json"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/back.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/back.webp"
+}
