@@ -29,7 +29,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -37,7 +37,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -65,7 +65,7 @@
         "dc_type": {
           "index": "str",
           "name": "str",
-          "url": "public/assets/atlas/ability_scores/strength"
+          "url": "assets/atlas/ability_scores/json/strength.json"
         },
         "dc_value": 12,
         "success_type": "none"
@@ -83,7 +83,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d6+2"
         }
@@ -99,7 +99,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "1d4+2"
         }
@@ -107,8 +107,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/panther.webp",
-  "url": "public/assets/atlas/enemies/json/panther.json",
+  "image": "assets/atlas/enemies/images/panther.webp",
+  "url": "assets/atlas/enemies/json/panther.json",
   "updated_at": "2026-04-16T08:21:55.354Z",
   "forms": [],
   "legendary_actions": [],
