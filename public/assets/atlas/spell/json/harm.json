@@ -19,7 +19,7 @@
     "damage_type": {
       "index": "necrotic",
       "name": "necrotic",
-      "url": "public/assets/atlas/damage_types/necrotic"
+      "url": "public/assets/atlas/damage_types/json/necrotic.json"
     },
     "damage_at_slot_level": {
       "6": "14d6"
@@ -29,26 +29,26 @@
     "dc_type": {
       "index": "con",
       "name": "con",
-      "url": "public/assets/atlas/ability_scores/constitution"
+      "url": "public/assets/atlas/ability_scores/json/constitution.json"
     },
     "dc_success": "half"
   },
   "school": {
     "index": "necromancy",
     "name": "necromancy",
-    "url": "public/assets/atlas/magic_schools/necromancy"
+    "url": "public/assets/atlas/magic_schools/json/necromancy.json"
   },
   "classes": [
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/harm.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/harm.webp",
+  "image": "public/assets/atlas/spell/images/harm.webp",
   "sprite_index": 0,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet7.webp"
 }

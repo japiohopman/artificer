@@ -19,7 +19,7 @@
     "damage_type": {
       "index": "radiant",
       "name": "radiant",
-      "url": "public/assets/atlas/damage_types/radiant"
+      "url": "public/assets/atlas/damage_types/json/radiant.json"
     },
     "damage_at_slot_level": {
       "4": "20"
@@ -29,7 +29,7 @@
     "dc_type": {
       "index": "dex",
       "name": "dex",
-      "url": "public/assets/atlas/ability_scores/dexterity"
+      "url": "public/assets/atlas/ability_scores/json/dexterity.json"
     },
     "dc_success": "half"
   },
@@ -40,19 +40,19 @@
   "school": {
     "index": "conjuration",
     "name": "conjuration",
-    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+    "url": "public/assets/atlas/magic_schools/json/conjuration.json"
   },
   "classes": [
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/guardian_of_faith.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/guardian_of_faith.webp",
+  "image": "public/assets/atlas/spell/images/guardian_of_faith.webp",
   "sprite_index": 18,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet6.webp"
 }

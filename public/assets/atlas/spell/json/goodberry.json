@@ -21,24 +21,24 @@
   "school": {
     "index": "transmutation",
     "name": "transmutation",
-    "url": "public/assets/atlas/magic_schools/transmutation"
+    "url": "public/assets/atlas/magic_schools/json/transmutation.json"
   },
   "classes": [
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     },
     {
       "index": "ranger",
       "name": "ranger",
-      "url": "public/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/goodberry.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/goodberry.webp",
+  "image": "public/assets/atlas/spell/images/goodberry.webp",
   "sprite_index": 14,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet6.webp"
 }

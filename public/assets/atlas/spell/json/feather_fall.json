@@ -19,7 +19,7 @@
   "school": {
     "index": "transmutation",
     "name": "transmutation",
-    "url": "public/assets/atlas/magic_schools/transmutation"
+    "url": "public/assets/atlas/magic_schools/json/transmutation.json"
   },
   "classes": [
     {
@@ -30,29 +30,29 @@
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/feather_fall.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/feather_fall.webp",
+  "image": "public/assets/atlas/spell/images/feather_fall.webp",
   "sprite_index": 8,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet5.webp"
 }

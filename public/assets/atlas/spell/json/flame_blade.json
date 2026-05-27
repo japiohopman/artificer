@@ -25,7 +25,7 @@
     "damage_type": {
       "index": "fire",
       "name": "fire",
-      "url": "public/assets/atlas/damage_types/fire"
+      "url": "public/assets/atlas/damage_types/json/fire.json"
     },
     "damage_at_slot_level": {
       "2": "3d6",
@@ -37,25 +37,25 @@
   "school": {
     "index": "evocation",
     "name": "evocation",
-    "url": "public/assets/atlas/magic_schools/evocation"
+    "url": "public/assets/atlas/magic_schools/json/evocation.json"
   },
   "classes": [
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/flame_blade.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/flame_blade.webp",
+  "image": "public/assets/atlas/spell/images/flame_blade.webp",
   "sprite_index": 19,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet5.webp"
 }

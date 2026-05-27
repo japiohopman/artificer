@@ -24,7 +24,7 @@
     "damage_type": {
       "index": "psychic",
       "name": "psychic",
-      "url": "public/assets/atlas/damage_types/psychic"
+      "url": "public/assets/atlas/damage_types/json/psychic.json"
     },
     "damage_at_slot_level": {
       "8": "4d6"
@@ -34,7 +34,7 @@
     "dc_type": {
       "index": "int",
       "name": "int",
-      "url": "public/assets/atlas/ability_scores/intelligence"
+      "url": "public/assets/atlas/ability_scores/json/intelligence.json"
     },
     "dc_success": "other",
     "desc": "The target always takes the damage. On a failed save, the creature's Intelligence and Charisma scores become 1."
@@ -42,34 +42,34 @@
   "school": {
     "index": "enchantment",
     "name": "enchantment",
-    "url": "public/assets/atlas/magic_schools/enchantment"
+    "url": "public/assets/atlas/magic_schools/json/enchantment.json"
   },
   "classes": [
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     },
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/feeblemind.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/feeblemind.webp",
+  "image": "public/assets/atlas/spell/images/feeblemind.webp",
   "sprite_index": 9,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet5.webp"
 }

@@ -21,30 +21,30 @@
   "school": {
     "index": "necromancy",
     "name": "necromancy",
-    "url": "public/assets/atlas/magic_schools/necromancy"
+    "url": "public/assets/atlas/magic_schools/json/necromancy.json"
   },
   "classes": [
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/gentle_repose.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/gentle_repose.webp",
+  "image": "public/assets/atlas/spell/images/gentle_repose.webp",
   "sprite_index": 9,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet6.webp"
 }

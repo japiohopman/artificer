@@ -21,7 +21,7 @@
     "damage_type": {
       "index": "fire",
       "name": "fire",
-      "url": "public/assets/atlas/damage_types/fire"
+      "url": "public/assets/atlas/damage_types/json/fire.json"
     },
     "damage_at_character_level": {
       "1": "1d10",
@@ -33,7 +33,7 @@
   "school": {
     "index": "evocation",
     "name": "evocation",
-    "url": "public/assets/atlas/magic_schools/evocation"
+    "url": "public/assets/atlas/magic_schools/json/evocation.json"
   },
   "classes": [
     {
@@ -44,18 +44,18 @@
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/fire_bolt.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/fire_bolt.webp",
+  "image": "public/assets/atlas/spell/images/fire_bolt.webp",
   "sprite_index": 15,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet5.webp"
 }

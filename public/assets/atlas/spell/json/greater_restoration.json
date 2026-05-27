@@ -24,7 +24,7 @@
   "school": {
     "index": "abjuration",
     "name": "abjuration",
-    "url": "public/assets/atlas/magic_schools/abjuration"
+    "url": "public/assets/atlas/magic_schools/json/abjuration.json"
   },
   "classes": [
     {
@@ -35,23 +35,23 @@
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/greater_restoration.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/greater_restoration.webp",
+  "image": "public/assets/atlas/spell/images/greater_restoration.webp",
   "sprite_index": 17,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet6.webp"
 }

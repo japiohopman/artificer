@@ -35,7 +35,7 @@
     "dc_type": {
       "index": "wis",
       "name": "wis",
-      "url": "public/assets/atlas/ability_scores/wisdom"
+      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
     },
     "dc_success": "none",
     "desc": "If the creature succeeds, it is immune to this spell if you cast it again"
@@ -43,24 +43,24 @@
   "school": {
     "index": "abjuration",
     "name": "abjuration",
-    "url": "public/assets/atlas/magic_schools/abjuration"
+    "url": "public/assets/atlas/magic_schools/json/abjuration.json"
   },
   "classes": [
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/imprisonment.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/imprisonment.webp",
+  "image": "public/assets/atlas/spell/images/imprisonment.webp",
   "sprite_index": 17,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet7.webp"
 }

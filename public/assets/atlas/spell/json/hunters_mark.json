@@ -19,19 +19,19 @@
   "school": {
     "index": "divination",
     "name": "divination",
-    "url": "public/assets/atlas/magic_schools/divination"
+    "url": "public/assets/atlas/magic_schools/json/divination.json"
   },
   "classes": [
     {
       "index": "ranger",
       "name": "ranger",
-      "url": "public/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/hunters_mark.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/hunters_mark.webp",
+  "image": "public/assets/atlas/spell/images/hunters_mark.webp",
   "sprite_index": 12,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet7.webp"
 }

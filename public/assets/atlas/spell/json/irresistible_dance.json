@@ -18,24 +18,24 @@
   "school": {
     "index": "enchantment",
     "name": "enchantment",
-    "url": "public/assets/atlas/magic_schools/enchantment"
+    "url": "public/assets/atlas/magic_schools/json/enchantment.json"
   },
   "classes": [
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/irresistible_dance.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/irresistible_dance.webp",
+  "image": "public/assets/atlas/spell/images/irresistible_dance.webp",
   "sprite_index": 23,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet7.webp"
 }

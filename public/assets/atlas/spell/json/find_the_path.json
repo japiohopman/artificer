@@ -21,29 +21,29 @@
   "school": {
     "index": "divination",
     "name": "divination",
-    "url": "public/assets/atlas/magic_schools/divination"
+    "url": "public/assets/atlas/magic_schools/json/divination.json"
   },
   "classes": [
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/find_the_path.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/find_the_path.webp",
+  "image": "public/assets/atlas/spell/images/find_the_path.webp",
   "sprite_index": 12,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet5.webp"
 }

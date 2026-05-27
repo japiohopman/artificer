@@ -24,7 +24,7 @@
     "dc_type": {
       "index": "con",
       "name": "con",
-      "url": "public/assets/atlas/ability_scores/constitution"
+      "url": "public/assets/atlas/ability_scores/json/constitution.json"
     },
     "dc_success": "none",
     "desc": "On a failed save, the target is restrained as its flesh begins to harden."
@@ -32,24 +32,24 @@
   "school": {
     "index": "transmutation",
     "name": "transmutation",
-    "url": "public/assets/atlas/magic_schools/transmutation"
+    "url": "public/assets/atlas/magic_schools/json/transmutation.json"
   },
   "classes": [
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/flesh_to_stone.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/flesh_to_stone.webp",
+  "image": "public/assets/atlas/spell/images/flesh_to_stone.webp",
   "sprite_index": 22,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet5.webp"
 }

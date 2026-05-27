@@ -22,25 +22,25 @@
   "school": {
     "index": "conjuration",
     "name": "conjuration",
-    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+    "url": "public/assets/atlas/magic_schools/json/conjuration.json"
   },
   "classes": [
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/floating_disk.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/floating_disk.webp",
+  "image": "public/assets/atlas/spell/images/floating_disk.webp",
   "sprite_index": 23,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet5.webp"
 }

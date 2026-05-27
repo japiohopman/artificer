@@ -20,7 +20,7 @@
     "damage_type": {
       "index": "necrotic",
       "name": "necrotic",
-      "url": "public/assets/atlas/damage_types/necrotic"
+      "url": "public/assets/atlas/damage_types/json/necrotic.json"
     },
     "damage_at_slot_level": {
       "7": "7d8 + 30"
@@ -30,36 +30,36 @@
     "dc_type": {
       "index": "con",
       "name": "con",
-      "url": "public/assets/atlas/ability_scores/constitution"
+      "url": "public/assets/atlas/ability_scores/json/constitution.json"
     },
     "dc_success": "half"
   },
   "school": {
     "index": "necromancy",
     "name": "necromancy",
-    "url": "public/assets/atlas/magic_schools/necromancy"
+    "url": "public/assets/atlas/magic_schools/json/necromancy.json"
   },
   "classes": [
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/finger_of_death.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/finger_of_death.webp",
+  "image": "public/assets/atlas/spell/images/finger_of_death.webp",
   "sprite_index": 14,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet5.webp"
 }

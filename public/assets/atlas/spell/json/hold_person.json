@@ -23,62 +23,62 @@
     "dc_type": {
       "index": "wis",
       "name": "wis",
-      "url": "public/assets/atlas/ability_scores/wisdom"
+      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
     },
     "dc_success": "none"
   },
   "school": {
     "index": "enchantment",
     "name": "enchantment",
-    "url": "public/assets/atlas/magic_schools/enchantment"
+    "url": "public/assets/atlas/magic_schools/json/enchantment.json"
   },
   "classes": [
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     },
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     },
     {
       "index": "land",
       "name": "land",
-      "url": "public/assets/atlas/subclasses/land"
+      "url": "public/assets/atlas/subclasses/json/land.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/hold_person.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/hold_person.webp",
+  "image": "public/assets/atlas/spell/images/hold_person.webp",
   "sprite_index": 10,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet7.webp"
 }

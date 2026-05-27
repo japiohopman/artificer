@@ -21,14 +21,14 @@
     "dc_type": {
       "index": "dex",
       "name": "dex",
-      "url": "public/assets/atlas/ability_scores/dexterity"
+      "url": "public/assets/atlas/ability_scores/json/dexterity.json"
     },
     "dc_success": "none"
   },
   "school": {
     "index": "evocation",
     "name": "evocation",
-    "url": "public/assets/atlas/magic_schools/evocation"
+    "url": "public/assets/atlas/magic_schools/json/evocation.json"
   },
   "classes": [
     {
@@ -39,34 +39,34 @@
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/light.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/light.webp",
+  "image": "public/assets/atlas/spell/images/light.webp",
   "sprite_index": 4,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet8.webp"
 }

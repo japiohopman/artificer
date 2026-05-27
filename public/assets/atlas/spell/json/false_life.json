@@ -33,7 +33,7 @@
   "school": {
     "index": "necromancy",
     "name": "necromancy",
-    "url": "public/assets/atlas/magic_schools/necromancy"
+    "url": "public/assets/atlas/magic_schools/json/necromancy.json"
   },
   "classes": [
     {
@@ -44,24 +44,24 @@
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/false_life.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/false_life.webp",
+  "image": "public/assets/atlas/spell/images/false_life.webp",
   "sprite_index": 6,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet5.webp"
 }

@@ -22,7 +22,7 @@
   "school": {
     "index": "illusion",
     "name": "illusion",
-    "url": "public/assets/atlas/magic_schools/illusion"
+    "url": "public/assets/atlas/magic_schools/json/illusion.json"
   },
   "classes": [
     {
@@ -33,39 +33,39 @@
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     },
     {
       "index": "land",
       "name": "land",
-      "url": "public/assets/atlas/subclasses/land"
+      "url": "public/assets/atlas/subclasses/json/land.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/invisibility.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/invisibility.webp",
+  "image": "public/assets/atlas/spell/images/invisibility.webp",
   "sprite_index": 22,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet7.webp"
 }

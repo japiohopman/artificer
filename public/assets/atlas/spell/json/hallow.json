@@ -33,7 +33,7 @@
     "dc_type": {
       "index": "cha",
       "name": "cha",
-      "url": "public/assets/atlas/ability_scores/charisma"
+      "url": "public/assets/atlas/ability_scores/json/charisma.json"
     },
     "dc_success": "none"
   },
@@ -44,25 +44,25 @@
   "school": {
     "index": "evocation",
     "name": "evocation",
-    "url": "public/assets/atlas/magic_schools/evocation"
+    "url": "public/assets/atlas/magic_schools/json/evocation.json"
   },
   "classes": [
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     }
   ],
   "subclasses": [
     {
       "index": "fiend",
       "name": "fiend",
-      "url": "public/assets/atlas/subclasses/fiend"
+      "url": "public/assets/atlas/subclasses/json/fiend.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/hallow.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/hallow.webp",
+  "image": "public/assets/atlas/spell/images/hallow.webp",
   "sprite_index": 23,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet6.webp"
 }
