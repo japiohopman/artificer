@@ -1,0 +1,64 @@
+{
+  "index": "head",
+  "name": "head",
+  "equipment": [
+    {
+      "index": "circlet_of_blasting",
+      "name": "circlet of blasting",
+      "url": "public/assets/atlas/magic_items/json/circlet_of_blasting.json"
+    },
+    {
+      "index": "eyes_of_charming",
+      "name": "eyes of charming",
+      "url": "public/assets/atlas/magic_items/json/eyes_of_charming.json"
+    },
+    {
+      "index": "eyes_of_minute_seeing",
+      "name": "eyes of minute seeing",
+      "url": "public/assets/atlas/magic_items/json/eyes_of_minute_seeing.json"
+    },
+    {
+      "index": "eyes_of_the_eagle",
+      "name": "eyes of the eagle",
+      "url": "public/assets/atlas/magic_items/json/eyes_of_the_eagle.json"
+    },
+    {
+      "index": "goggles_of_night",
+      "name": "goggles of night",
+      "url": "public/assets/atlas/magic_items/json/goggles_of_night.json"
+    },
+    {
+      "index": "hat_of_disguise",
+      "name": "hat of disguise",
+      "url": "public/assets/atlas/magic_items/json/hat_of_disguise.json"
+    },
+    {
+      "index": "headband_of_intellect",
+      "name": "headband of intellect",
+      "url": "public/assets/atlas/magic_items/json/headband_of_intellect.json"
+    },
+    {
+      "index": "helm_of_brilliance",
+      "name": "helm of brilliance",
+      "url": "public/assets/atlas/magic_items/json/helm_of_brilliance.json"
+    },
+    {
+      "index": "helm_of_comprehending_languages",
+      "name": "helm of comprehending languages",
+      "url": "public/assets/atlas/magic_items/json/helm_of_comprehending_languages.json"
+    },
+    {
+      "index": "helm_of_telepathy",
+      "name": "helm of telepathy",
+      "url": "public/assets/atlas/magic_items/json/helm_of_telepathy.json"
+    },
+    {
+      "index": "helm_of_teleportation",
+      "name": "helm of teleportation",
+      "url": "public/assets/atlas/magic_items/json/helm_of_teleportation.json"
+    }
+  ],
+  "url": "public/assets/atlas/equipment_categories/json/head.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "public/assets/atlas/equipment_categories/head.webp"
+}
