@@ -1,0 +1,32 @@
+{
+  "index": "bat_fur",
+  "name": "Bat Fur",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Hide",
+  "material_sub_category": "Fauna",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "cp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "A small patch of fur from a bat, used in spells involving darkness and flight."
+  ],
+  "properties": [
+    "Fauna",
+    "Darkness"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/bat_fur.json",
+  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "image": "public/assets/atlas/crafting/bat_fur.webp",
+  "category": "Monster Parts",
+  "last_updated": "27-05-2026",
+  "imageUrl": "/assets/atlas/crafting/bat_fur.webp",
+  "_type": "materials"
+}

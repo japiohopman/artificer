@@ -1,5 +1,22 @@
 {
   "name": "Refined Materials",
   "index": "refined_materials",
-  "materials": []
+  "materials": [
+    {
+      "name": "Diamond Dust",
+      "index": "diamond_dust"
+    },
+    {
+      "name": "Ruby Dust",
+      "index": "ruby_dust"
+    },
+    {
+      "name": "Jade Dust",
+      "index": "jade_dust"
+    },
+    {
+      "name": "Gold Dust",
+      "index": "gold_dust"
+    }
+  ]
 }

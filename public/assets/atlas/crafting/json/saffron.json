@@ -1,0 +1,32 @@
+{
+  "index": "saffron",
+  "name": "Saffron",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Herb",
+  "material_sub_category": "Flora",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "A precious spice derived from the flower of Crocus sativus, used in specialized ointments and rituals."
+  ],
+  "properties": [
+    "Herb",
+    "Valuable"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/saffron.json",
+  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "image": "public/assets/atlas/crafting/saffron.webp",
+  "category": "Herbs",
+  "last_updated": "27-05-2026",
+  "imageUrl": "/assets/atlas/crafting/saffron.webp",
+  "_type": "materials"
+}

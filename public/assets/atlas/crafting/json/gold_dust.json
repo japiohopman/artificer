@@ -1,0 +1,32 @@
+{
+  "index": "gold_dust",
+  "name": "Gold Dust",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Metal",
+  "material_sub_category": "Processed",
+  "rarity": "Uncommon",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "Finely ground gold, often consumed in spells that create lasting or brilliant effects."
+  ],
+  "properties": [
+    "Powder",
+    "Valuable"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/gold_dust.json",
+  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "image": "public/assets/atlas/crafting/gold_dust.webp",
+  "category": "Refined Materials",
+  "last_updated": "27-05-2026",
+  "imageUrl": "/assets/atlas/crafting/gold_dust.webp",
+  "_type": "materials"
+}

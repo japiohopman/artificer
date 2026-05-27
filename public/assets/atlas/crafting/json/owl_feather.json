@@ -1,0 +1,32 @@
+{
+  "index": "owl_feather",
+  "name": "Owl Feather",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Fiber",
+  "material_sub_category": "Fauna",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "cp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "A feather from an owl, used in spells that grant enhanced vision or silence."
+  ],
+  "properties": [
+    "Fauna",
+    "Perception"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/owl_feather.json",
+  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "image": "public/assets/atlas/crafting/owl_feather.webp",
+  "category": "Monster Parts",
+  "last_updated": "27-05-2026",
+  "imageUrl": "/assets/atlas/crafting/owl_feather.webp",
+  "_type": "materials"
+}

@@ -1,0 +1,32 @@
+{
+  "index": "jade_dust",
+  "name": "Jade Dust",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Stone",
+  "material_sub_category": "Processed",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "Finely ground jade, used in protective and life-sustaining spells."
+  ],
+  "properties": [
+    "Powder",
+    "Life"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/jade_dust.json",
+  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "image": "public/assets/atlas/crafting/jade_dust.webp",
+  "category": "Refined Materials",
+  "last_updated": "27-05-2026",
+  "imageUrl": "/assets/atlas/crafting/jade_dust.webp",
+  "_type": "materials"
+}

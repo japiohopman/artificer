@@ -1,0 +1,32 @@
+{
+  "index": "mercury",
+  "name": "Mercury",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Metal",
+  "material_sub_category": "Liquid",
+  "rarity": "Uncommon",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "A heavy, silvery liquid metal at room temperature, used in transmutation and illusion magic."
+  ],
+  "properties": [
+    "Metal",
+    "Liquid"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/mercury.json",
+  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "image": "public/assets/atlas/crafting/mercury.webp",
+  "category": "Raw Materials",
+  "last_updated": "27-05-2026",
+  "imageUrl": "/assets/atlas/crafting/mercury.webp",
+  "_type": "materials"
+}

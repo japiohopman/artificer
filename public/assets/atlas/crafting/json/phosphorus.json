@@ -1,0 +1,32 @@
+{
+  "index": "phosphorus",
+  "name": "Phosphorus",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Mineral",
+  "material_sub_category": "Natural",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "A reactive mineral that glows or ignites, used in light-producing and fire magic."
+  ],
+  "properties": [
+    "Mineral",
+    "Light"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/phosphorus.json",
+  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "image": "public/assets/atlas/crafting/phosphorus.webp",
+  "category": "Raw Materials",
+  "last_updated": "27-05-2026",
+  "imageUrl": "/assets/atlas/crafting/phosphorus.webp",
+  "_type": "materials"
+}

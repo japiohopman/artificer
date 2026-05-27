@@ -1,0 +1,32 @@
+{
+  "index": "charcoal",
+  "name": "Charcoal",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Fuel",
+  "material_sub_category": "Processed",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "sp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "A black residue consisting of carbon, used as a reagent and for drawing ritual circles."
+  ],
+  "properties": [
+    "Fuel",
+    "Reagent"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/charcoal.json",
+  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "image": "public/assets/atlas/crafting/charcoal.webp",
+  "category": "Raw Materials",
+  "last_updated": "27-05-2026",
+  "imageUrl": "/assets/atlas/crafting/charcoal.webp",
+  "_type": "materials"
+}

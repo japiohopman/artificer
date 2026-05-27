@@ -1,0 +1,32 @@
+{
+  "index": "ruby_dust",
+  "name": "Ruby Dust",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Mineral",
+  "material_sub_category": "Processed",
+  "rarity": "Rare",
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "Finely ground ruby, used in powerful evocation and illusion magic."
+  ],
+  "properties": [
+    "Powder",
+    "Fire"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/ruby_dust.json",
+  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "image": "public/assets/atlas/crafting/ruby_dust.webp",
+  "category": "Refined Materials",
+  "last_updated": "27-05-2026",
+  "imageUrl": "/assets/atlas/crafting/ruby_dust.webp",
+  "_type": "materials"
+}
