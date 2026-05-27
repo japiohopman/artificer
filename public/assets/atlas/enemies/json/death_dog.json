@@ -29,7 +29,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -37,7 +37,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -83,7 +83,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "1d6+2"
         }
@@ -91,8 +91,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/death_dog.webp",
-  "url": "public/assets/atlas/enemies/json/death_dog.json",
+  "image": "assets/atlas/enemies/images/death_dog.webp",
+  "url": "assets/atlas/enemies/json/death_dog.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

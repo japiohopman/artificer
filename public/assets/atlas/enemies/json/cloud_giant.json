@@ -28,7 +28,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -36,7 +36,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -44,7 +44,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     },
     {
@@ -52,7 +52,7 @@
       "proficiency": {
         "index": "skill_insight",
         "name": "skill: insight",
-        "url": "public/assets/atlas/proficiencies/skill_insight"
+        "url": "assets/atlas/proficiencies/json/skill_insight.json"
       }
     },
     {
@@ -60,7 +60,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -88,7 +88,7 @@
         "ability": {
           "index": "cha",
           "name": "cha",
-          "url": "public/assets/atlas/ability_scores/charisma"
+          "url": "assets/atlas/ability_scores/json/charisma.json"
         },
         "components_required": [
           "V",
@@ -98,7 +98,7 @@
           {
             "name": "detect magic",
             "level": 1,
-            "url": "public/assets/atlas/spells/detect_magic",
+            "url": "assets/atlas/spells/json/detect_magic.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -107,7 +107,7 @@
           {
             "name": "fog cloud",
             "level": 1,
-            "url": "public/assets/atlas/spells/fog_cloud",
+            "url": "assets/atlas/spells/json/fog_cloud.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -116,7 +116,7 @@
           {
             "name": "light",
             "level": 0,
-            "url": "public/assets/atlas/spells/light",
+            "url": "assets/atlas/spells/json/light.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -125,7 +125,7 @@
           {
             "name": "feather fall",
             "level": 1,
-            "url": "public/assets/atlas/spells/feather_fall",
+            "url": "assets/atlas/spells/json/feather_fall.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -135,7 +135,7 @@
           {
             "name": "fly",
             "level": 3,
-            "url": "public/assets/atlas/spells/fly",
+            "url": "assets/atlas/spells/json/fly.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -145,7 +145,7 @@
           {
             "name": "misty step",
             "level": 2,
-            "url": "public/assets/atlas/spells/misty_step",
+            "url": "assets/atlas/spells/json/misty_step.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -155,7 +155,7 @@
           {
             "name": "telekinesis",
             "level": 5,
-            "url": "public/assets/atlas/spells/telekinesis",
+            "url": "assets/atlas/spells/json/telekinesis.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -165,7 +165,7 @@
           {
             "name": "control weather",
             "level": 8,
-            "url": "public/assets/atlas/spells/constitutiontrol_weather",
+            "url": "assets/atlas/spells/json/constitutiontrol_weather.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -175,7 +175,7 @@
           {
             "name": "gaseous form",
             "level": 3,
-            "url": "public/assets/atlas/spells/gaseous_form",
+            "url": "assets/atlas/spells/json/gaseous_form.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -210,7 +210,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "3d8+8"
         }
@@ -226,7 +226,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "4d10+8"
         }
@@ -234,8 +234,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/cloud_giant.webp",
-  "url": "public/assets/atlas/enemies/json/cloud_giant.json",
+  "image": "assets/atlas/enemies/images/cloud_giant.webp",
+  "url": "assets/atlas/enemies/json/cloud_giant.json",
   "updated_at": "2026-04-17T10:00:24.133Z",
   "forms": [],
   "legendary_actions": [],

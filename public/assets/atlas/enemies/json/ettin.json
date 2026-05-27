@@ -28,7 +28,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -84,7 +84,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d8+5"
         }
@@ -100,7 +100,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d8+5"
         }
@@ -108,8 +108,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/ettin.webp",
-  "url": "public/assets/atlas/enemies/json/ettin.json",
+  "image": "assets/atlas/enemies/images/ettin.webp",
+  "url": "assets/atlas/enemies/json/ettin.json",
   "updated_at": "2026-04-16T12:22:53.552Z",
   "forms": [],
   "legendary_actions": [],

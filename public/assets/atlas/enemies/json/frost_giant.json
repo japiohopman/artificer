@@ -23,7 +23,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -31,7 +31,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -39,7 +39,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     },
     {
@@ -47,7 +47,7 @@
       "proficiency": {
         "index": "skill_athletics",
         "name": "skill: athletics",
-        "url": "public/assets/atlas/proficiencies/skill_athletics"
+        "url": "assets/atlas/proficiencies/json/skill_athletics.json"
       }
     },
     {
@@ -55,7 +55,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -95,7 +95,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "3d12+6"
         }
@@ -111,7 +111,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "4d10+6"
         }
@@ -119,8 +119,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/frost_giant.webp",
-  "url": "public/assets/atlas/enemies/json/frost_giant.json",
+  "image": "assets/atlas/enemies/images/frost_giant.webp",
+  "url": "assets/atlas/enemies/json/frost_giant.json",
   "updated_at": "2026-05-11T03:32:59.331Z",
   "forms": [],
   "legendary_actions": [],

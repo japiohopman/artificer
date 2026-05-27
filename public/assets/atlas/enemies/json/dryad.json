@@ -15,7 +15,7 @@
       "spell": {
         "index": "barkskin",
         "name": "barkskin",
-        "url": "public/assets/atlas/spells/barkskin"
+        "url": "assets/atlas/spells/json/barkskin.json"
       }
     }
   ],
@@ -37,7 +37,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -45,7 +45,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -69,7 +69,7 @@
         "ability": {
           "index": "cha",
           "name": "cha",
-          "url": "public/assets/atlas/ability_scores/charisma"
+          "url": "assets/atlas/ability_scores/json/charisma.json"
         },
         "dc": 14,
         "components_required": [
@@ -80,7 +80,7 @@
           {
             "name": "druidcraft",
             "level": 0,
-            "url": "public/assets/atlas/spells/druidcraft",
+            "url": "assets/atlas/spells/json/druidcraft.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -89,7 +89,7 @@
           {
             "name": "entangle",
             "level": 1,
-            "url": "public/assets/atlas/spells/entangle",
+            "url": "assets/atlas/spells/json/entangle.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -99,7 +99,7 @@
           {
             "name": "goodberry",
             "level": 1,
-            "url": "public/assets/atlas/spells/goodberry",
+            "url": "assets/atlas/spells/json/goodberry.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -109,7 +109,7 @@
           {
             "name": "barkskin",
             "level": 2,
-            "url": "public/assets/atlas/spells/barkskin",
+            "url": "assets/atlas/spells/json/barkskin.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -119,7 +119,7 @@
           {
             "name": "pass without trace",
             "level": 2,
-            "url": "public/assets/atlas/spells/pass_without_trace",
+            "url": "assets/atlas/spells/json/pass_without_trace.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -129,7 +129,7 @@
           {
             "name": "shillelagh",
             "level": 0,
-            "url": "public/assets/atlas/spells/shillelagh",
+            "url": "assets/atlas/spells/json/shillelagh.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -166,7 +166,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "1d4"
         }
@@ -181,7 +181,7 @@
         "dc_type": {
           "index": "wis",
           "name": "wis",
-          "url": "public/assets/atlas/ability_scores/wisdom"
+          "url": "assets/atlas/ability_scores/json/wisdom.json"
         },
         "dc_value": 14,
         "success_type": "none"
@@ -189,8 +189,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/dryad.webp",
-  "url": "public/assets/atlas/enemies/json/dryad.json",
+  "image": "assets/atlas/enemies/images/dryad.webp",
+  "url": "assets/atlas/enemies/json/dryad.json",
   "updated_at": "2026-04-19T08:11:20.761Z",
   "forms": [],
   "legendary_actions": [],

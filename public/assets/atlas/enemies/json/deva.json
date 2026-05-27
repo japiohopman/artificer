@@ -24,7 +24,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -32,7 +32,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     },
     {
@@ -40,7 +40,7 @@
       "proficiency": {
         "index": "skill_insight",
         "name": "skill: insight",
-        "url": "public/assets/atlas/proficiencies/skill_insight"
+        "url": "assets/atlas/proficiencies/json/skill_insight.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -62,17 +62,17 @@
     {
       "index": "charmed",
       "name": "charmed",
-      "url": "public/assets/atlas/constitutionditions/charismarmed"
+      "url": "assets/atlas/constitutionditions/json/charismarmed.json"
     },
     {
       "index": "exhaustion",
       "name": "exhaustion",
-      "url": "public/assets/atlas/constitutionditions/exhaustion"
+      "url": "assets/atlas/constitutionditions/json/exhaustion.json"
     },
     {
       "index": "frightened",
       "name": "frightened",
-      "url": "public/assets/atlas/constitutionditions/frightened"
+      "url": "assets/atlas/constitutionditions/json/frightened.json"
     }
   ],
   "senses": {
@@ -96,7 +96,7 @@
         "ability": {
           "index": "cha",
           "name": "cha",
-          "url": "public/assets/atlas/ability_scores/charisma"
+          "url": "assets/atlas/ability_scores/json/charisma.json"
         },
         "dc": 17,
         "components_required": [
@@ -106,7 +106,7 @@
           {
             "name": "detect evil and good",
             "level": 1,
-            "url": "public/assets/atlas/spells/detect_evil_and_good",
+            "url": "assets/atlas/spells/json/detect_evil_and_good.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -115,7 +115,7 @@
           {
             "name": "commune",
             "level": 5,
-            "url": "public/assets/atlas/spells/commune",
+            "url": "assets/atlas/spells/json/commune.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -125,7 +125,7 @@
           {
             "name": "raise dead",
             "level": 5,
-            "url": "public/assets/atlas/spells/raise_dead",
+            "url": "assets/atlas/spells/json/raise_dead.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -165,7 +165,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "1d6+4"
         },
@@ -173,7 +173,7 @@
           "damage_type": {
             "index": "radiant",
             "name": "radiant",
-            "url": "public/assets/atlas/damage_types/radiant"
+            "url": "assets/atlas/damage_types/json/radiant.json"
           },
           "damage_dice": "4d8"
         }
@@ -197,8 +197,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/deva.webp",
-  "url": "public/assets/atlas/enemies/json/deva.json",
+  "image": "assets/atlas/enemies/images/deva.webp",
+  "url": "assets/atlas/enemies/json/deva.json",
   "updated_at": "2026-05-18T09:00:48.705Z",
   "forms": [],
   "legendary_actions": [],

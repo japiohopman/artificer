@@ -52,7 +52,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d4-1"
         }
@@ -60,8 +60,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/baboon.webp",
-  "url": "public/assets/atlas/enemies/json/baboon.json",
+  "image": "assets/atlas/enemies/images/baboon.webp",
+  "url": "assets/atlas/enemies/json/baboon.json",
   "updated_at": "2026-04-14T21:12:39.788Z",
   "forms": [],
   "legendary_actions": [],

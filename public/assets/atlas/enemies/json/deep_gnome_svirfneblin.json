@@ -24,7 +24,7 @@
       "proficiency": {
         "index": "skill_investigation",
         "name": "skill: investigation",
-        "url": "public/assets/atlas/proficiencies/skill_investigation"
+        "url": "assets/atlas/proficiencies/json/skill_investigation.json"
       }
     },
     {
@@ -32,7 +32,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -40,7 +40,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -74,7 +74,7 @@
         "ability": {
           "index": "int",
           "name": "int",
-          "url": "public/assets/atlas/ability_scores/intelligence"
+          "url": "assets/atlas/ability_scores/json/intelligence.json"
         },
         "dc": 11,
         "components_required": [
@@ -86,7 +86,7 @@
             "name": "nondetection",
             "level": 3,
             "notes": "Self only",
-            "url": "public/assets/atlas/spells/nondetection",
+            "url": "assets/atlas/spells/json/nondetection.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -95,7 +95,7 @@
           {
             "name": "blindness/deafness",
             "level": 2,
-            "url": "public/assets/atlas/spells/blindness_deafness",
+            "url": "assets/atlas/spells/json/blindness_deafness.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -105,7 +105,7 @@
           {
             "name": "blur",
             "level": 2,
-            "url": "public/assets/atlas/spells/blur",
+            "url": "assets/atlas/spells/json/blur.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -115,7 +115,7 @@
           {
             "name": "disguise self",
             "level": 1,
-            "url": "public/assets/atlas/spells/disguise_self",
+            "url": "assets/atlas/spells/json/disguise_self.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -137,7 +137,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d8+2"
         }
@@ -153,7 +153,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d4+2"
         }
@@ -161,8 +161,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/deep_gnome_svirfneblin.webp",
-  "url": "public/assets/atlas/enemies/json/deep_gnome_svirfneblin.json",
+  "image": "assets/atlas/enemies/images/deep_gnome_svirfneblin.webp",
+  "url": "assets/atlas/enemies/json/deep_gnome_svirfneblin.json",
   "updated_at": "2026-05-10T21:33:03.968Z",
   "forms": [],
   "legendary_actions": [],

@@ -13,7 +13,7 @@
         {
           "index": "hide_armor",
           "name": "hide armor",
-          "url": "public/assets/atlas/equipment/hide_armor"
+          "url": "assets/atlas/equipment/json/hide_armor.json"
         }
       ]
     }
@@ -59,7 +59,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "1d12+3"
         }
@@ -67,8 +67,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/berserker.webp",
-  "url": "public/assets/atlas/enemies/json/berserker.json",
+  "image": "assets/atlas/enemies/images/berserker.webp",
+  "url": "assets/atlas/enemies/json/berserker.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

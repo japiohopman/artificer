@@ -30,7 +30,7 @@
       "proficiency": {
         "index": "saving_throw_dex",
         "name": "saving throw: dex",
-        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+        "url": "assets/atlas/proficiencies/json/saving_throw_dex.json"
       }
     },
     {
@@ -38,7 +38,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -46,7 +46,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -54,7 +54,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     },
     {
@@ -62,7 +62,7 @@
       "proficiency": {
         "index": "skill_history",
         "name": "skill: history",
-        "url": "public/assets/atlas/proficiencies/skill_history"
+        "url": "assets/atlas/proficiencies/json/skill_history.json"
       }
     },
     {
@@ -70,7 +70,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -78,7 +78,7 @@
       "proficiency": {
         "index": "skill_persuasion",
         "name": "skill: persuasion",
-        "url": "public/assets/atlas/proficiencies/skill_persuasion"
+        "url": "assets/atlas/proficiencies/json/skill_persuasion.json"
       }
     },
     {
@@ -86,7 +86,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -150,7 +150,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d10+8"
         }
@@ -166,7 +166,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d6+8"
         }
@@ -182,7 +182,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d8+8"
         }
@@ -197,7 +197,7 @@
         "dc_type": {
           "index": "wis",
           "name": "wis",
-          "url": "public/assets/atlas/ability_scores/wisdom"
+          "url": "assets/atlas/ability_scores/json/wisdom.json"
         },
         "dc_value": 18,
         "success_type": "none"
@@ -226,7 +226,7 @@
                 "dc_type": {
                   "index": "dex",
                   "name": "dex",
-                  "url": "public/assets/atlas/ability_scores/dexterity"
+                  "url": "assets/atlas/ability_scores/json/dexterity.json"
                 },
                 "dc_value": 21,
                 "success_type": "half"
@@ -236,7 +236,7 @@
                   "damage_type": {
                     "index": "fire",
                     "name": "fire",
-                    "url": "public/assets/atlas/damage_types/fire"
+                    "url": "assets/atlas/damage_types/json/fire.json"
                   },
                   "damage_dice": "16d6"
                 }
@@ -249,7 +249,7 @@
                 "dc_type": {
                   "index": "con",
                   "name": "con",
-                  "url": "public/assets/atlas/ability_scores/constitution"
+                  "url": "assets/atlas/ability_scores/json/constitution.json"
                 },
                 "dc_value": 21,
                 "success_type": "none"
@@ -285,7 +285,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/dexterity"
+          "url": "assets/atlas/ability_scores/json/dexterity.json"
         },
         "dc_value": 22,
         "success_type": "none"
@@ -295,15 +295,15 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d6+8"
         }
       ]
     }
   ],
-  "image": "public/assets/atlas/enemies/ancient_brass_dragon.webp",
-  "url": "public/assets/atlas/enemies/json/ancient_brass_dragon.json",
+  "image": "assets/atlas/enemies/images/ancient_brass_dragon.webp",
+  "url": "assets/atlas/enemies/json/ancient_brass_dragon.json",
   "updated_at": "2026-04-22T14:38:04.131Z",
   "forms": [],
   "reactions": [],

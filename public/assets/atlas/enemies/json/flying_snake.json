@@ -55,7 +55,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "1"
         },
@@ -63,7 +63,7 @@
           "damage_type": {
             "index": "poison",
             "name": "poison",
-            "url": "public/assets/atlas/damage_types/poison"
+            "url": "assets/atlas/damage_types/json/poison.json"
           },
           "damage_dice": "3d4"
         }
@@ -71,8 +71,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/flying_snake.webp",
-  "url": "public/assets/atlas/enemies/json/flying_snake.json",
+  "image": "assets/atlas/enemies/images/flying_snake.webp",
+  "url": "assets/atlas/enemies/json/flying_snake.json",
   "updated_at": "2026-04-24T17:51:10.947Z",
   "forms": [],
   "legendary_actions": [],

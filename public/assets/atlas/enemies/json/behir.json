@@ -29,7 +29,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -37,7 +37,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -83,7 +83,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "3d10+6"
         }
@@ -99,7 +99,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d10+6"
         },
@@ -107,7 +107,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d10+6"
         }
@@ -126,7 +126,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/dexterity"
+          "url": "assets/atlas/ability_scores/json/dexterity.json"
         },
         "dc_value": 16,
         "success_type": "half"
@@ -136,7 +136,7 @@
           "damage_type": {
             "index": "lightning",
             "name": "lightning",
-            "url": "public/assets/atlas/damage_types/lightning"
+            "url": "assets/atlas/damage_types/json/lightning.json"
           },
           "damage_dice": "12d10"
         }
@@ -151,7 +151,7 @@
           "damage_type": {
             "index": "acid",
             "name": "acid",
-            "url": "public/assets/atlas/damage_types/acid"
+            "url": "assets/atlas/damage_types/json/acid.json"
           },
           "damage_dice": "6d6"
         }
@@ -159,8 +159,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/behir.webp",
-  "url": "public/assets/atlas/enemies/json/behir.json",
+  "image": "assets/atlas/enemies/images/behir.webp",
+  "url": "assets/atlas/enemies/json/behir.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

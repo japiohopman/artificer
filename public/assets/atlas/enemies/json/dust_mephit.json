@@ -29,7 +29,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -37,7 +37,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -52,7 +52,7 @@
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -71,7 +71,7 @@
         "dc_type": {
           "index": "con",
           "name": "con",
-          "url": "public/assets/atlas/ability_scores/constitution"
+          "url": "assets/atlas/ability_scores/json/constitution.json"
         },
         "dc_value": 10,
         "success_type": "none"
@@ -85,7 +85,7 @@
         "ability": {
           "index": "cha",
           "name": "cha",
-          "url": "public/assets/atlas/ability_scores/charisma"
+          "url": "assets/atlas/ability_scores/json/charisma.json"
         },
         "dc": 10,
         "components_required": [
@@ -96,7 +96,7 @@
           {
             "name": "sleep",
             "level": 1,
-            "url": "public/assets/atlas/spells/sleep",
+            "url": "assets/atlas/spells/json/sleep.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -118,7 +118,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "1d4+2"
         }
@@ -138,7 +138,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/dexterity"
+          "url": "assets/atlas/ability_scores/json/dexterity.json"
         },
         "dc_value": 10,
         "success_type": "none"
@@ -146,8 +146,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/dust_mephit.webp",
-  "url": "public/assets/atlas/enemies/json/dust_mephit.json",
+  "image": "assets/atlas/enemies/images/dust_mephit.webp",
+  "url": "assets/atlas/enemies/json/dust_mephit.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

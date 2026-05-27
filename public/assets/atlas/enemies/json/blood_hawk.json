@@ -25,7 +25,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -62,7 +62,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d4+2"
         }
@@ -70,8 +70,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/blood_hawk.webp",
-  "url": "public/assets/atlas/enemies/json/blood_hawk.json",
+  "image": "assets/atlas/enemies/images/blood_hawk.webp",
+  "url": "assets/atlas/enemies/json/blood_hawk.json",
   "updated_at": "2026-05-10T20:55:21.711Z",
   "forms": [],
   "legendary_actions": [],

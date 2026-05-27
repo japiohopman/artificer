@@ -25,7 +25,7 @@
       "proficiency": {
         "index": "saving_throw_dex",
         "name": "saving throw: dex",
-        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+        "url": "assets/atlas/proficiencies/json/saving_throw_dex.json"
       }
     },
     {
@@ -33,7 +33,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -41,7 +41,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -49,7 +49,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     },
     {
@@ -57,7 +57,7 @@
       "proficiency": {
         "index": "skill_insight",
         "name": "skill: insight",
-        "url": "public/assets/atlas/proficiencies/skill_insight"
+        "url": "assets/atlas/proficiencies/json/skill_insight.json"
       }
     },
     {
@@ -65,7 +65,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -73,7 +73,7 @@
       "proficiency": {
         "index": "skill_persuasion",
         "name": "skill: persuasion",
-        "url": "public/assets/atlas/proficiencies/skill_persuasion"
+        "url": "assets/atlas/proficiencies/json/skill_persuasion.json"
       }
     },
     {
@@ -81,7 +81,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -150,7 +150,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d10+8"
         }
@@ -166,7 +166,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d6+8"
         }
@@ -182,7 +182,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d8+8"
         }
@@ -197,7 +197,7 @@
         "dc_type": {
           "index": "wis",
           "name": "wis",
-          "url": "public/assets/atlas/ability_scores/wisdom"
+          "url": "assets/atlas/ability_scores/json/wisdom.json"
         },
         "dc_value": 21,
         "success_type": "none"
@@ -226,7 +226,7 @@
                 "dc_type": {
                   "index": "dex",
                   "name": "dex",
-                  "url": "public/assets/atlas/ability_scores/dexterity"
+                  "url": "assets/atlas/ability_scores/json/dexterity.json"
                 },
                 "dc_value": 21,
                 "success_type": "half"
@@ -236,7 +236,7 @@
                   "damage_type": {
                     "index": "fire",
                     "name": "fire",
-                    "url": "public/assets/atlas/damage_types/fire"
+                    "url": "assets/atlas/damage_types/json/fire.json"
                   },
                   "damage_dice": "12d10"
                 }
@@ -249,7 +249,7 @@
                 "dc_type": {
                   "index": "str",
                   "name": "str",
-                  "url": "public/assets/atlas/ability_scores/strength"
+                  "url": "assets/atlas/ability_scores/json/strength.json"
                 },
                 "dc_value": 21,
                 "success_type": "none"
@@ -279,7 +279,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/dexterity"
+          "url": "assets/atlas/ability_scores/json/dexterity.json"
         },
         "dc_value": 22,
         "success_type": "none"
@@ -289,15 +289,15 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d6+8"
         }
       ]
     }
   ],
-  "image": "public/assets/atlas/enemies/adult_gold_dragon.webp",
-  "url": "public/assets/atlas/enemies/json/adult_gold_dragon.json",
+  "image": "assets/atlas/enemies/images/adult_gold_dragon.webp",
+  "url": "assets/atlas/enemies/json/adult_gold_dragon.json",
   "updated_at": "2026-05-18T11:48:19.512Z",
   "forms": [],
   "reactions": [],
@@ -335,7 +335,7 @@
         "proficiency": {
           "index": "saving_throw_dex",
           "name": "saving throw: dex",
-          "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+          "url": "assets/atlas/proficiencies/json/saving_throw_dex.json"
         }
       },
       {
@@ -343,7 +343,7 @@
         "proficiency": {
           "index": "saving_throw_con",
           "name": "saving throw: con",
-          "url": "public/assets/atlas/proficiencies/saving_throw_con"
+          "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
         }
       },
       {
@@ -351,7 +351,7 @@
         "proficiency": {
           "index": "saving_throw_wis",
           "name": "saving throw: wis",
-          "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+          "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
         }
       },
       {
@@ -359,7 +359,7 @@
         "proficiency": {
           "index": "saving_throw_cha",
           "name": "saving throw: cha",
-          "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+          "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
         }
       },
       {
@@ -367,7 +367,7 @@
         "proficiency": {
           "index": "skill_insight",
           "name": "skill: insight",
-          "url": "public/assets/atlas/proficiencies/skill_insight"
+          "url": "assets/atlas/proficiencies/json/skill_insight.json"
         }
       },
       {
@@ -375,7 +375,7 @@
         "proficiency": {
           "index": "skill_perception",
           "name": "skill: perception",
-          "url": "public/assets/atlas/proficiencies/skill_perception"
+          "url": "assets/atlas/proficiencies/json/skill_perception.json"
         }
       },
       {
@@ -383,7 +383,7 @@
         "proficiency": {
           "index": "skill_persuasion",
           "name": "skill: persuasion",
-          "url": "public/assets/atlas/proficiencies/skill_persuasion"
+          "url": "assets/atlas/proficiencies/json/skill_persuasion.json"
         }
       },
       {
@@ -391,7 +391,7 @@
         "proficiency": {
           "index": "skill_stealth",
           "name": "skill: stealth",
-          "url": "public/assets/atlas/proficiencies/skill_stealth"
+          "url": "assets/atlas/proficiencies/json/skill_stealth.json"
         }
       }
     ],
@@ -460,7 +460,7 @@
             "damage_type": {
               "index": "piercing",
               "name": "piercing",
-              "url": "public/assets/atlas/damage_types/piercing"
+              "url": "assets/atlas/damage_types/json/piercing.json"
             },
             "damage_dice": "2d10+8"
           }
@@ -476,7 +476,7 @@
             "damage_type": {
               "index": "slashing",
               "name": "slashing",
-              "url": "public/assets/atlas/damage_types/slashing"
+              "url": "assets/atlas/damage_types/json/slashing.json"
             },
             "damage_dice": "2d6+8"
           }
@@ -492,7 +492,7 @@
             "damage_type": {
               "index": "bludgeoning",
               "name": "bludgeoning",
-              "url": "public/assets/atlas/damage_types/bludgeoning"
+              "url": "assets/atlas/damage_types/json/bludgeoning.json"
             },
             "damage_dice": "2d8+8"
           }
@@ -507,7 +507,7 @@
           "dc_type": {
             "index": "wis",
             "name": "wis",
-            "url": "public/assets/atlas/ability_scores/wisdom"
+            "url": "assets/atlas/ability_scores/json/wisdom.json"
           },
           "dc_value": 21,
           "success_type": "none"
@@ -536,7 +536,7 @@
                   "dc_type": {
                     "index": "dex",
                     "name": "dex",
-                    "url": "public/assets/atlas/ability_scores/dexterity"
+                    "url": "assets/atlas/ability_scores/json/dexterity.json"
                   },
                   "dc_value": 21,
                   "success_type": "half"
@@ -546,7 +546,7 @@
                     "damage_type": {
                       "index": "fire",
                       "name": "fire",
-                      "url": "public/assets/atlas/damage_types/fire"
+                      "url": "assets/atlas/damage_types/json/fire.json"
                     },
                     "damage_dice": "12d10"
                   }
@@ -559,7 +559,7 @@
                   "dc_type": {
                     "index": "str",
                     "name": "str",
-                    "url": "public/assets/atlas/ability_scores/strength"
+                    "url": "assets/atlas/ability_scores/json/strength.json"
                   },
                   "dc_value": 21,
                   "success_type": "none"
@@ -589,7 +589,7 @@
           "dc_type": {
             "index": "dex",
             "name": "dex",
-            "url": "public/assets/atlas/ability_scores/dexterity"
+            "url": "assets/atlas/ability_scores/json/dexterity.json"
           },
           "dc_value": 22,
           "success_type": "none"
@@ -599,7 +599,7 @@
             "damage_type": {
               "index": "bludgeoning",
               "name": "bludgeoning",
-              "url": "public/assets/atlas/damage_types/bludgeoning"
+              "url": "assets/atlas/damage_types/json/bludgeoning.json"
             },
             "damage_dice": "2d6+8"
           }
@@ -607,11 +607,11 @@
       }
     ],
     "image": "/api/images/monsters/adult_gold_dragon.png",
-    "url": "public/assets/atlas/monsters/adult_gold_dragon",
+    "url": "assets/atlas/monsters/json/adult_gold_dragon.json",
     "updated_at": "2025-10-24T20:42:13.741Z",
     "forms": [],
     "reactions": [],
-    "lore": "The Adult Gold Dragon is the auric manifestation of solar justice. These venerable wyrms favor remote, mist-shrouded peaks or hidden geothermal grottos where the earth’s inner warmth mirrors their own radiant spirits. \n\nUnlike the feral hunger of their chromatic kin, the gold dragon’s predatory behavior is a study in patient vigilance. They rarely hunt for mere flesh; instead, they are stalkers of corruption. Often assuming the guise of humble wanderers or animals, they embed themselves within mortal societies to observe before unveiling their true, blinding majesty to incinerate the wicked. They consume the essence of chaos as much as physical sustenance.\n\nIn local folklore, they are revered as \"The Sun’s Gilded Breath.\" To glimpse shimmering scales amidst the clouds is considered a divine omen, signaling a season of prosperity. Peasants tell tales of the \"Silent Guardian,\" a golden-eyed stranger who arrives when a village is most imperiled, leaving behind only a trail of molten slag and the lingering scent of saffron and incense. They do not merely inhabit the landscape; they sanctify it, their very presence acting as a living bulwark against the encroaching dark.",
+    "lore": "The Adult Gold Dragon is the auric manifestation of solar justice. These venerable wyrms favor remote, mist-shrouded peaks or hidden geothermal grottos where the earth\u2019s inner warmth mirrors their own radiant spirits. \n\nUnlike the feral hunger of their chromatic kin, the gold dragon\u2019s predatory behavior is a study in patient vigilance. They rarely hunt for mere flesh; instead, they are stalkers of corruption. Often assuming the guise of humble wanderers or animals, they embed themselves within mortal societies to observe before unveiling their true, blinding majesty to incinerate the wicked. They consume the essence of chaos as much as physical sustenance.\n\nIn local folklore, they are revered as \"The Sun\u2019s Gilded Breath.\" To glimpse shimmering scales amidst the clouds is considered a divine omen, signaling a season of prosperity. Peasants tell tales of the \"Silent Guardian,\" a golden-eyed stranger who arrives when a village is most imperiled, leaving behind only a trail of molten slag and the lingering scent of saffron and incense. They do not merely inhabit the landscape; they sanctify it, their very presence acting as a living bulwark against the encroaching dark.",
     "imageUrl": "https://raw.githubusercontent.com/japiohopman/artificer/main/codex/assets/enemies/adult-gold-dragon.webp",
     "bakedAt": 1768762087116
   },

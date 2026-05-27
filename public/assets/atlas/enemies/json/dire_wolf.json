@@ -28,7 +28,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -36,7 +36,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -73,7 +73,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d6+3"
         }
@@ -81,8 +81,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/dire_wolf.webp",
-  "url": "public/assets/atlas/enemies/json/dire_wolf.json",
+  "image": "assets/atlas/enemies/images/dire_wolf.webp",
+  "url": "assets/atlas/enemies/json/dire_wolf.json",
   "updated_at": "2026-04-17T18:29:02.696Z",
   "forms": [],
   "legendary_actions": [],

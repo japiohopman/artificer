@@ -1,7 +1,7 @@
 {
   "index": "frog",
   "name": "frog",
-  "desc": "A frog has no effective attacks. It feeds on small insects and typically dwells near water, in trees, or underground. The frog’s statistics can also be used to represent a toad.",
+  "desc": "A frog has no effective attacks. It feeds on small insects and typically dwells near water, in trees, or underground. The frog\u2019s statistics can also be used to represent a toad.",
   "size": "Tiny",
   "type": "beast",
   "alignment": "unaligned",
@@ -30,7 +30,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -38,7 +38,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -66,8 +66,8 @@
       "damage": []
     }
   ],
-  "image": "public/assets/atlas/enemies/frog.webp",
-  "url": "public/assets/atlas/enemies/json/frog.json",
+  "image": "assets/atlas/enemies/images/frog.webp",
+  "url": "assets/atlas/enemies/json/frog.json",
   "updated_at": "2026-04-16T04:51:45.675Z",
   "actions": [],
   "forms": [],

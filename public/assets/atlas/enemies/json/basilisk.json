@@ -43,7 +43,7 @@
         "dc_type": {
           "index": "con",
           "name": "con",
-          "url": "public/assets/atlas/ability_scores/constitution"
+          "url": "assets/atlas/ability_scores/json/constitution.json"
         },
         "dc_value": 12,
         "success_type": "none"
@@ -61,7 +61,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d6+3"
         },
@@ -69,7 +69,7 @@
           "damage_type": {
             "index": "poison",
             "name": "poison",
-            "url": "public/assets/atlas/damage_types/poison"
+            "url": "assets/atlas/damage_types/json/poison.json"
           },
           "damage_dice": "2d6"
         }
@@ -77,8 +77,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/basilisk.webp",
-  "url": "public/assets/atlas/enemies/json/basilisk.json",
+  "image": "assets/atlas/enemies/images/basilisk.webp",
+  "url": "assets/atlas/enemies/json/basilisk.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

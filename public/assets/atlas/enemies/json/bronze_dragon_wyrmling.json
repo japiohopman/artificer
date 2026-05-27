@@ -30,7 +30,7 @@
       "proficiency": {
         "index": "saving_throw_dex",
         "name": "saving throw: dex",
-        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+        "url": "assets/atlas/proficiencies/json/saving_throw_dex.json"
       }
     },
     {
@@ -38,7 +38,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -46,7 +46,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -54,7 +54,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     },
     {
@@ -62,7 +62,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -70,7 +70,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -106,7 +106,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d10+3"
         }
@@ -135,7 +135,7 @@
                 "dc_type": {
                   "index": "dex",
                   "name": "dex",
-                  "url": "public/assets/atlas/ability_scores/dexterity"
+                  "url": "assets/atlas/ability_scores/json/dexterity.json"
                 },
                 "dc_value": 12,
                 "success_type": "half"
@@ -145,7 +145,7 @@
                   "damage_type": {
                     "index": "lightning",
                     "name": "lightning",
-                    "url": "public/assets/atlas/damage_types/lightning"
+                    "url": "assets/atlas/damage_types/json/lightning.json"
                   },
                   "damage_dice": "3d10"
                 }
@@ -158,7 +158,7 @@
                 "dc_type": {
                   "index": "str",
                   "name": "str",
-                  "url": "public/assets/atlas/ability_scores/strength"
+                  "url": "assets/atlas/ability_scores/json/strength.json"
                 },
                 "dc_value": 12,
                 "success_type": "none"
@@ -170,8 +170,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/bronze_dragon_wyrmling.webp",
-  "url": "public/assets/atlas/enemies/json/bronze_dragon_wyrmling.json",
+  "image": "assets/atlas/enemies/images/bronze_dragon_wyrmling.webp",
+  "url": "assets/atlas/enemies/json/bronze_dragon_wyrmling.json",
   "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],

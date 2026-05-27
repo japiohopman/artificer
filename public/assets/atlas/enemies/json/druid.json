@@ -25,7 +25,7 @@
       "proficiency": {
         "index": "skill_medicine",
         "name": "skill: medicine",
-        "url": "public/assets/atlas/proficiencies/skill_medicine"
+        "url": "assets/atlas/proficiencies/json/skill_medicine.json"
       }
     },
     {
@@ -33,7 +33,7 @@
       "proficiency": {
         "index": "skill_nature",
         "name": "skill: nature",
-        "url": "public/assets/atlas/proficiencies/skill_nature"
+        "url": "assets/atlas/proficiencies/json/skill_nature.json"
       }
     },
     {
@@ -41,7 +41,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -65,7 +65,7 @@
         "ability": {
           "index": "wis",
           "name": "wis",
-          "url": "public/assets/atlas/ability_scores/wisdom"
+          "url": "assets/atlas/ability_scores/json/wisdom.json"
         },
         "dc": 12,
         "modifier": 4,
@@ -83,47 +83,47 @@
           {
             "name": "druidcraft",
             "level": 0,
-            "url": "public/assets/atlas/spells/druidcraft"
+            "url": "assets/atlas/spells/json/druidcraft.json"
           },
           {
             "name": "produce flame",
             "level": 0,
-            "url": "public/assets/atlas/spells/produce_flame"
+            "url": "assets/atlas/spells/json/produce_flame.json"
           },
           {
             "name": "shillelagh",
             "level": 0,
-            "url": "public/assets/atlas/spells/shillelagh"
+            "url": "assets/atlas/spells/json/shillelagh.json"
           },
           {
             "name": "entangle",
             "level": 1,
-            "url": "public/assets/atlas/spells/entangle"
+            "url": "assets/atlas/spells/json/entangle.json"
           },
           {
             "name": "longstrider",
             "level": 1,
-            "url": "public/assets/atlas/spells/longstrider"
+            "url": "assets/atlas/spells/json/longstrider.json"
           },
           {
             "name": "speak with animals",
             "level": 1,
-            "url": "public/assets/atlas/spells/speak_with_animals"
+            "url": "assets/atlas/spells/json/speak_with_animals.json"
           },
           {
             "name": "thunderwave",
             "level": 1,
-            "url": "public/assets/atlas/spells/thunderwave"
+            "url": "assets/atlas/spells/json/thunderwave.json"
           },
           {
             "name": "animal messenger",
             "level": 2,
-            "url": "public/assets/atlas/spells/animal_messenger"
+            "url": "assets/atlas/spells/json/animal_messenger.json"
           },
           {
             "name": "barkskin",
             "level": 2,
-            "url": "public/assets/atlas/spells/barkskin"
+            "url": "assets/atlas/spells/json/barkskin.json"
           }
         ]
       },
@@ -147,7 +147,7 @@
                 "damage_type": {
                   "index": "bludgeoning",
                   "name": "bludgeoning",
-                  "url": "public/assets/atlas/damage_types/bludgeoning"
+                  "url": "assets/atlas/damage_types/json/bludgeoning.json"
                 },
                 "damage_dice": "1d6",
                 "notes": "One handed"
@@ -157,7 +157,7 @@
                 "damage_type": {
                   "index": "bludgeoning",
                   "name": "bludgeoning",
-                  "url": "public/assets/atlas/damage_types/bludgeoning"
+                  "url": "assets/atlas/damage_types/json/bludgeoning.json"
                 },
                 "damage_dice": "1d8",
                 "notes": "Two handed"
@@ -167,7 +167,7 @@
                 "damage_type": {
                   "index": "bludgeoning",
                   "name": "bludgeoning",
-                  "url": "public/assets/atlas/damage_types/bludgeoning"
+                  "url": "assets/atlas/damage_types/json/bludgeoning.json"
                 },
                 "damage_dice": "1d8+2",
                 "notes": "With shillelagh"
@@ -179,8 +179,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/druid.webp",
-  "url": "public/assets/atlas/enemies/json/druid.json",
+  "image": "assets/atlas/enemies/images/druid.webp",
+  "url": "assets/atlas/enemies/json/druid.json",
   "updated_at": "2026-05-18T16:03:37.891Z",
   "forms": [],
   "legendary_actions": [],

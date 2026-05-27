@@ -29,7 +29,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     }
   ],
@@ -61,7 +61,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "1d4+2"
         }
@@ -69,8 +69,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/eagle.webp",
-  "url": "public/assets/atlas/enemies/json/eagle.json",
+  "image": "assets/atlas/enemies/images/eagle.webp",
+  "url": "assets/atlas/enemies/json/eagle.json",
   "updated_at": "2026-04-13T04:38:45.409Z",
   "forms": [],
   "legendary_actions": [],

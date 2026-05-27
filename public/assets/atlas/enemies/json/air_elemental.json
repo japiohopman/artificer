@@ -37,42 +37,42 @@
     {
       "index": "exhaustion",
       "name": "exhaustion",
-      "url": "public/assets/atlas/constitutionditions/exhaustion"
+      "url": "assets/atlas/constitutionditions/json/exhaustion.json"
     },
     {
       "index": "grappled",
       "name": "grappled",
-      "url": "public/assets/atlas/constitutionditions/grappled"
+      "url": "assets/atlas/constitutionditions/json/grappled.json"
     },
     {
       "index": "paralyzed",
       "name": "paralyzed",
-      "url": "public/assets/atlas/constitutionditions/paralyzed"
+      "url": "assets/atlas/constitutionditions/json/paralyzed.json"
     },
     {
       "index": "petrified",
       "name": "petrified",
-      "url": "public/assets/atlas/constitutionditions/petrified"
+      "url": "assets/atlas/constitutionditions/json/petrified.json"
     },
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     },
     {
       "index": "prone",
       "name": "prone",
-      "url": "public/assets/atlas/constitutionditions/prone"
+      "url": "assets/atlas/constitutionditions/json/prone.json"
     },
     {
       "index": "restrained",
       "name": "restrained",
-      "url": "public/assets/atlas/constitutionditions/restrained"
+      "url": "assets/atlas/constitutionditions/json/restrained.json"
     },
     {
       "index": "unconscious",
       "name": "unconscious",
-      "url": "public/assets/atlas/constitutionditions/unconscious"
+      "url": "assets/atlas/constitutionditions/json/unconscious.json"
     }
   ],
   "senses": {
@@ -113,7 +113,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d8+5"
         }
@@ -132,8 +132,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/air_elemental.webp",
-  "url": "public/assets/atlas/enemies/json/air_elemental.json",
+  "image": "assets/atlas/enemies/images/air_elemental.webp",
+  "url": "assets/atlas/enemies/json/air_elemental.json",
   "updated_at": "2026-04-13T11:14:13.319Z",
   "forms": [],
   "legendary_actions": [],

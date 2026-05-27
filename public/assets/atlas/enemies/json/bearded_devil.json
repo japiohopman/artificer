@@ -29,7 +29,7 @@
       "proficiency": {
         "index": "saving_throw_str",
         "name": "saving throw: str",
-        "url": "public/assets/atlas/proficiencies/saving_throw_str"
+        "url": "assets/atlas/proficiencies/json/saving_throw_str.json"
       }
     },
     {
@@ -37,7 +37,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -45,7 +45,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     }
   ],
@@ -62,7 +62,7 @@
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "public/assets/atlas/constitutionditions/poisoned"
+      "url": "assets/atlas/constitutionditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -118,7 +118,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d8+2"
         }
@@ -134,7 +134,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "1d10+3"
         }
@@ -142,8 +142,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/bearded_devil.webp",
-  "url": "public/assets/atlas/enemies/json/bearded_devil.json",
+  "image": "assets/atlas/enemies/images/bearded_devil.webp",
+  "url": "assets/atlas/enemies/json/bearded_devil.json",
   "updated_at": "2026-04-13T22:20:30.376Z",
   "forms": [],
   "legendary_actions": [],

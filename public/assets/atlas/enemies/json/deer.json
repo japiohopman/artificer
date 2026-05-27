@@ -39,7 +39,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d4"
         }
@@ -47,8 +47,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/deer.webp",
-  "url": "public/assets/atlas/enemies/json/deer.json",
+  "image": "assets/atlas/enemies/images/deer.webp",
+  "url": "assets/atlas/enemies/json/deer.json",
   "updated_at": "2026-05-10T20:58:55.622Z",
   "forms": [],
   "legendary_actions": [],

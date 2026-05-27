@@ -1,7 +1,7 @@
 {
   "index": "cult_fanatic",
   "name": "cult fanatic",
-  "desc": "Fanatics are often part of a cult’s leadership, using their charisma and dogma to influence and prey on those of weak will. Most are interested in personal power above all else.",
+  "desc": "Fanatics are often part of a cult\u2019s leadership, using their charisma and dogma to influence and prey on those of weak will. Most are interested in personal power above all else.",
   "size": "Medium",
   "type": "humanoid",
   "subtype": "any race",
@@ -25,7 +25,7 @@
       "proficiency": {
         "index": "skill_deception",
         "name": "skill: deception",
-        "url": "public/assets/atlas/proficiencies/skill_deception"
+        "url": "assets/atlas/proficiencies/json/skill_deception.json"
       }
     },
     {
@@ -33,7 +33,7 @@
       "proficiency": {
         "index": "skill_persuasion",
         "name": "skill: persuasion",
-        "url": "public/assets/atlas/proficiencies/skill_persuasion"
+        "url": "assets/atlas/proficiencies/json/skill_persuasion.json"
       }
     },
     {
@@ -41,7 +41,7 @@
       "proficiency": {
         "index": "skill_religion",
         "name": "skill: religion",
-        "url": "public/assets/atlas/proficiencies/skill_religion"
+        "url": "assets/atlas/proficiencies/json/skill_religion.json"
       }
     }
   ],
@@ -70,7 +70,7 @@
         "ability": {
           "index": "wis",
           "name": "wis",
-          "url": "public/assets/atlas/ability_scores/wisdom"
+          "url": "assets/atlas/ability_scores/json/wisdom.json"
         },
         "dc": 11,
         "modifier": 3,
@@ -88,42 +88,42 @@
           {
             "name": "light",
             "level": 0,
-            "url": "public/assets/atlas/spells/light"
+            "url": "assets/atlas/spells/json/light.json"
           },
           {
             "name": "sacred flame",
             "level": 0,
-            "url": "public/assets/atlas/spells/sacred_flame"
+            "url": "assets/atlas/spells/json/sacred_flame.json"
           },
           {
             "name": "thaumaturgy",
             "level": 0,
-            "url": "public/assets/atlas/spells/thaumaturgy"
+            "url": "assets/atlas/spells/json/thaumaturgy.json"
           },
           {
             "name": "command",
             "level": 1,
-            "url": "public/assets/atlas/spells/command"
+            "url": "assets/atlas/spells/json/command.json"
           },
           {
             "name": "inflict wounds",
             "level": 1,
-            "url": "public/assets/atlas/spells/inflict_wounds"
+            "url": "assets/atlas/spells/json/inflict_wounds.json"
           },
           {
             "name": "shield of faith",
             "level": 1,
-            "url": "public/assets/atlas/spells/shield_of_faith"
+            "url": "assets/atlas/spells/json/shield_of_faith.json"
           },
           {
             "name": "hold person",
             "level": 2,
-            "url": "public/assets/atlas/spells/hold_person"
+            "url": "assets/atlas/spells/json/hold_person.json"
           },
           {
             "name": "spiritual weapon",
             "level": 2,
-            "url": "public/assets/atlas/spells/spiritual_weapon"
+            "url": "assets/atlas/spells/json/spiritual_weapon.json"
           }
         ]
       },
@@ -153,7 +153,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d4+2"
         }
@@ -161,8 +161,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/cult_fanatic.webp",
-  "url": "public/assets/atlas/enemies/json/cult_fanatic.json",
+  "image": "assets/atlas/enemies/images/cult_fanatic.webp",
+  "url": "assets/atlas/enemies/json/cult_fanatic.json",
   "updated_at": "2026-05-11T03:38:10.464Z",
   "forms": [],
   "legendary_actions": [],

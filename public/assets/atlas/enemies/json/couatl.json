@@ -24,7 +24,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -32,7 +32,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -40,7 +40,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     }
   ],
@@ -69,7 +69,7 @@
         "ability": {
           "index": "cha",
           "name": "cha",
-          "url": "public/assets/atlas/ability_scores/charisma"
+          "url": "assets/atlas/ability_scores/json/charisma.json"
         },
         "dc": 14,
         "components_required": [
@@ -79,7 +79,7 @@
           {
             "name": "detect evil and good",
             "level": 1,
-            "url": "public/assets/atlas/spells/detect_evil_and_good",
+            "url": "assets/atlas/spells/json/detect_evil_and_good.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -88,7 +88,7 @@
           {
             "name": "detect magic",
             "level": 1,
-            "url": "public/assets/atlas/spells/detect_magic",
+            "url": "assets/atlas/spells/json/detect_magic.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -97,7 +97,7 @@
           {
             "name": "detect thoughts",
             "level": 2,
-            "url": "public/assets/atlas/spells/detect_thoughts",
+            "url": "assets/atlas/spells/json/detect_thoughts.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -106,7 +106,7 @@
           {
             "name": "bless",
             "level": 1,
-            "url": "public/assets/atlas/spells/bless",
+            "url": "assets/atlas/spells/json/bless.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -116,7 +116,7 @@
           {
             "name": "create food and water",
             "level": 3,
-            "url": "public/assets/atlas/spells/create_food_and_water",
+            "url": "assets/atlas/spells/json/create_food_and_water.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -126,7 +126,7 @@
           {
             "name": "cure wounds",
             "level": 1,
-            "url": "public/assets/atlas/spells/cure_wounds",
+            "url": "assets/atlas/spells/json/cure_wounds.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -136,7 +136,7 @@
           {
             "name": "lesser restoration",
             "level": 2,
-            "url": "public/assets/atlas/spells/lesser_restoration",
+            "url": "assets/atlas/spells/json/lesser_restoration.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -146,7 +146,7 @@
           {
             "name": "protection from poison",
             "level": 2,
-            "url": "public/assets/atlas/spells/protection_from_poison",
+            "url": "assets/atlas/spells/json/protection_from_poison.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -156,7 +156,7 @@
           {
             "name": "sanctuary",
             "level": 1,
-            "url": "public/assets/atlas/spells/sanctuary",
+            "url": "assets/atlas/spells/json/sanctuary.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -166,7 +166,7 @@
           {
             "name": "shield",
             "level": 1,
-            "url": "public/assets/atlas/spells/shield",
+            "url": "assets/atlas/spells/json/shield.json",
             "usage": {
               "type": "per day",
               "times": 3,
@@ -176,7 +176,7 @@
           {
             "name": "dream",
             "level": 5,
-            "url": "public/assets/atlas/spells/dream",
+            "url": "assets/atlas/spells/json/dream.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -186,7 +186,7 @@
           {
             "name": "greater restoration",
             "level": 5,
-            "url": "public/assets/atlas/spells/greater_restoration",
+            "url": "assets/atlas/spells/json/greater_restoration.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -196,7 +196,7 @@
           {
             "name": "scrying",
             "level": 5,
-            "url": "public/assets/atlas/spells/scrying",
+            "url": "assets/atlas/spells/json/scrying.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -228,7 +228,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d6+5"
         }
@@ -244,7 +244,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "2d6+3"
         }
@@ -258,8 +258,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/couatl.webp",
-  "url": "public/assets/atlas/enemies/json/couatl.json",
+  "image": "assets/atlas/enemies/images/couatl.webp",
+  "url": "assets/atlas/enemies/json/couatl.json",
   "updated_at": "2026-05-18T08:58:34.545Z",
   "forms": [],
   "legendary_actions": [],

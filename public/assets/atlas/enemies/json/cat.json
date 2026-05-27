@@ -29,7 +29,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -37,7 +37,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -69,7 +69,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "1"
         }
@@ -77,8 +77,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/cat.webp",
-  "url": "public/assets/atlas/enemies/json/cat.json",
+  "image": "assets/atlas/enemies/images/cat.webp",
+  "url": "assets/atlas/enemies/json/cat.json",
   "updated_at": "2026-04-16T05:16:48.800Z",
   "forms": [],
   "legendary_actions": [],

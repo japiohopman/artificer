@@ -46,7 +46,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "1d6+2"
         }
@@ -62,7 +62,7 @@
           "damage_type": {
             "index": "bludgeoning",
             "name": "bludgeoning",
-            "url": "public/assets/atlas/damage_types/bludgeoning"
+            "url": "assets/atlas/damage_types/json/bludgeoning.json"
           },
           "damage_dice": "1d8+2"
         }
@@ -70,8 +70,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/constitutionstrictor_snake.webp",
-  "url": "public/assets/atlas/enemies/json/constitutionstrictor_snake.json",
+  "image": "assets/atlas/enemies/images/constitutionstrictor_snake.webp",
+  "url": "assets/atlas/enemies/json/constitutionstrictor_snake.json",
   "updated_at": "2026-04-21T16:08:49.184Z",
   "forms": [],
   "legendary_actions": [],
