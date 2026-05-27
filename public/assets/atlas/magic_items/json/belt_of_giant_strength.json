@@ -1,60 +1,26 @@
 {
-  "index": "belt_of_giant_strength",
-  "name": "belt of giant strength",
+  "index": "belt_of_giant_strength_cloud",
+  "name": "belt of cloud giant strength",
   "equipment_category": {
     "index": "wondrous_items",
     "name": "wondrous items",
     "url": "public/assets/atlas/equipment_categories/wondrous_items"
   },
   "rarity": {
-    "name": "varies"
+    "name": "legendary"
   },
-  "variants": [
-    {
-      "index": "belt_of_giant_strength_hill",
-      "name": "belt of hill giant strength",
-      "url": "public/assets/atlas/magic_items/belt_of_giant_strength_hill"
-    },
-    {
-      "index": "belt_of_giant_strength_stone",
-      "name": "belt of stone giant strength",
-      "url": "public/assets/atlas/magic_items/belt_of_giant_strength_stone"
-    },
-    {
-      "index": "belt_of_giant_strength_frost",
-      "name": "belt of frost giant strength",
-      "url": "public/assets/atlas/magic_items/belt_of_giant_strength_frost"
-    },
-    {
-      "index": "belt_of_giant_strength_fire",
-      "name": "belt of fire giant strength",
-      "url": "public/assets/atlas/magic_items/belt_of_giant_strength_fire"
-    },
-    {
-      "index": "belt_of_giant_strength_cloud",
-      "name": "belt of cloud giant strength",
-      "url": "public/assets/atlas/magic_items/belt_of_giant_strength_cloud"
-    },
-    {
-      "index": "belt_of_giant_strength_storm",
-      "name": "belt of storm giant strength",
-      "url": "public/assets/atlas/magic_items/belt_of_giant_strength_storm"
-    }
-  ],
-  "variant": false,
+  "variants": [],
+  "variant": true,
   "desc": [
-    "Wondrous item, rarity varies (requires attunement)",
-    "While wearing this belt, your Strength score changes to a score granted by the belt. If your Strength is already equal to or greater than the belt's score, the item has no Effect on you.",
-    "Six varieties of this belt exist, corresponding with and having rarity according to The Six kinds of true Giants. The belt of Stone Giant Strength and the belt of Frost Giant Strength look different, but they have the same Effect.",
-    "| Type | Strength | Rarity |",
-    "|---|---|---|",
-    "| Hill Giant | 21 | Rare |",
-    "| Stone Giant / Frost Giant | 23 | Very Rare |",
-    "| Fire Giant | 25 | Very Rare |",
-    "| Cloud Giant | 27 | Legendary |",
-    "| Storm Giant | 29 | Legendary |"
+    "Wondrous item, legendary (requires attunement)",
+    "While wearing this belt, your Strength score changes to 27. If your Strength is already equal to or greater than the belt's score, the item has no Effect on you."
   ],
-  "image": "public/assets/atlas/magic_items/belt_of_giant_strength.webp",
-  "url": "public/assets/atlas/magic_items/json/belt_of_giant_strength.json",
+  "feature_specific": {
+    "passive_modifiers": {
+      "strength_set": 27
+    }
+  },
+  "image": "public/assets/atlas/magic_items/belt_of_giant_strength_cloud.webp",
+  "url": "public/assets/atlas/magic_items/json/belt_of_giant_strength_cloud.json",
   "updated_at": "2025-10-24T20:42:13.517Z"
 }
