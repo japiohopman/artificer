@@ -1,0 +1,32 @@
+{
+  "index": "incense",
+  "name": "Incense",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Aromatic",
+  "material_sub_category": "Processed",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "Fragrant material that produces sweet-smelling smoke when burned, essential for many rituals."
+  ],
+  "properties": [
+    "Aromatic",
+    "Ritual"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/incense.json",
+  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "image": "public/assets/atlas/crafting/incense.webp",
+  "category": "Consumables",
+  "last_updated": "27-05-2026",
+  "imageUrl": "/assets/atlas/crafting/incense.webp",
+  "_type": "materials"
+}

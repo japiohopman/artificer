@@ -1,0 +1,32 @@
+{
+  "index": "gum_arabic",
+  "name": "Gum Arabic",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Resin",
+  "material_sub_category": "Natural",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "A natural gum made of hardened sap, used as an adhesive and stabilizer in spellcasting."
+  ],
+  "properties": [
+    "Resin",
+    "Adhesive"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/gum_arabic.json",
+  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "image": "public/assets/atlas/crafting/gum_arabic.webp",
+  "category": "Raw Materials",
+  "last_updated": "27-05-2026",
+  "imageUrl": "/assets/atlas/crafting/gum_arabic.webp",
+  "_type": "materials"
+}

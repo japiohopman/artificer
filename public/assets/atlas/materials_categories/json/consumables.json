@@ -1,5 +1,14 @@
 {
   "name": "Consumables",
   "index": "consumables",
-  "materials": []
+  "materials": [
+    {
+      "name": "Incense",
+      "index": "incense"
+    },
+    {
+      "name": "Holy Water",
+      "index": "holy_water"
+    }
+  ]
 }

@@ -1,5 +1,18 @@
 {
   "name": "Herbs",
   "index": "herbs",
-  "materials": []
+  "materials": [
+    {
+      "name": "Mistletoe",
+      "index": "mistletoe"
+    },
+    {
+      "name": "Saffron",
+      "index": "saffron"
+    },
+    {
+      "name": "Licorice Root",
+      "index": "licorice_root"
+    }
+  ]
 }

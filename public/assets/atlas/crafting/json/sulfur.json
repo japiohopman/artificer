@@ -1,0 +1,32 @@
+{
+  "index": "sulfur",
+  "name": "Sulfur",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Mineral",
+  "material_sub_category": "Natural",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "A yellow, crystalline mineral with a strong odor, used in many explosive and fire-based spells."
+  ],
+  "properties": [
+    "Mineral",
+    "Fire"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/sulfur.json",
+  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "image": "public/assets/atlas/crafting/sulfur.webp",
+  "category": "Raw Materials",
+  "last_updated": "27-05-2026",
+  "imageUrl": "/assets/atlas/crafting/sulfur.webp",
+  "_type": "materials"
+}

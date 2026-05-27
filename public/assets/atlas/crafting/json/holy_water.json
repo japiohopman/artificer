@@ -1,0 +1,33 @@
+{
+  "index": "holy_water",
+  "name": "Holy Water",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Liquid",
+  "material_sub_category": "Consecrated",
+  "rarity": "Common",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "Water that has been blessed by a cleric or paladin, used for protection and against the undead."
+  ],
+  "properties": [
+    "Liquid",
+    "Holy",
+    "Consumable"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/holy_water.json",
+  "updated_at": "2026-05-27T10:04:33.950299Z",
+  "image": "public/assets/atlas/crafting/holy_water.webp",
+  "category": "Consumables",
+  "last_updated": "27-05-2026",
+  "imageUrl": "/assets/atlas/crafting/holy_water.webp",
+  "_type": "materials"
+}
