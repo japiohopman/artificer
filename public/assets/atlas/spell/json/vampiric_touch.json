@@ -22,7 +22,7 @@
     "damage_type": {
       "index": "necrotic",
       "name": "necrotic",
-      "url": "public/assets/atlas/damage_types/necrotic"
+      "url": "public/assets/atlas/damage_types/json/necrotic.json"
     },
     "damage_at_slot_level": {
       "3": "3d6",
@@ -37,30 +37,30 @@
   "school": {
     "index": "necromancy",
     "name": "necromancy",
-    "url": "public/assets/atlas/magic_schools/necromancy"
+    "url": "public/assets/atlas/magic_schools/json/necromancy.json"
   },
   "classes": [
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/vampiric_touch.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/vampiric_touch.webp",
+  "image": "public/assets/atlas/spell/images/vampiric_touch.webp",
   "sprite_index": 2,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet13.webp"
 }

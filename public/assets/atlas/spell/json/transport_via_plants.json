@@ -18,19 +18,19 @@
   "school": {
     "index": "conjuration",
     "name": "conjuration",
-    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+    "url": "public/assets/atlas/magic_schools/json/conjuration.json"
   },
   "classes": [
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/transport_via_plants.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/transport_via_plants.webp",
+  "image": "public/assets/atlas/spell/images/transport_via_plants.webp",
   "sprite_index": 20,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet12.webp"
 }

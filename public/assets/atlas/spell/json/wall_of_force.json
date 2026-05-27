@@ -21,19 +21,19 @@
   "school": {
     "index": "evocation",
     "name": "evocation",
-    "url": "public/assets/atlas/magic_schools/evocation"
+    "url": "public/assets/atlas/magic_schools/json/evocation.json"
   },
   "classes": [
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/wall_of_force.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/wall_of_force.webp",
+  "image": "public/assets/atlas/spell/images/wall_of_force.webp",
   "sprite_index": 5,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet13.webp"
 }
