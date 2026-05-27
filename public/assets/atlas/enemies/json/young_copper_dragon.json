@@ -30,7 +30,7 @@
       "proficiency": {
         "index": "saving_throw_dex",
         "name": "saving throw: dex",
-        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+        "url": "assets/atlas/proficiencies/json/saving_throw_dex.json"
       }
     },
     {
@@ -38,7 +38,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -46,7 +46,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -54,7 +54,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     },
     {
@@ -62,7 +62,7 @@
       "proficiency": {
         "index": "skill_deception",
         "name": "skill: deception",
-        "url": "public/assets/atlas/proficiencies/skill_deception"
+        "url": "assets/atlas/proficiencies/json/skill_deception.json"
       }
     },
     {
@@ -70,7 +70,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -78,7 +78,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -125,7 +125,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d10+4"
         }
@@ -141,7 +141,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d6+4"
         }
@@ -170,7 +170,7 @@
                 "dc_type": {
                   "index": "dex",
                   "name": "dex",
-                  "url": "public/assets/atlas/ability_scores/dexterity"
+                  "url": "assets/atlas/ability_scores/json/dexterity.json"
                 },
                 "dc_value": 14,
                 "success_type": "half"
@@ -180,7 +180,7 @@
                   "damage_type": {
                     "index": "acid",
                     "name": "acid",
-                    "url": "public/assets/atlas/damage_types/acid"
+                    "url": "assets/atlas/damage_types/json/acid.json"
                   },
                   "damage_dice": "9d8"
                 }
@@ -193,7 +193,7 @@
                 "dc_type": {
                   "index": "con",
                   "name": "con",
-                  "url": "public/assets/atlas/ability_scores/constitution"
+                  "url": "assets/atlas/ability_scores/json/constitution.json"
                 },
                 "dc_value": 14,
                 "success_type": "none"
@@ -205,8 +205,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/young_copper_dragon.webp",
-  "url": "public/assets/atlas/enemies/json/young_copper_dragon.json",
+  "image": "assets/atlas/enemies/images/young_copper_dragon.webp",
+  "url": "assets/atlas/enemies/json/young_copper_dragon.json",
   "updated_at": "2025-10-24T20:42:13.742Z",
   "forms": [],
   "legendary_actions": [],

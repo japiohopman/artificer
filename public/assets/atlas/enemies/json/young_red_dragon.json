@@ -30,7 +30,7 @@
       "proficiency": {
         "index": "saving_throw_dex",
         "name": "saving throw: dex",
-        "url": "public/assets/atlas/proficiencies/saving_throw_dex"
+        "url": "assets/atlas/proficiencies/json/saving_throw_dex.json"
       }
     },
     {
@@ -38,7 +38,7 @@
       "proficiency": {
         "index": "saving_throw_con",
         "name": "saving throw: con",
-        "url": "public/assets/atlas/proficiencies/saving_throw_con"
+        "url": "assets/atlas/proficiencies/json/saving_throw_con.json"
       }
     },
     {
@@ -46,7 +46,7 @@
       "proficiency": {
         "index": "saving_throw_wis",
         "name": "saving throw: wis",
-        "url": "public/assets/atlas/proficiencies/saving_throw_wis"
+        "url": "assets/atlas/proficiencies/json/saving_throw_wis.json"
       }
     },
     {
@@ -54,7 +54,7 @@
       "proficiency": {
         "index": "saving_throw_cha",
         "name": "saving throw: cha",
-        "url": "public/assets/atlas/proficiencies/saving_throw_cha"
+        "url": "assets/atlas/proficiencies/json/saving_throw_cha.json"
       }
     },
     {
@@ -62,7 +62,7 @@
       "proficiency": {
         "index": "skill_perception",
         "name": "skill: perception",
-        "url": "public/assets/atlas/proficiencies/skill_perception"
+        "url": "assets/atlas/proficiencies/json/skill_perception.json"
       }
     },
     {
@@ -70,7 +70,7 @@
       "proficiency": {
         "index": "skill_stealth",
         "name": "skill: stealth",
-        "url": "public/assets/atlas/proficiencies/skill_stealth"
+        "url": "assets/atlas/proficiencies/json/skill_stealth.json"
       }
     }
   ],
@@ -117,7 +117,7 @@
           "damage_type": {
             "index": "piercing",
             "name": "piercing",
-            "url": "public/assets/atlas/damage_types/piercing"
+            "url": "assets/atlas/damage_types/json/piercing.json"
           },
           "damage_dice": "2d10+6"
         },
@@ -125,7 +125,7 @@
           "damage_type": {
             "index": "fire",
             "name": "fire",
-            "url": "public/assets/atlas/damage_types/fire"
+            "url": "assets/atlas/damage_types/json/fire.json"
           },
           "damage_dice": "1d6"
         }
@@ -141,7 +141,7 @@
           "damage_type": {
             "index": "slashing",
             "name": "slashing",
-            "url": "public/assets/atlas/damage_types/slashing"
+            "url": "assets/atlas/damage_types/json/slashing.json"
           },
           "damage_dice": "2d6+6"
         }
@@ -160,7 +160,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/dexterity"
+          "url": "assets/atlas/ability_scores/json/dexterity.json"
         },
         "dc_value": 17,
         "success_type": "half"
@@ -170,7 +170,7 @@
           "damage_type": {
             "index": "fire",
             "name": "fire",
-            "url": "public/assets/atlas/damage_types/fire"
+            "url": "assets/atlas/damage_types/json/fire.json"
           },
           "damage_dice": "16d6"
         }
@@ -178,8 +178,8 @@
       "actions": []
     }
   ],
-  "image": "public/assets/atlas/enemies/young_red_dragon.webp",
-  "url": "public/assets/atlas/enemies/json/young_red_dragon.json",
+  "image": "assets/atlas/enemies/images/young_red_dragon.webp",
+  "url": "assets/atlas/enemies/json/young_red_dragon.json",
   "updated_at": "2026-04-22T13:01:07.958Z",
   "forms": [],
   "legendary_actions": [],
