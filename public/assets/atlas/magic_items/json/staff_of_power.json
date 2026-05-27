@@ -25,6 +25,130 @@
     "| 11 to 20 ft. away | 6 \u00d7 the number of charges in the staff |",
     "| 21 to 30 ft. away | 4 \u00d7 the number of charges in the staff |"
   ],
+  "feature_specific": {
+    "charges": {
+      "max": 20,
+      "recovery": "2d8 + 4",
+      "type": "day"
+    },
+    "spells": [
+      {
+        "spell": {
+          "index": "cone_of_cold",
+          "name": "cone of cold",
+          "url": "public/assets/atlas/spell/json/cone_of_cold.json"
+        },
+        "usage": {
+          "times": 5,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "fireball",
+          "name": "fireball",
+          "url": "public/assets/atlas/spell/json/fireball.json"
+        },
+        "usage": {
+          "times": 5,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "globe_of_invulnerability",
+          "name": "globe of invulnerability",
+          "url": "public/assets/atlas/spell/json/globe_of_invulnerability.json"
+        },
+        "usage": {
+          "times": 6,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "hold_monster",
+          "name": "hold monster",
+          "url": "public/assets/atlas/spell/json/hold_monster.json"
+        },
+        "usage": {
+          "times": 5,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "levitate",
+          "name": "levitate",
+          "url": "public/assets/atlas/spell/json/levitate.json"
+        },
+        "usage": {
+          "times": 2,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "lightning_bolt",
+          "name": "lightning bolt",
+          "url": "public/assets/atlas/spell/json/lightning_bolt.json"
+        },
+        "usage": {
+          "times": 5,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "magic_missile",
+          "name": "magic missile",
+          "url": "public/assets/atlas/spell/json/magic_missile.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "ray_of_enfeeblement",
+          "name": "ray of enfeeblement",
+          "url": "public/assets/atlas/spell/json/ray_of_enfeeblement.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "wall_of_force",
+          "name": "wall of force",
+          "url": "public/assets/atlas/spell/json/wall_of_force.json"
+        },
+        "usage": {
+          "times": 5,
+          "type": "charge"
+        },
+        "special_action": "action"
+      }
+    ],
+    "passive_modifiers": {
+      "attack_bonus": 2,
+      "damage_bonus": 2,
+      "ac_bonus": 2,
+      "saving_throws_bonus": 2,
+      "spell_attack_bonus": 2
+    }
+  },
   "url": "public/assets/atlas/magic_items/json/staff_of_power.json",
   "updated_at": "2025-10-24T20:42:13.517Z",
   "image": "public/assets/atlas/magic_items/staff_of_power.webp"

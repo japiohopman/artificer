@@ -15,6 +15,11 @@
     "Wondrous item, uncommon (requires attunement)",
     "Your Strength score is 19 while you wear these gauntlets. They have no effect on you if your Strength is already 19 or higher."
   ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "strength_set": 19
+    }
+  },
   "url": "public/assets/atlas/magic_items/json/gauntlets_of_ogre_power.json",
   "updated_at": "2025-10-24T20:42:13.517Z",
   "image": "public/assets/atlas/magic_items/gauntlets_of_ogre_power.webp"

@@ -15,6 +15,10 @@
     "Weapon (any), rare",
     "When you roll a 20 on your attack roll with this magic weapon, your critical hit deals an extra 2d6 damage of the weapon's type."
   ],
+  "feature_specific": {
+    "extra_damage": "2d6",
+    "crit_threshold": 20
+  },
   "url": "public/assets/atlas/magic_items/json/vicious_weapon.json",
   "updated_at": "2025-10-24T20:42:13.517Z",
   "image": "public/assets/atlas/magic_items/vicious_weapon.webp"

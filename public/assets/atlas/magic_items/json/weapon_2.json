@@ -15,6 +15,12 @@
     "Weapon (any), rare",
     "You have a +2 bonus to attack and damage rolls made with this magic weapon."
   ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "attack_bonus": 2,
+      "damage_bonus": 2
+    }
+  },
   "url": "public/assets/atlas/magic_items/json/weapon_2.json",
   "updated_at": "2025-10-24T20:42:13.517Z",
   "image": "public/assets/atlas/magic_items/weapon_2.webp"

@@ -15,6 +15,11 @@
     "Armor (light, medium, or heavy), rare",
     "You have a +1 bonus to AC while wearing this armor."
   ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "ac_bonus": 1
+    }
+  },
   "image": "public/assets/atlas/magic_items/armor_1.webp",
   "url": "public/assets/atlas/magic_items/json/armor_1.json",
   "updated_at": "2025-10-24T20:42:13.517Z"

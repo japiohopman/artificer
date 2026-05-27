@@ -15,6 +15,12 @@
     "Weapon (any), uncommon",
     "You have a +1 bonus to attack and damage rolls made with this magic weapon."
   ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "attack_bonus": 1,
+      "damage_bonus": 1
+    }
+  },
   "url": "public/assets/atlas/magic_items/json/weapon_1.json",
   "updated_at": "2025-10-24T20:42:13.517Z",
   "image": "public/assets/atlas/magic_items/weapon_1.webp"

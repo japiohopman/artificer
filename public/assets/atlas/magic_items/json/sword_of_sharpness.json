@@ -15,6 +15,20 @@
     "When you attack a creature with this weapon and roll a 20 on the attack roll, that target takes an extra 4d6 slashing damage. Then roll another d20. If you roll a 20, you lop off one of the target's limbs, with the effect of such loss determined by the GM. If the creature has no limb to sever, you lop off a portion of its body instead.",
     "In addition, you can speak the sword's command word to cause the blade to shed bright light in a 10 foot radius and dim light for an additional 10 feet. Speaking the command word again or sheathing the sword puts out the light."
   ],
+  "feature_specific": {
+    "extra_damage": "4d6",
+    "damage_type": "slashing",
+    "crit_threshold": 20,
+    "light": {
+      "bright": 10,
+      "dim": 10
+    },
+    "base_equipment_options": [
+      "public/assets/atlas/equipment/json/greatsword.json",
+      "public/assets/atlas/equipment/json/longsword.json",
+      "public/assets/atlas/equipment/json/scimitar.json"
+    ]
+  },
   "url": "public/assets/atlas/magic_items/json/sword_of_sharpness.json",
   "updated_at": "2026-05-15T05:01:36.246Z",
   "image": "public/assets/atlas/magic_items/sword_of_sharpness.webp",

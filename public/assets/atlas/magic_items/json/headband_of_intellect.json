@@ -15,6 +15,11 @@
     "Wondrous item, uncommon (requires attunement)",
     "Your Intelligence score is 19 while you wear this headband. It has no effect on you if your Intelligence is already 19 or higher."
   ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "intelligence_set": 19
+    }
+  },
   "url": "public/assets/atlas/magic_items/json/headband_of_intellect.json",
   "updated_at": "2026-04-15T13:44:43.228Z",
   "image": "public/assets/atlas/magic_items/headband_of_intellect.webp",

@@ -15,6 +15,12 @@
     "Wondrous item, uncommon (requires attunement)",
     "You gain a +1 bonus to AC and saving throws while you wear this cloak."
   ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "ac_bonus": 1,
+      "saving_throws_bonus": 1
+    }
+  },
   "image": "public/assets/atlas/magic_items/cloak_of_protection.webp",
   "url": "public/assets/atlas/magic_items/json/cloak_of_protection.json",
   "updated_at": "2025-10-24T20:42:13.517Z"

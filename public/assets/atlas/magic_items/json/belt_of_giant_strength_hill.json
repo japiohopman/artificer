@@ -13,6 +13,11 @@
     "Wondrous item, rare (requires attunement)",
     "While wearing this belt, your Strength score changes to a 21. If your Strength is already equal to or greater than the belt's score, the item has no Effect on you."
   ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "strength_set": 21
+    }
+  },
   "image": "public/assets/atlas/magic_items/belt_of_giant_strength_hill.webp",
   "url": "public/assets/atlas/magic_items/json/belt_of_giant_strength_hill.json",
   "updated_at": "2026-05-20T10:39:34.076Z",
