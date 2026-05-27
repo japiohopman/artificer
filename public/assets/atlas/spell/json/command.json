@@ -26,42 +26,42 @@
     "dc_type": {
       "index": "wis",
       "name": "wis",
-      "url": "public/assets/atlas/ability_scores/wisdom"
+      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
     },
     "dc_success": "none"
   },
   "school": {
     "index": "enchantment",
     "name": "enchantment",
-    "url": "public/assets/atlas/magic_schools/enchantment"
+    "url": "public/assets/atlas/magic_schools/json/enchantment.json"
   },
   "classes": [
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "paladin",
       "name": "paladin",
-      "url": "public/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     },
     {
       "index": "fiend",
       "name": "fiend",
-      "url": "public/assets/atlas/subclasses/fiend"
+      "url": "public/assets/atlas/subclasses/json/fiend.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/command.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/command.webp",
+  "image": "public/assets/atlas/spell/images/command.webp",
   "sprite_index": 20,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet2.webp"
 }

@@ -29,30 +29,30 @@
   "school": {
     "index": "conjuration",
     "name": "conjuration",
-    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+    "url": "public/assets/atlas/magic_schools/json/conjuration.json"
   },
   "classes": [
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "land",
       "name": "land",
-      "url": "public/assets/atlas/subclasses/land"
+      "url": "public/assets/atlas/subclasses/json/land.json"
     }
   ],
-  "url": "public/assets/atlas/spell/json/constitutionjure_elemental.json",
+  "url": "public/assets/atlas/spell/json/conjure_elemental.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/constitutionjure_elemental.webp",
+  "image": "public/assets/atlas/spell/images/conjure_elemental.webp",
   "sprite_index": 4,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet3.webp"
 }

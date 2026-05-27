@@ -28,7 +28,7 @@
     "dc_type": {
       "index": "con",
       "name": "con",
-      "url": "public/assets/atlas/ability_scores/constitution"
+      "url": "public/assets/atlas/ability_scores/json/constitution.json"
     },
     "dc_success": "other",
     "desc": "After succeeding on three of these saving throws, the creature recovers from the disease, and the spell ends."
@@ -36,24 +36,24 @@
   "school": {
     "index": "necromancy",
     "name": "necromancy",
-    "url": "public/assets/atlas/magic_schools/necromancy"
+    "url": "public/assets/atlas/magic_schools/json/necromancy.json"
   },
   "classes": [
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     }
   ],
   "subclasses": [],
-  "url": "public/assets/atlas/spell/json/constitutiontagion.json",
+  "url": "public/assets/atlas/spell/json/contagion.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/constitutiontagion.webp",
+  "image": "public/assets/atlas/spell/images/contagion.webp",
   "sprite_index": 9,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet3.webp"
 }

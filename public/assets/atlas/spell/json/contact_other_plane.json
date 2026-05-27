@@ -19,7 +19,7 @@
     "dc_type": {
       "index": "int",
       "name": "int",
-      "url": "public/assets/atlas/ability_scores/intelligence"
+      "url": "public/assets/atlas/ability_scores/json/intelligence.json"
     },
     "dc_success": "other",
     "desc": "On a failure, you take 6d6 psychic damage and are insane until you finish a long rest."
@@ -27,24 +27,24 @@
   "school": {
     "index": "divination",
     "name": "divination",
-    "url": "public/assets/atlas/magic_schools/divination"
+    "url": "public/assets/atlas/magic_schools/json/divination.json"
   },
   "classes": [
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
-  "url": "public/assets/atlas/spell/json/constitutiontact_other_plane.json",
+  "url": "public/assets/atlas/spell/json/contact_other_plane.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/constitutiontact_other_plane.webp",
+  "image": "public/assets/atlas/spell/images/contact_other_plane.webp",
   "sprite_index": 8,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet3.webp"
 }

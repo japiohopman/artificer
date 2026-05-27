@@ -28,30 +28,30 @@
   "school": {
     "index": "transmutation",
     "name": "transmutation",
-    "url": "public/assets/atlas/magic_schools/transmutation"
+    "url": "public/assets/atlas/magic_schools/json/transmutation.json"
   },
   "classes": [
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/create_or_destroy_water.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/create_or_destroy_water.webp",
+  "image": "public/assets/atlas/spell/images/create_or_destroy_water.webp",
   "sprite_index": 16,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet3.webp"
 }

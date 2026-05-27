@@ -22,19 +22,19 @@
   "school": {
     "index": "conjuration",
     "name": "conjuration",
-    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+    "url": "public/assets/atlas/magic_schools/json/conjuration.json"
   },
   "classes": [
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     }
   ],
   "subclasses": [],
-  "url": "public/assets/atlas/spell/json/constitutionjure_celestial.json",
+  "url": "public/assets/atlas/spell/json/conjure_celestial.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/constitutionjure_celestial.webp",
+  "image": "public/assets/atlas/spell/images/conjure_celestial.webp",
   "sprite_index": 3,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet3.webp"
 }

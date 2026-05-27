@@ -25,7 +25,7 @@
     "damage_type": {
       "index": "psychic",
       "name": "psychic",
-      "url": "public/assets/atlas/damage_types/psychic"
+      "url": "public/assets/atlas/damage_types/json/psychic.json"
     },
     "damage_at_slot_level": {
       "5": "3d6"
@@ -35,7 +35,7 @@
     "dc_type": {
       "index": "wis",
       "name": "wis",
-      "url": "public/assets/atlas/ability_scores/wisdom"
+      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
     },
     "dc_success": "none",
     "desc": "On a failed save, echoes of the phantasmal monstrosity spawn a nightmare that lasts the duration of the target's sleep and prevents the target from gaining any benefit from that rest."
@@ -43,35 +43,35 @@
   "school": {
     "index": "illusion",
     "name": "illusion",
-    "url": "public/assets/atlas/magic_schools/illusion"
+    "url": "public/assets/atlas/magic_schools/json/illusion.json"
   },
   "classes": [
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "land",
       "name": "land",
-      "url": "public/assets/atlas/subclasses/land"
+      "url": "public/assets/atlas/subclasses/json/land.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/dream.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/dream.webp",
+  "image": "public/assets/atlas/spell/images/dream.webp",
   "sprite_index": 17,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet4.webp"
 }

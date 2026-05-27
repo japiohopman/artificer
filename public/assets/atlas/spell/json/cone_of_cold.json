@@ -24,7 +24,7 @@
     "damage_type": {
       "index": "cold",
       "name": "cold",
-      "url": "public/assets/atlas/damage_types/cold"
+      "url": "public/assets/atlas/damage_types/json/cold.json"
     },
     "damage_at_slot_level": {
       "5": "8d8",
@@ -38,7 +38,7 @@
     "dc_type": {
       "index": "con",
       "name": "con",
-      "url": "public/assets/atlas/ability_scores/constitution"
+      "url": "public/assets/atlas/ability_scores/json/constitution.json"
     },
     "dc_success": "half",
     "desc": "A creature killed by this spell becomes a frozen statue until it thaws."
@@ -50,30 +50,30 @@
   "school": {
     "index": "evocation",
     "name": "evocation",
-    "url": "public/assets/atlas/magic_schools/evocation"
+    "url": "public/assets/atlas/magic_schools/json/evocation.json"
   },
   "classes": [
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "land",
       "name": "land",
-      "url": "public/assets/atlas/subclasses/land"
+      "url": "public/assets/atlas/subclasses/json/land.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/constitutione_of_cold.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/constitutione_of_cold.webp",
+  "image": "public/assets/atlas/spell/images/constitutione_of_cold.webp",
   "sprite_index": 0,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet3.webp"
 }

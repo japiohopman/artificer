@@ -20,7 +20,7 @@
     "damage_type": {
       "index": "radiant",
       "name": "radiant",
-      "url": "public/assets/atlas/damage_types/radiant"
+      "url": "public/assets/atlas/damage_types/json/radiant.json"
     },
     "damage_at_slot_level": {
       "2": "2d6",
@@ -36,19 +36,19 @@
   "school": {
     "index": "evocation",
     "name": "evocation",
-    "url": "public/assets/atlas/magic_schools/evocation"
+    "url": "public/assets/atlas/magic_schools/json/evocation.json"
   },
   "classes": [
     {
       "index": "paladin",
       "name": "paladin",
-      "url": "public/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/branding_smite.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/branding_smite.webp",
+  "image": "public/assets/atlas/spell/images/branding_smite.webp",
   "sprite_index": 8,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet2.webp"
 }

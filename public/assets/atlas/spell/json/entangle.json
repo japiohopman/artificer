@@ -21,7 +21,7 @@
     "dc_type": {
       "index": "str",
       "name": "str",
-      "url": "public/assets/atlas/ability_scores/strength"
+      "url": "public/assets/atlas/ability_scores/json/strength.json"
     },
     "dc_success": "none"
   },
@@ -32,25 +32,25 @@
   "school": {
     "index": "conjuration",
     "name": "conjuration",
-    "url": "public/assets/atlas/magic_schools/constitutionjuration"
+    "url": "public/assets/atlas/magic_schools/json/conjuration.json"
   },
   "classes": [
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/subclasses/lore"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "url": "public/assets/atlas/spell/json/entangle.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/entangle.webp",
+  "image": "public/assets/atlas/spell/images/entangle.webp",
   "sprite_index": 23,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet4.webp"
 }

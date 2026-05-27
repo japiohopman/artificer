@@ -19,29 +19,29 @@
   "school": {
     "index": "abjuration",
     "name": "abjuration",
-    "url": "public/assets/atlas/magic_schools/abjuration"
+    "url": "public/assets/atlas/magic_schools/json/abjuration.json"
   },
   "classes": [
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/counterspell.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/counterspell.webp",
+  "image": "public/assets/atlas/spell/images/counterspell.webp",
   "sprite_index": 14,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet3.webp"
 }

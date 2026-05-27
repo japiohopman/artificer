@@ -29,24 +29,24 @@
   "school": {
     "index": "enchantment",
     "name": "enchantment",
-    "url": "public/assets/atlas/magic_schools/enchantment"
+    "url": "public/assets/atlas/magic_schools/json/enchantment.json"
   },
   "classes": [
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/antipathy_sympathy.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/antipathy_sympathy.webp",
+  "image": "public/assets/atlas/spell/images/antipathy_sympathy.webp",
   "sprite_index": 12,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet1.webp"
 }

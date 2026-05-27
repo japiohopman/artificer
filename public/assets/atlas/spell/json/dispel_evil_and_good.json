@@ -24,7 +24,7 @@
     "dc_type": {
       "index": "cha",
       "name": "cha",
-      "url": "public/assets/atlas/ability_scores/charisma"
+      "url": "public/assets/atlas/ability_scores/json/charisma.json"
     },
     "dc_success": "other",
     "desc": "The creature must succeed on a charisma saving throw or be sent back to its home plane (if it isn't there already)"
@@ -32,24 +32,24 @@
   "school": {
     "index": "abjuration",
     "name": "abjuration",
-    "url": "public/assets/atlas/magic_schools/abjuration"
+    "url": "public/assets/atlas/magic_schools/json/abjuration.json"
   },
   "classes": [
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "paladin",
       "name": "paladin",
-      "url": "public/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/dispel_evil_and_good.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/dispel_evil_and_good.webp",
+  "image": "public/assets/atlas/spell/images/dispel_evil_and_good.webp",
   "sprite_index": 9,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet4.webp"
 }

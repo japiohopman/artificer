@@ -21,19 +21,19 @@
   "school": {
     "index": "necromancy",
     "name": "necromancy",
-    "url": "public/assets/atlas/magic_schools/necromancy"
+    "url": "public/assets/atlas/magic_schools/json/necromancy.json"
   },
   "classes": [
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/clone.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/clone.webp",
+  "image": "public/assets/atlas/spell/images/clone.webp",
   "sprite_index": 17,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet2.webp"
 }

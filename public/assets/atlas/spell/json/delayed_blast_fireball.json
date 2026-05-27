@@ -26,7 +26,7 @@
     "damage_type": {
       "index": "fire",
       "name": "fire",
-      "url": "public/assets/atlas/damage_types/fire"
+      "url": "public/assets/atlas/damage_types/json/fire.json"
     },
     "damage_at_slot_level": {
       "7": "12d6",
@@ -38,7 +38,7 @@
     "dc_type": {
       "index": "dex",
       "name": "dex",
-      "url": "public/assets/atlas/ability_scores/dexterity"
+      "url": "public/assets/atlas/ability_scores/json/dexterity.json"
     },
     "dc_success": "half"
   },
@@ -49,24 +49,24 @@
   "school": {
     "index": "evocation",
     "name": "evocation",
-    "url": "public/assets/atlas/magic_schools/evocation"
+    "url": "public/assets/atlas/magic_schools/json/evocation.json"
   },
   "classes": [
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/delayed_blast_fireball.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "public/assets/atlas/spell/delayed_blast_fireball.webp",
+  "image": "public/assets/atlas/spell/images/delayed_blast_fireball.webp",
   "sprite_index": 0,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet4.webp"
 }
