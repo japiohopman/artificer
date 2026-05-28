@@ -3,16 +3,49 @@
   "class": {
     "index": "rogue",
     "name": "rogue",
-    "url": "assets/atlas/class/json/rogue.json"
+    "url": "public/assets/atlas/class/json/rogue.json"
   },
   "name": "arcane trickster",
   "subclass_flavor": "Roguish Archetype",
   "desc": [
     "Some rogues enhance their fine-honed skills of stealth and agility with magic, learning tricks of enchantment and illusion. These rogues include pickpockets and burglars, but also pranksters, mischief-makers, and a significant number of adventurers."
   ],
-  "subclass_levels": "assets/atlas/subclasses/arcane_trickster/levels",
-  "url": "assets/atlas/subclasses/json/arcane_trickster.json",
+  "features": [
+    {
+      "index": "spellcasting_arcane_trickster",
+      "name": "Spellcasting",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/spellcasting_arcane_trickster.json"
+    },
+    {
+      "index": "mage_hand_legerdemain",
+      "name": "Mage Hand Legerdemain",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/mage_hand_legerdemain.json"
+    },
+    {
+      "index": "magical_ambush",
+      "name": "Magical Ambush",
+      "level": 9,
+      "url": "public/assets/atlas/features/json/magical_ambush.json"
+    },
+    {
+      "index": "versatile_trickster",
+      "name": "Versatile Trickster",
+      "level": 13,
+      "url": "public/assets/atlas/features/json/versatile_trickster.json"
+    },
+    {
+      "index": "spell_thief",
+      "name": "Spell Thief",
+      "level": 17,
+      "url": "public/assets/atlas/features/json/spell_thief.json"
+    }
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/arcane_trickster/levels",
+  "url": "public/assets/atlas/subclasses/json/arcane_trickster.json",
   "updated_at": "2025-10-24T20:42:14.748Z",
   "spells": [],
-  "image": "assets/atlas/subclasses/arcane_trickster.webp"
+  "image": "public/assets/atlas/subclasses/arcane_trickster.webp"
 }
+
