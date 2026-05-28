@@ -4,7 +4,7 @@
     {
       "index": "dwarf",
       "name": "dwarf",
-      "url": "public/assets/atlas/races/dwarf"
+      "url": "public/assets/atlas/species/json/dwarf.json"
     }
   ],
   "subraces": [],
@@ -24,7 +24,7 @@
           "item": {
             "index": "smiths_tools",
             "name": "smith's tools",
-            "url": "public/assets/atlas/proficiencies/smiths_tools"
+            "url": "public/assets/atlas/proficiencies/json/smiths_tools.json"
           }
         },
         {
@@ -32,7 +32,7 @@
           "item": {
             "index": "brewers_supplies",
             "name": "brewer's supplies",
-            "url": "public/assets/atlas/proficiencies/brewers_supplies"
+            "url": "public/assets/atlas/proficiencies/json/brewers_supplies.json"
           }
         },
         {
@@ -40,7 +40,7 @@
           "item": {
             "index": "masons_tools",
             "name": "mason's tools",
-            "url": "public/assets/atlas/proficiencies/masons_tools"
+            "url": "public/assets/atlas/proficiencies/json/masons_tools.json"
           }
         }
       ]

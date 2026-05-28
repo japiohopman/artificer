@@ -5,7 +5,7 @@
     {
       "index": "hill_dwarf",
       "name": "hill dwarf",
-      "url": "public/assets/atlas/subraces/hill_dwarf"
+      "url": "public/assets/atlas/subraces/json/hill_dwarf.json"
     }
   ],
   "name": "dwarven toughness",
@@ -13,6 +13,11 @@
     "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
   ],
   "proficiencies": [],
+  "trait_specific": {
+    "passive_modifiers": {
+      "hp_bonus_per_level": 1
+    }
+  },
   "url": "public/assets/atlas/traits/json/dwarven_toughness.json",
   "updated_at": "2025-10-24T20:42:14.945Z",
   "image": "public/assets/atlas/traits/dwarven_toughness.webp"

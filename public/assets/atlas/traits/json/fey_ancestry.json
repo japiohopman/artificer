@@ -4,12 +4,12 @@
     {
       "index": "elf",
       "name": "elf",
-      "url": "public/assets/atlas/races/elf"
+      "url": "public/assets/atlas/species/json/elf.json"
     },
     {
       "index": "half_elf",
       "name": "half_elf",
-      "url": "public/assets/atlas/races/half_elf"
+      "url": "public/assets/atlas/species/json/half_elf.json"
     }
   ],
   "subraces": [],
@@ -18,6 +18,25 @@
     "You have advantage on saving throws against being charmed, and magic cannot put you to sleep."
   ],
   "proficiencies": [],
+  "trait_specific": {
+    "passive_modifiers": {
+      "advantage": [
+        {
+          "name": "Saving Throws against being charmed",
+          "condition": {
+            "index": "charmed",
+            "name": "charmed",
+            "url": "public/assets/atlas/conditions/json/charmed.json"
+          }
+        }
+      ],
+      "immunity": [
+        {
+          "name": "magic sleep"
+        }
+      ]
+    }
+  },
   "url": "public/assets/atlas/traits/json/fey_ancestry.json",
   "updated_at": "2025-10-24T20:42:14.945Z",
   "image": "public/assets/atlas/traits/fey_ancestry.webp"

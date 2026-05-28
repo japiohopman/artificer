@@ -4,7 +4,7 @@
     {
       "index": "dragonborn",
       "name": "dragonborn",
-      "url": "public/assets/atlas/races/dragonborn"
+      "url": "public/assets/atlas/species/json/dragonborn.json"
     }
   ],
   "subraces": [],
@@ -24,7 +24,7 @@
             "item": {
               "index": "draconic_ancestry_black",
               "name": "draconic ancestry (black)",
-              "url": "public/assets/atlas/traits/draconic_ancestry_black"
+              "url": "public/assets/atlas/traits/json/draconic_ancestry_black.json"
             }
           },
           {
@@ -32,7 +32,7 @@
             "item": {
               "index": "draconic_ancestry_blue",
               "name": "draconic ancestry (blue)",
-              "url": "public/assets/atlas/traits/draconic_ancestry_blue"
+              "url": "public/assets/atlas/traits/json/draconic_ancestry_blue.json"
             }
           },
           {
@@ -40,7 +40,7 @@
             "item": {
               "index": "draconic_ancestry_brass",
               "name": "draconic ancestry (brass)",
-              "url": "public/assets/atlas/traits/draconic_ancestry_brass"
+              "url": "public/assets/atlas/traits/json/draconic_ancestry_brass.json"
             }
           },
           {
@@ -48,7 +48,7 @@
             "item": {
               "index": "draconic_ancestry_bronze",
               "name": "draconic ancestry (bronze)",
-              "url": "public/assets/atlas/traits/draconic_ancestry_bronze"
+              "url": "public/assets/atlas/traits/json/draconic_ancestry_bronze.json"
             }
           },
           {
@@ -56,7 +56,7 @@
             "item": {
               "index": "draconic_ancestry_copper",
               "name": "draconic ancestry (copper)",
-              "url": "public/assets/atlas/traits/draconic_ancestry_copper"
+              "url": "public/assets/atlas/traits/json/draconic_ancestry_copper.json"
             }
           },
           {
@@ -64,7 +64,7 @@
             "item": {
               "index": "draconic_ancestry_gold",
               "name": "draconic ancestry (gold)",
-              "url": "public/assets/atlas/traits/draconic_ancestry_gold"
+              "url": "public/assets/atlas/traits/json/draconic_ancestry_gold.json"
             }
           },
           {
@@ -72,7 +72,7 @@
             "item": {
               "index": "draconic_ancestry_green",
               "name": "draconic ancestry (green)",
-              "url": "public/assets/atlas/traits/draconic_ancestry_green"
+              "url": "public/assets/atlas/traits/json/draconic_ancestry_green.json"
             }
           },
           {
@@ -80,7 +80,7 @@
             "item": {
               "index": "draconic_ancestry_red",
               "name": "draconic ancestry (red)",
-              "url": "public/assets/atlas/traits/draconic_ancestry_red"
+              "url": "public/assets/atlas/traits/json/draconic_ancestry_red.json"
             }
           },
           {
@@ -88,7 +88,7 @@
             "item": {
               "index": "draconic_ancestry_silver",
               "name": "draconic ancestry (silver)",
-              "url": "public/assets/atlas/traits/draconic_ancestry_silver"
+              "url": "public/assets/atlas/traits/json/draconic_ancestry_silver.json"
             }
           },
           {
@@ -96,7 +96,7 @@
             "item": {
               "index": "draconic_ancestry_white",
               "name": "draconic ancestry (white)",
-              "url": "public/assets/atlas/traits/draconic_ancestry_white"
+              "url": "public/assets/atlas/traits/json/draconic_ancestry_white.json"
             }
           }
         ]

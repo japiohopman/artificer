@@ -18,6 +18,14 @@
   "desc": [
     "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
   ],
+  "trait_specific": {
+    "passive_modifiers": {
+      "disadvantage": [
+        "Attack rolls in direct sunlight",
+        "Perception checks that rely on sight in direct sunlight"
+      ]
+    }
+  },
   "url": "public/assets/atlas/traits/json/sunlight_sensitivity.json",
   "updated_at": "2025-05-22T12:00:00.000Z",
   "image": "public/assets/atlas/traits/sunlight_sensitivity.webp"

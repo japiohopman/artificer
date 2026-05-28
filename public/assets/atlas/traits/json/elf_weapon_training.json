@@ -5,7 +5,7 @@
     {
       "index": "high_elf",
       "name": "high elf",
-      "url": "public/assets/atlas/subraces/high_elf"
+      "url": "public/assets/atlas/subraces/json/high_elf.json"
     }
   ],
   "name": "elf weapon training",
@@ -16,22 +16,22 @@
     {
       "index": "longswords",
       "name": "longswords",
-      "url": "public/assets/atlas/proficiencies/longswords"
+      "url": "public/assets/atlas/proficiencies/json/longswords.json"
     },
     {
       "index": "shortswords",
       "name": "shortswords",
-      "url": "public/assets/atlas/proficiencies/shortswords"
+      "url": "public/assets/atlas/proficiencies/json/shortswords.json"
     },
     {
       "index": "shortbows",
       "name": "shortbows",
-      "url": "public/assets/atlas/proficiencies/shortbows"
+      "url": "public/assets/atlas/proficiencies/json/shortbows.json"
     },
     {
       "index": "longbows",
       "name": "longbows",
-      "url": "public/assets/atlas/proficiencies/longbows"
+      "url": "public/assets/atlas/proficiencies/json/longbows.json"
     }
   ],
   "url": "public/assets/atlas/traits/json/elf_weapon_training.json",

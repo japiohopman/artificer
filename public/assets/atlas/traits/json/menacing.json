@@ -4,7 +4,7 @@
     {
       "index": "half_orc",
       "name": "half_orc",
-      "url": "public/assets/atlas/races/half_orc"
+      "url": "public/assets/atlas/species/json/half_orc.json"
     }
   ],
   "subraces": [],
@@ -16,7 +16,7 @@
     {
       "index": "skill_intimidation",
       "name": "skill: intimidation",
-      "url": "public/assets/atlas/proficiencies/skill_intimidation"
+      "url": "public/assets/atlas/proficiencies/json/skill_intimidation.json"
     }
   ],
   "url": "public/assets/atlas/traits/json/menacing.json",

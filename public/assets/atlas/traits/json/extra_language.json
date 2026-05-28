@@ -5,7 +5,7 @@
     {
       "index": "high_elf",
       "name": "high elf",
-      "url": "public/assets/atlas/subraces/high_elf"
+      "url": "public/assets/atlas/subraces/json/high_elf.json"
     }
   ],
   "name": "extra language",
@@ -13,7 +13,7 @@
     "You can speak, read, and write one extra language of your choice."
   ],
   "proficiencies": [],
-  "language_options": {
+  "language_choices": {
     "choose": 1,
     "type": "languages",
     "from": {
@@ -42,7 +42,7 @@
           "item": {
             "index": "gnomish",
             "name": "gnomish",
-            "url": "public/assets/atlas/languages/json/gnomish.json"
+            "url": "public/assets/atlas/languages/json/gnomish.json",
             "ttf": "public/assets/atlas/languages/Gnomish-Regular.ttf"
           }
         },

@@ -18,6 +18,11 @@
   "desc": [
     "Your base walking speed increases to 35 feet."
   ],
+  "trait_specific": {
+    "passive_modifiers": {
+      "speed_set": 35
+    }
+  },
   "url": "public/assets/atlas/traits/json/fleet_of_foot.json",
   "updated_at": "2025-05-22T12:00:00.000Z",
   "image": "public/assets/atlas/traits/fleet_of_foot.webp"
