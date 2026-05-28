@@ -3,12 +3,12 @@
   "class": {
     "index": "rogue",
     "name": "rogue",
-    "url": "assets/atlas/class/json/rogue.json"
+    "url": "public/assets/atlas/class/json/rogue.json"
   },
   "subclass": {
     "index": "arcane_trickster",
     "name": "arcane trickster",
-    "url": "assets/atlas/subclasses/json/arcane_trickster.json"
+    "url": "public/assets/atlas/subclasses/json/arcane_trickster.json"
   },
   "name": "spellcasting",
   "level": 3,
@@ -21,7 +21,8 @@
     "Whenever you gain a level in this class, you can replace one of the wizard spells you know with another spell of your choice from the wizard spell list. The new spell must be of a level for which you have spell slots, and it must be an enchantment or illusion spell, unless you're replacing the spell you learned at 3rd, 8th, 14th, or 20th level from any school of magic.",
     "Spellcasting Ability. Intelligence is your spellcasting ability for your wizard spells, since you learn them through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one."
   ],
-  "url": "assets/atlas/features/json/spellcasting_arcane_trickster.json",
+  "url": "public/assets/atlas/features/json/spellcasting_arcane_trickster.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "assets/atlas/features/spellcasting_arcane_trickster.webp"
+  "image": "public/assets/atlas/features/spellcasting_arcane_trickster.webp"
 }
+
