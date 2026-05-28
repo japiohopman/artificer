@@ -3,12 +3,12 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "assets/atlas/class/json/fighter.json"
+    "url": "public/assets/atlas/class/json/fighter.json"
   },
   "subclass": {
     "index": "psi_warrior",
     "name": "psi warrior",
-    "url": "assets/atlas/subclasses/json/psi_warrior.json"
+    "url": "public/assets/atlas/subclasses/json/psi_warrior.json"
   },
   "name": "psi-powered leap",
   "level": 7,
@@ -16,7 +16,7 @@
   "desc": [
     "At 7th level, you can propel your body with your mind. As a bonus action, you can propel yourself to gain a flying speed equal to twice your walking speed until the end of the current turn. Once you take this bonus action, you can't do so again until you finish a short or long rest, unless you expend a Psionic Energy die to take it again."
   ],
-  "url": "assets/atlas/features/json/psi_powered_leap.json",
+  "url": "public/assets/atlas/features/json/psi_powered_leap.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
   "image": "assets/atlas/features/psi_powered_leap.webp"
 }

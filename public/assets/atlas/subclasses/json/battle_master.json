@@ -3,16 +3,48 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "assets/atlas/class/json/fighter.json"
+    "url": "public/assets/atlas/class/json/fighter.json"
   },
   "name": "battle master",
   "subclass_flavor": "Martial Archetype",
   "desc": [
     "Battle Masters are students of the art of war. They view combat as a field of study, and they use maneuvers—specialized combat techniques—to control the battlefield and support their allies."
   ],
-  "subclass_levels": "assets/atlas/subclasses/battle_master/levels",
-  "url": "assets/atlas/subclasses/json/battle_master.json",
+  "features": [
+    {
+      "index": "combat_superiority",
+      "name": "Combat Superiority",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/combat_superiority.json"
+    },
+    {
+      "index": "student_of_war",
+      "name": "Student of War",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/student_of_war.json"
+    },
+    {
+      "index": "know_your_enemy",
+      "name": "Know Your Enemy",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/know_your_enemy.json"
+    },
+    {
+      "index": "improved_combat_superiority",
+      "name": "Improved Combat Superiority",
+      "level": 10,
+      "url": "public/assets/atlas/features/json/improved_combat_superiority.json"
+    },
+    {
+      "index": "relentless",
+      "name": "Relentless",
+      "level": 15,
+      "url": "public/assets/atlas/features/json/relentless.json"
+    }
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/battle_master/levels",
+  "url": "public/assets/atlas/subclasses/json/battle_master.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
   "spells": [],
-  "image": "assets/atlas/subclasses/battle_master.webp"
+  "image": "public/assets/atlas/subclasses/battle_master.webp"
 }

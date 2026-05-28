@@ -3,12 +3,12 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "assets/atlas/class/json/fighter.json"
+    "url": "public/assets/atlas/class/json/fighter.json"
   },
   "subclass": {
     "index": "champion",
     "name": "champion",
-    "url": "assets/atlas/subclasses/json/champion.json"
+    "url": "public/assets/atlas/subclasses/json/champion.json"
   },
   "name": "remarkable athlete",
   "level": 3,
@@ -16,7 +16,7 @@
   "desc": [
     "Starting at 3rd level, you have advantage on Initiative rolls and Strength (Athletics) checks. In addition, when you score a Critical Hit, you can move half your Speed without provoking Opportunity Attacks."
   ],
-  "url": "assets/atlas/features/json/remarkable_athlete.json",
+  "url": "public/assets/atlas/features/json/remarkable_athlete.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
   "image": "assets/atlas/features/remarkable_athlete.webp"
 }

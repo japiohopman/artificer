@@ -3,12 +3,38 @@
   "class": {
     "index": "warlock",
     "name": "warlock",
-    "url": "public/assets/atlas/classes/warlock"
+    "url": "public/assets/atlas/class/json/warlock.json"
   },
   "name": "fiend",
   "subclass_flavor": "Otherworldly Patron",
   "desc": [
     "You have made a pact with a fiend from the lower planes of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption or destruction of all things, ultimately including you. Fiends powerful enough to forge a pact include demon lords such as Demogorgon, Orcus, Fraz'Urb-luu, and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles, and Belial; pit fiends and balors that are especially mighty; and ultroloths and other lords of the yugoloths."
+  ],
+  "features": [
+    {
+      "index": "dark_ones_blessing",
+      "name": "Dark One's Blessing",
+      "level": 1,
+      "url": "public/assets/atlas/features/json/dark_ones_blessing.json"
+    },
+    {
+      "index": "dark_ones_own_luck",
+      "name": "Dark One's Own Luck",
+      "level": 6,
+      "url": "public/assets/atlas/features/json/dark_ones_own_luck.json"
+    },
+    {
+      "index": "fiendish_resilience",
+      "name": "Fiendish Resilience",
+      "level": 10,
+      "url": "public/assets/atlas/features/json/fiendish_resilience.json"
+    },
+    {
+      "index": "hurl_through_hell",
+      "name": "Hurl Through Hell",
+      "level": 14,
+      "url": "public/assets/atlas/features/json/hurl_through_hell.json"
+    }
   ],
   "spells": [
     {

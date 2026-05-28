@@ -3,12 +3,12 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "assets/atlas/class/json/fighter.json"
+    "url": "public/assets/atlas/class/json/fighter.json"
   },
   "subclass": {
     "index": "champion",
     "name": "champion",
-    "url": "assets/atlas/subclasses/json/champion.json"
+    "url": "public/assets/atlas/subclasses/json/champion.json"
   },
   "name": "superior critical",
   "level": 15,
@@ -16,7 +16,7 @@
   "desc": [
     "Starting at 15th level, your weapon attacks score a critical hit on a roll of 18–20."
   ],
-  "url": "assets/atlas/features/json/superior_critical.json",
+  "url": "public/assets/atlas/features/json/superior_critical.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
   "image": "assets/atlas/features/superior_critical.webp"
 }

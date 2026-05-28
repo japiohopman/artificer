@@ -3,12 +3,50 @@
   "class": {
     "index": "paladin",
     "name": "paladin",
-    "url": "public/assets/atlas/classes/paladin"
+    "url": "public/assets/atlas/class/json/paladin.json"
   },
   "name": "devotion",
   "subclass_flavor": "Sacred Oath",
   "desc": [
     "The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order. Sometimes called cavaliers, white knights, or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good and use their gods' tenets as the measure of their devotion. They hold angels--the perfect servants of good--as their ideals, and incorporate images of angelic wings into their helmets or coats of arms."
+  ],
+  "features": [
+    {
+      "index": "oath_spells",
+      "name": "Oath Spells",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/oath_spells.json"
+    },
+    {
+      "index": "channel_divinity_sacred_weapon",
+      "name": "Channel Divinity: Sacred Weapon",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/channel_divinity_sacred_weapon.json"
+    },
+    {
+      "index": "channel_divinity_turn_the_unholy",
+      "name": "Channel Divinity: Turn the Unholy",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/channel_divinity_turn_the_unholy.json"
+    },
+    {
+      "index": "aura_of_devotion",
+      "name": "Aura of Devotion",
+      "level": 7,
+      "url": "public/assets/atlas/features/json/aura_of_devotion.json"
+    },
+    {
+      "index": "purity_of_spirit",
+      "name": "Purity of Spirit",
+      "level": 15,
+      "url": "public/assets/atlas/features/json/purity_of_spirit.json"
+    },
+    {
+      "index": "holy_nimbus",
+      "name": "Holy Nimbus",
+      "level": 20,
+      "url": "public/assets/atlas/features/json/holy_nimbus.json"
+    }
   ],
   "spells": [
     {

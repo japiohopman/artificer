@@ -3,16 +3,54 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "assets/atlas/class/json/fighter.json"
+    "url": "public/assets/atlas/class/json/fighter.json"
   },
   "name": "champion",
   "subclass_flavor": "Martial Archetype",
   "desc": [
     "The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows."
   ],
-  "subclass_levels": "assets/atlas/subclasses/champion/levels",
-  "url": "assets/atlas/subclasses/json/champion.json",
+  "features": [
+    {
+      "index": "improved_critical",
+      "name": "Improved Critical",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/improved_critical.json"
+    },
+    {
+      "index": "remarkable_athlete",
+      "name": "Remarkable Athlete",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/remarkable_athlete.json"
+    },
+    {
+      "index": "additional_fighting_style",
+      "name": "Additional Fighting Style",
+      "level": 7,
+      "url": "public/assets/atlas/features/json/additional_fighting_style.json"
+    },
+    {
+      "index": "heroic_warrior",
+      "name": "Heroic Warrior",
+      "level": 10,
+      "url": "public/assets/atlas/features/json/heroic_warrior.json"
+    },
+    {
+      "index": "superior_critical",
+      "name": "Superior Critical",
+      "level": 15,
+      "url": "public/assets/atlas/features/json/superior_critical.json"
+    },
+    {
+      "index": "survivor",
+      "name": "Survivor",
+      "level": 18,
+      "url": "public/assets/atlas/features/json/survivor.json"
+    }
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/champion/levels",
+  "url": "public/assets/atlas/subclasses/json/champion.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
   "spells": [],
-  "image": "assets/atlas/subclasses/champion.webp"
+  "image": "public/assets/atlas/subclasses/champion.webp"
 }

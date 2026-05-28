@@ -1,0 +1,22 @@
+{
+  "index": "telekinetic_thrust",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "public/assets/atlas/class/json/fighter.json"
+  },
+  "subclass": {
+    "index": "psi_warrior",
+    "name": "psi warrior",
+    "url": "public/assets/atlas/subclasses/json/psi_warrior.json"
+  },
+  "name": "telekinetic thrust",
+  "level": 7,
+  "prerequisites": [],
+  "desc": [
+    "At 7th level, you can deliver a telekinetic shove with your Psionic Strike. When you deal damage to a target with your Psionic Strike, you can force the target to make a Strength saving throw against a DC equal to 8 + your proficiency bonus + your Intelligence modifier. If the save fails, you can knock the target prone or move it up to 10 feet in any direction horizontally."
+  ],
+  "url": "public/assets/atlas/features/json/telekinetic_thrust.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/telekinetic_thrust.webp"
+}

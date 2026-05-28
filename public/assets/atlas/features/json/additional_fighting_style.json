@@ -3,12 +3,12 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "assets/atlas/class/json/fighter.json"
+    "url": "public/assets/atlas/class/json/fighter.json"
   },
   "subclass": {
     "index": "champion",
     "name": "champion",
-    "url": "assets/atlas/subclasses/json/champion.json"
+    "url": "public/assets/atlas/subclasses/json/champion.json"
   },
   "name": "additional fighting style",
   "level": 7,
@@ -16,7 +16,7 @@
   "desc": [
     "At 7th level, you can choose a second option from the Fighting Style feature."
   ],
-  "url": "assets/atlas/features/json/additional_fighting_style.json",
+  "url": "public/assets/atlas/features/json/additional_fighting_style.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
   "image": "assets/atlas/features/additional_fighting_style.webp"
 }

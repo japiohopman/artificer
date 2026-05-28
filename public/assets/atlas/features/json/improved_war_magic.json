@@ -3,12 +3,12 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "assets/atlas/class/json/fighter.json"
+    "url": "public/assets/atlas/class/json/fighter.json"
   },
   "subclass": {
     "index": "eldritch_knight",
     "name": "eldritch knight",
-    "url": "assets/atlas/subclasses/json/eldritch_knight.json"
+    "url": "public/assets/atlas/subclasses/json/eldritch_knight.json"
   },
   "name": "improved war magic",
   "level": 18,
@@ -16,7 +16,7 @@
   "desc": [
     "Starting at 18th level, when you take the Attack action on your turn, you can replace two of your attacks with a casting of a wizard spell of 1st or 2nd level that has a casting time of an action."
   ],
-  "url": "assets/atlas/features/json/improved_war_magic.json",
+  "url": "public/assets/atlas/features/json/improved_war_magic.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
   "image": "assets/atlas/features/improved_war_magic.webp"
 }

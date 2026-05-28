@@ -3,12 +3,12 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "assets/atlas/class/json/fighter.json"
+    "url": "public/assets/atlas/class/json/fighter.json"
   },
   "subclass": {
     "index": "champion",
     "name": "champion",
-    "url": "assets/atlas/subclasses/json/champion.json"
+    "url": "public/assets/atlas/subclasses/json/champion.json"
   },
   "name": "heroic warrior",
   "level": 10,
@@ -16,7 +16,7 @@
   "desc": [
     "Starting at 10th level, you gain Heroic Inspiration whenever you start your turn without it."
   ],
-  "url": "assets/atlas/features/json/heroic_warrior.json",
+  "url": "public/assets/atlas/features/json/heroic_warrior.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
   "image": "assets/atlas/features/heroic_warrior.webp"
 }

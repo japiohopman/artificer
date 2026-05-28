@@ -3,12 +3,44 @@
   "class": {
     "index": "wizard",
     "name": "wizard",
-    "url": "public/assets/atlas/classes/wizard"
+    "url": "public/assets/atlas/class/json/wizard.json"
   },
   "name": "evocation",
   "subclass_flavor": "Arcane Tradition",
   "desc": [
     "You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants."
+  ],
+  "features": [
+    {
+      "index": "evocation_savant",
+      "name": "Evocation Savant",
+      "level": 2,
+      "url": "public/assets/atlas/features/json/evocation_savant.json"
+    },
+    {
+      "index": "sculpt_spells",
+      "name": "Sculpt Spells",
+      "level": 2,
+      "url": "public/assets/atlas/features/json/sculpt_spells.json"
+    },
+    {
+      "index": "potent_cantrip",
+      "name": "Potent Cantrip",
+      "level": 6,
+      "url": "public/assets/atlas/features/json/potent_cantrip.json"
+    },
+    {
+      "index": "empowered_evocation",
+      "name": "Empowered Evocation",
+      "level": 10,
+      "url": "public/assets/atlas/features/json/empowered_evocation.json"
+    },
+    {
+      "index": "overchannel",
+      "name": "Overchannel",
+      "level": 14,
+      "url": "public/assets/atlas/features/json/overchannel.json"
+    }
   ],
   "subclass_levels": "public/assets/atlas/subclasses/evocation/levels",
   "url": "public/assets/atlas/subclasses/json/evocation.json",

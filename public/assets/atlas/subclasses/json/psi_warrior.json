@@ -3,16 +3,72 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "assets/atlas/class/json/fighter.json"
+    "url": "public/assets/atlas/class/json/fighter.json"
   },
   "name": "psi warrior",
   "subclass_flavor": "Martial Archetype",
   "desc": [
     "Psi Warriors augment their physical might with the power of their minds. They use psionic energy to strike with greater force, shield themselves and others, and even move objects with a thought."
   ],
-  "subclass_levels": "assets/atlas/subclasses/psi_warrior/levels",
-  "url": "assets/atlas/subclasses/json/psi_warrior.json",
+  "features": [
+    {
+      "index": "psionic_power",
+      "name": "Psionic Power",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/psionic_power.json"
+    },
+    {
+      "index": "protective_field",
+      "name": "Protective Field",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/protective_field.json"
+    },
+    {
+      "index": "psionic_strike",
+      "name": "Psionic Strike",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/psionic_strike.json"
+    },
+    {
+      "index": "telekinetic_movement",
+      "name": "Telekinetic Movement",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/telekinetic_movement.json"
+    },
+    {
+      "index": "psi_powered_leap",
+      "name": "Psi-Powered Leap",
+      "level": 7,
+      "url": "public/assets/atlas/features/json/psi_powered_leap.json"
+    },
+    {
+      "index": "telekinetic_thrust",
+      "name": "Telekinetic Thrust",
+      "level": 7,
+      "url": "public/assets/atlas/features/json/telekinetic_thrust.json"
+    },
+    {
+      "index": "guarded_mind",
+      "name": "Guarded Mind",
+      "level": 10,
+      "url": "public/assets/atlas/features/json/guarded_mind.json"
+    },
+    {
+      "index": "bulwark_of_force",
+      "name": "Bulwark of Force",
+      "level": 15,
+      "url": "public/assets/atlas/features/json/bulwark_of_force.json"
+    },
+    {
+      "index": "telekinetic_master",
+      "name": "Telekinetic Master",
+      "level": 18,
+      "url": "public/assets/atlas/features/json/telekinetic_master.json"
+    }
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/psi_warrior/levels",
+  "url": "public/assets/atlas/subclasses/json/psi_warrior.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
   "spells": [],
-  "image": "assets/atlas/subclasses/psi_warrior.webp"
+  "image": "public/assets/atlas/subclasses/psi_warrior.webp"
 }
