@@ -1,0 +1,32 @@
+{
+  "index": "citrine",
+  "name": "Citrine",
+  "equipment_category": {
+    "url": "public/assets/atlas/equipment_categories/materials",
+    "name": "Materials",
+    "index": "materials"
+  },
+  "material_category": "Stone",
+  "material_sub_category": "Natural",
+  "rarity": "Uncommon",
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "desc": [
+    "A pale yellow crystal often used to channel lightning and electrical energy."
+  ],
+  "properties": [
+    "Gem",
+    "Lightning"
+  ],
+  "source": "5e SRD",
+  "url": "public/assets/atlas/crafting/json/citrine.json",
+  "updated_at": "2024-05-27T10:00:00.000Z",
+  "image": "public/assets/atlas/crafting/citrine.webp",
+  "category": "Common Materials",
+  "last_updated": "27-05-2024",
+  "imageUrl": "/assets/atlas/crafting/citrine.webp",
+  "_type": "materials"
+}

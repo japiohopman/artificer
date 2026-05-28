@@ -1,6 +1,6 @@
 {
   "index": "jade",
-  "name": "jade",
+  "name": "Jade",
   "equipment_category": {
     "url": "public/assets/atlas/equipment_categories/materials",
     "name": "Materials",
@@ -15,11 +15,13 @@
   },
   "weight": 1,
   "desc": [
-    "Grants +1 to all Saving Throws."
+    "A green stone that grants +1 to all Saving Throws. It is often used to channel psychic energy."
   ],
   "properties": [
+    "Gem",
     "Vital",
-    "Protective"
+    "Protective",
+    "Psychic"
   ],
   "source": "Real World",
   "url": "public/assets/atlas/crafting/json/jade.json",

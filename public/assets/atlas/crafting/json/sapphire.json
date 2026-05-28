@@ -1,6 +1,6 @@
 {
   "index": "sapphire",
-  "name": "sapphire",
+  "name": "Sapphire",
   "equipment_category": {
     "url": "public/assets/atlas/equipment_categories/materials",
     "name": "Materials",
@@ -15,11 +15,13 @@
   },
   "weight": 1,
   "desc": [
-    "Used in 'Ice Storm' or 'Teleport' related items."
+    "A brilliant blue gemstone used in 'Ice Storm' or 'Teleport' related items. It is also a powerful conduit for force energy."
   ],
   "properties": [
+    "Gem",
     "Cold",
-    "Precise"
+    "Precise",
+    "Force"
   ],
   "source": "Real World",
   "url": "public/assets/atlas/crafting/json/sapphire.json",

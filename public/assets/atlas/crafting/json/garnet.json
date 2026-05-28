@@ -1,6 +1,6 @@
 {
   "index": "garnet",
-  "name": "garnet",
+  "name": "Garnet",
   "equipment_category": {
     "url": "public/assets/atlas/equipment_categories/materials",
     "name": "Materials",
@@ -15,9 +15,10 @@
   },
   "weight": 1,
   "desc": [
-    "Used in 'Fireball' or 'Vampiric Touch' related items."
+    "A deep red gemstone used in 'Fireball' or 'Vampiric Touch' related items, known for channeling fire energy."
   ],
   "properties": [
+    "Gem",
     "Blood",
     "Fire"
   ],
