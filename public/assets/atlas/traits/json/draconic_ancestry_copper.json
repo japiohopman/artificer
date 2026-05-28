@@ -4,7 +4,7 @@
     {
       "index": "dragonborn",
       "name": "dragonborn",
-      "url": "public/assets/atlas/races/dragonborn"
+      "url": "public/assets/atlas/species/json/dragonborn.json"
     }
   ],
   "subraces": [],
@@ -15,14 +15,14 @@
   "parent": {
     "index": "draconic_ancestry",
     "name": "draconic ancestry",
-    "url": "public/assets/atlas/traits/draconic_ancestry"
+    "url": "public/assets/atlas/traits/json/draconic_ancestry.json"
   },
   "proficiencies": [],
   "trait_specific": {
     "damage_type": {
       "index": "acid",
       "name": "acid",
-      "url": "public/assets/atlas/damage_types/acid"
+      "url": "public/assets/atlas/damage_types/json/acid.json"
     },
     "breath_weapon": {
       "name": "breath weapon",
@@ -39,7 +39,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/dexterity"
+          "url": "public/assets/atlas/ability_scores/json/dexterity.json"
         },
         "success_type": "half"
       },
@@ -48,7 +48,7 @@
           "damage_type": {
             "index": "acid",
             "name": "acid",
-            "url": "public/assets/atlas/damage_types/acid"
+            "url": "public/assets/atlas/damage_types/json/acid.json"
           },
           "damage_at_character_level": {
             "1": "2d6",

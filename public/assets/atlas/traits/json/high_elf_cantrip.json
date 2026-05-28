@@ -5,7 +5,7 @@
     {
       "index": "high_elf",
       "name": "high elf",
-      "url": "public/assets/atlas/subraces/high_elf"
+      "url": "public/assets/atlas/subraces/json/high_elf.json"
     }
   ],
   "name": "high elf cantrip",
@@ -14,6 +14,11 @@
   ],
   "proficiencies": [],
   "trait_specific": {
+    "spellcasting_ability": {
+      "index": "intelligence",
+      "name": "intelligence",
+      "url": "public/assets/atlas/ability_scores/json/intelligence.json"
+    },
     "spell_options": {
       "choose": 1,
       "from": {
@@ -24,7 +29,7 @@
             "item": {
               "index": "light",
               "name": "light",
-              "url": "public/assets/atlas/spells/light"
+              "url": "public/assets/atlas/spell/json/light.json"
             }
           },
           {
@@ -32,7 +37,7 @@
             "item": {
               "index": "mage_hand",
               "name": "mage hand",
-              "url": "public/assets/atlas/spells/mage_hand"
+              "url": "public/assets/atlas/spell/json/mage_hand.json"
             }
           },
           {
@@ -40,7 +45,7 @@
             "item": {
               "index": "mending",
               "name": "mending",
-              "url": "public/assets/atlas/spells/mending"
+              "url": "public/assets/atlas/spell/json/mending.json"
             }
           },
           {
@@ -48,7 +53,7 @@
             "item": {
               "index": "message",
               "name": "message",
-              "url": "public/assets/atlas/spells/message"
+              "url": "public/assets/atlas/spell/json/message.json"
             }
           },
           {
@@ -56,7 +61,7 @@
             "item": {
               "index": "minor_illusion",
               "name": "minor illusion",
-              "url": "public/assets/atlas/spells/minor_illusion"
+              "url": "public/assets/atlas/spell/json/minor_illusion.json"
             }
           },
           {
@@ -64,7 +69,7 @@
             "item": {
               "index": "acid_splash",
               "name": "acid splash",
-              "url": "public/assets/atlas/spells/acid_splash"
+              "url": "public/assets/atlas/spell/json/acid_splash.json"
             }
           },
           {
@@ -72,7 +77,7 @@
             "item": {
               "index": "prestidigitation",
               "name": "prestidigitation",
-              "url": "public/assets/atlas/spells/prestidigitation"
+              "url": "public/assets/atlas/spell/json/prestidigitation.json"
             }
           },
           {
@@ -80,7 +85,7 @@
             "item": {
               "index": "ray_of_frost",
               "name": "ray of frost",
-              "url": "public/assets/atlas/spells/ray_of_frost"
+              "url": "public/assets/atlas/spell/json/ray_of_frost.json"
             }
           },
           {
@@ -88,7 +93,7 @@
             "item": {
               "index": "shocking_grasp",
               "name": "shocking grasp",
-              "url": "public/assets/atlas/spells/shocking_grasp"
+              "url": "public/assets/atlas/spell/json/shocking_grasp.json"
             }
           },
           {
@@ -96,7 +101,7 @@
             "item": {
               "index": "true_strike",
               "name": "true strike",
-              "url": "public/assets/atlas/spells/true_strike"
+              "url": "public/assets/atlas/spell/json/true_strike.json"
             }
           },
           {
@@ -104,7 +109,7 @@
             "item": {
               "index": "chill_touch",
               "name": "chill touch",
-              "url": "public/assets/atlas/spells/chill_touch"
+              "url": "public/assets/atlas/spell/json/chill_touch.json"
             }
           },
           {
@@ -112,7 +117,7 @@
             "item": {
               "index": "dancing_lights",
               "name": "dancing lights",
-              "url": "public/assets/atlas/spells/dancing_lights"
+              "url": "public/assets/atlas/spell/json/dancing_lights.json"
             }
           },
           {
@@ -120,7 +125,7 @@
             "item": {
               "index": "fire_bolt",
               "name": "fire bolt",
-              "url": "public/assets/atlas/spells/fire_bolt"
+              "url": "public/assets/atlas/spell/json/fire_bolt.json"
             }
           },
           {
@@ -128,7 +133,7 @@
             "item": {
               "index": "poison_spray",
               "name": "poison spray",
-              "url": "public/assets/atlas/spells/poison_spray"
+              "url": "public/assets/atlas/spell/json/poison_spray.json"
             }
           }
         ]

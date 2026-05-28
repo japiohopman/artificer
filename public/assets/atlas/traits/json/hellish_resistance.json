@@ -4,7 +4,7 @@
     {
       "index": "tiefling",
       "name": "tiefling",
-      "url": "public/assets/atlas/races/tiefling"
+      "url": "public/assets/atlas/species/json/tiefling.json"
     }
   ],
   "subraces": [],
@@ -13,6 +13,17 @@
     "You have resistance to fire damage."
   ],
   "proficiencies": [],
+  "trait_specific": {
+    "passive_modifiers": {
+      "resistance": [
+        {
+          "index": "fire",
+          "name": "fire",
+          "url": "public/assets/atlas/damage_types/json/fire.json"
+        }
+      ]
+    }
+  },
   "url": "public/assets/atlas/traits/json/hellish_resistance.json",
   "updated_at": "2025-10-24T20:42:14.945Z",
   "image": "public/assets/atlas/traits/hellish_resistance.webp"

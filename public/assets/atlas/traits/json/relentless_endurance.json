@@ -4,7 +4,7 @@
     {
       "index": "half_orc",
       "name": "half_orc",
-      "url": "public/assets/atlas/races/half_orc"
+      "url": "public/assets/atlas/species/json/half_orc.json"
     }
   ],
   "subraces": [],
@@ -13,6 +13,12 @@
     "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest."
   ],
   "proficiencies": [],
+  "trait_specific": {
+    "usage": {
+      "times": 1,
+      "type": "long_rest"
+    }
+  },
   "url": "public/assets/atlas/traits/json/relentless_endurance.json",
   "updated_at": "2025-10-24T20:42:14.945Z",
   "image": "public/assets/atlas/traits/relentless_endurance.webp"

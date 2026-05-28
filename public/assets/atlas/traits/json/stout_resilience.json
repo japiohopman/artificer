@@ -18,6 +18,27 @@
   "desc": [
     "You have advantage on saving throws against poison, and you have resistance against poison damage."
   ],
+  "trait_specific": {
+    "passive_modifiers": {
+      "advantage": [
+        {
+          "name": "Saving Throws against poison",
+          "damage_type": {
+            "index": "poison",
+            "name": "poison",
+            "url": "public/assets/atlas/damage_types/json/poison.json"
+          }
+        }
+      ],
+      "resistance": [
+        {
+          "index": "poison",
+          "name": "poison",
+          "url": "public/assets/atlas/damage_types/json/poison.json"
+        }
+      ]
+    }
+  },
   "url": "public/assets/atlas/traits/json/stout_resilience.json",
   "updated_at": "2025-05-22T12:00:00.000Z",
   "image": "public/assets/atlas/traits/stout_resilience.webp"

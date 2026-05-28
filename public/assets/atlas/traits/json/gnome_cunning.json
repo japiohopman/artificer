@@ -4,7 +4,7 @@
     {
       "index": "gnome",
       "name": "gnome",
-      "url": "public/assets/atlas/races/gnome"
+      "url": "public/assets/atlas/species/json/gnome.json"
     }
   ],
   "subraces": [],
@@ -13,6 +13,15 @@
     "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
   ],
   "proficiencies": [],
+  "trait_specific": {
+    "passive_modifiers": {
+      "advantage": [
+        "Intelligence Saving Throws against magic",
+        "Wisdom Saving Throws against magic",
+        "Charisma Saving Throws against magic"
+      ]
+    }
+  },
   "url": "public/assets/atlas/traits/json/gnome_cunning.json",
   "updated_at": "2025-10-24T20:42:14.945Z",
   "image": "public/assets/atlas/traits/gnome_cunning.webp"

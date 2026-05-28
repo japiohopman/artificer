@@ -4,7 +4,7 @@
     {
       "index": "dwarf",
       "name": "dwarf",
-      "url": "public/assets/atlas/races/dwarf"
+      "url": "public/assets/atlas/species/json/dwarf.json"
     }
   ],
   "subraces": [],
@@ -16,22 +16,22 @@
     {
       "index": "battleaxes",
       "name": "battleaxes",
-      "url": "public/assets/atlas/proficiencies/battleaxes"
+      "url": "public/assets/atlas/proficiencies/json/battleaxes.json"
     },
     {
       "index": "handaxes",
       "name": "handaxes",
-      "url": "public/assets/atlas/proficiencies/handaxes"
+      "url": "public/assets/atlas/proficiencies/json/handaxes.json"
     },
     {
       "index": "light_hammers",
       "name": "light hammers",
-      "url": "public/assets/atlas/proficiencies/light_hammers"
+      "url": "public/assets/atlas/proficiencies/json/light_hammers.json"
     },
     {
       "index": "warhammers",
       "name": "warhammers",
-      "url": "public/assets/atlas/proficiencies/warhammers"
+      "url": "public/assets/atlas/proficiencies/json/warhammers.json"
     }
   ],
   "url": "public/assets/atlas/traits/json/dwarven_combat_training.json",

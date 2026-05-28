@@ -4,7 +4,7 @@
     {
       "index": "elf",
       "name": "elf",
-      "url": "public/assets/atlas/races/elf"
+      "url": "public/assets/atlas/species/json/elf.json"
     }
   ],
   "subraces": [],
@@ -16,7 +16,7 @@
     {
       "index": "skill_perception",
       "name": "skill: perception",
-      "url": "public/assets/atlas/proficiencies/skill_perception"
+      "url": "public/assets/atlas/proficiencies/json/skill_perception.json"
     }
   ],
   "url": "public/assets/atlas/traits/json/keen_senses.json",

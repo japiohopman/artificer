@@ -38,6 +38,11 @@
     "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray."
   ],
   "proficiencies": [],
+  "trait_specific": {
+    "passive_modifiers": {
+      "darkvision": 60
+    }
+  },
   "url": "public/assets/atlas/traits/json/darkvision.json",
   "updated_at": "2025-10-24T20:42:14.945Z",
   "image": "public/assets/atlas/traits/darkvision.webp"

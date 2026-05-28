@@ -18,6 +18,49 @@
   "desc": [
     "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
   ],
+  "trait_specific": {
+    "spellcasting_ability": {
+      "index": "charisma",
+      "name": "charisma",
+      "url": "public/assets/atlas/ability_scores/json/charisma.json"
+    },
+    "spells": [
+      {
+        "spell": {
+          "index": "dancing_lights",
+          "name": "dancing lights",
+          "url": "public/assets/atlas/spell/json/dancing_lights.json"
+        },
+        "usage": {
+          "type": "at will"
+        }
+      },
+      {
+        "spell": {
+          "index": "faerie_fire",
+          "name": "faerie fire",
+          "url": "public/assets/atlas/spell/json/faerie_fire.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "long_rest"
+        },
+        "level_required": 3
+      },
+      {
+        "spell": {
+          "index": "darkness",
+          "name": "darkness",
+          "url": "public/assets/atlas/spell/json/darkness.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "long_rest"
+        },
+        "level_required": 5
+      }
+    ]
+  },
   "url": "public/assets/atlas/traits/json/drow_magic.json",
   "updated_at": "2025-05-22T12:00:00.000Z",
   "image": "public/assets/atlas/traits/drow_magic.webp"

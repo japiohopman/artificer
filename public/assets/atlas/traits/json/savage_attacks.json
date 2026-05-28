@@ -4,7 +4,7 @@
     {
       "index": "half_orc",
       "name": "half_orc",
-      "url": "public/assets/atlas/races/half_orc"
+      "url": "public/assets/atlas/species/json/half_orc.json"
     }
   ],
   "subraces": [],
@@ -13,6 +13,11 @@
     "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
   ],
   "proficiencies": [],
+  "trait_specific": {
+    "passive_modifiers": {
+      "extra_critical_damage_dice": 1
+    }
+  },
   "url": "public/assets/atlas/traits/json/savage_attacks.json",
   "updated_at": "2025-10-24T20:42:14.945Z",
   "image": "public/assets/atlas/traits/savage_attacks.webp"
