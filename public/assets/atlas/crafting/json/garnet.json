@@ -1,6 +1,6 @@
 {
   "index": "garnet",
-  "name": "garnet",
+  "name": "Garnet",
   "equipment_category": {
     "url": "public/assets/atlas/equipment_categories/materials",
     "name": "Materials",
@@ -15,17 +15,18 @@
   },
   "weight": 1,
   "desc": [
-    "Used in 'Fireball' or 'Vampiric Touch' related items."
+    "A deep red gemstone used in 'Fireball' or 'Vampiric Touch' related items, known for channeling fire energy."
   ],
   "properties": [
+    "Gem",
     "Blood",
     "Fire"
   ],
   "source": "Real World",
   "url": "public/assets/atlas/crafting/json/garnet.json",
   "updated_at": "2026-04-11T19:13:03.440Z",
-  "image": "public/assets/atlas/crafting/garnet.webp",
+  "image": "public/assets/atlas/crafting/images/garnet.webp",
   "category": "Common Materials",
   "last_updated": "11-4-2026",
-  "imageUrl": "/assets/atlas/crafting/garnet.webp"
+  "imageUrl": "/assets/atlas/crafting/images/garnet.webp"
 }

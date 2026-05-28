@@ -15,18 +15,19 @@
   },
   "weight": 0.1,
   "desc": [
-    "A smooth, white organic stone harvested from mollusks, used in identification and restorative magic."
+    "A smooth, white organic stone harvested from mollusks, used in identification and restorative magic. It is also associated with acid energy."
   ],
   "properties": [
     "Gem",
-    "Sea-born"
+    "Sea-born",
+    "Acid"
   ],
   "source": "5e SRD",
   "url": "public/assets/atlas/crafting/json/pearl.json",
   "updated_at": "2026-05-27T10:04:33.950299Z",
-  "image": "public/assets/atlas/crafting/pearl.webp",
+  "image": "public/assets/atlas/crafting/images/pearl.webp",
   "category": "Common Materials",
   "last_updated": "27-05-2026",
-  "imageUrl": "/assets/atlas/crafting/pearl.webp",
+  "imageUrl": "/assets/atlas/crafting/images/pearl.webp",
   "_type": "materials"
 }
