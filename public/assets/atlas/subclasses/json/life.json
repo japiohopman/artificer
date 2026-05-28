@@ -3,12 +3,50 @@
   "class": {
     "index": "cleric",
     "name": "cleric",
-    "url": "public/assets/atlas/classes/cleric"
+    "url": "public/assets/atlas/class/json/cleric.json"
   },
   "name": "life",
   "subclass_flavor": "Divine Domain",
   "desc": [
     "The Life domain focuses on the vibrant positive energy--one of the fundamental forces of the universe--that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities, sun gods, gods of healing or endurance, and gods of home and community."
+  ],
+  "features": [
+    {
+      "index": "bonus_proficiency",
+      "name": "Bonus Proficiency",
+      "level": 1,
+      "url": "public/assets/atlas/features/json/bonus_proficiency.json"
+    },
+    {
+      "index": "disciple_of_life",
+      "name": "Disciple of Life",
+      "level": 1,
+      "url": "public/assets/atlas/features/json/disciple_of_life.json"
+    },
+    {
+      "index": "channel_divinity_preserve_life",
+      "name": "Channel Divinity: Preserve Life",
+      "level": 2,
+      "url": "public/assets/atlas/features/json/channel_divinity_preserve_life.json"
+    },
+    {
+      "index": "blessed_healer",
+      "name": "Blessed Healer",
+      "level": 6,
+      "url": "public/assets/atlas/features/json/blessed_healer.json"
+    },
+    {
+      "index": "divine_strike",
+      "name": "Divine Strike",
+      "level": 8,
+      "url": "public/assets/atlas/features/json/divine_strike.json"
+    },
+    {
+      "index": "supreme_healing",
+      "name": "Supreme Healing",
+      "level": 17,
+      "url": "public/assets/atlas/features/json/supreme_healing.json"
+    }
   ],
   "spells": [
     {

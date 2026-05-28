@@ -1,0 +1,22 @@
+{
+  "index": "protective_field",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "public/assets/atlas/class/json/fighter.json"
+  },
+  "subclass": {
+    "index": "psi_warrior",
+    "name": "psi warrior",
+    "url": "public/assets/atlas/subclasses/json/psi_warrior.json"
+  },
+  "name": "protective field",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "When you or another creature you can see within 30 feet of you takes damage, you can use your reaction to expend one Psionic Energy die, roll the die, and reduce the damage taken by the number rolled plus your Intelligence modifier (minimum reduction of 1)."
+  ],
+  "url": "public/assets/atlas/features/json/protective_field.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/protective_field.webp"
+}

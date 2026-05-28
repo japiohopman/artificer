@@ -3,12 +3,44 @@
   "class": {
     "index": "druid",
     "name": "druid",
-    "url": "public/assets/atlas/classes/druid"
+    "url": "public/assets/atlas/class/json/druid.json"
   },
   "name": "land",
   "subclass_flavor": "Druid Circle",
   "desc": [
     "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites."
+  ],
+  "features": [
+    {
+      "index": "bonus_cantrip",
+      "name": "Bonus Cantrip",
+      "level": 2,
+      "url": "public/assets/atlas/features/json/bonus_cantrip.json"
+    },
+    {
+      "index": "natural_recovery",
+      "name": "Natural Recovery",
+      "level": 2,
+      "url": "public/assets/atlas/features/json/natural_recovery.json"
+    },
+    {
+      "index": "druid_lands_stride",
+      "name": "Land's Stride",
+      "level": 6,
+      "url": "public/assets/atlas/features/json/druid_lands_stride.json"
+    },
+    {
+      "index": "natures_ward",
+      "name": "Nature's Ward",
+      "level": 10,
+      "url": "public/assets/atlas/features/json/natures_ward.json"
+    },
+    {
+      "index": "natures_sanctuary",
+      "name": "Nature's Sanctuary",
+      "level": 14,
+      "url": "public/assets/atlas/features/json/natures_sanctuary.json"
+    }
   ],
   "spells": [
     {
@@ -176,7 +208,7 @@
       "spell": {
         "index": "cone_of_cold",
         "name": "cone of cold",
-        "url": "public/assets/atlas/spells/constitutione_of_cold"
+        "url": "public/assets/atlas/spells/cone_of_cold"
       }
     },
     {
@@ -281,7 +313,7 @@
       "spell": {
         "index": "control_water",
         "name": "control water",
-        "url": "public/assets/atlas/spells/constitutiontrol_water"
+        "url": "public/assets/atlas/spells/control_water"
       }
     },
     {
@@ -323,7 +355,7 @@
       "spell": {
         "index": "conjure_elemental",
         "name": "conjure elemental",
-        "url": "public/assets/atlas/spells/constitutionjure_elemental"
+        "url": "public/assets/atlas/spells/conjure_elemental"
       }
     },
     {

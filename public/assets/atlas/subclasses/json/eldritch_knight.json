@@ -3,16 +3,54 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "assets/atlas/class/json/fighter.json"
+    "url": "public/assets/atlas/class/json/fighter.json"
   },
   "name": "eldritch knight",
   "subclass_flavor": "Martial Archetype",
   "desc": [
     "Eldritch Knights combine the martial mastery common to all fighters with a careful study of magic. They use magical techniques similar to those practiced by wizards, weaving spells into their combat style to enhance their offensive and defensive capabilities."
   ],
-  "subclass_levels": "assets/atlas/subclasses/eldritch_knight/levels",
-  "url": "assets/atlas/subclasses/json/eldritch_knight.json",
+  "features": [
+    {
+      "index": "spellcasting_eldritch_knight",
+      "name": "Spellcasting",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/spellcasting_eldritch_knight.json"
+    },
+    {
+      "index": "weapon_bond",
+      "name": "Weapon Bond",
+      "level": 3,
+      "url": "public/assets/atlas/features/json/weapon_bond.json"
+    },
+    {
+      "index": "war_magic",
+      "name": "War Magic",
+      "level": 7,
+      "url": "public/assets/atlas/features/json/war_magic.json"
+    },
+    {
+      "index": "eldritch_strike",
+      "name": "Eldritch Strike",
+      "level": 10,
+      "url": "public/assets/atlas/features/json/eldritch_strike.json"
+    },
+    {
+      "index": "arcane_charge",
+      "name": "Arcane Charge",
+      "level": 15,
+      "url": "public/assets/atlas/features/json/arcane_charge.json"
+    },
+    {
+      "index": "improved_war_magic",
+      "name": "Improved War Magic",
+      "level": 18,
+      "url": "public/assets/atlas/features/json/improved_war_magic.json"
+    }
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/eldritch_knight/levels",
+  "url": "public/assets/atlas/subclasses/json/eldritch_knight.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
   "spells": [],
-  "image": "assets/atlas/subclasses/eldritch_knight.webp"
+  "image": "public/assets/atlas/subclasses/eldritch_knight.webp"
 }

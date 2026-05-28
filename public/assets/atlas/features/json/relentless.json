@@ -3,12 +3,12 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "assets/atlas/class/json/fighter.json"
+    "url": "public/assets/atlas/class/json/fighter.json"
   },
   "subclass": {
     "index": "battle_master",
     "name": "battle master",
-    "url": "assets/atlas/subclasses/json/battle_master.json"
+    "url": "public/assets/atlas/subclasses/json/battle_master.json"
   },
   "name": "relentless",
   "level": 15,
@@ -16,7 +16,7 @@
   "desc": [
     "Starting at 15th level, once per turn, when you use a maneuver, you can roll a d8 and use the number rolled instead of expending a superiority die."
   ],
-  "url": "assets/atlas/features/json/relentless.json",
+  "url": "public/assets/atlas/features/json/relentless.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
   "image": "assets/atlas/features/relentless.webp"
 }
