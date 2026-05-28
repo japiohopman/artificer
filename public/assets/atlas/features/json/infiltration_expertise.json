@@ -3,12 +3,12 @@
   "class": {
     "index": "rogue",
     "name": "rogue",
-    "url": "assets/atlas/class/json/rogue.json"
+    "url": "public/assets/atlas/class/json/rogue.json"
   },
   "subclass": {
     "index": "assassin",
     "name": "assassin",
-    "url": "assets/atlas/subclasses/json/assassin.json"
+    "url": "public/assets/atlas/subclasses/json/assassin.json"
   },
   "name": "infiltration expertise",
   "level": 9,
@@ -16,7 +16,8 @@
   "desc": [
     "Starting at 9th level, you can unfailingly create false identities for yourself. You must spend seven days and 25 gp to establish the history, profession, and affiliations for an identity. You can't establish an identity that belongs to someone else. For example, you might create a guise as a distant merchant from a remote city so you can insinuate yourself into a court of nobles. Thereafter, if you adopt the new identity as a disguise, other creatures believe you to be that person until they have given a reason to believe otherwise."
   ],
-  "url": "assets/atlas/features/json/infiltration_expertise.json",
+  "url": "public/assets/atlas/features/json/infiltration_expertise.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "assets/atlas/features/infiltration_expertise.webp"
+  "image": "public/assets/atlas/features/images/infiltration_expertise.webp"
 }
+
