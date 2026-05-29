@@ -1,16 +1,21 @@
 {
   "category": "landmarks",
-  "updatedAt": "2026-05-29T07:46:45.509Z",
+  "updatedAt": "2026-05-29T10:54:16.127Z",
   "location_id": "athkatla",
   "sub_locations": [
     {
-      "id": "the_crown_aflame",
+      "id": "6",
       "name": "The Crown Aflame",
-      "type": "landmarks",
-      "description": "A huge and rich theater inside a repurposed temple of [[Azuth]]. One of its performances was graced by the divine apparition of [[Sune]] in the 14{{th}} century [[DR]].",
-      "coordinates": {
-        "x": 519.99955886356,
-        "y": 1268.7502797113
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        519.99955886356,
+        1268.7502797113
+      ],
+      "popup": {
+        "title": "The Crown Aflame",
+        "description": "A huge and rich theater inside a repurposed temple of [[Azuth]]. One of its performances was graced by the divine apparition of [[Sune]] in the 14{{th}} century [[DR]].",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -26,13 +31,18 @@
       }
     },
     {
-      "id": "great_griffon",
+      "id": "23",
       "name": "Great Griffon",
-      "type": "landmarks",
-      "description": "The giant seven-ton bell used as a warning signal for ships sailing in stormy weather.{{approx}}",
-      "coordinates": {
-        "x": 123.03034131506,
-        "y": 1118.6450135778
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        123.03034131506,
+        1118.6450135778
+      ],
+      "popup": {
+        "title": "Great Griffon",
+        "description": "The giant seven-ton bell used as a warning signal for ships sailing in stormy weather.{{approx}}",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -48,13 +58,18 @@
       }
     },
     {
-      "id": "dunstuls_pump",
+      "id": "27",
       "name": "Dunstul's Pump",
-      "type": "landmarks",
-      "description": "A popular meeting spot and a source of free clean drinkable water.",
-      "coordinates": {
-        "x": 871.77501037206,
-        "y": 967.97911450898
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        871.77501037206,
+        967.97911450898
+      ],
+      "popup": {
+        "title": "Dunstul's Pump",
+        "description": "A popular meeting spot and a source of free clean drinkable water.",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -70,13 +85,18 @@
       }
     },
     {
-      "id": "council_house",
+      "id": "47",
       "name": "Council House",
-      "type": "landmarks",
-      "description": "A fortress-like building, the base of operations for the Council of Six, the government of the nation of [[Amn]].",
-      "coordinates": {
-        "x": 287.08254578661,
-        "y": 408.35470555092
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        287.08254578661,
+        408.35470555092
+      ],
+      "popup": {
+        "title": "Council House",
+        "description": "A fortress-like building, the base of operations for the Council of Six, the government of the nation of [[Amn]].",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -92,13 +112,18 @@
       }
     },
     {
-      "id": "cloakspell_tower",
+      "id": "48",
       "name": "Cloakspell Tower",
-      "type": "landmarks",
-      "description": "A magically warded striking landmark that rose high above the Scepter District.",
-      "coordinates": {
-        "x": 263.79543545409,
-        "y": 370.52301835455
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        263.79543545409,
+        370.52301835455
+      ],
+      "popup": {
+        "title": "Cloakspell Tower",
+        "description": "A magically warded striking landmark that rose high above the Scepter District.",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -114,13 +139,18 @@
       }
     },
     {
-      "id": "prison",
+      "id": "72",
       "name": "Prison",
-      "type": "landmarks",
-      "description": "The prison and gallows of [[Athkatla]].{{approx}}",
-      "coordinates": {
-        "x": 257.03191127375,
-        "y": 401.63550096048
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        257.03191127375,
+        401.63550096048
+      ],
+      "popup": {
+        "title": "Prison",
+        "description": "The prison and gallows of [[Athkatla]].{{approx}}",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -136,13 +166,18 @@
       }
     },
     {
-      "id": "baerlbohun_towers",
+      "id": "114",
       "name": "Baerlbohun Towers",
-      "type": "landmarks",
-      "description": "The gaudy mansion landmark of the Gem District. A tasteless structure with large turrets of gilded and carved designs of clashing colors and styles.",
-      "coordinates": {
-        "x": 703.23092143548,
-        "y": 974.72817857359
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        703.23092143548,
+        974.72817857359
+      ],
+      "popup": {
+        "title": "Baerlbohun Towers",
+        "description": "The gaudy mansion landmark of the Gem District. A tasteless structure with large turrets of gilded and carved designs of clashing colors and styles.",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -158,13 +193,18 @@
       }
     },
     {
-      "id": "flamewater_fountain",
+      "id": "119",
       "name": "Flamewater Fountain",
-      "type": "landmarks",
-      "description": "A popular meeting spot commonly visited by street perfume vendors.",
-      "coordinates": {
-        "x": 562.14599191118,
-        "y": 1037.325899728
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        562.14599191118,
+        1037.325899728
+      ],
+      "popup": {
+        "title": "Flamewater Fountain",
+        "description": "A popular meeting spot commonly visited by street perfume vendors.",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -180,13 +220,18 @@
       }
     },
     {
-      "id": "dancing_dolphins_house",
+      "id": "122",
       "name": "Dancing Dolphins House",
-      "type": "landmarks",
-      "description": "A landmark \"open mansion\" that welcomed guests and tourists. The mansion was completed ''circa'' 1360s [[DR]] by [[Albaerlus Gudelmer]].",
-      "coordinates": {
-        "x": 576.59473620433,
-        "y": 996.98912593911
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        576.59473620433,
+        996.98912593911
+      ],
+      "popup": {
+        "title": "Dancing Dolphins House",
+        "description": "A landmark \"open mansion\" that welcomed guests and tourists. The mansion was completed ''circa'' 1360s [[DR]] by [[Albaerlus Gudelmer]].",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -202,13 +247,18 @@
       }
     },
     {
-      "id": "crimmordown_turrets",
+      "id": "129",
       "name": "Crimmordown Turrets",
-      "type": "landmarks",
-      "description": "Or \"The Crim,\" home of the wealthy [[Crimmor (family)|Crimmor]] merchant family and an ancient castle.",
-      "coordinates": {
-        "x": 623.99911772711,
-        "y": 1019.2507882773
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        623.99911772711,
+        1019.2507882773
+      ],
+      "popup": {
+        "title": "Crimmordown Turrets",
+        "description": "Or \"The Crim,\" home of the wealthy [[Crimmor (family)|Crimmor]] merchant family and an ancient castle.",
+        "image": ""
       },
       "day": {
         "ambient": null,
