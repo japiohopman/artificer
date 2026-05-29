@@ -1,0 +1,755 @@
+{
+  "category": "shops",
+  "updatedAt": "2026-05-29T07:46:45.509Z",
+  "location_id": "athkatla",
+  "sub_locations": [
+    {
+      "id": "the_pride_of_athkatla",
+      "name": "The Pride of Athkatla",
+      "type": "shops",
+      "description": "A busy enclosed marketplace that accommodated local and visiting merchants.",
+      "coordinates": {
+        "x": 536.66082714449,
+        "y": 1254.3880052804
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "seven_songs_importing",
+      "name": "Seven Songs Importing",
+      "type": "shops",
+      "description": "A proprietor of exotic goods to order.",
+      "coordinates": {
+        "x": 524.32045807625,
+        "y": 1257.7660791524
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "silkstone_fashions",
+      "name": "Silkstone Fashions",
+      "type": "shops",
+      "description": "Tailor's shop and fashionable accessories' purveyor. ",
+      "coordinates": {
+        "x": 497.97800149937,
+        "y": 1250.8563399767
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "brundith_fine_furnishings",
+      "name": "Brundith Fine Furnishings",
+      "type": "shops",
+      "description": "An expensive furniture vendor that specialized in replicas and hidden containers.",
+      "coordinates": {
+        "x": 500.09752824215,
+        "y": 1274.1933990097
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "horse_armor_and_weapon_merchant__isker_lhavanas",
+      "name": "Horse Armor and Weapon Merchant – Isker Lhavanas",
+      "type": "shops",
+      "description": "Once a temple of [[Azuth]] still rumored to maintain defensive wards. The home of weapon and horse armor merchant [[Isker Lhavanas]] in the late 14{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 512.28599624844,
+        "y": 1234.59599464
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "perfume_merchant__klarynda_ballasdreia",
+      "name": "Perfume Merchant – Klarynda Ballasdreia",
+      "type": "shops",
+      "description": "Home of [[perfume]] merchant [[Klarynda Ballasdreia]] in there late 14{{th}} century [[DR]], and the former shrine of [[Tymora]].",
+      "coordinates": {
+        "x": 546.56554650335,
+        "y": 1251.0355979842
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_temple_bell",
+      "name": "The Temple Bell",
+      "type": "shops",
+      "description": "A merchant of vestments, ''[[holy symbol]]s'', and other religious goods. Formerly the home of the [[Flamaerdown]] family.",
+      "coordinates": {
+        "x": 551.16135066785,
+        "y": 1265.002377374
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "waukeens_promenade",
+      "name": "Waukeen's Promenade",
+      "type": "shops",
+      "description": "A massive, open-air marketplace and a landmark that dwarfed [[Waterdeep]]'s market.",
+      "coordinates": {
+        "x": 500.61195111337,
+        "y": 498.43446369204
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "adventurer_mart",
+      "name": "Adventurer Mart",
+      "type": "shops",
+      "description": "Located in [[Waukeen's Promenade]], the shop catered to adventurers, selling exotic magical items in defiance of the [[Cowled Wizards]].",
+      "coordinates": {
+        "x": 487.87155182922,
+        "y": 493.49126113414
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "enges_shop",
+      "name": "Enge's Shop",
+      "type": "shops",
+      "description": "Located in Waukeen's Promenade, the shop sold a variety of fruits. The shopkeep was titular [[Enge]] in the late 14{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 470.93436399252,
+        "y": 513.35966698562
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "platinum_quill",
+      "name": "Platinum Quill",
+      "type": "shops",
+      "description": "The company that organized and coordinated caravan shipments, with its offices within [[the Atrium]].",
+      "coordinates": {
+        "x": 972.16296202179,
+        "y": 1008.9831806214
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "gheldlegs_booth",
+      "name": "Gheldleg's Booth",
+      "type": "shops",
+      "description": "The moneychanger and merchant store, ran by [[Vemmemalius\nGheldleg]] in the late 14{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 974.99138914654,
+        "y": 993.42445800621
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "roseshades_table",
+      "name": "Roseshade's Table",
+      "type": "shops",
+      "description": "The store ran by a \"shuffler\" – a dealer of stolen contracts. In the late 14{{th}} century [[DR]], the shop was run by a [[Shadow Thieves]] member named [[Roseshade]].",
+      "coordinates": {
+        "x": 994.79599377002,
+        "y": 999.80553649488
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "jazasari_arrastis_pavilion",
+      "name": "Jazasari Arrasti's Pavilion",
+      "type": "shops",
+      "description": "A large tent filled with silk pillows and fanciful rugs that stood in front of the Arrasti Estate – home of merchant [[Jazasari Arrasti]].",
+      "coordinates": {
+        "x": 779.99955886356,
+        "y": 1092.0008137056
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "greater_galleon",
+      "name": "Greater Galleon",
+      "type": "shops",
+      "description": "The office of a [[spice]] distributor and a spice auction house. The store was ran by [[Mossan Zahad]] in ther late 14{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 799.50011028411,
+        "y": 1056.25
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "arrasti_perfumes",
+      "name": "Arrasti Perfumes",
+      "type": "shops",
+      "description": "A perfume merchant shop.",
+      "coordinates": {
+        "x": 781.50242625043,
+        "y": 1082.999491434
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "arrasti_cosmetics",
+      "name": "Arrasti Cosmetics",
+      "type": "shops",
+      "description": "A cosmetics merchant shop.",
+      "coordinates": {
+        "x": 788.50264681866,
+        "y": 1086.4993897208
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "bakery",
+      "name": "Bakery",
+      "type": "shops",
+      "description": "One of many bakeries in Athkatla.",
+      "coordinates": {
+        "x": 794,
+        "y": 1066.5
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "incense_and_candles_shop",
+      "name": "Incense and Candles Shop",
+      "type": "shops",
+      "description": "A small shop that sold various aromatics, [[incense]] and [[candle]]s.",
+      "coordinates": {
+        "x": 796.24977943178,
+        "y": 1061.25
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "cinnamon_merchant",
+      "name": "Cinnamon Merchant",
+      "type": "shops",
+      "description": "",
+      "coordinates": {
+        "x": 804.23720762978,
+        "y": 1054.9785091415
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "sugar_merchant",
+      "name": "Sugar Merchant",
+      "type": "shops",
+      "description": "",
+      "coordinates": {
+        "x": 807.50022056822,
+        "y": 1050.7502034264
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "nutmeg_merchant",
+      "name": "Nutmeg Merchant",
+      "type": "shops",
+      "description": "",
+      "coordinates": {
+        "x": 809.73037001492,
+        "y": 1046.9789668509
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "cocoa_merchant",
+      "name": "Cocoa Merchant",
+      "type": "shops",
+      "description": "",
+      "coordinates": {
+        "x": 812.4728706954,
+        "y": 1042.7287125679
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "garlic_merchant",
+      "name": "Garlic Merchant",
+      "type": "shops",
+      "description": "",
+      "coordinates": {
+        "x": 811.72419410473,
+        "y": 1026.7275174378
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "apothecary",
+      "name": "Apothecary",
+      "type": "shops",
+      "description": "One of many apothecaries in [[Athkatla]].",
+      "coordinates": {
+        "x": 820.22739234394,
+        "y": 1045.4860867748
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "mixed_seasoning_merchant",
+      "name": "Mixed Seasoning Merchant",
+      "type": "shops",
+      "description": "",
+      "coordinates": {
+        "x": 819.72761291216,
+        "y": 1027.2272885831
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "alchemist",
+      "name": "Alchemist",
+      "type": "shops",
+      "description": "The only alchemist's shop in the Waft area of the Trades District.",
+      "coordinates": {
+        "x": 830.42941934243,
+        "y": 1049.4653587652
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "fallenstar_fine_gems",
+      "name": "Fallenstar Fine Gems",
+      "type": "shops",
+      "description": "One of a dozen gem and jewelry stores in the Gem District.",
+      "coordinates": {
+        "x": 663.60193493069,
+        "y": 997.71212750271
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "blevynsoar_house",
+      "name": "Blevynsoar House",
+      "type": "shops",
+      "description": "A shop that traded in jewelry and maps.",
+      "coordinates": {
+        "x": 670.67861749281,
+        "y": 987.79767277089
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "redcloak_trading",
+      "name": "Redcloak Trading",
+      "type": "shops",
+      "description": "The establishment that sold buildings and land in [[Athkatla]].",
+      "coordinates": {
+        "x": 684.11395826593,
+        "y": 990.62739449329
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "sarangos_jewelry",
+      "name": "Sarango's Jewelry",
+      "type": "shops",
+      "description": "A jewelry shop.",
+      "coordinates": {
+        "x": 700.24955886356,
+        "y": 1008.0006102792
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "starnirs_pool_of_jewels",
+      "name": "Starnir's Pool of Jewels",
+      "type": "shops",
+      "description": "A rich jewelry store.",
+      "coordinates": {
+        "x": 717.2280540486,
+        "y": 963.72896685088
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_diamond_dragon",
+      "name": "The Diamond Dragon",
+      "type": "shops",
+      "description": "The richest and most splendorous jewelry store in the Gem District. The exclusive store's lobby displayed a humanoid-sized lounging dragon carved out of a single [[diamond]].",
+      "coordinates": {
+        "x": 606.00011028411,
+        "y": 985.25055942259
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "myrtels_stargirt_wonders",
+      "name": "Myrtel's Stargirt Wonders",
+      "type": "shops",
+      "description": "The three-storied store that dealt in beautiful enchanted items from [[Calimshan]].",
+      "coordinates": {
+        "x": 607.02790246661,
+        "y": 972.22497460783
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}
