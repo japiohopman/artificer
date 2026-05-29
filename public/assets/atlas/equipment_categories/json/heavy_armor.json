@@ -5,22 +5,22 @@
     {
       "index": "ring_mail",
       "name": "ring mail",
-      "url": "public/assets/atlas/equipment/ring_mail"
+      "url": "public/assets/atlas/equipment/json/ring_mail.json"
     },
     {
       "index": "chain_mail",
       "name": "chain mail",
-      "url": "public/assets/atlas/equipment/charismain_mail"
+      "url": "public/assets/atlas/equipment/json/chain_mail.json"
     },
     {
       "index": "splint_armor",
       "name": "splint armor",
-      "url": "public/assets/atlas/equipment/splint_armor"
+      "url": "public/assets/atlas/equipment/json/splint_armor.json"
     },
     {
       "index": "plate_armor",
       "name": "plate armor",
-      "url": "public/assets/atlas/equipment/plate_armor"
+      "url": "public/assets/atlas/equipment/json/plate_armor.json"
     }
   ],
   "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json",

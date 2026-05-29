@@ -5,47 +5,47 @@
     {
       "index": "arrow",
       "name": "arrow",
-      "url": "public/assets/atlas/equipment/arrow"
+      "url": "public/assets/atlas/equipment/json/arrow.json"
     },
     {
       "index": "blowgun_needle",
       "name": "blowgun needle",
-      "url": "public/assets/atlas/equipment/blowgun_needle"
+      "url": "public/assets/atlas/equipment/json/blowgun_needle.json"
     },
     {
       "index": "crossbow_bolt",
       "name": "crossbow bolt",
-      "url": "public/assets/atlas/equipment/crossbow_bolt"
+      "url": "public/assets/atlas/equipment/json/crossbow_bolt.json"
     },
     {
       "index": "sling_bullet",
-      "url": "public/assets/atlas/equipment/sling_bullet",
+      "url": "public/assets/atlas/equipment/json/sling_bullet.json",
       "name": "sling bullet"
     },
     {
       "index": "ammunition",
       "name": "ammunition, +1, +2, or +3",
-      "url": "public/assets/atlas/magic_items/ammunition"
+      "url": "public/assets/atlas/magic_items/json/ammunition.json"
     },
     {
       "index": "arrow_of_slaying",
       "name": "arrow of slaying",
-      "url": "public/assets/atlas/magic_items/arrow_of_slaying"
+      "url": "public/assets/atlas/magic_items/json/arrow_of_slaying.json"
     },
     {
       "index": "ammunition_1",
       "name": "ammunition, +1",
-      "url": "public/assets/atlas/magic_items/ammunition_1"
+      "url": "public/assets/atlas/magic_items/json/ammunition_1.json"
     },
     {
       "index": "ammunition_2",
       "name": "ammunition, +2",
-      "url": "public/assets/atlas/magic_items/ammunition_2"
+      "url": "public/assets/atlas/magic_items/json/ammunition_2.json"
     },
     {
       "index": "ammunition_3",
       "name": "ammunition, +3",
-      "url": "public/assets/atlas/magic_items/ammunition_3"
+      "url": "public/assets/atlas/magic_items/json/ammunition_3.json"
     }
   ],
   "url": "public/assets/atlas/equipment_categories/json/ammunition.json",

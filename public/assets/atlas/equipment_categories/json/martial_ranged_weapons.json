@@ -5,27 +5,27 @@
     {
       "index": "blowgun",
       "name": "blowgun",
-      "url": "public/assets/atlas/equipment/blowgun"
+      "url": "public/assets/atlas/equipment/json/blowgun.json"
     },
     {
       "index": "crossbow_hand",
       "name": "crossbow, hand",
-      "url": "public/assets/atlas/equipment/crossbow_hand"
+      "url": "public/assets/atlas/equipment/json/crossbow_hand.json"
     },
     {
       "index": "crossbow_heavy",
       "name": "crossbow, heavy",
-      "url": "public/assets/atlas/equipment/crossbow_heavy"
+      "url": "public/assets/atlas/equipment/json/crossbow_heavy.json"
     },
     {
       "index": "longbow",
       "name": "longbow",
-      "url": "public/assets/atlas/equipment/longbow"
+      "url": "public/assets/atlas/equipment/json/longbow.json"
     },
     {
       "index": "net",
       "name": "net",
-      "url": "public/assets/atlas/equipment/net"
+      "url": "public/assets/atlas/equipment/json/net.json"
     }
   ],
   "url": "public/assets/atlas/equipment_categories/json/martial_ranged_weapons.json",

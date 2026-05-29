@@ -5,37 +5,37 @@
     {
       "index": "mule",
       "name": "mule",
-      "url": "public/assets/atlas/equipment/mule"
+      "url": "public/assets/atlas/equipment/json/mule.json"
     },
     {
       "index": "elephant",
       "name": "elephant",
-      "url": "public/assets/atlas/equipment/elephant"
+      "url": "public/assets/atlas/equipment/json/elephant.json"
     },
     {
       "index": "horse_draft",
       "name": "horse, draft",
-      "url": "public/assets/atlas/equipment/horse_draft"
+      "url": "public/assets/atlas/equipment/json/horse_draft.json"
     },
     {
       "index": "horse_riding",
       "name": "horse, riding",
-      "url": "public/assets/atlas/equipment/horse_riding"
+      "url": "public/assets/atlas/equipment/json/horse_riding.json"
     },
     {
       "index": "mastiff",
       "name": "mastiff",
-      "url": "public/assets/atlas/equipment/mastiff"
+      "url": "public/assets/atlas/equipment/json/mastiff.json"
     },
     {
       "index": "pony",
       "name": "pony",
-      "url": "public/assets/atlas/equipment/pony"
+      "url": "public/assets/atlas/equipment/json/pony.json"
     },
     {
       "index": "warhorse",
       "name": "warhorse",
-      "url": "public/assets/atlas/equipment/warhorse"
+      "url": "public/assets/atlas/equipment/json/warhorse.json"
     }
   ],
   "url": "public/assets/atlas/equipment_categories/json/mounts_and_other_animals.json",
