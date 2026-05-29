@@ -1,0 +1,249 @@
+{
+  "category": "temples_shrines",
+  "updatedAt": "2026-05-29T07:46:45.510Z",
+  "location_id": "athkatla",
+  "sub_locations": [
+    {
+      "id": "moonhall",
+      "name": "Moonhall",
+      "type": "temples_shrines",
+      "description": "The temple of [[Selûne]], easily recognizable for its conical dome.",
+      "coordinates": {
+        "x": 196.56970073116,
+        "y": 1146.9614936637
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "dome_of_the_rose",
+      "name": "Dome of the Rose",
+      "type": "temples_shrines",
+      "description": "The grand monastery and temple to [[Lathander]].",
+      "coordinates": {
+        "x": 501.32872608302,
+        "y": 1070.5618243792
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "arbalests_house",
+      "name": "Arbalest's House",
+      "type": "temples_shrines",
+      "description": "A monastery dedicated to [[Milil]], the Lord of All Songs.",
+      "coordinates": {
+        "x": 401.51188280438,
+        "y": 1438.2243879597
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "goldspires",
+      "name": "Goldspires",
+      "type": "temples_shrines",
+      "description": "A large temple complex and the center of the worship of [[Waukeen]], Lady of Trade in [[Faerûn]].",
+      "coordinates": {
+        "x": 158.37445419228,
+        "y": 1330.6680636456
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "temple_of_ilmater",
+      "name": "Temple of Ilmater",
+      "type": "temples_shrines",
+      "description": "A humble temple dedicated to [[Ilmater]], the Crying God, that stood on stilt-supported elevation above the [[Copper Coronet]].",
+      "coordinates": {
+        "x": 739.95787264297,
+        "y": 876.46978328938
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "high_hall_of_the_radiant_heart",
+      "name": "High Hall of the Radiant Heart",
+      "type": "temples_shrines",
+      "description": "The High Hall of the [[paladin]] order dedicated to [[Helm]]. It stood surrounded by scenic elevated walkways above a water reservoir and cascading canals.{{approx}}",
+      "coordinates": {
+        "x": 649.99647090846,
+        "y": 1229.5019834074
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "temple_of_helm",
+      "name": "Temple of Helm",
+      "type": "temples_shrines",
+      "description": "The rich temple dedicated to [[Helm]], surrounded by scenic elevated walkways above a water reservoir and cascading canals.{{approx}}",
+      "coordinates": {
+        "x": 635.00154397755,
+        "y": 1238.9996948604
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "temple_of_taols",
+      "name": "Temple of Taols",
+      "type": "temples_shrines",
+      "description": "The rich temple dedicated to [[Taols]], surrounded by scenic elevated walkways above a water reservoir and cascading canals.{{approx}}",
+      "coordinates": {
+        "x": 632.96801878115,
+        "y": 1223.4567131434
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "temple_of_waukeen",
+      "name": "Temple of Waukeen",
+      "type": "temples_shrines",
+      "description": "A small but richly decorated temple of [[Waukeen]] that stood across the plaza from the [[Council House]].{{approx}}",
+      "coordinates": {
+        "x": 261.98399822133,
+        "y": 417.19321666634
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "temple_of_ilmater",
+      "name": "Temple of Ilmater",
+      "type": "temples_shrines",
+      "description": "A small shrine dedicated to [[Ilmater]] within one of the shops of [[Waukeen's Promenade]].",
+      "coordinates": {
+        "x": 470.93342986002,
+        "y": 502.69299916158
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "temple_of_oghma",
+      "name": "Temple of Oghma",
+      "type": "temples_shrines",
+      "description": "A small temple dedicated to the deity of knowledge, [[Oghma]], that offered its library to the temple's visitors.{{approx}}",
+      "coordinates": {
+        "x": 216.03794008053,
+        "y": 980.93885458636
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}
