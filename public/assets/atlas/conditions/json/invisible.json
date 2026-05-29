@@ -7,5 +7,15 @@
   ],
   "url": "public/assets/atlas/conditions/json/invisible.json",
   "updated_at": "2025-10-24T20:42:12.637Z",
-  "image": "public/assets/atlas/conditions/invisible.webp"
+  "image": "public/assets/atlas/conditions/invisible.webp",
+  "condition_specific": {
+    "passive_modifiers": {
+      "advantage": [
+        "Attack rolls"
+      ],
+      "disadvantage_against": [
+        "Attack rolls"
+      ]
+    }
+  }
 }

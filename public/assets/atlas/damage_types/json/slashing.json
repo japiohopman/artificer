@@ -4,7 +4,8 @@
   "desc": [
     "Swords, axes, and monsters' claws deal slashing damage."
   ],
-  "url": "assets/atlas/damage_types/json/slashing.json",
+  "url": "public/assets/atlas/damage_types/json/slashing.json",
   "updated_at": "2025-10-24T20:42:12.729Z",
-  "image": "assets/atlas/damage_types/images/slashing.webp"
+  "image": "public/assets/atlas/damage_types/images/slashing.webp",
+  "damage_specific": {}
 }

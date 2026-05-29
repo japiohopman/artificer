@@ -11,5 +11,26 @@
   ],
   "url": "public/assets/atlas/conditions/json/petrified.json",
   "updated_at": "2025-10-24T20:42:12.637Z",
-  "image": "public/assets/atlas/conditions/petrified.webp"
+  "image": "public/assets/atlas/conditions/petrified.webp",
+  "condition_specific": {
+    "passive_modifiers": {
+      "incapacitated": true,
+      "speed_set": 0,
+      "auto_fail": [
+        "Strength saving throws",
+        "Dexterity saving throws"
+      ],
+      "advantage_against": [
+        "Attack rolls"
+      ],
+      "resistance": [
+        "All damage"
+      ],
+      "immunity": [
+        "Poison",
+        "Disease"
+      ],
+      "weight_multiplier": 10
+    }
+  }
 }

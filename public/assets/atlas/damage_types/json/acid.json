@@ -4,7 +4,14 @@
   "desc": [
     "The corrosive spray of a black dragon's breath and the dissolving enzymes secreted by a black pudding deal acid damage."
   ],
-  "url": "assets/atlas/damage_types/json/acid.json",
+  "url": "public/assets/atlas/damage_types/json/acid.json",
   "updated_at": "2025-10-24T20:42:12.729Z",
-  "image": "assets/atlas/damage_types/images/acid.webp"
+  "image": "public/assets/atlas/damage_types/images/acid.webp",
+  "damage_specific": {
+    "associated_gemstone": {
+      "index": "pearl",
+      "name": "Pearl",
+      "url": "public/assets/atlas/crafting/json/pearl.json"
+    }
+  }
 }

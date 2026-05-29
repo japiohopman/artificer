@@ -6,5 +6,12 @@
   ],
   "url": "public/assets/atlas/conditions/json/deafened.json",
   "updated_at": "2025-10-24T20:42:12.637Z",
-  "image": "public/assets/atlas/conditions/deafened.webp"
+  "image": "public/assets/atlas/conditions/deafened.webp",
+  "condition_specific": {
+    "passive_modifiers": {
+      "auto_fail": [
+        "Ability checks that require hearing"
+      ]
+    }
+  }
 }

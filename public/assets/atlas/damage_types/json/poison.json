@@ -1,10 +1,17 @@
 {
-  "index": "piercing",
-  "name": "piercing",
+  "index": "poison",
+  "name": "poison",
   "desc": [
-    "Puncturing and impaling attacks, including spears and monsters' bites, deal piercing damage."
+    "Venomous stings and the toxic gas of a green dragon's breath deal poison damage."
   ],
-  "url": "assets/atlas/damage_types/json/piercing.json",
+  "url": "public/assets/atlas/damage_types/json/poison.json",
   "updated_at": "2025-10-24T20:42:12.729Z",
-  "image": "assets/atlas/damage_types/images/piercing.webp"
+  "image": "public/assets/atlas/damage_types/images/poison.webp",
+  "damage_specific": {
+    "associated_gemstone": {
+      "index": "amethyst",
+      "name": "Amethyst",
+      "url": "public/assets/atlas/crafting/json/amethyst.json"
+    }
+  }
 }
