@@ -1,7 +1,13 @@
 {
   "index": "shield_master",
   "name": "shield master",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "You use shields not just for protection but also for offense. You gain the following benefits while you are wielding a shield:",
     "- If you take the Attack action on your turn, you can use a bonus action to try to shove a creature within 5 feet of you with your shield.",

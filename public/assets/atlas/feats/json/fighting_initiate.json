@@ -3,7 +3,15 @@
   "name": "fighting initiate",
   "prerequisites": [
     {
+      "stat": "feature",
+      "operator": "==",
+      "value": true,
       "desc": "Proficiency with a martial weapon"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [

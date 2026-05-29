@@ -1,7 +1,13 @@
 {
   "index": "keen_mind",
   "name": "keen mind",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "You have a mind that can track time, direction, and detail with uncanny precision. You gain the following benefits:",
     "- Increase your Intelligence score by 1, to a maximum of 20.",

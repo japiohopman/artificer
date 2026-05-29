@@ -3,12 +3,14 @@
   "name": "defensive duelist",
   "prerequisites": [
     {
-      "ability_score": {
-        "index": "dexterity",
-        "name": "dexterity",
-        "url": "public/assets/atlas/ability_scores/json/dexterity.json"
-      },
-      "minimum_score": 13
+      "stat": "dexterity",
+      "operator": ">=",
+      "value": 13
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [

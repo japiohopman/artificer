@@ -1,7 +1,13 @@
 {
   "index": "linguist",
   "name": "linguist",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "You have studied languages and codes, gaining the following benefits:",
     "- Increase your Intelligence score by 1, to a maximum of 20.",

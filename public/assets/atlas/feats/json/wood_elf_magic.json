@@ -3,11 +3,14 @@
   "name": "wood elf magic",
   "prerequisites": [
     {
-      "species": {
-        "index": "elf",
-        "name": "elf",
-        "url": "public/assets/atlas/species/json/elf.json"
-      }
+      "stat": "species",
+      "operator": "==",
+      "value": "elf"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [

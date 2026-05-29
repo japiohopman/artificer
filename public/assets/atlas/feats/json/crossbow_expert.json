@@ -1,7 +1,13 @@
 {
   "index": "crossbow_expert",
   "name": "crossbow expert",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "Thanks to extensive practice with the crossbow, you gain the following benefits:",
     "- You ignore the loading quality of crossbows with which you are proficient.",

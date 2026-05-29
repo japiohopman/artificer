@@ -3,7 +3,15 @@
   "name": "moderately armored",
   "prerequisites": [
     {
+      "stat": "feature",
+      "operator": "==",
+      "value": true,
       "desc": "Proficiency with light armor"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [
@@ -16,7 +24,10 @@
       "choice": [
         {
           "name": "Strength or Dexterity bonus",
-          "options": ["strength_bonus", "dexterity_bonus"],
+          "options": [
+            "strength_bonus",
+            "dexterity_bonus"
+          ],
           "amount": 1
         }
       ]

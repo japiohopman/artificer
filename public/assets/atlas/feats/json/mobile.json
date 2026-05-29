@@ -1,7 +1,13 @@
 {
   "index": "mobile",
   "name": "mobile",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "You are exceptionally speedy and agile, gaining the following benefits:",
     "- Your speed increases by 10 feet.",

@@ -1,7 +1,13 @@
 {
   "index": "crusher",
   "name": "crusher",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "You are practiced in the art of crushing your enemies, granting you the following benefits:",
     "- Increase your Strength or Constitution score by 1, to a maximum of 20.",
@@ -13,7 +19,10 @@
       "choice": [
         {
           "name": "Strength or Constitution bonus",
-          "options": ["strength_bonus", "constitution_bonus"],
+          "options": [
+            "strength_bonus",
+            "constitution_bonus"
+          ],
           "amount": 1
         }
       ]

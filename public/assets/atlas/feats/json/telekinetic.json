@@ -1,7 +1,13 @@
 {
   "index": "telekinetic",
   "name": "telekinetic",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "You learn to move things with your mind, granting you the following benefits:",
     "- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
@@ -13,7 +19,11 @@
       "choice": [
         {
           "name": "Intelligence, Wisdom, or Charisma bonus",
-          "options": ["intelligence_bonus", "wisdom_bonus", "charisma_bonus"],
+          "options": [
+            "intelligence_bonus",
+            "wisdom_bonus",
+            "charisma_bonus"
+          ],
           "amount": 1
         }
       ]

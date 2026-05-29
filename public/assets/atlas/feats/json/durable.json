@@ -1,7 +1,13 @@
 {
   "index": "durable",
   "name": "durable",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "Hardy and resilient, you gain the following benefits:",
     "- Increase your Constitution score by 1, to a maximum of 20.",

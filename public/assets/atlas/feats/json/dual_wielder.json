@@ -1,7 +1,13 @@
 {
   "index": "dual_wielder",
   "name": "dual wielder",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "You master fighting with two weapons, gaining the following benefits:",
     "- You gain a +1 bonus to AC while you are wielding a separate melee weapon in each hand.",

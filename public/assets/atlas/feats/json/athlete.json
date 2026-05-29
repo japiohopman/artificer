@@ -1,7 +1,13 @@
 {
   "index": "athlete",
   "name": "athlete",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "You have undergone extensive physical training to gain the following benefits:",
     "- Increase your Strength or Dexterity score by 1, to a maximum of 20.",
@@ -14,7 +20,10 @@
       "choice": [
         {
           "name": "Strength or Dexterity bonus",
-          "options": ["strength_bonus", "dexterity_bonus"],
+          "options": [
+            "strength_bonus",
+            "dexterity_bonus"
+          ],
           "amount": 1
         }
       ]

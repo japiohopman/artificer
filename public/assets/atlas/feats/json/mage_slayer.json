@@ -1,7 +1,13 @@
 {
   "index": "mage_slayer",
   "name": "mage slayer",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "You have practiced techniques useful in melee combat against spellcasters, gaining the following benefits:",
     "- When a creature within 5 feet of you casts a spell, you can use your reaction to make a melee weapon attack against that creature.",

@@ -3,11 +3,14 @@
   "name": "elven accuracy",
   "prerequisites": [
     {
-      "species": {
-        "index": "elf",
-        "name": "elf",
-        "url": "public/assets/atlas/species/json/elf.json"
-      }
+      "stat": "species",
+      "operator": "==",
+      "value": "elf"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [
@@ -20,7 +23,12 @@
       "choice": [
         {
           "name": "Dexterity, Intelligence, Wisdom, or Charisma bonus",
-          "options": ["dexterity_bonus", "intelligence_bonus", "wisdom_bonus", "charisma_bonus"],
+          "options": [
+            "dexterity_bonus",
+            "intelligence_bonus",
+            "wisdom_bonus",
+            "charisma_bonus"
+          ],
           "amount": 1
         }
       ]

@@ -3,25 +3,18 @@
   "name": "prodigy",
   "prerequisites": [
     {
-      "species": {
-        "index": "half_elf",
-        "name": "half-elf",
-        "url": "public/assets/atlas/species/json/half_elf.json"
-      }
+      "stat": "species",
+      "operator": "in",
+      "value": [
+        "half_elf",
+        "half_orc",
+        "human"
+      ]
     },
     {
-      "species": {
-        "index": "half_orc",
-        "name": "half-orc",
-        "url": "public/assets/atlas/species/json/half_orc.json"
-      }
-    },
-    {
-      "species": {
-        "index": "human",
-        "name": "human",
-        "url": "public/assets/atlas/species/json/human.json"
-      }
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [

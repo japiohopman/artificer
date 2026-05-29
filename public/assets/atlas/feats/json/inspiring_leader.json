@@ -3,12 +3,14 @@
   "name": "inspiring leader",
   "prerequisites": [
     {
-      "ability_score": {
-        "index": "charisma",
-        "name": "charisma",
-        "url": "public/assets/atlas/ability_scores/json/charisma.json"
-      },
-      "minimum_score": 13
+      "stat": "charisma",
+      "operator": ">=",
+      "value": 13
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [

@@ -1,7 +1,13 @@
 {
   "index": "artificer_initiate",
   "name": "artificer initiate",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "You have learned some of an artificer's inventiveness, granting you the following benefits:",
     "- You learn one cantrip of your choice from the artificer spell list, and you learn one 1st-level spell of your choice from that list. Intelligence is your spellcasting ability for these spells.",

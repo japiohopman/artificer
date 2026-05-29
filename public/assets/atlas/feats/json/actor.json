@@ -1,7 +1,13 @@
 {
   "index": "actor",
   "name": "actor",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "Skilled at mimicry and dramatics, you gain the following benefits:",
     "- Increase your Charisma score by 1, to a maximum of 20.",
