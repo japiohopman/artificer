@@ -1,0 +1,26 @@
+{
+  "index": "wood_elf_magic",
+  "name": "wood elf magic",
+  "prerequisites": [
+    {
+      "species": {
+        "index": "elf",
+        "name": "elf",
+        "url": "public/assets/atlas/species/json/elf.json"
+      }
+    }
+  ],
+  "desc": [
+    "You learn the magic of the primeval woods, which are revered and protected by your people. You learn one druid cantrip of your choice. You also learn the longstrider and pass without trace spells, each of which you can cast once without expending a spell slot. You regain the ability to cast these two spells in this way when you finish a long rest. Wisdom is your spellcasting ability for all three spells."
+  ],
+  "feature_specific": {
+    "spellcasting_ability": {
+      "index": "wisdom",
+      "name": "wisdom",
+      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
+    }
+  },
+  "url": "public/assets/atlas/feats/json/wood_elf_magic.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/wood_elf_magic.webp"
+}

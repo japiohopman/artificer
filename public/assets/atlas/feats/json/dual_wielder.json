@@ -1,0 +1,19 @@
+{
+  "index": "dual_wielder",
+  "name": "dual wielder",
+  "prerequisites": [],
+  "desc": [
+    "You master fighting with two weapons, gaining the following benefits:",
+    "- You gain a +1 bonus to AC while you are wielding a separate melee weapon in each hand.",
+    "- You can use two-weapon fighting even when the one--handed melee weapons you are wielding aren't light.",
+    "- You can draw or stow two one-handed weapons when you would normally be able to draw or stow only one."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "ac_bonus": 1
+    }
+  },
+  "url": "public/assets/atlas/feats/json/dual_wielder.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/dual_wielder.webp"
+}

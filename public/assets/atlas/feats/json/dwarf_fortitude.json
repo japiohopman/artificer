@@ -1,0 +1,26 @@
+{
+  "index": "dwarf_fortitude",
+  "name": "dwarf fortitude",
+  "prerequisites": [
+    {
+      "species": {
+        "index": "dwarf",
+        "name": "dwarf",
+        "url": "public/assets/atlas/species/json/dwarf.json"
+      }
+    }
+  ],
+  "desc": [
+    "You have the blood of dwarf heroes flowing through your veins. You gain the following benefits:",
+    "- Increase your Constitution score by 1, to a maximum of 20.",
+    "- Whenever you take the Dodge action in combat, you can spend one Hit Die to heal yourself. Roll the die, add your Constitution modifier, and regain a number of hit points equal to the total (minimum of 1)."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "constitution_bonus": 1
+    }
+  },
+  "url": "public/assets/atlas/feats/json/dwarf_fortitude.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/dwarf_fortitude.webp"
+}

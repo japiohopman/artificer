@@ -1,0 +1,26 @@
+{
+  "index": "telekinetic",
+  "name": "telekinetic",
+  "prerequisites": [],
+  "desc": [
+    "You learn to move things with your mind, granting you the following benefits:",
+    "- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
+    "- You learn the mage hand cantrip. You can cast it without verbal or somatic components, and you can make the spectral hand invisible. If you already know this cantrip, its range increases by 30 feet when you cast it. Its spellcasting ability is the ability increased by this feat.",
+    "- As a bonus action, you can try to telekinetically shove one creature you can see within 30 feet of you. When you do so, the target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + the ability modifier of the score increased by this feat) or be moved 5 feet toward or away from you. A creature can willingly fail this saving throw."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Intelligence, Wisdom, or Charisma bonus",
+          "options": ["intelligence_bonus", "wisdom_bonus", "charisma_bonus"],
+          "amount": 1
+        }
+      ]
+    },
+    "special_action": "bonus_action"
+  },
+  "url": "public/assets/atlas/feats/json/telekinetic.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/telekinetic.webp"
+}

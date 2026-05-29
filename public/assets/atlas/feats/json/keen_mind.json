@@ -1,0 +1,20 @@
+{
+  "index": "keen_mind",
+  "name": "keen mind",
+  "prerequisites": [],
+  "desc": [
+    "You have a mind that can track time, direction, and detail with uncanny precision. You gain the following benefits:",
+    "- Increase your Intelligence score by 1, to a maximum of 20.",
+    "- You always know which way is north.",
+    "- You always know the number of hours left before the next sunrise or sunset.",
+    "- You can accurately recall anything you have seen or heard within the past month."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "intelligence_bonus": 1
+    }
+  },
+  "url": "public/assets/atlas/feats/json/keen_mind.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/keen_mind.webp"
+}

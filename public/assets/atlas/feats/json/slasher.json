@@ -1,0 +1,25 @@
+{
+  "index": "slasher",
+  "name": "slasher",
+  "prerequisites": [],
+  "desc": [
+    "You are practiced in the art of slashing your enemies, granting you the following benefits:",
+    "- Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "- Once per turn when you hit a creature with an attack that deals slashing damage, you can reduce the speed of the target by 10 feet until the start of your next turn.",
+    "- When you score a critical hit that deals slashing damage to a creature, you grievously wound it. Until the start of your next turn, the target has disadvantage on all attack rolls."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Strength or Dexterity bonus",
+          "options": ["strength_bonus", "dexterity_bonus"],
+          "amount": 1
+        }
+      ]
+    }
+  },
+  "url": "public/assets/atlas/feats/json/slasher.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/slasher.webp"
+}
