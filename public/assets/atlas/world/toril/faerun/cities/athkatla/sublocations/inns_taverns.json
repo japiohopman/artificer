@@ -1,16 +1,21 @@
 {
   "category": "inns_taverns",
-  "updatedAt": "2026-05-29T07:46:45.509Z",
+  "updatedAt": "2026-05-29T10:54:16.127Z",
   "location_id": "athkatla",
   "sub_locations": [
     {
-      "id": "the_harfin_draether",
+      "id": "7",
       "name": "The Harfin Draether",
-      "type": "inns_taverns",
-      "description": "An expensive and quality tavern, named after its founder, who died well before the 1370s [[DR]].",
-      "coordinates": {
-        "x": 535.24302638056,
-        "y": 1264.277323241
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        535.24302638056,
+        1264.277323241
+      ],
+      "popup": {
+        "title": "The Harfin Draether",
+        "description": "An expensive and quality tavern, named after its founder, who died well before the 1370s [[DR]].",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -26,13 +31,18 @@
       }
     },
     {
-      "id": "the_black_frog",
+      "id": "26",
       "name": "The Black Frog",
-      "type": "inns_taverns",
-      "description": "The most popular tavern in the Trades District in the late 14{{th}} century [[DR]].{{approx}}",
-      "coordinates": {
-        "x": 912.96096059807,
-        "y": 949.94852523089
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        912.96096059807,
+        949.94852523089
+      ],
+      "popup": {
+        "title": "The Black Frog",
+        "description": "The most popular tavern in the Trades District in the late 14{{th}} century [[DR]].{{approx}}",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -48,13 +58,18 @@
       }
     },
     {
-      "id": "adamantine_mug",
+      "id": "33",
       "name": "Adamantine Mug",
-      "type": "inns_taverns",
-      "description": "A surprisingly reasonably priced tavern and a club for [[Athkatla]]'s merchants.",
-      "coordinates": {
-        "x": 774.22671534759,
-        "y": 1047.179029717
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        774.22671534759,
+        1047.179029717
+      ],
+      "popup": {
+        "title": "Adamantine Mug",
+        "description": "A surprisingly reasonably priced tavern and a club for [[Athkatla]]'s merchants.",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -70,13 +85,18 @@
       }
     },
     {
-      "id": "copper_coronet",
+      "id": "34",
       "name": "Copper Coronet",
-      "type": "inns_taverns",
-      "description": "A large and dingy tavern that served smugglers, pirates and the \"blank-for-hire\".",
-      "coordinates": {
-        "x": 752.99713261312,
-        "y": 865.9997965736
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        752.99713261312,
+        865.9997965736
+      ],
+      "popup": {
+        "title": "Copper Coronet",
+        "description": "A large and dingy tavern that served smugglers, pirates and the \"blank-for-hire\".",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -92,13 +112,18 @@
       }
     },
     {
-      "id": "five_flagons",
+      "id": "35",
       "name": "Five Flagons",
-      "type": "inns_taverns",
-      "description": "A three-floored inn and an underground theater frequented by wealthy patrons.",
-      "coordinates": {
-        "x": 1008.8470456673,
-        "y": 813.81537986975
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1008.8470456673,
+        813.81537986975
+      ],
+      "popup": {
+        "title": "Five Flagons",
+        "description": "A three-floored inn and an underground theater frequented by wealthy patrons.",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -114,13 +139,18 @@
       }
     },
     {
-      "id": "den_of_the_seven_vales",
+      "id": "36",
       "name": "Den of the Seven Vales",
-      "type": "inns_taverns",
-      "description": "The tavern that was formerly the festhall known as the \"Den of the Seven Veils.\"",
-      "coordinates": {
-        "x": 964.33830977381,
-        "y": 692.89335961016
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        964.33830977381,
+        692.89335961016
+      ],
+      "popup": {
+        "title": "Den of the Seven Vales",
+        "description": "The tavern that was formerly the festhall known as the \"Den of the Seven Veils.\"",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -136,13 +166,18 @@
       }
     },
     {
-      "id": "seas_bounty",
+      "id": "37",
       "name": "Sea's Bounty",
-      "type": "inns_taverns",
-      "description": "A cramped two-floor tavern and an inn that served a variety of [[beer]]s and foods.",
-      "coordinates": {
-        "x": 645.56728160377,
-        "y": 689.36976477157
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        645.56728160377,
+        689.36976477157
+      ],
+      "popup": {
+        "title": "Sea's Bounty",
+        "description": "A cramped two-floor tavern and an inn that served a variety of [[beer]]s and foods.",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -158,13 +193,18 @@
       }
     },
     {
-      "id": "silverale_hall",
+      "id": "38",
       "name": "Silverale Hall",
-      "type": "inns_taverns",
-      "description": "A popular inn and festhall with the welcoming sign depicting a [[silver]] mug overflowing with [[ale]].",
-      "coordinates": {
-        "x": 591.8405792481,
-        "y": 487.11701524425
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        591.8405792481,
+        487.11701524425
+      ],
+      "popup": {
+        "title": "Silverale Hall",
+        "description": "A popular inn and festhall with the welcoming sign depicting a [[silver]] mug overflowing with [[ale]].",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -180,13 +220,18 @@
       }
     },
     {
-      "id": "delosars_inn",
+      "id": "39",
       "name": "Delosar's Inn",
-      "type": "inns_taverns",
-      "description": "An old but well-kept inn and tavern.",
-      "coordinates": {
-        "x": 483.60988337733,
-        "y": 412.17664241511
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        483.60988337733,
+        412.17664241511
+      ],
+      "popup": {
+        "title": "Delosar's Inn",
+        "description": "An old but well-kept inn and tavern.",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -202,13 +247,18 @@
       }
     },
     {
-      "id": "mithrest",
+      "id": "40",
       "name": "Mithrest",
-      "type": "inns_taverns",
-      "description": "An exclusive inn for [[Athkatla]]n nobles.",
-      "coordinates": {
-        "x": 445.48195276528,
-        "y": 663.9398845242
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        445.48195276528,
+        663.9398845242
+      ],
+      "popup": {
+        "title": "Mithrest",
+        "description": "An exclusive inn for [[Athkatla]]n nobles.",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -224,13 +274,18 @@
       }
     },
     {
-      "id": "bordryns_bucket",
+      "id": "43",
       "name": "Bordryn's Bucket",
-      "type": "inns_taverns",
-      "description": "The most popular drinking hole of the Bridge District in the late 14{{th}} century [[DR]].",
-      "coordinates": {
-        "x": 827.90881163176,
-        "y": 649.79350549702
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        827.90881163176,
+        649.79350549702
+      ],
+      "popup": {
+        "title": "Bordryn's Bucket",
+        "description": "The most popular drinking hole of the Bridge District in the late 14{{th}} century [[DR]].",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -246,13 +301,18 @@
       }
     },
     {
-      "id": "crooked_crane_inn",
+      "id": "74",
       "name": "Crooked Crane Inn",
-      "type": "inns_taverns",
-      "description": "A cheap inn that offered stables and common rooms for rent.",
-      "coordinates": {
-        "x": 951.70926887353,
-        "y": 1091.055436971
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        951.70926887353,
+        1091.055436971
+      ],
+      "popup": {
+        "title": "Crooked Crane Inn",
+        "description": "A cheap inn that offered stables and common rooms for rent.",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -268,13 +328,18 @@
       }
     },
     {
-      "id": "maevars_guildhall",
+      "id": "79",
       "name": "Mae'Var's Guildhall",
-      "type": "inns_taverns",
-      "description": "A nondescript three-floor inn and tavern, a cover for a [[Sahdow Thieves]]' Guildhall ran by [[Mae'Var]] in the late 14{{th}} century [[DR]].{{approx}}",
-      "coordinates": {
-        "x": 195.00529363731,
-        "y": 981.0003051396
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        195.00529363731,
+        981.0003051396
+      ],
+      "popup": {
+        "title": "Mae'Var's Guildhall",
+        "description": "A nondescript three-floor inn and tavern, a cover for a [[Sahdow Thieves]]' Guildhall ran by [[Mae'Var]] in the late 14{{th}} century [[DR]].{{approx}}",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -290,13 +355,18 @@
       }
     },
     {
-      "id": "coffee_and_tea_house",
+      "id": "94",
       "name": "Coffee and Tea House",
-      "type": "inns_taverns",
-      "description": "A small establishment that serves [[tea]]s and [[coffee]]s.",
-      "coordinates": {
-        "x": 800.96206343917,
-        "y": 1070.9587474073
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        800.96206343917,
+        1070.9587474073
+      ],
+      "popup": {
+        "title": "Coffee and Tea House",
+        "description": "A small establishment that serves [[tea]]s and [[coffee]]s.",
+        "image": ""
       },
       "day": {
         "ambient": null,
