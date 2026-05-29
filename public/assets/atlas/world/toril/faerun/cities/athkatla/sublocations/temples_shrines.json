@@ -1,16 +1,21 @@
 {
   "category": "temples_shrines",
-  "updatedAt": "2026-05-29T07:46:45.510Z",
+  "updatedAt": "2026-05-29T10:54:16.128Z",
   "location_id": "athkatla",
   "sub_locations": [
     {
-      "id": "moonhall",
+      "id": "21",
       "name": "Moonhall",
-      "type": "temples_shrines",
-      "description": "The temple of [[Selûne]], easily recognizable for its conical dome.",
-      "coordinates": {
-        "x": 196.56970073116,
-        "y": 1146.9614936637
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        196.56970073116,
+        1146.9614936637
+      ],
+      "popup": {
+        "title": "Moonhall",
+        "description": "The temple of [[Selûne]], easily recognizable for its conical dome.",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -26,13 +31,18 @@
       }
     },
     {
-      "id": "dome_of_the_rose",
+      "id": "22",
       "name": "Dome of the Rose",
-      "type": "temples_shrines",
-      "description": "The grand monastery and temple to [[Lathander]].",
-      "coordinates": {
-        "x": 501.32872608302,
-        "y": 1070.5618243792
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        501.32872608302,
+        1070.5618243792
+      ],
+      "popup": {
+        "title": "Dome of the Rose",
+        "description": "The grand monastery and temple to [[Lathander]].",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -48,13 +58,18 @@
       }
     },
     {
-      "id": "arbalests_house",
+      "id": "31",
       "name": "Arbalest's House",
-      "type": "temples_shrines",
-      "description": "A monastery dedicated to [[Milil]], the Lord of All Songs.",
-      "coordinates": {
-        "x": 401.51188280438,
-        "y": 1438.2243879597
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        401.51188280438,
+        1438.2243879597
+      ],
+      "popup": {
+        "title": "Arbalest's House",
+        "description": "A monastery dedicated to [[Milil]], the Lord of All Songs.",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -70,13 +85,18 @@
       }
     },
     {
-      "id": "goldspires",
+      "id": "32",
       "name": "Goldspires",
-      "type": "temples_shrines",
-      "description": "A large temple complex and the center of the worship of [[Waukeen]], Lady of Trade in [[Faerûn]].",
-      "coordinates": {
-        "x": 158.37445419228,
-        "y": 1330.6680636456
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        158.37445419228,
+        1330.6680636456
+      ],
+      "popup": {
+        "title": "Goldspires",
+        "description": "A large temple complex and the center of the worship of [[Waukeen]], Lady of Trade in [[Faerûn]].",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -92,13 +112,18 @@
       }
     },
     {
-      "id": "temple_of_ilmater",
+      "id": "61",
       "name": "Temple of Ilmater",
-      "type": "temples_shrines",
-      "description": "A humble temple dedicated to [[Ilmater]], the Crying God, that stood on stilt-supported elevation above the [[Copper Coronet]].",
-      "coordinates": {
-        "x": 739.95787264297,
-        "y": 876.46978328938
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        739.95787264297,
+        876.46978328938
+      ],
+      "popup": {
+        "title": "Temple of Ilmater",
+        "description": "A humble temple dedicated to [[Ilmater]], the Crying God, that stood on stilt-supported elevation above the [[Copper Coronet]].",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -114,13 +139,18 @@
       }
     },
     {
-      "id": "high_hall_of_the_radiant_heart",
+      "id": "62",
       "name": "High Hall of the Radiant Heart",
-      "type": "temples_shrines",
-      "description": "The High Hall of the [[paladin]] order dedicated to [[Helm]]. It stood surrounded by scenic elevated walkways above a water reservoir and cascading canals.{{approx}}",
-      "coordinates": {
-        "x": 649.99647090846,
-        "y": 1229.5019834074
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        649.99647090846,
+        1229.5019834074
+      ],
+      "popup": {
+        "title": "High Hall of the Radiant Heart",
+        "description": "The High Hall of the [[paladin]] order dedicated to [[Helm]]. It stood surrounded by scenic elevated walkways above a water reservoir and cascading canals.{{approx}}",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -136,13 +166,18 @@
       }
     },
     {
-      "id": "temple_of_helm",
+      "id": "63",
       "name": "Temple of Helm",
-      "type": "temples_shrines",
-      "description": "The rich temple dedicated to [[Helm]], surrounded by scenic elevated walkways above a water reservoir and cascading canals.{{approx}}",
-      "coordinates": {
-        "x": 635.00154397755,
-        "y": 1238.9996948604
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        635.00154397755,
+        1238.9996948604
+      ],
+      "popup": {
+        "title": "Temple of Helm",
+        "description": "The rich temple dedicated to [[Helm]], surrounded by scenic elevated walkways above a water reservoir and cascading canals.{{approx}}",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -158,13 +193,18 @@
       }
     },
     {
-      "id": "temple_of_taols",
+      "id": "64",
       "name": "Temple of Taols",
-      "type": "temples_shrines",
-      "description": "The rich temple dedicated to [[Taols]], surrounded by scenic elevated walkways above a water reservoir and cascading canals.{{approx}}",
-      "coordinates": {
-        "x": 632.96801878115,
-        "y": 1223.4567131434
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        632.96801878115,
+        1223.4567131434
+      ],
+      "popup": {
+        "title": "Temple of Taols",
+        "description": "The rich temple dedicated to [[Taols]], surrounded by scenic elevated walkways above a water reservoir and cascading canals.{{approx}}",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -180,13 +220,18 @@
       }
     },
     {
-      "id": "temple_of_waukeen",
+      "id": "66",
       "name": "Temple of Waukeen",
-      "type": "temples_shrines",
-      "description": "A small but richly decorated temple of [[Waukeen]] that stood across the plaza from the [[Council House]].{{approx}}",
-      "coordinates": {
-        "x": 261.98399822133,
-        "y": 417.19321666634
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        261.98399822133,
+        417.19321666634
+      ],
+      "popup": {
+        "title": "Temple of Waukeen",
+        "description": "A small but richly decorated temple of [[Waukeen]] that stood across the plaza from the [[Council House]].{{approx}}",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -202,13 +247,18 @@
       }
     },
     {
-      "id": "temple_of_ilmater",
+      "id": "77",
       "name": "Temple of Ilmater",
-      "type": "temples_shrines",
-      "description": "A small shrine dedicated to [[Ilmater]] within one of the shops of [[Waukeen's Promenade]].",
-      "coordinates": {
-        "x": 470.93342986002,
-        "y": 502.69299916158
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        470.93342986002,
+        502.69299916158
+      ],
+      "popup": {
+        "title": "Temple of Ilmater",
+        "description": "A small shrine dedicated to [[Ilmater]] within one of the shops of [[Waukeen's Promenade]].",
+        "image": ""
       },
       "day": {
         "ambient": null,
@@ -224,13 +274,18 @@
       }
     },
     {
-      "id": "temple_of_oghma",
+      "id": "80",
       "name": "Temple of Oghma",
-      "type": "temples_shrines",
-      "description": "A small temple dedicated to the deity of knowledge, [[Oghma]], that offered its library to the temple's visitors.{{approx}}",
-      "coordinates": {
-        "x": 216.03794008053,
-        "y": 980.93885458636
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        216.03794008053,
+        980.93885458636
+      ],
+      "popup": {
+        "title": "Temple of Oghma",
+        "description": "A small temple dedicated to the deity of knowledge, [[Oghma]], that offered its library to the temple's visitors.{{approx}}",
+        "image": ""
       },
       "day": {
         "ambient": null,
