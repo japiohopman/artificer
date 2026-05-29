@@ -1,0 +1,31 @@
+{
+  "index": "guile_of_the_cloud_giant",
+  "name": "guile of the cloud giant",
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You’ve manifested the airy power of cloud giants, granting you the following benefits:",
+    "- Increase your Strength, Constitution, or Wisdom score by 1, to a maximum of 20.",
+    "- Cloudy Escape: When a creature you can see hits you with an attack roll, you can use your reaction to interpose a cloud of magical fog between you and the attacker. You have resistance to the damage of that attack, and you can teleport up to 30 feet to an unoccupied space you can see. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Strength, Constitution, or Wisdom bonus",
+          "options": ["strength_bonus", "constitution_bonus", "wisdom_bonus"],
+          "amount": 1
+        }
+      ]
+    },
+    "special_action": "reaction"
+  },
+  "url": "public/assets/atlas/feats/json/guile_of_the_cloud_giant.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/guile_of_the_cloud_giant.webp"
+}

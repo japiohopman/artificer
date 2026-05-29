@@ -3,25 +3,18 @@
   "name": "squat nimbleness",
   "prerequisites": [
     {
-      "species": {
-        "index": "dwarf",
-        "name": "dwarf",
-        "url": "public/assets/atlas/species/json/dwarf.json"
-      }
+      "stat": "species",
+      "operator": "in",
+      "value": [
+        "dwarf",
+        "gnome",
+        "halfling"
+      ]
     },
     {
-      "species": {
-        "index": "gnome",
-        "name": "gnome",
-        "url": "public/assets/atlas/species/json/gnome.json"
-      }
-    },
-    {
-      "species": {
-        "index": "halfling",
-        "name": "halfling",
-        "url": "public/assets/atlas/species/json/halfling.json"
-      }
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [
@@ -36,7 +29,10 @@
       "choice": [
         {
           "name": "Strength or Dexterity bonus",
-          "options": ["strength_bonus", "dexterity_bonus"],
+          "options": [
+            "strength_bonus",
+            "dexterity_bonus"
+          ],
           "amount": 1
         }
       ],

@@ -3,11 +3,14 @@
   "name": "dwarf fortitude",
   "prerequisites": [
     {
-      "species": {
-        "index": "dwarf",
-        "name": "dwarf",
-        "url": "public/assets/atlas/species/json/dwarf.json"
-      }
+      "stat": "species",
+      "operator": "==",
+      "value": "dwarf"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [

@@ -14,7 +14,10 @@
       "choice": [
         {
           "name": "Strength or Constitution bonus",
-          "options": ["strength_bonus", "constitution_bonus"],
+          "options": [
+            "strength_bonus",
+            "constitution_bonus"
+          ],
           "amount": 1
         }
       ]

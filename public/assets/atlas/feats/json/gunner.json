@@ -1,13 +1,19 @@
 {
   "index": "gunner",
   "name": "gunner",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "You have a quick hand and keen eye when using firearms, granting you the following benefits:",
     "- Increase your Dexterity score by 1, to a maximum of 20.",
     "- You gain proficiency with firearms.",
     "- You ignore the loading property of firearms.",
-    "- Being within 5 feet of a hostile creature doesn’t impose disadvantage on your ranged attack rolls."
+    "- Being within 5 feet of a hostile creature doesn\u2019t impose disadvantage on your ranged attack rolls."
   ],
   "feature_specific": {
     "passive_modifiers": {

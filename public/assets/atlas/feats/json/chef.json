@@ -1,7 +1,13 @@
 {
   "index": "chef",
   "name": "chef",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "Time spent mastering the culinary arts has paid off, granting you the following benefits:",
     "- Increase your Constitution or Wisdom score by 1, to a maximum of 20.",
@@ -14,7 +20,10 @@
       "choice": [
         {
           "name": "Constitution or Wisdom bonus",
-          "options": ["constitution_bonus", "wisdom_bonus"],
+          "options": [
+            "constitution_bonus",
+            "wisdom_bonus"
+          ],
           "amount": 1
         }
       ]

@@ -1,0 +1,40 @@
+{
+  "index": "soul_of_the_storm_giant",
+  "name": "soul of the storm giant",
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You’ve manifested the thundering power of storm giants, granting you the following benefits:",
+    "- Increase your Strength, Constitution, or Wisdom score by 1, to a maximum of 20.",
+    "- You have resistance to lightning and thunder damage.",
+    "- Storm Aura: As a bonus action, you can surround yourself with a magical aura of wind and lightning that extends 10 feet from you in every direction. For 1 minute, the aura provides you with several benefits: attack rolls against you have disadvantage, and any creature that starts its turn within the aura has its speed halved until the start of its next turn. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Strength, Constitution, or Wisdom bonus",
+          "options": ["strength_bonus", "constitution_bonus", "wisdom_bonus"],
+          "amount": 1
+        }
+      ],
+      "resistance": [
+        {
+          "name": "Lightning damage"
+        },
+        {
+          "name": "Thunder damage"
+        }
+      ]
+    },
+    "special_action": "bonus_action"
+  },
+  "url": "public/assets/atlas/feats/json/soul_of_the_storm_giant.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/soul_of_the_storm_giant.webp"
+}

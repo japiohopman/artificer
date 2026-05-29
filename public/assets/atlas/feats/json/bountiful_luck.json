@@ -3,11 +3,14 @@
   "name": "bountiful luck",
   "prerequisites": [
     {
-      "species": {
-        "index": "halfling",
-        "name": "halfling",
-        "url": "public/assets/atlas/species/json/halfling.json"
-      }
+      "stat": "species",
+      "operator": "==",
+      "value": "halfling"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [

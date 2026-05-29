@@ -3,7 +3,15 @@
   "name": "spell sniper",
   "prerequisites": [
     {
+      "stat": "feature",
+      "operator": "==",
+      "value": true,
       "desc": "The ability to cast at least one spell"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [

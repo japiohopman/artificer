@@ -3,11 +3,14 @@
   "name": "infernal constitution",
   "prerequisites": [
     {
-      "species": {
-        "index": "tiefling",
-        "name": "tiefling",
-        "url": "public/assets/atlas/species/json/tiefling.json"
-      }
+      "stat": "species",
+      "operator": "==",
+      "value": "tiefling"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [

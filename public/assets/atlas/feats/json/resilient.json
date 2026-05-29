@@ -1,7 +1,13 @@
 {
   "index": "resilient",
   "name": "resilient",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "Choose one ability score. You gain the following benefits:",
     "- Increase the chosen ability score by 1, to a maximum of 20.",

@@ -1,0 +1,32 @@
+{
+  "index": "vigor_of_the_hill_giant",
+  "name": "vigor of the hill giant",
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You’ve manifested the resilient power of hill giants, granting you the following benefits:",
+    "- Increase your Strength, Constitution, or Wisdom score by 1, to a maximum of 20.",
+    "- Bulwark: When you are subjected to an effect that would move you, knock you prone, or both, you can use your reaction to not be moved or knocked prone.",
+    "- Hearty Recovery: Whenever you regain hit points from a spell or a magic item, you regain an additional 1d8 hit points. You can regain these extra hit points a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Strength, Constitution, or Wisdom bonus",
+          "options": ["strength_bonus", "constitution_bonus", "wisdom_bonus"],
+          "amount": 1
+        }
+      ]
+    },
+    "special_action": "reaction"
+  },
+  "url": "public/assets/atlas/feats/json/vigor_of_the_hill_giant.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/vigor_of_the_hill_giant.webp"
+}

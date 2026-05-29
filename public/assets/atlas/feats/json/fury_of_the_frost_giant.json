@@ -1,0 +1,37 @@
+{
+  "index": "fury_of_the_frost_giant",
+  "name": "fury of the frost giant",
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You’ve manifested the icy power of frost giants, granting you the following benefits:",
+    "- Increase your Strength, Constitution, or Wisdom score by 1, to a maximum of 20.",
+    "- You have resistance to cold damage.",
+    "- Frigid Retaliation: When a creature you can see hits you with an attack roll, you can use your reaction to retaliate with icy magic. The attacker takes 1d8 cold damage and must succeed on a Strength saving throw (DC 8 + your proficiency bonus + the ability modifier of the score increased by this feat) or have its speed reduced to 0 until the end of its next turn. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Strength, Constitution, or Wisdom bonus",
+          "options": ["strength_bonus", "constitution_bonus", "wisdom_bonus"],
+          "amount": 1
+        }
+      ],
+      "resistance": [
+        {
+          "name": "Cold damage"
+        }
+      ]
+    },
+    "special_action": "reaction"
+  },
+  "url": "public/assets/atlas/feats/json/fury_of_the_frost_giant.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/fury_of_the_frost_giant.webp"
+}

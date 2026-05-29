@@ -3,7 +3,15 @@
   "name": "ritual caster",
   "prerequisites": [
     {
+      "stat": "feature",
+      "operator": "==",
+      "value": true,
       "desc": "Intelligence or Wisdom 13 or higher"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [

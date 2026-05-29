@@ -1,7 +1,13 @@
 {
   "index": "observant",
   "name": "observant",
-  "prerequisites": [],
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
   "desc": [
     "Quick to notice details of your environment, you gain the following benefits:",
     "- Increase your Intelligence or Wisdom score by 1, to a maximum of 20.",
@@ -13,7 +19,10 @@
       "choice": [
         {
           "name": "Intelligence or Wisdom bonus",
-          "options": ["intelligence_bonus", "wisdom_bonus"],
+          "options": [
+            "intelligence_bonus",
+            "wisdom_bonus"
+          ],
           "amount": 1
         }
       ],

@@ -3,11 +3,14 @@
   "name": "dragon hide",
   "prerequisites": [
     {
-      "species": {
-        "index": "dragonborn",
-        "name": "dragonborn",
-        "url": "public/assets/atlas/species/json/dragonborn.json"
-      }
+      "stat": "species",
+      "operator": "==",
+      "value": "dragonborn"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [
@@ -21,7 +24,11 @@
       "choice": [
         {
           "name": "Strength, Constitution, or Charisma bonus",
-          "options": ["strength_bonus", "constitution_bonus", "charisma_bonus"],
+          "options": [
+            "strength_bonus",
+            "constitution_bonus",
+            "charisma_bonus"
+          ],
           "amount": 1
         }
       ]

@@ -3,7 +3,15 @@
   "name": "heavy armor master",
   "prerequisites": [
     {
+      "stat": "feature",
+      "operator": "==",
+      "value": true,
       "desc": "Proficiency with heavy armor"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
     }
   ],
   "desc": [
