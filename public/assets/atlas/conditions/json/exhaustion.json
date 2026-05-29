@@ -16,5 +16,35 @@
   ],
   "url": "public/assets/atlas/conditions/json/exhaustion.json",
   "updated_at": "2025-10-24T20:42:12.637Z",
-  "image": "public/assets/atlas/conditions/exhaustion.webp"
+  "image": "public/assets/atlas/conditions/exhaustion.webp",
+  "condition_specific": {
+    "passive_modifiers": {
+      "levels": [
+        {
+          "level": 1,
+          "effect": "Disadvantage on ability checks"
+        },
+        {
+          "level": 2,
+          "effect": "Speed halved"
+        },
+        {
+          "level": 3,
+          "effect": "Disadvantage on attack rolls and saving throws"
+        },
+        {
+          "level": 4,
+          "effect": "Hit point maximum halved"
+        },
+        {
+          "level": 5,
+          "effect": "Speed reduced to 0"
+        },
+        {
+          "level": 6,
+          "effect": "Death"
+        }
+      ]
+    }
+  }
 }

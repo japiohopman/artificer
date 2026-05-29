@@ -6,5 +6,10 @@
   ],
   "url": "public/assets/atlas/conditions/json/incapacitated.json",
   "updated_at": "2025-10-24T20:42:12.637Z",
-  "image": "public/assets/atlas/conditions/incapacitated.webp"
+  "image": "public/assets/atlas/conditions/incapacitated.webp",
+  "condition_specific": {
+    "passive_modifiers": {
+      "incapacitated": true
+    }
+  }
 }

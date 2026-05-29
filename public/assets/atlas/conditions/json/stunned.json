@@ -6,7 +6,20 @@
     "- The creature automatically fails Strength and Dexterity saving throws.",
     "- Attack rolls against the creature have advantage."
   ],
-  "url": "public/assets/atlas/constitutionditions/json/stunned.json",
+  "url": "public/assets/atlas/conditions/json/stunned.json",
   "updated_at": "2025-10-24T20:42:12.637Z",
-  "image": "public/assets/atlas/constitutionditions/stunned.webp"
+  "image": "public/assets/atlas/conditions/stunned.webp",
+  "condition_specific": {
+    "passive_modifiers": {
+      "incapacitated": true,
+      "speed_set": 0,
+      "auto_fail": [
+        "Strength saving throws",
+        "Dexterity saving throws"
+      ],
+      "advantage_against": [
+        "Attack rolls"
+      ]
+    }
+  }
 }

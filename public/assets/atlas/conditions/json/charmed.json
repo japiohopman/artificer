@@ -7,5 +7,16 @@
   ],
   "url": "public/assets/atlas/conditions/json/charmed.json",
   "updated_at": "2025-10-24T20:42:12.637Z",
-  "image": "public/assets/atlas/conditions/charmed.webp"
+  "image": "public/assets/atlas/conditions/charmed.webp",
+  "condition_specific": {
+    "passive_modifiers": {
+      "restricted_actions": [
+        "Can't attack the charmer",
+        "Can't target the charmer with harmful abilities or magical effects"
+      ],
+      "advantage_against": [
+        "Ability checks to interact socially (by charmer)"
+      ]
+    }
+  }
 }

@@ -8,5 +8,19 @@
   ],
   "url": "public/assets/atlas/conditions/json/prone.json",
   "updated_at": "2025-10-24T20:42:12.637Z",
-  "image": "public/assets/atlas/conditions/prone.webp"
+  "image": "public/assets/atlas/conditions/prone.webp",
+  "condition_specific": {
+    "passive_modifiers": {
+      "disadvantage": [
+        "Attack rolls"
+      ],
+      "advantage_against_within_5ft": [
+        "Attack rolls"
+      ],
+      "disadvantage_against_beyond_5ft": [
+        "Attack rolls"
+      ],
+      "movement_option": "crawl"
+    }
+  }
 }

@@ -8,5 +8,10 @@
   ],
   "url": "public/assets/atlas/conditions/json/grappled.json",
   "updated_at": "2025-10-24T20:42:12.637Z",
-  "image": "public/assets/atlas/conditions/grappled.webp"
+  "image": "public/assets/atlas/conditions/grappled.webp",
+  "condition_specific": {
+    "passive_modifiers": {
+      "speed_set": 0
+    }
+  }
 }

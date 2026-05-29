@@ -8,5 +8,17 @@
   ],
   "url": "public/assets/atlas/conditions/json/restrained.json",
   "updated_at": "2025-10-24T20:42:12.637Z",
-  "image": "public/assets/atlas/conditions/restrained.webp"
+  "image": "public/assets/atlas/conditions/restrained.webp",
+  "condition_specific": {
+    "passive_modifiers": {
+      "speed_set": 0,
+      "disadvantage": [
+        "Attack rolls",
+        "Dexterity saving throws"
+      ],
+      "advantage_against": [
+        "Attack rolls"
+      ]
+    }
+  }
 }

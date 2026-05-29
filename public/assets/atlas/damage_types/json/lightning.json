@@ -4,7 +4,14 @@
   "desc": [
     "A lightning bolt spell and a blue dragon's breath deal lightning damage."
   ],
-  "url": "assets/atlas/damage_types/json/lightning.json",
+  "url": "public/assets/atlas/damage_types/json/lightning.json",
   "updated_at": "2025-10-24T20:42:12.729Z",
-  "image": "assets/atlas/damage_types/images/lightning.webp"
+  "image": "public/assets/atlas/damage_types/images/lightning.webp",
+  "damage_specific": {
+    "associated_gemstone": {
+      "index": "citrine",
+      "name": "Citrine",
+      "url": "public/assets/atlas/crafting/json/citrine.json"
+    }
+  }
 }

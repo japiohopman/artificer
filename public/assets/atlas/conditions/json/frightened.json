@@ -7,5 +7,16 @@
   ],
   "url": "public/assets/atlas/conditions/json/frightened.json",
   "updated_at": "2025-10-24T20:42:12.637Z",
-  "image": "public/assets/atlas/conditions/frightened.webp"
+  "image": "public/assets/atlas/conditions/frightened.webp",
+  "condition_specific": {
+    "passive_modifiers": {
+      "disadvantage": [
+        "Ability checks",
+        "Attack rolls while source of fear is in line of sight"
+      ],
+      "restricted_movement": [
+        "Can't willingly move closer to the source of its fear"
+      ]
+    }
+  }
 }

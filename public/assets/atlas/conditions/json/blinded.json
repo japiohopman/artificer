@@ -7,5 +7,18 @@
   ],
   "url": "public/assets/atlas/conditions/json/blinded.json",
   "updated_at": "2025-10-24T20:42:12.637Z",
-  "image": "public/assets/atlas/conditions/blinded.webp"
+  "image": "public/assets/atlas/conditions/blinded.webp",
+  "condition_specific": {
+    "passive_modifiers": {
+      "disadvantage": [
+        "Attack rolls"
+      ],
+      "advantage_against": [
+        "Attack rolls"
+      ],
+      "auto_fail": [
+        "Ability checks that require sight"
+      ]
+    }
+  }
 }
