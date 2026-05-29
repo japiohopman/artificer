@@ -1,0 +1,601 @@
+{
+  "category": "roads",
+  "updatedAt": "2026-05-29T07:46:45.509Z",
+  "location_id": "athkatla",
+  "sub_locations": [
+    {
+      "id": "street_of_seven_altars",
+      "name": "Street of Seven Altars",
+      "type": "roads",
+      "description": "The street with the name remnant of its seven temples that stood there before the 14th century DR.",
+      "coordinates": {
+        "x": 544.84839070016,
+        "y": 1279.5208988629
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "godsmoot",
+      "name": "Godsmoot",
+      "type": "roads",
+      "description": "A wide street that kept its name from many temples that stood here before the 14{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 495.68138571591,
+        "y": 1256.1750529337
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "oblade_street",
+      "name": "Oblade Street",
+      "type": "roads",
+      "description": "The street that ran south, perpendicular to [[Aundle's Walk]].",
+      "coordinates": {
+        "x": 531.70733650935,
+        "y": 1239.8804491209
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "aundles_walk",
+      "name": "Aundle's Walk",
+      "type": "roads",
+      "description": "A cramped city walk that ran east from the intersection of the [[Street of Seven Altars]] and [[Oblade Street]].",
+      "coordinates": {
+        "x": 546.91746267325,
+        "y": 1261.0976082716
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "sarlannus_street",
+      "name": "Sarlannus Street",
+      "type": "roads",
+      "description": "The street that ran south from [[Godsmoot]] and the [[The Crown Aflame|Crown Aflame]] theater.",
+      "coordinates": {
+        "x": 509.81962262232,
+        "y": 1290.2809233662
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "meir_lane",
+      "name": "Meir Lane",
+      "type": "roads",
+      "description": "The street that ran from the north of the Temple District and ended on the [[Godsmoot]].",
+      "coordinates": {
+        "x": 503.63025477295,
+        "y": 1244.8421204658
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_bridge",
+      "name": "The Bridge",
+      "type": "roads",
+      "description": "The only connection between the two parts of [[Athkatla]] on the southern and northern shores of the [[Alandor River]].",
+      "coordinates": {
+        "x": 768.99955886356,
+        "y": 803.9996948604
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "alandamers_gate",
+      "name": "Alandamer's Gate",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 373.38232911962,
+        "y": 1279.8445518854
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "meirtyn_gate",
+      "name": "Meirtyn Gate",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 986.88025945482,
+        "y": 1088.8821361771
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "heroes_gate",
+      "name": "Heroes' Gate",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 1057.5597445165,
+        "y": 752.28262240685
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "sparandar_gate",
+      "name": "Sparandar Gate",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 828.72977141177,
+        "y": 306.88391150241
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "oloemandur_gate",
+      "name": "Oloemandur Gate",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 356.48225936155,
+        "y": 295.56718227554
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "julkoon_gate",
+      "name": "Julkoon Gate",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 585.43138994398,
+        "y": 330.76498963434
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "cold_dolor_gate",
+      "name": "Cold Dolor Gate",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 708.41369395126,
+        "y": 438.25615253274
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "sea-gates",
+      "name": "Sea-Gates",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 166.99823273958,
+        "y": 746.61814441556
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "chain-gate",
+      "name": "Chain-Gate",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 1033.4993981219,
+        "y": 970.05525661943
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "path_of_silk_flowers",
+      "name": "Path of Silk Flowers",
+      "type": "roads",
+      "description": "The street that ran along the district's northern wall, shaded with bright multicolor cloth awnings and lush gardens, decorated with flowers made out of silk.",
+      "coordinates": {
+        "x": 811.01654345634,
+        "y": 1228.922661862
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "avenue_of_chimes",
+      "name": "Avenue of Chimes",
+      "type": "roads",
+      "description": "A wide pedestrian street, illuminated with lanters and decorated with melodic wind chimes.",
+      "coordinates": {
+        "x": 839.99513233162,
+        "y": 1182.9259827142
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "ladycloak_lane",
+      "name": "Ladycloak Lane",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 676.70430973083,
+        "y": 970.47251376148
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "coront_street",
+      "name": "Coront Street",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 737.845807476,
+        "y": 959.86688299192
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "coront_street",
+      "name": "Coront Street",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 513.70948933047,
+        "y": 924.89617324665
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "sarbronts_walk",
+      "name": "Sarbront's Walk",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 696.2520953981,
+        "y": 998.50048313769
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "falconfly_ride",
+      "name": "Falconfly Ride",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 712.97992887848,
+        "y": 980.48067054695
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "stormwind_street",
+      "name": "Stormwind Street",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 587.93371107948,
+        "y": 974.01455661677
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "alaiths_walk",
+      "name": "Alaith's Walk",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 550.48434560146,
+        "y": 1006.5370813037
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "four_fountains_lane",
+      "name": "Four Fountains Lane",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 606.67422429491,
+        "y": 1023.1557089087
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "salgrast_lane",
+      "name": "Salgrast Lane",
+      "type": "roads",
+      "description": "",
+      "coordinates": {
+        "x": 631.77386361719,
+        "y": 1002.6458363444
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}
