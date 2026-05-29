@@ -1,0 +1,32 @@
+{
+  "index": "elven_accuracy",
+  "name": "elven accuracy",
+  "prerequisites": [
+    {
+      "species": {
+        "index": "elf",
+        "name": "elf",
+        "url": "public/assets/atlas/species/json/elf.json"
+      }
+    }
+  ],
+  "desc": [
+    "The accuracy of elves is legendary, especially that of elf archers and spellcasters. You have uncanny aim with attacks that rely on precision rather than brute force. You gain the following benefits:",
+    "- Increase your Dexterity, Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
+    "- Whenever you have advantage on an attack roll using Dexterity, Intelligence, Wisdom, or Charisma, you can reroll one of the dice once."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Dexterity, Intelligence, Wisdom, or Charisma bonus",
+          "options": ["dexterity_bonus", "intelligence_bonus", "wisdom_bonus", "charisma_bonus"],
+          "amount": 1
+        }
+      ]
+    }
+  },
+  "url": "public/assets/atlas/feats/json/elven_accuracy.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/elven_accuracy.webp"
+}

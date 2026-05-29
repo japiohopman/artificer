@@ -1,0 +1,54 @@
+{
+  "index": "squat_nimbleness",
+  "name": "squat nimbleness",
+  "prerequisites": [
+    {
+      "species": {
+        "index": "dwarf",
+        "name": "dwarf",
+        "url": "public/assets/atlas/species/json/dwarf.json"
+      }
+    },
+    {
+      "species": {
+        "index": "gnome",
+        "name": "gnome",
+        "url": "public/assets/atlas/species/json/gnome.json"
+      }
+    },
+    {
+      "species": {
+        "index": "halfling",
+        "name": "halfling",
+        "url": "public/assets/atlas/species/json/halfling.json"
+      }
+    }
+  ],
+  "desc": [
+    "You are uncommonly nimble for your race. You gain the following benefits:",
+    "- Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "- Your speed increases by 5 feet.",
+    "- You gain proficiency in the Athletics or Acrobatics skill (your choice).",
+    "- You have advantage on any Strength (Athletics) or Dexterity (Acrobatics) check you make to escape from being grappled."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Strength or Dexterity bonus",
+          "options": ["strength_bonus", "dexterity_bonus"],
+          "amount": 1
+        }
+      ],
+      "speed_bonus": 5,
+      "advantage": [
+        {
+          "name": "Athletics or Acrobatics check to escape from being grappled"
+        }
+      ]
+    }
+  },
+  "url": "public/assets/atlas/feats/json/squat_nimbleness.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/squat_nimbleness.webp"
+}

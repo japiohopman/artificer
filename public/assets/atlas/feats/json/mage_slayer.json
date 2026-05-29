@@ -1,0 +1,24 @@
+{
+  "index": "mage_slayer",
+  "name": "mage slayer",
+  "prerequisites": [],
+  "desc": [
+    "You have practiced techniques useful in melee combat against spellcasters, gaining the following benefits:",
+    "- When a creature within 5 feet of you casts a spell, you can use your reaction to make a melee weapon attack against that creature.",
+    "- When you damage a creature that is concentrating on a spell, that creature has disadvantage on the saving throw it makes to maintain its concentration.",
+    "- You have advantage on saving throws against spells cast by creatures within 5 feet of you."
+  ],
+  "feature_specific": {
+    "special_action": "reaction",
+    "passive_modifiers": {
+      "advantage": [
+        {
+          "name": "Saving throws against spells cast by creatures within 5 feet"
+        }
+      ]
+    }
+  },
+  "url": "public/assets/atlas/feats/json/mage_slayer.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/mage_slayer.webp"
+}

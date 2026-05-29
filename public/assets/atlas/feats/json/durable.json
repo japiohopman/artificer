@@ -1,0 +1,18 @@
+{
+  "index": "durable",
+  "name": "durable",
+  "prerequisites": [],
+  "desc": [
+    "Hardy and resilient, you gain the following benefits:",
+    "- Increase your Constitution score by 1, to a maximum of 20.",
+    "- When you roll a Hit Die to regain hit points, the minimum number of hit points you regain from the roll equals twice your Constitution modifier (minimum of 2)."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "constitution_bonus": 1
+    }
+  },
+  "url": "public/assets/atlas/feats/json/durable.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/durable.webp"
+}

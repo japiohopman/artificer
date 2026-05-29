@@ -1,0 +1,33 @@
+{
+  "index": "flames_of_phlegethos",
+  "name": "flames of phlegethos",
+  "prerequisites": [
+    {
+      "species": {
+        "index": "tiefling",
+        "name": "tiefling",
+        "url": "public/assets/atlas/species/json/tiefling.json"
+      }
+    }
+  ],
+  "desc": [
+    "You learn to call on hellfire to serve your commands. You gain the following benefits:",
+    "- Increase your Intelligence or Charisma score by 1, to a maximum of 20.",
+    "- When you roll fire damage for a spell you cast, you can reroll any roll of 1 on the fire damage dice, but you must use the new roll, even if it is another 1.",
+    "- Whenever you cast a spell that deals fire damage, you can cause flames to wreathe you until the end of your next turn. The flames don't harm you or your possessions, and they shed bright light in a 10-foot radius and dim light for an additional 10 feet. While the flames are present, any creature within 5 feet of you that hits you with a melee attack takes 1d4 fire damage."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Intelligence or Charisma bonus",
+          "options": ["intelligence_bonus", "charisma_bonus"],
+          "amount": 1
+        }
+      ]
+    }
+  },
+  "url": "public/assets/atlas/feats/json/flames_of_phlegethos.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/flames_of_phlegethos.webp"
+}

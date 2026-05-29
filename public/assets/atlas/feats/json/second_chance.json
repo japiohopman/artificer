@@ -1,0 +1,33 @@
+{
+  "index": "second_chance",
+  "name": "second chance",
+  "prerequisites": [
+    {
+      "species": {
+        "index": "halfling",
+        "name": "halfling",
+        "url": "public/assets/atlas/species/json/halfling.json"
+      }
+    }
+  ],
+  "desc": [
+    "Fortune favors you when one of your foes, even a very cautious one, might be about to hit you. You gain the following benefits:",
+    "- Increase your Dexterity, Constitution, or Charisma score by 1, to a maximum of 20.",
+    "- When a creature you can see hits you with an attack roll, you can use your reaction to force that creature to reroll the d20 and use the new roll. Once you use this ability, you can't use it again until you roll initiative at the start of a combat or until you finish a short or long rest."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Dexterity, Constitution, or Charisma bonus",
+          "options": ["dexterity_bonus", "constitution_bonus", "charisma_bonus"],
+          "amount": 1
+        }
+      ]
+    },
+    "special_action": "reaction"
+  },
+  "url": "public/assets/atlas/feats/json/second_chance.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/second_chance.webp"
+}

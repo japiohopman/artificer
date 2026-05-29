@@ -1,0 +1,23 @@
+{
+  "index": "bountiful_luck",
+  "name": "bountiful luck",
+  "prerequisites": [
+    {
+      "species": {
+        "index": "halfling",
+        "name": "halfling",
+        "url": "public/assets/atlas/species/json/halfling.json"
+      }
+    }
+  ],
+  "desc": [
+    "Your proficiency with the luck of halflings can also help your allies. When an ally you can see within 30 feet of you rolls a 1 on the d20 for an attack roll, an ability check, or a saving throw, you can use your reaction to let the ally reroll the die. The ally must use the new roll.",
+    "When you use this ability, you can't use your Lucky racial trait until the end of your next turn."
+  ],
+  "feature_specific": {
+    "special_action": "reaction"
+  },
+  "url": "public/assets/atlas/feats/json/bountiful_luck.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/bountiful_luck.webp"
+}

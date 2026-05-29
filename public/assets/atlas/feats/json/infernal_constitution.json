@@ -1,0 +1,40 @@
+{
+  "index": "infernal_constitution",
+  "name": "infernal constitution",
+  "prerequisites": [
+    {
+      "species": {
+        "index": "tiefling",
+        "name": "tiefling",
+        "url": "public/assets/atlas/species/json/tiefling.json"
+      }
+    }
+  ],
+  "desc": [
+    "Fiendish blood runs strong in you, unlocking a resilience akin to that of a fiend. You gain the following benefits:",
+    "- Increase your Constitution score by 1, to a maximum of 20.",
+    "- You have resistance to cold damage and poison damage.",
+    "- You have advantage on saving throws against being poisoned."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "constitution_bonus": 1,
+      "resistance": [
+        {
+          "name": "Cold damage"
+        },
+        {
+          "name": "Poison damage"
+        }
+      ],
+      "advantage": [
+        {
+          "name": "Saving throws against being poisoned"
+        }
+      ]
+    }
+  },
+  "url": "public/assets/atlas/feats/json/infernal_constitution.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/infernal_constitution.webp"
+}

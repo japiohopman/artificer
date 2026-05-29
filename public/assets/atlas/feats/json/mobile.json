@@ -1,0 +1,19 @@
+{
+  "index": "mobile",
+  "name": "mobile",
+  "prerequisites": [],
+  "desc": [
+    "You are exceptionally speedy and agile, gaining the following benefits:",
+    "- Your speed increases by 10 feet.",
+    "- When you use the Dash action, difficult terrain doesn't cost you extra movement on that turn.",
+    "- When you make a melee attack against a creature, you don't provoke opportunity attacks from that creature for the rest of the turn, whether you hit or not."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "speed_bonus": 10
+    }
+  },
+  "url": "public/assets/atlas/feats/json/mobile.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/mobile.webp"
+}

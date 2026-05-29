@@ -1,0 +1,24 @@
+{
+  "index": "skulker",
+  "name": "skulker",
+  "prerequisites": [
+    {
+      "ability_score": {
+        "index": "dexterity",
+        "name": "dexterity",
+        "url": "public/assets/atlas/ability_scores/json/dexterity.json"
+      },
+      "minimum_score": 13
+    }
+  ],
+  "desc": [
+    "You are expert at slinking through shadows. You gain the following benefits:",
+    "- You can try to hide when you are lightly obscured from the creature from which you are hiding.",
+    "- When you are hidden from a creature and miss it with a ranged weapon attack, making the attack doesn't reveal your position.",
+    "- Dim light doesn't impose disadvantage on your Wisdom (Perception) checks relying on sight."
+  ],
+  "feature_specific": {},
+  "url": "public/assets/atlas/feats/json/skulker.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/feats/skulker.webp"
+}
