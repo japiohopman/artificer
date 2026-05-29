@@ -1,0 +1,412 @@
+{
+  "category": "poi",
+  "updatedAt": "2026-05-29T10:54:16.128Z",
+  "location_id": "athkatla",
+  "sub_locations": [
+    {
+      "id": "1",
+      "name": "Temple District",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        537.28636657044,
+        1207.6962136023
+      ],
+      "popup": {
+        "title": "Temple District",
+        "description": "The home to the city's wealthiest businesses and family estates.",
+        "image": "File:Athkatla Temple District.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "The Society of the Lost Ingot",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        516.88460778807,
+        1282.6801727673
+      ],
+      "popup": {
+        "title": "The Society of the Lost Ingot",
+        "description": "A private club for wealthy merchant males born in [[Athkatla]] whose ships were lost at sea. Previously a temple to [[Ilmater]]. ",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "20",
+      "name": "Wave District",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        258.04102803563,
+        1125.9692668327
+      ],
+      "popup": {
+        "title": "Wave District",
+        "description": "The district of [[Athkatla]] that housed all things concerning seafaring and marine trade.",
+        "image": "File:Athkatla's Wave District.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "24",
+      "name": "Gem District",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        504.19661242487,
+        999.49083219327
+      ],
+      "popup": {
+        "title": "Gem District",
+        "description": "The excessively wealthiest area of the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "25",
+      "name": "Trades District",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        845.70251767424,
+        1124.3088442703
+      ],
+      "popup": {
+        "title": "Trades District",
+        "description": "The mercantile hub of [[Athkatla]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "28",
+      "name": "River District",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        598.95219803406,
+        827.9488129203
+      ],
+      "popup": {
+        "title": "River District",
+        "description": "The poorest and the dirtiest area of the city, home of the old and down on their luck.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "42",
+      "name": "Bridge District",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        743.03353888833,
+        660.39521651254
+      ],
+      "popup": {
+        "title": "Bridge District",
+        "description": "A poorer and hectic district inhabited by laborers and dedicated to caravan trade.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "44",
+      "name": "Guards District",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        1031.3799477026,
+        656.12553311868
+      ],
+      "popup": {
+        "title": "Guards District",
+        "description": "Home of merchants, guards, adventurers, and businesses that catered to them.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "45",
+      "name": "Center District",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        526.16698915734,
+        668.86532232528
+      ],
+      "popup": {
+        "title": "Center District",
+        "description": "The main mercantile district of Athkatla and the location of the famous [[Waukeen's Promenade]] massive open-air market.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "46",
+      "name": "Scepter District",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        330.92472587302,
+        391.0249435276
+      ],
+      "popup": {
+        "title": "Scepter District",
+        "description": "The district of the [[Council House]] and old aristocratic families.",
+        "image": "File:Scepter District.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "49",
+      "name": "Grave District",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        735.26129263531,
+        303.95232577898
+      ],
+      "popup": {
+        "title": "Grave District",
+        "description": "The city's cemetery filled with ornate mortuaries and tombs.",
+        "image": "File:Grave District of Athkatla.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "81",
+      "name": "North Side",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        838.62801862611,
+        1216.2238794071
+      ],
+      "popup": {
+        "title": "North Side",
+        "description": "The North Side of the Trades District – the home of the wealthy with little social status.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "84",
+      "name": "The Atrium",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        984.99319565089,
+        1001.9703808634
+      ],
+      "popup": {
+        "title": "The Atrium",
+        "description": "A busy open-air financial walled square, home of several moneychangers, banks, and the city notary.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "88",
+      "name": "The Waft",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        799.75562448964,
+        1029.5031531092
+      ],
+      "popup": {
+        "title": "The Waft",
+        "description": "The area located at the foot of the hill where the Gem District stood above the Trades District.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "121",
+      "name": "Shadowgates House",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        557.19031859165,
+        1016.0822317067
+      ],
+      "popup": {
+        "title": "Shadowgates House",
+        "description": "A private club for [[Athkatla]]n females of wealth and status.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}
