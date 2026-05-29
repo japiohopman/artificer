@@ -1,0 +1,61 @@
+{
+  "category": "water",
+  "updatedAt": "2026-05-29T10:54:16.128Z",
+  "location_id": "athkatla",
+  "sub_locations": [
+    {
+      "id": "30",
+      "name": "Alandor River",
+      "categoryId": "water",
+      "type": "marker",
+      "position": [
+        482.22873611458,
+        797.5306957261
+      ],
+      "popup": {
+        "title": "Alandor River",
+        "description": "The location of [[Athkatla]] that occupied its shores. Its waters were rich with [[silverwink minnow]]s, [[brownscale]]s, and [[Alandor eel]]s.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "60",
+      "name": "Merchant's Bay",
+      "categoryId": "water",
+      "type": "marker",
+      "position": [
+        221.90736604,
+        787.89174559411
+      ],
+      "popup": {
+        "title": "Merchant's Bay",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}
