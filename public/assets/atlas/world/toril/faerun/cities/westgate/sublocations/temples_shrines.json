@@ -1,0 +1,385 @@
+{
+  "category": "temples_shrines",
+  "updatedAt": "2026-05-30T02:20:21.957Z",
+  "location_id": "westgate",
+  "sub_locations": [
+    {
+      "id": "28",
+      "name": "House of Spires and Shadows",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1423,
+        982
+      ],
+      "popup": {
+        "title": "House of Spires and Shadows",
+        "description": "Also known as '''Shadowspires''', a temple dedicated to [[Mask]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "72",
+      "name": "Whitecap Hall",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        2733.6740505551,
+        1865.3512569862
+      ],
+      "popup": {
+        "title": "Whitecap Hall",
+        "description": "A temple dedicated to the Bitch Queen, [[Umberlee]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "73",
+      "name": "Fortuneboon Hall",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1241.9956696097,
+        1556.0030277317
+      ],
+      "popup": {
+        "title": "Fortuneboon Hall",
+        "description": "A temple dedicated to [[Tymora]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "74",
+      "name": "The House of the Wheel",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1204,
+        1484.0060554634
+      ],
+      "popup": {
+        "title": "The House of the Wheel",
+        "description": "A temple dedicated to [[Gond]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "75",
+      "name": "Morningstar Haven",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        935.99675220729,
+        1612.0070647074
+      ],
+      "popup": {
+        "title": "Morningstar Haven",
+        "description": "A temple dedicated to [[Lathander]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "86",
+      "name": "House of Winds",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        2678.5204871346,
+        1838.4826265875
+      ],
+      "popup": {
+        "title": "House of Winds",
+        "description": "The temple of [[Talos]] famous for the carved [[dragon]]s on its roof.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "87",
+      "name": "Painbliss Hall",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1174.4987976513,
+        1697.9480947061
+      ],
+      "popup": {
+        "title": "Painbliss Hall",
+        "description": "A temple dedicated to [[Loviatar]]. ",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "88",
+      "name": "House of Ilmater",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1010.4555903155764,
+        1573.3100903888308
+      ],
+      "popup": {
+        "title": "House of Ilmater",
+        "description": "A temple dedicated to the [[Crying God]]. It was also known as '''The House''', with its [[Spire of Suffering]] seen from several miles outside the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "91",
+      "name": "The Hidden House",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1038,
+        1346.005046219536
+      ],
+      "popup": {
+        "title": "The Hidden House",
+        "description": "A subterranean temple dedicated to [[Leira]], hidden deep under the streets of [[Westgate]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "92",
+      "name": "Place of Waiting Death",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        754.34533631177,
+        1441.8726235128
+      ],
+      "popup": {
+        "title": "Place of Waiting Death",
+        "description": "A hidden subterranean temple of Talona, deep beneath the city of Westgate.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "93",
+      "name": "House of Steel",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1812.5177608374,
+        1099.8683515585
+      ],
+      "popup": {
+        "title": "House of Steel",
+        "description": "An underground temple of [[Garagos]], that was once took it over by the [[vampire]] named [[Kirenkirsalai]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "108",
+      "name": "Shrine to Tyr",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1067.9967522073,
+        1728.0060554634
+      ],
+      "popup": {
+        "title": "Shrine to Tyr",
+        "description": "Also known as '''Brother Eden's Shrine''', dedicated to [[Tyr]] Grimjaws.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "127",
+      "name": "Hills of the Seven Lost Gods",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        224.03792637223,
+        235.94182005046
+      ],
+      "popup": {
+        "title": "Hills of the Seven Lost Gods",
+        "description": "'''The Seven Hills''' just west of [[Westgate]]. Each was crowned with a ring of standing stones, each ring dedicated as a shrine.",
+        "image": "File:Hills of the Seven Lost Gods.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "128",
+      "name": "Hill of Fangs",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        164.02809360906,
+        191.94100634487
+      ],
+      "popup": {
+        "title": "Hill of Fangs",
+        "description": "The central hill of the [[Hills of the Seven Lost Gods]] dedicated to [[Moander]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}
