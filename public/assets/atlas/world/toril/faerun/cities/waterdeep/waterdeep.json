@@ -1,13 +1,46 @@
 {
   "id": "waterdeep",
   "name": "waterdeep",
-  "type": "settlement",
+  "type": "metropolis",
   "parent": "cities",
-  "title": "Waterdeep",
-  "description": "The famed '''City of Splendors''' – the most important and influential city in all of [[Faerûn]]. A marvelous cosmopolitan city of great culture, arts, and academia. Its cultural impact was as grand as its trade.<br/><br/>Interactive map can be found [[Map:Waterdeep|here]].",
+  "title": "waterdeep: Metropolis",
+  "description": "Interactive map of the city of Waterdeep during the 15th century DR. Index and references can be found [https://forgottenrealms.fandom.com/wiki/File:Waterdeep_map-5e.jpg here].",
+  "wiki": "",
   "image": "waterdeep.webp",
+  "thumbnail": "waterdeep_thumb.webp",
+  "banner": "waterdeep_banner.webp",
+  "tags": [
+    "city",
+    "metropolis"
+  ],
+  "map": "assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_map.webp",
+  "children": [],
+  "sub_location_files": [
+    "assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/poi.json"
+  ],
   "coordinates": {
-    "lat": 693.67,
-    "lng": 2505.63
-  }
+    "lat": 0,
+    "lng": 0
+  },
+  "geography": "",
+  "history": "",
+  "metadata": {
+    "government": "Council of Six",
+    "organizations": "",
+    "trade": "",
+    "military": "The Mehelm",
+    "population": "100,000+"
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      3000,
+      4524
+    ]
+  ],
+  "origin": "bottom-left",
+  "unitsPerMile": 1
 }
