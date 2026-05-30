@@ -1,0 +1,169 @@
+{
+  "category": "gates",
+  "updatedAt": "2026-05-30T02:20:21.957Z",
+  "location_id": "westgate",
+  "sub_locations": [
+    {
+      "id": "8",
+      "name": "The Water Gate",
+      "categoryId": "gates",
+      "type": "marker",
+      "position": [
+        976.51460030636,
+        1871.9061888683
+      ],
+      "popup": {
+        "title": "The Water Gate",
+        "description": "A cliff gate that led to a steep staircase and a path down to [[the Shore]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "Mulsantir’s Gate",
+      "categoryId": "gates",
+      "type": "marker",
+      "position": [
+        415.97295990128,
+        1221.9566701774
+      ],
+      "popup": {
+        "title": "Mulsantir’s Gate",
+        "description": "[[Westgate]]'s main city gates. The end of the [[Trader's Road]] and the start of the [[King's March]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "14",
+      "name": "The West Gate",
+      "categoryId": "gates",
+      "type": "marker",
+      "position": [
+        568.84659215382,
+        1643.8384163154
+      ],
+      "popup": {
+        "title": "The West Gate",
+        "description": "The western gate into [[Westgate]] on [[Westgate Market Street]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "29",
+      "name": "The South Gate",
+      "categoryId": "gates",
+      "type": "marker",
+      "position": [
+        1342.4117074632,
+        431.84821234516
+      ],
+      "popup": {
+        "title": "The South Gate",
+        "description": "The gate that stood at the end of the [[Grand Ride]] and [[Southgate Market Street]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "43",
+      "name": "The River Gate",
+      "categoryId": "gates",
+      "type": "marker",
+      "position": [
+        2594.5711386946,
+        1031.8823879799
+      ],
+      "popup": {
+        "title": "The River Gate",
+        "description": "The gate on the [[River Thunn]] that fed into the [[Sea of Fallen Stars]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "50",
+      "name": "The East Gate",
+      "categoryId": "gates",
+      "type": "marker",
+      "position": [
+        2786.6048510255,
+        1833.913715645
+      ],
+      "popup": {
+        "title": "The East Gate",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}
