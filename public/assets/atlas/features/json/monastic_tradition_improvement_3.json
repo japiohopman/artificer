@@ -3,7 +3,7 @@
   "class": {
     "index": "monk",
     "name": "monk",
-    "url": "public/assets/atlas/classes/monk"
+    "url": "public/assets/atlas/class/json/monk.json"
   },
   "name": "monastic tradition feature",
   "level": 17,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/monastic_tradition_improvement_3.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/monastic_tradition_improvement_3.webp"
+  "image": "public/assets/atlas/features/images/monastic_tradition_improvement_3.webp"
 }

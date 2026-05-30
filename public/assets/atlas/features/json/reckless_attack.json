@@ -3,7 +3,7 @@
   "class": {
     "index": "barbarian",
     "name": "barbarian",
-    "url": "public/assets/atlas/classes/barbarian"
+    "url": "public/assets/atlas/class/json/barbarian.json"
   },
   "name": "reckless attack",
   "level": 2,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/reckless_attack.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/reckless_attack.webp"
+  "image": "public/assets/atlas/features/images/reckless_attack.webp"
 }

@@ -3,7 +3,7 @@
   "class": {
     "index": "barbarian",
     "name": "barbarian",
-    "url": "public/assets/atlas/classes/barbarian"
+    "url": "public/assets/atlas/class/json/barbarian.json"
   },
   "name": "rage",
   "level": 1,
@@ -19,5 +19,24 @@
   ],
   "url": "public/assets/atlas/features/json/rage.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/rage.webp"
+  "image": "public/assets/atlas/features/images/rage.webp",
+  "feature_specific": {
+    "special_action": "bonus_action",
+    "passive_modifiers": {
+      "advantage": [
+        "strength_checks",
+        "strength_saving_throws"
+      ],
+      "resistance": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "damage_bonus": 2
+    },
+    "usage": {
+      "type": "long_rest"
+    },
+    "duration": "1 minute"
+  }
 }

@@ -3,7 +3,7 @@
   "class": {
     "index": "monk",
     "name": "monk",
-    "url": "public/assets/atlas/classes/monk"
+    "url": "public/assets/atlas/class/json/monk.json"
   },
   "name": "flurry of blows",
   "level": 2,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/flurry_of_blows.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/flurry_of_blows.webp"
+  "image": "public/assets/atlas/features/images/flurry_of_blows.webp"
 }

@@ -3,7 +3,7 @@
   "class": {
     "index": "bard",
     "name": "bard",
-    "url": "public/assets/atlas/classes/bard"
+    "url": "public/assets/atlas/class/json/bard.json"
   },
   "name": "bardic inspiration (d10)",
   "level": 10,
@@ -15,5 +15,5 @@
   ],
   "url": "public/assets/atlas/features/json/bardic_inspiration_d10.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/bardic_inspiration_d10.webp"
+  "image": "public/assets/atlas/features/images/bardic_inspiration_d10.webp"
 }

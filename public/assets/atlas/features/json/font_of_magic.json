@@ -3,7 +3,7 @@
   "class": {
     "index": "sorcerer",
     "name": "sorcerer",
-    "url": "public/assets/atlas/classes/sorcerer"
+    "url": "public/assets/atlas/class/json/sorcerer.json"
   },
   "name": "font of magic",
   "level": 2,
@@ -15,5 +15,5 @@
   ],
   "url": "public/assets/atlas/features/json/font_of_magic.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/font_of_magic.webp"
+  "image": "public/assets/atlas/features/images/font_of_magic.webp"
 }

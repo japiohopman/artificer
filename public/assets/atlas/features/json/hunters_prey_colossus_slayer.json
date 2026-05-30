@@ -3,12 +3,12 @@
   "class": {
     "index": "ranger",
     "name": "ranger",
-    "url": "public/assets/atlas/classes/ranger"
+    "url": "public/assets/atlas/class/json/ranger.json"
   },
   "subclass": {
     "index": "hunter",
     "name": "hunter",
-    "url": "public/assets/atlas/subclasses/hunter"
+    "url": "public/assets/atlas/subclasses/json/hunter.json"
   },
   "name": "hunter's prey: colossus slayer",
   "level": 3,
@@ -19,9 +19,9 @@
   "parent": {
     "index": "hunters_prey",
     "name": "hunter's prey",
-    "url": "public/assets/atlas/features/hunters_prey"
+    "url": "public/assets/atlas/features/hunters_prey.json"
   },
   "url": "public/assets/atlas/features/json/hunters_prey_colossus_slayer.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/hunters_prey_colossus_slayer.webp"
+  "image": "public/assets/atlas/features/images/hunters_prey_colossus_slayer.webp"
 }

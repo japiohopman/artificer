@@ -3,7 +3,7 @@
   "class": {
     "index": "wizard",
     "name": "wizard",
-    "url": "public/assets/atlas/classes/wizard"
+    "url": "public/assets/atlas/class/json/wizard.json"
   },
   "name": "spell mastery",
   "level": 18,
@@ -14,5 +14,5 @@
   ],
   "url": "public/assets/atlas/features/json/spell_mastery.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/spell_mastery.webp"
+  "image": "public/assets/atlas/features/images/spell_mastery.webp"
 }

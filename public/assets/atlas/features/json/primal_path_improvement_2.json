@@ -3,7 +3,7 @@
   "class": {
     "index": "barbarian",
     "name": "barbarian",
-    "url": "public/assets/atlas/classes/barbarian"
+    "url": "public/assets/atlas/class/json/barbarian.json"
   },
   "name": "path feature",
   "level": 10,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/primal_path_improvement_2.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/primal_path_improvement_2.webp"
+  "image": "public/assets/atlas/features/images/primal_path_improvement_2.webp"
 }

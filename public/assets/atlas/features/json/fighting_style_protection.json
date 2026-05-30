@@ -3,7 +3,7 @@
   "class": {
     "index": "paladin",
     "name": "paladin",
-    "url": "public/assets/atlas/classes/paladin"
+    "url": "public/assets/atlas/class/json/paladin.json"
   },
   "name": "fighting style: protection",
   "level": 2,
@@ -14,9 +14,9 @@
   "parent": {
     "index": "paladin_fighting_style",
     "name": "fighting style",
-    "url": "public/assets/atlas/features/paladin_fighting_style"
+    "url": "public/assets/atlas/features/paladin_fighting_style.json"
   },
   "url": "public/assets/atlas/features/json/fighting_style_protection.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/fighting_style_protection.webp"
+  "image": "public/assets/atlas/features/images/fighting_style_protection.webp"
 }

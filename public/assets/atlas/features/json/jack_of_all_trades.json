@@ -3,7 +3,7 @@
   "class": {
     "index": "bard",
     "name": "bard",
-    "url": "public/assets/atlas/classes/bard"
+    "url": "public/assets/atlas/class/json/bard.json"
   },
   "name": "jack of all trades",
   "level": 2,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/jack_of_all_trades.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/jack_of_all_trades.webp"
+  "image": "public/assets/atlas/features/images/jack_of_all_trades.webp"
 }

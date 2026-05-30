@@ -3,7 +3,7 @@
   "class": {
     "index": "druid",
     "name": "druid",
-    "url": "public/assets/atlas/classes/druid"
+    "url": "public/assets/atlas/class/json/druid.json"
   },
   "name": "wild shape (cr 1/4 or below, no flying or swim speed)",
   "level": 2,
@@ -21,5 +21,5 @@
   ],
   "url": "public/assets/atlas/features/json/wild_shape_cr_1_4_or_below_no_flying_or_swim_speed.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/wild_shape_cr_1_4_or_below_no_flying_or_swim_speed.webp"
+  "image": "public/assets/atlas/features/images/wild_shape_cr_1_4_or_below_no_flying_or_swim_speed.webp"
 }

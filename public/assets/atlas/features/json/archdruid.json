@@ -3,7 +3,7 @@
   "class": {
     "index": "druid",
     "name": "druid",
-    "url": "public/assets/atlas/classes/druid"
+    "url": "public/assets/atlas/class/json/druid.json"
   },
   "name": "archdruid",
   "level": 20,
@@ -14,5 +14,5 @@
   ],
   "url": "public/assets/atlas/features/json/archdruid.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/archdruid.webp"
+  "image": "public/assets/atlas/features/images/archdruid.webp"
 }

@@ -3,7 +3,7 @@
   "class": {
     "index": "ranger",
     "name": "ranger",
-    "url": "public/assets/atlas/classes/ranger"
+    "url": "public/assets/atlas/class/json/ranger.json"
   },
   "name": "favored enemy (1 type)",
   "level": 1,
@@ -44,5 +44,5 @@
   },
   "url": "public/assets/atlas/features/json/favored_enemy_1_type.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/favored_enemy_1_type.webp"
+  "image": "public/assets/atlas/features/images/favored_enemy_1_type.webp"
 }

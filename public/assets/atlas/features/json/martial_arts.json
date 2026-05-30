@@ -3,7 +3,7 @@
   "class": {
     "index": "monk",
     "name": "monk",
-    "url": "public/assets/atlas/classes/monk"
+    "url": "public/assets/atlas/class/json/monk.json"
   },
   "name": "martial arts",
   "level": 1,
@@ -18,5 +18,5 @@
   ],
   "url": "public/assets/atlas/features/json/martial_arts.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/martial_arts.webp"
+  "image": "public/assets/atlas/features/images/martial_arts.webp"
 }

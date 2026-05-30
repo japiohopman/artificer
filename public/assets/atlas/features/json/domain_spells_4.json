@@ -3,7 +3,7 @@
   "class": {
     "index": "cleric",
     "name": "cleric",
-    "url": "public/assets/atlas/classes/cleric"
+    "url": "public/assets/atlas/class/json/cleric.json"
   },
   "name": "domain spells",
   "level": 7,
@@ -14,5 +14,5 @@
   ],
   "url": "public/assets/atlas/features/json/domain_spells_4.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/domain_spells_4.webp"
+  "image": "public/assets/atlas/features/images/domain_spells_4.webp"
 }

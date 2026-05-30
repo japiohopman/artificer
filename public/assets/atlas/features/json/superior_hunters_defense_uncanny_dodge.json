@@ -3,12 +3,12 @@
   "class": {
     "index": "ranger",
     "name": "ranger",
-    "url": "public/assets/atlas/classes/ranger"
+    "url": "public/assets/atlas/class/json/ranger.json"
   },
   "subclass": {
     "index": "hunter",
     "name": "hunter",
-    "url": "public/assets/atlas/subclasses/hunter"
+    "url": "public/assets/atlas/subclasses/json/hunter.json"
   },
   "name": "superior hunter's defense: uncanny dodge",
   "level": 15,
@@ -19,9 +19,9 @@
   "parent": {
     "index": "superior_hunters_defense",
     "name": "superior hunter's defense",
-    "url": "public/assets/atlas/features/superior_hunters_defense"
+    "url": "public/assets/atlas/features/superior_hunters_defense.json"
   },
   "url": "public/assets/atlas/features/json/superior_hunters_defense_uncanny_dodge.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/superior_hunters_defense_uncanny_dodge.webp"
+  "image": "public/assets/atlas/features/images/superior_hunters_defense_uncanny_dodge.webp"
 }

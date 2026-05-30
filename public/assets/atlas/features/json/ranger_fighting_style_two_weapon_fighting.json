@@ -3,7 +3,7 @@
   "class": {
     "index": "ranger",
     "name": "ranger",
-    "url": "public/assets/atlas/classes/ranger"
+    "url": "public/assets/atlas/class/json/ranger.json"
   },
   "name": "fighting style: two_weapon fighting",
   "level": 2,
@@ -14,9 +14,9 @@
   "parent": {
     "index": "ranger_fighting_style",
     "name": "fighting style",
-    "url": "public/assets/atlas/features/ranger_fighting_style"
+    "url": "public/assets/atlas/features/ranger_fighting_style.json"
   },
   "url": "public/assets/atlas/features/json/ranger_fighting_style_two_weapon_fighting.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/ranger_fighting_style_two_weapon_fighting.webp"
+  "image": "public/assets/atlas/features/images/ranger_fighting_style_two_weapon_fighting.webp"
 }

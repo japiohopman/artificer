@@ -3,12 +3,7 @@
   "class": {
     "index": "wizard",
     "name": "wizard",
-    "url": "public/assets/atlas/classes/wizard"
-  },
-  "subclass": {
-    "index": "evocation",
-    "name": "evocation",
-    "url": "public/assets/atlas/subclasses/evocation"
+    "url": "public/assets/atlas/class/json/wizard.json"
   },
   "name": "overchannel",
   "level": 14,
@@ -19,5 +14,10 @@
   ],
   "url": "public/assets/atlas/features/json/overchannel.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/overchannel.webp"
+  "image": "public/assets/atlas/features/images/overchannel.webp",
+  "magic_school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "public/assets/atlas/magic_schools/json/evocation.json"
+  }
 }

@@ -3,7 +3,7 @@
   "class": {
     "index": "warlock",
     "name": "warlock",
-    "url": "public/assets/atlas/classes/warlock"
+    "url": "public/assets/atlas/class/json/warlock.json"
   },
   "name": "mystic arcanum (8th level)",
   "level": 15,
@@ -15,5 +15,5 @@
   ],
   "url": "public/assets/atlas/features/json/mystic_arcanum_8th_level.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/mystic_arcanum_8th_level.webp"
+  "image": "public/assets/atlas/features/images/mystic_arcanum_8th_level.webp"
 }

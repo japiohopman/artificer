@@ -3,7 +3,7 @@
   "class": {
     "index": "rogue",
     "name": "rogue",
-    "url": "public/assets/atlas/classes/rogue"
+    "url": "public/assets/atlas/class/json/rogue.json"
   },
   "name": "stroke of luck",
   "level": 20,
@@ -14,5 +14,5 @@
   ],
   "url": "public/assets/atlas/features/json/stroke_of_luck.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/stroke_of_luck.webp"
+  "image": "public/assets/atlas/features/images/stroke_of_luck.webp"
 }

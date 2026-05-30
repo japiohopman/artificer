@@ -3,12 +3,12 @@
   "class": {
     "index": "ranger",
     "name": "ranger",
-    "url": "public/assets/atlas/classes/ranger"
+    "url": "public/assets/atlas/class/json/ranger.json"
   },
   "subclass": {
     "index": "hunter",
     "name": "hunter",
-    "url": "public/assets/atlas/subclasses/hunter"
+    "url": "public/assets/atlas/subclasses/json/hunter.json"
   },
   "name": "superior hunter's defense",
   "level": 15,
@@ -31,7 +31,7 @@
             "item": {
               "index": "superior_hunters_defense_evasion",
               "name": "superior hunter's defense: evasion",
-              "url": "public/assets/atlas/features/superior_hunters_defense_evasion"
+              "url": "public/assets/atlas/features/superior_hunters_defense_evasion.json"
             }
           },
           {
@@ -39,7 +39,7 @@
             "item": {
               "index": "superior_hunters_defense_stand_against_the_tide",
               "name": "superior hunter's defense: stand against the tide",
-              "url": "public/assets/atlas/features/superior_hunters_defense_stand_against_the_tide"
+              "url": "public/assets/atlas/features/superior_hunters_defense_stand_against_the_tide.json"
             }
           },
           {
@@ -47,7 +47,7 @@
             "item": {
               "index": "superior_hunters_defense_uncanny_dodge",
               "name": "superior hunter's defense: uncanny dodge",
-              "url": "public/assets/atlas/features/superior_hunters_defense_uncanny_dodge"
+              "url": "public/assets/atlas/features/superior_hunters_defense_uncanny_dodge.json"
             }
           }
         ]
@@ -57,5 +57,5 @@
   },
   "url": "public/assets/atlas/features/json/superior_hunters_defense.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/superior_hunters_defense.webp"
+  "image": "public/assets/atlas/features/images/superior_hunters_defense.webp"
 }

@@ -3,7 +3,7 @@
   "class": {
     "index": "monk",
     "name": "monk",
-    "url": "public/assets/atlas/classes/monk"
+    "url": "public/assets/atlas/class/json/monk.json"
   },
   "name": "unarmored movement",
   "level": 9,
@@ -14,5 +14,5 @@
   ],
   "url": "public/assets/atlas/features/json/unarmored_movement_2.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/unarmored_movement_2.webp"
+  "image": "public/assets/atlas/features/images/unarmored_movement_2.webp"
 }

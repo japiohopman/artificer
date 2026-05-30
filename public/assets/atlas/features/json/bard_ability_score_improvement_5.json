@@ -3,7 +3,7 @@
   "class": {
     "index": "bard",
     "name": "bard",
-    "url": "public/assets/atlas/classes/bard"
+    "url": "public/assets/atlas/class/json/bard.json"
   },
   "name": "ability score improvement",
   "level": 19,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/bard_ability_score_improvement_5.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/bard_ability_score_improvement_5.webp"
+  "image": "public/assets/atlas/features/images/bard_ability_score_improvement_5.webp"
 }

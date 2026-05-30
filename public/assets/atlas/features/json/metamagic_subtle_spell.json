@@ -3,7 +3,7 @@
   "class": {
     "index": "sorcerer",
     "name": "sorcerer",
-    "url": "public/assets/atlas/classes/sorcerer"
+    "url": "public/assets/atlas/class/json/sorcerer.json"
   },
   "name": "metamagic: subtle spell",
   "level": 3,
@@ -14,9 +14,9 @@
   "parent": {
     "index": "metamagic_1",
     "name": "metamagic",
-    "url": "public/assets/atlas/features/metamagic_1"
+    "url": "public/assets/atlas/features/metamagic_1.json"
   },
   "url": "public/assets/atlas/features/json/metamagic_subtle_spell.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/metamagic_subtle_spell.webp"
+  "image": "public/assets/atlas/features/images/metamagic_subtle_spell.webp"
 }

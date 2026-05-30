@@ -3,7 +3,7 @@
   "class": {
     "index": "sorcerer",
     "name": "sorcerer",
-    "url": "public/assets/atlas/classes/sorcerer"
+    "url": "public/assets/atlas/class/json/sorcerer.json"
   },
   "name": "flexible casting: converting spell slot",
   "level": 2,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/flexible_casting_converting_spell_slot.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/flexible_casting_converting_spell_slot.webp"
+  "image": "public/assets/atlas/features/images/flexible_casting_converting_spell_slot.webp"
 }

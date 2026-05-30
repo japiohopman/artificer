@@ -3,12 +3,7 @@
   "class": {
     "index": "wizard",
     "name": "wizard",
-    "url": "public/assets/atlas/classes/wizard"
-  },
-  "subclass": {
-    "index": "evocation",
-    "name": "evocation",
-    "url": "public/assets/atlas/subclasses/evocation"
+    "url": "public/assets/atlas/class/json/wizard.json"
   },
   "name": "empowered evocation",
   "level": 10,
@@ -18,5 +13,10 @@
   ],
   "url": "public/assets/atlas/features/json/empowered_evocation.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/empowered_evocation.webp"
+  "image": "public/assets/atlas/features/images/empowered_evocation.webp",
+  "magic_school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "public/assets/atlas/magic_schools/json/evocation.json"
+  }
 }

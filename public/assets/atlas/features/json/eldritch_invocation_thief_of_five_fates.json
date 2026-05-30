@@ -3,7 +3,7 @@
   "class": {
     "index": "warlock",
     "name": "warlock",
-    "url": "public/assets/atlas/classes/warlock"
+    "url": "public/assets/atlas/class/json/warlock.json"
   },
   "name": "eldritch invocation: thief of five fates",
   "level": 2,
@@ -14,9 +14,9 @@
   "parent": {
     "index": "eldritch_invocations",
     "name": "eldritch invocations",
-    "url": "public/assets/atlas/features/eldritch_invocations"
+    "url": "public/assets/atlas/features/eldritch_invocations.json"
   },
   "url": "public/assets/atlas/features/json/eldritch_invocation_thief_of_five_fates.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/eldritch_invocation_thief_of_five_fates.webp"
+  "image": "public/assets/atlas/features/images/eldritch_invocation_thief_of_five_fates.webp"
 }

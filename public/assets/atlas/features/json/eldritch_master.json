@@ -3,7 +3,7 @@
   "class": {
     "index": "warlock",
     "name": "warlock",
-    "url": "public/assets/atlas/classes/warlock"
+    "url": "public/assets/atlas/class/json/warlock.json"
   },
   "name": "eldritch master",
   "level": 20,
@@ -14,5 +14,5 @@
   ],
   "url": "public/assets/atlas/features/json/eldritch_master.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/eldritch_master.webp"
+  "image": "public/assets/atlas/features/images/eldritch_master.webp"
 }

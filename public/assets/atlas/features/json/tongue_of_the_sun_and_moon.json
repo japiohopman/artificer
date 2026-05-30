@@ -3,7 +3,7 @@
   "class": {
     "index": "monk",
     "name": "monk",
-    "url": "public/assets/atlas/classes/monk"
+    "url": "public/assets/atlas/class/json/monk.json"
   },
   "name": "tongue of the sun and moon",
   "level": 13,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/tongue_of_the_sun_and_moon.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/tongue_of_the_sun_and_moon.webp"
+  "image": "public/assets/atlas/features/images/tongue_of_the_sun_and_moon.webp"
 }
