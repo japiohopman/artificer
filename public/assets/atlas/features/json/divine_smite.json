@@ -3,7 +3,7 @@
   "class": {
     "index": "paladin",
     "name": "paladin",
-    "url": "public/assets/atlas/classes/paladin"
+    "url": "public/assets/atlas/class/json/paladin.json"
   },
   "name": "divine smite",
   "level": 2,
@@ -13,5 +13,18 @@
   ],
   "url": "public/assets/atlas/features/json/divine_smite.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/divine_smite.webp"
+  "image": "public/assets/atlas/features/images/divine_smite.webp",
+  "feature_specific": {
+    "extra_damage": "2d8",
+    "damage_type": "radiant",
+    "scaling": {
+      "die": "1d8",
+      "per_level": 1,
+      "max_dice": "5d8"
+    },
+    "bonus_damage": {
+      "condition": "target is undead or fiend",
+      "die": "1d8"
+    }
+  }
 }

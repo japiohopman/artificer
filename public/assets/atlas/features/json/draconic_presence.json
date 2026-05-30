@@ -3,12 +3,12 @@
   "class": {
     "index": "sorcerer",
     "name": "sorcerer",
-    "url": "public/assets/atlas/classes/sorcerer"
+    "url": "public/assets/atlas/class/json/sorcerer.json"
   },
   "subclass": {
     "index": "draconic",
     "name": "draconic",
-    "url": "public/assets/atlas/subclasses/draconic"
+    "url": "public/assets/atlas/subclasses/json/draconic.json"
   },
   "name": "draconic presence",
   "level": 18,
@@ -18,5 +18,5 @@
   ],
   "url": "public/assets/atlas/features/json/draconic_presence.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/draconic_presence.webp"
+  "image": "public/assets/atlas/features/images/draconic_presence.webp"
 }

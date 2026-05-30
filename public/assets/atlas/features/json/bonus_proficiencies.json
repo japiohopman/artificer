@@ -3,12 +3,12 @@
   "class": {
     "index": "bard",
     "name": "bard",
-    "url": "public/assets/atlas/classes/bard"
+    "url": "public/assets/atlas/class/json/bard.json"
   },
   "subclass": {
     "index": "lore",
     "name": "lore",
-    "url": "public/assets/atlas/subclasses/lore"
+    "url": "public/assets/atlas/subclasses/json/lore.json"
   },
   "name": "bonus proficiencies",
   "level": 3,
@@ -18,5 +18,5 @@
   ],
   "url": "public/assets/atlas/features/json/bonus_proficiencies.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/bonus_proficiencies.webp"
+  "image": "public/assets/atlas/features/images/bonus_proficiencies.webp"
 }

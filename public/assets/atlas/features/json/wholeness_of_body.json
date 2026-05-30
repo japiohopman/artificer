@@ -3,12 +3,12 @@
   "class": {
     "index": "monk",
     "name": "monk",
-    "url": "public/assets/atlas/classes/monk"
+    "url": "public/assets/atlas/class/json/monk.json"
   },
   "subclass": {
     "index": "open_hand",
     "name": "open hand",
-    "url": "public/assets/atlas/subclasses/open_hand"
+    "url": "public/assets/atlas/subclasses/json/open_hand.json"
   },
   "name": "wholeness of body",
   "level": 6,
@@ -18,5 +18,5 @@
   ],
   "url": "public/assets/atlas/features/json/wholeness_of_body.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/wholeness_of_body.webp"
+  "image": "public/assets/atlas/features/images/wholeness_of_body.webp"
 }

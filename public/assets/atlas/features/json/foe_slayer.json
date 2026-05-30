@@ -3,7 +3,7 @@
   "class": {
     "index": "ranger",
     "name": "ranger",
-    "url": "public/assets/atlas/classes/ranger"
+    "url": "public/assets/atlas/class/json/ranger.json"
   },
   "name": "foe slayer",
   "level": 20,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/foe_slayer.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/foe_slayer.webp"
+  "image": "public/assets/atlas/features/images/foe_slayer.webp"
 }

@@ -3,12 +3,12 @@
   "class": {
     "index": "paladin",
     "name": "paladin",
-    "url": "public/assets/atlas/classes/paladin"
+    "url": "public/assets/atlas/class/json/paladin.json"
   },
   "subclass": {
     "index": "devotion",
     "name": "devotion",
-    "url": "public/assets/atlas/subclasses/devotion"
+    "url": "public/assets/atlas/subclasses/json/devotion.json"
   },
   "name": "channel divinity: turn the unholy",
   "level": 3,
@@ -19,5 +19,5 @@
   ],
   "url": "public/assets/atlas/features/json/channel_divinity_turn_the_unholy.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/channel_divinity_turn_the_unholy.webp"
+  "image": "public/assets/atlas/features/images/channel_divinity_turn_the_unholy.webp"
 }

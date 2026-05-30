@@ -3,7 +3,7 @@
   "class": {
     "index": "ranger",
     "name": "ranger",
-    "url": "public/assets/atlas/classes/ranger"
+    "url": "public/assets/atlas/class/json/ranger.json"
   },
   "name": "spellcasting: ranger",
   "level": 2,
@@ -11,8 +11,8 @@
   "desc": [
     "By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does."
   ],
-  "reference": "public/assets/atlas/classes/ranger/spellcasting",
+  "reference": "public/assets/atlas/class/json/ranger/spellcasting.json",
   "url": "public/assets/atlas/features/json/spellcasting_ranger.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/spellcasting_ranger.webp"
+  "image": "public/assets/atlas/features/images/spellcasting_ranger.webp"
 }

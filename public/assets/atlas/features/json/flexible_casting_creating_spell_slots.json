@@ -3,7 +3,7 @@
   "class": {
     "index": "sorcerer",
     "name": "sorcerer",
-    "url": "public/assets/atlas/classes/sorcerer"
+    "url": "public/assets/atlas/class/json/sorcerer.json"
   },
   "name": "flexible casting: creating spell slots",
   "level": 2,
@@ -14,5 +14,5 @@
   ],
   "url": "public/assets/atlas/features/json/flexible_casting_creating_spell_slots.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/flexible_casting_creating_spell_slots.webp"
+  "image": "public/assets/atlas/features/images/flexible_casting_creating_spell_slots.webp"
 }

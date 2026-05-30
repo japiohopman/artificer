@@ -3,7 +3,7 @@
   "class": {
     "index": "druid",
     "name": "druid",
-    "url": "public/assets/atlas/classes/druid"
+    "url": "public/assets/atlas/class/json/druid.json"
   },
   "name": "spellcasting: druid",
   "level": 1,
@@ -11,8 +11,8 @@
   "desc": [
     "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
   ],
-  "reference": "public/assets/atlas/classes/druid/spellcasting",
+  "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
   "url": "public/assets/atlas/features/json/spellcasting_druid.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/spellcasting_druid.webp"
+  "image": "public/assets/atlas/features/images/spellcasting_druid.webp"
 }

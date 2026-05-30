@@ -3,7 +3,7 @@
   "class": {
     "index": "warlock",
     "name": "warlock",
-    "url": "public/assets/atlas/classes/warlock"
+    "url": "public/assets/atlas/class/json/warlock.json"
   },
   "name": "ability score improvement",
   "level": 12,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/warlock_ability_score_improvement_3.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/warlock_ability_score_improvement_3.webp"
+  "image": "public/assets/atlas/features/images/warlock_ability_score_improvement_3.webp"
 }

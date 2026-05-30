@@ -3,7 +3,7 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "public/assets/atlas/classes/fighter"
+    "url": "public/assets/atlas/class/json/fighter.json"
   },
   "name": "indomitable (1 use)",
   "level": 9,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/indomitable_1_use.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/indomitable_1_use.webp"
+  "image": "public/assets/atlas/features/images/indomitable_1_use.webp"
 }

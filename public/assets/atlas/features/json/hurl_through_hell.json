@@ -3,12 +3,12 @@
   "class": {
     "index": "warlock",
     "name": "warlock",
-    "url": "public/assets/atlas/classes/warlock"
+    "url": "public/assets/atlas/class/json/warlock.json"
   },
   "subclass": {
     "index": "fiend",
     "name": "fiend",
-    "url": "public/assets/atlas/subclasses/fiend"
+    "url": "public/assets/atlas/subclasses/json/fiend.json"
   },
   "name": "hurl through hell",
   "level": 14,
@@ -20,5 +20,5 @@
   ],
   "url": "public/assets/atlas/features/json/hurl_through_hell.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/hurl_through_hell.webp"
+  "image": "public/assets/atlas/features/images/hurl_through_hell.webp"
 }

@@ -3,7 +3,7 @@
   "class": {
     "index": "ranger",
     "name": "ranger",
-    "url": "public/assets/atlas/classes/ranger"
+    "url": "public/assets/atlas/class/json/ranger.json"
   },
   "name": "hide in plain sight",
   "level": 10,
@@ -14,5 +14,5 @@
   ],
   "url": "public/assets/atlas/features/json/hide_in_plain_sight.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/hide_in_plain_sight.webp"
+  "image": "public/assets/atlas/features/images/hide_in_plain_sight.webp"
 }

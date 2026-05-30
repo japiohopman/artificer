@@ -3,12 +3,12 @@
   "class": {
     "index": "ranger",
     "name": "ranger",
-    "url": "public/assets/atlas/classes/ranger"
+    "url": "public/assets/atlas/class/json/ranger.json"
   },
   "subclass": {
     "index": "hunter",
     "name": "hunter",
-    "url": "public/assets/atlas/subclasses/hunter"
+    "url": "public/assets/atlas/subclasses/json/hunter.json"
   },
   "name": "multiattack: volley",
   "level": 11,
@@ -19,9 +19,9 @@
   "parent": {
     "index": "multiattack",
     "name": "multiattack",
-    "url": "public/assets/atlas/features/multiattack"
+    "url": "public/assets/atlas/features/multiattack.json"
   },
   "url": "public/assets/atlas/features/json/multiattack_volley.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/multiattack_volley.webp"
+  "image": "public/assets/atlas/features/images/multiattack_volley.webp"
 }

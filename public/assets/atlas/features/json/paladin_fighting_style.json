@@ -3,7 +3,7 @@
   "class": {
     "index": "paladin",
     "name": "paladin",
-    "url": "public/assets/atlas/classes/paladin"
+    "url": "public/assets/atlas/class/json/paladin.json"
   },
   "name": "fighting style",
   "level": 2,
@@ -23,7 +23,7 @@
             "item": {
               "index": "fighting_style_defense",
               "name": "fighting style: defense",
-              "url": "public/assets/atlas/features/fighting_style_defense"
+              "url": "public/assets/atlas/features/fighting_style_defense.json"
             }
           },
           {
@@ -31,7 +31,7 @@
             "item": {
               "index": "fighting_style_dueling",
               "name": "fighting style: dueling",
-              "url": "public/assets/atlas/features/fighting_style_dueling"
+              "url": "public/assets/atlas/features/fighting_style_dueling.json"
             }
           },
           {
@@ -39,7 +39,7 @@
             "item": {
               "index": "fighting_style_great_weapon_fighting",
               "name": "fighting style: great weapon fighting",
-              "url": "public/assets/atlas/features/fighting_style_great_weapon_fighting"
+              "url": "public/assets/atlas/features/fighting_style_great_weapon_fighting.json"
             }
           },
           {
@@ -47,7 +47,7 @@
             "item": {
               "index": "fighting_style_protection",
               "name": "fighting style: protection",
-              "url": "public/assets/atlas/features/fighting_style_protection"
+              "url": "public/assets/atlas/features/fighting_style_protection.json"
             }
           }
         ]
@@ -57,5 +57,5 @@
   },
   "url": "public/assets/atlas/features/json/paladin_fighting_style.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/paladin_fighting_style.webp"
+  "image": "public/assets/atlas/features/images/paladin_fighting_style.webp"
 }

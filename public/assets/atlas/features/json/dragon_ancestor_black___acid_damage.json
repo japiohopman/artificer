@@ -3,12 +3,12 @@
   "class": {
     "index": "sorcerer",
     "name": "sorcerer",
-    "url": "public/assets/atlas/classes/sorcerer"
+    "url": "public/assets/atlas/class/json/sorcerer.json"
   },
   "subclass": {
     "index": "draconic",
     "name": "draconic",
-    "url": "public/assets/atlas/subclasses/draconic"
+    "url": "public/assets/atlas/subclasses/json/draconic.json"
   },
   "name": "dragon ancestor: black _ acid damage",
   "level": 1,
@@ -20,9 +20,9 @@
   "parent": {
     "index": "dragon_ancestor",
     "name": "dragon ancestor",
-    "url": "public/assets/atlas/features/dragon_ancestor"
+    "url": "public/assets/atlas/features/dragon_ancestor.json"
   },
   "url": "public/assets/atlas/features/json/dragon_ancestor_black___acid_damage.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/dragon_ancestor_black___acid_damage.webp"
+  "image": "public/assets/atlas/features/images/dragon_ancestor_black___acid_damage.webp"
 }

@@ -3,7 +3,7 @@
   "class": {
     "index": "paladin",
     "name": "paladin",
-    "url": "public/assets/atlas/classes/paladin"
+    "url": "public/assets/atlas/class/json/paladin.json"
   },
   "name": "improved divine smite",
   "level": 11,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/improved_divine_smite.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/improved_divine_smite.webp"
+  "image": "public/assets/atlas/features/images/improved_divine_smite.webp"
 }

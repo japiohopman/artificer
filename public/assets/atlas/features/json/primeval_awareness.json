@@ -3,7 +3,7 @@
   "class": {
     "index": "ranger",
     "name": "ranger",
-    "url": "public/assets/atlas/classes/ranger"
+    "url": "public/assets/atlas/class/json/ranger.json"
   },
   "name": "primeval awareness",
   "level": 3,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/primeval_awareness.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/primeval_awareness.webp"
+  "image": "public/assets/atlas/features/images/primeval_awareness.webp"
 }

@@ -3,7 +3,7 @@
   "class": {
     "index": "barbarian",
     "name": "barbarian",
-    "url": "public/assets/atlas/classes/barbarian"
+    "url": "public/assets/atlas/class/json/barbarian.json"
   },
   "name": "brutal critical (3 dice)",
   "level": 17,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/brutal_critical_3_dice.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/brutal_critical_3_dice.webp"
+  "image": "public/assets/atlas/features/images/brutal_critical_3_dice.webp"
 }

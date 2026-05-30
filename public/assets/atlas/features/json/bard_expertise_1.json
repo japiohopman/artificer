@@ -3,7 +3,7 @@
   "class": {
     "index": "bard",
     "name": "bard",
-    "url": "public/assets/atlas/classes/bard"
+    "url": "public/assets/atlas/class/json/bard.json"
   },
   "name": "expertise",
   "level": 3,
@@ -23,7 +23,7 @@
             "item": {
               "index": "skill_acrobatics",
               "name": "skill: acrobatics",
-              "url": "public/assets/atlas/proficiencies/skill_acrobatics"
+              "url": "public/assets/atlas/proficiencies/json/skill_acrobatics.json"
             }
           },
           {
@@ -31,7 +31,7 @@
             "item": {
               "index": "skill_animal_handling",
               "name": "skill: animal handling",
-              "url": "public/assets/atlas/proficiencies/skill_animal_handling"
+              "url": "public/assets/atlas/proficiencies/json/skill_animal_handling.json"
             }
           },
           {
@@ -39,7 +39,7 @@
             "item": {
               "index": "skill_arcana",
               "name": "skill: arcana",
-              "url": "public/assets/atlas/proficiencies/skill_arcana"
+              "url": "public/assets/atlas/proficiencies/json/skill_arcana.json"
             }
           },
           {
@@ -47,7 +47,7 @@
             "item": {
               "index": "skill_athletics",
               "name": "skill: athletics",
-              "url": "public/assets/atlas/proficiencies/skill_athletics"
+              "url": "public/assets/atlas/proficiencies/json/skill_athletics.json"
             }
           },
           {
@@ -55,7 +55,7 @@
             "item": {
               "index": "skill_deception",
               "name": "skill: deception",
-              "url": "public/assets/atlas/proficiencies/skill_deception"
+              "url": "public/assets/atlas/proficiencies/json/skill_deception.json"
             }
           },
           {
@@ -63,7 +63,7 @@
             "item": {
               "index": "skill_history",
               "name": "skill: history",
-              "url": "public/assets/atlas/proficiencies/skill_history"
+              "url": "public/assets/atlas/proficiencies/json/skill_history.json"
             }
           },
           {
@@ -71,7 +71,7 @@
             "item": {
               "index": "skill_insight",
               "name": "skill: insight",
-              "url": "public/assets/atlas/proficiencies/skill_insight"
+              "url": "public/assets/atlas/proficiencies/json/skill_insight.json"
             }
           },
           {
@@ -79,7 +79,7 @@
             "item": {
               "index": "skill_intimidation",
               "name": "skill: intimidation",
-              "url": "public/assets/atlas/proficiencies/skill_intimidation"
+              "url": "public/assets/atlas/proficiencies/json/skill_intimidation.json"
             }
           },
           {
@@ -87,7 +87,7 @@
             "item": {
               "index": "skill_investigation",
               "name": "skill: investigation",
-              "url": "public/assets/atlas/proficiencies/skill_investigation"
+              "url": "public/assets/atlas/proficiencies/json/skill_investigation.json"
             }
           },
           {
@@ -95,7 +95,7 @@
             "item": {
               "index": "skill_medicine",
               "name": "skill: medicine",
-              "url": "public/assets/atlas/proficiencies/skill_medicine"
+              "url": "public/assets/atlas/proficiencies/json/skill_medicine.json"
             }
           },
           {
@@ -103,7 +103,7 @@
             "item": {
               "index": "skill_nature",
               "name": "skill: nature",
-              "url": "public/assets/atlas/proficiencies/skill_nature"
+              "url": "public/assets/atlas/proficiencies/json/skill_nature.json"
             }
           },
           {
@@ -111,7 +111,7 @@
             "item": {
               "index": "skill_perception",
               "name": "skill: perception",
-              "url": "public/assets/atlas/proficiencies/skill_perception"
+              "url": "public/assets/atlas/proficiencies/json/skill_perception.json"
             }
           },
           {
@@ -119,7 +119,7 @@
             "item": {
               "index": "skill_performance",
               "name": "skill: performance",
-              "url": "public/assets/atlas/proficiencies/skill_performance"
+              "url": "public/assets/atlas/proficiencies/json/skill_performance.json"
             }
           },
           {
@@ -127,7 +127,7 @@
             "item": {
               "index": "skill_persuasion",
               "name": "skill: persuasion",
-              "url": "public/assets/atlas/proficiencies/skill_persuasion"
+              "url": "public/assets/atlas/proficiencies/json/skill_persuasion.json"
             }
           },
           {
@@ -135,7 +135,7 @@
             "item": {
               "index": "skill_religion",
               "name": "skill: religion",
-              "url": "public/assets/atlas/proficiencies/skill_religion"
+              "url": "public/assets/atlas/proficiencies/json/skill_religion.json"
             }
           },
           {
@@ -143,7 +143,7 @@
             "item": {
               "index": "skill_sleight_of_hand",
               "name": "skill: sleight of hand",
-              "url": "public/assets/atlas/proficiencies/skill_sleight_of_hand"
+              "url": "public/assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
             }
           },
           {
@@ -151,7 +151,7 @@
             "item": {
               "index": "skill_stealth",
               "name": "skill: stealth",
-              "url": "public/assets/atlas/proficiencies/skill_stealth"
+              "url": "public/assets/atlas/proficiencies/json/skill_stealth.json"
             }
           },
           {
@@ -159,7 +159,7 @@
             "item": {
               "index": "skill_survival",
               "name": "skill: survival",
-              "url": "public/assets/atlas/proficiencies/skill_survival"
+              "url": "public/assets/atlas/proficiencies/json/skill_survival.json"
             }
           }
         ]
@@ -169,5 +169,5 @@
   },
   "url": "public/assets/atlas/features/json/bard_expertise_1.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/bard_expertise_1.webp"
+  "image": "public/assets/atlas/features/images/bard_expertise_1.webp"
 }

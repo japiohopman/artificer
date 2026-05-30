@@ -3,12 +3,12 @@
   "class": {
     "index": "barbarian",
     "name": "barbarian",
-    "url": "public/assets/atlas/classes/barbarian"
+    "url": "public/assets/atlas/class/json/barbarian.json"
   },
   "subclass": {
     "index": "berserker",
     "name": "berserker",
-    "url": "public/assets/atlas/subclasses/berserker"
+    "url": "public/assets/atlas/subclasses/json/berserker.json"
   },
   "name": "mindless rage",
   "level": 6,
@@ -18,5 +18,5 @@
   ],
   "url": "public/assets/atlas/features/json/mindless_rage.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/mindless_rage.webp"
+  "image": "public/assets/atlas/features/images/mindless_rage.webp"
 }

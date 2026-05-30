@@ -3,7 +3,7 @@
   "class": {
     "index": "bard",
     "name": "bard",
-    "url": "public/assets/atlas/classes/bard"
+    "url": "public/assets/atlas/class/json/bard.json"
   },
   "name": "song of rest (d12)",
   "level": 17,
@@ -14,5 +14,5 @@
   ],
   "url": "public/assets/atlas/features/json/song_of_rest_d12.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/song_of_rest_d12.webp"
+  "image": "public/assets/atlas/features/images/song_of_rest_d12.webp"
 }

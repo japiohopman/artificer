@@ -3,7 +3,7 @@
   "class": {
     "index": "warlock",
     "name": "warlock",
-    "url": "public/assets/atlas/classes/warlock"
+    "url": "public/assets/atlas/class/json/warlock.json"
   },
   "name": "pact of the chain",
   "level": 3,
@@ -17,9 +17,9 @@
   "parent": {
     "index": "pact_boon",
     "name": "pact boon",
-    "url": "public/assets/atlas/features/pact_boon"
+    "url": "public/assets/atlas/features/pact_boon.json"
   },
   "url": "public/assets/atlas/features/json/pact_of_the_chain.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/pact_of_the_chain.webp"
+  "image": "public/assets/atlas/features/images/pact_of_the_chain.webp"
 }

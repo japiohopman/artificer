@@ -3,7 +3,7 @@
   "class": {
     "index": "fighter",
     "name": "fighter",
-    "url": "public/assets/atlas/classes/fighter"
+    "url": "public/assets/atlas/class/json/fighter.json"
   },
   "name": "ability score improvement",
   "level": 4,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/fighter_ability_score_improvement_1.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/fighter_ability_score_improvement_1.webp"
+  "image": "public/assets/atlas/features/images/fighter_ability_score_improvement_1.webp"
 }

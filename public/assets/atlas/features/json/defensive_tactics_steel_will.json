@@ -3,12 +3,12 @@
   "class": {
     "index": "ranger",
     "name": "ranger",
-    "url": "public/assets/atlas/classes/ranger"
+    "url": "public/assets/atlas/class/json/ranger.json"
   },
   "subclass": {
     "index": "hunter",
     "name": "hunter",
-    "url": "public/assets/atlas/subclasses/hunter"
+    "url": "public/assets/atlas/subclasses/json/hunter.json"
   },
   "name": "defensive tactics: steel will",
   "level": 7,
@@ -19,9 +19,9 @@
   "parent": {
     "index": "defensive_tactics",
     "name": "defensive tactics",
-    "url": "public/assets/atlas/features/defensive_tactics"
+    "url": "public/assets/atlas/features/defensive_tactics.json"
   },
   "url": "public/assets/atlas/features/json/defensive_tactics_steel_will.json",
   "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/defensive_tactics_steel_will.webp"
+  "image": "public/assets/atlas/features/images/defensive_tactics_steel_will.webp"
 }

@@ -3,7 +3,7 @@
   "class": {
     "index": "sorcerer",
     "name": "sorcerer",
-    "url": "public/assets/atlas/classes/sorcerer"
+    "url": "public/assets/atlas/class/json/sorcerer.json"
   },
   "name": "ability score improvement",
   "level": 19,
@@ -13,5 +13,5 @@
   ],
   "url": "public/assets/atlas/features/json/sorcerer_ability_score_improvement_5.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/sorcerer_ability_score_improvement_5.webp"
+  "image": "public/assets/atlas/features/images/sorcerer_ability_score_improvement_5.webp"
 }

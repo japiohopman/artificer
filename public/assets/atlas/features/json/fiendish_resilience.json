@@ -3,12 +3,12 @@
   "class": {
     "index": "warlock",
     "name": "warlock",
-    "url": "public/assets/atlas/classes/warlock"
+    "url": "public/assets/atlas/class/json/warlock.json"
   },
   "subclass": {
     "index": "fiend",
     "name": "fiend",
-    "url": "public/assets/atlas/subclasses/fiend"
+    "url": "public/assets/atlas/subclasses/json/fiend.json"
   },
   "name": "fiendish resilience",
   "level": 10,
@@ -18,5 +18,5 @@
   ],
   "url": "public/assets/atlas/features/json/fiendish_resilience.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/fiendish_resilience.webp"
+  "image": "public/assets/atlas/features/images/fiendish_resilience.webp"
 }
