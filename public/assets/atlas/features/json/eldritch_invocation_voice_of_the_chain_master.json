@@ -10,7 +10,7 @@
   "prerequisites": [
     {
       "type": "feature",
-      "feature": "public/assets/atlas/features/pact-of-the-chain.json"
+      "feature": "public/assets/atlas/features/json/pact-of-the-chain.json"
     }
   ],
   "desc": [
@@ -20,7 +20,7 @@
   "parent": {
     "index": "eldritch_invocations",
     "name": "eldritch invocations",
-    "url": "public/assets/atlas/features/eldritch_invocations.json"
+    "url": "public/assets/atlas/features/json/eldritch_invocations.json"
   },
   "url": "public/assets/atlas/features/json/eldritch_invocation_voice_of_the_chain_master.json",
   "updated_at": "2025-10-24T20:42:13.151Z",
