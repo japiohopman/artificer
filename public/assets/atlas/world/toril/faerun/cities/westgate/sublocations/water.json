@@ -1,0 +1,115 @@
+{
+  "category": "water",
+  "updatedAt": "2026-05-30T02:20:21.957Z",
+  "location_id": "westgate",
+  "sub_locations": [
+    {
+      "id": "24",
+      "name": "The Neck",
+      "categoryId": "water",
+      "type": "marker",
+      "position": [
+        192,
+        2155.9983725888
+      ],
+      "popup": {
+        "title": "The Neck",
+        "description": "The strait that connected the [[Dragonmere]] with the [[Sea of Fallen Stars]].",
+        "image": "File:Dragonmere map 4e.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "25",
+      "name": "Sea of Fallen Stars",
+      "categoryId": "water",
+      "type": "marker",
+      "position": [
+        2356,
+        2051.9910492385
+      ],
+      "popup": {
+        "title": "Sea of Fallen Stars",
+        "description": "Or the '''Inner Sea''', the largest inland body of water in [[Faerûn]].",
+        "image": "File:Demon Stone concept Sea of Fallen Stars.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "32",
+      "name": "The Lord's Water",
+      "categoryId": "water",
+      "type": "marker",
+      "position": [
+        1982.491774249,
+        693.88360853823
+      ],
+      "popup": {
+        "title": "The Lord's Water",
+        "description": "A pool.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "124",
+      "name": "River Thunn",
+      "categoryId": "water",
+      "type": "marker",
+      "position": [
+        2525.1907388648,
+        1507.8245833204
+      ],
+      "popup": {
+        "title": "River Thunn",
+        "description": "The river that ran from the high lands of the [[Dragon Coast]] down into the harbor of [[Westgate]].",
+        "image": "File:WestgateDragon428.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}
