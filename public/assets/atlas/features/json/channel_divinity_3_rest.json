@@ -12,6 +12,12 @@
     "Beginning at 6th level, you can use your Channel Divinity twice between rests, and beginning at 18th level, you can use it three times between rests. When you finish a short or long rest, you regain your expended uses."
   ],
   "url": "public/assets/atlas/features/json/channel_divinity_3_rest.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/channel_divinity_3_rest.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/channel_divinity_3_rest.webp",
+  "feature_specific": {
+    "usage": {
+      "times": 3,
+      "type": "rest"
+    }
+  }
 }

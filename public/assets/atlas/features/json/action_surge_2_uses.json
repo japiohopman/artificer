@@ -13,6 +13,13 @@
     "Once you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn."
   ],
   "url": "public/assets/atlas/features/json/action_surge_2_uses.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/action_surge_2_uses.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/action_surge_2_uses.webp",
+  "feature_specific": {
+    "special_action": "additional_action",
+    "usage": {
+      "times": 2,
+      "type": "rest"
+    }
+  }
 }

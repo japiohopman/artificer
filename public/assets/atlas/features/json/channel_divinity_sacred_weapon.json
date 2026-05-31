@@ -18,6 +18,12 @@
     "You can end this effect on your turn as part of any other action. If you are no longer holding or carrying this weapon, or if you fall unconscious, this effect ends."
   ],
   "url": "public/assets/atlas/features/json/channel_divinity_sacred_weapon.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/channel_divinity_sacred_weapon.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/channel_divinity_sacred_weapon.webp",
+  "feature_specific": {
+    "special_action": "action",
+    "passive_modifiers": {
+      "attack_bonus": "charisma_modifier"
+    }
+  }
 }

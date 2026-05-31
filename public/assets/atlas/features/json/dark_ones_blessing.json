@@ -17,6 +17,11 @@
     "Starting at 1st level, when you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level (minimum of 1)."
   ],
   "url": "public/assets/atlas/features/json/dark_ones_blessing.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/images/dark_ones_blessing.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/dark_ones_blessing.webp",
+  "feature_specific": {
+    "on_kill": {
+      "temporary_hp": "charisma_modifier + warlock_level"
+    }
+  }
 }

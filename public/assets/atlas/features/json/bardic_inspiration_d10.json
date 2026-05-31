@@ -14,6 +14,14 @@
     "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
   ],
   "url": "public/assets/atlas/features/json/bardic_inspiration_d10.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/bardic_inspiration_d10.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/bardic_inspiration_d10.webp",
+  "feature_specific": {
+    "special_action": "bonus_action",
+    "attack_die": "1d10",
+    "usage": {
+      "type": "charisma_modifier",
+      "recovery": "long_rest"
+    }
+  }
 }

@@ -19,6 +19,11 @@
     "Once you gain access to a circle spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day. If you gain access to a spell that doesn't appear on the druid spell list, the spell is nonetheless a druid spell for you."
   ],
   "url": "public/assets/atlas/features/json/circle_spells_4.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/circle_spells_4.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/circle_spells_4.webp",
+  "feature_specific": {
+    "subfeature_options": {
+      "type": "spell"
+    }
+  }
 }

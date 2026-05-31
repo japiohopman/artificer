@@ -12,6 +12,11 @@
     "Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or invisible creature within 10 feet of you."
   ],
   "url": "public/assets/atlas/features/json/blindsense.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/images/blindsense.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/blindsense.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "blindsight": 10
+    }
+  }
 }

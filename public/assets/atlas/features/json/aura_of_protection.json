@@ -13,6 +13,14 @@
     "At 18th level, the range of this aura increases to 30 feet."
   ],
   "url": "public/assets/atlas/features/json/aura_of_protection.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/aura_of_protection.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/aura_of_protection.webp",
+  "feature_specific": {
+    "aura": {
+      "radius": 10,
+      "passive_modifiers": {
+        "saving_throws_bonus": "charisma_modifier"
+      }
+    }
+  }
 }

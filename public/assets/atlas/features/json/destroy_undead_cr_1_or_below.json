@@ -12,6 +12,11 @@
     "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold."
   ],
   "url": "public/assets/atlas/features/json/destroy_undead_cr_1_or_below.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/destroy_undead_cr_1_or_below.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/destroy_undead_cr_1_or_below.webp",
+  "feature_specific": {
+    "destroy_undead": {
+      "max_cr": 1.0
+    }
+  }
 }

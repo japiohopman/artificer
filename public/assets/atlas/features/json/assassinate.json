@@ -17,6 +17,14 @@
     "Starting at 3rd level, you are at your deadliest when you get the drop on your enemies. You have advantage on attack rolls against any creature that hasn't taken a turn in the combat yet. In addition, any hit you score against a creature that is surprised is a critical hit."
   ],
   "url": "public/assets/atlas/features/json/assassinate.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/images/assassinate.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/assassinate.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "advantage": [
+        "attack_rolls_against_creatures_not_taken_turn"
+      ],
+      "critical_against_surprised": true
+    }
+  }
 }

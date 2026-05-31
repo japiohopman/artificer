@@ -12,6 +12,11 @@
     "At 18th level, the range of your auras increase to 30 feet."
   ],
   "url": "public/assets/atlas/features/json/aura_improvements.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/aura_improvements.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/aura_improvements.webp",
+  "feature_specific": {
+    "aura": {
+      "radius": 30
+    }
+  }
 }

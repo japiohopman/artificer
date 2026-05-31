@@ -21,5 +21,12 @@
   ],
   "url": "public/assets/atlas/features/json/combat_superiority.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
-  "image": "public/assets/atlas/features/images/combat_superiority.webp"
+  "image": "public/assets/atlas/features/images/combat_superiority.webp",
+  "feature_specific": {
+    "usage": {
+      "times": 4,
+      "type": "rest"
+    },
+    "attack_die": "1d8"
+  }
 }

@@ -19,6 +19,11 @@
     "Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct."
   ],
   "url": "public/assets/atlas/features/json/channel_divinity_preserve_life.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/channel_divinity_preserve_life.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/channel_divinity_preserve_life.webp",
+  "feature_specific": {
+    "healing": {
+      "pool": "5 * cleric_level"
+    }
+  }
 }

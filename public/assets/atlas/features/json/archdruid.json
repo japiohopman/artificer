@@ -13,6 +13,12 @@
     "Additionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape."
   ],
   "url": "public/assets/atlas/features/json/archdruid.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/archdruid.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/archdruid.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "infinite_wild_shape": true,
+      "ignore_verbal_somatic_components": true
+    }
+  }
 }

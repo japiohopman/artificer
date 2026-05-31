@@ -12,6 +12,12 @@
     "At 3rd level, you choose the type of specialist you are: Alchemist, Armorer, Artillerist, or Battle Smith. Your choice grants you features at 5th, 9th, and 15th level."
   ],
   "url": "public/assets/atlas/features/json/artificer_specialist.json",
-  "updated_at": "2025-05-22T12:00:00.000Z",
-  "image": "public/assets/atlas/features/images/artificer_specialist.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/artificer_specialist.webp",
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "subclass"
+    }
+  }
 }

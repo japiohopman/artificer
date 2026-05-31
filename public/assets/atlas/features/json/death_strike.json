@@ -1,0 +1,27 @@
+{
+  "index": "death_strike",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "public/assets/atlas/class/json/rogue.json"
+  },
+  "subclass": {
+    "index": "assassin",
+    "name": "assassin",
+    "url": "public/assets/atlas/subclasses/json/assassin.json"
+  },
+  "name": "death strike",
+  "level": 17,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 17th level, you become a master of instant death. When you attack and hit a creature that is surprised, it must make a Constitution saving throw (DC 8 + your Dexterity modifier + your proficiency bonus). On a failed save, double the damage of your attack against the creature."
+  ],
+  "url": "public/assets/atlas/features/json/death_strike.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/death_strike.webp",
+  "feature_specific": {
+    "special_action": "on_hit",
+    "condition": "surprised",
+    "saving_throw": "constitution"
+  }
+}
