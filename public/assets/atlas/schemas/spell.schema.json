@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/spell.schema.json",
+  "title": "Spell",
+  "description": "A spell in the game atlas.",
+  "type": "object",
+  "required": [
+    "index",
+    "name",
+    "desc",
+    "range",
+    "components",
+    "ritual",
+    "duration",
+    "concentration",
+    "casting_time",
+    "level",
+    "school",
+    "classes",
+    "url",
+    "image",
+    "updated_at"
+  ],
+  "properties": {
+    "index": {
+      "type": "string",
+      "description": "The unique identifier for the spell."
+    },
+    "name": {
+      "type": "string",
+      "description": "The human-readable name of the spell."
+    },
+    "desc": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of description paragraphs."
+    },
+    "higher_level": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Description of the spell's effects at higher levels."
+    },
+    "range": {
+      "type": "string"
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["V", "S", "M"]
+      }
+    },
+    "material": {
+      "type": "string"
+    },
+    "ritual": {
+      "type": "boolean"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "concentration": {
+      "type": "boolean"
+    },
+    "casting_time": {
+      "type": "string"
+    },
+    "level": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9
+    },
+    "attack_type": {
+      "type": "string",
+      "enum": ["melee", "ranged"]
+    },
+    "damage": {
+      "type": "object",
+      "properties": {
+        "damage_type": {
+          "type": "object",
+          "properties": {
+            "index": { "type": "string" },
+            "name": { "type": "string" },
+            "url": { "type": "string" }
+          }
+        },
+        "damage_at_slot_level": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "damage_at_character_level": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "heal_at_slot_level": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "dc": {
+      "type": "object",
+      "properties": {
+        "dc_type": {
+          "type": "object",
+          "properties": {
+            "index": { "type": "string" },
+            "name": { "type": "string" },
+            "url": { "type": "string" }
+          }
+        },
+        "dc_success": { "type": "string" }
+      }
+    },
+    "area_of_effect": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "size": { "type": "integer" }
+      }
+    },
+    "school": {
+      "type": "object",
+      "properties": {
+        "index": { "type": "string" },
+        "name": { "type": "string" },
+        "url": { "type": "string" }
+      },
+      "required": ["index", "name", "url"]
+    },
+    "classes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "string" },
+          "name": { "type": "string" },
+          "url": { "type": "string" }
+        },
+        "required": ["index", "name", "url"]
+      }
+    },
+    "subclasses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "string" },
+          "name": { "type": "string" },
+          "url": { "type": "string" }
+        },
+        "required": ["index", "name", "url"]
+      }
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^(public/)?assets/atlas/spell/json/.+\\.json$"
+    },
+    "image": {
+      "type": "string",
+      "pattern": "^(public/)?assets/atlas/spell/images/.+\\.webp$"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sprite_index": {
+      "type": "integer"
+    },
+    "sprite_sheet": {
+      "type": "string"
+    }
+  }
+}
