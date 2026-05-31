@@ -1,0 +1,182 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/enemy.schema.json",
+  "title": "Enemy",
+  "description": "An enemy in the game atlas.",
+  "type": "object",
+  "required": [
+    "index",
+    "name",
+    "size",
+    "type",
+    "alignment",
+    "armor_class",
+    "hit_points",
+    "hit_dice",
+    "speed"
+  ],
+  "properties": {
+    "index": { "type": "string" },
+    "name": { "type": "string" },
+    "desc": { "type": "string" },
+    "size": { "type": "string" },
+    "type": { "type": "string" },
+    "subtype": { "type": ["string", "null"] },
+    "alignment": { "type": "string" },
+    "armor_class": {
+      "oneOf": [
+        { "type": "integer" },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string" },
+              "value": { "type": "integer" },
+              "armor": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "index": { "type": "string" },
+                    "name": { "type": "string" },
+                    "url": { "type": "string" }
+                  }
+                }
+              }
+            },
+            "required": ["type", "value"]
+          }
+        }
+      ]
+    },
+    "hit_points": { "type": "integer" },
+    "hit_dice": { "type": "string" },
+    "hit_points_roll": { "type": "string" },
+    "speed": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "object",
+          "additionalProperties": { "type": ["string", "boolean"] }
+        }
+      ]
+    },
+    "strength": { "type": "integer" },
+    "dexterity": { "type": "integer" },
+    "constitution": { "type": "integer" },
+    "intelligence": { "type": "integer" },
+    "wisdom": { "type": "integer" },
+    "charisma": { "type": "integer" },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "str": { "type": "integer" },
+        "dex": { "type": "integer" },
+        "con": { "type": "integer" },
+        "int": { "type": "integer" },
+        "wis": { "type": "integer" },
+        "cha": { "type": "integer" }
+      }
+    },
+    "proficiencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "integer" },
+          "proficiency": {
+            "type": "object",
+            "properties": {
+              "index": { "type": "string" },
+              "name": { "type": "string" },
+              "url": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "damage_vulnerabilities": { "type": "array", "items": { "type": "string" } },
+    "damage_resistances": { "type": "array", "items": { "type": "string" } },
+    "damage_immunities": { "type": "array", "items": { "type": "string" } },
+    "condition_immunities": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          { "type": "string" },
+          {
+            "type": "object",
+            "properties": {
+              "index": { "type": "string" },
+              "name": { "type": "string" },
+              "url": { "type": "string" }
+            }
+          }
+        ]
+      }
+    },
+    "senses": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "object",
+          "additionalProperties": { "type": ["string", "integer"] }
+        }
+      ]
+    },
+    "languages": { "type": "string" },
+    "challenge_rating": { "type": ["number", "string"] },
+    "proficiency_bonus": { "type": "integer" },
+    "xp": { "type": "integer" },
+    "special_abilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "desc": { "type": "string" },
+          "usage": { "type": "object" },
+          "dc": { "type": "object" },
+          "damage": { "type": "array" }
+        }
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "desc": { "type": "string" },
+          "attack_bonus": { "type": "integer" },
+          "dc": { "type": "object" },
+          "damage": { "type": "array" },
+          "actions": { "type": "array" },
+          "usage": { "type": "object" },
+          "multiattack_type": { "type": "string" }
+        }
+      }
+    },
+    "legendary_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "desc": { "type": "string" },
+          "damage": { "type": "array" },
+          "dc": { "type": "object" }
+        }
+      }
+    },
+    "reactions": { "type": "array" },
+    "image": { "type": "string" },
+    "url": { "type": "string" },
+    "updated_at": { "type": "string" },
+    "sprite_index": { "type": "integer" },
+    "sprite_sheet": { "type": "string" },
+    "rarity": { "type": "string" },
+    "background_type": { "type": "string" },
+    "item_drops": { "type": "array" }
+  }
+}
