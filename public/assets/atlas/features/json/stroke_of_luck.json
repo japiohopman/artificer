@@ -13,6 +13,12 @@
     "Once you use this feature, you can't use it again until you finish a short or long rest."
   ],
   "url": "public/assets/atlas/features/json/stroke_of_luck.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/images/stroke_of_luck.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/stroke_of_luck.webp",
+  "feature_specific": {
+    "usage": {
+      "times": 1,
+      "type": "rest"
+    }
+  }
 }

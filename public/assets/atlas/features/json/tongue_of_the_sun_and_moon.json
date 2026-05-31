@@ -12,6 +12,11 @@
     "Starting at 13th level, you learn to touch the ki of other minds so that you understand all spoken languages. Moreover, any creature that can understand a language can understand what you say."
   ],
   "url": "public/assets/atlas/features/json/tongue_of_the_sun_and_moon.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/tongue_of_the_sun_and_moon.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/tongue_of_the_sun_and_moon.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "understand_all_languages": true
+    }
+  }
 }

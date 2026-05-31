@@ -17,6 +17,15 @@
     "At 6th level, you gain the ability to heal yourself. As an action, you can regain hit points equal to three times your monk level. You must finish a long rest before you can use this feature again."
   ],
   "url": "public/assets/atlas/features/json/wholeness_of_body.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/wholeness_of_body.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/wholeness_of_body.webp",
+  "feature_specific": {
+    "healing": {
+      "amount": "3 * monk_level"
+    },
+    "usage": {
+      "times": 1,
+      "type": "long_rest"
+    }
+  }
 }

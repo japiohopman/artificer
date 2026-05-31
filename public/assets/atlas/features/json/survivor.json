@@ -18,5 +18,11 @@
   ],
   "url": "public/assets/atlas/features/json/survivor.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
-  "image": "public/assets/atlas/features/images/survivor.webp"
+  "image": "public/assets/atlas/features/images/survivor.webp",
+  "feature_specific": {
+    "on_turn_start": {
+      "healing": "5 + constitution_modifier",
+      "condition": "hp_below_half"
+    }
+  }
 }

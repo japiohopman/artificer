@@ -12,6 +12,13 @@
     "Starting at 5th level, you can interfere with the flow of ki in an opponent's body. When you hit another creature with a melee weapon attack, you can spend 1 ki point to attempt a stunning strike. The target must succeed on a Constitution saving throw or be stunned until the end of your next turn."
   ],
   "url": "public/assets/atlas/features/json/stunning_strike.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/stunning_strike.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/stunning_strike.webp",
+  "feature_specific": {
+    "special_action": "on_hit",
+    "cost": {
+      "ki": 1
+    },
+    "saving_throw": "constitution"
+  }
 }

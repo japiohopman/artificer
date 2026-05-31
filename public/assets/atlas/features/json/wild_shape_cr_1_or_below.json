@@ -20,6 +20,11 @@
     "- You choose whether your equipment falls to the ground in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the GM decides whether it is practical for the new form to wear a piece of equipment, based on the creature's shape and size. Your equipment doesn't change size or shape to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge with it. Equipment that merges with the form has no effect until you leave the form."
   ],
   "url": "public/assets/atlas/features/json/wild_shape_cr_1_or_below.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/wild_shape_cr_1_or_below.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/wild_shape_cr_1_or_below.webp",
+  "feature_specific": {
+    "wild_shape": {
+      "max_cr": 1.0
+    }
+  }
 }

@@ -17,6 +17,11 @@
     "When you reach 17th level, you have become adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal initiative and your second turn at your initiative minus 10. You cannot use this feature when you are surprised."
   ],
   "url": "public/assets/atlas/features/json/thief_s_reflexes.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/images/thief_s_reflexes.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/thief_s_reflexes.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "two_turns_in_first_round": true
+    }
+  }
 }

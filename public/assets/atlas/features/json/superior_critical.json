@@ -18,5 +18,10 @@
   ],
   "url": "public/assets/atlas/features/json/superior_critical.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
-  "image": "public/assets/atlas/features/images/superior_critical.webp"
+  "image": "public/assets/atlas/features/images/superior_critical.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "critical_threshold": 18
+    }
+  }
 }
