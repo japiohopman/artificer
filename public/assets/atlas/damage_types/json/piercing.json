@@ -5,7 +5,19 @@
     "Puncturing and impaling attacks, including spears and monsters' bites, deal piercing damage."
   ],
   "url": "public/assets/atlas/damage_types/json/piercing.json",
-  "updated_at": "2025-10-24T20:42:12.729Z",
+  "updated_at": "2026-04-25T20:00:00.000Z",
   "image": "public/assets/atlas/damage_types/images/piercing.webp",
+  "damage_modifiers": {
+    "vulnerable_multiplier": 2.0,
+    "resistant_multiplier": 0.5,
+    "immune_multiplier": 0.0
+  },
+  "default_interactions": [
+    {
+      "target_tag": "soft_armor",
+      "effect": "armor_penetration",
+      "value": 2
+    }
+  ],
   "damage_specific": {}
 }

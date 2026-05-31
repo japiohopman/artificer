@@ -30,3 +30,9 @@ Internal paths in JSON files must accurately reflect the filesystem structure.
 - When adding new content, ensure the filename matches the `index` or `id` field in the JSON.
 - Verify that all related files (images, nested locations) are in the same or appropriate subdirectory.
 - Run a consistency check if you rename any major region folders.
+
+## 6. Damage Type Standards
+Damage types are machine-readable and support the game engine with the following schema:
+- `damage_modifiers`: Defines `vulnerable_multiplier` (default 2.0), `resistant_multiplier` (default 0.5), and `immune_multiplier` (default 0.0).
+- `default_interactions`: An array of objects defining how the damage type interacts with specific `target_tag`s (e.g., `flammable`, `metallic`). Each interaction can specify an `effect`, and optionally a `chance` (0.0 to 1.0) or a `value`.
+- All damage types must be stored in `public/assets/atlas/damage_types/json/` and match their `index`.

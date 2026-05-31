@@ -5,8 +5,20 @@
     "Force is pure magical energy focused into a damaging form. Most effects that deal force damage are spells, including magic missile and spiritual weapon."
   ],
   "url": "public/assets/atlas/damage_types/json/force.json",
-  "updated_at": "2025-10-24T20:42:12.729Z",
+  "updated_at": "2026-04-25T20:00:00.000Z",
   "image": "public/assets/atlas/damage_types/images/force.webp",
+  "damage_modifiers": {
+    "vulnerable_multiplier": 2.0,
+    "resistant_multiplier": 0.5,
+    "immune_multiplier": 0.0
+  },
+  "default_interactions": [
+    {
+      "target_tag": "magical_barrier",
+      "effect": "disruption",
+      "chance": 1.0
+    }
+  ],
   "damage_specific": {
     "associated_gemstone": {
       "index": "sapphire",

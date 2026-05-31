@@ -5,8 +5,20 @@
     "Radiant damage, dealt by a cleric's flame strike spell or an angel's smiting weapon, sears the flesh like fire and overloads the spirit with power."
   ],
   "url": "public/assets/atlas/damage_types/json/radiant.json",
-  "updated_at": "2025-10-24T20:42:12.729Z",
+  "updated_at": "2026-04-25T20:00:00.000Z",
   "image": "public/assets/atlas/damage_types/images/radiant.webp",
+  "damage_modifiers": {
+    "vulnerable_multiplier": 2.0,
+    "resistant_multiplier": 0.5,
+    "immune_multiplier": 0.0
+  },
+  "default_interactions": [
+    {
+      "target_tag": "undead",
+      "effect": "sear",
+      "chance": 0.5
+    }
+  ],
   "damage_specific": {
     "associated_gemstone": {
       "index": "topaz",
