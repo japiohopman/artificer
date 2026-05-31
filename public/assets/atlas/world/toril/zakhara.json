@@ -1,0 +1,153 @@
+{
+  "id": "zakhara",
+  "name": "Zakhara",
+  "aliases": [
+    "Land of Fate"
+  ],
+  "type": "Continent",
+  "world": "Toril",
+  "supercontinent": "Afro-Eurasia-like Central Supercontinent",
+  "symbol": {
+    "name": "Moon and Trailing Stars",
+    "type": "National Symbol"
+  },
+  "capital": {
+    "name": "Huzuz",
+    "title": "City of Delights"
+  },
+  "government": {
+    "type": "Theocracy",
+    "ruler_title": "Grand Caliph",
+    "current_ruler": {
+      "name": "Khalil al-Assad al-Zahir",
+      "year": "1367 DR"
+    }
+  },
+  "religion": {
+    "primary": "Zakharan Pantheon",
+    "cultural_philosophy": [
+      "Fate",
+      "Enlightenment"
+    ]
+  },
+  "currency": {
+    "gold": {
+      "name": "Dinar",
+      "value": 1
+    },
+    "silver": {
+      "name": "Dirham",
+      "per_gold": 10
+    },
+    "copper": {
+      "name": "Bit",
+      "per_gold": 100
+    }
+  },
+  "geography": {
+    "landform": "Giant Peninsula",
+    "relative_location": {
+      "south_of": [
+        "Faerun"
+      ],
+      "east_of": [
+        "Faerun"
+      ]
+    },
+    "nearby_regions": [
+      "Utter East",
+      "Dambrath",
+      "Var the Golden",
+      "Ulgarth",
+      "Konigheim"
+    ],
+    "natural_barriers": [
+      {
+        "name": "World Pillar Mountains",
+        "description": "Separates Zakhara from the rest of the supercontinent."
+      }
+    ],
+    "terrain": [
+      "Deserts",
+      "Oases",
+      "Coastal Seas"
+    ]
+  },
+  "environment": {
+    "features": [
+      "Secretive Cities",
+      "Large Deserts",
+      "Lush Oases"
+    ]
+  },
+  "trade": {
+    "known_for": [
+      "Exotic Goods",
+      "Exotic Magic",
+      "Rare Trade Goods"
+    ],
+    "trade_partners": [
+      "Faerun"
+    ],
+    "hazards": [
+      "Pirates",
+      "Corsairs"
+    ]
+  },
+  "magic": {
+    "characteristics": [
+      "Exotic Magic",
+      "Genie Magic",
+      "Sha'ir Magic"
+    ],
+    "creatures": [
+      "Genies"
+    ],
+    "magic_users": [
+      {
+        "type": "Sha'ir",
+        "description": "Genie-binding spellcasters."
+      }
+    ]
+  },
+  "culture": {
+    "language": "Midani",
+    "dominant_ethnicity": "Zakharan",
+    "physical_traits": {
+      "skin": "Brown",
+      "hair": "Dark",
+      "height": "Relatively Short"
+    },
+    "values": [
+      "Enlightenment",
+      "Civilization",
+      "Fate"
+    ],
+    "attitude_toward_foreigners": "Views outsiders as barbarians."
+  },
+  "demographics": {
+    "majority_population": "Human Zakharans",
+    "non_human_populations": true
+  },
+  "migration_history": [
+    {
+      "group": "Bedine",
+      "destination": "Faerun",
+      "method": "Ancient Portals"
+    },
+    {
+      "group": "Calishites",
+      "destination": "Faerun",
+      "method": "Ancient Portals"
+    }
+  ],
+  "notable_creatures": [
+    "Genies"
+  ],
+  "quotes": [
+    {
+      "text": "To get to Zakhara, go south. Then go south some more.",
+      "source": "Faerunian Saying"
+    }
+  ]
+}
