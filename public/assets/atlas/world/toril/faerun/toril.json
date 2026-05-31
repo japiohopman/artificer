@@ -1,1 +1,206 @@
-
+{
+  "name": "Toril",
+  "aliases": [
+    "Abeir-Toril"
+  ],
+  "pronunciation": {
+    "ipa": [
+      "/toʊˈrɪl/",
+      "/tɔːrˈrɪl/"
+    ],
+    "phonetic": [
+      "toh-RILL",
+      "tor-RILL"
+    ]
+  },
+  "description": {
+    "planetary_position": 3,
+    "star_system": "Realmspace",
+    "former_name_meaning": {
+      "term": "Abeir-Toril",
+      "meaning": "Cradle of Life",
+      "language": "Extinct and forgotten language"
+    },
+    "modern_usage": "Informally refers to the formerly united worlds of Abeir and Toril."
+  },
+  "astronomy": {
+    "type": "Planet",
+    "classification_code": "E●E",
+    "parent_star": "The Sun",
+    "orbital_distance": {
+      "miles": 200000000,
+      "kilometers": 320000000
+    },
+    "day_length_hours": 24,
+    "year_length_days": 365,
+    "satellites": [
+      {
+        "name": "Selune",
+        "type": "Moon"
+      },
+      {
+        "name": "Tears of Selune",
+        "type": "Asteroid Cluster"
+      }
+    ]
+  },
+  "physical_characteristics": {
+    "comparable_to": "Earth",
+    "equatorial_circumference": {
+      "miles": 25000,
+      "kilometers": 40000
+    },
+    "polar_circumference": {
+      "miles": 24900,
+      "kilometers": 40100
+    },
+    "radius": {
+      "equatorial": {
+        "miles": 3980,
+        "kilometers": 6410
+      },
+      "polar": {
+        "miles": 3960,
+        "kilometers": 6370
+      }
+    }
+  },
+  "inhabitants": {
+    "demonym": "Torilian",
+    "population_groups": [
+      "Humans",
+      "Humanoids"
+    ]
+  },
+  "geography": {
+    "supercontinent": {
+      "name": "Central Supercontinent",
+      "regions": [
+        "Faerun",
+        "Zakhara",
+        "Kara-Tur"
+      ]
+    },
+    "continents": [
+      {
+        "name": "Faerun",
+        "location": "Western portion of the central supercontinent",
+        "description": "Diverse landscape inhabited by humans, dwarves, elves, halflings, gnomes, and others.",
+        "status": "Known"
+      },
+      {
+        "name": "Zakhara",
+        "location": "Central supercontinent",
+        "description": "Hot, arid realm influenced by elemental forces and the philosophy of Fate and Honor.",
+        "status": "Known"
+      },
+      {
+        "name": "Kara-Tur",
+        "location": "Eastern portion of the central supercontinent",
+        "description": "Region steeped in ancient history.",
+        "status": "Known"
+      },
+      {
+        "name": "Maztica",
+        "location": "Western region",
+        "description": "Cultures centered around divine duty and blood sacrifice.",
+        "status": "Known",
+        "historical_events": [
+          {
+            "event": "Spellplague",
+            "result": "Transferred to Abeir"
+          },
+          {
+            "event": "Second Sundering",
+            "result": "Returned to Toril"
+          }
+        ]
+      },
+      {
+        "name": "Anchorome",
+        "location": "Western region",
+        "description": "Poorly explored land populated by violent elves and humans.",
+        "status": "Partially explored"
+      },
+      {
+        "name": "Katashaka",
+        "location": "South of Maztica",
+        "description": "Largely unexplored continent.",
+        "status": "Unexplored"
+      },
+      {
+        "name": "Laerakond",
+        "location": "Western region",
+        "description": "Formerly part of Abeir; known for dragon empires and new cultures.",
+        "status": "Known",
+        "historical_events": [
+          {
+            "event": "Spellplague",
+            "result": "Appeared on Toril"
+          }
+        ]
+      },
+      {
+        "name": "Osse",
+        "location": "East of Kara-Tur",
+        "description": "Land of spiritualists and druids where nature and spirits dominate daily life.",
+        "status": "Unexplored"
+      }
+    ]
+  },
+  "historical_ages": [
+    "The Dawn Ages",
+    "The First Flowering",
+    "The Founding Time",
+    "The Age of Humanity",
+    "The Present Age"
+  ],
+  "major_events": [
+    {
+      "name": "Spellplague",
+      "effects": [
+        "Maztica transferred to Abeir",
+        "Laerakond appeared on Toril",
+        "Existence of Abeir became widely known"
+      ]
+    },
+    {
+      "name": "Second Sundering",
+      "effects": [
+        "Maztica returned to Toril"
+      ]
+    }
+  ],
+  "related_worlds": [
+    {
+      "name": "Abeir",
+      "relationship": "Planetary sibling",
+      "notes": "Formerly united with Toril"
+    }
+  ],
+  "notable_quote": {
+    "speaker": "Binbollar Clambake",
+    "race": "Halfling",
+    "occupation": "Merchant",
+    "homeland": "Luiren",
+    "quote": "It seem to me that there is a direct relation between the amount of time a person spends traveling and just how much that person truly understands about the world..."
+  },
+  "source_structure": {
+    "sections": [
+      "Geography",
+      "Continents",
+      "History",
+      "The Dawn Ages",
+      "The First Flowering",
+      "The Founding Time",
+      "The Age of Humanity",
+      "The Present Age",
+      "Appendix",
+      "Background",
+      "Gallery",
+      "External Links",
+      "References",
+      "Connections"
+    ]
+  }
+}
