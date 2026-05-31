@@ -1,0 +1,162 @@
+Assets review TODO
+==================
+
+Scope
+-----
+Reviewed: https://github.com/japiohopman/artificer/tree/main/public/assets
+Ignored as requested: any /toril/ and /animals/ paths.
+
+Snapshot
+--------
+- public/assets contains about 5,550 reviewed files, excluding toril/animals.
+- Total reviewed asset size is about 2.1 GB.
+- Main buckets:
+  - atlas: about 5,060 files, 1.6 GB
+  - images: about 317 files, 386 MB
+  - sounds: about 168 files, 107 MB
+- Common asset types:
+  - 3,071 JSON files
+  - 1,163 PNG files
+  - 1,119 WEBP files
+  - 160 audio files
+
+Overall review
+--------------
+The setup is workable and already has a useful domain split. The atlas folder is especially promising because most content is grouped by game concept, and many domains use a predictable json/images split.
+
+The main risk is that the assets are becoming a content database without enough automated validation. There are broken internal paths, inconsistent singular/plural folder names, old/generated import leftovers, and large media files that will hurt repo size and runtime loading if they are shipped directly.
+
+High priority
+-------------
+[ ] Add an asset validation script.
+    Check every JSON field that looks like a local path, especially url, image, sprite_sheet, icon, audio, and nested object urls.
+    The script should fail when a referenced file does not exist.
+
+[ ] Fix known broken path references.
+    Examples found:
+    - public/assets/atlas/spell/json/aid.json references public/assets/atlas/classes/json/cleric.json and paladin.json, but the real folder is public/assets/atlas/class/json/.
+    - public/assets/atlas/enemies/json/pony.json references public/assets/atlas/enemies/pony.webp, but that file does not exist.
+    - public/assets/atlas/enemies/json/pony.json references public/assets/atlas/damage_types/bludgeoning without /json/ and .json, while the existing file is public/assets/atlas/damage_types/json/bludgeoning.json.
+
+[ ] Decide on one path convention and document it.
+    Current examples mix:
+    - public/assets/...
+    - /artificer-main/codex/assets/...
+    Recommendation: use app-root public URLs consistently, for example /assets/atlas/spell/images/aid.webp, or use stable logical ids and resolve paths in code.
+
+[ ] Clean generated/import leftovers in enemies.
+    These paths look accidentally created from a GitHub URL and should be reviewed:
+    - public/assets/atlas/enemies/enemies_wiki/japiohopman/artificer/tree/main/codex/wiki/enemies/tiamas.json
+    - public/assets/atlas/enemies/images/japiohopman/artificer/tree/main/codex/wiki/enemies/.webp
+
+[ ] Add JSON schemas per asset domain.
+    Start with the biggest/highest-use domains:
+    - spell
+    - enemies
+    - equipment
+    - magic_items
+    - maps
+    Schemas should enforce required fields, path formats, enum-like fields, and the shape of nested references.
+
+[ ] Add CI for assets.
+    Minimum checks:
+    - all JSON parses
+    - all local references exist
+    - no references to ignored/generated source paths
+    - no unexpected uppercase/spaces/hyphens in filenames unless explicitly allowed
+    - no files above the agreed size threshold without an allowlist entry
+
+Medium priority
+---------------
+[ ] Standardize singular/plural folder names.
+    Current examples include:
+    - class, but JSON references classes
+    - character and characters
+    - enemies and enemies_categories
+    Pick one naming style per concept and keep references aligned.
+
+[ ] Move or archive old/staging assets.
+    Examples:
+    - public/assets/images/items_old/
+    - public/assets/images/characters_old/
+    - public/assets/images/items_old/staged/
+    Keep production assets separate from experiments, staging, and deprecated assets.
+
+[ ] Normalize filenames.
+    Most files use snake_case, which is good. Some files use spaces, apostrophes, uppercase, hyphens, and parentheses:
+    - public/assets/atlas/crafting/D&D Crafting System Mechanics & Rules (Expanded).md
+    - public/assets/atlas/enemies/enemies_wiki/Guard Drake.json
+    - public/assets/atlas/enemies/json/myconid-sprout.json
+    - public/assets/atlas/font/Elan ITC Std Black.otf
+    Recommendation: snake_case for data/media assets, with a small allowlist for third-party font filenames if needed.
+
+[ ] Fix probable typo filenames.
+    Example:
+    - public/assets/atlas/alignments/images/aliment_bg.webp
+    This likely means alignment_bg.webp. If referenced anywhere, rename carefully and update references.
+
+[ ] Revisit large image/audio files.
+    Notable large files:
+    - public/assets/sounds/music/the_weaves_hum1.mp3: about 11.2 MB
+    - public/assets/sounds/music/the_weaves_hum2.mp3: about 10.4 MB
+    - public/assets/sounds/music/archives_of_the_elder2.mp3: about 8.6 MB
+    - public/assets/atlas/spell/images/create_undead.webp: about 2.3 MB
+    - public/assets/atlas/crafting/json/bamboo.json: about 2.1 MB, unusually large for JSON
+    Add compression targets and split oversized JSON if it contains embedded/generated content.
+
+[ ] Separate source/reference data from runtime data.
+    There are folders like background_wiki, character_wiki, class_wiki, enemies_wiki, wiki_image, and crafting markdown docs inside runtime assets.
+    Consider moving source/reference material to docs/, data_source/, or tools/input/ and generating public runtime assets from it.
+
+[ ] Create domain indexes/manifests.
+    For each major domain, generate an index file with ids and paths instead of relying on directory scans.
+    Useful examples:
+    - atlas/spell/index.json
+    - atlas/enemies/index.json
+    - atlas/equipment/index.json
+
+Low priority / polish
+---------------------
+[ ] Add an ASSETS.md.
+    Document:
+    - folder conventions
+    - naming rules
+    - allowed file types
+    - max recommended sizes
+    - how to add a new spell/enemy/item
+    - how to run validation
+
+[ ] Decide what belongs in public/assets/images versus public/assets/atlas.
+    Current top-level images include combat, npcs, enemy_backgrounds, shop_location_backgrounds, items_old, characters_old, and game_art.
+    If these are gameplay domain assets, consider moving them under atlas or giving top-level images a clear role like ui-only/static-only.
+
+[ ] Consider generated sprite sheets as first-class assets.
+    Several JSON files reference sprite_sheet and sprite_index.
+    Add a manifest per sprite sheet that records:
+    - sheet path
+    - tile dimensions
+    - item count
+    - mapping from id to index
+
+[ ] Add size budgets.
+    Suggested starting point:
+    - JSON: warn above 250 KB, fail above 1 MB unless allowlisted
+    - individual WEBP/PNG: warn above 1 MB, fail above 2.5 MB unless allowlisted
+    - audio: warn above 5 MB, require streaming/lazy loading for music
+
+[ ] Add duplicate/stale asset detection.
+    Check for:
+    - same filename stem in multiple folders
+    - unused images
+    - JSON entries without matching media
+    - media without matching JSON where a pair is expected
+
+Suggested first implementation order
+------------------------------------
+1. Add asset validation script for JSON parse + local path existence.
+2. Fix the known broken references found above.
+3. Document the canonical path and naming convention.
+4. Clean the obvious generated GitHub URL folders under enemies.
+5. Add size budgets and allowlist the few intentional large files.
+6. Add schemas for spell, enemies, equipment, and magic_items.
+
