@@ -18,5 +18,9 @@
   ],
   "url": "public/assets/atlas/features/json/know_your_enemy.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
-  "image": "public/assets/atlas/features/images/know_your_enemy.webp"
+  "image": "public/assets/atlas/features/images/know_your_enemy.webp",
+  "feature_specific": {
+    "special_action": "none",
+    "desc": "Study a creature for 1 minute"
+  }
 }

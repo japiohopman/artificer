@@ -14,9 +14,14 @@
   "parent": {
     "index": "paladin_fighting_style",
     "name": "fighting style",
-    "url": "public/assets/atlas/features/json/paladin_fighting_style.json"
+    "url": "public/assets/atlas/features/paladin_fighting_style.json"
   },
   "url": "public/assets/atlas/features/json/fighting_style_defense.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/fighting_style_defense.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/fighting_style_defense.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "ac_bonus": 1
+    }
+  }
 }

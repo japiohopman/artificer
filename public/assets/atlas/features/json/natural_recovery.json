@@ -18,6 +18,12 @@
     "For example, when you are a 4th-level druid, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level slot or two 1st-level slots."
   ],
   "url": "public/assets/atlas/features/json/natural_recovery.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/natural_recovery.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/natural_recovery.webp",
+  "feature_specific": {
+    "usage": {
+      "times": 1,
+      "type": "long_rest"
+    }
+  }
 }

@@ -17,6 +17,11 @@
     "Starting at 9th level, if you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn."
   ],
   "url": "public/assets/atlas/features/json/magical_ambush.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/images/magical_ambush.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/magical_ambush.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "disadvantage_on_saves_against_spells_when_hidden": true
+    }
+  }
 }

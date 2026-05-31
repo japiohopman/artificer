@@ -18,6 +18,9 @@
     " If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours."
   ],
   "url": "public/assets/atlas/features/json/intimidating_presence.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/intimidating_presence.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/intimidating_presence.webp",
+  "feature_specific": {
+    "special_action": "action"
+  }
 }

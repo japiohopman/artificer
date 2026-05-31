@@ -14,9 +14,15 @@
   "parent": {
     "index": "fighter_fighting_style",
     "name": "fighting style",
-    "url": "public/assets/atlas/features/json/fighter_fighting_style.json"
+    "url": "public/assets/atlas/features/fighter_fighting_style.json"
   },
   "url": "public/assets/atlas/features/json/fighter_fighting_style_great_weapon_fighting.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/fighter_fighting_style_great_weapon_fighting.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/fighter_fighting_style_great_weapon_fighting.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "reroll_damage_die_on_1_or_2": true,
+      "weapon_type": "heavy_or_two_handed"
+    }
+  }
 }

@@ -14,9 +14,15 @@
   "parent": {
     "index": "fighter_fighting_style",
     "name": "fighting style",
-    "url": "public/assets/atlas/features/json/fighter_fighting_style.json"
+    "url": "public/assets/atlas/features/fighter_fighting_style.json"
   },
   "url": "public/assets/atlas/features/json/fighter_fighting_style_dueling.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/fighter_fighting_style_dueling.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/fighter_fighting_style_dueling.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "damage_bonus": 2,
+      "condition": "single_one_handed_melee_weapon"
+    }
+  }
 }

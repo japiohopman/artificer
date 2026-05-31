@@ -12,6 +12,11 @@
     "Starting at 2nd level, you can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus."
   ],
   "url": "public/assets/atlas/features/json/jack_of_all_trades.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/jack_of_all_trades.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/jack_of_all_trades.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "half_proficiency_bonus_to_all_ability_checks": true
+    }
+  }
 }

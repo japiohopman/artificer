@@ -12,6 +12,11 @@
     "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total."
   ],
   "url": "public/assets/atlas/features/json/indomitable_might.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/indomitable_might.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/indomitable_might.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "minimum_strength_check_roll": "strength_score"
+    }
+  }
 }

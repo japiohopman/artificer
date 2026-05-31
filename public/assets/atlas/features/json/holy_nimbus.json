@@ -19,6 +19,10 @@
     "In addition, for the duration, you have advantage on saving throws against spells cast by fiends or undead."
   ],
   "url": "public/assets/atlas/features/json/holy_nimbus.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/holy_nimbus.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/holy_nimbus.webp",
+  "feature_specific": {
+    "special_action": "action",
+    "duration": "1 minute"
+  }
 }

@@ -15,6 +15,11 @@
     "This feature has no effect on undead and constructs."
   ],
   "url": "public/assets/atlas/features/json/lay_on_hands.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/lay_on_hands.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/lay_on_hands.webp",
+  "feature_specific": {
+    "healing": {
+      "pool": "5 * paladin_level"
+    }
+  }
 }
