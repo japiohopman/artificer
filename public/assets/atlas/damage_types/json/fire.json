@@ -5,8 +5,20 @@
     "Red dragons breathe fire, and many spells conjure flames to deal fire damage."
   ],
   "url": "public/assets/atlas/damage_types/json/fire.json",
-  "updated_at": "2025-10-24T20:42:12.729Z",
+  "updated_at": "2026-04-25T20:00:00.000Z",
   "image": "public/assets/atlas/damage_types/images/fire.webp",
+  "damage_modifiers": {
+    "vulnerable_multiplier": 2.0,
+    "resistant_multiplier": 0.5,
+    "immune_multiplier": 0.0
+  },
+  "default_interactions": [
+    {
+      "target_tag": "flammable",
+      "effect": "ignite",
+      "chance": 0.5
+    }
+  ],
   "damage_specific": {
     "associated_gemstone": {
       "index": "garnet",

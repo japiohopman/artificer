@@ -1,0 +1,21 @@
+# Enemies Data Summary
+This directory contains creature and monster data.
+
+## Resistance & Vulnerability Logic
+- Enemies should define their interaction with damage types using:
+  - `damage_vulnerabilities`: Array of damage type indices (e.g., ["radiant"]).
+  - `damage_resistances`: Array of damage type indices (e.g., ["fire", "cold"]).
+  - `damage_immunities`: Array of damage type indices (e.g., ["poison"]).
+- The engine uses the multipliers defined in the damage type's JSON (e.g., 2.0 for vulnerability) to calculate final damage.
+
+## Target Tags
+- To enable `default_interactions` from damage types, enemies should include a `tags` array:
+  ```json
+  "tags": ["flammable", "living", "soft_armor"]
+  ```
+- These tags allow the engine to apply effects like "ignite" or "armor_penetration" automatically based on the damage type's rules.
+
+## Standards
+- JSON files are located in the `json/` subdirectory.
+- Images are located in the `images/` or root of this directory as `.webp`.
+- URLs must include the `public/` prefix.

@@ -5,8 +5,20 @@
     "Venomous stings and the toxic gas of a green dragon's breath deal poison damage."
   ],
   "url": "public/assets/atlas/damage_types/json/poison.json",
-  "updated_at": "2025-10-24T20:42:12.729Z",
+  "updated_at": "2026-04-25T20:00:00.000Z",
   "image": "public/assets/atlas/damage_types/images/poison.webp",
+  "damage_modifiers": {
+    "vulnerable_multiplier": 2.0,
+    "resistant_multiplier": 0.5,
+    "immune_multiplier": 0.0
+  },
+  "default_interactions": [
+    {
+      "target_tag": "living",
+      "effect": "poisoned",
+      "chance": 0.25
+    }
+  ],
   "damage_specific": {
     "associated_gemstone": {
       "index": "amethyst",
