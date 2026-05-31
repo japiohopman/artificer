@@ -4,7 +4,10 @@
   "desc": [
     "Monks gain several benefits while unarmed or wielding only monk weapons while they aren't wearing armor or wielding shields."
   ],
+  "property_specific": {
+    "monk_weapon": true
+  },
   "url": "public/assets/atlas/weapon_properties/json/monk.json",
-  "updated_at": "2025-10-24T20:42:15.048Z",
-  "image": "public/assets/atlas/weapon_properties/monk.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/weapon_properties/images/monk.webp"
 }

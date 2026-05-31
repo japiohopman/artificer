@@ -4,7 +4,10 @@
   "desc": [
     "This weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for opportunity attacks with it."
   ],
+  "property_specific": {
+    "reach_bonus": 5
+  },
   "url": "public/assets/atlas/weapon_properties/json/reach.json",
-  "updated_at": "2025-10-24T20:42:15.048Z",
-  "image": "public/assets/atlas/weapon_properties/reach.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/weapon_properties/images/reach.webp"
 }

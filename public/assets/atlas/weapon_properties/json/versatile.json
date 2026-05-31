@@ -4,7 +4,10 @@
   "desc": [
     "This weapon can be used with one or two hands. A damage value in parentheses appears with the property--the damage when the weapon is used with two hands to make a melee attack."
   ],
+  "property_specific": {
+    "versatile_damage": true
+  },
   "url": "public/assets/atlas/weapon_properties/json/versatile.json",
-  "updated_at": "2025-10-24T20:42:15.048Z",
-  "image": "public/assets/atlas/weapon_properties/versatile.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/weapon_properties/images/versatile.webp"
 }

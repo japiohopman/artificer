@@ -4,7 +4,10 @@
   "desc": [
     "A weapon with the special property has unusual rules governing its use, explained in the weapon's description (see \"Special Weapons\" later in this section)."
   ],
+  "property_specific": {
+    "custom_logic": true
+  },
   "url": "public/assets/atlas/weapon_properties/json/special.json",
-  "updated_at": "2025-10-24T20:42:15.048Z",
-  "image": "public/assets/atlas/weapon_properties/special.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/weapon_properties/images/special.webp"
 }
