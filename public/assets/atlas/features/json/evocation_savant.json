@@ -12,11 +12,12 @@
     "Beginning when you select this school at 2nd level, the gold and time you must spend to copy an evocation spell into your spellbook is halved."
   ],
   "url": "public/assets/atlas/features/json/evocation_savant.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "image": "public/assets/atlas/features/images/evocation_savant.webp",
   "magic_school": {
     "index": "evocation",
     "name": "evocation",
     "url": "public/assets/atlas/magic_schools/json/evocation.json"
-  }
+  },
+  "feature_specific": {}
 }

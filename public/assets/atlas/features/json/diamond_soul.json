@@ -13,6 +13,11 @@
     "Additionally, whenever you make a saving throw and fail, you can spend 1 ki point to reroll it and take the second result."
   ],
   "url": "public/assets/atlas/features/json/diamond_soul.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/diamond_soul.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/diamond_soul.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "saving_throws_proficiency": true
+    }
+  }
 }

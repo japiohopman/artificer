@@ -14,7 +14,7 @@
     },
     {
       "type": "feature",
-      "feature": "public/assets/atlas/features/json/pact-of-the-blade.json"
+      "feature": "public/assets/atlas/features/pact-of-the-blade.json"
     }
   ],
   "desc": [
@@ -23,9 +23,15 @@
   "parent": {
     "index": "eldritch_invocations",
     "name": "eldritch invocations",
-    "url": "public/assets/atlas/features/json/eldritch_invocations.json"
+    "url": "public/assets/atlas/features/eldritch_invocations.json"
   },
   "url": "public/assets/atlas/features/json/eldritch_invocation_thirsting_blade.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/images/eldritch_invocation_thirsting_blade.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/eldritch_invocation_thirsting_blade.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "extra_attacks": 1,
+      "condition": "pact_weapon"
+    }
+  }
 }

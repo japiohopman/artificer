@@ -14,9 +14,14 @@
   "parent": {
     "index": "eldritch_invocations",
     "name": "eldritch invocations",
-    "url": "public/assets/atlas/features/json/eldritch_invocations.json"
+    "url": "public/assets/atlas/features/eldritch_invocations.json"
   },
   "url": "public/assets/atlas/features/json/eldritch_invocation_armor_of_shadows.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/images/eldritch_invocation_armor_of_shadows.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/eldritch_invocation_armor_of_shadows.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "ac_set": "13 + dexterity_modifier"
+    }
+  }
 }

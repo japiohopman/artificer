@@ -12,11 +12,12 @@
     "Beginning at 10th level, you can add your Intelligence modifier to one damage roll of any wizard evocation spell you cast."
   ],
   "url": "public/assets/atlas/features/json/empowered_evocation.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "image": "public/assets/atlas/features/images/empowered_evocation.webp",
   "magic_school": {
     "index": "evocation",
     "name": "evocation",
     "url": "public/assets/atlas/magic_schools/json/evocation.json"
-  }
+  },
+  "feature_specific": {}
 }

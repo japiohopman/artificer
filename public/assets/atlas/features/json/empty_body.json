@@ -13,6 +13,12 @@
     "Additionally, you can spend 8 ki points to cast the astral projection spell, without needing material components. When you do so, you can't take any other creatures with you."
   ],
   "url": "public/assets/atlas/features/json/empty_body.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/empty_body.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/empty_body.webp",
+  "feature_specific": {
+    "special_action": "action",
+    "cost": {
+      "ki": 4
+    }
+  }
 }

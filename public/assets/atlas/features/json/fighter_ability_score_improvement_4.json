@@ -12,6 +12,67 @@
     "When you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
   ],
   "url": "public/assets/atlas/features/json/fighter_ability_score_improvement_4.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/fighter_ability_score_improvement_4.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/fighter_ability_score_improvement_4.webp",
+  "feature_specific": {
+    "choice": [
+      {
+        "choose": 1,
+        "type": "ability_score",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "strength",
+                "name": "strength",
+                "url": "public/assets/atlas/ability_scores/json/strength.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "dexterity",
+                "name": "dexterity",
+                "url": "public/assets/atlas/ability_scores/json/dexterity.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "constitution",
+                "name": "constitution",
+                "url": "public/assets/atlas/ability_scores/json/constitution.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "intelligence",
+                "name": "intelligence",
+                "url": "public/assets/atlas/ability_scores/json/intelligence.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "wisdom",
+                "name": "wisdom",
+                "url": "public/assets/atlas/ability_scores/json/wisdom.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "charisma",
+                "name": "charisma",
+                "url": "public/assets/atlas/ability_scores/json/charisma.json"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }

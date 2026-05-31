@@ -13,6 +13,12 @@
     "You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses."
   ],
   "url": "public/assets/atlas/features/json/divine_sense.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/divine_sense.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/divine_sense.webp",
+  "feature_specific": {
+    "usage": {
+      "times": "1 + charisma_modifier",
+      "type": "long_rest"
+    }
+  }
 }

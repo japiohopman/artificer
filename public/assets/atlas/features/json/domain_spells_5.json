@@ -13,6 +13,11 @@
     "If you have a domain spell that doesn't appear on the cleric spell list, the spell is nonetheless a cleric spell for you."
   ],
   "url": "public/assets/atlas/features/json/domain_spells_5.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/domain_spells_5.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/domain_spells_5.webp",
+  "feature_specific": {
+    "subfeature_options": {
+      "type": "spell"
+    }
+  }
 }

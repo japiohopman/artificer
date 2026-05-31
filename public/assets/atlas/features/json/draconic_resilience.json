@@ -18,6 +18,12 @@
     "Additionally, parts of your skin are covered by a thin sheen of dragon-like scales. When you aren't wearing armor, your AC equals 13 + your Dexterity modifier."
   ],
   "url": "public/assets/atlas/features/json/draconic_resilience.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/images/draconic_resilience.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/draconic_resilience.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "hp_bonus_per_level": 1,
+      "ac_set": "13 + dexterity_modifier"
+    }
+  }
 }
