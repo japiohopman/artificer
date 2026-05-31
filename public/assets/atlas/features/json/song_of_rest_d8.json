@@ -13,6 +13,12 @@
     "The extra hit points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level."
   ],
   "url": "public/assets/atlas/features/json/song_of_rest_d8.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/song_of_rest_d8.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/song_of_rest_d8.webp",
+  "feature_specific": {
+    "healing": {
+      "dice": "1d8",
+      "condition": "short_rest"
+    }
+  }
 }

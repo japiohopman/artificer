@@ -13,6 +13,13 @@
   ],
   "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
   "url": "public/assets/atlas/features/json/spellcasting_druid.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/spellcasting_druid.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/spellcasting_druid.webp",
+  "feature_specific": {
+    "spellcasting_ability": {
+      "index": "wisdom",
+      "name": "wisdom",
+      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
+    }
+  }
 }

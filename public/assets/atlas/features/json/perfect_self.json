@@ -12,6 +12,12 @@
     "At 20th level, when you roll for initiative and have no ki points remaining, you regain 4 ki points."
   ],
   "url": "public/assets/atlas/features/json/perfect_self.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/perfect_self.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/perfect_self.webp",
+  "feature_specific": {
+    "on_initiative": {
+      "regain_ki": 4,
+      "condition": "zero_ki"
+    }
+  }
 }

@@ -13,6 +13,13 @@
     "Tools Required. You produce your artificer spell effects through your tools. You must have a spellcasting focus \u2014 specifically thieves' tools or some kind of artisan's tool \u2014 in hand when you cast any spell with this spellcasting feature. You must be proficient with the tool to use it in this way. After you gain the Infuse Item feature at 2nd level, you can also use any item you've infused as a spellcasting focus."
   ],
   "url": "public/assets/atlas/features/json/spellcasting_artificer.json",
-  "updated_at": "2025-05-22T12:00:00.000Z",
-  "image": "public/assets/atlas/features/images/spellcasting_artificer.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/spellcasting_artificer.webp",
+  "feature_specific": {
+    "spellcasting_ability": {
+      "index": "intelligence",
+      "name": "intelligence",
+      "url": "public/assets/atlas/ability_scores/json/intelligence.json"
+    }
+  }
 }

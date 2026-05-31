@@ -18,5 +18,11 @@
   ],
   "url": "public/assets/atlas/features/json/relentless.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
-  "image": "public/assets/atlas/features/images/relentless.webp"
+  "image": "public/assets/atlas/features/images/relentless.webp",
+  "feature_specific": {
+    "on_initiative": {
+      "regain_superiority_dice": 1,
+      "condition": "zero_dice"
+    }
+  }
 }

@@ -25,5 +25,12 @@
   ],
   "url": "public/assets/atlas/features/json/spellcasting_eldritch_knight.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
-  "image": "public/assets/atlas/features/images/spellcasting_eldritch_knight.webp"
+  "image": "public/assets/atlas/features/images/spellcasting_eldritch_knight.webp",
+  "feature_specific": {
+    "spellcasting_ability": {
+      "index": "intelligence",
+      "name": "intelligence",
+      "url": "public/assets/atlas/ability_scores/json/intelligence.json"
+    }
+  }
 }

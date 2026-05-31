@@ -18,5 +18,11 @@
   ],
   "url": "public/assets/atlas/features/json/remarkable_athlete.json",
   "updated_at": "2024-06-19T00:00:00.000Z",
-  "image": "public/assets/atlas/features/images/remarkable_athlete.webp"
+  "image": "public/assets/atlas/features/images/remarkable_athlete.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "initiative_bonus": "half_proficiency_bonus",
+      "jump_distance_bonus": "strength_modifier"
+    }
+  }
 }

@@ -12,6 +12,11 @@
     "Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it."
   ],
   "url": "public/assets/atlas/features/json/persistent_rage.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/persistent_rage.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/persistent_rage.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "rage_ends_only_if_unconscious_or_voluntary": true
+    }
+  }
 }

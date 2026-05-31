@@ -13,6 +13,13 @@
   ],
   "reference": "public/assets/atlas/class/json/bard/spellcasting.json",
   "url": "public/assets/atlas/features/json/spellcasting_bard.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/spellcasting_bard.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/spellcasting_bard.webp",
+  "feature_specific": {
+    "spellcasting_ability": {
+      "index": "charisma",
+      "name": "charisma",
+      "url": "public/assets/atlas/ability_scores/json/charisma.json"
+    }
+  }
 }

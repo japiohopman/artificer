@@ -12,6 +12,10 @@
     "Beginning at 4th level, you can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your monk level."
   ],
   "url": "public/assets/atlas/features/json/slow_fall.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/slow_fall.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/slow_fall.webp",
+  "feature_specific": {
+    "special_action": "reaction",
+    "damage_reduction": "5 * monk_level"
+  }
 }

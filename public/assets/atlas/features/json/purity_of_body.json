@@ -12,6 +12,14 @@
     "At 10th level, your mastery of the ki flowing through you makes you immune to disease and poison."
   ],
   "url": "public/assets/atlas/features/json/purity_of_body.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/purity_of_body.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/purity_of_body.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "immunity": [
+        "poison",
+        "disease"
+      ]
+    }
+  }
 }

@@ -13,6 +13,12 @@
     "Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10."
   ],
   "url": "public/assets/atlas/features/json/relentless_rage.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/relentless_rage.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/relentless_rage.webp",
+  "feature_specific": {
+    "on_zero_hp": {
+      "saving_throw": "constitution",
+      "dc": 10
+    }
+  }
 }

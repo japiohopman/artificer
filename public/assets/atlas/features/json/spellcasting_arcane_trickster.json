@@ -22,6 +22,13 @@
     "Spellcasting Ability. Intelligence is your spellcasting ability for your wizard spells, since you learn them through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one."
   ],
   "url": "public/assets/atlas/features/json/spellcasting_arcane_trickster.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/images/spellcasting_arcane_trickster.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/spellcasting_arcane_trickster.webp",
+  "feature_specific": {
+    "spellcasting_ability": {
+      "index": "intelligence",
+      "name": "intelligence",
+      "url": "public/assets/atlas/ability_scores/json/intelligence.json"
+    }
+  }
 }

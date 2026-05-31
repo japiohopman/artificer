@@ -18,6 +18,12 @@
     "You can have only one creature under the effect of this feature at a time. You can choose to end the vibrations harmlessly without using an action."
   ],
   "url": "public/assets/atlas/features/json/quivering_palm.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "public/assets/atlas/features/images/quivering_palm.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/quivering_palm.webp",
+  "feature_specific": {
+    "special_action": "action",
+    "cost": {
+      "ki": 3
+    }
+  }
 }

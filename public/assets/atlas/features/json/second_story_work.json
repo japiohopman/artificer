@@ -18,6 +18,12 @@
     "In addition, when you make a running jump, the distance you cover increases by a number of feet equal to your Dexterity modifier."
   ],
   "url": "public/assets/atlas/features/json/second_story_work.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "public/assets/atlas/features/images/second_story_work.webp"
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "public/assets/atlas/features/images/second_story_work.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "climb_speed_set": "walking_speed",
+      "jump_distance_bonus": "dexterity_modifier"
+    }
+  }
 }
