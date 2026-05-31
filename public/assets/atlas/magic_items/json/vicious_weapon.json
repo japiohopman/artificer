@@ -15,6 +15,25 @@
     "Weapon (any), rare",
     "When you roll a 20 on your attack roll with this magic weapon, your critical hit deals an extra 2d6 damage of the weapon's type."
   ],
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "public/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "secondary_effects": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "slashing",
+        "name": "slashing",
+        "url": "public/assets/atlas/damage_types/json/slashing.json"
+      },
+      "condition": "on critical hit"
+    }
+  ],
   "feature_specific": {
     "extra_damage": "2d6",
     "crit_threshold": 20

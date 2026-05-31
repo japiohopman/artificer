@@ -15,6 +15,14 @@
     "***Luck.*** If the sword is on your person, you can call on its luck (no action required) to reroll one attack roll, ability check, or saving throw you dislike. You must use the second roll. This property can't be used again until the next dawn.",
     "***Wish.*** The sword has 1d4 - 1 charges. While holding it, you can use an action to expend 1 charge and cast the wish spell from it. This property can't be used again until the next dawn. The sword loses this property if it has no charges."
   ],
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "public/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
   "url": "public/assets/atlas/magic_items/json/luck_blade.json",
   "updated_at": "2026-05-03T19:30:49.833Z",
   "image": "public/assets/atlas/magic_items/luck_blade.webp",

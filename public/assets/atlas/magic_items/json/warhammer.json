@@ -20,7 +20,7 @@
     "damage_type": {
       "index": "bludgeoning",
       "name": "bludgeoning",
-      "url": "public/assets/atlas/damage_types/bludgeoning"
+      "url": "public/assets/atlas/damage_types/json/bludgeoning.json"
     }
   },
   "range": {
@@ -39,7 +39,7 @@
     "damage_type": {
       "index": "bludgeoning",
       "name": "bludgeoning",
-      "url": "public/assets/atlas/damage_types/bludgeoning"
+      "url": "public/assets/atlas/damage_types/json/bludgeoning.json"
     }
   },
   "url": "public/assets/atlas/equipment/json/warhammer.json",

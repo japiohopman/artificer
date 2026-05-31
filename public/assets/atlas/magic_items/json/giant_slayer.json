@@ -14,6 +14,27 @@
     "You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
     "When you hit a giant with it, the giant takes an extra 2d6 damage of the weapon's type and must succeed on a DC 15 Strength saving throw or fall prone. For the purpose of this weapon, \"giant\" refers to any creature with the giant type, including ettins and trolls."
   ],
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "public/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "secondary_effects": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "slashing",
+        "name": "slashing",
+        "url": "public/assets/atlas/damage_types/json/slashing.json"
+      },
+      "condition": "vs giants",
+      "dc": 15,
+      "saving_throw": "strength"
+    }
+  ],
   "url": "public/assets/atlas/magic_items/json/giant_slayer.json",
   "updated_at": "2026-05-03T19:26:05.054Z",
   "image": "public/assets/atlas/magic_items/giant_slayer.webp",

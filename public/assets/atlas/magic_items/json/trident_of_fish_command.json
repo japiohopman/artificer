@@ -13,6 +13,14 @@
     "Weapon (trident), uncommon (requires attunement)",
     "This trident is a magic weapon. It has 3 charges. While you carry it, you can use an action and expend 1 charge to cast dominate beast (save DC 15) from it on a beast that has an innate swimming speed. The trident regains 1d3 expended charges daily at dawn."
   ],
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "public/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
   "url": "public/assets/atlas/magic_items/json/trident_of_fish_command.json",
   "updated_at": "2026-05-27T06:33:48.874Z",
   "image": "public/assets/atlas/magic_items/trident_of_fish_command.webp",

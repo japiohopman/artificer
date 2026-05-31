@@ -13,6 +13,26 @@
     "Weapon (any sword), rare (requires attunement)",
     "When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain temporary hit points equal to the extra damage dealt."
   ],
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "public/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "secondary_effects": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "necrotic",
+        "name": "necrotic",
+        "url": "public/assets/atlas/damage_types/json/necrotic.json"
+      },
+      "condition": "on critical hit",
+      "effect": "gain temporary hit points"
+    }
+  ],
   "url": "public/assets/atlas/magic_items/json/sword_of_life_stealing.json",
   "updated_at": "2026-05-04T17:35:39.997Z",
   "image": "public/assets/atlas/magic_items/sword_of_life_stealing.webp",
