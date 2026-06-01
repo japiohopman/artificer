@@ -72,6 +72,19 @@
       "meta": {
         "createdAt": "2026-06-01T22:08:49.140Z"
       }
+    },
+    "lightning": {
+      "category": "sfx",
+      "loop": false,
+      "volume": 1,
+      "priority": 1,
+      "tags": [
+        "sfx"
+      ],
+      "file": "public/assets/sounds/sfx/lightning.wav",
+      "meta": {
+        "createdAt": "2026-06-01T22:53:36.447Z"
+      }
     }
   }
 }
