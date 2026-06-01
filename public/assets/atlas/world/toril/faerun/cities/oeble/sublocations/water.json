@@ -1,47 +1,20 @@
 {
   "category": "water",
-  "updatedAt": "2026-06-01T21:19:03.190Z",
+  "updatedAt": "2026-06-01T21:44:38.069Z",
   "location_id": "oeble",
   "sub_locations": [
     {
-      "id": "30",
-      "name": "Alandor River",
+      "id": "10",
+      "name": "River Scelptar",
       "categoryId": "water",
       "type": "marker",
       "position": [
-        482.22873611458,
-        797.5306957261
+        601.18373189862,
+        1043.1219578007
       ],
       "popup": {
-        "title": "Alandor River",
-        "description": "The location of [[Athkatla]] that occupied its shores. Its waters were rich with [[silverwink minnow]]s, [[brownscale]]s, and [[Alandor eel]]s.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "60",
-      "name": "Merchant's Bay",
-      "categoryId": "water",
-      "type": "marker",
-      "position": [
-        221.90736604,
-        787.89174559411
-      ],
-      "popup": {
-        "title": "Merchant's Bay",
-        "description": "",
+        "title": "River Scelptar",
+        "description": "The river that cut [[Oeble]] into southern and northern halves. The river  began in the [[Qurth Forest]] and flowed into the [[Shining Sea]].",
         "image": ""
       },
       "day": {
