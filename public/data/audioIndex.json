@@ -33,6 +33,19 @@
         "createdAt": "2026-05-26T03:51:54.707Z"
       },
       "file": "public/assets/sounds/sfx/sfx_level_up.wav"
+    },
+    "unselected_scene_light_rain_nigh": {
+      "category": "sfx",
+      "loop": false,
+      "volume": 1,
+      "priority": 1,
+      "tags": [
+        "sfx"
+      ],
+      "file": "public/assets/sounds/sfx/unselected_scene_light_rain_nigh.wav",
+      "meta": {
+        "createdAt": "2026-06-01T10:38:32.553Z"
+      }
     }
   }
 }
