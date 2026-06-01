@@ -357,7 +357,7 @@
                 "equipment_category": {
                   "index": "simple_weapons",
                   "name": "simple weapons",
-                  "url": "public/assets/atlas/equipment_categories/simple_weapons"
+                  "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
                 }
               }
             }
@@ -420,7 +420,7 @@
                 "equipment_category": {
                   "index": "musical_instruments",
                   "name": "musical instruments",
-                  "url": "public/assets/atlas/equipment_categories/musical_instruments"
+                  "url": "public/assets/atlas/equipment_categories/json/musical_instruments.json"
                 }
               }
             }
@@ -429,7 +429,7 @@
       }
     }
   ],
-  "class_levels": "public/assets/atlas/classes/bard/levels",
+  "class_levels": "public/assets/atlas/class/levels/bard.json",
   "multi_classing": {
     "prerequisites": [
       {
@@ -699,7 +699,7 @@
     {
       "index": "lore",
       "name": "lore",
-      "url": "public/assets/atlas/class/json/lore.json"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
   "spellcasting": {
@@ -754,8 +754,8 @@
       }
     ]
   },
-  "spells": "public/assets/atlas/classes/bard/spells",
+  "spells": "public/assets/atlas/spell/json/",
   "url": "public/assets/atlas/class/json/bard.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
-  "image": "public/assets/atlas/classes/bard.webp"
+  "image": "public/assets/atlas/class/wiki_image/bard.webp"
 }

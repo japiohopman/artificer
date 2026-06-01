@@ -235,7 +235,7 @@
                 "equipment_category": {
                   "index": "simple_weapons",
                   "name": "simple weapons",
-                  "url": "public/assets/atlas/equipment_categories/simple_weapons"
+                  "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
                 }
               }
             }
@@ -280,12 +280,12 @@
         "equipment_category": {
           "index": "holy_symbols",
           "name": "holy symbols",
-          "url": "public/assets/atlas/equipment_categories/holy_symbols"
+          "url": "public/assets/atlas/equipment_categories/json/holy_symbols.json"
         }
       }
     }
   ],
-  "class_levels": "public/assets/atlas/classes/cleric/levels",
+  "class_levels": "public/assets/atlas/class/levels/cleric.json",
   "multi_classing": {
     "prerequisites": [
       {
@@ -319,7 +319,7 @@
     {
       "index": "life",
       "name": "life",
-      "url": "public/assets/atlas/class/json/life.json"
+      "url": "public/assets/atlas/subclasses/json/life.json"
     }
   ],
   "spellcasting": {
@@ -367,8 +367,8 @@
       }
     ]
   },
-  "spells": "public/assets/atlas/classes/cleric/spells",
+  "spells": "public/assets/atlas/spell/json/",
   "url": "public/assets/atlas/class/json/cleric.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
-  "image": "public/assets/atlas/classes/cleric.webp"
+  "image": "public/assets/atlas/class/wiki_image/cleric.webp"
 }

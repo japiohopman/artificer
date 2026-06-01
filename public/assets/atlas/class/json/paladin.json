@@ -138,7 +138,7 @@
                     "equipment_category": {
                       "name": "martial weapons",
                       "index": "martial_weapons",
-                      "url": "public/assets/atlas/equipment_categories/martial_weapons"
+                      "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
                     }
                   }
                 }
@@ -165,7 +165,7 @@
                 "equipment_category": {
                   "index": "martial_weapons",
                   "name": "martial weapons",
-                  "url": "public/assets/atlas/equipment_categories/martial_weapons"
+                  "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
                 }
               }
             }
@@ -200,7 +200,7 @@
                 "equipment_category": {
                   "index": "simple_weapons",
                   "name": "simple weapons",
-                  "url": "public/assets/atlas/equipment_categories/simple_weapons"
+                  "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
                 }
               }
             }
@@ -245,12 +245,12 @@
         "equipment_category": {
           "index": "holy_symbols",
           "name": "holy symbols",
-          "url": "public/assets/atlas/equipment_categories/holy_symbols"
+          "url": "public/assets/atlas/equipment_categories/json/holy_symbols.json"
         }
       }
     }
   ],
-  "class_levels": "public/assets/atlas/classes/paladin/levels",
+  "class_levels": "public/assets/atlas/class/levels/paladin.json",
   "multi_classing": {
     "prerequisites": [
       {
@@ -302,7 +302,7 @@
     {
       "index": "devotion",
       "name": "devotion",
-      "url": "public/assets/atlas/class/json/devotion.json"
+      "url": "public/assets/atlas/subclasses/json/devotion.json"
     }
   ],
   "spellcasting": {
@@ -338,8 +338,8 @@
       }
     ]
   },
-  "spells": "public/assets/atlas/classes/paladin/spells",
+  "spells": "public/assets/atlas/spell/json/",
   "url": "public/assets/atlas/class/json/paladin.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
-  "image": "public/assets/atlas/classes/paladin.webp"
+  "image": "public/assets/atlas/class/wiki_image/paladin.webp"
 }

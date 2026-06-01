@@ -164,7 +164,7 @@
                 "equipment_category": {
                   "index": "simple_weapons",
                   "name": "simple weapons",
-                  "url": "public/assets/atlas/equipment_categories/simple_weapons"
+                  "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
                 }
               }
             }
@@ -199,7 +199,7 @@
                 "equipment_category": {
                   "index": "arcane_foci",
                   "name": "arcane foci",
-                  "url": "public/assets/atlas/equipment_categories/arcane_foci"
+                  "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
                 }
               }
             }
@@ -244,12 +244,12 @@
         "equipment_category": {
           "index": "simple_weapons",
           "name": "simple weapons",
-          "url": "public/assets/atlas/equipment_categories/simple_weapons"
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
         }
       }
     }
   ],
-  "class_levels": "public/assets/atlas/classes/warlock/levels",
+  "class_levels": "public/assets/atlas/class/levels/warlock.json",
   "multi_classing": {
     "prerequisites": [
       {
@@ -278,7 +278,7 @@
     {
       "index": "fiend",
       "name": "fiend",
-      "url": "public/assets/atlas/class/json/fiend.json"
+      "url": "public/assets/atlas/subclasses/json/fiend.json"
     }
   ],
   "spellcasting": {
@@ -327,8 +327,8 @@
       }
     ]
   },
-  "spells": "public/assets/atlas/classes/warlock/spells",
+  "spells": "public/assets/atlas/spell/json/",
   "url": "public/assets/atlas/class/json/warlock.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
-  "image": "public/assets/atlas/classes/warlock.webp"
+  "image": "public/assets/atlas/class/wiki_image/warlock.webp"
 }

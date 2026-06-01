@@ -218,7 +218,7 @@
                 "equipment_category": {
                   "index": "simple_weapons",
                   "name": "simple weapons",
-                  "url": "public/assets/atlas/equipment_categories/simple_weapons"
+                  "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
                 }
               }
             }
@@ -253,7 +253,7 @@
                 "equipment_category": {
                   "index": "simple_melee_weapons",
                   "name": "simple melee weapons",
-                  "url": "public/assets/atlas/equipment_categories/simple_melee_weapons"
+                  "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
                 }
               }
             }
@@ -270,12 +270,12 @@
         "equipment_category": {
           "index": "druidic_foci",
           "name": "druidic foci",
-          "url": "public/assets/atlas/equipment_categories/druidic_foci"
+          "url": "public/assets/atlas/equipment_categories/json/druidic_foci.json"
         }
       }
     }
   ],
-  "class_levels": "public/assets/atlas/classes/druid/levels",
+  "class_levels": "public/assets/atlas/class/levels/druid.json",
   "multi_classing": {
     "prerequisites": [
       {
@@ -309,7 +309,7 @@
     {
       "index": "land",
       "name": "land",
-      "url": "public/assets/atlas/class/json/land.json"
+      "url": "public/assets/atlas/subclasses/json/land.json"
     }
   ],
   "spellcasting": {
@@ -357,8 +357,8 @@
       }
     ]
   },
-  "spells": "public/assets/atlas/classes/druid/spells",
+  "spells": "public/assets/atlas/spell/json/",
   "url": "public/assets/atlas/class/json/druid.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
-  "image": "public/assets/atlas/classes/druid.webp"
+  "image": "public/assets/atlas/class/wiki_image/druid.webp"
 }

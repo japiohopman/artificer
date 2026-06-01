@@ -201,7 +201,7 @@
                 "equipment_category": {
                   "index": "simple_melee_weapons",
                   "name": "simple melee weapons",
-                  "url": "public/assets/atlas/equipment_categories/simple_melee_weapons"
+                  "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
                 }
               }
             }
@@ -238,7 +238,7 @@
       }
     }
   ],
-  "class_levels": "public/assets/atlas/classes/ranger/levels",
+  "class_levels": "public/assets/atlas/class/levels/ranger.json",
   "multi_classing": {
     "prerequisites": [
       {
@@ -365,7 +365,7 @@
     {
       "index": "hunter",
       "name": "hunter",
-      "url": "public/assets/atlas/class/json/hunter.json"
+      "url": "public/assets/atlas/subclasses/json/hunter.json"
     }
   ],
   "spellcasting": {
@@ -401,8 +401,8 @@
       }
     ]
   },
-  "spells": "public/assets/atlas/classes/ranger/spells",
+  "spells": "public/assets/atlas/spell/json/",
   "url": "public/assets/atlas/class/json/ranger.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
-  "image": "public/assets/atlas/classes/ranger.webp"
+  "image": "public/assets/atlas/class/wiki_image/ranger.webp"
 }

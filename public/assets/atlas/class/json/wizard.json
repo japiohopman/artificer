@@ -177,7 +177,7 @@
                 "equipment_category": {
                   "index": "arcane_foci",
                   "name": "arcane foci",
-                  "url": "public/assets/atlas/equipment_categories/arcane_foci"
+                  "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
                 }
               }
             }
@@ -214,7 +214,7 @@
       }
     }
   ],
-  "class_levels": "public/assets/atlas/classes/wizard/levels",
+  "class_levels": "public/assets/atlas/class/levels/wizard.json",
   "multi_classing": {
     "prerequisites": [
       {
@@ -232,7 +232,7 @@
     {
       "index": "evocation",
       "name": "evocation",
-      "url": "public/assets/atlas/class/json/evocation.json"
+      "url": "public/assets/atlas/subclasses/json/evocation.json"
     }
   ],
   "spellcasting": {
@@ -286,8 +286,8 @@
       }
     ]
   },
-  "spells": "public/assets/atlas/classes/wizard/spells",
+  "spells": "public/assets/atlas/spell/json/",
   "url": "public/assets/atlas/class/json/wizard.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
-  "image": "public/assets/atlas/classes/wizard.webp"
+  "image": "public/assets/atlas/class/wiki_image/wizard.webp"
 }
