@@ -1,0 +1,17 @@
+{
+  "categoryId": "roads_trails",
+  "position": [
+    3692.75,
+    2644.5
+  ],
+  "popup": {
+    "title": "Ferry Route",
+    "description": "A ferry route across the [[River Mulsantir]], part of the [[Golden Way]].",
+    "link": {
+      "url": "public/assets/atlas/world/toril/faerun/roads_trails/ferry_route/ferry_route.json",
+      "label": "Ferry Route"
+    },
+    "image": "public/assets/atlas/world/toril/faerun/roads_trails/ferry_route/ferry_route.webp"
+  },
+  "id": "ferry_route"
+}
