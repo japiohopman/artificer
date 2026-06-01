@@ -1,15 +1,18 @@
 {
   "index": "poisoners_kit",
-  "type": "Other",
+  "type": "other",
   "name": "poisoner's kit",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/poisoners_kit.json",
   "reference": {
     "index": "poisoners_kit",
     "name": "poisoner's kit",
-    "url": "public/assets/atlas/equipment/poisoners_kit"
+    "url": "public/assets/atlas/equipment/json/poisoners_kit.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/poisoners_kit.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/poisoners_kit.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

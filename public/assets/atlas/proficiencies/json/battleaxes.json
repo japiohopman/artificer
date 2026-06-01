@@ -1,21 +1,18 @@
 {
   "index": "battleaxes",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "battleaxes",
   "classes": [],
-  "races": [
-    {
-      "index": "dwarf",
-      "name": "dwarf",
-      "url": "public/assets/atlas/races/dwarf"
-    }
-  ],
   "url": "public/assets/atlas/proficiencies/json/battleaxes.json",
   "reference": {
     "index": "battleaxe",
     "name": "battleaxe",
-    "url": "public/assets/atlas/equipment/battleaxe"
+    "url": "public/assets/atlas/equipment/json/battleaxe.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/battleaxes.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/battleaxes.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

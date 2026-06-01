@@ -1,15 +1,18 @@
 {
   "index": "chain_shirt",
-  "type": "Armor",
+  "type": "armor",
   "name": "chain shirt",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/charismain_shirt.json",
   "reference": {
     "index": "chain_shirt",
     "name": "chain shirt",
-    "url": "public/assets/atlas/equipment/charismain_shirt"
+    "url": "public/assets/atlas/equipment/json/charismain_shirt.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/charismain_shirt.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/charismain_shirt.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

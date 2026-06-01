@@ -1,32 +1,29 @@
 {
   "index": "longswords",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "longswords",
   "classes": [
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "rogue",
       "name": "rogue",
-      "url": "public/assets/atlas/classes/rogue"
-    }
-  ],
-  "races": [
-    {
-      "index": "high_elf",
-      "name": "high elf",
-      "url": "public/assets/atlas/subraces/high_elf"
+      "url": "public/assets/atlas/class/json/rogue.json"
     }
   ],
   "url": "public/assets/atlas/proficiencies/json/longswords.json",
   "reference": {
     "index": "longsword",
     "name": "longsword",
-    "url": "public/assets/atlas/equipment/longsword"
+    "url": "public/assets/atlas/equipment/json/longsword.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/longswords.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/longswords.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

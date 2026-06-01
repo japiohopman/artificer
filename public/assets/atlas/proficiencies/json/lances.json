@@ -1,15 +1,18 @@
 {
   "index": "lances",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "lances",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/lances.json",
   "reference": {
     "index": "lance",
     "name": "lance",
-    "url": "public/assets/atlas/equipment/lance"
+    "url": "public/assets/atlas/equipment/json/lance.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/lances.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/lances.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

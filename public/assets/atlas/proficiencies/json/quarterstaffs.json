@@ -1,31 +1,34 @@
 {
   "index": "quarterstaffs",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "quarterstaffs",
   "classes": [
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     },
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/quarterstaffs.json",
   "reference": {
     "index": "quarterstaff",
     "name": "quarterstaff",
-    "url": "public/assets/atlas/equipment/quarterstaff"
+    "url": "public/assets/atlas/equipment/json/quarterstaff.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/quarterstaffs.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/quarterstaffs.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

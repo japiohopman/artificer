@@ -1,15 +1,18 @@
 {
   "index": "lyre",
-  "type": "Musical Instruments",
+  "type": "musical_instruments",
   "name": "lyre",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/lyre.json",
   "reference": {
     "index": "lyre",
     "name": "lyre",
-    "url": "public/assets/atlas/equipment/lyre"
+    "url": "public/assets/atlas/equipment/json/lyre.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/lyre.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/lyre.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/proficiency.schema.json",
+  "title": "Proficiency",
+  "description": "A proficiency in the game atlas.",
+  "type": "object",
+  "required": [
+    "index",
+    "type",
+    "name",
+    "classes",
+    "species",
+    "url",
+    "reference",
+    "proficiency_specific",
+    "updated_at",
+    "image"
+  ],
+  "properties": {
+    "index": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "armor",
+        "artisans_tools",
+        "gaming_sets",
+        "musical_instruments",
+        "other",
+        "saving_throws",
+        "skills",
+        "vehicles",
+        "weapons"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "classes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "string" },
+          "name": { "type": "string" },
+          "url": { "type": "string", "pattern": "^public/assets/atlas/class/json/.+\\.json$" }
+        },
+        "required": ["index", "name", "url"]
+      }
+    },
+    "species": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "string" },
+          "name": { "type": "string" },
+          "url": { "type": "string", "pattern": "^public/assets/atlas/(species|subraces)/json/.+\\.json$" }
+        },
+        "required": ["index", "name", "url"]
+      }
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^public/assets/atlas/proficiencies/json/.+\\.json$"
+    },
+    "reference": {
+      "type": "object",
+      "properties": {
+        "index": { "type": "string" },
+        "name": { "type": "string" },
+        "url": { "type": "string", "pattern": "^public/assets/atlas/.+/json/.+\\.json$" }
+      },
+      "required": ["index", "name", "url"]
+    },
+    "proficiency_specific": {
+      "type": "object",
+      "properties": {
+        "reference_category": {
+          "type": "string",
+          "enum": ["skills", "ability_scores", "equipment", "equipment_categories"]
+        }
+      },
+      "required": ["reference_category"]
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "image": {
+      "type": "string",
+      "pattern": "^public/assets/atlas/proficiencies/.+\\.webp$"
+    }
+  }
+}

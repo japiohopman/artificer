@@ -1,15 +1,18 @@
 {
   "index": "dice_set",
-  "type": "Gaming Sets",
+  "type": "gaming_sets",
   "name": "dice set",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/dice_set.json",
   "reference": {
     "index": "dice_set",
     "name": "dice set",
-    "url": "public/assets/atlas/equipment/dice_set"
+    "url": "public/assets/atlas/equipment/json/dice_set.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/dice_set.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/dice_set.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

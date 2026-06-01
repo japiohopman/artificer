@@ -1,15 +1,18 @@
 {
   "index": "navigators_tools",
-  "type": "Other",
+  "type": "other",
   "name": "navigator's tools",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/navigators_tools.json",
   "reference": {
     "index": "navigators_tools",
     "name": "navigator's tools",
-    "url": "public/assets/atlas/equipment/navigators_tools"
+    "url": "public/assets/atlas/equipment/json/navigators_tools.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/navigators_tools.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/navigators_tools.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

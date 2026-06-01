@@ -1,15 +1,18 @@
 {
   "index": "chain_mail",
-  "type": "Armor",
+  "type": "armor",
   "name": "chain mail",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/charismain_mail.json",
   "reference": {
     "index": "chain_mail",
     "name": "chain mail",
-    "url": "public/assets/atlas/equipment/charismain_mail"
+    "url": "public/assets/atlas/equipment/json/charismain_mail.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/charismain_mail.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/charismain_mail.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

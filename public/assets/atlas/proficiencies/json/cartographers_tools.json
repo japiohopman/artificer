@@ -1,15 +1,18 @@
 {
   "index": "cartographers_tools",
-  "type": "Artisan's Tools",
+  "type": "artisans_tools",
   "name": "cartographer's tools",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/cartographers_tools.json",
   "reference": {
     "index": "cartographers_tools",
     "name": "cartographer's tools",
-    "url": "public/assets/atlas/equipment/cartographers_tools"
+    "url": "public/assets/atlas/equipment/json/cartographers_tools.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/cartographers_tools.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/cartographers_tools.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

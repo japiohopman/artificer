@@ -1,36 +1,39 @@
 {
   "index": "martial_weapons",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "martial weapons",
   "classes": [
     {
       "index": "barbarian",
       "name": "barbarian",
-      "url": "public/assets/atlas/classes/barbarian"
+      "url": "public/assets/atlas/class/json/barbarian.json"
     },
     {
       "index": "fighter",
       "name": "fighter",
-      "url": "public/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
     {
       "index": "paladin",
       "name": "paladin",
-      "url": "public/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
     {
       "index": "ranger",
       "name": "ranger",
-      "url": "public/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     }
   ],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/martial_weapons.json",
   "reference": {
     "index": "martial_weapons",
     "name": "martial weapons",
-    "url": "public/assets/atlas/equipment_categories/martial_weapons"
+    "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/martial_weapons.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/martial_weapons.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment_categories"
+  }
 }

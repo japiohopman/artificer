@@ -1,15 +1,18 @@
 {
   "index": "breastplate",
-  "type": "Armor",
+  "type": "armor",
   "name": "breastplate",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/breastplate.json",
   "reference": {
     "index": "breastplate",
     "name": "breastplate",
-    "url": "public/assets/atlas/equipment/breastplate"
+    "url": "public/assets/atlas/equipment/json/breastplate.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/breastplate.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/breastplate.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

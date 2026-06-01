@@ -1,15 +1,18 @@
 {
   "index": "lute",
-  "type": "Musical Instruments",
+  "type": "musical_instruments",
   "name": "lute",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/lute.json",
   "reference": {
     "index": "lute",
     "name": "lute",
-    "url": "public/assets/atlas/equipment/lute"
+    "url": "public/assets/atlas/equipment/json/lute.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/lute.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/lute.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

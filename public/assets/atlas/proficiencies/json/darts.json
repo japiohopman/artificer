@@ -1,31 +1,34 @@
 {
   "index": "darts",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "darts",
   "classes": [
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     },
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/darts.json",
   "reference": {
     "index": "dart",
     "name": "dart",
-    "url": "public/assets/atlas/equipment/dart"
+    "url": "public/assets/atlas/equipment/json/dart.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/darts.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/darts.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

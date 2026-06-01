@@ -1,15 +1,18 @@
 {
   "index": "pikes",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "pikes",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/pikes.json",
   "reference": {
     "index": "pike",
     "name": "pike",
-    "url": "public/assets/atlas/equipment/pike"
+    "url": "public/assets/atlas/equipment/json/pike.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/pikes.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/pikes.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

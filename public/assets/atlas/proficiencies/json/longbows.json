@@ -1,21 +1,18 @@
 {
   "index": "longbows",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "longbows",
   "classes": [],
-  "races": [
-    {
-      "index": "high_elf",
-      "name": "high elf",
-      "url": "public/assets/atlas/subraces/high_elf"
-    }
-  ],
   "url": "public/assets/atlas/proficiencies/json/longbows.json",
   "reference": {
     "index": "longbow",
     "name": "longbow",
-    "url": "public/assets/atlas/equipment/longbow"
+    "url": "public/assets/atlas/equipment/json/longbow.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/longbows.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/longbows.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

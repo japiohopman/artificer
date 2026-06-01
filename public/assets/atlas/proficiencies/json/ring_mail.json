@@ -1,15 +1,18 @@
 {
   "index": "ring_mail",
-  "type": "Armor",
+  "type": "armor",
   "name": "ring mail",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/ring_mail.json",
   "reference": {
     "index": "ring_mail",
     "name": "ring mail",
-    "url": "public/assets/atlas/equipment/ring_mail"
+    "url": "public/assets/atlas/equipment/json/ring_mail.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/ring_mail.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/ring_mail.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

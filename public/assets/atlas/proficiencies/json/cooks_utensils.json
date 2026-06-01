@@ -1,15 +1,18 @@
 {
   "index": "cooks_utensils",
-  "type": "Artisan's Tools",
+  "type": "artisans_tools",
   "name": "cook's utensils",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/cooks_utensils.json",
   "reference": {
     "index": "cooks_utensils",
     "name": "cook's utensils",
-    "url": "public/assets/atlas/equipment/cooks_utensils"
+    "url": "public/assets/atlas/equipment/json/cooks_utensils.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/cooks_utensils.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/cooks_utensils.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

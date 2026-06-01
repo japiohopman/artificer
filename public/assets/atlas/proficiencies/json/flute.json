@@ -1,15 +1,18 @@
 {
   "index": "flute",
-  "type": "Musical Instruments",
+  "type": "musical_instruments",
   "name": "flute",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/flute.json",
   "reference": {
     "index": "flute",
     "name": "flute",
-    "url": "public/assets/atlas/equipment/flute"
+    "url": "public/assets/atlas/equipment/json/flute.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/flute.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/flute.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

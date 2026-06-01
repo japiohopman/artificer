@@ -1,15 +1,18 @@
 {
   "index": "crossbows_heavy",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "crossbows, heavy",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/crossbows_heavy.json",
   "reference": {
     "index": "crossbow_heavy",
     "name": "crossbow, heavy",
-    "url": "public/assets/atlas/equipment/crossbow_heavy"
+    "url": "public/assets/atlas/equipment/json/crossbow_heavy.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/crossbows_heavy.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/crossbows_heavy.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

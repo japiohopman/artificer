@@ -1,36 +1,39 @@
 {
   "index": "medium_armor",
-  "type": "Armor",
+  "type": "armor",
   "name": "medium armor",
   "classes": [
     {
       "index": "barbarian",
       "name": "barbarian",
-      "url": "public/assets/atlas/classes/barbarian"
+      "url": "public/assets/atlas/class/json/barbarian.json"
     },
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     },
     {
       "index": "ranger",
       "name": "ranger",
-      "url": "public/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     }
   ],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/medium_armor.json",
   "reference": {
     "index": "medium_armor",
     "name": "medium armor",
-    "url": "public/assets/atlas/equipment_categories/medium_armor"
+    "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/medium_armor.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/medium_armor.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment_categories"
+  }
 }

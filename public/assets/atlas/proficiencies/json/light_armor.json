@@ -1,51 +1,54 @@
 {
   "index": "light_armor",
-  "type": "Armor",
+  "type": "armor",
   "name": "light armor",
   "classes": [
     {
       "index": "barbarian",
       "name": "barbarian",
-      "url": "public/assets/atlas/classes/barbarian"
+      "url": "public/assets/atlas/class/json/barbarian.json"
     },
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     },
     {
       "index": "ranger",
       "name": "ranger",
-      "url": "public/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
     {
       "index": "rogue",
       "name": "rogue",
-      "url": "public/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     }
   ],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/light_armor.json",
   "reference": {
     "index": "light_armor",
     "name": "light armor",
-    "url": "public/assets/atlas/equipment_categories/light_armor"
+    "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/light_armor.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/light_armor.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment_categories"
+  }
 }

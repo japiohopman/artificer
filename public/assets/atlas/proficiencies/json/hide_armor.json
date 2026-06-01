@@ -1,15 +1,18 @@
 {
   "index": "hide_armor",
-  "type": "Armor",
+  "type": "armor",
   "name": "hide armor",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/hide_armor.json",
   "reference": {
     "index": "hide_armor",
     "name": "hide armor",
-    "url": "public/assets/atlas/equipment/hide_armor"
+    "url": "public/assets/atlas/equipment/json/hide_armor.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/hide_armor.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/hide_armor.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

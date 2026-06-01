@@ -1,15 +1,18 @@
 {
   "index": "glaives",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "glaives",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/glaives.json",
   "reference": {
     "index": "glaive",
     "name": "glaive",
-    "url": "public/assets/atlas/equipment/glaive"
+    "url": "public/assets/atlas/equipment/json/glaive.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/glaives.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/glaives.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

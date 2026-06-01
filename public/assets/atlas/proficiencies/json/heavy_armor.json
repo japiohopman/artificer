@@ -1,15 +1,18 @@
 {
   "index": "heavy_armor",
-  "type": "Armor",
+  "type": "armor",
   "name": "heavy armor",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/heavy_armor.json",
   "reference": {
     "index": "heavy_armor",
     "name": "heavy armor",
-    "url": "public/assets/atlas/equipment_categories/heavy_armor"
+    "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/heavy_armor.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/heavy_armor.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment_categories"
+  }
 }

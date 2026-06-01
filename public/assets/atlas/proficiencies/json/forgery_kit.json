@@ -1,15 +1,18 @@
 {
   "index": "forgery_kit",
-  "type": "Artisan's Tools",
+  "type": "artisans_tools",
   "name": "forgery kit",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/forgery_kit.json",
   "reference": {
     "index": "forgery_kit",
     "name": "forgery kit",
-    "url": "public/assets/atlas/equipment/forgery_kit"
+    "url": "public/assets/atlas/equipment/json/forgery_kit.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/forgery_kit.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/forgery_kit.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

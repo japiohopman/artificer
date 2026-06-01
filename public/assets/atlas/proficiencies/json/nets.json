@@ -1,15 +1,18 @@
 {
   "index": "nets",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "nets",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/nets.json",
   "reference": {
     "index": "net",
     "name": "net",
-    "url": "public/assets/atlas/equipment/net"
+    "url": "public/assets/atlas/equipment/json/net.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/nets.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/nets.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

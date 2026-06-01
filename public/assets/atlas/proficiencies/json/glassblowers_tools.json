@@ -1,15 +1,18 @@
 {
   "index": "glassblowers_tools",
-  "type": "Artisan's Tools",
+  "type": "artisans_tools",
   "name": "glassblower's tools",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/glassblowers_tools.json",
   "reference": {
     "index": "glassblowers_tools",
     "name": "glassblower's tools",
-    "url": "public/assets/atlas/equipment/glassblowers_tools"
+    "url": "public/assets/atlas/equipment/json/glassblowers_tools.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/glassblowers_tools.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/glassblowers_tools.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

@@ -1,15 +1,18 @@
 {
   "index": "alchemists_supplies",
-  "type": "Artisan's Tools",
+  "type": "artisans_tools",
   "name": "alchemist's supplies",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/alchemists_supplies.json",
   "reference": {
     "index": "alchemists_supplies",
     "name": "alchemist's supplies",
-    "url": "public/assets/atlas/equipment/alchemists_supplies"
+    "url": "public/assets/atlas/equipment/json/alchemists_supplies.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/alchemists_supplies.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/alchemists_supplies.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

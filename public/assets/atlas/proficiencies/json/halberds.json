@@ -1,15 +1,18 @@
 {
   "index": "halberds",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "halberds",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/halberds.json",
   "reference": {
     "index": "halberd",
     "name": "halberd",
-    "url": "public/assets/atlas/equipment/halberd"
+    "url": "public/assets/atlas/equipment/json/halberd.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/halberds.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/halberds.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

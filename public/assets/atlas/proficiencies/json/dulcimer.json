@@ -1,15 +1,18 @@
 {
   "index": "dulcimer",
-  "type": "Musical Instruments",
+  "type": "musical_instruments",
   "name": "dulcimer",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/dulcimer.json",
   "reference": {
     "index": "dulcimer",
     "name": "dulcimer",
-    "url": "public/assets/atlas/equipment/dulcimer"
+    "url": "public/assets/atlas/equipment/json/dulcimer.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/dulcimer.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/dulcimer.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

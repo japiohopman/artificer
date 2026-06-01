@@ -1,15 +1,18 @@
 {
   "index": "disguise_kit",
-  "type": "Artisan's Tools",
+  "type": "artisans_tools",
   "name": "disguise kit",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/disguise_kit.json",
   "reference": {
     "index": "disguise_kit",
     "name": "disguise kit",
-    "url": "public/assets/atlas/equipment/disguise_kit"
+    "url": "public/assets/atlas/equipment/json/disguise_kit.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/disguise_kit.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/disguise_kit.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

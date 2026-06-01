@@ -1,15 +1,18 @@
 {
   "index": "blowguns",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "blowguns",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/blowguns.json",
   "reference": {
     "index": "blowgun",
     "name": "blowgun",
-    "url": "public/assets/atlas/equipment/blowgun"
+    "url": "public/assets/atlas/equipment/json/blowgun.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/blowguns.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/blowguns.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

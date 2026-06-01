@@ -1,15 +1,18 @@
 {
   "index": "painters_supplies",
-  "type": "Artisan's Tools",
+  "type": "artisans_tools",
   "name": "painter's supplies",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/painters_supplies.json",
   "reference": {
     "index": "painters_supplies",
     "name": "painter's supplies",
-    "url": "public/assets/atlas/equipment/painters_supplies"
+    "url": "public/assets/atlas/equipment/json/painters_supplies.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/painters_supplies.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/painters_supplies.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

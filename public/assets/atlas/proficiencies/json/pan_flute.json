@@ -1,15 +1,18 @@
 {
   "index": "pan_flute",
-  "type": "Musical Instruments",
+  "type": "musical_instruments",
   "name": "pan flute",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/pan_flute.json",
   "reference": {
     "index": "pan_flute",
     "name": "pan flute",
-    "url": "public/assets/atlas/equipment/pan_flute"
+    "url": "public/assets/atlas/equipment/json/pan_flute.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/pan_flute.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/pan_flute.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

@@ -1,15 +1,18 @@
 {
   "index": "carpenters_tools",
-  "type": "Artisan's Tools",
+  "type": "artisans_tools",
   "name": "carpenter's tools",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/carpenters_tools.json",
   "reference": {
     "index": "carpenters_tools",
     "name": "carpenter's tools",
-    "url": "public/assets/atlas/equipment/carpenters_tools"
+    "url": "public/assets/atlas/equipment/json/carpenters_tools.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/carpenters_tools.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/carpenters_tools.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

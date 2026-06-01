@@ -1,26 +1,29 @@
 {
   "index": "rapiers",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "rapiers",
   "classes": [
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "rogue",
       "name": "rogue",
-      "url": "public/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     }
   ],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/rapiers.json",
   "reference": {
     "index": "rapier",
     "name": "rapier",
-    "url": "public/assets/atlas/equipment/rapier"
+    "url": "public/assets/atlas/equipment/json/rapier.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/rapiers.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/rapiers.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }
