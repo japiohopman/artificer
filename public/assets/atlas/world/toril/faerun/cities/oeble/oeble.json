@@ -1,11 +1,11 @@
 {
   "$schema": "public/assets/atlas/schemas/city.schema.json",
   "id": "oeble",
-  "name": "Athkatla",
+  "name": "oeble",
   "type": "metropolis",
   "parent": "cities",
-  "title": "Athkatla: Metropolis",
-  "description": "An interactive map of [[Athkatla]].",
+  "title": "oeble: Metropolis",
+  "description": "",
   "wiki": "",
   "image": "oeble.webp",
   "thumbnail": "oeble_thumb.webp",
@@ -15,15 +15,11 @@
     "metropolis"
   ],
   "map": "assets/atlas/world/toril/faerun/cities/oeble/oeble_map.webp",
+  "coordinateOrder": "yx",
   "children": [],
   "sub_location_files": [
-    "assets/atlas/world/toril/faerun/cities/oeble/sublocations/estates.json",
     "assets/atlas/world/toril/faerun/cities/oeble/sublocations/inns_taverns.json",
-    "assets/atlas/world/toril/faerun/cities/oeble/sublocations/landmarks.json",
     "assets/atlas/world/toril/faerun/cities/oeble/sublocations/poi.json",
-    "assets/atlas/world/toril/faerun/cities/oeble/sublocations/roads.json",
-    "assets/atlas/world/toril/faerun/cities/oeble/sublocations/shops.json",
-    "assets/atlas/world/toril/faerun/cities/oeble/sublocations/temples_shrines.json",
     "assets/atlas/world/toril/faerun/cities/oeble/sublocations/water.json"
   ],
   "coordinates": {
@@ -45,8 +41,8 @@
       0
     ],
     [
-      1107,
-      1567
+      3338,
+      2506
     ]
   ],
   "origin": "bottom-left",
