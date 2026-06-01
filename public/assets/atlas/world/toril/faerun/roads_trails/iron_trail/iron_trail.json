@@ -1,0 +1,17 @@
+{
+  "categoryId": "roads_trails",
+  "position": [
+    210.5,
+    2973.25
+  ],
+  "popup": {
+    "title": "Iron Trail",
+    "description": "The trail that connected [[Ironmaster]] and the [[Ten Trail]].",
+    "link": {
+      "url": "public/assets/atlas/world/toril/faerun/roads_trails/iron_trail/iron_trail.json",
+      "label": "Iron Trail"
+    },
+    "image": "public/assets/atlas/world/toril/faerun/roads_trails/iron_trail/iron_trail.webp"
+  },
+  "id": "iron_trail"
+}
