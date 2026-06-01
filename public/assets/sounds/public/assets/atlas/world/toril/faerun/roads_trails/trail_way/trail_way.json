@@ -1,0 +1,17 @@
+{
+  "categoryId": "roads_trails",
+  "position": [
+    812.11,
+    2433.15
+  ],
+  "popup": {
+    "title": "Trail Way",
+    "description": "A short trail that cut a shorter route from the [[Trade Way]] to the [[Delimbiyr Route]].",
+    "link": {
+      "url": "public/assets/atlas/world/toril/faerun/roads_trails/trail_way/trail_way.json",
+      "label": "Trail Way"
+    },
+    "image": "public/assets/atlas/world/toril/faerun/roads_trails/trail_way/trail_way.webp"
+  },
+  "id": "trail_way"
+}
