@@ -1,15 +1,18 @@
 {
   "index": "skill_intimidation",
-  "type": "Skills",
+  "type": "skills",
   "name": "skill: intimidation",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/skill_intimidation.json",
   "reference": {
     "index": "intimidation",
     "name": "intimidation",
-    "url": "public/assets/atlas/skills/intelligenceimidation"
+    "url": "public/assets/atlas/skills/json/intelligenceimidation.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/skill_intimidation.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/skill_intimidation.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
 }

@@ -1,15 +1,18 @@
 {
   "index": "skill_athletics",
-  "type": "Skills",
+  "type": "skills",
   "name": "skill: athletics",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/skill_athletics.json",
   "reference": {
     "index": "athletics",
     "name": "athletics",
-    "url": "public/assets/atlas/skills/athletics"
+    "url": "public/assets/atlas/skills/json/athletics.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/skill_athletics.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/skill_athletics.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
 }

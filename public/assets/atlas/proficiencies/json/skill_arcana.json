@@ -1,15 +1,18 @@
 {
   "index": "skill_arcana",
-  "type": "Skills",
+  "type": "skills",
   "name": "skill: arcana",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/skill_arcana.json",
   "reference": {
     "index": "arcana",
     "name": "arcana",
-    "url": "public/assets/atlas/skills/arcana"
+    "url": "public/assets/atlas/skills/json/arcana.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/skill_arcana.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/skill_arcana.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
 }

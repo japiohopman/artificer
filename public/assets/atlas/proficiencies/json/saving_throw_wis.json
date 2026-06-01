@@ -1,41 +1,44 @@
 {
   "index": "saving_throw_wis",
-  "type": "Saving Throws",
+  "type": "saving_throws",
   "name": "saving throw: wis",
   "classes": [
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     },
     {
       "index": "paladin",
       "name": "paladin",
-      "url": "public/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/wizard"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/saving_throw_wis.json",
   "reference": {
-    "index": "wis",
-    "name": "wis",
-    "url": "public/assets/atlas/ability_scores/wisdom"
+    "index": "wisdom",
+    "name": "wisdom",
+    "url": "public/assets/atlas/ability_scores/json/wisdom.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/saving_throw_wis.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/saving_throw_wis.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "ability_scores"
+  }
 }

@@ -1,21 +1,24 @@
 {
   "index": "scimitars",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "scimitars",
   "classes": [
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/druid"
+      "url": "public/assets/atlas/class/json/druid.json"
     }
   ],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/scimitars.json",
   "reference": {
     "index": "scimitar",
     "name": "scimitar",
-    "url": "public/assets/atlas/equipment/scimitar"
+    "url": "public/assets/atlas/equipment/json/scimitar.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/scimitars.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/scimitars.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

@@ -1,15 +1,18 @@
 {
   "index": "skill_performance",
-  "type": "Skills",
+  "type": "skills",
   "name": "skill: performance",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/skill_performance.json",
   "reference": {
     "index": "performance",
     "name": "performance",
-    "url": "public/assets/atlas/skills/performance"
+    "url": "public/assets/atlas/skills/json/performance.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/skill_performance.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/skill_performance.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
 }

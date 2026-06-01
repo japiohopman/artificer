@@ -1,15 +1,18 @@
 {
   "index": "skill_stealth",
-  "type": "Skills",
+  "type": "skills",
   "name": "skill: stealth",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/skill_stealth.json",
   "reference": {
     "index": "stealth",
     "name": "stealth",
-    "url": "public/assets/atlas/skills/stealth"
+    "url": "public/assets/atlas/skills/json/stealth.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/skill_stealth.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/skill_stealth.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
 }

@@ -1,61 +1,64 @@
 {
   "index": "simple_weapons",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "simple weapons",
   "classes": [
     {
       "index": "barbarian",
       "name": "barbarian",
-      "url": "public/assets/atlas/classes/barbarian"
+      "url": "public/assets/atlas/class/json/barbarian.json"
     },
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "fighter",
       "name": "fighter",
-      "url": "public/assets/atlas/classes/fighter"
+      "url": "public/assets/atlas/class/json/fighter.json"
     },
     {
       "index": "monk",
       "name": "monk",
-      "url": "public/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
     {
       "index": "paladin",
       "name": "paladin",
-      "url": "public/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
     {
       "index": "ranger",
       "name": "ranger",
-      "url": "public/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
     {
       "index": "rogue",
       "name": "rogue",
-      "url": "public/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     },
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     }
   ],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/simple_weapons.json",
   "reference": {
     "index": "simple_weapons",
     "name": "simple weapons",
-    "url": "public/assets/atlas/equipment_categories/simple_weapons"
+    "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/simple_weapons.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/simple_weapons.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment_categories"
+  }
 }

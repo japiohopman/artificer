@@ -1,15 +1,18 @@
 {
   "index": "scale_mail",
-  "type": "Armor",
+  "type": "armor",
   "name": "scale mail",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/scale_mail.json",
   "reference": {
     "index": "scale_mail",
     "name": "scale mail",
-    "url": "public/assets/atlas/equipment/scale_mail"
+    "url": "public/assets/atlas/equipment/json/scale_mail.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/scale_mail.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/scale_mail.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

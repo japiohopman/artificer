@@ -1,15 +1,18 @@
 {
   "index": "tridents",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "tridents",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/tridents.json",
   "reference": {
     "index": "trident",
     "name": "trident",
-    "url": "public/assets/atlas/equipment/trident"
+    "url": "public/assets/atlas/equipment/json/trident.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/tridents.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/tridents.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

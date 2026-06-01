@@ -1,15 +1,18 @@
 {
   "index": "skill_history",
-  "type": "Skills",
+  "type": "skills",
   "name": "skill: history",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/skill_history.json",
   "reference": {
     "index": "history",
     "name": "history",
-    "url": "public/assets/atlas/skills/history"
+    "url": "public/assets/atlas/skills/json/history.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/skill_history.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/skill_history.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
 }

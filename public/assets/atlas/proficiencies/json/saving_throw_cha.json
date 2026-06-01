@@ -1,41 +1,44 @@
 {
   "index": "saving_throw_cha",
-  "type": "Saving Throws",
+  "type": "saving_throws",
   "name": "saving throw: cha",
   "classes": [
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "cleric",
       "name": "cleric",
-      "url": "public/assets/atlas/classes/cleric"
+      "url": "public/assets/atlas/class/json/cleric.json"
     },
     {
       "index": "paladin",
       "name": "paladin",
-      "url": "public/assets/atlas/classes/paladin"
+      "url": "public/assets/atlas/class/json/paladin.json"
     },
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/sorcerer"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "warlock",
       "name": "warlock",
-      "url": "public/assets/atlas/classes/warlock"
+      "url": "public/assets/atlas/class/json/warlock.json"
     }
   ],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/saving_throw_cha.json",
   "reference": {
-    "index": "cha",
-    "name": "cha",
-    "url": "public/assets/atlas/ability_scores/charisma"
+    "index": "charisma",
+    "name": "charisma",
+    "url": "public/assets/atlas/ability_scores/json/charisma.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/saving_throw_cha.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/saving_throw_cha.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "ability_scores"
+  }
 }

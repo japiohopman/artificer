@@ -1,15 +1,18 @@
 {
   "index": "skill_insight",
-  "type": "Skills",
+  "type": "skills",
   "name": "skill: insight",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/skill_insight.json",
   "reference": {
     "index": "insight",
     "name": "insight",
-    "url": "public/assets/atlas/skills/insight"
+    "url": "public/assets/atlas/skills/json/insight.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/skill_insight.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/skill_insight.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
 }

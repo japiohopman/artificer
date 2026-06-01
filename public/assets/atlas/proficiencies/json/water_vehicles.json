@@ -1,15 +1,18 @@
 {
   "index": "water_vehicles",
-  "type": "Vehicles",
+  "type": "vehicles",
   "name": "water vehicles",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/water_vehicles.json",
   "reference": {
     "index": "waterborne_vehicles",
     "name": "waterborne vehicles",
-    "url": "public/assets/atlas/equipment_categories/waterborne_vehicles"
+    "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/water_vehicles.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/water_vehicles.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment_categories"
+  }
 }

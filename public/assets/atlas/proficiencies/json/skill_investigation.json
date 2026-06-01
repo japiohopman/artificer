@@ -1,15 +1,18 @@
 {
   "index": "skill_investigation",
-  "type": "Skills",
+  "type": "skills",
   "name": "skill: investigation",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/skill_investigation.json",
   "reference": {
     "index": "investigation",
     "name": "investigation",
-    "url": "public/assets/atlas/skills/investigation"
+    "url": "public/assets/atlas/skills/json/investigation.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/skill_investigation.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/skill_investigation.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
 }

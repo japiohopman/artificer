@@ -1,15 +1,18 @@
 {
   "index": "war_picks",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "war picks",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/war_picks.json",
   "reference": {
     "index": "war_pick",
     "name": "war pick",
-    "url": "public/assets/atlas/equipment/war_pick"
+    "url": "public/assets/atlas/equipment/json/war_pick.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/war_picks.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/war_picks.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

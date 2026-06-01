@@ -1,15 +1,18 @@
 {
   "index": "skill_religion",
-  "type": "Skills",
+  "type": "skills",
   "name": "skill: religion",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/skill_religion.json",
   "reference": {
     "index": "religion",
     "name": "religion",
-    "url": "public/assets/atlas/skills/religion"
+    "url": "public/assets/atlas/skills/json/religion.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/skill_religion.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/skill_religion.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
 }

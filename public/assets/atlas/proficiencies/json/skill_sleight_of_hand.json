@@ -1,15 +1,18 @@
 {
   "index": "skill_sleight_of_hand",
-  "type": "Skills",
+  "type": "skills",
   "name": "skill: sleight of hand",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/skill_sleight_of_hand.json",
   "reference": {
     "index": "sleight_of_hand",
     "name": "sleight of hand",
-    "url": "public/assets/atlas/skills/sleight_of_hand"
+    "url": "public/assets/atlas/skills/json/sleight_of_hand.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/skill_sleight_of_hand.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/skill_sleight_of_hand.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
 }

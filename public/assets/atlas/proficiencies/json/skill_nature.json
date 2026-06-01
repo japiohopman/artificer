@@ -1,15 +1,18 @@
 {
   "index": "skill_nature",
-  "type": "Skills",
+  "type": "skills",
   "name": "skill: nature",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/skill_nature.json",
   "reference": {
     "index": "nature",
     "name": "nature",
-    "url": "public/assets/atlas/skills/nature"
+    "url": "public/assets/atlas/skills/json/nature.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/skill_nature.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/skill_nature.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
 }

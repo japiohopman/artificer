@@ -1,21 +1,18 @@
 {
   "index": "warhammers",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "warhammers",
   "classes": [],
-  "races": [
-    {
-      "index": "dwarf",
-      "name": "dwarf",
-      "url": "public/assets/atlas/races/dwarf"
-    }
-  ],
   "url": "public/assets/atlas/proficiencies/json/warhammers.json",
   "reference": {
     "index": "warhammer",
     "name": "warhammer",
-    "url": "public/assets/atlas/equipment/warhammer"
+    "url": "public/assets/atlas/equipment/json/warhammer.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/warhammers.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/warhammers.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

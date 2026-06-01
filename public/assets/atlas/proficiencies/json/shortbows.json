@@ -1,21 +1,18 @@
 {
   "index": "shortbows",
-  "type": "Weapons",
+  "type": "weapons",
   "name": "shortbows",
   "classes": [],
-  "races": [
-    {
-      "index": "high_elf",
-      "name": "high elf",
-      "url": "public/assets/atlas/subraces/high_elf"
-    }
-  ],
   "url": "public/assets/atlas/proficiencies/json/shortbows.json",
   "reference": {
     "index": "shortbow",
     "name": "shortbow",
-    "url": "public/assets/atlas/equipment/shortbow"
+    "url": "public/assets/atlas/equipment/json/shortbow.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/shortbows.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/shortbows.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

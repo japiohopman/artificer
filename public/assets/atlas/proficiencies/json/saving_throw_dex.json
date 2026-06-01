@@ -1,36 +1,39 @@
 {
   "index": "saving_throw_dex",
-  "type": "Saving Throws",
+  "type": "saving_throws",
   "name": "saving throw: dex",
   "classes": [
     {
       "index": "bard",
       "name": "bard",
-      "url": "public/assets/atlas/classes/bard"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "monk",
       "name": "monk",
-      "url": "public/assets/atlas/classes/monk"
+      "url": "public/assets/atlas/class/json/monk.json"
     },
     {
       "index": "ranger",
       "name": "ranger",
-      "url": "public/assets/atlas/classes/ranger"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
     {
       "index": "rogue",
       "name": "rogue",
-      "url": "public/assets/atlas/classes/rogue"
+      "url": "public/assets/atlas/class/json/rogue.json"
     }
   ],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/saving_throw_dex.json",
   "reference": {
-    "index": "dex",
-    "name": "dex",
-    "url": "public/assets/atlas/ability_scores/dexterity"
+    "index": "dexterity",
+    "name": "dexterity",
+    "url": "public/assets/atlas/ability_scores/json/dexterity.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/saving_throw_dex.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/saving_throw_dex.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "ability_scores"
+  }
 }

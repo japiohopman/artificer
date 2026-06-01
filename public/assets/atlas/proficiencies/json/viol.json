@@ -1,15 +1,18 @@
 {
   "index": "viol",
-  "type": "Musical Instruments",
+  "type": "musical_instruments",
   "name": "viol",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/viol.json",
   "reference": {
     "index": "viol",
     "name": "viol",
-    "url": "public/assets/atlas/equipment/viol"
+    "url": "public/assets/atlas/equipment/json/viol.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/viol.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/viol.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

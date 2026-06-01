@@ -1,15 +1,18 @@
 {
   "index": "smiths_tools",
-  "type": "Artisan's Tools",
+  "type": "artisans_tools",
   "name": "smith's tools",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/smiths_tools.json",
   "reference": {
     "index": "smiths_tools",
     "name": "smith's tools",
-    "url": "public/assets/atlas/equipment/smiths_tools"
+    "url": "public/assets/atlas/equipment/json/smiths_tools.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/smiths_tools.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/smiths_tools.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
 }

@@ -1,15 +1,18 @@
 {
   "index": "skill_survival",
-  "type": "Skills",
+  "type": "skills",
   "name": "skill: survival",
   "classes": [],
-  "races": [],
   "url": "public/assets/atlas/proficiencies/json/skill_survival.json",
   "reference": {
     "index": "survival",
     "name": "survival",
-    "url": "public/assets/atlas/skills/survival"
+    "url": "public/assets/atlas/skills/json/survival.json"
   },
-  "updated_at": "2025-10-24T20:42:14.116Z",
-  "image": "public/assets/atlas/proficiencies/skill_survival.webp"
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "public/assets/atlas/proficiencies/skill_survival.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
 }
