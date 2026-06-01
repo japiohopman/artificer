@@ -1,20 +1,20 @@
 {
   "category": "inns_taverns",
-  "updatedAt": "2026-06-01T21:19:03.189Z",
+  "updatedAt": "2026-06-01T21:44:38.068Z",
   "location_id": "oeble",
   "sub_locations": [
     {
-      "id": "7",
-      "name": "The Harfin Draether",
+      "id": "1",
+      "name": "Griffingate House",
       "categoryId": "inns_taverns",
       "type": "marker",
       "position": [
-        535.24302638056,
-        1264.277323241
+        1668.0007579091,
+        750.00201848781
       ],
       "popup": {
-        "title": "The Harfin Draether",
-        "description": "An expensive and quality tavern, named after its founder, who died well before the 1370s [[DR]].",
+        "title": "Griffingate House",
+        "description": "A large ornate old inn at the center of the city and its most imposing structure of many balconies and gargoyles.",
         "image": ""
       },
       "day": {
@@ -31,17 +31,125 @@
       }
     },
     {
-      "id": "26",
-      "name": "The Black Frog",
+      "id": "17",
+      "name": "The Paeraddyn",
       "categoryId": "inns_taverns",
       "type": "marker",
       "position": [
-        912.96096059807,
-        949.94852523089
+        567.99393672719,
+        256.00807395126
       ],
       "popup": {
-        "title": "The Black Frog",
-        "description": "The most popular tavern in the Trades District in the late 14{{th}} century [[DR]].{{approx}}",
+        "title": "The Paeraddyn",
+        "description": "A walled and heavily-protected [[caravansary]] that included  a bathhouse, stables, gardens, minstrels' bower, and a luxurious market advertised as \"A Taste of Oeble.\"",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "19",
+      "name": "Slarvyn's Sword",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1782.6896362233,
+        1663.7456705354
+      ],
+      "popup": {
+        "title": "Slarvyn's Sword",
+        "description": "A fine dining club and a place to be seen at. It offered expensive dishes and was decorated with countless adventuring trophies.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "22",
+      "name": "Melder's Door",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1236.0205098234,
+        506.31557377157
+      ],
+      "popup": {
+        "title": "Melder's Door",
+        "description": "A rowdy inn and a tavern of ill repute, located in the [[Underways]] directly under the [[Sixturrets]] intersection, frequented by [[Oeble]]'s [[monstrous humanoid]] population,",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "31",
+      "name": "Mhalree's Door",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1187.9404642387,
+        390.32865236066
+      ],
+      "popup": {
+        "title": "Mhalree's Door",
+        "description": "An inn of note on [[Oeble]]'s [[Sixturrets]] intersection.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "32",
+      "name": "Wyvernposts",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        2312.2000521255,
+        360.84974237856
+      ],
+      "popup": {
+        "title": "Wyvernposts",
+        "description": "An inn of note that faced the [[Dead King's Walk]].",
         "image": ""
       },
       "day": {
@@ -59,16 +167,16 @@
     },
     {
       "id": "33",
-      "name": "Adamantine Mug",
+      "name": "Sammart Hall",
       "categoryId": "inns_taverns",
       "type": "marker",
       "position": [
-        774.22671534759,
-        1047.179029717
+        1853.6679450912,
+        2174.8006928011
       ],
       "popup": {
-        "title": "Adamantine Mug",
-        "description": "A surprisingly reasonably priced tavern and a club for [[Athkatla]]'s merchants.",
+        "title": "Sammart Hall",
+        "description": "One of [[Oeble]]'s notable inns.",
         "image": ""
       },
       "day": {
@@ -86,286 +194,16 @@
     },
     {
       "id": "34",
-      "name": "Copper Coronet",
+      "name": "The Black Rose",
       "categoryId": "inns_taverns",
       "type": "marker",
       "position": [
-        752.99713261312,
-        865.9997965736
+        1811.1986644069,
+        1300.1501684958
       ],
       "popup": {
-        "title": "Copper Coronet",
-        "description": "A large and dingy tavern that served smugglers, pirates and the \"blank-for-hire\".",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "35",
-      "name": "Five Flagons",
-      "categoryId": "inns_taverns",
-      "type": "marker",
-      "position": [
-        1008.8470456673,
-        813.81537986975
-      ],
-      "popup": {
-        "title": "Five Flagons",
-        "description": "A three-floored inn and an underground theater frequented by wealthy patrons.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "36",
-      "name": "Den of the Seven Vales",
-      "categoryId": "inns_taverns",
-      "type": "marker",
-      "position": [
-        964.33830977381,
-        692.89335961016
-      ],
-      "popup": {
-        "title": "Den of the Seven Vales",
-        "description": "The tavern that was formerly the festhall known as the \"Den of the Seven Veils.\"",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "37",
-      "name": "Sea's Bounty",
-      "categoryId": "inns_taverns",
-      "type": "marker",
-      "position": [
-        645.56728160377,
-        689.36976477157
-      ],
-      "popup": {
-        "title": "Sea's Bounty",
-        "description": "A cramped two-floor tavern and an inn that served a variety of [[beer]]s and foods.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "38",
-      "name": "Silverale Hall",
-      "categoryId": "inns_taverns",
-      "type": "marker",
-      "position": [
-        591.8405792481,
-        487.11701524425
-      ],
-      "popup": {
-        "title": "Silverale Hall",
-        "description": "A popular inn and festhall with the welcoming sign depicting a [[silver]] mug overflowing with [[ale]].",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "39",
-      "name": "Delosar's Inn",
-      "categoryId": "inns_taverns",
-      "type": "marker",
-      "position": [
-        483.60988337733,
-        412.17664241511
-      ],
-      "popup": {
-        "title": "Delosar's Inn",
-        "description": "An old but well-kept inn and tavern.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "40",
-      "name": "Mithrest",
-      "categoryId": "inns_taverns",
-      "type": "marker",
-      "position": [
-        445.48195276528,
-        663.9398845242
-      ],
-      "popup": {
-        "title": "Mithrest",
-        "description": "An exclusive inn for [[Athkatla]]n nobles.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "43",
-      "name": "Bordryn's Bucket",
-      "categoryId": "inns_taverns",
-      "type": "marker",
-      "position": [
-        827.90881163176,
-        649.79350549702
-      ],
-      "popup": {
-        "title": "Bordryn's Bucket",
-        "description": "The most popular drinking hole of the Bridge District in the late 14{{th}} century [[DR]].",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "74",
-      "name": "Crooked Crane Inn",
-      "categoryId": "inns_taverns",
-      "type": "marker",
-      "position": [
-        951.70926887353,
-        1091.055436971
-      ],
-      "popup": {
-        "title": "Crooked Crane Inn",
-        "description": "A cheap inn that offered stables and common rooms for rent.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "79",
-      "name": "Mae'Var's Guildhall",
-      "categoryId": "inns_taverns",
-      "type": "marker",
-      "position": [
-        195.00529363731,
-        981.0003051396
-      ],
-      "popup": {
-        "title": "Mae'Var's Guildhall",
-        "description": "A nondescript three-floor inn and tavern, a cover for a [[Sahdow Thieves]]' Guildhall ran by [[Mae'Var]] in the late 14{{th}} century [[DR]].{{approx}}",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "94",
-      "name": "Coffee and Tea House",
-      "categoryId": "inns_taverns",
-      "type": "marker",
-      "position": [
-        800.96206343917,
-        1070.9587474073
-      ],
-      "popup": {
-        "title": "Coffee and Tea House",
-        "description": "A small establishment that serves [[tea]]s and [[coffee]]s.",
+        "title": "The Black Rose",
+        "description": "A well-known inn and brothel that stood on the [[River Scelptar]].",
         "image": ""
       },
       "day": {
