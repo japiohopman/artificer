@@ -1,345 +1,21 @@
 {
   "category": "poi",
-  "updatedAt": "2026-06-01T19:17:08.192Z",
+  "updatedAt": "2026-06-01T21:19:03.189Z",
   "location_id": "oeble",
   "sub_locations": [
     {
-      "id": "2",
-      "name": "Alhan's Ride",
-      "categoryId": "poi",
+      "id": "1",
+      "name": "Temple District",
+      "categoryId": "districts",
       "type": "marker",
       "position": [
-        1077.6929015574,
-        1784.5576776258
+        537.28636657044,
+        1207.6962136023
       ],
       "popup": {
-        "title": "Alhan's Ride",
-        "description": "The street that began on [[Dead King's Walk]], crossed [[River Scelptar]] via [[Alhan's Span]] , and continued on north across the city.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "3",
-      "name": "Alhan's Ride",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        1207.9802943634,
-        904.08679497602
-      ],
-      "popup": {
-        "title": "Alhan's Ride",
-        "description": "The street that began on [[Dead King's Walk]], crossed [[River Scelptar]] via [[Alhan's Span]] , and continued on north across the city.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "4",
-      "name": "Vriel's Walk",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        2144.4926409154,
-        851.82439156015
-      ],
-      "popup": {
-        "title": "Vriel's Walk",
-        "description": "The street that began on [[Dead King's Walk]], crossed [[River Scelptar]] via [[Vriel's Leap]], and continued on north across the city.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "5",
-      "name": "Vriel's Walk",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        1948.030316364,
-        1952.2866252696
-      ],
-      "popup": {
-        "title": "Vriel's Walk",
-        "description": "The street that began on [[Dead King's Walk]], crossed [[River Scelptar]] via [[Vriel's Leap]], and continued on north across the city.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "6",
-      "name": "Alhan's Span",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        1146.3746628174,
-        1249.5610469816
-      ],
-      "popup": {
-        "title": "Alhan's Span",
-        "description": "The bridge across the [[River Scelptar]], part of [[Alhan's Ride]].",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "7",
-      "name": "Vriel's Leap",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        2095.8655712823,
-        1213.3923819433
-      ],
-      "popup": {
-        "title": "Vriel's Leap",
-        "description": "The bridge across the [[River Scelptar]], part of [[Vriel's Walk]].",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "8",
-      "name": "Arch of Gargoyles",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        1666.9660305701,
-        1186.749035518
-      ],
-      "popup": {
-        "title": "Arch of Gargoyles",
-        "description": "The bridge that linked [[Laskalar's Square]] to the northern side of [[River Scelptar]].",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "9",
-      "name": "Laskalar's Square",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        1666.9735334874,
-        835.86278868389
-      ],
-      "popup": {
-        "title": "Laskalar's Square",
-        "description": "The city square in front of the [[Griffingate House]] inn, on [[River Scelptar]]'s southern bank.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "11",
-      "name": "Balamonthar's Street",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        2746.0083370001,
-        654.89790565333
-      ],
-      "popup": {
-        "title": "Balamonthar's Street",
-        "description": "One of [[Oeble]]'s widest streets that began on [[Laskalar's Square]] and ran east, reaching the city's edge.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "12",
-      "name": "Dead King's Walk",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        1861.6596988138,
-        458.79294428698
-      ],
-      "popup": {
-        "title": "Dead King's Walk",
-        "description": "A curvy street in [[Oeble]]'s southern part that linked [[Alhan's Ride]] and [[Balamonthar's Street]].",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "13",
-      "name": "The Rolling Shields",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        1432.2012199895,
-        714.54728890038
-      ],
-      "popup": {
-        "title": "The Rolling Shields",
-        "description": "One of the two widest roads in [[Oeble]] that began on [[Laskalar's Square]], ran west, passed the [[Sixturrets]], and reached the city's edge.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "14",
-      "name": "Sixturrets",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        1278.4501322306,
-        475.17004781167
-      ],
-      "popup": {
-        "title": "Sixturrets",
-        "description": "A wide and busy intersection of [[Mraedur Street]], [[the Rolling Shields]], [[the Street of Six Tombs]], and [[Dead King's Walk]].",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "15",
-      "name": "Skulls New and Used",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        1348.2368160648,
-        1026.8647613164
-      ],
-      "popup": {
-        "title": "Skulls New and Used",
-        "description": "A large infamous emporium of [[enchanted]] items and relics recovered by lucky or unlucky adventurers. The shop's name was inspired by its collection of drinking tankards carved out of various skulls.",
-        "image": ""
+        "title": "Temple District",
+        "description": "The home to the city's wealthiest businesses and family estates.",
+        "image": "File:Athkatla Temple District.png"
       },
       "day": {
         "ambient": null,
@@ -356,43 +32,16 @@
     },
     {
       "id": "16",
-      "name": "Sarl Street",
+      "name": "The Society of the Lost Ingot",
       "categoryId": "poi",
       "type": "marker",
       "position": [
-        1440,
-        948.00403697563
+        516.88460778807,
+        1282.6801727673
       ],
       "popup": {
-        "title": "Sarl Street",
-        "description": "The street that began at [[Alhan's Span]]'s southern end and moved east, past [[Skulls New and Used]], and ended in a dead end.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "18",
-      "name": "Garbage-middens",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        2979.0786516868,
-        466.11028365286
-      ],
-      "popup": {
-        "title": "Garbage-middens",
-        "description": "The final destination of [[Oeble]]'s Dead Cart that delivered the city's dead for a mass-grave burial.{{approx}}",
+        "title": "The Society of the Lost Ingot",
+        "description": "A private club for wealthy merchant males born in [[Athkatla]] whose ships were lost at sea. Previously a temple to [[Ilmater]]. ",
         "image": ""
       },
       "day": {
@@ -410,71 +59,17 @@
     },
     {
       "id": "20",
-      "name": "Tarandar Street",
-      "categoryId": "poi",
+      "name": "Wave District",
+      "categoryId": "districts",
       "type": "marker",
       "position": [
-        1326.4883758475,
-        1660.2838676532
+        258.04102803563,
+        1125.9692668327
       ],
       "popup": {
-        "title": "Tarandar Street",
-        "description": "A bow-shaped street in the northern half of [[Oeble]] that ran parallel [[River Scelptar]] beginning and ending in curves south, towards the river edge.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "21",
-      "name": "Tarandar Street",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        2580.8824076058,
-        1685.0103684146
-      ],
-      "popup": {
-        "title": "Tarandar Street",
-        "description": "A bow-shaped street in the northern half of [[Oeble]] that ran parallel [[River Scelptar]] beginning and ending in curves south, towards the river edge.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "23",
-      "name": "Thaerl Street",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        2326.7502689513,
-        999.41968475336
-      ],
-      "popup": {
-        "title": "Thaerl Street",
-        "description": "A narrow street that crossed [[Vriel's Walk]].",
-        "image": ""
+        "title": "Wave District",
+        "description": "The district of [[Athkatla]] that housed all things concerning seafaring and marine trade.",
+        "image": "File:Athkatla's Wave District.png"
       },
       "day": {
         "ambient": null,
@@ -491,16 +86,16 @@
     },
     {
       "id": "24",
-      "name": "Street of Six Tombs",
-      "categoryId": "poi",
+      "name": "Gem District",
+      "categoryId": "districts",
       "type": "marker",
       "position": [
-        1566.5160750392,
-        328.83129555545
+        504.19661242487,
+        999.49083219327
       ],
       "popup": {
-        "title": "Street of Six Tombs",
-        "description": "The street that began at the busy [[Sixturrets]] intersection and ran curving southeast.",
+        "title": "Gem District",
+        "description": "The excessively wealthiest area of the city.",
         "image": ""
       },
       "day": {
@@ -518,70 +113,16 @@
     },
     {
       "id": "25",
-      "name": "Mraedur Street",
-      "categoryId": "poi",
+      "name": "Trades District",
+      "categoryId": "districts",
       "type": "marker",
       "position": [
-        858.0007579091,
-        712.00403697563
+        845.70251767424,
+        1124.3088442703
       ],
       "popup": {
-        "title": "Mraedur Street",
-        "description": "The street that began at the busy [[Sixturrets]] intersection and ran curving northwest, reaching the outskirts of [[Oeble]].",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "26",
-      "name": "Manywheels Street",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        1367.9969683636,
-        1470.0010092439
-      ],
-      "popup": {
-        "title": "Manywheels Street",
-        "description": "The street that split from [[Tarandar Street]], ran parallel to it and, eventually, rejoined it as it curved south.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "27",
-      "name": "Manywheels Street",
-      "categoryId": "poi",
-      "type": "marker",
-      "position": [
-        2431.07162241,
-        1569.4812486317
-      ],
-      "popup": {
-        "title": "Manywheels Street",
-        "description": "The street that split from [[Tarandar Street]], ran parallel to it and, eventually, rejoined it as it curved south.",
+        "title": "Trades District",
+        "description": "The mercantile hub of [[Athkatla]].",
         "image": ""
       },
       "day": {
@@ -599,16 +140,16 @@
     },
     {
       "id": "28",
-      "name": "Jarthoun's Ride",
-      "categoryId": "poi",
+      "name": "River District",
+      "categoryId": "districts",
       "type": "marker",
       "position": [
-        2391.4035145357,
-        1908.755841418
+        598.95219803406,
+        827.9488129203
       ],
       "popup": {
-        "title": "Jarthoun's Ride",
-        "description": "",
+        "title": "River District",
+        "description": "The poorest and the dirtiest area of the city, home of the old and down on their luck.",
         "image": ""
       },
       "day": {
@@ -625,17 +166,17 @@
       }
     },
     {
-      "id": "29",
-      "name": "Jarthoun's Ride",
-      "categoryId": "poi",
+      "id": "42",
+      "name": "Bridge District",
+      "categoryId": "districts",
       "type": "marker",
       "position": [
-        2524.3138651109,
-        1308.6397317293
+        743.03353888833,
+        660.39521651254
       ],
       "popup": {
-        "title": "Jarthoun's Ride",
-        "description": "",
+        "title": "Bridge District",
+        "description": "A poorer and hectic district inhabited by laborers and dedicated to caravan trade.",
         "image": ""
       },
       "day": {
@@ -652,17 +193,17 @@
       }
     },
     {
-      "id": "30",
-      "name": "Darkwind Street",
-      "categoryId": "poi",
+      "id": "44",
+      "name": "Guards District",
+      "categoryId": "districts",
       "type": "marker",
       "position": [
-        1466.007292975,
-        1900.0793036633
+        1031.3799477026,
+        656.12553311868
       ],
       "popup": {
-        "title": "Darkwind Street",
-        "description": "",
+        "title": "Guards District",
+        "description": "Home of merchants, guards, adventurers, and businesses that catered to them.",
         "image": ""
       },
       "day": {
@@ -679,17 +220,17 @@
       }
     },
     {
-      "id": "35",
-      "name": "Ferry",
-      "categoryId": "poi",
+      "id": "45",
+      "name": "Center District",
+      "categoryId": "districts",
       "type": "marker",
       "position": [
-        1327.5408416112,
-        1195.8480500534
+        526.16698915734,
+        668.86532232528
       ],
       "popup": {
-        "title": "Ferry",
-        "description": "",
+        "title": "Center District",
+        "description": "The main mercantile district of Athkatla and the location of the famous [[Waukeen's Promenade]] massive open-air market.",
         "image": ""
       },
       "day": {
@@ -706,17 +247,71 @@
       }
     },
     {
-      "id": "36",
-      "name": "Cable ferry",
-      "categoryId": "poi",
+      "id": "46",
+      "name": "Scepter District",
+      "categoryId": "districts",
       "type": "marker",
       "position": [
-        1884.9521387161,
-        1150.1678847039
+        330.92472587302,
+        391.0249435276
       ],
       "popup": {
-        "title": "Cable ferry",
-        "description": "",
+        "title": "Scepter District",
+        "description": "The district of the [[Council House]] and old aristocratic families.",
+        "image": "File:Scepter District.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "49",
+      "name": "Grave District",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        735.26129263531,
+        303.95232577898
+      ],
+      "popup": {
+        "title": "Grave District",
+        "description": "The city's cemetery filled with ornate mortuaries and tombs.",
+        "image": "File:Grave District of Athkatla.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "81",
+      "name": "North Side",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        838.62801862611,
+        1216.2238794071
+      ],
+      "popup": {
+        "title": "North Side",
+        "description": "The North Side of the Trades District – the home of the wealthy with little social status.",
         "image": ""
       },
       "day": {
@@ -733,17 +328,17 @@
       }
     },
     {
-      "id": "37",
-      "name": "Ferry",
-      "categoryId": "poi",
+      "id": "84",
+      "name": "The Atrium",
+      "categoryId": "districts",
       "type": "marker",
       "position": [
-        2371.6259615691,
-        1184.1261376379
+        984.99319565089,
+        1001.9703808634
       ],
       "popup": {
-        "title": "Ferry",
-        "description": "",
+        "title": "The Atrium",
+        "description": "A busy open-air financial walled square, home of several moneychangers, banks, and the city notary.",
         "image": ""
       },
       "day": {
@@ -760,17 +355,17 @@
       }
     },
     {
-      "id": "38",
-      "name": "Ferry",
-      "categoryId": "poi",
+      "id": "88",
+      "name": "The Waft",
+      "categoryId": "districts",
       "type": "marker",
       "position": [
-        2442.2037308669,
-        1161.4873023486
+        799.75562448964,
+        1029.5031531092
       ],
       "popup": {
-        "title": "Ferry",
-        "description": "",
+        "title": "The Waft",
+        "description": "The area located at the foot of the hill where the Gem District stood above the Trades District.",
         "image": ""
       },
       "day": {
@@ -787,17 +382,17 @@
       }
     },
     {
-      "id": "39",
-      "name": "Cable ferry",
+      "id": "121",
+      "name": "Shadowgates House",
       "categoryId": "poi",
       "type": "marker",
       "position": [
-        2736.3773013658,
-        1071.1075174211
+        557.19031859165,
+        1016.0822317067
       ],
       "popup": {
-        "title": "Cable ferry",
-        "description": "",
+        "title": "Shadowgates House",
+        "description": "A private club for [[Athkatla]]n females of wealth and status.",
         "image": ""
       },
       "day": {
