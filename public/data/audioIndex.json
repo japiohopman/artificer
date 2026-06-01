@@ -59,6 +59,19 @@
       "meta": {
         "createdAt": "2026-06-01T22:07:52.521Z"
       }
+    },
+    "healing": {
+      "category": "sfx",
+      "loop": false,
+      "volume": 1,
+      "priority": 1,
+      "tags": [
+        "sfx"
+      ],
+      "file": "public/assets/sounds/sfx/healing.wav",
+      "meta": {
+        "createdAt": "2026-06-01T22:08:49.140Z"
+      }
     }
   }
 }
