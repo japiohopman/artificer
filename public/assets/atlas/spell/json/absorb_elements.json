@@ -19,7 +19,7 @@
   "school": {
     "index": "abjuration",
     "name": "abjuration",
-    "url": "assets/atlas/magic_schools/json/abjuration.json"
+    "url": "public/assets/atlas/magic_schools/json/abjuration.json"
   },
   "classes": [
     {
@@ -30,26 +30,26 @@
     {
       "index": "druid",
       "name": "druid",
-      "url": "public/assets/atlas/classes/json/druid.json"
+      "url": "public/assets/atlas/class/json/druid.json"
     },
     {
       "index": "ranger",
       "name": "ranger",
-      "url": "public/assets/atlas/classes/json/ranger.json"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "public/assets/atlas/classes/json/sorcerer.json"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "public/assets/atlas/classes/json/wizard.json"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
   "url": "public/assets/atlas/spell/json/absorb_elements.json",
-  "updated_at": "2025-10-24T20:42:14.619Z",
+  "updated_at": "2026-06-01T06:56:15.190Z",
   "image": "public/assets/atlas/spell/images/absorb_elements.webp"
 }

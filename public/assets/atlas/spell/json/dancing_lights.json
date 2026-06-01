@@ -32,29 +32,29 @@
     {
       "index": "bard",
       "name": "bard",
-      "url": "assets/atlas/classes/json/bard.json"
+      "url": "public/assets/atlas/class/json/bard.json"
     },
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "assets/atlas/classes/json/sorcerer.json"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "assets/atlas/classes/json/wizard.json"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [
     {
       "index": "lore",
       "name": "lore",
-      "url": "assets/atlas/subclasses/json/lore.json"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
-  "url": "assets/atlas/spell/json/dancing_lights.json",
-  "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "assets/atlas/spell/images/dancing_lights.webp",
+  "url": "public/assets/atlas/spell/json/dancing_lights.json",
+  "updated_at": "2026-06-01T06:56:15.190Z",
+  "image": "public/assets/atlas/spell/images/dancing_lights.webp",
   "sprite_index": 20,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet3.webp"
 }

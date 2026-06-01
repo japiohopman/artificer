@@ -26,18 +26,18 @@
   "school": {
     "index": "abjuration",
     "name": "abjuration",
-    "url": "assets/atlas/magic_schools/json/abjuration.json"
+    "url": "public/assets/atlas/magic_schools/json/abjuration.json"
   },
   "classes": [
     {
       "index": "artificer",
       "name": "artificer",
-      "url": "assets/atlas/class/json/artificer.json"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
     {
       "index": "ranger",
       "name": "ranger",
-      "url": "assets/atlas/classes/json/ranger.json"
+      "url": "public/assets/atlas/class/json/ranger.json"
     },
     {
       "index": "wizard",
@@ -49,12 +49,12 @@
     {
       "index": "lore",
       "name": "lore",
-      "url": "assets/atlas/subclasses/json/lore.json"
+      "url": "public/assets/atlas/subclasses/json/lore.json"
     }
   ],
-  "url": "assets/atlas/spell/json/alarm.json",
-  "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "assets/atlas/spell/images/alarm.webp",
+  "url": "public/assets/atlas/spell/json/alarm.json",
+  "updated_at": "2026-06-01T06:56:15.190Z",
+  "image": "public/assets/atlas/spell/images/alarm.webp",
   "sprite_index": 3,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet1.webp"
 }

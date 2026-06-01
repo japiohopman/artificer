@@ -35,29 +35,29 @@
   "school": {
     "index": "illusion",
     "name": "illusion",
-    "url": "assets/atlas/magic_schools/json/illusion.json"
+    "url": "public/assets/atlas/magic_schools/json/illusion.json"
   },
   "classes": [
     {
       "index": "artificer",
       "name": "artificer",
-      "url": "assets/atlas/class/json/artificer.json"
+      "url": "public/assets/atlas/class/json/artificer.json"
     },
     {
       "index": "sorcerer",
       "name": "sorcerer",
-      "url": "assets/atlas/classes/json/sorcerer.json"
+      "url": "public/assets/atlas/class/json/sorcerer.json"
     },
     {
       "index": "wizard",
       "name": "wizard",
-      "url": "assets/atlas/classes/json/wizard.json"
+      "url": "public/assets/atlas/class/json/wizard.json"
     }
   ],
   "subclasses": [],
-  "url": "assets/atlas/spell/json/creation.json",
-  "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "assets/atlas/spell/images/creation.webp",
+  "url": "public/assets/atlas/spell/json/creation.json",
+  "updated_at": "2026-06-01T06:56:15.190Z",
+  "image": "public/assets/atlas/spell/images/creation.webp",
   "sprite_index": 18,
   "sprite_sheet": "/artificer-main/codex/assets/spell/sprites/spell_sheet3.webp"
 }
