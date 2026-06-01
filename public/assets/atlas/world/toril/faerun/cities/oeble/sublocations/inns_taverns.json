@@ -1,0 +1,223 @@
+{
+  "category": "inns_taverns",
+  "updatedAt": "2026-06-01T19:17:08.192Z",
+  "location_id": "oeble",
+  "sub_locations": [
+    {
+      "id": "1",
+      "name": "Griffingate House",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1668.0007579091,
+        750.00201848781
+      ],
+      "popup": {
+        "title": "Griffingate House",
+        "description": "A large ornate old inn at the center of the city and its most imposing structure of many balconies and gargoyles.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "The Paeraddyn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        567.99393672719,
+        256.00807395126
+      ],
+      "popup": {
+        "title": "The Paeraddyn",
+        "description": "A walled and heavily-protected [[caravansary]] that included  a bathhouse, stables, gardens, minstrels' bower, and a luxurious market advertised as \"A Taste of Oeble.\"",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "19",
+      "name": "Slarvyn's Sword",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1782.6896362233,
+        1663.7456705354
+      ],
+      "popup": {
+        "title": "Slarvyn's Sword",
+        "description": "A fine dining club and a place to be seen at. It offered expensive dishes and was decorated with countless adventuring trophies.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "22",
+      "name": "Melder's Door",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1236.0205098234,
+        506.31557377157
+      ],
+      "popup": {
+        "title": "Melder's Door",
+        "description": "A rowdy inn and a tavern of ill repute, located in the [[Underways]] directly under the [[Sixturrets]] intersection, frequented by [[Oeble]]'s [[monstrous humanoid]] population,",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "31",
+      "name": "Mhalree's Door",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1187.9404642387,
+        390.32865236066
+      ],
+      "popup": {
+        "title": "Mhalree's Door",
+        "description": "An inn of note on [[Oeble]]'s [[Sixturrets]] intersection.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "32",
+      "name": "Wyvernposts",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        2312.2000521255,
+        360.84974237856
+      ],
+      "popup": {
+        "title": "Wyvernposts",
+        "description": "An inn of note that faced the [[Dead King's Walk]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "33",
+      "name": "Sammart Hall",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1853.6679450912,
+        2174.8006928011
+      ],
+      "popup": {
+        "title": "Sammart Hall",
+        "description": "One of [[Oeble]]'s notable inns.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "34",
+      "name": "The Black Rose",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1811.1986644069,
+        1300.1501684958
+      ],
+      "popup": {
+        "title": "The Black Rose",
+        "description": "A well-known inn and brothel that stood on the [[River Scelptar]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}
