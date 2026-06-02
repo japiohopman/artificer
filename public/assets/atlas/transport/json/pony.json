@@ -1,0 +1,49 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "pony",
+  "name": "pony",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 30,
+    "unit": "gp"
+  },
+  "speed": {
+    "land": {
+      "quantity": 40.0,
+      "unit": "ft/round"
+    }
+  },
+  "capacity": {
+    "cargo": "225 lb."
+  },
+  "url": "public/assets/atlas/transport/json/pony.json",
+  "updated_at": "2026-04-21T14:03:47.412Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/enemies/images/pony.webp",
+  "sprite_index": 11,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/pony.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "21-4-2026",
+  "transport_type": "mount",
+  "transport_specific": {
+    "stat_block": {
+      "index": "pony",
+      "name": "pony",
+      "url": "public/assets/atlas/enemies/json/pony.json"
+    },
+    "feed": {
+      "index": "animal_feed_1_day",
+      "name": "animal feed (1 day)",
+      "url": "public/assets/atlas/equipment/json/animal_feed_1_day.json"
+    }
+  }
+}

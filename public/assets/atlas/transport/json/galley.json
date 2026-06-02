@@ -1,0 +1,35 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "galley",
+  "name": "galley",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Waterborne Vehicles",
+  "cost": {
+    "quantity": 30000,
+    "unit": "gp"
+  },
+  "speed": {
+    "water": {
+      "quantity": 4.0,
+      "unit": "mph"
+    }
+  },
+  "url": "public/assets/atlas/transport/json/galley.json",
+  "updated_at": "2026-04-21T14:07:41.325Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/transport/images/galley.webp",
+  "sprite_index": 16,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/galley.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "21-4-2026",
+  "transport_type": "vehicle",
+  "transport_specific": {}
+}

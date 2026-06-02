@@ -1,0 +1,49 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "horse_draft",
+  "name": "horse, draft",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "speed": {
+    "land": {
+      "quantity": 40.0,
+      "unit": "ft/round"
+    }
+  },
+  "capacity": {
+    "cargo": "540 lb."
+  },
+  "url": "public/assets/atlas/transport/json/horse_draft.json",
+  "updated_at": "2026-04-21T14:06:29.153Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/enemies/images/draft_horse.webp",
+  "sprite_index": 8,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp",
+  "imageUrl": "/assets/atlas/equipment/images/horse_draft.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "21-4-2026",
+  "transport_type": "mount",
+  "transport_specific": {
+    "stat_block": {
+      "index": "draft_horse",
+      "name": "horse, draft",
+      "url": "public/assets/atlas/enemies/json/draft_horse.json"
+    },
+    "feed": {
+      "index": "animal_feed_1_day",
+      "name": "animal feed (1 day)",
+      "url": "public/assets/atlas/equipment/json/animal_feed_1_day.json"
+    }
+  }
+}

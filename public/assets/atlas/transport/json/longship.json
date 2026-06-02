@@ -1,0 +1,38 @@
+{
+  "desc": [
+    "The longship was similar to the drakkar but much smaller\u2014typically 70\u200b to \u200b80\u202ffeet (21\u200b to \u200b24\u202fmeters) along the keel and 15\u200b to \u200b20\u202ffeet (4.6\u200b to \u200b6.1\u202fmeters) across the beam. With 20 oars on each side, the minimum crew size was 40 plus three watchmen and could carry a maximum crew of between 60 and 200 including rowers. Longships could sail, assuming moderate, favorable winds and calm seas, at a maximum speed of 16 nautical miles per hour with sail and between two and ten while propelled by oars."
+  ],
+  "special": [],
+  "index": "longship",
+  "name": "longship",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Waterborne Vehicles",
+  "cost": {
+    "quantity": 10000,
+    "unit": "gp"
+  },
+  "speed": {
+    "water": {
+      "quantity": 3.0,
+      "unit": "mph"
+    }
+  },
+  "url": "public/assets/atlas/transport/json/longship.json",
+  "updated_at": "2026-04-11T15:55:23.465Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/transport/images/longship.webp",
+  "sprite_index": 4,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/longship.webp",
+  "_type": "equipment",
+  "rarity": "Very Rare",
+  "category": "Waterborne Vehicles",
+  "last_updated": "11-4-2026",
+  "transport_type": "vehicle",
+  "transport_specific": {}
+}

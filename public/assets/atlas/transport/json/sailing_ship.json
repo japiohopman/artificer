@@ -1,0 +1,40 @@
+{
+  "desc": [
+    "The barnacled hull of this miniature sailing ship whispers secrets of forgotten voyages to drowned gods, its tiny, blood-red sails forever catching a phantom wind that chills the bone. Hold it close, and feel the abyss beckon, promising passage across seas where no sane mortal should ever tread.\n"
+  ],
+  "special": [],
+  "index": "sailing_ship",
+  "name": "sailing ship",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Waterborne Vehicles",
+  "cost": {
+    "quantity": 10000,
+    "unit": "gp"
+  },
+  "speed": {
+    "water": {
+      "quantity": 2.0,
+      "unit": "mph"
+    }
+  },
+  "url": "public/assets/atlas/transport/json/sailing_ship.json",
+  "updated_at": "2026-04-25T19:33:30.717Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/transport/images/sailing_ship.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/sailing_ship.webp",
+  "_type": "equipment",
+  "background_type": "water",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "25-4-2026",
+  "transport_type": "vehicle",
+  "transport_specific": {}
+}

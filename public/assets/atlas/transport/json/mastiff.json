@@ -1,0 +1,45 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "mastiff",
+  "name": "mastiff",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "public/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "speed": {
+    "land": {
+      "quantity": 40.0,
+      "unit": "ft/round"
+    }
+  },
+  "capacity": {
+    "cargo": "195 lb."
+  },
+  "url": "public/assets/atlas/transport/json/mastiff.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "public/assets/atlas/enemies/images/mastiff.webp",
+  "sprite_index": 12,
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet6.webp",
+  "transport_type": "mount",
+  "transport_specific": {
+    "stat_block": {
+      "index": "mastiff",
+      "name": "mastiff",
+      "url": "public/assets/atlas/enemies/json/mastiff.json"
+    },
+    "feed": {
+      "index": "animal_feed_1_day",
+      "name": "animal feed (1 day)",
+      "url": "public/assets/atlas/equipment/json/animal_feed_1_day.json"
+    }
+  }
+}

@@ -5,27 +5,27 @@
     {
       "index": "carriage",
       "name": "carriage",
-      "url": "public/assets/atlas/equipment/json/carriage.json"
+      "url": "public/assets/atlas/transport/json/carriage.json"
     },
     {
       "index": "cart",
       "name": "cart",
-      "url": "public/assets/atlas/equipment/json/cart.json"
+      "url": "public/assets/atlas/transport/json/cart.json"
     },
     {
       "index": "chariot",
       "name": "chariot",
-      "url": "public/assets/atlas/equipment/json/charismariot.json"
+      "url": "public/assets/atlas/transport/json/chariot.json"
     },
     {
       "index": "sled",
       "name": "sled",
-      "url": "public/assets/atlas/equipment/json/sled.json"
+      "url": "public/assets/atlas/transport/json/sled.json"
     },
     {
       "index": "wagon",
       "name": "wagon",
-      "url": "public/assets/atlas/equipment/json/wagon.json"
+      "url": "public/assets/atlas/transport/json/wagon.json"
     }
   ],
   "url": "public/assets/atlas/equipment_categories/json/land_vehicles.json",
