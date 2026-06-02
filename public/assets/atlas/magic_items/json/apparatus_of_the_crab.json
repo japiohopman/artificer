@@ -36,7 +36,36 @@
     "| 9 | The apparatus sinks as much as 20 feet in liquid. | The apparatus rises up to 20 feet in liquid. |",
     "| 10 | The rear hatch unseals and opens. |  The rear hatch closes and seals. |"
   ],
-  "image": "public/assets/atlas/magic_items/apparatus_of_the_crab.webp",
-  "url": "public/assets/atlas/magic_items/json/apparatus_of_the_crab.json",
-  "updated_at": "2025-10-24T20:42:13.517Z"
+  "image": "public/assets/atlas/transport/images/apparatus_of_the_crab.webp",
+  "url": "public/assets/atlas/transport/json/apparatus_of_the_crab.json",
+  "updated_at": "2026-06-02T13:31:56.888Z",
+  "transport_type": "magical",
+  "speed": {
+    "land": {
+      "quantity": 30,
+      "unit": "ft/round"
+    },
+    "water": {
+      "quantity": 30,
+      "unit": "ft/round"
+    }
+  },
+  "capacity": {
+    "passenger": {
+      "count": 2,
+      "size": "Medium",
+      "description": "Two Medium or smaller creatures"
+    }
+  },
+  "transport_specific": {
+    "armor_class": 20,
+    "hull_points": 200,
+    "operating_conditions": [
+      "Requires 1 pilot"
+    ]
+  },
+  "imageUrl": "/assets/atlas/magic_items/images/apparatus_of_the_crab.webp",
+  "_type": "transport",
+  "background_type": "land_forest",
+  "last_updated": "2-6-2026"
 }
