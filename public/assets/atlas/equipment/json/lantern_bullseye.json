@@ -21,10 +21,17 @@
     "A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
   ],
   "url": "public/assets/atlas/equipment/json/lantern_bullseye.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-02T08:20:09.630Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/lantern_bullseye.webp",
   "sprite_index": 21,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet5.0webp",
+  "imageUrl": "/assets/atlas/equipment/images/lantern_bullseye.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "2-6-2026"
 }
