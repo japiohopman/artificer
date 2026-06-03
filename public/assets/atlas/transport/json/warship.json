@@ -17,12 +17,12 @@
   },
   "speed": {
     "water": {
-      "quantity": 2.5,
-      "unit": "mph"
+      "ft_per_round": 22.0,
+      "mph": 2.5
     }
   },
   "url": "public/assets/atlas/transport/json/warship.json",
-  "updated_at": "2026-04-25T19:29:50.181Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/transport/images/warship.webp",
@@ -37,5 +37,14 @@
   "category": "Waterborne Vehicles",
   "last_updated": "25-4-2026",
   "transport_type": "vehicle",
+  "combat_stats": {
+    "armor_class": 15,
+    "hit_points": 500,
+    "damage_threshold": 20
+  },
+  "capacity": {
+    "crew_required": 60,
+    "max_passengers": 40
+  },
   "transport_specific": {}
 }

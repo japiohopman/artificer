@@ -15,15 +15,15 @@
   },
   "speed": {
     "land": {
-      "quantity": 40.0,
-      "unit": "ft/round"
+      "ft_per_round": 40.0,
+      "mph": 4.55
     }
   },
   "capacity": {
     "cargo": "540 lb."
   },
   "url": "public/assets/atlas/transport/json/horse_draft.json",
-  "updated_at": "2026-04-21T14:06:29.153Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/enemies/images/draft_horse.webp",
@@ -37,7 +37,7 @@
   "transport_specific": {
     "stat_block": {
       "index": "draft_horse",
-      "name": "horse, draft",
+      "name": "draft horse",
       "url": "public/assets/atlas/enemies/json/draft_horse.json"
     },
     "feed": {

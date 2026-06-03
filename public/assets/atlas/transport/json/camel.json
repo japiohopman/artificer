@@ -15,15 +15,15 @@
   },
   "speed": {
     "land": {
-      "quantity": 50.0,
-      "unit": "ft/round"
+      "ft_per_round": 50.0,
+      "mph": 5.68
     }
   },
   "capacity": {
     "cargo": "480 lb."
   },
   "url": "public/assets/atlas/transport/json/camel.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/enemies/images/camel.webp",

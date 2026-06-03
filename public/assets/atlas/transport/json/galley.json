@@ -15,12 +15,12 @@
   },
   "speed": {
     "water": {
-      "quantity": 4.0,
-      "unit": "mph"
+      "ft_per_round": 35.2,
+      "mph": 4.0
     }
   },
   "url": "public/assets/atlas/transport/json/galley.json",
-  "updated_at": "2026-04-21T14:07:41.325Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/transport/images/galley.webp",
@@ -31,5 +31,14 @@
   "background_type": "land_forest",
   "last_updated": "21-4-2026",
   "transport_type": "vehicle",
+  "combat_stats": {
+    "armor_class": 15,
+    "hit_points": 500,
+    "damage_threshold": 20
+  },
+  "capacity": {
+    "crew_required": 80,
+    "max_passengers": 0
+  },
   "transport_specific": {}
 }

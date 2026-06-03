@@ -38,28 +38,31 @@
   ],
   "image": "public/assets/atlas/transport/images/apparatus_of_the_crab.webp",
   "url": "public/assets/atlas/transport/json/apparatus_of_the_crab.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "transport_type": "magical",
   "speed": {
     "land": {
-      "quantity": 30.0,
-      "unit": "ft/round"
+      "ft_per_round": 30.0,
+      "mph": 3.41
     },
     "water": {
-      "quantity": 30.0,
-      "unit": "ft/round"
+      "ft_per_round": 30.0,
+      "mph": 3.41
     }
+  },
+  "combat_stats": {
+    "armor_class": 20,
+    "hit_points": 200,
+    "damage_threshold": 0
   },
   "capacity": {
-    "passenger": {
-      "count": 2,
-      "size": "Medium",
-      "description": "Two Medium or smaller creatures"
-    }
+    "crew_required": 1,
+    "max_passengers": 1
   },
   "transport_specific": {
-    "armor_class": 20,
-    "hull_points": 200,
+    "command_words": [
+      "10 levers"
+    ],
     "operating_conditions": [
       "Requires 1 pilot"
     ]

@@ -15,18 +15,18 @@
   },
   "speed": {
     "land": {
-      "quantity": 40.0,
-      "unit": "ft/round"
+      "ft_per_round": 40.0,
+      "mph": 4.55
     }
   },
   "capacity": {
     "cargo": "225 lb."
   },
   "url": "public/assets/atlas/transport/json/pony.json",
-  "updated_at": "2026-04-21T14:03:47.412Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "contents": [],
   "properties": [],
-  "image": "public/assets/atlas/enemies/images/pony.webp",
+  "image": "public/assets/atlas/enemies/images/mule.webp",
   "sprite_index": 11,
   "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet7.webp",
   "imageUrl": "/assets/atlas/equipment/images/pony.webp",
@@ -36,9 +36,9 @@
   "transport_type": "mount",
   "transport_specific": {
     "stat_block": {
-      "index": "pony",
-      "name": "pony",
-      "url": "public/assets/atlas/enemies/json/pony.json"
+      "index": "mule",
+      "name": "mule",
+      "url": "public/assets/atlas/enemies/json/mule.json"
     },
     "feed": {
       "index": "animal_feed_1_day",

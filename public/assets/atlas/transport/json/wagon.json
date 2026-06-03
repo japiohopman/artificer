@@ -15,7 +15,7 @@
   },
   "weight": 400,
   "url": "public/assets/atlas/transport/json/wagon.json",
-  "updated_at": "2026-05-02T06:48:56.025Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/transport/images/wagon.webp",
@@ -30,6 +30,20 @@
   ],
   "last_updated": "2-5-2026",
   "transport_type": "vehicle",
-  "speed": {},
+  "speed": {
+    "land": {
+      "ft_per_round": 30.0,
+      "mph": 3.41
+    }
+  },
+  "combat_stats": {
+    "armor_class": 12,
+    "hit_points": 100,
+    "damage_threshold": 0
+  },
+  "capacity": {
+    "crew_required": 1,
+    "max_passengers": 6
+  },
   "transport_specific": {}
 }

@@ -18,17 +18,15 @@
   ],
   "image": "public/assets/atlas/transport/images/broom_of_flying.webp",
   "url": "public/assets/atlas/transport/json/broom_of_flying.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "transport_type": "magical",
   "speed": {
     "air": {
-      "quantity": 50.0,
-      "unit": "ft/round"
+      "ft_per_round": 50.0,
+      "mph": 5.68
     }
   },
-  "capacity": {
-    "cargo": "400 lb."
-  },
+  "capacity": {},
   "transport_specific": {
     "command_words": [
       "(variable)"

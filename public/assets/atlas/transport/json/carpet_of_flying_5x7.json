@@ -18,17 +18,15 @@
   ],
   "image": "public/assets/atlas/transport/images/carpet_of_flying_5x7.webp",
   "url": "public/assets/atlas/transport/json/carpet_of_flying_5x7.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "transport_type": "magical",
   "speed": {
     "air": {
-      "quantity": 80.0,
-      "unit": "ft/round"
+      "ft_per_round": 40.0,
+      "mph": 4.55
     }
   },
-  "capacity": {
-    "cargo": "800 lb."
-  },
+  "capacity": {},
   "transport_specific": {
     "command_words": [
       "(variable)"

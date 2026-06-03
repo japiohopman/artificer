@@ -17,12 +17,12 @@
   },
   "speed": {
     "water": {
-      "quantity": 3.0,
-      "unit": "mph"
+      "ft_per_round": 26.4,
+      "mph": 3.0
     }
   },
   "url": "public/assets/atlas/transport/json/longship.json",
-  "updated_at": "2026-04-11T15:55:23.465Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/transport/images/longship.webp",
@@ -34,5 +34,14 @@
   "category": "Waterborne Vehicles",
   "last_updated": "11-4-2026",
   "transport_type": "vehicle",
+  "combat_stats": {
+    "armor_class": 15,
+    "hit_points": 300,
+    "damage_threshold": 15
+  },
+  "capacity": {
+    "crew_required": 40,
+    "max_passengers": 100
+  },
   "transport_specific": {}
 }

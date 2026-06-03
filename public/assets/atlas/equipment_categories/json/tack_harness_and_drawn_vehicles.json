@@ -70,12 +70,12 @@
     {
       "index": "carriage",
       "name": "carriage",
-      "url": "public/assets/atlas/equipment/json/carriage.json"
+      "url": "public/assets/atlas/transport/json/carriage.json"
     },
     {
       "index": "cart",
       "name": "cart",
-      "url": "public/assets/atlas/equipment/json/cart.json"
+      "url": "public/assets/atlas/transport/json/cart.json"
     },
     {
       "index": "chariot",
@@ -115,7 +115,7 @@
     {
       "index": "sled",
       "name": "sled",
-      "url": "public/assets/atlas/equipment/json/sled.json"
+      "url": "public/assets/atlas/transport/json/sled.json"
     },
     {
       "index": "stabling_1_day",
@@ -125,7 +125,7 @@
     {
       "index": "wagon",
       "name": "wagon",
-      "url": "public/assets/atlas/equipment/json/wagon.json"
+      "url": "public/assets/atlas/transport/json/wagon.json"
     }
   ],
   "url": "public/assets/atlas/equipment_categories/json/tack_harness_and_drawn_vehicles.json",

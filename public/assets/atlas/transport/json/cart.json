@@ -15,7 +15,7 @@
   },
   "weight": 200,
   "url": "public/assets/atlas/transport/json/cart.json",
-  "updated_at": "2026-04-21T14:02:21.018Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/transport/images/cart.webp",
@@ -26,6 +26,20 @@
   "background_type": "land_forest",
   "last_updated": "21-4-2026",
   "transport_type": "vehicle",
-  "speed": {},
+  "speed": {
+    "land": {
+      "ft_per_round": 30.0,
+      "mph": 3.41
+    }
+  },
+  "combat_stats": {
+    "armor_class": 12,
+    "hit_points": 50,
+    "damage_threshold": 0
+  },
+  "capacity": {
+    "crew_required": 1,
+    "max_passengers": 1
+  },
   "transport_specific": {}
 }

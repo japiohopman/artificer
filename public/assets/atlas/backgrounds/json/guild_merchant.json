@@ -20,7 +20,7 @@
       "equipment": {
         "index": "mule",
         "name": "Mule",
-        "url": "public/assets/atlas/equipment/json/mule.json"
+        "url": "public/assets/atlas/transport/json/mule.json"
       },
       "quantity": 1
     },
@@ -28,7 +28,7 @@
       "equipment": {
         "index": "cart",
         "name": "Cart",
-        "url": "public/assets/atlas/equipment/json/cart.json"
+        "url": "public/assets/atlas/transport/json/cart.json"
       },
       "quantity": 1
     },

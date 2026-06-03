@@ -20,7 +20,7 @@
     "The third command word causes the folding boat to fold back into a box, provided that no creatures are aboard. Any objects in the vessel that can't fit inside the box remain outside the box as it folds. Any objects in the vessel that can fit inside the box do so."
   ],
   "url": "public/assets/atlas/transport/json/folding_boat.json",
-  "updated_at": "2026-05-02T06:52:07.553Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "image": "public/assets/atlas/transport/images/folding_boat.webp",
   "imageUrl": "/assets/atlas/magic_items/images/folding_boat.webp",
   "_type": "equipment",
@@ -30,17 +30,11 @@
   "transport_type": "magical",
   "speed": {
     "water": {
-      "quantity": 15.0,
-      "unit": "ft/round"
+      "ft_per_round": 15.0,
+      "mph": 1.7
     }
   },
-  "capacity": {
-    "passenger": {
-      "count": 15,
-      "size": "Medium",
-      "description": "Up to 15 in ship form"
-    }
-  },
+  "capacity": {},
   "transport_specific": {
     "command_words": [
       "(3 unique command words)"

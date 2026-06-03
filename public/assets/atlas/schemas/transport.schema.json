@@ -42,27 +42,9 @@
     "speed": {
       "type": "object",
       "properties": {
-        "land": {
-          "type": "object",
-          "properties": {
-            "quantity": { "type": "number" },
-            "unit": { "type": "string" }
-          }
-        },
-        "water": {
-          "type": "object",
-          "properties": {
-            "quantity": { "type": "number" },
-            "unit": { "type": "string" }
-          }
-        },
-        "air": {
-          "type": "object",
-          "properties": {
-            "quantity": { "type": "number" },
-            "unit": { "type": "string" }
-          }
-        }
+        "land": { "$ref": "#/definitions/speed_detail" },
+        "water": { "$ref": "#/definitions/speed_detail" },
+        "air": { "$ref": "#/definitions/speed_detail" }
       }
     },
     "capacity": {
@@ -87,7 +69,17 @@
             "size": { "type": "string" },
             "description": { "type": "string" }
           }
-        }
+        },
+        "max_passengers": { "type": "integer" },
+        "crew_required": { "type": "integer" }
+      }
+    },
+    "combat_stats": {
+      "type": "object",
+      "properties": {
+        "armor_class": { "type": "integer" },
+        "hit_points": { "type": "integer" },
+        "damage_threshold": { "type": "integer" }
       }
     },
     "transport_specific": {
@@ -109,9 +101,7 @@
             "url": { "type": "string" }
           }
         },
-        "crew_requirements": { "type": "string" },
-        "hull_points": { "type": "integer" },
-        "armor_class": { "type": "integer" },
+        "crew_requirements_desc": { "type": "string" },
         "flight_duration": { "type": "string" },
         "command_words": {
           "type": "array",
@@ -134,5 +124,14 @@
     "updated_at": { "type": "string", "format": "date-time" },
     "sprite_index": { "type": "integer" },
     "sprite_sheet": { "type": "string" }
+  },
+  "definitions": {
+    "speed_detail": {
+      "type": "object",
+      "properties": {
+        "ft_per_round": { "type": "number" },
+        "mph": { "type": "number" }
+      }
+    }
   }
 }

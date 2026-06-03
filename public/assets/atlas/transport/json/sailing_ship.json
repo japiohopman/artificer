@@ -17,12 +17,12 @@
   },
   "speed": {
     "water": {
-      "quantity": 2.0,
-      "unit": "mph"
+      "ft_per_round": 17.6,
+      "mph": 2.0
     }
   },
   "url": "public/assets/atlas/transport/json/sailing_ship.json",
-  "updated_at": "2026-04-25T19:33:30.717Z",
+  "updated_at": "2024-06-19T00:00:00.000Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/transport/images/sailing_ship.webp",
@@ -36,5 +36,14 @@
   ],
   "last_updated": "25-4-2026",
   "transport_type": "vehicle",
+  "combat_stats": {
+    "armor_class": 15,
+    "hit_points": 300,
+    "damage_threshold": 15
+  },
+  "capacity": {
+    "crew_required": 20,
+    "max_passengers": 20
+  },
   "transport_specific": {}
 }
