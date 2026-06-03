@@ -1,8 +1,10 @@
 {
   "id": "island_kingdoms",
   "name": "Island Kingdoms",
-  "type": "region",
-  "parent": "faerun",
+  "world": "totil",
+  "continent": "fearun",
+  "region": "west_faerun",
+  "sub_region": "island_kingdoms",
   "title": "The Western Reaches: Island Kingdoms",
   "description": "The myriad islands in the Sea of Swords and the Trackless Sea beyond. These range from the elven paradise of Evermeet to the technological wonders of Lantan.",
   "wiki": "Isolated by miles of ocean, these island nations have developed unique cultures. Evermeet is the last retreat of the elves, while Nimbral is known for its legendary glass-plate armor and flying knights. Lantan is a place of goggles, gears, and gunpowder. These lands are often shrouded in myth and hard to reach for the common folk of mainland Faerûn.",
