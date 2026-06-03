@@ -180,6 +180,15 @@
               "name": "crossbow bolt",
               "url": "public/assets/atlas/equipment/json/crossbow_bolt.json"
             }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "case_crossbow_bolt",
+              "name": "crossbow bolt case",
+              "url": "public/assets/atlas/equipment/json/case_crossbow_bolt.json"
+            }
           }
         ]
       }

@@ -29,6 +29,16 @@
       "index": "intelligence",
       "name": "intelligence",
       "url": "public/assets/atlas/ability_scores/json/intelligence.json"
-    }
+    },
+    "base_equipment_options": [
+      {
+        "equipment": {
+          "index": "spellbook",
+          "name": "spellbook",
+          "url": "public/assets/atlas/equipment/json/spellbook.json"
+        },
+        "quantity": 1
+      }
+    ]
   }
 }

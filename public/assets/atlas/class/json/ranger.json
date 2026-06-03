@@ -143,6 +143,14 @@
         "url": "public/assets/atlas/equipment/json/arrow.json"
       },
       "quantity": 20
+    },
+    {
+      "equipment": {
+        "index": "quiver",
+        "name": "quiver",
+        "url": "public/assets/atlas/equipment/json/quiver.json"
+      },
+      "quantity": 1
     }
   ],
   "starting_equipment_options": [
