@@ -1,8 +1,10 @@
 {
-  "id": "southeast_faerun_old_empires",
-  "name": "East Faerûn",
+  "id": "east_faerun",
+  "name": "East Faer\u00fbn",
+  "world": "totil",
   "type": "region",
-  "parent": "faerun",
+  "continent": "fearun",
+  "region": "east_faerun",
   "title": "East Faerûn: The Old Empires",
   "description": "East Faerûn is a land of ancient history, god-kings, and hidden wonders. It encompasses the remnants of empires like Mulhorand and Unther, where tradition and ancient laws still hold sway.",
   "wiki": "The Old Empires of the East were once ruled by manifestations of the gods themselves. Though their glory has faded, the influence of ancient magic and divine presence is still palpable. To the north lies the mysterious land of Thay, ruled by the Red Wizards, and to the south, the vast deserts leading towards further reaches of Toril.",
