@@ -10,20 +10,20 @@
     {
       "name": "acrobatics",
       "index": "acrobatics",
-      "url": "assets/atlas/skills/json/acrobatics.json"
+      "url": "public/assets/atlas/skills/json/acrobatics.json"
     },
     {
       "name": "sleight of hand",
       "index": "sleight_of_hand",
-      "url": "assets/atlas/skills/json/sleight_of_hand.json"
+      "url": "public/assets/atlas/skills/json/sleight_of_hand.json"
     },
     {
       "name": "stealth",
       "index": "stealth",
-      "url": "assets/atlas/skills/json/stealth.json"
+      "url": "public/assets/atlas/skills/json/stealth.json"
     }
   ],
-  "url": "assets/atlas/ability_scores/json/dexterity.json",
+  "url": "public/assets/atlas/ability_scores/json/dexterity.json",
   "updated_at": "2025-10-24T20:42:12.130Z",
-  "image": "assets/atlas/ability_scores/images/dexterity.webp"
+  "image": "public/assets/atlas/ability_scores/images/dexterity.webp"
 }

@@ -10,30 +10,30 @@
     {
       "name": "arcana",
       "index": "arcana",
-      "url": "assets/atlas/skills/json/arcana.json"
+      "url": "public/assets/atlas/skills/json/arcana.json"
     },
     {
       "name": "history",
       "index": "history",
-      "url": "assets/atlas/skills/json/history.json"
+      "url": "public/assets/atlas/skills/json/history.json"
     },
     {
       "name": "investigation",
       "index": "investigation",
-      "url": "assets/atlas/skills/json/investigation.json"
+      "url": "public/assets/atlas/skills/json/investigation.json"
     },
     {
       "name": "nature",
       "index": "nature",
-      "url": "assets/atlas/skills/json/nature.json"
+      "url": "public/assets/atlas/skills/json/nature.json"
     },
     {
       "name": "religion",
       "index": "religion",
-      "url": "assets/atlas/skills/json/religion.json"
+      "url": "public/assets/atlas/skills/json/religion.json"
     }
   ],
-  "url": "assets/atlas/ability_scores/json/intelligence.json",
+  "url": "public/assets/atlas/ability_scores/json/intelligence.json",
   "updated_at": "2025-10-24T20:42:12.130Z",
-  "image": "assets/atlas/ability_scores/images/intelligence.webp"
+  "image": "public/assets/atlas/ability_scores/images/intelligence.webp"
 }
