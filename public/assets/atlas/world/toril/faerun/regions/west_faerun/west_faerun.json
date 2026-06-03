@@ -1,8 +1,9 @@
 {
-  "id": "central_faerun_heartlands",
-  "name": "West Faerûn",
-  "type": "region",
-  "parent": "faerun",
+  "id": "west_faerun",
+  "name": "West Faer\u00fbn",
+  "world": "totil",
+  "continent": "fearun",
+  "region": "west_faerun",
   "title": "West Faerûn: The Heartlands",
   "description": "West Faerûn, also known as the Heartlands, is the central core of the continent. It stretches from the Sword Coast in the west to the Sea of Fallen Stars in the east. This region is a tapestry of powerful kingdoms, ancient forests, and bustling trade routes.",
   "wiki": "The Heartlands is a broad geographic term for the central regions of Faerûn. It includes major powers like Cormyr and Sembia, as well as the Dalelands and the Western Heartlands. The region is known for its diverse cultures, rich history, and significant impact on the geopolitics of the continent. It is often seen as the cradle of civilization in northern Faerûn.",
