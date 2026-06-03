@@ -1,1 +1,35 @@
-
+{
+  "id": "nine_hells",
+  "name": "Nine Hells of Baator",
+  "type": "plane",
+  "parent": "outer_planes",
+  "title": "The Nine Hells of Baator",
+  "description": "The Nine Hells of Baator is the ultimate plane of law and evil, the epitome of premeditated cruelty and the home of the devils.",
+  "wiki": "The Nine Hells, also known as Baator, consists of nine layers, each deeper than the last. It is ruled by the Archdevils, with Asmodeus as the supreme overlord of the entire plane.",
+  "image": "nine_hells.webp",
+  "tags": [
+    "plane",
+    "lawful_evil",
+    "baator",
+    "outer_plane"
+  ],
+  "children": [
+    "avernus",
+    "dis",
+    "minauros",
+    "phlegethos",
+    "stygia",
+    "malbolge",
+    "maladomini",
+    "cania",
+    "nessus"
+  ],
+  "metadata": {
+    "ruler": "Asmodeus",
+    "alignment": "Lawful Evil",
+    "inhabitants": [
+      "Devils"
+    ]
+  },
+  "updated_at": "2024-06-19T00:00:00.000Z"
+}

@@ -1,1 +1,25 @@
-
+{
+  "id": "avernus",
+  "name": "Avernus",
+  "type": "plane_layer",
+  "parent": "nine_hells",
+  "title": "Avernus: The First Layer",
+  "description": "Avernus is the first layer of the Nine Hells, a rocky wasteland with rivers of blood and clouds of biting flies, serving as the arrival point for visitors and the front line of the Blood War.",
+  "wiki": "Avernus is a charred, desolate wasteland littered with the debris of a thousand wars. It is the domain of Zariel, who commands the infernal legions against the demon hordes of the Abyss.",
+  "image": "avernus.webp",
+  "tags": [
+    "plane_layer",
+    "nine_hells",
+    "avernus"
+  ],
+  "metadata": {
+    "ruler": "Zariel",
+    "previous_ruler": "Bel",
+    "key_locations": [
+      "Bronze Citadel",
+      "Styx",
+      "Tiamat's Lair"
+    ]
+  },
+  "updated_at": "2024-06-19T00:00:00.000Z"
+}

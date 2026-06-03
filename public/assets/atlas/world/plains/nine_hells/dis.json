@@ -1,0 +1,23 @@
+{
+  "id": "dis",
+  "name": "Dis",
+  "type": "plane_layer",
+  "parent": "nine_hells",
+  "title": "Dis: The Second Layer",
+  "description": "Dis is the second layer of the Nine Hells, consisting primarily of the Iron City of Dis, a sprawling metropolis of glowing hot iron.",
+  "wiki": "The city of Dis is a maze of streets where the iron buildings glow with heat. It is ruled by Dispater from his Iron Tower, where he obsessively plots and monitors the multiverse.",
+  "image": "dis.webp",
+  "tags": [
+    "plane_layer",
+    "nine_hells",
+    "dis"
+  ],
+  "metadata": {
+    "ruler": "Dispater",
+    "key_locations": [
+      "Iron City",
+      "Iron Tower"
+    ]
+  },
+  "updated_at": "2024-06-19T00:00:00.000Z"
+}
