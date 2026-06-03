@@ -1,6 +1,14 @@
 {
   "id": "zorth_ulmaril",
   "name": "Zorth Ulmaril",
-  "backstory": "Zorth Ulmaril is a known figure in Waterdeep, associated with Lanternmaker Zorth Ulmaril.",
-  "updated_at": "2026-06-03T07:58:15.912826Z"
+  "sex": "Male",
+  "race": {
+    "index": "human",
+    "name": "Human",
+    "url": "public/assets/atlas/species/spicies_wiki/human.json"
+  },
+  "occupation": "Shopkeeper (Lanternmaker)",
+  "home": "Dock Ward, Waterdeep",
+  "backstory": "Zorth Ulmaril was a shopkeeper inhabiting Waterdeep during the mid-to-late 14th century DR. He made lanterns in a small shop located in Waterdeep's Dock Ward on Presper Street, just south of the end of Bitter Alley.",
+  "updated_at": "2024-06-19T00:00:00.000Z"
 }

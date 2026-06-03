@@ -1,6 +1,14 @@
 {
   "id": "piatran",
   "name": "Piatran",
-  "backstory": "Piatran is a known figure in Waterdeep, associated with Piatran's Clothiers.",
-  "updated_at": "2026-06-03T07:58:15.916154Z"
+  "sex": "Male",
+  "race": {
+    "index": "human",
+    "name": "Human",
+    "url": "public/assets/atlas/species/spicies_wiki/human.json"
+  },
+  "occupation": "Shopkeeper (Clothier)",
+  "home": "Southern Ward, Waterdeep",
+  "backstory": "Piatran was the owner of Piatran's Clothiers, a single-story shop in the Southern Ward of Waterdeep. Known for his quality garments and personalized service, his shop featured a split-floor design with elevated dressing rooms.",
+  "updated_at": "2024-06-19T00:00:00.000Z"
 }

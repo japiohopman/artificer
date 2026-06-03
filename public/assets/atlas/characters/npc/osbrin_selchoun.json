@@ -1,6 +1,14 @@
 {
   "id": "osbrin_selchoun",
   "name": "Osbrin Selchoun",
-  "backstory": "Osbrin Selchoun is a known figure in Waterdeep, associated with Selchoun's Sundries Shop.",
-  "updated_at": "2026-06-03T07:58:15.911197Z"
+  "sex": "Male",
+  "race": {
+    "index": "human",
+    "name": "Human",
+    "url": "public/assets/atlas/species/spicies_wiki/human.json"
+  },
+  "occupation": "Shopkeeper (General Store Proprietor)",
+  "home": "Staghunter's Way, Waterdeep",
+  "backstory": "Osbrin Selchoun is the proprietor of Selchoun's Sundries Shop, a prosperous general store in Waterdeep. Originally located in the Sea Ward, his shop was destroyed in a mysterious fire in 1367 DR, leading him to reopen at a new location on Staghunter's Way near Heroes' Garden. He sells a variety of goods ranging from tourist trinkets and toys to mundane everyday necessities.",
+  "updated_at": "2024-06-19T00:00:00.000Z"
 }
