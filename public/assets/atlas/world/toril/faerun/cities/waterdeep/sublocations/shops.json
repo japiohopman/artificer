@@ -1,6 +1,6 @@
 {
   "category": "shops",
-  "updatedAt": "2026-06-03T05:50:02.274151Z",
+  "updatedAt": "2026-06-03T07:58:15.916769Z",
   "location_id": "waterdeep",
   "sub_locations": [
     {
@@ -19,16 +19,53 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "osbrin_selchoun",
+            "name": "Osbrin Selchoun",
+            "url": "public/assets/atlas/characters/npc/osbrin_selchoun.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "osbrin_selchoun",
+            "name": "Osbrin Selchoun",
+            "url": "public/assets/atlas/characters/npc/osbrin_selchoun.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "358",
@@ -55,7 +92,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "jeweler",
+      "equipment_categories": [
+        {
+          "index": "ring",
+          "url": "public/assets/atlas/equipment_categories/json/ring.json"
+        },
+        {
+          "index": "necklace",
+          "url": "public/assets/atlas/equipment_categories/json/necklace.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
     },
     {
       "id": "360",
@@ -82,7 +136,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tavern",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        }
+      ]
     },
     {
       "id": "364",
@@ -109,7 +176,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "389",
@@ -136,7 +228,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "395",
@@ -154,16 +263,45 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "torpus_the_tanner",
+            "name": "Torpus the Tanner",
+            "url": "public/assets/atlas/characters/npc/torpus_the_tanner.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "torpus_the_tanner",
+            "name": "Torpus the Tanner",
+            "url": "public/assets/atlas/characters/npc/torpus_the_tanner.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "397",
@@ -190,7 +328,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tavern",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        }
+      ]
     },
     {
       "id": "398",
@@ -208,16 +359,45 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "orgul_telethar",
+            "name": "Orgul Telethar",
+            "url": "public/assets/atlas/characters/npc/orgul_telethar.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "orgul_telethar",
+            "name": "Orgul Telethar",
+            "url": "public/assets/atlas/characters/npc/orgul_telethar.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "399",
@@ -244,7 +424,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "406",
@@ -262,16 +459,53 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "gelfuril",
+            "name": "Gelfuril",
+            "url": "public/assets/atlas/characters/npc/gelfuril.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "gelfuril",
+            "name": "Gelfuril",
+            "url": "public/assets/atlas/characters/npc/gelfuril.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "413",
@@ -298,7 +532,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "414",
@@ -325,7 +584,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "415",
@@ -343,16 +619,53 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "haerlit_thomm",
+            "name": "Haerlit Thomm",
+            "url": "public/assets/atlas/characters/npc/haerlit_thomm.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "haerlit_thomm",
+            "name": "Haerlit Thomm",
+            "url": "public/assets/atlas/characters/npc/haerlit_thomm.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "416",
@@ -379,7 +692,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "436",
@@ -406,7 +744,36 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
     },
     {
       "id": "451",
@@ -433,7 +800,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "bookshop",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "460",
@@ -451,16 +831,57 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "baerhar_surtlan",
+            "name": "Baerhar Surtlan",
+            "url": "public/assets/atlas/characters/npc/baerhar_surtlan.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "baerhar_surtlan",
+            "name": "Baerhar Surtlan",
+            "url": "public/assets/atlas/characters/npc/baerhar_surtlan.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
     },
     {
       "id": "470",
@@ -478,16 +899,53 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "chuldan_helmstar",
+            "name": "Chuldan Helmstar",
+            "url": "public/assets/atlas/characters/npc/chuldan_helmstar.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "chuldan_helmstar",
+            "name": "Chuldan Helmstar",
+            "url": "public/assets/atlas/characters/npc/chuldan_helmstar.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "472",
@@ -514,7 +972,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "479",
@@ -541,7 +1016,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "487",
@@ -559,16 +1059,53 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "zorth_ulmaril",
+            "name": "Zorth Ulmaril",
+            "url": "public/assets/atlas/characters/npc/zorth_ulmaril.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "zorth_ulmaril",
+            "name": "Zorth Ulmaril",
+            "url": "public/assets/atlas/characters/npc/zorth_ulmaril.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "495",
@@ -595,7 +1132,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "496",
@@ -622,7 +1184,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "497",
@@ -649,7 +1236,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "506",
@@ -676,7 +1280,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "512",
@@ -703,7 +1324,36 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "arcane",
+      "equipment_categories": [
+        {
+          "index": "arcane_foci",
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
+        },
+        {
+          "index": "wand",
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
+        },
+        {
+          "index": "staff",
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
+        },
+        {
+          "index": "rod",
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
+        },
+        {
+          "index": "scroll",
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "514",
@@ -730,7 +1380,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "carpenter",
+      "equipment_categories": [
+        {
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
     },
     {
       "id": "517",
@@ -757,7 +1420,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "519",
@@ -784,7 +1472,36 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "arcane",
+      "equipment_categories": [
+        {
+          "index": "arcane_foci",
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
+        },
+        {
+          "index": "wand",
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
+        },
+        {
+          "index": "staff",
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
+        },
+        {
+          "index": "rod",
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
+        },
+        {
+          "index": "scroll",
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "535",
@@ -811,7 +1528,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "538",
@@ -838,7 +1580,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "539",
@@ -865,7 +1632,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "jeweler",
+      "equipment_categories": [
+        {
+          "index": "ring",
+          "url": "public/assets/atlas/equipment_categories/json/ring.json"
+        },
+        {
+          "index": "necklace",
+          "url": "public/assets/atlas/equipment_categories/json/necklace.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
     },
     {
       "id": "540",
@@ -892,7 +1676,28 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "apothecary",
+      "equipment_categories": [
+        {
+          "index": "potion",
+          "url": "public/assets/atlas/equipment_categories/json/potion.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "herbs",
+          "url": "public/assets/atlas/materials_categories/json/herbs.json"
+        },
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        }
+      ]
     },
     {
       "id": "545",
@@ -919,7 +1724,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "carpenter",
+      "equipment_categories": [
+        {
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
     },
     {
       "id": "555",
@@ -946,7 +1764,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "558",
@@ -973,7 +1808,36 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
     },
     {
       "id": "561",
@@ -1000,7 +1864,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "562",
@@ -1018,16 +1899,57 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "zarondar_riautar",
+            "name": "Zarondar Riautar",
+            "url": "public/assets/atlas/characters/npc/zarondar_riautar.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "zarondar_riautar",
+            "name": "Zarondar Riautar",
+            "url": "public/assets/atlas/characters/npc/zarondar_riautar.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
     },
     {
       "id": "568",
@@ -1054,7 +1976,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "570",
@@ -1072,16 +2011,45 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "dannath_lisosar",
+            "name": "Dannath Lisosar",
+            "url": "public/assets/atlas/characters/npc/dannath_lisosar.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "dannath_lisosar",
+            "name": "Dannath Lisosar",
+            "url": "public/assets/atlas/characters/npc/dannath_lisosar.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "572",
@@ -1099,16 +2067,41 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "jhalassan_thond",
+            "name": "Jhalassan Thond",
+            "url": "public/assets/atlas/characters/npc/jhalassan_thond.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "jhalassan_thond",
+            "name": "Jhalassan Thond",
+            "url": "public/assets/atlas/characters/npc/jhalassan_thond.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "carpenter",
+      "equipment_categories": [
+        {
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
     },
     {
       "id": "573",
@@ -1135,7 +2128,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tavern",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        }
+      ]
     },
     {
       "id": "575",
@@ -1162,7 +2168,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "618",
@@ -1189,7 +2220,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "619",
@@ -1207,16 +2255,45 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "shalrin_meraedos",
+            "name": "Shalrin Meraedos",
+            "url": "public/assets/atlas/characters/npc/shalrin_meraedos.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "shalrin_meraedos",
+            "name": "Shalrin Meraedos",
+            "url": "public/assets/atlas/characters/npc/shalrin_meraedos.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "623",
@@ -1243,7 +2320,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "carpenter",
+      "equipment_categories": [
+        {
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
     },
     {
       "id": "657",
@@ -1261,16 +2351,53 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "lhund_dhaermos",
+            "name": "Lhund Dhaermos",
+            "url": "public/assets/atlas/characters/npc/lhund_dhaermos.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "lhund_dhaermos",
+            "name": "Lhund Dhaermos",
+            "url": "public/assets/atlas/characters/npc/lhund_dhaermos.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "670",
@@ -1297,7 +2424,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "686",
@@ -1324,7 +2476,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "701",
@@ -1351,7 +2528,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "702",
@@ -1378,7 +2580,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "bookshop",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "704",
@@ -1405,7 +2620,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "carpenter",
+      "equipment_categories": [
+        {
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
     },
     {
       "id": "712",
@@ -1432,7 +2660,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "carpenter",
+      "equipment_categories": [
+        {
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
     },
     {
       "id": "726",
@@ -1459,7 +2700,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "727",
@@ -1486,7 +2752,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "734",
@@ -1504,16 +2795,57 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "bronwyn_caradoon",
+            "name": "Bronwyn Caradoon",
+            "url": "public/assets/atlas/characters/npc/bronwyn_caradoon.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "bronwyn_caradoon",
+            "name": "Bronwyn Caradoon",
+            "url": "public/assets/atlas/characters/npc/bronwyn_caradoon.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "arcane",
+      "equipment_categories": [
+        {
+          "index": "arcane_foci",
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
+        },
+        {
+          "index": "wand",
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
+        },
+        {
+          "index": "staff",
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
+        },
+        {
+          "index": "rod",
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
+        },
+        {
+          "index": "scroll",
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "740",
@@ -1540,7 +2872,28 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "apothecary",
+      "equipment_categories": [
+        {
+          "index": "potion",
+          "url": "public/assets/atlas/equipment_categories/json/potion.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "herbs",
+          "url": "public/assets/atlas/materials_categories/json/herbs.json"
+        },
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        }
+      ]
     },
     {
       "id": "741",
@@ -1567,7 +2920,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "742",
@@ -1594,7 +2964,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "746",
@@ -1621,7 +3016,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "748",
@@ -1648,7 +3060,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "752",
@@ -1675,7 +3112,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "754",
@@ -1702,7 +3156,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "755",
@@ -1729,7 +3208,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "761",
@@ -1756,7 +3260,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "764",
@@ -1783,7 +3312,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "767",
@@ -1810,7 +3364,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "777",
@@ -1837,7 +3416,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "785",
@@ -1864,7 +3468,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "bookshop",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "786",
@@ -1891,7 +3508,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "795",
@@ -1918,7 +3560,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "796",
@@ -1945,7 +3612,36 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
     },
     {
       "id": "799",
@@ -1972,7 +3668,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "801",
@@ -1999,7 +3712,36 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "arcane",
+      "equipment_categories": [
+        {
+          "index": "arcane_foci",
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
+        },
+        {
+          "index": "wand",
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
+        },
+        {
+          "index": "staff",
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
+        },
+        {
+          "index": "rod",
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
+        },
+        {
+          "index": "scroll",
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "802",
@@ -2026,7 +3768,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "803",
@@ -2053,7 +3820,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "804",
@@ -2080,7 +3872,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "806",
@@ -2107,7 +3924,36 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
     },
     {
       "id": "810",
@@ -2134,7 +3980,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "812",
@@ -2161,7 +4032,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "813",
@@ -2188,7 +4076,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "814",
@@ -2215,7 +4128,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "bookshop",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "817",
@@ -2242,7 +4168,36 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
     },
     {
       "id": "819",
@@ -2269,7 +4224,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "824",
@@ -2287,16 +4267,40 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "hemmerem",
+            "name": "Hemmerem",
+            "url": "public/assets/atlas/characters/npc/hemmerem.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "hemmerem",
+            "name": "Hemmerem",
+            "url": "public/assets/atlas/characters/npc/hemmerem.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "stable",
+      "equipment_categories": [
+        {
+          "index": "mounts_and_other_animals",
+          "url": "public/assets/atlas/equipment_categories/json/mounts_and_other_animals.json"
+        },
+        {
+          "index": "tack_harness_and_drawn_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/tack_harness_and_drawn_vehicles.json"
+        }
+      ],
+      "material_categories": []
     },
     {
       "id": "825",
@@ -2314,16 +4318,45 @@
       },
       "day": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "piatran",
+            "name": "Piatran",
+            "url": "public/assets/atlas/characters/npc/piatran.json"
+          }
+        ],
         "map": null,
         "image": null
       },
       "night": {
         "ambient": null,
-        "npcs": [],
+        "npcs": [
+          {
+            "index": "piatran",
+            "name": "Piatran",
+            "url": "public/assets/atlas/characters/npc/piatran.json"
+          }
+        ],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "828",
@@ -2350,7 +4383,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "830",
@@ -2377,7 +4435,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "jeweler",
+      "equipment_categories": [
+        {
+          "index": "ring",
+          "url": "public/assets/atlas/equipment_categories/json/ring.json"
+        },
+        {
+          "index": "necklace",
+          "url": "public/assets/atlas/equipment_categories/json/necklace.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
     },
     {
       "id": "832",
@@ -2404,7 +4479,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "835",
@@ -2431,7 +4531,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tavern",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        }
+      ]
     },
     {
       "id": "837",
@@ -2458,7 +4571,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "848",
@@ -2485,7 +4623,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "jeweler",
+      "equipment_categories": [
+        {
+          "index": "ring",
+          "url": "public/assets/atlas/equipment_categories/json/ring.json"
+        },
+        {
+          "index": "necklace",
+          "url": "public/assets/atlas/equipment_categories/json/necklace.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
     },
     {
       "id": "933",
@@ -2512,7 +4667,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tavern",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        }
+      ]
     },
     {
       "id": "941",
@@ -2539,7 +4707,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "943",
@@ -2566,7 +4759,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "951",
@@ -2593,7 +4811,36 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
     },
     {
       "id": "954",
@@ -2620,7 +4867,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "959",
@@ -2647,7 +4911,20 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "bookshop",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "960",
@@ -2674,7 +4951,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "963",
@@ -2701,7 +5003,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "965",
@@ -2728,7 +5055,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "975",
@@ -2755,7 +5107,36 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "arcane",
+      "equipment_categories": [
+        {
+          "index": "arcane_foci",
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
+        },
+        {
+          "index": "wand",
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
+        },
+        {
+          "index": "staff",
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
+        },
+        {
+          "index": "rod",
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
+        },
+        {
+          "index": "scroll",
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "987",
@@ -2782,7 +5163,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "999",
@@ -2809,7 +5215,28 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "apothecary",
+      "equipment_categories": [
+        {
+          "index": "potion",
+          "url": "public/assets/atlas/equipment_categories/json/potion.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "herbs",
+          "url": "public/assets/atlas/materials_categories/json/herbs.json"
+        },
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        }
+      ]
     },
     {
       "id": "1004",
@@ -2836,7 +5263,24 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     },
     {
       "id": "1006",
@@ -2863,7 +5307,32 @@
         "npcs": [],
         "map": null,
         "image": null
-      }
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     }
   ]
 }
