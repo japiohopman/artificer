@@ -1,6 +1,14 @@
 {
   "id": "jhalassan_thond",
   "name": "Jhalassan Thond",
-  "backstory": "Jhalassan Thond is a known figure in Waterdeep, associated with Thond Glass and Glazing.",
-  "updated_at": "2026-06-03T08:09:27.577560Z"
+  "sex": "Male",
+  "race": {
+    "index": "human",
+    "name": "Human",
+    "url": "public/assets/atlas/species/spicies_wiki/human.json"
+  },
+  "occupation": "Shopkeeper (Glassblower)",
+  "home": "Waterdeep",
+  "backstory": "Jhalassan Thond owned Thond Glass and Glazing in Waterdeep during the 14th century DR. His shop was well-regarded for its fine glasswork and glazing services, catering to the city's construction and decoration needs.",
+  "updated_at": "2024-06-19T00:00:00.000Z"
 }

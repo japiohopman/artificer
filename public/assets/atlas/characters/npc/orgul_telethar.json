@@ -1,6 +1,14 @@
 {
   "id": "orgul_telethar",
   "name": "Orgul Telethar",
-  "backstory": "Orgul Telethar is a known figure in Waterdeep, associated with Telethar Leatherworks.",
-  "updated_at": "2026-06-03T08:09:27.574840Z"
+  "sex": "Male",
+  "race": {
+    "index": "human",
+    "name": "Human",
+    "url": "public/assets/atlas/species/spicies_wiki/human.json"
+  },
+  "occupation": "Leaguemaster, Shopkeeper (Leatherworker)",
+  "home": "Dock Ward, Waterdeep",
+  "backstory": "Orgul Telethar was the leader of the League of Skinners & Tanners in Waterdeep during the mid-14th century DR. He owned and operated Telethar Leatherworks on Dock Street, which served as both his personal business and a key hub for the guild's activities.",
+  "updated_at": "2024-06-19T00:00:00.000Z"
 }

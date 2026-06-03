@@ -1,6 +1,14 @@
 {
   "id": "chuldan_helmstar",
   "name": "Chuldan Helmstar",
-  "backstory": "Chuldan Helmstar is a known figure in Waterdeep, associated with Helmstar Warehouse.",
-  "updated_at": "2026-06-03T08:09:27.576229Z"
+  "sex": "Male",
+  "race": {
+    "index": "human",
+    "name": "Human",
+    "url": "public/assets/atlas/species/spicies_wiki/human.json"
+  },
+  "occupation": "Fence, Warehouse Owner",
+  "home": "Dock Ward, Waterdeep",
+  "backstory": "Chuldan Helmstar was a fence of stolen goods inhabiting Waterdeep during the mid-to-late 14th century DR. He operated out of the Helmstar Warehouse on Dock Street, primarily dealing in statues and large architectural pieces that were hard to trace.",
+  "updated_at": "2024-06-19T00:00:00.000Z"
 }

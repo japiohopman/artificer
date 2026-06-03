@@ -1,6 +1,14 @@
 {
   "id": "bronwyn_caradoon",
   "name": "Bronwyn Caradoon",
-  "backstory": "Bronwyn Caradoon is a known figure in Waterdeep, associated with Curious Past.",
-  "updated_at": "2026-06-03T08:09:27.579059Z"
+  "sex": "Female",
+  "race": {
+    "index": "human",
+    "name": "Human",
+    "url": "public/assets/atlas/species/spicies_wiki/human.json"
+  },
+  "occupation": "Shopkeeper (Antiquities Dealer), Harper Agent",
+  "home": "Curious Past, Waterdeep",
+  "backstory": "Bronwyn Caradoon was the proprietor of an antiquities shop called the Curious Past, a part-time adventurer, and a member of the Harpers. Born in Amn, she was once captured by the Zhentarim and became a skilled counterfeiter before purchasing her freedom and starting her business in Waterdeep. She is known for sharing her extensive knowledge of ancient texts and lore while gathering information on lost or stolen items.",
+  "updated_at": "2024-06-19T00:00:00.000Z"
 }
