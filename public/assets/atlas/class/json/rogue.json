@@ -243,6 +243,15 @@
                   "name": "arrow",
                   "url": "public/assets/atlas/equipment/json/arrow.json"
                 }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "quiver",
+                  "name": "quiver",
+                  "url": "public/assets/atlas/equipment/json/quiver.json"
+                }
               }
             ]
           },
