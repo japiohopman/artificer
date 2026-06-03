@@ -1,0 +1,23 @@
+{
+  "id": "nessus",
+  "name": "Nessus",
+  "type": "plane_layer",
+  "parent": "nine_hells",
+  "title": "Nessus: The Ninth Layer",
+  "description": "Nessus is the ninth and deepest layer of the Nine Hells, a realm of bottomless ravines and jagged canyons.",
+  "wiki": "Nessus is the personal domain of Asmodeus, the Archlord of the Nine Hells. It is here, in the Malsheem, that he orchestrates the grand schemes that influence the entire multiverse.",
+  "image": "nessus.webp",
+  "tags": [
+    "plane_layer",
+    "nine_hells",
+    "nessus"
+  ],
+  "metadata": {
+    "ruler": "Asmodeus",
+    "key_locations": [
+      "Malsheem",
+      "The Serpent's Coil"
+    ]
+  },
+  "updated_at": "2024-06-19T00:00:00.000Z"
+}

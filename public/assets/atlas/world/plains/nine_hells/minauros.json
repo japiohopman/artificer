@@ -1,0 +1,23 @@
+{
+  "id": "minauros",
+  "name": "Minauros",
+  "type": "plane_layer",
+  "parent": "nine_hells",
+  "title": "Minauros: The Third Layer",
+  "description": "Minauros is the third layer of the Nine Hells, an endless bog of vile pollution, slime, and acid rain.",
+  "wiki": "Minauros is a dismal realm of swamps and bogs where the greedy Mammon rules from the Sinking City. The environment is constantly shifting and sinking, reflecting the treacherous nature of its ruler.",
+  "image": "minauros.webp",
+  "tags": [
+    "plane_layer",
+    "nine_hells",
+    "minauros"
+  ],
+  "metadata": {
+    "ruler": "Mammon",
+    "key_locations": [
+      "Sinking City",
+      "Jangling Hiter"
+    ]
+  },
+  "updated_at": "2024-06-19T00:00:00.000Z"
+}
