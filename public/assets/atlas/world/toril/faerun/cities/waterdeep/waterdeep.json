@@ -16,7 +16,15 @@
   "map": "assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_map.webp",
   "children": [],
   "sub_location_files": [
-    "assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/poi.json"
+    "assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/estates.json",
+    "assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/government.json",
+    "assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/inns_taverns.json",
+    "assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/landmarks.json",
+    "assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/points_of_interest.json",
+    "assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/roads.json",
+    "assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/sewers.json",
+    "assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/shops.json",
+    "assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/temples_shrines.json"
   ],
   "coordinates": {
     "lat": 0,

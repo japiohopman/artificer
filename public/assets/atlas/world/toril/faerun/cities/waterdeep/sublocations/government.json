@@ -1,0 +1,1816 @@
+{
+  "category": "government",
+  "updatedAt": "2026-06-03T05:50:02.274151Z",
+  "location_id": "waterdeep",
+  "sub_locations": [
+    {
+      "id": "9",
+      "name": "Twelvedog Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1277.7419536041,
+        3691.4509511844
+      ],
+      "popup": {
+        "title": "Twelvedog Court",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "142",
+      "name": "Magecourt",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1622.1029560419,
+        2666.4996718545
+      ],
+      "popup": {
+        "title": "Magecourt",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "165",
+      "name": "Jester's Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1128.1888693831,
+        2282.5406896702
+      ],
+      "popup": {
+        "title": "Jester's Court",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "166",
+      "name": "Turnback Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        975.10025125625,
+        2339.8163389463
+      ],
+      "popup": {
+        "title": "Turnback Court",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "177",
+      "name": "Fetlock Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        966.26141649142,
+        2205.4660505208
+      ],
+      "popup": {
+        "title": "Fetlock Court",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "201",
+      "name": "Hillock Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1402.1927470929,
+        1887.2679989869
+      ],
+      "popup": {
+        "title": "Hillock Court",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "210",
+      "name": "Court of the White Bull",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1843.7809319439,
+        1884.7931252527
+      ],
+      "popup": {
+        "title": "Court of the White Bull",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "233",
+      "name": "Fishgut Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1267.8424586675,
+        1511.0871913957
+      ],
+      "popup": {
+        "title": "Fishgut Court",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "261",
+      "name": "Caravan Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1909.5418625943,
+        1623.5171696043
+      ],
+      "popup": {
+        "title": "Caravan Court",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "346",
+      "name": "Court of the Well",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1183.3431983157,
+        2974.0911216706
+      ],
+      "popup": {
+        "title": "Court of the Well",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "363",
+      "name": "North Tower",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        919.9459223237,
+        3878.8342481988
+      ],
+      "popup": {
+        "title": "North Tower",
+        "description": "The North Tower, also known as the Trolltower, was a torchtower. It had all the features that were common among them. This included a debriefing room, a small armory, holding cells, storage rooms for the holding of evidence or confiscated items, some bedchambers, and some garderobes.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "390",
+      "name": "Watermens' Hall",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1683.6212460052,
+        1041.2147352972
+      ],
+      "popup": {
+        "title": "Watermens' Hall",
+        "description": "Watermens' Hall was the guildhall of the [[Guild of Watermen]].",
+        "image": "File:Dockwardspring.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "394",
+      "name": "Mariners' Hall",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1772.3631470441,
+        1016.8195513463
+      ],
+      "popup": {
+        "title": "Mariners' Hall",
+        "description": "The Mariners' Hall was the guildhall of the [[Master Mariners' Guild]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "401",
+      "name": "City Guard Barracks",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1851.559106537,
+        853.83143828276
+      ],
+      "popup": {
+        "title": "City Guard Barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "427",
+      "name": "Harborwatch Tower",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        683,
+        1365
+      ],
+      "popup": {
+        "title": "Harborwatch Tower",
+        "description": "Harborwatch Tower was one of the major torchtowers of Waterdeep's [[Trollwall]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "429",
+      "name": "Watching Tower",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        658,
+        1491
+      ],
+      "popup": {
+        "title": "Watching Tower",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "435",
+      "name": "City Guard Barracks",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1476.4389591175,
+        1833.1743302261
+      ],
+      "popup": {
+        "title": "City Guard Barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "439",
+      "name": "Bell Tower",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1413.1529022013,
+        1809.4862530564
+      ],
+      "popup": {
+        "title": "Bell Tower",
+        "description": "A municipal bell tower that was used to signal the presence of fires, attacks on the city, or call for assemblies at [[Piergeiron's Palace]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "447",
+      "name": "Philosopher's Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1582.5049762955,
+        1495.177288819
+      ],
+      "popup": {
+        "title": "Philosopher's Court",
+        "description": "Also known as the Foolsquare",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "464",
+      "name": "Coach & Wagon Hall",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1823.2748352895,
+        1501.5412498496
+      ],
+      "popup": {
+        "title": "Coach & Wagon Hall",
+        "description": "The Coach & Wagon Hall was the headquarters of the [[Wagonmakers' and Coach Builders' Guild]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "465",
+      "name": "Saddlers' & Harness-Makers' Hall",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1821.8606217271,
+        1518.1582592075
+      ],
+      "popup": {
+        "title": "Saddlers' & Harness-Makers' Hall",
+        "description": "The Saddlers' & Harness-Makers Hall, also known simply as the Saddlers' Hall, was the headquarters of the [[Saddlers' and Harness-makers' Guild]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "467",
+      "name": "Wheel Hall",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1903.1779015636,
+        1769.8882733099
+      ],
+      "popup": {
+        "title": "Wheel Hall",
+        "description": "Wheel Hall was the guildhall of the [[Weelwrights' Guild]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "478",
+      "name": "Shippers' Hall",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1547.1496372362,
+        1196.7782271582
+      ],
+      "popup": {
+        "title": "Shippers' Hall",
+        "description": "The Shippers' Hall was the guildhall of the [[Fellowship of Salters, Packers, and Joiners]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "481",
+      "name": "Coopers' Rest",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1568.7163940624,
+        1189.0000525652
+      ],
+      "popup": {
+        "title": "Coopers' Rest",
+        "description": "Coopers' Rest was the guildhall of the [[Coopers' Guild]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "490",
+      "name": "Seaswealth Hall",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1574.7268017024,
+        1092.4799769332
+      ],
+      "popup": {
+        "title": "Seaswealth Hall",
+        "description": "Seaswealth Hall was the guildhall of the [[Fishmongers' Fellowship]].",
+        "image": "File:Seaswealth Hall - City System.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "500",
+      "name": "Dancing Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1829.2852429296,
+        1134.9063838044
+      ],
+      "popup": {
+        "title": "Dancing Court",
+        "description": "The Dancing Court was a cul-de-sac.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "502",
+      "name": "Anchoret's Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1880.9040379562,
+        1331.8356223649
+      ],
+      "popup": {
+        "title": "Anchoret's Court",
+        "description": "Anchoret's Court was a small courtyard.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "503",
+      "name": "Sethma's Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1848.3771260216,
+        1453.1044353384
+      ],
+      "popup": {
+        "title": "Sethma's Court",
+        "description": "Sethma's Court was a cobbled courtyard.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "505",
+      "name": "Builders' Hall",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1948.7862889501,
+        1231.4264594364
+      ],
+      "popup": {
+        "title": "Builders' Hall",
+        "description": "Builders' Hall was the guildhall of the [[Guild of Stonecutters, Masons, Potters, & Tile-makers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "513",
+      "name": "Metalmasters' Hall",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1930.0479592487,
+        1092.8335303238
+      ],
+      "popup": {
+        "title": "Metalmasters' Hall",
+        "description": "The Metalmasters' Hall was the guildhall of the [[Most Careful Order of Skilled Smiths & Metalforgers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "534",
+      "name": "Master Bakers' Hall",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1346.3313113792,
+        2038.9424035514
+      ],
+      "popup": {
+        "title": "Master Bakers' Hall",
+        "description": "The Master Bakers\u2019 Hall was the guildhall of the [[Bakers' Guild]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "537",
+      "name": "Halls of Hilmer",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1417.3955428884,
+        2120.2596833879
+      ],
+      "popup": {
+        "title": "Halls of Hilmer",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "541",
+      "name": "Guildhall of the Order",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1462.2968234938,
+        1980.2525407129
+      ],
+      "popup": {
+        "title": "Guildhall of the Order",
+        "description": "The Guildhall of the Order was the headquarters of the [[Solemn Order of Recognized Furriers and Woolmen]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "544",
+      "name": "Pewterers' and Casters' Guildhall",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1504.0161235838,
+        2008.1832585698
+      ],
+      "popup": {
+        "title": "Pewterers' and Casters' Guildhall",
+        "description": "The Pewterers' and Casters' Guildhall was the guildhall of the [[Guild of Trusted Pewterers and Casters]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "547",
+      "name": "Guards Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1494.1166286472,
+        1892.9248532364
+      ],
+      "popup": {
+        "title": "Guards Court",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "550",
+      "name": "City Guard Barracks",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1484.5706871012,
+        1857.9230675677
+      ],
+      "popup": {
+        "title": "City Guard Barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "551",
+      "name": "City Guard Barracks",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1461.236163322,
+        1858.2766209582
+      ],
+      "popup": {
+        "title": "City Guard Barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "552",
+      "name": "City Guard Barracks",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1446.3869209171,
+        1861.4586014736
+      ],
+      "popup": {
+        "title": "City Guard Barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "553",
+      "name": "City Guard Barracks",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1458.0541828067,
+        1839.8918446474
+      ],
+      "popup": {
+        "title": "City Guard Barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "554",
+      "name": "City Guard Barracks",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1442.14428023,
+        1840.5989514286
+      ],
+      "popup": {
+        "title": "City Guard Barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "557",
+      "name": "Costumers' Hall",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1544.674763502,
+        2058.387840034
+      ],
+      "popup": {
+        "title": "Costumers' Hall",
+        "description": "Costumers' Hall was the guildhall of the [[Order of Master Taylors, Glovers, and Mercers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "560",
+      "name": "Citadel of the Arrow",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1579.3229957802,
+        2097.6322663899
+      ],
+      "popup": {
+        "title": "Citadel of the Arrow",
+        "description": "Citadel of the Arrow was the guildhall of the [[Fellowship of Bowers and Fletchers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "565",
+      "name": "Hall of the Sages",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1763.8778656698,
+        2095.5109460463
+      ],
+      "popup": {
+        "title": "Hall of the Sages",
+        "description": "The Hall of the Sages was a tomb. As its name implied, the Hall of the Sages was reserved specifically for [[sage]]s.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "566",
+      "name": "Hall of Heroes",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1823.9819420707,
+        2047.7812383162
+      ],
+      "popup": {
+        "title": "Hall of Heroes",
+        "description": "The Hall of Heroes was a tomb. \n\nBlue [[marble]] was used for the tomb's walls. The interior was decorated with trophies of famous fallen warriors including the sword hilt of [[Raurlor]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "574",
+      "name": "League Office",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1750.0892834367,
+        2021.2647340217
+      ],
+      "popup": {
+        "title": "League Office",
+        "description": "The League Office was the guildhall of the [[League of Basketmakers & Wickerworkers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "577",
+      "name": "The Zoarstar",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1760.6958851545,
+        1936.4119202794
+      ],
+      "popup": {
+        "title": "The Zoarstar",
+        "description": "The Zoarstar was the guildhall of the [[Scriveners', Scribes', & Clerks' Guild]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "580",
+      "name": "Old Guildhall",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1822.9212818989,
+        1967.8781720422
+      ],
+      "popup": {
+        "title": "Old Guildhall",
+        "description": "The Old Guildhall was the guildhall of the [[Cellarers' & Plumbers' Guild]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "583",
+      "name": "Guild Paddock",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1875.2471837067,
+        1873.1258633632
+      ],
+      "popup": {
+        "title": "Guild Paddock",
+        "description": "The Guild Paddock was the guildhall of the [[Stablemasters' & Farriers' Guild]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "608",
+      "name": "Cliffwatch",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1962,
+        2766
+      ],
+      "popup": {
+        "title": "Cliffwatch",
+        "description": "The Cliffwatch was a public walkway.",
+        "image": "File:The Cliffwatch WDH-map.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "609",
+      "name": "Cliffwatch Stables",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1889.0357659399,
+        2962.7774131716
+      ],
+      "popup": {
+        "title": "Cliffwatch Stables",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "635",
+      "name": "City Guard Barracks",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1498.3592693343,
+        3569.4750314297
+      ],
+      "popup": {
+        "title": "City Guard Barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "648",
+      "name": "Farwatch Tower",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1822.2141751177,
+        3460.9341405176
+      ],
+      "popup": {
+        "title": "Farwatch Tower",
+        "description": "Farwatch Tower was one of the major torchtowers of Waterdeep's [[Trollwall]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "659",
+      "name": "Howling Cat Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1133.492170242,
+        2229.5076810812
+      ],
+      "popup": {
+        "title": "Howling Cat Court",
+        "description": "Howling Cat Court was a small courtyard.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "664",
+      "name": "Palace of Waterdeep",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        987.47461992701,
+        2039.295956942
+      ],
+      "popup": {
+        "title": "Palace of Waterdeep",
+        "description": "The Palace of Waterdeep, also known as the Lords' Palace and previously often called Piergeiron's Palace, was the residence of the [[Open Lord]] of Waterdeep.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "667",
+      "name": "City Guard Barracks",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1024.5977259393,
+        1974.949239854
+      ],
+      "popup": {
+        "title": "City Guard Barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "668",
+      "name": "City Guard Barracks",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        985.35329958345,
+        2116.0170427007
+      ],
+      "popup": {
+        "title": "City Guard Barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "669",
+      "name": "City Guard Barracks",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        989.59594027057,
+        2161.2718766967
+      ],
+      "popup": {
+        "title": "City Guard Barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "671",
+      "name": "Palace Stables",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        959.89745546074,
+        2110.3601884513
+      ],
+      "popup": {
+        "title": "Palace Stables",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "672",
+      "name": "Palace Paddock",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        968.02918344438,
+        2137.5837995269
+      ],
+      "popup": {
+        "title": "Palace Paddock",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "687",
+      "name": "City Guard Barracks",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1872,
+        840
+      ],
+      "popup": {
+        "title": "City Guard Barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "698",
+      "name": "Seawatch Tower",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        682,
+        3330
+      ],
+      "popup": {
+        "title": "Seawatch Tower",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "708",
+      "name": "Lhestyn's Court",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1427.5,
+        3438.5
+      ],
+      "popup": {
+        "title": "Lhestyn's Court",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "771",
+      "name": "Guard Tower",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1874.8936303161,
+        1974.949239854
+      ],
+      "popup": {
+        "title": "Guard Tower",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "790",
+      "name": "City Guard Barracks",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1469.7214446962,
+        1816.5573208682
+      ],
+      "popup": {
+        "title": "City Guard Barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "833",
+      "name": "Watch Guardpost",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1775.25,
+        1324.75
+      ],
+      "popup": {
+        "title": "Watch Guardpost",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "849",
+      "name": "Ravencourt",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1040.1540751254,
+        3686.1476503255
+      ],
+      "popup": {
+        "title": "Ravencourt",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "996",
+      "name": "Pavilion of Paving Stones",
+      "categoryId": "government",
+      "type": "marker",
+      "position": [
+        1675.8430714121,
+        1437.5480861523
+      ],
+      "popup": {
+        "title": "Pavilion of Paving Stones",
+        "description": "Guildhall of the [[Loyal Order of Street Laborers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}
