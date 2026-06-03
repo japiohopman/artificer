@@ -1,0 +1,8998 @@
+{
+  "category": "roads",
+  "updatedAt": "2026-06-03T05:50:02.274151Z",
+  "location_id": "waterdeep",
+  "sub_locations": [
+    {
+      "id": "1",
+      "name": "Fieldway",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        986.41395975523,
+        3905.3507524933
+      ],
+      "popup": {
+        "title": "Fieldway",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "Firewine Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1099.9045981357,
+        3862.2172388409
+      ],
+      "popup": {
+        "title": "Firewine Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "Flipcoin Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1163.8977618331,
+        3714.4319215729
+      ],
+      "popup": {
+        "title": "Flipcoin Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "Boltspring Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1015.7588911745,
+        3833.9329675935
+      ],
+      "popup": {
+        "title": "Boltspring Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "Trollwall Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1131.0172965079,
+        3896.8654711191
+      ],
+      "popup": {
+        "title": "Trollwall Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "Soot Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1277.3884002135,
+        3805.2951429554
+      ],
+      "popup": {
+        "title": "Soot Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "Nanze Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1196.7782271582,
+        3849.8428701702
+      ],
+      "popup": {
+        "title": "Nanze Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "Slipgate Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1436.4874259805,
+        3753.6763479288
+      ],
+      "popup": {
+        "title": "Slipgate Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "Saltpork Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1363.6554275183,
+        3676.95526217
+      ],
+      "popup": {
+        "title": "Saltpork Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "Prestige Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1359.0592334405,
+        3712.3106012294
+      ],
+      "popup": {
+        "title": "Prestige Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "Stench Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1667.7113434285,
+        3648.317437532
+      ],
+      "popup": {
+        "title": "Stench Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "14",
+      "name": "Tanner Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1631.648897588,
+        3621.0938264563
+      ],
+      "popup": {
+        "title": "Tanner Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "Chop Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1673.7217510686,
+        3662.1060197651
+      ],
+      "popup": {
+        "title": "Chop Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "Leanwall Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1660.286722226,
+        3695.3400384809
+      ],
+      "popup": {
+        "title": "Leanwall Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "Shanty Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1805.2436123693,
+        3555.6864491966
+      ],
+      "popup": {
+        "title": "Shanty Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "19",
+      "name": "Gawenknife Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1697.0562748477,
+        3564.1717305708
+      ],
+      "popup": {
+        "title": "Gawenknife Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "20",
+      "name": "Endshift Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1886.5608922057,
+        3473.3085091883
+      ],
+      "popup": {
+        "title": "Endshift Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "Breezeway",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1905.2992219072,
+        3394.1125496954
+      ],
+      "popup": {
+        "title": "Breezeway",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "22",
+      "name": "Logan's Walk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1663.1151493508,
+        3605.1839238796
+      ],
+      "popup": {
+        "title": "Logan's Walk",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "24",
+      "name": "Street of Lances",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        873.98398154657,
+        3813.7804243296
+      ],
+      "popup": {
+        "title": "Street of Lances",
+        "description": "Street of Lances was walked by broadcryers who peddled their broadsheets to passers-by.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "25",
+      "name": "Seawind Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        844.63905012733,
+        3785.4961530822
+      ],
+      "popup": {
+        "title": "Seawind Alley",
+        "description": "Seawind Alley was an alley notable for the ghostly voices that could be heard within the alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "26",
+      "name": "Breeze's Cut",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        779.93877964876,
+        3683.3192232007
+      ],
+      "popup": {
+        "title": "Breeze's Cut",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "27",
+      "name": "Aureenar Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        908.98576721531,
+        3688.6225240596
+      ],
+      "popup": {
+        "title": "Aureenar Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "29",
+      "name": "Murlpar Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        864.79159339115,
+        3667.0557672334
+      ],
+      "popup": {
+        "title": "Murlpar Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "30",
+      "name": "Morningstar Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        925.60277657319,
+        3632.7610883459
+      ],
+      "popup": {
+        "title": "Morningstar Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "31",
+      "name": "Ghostwalk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        842.16417639318,
+        3600.5877298019
+      ],
+      "popup": {
+        "title": "Ghostwalk",
+        "description": "Ghostwalk was considered sufficiently safe for the rich inhabitants of the ward to walk by undisturbed. Like other alleys in the Sea Ward, it was clean and wide. It contained numerous shadowtops that were favored by children to climb and play by.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "32",
+      "name": "Stormstar's Ride",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        972.6253775221,
+        3640.8928163295
+      ],
+      "popup": {
+        "title": "Stormstar's Ride",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "33",
+      "name": "Sanborim Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1077.8723418749,
+        3691.1347131418
+      ],
+      "popup": {
+        "title": "Sanborim Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "34",
+      "name": "Street of Glances",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1047.2251429373,
+        3589.9811280841
+      ],
+      "popup": {
+        "title": "Street of Glances",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "35",
+      "name": "Phastal Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1040.507628516,
+        3653.6207383909
+      ],
+      "popup": {
+        "title": "Phastal Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "36",
+      "name": "Westwall Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        731.14841174689,
+        3615.4369722068
+      ],
+      "popup": {
+        "title": "Westwall Street",
+        "description": "Westwall Street was located in the western section of Waterdeep's Sea Ward, fully spanning the entire western boundary of the ward with the exterior wall in that portion of the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "37",
+      "name": "Heroes' Walk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1111.5718600253,
+        3652.9136316097
+      ],
+      "popup": {
+        "title": "Heroes' Walk",
+        "description": "Every year during the summer, Heroes' Garden and Heroes' Walk were both overtaken by the nobles of the Church of Siamorphe on their holy day, the Divine Pageantry.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "39",
+      "name": "Trollkill Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1255.4680899967,
+        3658.9240392498
+      ],
+      "popup": {
+        "title": "Trollkill Street",
+        "description": "Trollkill Street was a large road in the city of Waterdeep, spanning nearly the whole northern portion of the Trollwall, that started in the Sea Ward and ended in the North Ward.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "41",
+      "name": "Kulzar's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1220.8198577186,
+        3610.4872247385
+      ],
+      "popup": {
+        "title": "Kulzar's Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "43",
+      "name": "Skulls Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1250.871895919,
+        3550.0295949471
+      ],
+      "popup": {
+        "title": "Skulls Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "44",
+      "name": "Ignorance Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        720.1882566385,
+        3418.1541802558
+      ],
+      "popup": {
+        "title": "Ignorance Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "45",
+      "name": "Bliss Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        719.48114985731,
+        3472.2478490165
+      ],
+      "popup": {
+        "title": "Bliss Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "46",
+      "name": "Telchar Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        847.82103064267,
+        3531.2912652456
+      ],
+      "popup": {
+        "title": "Telchar Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "47",
+      "name": "Gorl Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        889.89388412327,
+        3513.2600423254
+      ],
+      "popup": {
+        "title": "Gorl Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "48",
+      "name": "Staghunter's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        935.5022715098,
+        3522.4524304808
+      ],
+      "popup": {
+        "title": "Staghunter's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "49",
+      "name": "Sighing Maiden's Walk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        914.6426214648,
+        3481.0866837814
+      ],
+      "popup": {
+        "title": "Sighing Maiden's Walk",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "50",
+      "name": "Street of the Singing Dolphin",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        830.4969145036,
+        3469.7729752824
+      ],
+      "popup": {
+        "title": "Street of the Singing Dolphin",
+        "description": "The Street of the Singing Dolphin was located in the western section of Waterdeep's Sea Ward. The road spanned the entire western side of the ward",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "51",
+      "name": "Wrightstone Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1181.2218779721,
+        3507.9567414665
+      ],
+      "popup": {
+        "title": "Wrightstone Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "52",
+      "name": "Ivory Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        991.71726061413,
+        3441.1351506443
+      ],
+      "popup": {
+        "title": "Ivory Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "53",
+      "name": "Thunderstaff Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1372.4942622831,
+        3475.7833829225
+      ],
+      "popup": {
+        "title": "Thunderstaff Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "54",
+      "name": "Brassfeather Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1528.7648609253,
+        3515.3813626689
+      ],
+      "popup": {
+        "title": "Brassfeather Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "55",
+      "name": "Anteos Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1632.0024509786,
+        3481.440237172
+      ],
+      "popup": {
+        "title": "Anteos Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "56",
+      "name": "Phull Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1712.6126240338,
+        3469.7729752824
+      ],
+      "popup": {
+        "title": "Phull Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "57",
+      "name": "Whaelgond Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1676.9037315839,
+        3413.2044327875
+      ],
+      "popup": {
+        "title": "Whaelgond Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "58",
+      "name": "Torch Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1011.1626970968,
+        3402.5978310697
+      ],
+      "popup": {
+        "title": "Torch Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "59",
+      "name": "Flint Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        979.34289194337,
+        3326.5838520921
+      ],
+      "popup": {
+        "title": "Flint Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "60",
+      "name": "Pharra's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1016.1124445651,
+        3373.9600064316
+      ],
+      "popup": {
+        "title": "Pharra's Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "61",
+      "name": "Grimwald's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        760.13978977554,
+        3336.8369004193
+      ],
+      "popup": {
+        "title": "Grimwald's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "62",
+      "name": "Wagonslide Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        717.00627612316,
+        3265.0655621289
+      ],
+      "popup": {
+        "title": "Wagonslide Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "63",
+      "name": "Seawatch Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        740.69435329291,
+        3280.621911315
+      ],
+      "popup": {
+        "title": "Seawatch Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "64",
+      "name": "Shark Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        774.98903218046,
+        3264.0049019571
+      ],
+      "popup": {
+        "title": "Shark Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "65",
+      "name": "Street of Whispers",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        808.93015767741,
+        3266.8333290818
+      ],
+      "popup": {
+        "title": "Street of Whispers",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "66",
+      "name": "Gondwatch Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        793.7273618819,
+        3199.6581848691
+      ],
+      "popup": {
+        "title": "Gondwatch Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "67",
+      "name": "Satchel Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        718.06693629494,
+        3172.0810204029
+      ],
+      "popup": {
+        "title": "Satchel Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "68",
+      "name": "Diamond Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        796.20223561605,
+        3143.7967491554
+      ],
+      "popup": {
+        "title": "Diamond Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "69",
+      "name": "Delzorin Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        969.79695039735,
+        3261.530028223
+      ],
+      "popup": {
+        "title": "Delzorin Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "70",
+      "name": "Chasso's Trot",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1180.1612178003,
+        3409.3153454909
+      ],
+      "popup": {
+        "title": "Chasso's Trot",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "71",
+      "name": "Watch Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1806.304272541,
+        3401.1836175073
+      ],
+      "popup": {
+        "title": "Watch Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "72",
+      "name": "Tower March",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1707.3093231749,
+        3356.6358902925
+      ],
+      "popup": {
+        "title": "Tower March",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "73",
+      "name": "Pony Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1785.0910691054,
+        3301.48156136
+      ],
+      "popup": {
+        "title": "Pony Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "74",
+      "name": "Immar Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1774.130913997,
+        3357.6965504643
+      ],
+      "popup": {
+        "title": "Immar Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "75",
+      "name": "Black Dog Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1833.5278836167,
+        3359.4643174173
+      ],
+      "popup": {
+        "title": "Black Dog Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "76",
+      "name": "Stallion Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1847.3164658499,
+        3319.5127842802
+      ],
+      "popup": {
+        "title": "Stallion Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "77",
+      "name": "Horn Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1752.2106037803,
+        3277.0863774091
+      ],
+      "popup": {
+        "title": "Horn Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "78",
+      "name": "Selrin Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1854.0339802711,
+        3260.8229214418
+      ],
+      "popup": {
+        "title": "Selrin Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "79",
+      "name": "Trollmarch",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1879.8433777844,
+        3321.6341046238
+      ],
+      "popup": {
+        "title": "Trollmarch",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "80",
+      "name": "Lion Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1850.4984463652,
+        3176.6772144806
+      ],
+      "popup": {
+        "title": "Lion Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "81",
+      "name": "Saerdoun Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1791.8085835267,
+        3185.1624958548
+      ],
+      "popup": {
+        "title": "Saerdoun Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "82",
+      "name": "Brondar's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1655.6905281483,
+        3139.5541084683
+      ],
+      "popup": {
+        "title": "Brondar's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "83",
+      "name": "Windborne Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1563.0595398129,
+        3323.0483181862
+      ],
+      "popup": {
+        "title": "Windborne Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "84",
+      "name": "Vhezoar Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1598.0613254816,
+        3134.2508076094
+      ],
+      "popup": {
+        "title": "Vhezoar Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "85",
+      "name": "Ilzantil Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1531.2397346595,
+        3144.5038559366
+      ],
+      "popup": {
+        "title": "Ilzantil Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "86",
+      "name": "Vondil Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1180.8683245815,
+        3304.6635418753
+      ],
+      "popup": {
+        "title": "Vondil Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "87",
+      "name": "Mendever Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1133.1386168514,
+        3258.3480477076
+      ],
+      "popup": {
+        "title": "Mendever Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "88",
+      "name": "Sul Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1227.5373721398,
+        3256.9338341452
+      ],
+      "popup": {
+        "title": "Sul Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "89",
+      "name": "Shield Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1320.8754672565,
+        3259.4087078794
+      ],
+      "popup": {
+        "title": "Shield Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "90",
+      "name": "Copper Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1397.9501064058,
+        3257.994494317
+      ],
+      "popup": {
+        "title": "Copper Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "91",
+      "name": "Sidle Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1436.8409793711,
+        3144.8574093272
+      ],
+      "popup": {
+        "title": "Sidle Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "92",
+      "name": "Rough Road",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1180.1612178003,
+        3096.4205948159
+      ],
+      "popup": {
+        "title": "Rough Road",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "93",
+      "name": "Feather Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1030.96168697,
+        3157.9388847791
+      ],
+      "popup": {
+        "title": "Feather Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "94",
+      "name": "Moonstar Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        859.84184592284,
+        3106.6736431431
+      ],
+      "popup": {
+        "title": "Moonstar Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "95",
+      "name": "Westwall Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        665.38748109654,
+        3083.3391193639
+      ],
+      "popup": {
+        "title": "Westwall Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "97",
+      "name": "Seaeye's March",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        615.89000641348,
+        2924.9472003782
+      ],
+      "popup": {
+        "title": "Seaeye's March",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "98",
+      "name": "Jelzar's Stride",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        691.55043200044,
+        2942.2713165172
+      ],
+      "popup": {
+        "title": "Jelzar's Stride",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "99",
+      "name": "Dob's Loss",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        851.7101179392,
+        2981.1621894825
+      ],
+      "popup": {
+        "title": "Dob's Loss",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "100",
+      "name": "Darselune Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        922.42079605785,
+        2974.0911216706
+      ],
+      "popup": {
+        "title": "Darselune Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "101",
+      "name": "Gulzindar Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        838.27508909665,
+        2935.553802096
+      ],
+      "popup": {
+        "title": "Gulzindar Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "102",
+      "name": "Julthoon Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        841.1035162214,
+        2866.9644443209
+      ],
+      "popup": {
+        "title": "Julthoon Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "103",
+      "name": "Zarimtar Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1077.6307345283,
+        3016.5175285418
+      ],
+      "popup": {
+        "title": "Zarimtar Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "104",
+      "name": "Haltovar Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        996.66700808244,
+        2942.9784232984
+      ],
+      "popup": {
+        "title": "Haltovar Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "105",
+      "name": "The Sutherlane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1044.7502692031,
+        2950.7565978915
+      ],
+      "popup": {
+        "title": "The Sutherlane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "106",
+      "name": "Whim Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1183.3431983157,
+        2939.4428893925
+      ],
+      "popup": {
+        "title": "Whim Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "107",
+      "name": "Hassantyr's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1272.4386527452,
+        2980.1015293107
+      ],
+      "popup": {
+        "title": "Hassantyr's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "108",
+      "name": "Sulmor Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1350.5739520663,
+        3055.7619548977
+      ],
+      "popup": {
+        "title": "Sulmor Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "109",
+      "name": "Street of the Manticore",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1642.6090526963,
+        2948.6352775479
+      ],
+      "popup": {
+        "title": "Street of the Manticore",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "110",
+      "name": "Ussilbran Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1786.8588360584,
+        3060.711702366
+      ],
+      "popup": {
+        "title": "Ussilbran Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "111",
+      "name": "Nindabar Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1860.0443879112,
+        3030.3061107749
+      ],
+      "popup": {
+        "title": "Nindabar Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "112",
+      "name": "Stabbed Sailor Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1642.9626060869,
+        2903.7339969426
+      ],
+      "popup": {
+        "title": "Stabbed Sailor Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "113",
+      "name": "Little Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1709.4306435185,
+        2904.4411037237
+      ],
+      "popup": {
+        "title": "Little Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "114",
+      "name": "Shattercrock Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1664.8829163037,
+        2850.7009883536
+      ],
+      "popup": {
+        "title": "Shattercrock Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "115",
+      "name": "Endcliff Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1883.0253582998,
+        2928.1291808935
+      ],
+      "popup": {
+        "title": "Endcliff Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "116",
+      "name": "Tarsar's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1829.6387963202,
+        2897.3700359119
+      ],
+      "popup": {
+        "title": "Tarsar's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "117",
+      "name": "High Road",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1479,
+        3293
+      ],
+      "popup": {
+        "title": "High Road",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "118",
+      "name": "Cliffride",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        659.73062684705,
+        2814.6385425131
+      ],
+      "popup": {
+        "title": "Cliffride",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "119",
+      "name": "Toalar's Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        739.98724651172,
+        2833.3768722145
+      ],
+      "popup": {
+        "title": "Toalar's Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "120",
+      "name": "Gothal Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        922.77434944844,
+        2835.8517459486
+      ],
+      "popup": {
+        "title": "Gothal Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "121",
+      "name": "Melshar's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        962.72588258548,
+        2839.7408332452
+      ],
+      "popup": {
+        "title": "Melshar's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "122",
+      "name": "Tchozal's Race",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1018.2337649086,
+        2820.6489501531
+      ],
+      "popup": {
+        "title": "Tchozal's Race",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "123",
+      "name": "Trader's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1273,
+        2728
+      ],
+      "popup": {
+        "title": "Trader's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "124",
+      "name": "Elvarren's Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        864.08448660996,
+        2735.4425830202
+      ],
+      "popup": {
+        "title": "Elvarren's Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "125",
+      "name": "Calamastyr Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        945.04821305582,
+        2740.0387770979
+      ],
+      "popup": {
+        "title": "Calamastyr Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "126",
+      "name": "Heard Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1181.2218779721,
+        2795.546659421
+      ],
+      "popup": {
+        "title": "Heard Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "127",
+      "name": "Manycats Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1356.5843597064,
+        2813.2243289507
+      ],
+      "popup": {
+        "title": "Manycats Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "128",
+      "name": "Swords Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        913.93551468361,
+        2677.1062735723
+      ],
+      "popup": {
+        "title": "Swords Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "129",
+      "name": "Marlar's Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1013.9911242215,
+        2604.9813818912
+      ],
+      "popup": {
+        "title": "Marlar's Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "130",
+      "name": "Aka Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1050.4071234526,
+        2593.3141200017
+      ],
+      "popup": {
+        "title": "Aka Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "131",
+      "name": "Tharleon Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1105.9150057758,
+        2558.3123343329
+      ],
+      "popup": {
+        "title": "Tharleon Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "132",
+      "name": "Bazaar Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1200.3137610642,
+        2565.7369555354
+      ],
+      "popup": {
+        "title": "Bazaar Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "133",
+      "name": "Tarnath Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1542.1998897679,
+        2807.2139213106
+      ],
+      "popup": {
+        "title": "Tarnath Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "134",
+      "name": "Suldown Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1549.9780643609,
+        2719.5326804435
+      ],
+      "popup": {
+        "title": "Suldown Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "135",
+      "name": "Shando Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1622.1029560419,
+        2720.5933406152
+      ],
+      "popup": {
+        "title": "Shando Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "136",
+      "name": "Aveen Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1676.5501781933,
+        2734.735476239
+      ],
+      "popup": {
+        "title": "Aveen Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "137",
+      "name": "Gelthoon Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1722.1585655798,
+        2741.8065440508
+      ],
+      "popup": {
+        "title": "Gelthoon Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "138",
+      "name": "Brahiir's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1770.9489334817,
+        2764.4339610488
+      ],
+      "popup": {
+        "title": "Brahiir's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "140",
+      "name": "Catchthief Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1811.2540200093,
+        2710.6938456786
+      ],
+      "popup": {
+        "title": "Catchthief Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "141",
+      "name": "Golden Serpent Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1772.0095936535,
+        2672.8636328851
+      ],
+      "popup": {
+        "title": "Golden Serpent Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "143",
+      "name": "Siren Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1114.7538405406,
+        2484.4196756989
+      ],
+      "popup": {
+        "title": "Siren Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "144",
+      "name": "Alnether Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1200.6673144548,
+        2494.6727240261
+      ],
+      "popup": {
+        "title": "Alnether Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "145",
+      "name": "Elsambul's Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1293.2983027902,
+        2467.4491129505
+      ],
+      "popup": {
+        "title": "Elsambul's Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "146",
+      "name": "Lamp Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1366.1303012524,
+        2508.8148596499
+      ],
+      "popup": {
+        "title": "Lamp Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "147",
+      "name": "Cymbril's Walk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1297.1873900867,
+        2399.9204153471
+      ],
+      "popup": {
+        "title": "Cymbril's Walk",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "148",
+      "name": "Street of the Sword",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1331.4820689743,
+        2458.9638315762
+      ],
+      "popup": {
+        "title": "Street of the Sword",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "150",
+      "name": "Undal's Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1614.3247814489,
+        2595.7889937358
+      ],
+      "popup": {
+        "title": "Undal's Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "151",
+      "name": "Mhalsymber's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1768.120506357,
+        2618.4164107338
+      ],
+      "popup": {
+        "title": "Mhalsymber's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "152",
+      "name": "Zendulth Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1858.2766209582,
+        2588.717925924
+      ],
+      "popup": {
+        "title": "Zendulth Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "153",
+      "name": "The Beaconmarch",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1906.7134354695,
+        2518.0072478053
+      ],
+      "popup": {
+        "title": "The Beaconmarch",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "154",
+      "name": "Sammarin's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1723.2192257516,
+        2523.6641020548
+      ],
+      "popup": {
+        "title": "Sammarin's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "155",
+      "name": "Black Cat Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1668.7720036003,
+        2558.3123343329
+      ],
+      "popup": {
+        "title": "Black Cat Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "156",
+      "name": "Andamaar's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1643.3161594775,
+        2480.884141793
+      ],
+      "popup": {
+        "title": "Andamaar's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "157",
+      "name": "Theln Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1620.6887424796,
+        2449.7714434208
+      ],
+      "popup": {
+        "title": "Theln Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "158",
+      "name": "Irimar's Walk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1569.7770542341,
+        2446.5894629055
+      ],
+      "popup": {
+        "title": "Irimar's Walk",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "159",
+      "name": "Keltarn Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1111.9254134158,
+        2435.9828611877
+      ],
+      "popup": {
+        "title": "Keltarn Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "160",
+      "name": "Spindle Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1583.9191898579,
+        2282.5406896702
+      ],
+      "popup": {
+        "title": "Spindle Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "161",
+      "name": "Coffinmarch",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1586.0405102014,
+        2232.6896615965
+      ],
+      "popup": {
+        "title": "Coffinmarch",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "162",
+      "name": "Winter Path",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1591.3438110603,
+        2193.4452352407
+      ],
+      "popup": {
+        "title": "Winter Path",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "163",
+      "name": "Ironpost Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1596.2935585286,
+        2151.0188283695
+      ],
+      "popup": {
+        "title": "Ironpost Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "164",
+      "name": "Selduth Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1210.5668093914,
+        2311.5320676988
+      ],
+      "popup": {
+        "title": "Selduth Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "168",
+      "name": "Asmagh's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1230.012245874,
+        2254.2564184227
+      ],
+      "popup": {
+        "title": "Asmagh's Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "169",
+      "name": "Buckle Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1393.0003589375,
+        2212.8906717233
+      ],
+      "popup": {
+        "title": "Buckle Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "170",
+      "name": "Street of Bells",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1438.9622997146,
+        2119.1990232161
+      ],
+      "popup": {
+        "title": "Street of Bells",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "171",
+      "name": "Burnt Wagon Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1574.7268017024,
+        2084.9043443285
+      ],
+      "popup": {
+        "title": "Burnt Wagon Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "172",
+      "name": "Street of the Tusks",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1606.5466068558,
+        2037.528189989
+      ],
+      "popup": {
+        "title": "Street of the Tusks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "173",
+      "name": "Mhaer's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1648.973013727,
+        2052.0238790034
+      ],
+      "popup": {
+        "title": "Mhaer's Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "174",
+      "name": "Cat Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1479.9744930234,
+        2029.0429086148
+      ],
+      "popup": {
+        "title": "Cat Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "175",
+      "name": "Zeldan's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1337.8460300049,
+        2072.8835290484
+      ],
+      "popup": {
+        "title": "Zeldan's Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "176",
+      "name": "Palfrey Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1214.1023432973,
+        2086.3185578909
+      ],
+      "popup": {
+        "title": "Palfrey Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "178",
+      "name": "Mulgomir's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1143.3916651786,
+        2128.0378579809
+      ],
+      "popup": {
+        "title": "Mulgomir's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "179",
+      "name": "Shadow Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1097.7832777921,
+        2063.3375875023
+      ],
+      "popup": {
+        "title": "Shadow Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "180",
+      "name": "Cage Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1126.4211024302,
+        2034.3462094737
+      ],
+      "popup": {
+        "title": "Cage Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "181",
+      "name": "Warrior's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1265.3675849333,
+        2251.427991298
+      ],
+      "popup": {
+        "title": "Warrior's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "182",
+      "name": "Waterdeep Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1372.4942622831,
+        1959.0393372773
+      ],
+      "popup": {
+        "title": "Waterdeep Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "183",
+      "name": "Revon Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1689.6316536453,
+        2023.3860543653
+      ],
+      "popup": {
+        "title": "Revon Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "184",
+      "name": "Spendthrift Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1638.3664120092,
+        2023.7396077559
+      ],
+      "popup": {
+        "title": "Spendthrift Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "185",
+      "name": "Vellarr's Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1611.4963543241,
+        1975.3027932446
+      ],
+      "popup": {
+        "title": "Vellarr's Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "186",
+      "name": "Sleepers' Walk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1698.1169350195,
+        1968.2317254328
+      ],
+      "popup": {
+        "title": "Sleepers' Walk",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "187",
+      "name": "Slipstone Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1721.0979054081,
+        1951.9682694655
+      ],
+      "popup": {
+        "title": "Slipstone Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "188",
+      "name": "Nethpranter's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1770.2418267005,
+        1966.8175118704
+      ],
+      "popup": {
+        "title": "Nethpranter's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "189",
+      "name": "Quill Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1768.4740597476,
+        1930.7550660299
+      ],
+      "popup": {
+        "title": "Quill Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "190",
+      "name": "Wall Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1889.0357659399,
+        1919.4413575309
+      ],
+      "popup": {
+        "title": "Wall Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "191",
+      "name": "Wide Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1796.758330995,
+        1902.4707947824
+      ],
+      "popup": {
+        "title": "Wide Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "192",
+      "name": "Spoils Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1735.2400410318,
+        1912.0167363284
+      ],
+      "popup": {
+        "title": "Spoils Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "193",
+      "name": "Deloun Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1767.7669529664,
+        1879.8433777844
+      ],
+      "popup": {
+        "title": "Deloun Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "194",
+      "name": "Chelor's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1807.0113793222,
+        1862.5192616454
+      ],
+      "popup": {
+        "title": "Chelor's Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "195",
+      "name": "Sevenlamps Cut",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1043.6896090313,
+        2267.6914472653
+      ],
+      "popup": {
+        "title": "Sevenlamps Cut",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "196",
+      "name": "Street of Silks",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1077.9842879189,
+        2255.3170785945
+      ],
+      "popup": {
+        "title": "Street of Silks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "197",
+      "name": "Gem Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1378.1511165326,
+        1923.3304448274
+      ],
+      "popup": {
+        "title": "Gem Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "198",
+      "name": "Niles Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1448.15468787,
+        1920.1484643121
+      ],
+      "popup": {
+        "title": "Niles Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "199",
+      "name": "High Hillock Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1476.0854057269,
+        1878.4291642221
+      ],
+      "popup": {
+        "title": "High Hillock Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "200",
+      "name": "Crossbow Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1509.3194244427,
+        1845.9022522875
+      ],
+      "popup": {
+        "title": "Crossbow Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "202",
+      "name": "Soldier's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1484.9242404917,
+        1811.6075733999
+      ],
+      "popup": {
+        "title": "Soldier's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "203",
+      "name": "Quaff Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1549.6245109703,
+        1919.4413575309
+      ],
+      "popup": {
+        "title": "Quaff Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "204",
+      "name": "Scroll Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1602.3039661687,
+        1896.1068337517
+      ],
+      "popup": {
+        "title": "Scroll Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "206",
+      "name": "Simple's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1603.7181797311,
+        1817.9715344306
+      ],
+      "popup": {
+        "title": "Simple's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "207",
+      "name": "Blackhorn Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1698.8240418007,
+        1869.5903294572
+      ],
+      "popup": {
+        "title": "Blackhorn Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "208",
+      "name": "Lathin's Cut",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1732.411613907,
+        1815.1431073059
+      ],
+      "popup": {
+        "title": "Lathin's Cut",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "209",
+      "name": "Salabar Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1825.7497090237,
+        1823.6283886801
+      ],
+      "popup": {
+        "title": "Salabar Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "211",
+      "name": "Sorn Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1877.3685040503,
+        1831.0530098826
+      ],
+      "popup": {
+        "title": "Sorn Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "212",
+      "name": "Brindul Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1851.9126599276,
+        1814.0824471341
+      ],
+      "popup": {
+        "title": "Brindul Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "213",
+      "name": "River Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1845.5486988969,
+        1780.4948750277
+      ],
+      "popup": {
+        "title": "River Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "214",
+      "name": "Soothsayer's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1609.7285873712,
+        1776.6057877312
+      ],
+      "popup": {
+        "title": "Soothsayer's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "215",
+      "name": "Coin Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        828.02204076945,
+        1542.906996549
+      ],
+      "popup": {
+        "title": "Coin Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "216",
+      "name": "Sea Lion Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        949.64440713353,
+        1576.848122046
+      ],
+      "popup": {
+        "title": "Sea Lion Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "217",
+      "name": "Sail Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        933.73450455684,
+        1504.723230365
+      ],
+      "popup": {
+        "title": "Sail Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "218",
+      "name": "Tarnished Silver Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1002.6774157225,
+        1591.6973644509
+      ],
+      "popup": {
+        "title": "Tarnished Silver Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "219",
+      "name": "Lackpurse Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1069.8525599352,
+        1602.3039661687
+      ],
+      "popup": {
+        "title": "Lackpurse Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "220",
+      "name": "Dock Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1131.3708498985,
+        1505.4303371462
+      ],
+      "popup": {
+        "title": "Dock Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "222",
+      "name": "Crook Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1153.2911601153,
+        1653.9227611953
+      ],
+      "popup": {
+        "title": "Crook Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "223",
+      "name": "Dretch Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1172.0294898167,
+        1725.3405460952
+      ],
+      "popup": {
+        "title": "Dretch Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "225",
+      "name": "Eel Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1232.1335662176,
+        1659.2260620542
+      ],
+      "popup": {
+        "title": "Eel Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "227",
+      "name": "Ward's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1320.8754672565,
+        1673.7217510686
+      ],
+      "popup": {
+        "title": "Ward's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "228",
+      "name": "Belnimbra's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1324.0574477718,
+        1637.659305228
+      ],
+      "popup": {
+        "title": "Belnimbra's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "229",
+      "name": "Rainrun Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1376.029796189,
+        1744.0788757966
+      ],
+      "popup": {
+        "title": "Rainrun Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "230",
+      "name": "Cook Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1431.8912319028,
+        1755.7461376862
+      ],
+      "popup": {
+        "title": "Cook Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "232",
+      "name": "Arun's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1363.6554275183,
+        1678.6714985369
+      ],
+      "popup": {
+        "title": "Arun's Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "234",
+      "name": "Sakiir's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1275.6206332605,
+        1592.0509178415
+      ],
+      "popup": {
+        "title": "Sakiir's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "235",
+      "name": "Wastrel Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1341.7351173015,
+        1568.0092872812
+      ],
+      "popup": {
+        "title": "Wastrel Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "236",
+      "name": "Redcloak Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1414.9206691543,
+        1627.0527035102
+      ],
+      "popup": {
+        "title": "Redcloak Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "237",
+      "name": "Nelnuk's Walk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1354.4630393628,
+        1523.815113457
+      ],
+      "popup": {
+        "title": "Nelnuk's Walk",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "238",
+      "name": "Leera's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1445.3262607453,
+        1577.9087822178
+      ],
+      "popup": {
+        "title": "Leera's Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "239",
+      "name": "Watchrun Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1388.0506114692,
+        1563.4130932035
+      ],
+      "popup": {
+        "title": "Watchrun Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "240",
+      "name": "Adder Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1354.4630393628,
+        1491.641754913
+      ],
+      "popup": {
+        "title": "Adder Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "241",
+      "name": "Gut Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1476.4389591175,
+        1648.2659069458
+      ],
+      "popup": {
+        "title": "Gut Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "242",
+      "name": "Snail Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1544.3212101114,
+        1601.5968593875
+      ],
+      "popup": {
+        "title": "Snail Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "243",
+      "name": "Blackstar Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1514.269171911,
+        1554.9278118292
+      ],
+      "popup": {
+        "title": "Blackstar Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "244",
+      "name": "Three Daggers Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1494.8237354284,
+        1500.1270362873
+      ],
+      "popup": {
+        "title": "Three Daggers Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "245",
+      "name": "Spiderweb Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1461.5897167126,
+        1452.3973285572
+      ],
+      "popup": {
+        "title": "Spiderweb Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "246",
+      "name": "Picklock Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1332.542729146,
+        1463.3574836656
+      ],
+      "popup": {
+        "title": "Picklock Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "247",
+      "name": "Fish Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1333.2498359272,
+        1421.284630185
+      ],
+      "popup": {
+        "title": "Fish Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "248",
+      "name": "Julbuck Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1386.9899512974,
+        1421.284630185
+      ],
+      "popup": {
+        "title": "Julbuck Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "249",
+      "name": "Shoor Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1745.1395359684,
+        1722.865672361
+      ],
+      "popup": {
+        "title": "Shoor Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "250",
+      "name": "Beacon Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1710.8448570809,
+        1687.1567799111
+      ],
+      "popup": {
+        "title": "Beacon Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "251",
+      "name": "Blackmul Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1739.8362351095,
+        1665.2364696943
+      ],
+      "popup": {
+        "title": "Blackmul Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "252",
+      "name": "Shesstra's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1568.3628406718,
+        1641.5483925246
+      ],
+      "popup": {
+        "title": "Shesstra's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "253",
+      "name": "Drakiir Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1640.1341789622,
+        1613.2641212771
+      ],
+      "popup": {
+        "title": "Drakiir Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "254",
+      "name": "Drovers' Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1822.9212818989,
+        1694.5814011136
+      ],
+      "popup": {
+        "title": "Drovers' Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "255",
+      "name": "Wagonrace",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1898.2281540953,
+        1715.4410511586
+      ],
+      "popup": {
+        "title": "Wagonrace",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "256",
+      "name": "Wall Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1950.9076092937,
+        1687.5103333017
+      ],
+      "popup": {
+        "title": "Wall Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "258",
+      "name": "Sahtyra's Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1844.8415921157,
+        1664.8829163037
+      ],
+      "popup": {
+        "title": "Sahtyra's Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "259",
+      "name": "Telshambra's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1737.3613613753,
+        1601.2433059969
+      ],
+      "popup": {
+        "title": "Telshambra's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "260",
+      "name": "Buckle Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1849.0842328028,
+        1627.0527035102
+      ],
+      "popup": {
+        "title": "Buckle Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "263",
+      "name": "Robin's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1910.6025227661,
+        1535.128821956
+      ],
+      "popup": {
+        "title": "Robin's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "264",
+      "name": "Rising Ride",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1867.4690091137,
+        1553.1600448763
+      ],
+      "popup": {
+        "title": "Rising Ride",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "265",
+      "name": "Tezambril's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1888.3286591587,
+        1494.1166286472
+      ],
+      "popup": {
+        "title": "Tezambril's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "266",
+      "name": "Tulmaster's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1864.2870285983,
+        1477.4996192893
+      ],
+      "popup": {
+        "title": "Tulmaster's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "267",
+      "name": "Caravan Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1913.4309498908,
+        1485.9849006635
+      ],
+      "popup": {
+        "title": "Caravan Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "268",
+      "name": "Book Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1615.0318882301,
+        1520.6331329417
+      ],
+      "popup": {
+        "title": "Book Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "269",
+      "name": "Black Wagon Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1673.0146442874,
+        1522.047346504
+      ],
+      "popup": {
+        "title": "Black Wagon Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "270",
+      "name": "Ilisar's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1754.6854775144,
+        1567.3021805
+      ],
+      "popup": {
+        "title": "Ilisar's Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "271",
+      "name": "Street of Smiths",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1745.493089359,
+        1517.8047058169
+      ],
+      "popup": {
+        "title": "Street of Smiths",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "272",
+      "name": "Brian's Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1761.7565453263,
+        1469.7214446962
+      ],
+      "popup": {
+        "title": "Brian's Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "274",
+      "name": "Tilman's Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1925.8053185616,
+        1439.3158531052
+      ],
+      "popup": {
+        "title": "Tilman's Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "275",
+      "name": "Olaim's Cut",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1938.5332406229,
+        1363.6554275183
+      ],
+      "popup": {
+        "title": "Olaim's Cut",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "276",
+      "name": "Anchoret's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1860.7514946924,
+        1366.8374080336
+      ],
+      "popup": {
+        "title": "Anchoret's Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "277",
+      "name": "Specterwalk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1906.0063286883,
+        1310.6224189293
+      ],
+      "popup": {
+        "title": "Specterwalk",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "278",
+      "name": "Carter's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1934.6441533264,
+        1262.8927111992
+      ],
+      "popup": {
+        "title": "Carter's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "279",
+      "name": "Coach Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1974.2421330728,
+        1219.7591975468
+      ],
+      "popup": {
+        "title": "Coach Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "280",
+      "name": "Coachlamp Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1985.2022881812,
+        1132.4315100703
+      ],
+      "popup": {
+        "title": "Coachlamp Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "281",
+      "name": "Slop Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1799.5867581198,
+        1114.40028715
+      ],
+      "popup": {
+        "title": "Slop Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "282",
+      "name": "Way of the Dragon",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1805.5971657598,
+        1042.6289488596
+      ],
+      "popup": {
+        "title": "Way of the Dragon",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "283",
+      "name": "Odd Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1360.8270003935,
+        1355.8772529252
+      ],
+      "popup": {
+        "title": "Odd Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "284",
+      "name": "Siren Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1390.8790385939,
+        1326.532321506
+      ],
+      "popup": {
+        "title": "Siren Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "285",
+      "name": "Ship Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1428.0021446062,
+        1326.1787681154
+      ],
+      "popup": {
+        "title": "Ship Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "286",
+      "name": "Two Flask Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1442.14428023,
+        1345.624204598
+      ],
+      "popup": {
+        "title": "Two Flask Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "287",
+      "name": "Presper Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1489.1668811789,
+        1324.764554553
+      ],
+      "popup": {
+        "title": "Presper Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "288",
+      "name": "Sternpost Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1385.9292911256,
+        1262.5391578086
+      ],
+      "popup": {
+        "title": "Sternpost Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "289",
+      "name": "Asteril's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1401.4856403117,
+        1239.55818742
+      ],
+      "popup": {
+        "title": "Asteril's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "290",
+      "name": "Cod Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1469.7214446962,
+        1264.6604781521
+      ],
+      "popup": {
+        "title": "Cod Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "291",
+      "name": "Street of Six Casks",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1531.9468414407,
+        1302.4906909456
+      ],
+      "popup": {
+        "title": "Street of Six Casks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "292",
+      "name": "Aline's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1495.5308422095,
+        1144.0987719598
+      ],
+      "popup": {
+        "title": "Aline's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "293",
+      "name": "Keel Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1539.0179092525,
+        1161.4228880989
+      ],
+      "popup": {
+        "title": "Keel Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "294",
+      "name": "Pressbow Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1568.0092872812,
+        1242.7401679354
+      ],
+      "popup": {
+        "title": "Pressbow Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "295",
+      "name": "Zastrow Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1655.6905281483,
+        1336.4318164426
+      ],
+      "popup": {
+        "title": "Zastrow Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "296",
+      "name": "Street of Curtains",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1591.3438110603,
+        1465.8323573997
+      ],
+      "popup": {
+        "title": "Street of Curtains",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "297",
+      "name": "Trollcrook Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1620.6887424796,
+        1407.1424945612
+      ],
+      "popup": {
+        "title": "Trollcrook Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "298",
+      "name": "Pearl Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1599.475539044,
+        1372.1407088925
+      ],
+      "popup": {
+        "title": "Pearl Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "299",
+      "name": "Shrimp Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1571.1912677965,
+        1324.4110011624
+      ],
+      "popup": {
+        "title": "Shrimp Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "300",
+      "name": "Fillet Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1689.6316536453,
+        1242.7401679354
+      ],
+      "popup": {
+        "title": "Fillet Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "301",
+      "name": "Net Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1669.1255569908,
+        1185.4645186592
+      ],
+      "popup": {
+        "title": "Net Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "302",
+      "name": "Oar Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1553.5135982668,
+        1209.152595829
+      ],
+      "popup": {
+        "title": "Oar Alley",
+        "description": "A minor avenue of hard-packed earth and [[gravel]] that extended off of [[Ship Street]] and terminated in a dead end.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "303",
+      "name": "Mouse Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1758.5745648109,
+        1438.2551929334
+      ],
+      "popup": {
+        "title": "Mouse Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "304",
+      "name": "Fishwife Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1768.8276131381,
+        1412.7993488107
+      ],
+      "popup": {
+        "title": "Fishwife Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "305",
+      "name": "Curtain Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1803.8293988069,
+        1400.7785335306
+      ],
+      "popup": {
+        "title": "Curtain Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "306",
+      "name": "Blackcloak Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1740.8968952813,
+        1375.6762427984
+      ],
+      "popup": {
+        "title": "Blackcloak Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "307",
+      "name": "Spices Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1640.4877323528,
+        1112.2789668064
+      ],
+      "popup": {
+        "title": "Spices Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "308",
+      "name": "Fishgut Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1698.8240418007,
+        1104.5007922134
+      ],
+      "popup": {
+        "title": "Fishgut Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "309",
+      "name": "Wharf Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1724.2798859234,
+        1106.6221125569
+      ],
+      "popup": {
+        "title": "Wharf Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "310",
+      "name": "Cedar Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1747.260856312,
+        1028.8403666264
+      ],
+      "popup": {
+        "title": "Cedar Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "311",
+      "name": "Hog Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1791.4550301361,
+        1008.6878233626
+      ],
+      "popup": {
+        "title": "Hog Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "312",
+      "name": "Sambril Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1895.0461735799,
+        970.50405717854
+      ],
+      "popup": {
+        "title": "Sambril Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "313",
+      "name": "Nag Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1860.3979413018,
+        976.86801820922
+      ],
+      "popup": {
+        "title": "Nag Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "316",
+      "name": "Southcliff Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        2434,
+        1105
+      ],
+      "popup": {
+        "title": "Southcliff Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "317",
+      "name": "Undercliff Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        2483,
+        1817
+      ],
+      "popup": {
+        "title": "Undercliff Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "342",
+      "name": "Moarinskoar Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1163.8977618331,
+        3251.9840866769
+      ],
+      "popup": {
+        "title": "Moarinskoar Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "365",
+      "name": "Shark Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        997.72766825422,
+        3764.2829496466
+      ],
+      "popup": {
+        "title": "Shark Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "366",
+      "name": "Roguerun Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        759.78623638495,
+        3628.5184476588
+      ],
+      "popup": {
+        "title": "Roguerun Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "367",
+      "name": "Skulkway",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        724.43089732562,
+        3551.7973619
+      ],
+      "popup": {
+        "title": "Skulkway",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "417",
+      "name": "Waymoot",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1915.5522702344,
+        1007.9807165814
+      ],
+      "popup": {
+        "title": "Waymoot",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "433",
+      "name": "Overlooked Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1432.9518920745,
+        1812.6682335717
+      ],
+      "popup": {
+        "title": "Overlooked Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "441",
+      "name": "Murghir's Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1581.4443161237,
+        1694.227847723
+      ],
+      "popup": {
+        "title": "Murghir's Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "446",
+      "name": "Dust Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1521.6937931135,
+        1506.8445507085
+      ],
+      "popup": {
+        "title": "Dust Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "453",
+      "name": "Hunter's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1700.5918087536,
+        1787.9194962302
+      ],
+      "popup": {
+        "title": "Hunter's Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "454",
+      "name": "Jembril Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1730.9974003447,
+        1757.1603512486
+      ],
+      "popup": {
+        "title": "Jembril Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "456",
+      "name": "Tsarnen Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1694.227847723,
+        1838.1240776944
+      ],
+      "popup": {
+        "title": "Tsarnen Alley",
+        "description": "Tsarnen Alley was a short, hard-packed dirt and gravel paved, alleyway. It was frequently walked down by pilgrims and priests on their way to the [[Plinth]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "461",
+      "name": "Tornsar Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1863.5799218171,
+        1588.8689373262
+      ],
+      "popup": {
+        "title": "Tornsar Alley",
+        "description": "Tornsar Alley was a small side alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "462",
+      "name": "Juth Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1892.9248532364,
+        1562.7059864223
+      ],
+      "popup": {
+        "title": "Juth Alley",
+        "description": "Juth Alley was a small side alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "485",
+      "name": "Bitter Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1502.2483566308,
+        1371.4336021113
+      ],
+      "popup": {
+        "title": "Bitter Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "492",
+      "name": "Ghemmer's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1499.4199295061,
+        1436.8409793711
+      ],
+      "popup": {
+        "title": "Ghemmer's Alley",
+        "description": "Ghemmer's Alley was a small backalley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "510",
+      "name": "Street of Nine Steps",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1933.229939764,
+        1380.9795436573
+      ],
+      "popup": {
+        "title": "Street of Nine Steps",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "546",
+      "name": "Watchmen's Way",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1436.8409793711,
+        1873.1258633632
+      ],
+      "popup": {
+        "title": "Watchmen's Way",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "548",
+      "name": "Atkiss Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1588.5153839356,
+        1914.138056672
+      ],
+      "popup": {
+        "title": "Atkiss Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "571",
+      "name": "Tuckpurse Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1678.6714985369,
+        1958.3322304961
+      ],
+      "popup": {
+        "title": "Tuckpurse Alley",
+        "description": "Tuckpurse Alley was an alleyway of hard-packed dirt and gravel.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "582",
+      "name": "Gaustus Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1843.4273785533,
+        1949.8469491219
+      ],
+      "popup": {
+        "title": "Gaustus Street",
+        "description": "Gaustus Street was a street of hard-packed dirt and gravel.\n\nThis street stretched from north to south, curving off of the [[Wall Way]] and terminating at the [[Court of the White Bull]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "584",
+      "name": "Walltower Walk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1887.6215523775,
+        1879.8433777844
+      ],
+      "popup": {
+        "title": "Walltower Walk",
+        "description": "Walltower Walk was a street of hard-packed dirt and gravel.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "585",
+      "name": "Urcandle Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1863.5799218171,
+        1848.3771260216
+      ],
+      "popup": {
+        "title": "Urcandle Alley",
+        "description": "Urcandle Alley was a short alleyway of hard-packed dirt and gravel. Urcandle Alley was home to one of the greatest concentrations of wheelwright stores in Waterdeep.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "598",
+      "name": "Trollskull Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1646,
+        3236.25
+      ],
+      "popup": {
+        "title": "Trollskull Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "626",
+      "name": "Sprangalar's Swordcut",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1650.74078068,
+        2931.6647147994
+      ],
+      "popup": {
+        "title": "Sprangalar's Swordcut",
+        "description": "Sprangalar's Swordcut, which was also simply called the Swordcut, was a small alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "689",
+      "name": "Belzound Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1835.2956505697,
+        2868.7322112738
+      ],
+      "popup": {
+        "title": "Belzound Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "696",
+      "name": "Blue Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        919,
+        3433.5
+      ],
+      "popup": {
+        "title": "Blue Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "705",
+      "name": "Rook Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1241,
+        3603
+      ],
+      "popup": {
+        "title": "Rook Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "728",
+      "name": "\u201cSharkroar\u201d Horth Shalark's Broadsheets",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1283.5,
+        2702.5
+      ],
+      "popup": {
+        "title": "\u201cSharkroar\u201d Horth Shalark's Broadsheets",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "770",
+      "name": "Watchway Tower",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1948.7862889501,
+        2461.0851519198
+      ],
+      "popup": {
+        "title": "Watchway Tower",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "773",
+      "name": "Roads' End",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1855.0946404429,
+        2350.4229406641
+      ],
+      "popup": {
+        "title": "Roads' End",
+        "description": "The tomb was used as a communal burial site for travelers who perished while visiting the City of Splendors.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "839",
+      "name": "Snake Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1753.375,
+        1289.25
+      ],
+      "popup": {
+        "title": "Snake Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "840",
+      "name": "Grocer's Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1780,
+        1315.5
+      ],
+      "popup": {
+        "title": "Grocer's Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "845",
+      "name": "Marching Grounds",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        2233,
+        2435
+      ],
+      "popup": {
+        "title": "Marching Grounds",
+        "description": "A well protected training camp of the City Guard.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "850",
+      "name": "Prayer Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1022.1228522052,
+        3674.1268350453
+      ],
+      "popup": {
+        "title": "Prayer Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "851",
+      "name": "Sabbar's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        842.16417639318,
+        3664.2273401087
+      ],
+      "popup": {
+        "title": "Sabbar's Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "852",
+      "name": "Sniff Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        923.83500962022,
+        3562.0504102272
+      ],
+      "popup": {
+        "title": "Sniff Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "854",
+      "name": "Runer's Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1030.6081335794,
+        2899.1378028648
+      ],
+      "popup": {
+        "title": "Runer's Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "855",
+      "name": "Cloaksweep Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1181.75,
+        3035.5
+      ],
+      "popup": {
+        "title": "Cloaksweep Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "889",
+      "name": "Melody Mount Walk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        857.36697218869,
+        2644.5793616377
+      ],
+      "popup": {
+        "title": "Melody Mount Walk",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "905",
+      "name": "Lemontree Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1122.5320151336,
+        2088.4398782345
+      ],
+      "popup": {
+        "title": "Lemontree Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "916",
+      "name": "Red Nose Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1872.7723099726,
+        1524.1686668476
+      ],
+      "popup": {
+        "title": "Red Nose Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "964",
+      "name": "Candle Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1653.9227611953,
+        1490.5810947412
+      ],
+      "popup": {
+        "title": "Candle Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "970",
+      "name": "Fishnet Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1678.25,
+        1123
+      ],
+      "popup": {
+        "title": "Fishnet Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "997",
+      "name": "Tao Wall Street's Pub",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1936.0583668888,
+        1741.6040020625
+      ],
+      "popup": {
+        "title": "Tao Wall Street's Pub",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "1007",
+      "name": "Belzer's Walk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1934.3322937902872,
+        1655.0990992305194
+      ],
+      "popup": {
+        "title": "Belzer's Walk",
+        "description": "An alleyway that stood on the boundary line of the [[Waterdeep/Southern Ward|Southern Ward]] and [[Waterdeep/Trades Ward|Trades Ward]].",
+        "image": "File:Caravan Court CS-map.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "1008",
+      "name": "Leanwall Alley",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1768.3513967892238,
+        3616.831303775443
+      ],
+      "popup": {
+        "title": "Leanwall Alley",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

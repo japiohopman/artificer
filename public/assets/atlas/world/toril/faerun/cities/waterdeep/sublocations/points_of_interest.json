@@ -1,0 +1,3598 @@
+{
+  "category": "points_of_interest",
+  "updatedAt": "2026-06-03T05:50:02.274151Z",
+  "location_id": "waterdeep",
+  "sub_locations": [
+    {
+      "id": "18",
+      "name": "The Semize",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1704.4808960502,
+        3540.483653401
+      ],
+      "popup": {
+        "title": "The Semize",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "28",
+      "name": "Demondraught",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        949.99796052413,
+        3670.94485453
+      ],
+      "popup": {
+        "title": "Demondraught",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "42",
+      "name": "The Fanebar",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1264.6604781521,
+        3598.8199628489
+      ],
+      "popup": {
+        "title": "The Fanebar",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "96",
+      "name": "The Lions",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        724.43089732562,
+        3052.5799743823
+      ],
+      "popup": {
+        "title": "The Lions",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "139",
+      "name": "The Passar",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1876.3078438785,
+        2730.4928355519
+      ],
+      "popup": {
+        "title": "The Passar",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "149",
+      "name": "The Prowl",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1230.7193526552,
+        2436.6899679688
+      ],
+      "popup": {
+        "title": "The Prowl",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "167",
+      "name": "The Rise",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        938.33069863455,
+        2296.6828252939
+      ],
+      "popup": {
+        "title": "The Rise",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "221",
+      "name": "The Reach",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1070.5596667164,
+        1680.4392654898
+      ],
+      "popup": {
+        "title": "The Reach",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "224",
+      "name": "Knife's Edge",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1211.2739161726,
+        1732.7651672976
+      ],
+      "popup": {
+        "title": "Knife's Edge",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "226",
+      "name": "The Slide",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1232.1335662176,
+        1590.6367042791
+      ],
+      "popup": {
+        "title": "The Slide",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "257",
+      "name": "Quarrel's Flight",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1908.1276490319,
+        1685.7425663487
+      ],
+      "popup": {
+        "title": "Quarrel's Flight",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "262",
+      "name": "Ruid's Stroll",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1945.2507550442,
+        1592.0509178415
+      ],
+      "popup": {
+        "title": "Ruid's Stroll",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "273",
+      "name": "The Forcebar",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1860.3979413018,
+        1432.2447852934
+      ],
+      "popup": {
+        "title": "The Forcebar",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "320",
+      "name": "The Wandering Wemic",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        744.22988719884,
+        3156.8782246073
+      ],
+      "popup": {
+        "title": "The Wandering Wemic",
+        "description": "Rooms could be had at the Wandering Wemic at a rate of 10 gp per night and included stabling, a valet service used for cleaning or repairing gear, and one bottle of wine per person per evening.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "352",
+      "name": "Fair Winds",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        689.42911165688,
+        2755.2415728934
+      ],
+      "popup": {
+        "title": "Fair Winds",
+        "description": "Rental Villa",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "353",
+      "name": "Marblehearth",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        733.5,
+        2735.5
+      ],
+      "popup": {
+        "title": "Marblehearth",
+        "description": "Rental Villa",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "354",
+      "name": "New Olamn",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        771.09994488393,
+        2668.9745455886
+      ],
+      "popup": {
+        "title": "New Olamn",
+        "description": "The College of New Olamn, simply known as New Olamn, was a traditional bardic college",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "357",
+      "name": "Sahuagin Humbled",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        706.75322779595,
+        2799.7893001081
+      ],
+      "popup": {
+        "title": "Sahuagin Humbled",
+        "description": "The [[Walking Statue of Waterdeep]] known as the Sahuagin Humbled was originally the only Walking Statue visible in Waterdeep.",
+        "image": "File:SahuaginHumbled-Concept.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "361",
+      "name": "Trollfort",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        831.55757467538,
+        3960.8586348164
+      ],
+      "popup": {
+        "title": "Trollfort",
+        "description": "This structure stood four stories tall and was directly connected to the city walls that surrounded the Field Ward.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "362",
+      "name": "Trollyard",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        859.84184592284,
+        3911.3611601334
+      ],
+      "popup": {
+        "title": "Trollyard",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "404",
+      "name": "The Red Gauntlet",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1832.1136700543,
+        1051.821337015
+      ],
+      "popup": {
+        "title": "The Red Gauntlet",
+        "description": "Food served here consisted mostly of dried fish, waybread, and rabbit-and-fowl stew. Drink consisted of a house wine. The fares were cheap in the Red Gauntlet with a plate of food running just 3 cp and a tankard 2 cp.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "408",
+      "name": "Southyard",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1951.2611626843,
+        944.69465966523
+      ],
+      "popup": {
+        "title": "Southyard",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "410",
+      "name": "Orm's Highbench",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1942.4223279194,
+        1018.9408716898
+      ],
+      "popup": {
+        "title": "Orm's Highbench",
+        "description": "Orm's Highbench was the headquarters of a trading company.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "412",
+      "name": "Athal's Stables",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1997.2231034614,
+        1009.3949301438
+      ],
+      "popup": {
+        "title": "Athal's Stables",
+        "description": "Athal's Stables were a stables. [[Mount]]s and gear related to them, such as [[bit and bridle|bits, bridles]], and [[saddle]]s, could be purchased here.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "418",
+      "name": "Southpost",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        2012,
+        746
+      ],
+      "popup": {
+        "title": "Southpost",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "419",
+      "name": "Southfort Keep",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        2134,
+        899
+      ],
+      "popup": {
+        "title": "Southfort Keep",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "425",
+      "name": "T'Quession",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1135,
+        812
+      ],
+      "popup": {
+        "title": "T'Quession",
+        "description": "T'Quession was a [[sea elf]] hamlet.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "437",
+      "name": "The Red-Eyed Owl",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1515.3298320828,
+        1730.2902935635
+      ],
+      "popup": {
+        "title": "The Red-Eyed Owl",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "438",
+      "name": "The Sleepy Sylph",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1530.5326278783,
+        1738.4220215471
+      ],
+      "popup": {
+        "title": "The Sleepy Sylph",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "443",
+      "name": "Turnstone Plumbing and Pipefitting",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1362.9483207371,
+        1650.0336738988
+      ],
+      "popup": {
+        "title": "Turnstone Plumbing and Pipefitting",
+        "description": "Turnstone Plumbing and Pipefitting was a plumbing business that was owned by [[Jhalossan Turnstone]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "468",
+      "name": "The Redbridle Stables",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1943.8365414818,
+        1560.9382194693
+      ],
+      "popup": {
+        "title": "The Redbridle Stables",
+        "description": "The Redbridle Stables were a stables that was owned by [[Rhazbos Redbridle]]. [[Mount]]s and gear related to them, such as [[bit and bridle|bits, bridles]], and [[saddle]]s, could be purchased here.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "474",
+      "name": "Arnagus the Shipwright",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1476.7925125081,
+        1141.6238982257
+      ],
+      "popup": {
+        "title": "Arnagus the Shipwright",
+        "description": "This was a large shipbuilding shed owned by [[Arnagus the Shipwright]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "484",
+      "name": "Thirsty Sailor",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1417.0419894978,
+        1377.797563142
+      ],
+      "popup": {
+        "title": "Thirsty Sailor",
+        "description": "The Thirsty Sailor was an infamous dive bar.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "509",
+      "name": "Hlakken Stables",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1967.171065261,
+        1158.2409075836
+      ],
+      "popup": {
+        "title": "Hlakken Stables",
+        "description": "The Hlakken Stables were a stables. [[Mount]]s and gear related to them, such as [[bit and bridle|bits, bridles,]] and [[saddle]]s, could be purchased here.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "511",
+      "name": "The Jar",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1937.4725804511,
+        1424.1130573097
+      ],
+      "popup": {
+        "title": "The Jar",
+        "description": "The Jar was a small courtyard.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "515",
+      "name": "Pampered Traveler",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1445.3262607453,
+        2356.0797949136
+      ],
+      "popup": {
+        "title": "Pampered Traveler",
+        "description": "Pampered Traveler was a fine establishment with large, well-furnished rooms, a play area for children, and a library that guests could peruse.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "522",
+      "name": "Hriiat Fine Pastries",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1703.773789269,
+        2526.8460825701
+      ],
+      "popup": {
+        "title": "Hriiat Fine Pastries",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "524",
+      "name": "Merchants' Rest",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1728.8760800011,
+        2241.5284963614
+      ],
+      "popup": {
+        "title": "Merchants' Rest",
+        "description": "Merchants' Rest, which was also known as the Coinscoffin, was a tomb. Despite its name, Merchants' Rest was reserved for anyone, whether they were a merchant or not, who prepaid to be interred within.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "542",
+      "name": "Jade Jug",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1509.3194244427,
+        1979.1918805411
+      ],
+      "popup": {
+        "title": "Jade Jug",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "543",
+      "name": "Blue Jack",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1508.6123176615,
+        1993.3340161649
+      ],
+      "popup": {
+        "title": "Blue Jack",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "564",
+      "name": "Dunblast Roofing Company",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1639.0735187904,
+        2215.3655454575
+      ],
+      "popup": {
+        "title": "Dunblast Roofing Company",
+        "description": "Dunblast Roofing Company was a carpentry business that was owned by [[Elemos Dunblast]] in the 14th century DR",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "567",
+      "name": "Mariners' Rest",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1860.3979413018,
+        1994.0411229461
+      ],
+      "popup": {
+        "title": "Mariners' Rest",
+        "description": "Mariners' Rest was a tomb. As its name implied, the tomb was reserved sailors and seamen who prepaid to be interred within.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "579",
+      "name": "Gentle Rest Stables",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1759.9887783733,
+        1900.3494744388
+      ],
+      "popup": {
+        "title": "Gentle Rest Stables",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "611",
+      "name": "The Misty Beard",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1915.1987168438,
+        3025.3563633066
+      ],
+      "popup": {
+        "title": "The Misty Beard",
+        "description": "Part of what made the Misty Beard famous up and down the [[Sword Coast]] was the staff which was composed of exotic or monstrous creatures from all over [[Faer\u00fbn]].",
+        "image": "File:MistyBeard.JPG"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "614",
+      "name": "Singing Sword",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1394.4145724999,
+        2619.123517515
+      ],
+      "popup": {
+        "title": "Singing Sword",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "633",
+      "name": "Northyard",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1504,
+        3740
+      ],
+      "popup": {
+        "title": "Northyard",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "650",
+      "name": "Boatscrape Cove",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1016,
+        778
+      ],
+      "popup": {
+        "title": "Boatscrape Cove",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "651",
+      "name": "Deepwater Beach",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1101,
+        491
+      ],
+      "popup": {
+        "title": "Deepwater Beach",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "654",
+      "name": "Mirt's Mansion",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        801.50553647495,
+        1624.5778297761
+      ],
+      "popup": {
+        "title": "Mirt's Mansion",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "660",
+      "name": "Seacave",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        704,
+        2021
+      ],
+      "popup": {
+        "title": "Seacave",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "661",
+      "name": "Northern Seacave",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        717,
+        2116
+      ],
+      "popup": {
+        "title": "Northern Seacave",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "662",
+      "name": "Griffon Stable",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        896.61139854454,
+        1996.5159966802
+      ],
+      "popup": {
+        "title": "Griffon Stable",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "663",
+      "name": "Peaktop Eyrie",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        887.41901038912,
+        1979.8989873223
+      ],
+      "popup": {
+        "title": "Peaktop Eyrie",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "673",
+      "name": "Castle Waterdeep",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1313.0972926634,
+        1843.0738251627
+      ],
+      "popup": {
+        "title": "Castle Waterdeep",
+        "description": "Castle Waterdeep was the seat of the city's government.",
+        "image": "File:Waterdeep Castle Level 1.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "674",
+      "name": "Dragon's Head",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1089.6515498085,
+        2021.6182874123
+      ],
+      "popup": {
+        "title": "Dragon's Head",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "675",
+      "name": "The Golden Key Locksmiths",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1301.4300307738,
+        2043.1850442385
+      ],
+      "popup": {
+        "title": "The Golden Key Locksmiths",
+        "description": "The Golden Key Locksmiths, also known as The Golden Key, was a business owned by the locksmith [[Ansilver]] in the 14th century DR.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "678",
+      "name": "Mud Flats",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        644,
+        3568
+      ],
+      "popup": {
+        "title": "Mud Flats",
+        "description": "The beach was frequented mostly by fishers, clam diggers, and occasional locals who enjoyed bathing in the cold waters of the [[Sea of Swords]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "681",
+      "name": "The Lady Dreaming",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        895,
+        2462
+      ],
+      "popup": {
+        "title": "The Lady Dreaming",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "682",
+      "name": "The Great Drunkard",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1356,
+        2539
+      ],
+      "popup": {
+        "title": "The Great Drunkard",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "683",
+      "name": "The Swordmaiden",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1760,
+        2936
+      ],
+      "popup": {
+        "title": "The Swordmaiden",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "684",
+      "name": "The Hawk Man",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1321.2290206471,
+        2096.9251596087
+      ],
+      "popup": {
+        "title": "The Hawk Man",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "685",
+      "name": "The Honorable Knight",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1619,
+        1629
+      ],
+      "popup": {
+        "title": "The Honorable Knight",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "690",
+      "name": "Sated Satyr",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        938,
+        3831
+      ],
+      "popup": {
+        "title": "Sated Satyr",
+        "description": "The Sated Satyr was a two-story, irregularly shaped building that fronted the streets or the alley on all sides but one.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "691",
+      "name": "Gerin's Breads",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        848.5,
+        3804.5
+      ],
+      "popup": {
+        "title": "Gerin's Breads",
+        "description": "Gerin's Breads was a bakery.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "693",
+      "name": "Mystra\u2019s Arms",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        888,
+        3622
+      ],
+      "popup": {
+        "title": "Mystra\u2019s Arms",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "695",
+      "name": "Stagdown Manse",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        960.5,
+        3506.5
+      ],
+      "popup": {
+        "title": "Stagdown Manse",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "699",
+      "name": "Velatha\u2019s Delights",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        704.2783540618,
+        3345.6757351841
+      ],
+      "popup": {
+        "title": "Velatha\u2019s Delights",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "700",
+      "name": "Silken Slyph",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        778.5,
+        3351
+      ],
+      "popup": {
+        "title": "Silken Slyph",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "711",
+      "name": "Silent Shield",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1675.5,
+        3293.5
+      ],
+      "popup": {
+        "title": "Silent Shield",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "713",
+      "name": "Taurntyrith Adornments",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1413.5,
+        3076.5
+      ],
+      "popup": {
+        "title": "Taurntyrith Adornments",
+        "description": "Taurntyrith dealed in door panels and wall panels of both painted and iridescent acid-treated copper and enamel. These predominantly depicted blue-green or blue-and-silver forest scenes.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "716",
+      "name": "Broken Lance",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        973.5,
+        3011.5
+      ],
+      "popup": {
+        "title": "Broken Lance",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "717",
+      "name": "Thayan Embassy",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1118.5,
+        2755.5
+      ],
+      "popup": {
+        "title": "Thayan Embassy",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "733",
+      "name": "Sorynth\u2019s Silverware",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1299.6622638209,
+        2488.6623163861
+      ],
+      "popup": {
+        "title": "Sorynth\u2019s Silverware",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "743",
+      "name": "Bhephel's Bottles",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1443.5584937923,
+        3045.1553531799
+      ],
+      "popup": {
+        "title": "Bhephel's Bottles",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "744",
+      "name": "Tirelessly Turning Wheel",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1442.8513870112,
+        2852.8223086971
+      ],
+      "popup": {
+        "title": "Tirelessly Turning Wheel",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "758",
+      "name": "Lightsinger Theater",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1387.343504688,
+        2562.9085284106
+      ],
+      "popup": {
+        "title": "Lightsinger Theater",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "763",
+      "name": "Khammeral's Coins",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1526.5,
+        2384
+      ],
+      "popup": {
+        "title": "Khammeral's Coins",
+        "description": "Khammeral's Coins was a currency exchange.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "765",
+      "name": "Rejviik's Mortuary",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1626.6991501197,
+        2137.2302461363
+      ],
+      "popup": {
+        "title": "Rejviik's Mortuary",
+        "description": "Rejviik's Mortuary was a business.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "772",
+      "name": "Deepwinter Vault",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1782.9697487619,
+        2485.1267824801
+      ],
+      "popup": {
+        "title": "Deepwinter Vault",
+        "description": "The Deepwinter Vault was a mausoleum that belonged to the defunct noble [[Deepwinter (family) |Deepwinter]] family. It was also one of the entrances to the former lair of [[Artor Morlin]], the [[vampire lord]] of Waterdeep.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "774",
+      "name": "Sultlue Vault",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1705.8951096125,
+        2364.9186296784
+      ],
+      "popup": {
+        "title": "Sultlue Vault",
+        "description": "The tomb was heavily warded with magic.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "775",
+      "name": "Lords' Respite",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1825.0426022425,
+        2125.9165376374
+      ],
+      "popup": {
+        "title": "Lords' Respite",
+        "description": "The Lords' Respite was reserved for any Lords of Waterdeep who wished to be buried there.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "778",
+      "name": "Quaffing Quaggoth",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1054.6497641397,
+        1629.881130635
+      ],
+      "popup": {
+        "title": "Quaffing Quaggoth",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "781",
+      "name": "Sailor\u2019s Corner",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1259.7107306838,
+        1448.8617946512
+      ],
+      "popup": {
+        "title": "Sailor\u2019s Corner",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "782",
+      "name": "The Grey Griffon",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1223.2947314527,
+        1683.2676926146
+      ],
+      "popup": {
+        "title": "The Grey Griffon",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "794",
+      "name": "Sleepy Slyph",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1528.7648609253,
+        1648.973013727
+      ],
+      "popup": {
+        "title": "Sleepy Slyph",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "798",
+      "name": "Darth's Dolphyntyde",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1363.6554275183,
+        1590.6367042791
+      ],
+      "popup": {
+        "title": "Darth's Dolphyntyde",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "805",
+      "name": "Mother Jatha's",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1508.6123176615,
+        1431.8912319028
+      ],
+      "popup": {
+        "title": "Mother Jatha's",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "808",
+      "name": "Merlook Nets & Knotware",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1698.1169350195,
+        1175.5650237226
+      ],
+      "popup": {
+        "title": "Merlook Nets & Knotware",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "809",
+      "name": "Hlethvagi's Coins",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1950.2005025125,
+        989.59594027057
+      ],
+      "popup": {
+        "title": "Hlethvagi's Coins",
+        "description": "Hlethvagi's Coins was a moneychanging house.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "815",
+      "name": "Tehmak's Coaches",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1903.5314549542,
+        1138.4419177103
+      ],
+      "popup": {
+        "title": "Tehmak's Coaches",
+        "description": "Tehma's Coaches provided coach and transportation services with the southern regions of Waterdeep.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "816",
+      "name": "Flame of Hope",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1852.6197667088,
+        1494.8237354284
+      ],
+      "popup": {
+        "title": "Flame of Hope",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "818",
+      "name": "The Midnight Sun",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1779.0806614654,
+        1380.2724368761
+      ],
+      "popup": {
+        "title": "The Midnight Sun",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "821",
+      "name": "Weeping Maiden's Run",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1777.875,
+        1333.25
+      ],
+      "popup": {
+        "title": "Weeping Maiden's Run",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "823",
+      "name": "Amrani's Laundry",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1784.375,
+        1347.5
+      ],
+      "popup": {
+        "title": "Amrani's Laundry",
+        "description": "Amrani's Laundry was a business owned by [[Amrani]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "829",
+      "name": "Beer Golem",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1795.125,
+        1283.625
+      ],
+      "popup": {
+        "title": "Beer Golem",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "831",
+      "name": "Laran's Cartographers",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1782.375,
+        1308.5
+      ],
+      "popup": {
+        "title": "Laran's Cartographers",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "838",
+      "name": "Tymora's Blessing",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1746.875,
+        1288.375
+      ],
+      "popup": {
+        "title": "Tymora's Blessing",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "842",
+      "name": "Tharqualnaar",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1203,
+        698
+      ],
+      "popup": {
+        "title": "Tharqualnaar",
+        "description": "Tharqualnaar was a village of [[merfolk]] in Deepwater Harbor in Waterdeep, beneath Deepwater Isle.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "843",
+      "name": "Outer Fort",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        810,
+        763
+      ],
+      "popup": {
+        "title": "Outer Fort",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "844",
+      "name": "The Queenspire",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1991,
+        611
+      ],
+      "popup": {
+        "title": "The Queenspire",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "847",
+      "name": "Amendsfarm",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1949,
+        3733
+      ],
+      "popup": {
+        "title": "Amendsfarm",
+        "description": "A prison farm operated by the City Watch, where Waterdhavians convicted of minor offenses were sentenced to pay hard labor for a limited period of time.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "853",
+      "name": "Sharra's Flight",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        857.36697218869,
+        3068.1363235684
+      ],
+      "popup": {
+        "title": "Sharra's Flight",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "937",
+      "name": "The Griffon",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        914.6426214648,
+        1938.5332406229
+      ],
+      "popup": {
+        "title": "The Griffon",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "938",
+      "name": "Mistshore",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        829.43625433182,
+        1492.3488616942
+      ],
+      "popup": {
+        "title": "Mistshore",
+        "description": "Mistshore was the name given to the dilapidated north shore of Waterdeep's harbor in the late 15th century DR.[",
+        "image": "File:Mistshore.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "940",
+      "name": "Southern Ward",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1864,
+        1171
+      ],
+      "popup": {
+        "title": "Southern Ward",
+        "description": "Southern Ward was the southeastern sector of the city of Waterdeep.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "942",
+      "name": "Castle Ward",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1347,
+        2311
+      ],
+      "popup": {
+        "title": "Castle Ward",
+        "description": "The Castle Ward was the central ward of the city of Waterdeep.",
+        "image": "File:Castle ward-5e.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "944",
+      "name": "City of the Dead",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1785,
+        2275
+      ],
+      "popup": {
+        "title": "City of the Dead",
+        "description": "The City of the Dead was a large cemetery and ward in Waterdeep. Most of the city's dead were buried here. By day, it also doubled as the city's major public park picnic area.",
+        "image": "File:City of the Dead-Julian Kok.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "945",
+      "name": "North Ward",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1552,
+        3008
+      ],
+      "popup": {
+        "title": "North Ward",
+        "description": "The North Ward was the northeastern sector of Waterdeep. It was famous for being the quietest ward of the city, consisting mostly of residential areas.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "946",
+      "name": "Sea Ward",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        955,
+        3063
+      ],
+      "popup": {
+        "title": "Sea Ward",
+        "description": "The Sea Ward of Waterdeep was the wealthiest ward in Waterdeep and located in the northwest of the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "952",
+      "name": "Seven Masks Theater",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1231.4264594364,
+        1572.2519279683
+      ],
+      "popup": {
+        "title": "Seven Masks Theater",
+        "description": "The Seven Masks Theater was a theater that catered to the masses typically found in the neighborhood. Ship captains and sailors were admitted for free.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "953",
+      "name": "Weirdbottle's Concoctions",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1568.7163940624,
+        2458.256724795
+      ],
+      "popup": {
+        "title": "Weirdbottle's Concoctions",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "956",
+      "name": "Thantilvur Investments",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1528.0577541441,
+        2791.3040187339
+      ],
+      "popup": {
+        "title": "Thantilvur Investments",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "967",
+      "name": "Corellon's Crown",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1650.0336738988,
+        3223.3462620389
+      ],
+      "popup": {
+        "title": "Corellon's Crown",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "968",
+      "name": "Dandy Mops",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1599.25,
+        2053
+      ],
+      "popup": {
+        "title": "Dandy Mops",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "969",
+      "name": "Dauntlyn\u2019s Doors",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1442.8513870112,
+        2419.3658518298
+      ],
+      "popup": {
+        "title": "Dauntlyn\u2019s Doors",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "973",
+      "name": "Horizon's Sails",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1452.25,
+        1359
+      ],
+      "popup": {
+        "title": "Horizon's Sails",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "976",
+      "name": "Knight'n Shadow",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1562.5,
+        1422
+      ],
+      "popup": {
+        "title": "Knight'n Shadow",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "977",
+      "name": "Mermaid on a Dolphin",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1090,
+        3300
+      ],
+      "popup": {
+        "title": "Mermaid on a Dolphin",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "980",
+      "name": "Oblarth's Gryphon",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1418.5,
+        3095
+      ],
+      "popup": {
+        "title": "Oblarth's Gryphon",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "981",
+      "name": "Ohmtalakar's Fine Gems",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1212,
+        3335.5
+      ],
+      "popup": {
+        "title": "Ohmtalakar's Fine Gems",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "982",
+      "name": "Pink Flumph",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1282.5,
+        2441
+      ],
+      "popup": {
+        "title": "Pink Flumph",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "983",
+      "name": "Sarsantyr's Tapestries & Draperies",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1456,
+        3298.5
+      ],
+      "popup": {
+        "title": "Sarsantyr's Tapestries & Draperies",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "984",
+      "name": "Silavene's",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        724,
+        2763
+      ],
+      "popup": {
+        "title": "Silavene's",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "985",
+      "name": "Slaked Sylph",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        870.5,
+        2901.5
+      ],
+      "popup": {
+        "title": "Slaked Sylph",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "986",
+      "name": "Starry Cradles orphanage",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1143.5,
+        1680
+      ],
+      "popup": {
+        "title": "Starry Cradles orphanage",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "990",
+      "name": "Telvar's Tipples",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1855.9785239194,
+        1616.4461017924
+      ],
+      "popup": {
+        "title": "Telvar's Tipples",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "991",
+      "name": "Daily Trumpet",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1760.3423317639,
+        1262.5391578086
+      ],
+      "popup": {
+        "title": "Daily Trumpet",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "993",
+      "name": "Dancing Haven",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1694.227847723,
+        3486.7435380309
+      ],
+      "popup": {
+        "title": "Dancing Haven",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "995",
+      "name": "Friendly Flounder",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1611.8499077147,
+        1501.5412498496
+      ],
+      "popup": {
+        "title": "Friendly Flounder",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "998",
+      "name": "Smiling Succubus",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1691.7529739888,
+        1102.3794718698
+      ],
+      "popup": {
+        "title": "Smiling Succubus",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "1000",
+      "name": "Waterdeep Wazoo",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1834.5885437885,
+        3308.9061825624
+      ],
+      "popup": {
+        "title": "Waterdeep Wazoo",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "1001",
+      "name": "Zephyr Post",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        1625.2849365573,
+        3218.04296118
+      ],
+      "popup": {
+        "title": "Zephyr Post",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "1009",
+      "name": " Gull Leap",
+      "categoryId": "points_of_interest",
+      "type": "marker",
+      "position": [
+        556.9514814127211,
+        2917.4833045911228
+      ],
+      "popup": {
+        "title": " Gull Leap",
+        "description": "A cliff along the northwestern edge of Waterdeep, just outside the Trollwall, that was named in part for the significant amount of [[sea gull]]s that nested upon it.",
+        "image": "File:VGtW-Cliffride.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

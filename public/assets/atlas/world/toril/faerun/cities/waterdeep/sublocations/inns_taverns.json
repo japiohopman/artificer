@@ -1,0 +1,2410 @@
+{
+  "category": "inns_taverns",
+  "updatedAt": "2026-06-03T05:50:02.274151Z",
+  "location_id": "waterdeep",
+  "sub_locations": [
+    {
+      "id": "5",
+      "name": "Burnt Inn Street",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1189.3536059558,
+        3733.8773580556
+      ],
+      "popup": {
+        "title": "Burnt Inn Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "23",
+      "name": "Endshift Tavern",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1875.625,
+        3454.25
+      ],
+      "popup": {
+        "title": "Endshift Tavern",
+        "description": "The Endshift Tavern was a frequent stop for off-duty members of the [[City Guard (Waterdeep)|City Guard]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "315",
+      "name": "Smuggler's Run",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1926.5124253427,
+        910.75353416827
+      ],
+      "popup": {
+        "title": "Smuggler's Run",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "318",
+      "name": "The Ship's Wheel",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        690.13621843807,
+        3150.8678169673
+      ],
+      "popup": {
+        "title": "The Ship's Wheel",
+        "description": "The Ship's Wheel had a reputation for being one of the safest taverns around. Most activity within the tavern never got more exciting than the old patrons watching each others hair fall out.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "319",
+      "name": "The Pilgrim's Rest",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        721.24891681028,
+        3152.9891373108
+      ],
+      "popup": {
+        "title": "The Pilgrim's Rest",
+        "description": "This comfortable inn was moderately priced, at least by Waterdeep standards. Many of the patrons stayed here while visiting Waterdeep's temples. A private room could be had for 9 gp per night and included stabling and a meal. ",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "324",
+      "name": "Fiery Flagon",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        733.26973209045,
+        3243.4988053027
+      ],
+      "popup": {
+        "title": "Fiery Flagon",
+        "description": "The Fiery Flagon was a stately old tavern that served excellent food.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "325",
+      "name": "Dacer's Inn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        760.13978977554,
+        3214.507427274
+      ],
+      "popup": {
+        "title": "Dacer's Inn",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "326",
+      "name": "Gournar's Tavern",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        773.92837200868,
+        3130.3617203128
+      ],
+      "popup": {
+        "title": "Gournar's Tavern",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "329",
+      "name": "Maerghoun's Inn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        806.10173055266,
+        3181.6269619489
+      ],
+      "popup": {
+        "title": "Maerghoun's Inn",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "391",
+      "name": "The Sleeping Snake",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1682.2070324428,
+        1067.7312395917
+      ],
+      "popup": {
+        "title": "The Sleeping Snake",
+        "description": "Rowdy tavern for dockhands and dancers, owner by [[Alard Belaerl]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "392",
+      "name": "Shipmasters' Hall",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1734.5329342506,
+        1052.8819971868
+      ],
+      "popup": {
+        "title": "Shipmasters' Hall",
+        "description": "Shipmasters' Hall was an inn. ",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "393",
+      "name": "Sel\u00fbne's Smile",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1279,
+        1498
+      ],
+      "popup": {
+        "title": "Sel\u00fbne's Smile",
+        "description": "Sel\u00fbne's Smile, also known as the Inn of the Crescent Moon, was a tavern and inn devoted to [[Sel\u00fbne]]. Uniquely, it was established and run by an [[avatar]] of the goddess Sel\u00fbne.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "396",
+      "name": "League Hall",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1812.3146801811,
+        992.42436739532
+      ],
+      "popup": {
+        "title": "League Hall",
+        "description": "League Hall was the guildhall of the [[League of Skinners & Tanners]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "407",
+      "name": "Copper Cup",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1937.8261338417,
+        939.74491219692
+      ],
+      "popup": {
+        "title": "Copper Cup",
+        "description": "The Copper Cup was a [[festhall]]. ",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "420",
+      "name": "Inner Fort",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1628,
+        612
+      ],
+      "popup": {
+        "title": "Inner Fort",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "430",
+      "name": "Smuggler's Bane Tower",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        593,
+        1026
+      ],
+      "popup": {
+        "title": "Smuggler's Bane Tower",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "434",
+      "name": "Yawning Portal",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1465.4788040091,
+        1746.2001961402
+      ],
+      "popup": {
+        "title": "Yawning Portal",
+        "description": "The Yawning Portal inn gained most of its renown for being the primary open route to the [[Undermountain]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "440",
+      "name": "Bowels of the Earth",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1566.2415203282,
+        1813.3753403529
+      ],
+      "popup": {
+        "title": "Bowels of the Earth",
+        "description": "The tavern was a well-known spot for hiring [[mercenaries]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "442",
+      "name": "Rearing Hippocampus",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1343.856437645,
+        1509.6729778333
+      ],
+      "popup": {
+        "title": "Rearing Hippocampus",
+        "description": "The Rearing Hippocampus was an inn.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "444",
+      "name": "The Blackstar Inn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1496.9450557719,
+        1541.1392295961
+      ],
+      "popup": {
+        "title": "The Blackstar Inn",
+        "description": "The Blackstar Inn was owned by [[Asiyra Boldwinter]] during the mid-to-late 14th century DR. Armed guards protected the entryway and the stables.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "449",
+      "name": "Gray Serpent",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1686.8032265205,
+        1644.0232662587
+      ],
+      "popup": {
+        "title": "Gray Serpent",
+        "description": "The Gray Serpent, which was also seen as the Grey Serpent, was an inn located in Waterdeep during the mid-to-late 14th century DR.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "450",
+      "name": "Swords' Rest",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1796.4047776044,
+        1619.2745289172
+      ],
+      "popup": {
+        "title": "Swords' Rest",
+        "description": "Swords' Rest was a tavern and a good place to hire [[mercenaries]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "459",
+      "name": "Felzoun's Folly",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1813.7288937435,
+        1817.2644276494
+      ],
+      "popup": {
+        "title": "Felzoun's Folly",
+        "description": "This tavern was frequently quite crowded and noisy, but overall was a casual place where merchants and consumers alike stopped for a quick bite or drink.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "463",
+      "name": "House of Good Spirits",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1866.7619023325,
+        1567.6557338906
+      ],
+      "popup": {
+        "title": "House of Good Spirits",
+        "description": "The House of Good Spirits was the guildhall of the [[Vintners', Distillers', & Brewers' Guild]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "471",
+      "name": "Ship's Prow",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1386.2828445162,
+        1363.3018741277
+      ],
+      "popup": {
+        "title": "Ship's Prow",
+        "description": "The inn's name derived from the fact that it was converted into a building from the prow of a ship.",
+        "image": "File:The Ship's Prow - Volo's Guide.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "473",
+      "name": "The Mermaid's Arms",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1456.6399692443,
+        1167.7868491296
+      ],
+      "popup": {
+        "title": "The Mermaid's Arms",
+        "description": "The Mermaid's Arms was a pricey and busy tavern, inn, and festhall.",
+        "image": "File:Arnagus - City System.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "476",
+      "name": "Full Sails",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1502.2483566308,
+        1111.5718600253
+      ],
+      "popup": {
+        "title": "Full Sails",
+        "description": "The Full Sails was a tavern that doubled as the guildhall of the [[Most Diligent League of Sail-Makers and Cordwainers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "477",
+      "name": "Blue Mermaid",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1526.9970939723,
+        1189.0000525652
+      ],
+      "popup": {
+        "title": "Blue Mermaid",
+        "description": "The tavern was well appointed and clean, if a bit tired.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "482",
+      "name": "Hanging Lantern",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1547.5031906268,
+        1232.8406729987
+      ],
+      "popup": {
+        "title": "Hanging Lantern",
+        "description": "The Hanging Lantern was a [[festhall]]. The building stood an impressive six storys tall.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "483",
+      "name": "Sleeping Wench",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1584.6262966391,
+        1219.0520907656
+      ],
+      "popup": {
+        "title": "Sleeping Wench",
+        "description": "This tavern could be rather rowdy, but less so compared to the [[Sleeping Snake]] and had a comparably better clientele.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "486",
+      "name": "Warm Beds",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1465.1252506185,
+        1318.0470401317
+      ],
+      "popup": {
+        "title": "Warm Beds",
+        "description": "Warm Beds was an [[inn]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "488",
+      "name": "Bloody Fist",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1560.2311126881,
+        1352.6952724099
+      ],
+      "popup": {
+        "title": "Bloody Fist",
+        "description": "The Bloody Fist was a [[tavern]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "489",
+      "name": "Hanged Man",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1602.6575195593,
+        1177.3327906756
+      ],
+      "popup": {
+        "title": "Hanged Man",
+        "description": "This tavern offered a fine selection of [[wine]]s, far better than one might suspect it to have, as well as a wide variety of [[ale]]s.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "491",
+      "name": "Three Pearls Nightclub",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1606.1930534652,
+        1378.1511165326
+      ],
+      "popup": {
+        "title": "Three Pearls Nightclub",
+        "description": "The Three Pearls Nightclub was a [[festhall]] and nightclub.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "493",
+      "name": "Purple Palace",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1649.6801205082,
+        1261.4784976368
+      ],
+      "popup": {
+        "title": "Purple Palace",
+        "description": "The Purple Palace was a [[festhall]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "494",
+      "name": "Thirsty Throat",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1685.0354595675,
+        1454.5186489007
+      ],
+      "popup": {
+        "title": "Thirsty Throat",
+        "description": "The Thirsty Throat was a [[tavern]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "498",
+      "name": "Blushing Mermaid",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1610.789247543,
+        1131.0172965079
+      ],
+      "popup": {
+        "title": "Blushing Mermaid",
+        "description": "The Blushing Mermaid was a tavern, inn, and festhall managed by Lady [[Alathene Moonstar]] circa the Year of Wild Magic, [[1372 DR]].",
+        "image": "File:BlushingMermaid-Valerie Valusek-VgtW-194.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "499",
+      "name": "Jade Dancer",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1839.5382912568,
+        1139.1490244915
+      ],
+      "popup": {
+        "title": "Jade Dancer",
+        "description": "The Jade Dancer was a [[festhall]] and [[tavern]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "507",
+      "name": "The Full Cup",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1951.2611626843,
+        1209.5061492196
+      ],
+      "popup": {
+        "title": "The Full Cup",
+        "description": "The Full Cup's patrons were mostly caravan drovers. Brawls were a common occurrence in this seedy [[tavern]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "518",
+      "name": "Inn of the Dripping Dagger",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1536.896588909,
+        2300.5719125904
+      ],
+      "popup": {
+        "title": "Inn of the Dripping Dagger",
+        "description": "The Inn of the Dripping Dagger was the favored bar and home to many adventurers, mercenaries, misfits and soldiers.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "531",
+      "name": "Mother Tathlorn's House of Pleasure and Healing",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1314.5115062258,
+        1911.6631829378
+      ],
+      "popup": {
+        "title": "Mother Tathlorn's House of Pleasure and Healing",
+        "description": "Mother Tathlorn's House of Pleasure and Healing was a festhall and spa.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "533",
+      "name": "Elfstone Tavern",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1386.9899512974,
+        2018.0827535064
+      ],
+      "popup": {
+        "title": "Elfstone Tavern",
+        "description": "The Elfstone Tavern was a tavern. It catered to elves and half-elves in the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "549",
+      "name": "Golden Horn Gambling House",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1518.8653659887,
+        1919.0878041403
+      ],
+      "popup": {
+        "title": "Golden Horn Gambling House",
+        "description": "The Golden Horn Gambling House, which was also simply called the Golden Horn, was a [[festhall]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "556",
+      "name": "Unicorn's Horn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1546.75,
+        1985.25
+      ],
+      "popup": {
+        "title": "Unicorn's Horn",
+        "description": "The Unicorn's Horn was an [[inn]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "559",
+      "name": "Gondalim's",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1555.2813652198,
+        2128.7449647621
+      ],
+      "popup": {
+        "title": "Gondalim's",
+        "description": "Gondalim's was an [[inn]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "578",
+      "name": "Gentle Rest",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1737.0078079848,
+        1902.1172413918
+      ],
+      "popup": {
+        "title": "Gentle Rest",
+        "description": "The Gentle Rest was an [[inn]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "591",
+      "name": "The Gentle Mermaid",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1434.3661056369,
+        3018.992402276
+      ],
+      "popup": {
+        "title": "The Gentle Mermaid",
+        "description": "The Gentle Mermaid was a tavern, festhall, and gambling hall. The Gentle Mermaid had the largest gambling room throughout Waterdeep, and perhaps even throughout [[Faer\u00fbn]].",
+        "image": "File:GentleMermaid.JPG"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "604",
+      "name": "The Raging Lion",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1880.9040379562,
+        3190.4657967137
+      ],
+      "popup": {
+        "title": "The Raging Lion",
+        "description": "The Raging Lion was owned by a man named [[Lhaerhlin Masram]]. Several [[dwarves]] and female [[adventurer]]s used the inn as their home. They helped Lhaerhlin maintain order during their stays between outings.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "605",
+      "name": "A Maiden's Tears",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1877.3685040503,
+        3149.8071567955
+      ],
+      "popup": {
+        "title": "A Maiden's Tears",
+        "description": "A Maiden's Tears, which was also simply called the Tears, was a tavern. The tavern was quiet compared to others located in this part of the North Ward and patrons appreciated its private booths.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "620",
+      "name": "Galloping Minotaur",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1417.3955428884,
+        2790.2433585621
+      ],
+      "popup": {
+        "title": "Galloping Minotaur",
+        "description": "Galloping Minotaur was an [[inn]] that was widely known and frequented by merchants and travelers.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "627",
+      "name": "Roaringhorn Villa",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1813.3753403529,
+        2875.8032790857
+      ],
+      "popup": {
+        "title": "Roaringhorn Villa",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "653",
+      "name": "Smuggler's Dock",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        714,
+        1507
+      ],
+      "popup": {
+        "title": "Smuggler's Dock",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "656",
+      "name": "The Sailors' Own",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1040.507628516,
+        1539.0179092525
+      ],
+      "popup": {
+        "title": "The Sailors' Own",
+        "description": "The Sailors' Own was a rather shabby tavern near the docks.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "676",
+      "name": "Fellowship Hall",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1311.683079101,
+        1936.4119202794
+      ],
+      "popup": {
+        "title": "Fellowship Hall",
+        "description": "Fellowship Hall was the guildhall of the [[Fellowship of Innkeepers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "677",
+      "name": "Crawling Spider",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1322.2896808188,
+        2127.3307511997
+      ],
+      "popup": {
+        "title": "Crawling Spider",
+        "description": "The Crawling Spider was a [[tavern]]. The tavern had a mock underground decor made from plaster and rock rubble. Stuffed spiders hung from the ceiling, giving the tavern its namesake.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "692",
+      "name": "Wyvern's Rest",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        840,
+        3691
+      ],
+      "popup": {
+        "title": "Wyvern's Rest",
+        "description": "The Wyvern's Rest was an inn. Originally constructed as a stone watch house, the Wyvern's Rest was a favorite of guards and watchmen.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "706",
+      "name": "Golden Harp Inn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1428.5,
+        3547.5
+      ],
+      "popup": {
+        "title": "Golden Harp Inn",
+        "description": "The Golden Harp Inn was an [[inn]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "707",
+      "name": "High Flagon",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1454,
+        3481
+      ],
+      "popup": {
+        "title": "High Flagon",
+        "description": "The High Flagon was a gambling hall and inn.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "714",
+      "name": "Twilight Hunters",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1851.5,
+        3089
+      ],
+      "popup": {
+        "title": "Twilight Hunters",
+        "description": "Twilight Hunters was a tavern.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "724",
+      "name": "Tavern of the Flagon Dragon",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        950,
+        2594.5
+      ],
+      "popup": {
+        "title": "Tavern of the Flagon Dragon",
+        "description": "The Tavern of the Flagon Dragon was a tavern.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "725",
+      "name": "Jhrual's Dance",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        928.5,
+        2576
+      ],
+      "popup": {
+        "title": "Jhrual's Dance",
+        "description": "Jhrual's Dance was a [[festhall]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "732",
+      "name": "Smiling Siren",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1095.308404058,
+        2510.2290732122
+      ],
+      "popup": {
+        "title": "Smiling Siren",
+        "description": "The Smiling Siren was a bawdy tavern/nightclub and theater that later became a [[festhall]] run by the church of [[Sune]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "735",
+      "name": "Mighty Manticore",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1147.9878592564,
+        2297.0363786845
+      ],
+      "popup": {
+        "title": "Mighty Manticore",
+        "description": "This tavern was known for its thick and flavorful stew, sharp [[cheese]], fresh black bread, and hearty ale.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "738",
+      "name": "The Asp's Strike",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1051.1142302338,
+        1959.0393372773
+      ],
+      "popup": {
+        "title": "The Asp's Strike",
+        "description": "The Asp's Strike was a [[tavern]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "745",
+      "name": "Cliffwatch Inn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1901.05658122,
+        2937.3215690489
+      ],
+      "popup": {
+        "title": "Cliffwatch Inn",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "749",
+      "name": "Grinning Lion",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1691.0458672076,
+        2696.5517100549
+      ],
+      "popup": {
+        "title": "Grinning Lion",
+        "description": "The Grinning Lion was a [[tavern]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "759",
+      "name": "Wyrmbones Inn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1500.1270362873,
+        2219.6081861446
+      ],
+      "popup": {
+        "title": "Wyrmbones Inn",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "766",
+      "name": "Maelstrom's Notch",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1662.7615959602,
+        2031.8713357395
+      ],
+      "popup": {
+        "title": "Maelstrom's Notch",
+        "description": "The Maelstrom's Notch was an [[inn]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "779",
+      "name": "Pickled Fisherman",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1158.9480143648,
+        1548.2102974079
+      ],
+      "popup": {
+        "title": "Pickled Fisherman",
+        "description": "The Pickled Fisherman was a tavern.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "780",
+      "name": "Soaring Pegasus",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1203.4957415795,
+        1533.0075016124
+      ],
+      "popup": {
+        "title": "Soaring Pegasus",
+        "description": "The Soaring Pegasus was a tavern.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "783",
+      "name": "Angry Coxswain",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1331.4820689743,
+        1347.0384181604
+      ],
+      "popup": {
+        "title": "Angry Coxswain",
+        "description": "A [[magical]] ''[[Angry Coxswain Portal|portal]]'' existed within the tavern that Ramas and Orth used to ferry slaves to [[Mulhorand]]. The portal connected directly to a prison cell located in a market in [[Skuld]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "787",
+      "name": "Singed Bolt",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1816.9108742588,
+        1771.3024868723
+      ],
+      "popup": {
+        "title": "Singed Bolt",
+        "description": "The Singed Bolt was a tavern.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "791",
+      "name": "Azuth\u2019s Mug",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1429.7699115592,
+        1770.2418267005
+      ],
+      "popup": {
+        "title": "Azuth\u2019s Mug",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "792",
+      "name": "Blushing Nymph",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1410.3244750766,
+        1745.1395359684
+      ],
+      "popup": {
+        "title": "Blushing Nymph",
+        "description": "The Blushing Nymph, or just the Nymph, was a festhall.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "793",
+      "name": "Underdark",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1762.1100987169,
+        1625.9920433385
+      ],
+      "popup": {
+        "title": "Underdark",
+        "description": "The Underdark tavern had a secret passage that led to [[Undermountain]] in the back of the establishment's basement.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "807",
+      "name": "The Splintered Stair",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1427.295037825,
+        1475.0247455551
+      ],
+      "popup": {
+        "title": "The Splintered Stair",
+        "description": "A large spiraling staircase overlooked by balconies dominated the entry of the inn. The stairway was badly damaged during an epic brawl between adventurers, giving the inn its name. The rooms for rent were large, but also dark and cold.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "811",
+      "name": "The Spouting Fish",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1772.7167004347,
+        1086.8231226837
+      ],
+      "popup": {
+        "title": "The Spouting Fish",
+        "description": "The Spouting Fish was a popular tavern.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "822",
+      "name": "Madame Garah's Boarding House",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1776.9593411218,
+        1349.5132918945
+      ],
+      "popup": {
+        "title": "Madame Garah's Boarding House",
+        "description": "Madame Garah's Boarding House was a row house used as a boarding house.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "827",
+      "name": "Safehaven Inn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1807.875,
+        1302.25
+      ],
+      "popup": {
+        "title": "Safehaven Inn",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "846",
+      "name": "Snobeedle Orchard and Meadery",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        2686,
+        2743
+      ],
+      "popup": {
+        "title": "Snobeedle Orchard and Meadery",
+        "description": "An orchard, shop, and drinking hall operated by the [[Snobeedle]] family of [[halfling]]s. Tourists were able to pick their own fruit during the appropriate seasons.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "856",
+      "name": "Soaring Delights",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1327.2394282871,
+        2100.8142469052
+      ],
+      "popup": {
+        "title": "Soaring Delights",
+        "description": "Soaring Delights was a [[:category:restaurants|restaurant]] built on the first floor of the hollow [[Hawk Man]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "947",
+      "name": "Field Ward",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1469,
+        3699
+      ],
+      "popup": {
+        "title": "Field Ward",
+        "description": "The Field Ward of Waterdeep was an unofficial ward of the city, located between the inner and outer walls on the north side of town. It was in fact the city's slums \u2014 possessing the poorest living conditions within the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "949",
+      "name": "Muleskull Tavern",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1499.7734828967,
+        1196.4246737676
+      ],
+      "popup": {
+        "title": "Muleskull Tavern",
+        "description": "Muleskull Tavern was a tavern that doubled as the guildhall of the [[Dungsweepers' Guild]]",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "950",
+      "name": "Skewered Dragon",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1621.0422958702,
+        1228.5980323116
+      ],
+      "popup": {
+        "title": "Skewered Dragon",
+        "description": "The Skewered Dragon was a tavern. The clientele was primarily made up of dock workers that were suspicious of strangers.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "958",
+      "name": "Bard Inn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1237.7904204671,
+        1515.6833854734
+      ],
+      "popup": {
+        "title": "Bard Inn",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "966",
+      "name": "Chazlauth Yarghorn Residence",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1503.3090168026,
+        2821.0025035437
+      ],
+      "popup": {
+        "title": "Chazlauth Yarghorn Residence",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "971",
+      "name": "Frewn's Brews",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1577.5,
+        3237.25
+      ],
+      "popup": {
+        "title": "Frewn's Brews",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "978",
+      "name": "Mother Salinka's House of Pleasures",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1476,
+        1747.5
+      ],
+      "popup": {
+        "title": "Mother Salinka's House of Pleasures",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "994",
+      "name": "Empty Keg",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1485.9849006635,
+        1747.6144097026
+      ],
+      "popup": {
+        "title": "Empty Keg",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}
