@@ -1,0 +1,224 @@
+{
+  "category": "docks",
+  "categoryId": "16",
+  "updatedAt": "2026-06-04T07:02:42.036026Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
+    {
+      "id": "85",
+      "name": "Fisher's Wharf",
+      "categoryId": "16",
+      "type": "marker",
+      "position": [
+        970.5013106771521,
+        1293.0010092439072
+      ],
+      "popup": {
+        "title": "Fisher's Wharf",
+        "description": "A pier used by fishing vessels and an occasional live-in boat roped to the docks.",
+        "image": "File:Fisher's Wharf.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "86",
+      "name": "Silver Crescent Beach",
+      "categoryId": "16",
+      "type": "marker",
+      "position": [
+        599.0008309605715,
+        858.0005046219536
+      ],
+      "popup": {
+        "title": "Silver Crescent Beach",
+        "description": "A southwestern beach in the city and the location of a washed ashore corpse – part of a series of grizzly murders, in [[1477 DR]].",
+        "image": "File:Silver Crescent Beach.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "96",
+      "name": "Stormshore Street Dock",
+      "categoryId": "16",
+      "type": "marker",
+      "position": [
+        1079.1785006551236,
+        1126.343062572429
+      ],
+      "popup": {
+        "title": "Stormshore Street Dock",
+        "description": "Docks at the southern end of [[Stormshore Street]].",
+        "image": "File:Stormshore Street.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "157",
+      "name": "Waendel's Wharf",
+      "categoryId": "16",
+      "type": "marker",
+      "position": [
+        963.1786548228325,
+        1165.2421381817085
+      ],
+      "popup": {
+        "title": "Waendel's Wharf",
+        "description": "A wharf of note.",
+        "image": "File:The Eastern Wet.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "158",
+      "name": "Stormwynd Dock",
+      "categoryId": "16",
+      "type": "marker",
+      "position": [
+        1103.793933642083,
+        1033.0851482431779
+      ],
+      "popup": {
+        "title": "Stormwynd Dock",
+        "description": "A dock of note.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "159",
+      "name": "Athcaulyr's Stand",
+      "categoryId": "16",
+      "type": "marker",
+      "position": [
+        852.0626784902605,
+        1246.632466626331
+      ],
+      "popup": {
+        "title": "Athcaulyr's Stand",
+        "description": "A wide and legless dock of note.",
+        "image": "File:The Eastern Wet.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "160",
+      "name": "Glaezel's Dock",
+      "categoryId": "16",
+      "type": "marker",
+      "position": [
+        612.9996489782181,
+        1059.5022707987912
+      ],
+      "popup": {
+        "title": "Glaezel's Dock",
+        "description": "A small dock that had changed many owners and names over the years. It was ran by [[Manthuran Glaezel]] of the wealthy [[Glaezel]] family in the late 14 century [[DR]].",
+        "image": "File:Caundorl Street and Black Eel Street.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "161",
+      "name": "Hethkantle's Jetty",
+      "categoryId": "16",
+      "type": "marker",
+      "position": [
+        661.2077896307287,
+        1112.8193453406097
+      ],
+      "popup": {
+        "title": "Hethkantle's Jetty",
+        "description": "A dock of note.",
+        "image": "File:Caundorl Street and Black Eel Street.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

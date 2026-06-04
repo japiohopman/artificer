@@ -1,0 +1,251 @@
+{
+  "category": "landmarks",
+  "categoryId": "6",
+  "updatedAt": "2026-06-04T07:02:42.036026Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
+    {
+      "id": "26",
+      "name": "Sewer Keep",
+      "categoryId": "6",
+      "type": "marker",
+      "position": [
+        456.79112754097343,
+        799.7395536300118
+      ],
+      "popup": {
+        "title": "Sewer Keep",
+        "description": "The tower complex used as a magic water treatment facility that purified sewage waste before it is washed into the [[River Chionthar]].",
+        "image": "File:Seatower of bg.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "27",
+      "name": "Seatower of Balduran",
+      "categoryId": "6",
+      "type": "marker",
+      "position": [
+        712.7620575633239,
+        1011.1705471720802
+      ],
+      "popup": {
+        "title": "Seatower of Balduran",
+        "description": "The massive sea-fortress that rested on a rocky island in the city's bay that served as the headquarters of the [[Flaming Fist]] in the 15 century [[DR]].",
+        "image": "File:Seatower of Balduran CLB.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "28",
+      "name": "High Hall",
+      "categoryId": "6",
+      "type": "marker",
+      "position": [
+        481.5012285762366,
+        1432.5
+      ],
+      "popup": {
+        "title": "High Hall",
+        "description": "Also known as the Ducal Palace, the seat of the [[Council of Four]] in which city business was conducted.",
+        "image": "File:The High Hall.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "29",
+      "name": "Watch Citadel",
+      "categoryId": "6",
+      "type": "marker",
+      "position": [
+        331.9996280918342,
+        1448.0020184878144
+      ],
+      "popup": {
+        "title": "Watch Citadel",
+        "description": "Also known as Stormkeep, the headquarters of [[the Watch]] in [[Baldur's Gate]] that served as a staging area, training grounds, and a temporary holding area, when needed.",
+        "image": "File:Watch Citadel.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "59",
+      "name": "Baldur's Mouth",
+      "categoryId": "6",
+      "type": "marker",
+      "position": [
+        917.1173098412116,
+        1393.708000951093
+      ],
+      "popup": {
+        "title": "Baldur's Mouth",
+        "description": "A narrow, five-story printshop that disseminated news via [[broadsheet]]s and town criers.",
+        "image": "File:Baldur's Mouth.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "69",
+      "name": "Harborside Hospital",
+      "categoryId": "6",
+      "type": "marker",
+      "position": [
+        1347.0384181603729,
+        1146.9300536574226
+      ],
+      "popup": {
+        "title": "Harborside Hospital",
+        "description": "Formerly [[Scarbradro's Haven]], a hospital within the [[Brampton]] district with its [[cleric]]al staff offering medical services to anyone regardless of faith. Quality of service varied depending on the patient's wealth.",
+        "image": "File:Harborside Hospital.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "72",
+      "name": "Wyrm's Rock",
+      "categoryId": "6",
+      "type": "marker",
+      "position": [
+        2620.5372051197733,
+        715.5956307768394
+      ],
+      "popup": {
+        "title": "Wyrm's Rock",
+        "description": "A [[granite]] fortress that loomed over the small islet that connected the bridges of [[Wyrm's Crossing]].",
+        "image": "File:Wyrm's Crossing BG3.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "91",
+      "name": "Old Wall",
+      "categoryId": "6",
+      "type": "marker",
+      "position": [
+        711.9996280918342,
+        1471.001513865861
+      ],
+      "popup": {
+        "title": "Old Wall",
+        "description": "The wall that encircled the affluent [[Upper City]] of [[Baldur's Gate]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "92",
+      "name": "Harbormaster's Office",
+      "categoryId": "6",
+      "type": "marker",
+      "position": [
+        993.4850275670992,
+        1287.6428758271243
+      ],
+      "popup": {
+        "title": "Harbormaster's Office",
+        "description": "The main civic building in the harbours of [[Baldur's Gate]].",
+        "image": "File:Harbormaster's Office.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

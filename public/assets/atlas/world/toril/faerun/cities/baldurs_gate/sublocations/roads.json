@@ -1,0 +1,1277 @@
+{
+  "category": "roads",
+  "categoryId": "14",
+  "updatedAt": "2026-06-04T07:02:42.036026Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
+    {
+      "id": "83",
+      "name": "Sailor's Crossing",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1029.0003719081658,
+        1214.9989907560928
+      ],
+      "popup": {
+        "title": "Sailor's Crossing",
+        "description": "A pier-side cobblestone plaza with a fountain at its center and the site of a grizzly murder in [[1477 DR]].",
+        "image": "File:Sailor's Crossing.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "84",
+      "name": "Admiral's Way",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1037.001987226955,
+        1175.9994953780465
+      ],
+      "popup": {
+        "title": "Admiral's Way",
+        "description": "A dockside [[salt]]-strewn street with the [[Low Lantern]] located at its eastern end.",
+        "image": "File:Admiral's Way.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "87",
+      "name": "Loklee Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1026.3656206360604,
+        1388.7580750719844
+      ],
+      "popup": {
+        "title": "Loklee Street",
+        "description": "The street that owed its name to the small fishing village that eventually grew to be known as [[Baldur's Gate]]; it crossed with [[Stormshore Street]] in the north.",
+        "image": "File:Loklee Street.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "88",
+      "name": "Trade Way",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        262.1916929218996,
+        1728.1225864112291
+      ],
+      "popup": {
+        "title": "Trade Way",
+        "description": "An ancient, long, well-traveled trade road along the west coast of [[Faerûn]].",
+        "image": "File:Twjpg.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "89",
+      "name": "Coast Way",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        2828.4423775157793,
+        295.5499388828677
+      ],
+      "popup": {
+        "title": "Coast Way",
+        "description": "A long, well-traveled part of the much larger [[Trade Way]] that started at [[Calimport]] in the south and went along the coastline all the way north to [[Waterdeep]].",
+        "image": "File:Coast Way CLB.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "93",
+      "name": "Stormshore Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1168.8477722801492,
+        1420.57859386859
+      ],
+      "popup": {
+        "title": "Stormshore Street",
+        "description": "A street that began in the northernmost top of the harbors, circled the [[Heapside]], passed [[Sorcerous Sundries]], hooked back west, and ended at the [[Stormshore Street Dock]] where the [[Low Lantern]] was [[anchor]]ed.",
+        "image": "File:Stormshore Street.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "94",
+      "name": "Stormshore Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1151.1687878565554,
+        1165.3126890386409
+      ],
+      "popup": {
+        "title": "Stormshore Street",
+        "description": "A street that began in the northernmost top of the harbors, circled the [[Heapside]], passed [[Sorcerous Sundries]], hooked back west, and ended at the [[Stormshore Street Dock]] where the [[Low Lantern]] was [[anchor]]ed.",
+        "image": "File:Stormshore Street.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "95",
+      "name": "Stormshore Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        887.4109311936105,
+        1456.6367578498398
+      ],
+      "popup": {
+        "title": "Stormshore Street",
+        "description": "A street that began in the northernmost top of the harbors, crossed [[Loklee Street]], circled the [[Heapside]], passed [[Sorcerous Sundries]], hooked back west, and ended at the [[Stormshore Street Dock]] where the [[Low Lantern]] was [[anchor]]ed.",
+        "image": "File:Stormshore Street.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "97",
+      "name": "Bindle Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        941.1591257592947,
+        1411.38656253477
+      ],
+      "popup": {
+        "title": "Bindle Street",
+        "description": "The street that began at the [[Old Wall (Baldur's Gate)|Old Wall]] by [[Felogyr's Fireworks]], ran south with a slight curve, passed the [[Blushing Mermaid]], crossed [[Stormshore Street]], and, eventually, ended at a dock near [[Fisher's Wharf]].",
+        "image": "File:Bindle Street.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "112",
+      "name": "Ulvur's Lane",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        585.5014269117116,
+        1273.5017661768377
+      ],
+      "popup": {
+        "title": "Ulvur's Lane",
+        "description": "A short lane that rang along the southern side of the [[Old Wall (Baldur's Gate)|Old Wall]] from two city blocks west of the [[Gond Gate]].",
+        "image": "File:House of the Lute and Ulvur’s Lane.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "114",
+      "name": "Hammaskarl's Ride",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1144.0987719598338,
+        1315.2196834717943
+      ],
+      "popup": {
+        "title": "Hammaskarl's Ride",
+        "description": "The street that began at the [[Basilisk Gate]], curved south, then moved west past [[Eastway Expeditions]], and ended on an interception with [[Loklee Street]].",
+        "image": "File:Hammaskarl's Ride.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "115",
+      "name": "Talankar's Lane",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1050.761917892621,
+        1439.6694064958106
+      ],
+      "popup": {
+        "title": "Talankar's Lane",
+        "description": "The street that began at the [[Basilisk Gate]] and ran northwest, passing the [[Blade and Stars]], the [[Elfsong Tavern]], and ended at the [[Heap Gate]].",
+        "image": "File:Talankar's Lane.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "149",
+      "name": "Windspell Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        469.00027098549384,
+        1398.0005046219535
+      ],
+      "popup": {
+        "title": "Windspell Street",
+        "description": "The street that stretched from the [[Citadel Gate]], passed [[Helm and Cloak]],  and separated the [[High House of Wonders]] from the [[Hall of Wonders]].",
+        "image": "File:Windspell Street map.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "150",
+      "name": "Belltoll Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        469.51815807822055,
+        1339.9684208133235
+      ],
+      "popup": {
+        "title": "Belltoll Street",
+        "description": "The street that began at [[The Wide]] by the [[Hlath (family)|Hlath Estate]], moved southwest past the [[High Hall]] and the [[Helm and Cloak]] inn, and ended soon after after crossing [[Sornbanner Street]].",
+        "image": "File:Belltoll Street.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "151",
+      "name": "Wendserpent Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        550.1670518751279,
+        1056.3240438321059
+      ],
+      "popup": {
+        "title": "Wendserpent Street",
+        "description": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
+        "image": "File:Wendserpent Street.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "152",
+      "name": "The Run",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        439.50035102178185,
+        1540.0015138658607
+      ],
+      "popup": {
+        "title": "The Run",
+        "description": "Thr road that stretched from the [[Watch Citadel]] to the [[Black Dragon Gate]].",
+        "image": "File:The Run.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "153",
+      "name": "Canary Lane",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1048.7005936842002,
+        1258.9142142678875
+      ],
+      "popup": {
+        "title": "Canary Lane",
+        "description": "A short shady lane with dark alleys that offered hiding spots for ne'er-do-well and an access point to the [[Baldur's Gate/Sewers|sewers]].",
+        "image": "File:Canary Lane.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "154",
+      "name": "Market Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1203.5,
+        1260.9989907560928
+      ],
+      "popup": {
+        "title": "Market Street",
+        "description": "The street with a butcher shop, rumored to serve monster meat in [[1477 DR]].",
+        "image": "File:Market Street butcher.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "155",
+      "name": "The Western Wet",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        588.3130901570898,
+        1189.3543195989835
+      ],
+      "popup": {
+        "title": "The Western Wet",
+        "description": "The road that ran alongside the docks from the [[Seatower of Balduran]] to the [[Water Queen's House]].",
+        "image": "File:The Western Wet.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "156",
+      "name": "The Eastern Wet",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        891.8254480118015,
+        1406.4632198652587
+      ],
+      "popup": {
+        "title": "The Eastern Wet",
+        "description": "The street that ran alongside the docks and hugged the harbors from the drydocks on the northern edge of the [[Gray Harbor]] and ended at [[Waendel's Wharf]].",
+        "image": "File:The Eastern Wet.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "162",
+      "name": "Black Eel Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        434.5,
+        997.0017661768376
+      ],
+      "popup": {
+        "title": "Black Eel Street",
+        "description": "The road that began at [[Glaezel's Dock]] and moved in a straight line to the west until it ended at the city walls.",
+        "image": "File:Caundorl Street and Black Eel Street.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "163",
+      "name": "Caundorl Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        452.16145475552037,
+        1051.3198499625635
+      ],
+      "popup": {
+        "title": "Caundorl Street",
+        "description": "The road that began at [[Hethkantle's Jetty]] and moved in a straight line to the west until it ended at the city walls.",
+        "image": "File:Caundorl Street and Black Eel Street.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "164",
+      "name": "Wendserpent Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        478.7168755856447,
+        1207.0068332054714
+      ],
+      "popup": {
+        "title": "Wendserpent Street",
+        "description": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
+        "image": "File:Wendserpent Street.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "165",
+      "name": "Wendserpent Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        474.1484669495907,
+        1502.917241999609
+      ],
+      "popup": {
+        "title": "Wendserpent Street",
+        "description": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
+        "image": "File:Wendserpent Street.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "166",
+      "name": "Wendserpent Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        576.9981406086935,
+        1660.287435869224
+      ],
+      "popup": {
+        "title": "Wendserpent Street",
+        "description": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
+        "image": "File:Wendserpent Street.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "167",
+      "name": "Wendserpent Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        729.027587823095,
+        1622.8104196447316
+      ],
+      "popup": {
+        "title": "Wendserpent Street",
+        "description": "The street that began at [[Black Eel Street]], moved north through the [[Manor Gate]], crossed [[Belltoll Street]], then [[Windspell Street]], passed in front of the [[Black Dragon Gate]], curved along the city walls, passed [[Rose Portal]] shrine, and curved to [[the Wide]], where it ended.",
+        "image": "File:Wendserpent Street.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "168",
+      "name": "Nuthkhal's Way",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1181.1557300384911,
+        1280.4586955663697
+      ],
+      "popup": {
+        "title": "Nuthkhal's Way",
+        "description": "The street that curved, connecting the [[Manycoins House]] with the [[Cliffgate]].",
+        "image": "File:Nuthkhal's Way.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "169",
+      "name": "Nuthkhal's Way",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1294.0051613614996,
+        1141.9785220810902
+      ],
+      "popup": {
+        "title": "Nuthkhal's Way",
+        "description": "The street that curved, connecting the [[Manycoins House]] with the [[Cliffgate]].",
+        "image": "File:Nuthkhal's Way.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "170",
+      "name": "Manyspears Lane",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        699.6514506347368,
+        1372.9038695178385
+      ],
+      "popup": {
+        "title": "Manyspears Lane",
+        "description": "The long lane that began at the [[Counting House]], passed the [[Baldur's Gate (gate)|Baldur's Gate]] and encircled [[The Wide]].",
+        "image": "File:Manyspears Lane.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "171",
+      "name": "Manyspears Lane",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        587.6067280055502,
+        1601.6039958196368
+      ],
+      "popup": {
+        "title": "Manyspears Lane",
+        "description": "The long lane that began at the [[Counting House]], passed the [[Baldur's Gate (gate)|Baldur's Gate]] and encircled [[The Wide]].",
+        "image": "File:Manyspears Lane.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "172",
+      "name": "Manyspears Lane",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        777.2258672524956,
+        1551.3824230848104
+      ],
+      "popup": {
+        "title": "Manyspears Lane",
+        "description": "The long lane that began at the [[Counting House]], passed the [[Baldur's Gate (gate)|Baldur's Gate]] and encircled [[The Wide]].",
+        "image": "File:Manyspears Lane.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "173",
+      "name": "Three Spires",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        468.45811843114654,
+        1240.2660078444148
+      ],
+      "popup": {
+        "title": "Three Spires",
+        "description": "One of three major moots in [[Baldur's Gate]] – the intersection of [[Hauth Lane]], [[Wendserpent Street]], and [[Blackraven Lane]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "174",
+      "name": "Hauth Lane",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        451.48767978761055,
+        1240.9731146256015
+      ],
+      "popup": {
+        "title": "Hauth Lane",
+        "description": "A short street that moved roughly north to south across the [[Three Spires]] intersection.",
+        "image": "File:Hauth Lane.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "175",
+      "name": "Blackraven Lane",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        451.8412331782038,
+        1197.8394225624195
+      ],
+      "popup": {
+        "title": "Blackraven Lane",
+        "description": "A short street that moved roughly east to west across the [[Three Spires]] intersection, from the [[Sashenstar]] family estate to [[Chalsendace Street]].",
+        "image": "File:Blackraven Lane.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "176",
+      "name": "Chalsendace Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        516.5003510217819,
+        1290.9992430670695
+      ],
+      "popup": {
+        "title": "Chalsendace Street",
+        "description": "A street of wealth mansions; it stretched from the city walls to [[Stormcanter Street]] by the [[Old Wall (Baldur's Gate)|Old Wall]].",
+        "image": "File:Chalsendace Street.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "177",
+      "name": "Stormcanter Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        551.9992979564363,
+        1274.9997476890233
+      ],
+      "popup": {
+        "title": "Stormcanter Street",
+        "description": "A short street on the southern end of [[Chalsendace Street]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "178",
+      "name": "Fox Bottom",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1218.999824489109,
+        1224.0005046219535
+      ],
+      "popup": {
+        "title": "Fox Bottom",
+        "description": "One of three major moots in [[Baldur's Gate]]; it was located two city blocks south of [[Manycoins House]] along the [[Stormshore Street]] (formerly known as Long Lane) in a slummy area of run-down rooming-houses.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "179",
+      "name": "Lathdell",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        993,
+        1575.5010092439072
+      ],
+      "popup": {
+        "title": "Lathdell",
+        "description": "The small open plaza, or strake, in front of the [[Shrine of the Suffering]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "180",
+      "name": "Hulkael Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1034.9991224455453,
+        1543.5010092439072
+      ],
+      "popup": {
+        "title": "Hulkael Street",
+        "description": "The street that once ran to and past the [[Manycoins House]], later, just stretched between the [[Lathdell]] plaza and [[Murl's Rest]] where the [[Sorcerous Sundries]] store was located.",
+        "image": "File:Hulkael Street.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "181",
+      "name": "Murl's Rest",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1080.343188651017,
+        1519.4507993595237
+      ],
+      "popup": {
+        "title": "Murl's Rest",
+        "description": "The triangular plaza, or strake, in front of [[Sorcerous Sundries]].",
+        "image": "File:Murl's Rest.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "182",
+      "name": "Lionsmoot",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        448.5046970818932,
+        1408.513877103724
+      ],
+      "popup": {
+        "title": "Lionsmoot",
+        "description": "One of three major moots in [[Baldur's Gate]], named after [[The House of the Lion]] [[festhall]] located on its eastern angle.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "189",
+      "name": "Misty Court",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1582.1530362691349,
+        1093.5408155157984
+      ],
+      "popup": {
+        "title": "Misty Court",
+        "description": "A street of note where the open-air stonemason's workshop, [[Alabaster Stonecrafts]], could be found.",
+        "image": "File:Misty Court.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "191",
+      "name": "Trident Lane",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        602.9998193430041,
+        944.0017661768376
+      ],
+      "popup": {
+        "title": "Trident Lane",
+        "description": "An area in the [[Seatower]] that housed many weapon smiths who serviced the [[Flaming Fist]]. One such shop was run by an automaton in the late 15 century [[DR]].",
+        "image": "File:Trident Lane.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "192",
+      "name": "Saint Sollars Way",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1061.500090328498,
+        1479.998738445116
+      ],
+      "popup": {
+        "title": "Saint Sollars Way",
+        "description": "The street of note on which stood the home ot Mrs. [[Leventide]] in the late 15 century [[DR]].",
+        "image": "File:Saint dollars way.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "193",
+      "name": "Old Town Avenue",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1112.1334304530124,
+        1454.3657705603414
+      ],
+      "popup": {
+        "title": "Old Town Avenue",
+        "description": "A street in the [[Lower City]] known for its expensive apartments and lodgings.",
+        "image": "File:Old Town Avenue apartments.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "194",
+      "name": "Long Lane",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        1230.6384888488974,
+        1207.429857548449
+      ],
+      "popup": {
+        "title": "Long Lane",
+        "description": "A short street that crossed [[Stormshore Street]] at the moot known as [[Fox Bottom]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "205",
+      "name": "Sornbanner Street",
+      "categoryId": "14",
+      "type": "marker",
+      "position": [
+        448.6591777039727,
+        1259.710624590042
+      ],
+      "popup": {
+        "title": "Sornbanner Street",
+        "description": "The street that joined [[Belltoll Street]] at a moot in the west and [[Wendserpent Street]] at another moot to the east.",
+        "image": "File:Sornbanner Street.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}
