@@ -22,6 +22,13 @@
     "In a similar way, you can use an action to speak a second command word and free one creature trapped in the mirror. The freed creature appears, along with its possessions, in the unoccupied space nearest to the mirror and facing away from it."
   ],
   "url": "public/assets/atlas/magic_items/json/mirror_of_life_trapping.json",
-  "updated_at": "2025-10-24T20:42:13.517Z",
-  "image": "public/assets/atlas/magic_items/mirror_of_life_trapping.webp"
+  "updated_at": "2026-06-04T08:22:54.505Z",
+  "image": "public/assets/atlas/magic_items/mirror_of_life_trapping.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/mirror_of_life_trapping.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "4-6-2026"
 }
