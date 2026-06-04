@@ -1,0 +1,88 @@
+{
+  "region_name": "The Underdark",
+  "alternate_names": ["Deep Earth", "Realms Below", "Lightless Lands"],
+  "layers": [
+    {
+      "id": "upperdark",
+      "name": "The Upperdark",
+      "depth_range": "0 - 3 miles",
+      "description": "Highest layer with the most interaction with the surface world.",
+      "common_races": ["Drow", "Dwarves", "Deep Gnomes", "Orcs", "Chitines"]
+    },
+    {
+      "id": "middledark",
+      "name": "The Middledark",
+      "depth_range": "3 - 10 miles",
+      "description": "Home to the largest subterranean empires and trade centers.",
+      "common_races": ["Drow", "Duergar", "Mind Flayers", "Aboleths", "Kuo-toa"]
+    },
+    {
+      "id": "lowerdark",
+      "name": "The Lowerdark",
+      "depth_range": "10+ miles",
+      "description": "An alien environment where reality and magic begin to fray.",
+      "common_races": ["Beholders", "Aboleths", "Deep Spawn", "Far Realm Aberrations"]
+    }
+  ],
+  "major_cities": [
+    {
+      "id": "menzoberranzan",
+      "name": "Menzoberranzan",
+      "dominant_race": "Drow",
+      "government": "Matriarchal Noble Houses",
+      "primary_deity": "Lolth"
+    },
+    {
+      "id": "gracklstugh",
+      "name": "Gracklstugh",
+      "dominant_race": "Duergar",
+      "government": "Monarchy / Guild Council",
+      "focus": "Industry and Smithing"
+    },
+    {
+      "id": "oryndoll",
+      "name": "Oryndoll",
+      "dominant_race": "Mind Flayers",
+      "government": "Elder Brain Collective",
+      "focus": "Psionic Research and Knowledge Hoarding"
+    },
+    {
+      "id": "mantol_derith",
+      "name": "Mantol-Derith",
+      "dominant_race": "Mixed",
+      "government": "Trade Council",
+      "focus": "Neutral Trade and Diplomacy"
+    }
+  ],
+  "hazards": [
+    {
+      "name": "Faerzress",
+      "type": "Magical Radiation",
+      "effects": ["Interferes with Divination", "Interferes with Teleportation", "Provides dim light"]
+    },
+    {
+      "name": "Air Toxicity",
+      "type": "Environmental",
+      "effects": ["Volcanic fumes", "Stale air pockets"]
+    },
+    {
+      "name": "Wild Magic Zones",
+      "type": "Arcane",
+      "effects": ["Unpredictable spell results", "Dead magic areas"]
+    }
+  ],
+  "apex_predators": [
+    "Purple Worm",
+    "Aboleth",
+    "Mind Flayer",
+    "Beholder",
+    "Tomb Tapper",
+    "Annihilator"
+  ],
+  "flora": [
+    "Zurkhwood (Lumber)",
+    "Bluecap (Flour)",
+    "Bioluminescent Fungi",
+    "Cave Creeper (Hazard)"
+  ]
+}

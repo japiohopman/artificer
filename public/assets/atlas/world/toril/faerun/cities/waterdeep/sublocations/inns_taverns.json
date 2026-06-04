@@ -2191,33 +2191,6 @@
       }
     },
     {
-      "id": "947",
-      "name": "Field Ward",
-      "categoryId": "inns_taverns",
-      "type": "marker",
-      "position": [
-        1469,
-        3699
-      ],
-      "popup": {
-        "title": "Field Ward",
-        "description": "The Field Ward of Waterdeep was an unofficial ward of the city, located between the inner and outer walls on the north side of town. It was in fact the city's slums \u2014 possessing the poorest living conditions within the city.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
       "id": "949",
       "name": "Muleskull Tavern",
       "categoryId": "inns_taverns",

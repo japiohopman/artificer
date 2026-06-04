@@ -114,5 +114,10 @@
     "Undermountain Entrance",
     "Skullport (Subterranean)",
     "The Code Legal"
-  ]
+  ],
+  "lore_links": {
+    "politics": "public/assets/atlas/lore/politics/waterdeep.md",
+    "geography": "public/assets/atlas/lore/geography/waterdeep.md",
+    "essays": "public/assets/atlas/lore/essays/waterdeep.md"
+  }
 }

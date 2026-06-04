@@ -5604,66 +5604,6 @@
       ]
     },
     {
-      "id": "941",
-      "name": "Trades Ward",
-      "categoryId": "shops",
-      "type": "marker",
-      "position": [
-        1723,
-        1803
-      ],
-      "popup": {
-        "title": "Trades Ward",
-        "description": "The Trades Ward was one of the seven wards of the city of Waterdeep. It was the main shopping district of Waterdeep and housed many of the city's guildhalls.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "archetype": "general_store",
-      "equipment_categories": [
-        {
-          "index": "standard_gear",
-          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
-        },
-        {
-          "index": "adventuring_gear",
-          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
-        },
-        {
-          "index": "kits",
-          "url": "public/assets/atlas/equipment_categories/json/kits.json"
-        },
-        {
-          "index": "tools",
-          "url": "public/assets/atlas/equipment_categories/json/tools.json"
-        },
-        {
-          "index": "gaming_sets",
-          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
-        }
-      ],
-      "material_categories": [
-        {
-          "index": "common_materials",
-          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
-        },
-        {
-          "index": "bundled_materials",
-          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
-        }
-      ]
-    },
-    {
       "id": "943",
       "name": "Market",
       "categoryId": "shops",

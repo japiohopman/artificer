@@ -1,0 +1,292 @@
+{
+  "category": "districts",
+  "updatedAt": "2026-06-03T10:00:00.000000Z",
+  "location_id": "waterdeep",
+  "sub_locations": [
+    {
+      "id": "939",
+      "name": "Dock Ward",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        1518,
+        1401
+      ],
+      "popup": {
+        "title": "Dock Ward",
+        "description": "The Dock Ward of Waterdeep was situated on the Great Harbor of Waterdeep. It contained the docks, shipbuilding yards, and warehouses for the sea trade. Compared to the rest of the city it was exceptionally dirty, smelly, and particularly dangerous.",
+        "image": "File:Dockwardspring.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "lore": "public/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_lore.json"
+    },
+    {
+      "id": "940",
+      "name": "Southern Ward",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        1864,
+        1171
+      ],
+      "popup": {
+        "title": "Southern Ward",
+        "description": "Southern Ward was the southeastern sector of the city of Waterdeep.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "lore": "public/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_lore.json"
+    },
+    {
+      "id": "941",
+      "name": "Trades Ward",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        1723,
+        1803
+      ],
+      "popup": {
+        "title": "Trades Ward",
+        "description": "The Trades Ward was one of the seven wards of the city of Waterdeep. It was the main shopping district of Waterdeep and housed many of the city's guildhalls.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ],
+      "lore": "public/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_lore.json"
+    },
+    {
+      "id": "942",
+      "name": "Castle Ward",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        1347,
+        2311
+      ],
+      "popup": {
+        "title": "Castle Ward",
+        "description": "The Castle Ward was the central ward of the city of Waterdeep.",
+        "image": "File:Castle ward-5e.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "lore": "public/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_lore.json"
+    },
+    {
+      "id": "944",
+      "name": "City of the Dead",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        1785,
+        2275
+      ],
+      "popup": {
+        "title": "City of the Dead",
+        "description": "The City of the Dead was a large cemetery and ward in Waterdeep. Most of the city's dead were buried here. By day, it also doubled as the city's major public park picnic area.",
+        "image": "File:City of the Dead-Julian Kok.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "lore": "public/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_lore.json"
+    },
+    {
+      "id": "945",
+      "name": "North Ward",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        1552,
+        3008
+      ],
+      "popup": {
+        "title": "North Ward",
+        "description": "The North Ward was the northeastern sector of Waterdeep. It was famous for being the quietest ward of the city, consisting mostly of residential areas.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "lore": "public/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_lore.json"
+    },
+    {
+      "id": "946",
+      "name": "Sea Ward",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        955,
+        3063
+      ],
+      "popup": {
+        "title": "Sea Ward",
+        "description": "The Sea Ward of Waterdeep was the wealthiest ward in Waterdeep and located in the northwest of the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "lore": "public/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_lore.json"
+    },
+    {
+      "id": "947",
+      "name": "Field Ward",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        1469,
+        3699
+      ],
+      "popup": {
+        "title": "Field Ward",
+        "description": "The Field Ward of Waterdeep was an unofficial ward of the city, located between the inner and outer walls on the north side of town. It was in fact the city's slums — possessing the poorest living conditions within the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "lore": "public/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_lore.json"
+    },
+    {
+      "id": "948",
+      "name": "Undercliff ",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        2296,
+        2649
+      ],
+      "popup": {
+        "title": "Undercliff ",
+        "description": "Undercliff was a rural community just outside the walls of Waterdeep, located east of the city proper. Along with the Field Ward, it was considered an unofficial ward of the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "lore": "public/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_lore.json"
+    }
+  ]
+}

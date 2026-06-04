@@ -1192,60 +1192,6 @@
       }
     },
     {
-      "id": "939",
-      "name": "Dock Ward",
-      "categoryId": "landmarks",
-      "type": "marker",
-      "position": [
-        1518,
-        1401
-      ],
-      "popup": {
-        "title": "Dock Ward",
-        "description": "The Dock Ward of Waterdeep was situated on the Great Harbor of Waterdeep. It contained the docks, shipbuilding yards, and warehouses for the sea trade. Compared to the rest of the city it was exceptionally dirty, smelly, and particularly dangerous.",
-        "image": "File:Dockwardspring.png"
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
-      "id": "948",
-      "name": "Undercliff ",
-      "categoryId": "landmarks",
-      "type": "marker",
-      "position": [
-        2296,
-        2649
-      ],
-      "popup": {
-        "title": "Undercliff ",
-        "description": "Undercliff was a rural community just outside the walls of Waterdeep, located east of the city proper. Along with the Field Ward, it was considered an unofficial ward of the city.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      }
-    },
-    {
       "id": "989",
       "name": "Tarth's Towers",
       "categoryId": "landmarks",
