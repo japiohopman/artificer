@@ -40,9 +40,16 @@
     }
   ],
   "url": "public/assets/atlas/equipment/json/club.json",
-  "updated_at": "2025-10-24T20:42:12.925Z",
+  "updated_at": "2026-06-04T08:17:14.585Z",
   "contents": [],
   "image": "public/assets/atlas/equipment/club.webp",
   "sprite_index": 13,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.webp"
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet3.0webp",
+  "imageUrl": "/assets/atlas/equipment/images/club.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "4-6-2026"
 }
