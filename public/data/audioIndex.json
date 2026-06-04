@@ -85,6 +85,19 @@
       "meta": {
         "createdAt": "2026-06-01T22:53:36.447Z"
       }
+    },
+    "welcome_adventure_dm": {
+      "category": "npc_voice",
+      "loop": false,
+      "volume": 1,
+      "priority": 1,
+      "tags": [
+        "npc_voice"
+      ],
+      "file": "public/assets/sounds/npc_voice/welcome_adventure_dm.wav",
+      "meta": {
+        "createdAt": "2026-06-04T10:34:31.495Z"
+      }
     }
   }
 }
