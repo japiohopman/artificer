@@ -11,7 +11,18 @@
       "xp": 5900,
       "challenge_rating": 10,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/aboleth.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/aboleth.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/aboleth.webp"
+    },
+    {
+      "name": "beholder",
+      "index": "beholder",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "lawful evil",
+      "xp": 10000,
+      "challenge_rating": 13,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/beholder.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/beholder.webp"
     },
     {
       "name": "chuul",
@@ -22,7 +33,7 @@
       "xp": 1100,
       "challenge_rating": 4,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/chuul.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/chuul.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/chuul.webp"
     },
     {
       "name": "cloaker",
@@ -33,7 +44,7 @@
       "xp": 3900,
       "challenge_rating": 8,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/cloaker.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/cloaker.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/cloaker.webp"
     },
     {
       "name": "gibbering mouther",
@@ -44,7 +55,29 @@
       "xp": 450,
       "challenge_rating": 2,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/gibbering_mouther.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/gibbering_mouther.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/gibbering_mouther.webp"
+    },
+    {
+      "name": "ineffable horror",
+      "index": "ineffable_horror",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "chaotic evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/ineffable_horror.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/ineffable_horror.webp"
+    },
+    {
+      "name": "mind flayer",
+      "index": "mind_flayer",
+      "size": "Medium",
+      "type": "aberration",
+      "alignment": "lawful evil",
+      "xp": 2900,
+      "challenge_rating": 7,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/mind_flayer.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/mind_flayer.webp"
     },
     {
       "name": "otyugh",
@@ -55,7 +88,18 @@
       "xp": 1800,
       "challenge_rating": 5,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/otyugh.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/otyugh.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/otyugh.webp"
+    },
+    {
+      "name": "phthisic",
+      "index": "phthisic",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "chaotic evil",
+      "xp": 2300,
+      "challenge_rating": 6,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/phthisic.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/phthisic.webp"
     }
   ]
 }

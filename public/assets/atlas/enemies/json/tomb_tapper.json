@@ -1,0 +1,167 @@
+{
+  "index": "tomb_tapper",
+  "name": "tomb tapper",
+  "size": "Huge",
+  "type": "construct",
+  "alignment": "lawful neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 195,
+  "hit_dice": "17d12+85",
+  "hit_points_roll": "17d12+85",
+  "speed": {
+    "walk": "30 ft.",
+    "burrow": "10 ft."
+  },
+  "strength": 20,
+  "dexterity": 10,
+  "constitution": 20,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 1,
+  "proficiencies": [
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning, piercing, and slashing from nonmagical attacks"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "public/assets/atlas/conditions/json/charmed.json"
+    },
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "public/assets/atlas/conditions/json/exhaustion.json"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "public/assets/atlas/conditions/json/frightened.json"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "public/assets/atlas/conditions/json/paralyzed.json"
+    },
+    {
+      "index": "petrified",
+      "name": "petrified",
+      "url": "public/assets/atlas/conditions/json/petrified.json"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "public/assets/atlas/conditions/json/poisoned.json"
+    }
+  ],
+  "senses": {
+    "blindsight": "60 ft. (blind beyond this radius)",
+    "tremorsense": "120 ft.",
+    "passive_perception": 19
+  },
+  "languages": "understand Netherese and Common but can't speak; telepathy 60 ft.",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [
+    {
+      "name": "magic sense",
+      "desc": "The tomb tapper knows the location of any magic item within 60 feet of it.",
+      "damage": []
+    },
+    {
+      "name": "siege monster",
+      "desc": "The tomb tapper deals double damage to objects and structures.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The tomb tapper makes three attacks: one with its bite and two with its claws or maul.",
+      "damage": []
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 15 (3d6 + 5) piercing damage.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 12 (2d6 + 5) slashing damage.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "maul",
+      "desc": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 26 (6d6 + 5) bludgeoning damage.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "public/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "6d6+5"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/images/tomb_tapper.webp",
+  "url": "public/assets/atlas/enemies/json/tomb_tapper.json",
+  "updated_at": "2024-06-04T12:00:00.000Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet1.webp",
+  "rarity": "Rare",
+  "background_type": "underdark",
+  "item_drops": [
+    {
+      "name": "adamantine maul",
+      "rarity": "Uncommon",
+      "quantity": "1",
+      "type": "equipment"
+    }
+  ],
+  "tags": ["living_stone", "magic_hunter"]
+}

@@ -30,28 +30,32 @@
       "name": "Menzoberranzan",
       "dominant_race": "Drow",
       "government": "Matriarchal Noble Houses",
-      "primary_deity": "Lolth"
+      "primary_deity": "Lolth",
+      "url": "public/assets/atlas/world/toril/faerun/cities/menzoberranzan/menzoberranzan.json"
     },
     {
       "id": "gracklstugh",
       "name": "Gracklstugh",
       "dominant_race": "Duergar",
       "government": "Monarchy / Guild Council",
-      "focus": "Industry and Smithing"
+      "focus": "Industry and Smithing",
+      "url": "public/assets/atlas/world/toril/faerun/cities/gracklstugh/gracklstugh.json"
     },
     {
       "id": "oryndoll",
       "name": "Oryndoll",
       "dominant_race": "Mind Flayers",
       "government": "Elder Brain Collective",
-      "focus": "Psionic Research and Knowledge Hoarding"
+      "focus": "Psionic Research and Knowledge Hoarding",
+      "url": "public/assets/atlas/world/toril/faerun/cities/oryndoll/oryndoll.json"
     },
     {
       "id": "mantol_derith",
       "name": "Mantol-Derith",
       "dominant_race": "Mixed",
       "government": "Trade Council",
-      "focus": "Neutral Trade and Diplomacy"
+      "focus": "Neutral Trade and Diplomacy",
+      "url": "public/assets/atlas/world/toril/faerun/cities/mantol_derith/mantol_derith.json"
     }
   ],
   "hazards": [
@@ -72,12 +76,42 @@
     }
   ],
   "apex_predators": [
-    "Purple Worm",
-    "Aboleth",
-    "Mind Flayer",
-    "Beholder",
-    "Tomb Tapper",
-    "Annihilator"
+    {
+      "name": "Purple Worm",
+      "url": "public/assets/atlas/enemies/json/purple_worm.json"
+    },
+    {
+      "name": "Aboleth",
+      "url": "public/assets/atlas/enemies/json/aboleth.json"
+    },
+    {
+      "name": "Mind Flayer",
+      "url": "public/assets/atlas/enemies/json/mind_flayer.json"
+    },
+    {
+      "name": "Beholder",
+      "url": "public/assets/atlas/enemies/json/beholder.json"
+    },
+    {
+      "name": "Tomb Tapper",
+      "url": "public/assets/atlas/enemies/json/tomb_tapper.json"
+    },
+    {
+      "name": "Annihilator",
+      "url": "public/assets/atlas/enemies/json/annihilator.json"
+    },
+    {
+      "name": "Phthisic",
+      "url": "public/assets/atlas/enemies/json/phthisic.json"
+    },
+    {
+      "name": "Ineffable Horror",
+      "url": "public/assets/atlas/enemies/json/ineffable_horror.json"
+    },
+    {
+      "name": "Vodyanoi",
+      "url": "public/assets/atlas/enemies/json/vodyanoi.json"
+    }
   ],
   "flora": [
     "Zurkhwood (Lumber)",

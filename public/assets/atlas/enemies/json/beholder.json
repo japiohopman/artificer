@@ -1,0 +1,131 @@
+{
+  "index": "beholder",
+  "name": "beholder",
+  "size": "Large",
+  "type": "aberration",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 180,
+  "hit_dice": "19d10+76",
+  "hit_points_roll": "19d10+76",
+  "speed": {
+    "walk": "0 ft.",
+    "fly": "20 ft. (hover)"
+  },
+  "strength": 10,
+  "dexterity": 14,
+  "constitution": 18,
+  "intelligence": 17,
+  "wisdom": 15,
+  "charisma": 17,
+  "proficiencies": [
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving_throw_int",
+        "name": "saving throw: int",
+        "url": "public/assets/atlas/proficiencies/json/saving_throw_int.json"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/json/saving_throw_cha.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "prone",
+      "name": "prone",
+      "url": "public/assets/atlas/conditions/json/prone.json"
+    }
+  ],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 22
+  },
+  "languages": "Deep Speech, Undercommon",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [
+    {
+      "name": "antimagic cone",
+      "desc": "The beholder's central eye creates an area of antimagic, as in the antimagic field spell, in a 150-foot cone. At the start of each of its turns, the beholder decides which way the cone faces and whether the cone is active. The area works against the beholder's own eye rays.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 14 (4d6) piercing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "4d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "eye rays",
+      "desc": "The beholder shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it.",
+      "damage": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "eye ray",
+      "desc": "The beholder uses one random eye ray.",
+      "damage": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/images/beholder.webp",
+  "url": "public/assets/atlas/enemies/json/beholder.json",
+  "updated_at": "2024-06-04T12:00:00.000Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet1.webp",
+  "rarity": "Legendary",
+  "background_type": "underdark",
+  "item_drops": [
+    {
+      "name": "beholder eye",
+      "rarity": "Very Rare",
+      "quantity": "1",
+      "type": "material"
+    }
+  ],
+  "tags": ["living", "hovering", "xenophobic"]
+}

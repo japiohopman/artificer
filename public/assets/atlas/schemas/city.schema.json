@@ -8,7 +8,6 @@
     "id",
     "name",
     "type",
-    "parent",
     "title",
     "description",
     "coordinates"
@@ -25,6 +24,26 @@
     "type": {
       "type": "string",
       "description": "The type of settlement (e.g., metropolis, city, settlement)."
+    },
+    "plain": {
+      "type": "string",
+      "description": "The plane the city is on."
+    },
+    "world": {
+      "type": "string",
+      "description": "The world the city is in."
+    },
+    "continent": {
+      "type": "string",
+      "description": "The continent the city is on."
+    },
+    "region": {
+      "type": "string",
+      "description": "The region the city is in."
+    },
+    "sub_region": {
+      "type": "string",
+      "description": "The sub-region the city is in."
     },
     "parent": {
       "type": "string",
@@ -65,6 +84,10 @@
       "type": "string",
       "description": "Path to the interactive city map image."
     },
+    "sub_map": {
+      "type": "string",
+      "description": "Path to a sub-map image."
+    },
     "children": {
       "type": "array",
       "items": {
@@ -75,8 +98,7 @@
     "sub_location_files": {
       "type": "array",
       "items": {
-        "type": "string",
-        "pattern": "^(public/)?assets/atlas/world/toril/faerun/cities/.+\\.json$"
+        "type": "string"
       },
       "description": "Paths to JSON files containing sub-locations like shops, inns, etc."
     },
@@ -87,25 +109,6 @@
         "lng": { "type": "number" }
       },
       "required": ["lat", "lng"]
-    },
-    "geography": {
-      "type": "string",
-      "description": "Detailed geographical description (markdown)."
-    },
-    "history": {
-      "type": "string",
-      "description": "Detailed historical information (markdown)."
-    },
-    "metadata": {
-      "type": "object",
-      "properties": {
-        "government": { "type": "string" },
-        "military": { "type": "string" },
-        "population": { "type": "string" },
-        "organizations": { "type": "string" },
-        "trade": { "type": "string" }
-      },
-      "additionalProperties": { "type": "string" }
     },
     "bounds": {
       "type": "array",
@@ -123,13 +126,48 @@
       "type": "string",
       "description": "The coordinate origin for the city map."
     },
-    "scale": {
-      "type": "number",
-      "description": "The scale factor for the map (e.g. pixels per foot)."
-    },
     "unitsPerMile": {
       "type": "number",
       "description": "Scale of the city map in units per mile."
+    },
+    "geography": {
+      "type": "string",
+      "description": "Detailed geographical description (markdown)."
+    },
+    "history": {
+      "type": "string",
+      "description": "Detailed historical information (markdown)."
+    },
+    "bestiary": {
+      "type": "string",
+      "description": "Markdown link or index for bestiary data."
+    },
+    "politics": {
+      "type": "string",
+      "description": "Markdown link or index for political data."
+    },
+    "religion": {
+      "type": "string",
+      "description": "Markdown link or index for religious data."
+    },
+    "trade": {
+      "type": "string",
+      "description": "Markdown link or index for trade data."
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "government": { "type": "string" },
+        "military": { "type": "string" },
+        "population": { "type": "string" },
+        "organizations": { "type": "string" },
+        "trade": { "type": "string" }
+      },
+      "additionalProperties": { "type": "string" }
+    },
+    "categories": {
+      "type": "array",
+      "items": { "type": "string" }
     },
     "updated_at": {
       "type": "string",

@@ -1,0 +1,115 @@
+{
+  "index": "vodyanoi",
+  "name": "vodyanoi",
+  "size": "Large",
+  "type": "monstrosity",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 114,
+  "hit_dice": "12d10+48",
+  "hit_points_roll": "12d10+48",
+  "speed": {
+    "walk": "20 ft.",
+    "swim": "40 ft."
+  },
+  "strength": 21,
+  "dexterity": 13,
+  "constitution": 19,
+  "intelligence": 5,
+  "wisdom": 12,
+  "charisma": 6,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 15
+  },
+  "languages": "-",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [
+    {
+      "name": "amphibious",
+      "desc": "The vodyanoi can breathe air and water.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The vodyanoi makes three attacks: one with its bite and two with its claws.",
+      "damage": []
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) piercing damage.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "public/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "call electric eels",
+      "desc": "The vodyanoi summons 1d4 swarms of quippers (electric variant) to its aid if it is in water.",
+      "damage": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/images/vodyanoi.webp",
+  "url": "public/assets/atlas/enemies/json/vodyanoi.json",
+  "updated_at": "2024-06-04T12:00:00.000Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet1.webp",
+  "rarity": "Uncommon",
+  "background_type": "aquatic",
+  "item_drops": [
+    {
+      "name": "vodyanoi hide",
+      "rarity": "Common",
+      "quantity": "1",
+      "type": "material"
+    }
+  ],
+  "tags": ["living", "aquatic", "predator"]
+}

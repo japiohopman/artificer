@@ -1,0 +1,119 @@
+{
+  "index": "annihilator",
+  "name": "annihilator",
+  "size": "Large",
+  "type": "monstrosity",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 114,
+  "hit_dice": "12d10+48",
+  "hit_points_roll": "12d10+48",
+  "speed": {
+    "walk": "40 ft.",
+    "climb": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 14,
+  "constitution": 18,
+  "intelligence": 2,
+  "wisdom": 13,
+  "charisma": 5,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 15
+  },
+  "languages": "-",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [
+    {
+      "name": "disintegrating antennae",
+      "desc": "The annihilator can corrode both metal and organic matter on contact. Any nonmagical weapon made of metal or wood that hits the annihilator corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the annihilator is destroyed after dealing damage.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The annihilator makes three attacks: one with its bite and two with its antennae.",
+      "damage": []
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) piercing damage.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "antennae",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: The target must succeed on a DC 15 Dexterity saving throw or a nonmagical object it is wearing or carrying is disintegrated. If the target is a creature, it takes 18 (4d8) force damage instead if it is not wearing or carrying any nonmagical objects.",
+      "attack_bonus": 7,
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "public/assets/atlas/ability_scores/json/dexterity.json"
+        },
+        "dc_value": 15,
+        "success_type": "none"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "force",
+            "name": "force",
+            "url": "public/assets/atlas/damage_types/json/force.json"
+          },
+          "damage_dice": "4d8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/images/annihilator.webp",
+  "url": "public/assets/atlas/enemies/json/annihilator.json",
+  "updated_at": "2024-06-04T12:00:00.000Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet1.webp",
+  "rarity": "Rare",
+  "background_type": "underdark",
+  "item_drops": [
+    {
+      "name": "annihilator feeler",
+      "rarity": "Rare",
+      "quantity": "2",
+      "type": "material"
+    }
+  ],
+  "tags": ["living", "mutant", "destructive"]
+}

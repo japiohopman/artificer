@@ -11,7 +11,7 @@
       "xp": 18000,
       "challenge_rating": 17,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/androsphinx.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/androsphinx.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/androsphinx.webp"
     },
     {
       "name": "ankheg",
@@ -22,7 +22,18 @@
       "xp": 250,
       "challenge_rating": 2,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/ankheg.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/ankheg.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/ankheg.webp"
+    },
+    {
+      "name": "annihilator",
+      "index": "annihilator",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 2300,
+      "challenge_rating": 6,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/annihilator.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/annihilator.webp"
     },
     {
       "name": "basilisk",
@@ -33,7 +44,7 @@
       "xp": 700,
       "challenge_rating": 3,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/basilisk.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/basilisk.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/basilisk.webp"
     },
     {
       "name": "behir",
@@ -44,7 +55,7 @@
       "xp": 7200,
       "challenge_rating": 11,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/behir.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/behir.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/behir.webp"
     },
     {
       "name": "bulette",
@@ -55,7 +66,7 @@
       "xp": 1800,
       "challenge_rating": 5,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/bulette.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/bulette.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/bulette.webp"
     },
     {
       "name": "centaur",
@@ -66,7 +77,7 @@
       "xp": 450,
       "challenge_rating": 2,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/centaur.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/centaur.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/centaur.webp"
     },
     {
       "name": "chimera",
@@ -77,7 +88,7 @@
       "xp": 2300,
       "challenge_rating": 6,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/chimera.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/chimera.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/chimera.webp"
     },
     {
       "name": "cockatrice",
@@ -88,7 +99,7 @@
       "xp": 100,
       "challenge_rating": 0.5,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/cockatrice.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/cockatrice.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/cockatrice.webp"
     },
     {
       "name": "darkmantle",
@@ -99,7 +110,7 @@
       "xp": 100,
       "challenge_rating": 0.5,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/darkmantle.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/darkmantle.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/darkmantle.webp"
     },
     {
       "name": "death dog",
@@ -110,7 +121,7 @@
       "xp": 200,
       "challenge_rating": 1,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/death_dog.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/death_dog.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/death_dog.webp"
     },
     {
       "name": "doppelganger",
@@ -122,7 +133,7 @@
       "xp": 700,
       "challenge_rating": 3,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/doppelganger.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/doppelganger.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/doppelganger.webp"
     },
     {
       "name": "drider",
@@ -133,7 +144,7 @@
       "xp": 2300,
       "challenge_rating": 6,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/drider.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/drider.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/drider.webp"
     },
     {
       "name": "ettercap",
@@ -144,7 +155,7 @@
       "xp": 450,
       "challenge_rating": 2,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/ettercap.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/ettercap.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/ettercap.webp"
     },
     {
       "name": "gorgon",
@@ -155,7 +166,7 @@
       "xp": 1800,
       "challenge_rating": 5,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/gorgon.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/gorgon.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/gorgon.webp"
     },
     {
       "name": "grick",
@@ -166,7 +177,7 @@
       "xp": 450,
       "challenge_rating": 2,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/grick.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/grick.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/grick.webp"
     },
     {
       "name": "griffon",
@@ -177,7 +188,7 @@
       "xp": 450,
       "challenge_rating": 2,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/griffon.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/griffon.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/griffon.webp"
     },
     {
       "name": "guardian naga",
@@ -188,7 +199,7 @@
       "xp": 5900,
       "challenge_rating": 10,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/guardian_naga.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/guardian_naga.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/guardian_naga.webp"
     },
     {
       "name": "gynosphinx",
@@ -199,7 +210,7 @@
       "xp": 7200,
       "challenge_rating": 11,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/gynosphinx.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/gynosphinx.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/gynosphinx.webp"
     },
     {
       "name": "harpy",
@@ -210,7 +221,7 @@
       "xp": 200,
       "challenge_rating": 1,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/harpy.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/harpy.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/harpy.webp"
     },
     {
       "name": "hippogriff",
@@ -221,7 +232,7 @@
       "xp": 200,
       "challenge_rating": 1,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/hippogriff.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/hippogriff.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/hippogriff.webp"
     },
     {
       "name": "hydra",
@@ -232,7 +243,7 @@
       "xp": 3900,
       "challenge_rating": 8,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/hydra.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/hydra.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/hydra.webp"
     },
     {
       "name": "kraken",
@@ -244,7 +255,7 @@
       "xp": 50000,
       "challenge_rating": 23,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/kraken.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/kraken.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/kraken.webp"
     },
     {
       "name": "lamia",
@@ -255,7 +266,7 @@
       "xp": 1100,
       "challenge_rating": 4,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/lamia.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/lamia.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/lamia.webp"
     },
     {
       "name": "manticore",
@@ -266,7 +277,7 @@
       "xp": 700,
       "challenge_rating": 3,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/manticore.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/manticore.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/manticore.webp"
     },
     {
       "name": "medusa",
@@ -277,7 +288,7 @@
       "xp": 2300,
       "challenge_rating": 6,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/medusa.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/medusa.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/medusa.webp"
     },
     {
       "name": "merrow",
@@ -288,7 +299,7 @@
       "xp": 450,
       "challenge_rating": 2,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/merrow.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/merrow.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/merrow.webp"
     },
     {
       "name": "mimic",
@@ -300,7 +311,7 @@
       "xp": 450,
       "challenge_rating": 2,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/mimic.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/mimic.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/mimic.webp"
     },
     {
       "name": "minotaur",
@@ -311,7 +322,7 @@
       "xp": 700,
       "challenge_rating": 3,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/minotaur.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/minotaur.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/minotaur.webp"
     },
     {
       "name": "owlbear",
@@ -322,7 +333,7 @@
       "xp": 700,
       "challenge_rating": 3,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/owlbear.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/owlbear.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/owlbear.webp"
     },
     {
       "name": "phase spider",
@@ -333,7 +344,7 @@
       "xp": 700,
       "challenge_rating": 3,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/phase_spider.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/phase_spider.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/phase_spider.webp"
     },
     {
       "name": "purple worm",
@@ -344,7 +355,7 @@
       "xp": 13000,
       "challenge_rating": 15,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/purple_worm.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/purple_worm.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/purple_worm.webp"
     },
     {
       "name": "remorhaz",
@@ -355,7 +366,7 @@
       "xp": 7200,
       "challenge_rating": 11,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/remorhaz.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/remorhaz.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/remorhaz.webp"
     },
     {
       "name": "roc",
@@ -366,7 +377,7 @@
       "xp": 7200,
       "challenge_rating": 11,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/roc.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/roc.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/roc.webp"
     },
     {
       "name": "roper",
@@ -377,7 +388,7 @@
       "xp": 1800,
       "challenge_rating": 5,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/roper.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/roper.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/roper.webp"
     },
     {
       "name": "rust monster",
@@ -388,7 +399,7 @@
       "xp": 100,
       "challenge_rating": 0.5,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/rust_monster.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/rust_monster.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/rust_monster.webp"
     },
     {
       "name": "spirit naga",
@@ -399,7 +410,7 @@
       "xp": 3900,
       "challenge_rating": 8,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/spirit_naga.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/spirit_naga.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/spirit_naga.webp"
     },
     {
       "name": "tarrasque",
@@ -411,7 +422,18 @@
       "xp": 155000,
       "challenge_rating": 30,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/tarrasque.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/tarrasque.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/tarrasque.webp"
+    },
+    {
+      "name": "vodyanoi",
+      "index": "vodyanoi",
+      "size": "Large",
+      "type": "monstrosity",
+      "alignment": "unaligned",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/vodyanoi.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/vodyanoi.webp"
     },
     {
       "name": "winter wolf",
@@ -422,7 +444,7 @@
       "xp": 700,
       "challenge_rating": 3,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/winter_wolf.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/winter_wolf.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/winter_wolf.webp"
     },
     {
       "name": "worg",
@@ -433,7 +455,7 @@
       "xp": 100,
       "challenge_rating": 0.5,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/worg.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/worg.webp"
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/worg.webp"
     }
   ]
 }

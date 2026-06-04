@@ -1,0 +1,213 @@
+{
+  "index": "mind_flayer",
+  "name": "mind flayer",
+  "size": "Medium",
+  "type": "aberration",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 15,
+      "armor": [
+        {
+          "index": "breastplate",
+          "name": "breastplate",
+          "url": "public/assets/atlas/equipment/json/breastplate.json"
+        }
+      ]
+    }
+  ],
+  "hit_points": 71,
+  "hit_dice": "13d8+13",
+  "hit_points_roll": "13d8+13",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 12,
+  "constitution": 12,
+  "intelligence": 19,
+  "wisdom": 17,
+  "charisma": 17,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_int",
+        "name": "saving throw: int",
+        "url": "public/assets/atlas/proficiencies/json/saving_throw_int.json"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "public/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "public/assets/atlas/proficiencies/json/saving_throw_cha.json"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill_arcana",
+        "name": "skill: arcana",
+        "url": "public/assets/atlas/proficiencies/json/skill_arcana.json"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_deception",
+        "name": "skill: deception",
+        "url": "public/assets/atlas/proficiencies/json/skill_deception.json"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_insight",
+        "name": "skill: insight",
+        "url": "public/assets/atlas/proficiencies/json/skill_insight.json"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "public/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_persuasion",
+        "name": "skill: persuasion",
+        "url": "public/assets/atlas/proficiencies/json/skill_persuasion.json"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "public/assets/atlas/proficiencies/json/skill_stealth.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 16
+  },
+  "languages": "Deep Speech, Undercommon, telepathy 120 ft.",
+  "challenge_rating": 7,
+  "proficiency_bonus": 3,
+  "xp": 2900,
+  "special_abilities": [
+    {
+      "name": "magic resistance",
+      "desc": "The mind flayer has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting (psionics)",
+      "desc": "The mind flayer's innate spellcasting ability is Intelligence (spell save DC 15). It can innately cast the following spells, requiring no components:\nAt will: detect thoughts, levitate\n1/day each: dominate monster, plane shift (self only)",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "tentacles",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 15 (2d10 + 4) psychic damage. If the target is Medium or smaller, it is grappled (escape DC 15) and must succeed on a DC 15 Intelligence saving throw or be stunned until this grapple ends.",
+      "attack_bonus": 7,
+      "dc": {
+        "dc_type": {
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/json/intelligence.json"
+        },
+        "dc_value": 15,
+        "success_type": "none"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "psychic",
+            "name": "psychic",
+            "url": "public/assets/atlas/damage_types/json/psychic.json"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "extract brain",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one incapacitated humanoid grappled by the mind flayer. Hit: The target takes 55 (10d10) piercing damage. If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "public/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "10d10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "mind blast",
+      "desc": "The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 Intelligence saving throw or take 22 (4d8 + 4) psychic damage and be stunned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "dc": {
+        "dc_type": {
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/json/intelligence.json"
+        },
+        "dc_value": 15,
+        "success_type": "none"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "psychic",
+            "name": "psychic",
+            "url": "public/assets/atlas/damage_types/json/psychic.json"
+          },
+          "damage_dice": "4d8+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "public/assets/atlas/enemies/images/mind_flayer.webp",
+  "url": "public/assets/atlas/enemies/json/mind_flayer.json",
+  "updated_at": "2024-06-04T12:00:00.000Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet1.webp",
+  "rarity": "Rare",
+  "background_type": "underdark",
+  "item_drops": [
+    {
+      "name": "mind flayer brain",
+      "rarity": "Rare",
+      "quantity": "1",
+      "type": "material"
+    }
+  ],
+  "tags": ["living", "telepathic", "psionic"]
+}

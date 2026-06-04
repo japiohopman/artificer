@@ -1,0 +1,42 @@
+{
+  "id": "gracklstugh",
+  "name": "gracklstugh",
+  "type": "city",
+  "plain": "",
+  "world": "totil",
+  "continent": "fearun",
+  "region": "underdark",
+  "sub_region": "northdark",
+  "title": "Gracklstugh: The City of Blades",
+  "description": "A dark, smog-filled city of the [[duergar]], famous for its industry and ironworks.",
+  "wiki": "Gracklstugh is the capital of the duergar realm of Deep Shanatar. It is located on the shores of the Darklake and is a major center of trade and manufacturing in the Northdark.",
+  "image": "gracklstugh.webp",
+  "thumbnail": "gracklstugh_thumb.webp",
+  "banner": "gracklstugh_banner.webp",
+  "tags": ["city", "underdark", "duergar", "industry"],
+  "map": "assets/atlas/world/toril/faerun/cities/gracklstugh/gracklstugh_map.webp",
+  "children": [],
+  "sub_location_files": [],
+  "coordinates": {
+    "lat": 0,
+    "lng": 0
+  },
+  "bounds": [
+    [0, 0],
+    [3000, 1994]
+  ],
+  "origin": "bottom-left",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "Laduguer",
+  "trade": "Ironworks",
+  "metadata": {
+    "government": "Monarchy (Deep King)",
+    "population": "36,000",
+    "military": "Stone Guards"
+  },
+  "categories": []
+}
