@@ -1,11 +1,12 @@
 
 {
-  "id": "the_north",
-  "name": "North Faerûn",
-  "type": "region",
-  "parent": "faerun",
+  "id": "north_faerun",
+  "name": "North Faer\u00fbn",
+  "world": "totil",
+  "continent": "fearun",
+  "region": "north_faerun",
   "title": "The Crown of the North: North Faerûn",
-  "description": "North Faerûn encompasses the central northern reaches of the continent, including the Silver Marches and the Moonsea region.",
+  "description": "North Faer\u00fbn encompasses the central northern reaches of the continent, including the Silver Marches and the Moonsea region.",
   "wiki": "This is a region of powerful city-states and ancient dwarven kingdoms. The Silver Marches, centered on Silverymoon, are a bastion of hope and civilization in the wild North. Further east, the Moonsea is a place of dark power and intense competition between states like Zhentil Keep and Hillsfar. It is a land of constant struggle and ancient magic.",
   "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
   "tags": ["region", "faerun", "north", "magic", "fortresses"],
