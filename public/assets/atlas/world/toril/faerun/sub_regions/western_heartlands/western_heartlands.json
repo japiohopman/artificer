@@ -1,18 +1,26 @@
-
 {
   "id": "western_heartlands",
   "name": "Western Heartlands",
   "world": "totil",
   "continent": "fearun",
   "region": "northwest_faerun",
-  "sub_region": "waterdeep",
+  "sub_region": "western_heartlands",
   "title": "Western Heartlands: The Frontier of Central Faerûn",
   "description": "The Western Heartlands is a vast region of scattered city-states, independent towns, and untamed wilderness between the Sword Coast and the Sea of Fallen Stars.",
   "wiki": "This region is the setting for many legendary adventures. It home to the great city of Baldur's Gate and the library fortress of Candlekeep. The landscape is dominated by the High Moor, the serpent-infested Serpent Hills, and the winding River Chionthar. It is a land where anyone with enough grit can make their own way.",
   "image": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80",
-  "tags": ["region", "faerun", "heartlands", "frontier"],
+  "tags": [
+    "region",
+    "faerun",
+    "heartlands",
+    "frontier"
+  ],
   "metadata": {
-    "prominent_cities": ["Baldur's Gate", "Elturel", "Scornubel"],
+    "prominent_cities": [
+      "Baldur's Gate",
+      "Elturel",
+      "Scornubel"
+    ],
     "landscape": "Plains, hills, marshlands",
     "economy": "Commerce, mercenary work, livestock"
   }

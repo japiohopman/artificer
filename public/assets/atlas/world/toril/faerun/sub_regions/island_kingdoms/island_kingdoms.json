@@ -9,9 +9,20 @@
   "description": "The myriad islands in the Sea of Swords and the Trackless Sea beyond. These range from the elven paradise of Evermeet to the technological wonders of Lantan.",
   "wiki": "Isolated by miles of ocean, these island nations have developed unique cultures. Evermeet is the last retreat of the elves, while Nimbral is known for its legendary glass-plate armor and flying knights. Lantan is a place of goggles, gears, and gunpowder. These lands are often shrouded in myth and hard to reach for the common folk of mainland Faerûn.",
   "image": "https://images.unsplash.com/photo-1505852673533-5b87723dd853?auto=format&fit=crop&w=800&q=80",
-  "tags": ["region", "faerun", "island", "ocean", "exotic"],
+  "tags": [
+    "region",
+    "faerun",
+    "island",
+    "ocean",
+    "exotic"
+  ],
   "metadata": {
-    "prominent_islands": ["Evermeet", "Lantan", "Nimbral", "The Nelanther Isles"],
+    "prominent_islands": [
+      "Evermeet",
+      "Lantan",
+      "Nimbral",
+      "The Nelanther Isles"
+    ],
     "landscape": "Archipelagos, island peaks",
     "economy": "Specialized exports, shipbuilding, isolationism"
   }
