@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "aberration",
   "alignment": "chaotic evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 18
-    }
-  ],
+  "armor_class": 18,
   "hit_points": 126,
   "hit_dice": "12d10+60",
   "hit_points_roll": "12d10+60",
@@ -43,13 +38,13 @@
     "passive_perception": 16
   },
   "languages": "Undercommon",
-  "challenge_rating": 6,
+  "challenge_rating": "6",
   "proficiency_bonus": 3,
   "xp": 2300,
   "special_abilities": [
     {
       "name": "mind feed",
-      "desc": "When the phthisic hits a creature with its bite attack, the target must succeed on a DC 15 Intelligence saving throw or take 7 (2d6) psychic damage, and its Intelligence score is reduced by 1d4. The target dies if this reduces its Intelligence to 0. Otherwise, the reduction lasts until the target finishes a short or long rest.",
+      "desc": "When the phthisic hits a creature with its bite attack, the target must succeed on a DC 15 Intelligence saving throw or take 7 (2d6) psychic damage, and its Intelligence score is reduced by 1d4.0 The target dies if this reduces its Intelligence to 0.0 Otherwise, the reduction lasts until the target finishes a short or long rest.",
       "dc": {
         "dc_type": {
           "index": "int",
@@ -112,9 +107,9 @@
   ],
   "image": "public/assets/atlas/enemies/images/phthisic.webp",
   "url": "public/assets/atlas/enemies/json/phthisic.json",
-  "updated_at": "2024-06-04T12:00:00.000Z",
+  "updated_at": "2026-06-04T13:48:05.989Z",
   "sprite_index": 0,
-  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet1.webp",
+  "sprite_sheet": "/artificer-main/codex/assets/enemies/sprites/enemies_sheet1.0webp",
   "rarity": "Rare",
   "background_type": "underdark",
   "item_drops": [
@@ -125,5 +120,20 @@
       "type": "material"
     }
   ],
-  "tags": ["living", "abomination", "psionic"]
+  "tags": [
+    "living",
+    "abomination",
+    "psionic"
+  ],
+  "stats": {
+    "str": 23,
+    "dex": 12,
+    "con": 21,
+    "int": 10,
+    "wis": 14,
+    "cha": 14
+  },
+  "imageUrl": "/assets/atlas/enemies/images/phthisic.webp",
+  "_type": "enemies",
+  "last_updated": "4-6-2026"
 }
