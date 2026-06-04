@@ -1,6 +1,6 @@
 {
   "desc": [
-    "Forged in shadow and quenched in the blood of a fallen god, this arrow whispers promises of swift passage into oblivion, its +1 enchantment a subtle but undeniable caress of lingering darkness. Each flight is a dirge sung for the soon-to-be departed, guided by an unseen hand towards a destiny etched in pain.\n"
+    "Etched with faint runes of malice and quenched in still-warm blood, this black-fletched shaft hums with an unnatural, predatory hunger. It shivers against the bowstring, guided by a subtle, unseen gravity toward the warmth of living marrow."
   ],
   "special": [],
   "index": "arrow_1",
@@ -17,22 +17,22 @@
   },
   "quantity": 20,
   "cost": {
-    "quantity": 1,
-    "unit": "gp"
+    "quantity": 2,
+    "unit": "cp"
   },
   "weight": 1,
   "url": "public/assets/atlas/equipment/json/arrow.json",
-  "updated_at": "2026-05-17T06:34:24.113Z",
+  "updated_at": "2026-06-04T08:38:43.279Z",
   "contents": [],
   "properties": [],
   "image": "public/assets/atlas/equipment/arrow.webp",
   "sprite_index": 8,
-  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.webp",
+  "sprite_sheet": "/artificer-main/codex/assets/equipment/sprites/equipment_sheet1.0webp",
   "imageUrl": "/assets/atlas/magic_items/images/arrow_1.webp",
   "_type": "equipment",
   "background_type": "land_forest",
   "category": "Ammunition",
-  "last_updated": "17-5-2026",
+  "last_updated": "4-6-2026",
   "slot": [
     "ammo"
   ],
