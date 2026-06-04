@@ -39,6 +39,9 @@
   "unitsPerMile": 1,
   "geography": "",
   "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
   "metadata": {
     "government": "The Council of Four",
     "military": "The Flaming Fist",
@@ -49,123 +52,67 @@
       "id": "1",
       "listId": 1,
       "name": "Districts",
-      "color": "#f00",
-      "symbol": "",
-      "symbolColor": "",
-      "icon": "File:City icon.svg"
     },
     {
       "id": "5",
       "listId": 2,
       "name": "Temples & Shrines",
-      "color": "#fac600",
-      "symbol": "",
-      "symbolColor": "",
-      "icon": "File:Lathander temple icon.svg"
     },
     {
       "id": "6",
       "listId": 3,
       "name": "Landmarks",
-      "color": "#7c002e",
-      "symbol": "",
-      "symbolColor": "",
-      "icon": "File:Tower icon.svg"
     },
     {
       "id": "7",
       "listId": 4,
       "name": "Shops & Coasters",
-      "color": "#007903",
-      "symbol": "",
-      "symbolColor": "",
-      "icon": "File:Tymora coin icon.svg"
     },
     {
       "id": "8",
       "listId": 5,
       "name": "Points of Interest",
-      "color": "#021ebb",
-      "symbol": "",
-      "symbolColor": "",
-      "icon": "File:Elminter's choice icon.svg"
     },
     {
       "id": "9",
       "listId": 6,
       "name": "Taverns & Eateries",
-      "color": "#fa5d00",
-      "symbol": "",
-      "symbolColor": "",
-      "icon": "File:Tankard icon.svg"
     },
     {
       "id": "12",
       "listId": 7,
       "name": "Inns",
-      "color": "#fa5d00",
-      "symbol": "",
-      "symbolColor": "",
-      "icon": "File:Tankard icon.svg"
     },
     {
       "id": "10",
       "listId": 8,
       "name": "Residences & Estates",
-      "color": "#ff6a6a",
-      "symbol": "",
-      "symbolColor": "",
-      "icon": "File:Hamlet icon.svg"
     },
     {
       "id": "11",
       "listId": 9,
       "name": "Gates",
-      "color": "#ffffff",
-      "symbol": "",
-      "symbolColor": "",
-      "icon": "File:Gate icon.svg"
     },
     {
       "id": "14",
       "listId": 10,
       "name": "Streets & Roads",
-      "color": "#fa005a",
-      "symbol": "",
-      "symbolColor": "",
-      "icon": "File:Mountain road icon.svg"
     },
     {
       "id": "13",
       "listId": 11,
       "name": "Geographical",
-      "color": "#2e2703",
-      "symbol": "",
-      "symbolColor": "",
-      "icon": "File:Mountains icon.svg"
     },
     {
       "id": "16",
       "listId": 12,
       "name": "Docks & Wharves",
       "color": "#fa005a",
-      "symbol": "",
-      "symbolColor": "",
-      "icon": "File:Ship icon.svg"
     },
     {
       "id": "15",
       "listId": 13,
       "name": "Bodies of Water",
-      "color": "#fa005a",
-      "symbol": "",
-      "symbolColor": "",
-      "icon": "File:Bodies of water icon.svg"
     }
   ],
-  "pageCategories": [
-    "Interactive_maps",
-    "Maps_of_Baldur's_Gate",
-    "Maps_of_cities"
-  ]
 }
