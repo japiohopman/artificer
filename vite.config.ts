@@ -8,7 +8,6 @@ export default defineConfig(({mode}) => {
   return {
     plugins: [react(), tailwindcss()],
     define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
       'process.env.GITHUB_REPO': JSON.stringify(env.GITHUB_REPO),
       'process.env.GITHUB_BRANCH': JSON.stringify(env.GITHUB_BRANCH || 'main'),
     },

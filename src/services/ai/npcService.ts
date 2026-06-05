@@ -1,6 +1,4 @@
-import { GoogleGenAI } from "@google/genai";
 import { ai, MODELS } from "./config";
-import { Type } from "@google/genai";
 import { getXPForLevel } from "../../lib/npcGeneratorUtils";
 import { ATLAS_TRAITS } from "../../lib/atlasTraits";
 
@@ -121,53 +119,53 @@ export async function generateNPCData(
     config: {
       responseMimeType: "application/json",
       responseSchema: {
-        type: Type.OBJECT,
+        type: "OBJECT",
         properties: {
-          name: { type: Type.STRING },
-          gender: { type: Type.STRING, enum: ["Male", "Female"] },
-          class: { type: Type.STRING },
-          race: { type: Type.STRING },
-          background: { type: Type.STRING },
-          alignment: { type: Type.STRING },
-          level: { type: Type.NUMBER },
-          xp: { type: Type.NUMBER },
+          name: { type: "STRING" },
+          gender: { type: "STRING", enum: ["Male", "Female"] },
+          class: { type: "STRING" },
+          race: { type: "STRING" },
+          background: { type: "STRING" },
+          alignment: { type: "STRING" },
+          level: { type: "NUMBER" },
+          xp: { type: "NUMBER" },
           stats: {
-            type: Type.OBJECT,
+            type: "OBJECT",
             properties: {
-              str: { type: Type.NUMBER },
-              dex: { type: Type.NUMBER },
-              con: { type: Type.NUMBER },
-              int: { type: Type.NUMBER },
-              wis: { type: Type.NUMBER },
-              cha: { type: Type.NUMBER },
+              str: { type: "NUMBER" },
+              dex: { type: "NUMBER" },
+              con: { type: "NUMBER" },
+              int: { type: "NUMBER" },
+              wis: { type: "NUMBER" },
+              cha: { type: "NUMBER" },
             },
             required: ["str", "dex", "con", "int", "wis", "cha"]
           },
-          proficiencies: { type: Type.ARRAY, items: { type: Type.STRING } },
-          backstory: { type: Type.STRING },
-          flaws: { type: Type.ARRAY, items: { type: Type.STRING } },
-          ideals: { type: Type.ARRAY, items: { type: Type.STRING } },
-          bonds: { type: Type.ARRAY, items: { type: Type.STRING } },
-          traits: { type: Type.ARRAY, items: { type: Type.STRING } },
-          features: { type: Type.ARRAY, items: { type: Type.STRING } },
-          voiceProfile: { type: Type.STRING },
+          proficiencies: { type: "ARRAY", items: { type: "STRING" } },
+          backstory: { type: "STRING" },
+          flaws: { type: "ARRAY", items: { type: "STRING" } },
+          ideals: { type: "ARRAY", items: { type: "STRING" } },
+          bonds: { type: "ARRAY", items: { type: "STRING" } },
+          traits: { type: "ARRAY", items: { type: "STRING" } },
+          features: { type: "ARRAY", items: { type: "STRING" } },
+          voiceProfile: { type: "STRING" },
           appearance: {
-            type: Type.OBJECT,
+            type: "OBJECT",
             properties: {
-              hair_color: { type: Type.STRING },
-              hair_style: { type: Type.STRING },
-              build: { type: Type.STRING },
-              eye_color: { type: Type.STRING },
-              skin_color: { type: Type.STRING },
-              size: { type: Type.STRING },
-              height: { type: Type.STRING },
-              weight: { type: Type.STRING },
+              hair_color: { type: "STRING" },
+              hair_style: { type: "STRING" },
+              build: { type: "STRING" },
+              eye_color: { type: "STRING" },
+              skin_color: { type: "STRING" },
+              size: { type: "STRING" },
+              height: { type: "STRING" },
+              weight: { type: "STRING" },
             }
           },
           money: {
-            type: Type.OBJECT,
+            type: "OBJECT",
             properties: {
-              gp: { type: Type.NUMBER }
+              gp: { type: "NUMBER" }
             }
           }
         }
@@ -302,21 +300,21 @@ export async function generateNPCImages(npc: NPCProfile): Promise<{ profileUrl: 
   let avatarUrl = '';
   let matrixUrl = '';
 
-  for (const part of profileRes.candidates[0].content.parts) {
+  for (const part of profileRes.candidates?.[0]?.content?.parts || []) {
     if (part.inlineData) {
       profileUrl = `data:image/png;base64,${part.inlineData.data}`;
       break;
     }
   }
 
-  for (const part of avatarRes.candidates[0].content.parts) {
+  for (const part of avatarRes.candidates?.[0]?.content?.parts || []) {
     if (part.inlineData) {
       avatarUrl = `data:image/png;base64,${part.inlineData.data}`;
       break;
     }
   }
 
-  for (const part of matrixRes.candidates[0].content.parts) {
+  for (const part of matrixRes.candidates?.[0]?.content?.parts || []) {
     if (part.inlineData) {
       matrixUrl = `data:image/png;base64,${part.inlineData.data}`;
       break;
