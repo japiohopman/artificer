@@ -1,0 +1,13 @@
+{
+  "index": "special",
+  "name": "special",
+  "desc": [
+    "A weapon with the special property has unusual rules governing its use, explained in the weapon's description (see \"Special Weapons\" later in this section)."
+  ],
+  "property_specific": {
+    "custom_logic": true
+  },
+  "url": "/assets/atlas/weapon_properties/json/special.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/weapon_properties/images/special.webp"
+}

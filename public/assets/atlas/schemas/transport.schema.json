@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/transport.schema.json",
+  "title": "Transport",
+  "description": "A transport entity (mount, vehicle, or magical transport) in the game atlas.",
+  "type": "object",
+  "required": [
+    "index",
+    "name",
+    "transport_type",
+    "speed",
+    "url",
+    "image",
+    "updated_at"
+  ],
+  "properties": {
+    "index": { "type": "string" },
+    "name": { "type": "string" },
+    "transport_type": {
+      "type": "string",
+      "enum": ["mount", "vehicle", "magical"]
+    },
+    "desc": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "equipment_category": {
+      "type": "object",
+      "properties": {
+        "index": { "type": "string" },
+        "name": { "type": "string" },
+        "url": { "type": "string" }
+      }
+    },
+    "cost": {
+      "type": "object",
+      "properties": {
+        "quantity": { "type": "integer" },
+        "unit": { "type": "string" }
+      }
+    },
+    "speed": {
+      "type": "object",
+      "properties": {
+        "land": { "$ref": "#/definitions/speed_detail" },
+        "water": { "$ref": "#/definitions/speed_detail" },
+        "air": { "$ref": "#/definitions/speed_detail" }
+      }
+    },
+    "capacity": {
+      "type": "object",
+      "properties": {
+        "cargo": {
+          "oneOf": [
+            { "type": "string" },
+            {
+              "type": "object",
+              "properties": {
+                "quantity": { "type": "number" },
+                "unit": { "type": "string" }
+              }
+            }
+          ]
+        },
+        "passenger": {
+          "type": "object",
+          "properties": {
+            "count": { "type": "integer" },
+            "size": { "type": "string" },
+            "description": { "type": "string" }
+          }
+        },
+        "max_passengers": { "type": "integer" },
+        "crew_required": { "type": "integer" }
+      }
+    },
+    "combat_stats": {
+      "type": "object",
+      "properties": {
+        "armor_class": { "type": "integer" },
+        "hit_points": { "type": "integer" },
+        "damage_threshold": { "type": "integer" }
+      }
+    },
+    "transport_specific": {
+      "type": "object",
+      "properties": {
+        "stat_block": {
+          "type": "object",
+          "properties": {
+            "index": { "type": "string" },
+            "name": { "type": "string" },
+            "url": { "type": "string" }
+          }
+        },
+        "feed": {
+          "type": "object",
+          "properties": {
+            "index": { "type": "string" },
+            "name": { "type": "string" },
+            "url": { "type": "string" }
+          }
+        },
+        "crew_requirements_desc": { "type": "string" },
+        "flight_duration": { "type": "string" },
+        "command_words": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "operating_conditions": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^public/assets/atlas/transport/json/.+\\.json$"
+    },
+    "image": {
+      "type": "string",
+      "pattern": "^public/assets/atlas/(transport/images|enemies/images)/.+\\.webp$"
+    },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "sprite_index": { "type": "integer" },
+    "sprite_sheet": { "type": "string" }
+  },
+  "definitions": {
+    "speed_detail": {
+      "type": "object",
+      "properties": {
+        "ft_per_round": { "type": "number" },
+        "mph": { "type": "number" }
+      }
+    }
+  }
+}

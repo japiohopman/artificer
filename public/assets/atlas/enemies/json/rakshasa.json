@@ -1,0 +1,260 @@
+{
+  "index": "rakshasa",
+  "name": "rakshasa",
+  "size": "Medium",
+  "type": "fiend",
+  "alignment": "lawful evil",
+  "armor_class": 16,
+  "hit_dice": "13d8",
+  "hit_points": 110,
+  "hit_points_roll": "13d8+52",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 14,
+  "dexterity": 17,
+  "constitution": 18,
+  "intelligence": 13,
+  "wisdom": 16,
+  "charisma": 20,
+  "proficiencies": [
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "skill_deception",
+        "name": "skill: deception",
+        "url": "/assets/atlas/skills/json/deception.json"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill_insight",
+        "name": "skill: insight",
+        "url": "/assets/atlas/skills/json/insight.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [
+    "piercing from magic weapons wielded by good creatures"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 13
+  },
+  "languages": "Common, Infernal",
+  "challenge_rating": "13",
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [
+    {
+      "name": "limited magic immunity",
+      "desc": "The rakshasa can't be affected or detected by spells of 6th level or lower unless it wishes to be. It has advantage on saving throws against all other spells and magical effects.",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The rakshasa's innate spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). The rakshasa can innately cast the following spells, requiring no material components:\n\nAt will: detect thoughts, disguise self, mage hand, minor illusion\n3/day each: charm person, detect magic, invisibility, major image, suggestion\n1/day each: dominate person, fly, plane shift, true seeing",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "/assets/atlas/ability_scores/json/charisma.json"
+        },
+        "dc": 18,
+        "modifier": 10,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "detect thoughts",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/detect_thoughts.json",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "disguise self",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/disguise_self.json",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "mage hand",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/mage_hand.json",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "minor illusion",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/minor_illusion.json",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "charm person",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/charismarm_person.json",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "detect magic",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/detect_magic.json",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "invisibility",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/invisibility.json",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "major image",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/major_image.json",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "suggestion",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/suggestion.json",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "dominate person",
+            "level": 5,
+            "url": "/assets/atlas/spell/json/dominate_person.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "fly",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/fly.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "plane shift",
+            "level": 7,
+            "url": "/assets/atlas/spell/json/plane_shift.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "true seeing",
+            "level": 6,
+            "url": "/assets/atlas/spell/json/true_seeing.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The rakshasa makes two claw attacks",
+      "actions": [
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) slashing damage, and the target is cursed if it is a creature. The magical curse takes effect whenever the target takes a short or long rest, filling the target's thoughts with horrible images and dreams. The cursed target gains no benefit from finishing a short or long rest. The curse lasts until it is lifted by a remove curse spell or similar magic.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/rakshasa.webp",
+  "url": "/assets/atlas/enemies/json/rakshasa.json",
+  "updated_at": "2026-05-18T11:42:04.694Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 5,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.webp",
+  "stats": {
+    "str": 14,
+    "dex": 17,
+    "con": 18,
+    "int": 13,
+    "wis": 16,
+    "cha": 20
+  },
+  "lore": "/assets/atlas/enemies/enemies_wiki/rakshasa.json",
+  "wikiData": {},
+  "imageUrl": "/assets/atlas/enemies/images/rakshasa.webp",
+  "_type": "enemies",
+  "background_type": "volcano4",
+  "last_updated": "18-5-2026"
+}

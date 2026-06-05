@@ -1,0 +1,71 @@
+{
+  "index": "invisibility",
+  "name": "invisibility",
+  "desc": [
+    "A creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person. The spell ends for a target that attacks or casts a spell."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "An eyelash encased in gum arabic.",
+  "ritual": false,
+  "duration": "Up to 1 hour",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "illusion",
+    "name": "illusion",
+    "url": "/assets/atlas/magic_schools/json/illusion.json"
+  },
+  "classes": [
+    {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "/assets/atlas/class/json/artificer.json"
+    },
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    },
+    {
+      "index": "land",
+      "name": "land",
+      "url": "/assets/atlas/subclasses/json/land.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/invisibility.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/invisibility.webp",
+  "sprite_index": 22,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet7.webp"
+}

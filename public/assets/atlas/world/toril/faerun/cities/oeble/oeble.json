@@ -1,0 +1,50 @@
+{
+  "$schema": "public/assets/atlas/schemas/city.schema.json",
+  "id": "oeble",
+  "name": "oeble",
+  "type": "metropolis",
+  "parent": "cities",
+  "title": "oeble: Metropolis",
+  "description": "",
+  "wiki": "",
+  "image": "oeble.webp",
+  "thumbnail": "oeble_thumb.webp",
+  "banner": "oeble_banner.webp",
+  "tags": [
+    "city",
+    "metropolis"
+  ],
+  "map": "assets/atlas/world/toril/faerun/cities/oeble/oeble_map.webp",
+  "coordinateOrder": "yx",
+  "children": [],
+  "sub_location_files": [
+    "assets/atlas/world/toril/faerun/cities/oeble/sublocations/inns_taverns.json",
+    "assets/atlas/world/toril/faerun/cities/oeble/sublocations/poi.json",
+    "assets/atlas/world/toril/faerun/cities/oeble/sublocations/water.json"
+  ],
+  "coordinates": {
+    "lat": 0,
+    "lng": 0
+  },
+  "geography": "",
+  "history": "",
+  "metadata": {
+    "government": "Council of Six",
+    "organizations": "",
+    "trade": "",
+    "military": "The Mehelm",
+    "population": "100,000+"
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      3338,
+      2506
+    ]
+  ],
+  "origin": "bottom-left",
+  "unitsPerMile": 1
+}

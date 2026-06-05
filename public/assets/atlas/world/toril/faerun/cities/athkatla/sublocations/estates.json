@@ -1,0 +1,520 @@
+{
+  "category": "estates",
+  "updatedAt": "2026-05-29T10:54:16.127Z",
+  "location_id": "athkatla",
+  "sub_locations": [
+    {
+      "id": "11",
+      "name": "House of Marimmal Theer",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        511.23102880957,
+        1257.2217574298
+      ],
+      "popup": {
+        "title": "House of Marimmal Theer",
+        "description": "Home of actor and impressario [[Marimmal Theer]] in the late 14{{th}} century [[DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "House of Thammas Thous",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        505.75024941159,
+        1280.9098705606
+      ],
+      "popup": {
+        "title": "House of Thammas Thous",
+        "description": "The home of [[Thammas Thoul]], a collector, merchant, and an ex-slaver in there late 14{{th}} century [[DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "65",
+      "name": "Pimlico Estate",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        641.67710172064,
+        1249.7878554876
+      ],
+      "popup": {
+        "title": "Pimlico Estate",
+        "description": "Home of [[Pimlico]], a rich collector of rare [[book]]s in the late 14{{th}} century [[DR]].{{approx}}",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "67",
+      "name": "Deril Estate",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        275.42121057786,
+        387.14211345311
+      ],
+      "popup": {
+        "title": "Deril Estate",
+        "description": "The estate of a wealthy and powerful [[conjurer]] [[Deril]], who was served by a powerful [[lich]] as his butler in the late 14{{th}} century [[DR]].{{approx}}",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "68",
+      "name": "Delryn Estate",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        293.81113374311,
+        391.7394582843
+      ],
+      "popup": {
+        "title": "Delryn Estate",
+        "description": "The marge mansion of the noble [[Delryn]] family of [[Amn]]. The patriarch of the family was [[Cor Delryn]] in the late 14{{th}} century [[DR]].{{approx}}",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "69",
+      "name": "Firecam Estate",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        285.31992568805,
+        377.24297812696
+      ],
+      "popup": {
+        "title": "Firecam Estate",
+        "description": "The estate of the [[Keldorn]] family, led by [[Keldorn Firecam]] in the late 14{{th}} century [[DR]].{{approx}}",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "70",
+      "name": "Jysstev Estate",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        306.89011375051,
+        389.26501608271
+      ],
+      "popup": {
+        "title": "Jysstev Estate",
+        "description": "The two-floor estate of the [[Jysstev]] family.{{approx}}",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "71",
+      "name": "Roenall Estate",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        284.50661821987,
+        423.96454505965
+      ],
+      "popup": {
+        "title": "Roenall Estate",
+        "description": "The home of the noble [[Roenall]] family.{{approx}}",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "73",
+      "name": "Vulova Estate",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        271.52915994092,
+        420.37508929854
+      ],
+      "popup": {
+        "title": "Vulova Estate",
+        "description": "A smaller mansion of the [[Vulova]] family, built next door to the [[Temple of Waukeen (Athkatla)|Temple of Waukeen]].{{approx}}",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "78",
+      "name": "Galvarey Estate",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        199.05161296378,
+        942.01739295694
+      ],
+      "popup": {
+        "title": "Galvarey Estate",
+        "description": "A large bright noble estate, in reality, a fortified [[Harper]] hold, guarded by [[Spectral Harpist]] and numerous Harper agents.{{approx}}",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "95",
+      "name": "Ophal Estate",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        780.49823545423,
+        1019.9998982868
+      ],
+      "popup": {
+        "title": "Ophal Estate",
+        "description": "The estate of the [[Ophal]] merchant family that dealt in [[salt]], [[pepper]], and [[herb]]s.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "113",
+      "name": "House of Darastiir Thalongal",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        701.5,
+        984.9997965736
+      ],
+      "popup": {
+        "title": "House of Darastiir Thalongal",
+        "description": "Home of merchant and a fleet owner [[Darastiir Thalongal]] who dealt in smuggling mercenaries, slaves, and weaponry in the late 14{{th}} century [[DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "115",
+      "name": "House of Malareetha Narindryn",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        710.25033085233,
+        990.50045770939
+      ],
+      "popup": {
+        "title": "House of Malareetha Narindryn",
+        "description": "The home of so-called \"Lady Stargowns\", [[Malareetha Narindryn]] – a socialite and filthy rich investor into Athkathlan business in the late 14{{th}} century [[DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "116",
+      "name": "Baerlbohun House",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        715.47320154773,
+        999.23056883375
+      ],
+      "popup": {
+        "title": "Baerlbohun House",
+        "description": "The mansion of the [[Baerlbohun]] family, just as gaudy as the [[Baerlbohun Towers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "120",
+      "name": "House of Jalasra Fourwynds",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        572.75571293468,
+        1023.1833685327
+      ],
+      "popup": {
+        "title": "House of Jalasra Fourwynds",
+        "description": "Home of the retired adventurer and an information broker [[Jalasra Fourwynds]] who dabbled in investments in the late 14{{th}} century [[DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "123",
+      "name": "Hallowturrets House",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        593.59228094711,
+        1028.1069307799
+      ],
+      "popup": {
+        "title": "Hallowturrets House",
+        "description": "One of the oldest vast mansions in the Gem District and home of the [[Hawkyns]] noble family. It was well-liked by the locals and illuminated by a plethora of lanterns.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "124",
+      "name": "House of Velrack Worthgar",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        604.90084259169,
+        1009.0116673495
+      ],
+      "popup": {
+        "title": "House of Velrack Worthgar",
+        "description": "Home of the wealthy retired sea captain and investor [[Velrack Worthgar]] in the late 14{{th}} century [[DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "125",
+      "name": "House of Tholondor Ivryn",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        608.78821427008,
+        999.81834420687
+      ],
+      "popup": {
+        "title": "House of Tholondor Ivryn",
+        "description": "Home of the [[Sage]] of [[Athkatla]], [[Tholondor Ivryn]]. The expert in the mercantile history of [[Amn]], genealogy, and investments.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "128",
+      "name": "House of Darsarl Rastable",
+      "categoryId": "estates",
+      "type": "marker",
+      "position": [
+        623.96812847864,
+        981.23006026776
+      ],
+      "popup": {
+        "title": "House of Darsarl Rastable",
+        "description": "Home of [[Darsarl Rastable]], a duelist for hire and an investor.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "index": "awakened_shrub",
+  "name": "awakened shrub",
+  "desc": "An awakened shrub is an ordinary shrub given sentience and mobility by the awaken spell or similar magic.",
+  "size": "Small",
+  "type": "plant",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 9
+    }
+  ],
+  "hit_points": 10,
+  "hit_dice": "3d6",
+  "hit_points_roll": "3d6",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 3,
+  "dexterity": 8,
+  "constitution": 11,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 6,
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "damage_resistances": [
+    "piercing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "one language known by its creator",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "false appearance",
+      "desc": "While the shrub remains motionless, it is indistinguishable from a normal shrub.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "rake",
+      "desc": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) slashing damage.",
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4-1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/awakened_shrub.webp",
+  "url": "/assets/atlas/enemies/json/awakened_shrub.json",
+  "updated_at": "2026-04-03T19:50:12.823Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 4,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet2.webp",
+  "wikiData": null,
+  "imageUrl": null,
+  "last_updated": "3-4-2026",
+  "background_type": "land_forest"
+}

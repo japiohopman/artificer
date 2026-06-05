@@ -1,0 +1,18 @@
+{
+  "index": "longbows",
+  "type": "weapons",
+  "name": "longbows",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/longbows.json",
+  "reference": {
+    "index": "longbow",
+    "name": "longbow",
+    "url": "/assets/atlas/equipment/json/longbow.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/longbows.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

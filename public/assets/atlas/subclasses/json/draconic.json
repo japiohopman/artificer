@@ -1,0 +1,50 @@
+{
+  "index": "draconic",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "/assets/atlas/class/json/sorcerer.json"
+  },
+  "name": "draconic",
+  "subclass_flavor": "Sorcerous Origin",
+  "desc": [
+    "Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors. Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the first of a new bloodline, as a result of a pact or some other exceptional circumstance."
+  ],
+  "features": [
+    {
+      "index": "dragon_ancestor",
+      "name": "Dragon Ancestor",
+      "level": 1,
+      "url": "/assets/atlas/features/json/dragon_ancestor.json"
+    },
+    {
+      "index": "draconic_resilience",
+      "name": "Draconic Resilience",
+      "level": 1,
+      "url": "/assets/atlas/features/json/draconic_resilience.json"
+    },
+    {
+      "index": "elemental_affinity",
+      "name": "Elemental Affinity",
+      "level": 6,
+      "url": "/assets/atlas/features/json/elemental_affinity.json"
+    },
+    {
+      "index": "dragon_wings",
+      "name": "Dragon Wings",
+      "level": 14,
+      "url": "/assets/atlas/features/json/dragon_wings.json"
+    },
+    {
+      "index": "draconic_presence",
+      "name": "Draconic Presence",
+      "level": 18,
+      "url": "/assets/atlas/features/json/draconic_presence.json"
+    }
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/draconic/levels",
+  "url": "/assets/atlas/subclasses/json/draconic.json",
+  "updated_at": "2025-10-24T20:42:14.748Z",
+  "spells": [],
+  "image": "/assets/atlas/subclasses/draconic.webp"
+}

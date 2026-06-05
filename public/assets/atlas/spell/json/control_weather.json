@@ -1,0 +1,81 @@
+{
+  "higher_level": [],
+  "index": "control_weather",
+  "name": "control weather",
+  "desc": [
+    "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early.",
+    "When you cast the spell, you change the current weather conditions, which are determined by the GM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.",
+    "When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction.",
+    "##### Precipitation",
+    "| Stage | Condition |",
+    "|---|---|",
+    "| 1 | Clear |",
+    "| 2 | Light clouds |",
+    "| 3 | Overcast or ground fog |",
+    "| 4 | Rain, hail, or snow |",
+    "| 5 | Torrential rain, driving hail, or blizzard |",
+    "##### Temperature",
+    "| Stage | Condition |",
+    "|---|---|",
+    "| 1 | Unbearable heat |",
+    "| 2 | Hot |",
+    "| 3 | Warm |",
+    "| 4 | Cool |",
+    "| 5 | Cold |",
+    "| 6 | Arctic cold |",
+    "##### Wind",
+    "| Stage | Condition |",
+    "|---|---|",
+    "| 1 | Calm |",
+    "| 2 | Moderate wind |",
+    "| 3 | Strong wind |",
+    "| 4 | Gale |",
+    "| 5 | Storm |"
+  ],
+  "range": "Self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Burning incense and bits of earth and wood mixed in water.",
+  "ritual": false,
+  "duration": "Up to 8 hours",
+  "concentration": true,
+  "casting_time": "10 minutes",
+  "level": 8,
+  "school": {
+    "index": "transmutation",
+    "name": "transmutation",
+    "url": "/assets/atlas/magic_schools/json/transmutation.json"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "land",
+      "url": "/assets/atlas/subclasses/json/land.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/control_weather.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/control_weather.webp",
+  "sprite_index": 13,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet3.webp"
+}

@@ -1,0 +1,848 @@
+{
+  "category": "shops",
+  "categoryId": "7",
+  "updatedAt": "2026-06-04T07:02:42.036026Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
+    {
+      "id": "1",
+      "name": "The Wide",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        647,
+        1568
+      ],
+      "popup": {
+        "title": "The Wide",
+        "description": "A district in the [[Upper City]] of [[Baldur's Gate]] that served as a vast open-air marketplace and plaza.",
+        "image": "File:The Wide CLB.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "30",
+      "name": "Hissing Stones",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        358.50284427265206,
+        947.5277254708428
+      ],
+      "popup": {
+        "title": "Hissing Stones",
+        "description": "A bathhouse and a local landmark with a sterling reputation as the city's safest and most confidential meeting area among the various Baldurian power groups.",
+        "image": "File:Seatower of bg.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "54",
+      "name": "Distant Shores",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        657.9630067885462,
+        1622.8098844123238
+      ],
+      "popup": {
+        "title": "Distant Shores",
+        "description": "A merchant of imported goods and products native to [[Chult]].",
+        "image": "File:The wide.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "55",
+      "name": "Harbreeze Bakery",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        683.4182633334068,
+        1636.9541609656867
+      ],
+      "popup": {
+        "title": "Harbreeze Bakery",
+        "description": "A bakery offered such favorite delicacies as [[cinnamon]] [[cookie]]s and full loaves of [[sugarbread]] highlighted by the flavors of foreign [[tea]]s and [[spice]]s.",
+        "image": "File:The wide.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "56",
+      "name": "Felogyr's Fireworks",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        812.4651040054881,
+        1513.2095822040276
+      ],
+      "popup": {
+        "title": "Felogyr's Fireworks",
+        "description": "A four-story stone shop on [[Bindle Street]] that traded in [[fireworks]], [[torch]]es, [[candle]] wicks, and other lesser alchemical items, and as of the late 15 century [[DR]], the sole producer of [[smokepowder]] within [[Baldur's Gate]].",
+        "image": "File:Felogyr's Fireworks.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "60",
+      "name": "Counting House",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        762.4996883897857,
+        1291.4997476890233
+      ],
+      "popup": {
+        "title": "Counting House",
+        "description": "The center of trade and business in [[Baldur's Gate]], serving as both a bank and establishment that facilitated the exchange of various currencies.",
+        "image": "File:Counting House 5e.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "61",
+      "name": "Sorcerous Sundries",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        1085.055726446238,
+        1508.965514230487
+      ],
+      "popup": {
+        "title": "Sorcerous Sundries",
+        "description": "A magic shop on [[Stormshore Street]] in the [[Heapside]] district.",
+        "image": "File:Sorcerous Sundries.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "64",
+      "name": "Eastway Expeditions",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        1179.0015580510717,
+        1315.0010092439072
+      ],
+      "popup": {
+        "title": "Eastway Expeditions",
+        "description": "A shop that specialized in selling equipment to those who sought exploration or adventure, particularly those en route to the [[Chultan Peninsula]].",
+        "image": "File:Eastway Expeditions.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "66",
+      "name": "Candulhallow's Funeral Arrangements",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        1182.989057347239,
+        1467.2479982485074
+      ],
+      "popup": {
+        "title": "Candulhallow's Funeral Arrangements",
+        "description": "A city-sponsored business that specialized in the transportation and occasionally sale of corpses to cemeteries or temples.",
+        "image": "File:Candulhallow's Tombstones.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "71",
+      "name": "Danthelon's Dancing Axe",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        2593.666652424672,
+        798.3231991380069
+      ],
+      "popup": {
+        "title": "Danthelon's Dancing Axe",
+        "description": "A general store that sold good quality secondhand wares, from pots and pans to [[rope]], [[armor]], and [[weapons]].",
+        "image": "File:Danthelon's Dancing Axe.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "74",
+      "name": "Hamhocks Slaughterhouse",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        2430,
+        1406.0015138658607
+      ],
+      "popup": {
+        "title": "Hamhocks Slaughterhouse",
+        "description": "A massive compound composed of a number of animal pens, knackeries, and butcheries, its foul stench drove away the animals of the herders and wranglers.",
+        "image": "File:Sow's Foot.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "76",
+      "name": "Garynmor Stables and Menagerie",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        1397,
+        1467
+      ],
+      "popup": {
+        "title": "Garynmor Stables and Menagerie",
+        "description": "A business that specialized in the handling and care of mundane beasts of burden, as well as the exhibition of all manner of exotic and fantastical creatures.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "99",
+      "name": "Calim Jewel Emporium",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        1743.992936835142,
+        1777.0073170183273
+      ],
+      "popup": {
+        "title": "Calim Jewel Emporium",
+        "description": "Shop and home to the most well-regarded [[Baldurian]] jeweler of the late 15 century [[DR]] and a forum for local agents of the criminal organization known as [[the Guild]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "107",
+      "name": "Garynmor Stables",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        164.04877323527901,
+        1735.9482182777901
+      ],
+      "popup": {
+        "title": "Garynmor Stables",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "108",
+      "name": "Garynmor Stables",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        202.93935241161162,
+        1697.0566316693191
+      ],
+      "popup": {
+        "title": "Garynmor Stables",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "119",
+      "name": "Candlekeep Chandlery",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        411.4908734336711,
+        882.5032800426984
+      ],
+      "popup": {
+        "title": "Candlekeep Chandlery",
+        "description": "A shop that sold beautifying products and [[candle]]s, both mundane and magical in nature.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "186",
+      "name": "Lucky Aello's Discount Store",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        1228.4162293662127,
+        1432.7561754240155
+      ],
+      "popup": {
+        "title": "Lucky Aello's Discount Store",
+        "description": "A store that sold heavily marked-down goods that ranged from [[potion]]s of reliable quality to [[curse]]d [[weapon]]s and [[scroll]]s of magic protection.",
+        "image": "File:Lucky Aello's Discount Store.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "187",
+      "name": "Maltz's Weapon Shop",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        1075.8648291494494,
+        1362.5949457572797
+      ],
+      "popup": {
+        "title": "Maltz's Weapon Shop",
+        "description": "A merchant who dealt in mandate weapons, ran by [[Maltz]] in the 14 century [[DR]], located just to the northwest of the [[Elfsong Tavern]].",
+        "image": "File:Maltz's Weapon Shop.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "188",
+      "name": "Well-Adjusted Al's General Store",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        1118.9964812277115,
+        1150.4634466337234
+      ],
+      "popup": {
+        "title": "Well-Adjusted Al's General Store",
+        "description": "The general store located to the west of the [[Low Lantern]]; it traded in mundane goods and [[weapon]]s and run by eccentric [[Well-Adjusted Al]] in the 14 century [[DR]].",
+        "image": "File:Well-Adjusted Al's General Store.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "190",
+      "name": "Alabaster Stonecrafts",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        1569.777239591876,
+        1082.2272854276162
+      ],
+      "popup": {
+        "title": "Alabaster Stonecrafts",
+        "description": "An open-air stonemason's workshop run by twin [[dwarf|dwarven]] siblings in the late 15 century [[DR]].",
+        "image": "File:Misty Court.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "197",
+      "name": "Rivington General",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        2765.1037953756136,
+        418.23995704664776
+      ],
+      "popup": {
+        "title": "Rivington General",
+        "description": "A smithy that dealt in [[weapon]]s and [[armor]], run by [[Gyldro Angleiron]] after [[1477 DR]]. Its shop area was a building to the north, with the southern connected structure being the workshop and the proprietor's home.",
+        "image": "File:Rivington General.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "200",
+      "name": "Bonecloak's Apothecary",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        1066.4997378645696,
+        1517.7508830884187
+      ],
+      "popup": {
+        "title": "Bonecloak's Apothecary",
+        "description": "A [[potion]] brewer's shop run by [[Derryth Bonecloak]] and [[Baelen Bonecloak]] circa [[1492 DR]].",
+        "image": "File:Bonecloak's Apothecary.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "203",
+      "name": "The Glitter Gala",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        510.4998375948592,
+        1156.2501250327332
+      ],
+      "popup": {
+        "title": "The Glitter Gala",
+        "description": "A shop that traded in [[gemstone]]s and jewelry from [[Amn]], [[Cormyr]], and [[Damara]] and shared the building with [[Chromatic Scale]] musical instrument shop.",
+        "image": "File:The Glitter Gala.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "204",
+      "name": "Chromatic Scale",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        506.7498105273357,
+        1160.5000500130934
+      ],
+      "popup": {
+        "title": "Chromatic Scale",
+        "description": "A shop that dealt in quality musical instruments, run by [[Thomas C. Quirkilious]] in the late 15 century [[DR]].",
+        "image": "File:The Glitter Gala.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "206",
+      "name": "Facemaker's Boutique",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        503.0000903886713,
+        1182.7496215335348
+      ],
+      "popup": {
+        "title": "Facemaker's Boutique",
+        "description": "An upscale clothier, barber, makeup artist, stylist, and disguises shop.",
+        "image": "File:Facemaker Fashion.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "208",
+      "name": "Crimson Draughts",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        931.25,
+        1469.25
+      ],
+      "popup": {
+        "title": "Crimson Draughts",
+        "description": "[[Araj Oblodra]]'s [[alchemist]] shop located on [[Stormshore Street]] across from [[Beehive Goods and Wares]] general store in the late 15 century DR.",
+        "image": "File:Crimson Draughts.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "209",
+      "name": "Beehive Goods and Wares",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        935.25,
+        1459.25
+      ],
+      "popup": {
+        "title": "Beehive Goods and Wares",
+        "description": "A general store run by [[Oliver Tefoco]] in the late 15 century [[DR]] and offered food, [[potion]]s, [[wine]]s, and some general miscellany.",
+        "image": "File:Beehive Goods and Wares.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "211",
+      "name": "Sword Coast Couriers",
+      "categoryId": "7",
+      "type": "marker",
+      "position": [
+        2728,
+        490.4989907560928
+      ],
+      "popup": {
+        "title": "Sword Coast Couriers",
+        "description": "A courier, shipping, and postal agency that operated in the environs and within the city of [[Baldur's Gate]], located in the [[Rivington]] neighborhood in the late 15 century [[DR]].",
+        "image": "File:Sword Coast Couriers.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [],
+      "material_categories": []
+    }
+  ]
+}

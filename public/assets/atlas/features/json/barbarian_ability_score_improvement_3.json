@@ -1,0 +1,78 @@
+{
+  "index": "barbarian_ability_score_improvement_3",
+  "class": {
+    "index": "barbarian",
+    "name": "barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "name": "ability score improvement",
+  "level": 12,
+  "prerequisites": [],
+  "desc": [
+    "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
+  ],
+  "url": "/assets/atlas/features/json/barbarian_ability_score_improvement_3.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/barbarian_ability_score_improvement_3.webp",
+  "feature_specific": {
+    "choice": [
+      {
+        "choose": 1,
+        "type": "ability_score",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "strength",
+                "name": "strength",
+                "url": "/assets/atlas/ability_scores/json/strength.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "dexterity",
+                "name": "dexterity",
+                "url": "/assets/atlas/ability_scores/json/dexterity.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "constitution",
+                "name": "constitution",
+                "url": "/assets/atlas/ability_scores/json/constitution.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "intelligence",
+                "name": "intelligence",
+                "url": "/assets/atlas/ability_scores/json/intelligence.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "wisdom",
+                "name": "wisdom",
+                "url": "/assets/atlas/ability_scores/json/wisdom.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "charisma",
+                "name": "charisma",
+                "url": "/assets/atlas/ability_scores/json/charisma.json"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

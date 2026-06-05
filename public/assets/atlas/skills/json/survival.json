@@ -1,0 +1,15 @@
+{
+  "index": "survival",
+  "name": "survival",
+  "desc": [
+    "The GM might ask you to make a Wisdom (Survival) check to follow tracks, hunt wild game, guide your group through frozen wastelands, identify signs that owlbears live nearby, predict the weather, or avoid quicksand and other natural hazards."
+  ],
+  "ability_score": {
+    "index": "wis",
+    "name": "wis",
+    "url": "/assets/atlas/ability_scores/json/wisdom.json"
+  },
+  "url": "/assets/atlas/skills/json/survival.json",
+  "updated_at": "2025-10-24T20:42:14.523Z",
+  "image": "/assets/atlas/skills/json/survival.webp"
+}

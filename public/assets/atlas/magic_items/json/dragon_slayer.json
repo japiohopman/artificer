@@ -1,0 +1,62 @@
+{
+  "index": "dragon_slayer",
+  "name": "dragon slayer",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "rarity": "Rare",
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Weapon (any sword), rare",
+    "You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
+    "When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, \"dragon\" refers to any creature with the dragon type, including dragon turtles and wyverns."
+  ],
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "secondary_effects": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "slashing",
+        "name": "slashing",
+        "url": "/assets/atlas/damage_types/json/slashing.json"
+      },
+      "condition": "vs dragons"
+    }
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "attack_bonus": 1,
+      "damage_bonus": 1
+    },
+    "extra_damage": "3d6",
+    "condition": "vs dragons",
+    "base_equipment_options": [
+      "public/assets/atlas/equipment/json/greatsword.json",
+      "public/assets/atlas/equipment/json/longsword.json",
+      "public/assets/atlas/equipment/json/shortsword.json",
+      "public/assets/atlas/equipment/json/scimitar.json",
+      "public/assets/atlas/equipment/json/rapier.json"
+    ]
+  },
+  "image": "/assets/atlas/magic_items/dragon_slayer.webp",
+  "url": "/assets/atlas/magic_items/json/dragon_slayer.json",
+  "updated_at": "2026-05-04T17:19:49.761Z",
+  "imageUrl": "/assets/atlas/magic_items/images/dragon_slayer.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "4-5-2026"
+}

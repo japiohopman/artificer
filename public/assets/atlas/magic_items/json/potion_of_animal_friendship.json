@@ -1,0 +1,21 @@
+{
+  "index": "potion_of_animal_friendship",
+  "name": "potion of animal friendship",
+  "equipment_category": {
+    "index": "potion",
+    "name": "potion",
+    "url": "/assets/atlas/equipment_categories/potion"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Potion, uncommon",
+    "When you drink this potion, you can cast the animal friendship spell (save DC 13) for 1 hour at will. Agitating this muddy liquid brings little bits into view: a fish scale, a hummingbird tongue, a cat claw, or a squirrel hair."
+  ],
+  "url": "/assets/atlas/magic_items/json/potion_of_animal_friendship.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/potion_of_animal_friendship.webp"
+}

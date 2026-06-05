@@ -1,0 +1,21 @@
+{
+  "index": "stone_of_good_luck_luckstone",
+  "name": "stone of good luck (luckstone)",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, uncommon (requires attunement)",
+    "While this polished agate is on your person, you gain a +1 bonus to ability checks and saving throws."
+  ],
+  "url": "/assets/atlas/magic_items/json/stone_of_good_luck_luckstone.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/stone_of_good_luck_luckstone.webp"
+}

@@ -1,0 +1,83 @@
+{
+  "index": "hawk",
+  "name": "hawk",
+  "size": "Tiny",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 13
+    }
+  ],
+  "hit_points": 1,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4-1",
+  "speed": {
+    "walk": "10 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 5,
+  "dexterity": 16,
+  "constitution": 8,
+  "intelligence": 2,
+  "wisdom": 14,
+  "charisma": 6,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/skills/json/perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "keen sight",
+      "desc": "The hawk has advantage on Wisdom (Perception) checks that rely on sight.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "talons",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 1 slashing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/hawk.webp",
+  "url": "/assets/atlas/enemies/json/hawk.json",
+  "updated_at": "2026-04-01T15:49:48.508Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 10,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.webp",
+  "wikiData": null,
+  "imageUrl": null,
+  "last_updated": "1-4-2026"
+}

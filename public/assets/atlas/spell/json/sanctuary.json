@@ -1,0 +1,55 @@
+{
+  "higher_level": [],
+  "index": "sanctuary",
+  "name": "sanctuary",
+  "desc": [
+    "You ward a creature within range against attack. Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from area effects, such as the explosion of a fireball.",
+    "If the warded creature makes an attack or casts a spell that affects an enemy creature, this spell ends."
+  ],
+  "range": "30 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A small silver mirror.",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 bonus action",
+  "level": 1,
+  "school": {
+    "index": "abjuration",
+    "name": "abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [
+    {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "/assets/atlas/class/json/artificer.json"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    },
+    {
+      "index": "devotion",
+      "name": "devotion",
+      "url": "/assets/atlas/subclasses/json/devotion.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/sanctuary.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/sanctuary.webp",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet11.webp"
+}

@@ -1,0 +1,29 @@
+{
+  "index": "animated_shield",
+  "name": "animated shield",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "rarity": {
+    "name": "very rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Armor (shield), very rare (requires attunement)",
+    "While holding this shield, you can speak its command word as a bonus action to cause it to animate. The shield leaps into the air and hovers in your space to protect you as if you were wielding it, leaving your hands free. The shield remains animated for 1 minute, until you use a bonus action to end this effect, or until you are incapacitated or die, at which point the shield falls to the ground or into your hand if you have one free."
+  ],
+  "image": "/assets/atlas/magic_items/animated_shield.webp",
+  "url": "/assets/atlas/magic_items/json/animated_shield.json",
+  "updated_at": "2026-04-22T18:04:51.080Z",
+  "imageUrl": "/assets/atlas/magic_items/images/animated_shield.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "ring-1",
+    "off-hand"
+  ],
+  "last_updated": "22-4-2026"
+}

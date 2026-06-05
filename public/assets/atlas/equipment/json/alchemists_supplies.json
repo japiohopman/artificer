@@ -1,0 +1,39 @@
+{
+  "special": [],
+  "index": "alchemists_supplies",
+  "name": "alchemist's supplies",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Artisan's Tools",
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "weight": 8,
+  "desc": [
+    "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+  ],
+  "url": "/assets/atlas/equipment/json/alchemists_supplies.json",
+  "updated_at": "2026-04-29T00:34:10.596Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/alchemists_supplies.webp",
+  "sprite_index": 3,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
+  "imageUrl": "/assets/atlas/equipment/images/alchemists_supplies.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "29-4-2026",
+  "kind": "tool",
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "special": [],
+  "index": "fishing_tackle",
+  "name": "fishing tackle",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 4,
+  "desc": [
+    "This kit includes a wooden rod, silken line, corkwood bobbers, steel hooks, lead sinkers, velvet lures, and narrow netting."
+  ],
+  "url": "/assets/atlas/equipment/json/fishing_tackle.json",
+  "updated_at": "2026-05-03T14:15:07.466Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/fishing_tackle.webp",
+  "sprite_index": 11,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/fishing_tackle.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "category": "Adventuring Gear",
+  "last_updated": "3-5-2026",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

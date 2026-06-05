@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/sub_region.schema.json",
+  "title": "Sub-Region",
+  "description": "A sub-region in the game atlas.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "world",
+    "continent",
+    "region",
+    "sub_region",
+    "description"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the sub-region (slug)."
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the sub-region."
+    },
+    "world": {
+      "type": "string",
+      "enum": ["totil"],
+      "description": "The world the sub-region is in."
+    },
+    "continent": {
+      "type": "string",
+      "enum": ["fearun"],
+      "description": "The continent the sub-region is on."
+    },
+    "region": {
+      "type": "string",
+      "description": "The region the sub-region is in."
+    },
+    "sub_region": {
+      "type": "string",
+      "description": "The sub-region identifier (usually matches id)."
+    },
+    "title": {
+      "type": "string",
+      "description": "Formal title or epithet of the sub-region."
+    },
+    "description": {
+      "type": "string",
+      "description": "Short summary or introduction to the sub-region."
+    },
+    "wiki": {
+      "type": "string",
+      "description": "Brief encyclopedic summary."
+    },
+    "image": {
+      "type": "string",
+      "description": "Path or filename of the main sub-region image."
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Keywords describing the sub-region."
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "higher_level": [],
+  "index": "plane_shift",
+  "name": "plane shift",
+  "desc": [
+    "You and up to eight willing creatures who link hands in a circle are transported to a different plane of existence. You can specify a target destination in general terms, such as the City of Brass on the Elemental Plane of Fire or the palace of Dispater on the second level of the Nine Hells, and you appear in or near that destination. If you are trying to reach the City of Brass, for example, you might arrive in its Street of Steel, before its Gate of Ashes, or looking at the city from across the Sea of Fire, at the GM's discretion.",
+    "Alternatively, if you know the sigil sequence of a teleportation circle on another plane of existence, this spell can take you to that circle. If the teleportation circle is too small to hold all the creatures you transported, they appear in the closest unoccupied spaces next to the circle.",
+    "You can use this spell to banish an unwilling creature to another plane. Choose a creature within your reach and make a melee spell attack against it. On a hit, the creature must make a charisma saving throw. If the creature fails this save, it is transported to a random location on the plane of existence you specify. A creature so transported must find its own way back to your current plane of existence."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A forked, metal rod worth at least 250 gp, attuned to a particular plane of existence.",
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 7,
+  "attack_type": "melee",
+  "dc": {
+    "dc_type": {
+      "index": "cha",
+      "name": "cha",
+      "url": "/assets/atlas/ability_scores/json/charisma.json"
+    },
+    "dc_success": "none",
+    "desc": "If the creature fails this save, it is transported to a random location on the plane of existence you specify. A creature so transported must find its own way back to your current plane of existence."
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/plane_shift.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/plane_shift.webp",
+  "sprite_index": 19,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet9.webp"
+}

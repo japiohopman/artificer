@@ -1,0 +1,104 @@
+{
+  "index": "noble",
+  "name": "noble",
+  "desc": "**Nobles** wield great authority and influence as members of the upper class, possessing wealth and connections that can make them as powerful as monarchs and generals. A noble often travels in the company of guards, as well as servants who are commoners.\n\nThe noble’s statistics can also be used to represent **courtiers** who aren’t of noble birth.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any alignment",
+  "armor_class": 15,
+  "hit_points": 9,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 12,
+  "constitution": 11,
+  "intelligence": 12,
+  "wisdom": 14,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill_deception",
+        "name": "skill: deception",
+        "url": "/assets/atlas/proficiencies/json/skill_deception.json"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_insight",
+        "name": "skill: insight",
+        "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill_persuasion",
+        "name": "skill: persuasion",
+        "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any two languages",
+  "challenge_rating": "0.125",
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "actions": [
+    {
+      "name": "rapier",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) piercing damage.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d8+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "reactions": [
+    {
+      "name": "parry",
+      "desc": "The noble adds 2 to its AC against one melee attack that would hit it. To do so, the noble must see the attacker and be wielding a melee weapon."
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/noble.webp",
+  "url": "/assets/atlas/enemies/json/noble.json",
+  "updated_at": "2026-05-11T03:58:01.718Z",
+  "forms": [],
+  "legendary_actions": [],
+  "special_abilities": [],
+  "sprite_index": 6,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.webp",
+  "stats": {
+    "str": 11,
+    "dex": 12,
+    "con": 11,
+    "int": 12,
+    "wis": 14,
+    "cha": 16
+  },
+  "imageUrl": "/assets/atlas/enemies/images/noble.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "rarity": "Uncommon",
+  "last_updated": "11-5-2026"
+}

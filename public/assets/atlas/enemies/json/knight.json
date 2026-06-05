@@ -1,0 +1,146 @@
+{
+  "index": "knight",
+  "name": "knight",
+  "desc": "Knights are warriors who pledge service to rulers, religious orders, and noble causes. A knight’s alignment determines the extent to which a pledge is honored. Whether undertaking a quest or patrolling a realm, a knight often travels with an entourage that includes squires and hirelings who are commoners.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 18,
+      "armor": [
+        {
+          "index": "plate_armor",
+          "name": "plate armor",
+          "url": "/assets/atlas/equipment/plate_armor"
+        }
+      ]
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8+16",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 11,
+  "constitution": 14,
+  "intelligence": 11,
+  "wisdom": 11,
+  "charisma": 15,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [
+    {
+      "name": "brave",
+      "desc": "The knight has advantage on saving throws against being frightened.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The knight makes two melee attacks.",
+      "actions": [
+        {
+          "action_name": "Greatsword",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "greatsword",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "heavy crossbow",
+      "desc": "Ranged Weapon Attack: +2 to hit, range 100/400 ft., one target. Hit: 5 (1d10) piercing damage.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "leadership",
+      "desc": "For 1 minute, the knight can utter a special command or warning whenever a nonhostile creature that it can see within 30 ft. of it makes an attack roll or a saving throw. The creature can add a d4 to its roll provided it can hear and understand the knight. A creature can benefit from only one Leadership die at a time. This effect ends if the knight is incapacitated.",
+      "usage": {
+        "type": "recharge after rest",
+        "rest_types": [
+          "short",
+          "long"
+        ]
+      },
+      "actions": []
+    }
+  ],
+  "reactions": [
+    {
+      "name": "parry",
+      "desc": "The knight adds 2 to its AC against one melee attack that would hit it. To do so, the knight must see the attacker and be wielding a melee weapon."
+    }
+  ],
+  "image": "/assets/atlas/enemies/knight.webp",
+  "url": "/assets/atlas/enemies/json/knight.json",
+  "updated_at": "2026-04-04T14:03:22.791Z",
+  "forms": [],
+  "legendary_actions": [],
+  "sprite_index": 3,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet8.webp",
+  "imageUrl": null,
+  "background_type": "castle",
+  "last_updated": "4-4-2026"
+}

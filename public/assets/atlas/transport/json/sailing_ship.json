@@ -1,0 +1,49 @@
+{
+  "desc": [
+    "The barnacled hull of this miniature sailing ship whispers secrets of forgotten voyages to drowned gods, its tiny, blood-red sails forever catching a phantom wind that chills the bone. Hold it close, and feel the abyss beckon, promising passage across seas where no sane mortal should ever tread.\n"
+  ],
+  "special": [],
+  "index": "sailing_ship",
+  "name": "sailing ship",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Waterborne Vehicles",
+  "cost": {
+    "quantity": 10000,
+    "unit": "gp"
+  },
+  "speed": {
+    "water": {
+      "ft_per_round": 17.6,
+      "mph": 2
+    }
+  },
+  "url": "/assets/atlas/transport/json/sailing_ship.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/transport/images/sailing_ship.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/sailing_ship.webp",
+  "_type": "equipment",
+  "background_type": "water",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "25-4-2026",
+  "transport_type": "vehicle",
+  "combat_stats": {
+    "armor_class": 15,
+    "hit_points": 300,
+    "damage_threshold": 15
+  },
+  "capacity": {
+    "crew_required": 20,
+    "max_passengers": 20
+  },
+  "transport_specific": {}
+}

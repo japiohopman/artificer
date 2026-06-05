@@ -1,0 +1,18 @@
+{
+  "index": "battleaxes",
+  "type": "weapons",
+  "name": "battleaxes",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/battleaxes.json",
+  "reference": {
+    "index": "battleaxe",
+    "name": "battleaxe",
+    "url": "/assets/atlas/equipment/json/battleaxe.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/battleaxes.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

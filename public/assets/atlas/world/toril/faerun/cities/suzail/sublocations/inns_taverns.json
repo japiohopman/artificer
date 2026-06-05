@@ -1,0 +1,865 @@
+{
+  "category": "inns_taverns",
+  "updatedAt": "2026-05-03T05:02:02.213Z",
+  "location_id": "suzail",
+  "sub_locations": [
+    {
+      "id": "lake_azoun",
+      "name": "Lake Azoun",
+      "type": "inn_tavern",
+      "description": "A small crescent-shaped pond that separated [[Castle Obarskyr]] and the [[Royal Gardens]].",
+      "coordinates": {
+        "x": 66.09081174662333,
+        "y": 55.59660240337871
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_silent_room",
+      "name": "The Silent Room",
+      "type": "inn_tavern",
+      "description": "Temple of the god of knowledge, [[Oghma]]. Previously, dedicated to Oghma's servant - god [[Deneir]].",
+      "coordinates": {
+        "x": 71.63337941741334,
+        "y": 55.382825784726364
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "shrine_to_tempus",
+      "name": " Shrine to Tempus",
+      "type": "inn_tavern",
+      "description": "A shrine dedicated to [[Tempus]].",
+      "coordinates": {
+        "x": 73.56664823303332,
+        "y": 66.77150762327364
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "shrine_to_malar",
+      "name": "Shrine to Malar",
+      "type": "inn_tavern",
+      "description": "A shrine dedicated to the [[Malar|Master of the Hunt]].",
+      "coordinates": {
+        "x": 69.83335176696667,
+        "y": 68.69729219445605
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_wailing_wheel",
+      "name": "The Wailing Wheel",
+      "type": "inn_tavern",
+      "description": "A fair-priced and quiet inn on the [[Promenade (Suzail)|Promenade]], infamous for its poor service and lack of cleanliness.",
+      "coordinates": {
+        "x": 24.133333333333333,
+        "y": 55.6650390625
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_six_candles",
+      "name": "The Six Candles",
+      "type": "inn_tavern",
+      "description": "A cheap and clean inn on the [[Promenade (Suzail)|Promenade]].",
+      "coordinates": {
+        "x": 27.479488912148334,
+        "y": 50.86217469308965
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "witch_dukes_bride",
+      "name": "Witch-Duke's Bride",
+      "type": "inn_tavern",
+      "description": "A popular tavern established in the 15{{th}} century [[DR]]. Formerly the '''High Tankard''' tavern.",
+      "coordinates": {
+        "x": 36.88333333333333,
+        "y": 42.23440489063848
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_myrmidon",
+      "name": "The Myrmidon",
+      "type": "inn_tavern",
+      "description": "Previously known as '''[[Thelmar's Inn]].'''",
+      "coordinates": {
+        "x": 46.68139693643,
+        "y": 39.83922350932051
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_dragons_jaws",
+      "name": "The Dragon's Jaws",
+      "type": "inn_tavern",
+      "description": "A tavern often used for business dealings and meetings. Formerly known as the '''Red Sword.'''",
+      "coordinates": {
+        "x": 67.20002765044667,
+        "y": 42.699238677091216
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "towers_of_good_fortune",
+      "name": "Towers of Good Fortune",
+      "type": "inn_tavern",
+      "description": "Also known as the '''Temple of Good Fortune''', the Towers were a large and wealthy temple of [[Tymora]].",
+      "coordinates": {
+        "x": 75.86669431711333,
+        "y": 63.51759473090879
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_nightgate_inn",
+      "name": "The Nightgate Inn",
+      "type": "inn_tavern",
+      "description": "A damp and gloomy inn located outside the city walls.",
+      "coordinates": {
+        "x": 89.93332411651666,
+        "y": 73.84377656945605
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "shrine_to_milil",
+      "name": "Shrine to Milil",
+      "type": "inn_tavern",
+      "description": "A shrine dedicated to Milil, the Guardian of Singers and Troubadours.",
+      "coordinates": {
+        "x": 85.48572803449333,
+        "y": 50.99550728128144
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "shrine_to_lliira",
+      "name": "Shrine to Lliira",
+      "type": "inn_tavern",
+      "description": "A shrine dedicated to the worship of [[Lliira|Our Lady of Joy]].",
+      "coordinates": {
+        "x": 82.7,
+        "y": 48.64261465800332
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "dragonmere",
+      "name": "Dragonmere",
+      "type": "inn_tavern",
+      "description": "Dragonmere, or the Lake of the Dragons",
+      "coordinates": {
+        "x": 48.683316666383334,
+        "y": 0.4598376974832969
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_laughing_lass",
+      "name": "The Laughing Lass",
+      "type": "inn_tavern",
+      "description": "A tavern that became a [[festhall]] on warm summer nights.",
+      "coordinates": {
+        "x": 68.26671275074666,
+        "y": 29.98245840800166
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_basin",
+      "name": "The Basin",
+      "type": "inn_tavern",
+      "description": "One of the city's commercial deepwater harbors capable of serving up to 20 ships at the time.",
+      "coordinates": {
+        "x": 28.45,
+        "y": 26.662109375
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_winking_eye",
+      "name": "The Winking Eye",
+      "type": "inn_tavern",
+      "description": "A tavern of note on the [[Court Close]].",
+      "coordinates": {
+        "x": 39.73335176696666,
+        "y": 44.99026426563848
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_old_dwarf",
+      "name": "The Old Dwarf",
+      "type": "inn_tavern",
+      "description": "A long-standing tavern with deep wince cellars that hid a passage to [[Castle Obarskyr]].",
+      "coordinates": {
+        "x": 57.88508422262,
+        "y": 38.644505395826364
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_weather_eye",
+      "name": "The Weather Eye",
+      "type": "inn_tavern",
+      "description": "A tavern not far from the wharves.",
+      "coordinates": {
+        "x": 48.460410806409996,
+        "y": 22.773828986204432
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_golden_goblin",
+      "name": "The Golden Goblin",
+      "type": "inn_tavern",
+      "description": "A rowdy tavern infamous for its brawls.",
+      "coordinates": {
+        "x": 18.916666666666668,
+        "y": 31.9248046875
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_crying_witch",
+      "name": "The Crying Witch",
+      "type": "inn_tavern",
+      "description": "A tavern overlooking [[Suzail]]'s market plaza.",
+      "coordinates": {
+        "x": 20.133333333333333,
+        "y": 24.0888671875
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "leaning_post",
+      "name": " Leaning Post",
+      "type": "inn_tavern",
+      "description": "A quiet quality inn on the crossing of [[Garth Street]] and the [[Hunt Ride]].",
+      "coordinates": {
+        "x": 23.70002765044833,
+        "y": 40.54105215800332
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_jaws",
+      "name": "The Jaws",
+      "type": "inn_tavern",
+      "description": "A stream that fed into [[Lake Azoun]] and passed toward [[the Basin]] as a culvert.",
+      "coordinates": {
+        "x": 67.28604408759666,
+        "y": 73.04552307360214
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "selavars_inn",
+      "name": "Selavar's Inn",
+      "type": "inn_tavern",
+      "description": "An inn of note.",
+      "coordinates": {
+        "x": 48.14799336907333,
+        "y": 34.658975394778906
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_black_rat",
+      "name": "The Black Rat",
+      "type": "inn_tavern",
+      "description": "A murky but genuinely hospitable eatery and a tavern.",
+      "coordinates": {
+        "x": 35.82692606376667,
+        "y": 22.58605071605789
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_mares_tail",
+      "name": "The Mare's Tail",
+      "type": "inn_tavern",
+      "description": "A tavern of note.",
+      "coordinates": {
+        "x": 52.28204074830333,
+        "y": 29.478720525842792
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "taneths_feasthall",
+      "name": "Taneth's Feasthall",
+      "type": "inn_tavern",
+      "description": "A [[festhall]] of note.",
+      "coordinates": {
+        "x": 52.75017891106334,
+        "y": 27.328581632235625
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "sontravins_inn",
+      "name": "Sontravin's Inn",
+      "type": "inn_tavern",
+      "description": "An inn of note.",
+      "coordinates": {
+        "x": 88.73339785104666,
+        "y": 30.812546496547597
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "shrine_to_tyr",
+      "name": "Shrine to Tyr",
+      "type": "inn_tavern",
+      "description": "A shrine dedicated to [[Tyr]], God of Justice.",
+      "coordinates": {
+        "x": 72.36657645020334,
+        "y": 67.23644541018145
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "sulchras_festhall",
+      "name": "Sulchra's Festhall",
+      "type": "inn_tavern",
+      "description": "A [[festhall]] of note.",
+      "coordinates": {
+        "x": 83.17623246759,
+        "y": 58.99887259821718
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_warm_bed_inn",
+      "name": "The Warm Bed Inn",
+      "type": "inn_tavern",
+      "description": "",
+      "coordinates": {
+        "x": 84.87695236632334,
+        "y": 52.35807198402363
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_purple_scar",
+      "name": "The Purple Scar",
+      "type": "inn_tavern",
+      "description": "A [[festhall]], formerly a smithy-shop of [[Atham One-Eye]].",
+      "coordinates": {
+        "x": 13.4,
+        "y": 9.8779296875
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "vardrims_rooming_house",
+      "name": "Vardrim's rooming-house",
+      "type": "inn_tavern",
+      "description": "A busy rooming-house for carters, crate-makers, and warehouse workers.",
+      "coordinates": {
+        "x": 78.40005530089667,
+        "y": 51.166042194456054
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "montalars_happy_house",
+      "name": "Montalar's Happy House",
+      "type": "inn_tavern",
+      "description": "A busy dawn-to-dusk eatery that did not welcome drunks.",
+      "coordinates": {
+        "x": 79.2372529406,
+        "y": 52.97449990697656
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_hidden_lady",
+      "name": "The Hidden Lady",
+      "type": "inn_tavern",
+      "description": "A friendly inn and tavern overlooking the waters of the [[Dragonmere]].",
+      "coordinates": {
+        "x": 5.232616249873001,
+        "y": 10.283441215430331
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "shalibers_ship",
+      "name": "Shaliber's Ship",
+      "type": "inn_tavern",
+      "description": "A curious inn aboard a semi-permanently docked ship.",
+      "coordinates": {
+        "x": 43.60490513862333,
+        "y": 13.100824493580898
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "valkurs_berth",
+      "name": "Valkur's Berth",
+      "type": "inn_tavern",
+      "description": "A well-hidden half-flooded temple to [[Valkur]] and a smuggling operation.",
+      "coordinates": {
+        "x": 39.36667588348334,
+        "y": 27.45899433854594
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "darcleirs_haven",
+      "name": "Darcleir's Haven",
+      "type": "inn_tavern",
+      "description": "An exclusive and fanciful eatery.",
+      "coordinates": {
+        "x": 50.35417413908,
+        "y": 38.593847770825974
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_eel_revealed",
+      "name": "The Eel Revealed",
+      "type": "inn_tavern",
+      "description": "Eatery is famed for its fortified [[wine]]s, [[eel]] and [[cheese]] [[pie]]s, and young [[oil]]ed wait staff.",
+      "coordinates": {
+        "x": 31.159412995007997,
+        "y": 51.76207762140156
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "index": "ring_of_resistance",
+  "name": "ring of resistance",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [
+    {
+      "index": "ring_of_resistance_acid",
+      "name": "ring of acid resistance",
+      "url": "/assets/atlas/magic_items/ring_of_resistance_acid"
+    },
+    {
+      "index": "ring_of_resistance_cold",
+      "name": "ring of cold resistance",
+      "url": "/assets/atlas/magic_items/ring_of_resistance_cold"
+    },
+    {
+      "index": "ring_of_resistance_fire",
+      "name": "ring of fire resistance",
+      "url": "/assets/atlas/magic_items/ring_of_resistance_fire"
+    },
+    {
+      "index": "ring_of_resistance_force",
+      "name": "ring of force resistance",
+      "url": "/assets/atlas/magic_items/ring_of_resistance_force"
+    },
+    {
+      "index": "ring_of_resistance_lightning",
+      "name": "ring of lightning resistance",
+      "url": "/assets/atlas/magic_items/ring_of_resistance_lightning"
+    },
+    {
+      "index": "ring_of_resistance_necrotic",
+      "name": "ring of necrotic resistance",
+      "url": "/assets/atlas/magic_items/ring_of_resistance_necrotic"
+    },
+    {
+      "index": "ring_of_resistance_poison",
+      "name": "ring of poison resistance",
+      "url": "/assets/atlas/magic_items/ring_of_resistance_poison"
+    },
+    {
+      "index": "ring_of_resistance_psychic",
+      "name": "ring of psychic resistance",
+      "url": "/assets/atlas/magic_items/ring_of_resistance_psychic"
+    },
+    {
+      "index": "ring_of_resistance_radiant",
+      "name": "ring of radiant resistance",
+      "url": "/assets/atlas/magic_items/ring_of_resistance_radiant"
+    },
+    {
+      "index": "ring_of_resistance_thunder",
+      "name": "ring of thunder resistance",
+      "url": "/assets/atlas/magic_items/ring_of_resistance_thunder"
+    }
+  ],
+  "variant": false,
+  "desc": [
+    "Ring, rare (requires attunement)",
+    "You have resistance to one damage type while wearing this ring. The gem in the ring indicates the type, which the GM chooses or determines randomly.",
+    "| d10 | Damage Type | Gem |",
+    "|---|---|---|",
+    "| 1 | Acid | Pearl |",
+    "| 2 | Cold | Tourmaline |",
+    "| 3 | Fire | Garnet |",
+    "| 4 | Force | Sapphire |",
+    "| 5 | Lightning | Citrine |",
+    "| 6 | Necrotic | Jet |",
+    "| 7 | Poison | Amethyst |",
+    "| 8 | Psychic | Jade |",
+    "| 9 | Radiant | Topaz |",
+    "| 10 | Thunder | Spinel |"
+  ],
+  "url": "/assets/atlas/magic_items/json/ring_of_resistance.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/ring_of_resistance.webp"
+}

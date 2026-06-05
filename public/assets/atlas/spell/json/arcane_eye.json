@@ -1,0 +1,54 @@
+{
+  "higher_level": [],
+  "index": "arcane_eye",
+  "name": "arcane eye",
+  "desc": [
+    "You create an invisible, magical eye within range that hovers in the air for the duration.",
+    "You mentally receive visual information from the eye, which has normal vision and darkvision out to 30 feet. The eye can look in every direction.",
+    "As an action, you can move the eye up to 30 feet in any direction. There is no limit to how far away from you the eye can move, but it can't enter another plane of existence. A solid barrier blocks the eye's movement, but the eye can pass through an opening as small as 1 inch in diameter."
+  ],
+  "range": "30 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A bit of bat fur.",
+  "ritual": false,
+  "duration": "Up to 1 hour",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 4,
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 30
+  },
+  "school": {
+    "index": "divination",
+    "name": "divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [
+    {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "/assets/atlas/class/json/artificer.json"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/arcane_eye.json",
+  "updated_at": "2026-06-01T06:56:15.190Z",
+  "image": "/assets/atlas/spell/json/images/arcane_eye.webp",
+  "sprite_index": 13,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet1.webp"
+}

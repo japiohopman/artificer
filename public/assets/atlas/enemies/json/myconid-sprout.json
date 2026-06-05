@@ -1,0 +1,43 @@
+{
+  "name": "Myconid Sprout",
+  "index": "myconid-sprout",
+  "size": "Small",
+  "type": "plant",
+  "stats": {
+    "str": 8,
+    "wis": 11
+  },
+  "rarity": "Common",
+  "challenge_rating": "0",
+  "actions": [],
+  "special_abilities": [],
+  "alignment": "any alignment",
+  "armor_class": 12,
+  "background_type": "underdark",
+  "card_color": "#556B2F",
+  "condition_immunities": [
+    {
+      "name": "poisoned"
+    }
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "hit_points": 7,
+  "item_drops": [
+    {
+      "name": "Myconid Cap",
+      "quantity": "1d4",
+      "rarity": "Common"
+    }
+  ],
+  "speed": "20 ft.",
+  "imageUrl": "/assets/atlas/enemies/images/myconid-sprout.webp",
+  "last_updated": "18-5-2026",
+  "updated_at": "2026-05-18T11:35:29.298Z",
+  "_type": "enemies",
+  "hit_dice": "2d6",
+  "languages": "—",
+  "senses": "darkvision 60 ft., passive Perception 10",
+  "xp": 10
+}

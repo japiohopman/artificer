@@ -1,0 +1,535 @@
+{
+  "category": "roads",
+  "updatedAt": "2026-05-03T05:01:58.829Z",
+  "location_id": "suzail",
+  "sub_locations": [
+    {
+      "id": "calantars_way",
+      "name": "Calantar's Way",
+      "type": "roads",
+      "description": "The road that started at the [[Eastgate (Suzail|Eastgate]] and went north past [[Calantar's Bridge]] and towards [[Arabel]].",
+      "coordinates": {
+        "x": 82.28669960514,
+        "y": 75.36849226106739
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "way_of_the_dragon",
+      "name": "Way of the Dragon",
+      "type": "roads",
+      "description": "The road that started at the [[Horngate]], cut through the [[King's Forest]] and reached the town of [[Waymoot]].",
+      "coordinates": {
+        "x": 17.544434845260334,
+        "y": 68.12947478232891
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_promenade",
+      "name": "The Promenade",
+      "type": "roads",
+      "description": "Once known as '''The March''', the wide and semi-circular street arching the [[Royal Court]] district. It was one of the best shopping strolls on [[Toril]].",
+      "coordinates": {
+        "x": 56.68463940714333,
+        "y": 40.50530557255468
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "garth_street",
+      "name": "Garth Street",
+      "type": "roads",
+      "description": "The street that stretched from the [[Market (Suzail)|Market]] to the [[Promenade (Suzail) |Promenade]].",
+      "coordinates": {
+        "x": 19.045685754357,
+        "y": 35.78038320918535
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "hunt_bide",
+      "name": "Hunt Bide",
+      "type": "roads",
+      "description": "The street that stretched from [[the Basin]] to the [[Promenade (Suzail)|Promenade]].",
+      "coordinates": {
+        "x": 26.015198496581334,
+        "y": 41.83166767622031
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "tholone_lane",
+      "name": "Tholone Lane",
+      "type": "roads",
+      "description": "A short arc street between [[Nerester's Run]] and [[Silverscales Street]].",
+      "coordinates": {
+        "x": 41.36743338808,
+        "y": 26.39679169983988
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "neresters_run",
+      "name": "Nerester's Run",
+      "type": "roads",
+      "description": "The street at the western end of [[Tholone Lane]].",
+      "coordinates": {
+        "x": 36.300696487390006,
+        "y": 28.488227214863162
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "silverscales_street",
+      "name": "Silverscales Street",
+      "type": "roads",
+      "description": "The street at the eastern end of [[Tholone Lane]].",
+      "coordinates": {
+        "x": 37.66566583184333,
+        "y": 22.844449079581114
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "swordstars_lane",
+      "name": "Swordstars Lane",
+      "type": "roads",
+      "description": "The street that ended in a \"Y\" junction to the north and a \"T\" junction to the south.",
+      "coordinates": {
+        "x": 79.93324554080667,
+        "y": 50.90031632668593
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "cart_alley",
+      "name": "Cart alley",
+      "type": "roads",
+      "description": "A busy cart alley for the warehouses on the block that connected to [[Swordstars Lane]].",
+      "coordinates": {
+        "x": 78.98332882251,
+        "y": 52.502470727544534
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "royal_ride",
+      "name": "Royal Ride",
+      "type": "roads",
+      "description": "A rich street that began on the [[Promenade (Suzail)|Promenade]] by the [[Towers of Good Fortune]] and ran west.",
+      "coordinates": {
+        "x": 57.11232833915,
+        "y": 67.43417183222128
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "stonebow_street",
+      "name": "Stonebow Street",
+      "type": "roads",
+      "description": "A street that began on the [[Promenade (Suzail)|Promenade]] and housed the [[Shrine to Lliira (Suzail)|Shrine to Lliira]] on its northern side.",
+      "coordinates": {
+        "x": 76.0000353359604,
+        "y": 48.41018281945583
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "torch_street",
+      "name": "Torch Street",
+      "type": "roads",
+      "description": "A street that crossed [[Stonebow Street]], west of the [[Shrine to Lliira (Suzail)|Shrine to Lliira]].",
+      "coordinates": {
+        "x": 79.30814356196667,
+        "y": 44.456396918840234
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "blade_lane",
+      "name": "Blade Lane",
+      "type": "roads",
+      "description": "A curved street at the eastern end of [[Stonebow Street]].",
+      "coordinates": {
+        "x": 84.07489216832667,
+        "y": 43.892193706347854
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "coachwheels_way",
+      "name": "Coachwheels Way",
+      "type": "roads",
+      "description": "A straight street with the Shrine to Milil on its west side.",
+      "coordinates": {
+        "x": 87.10860593595,
+        "y": 50.59996456228242
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "dancing_druid_lane",
+      "name": "Dancing Druid Lane",
+      "type": "roads",
+      "description": "The street with the entrance to The [[Osculatory]] at its northern end.",
+      "coordinates": {
+        "x": 47.56666666666666,
+        "y": 17.9462890625
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "street_of_staves",
+      "name": "Street of Staves",
+      "type": "roads",
+      "description": "The street that met with the [[Promenade (Suzail)|Promenade]] right by the [[Dragon's Jaws]] tavern.",
+      "coordinates": {
+        "x": 71.14883617734665,
+        "y": 40.90158166708789
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "court_close",
+      "name": "Court Close",
+      "type": "roads",
+      "description": "The street that passed immediately east of The [[Winking Eye]], looped around the next block and ran all the way to [[Bolliver's Wharf]].",
+      "coordinates": {
+        "x": 45.733286510650004,
+        "y": 32.20695019729508
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "mayhap_lane",
+      "name": "Mayhap Lane",
+      "type": "roads",
+      "description": "The street that crossed with [[Hunt Bide]] and the [[Promenade (Suzail)|Promenade]] on the corner where The [[The Six Candles|Six Candles]] stood.",
+      "coordinates": {
+        "x": 23.617366491630683,
+        "y": 49.609341185550726
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "stables_of_the_six_candles_inn",
+      "name": "Stables of the Six Candles inn",
+      "type": "roads",
+      "description": "Located in the middle of the block with its entry on [[Windever Street]].",
+      "coordinates": {
+        "x": 24.348043498856786,
+        "y": 52.30932899262046
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "windever_street",
+      "name": "Windever Street",
+      "type": "roads",
+      "description": "The street ending at the [[Promenade (Suzail)|Promenade]] with the entry to the stables of the [[The Six Candles|Six Candles]] inn.  ",
+      "coordinates": {
+        "x": 21.807043228944668,
+        "y": 53.58837752292676
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "doloph_street",
+      "name": "Doloph Street",
+      "type": "roads",
+      "description": "A short street that began at a crossing with [[Mayhap Lane]] in the north and ended at [[Garth Street]] in the south.",
+      "coordinates": {
+        "x": 18.413547997049,
+        "y": 43.09410914617441
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "minstrels_ride",
+      "name": "Minstrel's Ride",
+      "type": "roads",
+      "description": "A street that crossed [[Nerester's Run]] and ended at the [[Court Close]].",
+      "coordinates": {
+        "x": 39.64512019852577,
+        "y": 30.850390245866063
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "dunstans_way",
+      "name": "Dunstan's Way",
+      "type": "roads",
+      "description": "A short street that began across the way from where the [[Hunt Bide]] began and ended on a moot with [[Nerester's Run]] and [[Silverscales Street]].",
+      "coordinates": {
+        "x": 32.29120316158048,
+        "y": 29.045554142925162
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

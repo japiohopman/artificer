@@ -1,0 +1,57 @@
+{
+  "index": "create_or_destroy_water",
+  "name": "create or destroy water",
+  "desc": [
+    "You either create or destroy water.",
+    "***Create Water.*** You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range.",
+    "***Destroy Water.*** You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st."
+  ],
+  "range": "30 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A drop of water if creating water, or a few grains of sand if destroying it.",
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "area_of_effect": {
+    "type": "cube",
+    "size": 30
+  },
+  "school": {
+    "index": "transmutation",
+    "name": "transmutation",
+    "url": "/assets/atlas/magic_schools/json/transmutation.json"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/create_or_destroy_water.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/create_or_destroy_water.webp",
+  "sprite_index": 16,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet3.webp"
+}

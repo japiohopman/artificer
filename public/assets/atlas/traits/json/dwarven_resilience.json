@@ -1,0 +1,40 @@
+{
+  "index": "dwarven_resilience",
+  "races": [
+    {
+      "index": "dwarf",
+      "name": "dwarf",
+      "url": "/assets/atlas/species/json/dwarf.json"
+    }
+  ],
+  "subraces": [],
+  "name": "dwarven resilience",
+  "desc": [
+    "You have advantage on saving throws against poison, and you have resistance against poison damage."
+  ],
+  "proficiencies": [],
+  "trait_specific": {
+    "passive_modifiers": {
+      "advantage": [
+        {
+          "name": "Saving Throws against poison",
+          "damage_type": {
+            "index": "poison",
+            "name": "poison",
+            "url": "/assets/atlas/damage_types/json/poison.json"
+          }
+        }
+      ],
+      "resistance": [
+        {
+          "index": "poison",
+          "name": "poison",
+          "url": "/assets/atlas/damage_types/json/poison.json"
+        }
+      ]
+    }
+  },
+  "url": "/assets/atlas/traits/json/dwarven_resilience.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "/assets/atlas/traits/dwarven_resilience.webp"
+}

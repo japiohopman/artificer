@@ -1,0 +1,41 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "pick_miners",
+  "name": "pick, miner's",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 10,
+  "url": "/assets/atlas/equipment/json/pick_miners.json",
+  "updated_at": "2026-05-09T18:44:17.500Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/pick_miners.webp",
+  "sprite_index": 3,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/pick_miners.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Adventuring Gear",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "9-5-2026",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

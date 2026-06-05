@@ -1,0 +1,40 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "grappling_hook",
+  "name": "grappling hook",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 4,
+  "url": "/assets/atlas/equipment/json/grappling_hook.json",
+  "updated_at": "2026-04-21T14:30:27.871Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/grappling_hook.webp",
+  "sprite_index": 19,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/grappling_hook.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "21-4-2026",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

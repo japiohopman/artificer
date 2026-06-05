@@ -1,0 +1,35 @@
+{
+  "special": [],
+  "index": "censer",
+  "name": "censer",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 0,
+    "unit": "cp"
+  },
+  "weight": 0,
+  "desc": [
+    "A censer, typically found in a priest's pack."
+  ],
+  "url": "/assets/atlas/equipment/json/censer.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/censer.webp",
+  "sprite_index": 1,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

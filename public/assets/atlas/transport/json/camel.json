@@ -1,0 +1,45 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "camel",
+  "name": "camel",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "speed": {
+    "land": {
+      "ft_per_round": 50,
+      "mph": 5.68
+    }
+  },
+  "capacity": {
+    "cargo": "480 lb."
+  },
+  "url": "/assets/atlas/transport/json/camel.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/enemies/images/camel.webp",
+  "sprite_index": 18,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "transport_type": "mount",
+  "transport_specific": {
+    "stat_block": {
+      "index": "camel",
+      "name": "camel",
+      "url": "/assets/atlas/enemies/json/camel.json"
+    },
+    "feed": {
+      "index": "animal_feed_1_day",
+      "name": "animal feed (1 day)",
+      "url": "/assets/atlas/equipment/json/animal_feed_1_day.json"
+    }
+  }
+}

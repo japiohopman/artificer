@@ -1,0 +1,34 @@
+{
+  "index": "land_vehicles",
+  "name": "land vehicles",
+  "equipment": [
+    {
+      "index": "carriage",
+      "name": "carriage",
+      "url": "/assets/atlas/transport/json/carriage.json"
+    },
+    {
+      "index": "cart",
+      "name": "cart",
+      "url": "/assets/atlas/transport/json/cart.json"
+    },
+    {
+      "index": "chariot",
+      "name": "chariot",
+      "url": "/assets/atlas/transport/json/chariot.json"
+    },
+    {
+      "index": "sled",
+      "name": "sled",
+      "url": "/assets/atlas/transport/json/sled.json"
+    },
+    {
+      "index": "wagon",
+      "name": "wagon",
+      "url": "/assets/atlas/transport/json/wagon.json"
+    }
+  ],
+  "url": "/assets/atlas/equipment_categories/json/land_vehicles.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "/assets/atlas/equipment_categories/land_vehicles.webp"
+}

@@ -1,0 +1,241 @@
+{
+  "index": "guardian_naga",
+  "name": "guardian naga",
+  "size": "Large",
+  "type": "monstrosity",
+  "alignment": "lawful good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 127,
+  "hit_dice": "15d10",
+  "hit_points_roll": "15d10+45",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "dexterity": 18,
+  "constitution": 16,
+  "intelligence": 16,
+  "wisdom": 19,
+  "charisma": 18,
+  "proficiencies": [
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_dex.json"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_int",
+        "name": "saving throw: int",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_int.json"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_cha.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "/assets/atlas/constitutionditions/json/charismarmed.json"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "/assets/atlas/constitutionditions/json/poisoned.json"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "languages": "Celestial, Common",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [
+    {
+      "name": "rejuvenation",
+      "desc": "If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning.",
+      "damage": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The naga is an 11th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following cleric spells prepared:\n\n- Cantrips (at will): mending, sacred flame, thaumaturgy\n- 1st level (4 slots): command, cure wounds, shield of faith\n- 2nd level (3 slots): calm emotions, hold person\n- 3rd level (3 slots): bestow curse, clairvoyance\n- 4th level (3 slots): banishment, freedom of movement\n- 5th level (2 slots): flame strike, geas\n- 6th level (1 slot): true seeing",
+      "spellcasting": {
+        "level": 11,
+        "ability": {
+          "index": "wis",
+          "name": "wis",
+          "url": "/assets/atlas/ability_scores/json/wisdom.json"
+        },
+        "dc": 16,
+        "modifier": 8,
+        "components_required": [
+          "V"
+        ],
+        "school": "cleric",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 2,
+          "6": 1
+        },
+        "spells": [
+          {
+            "name": "mending",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/json/mending.json"
+          },
+          {
+            "name": "sacred flame",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/json/sacred_flame.json"
+          },
+          {
+            "name": "thaumaturgy",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/json/thaumaturgy.json"
+          },
+          {
+            "name": "command",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/command.json"
+          },
+          {
+            "name": "cure wounds",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/cure_wounds.json"
+          },
+          {
+            "name": "shield of faith",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/shield_of_faith.json"
+          },
+          {
+            "name": "calm emotions",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/calm_emotions.json"
+          },
+          {
+            "name": "hold person",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/hold_person.json"
+          },
+          {
+            "name": "bestow curse",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/json/bestow_curse.json"
+          },
+          {
+            "name": "clairvoyance",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/json/clairvoyance.json"
+          },
+          {
+            "name": "banishment",
+            "level": 4,
+            "url": "/assets/atlas/spell/json/json/banishment.json"
+          },
+          {
+            "name": "freedom of movement",
+            "level": 4,
+            "url": "/assets/atlas/spell/json/json/freedom_of_movement.json"
+          },
+          {
+            "name": "flame strike",
+            "level": 5,
+            "url": "/assets/atlas/spell/json/json/flame_strike.json"
+          },
+          {
+            "name": "geas",
+            "level": 5,
+            "url": "/assets/atlas/spell/json/json/geas.json"
+          },
+          {
+            "name": "true seeing",
+            "level": 6,
+            "url": "/assets/atlas/spell/json/json/true_seeing.json"
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +8 to hit, reach 10 ft., one creature. Hit: 8 (1d8 + 4) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "spit poison",
+      "desc": "Ranged Weapon Attack: +8 to hit, range 15/30 ft., one creature. Hit: The target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 8,
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/guardian_naga.webp",
+  "url": "/assets/atlas/enemies/json/guardian_naga.json",
+  "updated_at": "2026-04-17T08:57:04.161Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 6,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.webp",
+  "imageUrl": "/assets/atlas/enemies/guardian_naga.webp",
+  "_type": "enemies",
+  "background_type": "ethereal",
+  "rarity": "Legendary",
+  "last_updated": "17-4-2026"
+}

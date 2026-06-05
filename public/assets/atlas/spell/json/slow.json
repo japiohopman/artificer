@@ -1,0 +1,70 @@
+{
+  "higher_level": [],
+  "index": "slow",
+  "name": "slow",
+  "desc": [
+    "You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a wisdom saving throw or be affected by this spell for the duration.",
+    "An affected target's speed is halved, it takes a -2 penalty to AC and dexterity saving throws, and it can't use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature's abilities or magic items, it can't make more than one melee or ranged attack during its turn.",
+    "If the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell is wasted.",
+    "A creature affected by this spell makes another wisdom saving throw at the end of its turn. On a successful save, the effect ends for it."
+  ],
+  "range": "120 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A drop of molasses.",
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 3,
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "wis",
+      "url": "/assets/atlas/ability_scores/json/wisdom.json"
+    },
+    "dc_success": "none",
+    "desc": "On failed save, the creature is slowed."
+  },
+  "area_of_effect": {
+    "type": "cube",
+    "size": 40
+  },
+  "school": {
+    "index": "transmutation",
+    "name": "transmutation",
+    "url": "/assets/atlas/magic_schools/json/transmutation.json"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    },
+    {
+      "index": "land",
+      "name": "land",
+      "url": "/assets/atlas/subclasses/json/land.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/slow.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/slow.webp",
+  "sprite_index": 19,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet11.webp"
+}

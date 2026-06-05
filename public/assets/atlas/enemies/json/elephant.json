@@ -1,0 +1,89 @@
+{
+  "index": "elephant",
+  "name": "elephant",
+  "size": "Huge",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 76,
+  "hit_dice": "8d12",
+  "hit_points_roll": "8d12+24",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 22,
+  "dexterity": 9,
+  "constitution": 17,
+  "intelligence": 3,
+  "wisdom": 11,
+  "charisma": 6,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [
+    {
+      "name": "trampling charge",
+      "desc": "If the elephant moves at least 20 ft. straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the elephant can make one stomp attack against it as a bonus action.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "gore",
+      "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 19 (3d8 + 6) piercing damage.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "stomp",
+      "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one prone creature. Hit: 22 (3d10 + 6) bludgeoning damage.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d10+6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/elephant.webp",
+  "url": "/assets/atlas/enemies/json/elephant.json",
+  "updated_at": "2026-04-04T13:29:35.318Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 20,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet4.webp",
+  "imageUrl": null,
+  "background_type": "land_plains",
+  "last_updated": "4-4-2026"
+}

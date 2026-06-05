@@ -1,0 +1,39 @@
+{
+  "special": [],
+  "index": "disguise_kit",
+  "name": "disguise kit",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "kits",
+    "name": "kits",
+    "url": "/assets/atlas/equipment_categories/kits"
+  },
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "desc": [
+    "This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise."
+  ],
+  "url": "/assets/atlas/equipment/json/disguise_kit.json",
+  "updated_at": "2026-04-12T07:52:45.598Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/disguise_kit.webp",
+  "sprite_index": 2,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/disguise_kit.webp",
+  "_type": "equipment",
+  "category": "Kits",
+  "last_updated": "12-4-2026",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

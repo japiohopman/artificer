@@ -1,0 +1,44 @@
+{
+  "index": "cape_of_the_mountebank",
+  "name": "cape of the mountebank",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": "Rare",
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, rare",
+    "This cape smells faintly of brimstone. While wearing it, you can use it to cast the dimension door spell as an action. This property of the cape can't be used again until the next dawn.",
+    "When you disappear, you leave behind a cloud of smoke, and you appear in a similar cloud of smoke at your destination. The smoke lightly obscures the space you left and the space you appear in, and it dissipates at the end of your next turn. A light or stronger wind disperses the smoke."
+  ],
+  "feature_specific": {
+    "spells": [
+      {
+        "spell": {
+          "index": "dimension_door",
+          "name": "dimension door",
+          "url": "/assets/atlas/spell/json/dimension_door.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "day"
+        },
+        "special_action": "action"
+      }
+    ]
+  },
+  "image": "/assets/atlas/magic_items/cape_of_the_mountebank.webp",
+  "url": "/assets/atlas/magic_items/json/cape_of_the_mountebank.json",
+  "updated_at": "2026-05-27T08:46:17.584Z",
+  "imageUrl": "/assets/atlas/magic_items/images/cape_of_the_mountebank.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "back"
+  ],
+  "category": "Wondrous Items",
+  "last_updated": "27-5-2026"
+}

@@ -1,0 +1,27 @@
+{
+  "index": "improved_critical",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "subclass": {
+    "index": "champion",
+    "name": "champion",
+    "url": "/assets/atlas/subclasses/json/champion.json"
+  },
+  "name": "improved critical",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "Beginning when you choose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "critical_threshold": 19
+    }
+  },
+  "url": "/assets/atlas/features/json/improved_critical.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/improved_critical.webp"
+}

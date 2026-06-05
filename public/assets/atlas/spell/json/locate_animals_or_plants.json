@@ -1,0 +1,54 @@
+{
+  "higher_level": [],
+  "index": "locate_animals_or_plants",
+  "name": "locate animals or plants",
+  "desc": [
+    "Describe or name a specific kind of beast or plant. Concentrating on the voice of nature in your surroundings, you learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present."
+  ],
+  "range": "Self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A bit of fur from a bloodhound.",
+  "ritual": true,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "divination",
+    "name": "divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "/assets/atlas/class/json/ranger.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/locate_animals_or_plants.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/locate_animals_or_plants.webp",
+  "sprite_index": 6,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet8.webp"
+}

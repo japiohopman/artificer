@@ -1,0 +1,40 @@
+{
+  "desc": [
+    "Forged from cold, light-drinking iron, this shield bears the weeping face of a martyr whose final, silent scream still vibrates against the arm of its bearer. Its surface is perpetually slick with a phantom gore that refuses to be wiped away, feeding on the life-force of those who seek refuge behind its wall of sorrow."
+  ],
+  "special": [],
+  "index": "shield",
+  "name": "shield",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "armor_category": "Shield",
+  "armor_class": {
+    "base": 2,
+    "dex_bonus": false
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false,
+  "weight": 6,
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "url": "/assets/atlas/equipment/json/shield.json",
+  "updated_at": "2026-04-12T08:06:36.452Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/shield.webp",
+  "sprite_index": 16,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/shield.webp",
+  "_type": "equipment",
+  "category": "Shields",
+  "last_updated": "12-4-2026",
+  "kind": "shield",
+  "equipSlots": [
+    "off_hand"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "index": "rock_gnome",
+  "name": "rock gnome",
+  "race": {
+    "index": "gnome",
+    "name": "gnome",
+    "url": "/assets/atlas/species/json/gnome.json"
+  },
+  "desc": "As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes.",
+  "ability_bonuses": [
+    {
+      "ability_score": {
+        "index": "con",
+        "name": "con",
+        "url": "/assets/atlas/ability_scores/json/constitution.json"
+      },
+      "bonus": 1
+    }
+  ],
+  "racial_traits": [
+    {
+      "index": "artificers_lore",
+      "name": "artificer's lore",
+      "url": "/assets/atlas/traits/json/artificers_lore.json"
+    },
+    {
+      "index": "tinker",
+      "name": "tinker",
+      "url": "/assets/atlas/traits/json/tinker.json"
+    }
+  ],
+  "url": "/assets/atlas/species/json/rock_gnome.json",
+  "updated_at": "2025-10-24T20:42:14.841Z",
+  "image": "/assets/atlas/subraces/rock_gnome.webp"
+}

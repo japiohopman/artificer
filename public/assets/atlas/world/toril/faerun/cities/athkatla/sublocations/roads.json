@@ -1,0 +1,736 @@
+{
+  "category": "roads",
+  "updatedAt": "2026-05-29T10:54:16.128Z",
+  "location_id": "athkatla",
+  "sub_locations": [
+    {
+      "id": "2",
+      "name": "Street of Seven Altars",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        544.84839070016,
+        1279.5208988629
+      ],
+      "popup": {
+        "title": "Street of Seven Altars",
+        "description": "The street with the name remnant of its seven temples that stood there before the 14th century DR.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "Godsmoot",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        495.68138571591,
+        1256.1750529337
+      ],
+      "popup": {
+        "title": "Godsmoot",
+        "description": "A wide street that kept its name from many temples that stood here before the 14{{th}} century [[DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "Oblade Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        531.70733650935,
+        1239.8804491209
+      ],
+      "popup": {
+        "title": "Oblade Street",
+        "description": "The street that ran south, perpendicular to [[Aundle's Walk]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "Aundle's Walk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        546.91746267325,
+        1261.0976082716
+      ],
+      "popup": {
+        "title": "Aundle's Walk",
+        "description": "A cramped city walk that ran east from the intersection of the [[Street of Seven Altars]] and [[Oblade Street]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "18",
+      "name": "Sarlannus Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        509.81962262232,
+        1290.2809233662
+      ],
+      "popup": {
+        "title": "Sarlannus Street",
+        "description": "The street that ran south from [[Godsmoot]] and the [[The Crown Aflame|Crown Aflame]] theater.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "19",
+      "name": "Meir Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        503.63025477295,
+        1244.8421204658
+      ],
+      "popup": {
+        "title": "Meir Lane",
+        "description": "The street that ran from the north of the Temple District and ended on the [[Godsmoot]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "29",
+      "name": "The Bridge",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        768.99955886356,
+        803.9996948604
+      ],
+      "popup": {
+        "title": "The Bridge",
+        "description": "The only connection between the two parts of [[Athkatla]] on the southern and northern shores of the [[Alandor River]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "50",
+      "name": "Alandamer's Gate",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        373.38232911962,
+        1279.8445518854
+      ],
+      "popup": {
+        "title": "Alandamer's Gate",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "51",
+      "name": "Meirtyn Gate",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        986.88025945482,
+        1088.8821361771
+      ],
+      "popup": {
+        "title": "Meirtyn Gate",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "52",
+      "name": "Heroes' Gate",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1057.5597445165,
+        752.28262240685
+      ],
+      "popup": {
+        "title": "Heroes' Gate",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "53",
+      "name": "Sparandar Gate",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        828.72977141177,
+        306.88391150241
+      ],
+      "popup": {
+        "title": "Sparandar Gate",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "54",
+      "name": "Oloemandur Gate",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        356.48225936155,
+        295.56718227554
+      ],
+      "popup": {
+        "title": "Oloemandur Gate",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "55",
+      "name": "Julkoon Gate",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        585.43138994398,
+        330.76498963434
+      ],
+      "popup": {
+        "title": "Julkoon Gate",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "56",
+      "name": "Cold Dolor Gate",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        708.41369395126,
+        438.25615253274
+      ],
+      "popup": {
+        "title": "Cold Dolor Gate",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "57",
+      "name": "Sea-Gates",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        166.99823273958,
+        746.61814441556
+      ],
+      "popup": {
+        "title": "Sea-Gates",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "58",
+      "name": "Chain-Gate",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        1033.4993981219,
+        970.05525661943
+      ],
+      "popup": {
+        "title": "Chain-Gate",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "82",
+      "name": "Path of Silk Flowers",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        811.01654345634,
+        1228.922661862
+      ],
+      "popup": {
+        "title": "Path of Silk Flowers",
+        "description": "The street that ran along the district's northern wall, shaded with bright multicolor cloth awnings and lush gardens, decorated with flowers made out of silk.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "83",
+      "name": "Avenue of Chimes",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        839.99513233162,
+        1182.9259827142
+      ],
+      "popup": {
+        "title": "Avenue of Chimes",
+        "description": "A wide pedestrian street, illuminated with lanters and decorated with melodic wind chimes.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "108",
+      "name": "Ladycloak Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        676.70430973083,
+        970.47251376148
+      ],
+      "popup": {
+        "title": "Ladycloak Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "109",
+      "name": "Coront Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        737.845807476,
+        959.86688299192
+      ],
+      "popup": {
+        "title": "Coront Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "110",
+      "name": "Coront Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        513.70948933047,
+        924.89617324665
+      ],
+      "popup": {
+        "title": "Coront Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "112",
+      "name": "Sarbront's Walk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        696.2520953981,
+        998.50048313769
+      ],
+      "popup": {
+        "title": "Sarbront's Walk",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "118",
+      "name": "Falconfly Ride",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        712.97992887848,
+        980.48067054695
+      ],
+      "popup": {
+        "title": "Falconfly Ride",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "130",
+      "name": "Stormwind Street",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        587.93371107948,
+        974.01455661677
+      ],
+      "popup": {
+        "title": "Stormwind Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "131",
+      "name": "Alaith's Walk",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        550.48434560146,
+        1006.5370813037
+      ],
+      "popup": {
+        "title": "Alaith's Walk",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "132",
+      "name": "Four Fountains Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        606.67422429491,
+        1023.1557089087
+      ],
+      "popup": {
+        "title": "Four Fountains Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "133",
+      "name": "Salgrast Lane",
+      "categoryId": "roads",
+      "type": "marker",
+      "position": [
+        631.77386361719,
+        1002.6458363444
+      ],
+      "popup": {
+        "title": "Salgrast Lane",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

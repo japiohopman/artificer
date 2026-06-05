@@ -1,0 +1,24 @@
+{
+  "id": "stygia",
+  "name": "Stygia",
+  "type": "plane_layer",
+  "parent": "nine_hells",
+  "title": "Stygia: The Fifth Layer",
+  "description": "Stygia is the fifth layer of the Nine Hells, a frozen layer of cold and ice with a vast, dark sea beneath the glaciers.",
+  "wiki": "Stygia is a realm of eternal frost where Prince Levistus is imprisoned in a colossal block of ice. The River Styx flows through this layer, becoming a frozen torrent of ice and slush.",
+  "image": "stygia.webp",
+  "tags": [
+    "plane_layer",
+    "nine_hells",
+    "stygia"
+  ],
+  "metadata": {
+    "ruler": "Levistus",
+    "previous_ruler": "Geryon",
+    "key_locations": [
+      "Tantlin",
+      "Sheyruushk"
+    ]
+  },
+  "updated_at": "2024-06-19T00:00:00.000Z"
+}

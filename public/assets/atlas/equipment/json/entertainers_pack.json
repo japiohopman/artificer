@@ -1,0 +1,91 @@
+{
+  "desc": [
+    "This collection of greasepaint, gaudy silks, and discarded stage props reeks of stale perfume and the metallic tang of dried blood, serving as a desperate mask for the horrors one must perform to survive. Within its depths lie the tools not just for a show, but for a meticulously choreographed deception meant to hide the darkness behind a performer’s grin."
+  ],
+  "special": [],
+  "index": "entertainers_pack",
+  "name": "entertainer's pack",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "equipment_packs",
+    "name": "equipment packs",
+    "url": "/assets/atlas/equipment_categories/equipment_packs"
+  },
+  "cost": {
+    "quantity": 40,
+    "unit": "gp"
+  },
+  "contents": [
+    {
+      "item": {
+        "index": "backpack",
+        "name": "backpack",
+        "url": "/assets/atlas/equipment/backpack"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "bedroll",
+        "name": "bedroll",
+        "url": "/assets/atlas/equipment/bedroll"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "clothes_costume",
+        "name": "clothes, costume",
+        "url": "/assets/atlas/equipment/clothes_costume"
+      },
+      "quantity": 2
+    },
+    {
+      "item": {
+        "index": "candle",
+        "name": "candle",
+        "url": "/assets/atlas/equipment/candle"
+      },
+      "quantity": 5
+    },
+    {
+      "item": {
+        "index": "rations_1_day",
+        "name": "rations (1 day)",
+        "url": "/assets/atlas/equipment/rations_1_day"
+      },
+      "quantity": 5
+    },
+    {
+      "item": {
+        "index": "waterskin",
+        "name": "waterskin",
+        "url": "/assets/atlas/equipment/waterskin"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "disguise_kit",
+        "name": "disguise kit",
+        "url": "/assets/atlas/equipment/disguise_kit"
+      },
+      "quantity": 1
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/entertainers_pack.json",
+  "updated_at": "2026-04-12T07:49:19.143Z",
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/entertainers_pack.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/entertainers_pack.webp",
+  "_type": "equipment",
+  "category": "Equipment Packs",
+  "last_updated": "12-4-2026",
+  "kind": "equipment_pack"
+}

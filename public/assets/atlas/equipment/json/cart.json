@@ -1,0 +1,29 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "cart",
+  "name": "cart",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 15,
+    "unit": "gp"
+  },
+  "weight": 200,
+  "url": "/assets/atlas/equipment/json/cart.json",
+  "updated_at": "2026-04-21T14:02:21.018Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/cart.webp",
+  "sprite_index": 22,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/images/cart.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "21-4-2026",
+  "kind": "adventuring_gear"
+}

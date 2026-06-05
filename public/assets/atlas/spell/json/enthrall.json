@@ -1,0 +1,55 @@
+{
+  "higher_level": [],
+  "index": "enthrall",
+  "name": "enthrall",
+  "desc": [
+    "You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a wisdom saving throw. Any creature that can't be charmed succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. On a failed save, the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you. The spell ends if you are incapacitated or can no longer speak."
+  ],
+  "range": "60 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "wis",
+      "url": "/assets/atlas/ability_scores/json/wisdom.json"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "enchantment",
+    "name": "enchantment",
+    "url": "/assets/atlas/magic_schools/json/enchantment.json"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/enthrall.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/enthrall.webp",
+  "sprite_index": 24,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet4.webp"
+}

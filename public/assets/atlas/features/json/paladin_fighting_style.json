@@ -1,0 +1,61 @@
+{
+  "index": "paladin_fighting_style",
+  "class": {
+    "index": "paladin",
+    "name": "paladin",
+    "url": "/assets/atlas/class/json/paladin.json"
+  },
+  "name": "fighting style",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "At 2nd level, you adopt a style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
+  ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "feature",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighting_style_defense",
+              "name": "fighting style: defense",
+              "url": "/assets/atlas/features/json/fighting_style_defense.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighting_style_dueling",
+              "name": "fighting style: dueling",
+              "url": "/assets/atlas/features/json/fighting_style_dueling.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighting_style_great_weapon_fighting",
+              "name": "fighting style: great weapon fighting",
+              "url": "/assets/atlas/features/json/fighting_style_great_weapon_fighting.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighting_style_protection",
+              "name": "fighting style: protection",
+              "url": "/assets/atlas/features/json/fighting_style_protection.json"
+            }
+          }
+        ]
+      }
+    },
+    "invocations": []
+  },
+  "url": "/assets/atlas/features/json/paladin_fighting_style.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "/assets/atlas/features/images/paladin_fighting_style.webp"
+}

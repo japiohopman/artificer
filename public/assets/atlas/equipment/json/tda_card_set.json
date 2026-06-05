@@ -1,0 +1,40 @@
+{
+  "special": [],
+  "index": "tda_card_set",
+  "name": "tda card set",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Gaming Sets",
+  "cost": {
+    "quantity": 28,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "These weathered cards are stained with the copper tang of dried blood dragons, and it is said that those who lose a hand to their grim portraits often find their very souls shuffled into the deck. Each face stares back with unnerving intent, waiting for the moment a desperate gambler finally draws the Ace of Crows."
+  ],
+  "image": "/assets/atlas/equipment/images/tda_card_set.webp",
+  "url": "/assets/atlas/equipment/json/tda_card_set.json",
+  "updated_at": "2026-05-05T22:32:02.035Z",
+  "contents": [],
+  "properties": [],
+  "sprite_index": 17,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/tda_card_set.webp",
+  "_type": "equipment",
+  "category": "Gaming Sets",
+  "last_updated": "6-5-2026",
+  "background_type": "land_forest",
+  "slot": [
+    "tool"
+  ],
+  "kind": "tool",
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "index": "belt_of_giant_strength_hill",
+  "name": "belt of hill giant strength",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": "Rare",
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Wondrous item, rare (requires attunement)",
+    "While wearing this belt, your Strength score changes to a 21. If your Strength is already equal to or greater than the belt's score, the item has no Effect on you."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "strength_set": 21
+    }
+  },
+  "image": "/assets/atlas/magic_items/belt_of_giant_strength_hill.webp",
+  "url": "/assets/atlas/magic_items/json/belt_of_giant_strength_hill.json",
+  "updated_at": "2026-05-20T10:39:34.076Z",
+  "imageUrl": "/assets/atlas/magic_items/images/belt_of_giant_strength_hill.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Wondrous Items",
+  "last_updated": "20-5-2026"
+}

@@ -1,0 +1,28 @@
+{
+  "index": "eldritch_invocation_devils_sight",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "eldritch invocation: devil's sight",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "You can see normally in darkness, both magical and nonmagical, to a distance of 120 feet."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "/assets/atlas/features/eldritch_invocations.json"
+  },
+  "url": "/assets/atlas/features/json/eldritch_invocation_devils_sight.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/eldritch_invocation_devils_sight.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "darkvision": 120,
+      "see_in_magical_darkness": true
+    }
+  }
+}

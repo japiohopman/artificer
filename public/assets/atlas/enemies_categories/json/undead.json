@@ -1,0 +1,229 @@
+{
+  "name": "Undead",
+  "index": "undead",
+  "monsters": [
+    {
+      "name": "ghast",
+      "index": "ghast",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "chaotic evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/ghast.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/ghast.webp"
+    },
+    {
+      "name": "ghost",
+      "index": "ghost",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "any alignment",
+      "xp": 1100,
+      "challenge_rating": 4,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/ghost.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/ghost.webp"
+    },
+    {
+      "name": "ghoul",
+      "index": "ghoul",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "chaotic evil",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/ghoul.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/ghoul.webp"
+    },
+    {
+      "name": "lich",
+      "index": "lich",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "any evil alignment",
+      "xp": 33000,
+      "challenge_rating": 21,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/lich.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/lich.webp"
+    },
+    {
+      "name": "minotaur skeleton",
+      "index": "minotaur_skeleton",
+      "size": "Large",
+      "type": "undead",
+      "alignment": "lawful evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/minotaur_skeleton.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/minotaur_skeleton.webp"
+    },
+    {
+      "name": "mummy",
+      "index": "mummy",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "lawful evil",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/mummy.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/mummy.webp"
+    },
+    {
+      "name": "mummy lord",
+      "index": "mummy_lord",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "lawful evil",
+      "xp": 13000,
+      "challenge_rating": 15,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/mummy_lord.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/mummy_lord.webp"
+    },
+    {
+      "name": "ogre zombie",
+      "index": "ogre_zombie",
+      "size": "Large",
+      "type": "undead",
+      "alignment": "neutral evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/ogre_zombie.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/ogre_zombie.webp"
+    },
+    {
+      "name": "shadow",
+      "index": "shadow",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "chaotic evil",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/shadow.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/shadow.webp"
+    },
+    {
+      "name": "skeleton",
+      "index": "skeleton",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "lawful evil",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/skeleton.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/skeleton.webp"
+    },
+    {
+      "name": "specter",
+      "index": "specter",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "chaotic evil",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/specter.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/specter.webp"
+    },
+    {
+      "name": "vampire, bat form",
+      "index": "vampire_bat",
+      "size": "Medium",
+      "type": "undead",
+      "subtype": "shapechanger",
+      "alignment": "lawful evil",
+      "xp": 10000,
+      "challenge_rating": 13,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/vampire_bat.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/vampire_bat.webp"
+    },
+    {
+      "name": "vampire, mist form",
+      "index": "vampire_mist",
+      "size": "Medium",
+      "type": "undead",
+      "subtype": "shapechanger",
+      "alignment": "lawful evil",
+      "xp": 10000,
+      "challenge_rating": 13,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/vampire_mist.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/vampire_mist.webp"
+    },
+    {
+      "name": "vampire spawn",
+      "index": "vampire_spawn",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "neutral evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/vampire_spawn.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/vampire_spawn.webp"
+    },
+    {
+      "name": "vampire, vampire form",
+      "index": "vampire_vampire",
+      "size": "Medium",
+      "type": "undead",
+      "subtype": "shapechanger",
+      "alignment": "lawful evil",
+      "xp": 10000,
+      "challenge_rating": 13,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/vampire_vampire.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/vampire_vampire.webp"
+    },
+    {
+      "name": "warhorse skeleton",
+      "index": "warhorse_skeleton",
+      "size": "Large",
+      "type": "undead",
+      "alignment": "lawful evil",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/warhorse_skeleton.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/warhorse_skeleton.webp"
+    },
+    {
+      "name": "wight",
+      "index": "wight",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "neutral evil",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/wight.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/wight.webp"
+    },
+    {
+      "name": "will_o'_wisp",
+      "index": "will_o_wisp",
+      "size": "Tiny",
+      "type": "undead",
+      "alignment": "chaotic evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/will_o_wisp.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/will_o_wisp.webp"
+    },
+    {
+      "name": "wraith",
+      "index": "wraith",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "neutral evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/wraith.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/wraith.webp"
+    },
+    {
+      "name": "zombie",
+      "index": "zombie",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "neutral evil",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/zombie.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/zombie.webp"
+    }
+  ]
+}

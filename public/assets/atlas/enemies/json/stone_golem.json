@@ -1,0 +1,159 @@
+{
+  "index": "stone_golem",
+  "name": "stone golem",
+  "size": "Large",
+  "type": "construct",
+  "alignment": "unaligned",
+  "armor_class": 17,
+  "hit_points": 178,
+  "hit_dice": "17d10",
+  "hit_points_roll": "17d10+85",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 22,
+  "dexterity": 9,
+  "constitution": 20,
+  "intelligence": 3,
+  "wisdom": 11,
+  "charisma": 1,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison",
+    "psychic",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "/assets/atlas/constitutionditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "/assets/atlas/constitutionditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "/assets/atlas/constitutionditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "petrified",
+      "url": "/assets/atlas/constitutionditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 10
+  },
+  "languages": "understands the languages of its creator but can't speak",
+  "challenge_rating": "10",
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [
+    {
+      "name": "immutable form",
+      "desc": "The golem is immune to any spell or effect that would alter its form.",
+      "damage": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The golem has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The golem's weapon attacks are magical.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The golem makes two slam attacks.",
+      "actions": [
+        {
+          "action_name": "Slam",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "slam",
+      "desc": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 19 (3d8 + 6) bludgeoning damage.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "slow",
+      "desc": "The golem targets one or more creatures it can see within 10 ft. of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "wis",
+          "url": "/assets/atlas/ability_scores/json/wisdom.json"
+        },
+        "dc_value": 17,
+        "success_type": "none"
+      },
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/stone_golem.webp",
+  "url": "/assets/atlas/enemies/json/stone_golem.json",
+  "updated_at": "2026-05-24T09:35:10.777Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 15,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet11.0webp",
+  "imageUrl": "/assets/atlas/enemies/images/stone_golem.webp",
+  "_type": "enemies",
+  "rarity": "Very Rare",
+  "background_type": "ruins",
+  "last_updated": "24-5-2026",
+  "stats": {
+    "str": 22,
+    "dex": 9,
+    "con": 20,
+    "int": 3,
+    "wis": 11,
+    "cha": 1
+  },
+  "lore": "/assets/atlas/enemies/enemies_wiki/stone_golem.json",
+  "wikiData": {}
+}

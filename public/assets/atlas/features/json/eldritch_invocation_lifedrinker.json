@@ -1,0 +1,38 @@
+{
+  "index": "eldritch_invocation_lifedrinker",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "eldritch invocation: lifedrinker",
+  "level": 12,
+  "prerequisites": [
+    {
+      "type": "level",
+      "level": 12
+    },
+    {
+      "type": "feature",
+      "feature": "public/assets/atlas/features/pact-of-the-blade.json"
+    }
+  ],
+  "desc": [
+    "When you hit a creature with your pact weapon, the creature takes extra necrotic damage equal to your Charisma modifier (minimum 1)."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "/assets/atlas/features/eldritch_invocations.json"
+  },
+  "url": "/assets/atlas/features/json/eldritch_invocation_lifedrinker.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/eldritch_invocation_lifedrinker.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "extra_damage": "charisma_modifier",
+      "damage_type": "necrotic",
+      "condition": "pact_weapon"
+    }
+  }
+}

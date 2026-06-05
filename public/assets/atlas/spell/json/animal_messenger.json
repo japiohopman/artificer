@@ -1,0 +1,57 @@
+{
+  "index": "animal_messenger",
+  "name": "animal messenger",
+  "desc": [
+    "By means of this spell, you use an animal to deliver a message. Choose a Tiny beast you can see within range, such as a squirrel, a blue jay, or a bat. You specify a location, which you must have visited, and a recipient who matches a general description, such as \"a man or woman dressed in the uniform of the town guard\" or \"a red-haired dwarf wearing a pointed hat.\" You also speak a message of up to twenty-five words. The target beast travels for the duration of the spell toward the specified location, covering about 50 miles per 24 hours for a flying messenger, or 25 miles for other animals.",
+    "When the messenger arrives, it delivers your message to the creature that you described, replicating the sound of your voice. The messenger speaks only to a creature matching the description you gave. If the messenger doesn't reach its destination before the spell ends, the message is lost, and the beast makes its way back to where you cast this spell."
+  ],
+  "higher_level": [
+    "If you cast this spell using a spell slot of 3nd level or higher, the duration of the spell increases by 48 hours for each slot level above 2nd."
+  ],
+  "range": "30 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A morsel of food.",
+  "ritual": true,
+  "duration": "24 hours",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "enchantment",
+    "name": "enchantment",
+    "url": "/assets/atlas/magic_schools/json/enchantment.json"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "/assets/atlas/class/json/ranger.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/animal_messenger.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/animal_messenger.webp",
+  "sprite_index": 6,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet1.webp"
+}

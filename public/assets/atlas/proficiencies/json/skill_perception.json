@@ -1,0 +1,18 @@
+{
+  "index": "skill_perception",
+  "type": "skills",
+  "name": "skill: perception",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/skill_perception.json",
+  "reference": {
+    "index": "perception",
+    "name": "perception",
+    "url": "/assets/atlas/skills/json/perception.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/skills/json/perception.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
+}

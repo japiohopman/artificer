@@ -1,0 +1,62 @@
+{
+  "category": "water",
+  "categoryId": "15",
+  "updatedAt": "2026-06-04T07:02:42.036026Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
+    {
+      "id": "81",
+      "name": "River Chionthar",
+      "categoryId": "15",
+      "type": "marker",
+      "position": [
+        1468,
+        672
+      ],
+      "popup": {
+        "title": "River Chionthar",
+        "description": "A large river that ran through the [[Western Heartlands]].",
+        "image": "File:MoonriseTowers riverChionthar.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "98",
+      "name": "Gray Harbor",
+      "categoryId": "15",
+      "type": "marker",
+      "position": [
+        847.1144452305393,
+        1070.5675167917502
+      ],
+      "popup": {
+        "title": "Gray Harbor",
+        "description": "The harbor of [[Baldur's Gate]] on [[River Chionthar]], one of the busiest and deepest natural harbors in [[Faerûn]].",
+        "image": "File:Gray harbor.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

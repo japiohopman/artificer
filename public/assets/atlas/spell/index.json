@@ -1,0 +1,4737 @@
+[
+  {
+    "index": "absorb_elements",
+    "name": "absorb elements",
+    "level": 1,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 reaction",
+    "range": "Self",
+    "duration": "1 round",
+    "path": "/assets/atlas/spell/json/absorb_elements.json"
+  },
+  {
+    "index": "acid_arrow",
+    "name": "acid arrow",
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/acid_arrow.json"
+  },
+  {
+    "index": "acid_splash",
+    "name": "acid splash",
+    "level": 0,
+    "school": "conjuration",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/acid_splash.json"
+  },
+  {
+    "index": "aid",
+    "name": "aid",
+    "level": 2,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "cleric",
+      "paladin"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/aid.json"
+  },
+  {
+    "index": "alarm",
+    "name": "alarm",
+    "level": 1,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "ranger",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "30 feet",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/alarm.json"
+  },
+  {
+    "index": "alter_self",
+    "name": "alter self",
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/alter_self.json"
+  },
+  {
+    "index": "animal_friendship",
+    "name": "animal friendship",
+    "level": 1,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "24 hours",
+    "path": "/assets/atlas/spell/json/animal_friendship.json"
+  },
+  {
+    "index": "animal_messenger",
+    "name": "animal messenger",
+    "level": 2,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "24 hours",
+    "path": "/assets/atlas/spell/json/animal_messenger.json"
+  },
+  {
+    "index": "animal_shapes",
+    "name": "animal shapes",
+    "level": 8,
+    "school": "transmutation",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 24 hours",
+    "path": "/assets/atlas/spell/json/animal_shapes.json"
+  },
+  {
+    "index": "animate_dead",
+    "name": "animate dead",
+    "level": 3,
+    "school": "necromancy",
+    "classes": [
+      "cleric",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "10 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/animate_dead.json"
+  },
+  {
+    "index": "animate_objects",
+    "name": "animate objects",
+    "level": 5,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/animate_objects.json"
+  },
+  {
+    "index": "antilife_shell",
+    "name": "antilife shell",
+    "level": 5,
+    "school": "abjuration",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/antilife_shell.json"
+  },
+  {
+    "index": "antimagic_field",
+    "name": "antimagic field",
+    "level": 8,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/antimagic_field.json"
+  },
+  {
+    "index": "antipathy_sympathy",
+    "name": "antipathy/sympathy",
+    "level": 8,
+    "school": "enchantment",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "casting_time": "1 hour",
+    "range": "60 feet",
+    "duration": "10 days",
+    "path": "/assets/atlas/spell/json/antipathy_sympathy.json"
+  },
+  {
+    "index": "arcane_eye",
+    "name": "arcane eye",
+    "level": 4,
+    "school": "divination",
+    "classes": [
+      "artificer",
+      "cleric",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/arcane_eye.json"
+  },
+  {
+    "index": "arcane_hand",
+    "name": "arcane hand",
+    "level": 5,
+    "school": "evocation",
+    "classes": [
+      "artificer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/arcane_hand.json"
+  },
+  {
+    "index": "arcane_lock",
+    "name": "arcane lock",
+    "level": 2,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "path": "/assets/atlas/spell/json/arcane_lock.json"
+  },
+  {
+    "index": "arcane_sword",
+    "name": "arcane sword",
+    "level": 7,
+    "school": "evocation",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/arcane_sword.json"
+  },
+  {
+    "index": "arcanists_magic_aura",
+    "name": "arcanist's magic aura",
+    "level": 2,
+    "school": "illusion",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "24 hours",
+    "path": "/assets/atlas/spell/json/arcanists_magic_aura.json"
+  },
+  {
+    "index": "astral_projection",
+    "name": "astral projection",
+    "level": 9,
+    "school": "necromancy",
+    "classes": [
+      "cleric",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 hour",
+    "range": "10 feet",
+    "duration": "Special",
+    "path": "/assets/atlas/spell/json/astral_projection.json"
+  },
+  {
+    "index": "augury",
+    "name": "augury",
+    "level": 2,
+    "school": "divination",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 minute",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/augury.json"
+  },
+  {
+    "index": "awaken",
+    "name": "awaken",
+    "level": 5,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "druid"
+    ],
+    "casting_time": "8 hours",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/awaken.json"
+  },
+  {
+    "index": "bane",
+    "name": "bane",
+    "level": 1,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/bane.json"
+  },
+  {
+    "index": "banishment",
+    "name": "banishment",
+    "level": 4,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "paladin",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/banishment.json"
+  },
+  {
+    "index": "barkskin",
+    "name": "barkskin",
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/barkskin.json"
+  },
+  {
+    "index": "beacon_of_hope",
+    "name": "beacon of hope",
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/beacon_of_hope.json"
+  },
+  {
+    "index": "bestow_curse",
+    "name": "bestow curse",
+    "level": 3,
+    "school": "necromancy",
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/bestow_curse.json"
+  },
+  {
+    "index": "black_tentacles",
+    "name": "black tentacles",
+    "level": 4,
+    "school": "conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/black_tentacles.json"
+  },
+  {
+    "index": "blade_barrier",
+    "name": "blade barrier",
+    "level": 6,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/blade_barrier.json"
+  },
+  {
+    "index": "bless",
+    "name": "bless",
+    "level": 1,
+    "school": "enchantment",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/bless.json"
+  },
+  {
+    "index": "blight",
+    "name": "blight",
+    "level": 4,
+    "school": "necromancy",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/blight.json"
+  },
+  {
+    "index": "blindness_deafness",
+    "name": "blindness/deafness",
+    "level": 2,
+    "school": "necromancy",
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/blindness_deafness.json"
+  },
+  {
+    "index": "blink",
+    "name": "blink",
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/blink.json"
+  },
+  {
+    "index": "blur",
+    "name": "blur",
+    "level": 2,
+    "school": "illusion",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/blur.json"
+  },
+  {
+    "index": "branding_smite",
+    "name": "branding smite",
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "paladin"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/branding_smite.json"
+  },
+  {
+    "index": "burning_hands",
+    "name": "burning hands",
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/burning_hands.json"
+  },
+  {
+    "index": "call_lightning",
+    "name": "call lightning",
+    "level": 3,
+    "school": "conjuration",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/call_lightning.json"
+  },
+  {
+    "index": "calm_emotions",
+    "name": "calm emotions",
+    "level": 2,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/calm_emotions.json"
+  },
+  {
+    "index": "catapult",
+    "name": "catapult",
+    "level": 1,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/catapult.json"
+  },
+  {
+    "index": "chain_lightning",
+    "name": "chain lightning",
+    "level": 6,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/chain_lightning.json"
+  },
+  {
+    "index": "charm_person",
+    "name": "charm person",
+    "level": 1,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/charm_person.json"
+  },
+  {
+    "index": "chill_touch",
+    "name": "chill touch",
+    "level": 0,
+    "school": "necromancy",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "1 round",
+    "path": "/assets/atlas/spell/json/chill_touch.json"
+  },
+  {
+    "index": "circle_of_death",
+    "name": "circle of death",
+    "level": 6,
+    "school": "necromancy",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/circle_of_death.json"
+  },
+  {
+    "index": "clairvoyance",
+    "name": "clairvoyance",
+    "level": 3,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "10 minutes",
+    "range": "1 mile",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/clairvoyance.json"
+  },
+  {
+    "index": "clone",
+    "name": "clone",
+    "level": 8,
+    "school": "necromancy",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 hour",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/clone.json"
+  },
+  {
+    "index": "cloudkill",
+    "name": "cloudkill",
+    "level": 5,
+    "school": "conjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/cloudkill.json"
+  },
+  {
+    "index": "color_spray",
+    "name": "color spray",
+    "level": 1,
+    "school": "illusion",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "1 round",
+    "path": "/assets/atlas/spell/json/color_spray.json"
+  },
+  {
+    "index": "command",
+    "name": "command",
+    "level": 1,
+    "school": "enchantment",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "1 round",
+    "path": "/assets/atlas/spell/json/command.json"
+  },
+  {
+    "index": "commune",
+    "name": "commune",
+    "level": 5,
+    "school": "divination",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 minute",
+    "range": "Self",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/commune.json"
+  },
+  {
+    "index": "commune_with_nature",
+    "name": "commune with nature",
+    "level": 5,
+    "school": "divination",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 minute",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/commune_with_nature.json"
+  },
+  {
+    "index": "comprehend_languages",
+    "name": "comprehend languages",
+    "level": 1,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/comprehend_languages.json"
+  },
+  {
+    "index": "compulsion",
+    "name": "compulsion",
+    "level": 4,
+    "school": "enchantment",
+    "classes": [
+      "bard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/compulsion.json"
+  },
+  {
+    "index": "cone_of_cold",
+    "name": "cone of cold",
+    "level": 5,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/cone_of_cold.json"
+  },
+  {
+    "index": "confusion",
+    "name": "confusion",
+    "level": 4,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/confusion.json"
+  },
+  {
+    "index": "conjure_animals",
+    "name": "conjure animals",
+    "level": 3,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/conjure_animals.json"
+  },
+  {
+    "index": "conjure_celestial",
+    "name": "conjure celestial",
+    "level": 7,
+    "school": "conjuration",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 minute",
+    "range": "90 feet",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/conjure_celestial.json"
+  },
+  {
+    "index": "conjure_elemental",
+    "name": "conjure elemental",
+    "level": 5,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "90 feet",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/conjure_elemental.json"
+  },
+  {
+    "index": "conjure_fey",
+    "name": "conjure fey",
+    "level": 6,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "warlock"
+    ],
+    "casting_time": "1 minute",
+    "range": "90 feet",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/conjure_fey.json"
+  },
+  {
+    "index": "conjure_minor_elementals",
+    "name": "conjure minor elementals",
+    "level": 4,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "90 feet",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/conjure_minor_elementals.json"
+  },
+  {
+    "index": "conjure_woodland_beings",
+    "name": "conjure woodland beings",
+    "level": 4,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/conjure_woodland_beings.json"
+  },
+  {
+    "index": "contact_other_plane",
+    "name": "contact other plane",
+    "level": 5,
+    "school": "divination",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "Self",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/contact_other_plane.json"
+  },
+  {
+    "index": "contagion",
+    "name": "contagion",
+    "level": 5,
+    "school": "necromancy",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "7 days",
+    "path": "/assets/atlas/spell/json/contagion.json"
+  },
+  {
+    "index": "contingency",
+    "name": "contingency",
+    "level": 6,
+    "school": "evocation",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "10 minutes",
+    "range": "Self",
+    "duration": "10 days",
+    "path": "/assets/atlas/spell/json/contingency.json"
+  },
+  {
+    "index": "continual_flame",
+    "name": "continual flame",
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "artificer",
+      "cleric",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "path": "/assets/atlas/spell/json/continual_flame.json"
+  },
+  {
+    "index": "control_water",
+    "name": "control water",
+    "level": 4,
+    "school": "transmutation",
+    "classes": [
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "300 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/control_water.json"
+  },
+  {
+    "index": "control_weather",
+    "name": "control weather",
+    "level": 8,
+    "school": "transmutation",
+    "classes": [
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "casting_time": "10 minutes",
+    "range": "Self",
+    "duration": "Up to 8 hours",
+    "path": "/assets/atlas/spell/json/control_weather.json"
+  },
+  {
+    "index": "counterspell",
+    "name": "counterspell",
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 reaction",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/counterspell.json"
+  },
+  {
+    "index": "create_food_and_water",
+    "name": "create food and water",
+    "level": 3,
+    "school": "conjuration",
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/create_food_and_water.json"
+  },
+  {
+    "index": "create_or_destroy_water",
+    "name": "create or destroy water",
+    "level": 1,
+    "school": "transmutation",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/create_or_destroy_water.json"
+  },
+  {
+    "index": "create_undead",
+    "name": "create undead",
+    "level": 6,
+    "school": "necromancy",
+    "classes": [
+      "cleric",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "10 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/create_undead.json"
+  },
+  {
+    "index": "creation",
+    "name": "creation",
+    "level": 5,
+    "school": "illusion",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "30 feet",
+    "duration": "Special",
+    "path": "/assets/atlas/spell/json/creation.json"
+  },
+  {
+    "index": "cure_wounds",
+    "name": "cure wounds",
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "artificer",
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/cure_wounds.json"
+  },
+  {
+    "index": "dancing_lights",
+    "name": "dancing lights",
+    "level": 0,
+    "school": "evocation",
+    "classes": [
+      "artificer",
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/dancing_lights.json"
+  },
+  {
+    "index": "darkness",
+    "name": "darkness",
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/darkness.json"
+  },
+  {
+    "index": "darkvision",
+    "name": "darkvision",
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/darkvision.json"
+  },
+  {
+    "index": "daylight",
+    "name": "daylight",
+    "level": 3,
+    "school": "evocation",
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "sorcerer"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/daylight.json"
+  },
+  {
+    "index": "death_ward",
+    "name": "death ward",
+    "level": 4,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/death_ward.json"
+  },
+  {
+    "index": "delayed_blast_fireball",
+    "name": "delayed blast fireball",
+    "level": 7,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/delayed_blast_fireball.json"
+  },
+  {
+    "index": "demiplane",
+    "name": "demiplane",
+    "level": 8,
+    "school": "conjuration",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/demiplane.json"
+  },
+  {
+    "index": "detect_evil_and_good",
+    "name": "detect evil and good",
+    "level": 1,
+    "school": "divination",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/detect_evil_and_good.json"
+  },
+  {
+    "index": "detect_magic",
+    "name": "detect magic",
+    "level": 1,
+    "school": "divination",
+    "classes": [
+      "artificer",
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/detect_magic.json"
+  },
+  {
+    "index": "detect_poison_and_disease",
+    "name": "detect poison and disease",
+    "level": 1,
+    "school": "divination",
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/detect_poison_and_disease.json"
+  },
+  {
+    "index": "detect_thoughts",
+    "name": "detect thoughts",
+    "level": 2,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/detect_thoughts.json"
+  },
+  {
+    "index": "dimension_door",
+    "name": "dimension door",
+    "level": 4,
+    "school": "conjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "500 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/dimension_door.json"
+  },
+  {
+    "index": "disguise_self",
+    "name": "disguise self",
+    "level": 1,
+    "school": "illusion",
+    "classes": [
+      "artificer",
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/disguise_self.json"
+  },
+  {
+    "index": "disintegrate",
+    "name": "disintegrate",
+    "level": 6,
+    "school": "transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/disintegrate.json"
+  },
+  {
+    "index": "dispel_evil_and_good",
+    "name": "dispel evil and good",
+    "level": 5,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/dispel_evil_and_good.json"
+  },
+  {
+    "index": "dispel_magic",
+    "name": "dispel magic",
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/dispel_magic.json"
+  },
+  {
+    "index": "divination",
+    "name": "divination",
+    "level": 4,
+    "school": "divination",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/divination.json"
+  },
+  {
+    "index": "divine_favor",
+    "name": "divine favor",
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "paladin"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/divine_favor.json"
+  },
+  {
+    "index": "divine_word",
+    "name": "divine word",
+    "level": 7,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/divine_word.json"
+  },
+  {
+    "index": "dominate_beast",
+    "name": "dominate beast",
+    "level": 4,
+    "school": "enchantment",
+    "classes": [
+      "druid",
+      "sorcerer"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/dominate_beast.json"
+  },
+  {
+    "index": "dominate_monster",
+    "name": "dominate monster",
+    "level": 8,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/dominate_monster.json"
+  },
+  {
+    "index": "dominate_person",
+    "name": "dominate person",
+    "level": 5,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/dominate_person.json"
+  },
+  {
+    "index": "dream",
+    "name": "dream",
+    "level": 5,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "Special",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/dream.json"
+  },
+  {
+    "index": "druidcraft",
+    "name": "druidcraft",
+    "level": 0,
+    "school": "transmutation",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/druidcraft.json"
+  },
+  {
+    "index": "earthquake",
+    "name": "earthquake",
+    "level": 8,
+    "school": "evocation",
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
+    "casting_time": "1 action",
+    "range": "500 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/earthquake.json"
+  },
+  {
+    "index": "eldritch_blast",
+    "name": "eldritch blast",
+    "level": 0,
+    "school": "evocation",
+    "classes": [
+      "warlock"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/eldritch_blast.json"
+  },
+  {
+    "index": "enhance_ability",
+    "name": "enhance ability",
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "bard",
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/enhance_ability.json"
+  },
+  {
+    "index": "enlarge_reduce",
+    "name": "enlarge/reduce",
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/enlarge_reduce.json"
+  },
+  {
+    "index": "entangle",
+    "name": "entangle",
+    "level": 1,
+    "school": "conjuration",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/entangle.json"
+  },
+  {
+    "index": "enthrall",
+    "name": "enthrall",
+    "level": 2,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "warlock"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/enthrall.json"
+  },
+  {
+    "index": "etherealness",
+    "name": "etherealness",
+    "level": 7,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/etherealness.json"
+  },
+  {
+    "index": "expeditious_retreat",
+    "name": "expeditious retreat",
+    "level": 1,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/expeditious_retreat.json"
+  },
+  {
+    "index": "eyebite",
+    "name": "eyebite",
+    "level": 6,
+    "school": "necromancy",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/eyebite.json"
+  },
+  {
+    "index": "fabricate",
+    "name": "fabricate",
+    "level": 4,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "wizard"
+    ],
+    "casting_time": "10 minutes",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/fabricate.json"
+  },
+  {
+    "index": "faerie_fire",
+    "name": "faerie fire",
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "artificer",
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/faerie_fire.json"
+  },
+  {
+    "index": "faithful_hound",
+    "name": "faithful hound",
+    "level": 4,
+    "school": "conjuration",
+    "classes": [
+      "artificer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/faithful_hound.json"
+  },
+  {
+    "index": "false_life",
+    "name": "false life",
+    "level": 1,
+    "school": "necromancy",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/false_life.json"
+  },
+  {
+    "index": "fear",
+    "name": "fear",
+    "level": 3,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/fear.json"
+  },
+  {
+    "index": "feather_fall",
+    "name": "feather fall",
+    "level": 1,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 reaction",
+    "range": "60 feet",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/feather_fall.json"
+  },
+  {
+    "index": "feeblemind",
+    "name": "feeblemind",
+    "level": 8,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/feeblemind.json"
+  },
+  {
+    "index": "find_familiar",
+    "name": "find familiar",
+    "level": 1,
+    "school": "conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 hour",
+    "range": "10 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/find_familiar.json"
+  },
+  {
+    "index": "find_steed",
+    "name": "find steed",
+    "level": 2,
+    "school": "conjuration",
+    "classes": [
+      "paladin"
+    ],
+    "casting_time": "10 minutes",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/find_steed.json"
+  },
+  {
+    "index": "find_the_path",
+    "name": "find the path",
+    "level": 6,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
+    "casting_time": "1 minute",
+    "range": "Self",
+    "duration": "Up to 24 hours",
+    "path": "/assets/atlas/spell/json/find_the_path.json"
+  },
+  {
+    "index": "find_traps",
+    "name": "find traps",
+    "level": 2,
+    "school": "divination",
+    "classes": [
+      "cleric",
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/find_traps.json"
+  },
+  {
+    "index": "finger_of_death",
+    "name": "finger of death",
+    "level": 7,
+    "school": "necromancy",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/finger_of_death.json"
+  },
+  {
+    "index": "fireball",
+    "name": "fireball",
+    "level": 3,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/fireball.json"
+  },
+  {
+    "index": "fire_bolt",
+    "name": "fire bolt",
+    "level": 0,
+    "school": "evocation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/fire_bolt.json"
+  },
+  {
+    "index": "fire_shield",
+    "name": "fire shield",
+    "level": 4,
+    "school": "evocation",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "10 minutes",
+    "path": "/assets/atlas/spell/json/fire_shield.json"
+  },
+  {
+    "index": "fire_storm",
+    "name": "fire storm",
+    "level": 7,
+    "school": "evocation",
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/fire_storm.json"
+  },
+  {
+    "index": "flame_blade",
+    "name": "flame blade",
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/flame_blade.json"
+  },
+  {
+    "index": "flame_strike",
+    "name": "flame strike",
+    "level": 5,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/flame_strike.json"
+  },
+  {
+    "index": "flaming_sphere",
+    "name": "flaming sphere",
+    "level": 2,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/flaming_sphere.json"
+  },
+  {
+    "index": "flesh_to_stone",
+    "name": "flesh to stone",
+    "level": 6,
+    "school": "transmutation",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/flesh_to_stone.json"
+  },
+  {
+    "index": "floating_disk",
+    "name": "floating disk",
+    "level": 1,
+    "school": "conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/floating_disk.json"
+  },
+  {
+    "index": "fly",
+    "name": "fly",
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/fly.json"
+  },
+  {
+    "index": "fog_cloud",
+    "name": "fog cloud",
+    "level": 1,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/fog_cloud.json"
+  },
+  {
+    "index": "forbiddance",
+    "name": "forbiddance",
+    "level": 6,
+    "school": "abjuration",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "10 minutes",
+    "range": "Touch",
+    "duration": "24 hours",
+    "path": "/assets/atlas/spell/json/forbiddance.json"
+  },
+  {
+    "index": "forcecage",
+    "name": "forcecage",
+    "level": 7,
+    "school": "evocation",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "100 feet",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/forcecage.json"
+  },
+  {
+    "index": "foresight",
+    "name": "foresight",
+    "level": 9,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/foresight.json"
+  },
+  {
+    "index": "freedom_of_movement",
+    "name": "freedom of movement",
+    "level": 4,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "bard",
+      "cleric",
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/freedom_of_movement.json"
+  },
+  {
+    "index": "freezing_sphere",
+    "name": "freezing sphere",
+    "level": 6,
+    "school": "evocation",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "300 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/freezing_sphere.json"
+  },
+  {
+    "index": "gaseous_form",
+    "name": "gaseous form",
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/gaseous_form.json"
+  },
+  {
+    "index": "gate",
+    "name": "gate",
+    "level": 9,
+    "school": "conjuration",
+    "classes": [
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/gate.json"
+  },
+  {
+    "index": "grease",
+    "name": "grease",
+    "level": 1,
+    "school": "conjuration",
+    "classes": [
+      "artificer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/geas.json"
+  },
+  {
+    "index": "gentle_repose",
+    "name": "gentle repose",
+    "level": 2,
+    "school": "necromancy",
+    "classes": [
+      "cleric",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "10 days",
+    "path": "/assets/atlas/spell/json/gentle_repose.json"
+  },
+  {
+    "index": "giant_insect",
+    "name": "giant insect",
+    "level": 4,
+    "school": "transmutation",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/giant_insect.json"
+  },
+  {
+    "index": "glibness",
+    "name": "glibness",
+    "level": 8,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "warlock"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/glibness.json"
+  },
+  {
+    "index": "globe_of_invulnerability",
+    "name": "globe of invulnerability",
+    "level": 6,
+    "school": "abjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/globe_of_invulnerability.json"
+  },
+  {
+    "index": "glyph_of_warding",
+    "name": "glyph of warding",
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
+    "casting_time": "1 hour",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "path": "/assets/atlas/spell/json/glyph_of_warding.json"
+  },
+  {
+    "index": "goodberry",
+    "name": "goodberry",
+    "level": 1,
+    "school": "transmutation",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/goodberry.json"
+  },
+  {
+    "index": "glyph_of_warding",
+    "name": "glyph of warding",
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "bard",
+      "cleric",
+      "wizard"
+    ],
+    "casting_time": "1 hour",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "path": "/assets/atlas/spell/json/grease.json"
+  },
+  {
+    "index": "greater_invisibility",
+    "name": "greater invisibility",
+    "level": 4,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/greater_invisibility.json"
+  },
+  {
+    "index": "greater_restoration",
+    "name": "greater restoration",
+    "level": 5,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "bard",
+      "cleric",
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/greater_restoration.json"
+  },
+  {
+    "index": "guardian_of_faith",
+    "name": "guardian of faith",
+    "level": 4,
+    "school": "conjuration",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/guardian_of_faith.json"
+  },
+  {
+    "index": "guards_and_wards",
+    "name": "guards and wards",
+    "level": 6,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "casting_time": "10 minutes",
+    "range": "Touch",
+    "duration": "24 hours",
+    "path": "/assets/atlas/spell/json/guards_and_wards.json"
+  },
+  {
+    "index": "guidance",
+    "name": "guidance",
+    "level": 0,
+    "school": "divination",
+    "classes": [
+      "artificer",
+      "cleric",
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/guidance.json"
+  },
+  {
+    "index": "guiding_bolt",
+    "name": "guiding bolt",
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "1 round",
+    "path": "/assets/atlas/spell/json/guiding_bolt.json"
+  },
+  {
+    "index": "gust_of_wind",
+    "name": "gust of wind",
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/gust_of_wind.json"
+  },
+  {
+    "index": "hallow",
+    "name": "hallow",
+    "level": 5,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "24 hours",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "path": "/assets/atlas/spell/json/hallow.json"
+  },
+  {
+    "index": "hallucinatory_terrain",
+    "name": "hallucinatory terrain",
+    "level": 4,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "10 minutes",
+    "range": "300 feet",
+    "duration": "24 hours",
+    "path": "/assets/atlas/spell/json/hallucinatory_terrain.json"
+  },
+  {
+    "index": "harm",
+    "name": "harm",
+    "level": 6,
+    "school": "necromancy",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/harm.json"
+  },
+  {
+    "index": "haste",
+    "name": "haste",
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/haste.json"
+  },
+  {
+    "index": "heal",
+    "name": "heal",
+    "level": 6,
+    "school": "evocation",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/heal.json"
+  },
+  {
+    "index": "healing_word",
+    "name": "healing word",
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/healing_word.json"
+  },
+  {
+    "index": "heat_metal",
+    "name": "heat metal",
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "bard",
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/heat_metal.json"
+  },
+  {
+    "index": "hellish_rebuke",
+    "name": "hellish rebuke",
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "warlock"
+    ],
+    "casting_time": "1 reaction",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/hellish_rebuke.json"
+  },
+  {
+    "index": "heroes_feast",
+    "name": "heroes' feast",
+    "level": 6,
+    "school": "conjuration",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "casting_time": "10 minutes",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/heroes_feast.json"
+  },
+  {
+    "index": "heroism",
+    "name": "heroism",
+    "level": 1,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "paladin"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/heroism.json"
+  },
+  {
+    "index": "hideous_laughter",
+    "name": "hideous laughter",
+    "level": 1,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/hideous_laughter.json"
+  },
+  {
+    "index": "hold_monster",
+    "name": "hold monster",
+    "level": 5,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/hold_monster.json"
+  },
+  {
+    "index": "hold_person",
+    "name": "hold person",
+    "level": 2,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/hold_person.json"
+  },
+  {
+    "index": "holy_aura",
+    "name": "holy aura",
+    "level": 8,
+    "school": "abjuration",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/holy_aura.json"
+  },
+  {
+    "index": "hunters_mark",
+    "name": "hunter's mark",
+    "level": 1,
+    "school": "divination",
+    "classes": [
+      "ranger"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "90 feet",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/hunters_mark.json"
+  },
+  {
+    "index": "hypnotic_pattern",
+    "name": "hypnotic pattern",
+    "level": 3,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/hypnotic_pattern.json"
+  },
+  {
+    "index": "ice_storm",
+    "name": "ice storm",
+    "level": 4,
+    "school": "evocation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "300 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/ice_storm.json"
+  },
+  {
+    "index": "identify",
+    "name": "identify",
+    "level": 1,
+    "school": "divination",
+    "classes": [
+      "artificer",
+      "bard",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/identify.json"
+  },
+  {
+    "index": "illusory_script",
+    "name": "illusory script",
+    "level": 1,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "duration": "10 days",
+    "path": "/assets/atlas/spell/json/illusory_script.json"
+  },
+  {
+    "index": "imprisonment",
+    "name": "imprisonment",
+    "level": 9,
+    "school": "abjuration",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "30 feet",
+    "duration": "Until dispelled",
+    "path": "/assets/atlas/spell/json/imprisonment.json"
+  },
+  {
+    "index": "incendiary_cloud",
+    "name": "incendiary cloud",
+    "level": 8,
+    "school": "conjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/incendiary_cloud.json"
+  },
+  {
+    "index": "inflict_wounds",
+    "name": "inflict wounds",
+    "level": 1,
+    "school": "necromancy",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/inflict_wounds.json"
+  },
+  {
+    "index": "insect_plague",
+    "name": "insect plague",
+    "level": 5,
+    "school": "conjuration",
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
+    "casting_time": "1 action",
+    "range": "300 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/insect_plague.json"
+  },
+  {
+    "index": "instant_summons",
+    "name": "instant summons",
+    "level": 6,
+    "school": "conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "path": "/assets/atlas/spell/json/instant_summons.json"
+  },
+  {
+    "index": "invisibility",
+    "name": "invisibility",
+    "level": 2,
+    "school": "illusion",
+    "classes": [
+      "artificer",
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/invisibility.json"
+  },
+  {
+    "index": "irresistible_dance",
+    "name": "irresistible dance",
+    "level": 6,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/irresistible_dance.json"
+  },
+  {
+    "index": "jump",
+    "name": "jump",
+    "level": 1,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/jump.json"
+  },
+  {
+    "index": "knock",
+    "name": "knock",
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/knock.json"
+  },
+  {
+    "index": "legend_lore",
+    "name": "legend lore",
+    "level": 5,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
+    "casting_time": "10 minutes",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/legend_lore.json"
+  },
+  {
+    "index": "lesser_restoration",
+    "name": "lesser restoration",
+    "level": 2,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/lesser_restoration.json"
+  },
+  {
+    "index": "levitate",
+    "name": "levitate",
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/levitate.json"
+  },
+  {
+    "index": "light",
+    "name": "light",
+    "level": 0,
+    "school": "evocation",
+    "classes": [
+      "artificer",
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/light.json"
+  },
+  {
+    "index": "lightning_bolt",
+    "name": "lightning bolt",
+    "level": 3,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/lightning_bolt.json"
+  },
+  {
+    "index": "locate_animals_or_plants",
+    "name": "locate animals or plants",
+    "level": 2,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/locate_animals_or_plants.json"
+  },
+  {
+    "index": "locate_creature",
+    "name": "locate creature",
+    "level": 4,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/locate_creature.json"
+  },
+  {
+    "index": "locate_object",
+    "name": "locate object",
+    "level": 2,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/locate_object.json"
+  },
+  {
+    "index": "longstrider",
+    "name": "longstrider",
+    "level": 1,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "bard",
+      "druid",
+      "ranger",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/longstrider.json"
+  },
+  {
+    "index": "mage_armor",
+    "name": "mage armor",
+    "level": 1,
+    "school": "abjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/mage_armor.json"
+  },
+  {
+    "index": "mage_hand",
+    "name": "mage hand",
+    "level": 0,
+    "school": "conjuration",
+    "classes": [
+      "artificer",
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/mage_hand.json"
+  },
+  {
+    "index": "magic_circle",
+    "name": "magic circle",
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "paladin",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "10 feet",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/magic_circle.json"
+  },
+  {
+    "index": "magic_jar",
+    "name": "magic jar",
+    "level": 6,
+    "school": "necromancy",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "Self",
+    "duration": "Until dispelled",
+    "path": "/assets/atlas/spell/json/magic_jar.json"
+  },
+  {
+    "index": "magic_missile",
+    "name": "magic missile",
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/magic_missile.json"
+  },
+  {
+    "index": "magic_mouth",
+    "name": "magic mouth",
+    "level": 2,
+    "school": "illusion",
+    "classes": [
+      "artificer",
+      "bard",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "30 feet",
+    "duration": "Until dispelled",
+    "path": "/assets/atlas/spell/json/magic_mouth.json"
+  },
+  {
+    "index": "magic_weapon",
+    "name": "magic weapon",
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "paladin",
+      "wizard"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/magic_weapon.json"
+  },
+  {
+    "index": "magnificent_mansion",
+    "name": "magnificent mansion",
+    "level": 7,
+    "school": "conjuration",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "300 feet",
+    "duration": "24 hours",
+    "path": "/assets/atlas/spell/json/magnificent_mansion.json"
+  },
+  {
+    "index": "major_image",
+    "name": "major image",
+    "level": 3,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/major_image.json"
+  },
+  {
+    "index": "mass_cure_wounds",
+    "name": "mass cure wounds",
+    "level": 5,
+    "school": "conjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/mass_cure_wounds.json"
+  },
+  {
+    "index": "mass_heal",
+    "name": "mass heal",
+    "level": 9,
+    "school": "conjuration",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/mass_heal.json"
+  },
+  {
+    "index": "mass_healing_word",
+    "name": "mass healing word",
+    "level": 3,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/mass_healing_word.json"
+  },
+  {
+    "index": "mass_suggestion",
+    "name": "mass suggestion",
+    "level": 6,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "24 hours",
+    "path": "/assets/atlas/spell/json/mass_suggestion.json"
+  },
+  {
+    "index": "maze",
+    "name": "maze",
+    "level": 8,
+    "school": "conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/maze.json"
+  },
+  {
+    "index": "meld_into_stone",
+    "name": "meld into stone",
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/meld_into_stone.json"
+  },
+  {
+    "index": "mending",
+    "name": "mending",
+    "level": 0,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "cleric",
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/mending.json"
+  },
+  {
+    "index": "message",
+    "name": "message",
+    "level": 0,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "1 round",
+    "path": "/assets/atlas/spell/json/message.json"
+  },
+  {
+    "index": "meteor_swarm",
+    "name": "meteor swarm",
+    "level": 9,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "1 mile",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/meteor_swarm.json"
+  },
+  {
+    "index": "mind_blank",
+    "name": "mind blank",
+    "level": 8,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "24 hours",
+    "path": "/assets/atlas/spell/json/mind_blank.json"
+  },
+  {
+    "index": "minor_illusion",
+    "name": "minor illusion",
+    "level": 0,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/minor_illusion.json"
+  },
+  {
+    "index": "mirage_arcane",
+    "name": "mirage arcane",
+    "level": 7,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "druid",
+      "wizard"
+    ],
+    "casting_time": "10 minutes",
+    "range": "Sight",
+    "duration": "10 days",
+    "path": "/assets/atlas/spell/json/mirage_arcane.json"
+  },
+  {
+    "index": "mirror_image",
+    "name": "mirror image",
+    "level": 2,
+    "school": "illusion",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/mirror_image.json"
+  },
+  {
+    "index": "mislead",
+    "name": "mislead",
+    "level": 5,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/mislead.json"
+  },
+  {
+    "index": "misty_step",
+    "name": "misty step",
+    "level": 2,
+    "school": "conjuration",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/misty_step.json"
+  },
+  {
+    "index": "modify_memory",
+    "name": "modify memory",
+    "level": 5,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/modify_memory.json"
+  },
+  {
+    "index": "moonbeam",
+    "name": "moonbeam",
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/moonbeam.json"
+  },
+  {
+    "index": "move_earth",
+    "name": "move earth",
+    "level": 6,
+    "school": "transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 2 hours",
+    "path": "/assets/atlas/spell/json/move_earth.json"
+  },
+  {
+    "index": "nondetection",
+    "name": "nondetection",
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "ranger",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/nondetection.json"
+  },
+  {
+    "index": "passwall",
+    "name": "passwall",
+    "level": 5,
+    "school": "transmutation",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/passwall.json"
+  },
+  {
+    "index": "pass_without_trace",
+    "name": "pass without trace",
+    "level": 2,
+    "school": "abjuration",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/pass_without_trace.json"
+  },
+  {
+    "index": "phantasmal_killer",
+    "name": "phantasmal killer",
+    "level": 4,
+    "school": "illusion",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/phantasmal_killer.json"
+  },
+  {
+    "index": "phantom_steed",
+    "name": "phantom steed",
+    "level": 3,
+    "school": "illusion",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "30 feet",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/phantom_steed.json"
+  },
+  {
+    "index": "planar_ally",
+    "name": "planar ally",
+    "level": 6,
+    "school": "conjuration",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "10 minutes",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/planar_ally.json"
+  },
+  {
+    "index": "planar_binding",
+    "name": "planar binding",
+    "level": 5,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "casting_time": "1 hour",
+    "range": "60 feet",
+    "duration": "24 hours",
+    "path": "/assets/atlas/spell/json/planar_binding.json"
+  },
+  {
+    "index": "plane_shift",
+    "name": "plane shift",
+    "level": 7,
+    "school": "conjuration",
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/plane_shift.json"
+  },
+  {
+    "index": "plant_growth",
+    "name": "plant growth",
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/plant_growth.json"
+  },
+  {
+    "index": "poison_spray",
+    "name": "poison spray",
+    "level": 0,
+    "school": "conjuration",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "10 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/poison_spray.json"
+  },
+  {
+    "index": "polymorph",
+    "name": "polymorph",
+    "level": 4,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/polymorph.json"
+  },
+  {
+    "index": "power_word_kill",
+    "name": "power word kill",
+    "level": 9,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/power_word_kill.json"
+  },
+  {
+    "index": "power_word_stun",
+    "name": "power word stun",
+    "level": 8,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/power_word_stun.json"
+  },
+  {
+    "index": "prayer_of_healing",
+    "name": "prayer of healing",
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "10 minutes",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/prayer_of_healing.json"
+  },
+  {
+    "index": "prestidigitation",
+    "name": "prestidigitation",
+    "level": 0,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "10 feet",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/prestidigitation.json"
+  },
+  {
+    "index": "prismatic_spray",
+    "name": "prismatic spray",
+    "level": 7,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/prismatic_spray.json"
+  },
+  {
+    "index": "prismatic_wall",
+    "name": "prismatic wall",
+    "level": 9,
+    "school": "abjuration",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "10 minutes",
+    "path": "/assets/atlas/spell/json/prismatic_wall.json"
+  },
+  {
+    "index": "private_sanctum",
+    "name": "private sanctum",
+    "level": 4,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "wizard"
+    ],
+    "casting_time": "10 minutes",
+    "range": "120 feet",
+    "duration": "24 hours",
+    "path": "/assets/atlas/spell/json/private_sanctum.json"
+  },
+  {
+    "index": "produce_flame",
+    "name": "produce flame",
+    "level": 0,
+    "school": "conjuration",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "10 minutes",
+    "path": "/assets/atlas/spell/json/produce_flame.json"
+  },
+  {
+    "index": "programmed_illusion",
+    "name": "programmed illusion",
+    "level": 6,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Until dispelled",
+    "path": "/assets/atlas/spell/json/programmed_illusion.json"
+  },
+  {
+    "index": "project_image",
+    "name": "project image",
+    "level": 7,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "500 miles",
+    "duration": "Up to 24 hours",
+    "path": "/assets/atlas/spell/json/project_image.json"
+  },
+  {
+    "index": "protection_from_energy",
+    "name": "protection from energy",
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "cleric",
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/protection_from_energy.json"
+  },
+  {
+    "index": "protection_from_evil_and_good",
+    "name": "protection from evil and good",
+    "level": 1,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "paladin",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/protection_from_evil_and_good.json"
+  },
+  {
+    "index": "protection_from_poison",
+    "name": "protection from poison",
+    "level": 2,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/protection_from_poison.json"
+  },
+  {
+    "index": "purify_food_and_drink",
+    "name": "purify food and drink",
+    "level": 1,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "cleric",
+      "druid",
+      "paladin"
+    ],
+    "casting_time": "1 action",
+    "range": "10 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/purify_food_and_drink.json"
+  },
+  {
+    "index": "raise_dead",
+    "name": "raise dead",
+    "level": 5,
+    "school": "necromancy",
+    "classes": [
+      "bard",
+      "cleric",
+      "paladin"
+    ],
+    "casting_time": "1 hour",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/raise_dead.json"
+  },
+  {
+    "index": "ray_of_enfeeblement",
+    "name": "ray of enfeeblement",
+    "level": 2,
+    "school": "necromancy",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/ray_of_enfeeblement.json"
+  },
+  {
+    "index": "ray_of_frost",
+    "name": "ray of frost",
+    "level": 0,
+    "school": "evocation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/ray_of_frost.json"
+  },
+  {
+    "index": "regenerate",
+    "name": "regenerate",
+    "level": 7,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/regenerate.json"
+  },
+  {
+    "index": "reincarnate",
+    "name": "reincarnate",
+    "level": 5,
+    "school": "transmutation",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 hour",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/reincarnate.json"
+  },
+  {
+    "index": "remove_curse",
+    "name": "remove curse",
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "paladin",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/remove_curse.json"
+  },
+  {
+    "index": "resilient_sphere",
+    "name": "resilient sphere",
+    "level": 4,
+    "school": "evocation",
+    "classes": [
+      "artificer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/resilient_sphere.json"
+  },
+  {
+    "index": "resistance",
+    "name": "resistance",
+    "level": 0,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "cleric",
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/resistance.json"
+  },
+  {
+    "index": "resurrection",
+    "name": "resurrection",
+    "level": 7,
+    "school": "necromancy",
+    "classes": [
+      "bard",
+      "cleric"
+    ],
+    "casting_time": "1 hour",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/resurrection.json"
+  },
+  {
+    "index": "reverse_gravity",
+    "name": "reverse gravity",
+    "level": 7,
+    "school": "transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "100 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/reverse_gravity.json"
+  },
+  {
+    "index": "revivify",
+    "name": "revivify",
+    "level": 3,
+    "school": "conjuration",
+    "classes": [
+      "artificer",
+      "cleric",
+      "paladin"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/revivify.json"
+  },
+  {
+    "index": "rope_trick",
+    "name": "rope trick",
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/rope_trick.json"
+  },
+  {
+    "index": "sacred_flame",
+    "name": "sacred flame",
+    "level": 0,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/sacred_flame.json"
+  },
+  {
+    "index": "sanctuary",
+    "name": "sanctuary",
+    "level": 1,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "cleric"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "30 feet",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/sanctuary.json"
+  },
+  {
+    "index": "scorching_ray",
+    "name": "scorching ray",
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/scorching_ray.json"
+  },
+  {
+    "index": "scrying",
+    "name": "scrying",
+    "level": 5,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "10 minutes",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/scrying.json"
+  },
+  {
+    "index": "secret_chest",
+    "name": "secret chest",
+    "level": 4,
+    "school": "conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/secret_chest.json"
+  },
+  {
+    "index": "seeming",
+    "name": "seeming",
+    "level": 5,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/seeming.json"
+  },
+  {
+    "index": "see_invisibility",
+    "name": "see invisibility",
+    "level": 2,
+    "school": "divination",
+    "classes": [
+      "artificer",
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/see_invisibility.json"
+  },
+  {
+    "index": "sending",
+    "name": "sending",
+    "level": 3,
+    "school": "evocation",
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Unlimited",
+    "duration": "1 round",
+    "path": "/assets/atlas/spell/json/sending.json"
+  },
+  {
+    "index": "sequester",
+    "name": "sequester",
+    "level": 7,
+    "school": "transmutation",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "path": "/assets/atlas/spell/json/sequester.json"
+  },
+  {
+    "index": "shapechange",
+    "name": "shapechange",
+    "level": 9,
+    "school": "transmutation",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/shapechange.json"
+  },
+  {
+    "index": "shatter",
+    "name": "shatter",
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/shatter.json"
+  },
+  {
+    "index": "shield",
+    "name": "shield",
+    "level": 1,
+    "school": "abjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 reaction",
+    "range": "Self",
+    "duration": "1 round",
+    "path": "/assets/atlas/spell/json/shield.json"
+  },
+  {
+    "index": "shield_of_faith",
+    "name": "shield of faith",
+    "level": 1,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "60 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/shield_of_faith.json"
+  },
+  {
+    "index": "shillelagh",
+    "name": "shillelagh",
+    "level": 0,
+    "school": "transmutation",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "Touch",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/shillelagh.json"
+  },
+  {
+    "index": "shocking_grasp",
+    "name": "shocking grasp",
+    "level": 0,
+    "school": "evocation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/shocking_grasp.json"
+  },
+  {
+    "index": "silence",
+    "name": "silence",
+    "level": 2,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "cleric",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/silence.json"
+  },
+  {
+    "index": "silent_image",
+    "name": "silent image",
+    "level": 1,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/silent_image.json"
+  },
+  {
+    "index": "simulacrum",
+    "name": "simulacrum",
+    "level": 7,
+    "school": "illusion",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "12 hours",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "path": "/assets/atlas/spell/json/simulacrum.json"
+  },
+  {
+    "index": "sleep",
+    "name": "sleep",
+    "level": 1,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/sleep.json"
+  },
+  {
+    "index": "sleet_storm",
+    "name": "sleet storm",
+    "level": 3,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/sleet_storm.json"
+  },
+  {
+    "index": "slow",
+    "name": "slow",
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/slow.json"
+  },
+  {
+    "index": "spare_the_dying",
+    "name": "spare the dying",
+    "level": 0,
+    "school": "necromancy",
+    "classes": [
+      "artificer",
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/spare_the_dying.json"
+  },
+  {
+    "index": "speak_with_animals",
+    "name": "speak with animals",
+    "level": 1,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "10 minutes",
+    "path": "/assets/atlas/spell/json/speak_with_animals.json"
+  },
+  {
+    "index": "speak_with_dead",
+    "name": "speak with dead",
+    "level": 3,
+    "school": "necromancy",
+    "classes": [
+      "bard",
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "10 feet",
+    "duration": "10 minutes",
+    "path": "/assets/atlas/spell/json/speak_with_dead.json"
+  },
+  {
+    "index": "speak_with_plants",
+    "name": "speak with plants",
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "10 minutes",
+    "path": "/assets/atlas/spell/json/speak_with_plants.json"
+  },
+  {
+    "index": "spider_climb",
+    "name": "spider climb",
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/spider_climb.json"
+  },
+  {
+    "index": "spike_growth",
+    "name": "spike growth",
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/spike_growth.json"
+  },
+  {
+    "index": "spiritual_weapon",
+    "name": "spiritual weapon",
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "60 feet",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/spiritual_weapon.json"
+  },
+  {
+    "index": "spirit_guardians",
+    "name": "spirit guardians",
+    "level": 3,
+    "school": "conjuration",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/spirit_guardians.json"
+  },
+  {
+    "index": "stinking_cloud",
+    "name": "stinking cloud",
+    "level": 3,
+    "school": "conjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/stinking_cloud.json"
+  },
+  {
+    "index": "stoneskin",
+    "name": "stoneskin",
+    "level": 4,
+    "school": "abjuration",
+    "classes": [
+      "artificer",
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/stoneskin.json"
+  },
+  {
+    "index": "stone_shape",
+    "name": "stone shape",
+    "level": 4,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/stone_shape.json"
+  },
+  {
+    "index": "storm_of_vengeance",
+    "name": "storm of vengeance",
+    "level": 9,
+    "school": "conjuration",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "Sight",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/storm_of_vengeance.json"
+  },
+  {
+    "index": "suggestion",
+    "name": "suggestion",
+    "level": 2,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 8 hours",
+    "path": "/assets/atlas/spell/json/suggestion.json"
+  },
+  {
+    "index": "sunbeam",
+    "name": "sunbeam",
+    "level": 6,
+    "school": "evocation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/sunbeam.json"
+  },
+  {
+    "index": "sunburst",
+    "name": "sunburst",
+    "level": 8,
+    "school": "evocation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/sunburst.json"
+  },
+  {
+    "index": "symbol",
+    "name": "symbol",
+    "level": 7,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "duration": "Until dispelled",
+    "path": "/assets/atlas/spell/json/symbol.json"
+  },
+  {
+    "index": "tashas_caustic_brew",
+    "name": "tasha's caustic brew",
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self (30-foot line)",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/tashas_caustic_brew.json"
+  },
+  {
+    "index": "telekinesis",
+    "name": "telekinesis",
+    "level": 5,
+    "school": "transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/telekinesis.json"
+  },
+  {
+    "index": "telepathic_bond",
+    "name": "telepathic bond",
+    "level": 5,
+    "school": "divination",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/telepathic_bond.json"
+  },
+  {
+    "index": "teleport",
+    "name": "teleport",
+    "level": 7,
+    "school": "conjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "10 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/teleport.json"
+  },
+  {
+    "index": "teleportation_circle",
+    "name": "teleportation circle",
+    "level": 5,
+    "school": "conjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "10 feet",
+    "duration": "1 round",
+    "path": "/assets/atlas/spell/json/teleportation_circle.json"
+  },
+  {
+    "index": "thaumaturgy",
+    "name": "thaumaturgy",
+    "level": 0,
+    "school": "transmutation",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "1 minute",
+    "path": "/assets/atlas/spell/json/thaumaturgy.json"
+  },
+  {
+    "index": "thorn_whip",
+    "name": "thorn whip",
+    "level": 0,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/thorn_whip.json"
+  },
+  {
+    "index": "thunderwave",
+    "name": "thunderwave",
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/thunderwave.json"
+  },
+  {
+    "index": "time_stop",
+    "name": "time stop",
+    "level": 9,
+    "school": "transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/time_stop.json"
+  },
+  {
+    "index": "tiny_hut",
+    "name": "tiny hut",
+    "level": 3,
+    "school": "evocation",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "casting_time": "1 minute",
+    "range": "Self",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/tiny_hut.json"
+  },
+  {
+    "index": "tongues",
+    "name": "tongues",
+    "level": 3,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/tongues.json"
+  },
+  {
+    "index": "transport_via_plants",
+    "name": "transport via plants",
+    "level": 6,
+    "school": "conjuration",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "10 feet",
+    "duration": "1 round",
+    "path": "/assets/atlas/spell/json/transport_via_plants.json"
+  },
+  {
+    "index": "tree_stride",
+    "name": "tree stride",
+    "level": 5,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/tree_stride.json"
+  },
+  {
+    "index": "true_polymorph",
+    "name": "true polymorph",
+    "level": 9,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/true_polymorph.json"
+  },
+  {
+    "index": "true_resurrection",
+    "name": "true resurrection",
+    "level": 9,
+    "school": "necromancy",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "casting_time": "1 hour",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/true_resurrection.json"
+  },
+  {
+    "index": "true_seeing",
+    "name": "true seeing",
+    "level": 6,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/true_seeing.json"
+  },
+  {
+    "index": "true_strike",
+    "name": "true strike",
+    "level": 0,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "Up to 1 round",
+    "path": "/assets/atlas/spell/json/true_strike.json"
+  },
+  {
+    "index": "unseen_servant",
+    "name": "unseen servant",
+    "level": 1,
+    "school": "conjuration",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/unseen_servant.json"
+  },
+  {
+    "index": "vampiric_touch",
+    "name": "vampiric touch",
+    "level": 3,
+    "school": "necromancy",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/vampiric_touch.json"
+  },
+  {
+    "index": "vicious_mockery",
+    "name": "vicious mockery",
+    "level": 0,
+    "school": "enchantment",
+    "classes": [
+      "bard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/vicious_mockery.json"
+  },
+  {
+    "index": "wall_of_fire",
+    "name": "wall of fire",
+    "level": 4,
+    "school": "evocation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/wall_of_fire.json"
+  },
+  {
+    "index": "wall_of_force",
+    "name": "wall of force",
+    "level": 5,
+    "school": "evocation",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/wall_of_force.json"
+  },
+  {
+    "index": "wall_of_ice",
+    "name": "wall of ice",
+    "level": 6,
+    "school": "evocation",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/wall_of_ice.json"
+  },
+  {
+    "index": "wall_of_stone",
+    "name": "wall of stone",
+    "level": 5,
+    "school": "evocation",
+    "classes": [
+      "artificer",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/wall_of_stone.json"
+  },
+  {
+    "index": "wall_of_thorns",
+    "name": "wall of thorns",
+    "level": 6,
+    "school": "conjuration",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 10 minutes",
+    "path": "/assets/atlas/spell/json/wall_of_thorns.json"
+  },
+  {
+    "index": "warding_bond",
+    "name": "warding bond",
+    "level": 2,
+    "school": "abjuration",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/warding_bond.json"
+  },
+  {
+    "index": "water_breathing",
+    "name": "water breathing",
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "24 hours",
+    "path": "/assets/atlas/spell/json/water_breathing.json"
+  },
+  {
+    "index": "water_walk",
+    "name": "water walk",
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "cleric",
+      "druid",
+      "ranger",
+      "sorcerer"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "1 hour",
+    "path": "/assets/atlas/spell/json/water_walk.json"
+  },
+  {
+    "index": "web",
+    "name": "web",
+    "level": 2,
+    "school": "conjuration",
+    "classes": [
+      "artificer",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "Up to 1 hour",
+    "path": "/assets/atlas/spell/json/web.json"
+  },
+  {
+    "index": "weird",
+    "name": "weird",
+    "level": 9,
+    "school": "illusion",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/weird.json"
+  },
+  {
+    "index": "wind_walk",
+    "name": "wind walk",
+    "level": 6,
+    "school": "transmutation",
+    "classes": [
+      "druid"
+    ],
+    "casting_time": "1 minute",
+    "range": "30 feet",
+    "duration": "8 hours",
+    "path": "/assets/atlas/spell/json/wind_walk.json"
+  },
+  {
+    "index": "wind_wall",
+    "name": "wind wall",
+    "level": 3,
+    "school": "evocation",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "duration": "Up to 1 minute",
+    "path": "/assets/atlas/spell/json/wind_wall.json"
+  },
+  {
+    "index": "wish",
+    "name": "wish",
+    "level": 9,
+    "school": "conjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Self",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/wish.json"
+  },
+  {
+    "index": "word_of_recall",
+    "name": "word of recall",
+    "level": 6,
+    "school": "conjuration",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 action",
+    "range": "5 feet",
+    "duration": "Instantaneous",
+    "path": "/assets/atlas/spell/json/word_of_recall.json"
+  },
+  {
+    "index": "zone_of_truth",
+    "name": "zone of truth",
+    "level": 2,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "cleric",
+      "paladin"
+    ],
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "10 minutes",
+    "path": "/assets/atlas/spell/json/zone_of_truth.json"
+  }
+]

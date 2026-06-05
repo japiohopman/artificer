@@ -1,0 +1,61 @@
+{
+  "index": "defensive_tactics",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "subclass": {
+    "index": "hunter",
+    "name": "hunter",
+    "url": "/assets/atlas/subclasses/json/hunter.json"
+  },
+  "name": "defensive tactics",
+  "level": 7,
+  "prerequisites": [],
+  "desc": [
+    "At 7th level, you gain one of the following features of your choice.",
+    "Escape the Horde",
+    "Multiattack Defense",
+    "Steel Will"
+  ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "feature",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "defensive_tactics_escape_the_horde",
+              "name": "defensive tactics: escape the horde",
+              "url": "/assets/atlas/features/json/defensive_tactics_escape_the_horde.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "defensive_tactics_multiattack_defense",
+              "name": "defensive tactics: multiattack defense",
+              "url": "/assets/atlas/features/json/defensive_tactics_multiattack_defense.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "defensive_tactics_steel_will",
+              "name": "defensive tactics: steel will",
+              "url": "/assets/atlas/features/json/defensive_tactics_steel_will.json"
+            }
+          }
+        ]
+      }
+    },
+    "invocations": []
+  },
+  "url": "/assets/atlas/features/json/defensive_tactics.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "/assets/atlas/features/images/defensive_tactics.webp"
+}

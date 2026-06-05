@@ -1,0 +1,54 @@
+{
+  "higher_level": [],
+  "index": "continual_flame",
+  "name": "continual flame",
+  "desc": [
+    "A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A continual flame can be covered or hidden but not smothered or quenched."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Ruby dust worth 50 gp, which the spell consumes.",
+  "ritual": false,
+  "duration": "Until dispelled",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "/assets/atlas/class/json/artificer.json"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/continual_flame.json",
+  "updated_at": "2026-06-01T06:56:15.190Z",
+  "image": "/assets/atlas/spell/json/images/continual_flame.webp",
+  "sprite_index": 11,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet3.webp"
+}

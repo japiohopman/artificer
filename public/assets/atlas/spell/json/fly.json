@@ -1,0 +1,61 @@
+{
+  "index": "fly",
+  "name": "fly",
+  "desc": [
+    "You touch a willing creature. The target gains a flying speed of 60 feet for the duration. When the spell ends, the target falls if it is still aloft, unless it can stop the fall."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A wing feather from any bird.",
+  "ritual": false,
+  "duration": "Up to 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "transmutation",
+    "name": "transmutation",
+    "url": "/assets/atlas/magic_schools/json/transmutation.json"
+  },
+  "classes": [
+    {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "/assets/atlas/class/json/artificer.json"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/fly.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/fly.webp",
+  "sprite_index": 24,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet5.webp"
+}

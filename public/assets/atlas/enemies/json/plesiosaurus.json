@@ -1,0 +1,88 @@
+{
+  "index": "plesiosaurus",
+  "name": "plesiosaurus",
+  "size": "Large",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 68,
+  "hit_dice": "8d10",
+  "hit_points_roll": "8d10+24",
+  "speed": {
+    "walk": "20 ft.",
+    "swim": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 5,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/skills/json/perception.json"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "/assets/atlas/skills/json/stealth.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "hold breath",
+      "desc": "The plesiosaurus can hold its breath for 1 hour.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 10 ft., one target. Hit: 14 (3d6 + 4) piercing damage.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d6+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/plesiosaurus.webp",
+  "url": "/assets/atlas/enemies/json/plesiosaurus.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 21,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.webp"
+}

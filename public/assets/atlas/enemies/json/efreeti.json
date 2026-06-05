@@ -1,0 +1,269 @@
+{
+  "index": "efreeti",
+  "name": "efreeti",
+  "size": "Large",
+  "type": "elemental",
+  "alignment": "lawful evil",
+  "armor_class": 17,
+  "hit_points": 200,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10+112",
+  "speed": {
+    "walk": "40 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 22,
+  "dexterity": 12,
+  "constitution": 24,
+  "intelligence": 16,
+  "wisdom": 15,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_int",
+        "name": "saving throw: int",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_int.json"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_cha.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 12
+  },
+  "languages": "Ignan",
+  "challenge_rating": "11",
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [
+    {
+      "name": "elemental demise",
+      "desc": "If the efreeti dies, its body disintegrates in a flash of fire and puff of smoke, leaving behind only equipment the djinni was wearing or carrying.",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The efreeti's innate spell casting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\n\nAt will: detect magic\n3/day: enlarge/reduce, tongues\n1/day each: conjure elemental (fire elemental only), gaseous form, invisibility, major image, plane shift, wall of fire",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "/assets/atlas/ability_scores/json/charisma.json"
+        },
+        "dc": 15,
+        "modifier": 7,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "detect magic",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/detect_magic.json",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "enlarge/reduce",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/enlarge_reduce.json",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "tongues",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/json/tongues.json",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "conjure elemental",
+            "level": 5,
+            "notes": "Fire Elemental only",
+            "url": "/assets/atlas/spell/json/json/constitutionjure_elemental.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "gaseous form",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/json/gaseous_form.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "invisibility",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/invisibility.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "major image",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/json/major_image.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "plane shift",
+            "level": 7,
+            "url": "/assets/atlas/spell/json/json/plane_shift.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "wall of fire",
+            "level": 4,
+            "url": "/assets/atlas/spell/json/json/wall_of_fire.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "action_options",
+      "desc": "The efreeti makes two scimitar attacks or uses its Hurl Flame twice.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "action",
+              "action_name": "Scimitar",
+              "count": 2,
+              "type": "melee"
+            },
+            {
+              "option_type": "action",
+              "action_name": "Hurl Flame",
+              "count": 2,
+              "type": "ranged"
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "scimitar",
+      "desc": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage plus 7 (2d6) fire damage.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+6"
+        },
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "/assets/atlas/damage_types/json/fire.json"
+          },
+          "damage_dice": "2d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "hurl flame",
+      "desc": "Ranged Spell Attack: +7 to hit, range 120 ft., one target. Hit: 17 (5d6) fire damage.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "/assets/atlas/damage_types/json/fire.json"
+          },
+          "damage_dice": "5d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/efreeti.webp",
+  "url": "/assets/atlas/enemies/json/efreeti.json",
+  "updated_at": "2026-04-25T10:52:06.749Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 19,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet4.webp",
+  "stats": {
+    "str": 22,
+    "dex": 12,
+    "con": 24,
+    "int": 16,
+    "wis": 15,
+    "cha": 16
+  },
+  "imageUrl": "/assets/atlas/enemies/images/efreeti.webp",
+  "_type": "enemies",
+  "background_type": "volcano",
+  "rarity": "Legendary",
+  "last_updated": "25-4-2026"
+}

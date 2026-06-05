@@ -1,0 +1,35 @@
+{
+  "index": "gift_of_the_gem_dragon",
+  "name": "gift of the gem dragon",
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You've manifested some of the power of gem dragons, granting you the following benefits:",
+    "- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
+    "- Telekinetic Reprisal: When you take damage from a creature that is within 10 feet of you, you can use your reaction to emanate telekinetic energy. The creature that dealt the damage must make a Strength saving throw (DC 8 + your proficiency bonus + the ability modifier of the score increased by this feat). On a failed save, the creature takes 2d8 force damage and is pushed up to 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Intelligence, Wisdom, or Charisma bonus",
+          "options": [
+            "intelligence_bonus",
+            "wisdom_bonus",
+            "charisma_bonus"
+          ],
+          "amount": 1
+        }
+      ]
+    },
+    "special_action": "reaction"
+  },
+  "url": "/assets/atlas/feats/json/gift_of_the_gem_dragon.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/gift_of_the_gem_dragon.webp"
+}

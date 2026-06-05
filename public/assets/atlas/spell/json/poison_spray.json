@@ -1,0 +1,78 @@
+{
+  "higher_level": [],
+  "index": "poison_spray",
+  "name": "poison spray",
+  "desc": [
+    "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a constitution saving throw or take 1d12 poison damage.",
+    "This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12)."
+  ],
+  "range": "10 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "damage": {
+    "damage_type": {
+      "index": "poison",
+      "name": "poison",
+      "url": "/assets/atlas/damage_types/json/poison.json"
+    },
+    "damage_at_character_level": {
+      "1": "1d12",
+      "5": "2d12",
+      "11": "3d12",
+      "17": "4d12"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "con",
+      "name": "con",
+      "url": "/assets/atlas/ability_scores/json/constitution.json"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [
+    {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "/assets/atlas/class/json/artificer.json"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/poison_spray.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/poison_spray.webp",
+  "sprite_index": 21,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet9.webp"
+}

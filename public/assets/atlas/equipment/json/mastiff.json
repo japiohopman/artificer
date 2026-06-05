@@ -1,0 +1,29 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "mastiff",
+  "name": "mastiff",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "speed": {
+    "quantity": 40,
+    "unit": "ft/round"
+  },
+  "capacity": "195 lb.",
+  "url": "/assets/atlas/equipment/json/mastiff.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/mastiff.webp",
+  "sprite_index": 12,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "kind": "adventuring_gear"
+}

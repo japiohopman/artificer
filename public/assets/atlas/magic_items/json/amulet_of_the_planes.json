@@ -1,0 +1,36 @@
+{
+  "index": "amulet_of_the_planes",
+  "name": "amulet of the planes",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "very rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, very rare (requires attunement)",
+    "While wearing this amulet, you can use an action to name a location that you are familiar with on another plane of existence. Then make a DC 15 Intelligence check. On a successful check, you cast the plane shift spell. On a failure, you and each creature and object within 15 feet of you travel to a random destination. Roll a d100. On a 1-60, you travel to a random location on the plane you named. On a 61-100, you travel to a randomly determined plane of existence."
+  ],
+  "feature_specific": {
+    "spells": [
+      {
+        "spell": {
+          "index": "plane_shift",
+          "name": "plane shift",
+          "url": "/assets/atlas/spell/json/plane_shift.json"
+        },
+        "usage": {
+          "type": "at_will"
+        },
+        "special_action": "action"
+      }
+    ]
+  },
+  "image": "/assets/atlas/magic_items/amulet_of_the_planes.webp",
+  "url": "/assets/atlas/magic_items/json/amulet_of_the_planes.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

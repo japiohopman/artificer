@@ -1,0 +1,77 @@
+{
+  "index": "fighter_fighting_style",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "name": "fighting style",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
+  ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "feature",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighter_fighting_style_archery",
+              "name": "fighting style: archery",
+              "url": "/assets/atlas/features/json/fighter_fighting_style_archery.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighter_fighting_style_defense",
+              "name": "fighting style: defense",
+              "url": "/assets/atlas/features/json/fighter_fighting_style_defense.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighter_fighting_style_dueling",
+              "name": "fighting style: dueling",
+              "url": "/assets/atlas/features/json/fighter_fighting_style_dueling.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighter_fighting_style_great_weapon_fighting",
+              "name": "fighting style: great weapon fighting",
+              "url": "/assets/atlas/features/json/fighter_fighting_style_great_weapon_fighting.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighter_fighting_style_protection",
+              "name": "fighting style: protection",
+              "url": "/assets/atlas/features/json/fighter_fighting_style_protection.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fighter_fighting_style_two_weapon_fighting",
+              "name": "fighting style: two_weapon fighting",
+              "url": "/assets/atlas/features/json/fighter_fighting_style_two_weapon_fighting.json"
+            }
+          }
+        ]
+      }
+    },
+    "invocations": []
+  },
+  "url": "/assets/atlas/features/json/fighter_fighting_style.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "/assets/atlas/features/images/fighter_fighting_style.webp"
+}

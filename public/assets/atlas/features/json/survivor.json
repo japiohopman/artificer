@@ -1,0 +1,28 @@
+{
+  "index": "survivor",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "subclass": {
+    "index": "champion",
+    "name": "champion",
+    "url": "/assets/atlas/subclasses/json/champion.json"
+  },
+  "name": "survivor",
+  "level": 18,
+  "prerequisites": [],
+  "desc": [
+    "At 18th level, you attain the pinnacle of resilience. You have Advantage on Death Saving Throws. In addition, when you roll a Death Save, you gain the benefit of rolling a 20 on an 18–20. Furthermore, at the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don't gain this benefit if you have 0 hit points."
+  ],
+  "url": "/assets/atlas/features/json/survivor.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/survivor.webp",
+  "feature_specific": {
+    "on_turn_start": {
+      "healing": "5 + constitution_modifier",
+      "condition": "hp_below_half"
+    }
+  }
+}

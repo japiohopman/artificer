@@ -1,0 +1,292 @@
+{
+  "index": "oni",
+  "name": "oni",
+  "size": "Large",
+  "type": "giant",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 16,
+      "armor": [
+        {
+          "index": "chain_mail",
+          "name": "chain mail",
+          "url": "/assets/atlas/equipment/json/charismain_mail.json"
+        }
+      ]
+    }
+  ],
+  "hit_points": 110,
+  "hit_dice": "13d10",
+  "hit_points_roll": "13d10+39",
+  "speed": {
+    "walk": "30 ft.",
+    "fly": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 11,
+  "constitution": 16,
+  "intelligence": 14,
+  "wisdom": 12,
+  "charisma": 15,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_dex.json"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_cha.json"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill_arcana",
+        "name": "skill: arcana",
+        "url": "/assets/atlas/proficiencies/json/skill_arcana.json"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill_deception",
+        "name": "skill: deception",
+        "url": "/assets/atlas/proficiencies/json/skill_deception.json"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "languages": "Common, Giant",
+  "challenge_rating": 7,
+  "proficiency_bonus": 3,
+  "xp": 2900,
+  "special_abilities": [
+    {
+      "name": "innate spellcasting",
+      "desc": "The oni's innate spellcasting ability is Charisma (spell save DC 13). The oni can innately cast the following spells, requiring no material components:\n\nAt will: darkness, invisibility\n1/day each: charm person, cone of cold, gaseous form, sleep",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "/assets/atlas/ability_scores/json/charisma.json"
+        },
+        "dc": 13,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "darkness",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/darkness.json",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "invisibility",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/invisibility.json",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "charm person",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/charismarm_person.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "cone of cold",
+            "level": 5,
+            "url": "/assets/atlas/spell/json/json/constitutione_of_cold.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "gaseous form",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/json/gaseous_form.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "sleep",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/sleep.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The oni's weapon attacks are magical.",
+      "damage": []
+    },
+    {
+      "name": "regeneration",
+      "desc": "The oni regains 10 hit points at the start of its turn if it has at least 1 hit point.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "action_options",
+      "desc": "The oni makes two attacks, either with its claws or its glaive.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "action",
+              "action_name": "Glaive",
+              "count": 2,
+              "type": "melee"
+            },
+            {
+              "option_type": "action",
+              "action_name": "Claw",
+              "desc": "If in Oni form",
+              "count": 2,
+              "type": "melee"
+            },
+            {
+              "desc": "If in Oni form",
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Glaive",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Claw",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "claw (oni form only)",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) slashing damage.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "glaive",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 15 (2d10 + 4) slashing damage, or 9 (1d10 + 4) slashing damage in Small or Medium form.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "change shape",
+      "desc": "The oni magically polymorphs into a Small or Medium humanoid, into a Large giant, or back into its true form. Other than its size, its statistics are the same in each form. The only equipment that is transformed is its glaive, which shrinks so that it can be wielded in humanoid form. If the oni dies, it reverts to its true form, and its glaive reverts to its normal size.",
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/oni.webp",
+  "url": "/assets/atlas/enemies/json/oni.json",
+  "updated_at": "2026-04-22T13:04:20.515Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 11,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.webp",
+  "imageUrl": "/assets/atlas/enemies/images/oni.webp",
+  "_type": "enemies",
+  "background_type": "land_forest4",
+  "rarity": "Rare",
+  "last_updated": "22-4-2026"
+}

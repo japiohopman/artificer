@@ -1,0 +1,87 @@
+{
+  "index": "flying_snake",
+  "name": "flying snake",
+  "desc": "A flying snake is a brightly colored, winged serpent found in remote jungles. Tribespeople and cultists sometimes domesticate flying snakes to serve as messengers that deliver scrolls wrapped in their coils.",
+  "size": "Tiny",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 14
+    }
+  ],
+  "hit_points": 5,
+  "hit_dice": "2d4",
+  "hit_points_roll": "2d4",
+  "speed": {
+    "walk": "30 ft.",
+    "fly": "60 ft.",
+    "swim": "30 ft."
+  },
+  "strength": 4,
+  "dexterity": 18,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 5,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "passive_perception": 11
+  },
+  "languages": "",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [
+    {
+      "name": "flyby",
+      "desc": "The snake doesn't provoke opportunity attacks when it flies out of an enemy's reach.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 1 piercing damage plus 7 (3d4) poison damage.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1"
+        },
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "poison",
+            "url": "/assets/atlas/damage_types/json/poison.json"
+          },
+          "damage_dice": "3d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/flying_snake.webp",
+  "url": "/assets/atlas/enemies/json/flying_snake.json",
+  "updated_at": "2026-04-24T17:51:10.947Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 3,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet5.webp",
+  "imageUrl": "/assets/atlas/enemies/images/flying_snake.webp",
+  "_type": "enemies",
+  "background_type": "air",
+  "rarity": "Uncommon",
+  "last_updated": "24-4-2026"
+}

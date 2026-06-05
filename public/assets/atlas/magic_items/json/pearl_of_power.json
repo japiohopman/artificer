@@ -1,0 +1,28 @@
+{
+  "index": "pearl_of_power",
+  "name": "pearl of power",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, uncommon (requires attunement by a spellcaster)",
+    "While this pearl is on your person, you can use an action to speak its command word and regain one expended spell slot. If the expended slot was of 4th level or higher, the new slot is 3rd level. Once you use the pearl, it can't be used again until the next dawn."
+  ],
+  "url": "/assets/atlas/magic_items/json/pearl_of_power.json",
+  "updated_at": "2026-06-04T08:19:50.589Z",
+  "image": "/assets/atlas/magic_items/pearl_of_power.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/pearl_of_power.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "4-6-2026"
+}

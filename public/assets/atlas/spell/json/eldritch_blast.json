@@ -1,0 +1,56 @@
+{
+  "higher_level": [],
+  "index": "eldritch_blast",
+  "name": "eldritch blast",
+  "desc": [
+    "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage. The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam."
+  ],
+  "range": "120 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "attack_type": "ranged",
+  "damage": {
+    "damage_type": {
+      "index": "force",
+      "name": "force",
+      "url": "/assets/atlas/damage_types/json/force.json"
+    },
+    "damage_at_character_level": {
+      "1": "1d10",
+      "5": "1d10",
+      "11": "1d10",
+      "17": "1d10"
+    }
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/eldritch_blast.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/eldritch_blast.webp",
+  "sprite_index": 20,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet4.webp"
+}

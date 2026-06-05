@@ -1,0 +1,28 @@
+{
+  "index": "eldritch_invocation_one_with_shadows",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "eldritch invocation: one with shadows",
+  "level": 5,
+  "prerequisites": [
+    {
+      "type": "level",
+      "level": 5
+    }
+  ],
+  "desc": [
+    "When you are in an area of dim light or darkness, you can use your action to become invisible until you move or take an action or a reaction."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "/assets/atlas/features/eldritch_invocations.json"
+  },
+  "url": "/assets/atlas/features/json/eldritch_invocation_one_with_shadows.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/eldritch_invocation_one_with_shadows.webp",
+  "feature_specific": {}
+}

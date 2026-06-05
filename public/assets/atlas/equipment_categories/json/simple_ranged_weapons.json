@@ -1,0 +1,29 @@
+{
+  "index": "simple_ranged_weapons",
+  "name": "simple ranged weapons",
+  "equipment": [
+    {
+      "index": "crossbow_light",
+      "name": "crossbow, light",
+      "url": "/assets/atlas/equipment/json/crossbow_light.json"
+    },
+    {
+      "index": "dart",
+      "name": "dart",
+      "url": "/assets/atlas/equipment/json/dart.json"
+    },
+    {
+      "index": "shortbow",
+      "name": "shortbow",
+      "url": "/assets/atlas/equipment/json/shortbow.json"
+    },
+    {
+      "index": "sling",
+      "name": "sling",
+      "url": "/assets/atlas/equipment/json/sling.json"
+    }
+  ],
+  "url": "/assets/atlas/equipment_categories/json/simple_ranged_weapons.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "/assets/atlas/equipment_categories/simple_ranged_weapons.webp"
+}

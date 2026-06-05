@@ -1,0 +1,61 @@
+{
+  "index": "flame_blade",
+  "name": "flame blade",
+  "desc": [
+    "You evoke a fiery blade in your free hand. The blade is similar in size and shape to a scimitar, and it lasts for the duration. If you let go of the blade, it disappears, but you can evoke the blade again as a bonus action.",
+    "You can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 3d6 fire damage.",
+    "The flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for every two slot levels above 2nd."
+  ],
+  "range": "Self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Leaf of sumac.",
+  "ritual": false,
+  "duration": "Up to 10 minutes",
+  "concentration": true,
+  "casting_time": "1 bonus action",
+  "level": 2,
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "fire",
+      "url": "/assets/atlas/damage_types/json/fire.json"
+    },
+    "damage_at_slot_level": {
+      "2": "3d6",
+      "4": "4d6",
+      "6": "5d6",
+      "8": "6d6"
+    }
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/flame_blade.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/flame_blade.webp",
+  "sprite_index": 19,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet5.webp"
+}

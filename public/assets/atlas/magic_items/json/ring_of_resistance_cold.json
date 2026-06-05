@@ -1,0 +1,21 @@
+{
+  "index": "ring_of_resistance_cold",
+  "name": "ring of cold resistance",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Ring, rare (requires attunement)",
+    "You have resistance to cold damage while wearing this tourmaline ring."
+  ],
+  "url": "/assets/atlas/magic_items/json/ring_of_resistance_cold.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/ring_of_resistance_cold.webp"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "westgate",
+  "name": "westgate",
+  "type": "metropolis",
+  "parent": "cities",
+  "title": "westgate: Metropolis",
+  "description": "",
+  "wiki": "",
+  "image": "westgate.webp",
+  "thumbnail": "westgate_thumb.webp",
+  "banner": "westgate_banner.webp",
+  "tags": [
+    "city",
+    "metropolis"
+  ],
+  "map": "assets/atlas/world/toril/faerun/cities/westgate/westgate_map.webp",
+  "children": [],
+  "sub_location_files": [
+    "assets/atlas/world/toril/faerun/cities/westgate/sublocations/inns_taverns.json",
+    "assets/atlas/world/toril/faerun/cities/westgate/sublocations/poi.json",
+    "assets/atlas/world/toril/faerun/cities/westgate/sublocations/temples_shrines.json",
+    "assets/atlas/world/toril/faerun/cities/westgate/sublocations/water.json",
+    "assets/atlas/world/toril/faerun/cities/westgate/sublocations/gates.json"
+  ],
+  "coordinates": {
+    "lat": 0,
+    "lng": 0
+  },
+  "geography": "",
+  "history": "",
+  "metadata": {
+    "government": "Council of Six",
+    "organizations": "",
+    "trade": "",
+    "military": "The Mehelm",
+    "population": "100,000+"
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      2880,
+      2196
+    ]
+  ],
+  "origin": "bottom-left",
+  "unitsPerMile": 1
+}

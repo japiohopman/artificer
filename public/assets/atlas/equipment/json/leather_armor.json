@@ -1,0 +1,42 @@
+{
+  "desc": [
+    "Crafted from the sun-bleached hide of a creature that died screaming, this armor still carries the faint, rhythmic heat of a heart that refuses to stop beating. Each seam is stitched with cord that tightens instinctively whenever blood is spilled nearby, hungry for the next wound to dress."
+  ],
+  "special": [],
+  "index": "leather_armor",
+  "name": "leather armor",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "armor_category": "Light",
+  "armor_class": {
+    "base": 11,
+    "dex_bonus": true
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false,
+  "weight": 10,
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "url": "/assets/atlas/equipment/json/leather_armor.json",
+  "updated_at": "2026-04-15T07:04:03.712Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/leather_armor.webp",
+  "sprite_index": 23,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "imageUrl": "/assets/atlas/equipment/images/leather_armor.webp",
+  "category": "Armor",
+  "slot": [
+    "chest"
+  ],
+  "last_updated": "15-4-2026",
+  "kind": "armor",
+  "equipSlots": [
+    "chest"
+  ]
+}

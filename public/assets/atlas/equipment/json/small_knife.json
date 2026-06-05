@@ -1,0 +1,42 @@
+{
+  "special": [],
+  "index": "small_knife",
+  "name": "small knife",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 0,
+    "unit": "cp"
+  },
+  "weight": 0,
+  "desc": [
+    "A small knife, typically found in a scholar's pack."
+  ],
+  "url": "/assets/atlas/equipment/json/small_knife.json",
+  "updated_at": "2026-04-26T06:48:54.423Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/small_knife.webp",
+  "sprite_index": 1,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/images/small_knife.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "26-4-2026",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

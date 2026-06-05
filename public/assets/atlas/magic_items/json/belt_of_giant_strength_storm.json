@@ -1,0 +1,31 @@
+{
+  "index": "belt_of_giant_strength_storm",
+  "name": "belt of storm giant strength",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": "Legendary",
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Wondrous item, legendary (requires attunement)",
+    "While wearing this belt, your Strength score changes to 29.0 If your Strength is already equal to or greater than the belt's score, the item has no Effect on you."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "strength_set": 29
+    }
+  },
+  "image": "/assets/atlas/magic_items/belt_of_giant_strength_storm.webp",
+  "url": "/assets/atlas/magic_items/json/belt_of_giant_strength_storm.json",
+  "updated_at": "2026-06-04T08:16:15.967Z",
+  "imageUrl": "/assets/atlas/magic_items/images/belt_of_giant_strength_storm.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "waist"
+  ],
+  "last_updated": "4-6-2026"
+}

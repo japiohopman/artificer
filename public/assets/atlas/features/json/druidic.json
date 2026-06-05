@@ -1,0 +1,18 @@
+{
+  "index": "druidic",
+  "class": {
+    "index": "druid",
+    "name": "druid",
+    "url": "/assets/atlas/class/json/druid.json"
+  },
+  "name": "druidic",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
+  ],
+  "url": "/assets/atlas/features/json/druidic.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/druidic.webp",
+  "feature_specific": {}
+}

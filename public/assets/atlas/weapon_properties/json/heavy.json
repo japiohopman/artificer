@@ -1,0 +1,16 @@
+{
+  "index": "heavy",
+  "name": "heavy",
+  "desc": [
+    "Small creatures have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small creature to use effectively."
+  ],
+  "property_specific": {
+    "disadvantage_size": [
+      "small",
+      "tiny"
+    ]
+  },
+  "url": "/assets/atlas/weapon_properties/json/heavy.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/weapon_properties/images/heavy.webp"
+}

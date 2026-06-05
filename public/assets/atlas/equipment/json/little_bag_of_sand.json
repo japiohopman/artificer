@@ -1,0 +1,35 @@
+{
+  "special": [],
+  "index": "little_bag_of_sand",
+  "name": "little bag of sand",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 0,
+    "unit": "cp"
+  },
+  "weight": 0,
+  "desc": [
+    "A small bag of sand, typically found in a scholar's pack."
+  ],
+  "url": "/assets/atlas/equipment/json/little_bag_of_sand.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/little_bag_of_sand.webp",
+  "sprite_index": 1,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

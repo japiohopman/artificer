@@ -1,0 +1,25 @@
+{
+  "index": "fighting_initiate",
+  "name": "fighting initiate",
+  "prerequisites": [
+    {
+      "stat": "feature",
+      "operator": "==",
+      "value": true,
+      "desc": "Proficiency with a martial weapon"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "Your martial training has helped you develop a particular style of fighting. As a result, you learn one Fighting Style option of your choice from the fighter class. If you already have a style, the one you choose must be different.",
+    "Whenever you reach a level that grants the Ability Score Improvement feature, you can replace this feat's fighting style with another one from the fighter class that you don't have."
+  ],
+  "feature_specific": {},
+  "url": "/assets/atlas/feats/json/fighting_initiate.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/fighting_initiate.webp"
+}

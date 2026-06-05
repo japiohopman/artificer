@@ -1,0 +1,54 @@
+{
+  "higher_level": [],
+  "index": "foresight",
+  "name": "foresight",
+  "desc": [
+    "You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target can't be surprised and has advantage on attack rolls, ability checks, and saving throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration.",
+    "This spell immediately ends if you cast it again before its duration ends."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A hummingbird feather.",
+  "ritual": false,
+  "duration": "8 hours",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 9,
+  "school": {
+    "index": "divination",
+    "name": "divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/foresight.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/foresight.webp",
+  "sprite_index": 3,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet6.webp"
+}

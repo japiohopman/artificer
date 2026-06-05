@@ -1,0 +1,18 @@
+{
+  "index": "handaxes",
+  "type": "weapons",
+  "name": "handaxes",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/handaxes.json",
+  "reference": {
+    "index": "handaxe",
+    "name": "handaxe",
+    "url": "/assets/atlas/equipment/json/handaxe.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/handaxes.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

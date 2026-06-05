@@ -1,0 +1,165 @@
+{
+  "index": "white_dragon_wyrmling",
+  "name": "white dragon wyrmling",
+  "size": "Medium",
+  "type": "dragon",
+  "alignment": "chaotic evil",
+  "armor_class": 16,
+  "hit_points": 32,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8+10",
+  "speed": {
+    "walk": "30 ft.",
+    "burrow": "15 ft.",
+    "fly": "60 ft.",
+    "swim": "30 ft."
+  },
+  "strength": 14,
+  "dexterity": 10,
+  "constitution": 14,
+  "intelligence": 5,
+  "wisdom": 10,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_dex.json"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_cha.json"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/skills/json/perception.json"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "/assets/atlas/skills/json/stealth.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "languages": "Draconic",
+  "challenge_rating": "2",
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2) piercing damage plus 2 (1d4) cold damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+2"
+        },
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "cold",
+            "url": "/assets/atlas/damage_types/json/cold.json"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "cold breath",
+      "desc": "The dragon exhales an icy blast of hail in a 15-foot cone. Each creature in that area must make a DC 12 Constitution saving throw, taking 22 (5d8) cold damage on a failed save, or half as much damage on a successful one.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "con",
+          "url": "/assets/atlas/ability_scores/json/constitution.json"
+        },
+        "dc_value": 12,
+        "success_type": "half"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "cold",
+            "url": "/assets/atlas/damage_types/json/cold.json"
+          },
+          "damage_dice": "5d8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/white_dragon_wyrmling.webp",
+  "url": "/assets/atlas/enemies/json/white_dragon_wyrmling.json",
+  "updated_at": "2026-04-29T19:33:51.544Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "sprite_index": 14,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet13.webp",
+  "stats": {
+    "str": 14,
+    "dex": 10,
+    "con": 14,
+    "int": 5,
+    "wis": 10,
+    "cha": 11
+  },
+  "imageUrl": "/assets/atlas/enemies/images/white_dragon_wyrmling.webp",
+  "_type": "enemies",
+  "background_type": "dragon_cave3",
+  "rarity": "Uncommon",
+  "last_updated": "29-4-2026"
+}

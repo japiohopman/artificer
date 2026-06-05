@@ -1,0 +1,54 @@
+{
+  "index": "light_armor",
+  "type": "armor",
+  "name": "light armor",
+  "classes": [
+    {
+      "index": "barbarian",
+      "name": "barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "/assets/atlas/class/json/ranger.json"
+    },
+    {
+      "index": "rogue",
+      "name": "rogue",
+      "url": "/assets/atlas/class/json/rogue.json"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    }
+  ],
+  "url": "/assets/atlas/proficiencies/json/light_armor.json",
+  "reference": {
+    "index": "light_armor",
+    "name": "light armor",
+    "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/light_armor.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment_categories"
+  }
+}

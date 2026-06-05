@@ -1,0 +1,64 @@
+{
+  "higher_level": [],
+  "index": "sacred_flame",
+  "name": "sacred flame",
+  "desc": [
+    "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw.",
+    "The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+  ],
+  "range": "60 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "damage": {
+    "damage_type": {
+      "index": "radiant",
+      "name": "radiant",
+      "url": "/assets/atlas/damage_types/json/radiant.json"
+    },
+    "damage_at_character_level": {
+      "1": "1d8",
+      "5": "2d8",
+      "11": "3d8",
+      "17": "4d8"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "dex",
+      "url": "/assets/atlas/ability_scores/json/dexterity.json"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/sacred_flame.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/sacred_flame.webp",
+  "sprite_index": 24,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet10.webp"
+}

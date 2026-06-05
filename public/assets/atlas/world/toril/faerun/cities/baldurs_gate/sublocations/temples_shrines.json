@@ -1,0 +1,332 @@
+{
+  "category": "temples_shrines",
+  "categoryId": "5",
+  "updatedAt": "2026-06-04T07:02:42.036026Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
+    {
+      "id": "21",
+      "name": "Water Queen's House",
+      "categoryId": "5",
+      "type": "marker",
+      "position": [
+        740.7498689322848,
+        1204.0010092439072
+      ],
+      "popup": {
+        "title": "Water Queen's House",
+        "description": "A temple dedicated to [[Umberlee]], the Bitch Queen – the city's oldest temple.",
+        "image": "File:Water Queen's House 5e.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "22",
+      "name": "High House of Wonders",
+      "categoryId": "5",
+      "type": "marker",
+      "position": [
+        542.9996280918342,
+        1349.0020184878144
+      ],
+      "popup": {
+        "title": "High House of Wonders",
+        "description": "A grand temple to [[Gond]] Wondermaker that consisted of numerous expansive workshops within which the [[Gondar]] [[priest]]s created experimental devices and machinations for the Baldurian people.",
+        "image": "File:High House of Wonders.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "23",
+      "name": "Lady's Hall",
+      "categoryId": "5",
+      "type": "marker",
+      "position": [
+        419.9998961299286,
+        1249.4994953780465
+      ],
+      "popup": {
+        "title": "Lady's Hall",
+        "description": "A prosperous temple of [[Tymora]], the Lady Luck, built soon after the founding of [[Baldur's Gate]].",
+        "image": "File:LadysHall.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "24",
+      "name": "Watchful Shield",
+      "categoryId": "5",
+      "type": "marker",
+      "position": [
+        338.70414818836,
+        1195.3640135959
+      ],
+      "popup": {
+        "title": "Watchful Shield",
+        "description": "A shrine of [[Helm]] the Vigilant, located in the [[Manorborn]] district of [[Baldur's Gate]] within a diminutive chapel with wings extending from either side of its front doorway, and the [[silver]] eye of Helm inscribed above.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "25",
+      "name": "Shrine of the Suffering",
+      "categoryId": "5",
+      "type": "marker",
+      "position": [
+        989.9996386860082,
+        1551.5017661768377
+      ],
+      "popup": {
+        "title": "Shrine of the Suffering",
+        "description": "A shrine of [[Ilmater]], the Maimed God, established before [[1358 DR]] that served as a soup kitchen in the late 15 century [[DR]].",
+        "image": "File:Shrine of the Suffering.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "50",
+      "name": "Unrolling Scroll",
+      "categoryId": "5",
+      "type": "marker",
+      "position": [
+        624.0002077401429,
+        1459.0013877103725
+      ],
+      "popup": {
+        "title": "Unrolling Scroll",
+        "description": "A white [[marble]] building with a red roof and [[gold]] leaf trim – a shrine to [[Oghma]], the Patron of all Bards.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "51",
+      "name": "Hall of Wonders",
+      "categoryId": "5",
+      "type": "marker",
+      "position": [
+        585.4828369497452,
+        1373.2060077451445
+      ],
+      "popup": {
+        "title": "Hall of Wonders",
+        "description": "A museum in [[Baldur's Gate]] that displayed both the pragmatic and fantastical \"holy relics\" of the [[Church of Gond]].",
+        "image": "File:Hall of Wonders.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "73",
+      "name": "Church of Last Hope",
+      "categoryId": "5",
+      "type": "marker",
+      "position": [
+        2599.3236334352405,
+        1005.5101247065345
+      ],
+      "popup": {
+        "title": "Church of Last Hope",
+        "description": "A sanctuary not dedicated to any particular faith that offered shelter to the despondent, depressed, and hopeless wretches of the city and beyond.",
+        "image": "File:Church of Last Hope.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "103",
+      "name": "Rose Portal",
+      "categoryId": "5",
+      "type": "marker",
+      "position": [
+        693.1410402950582,
+        1656.945248518034
+      ],
+      "popup": {
+        "title": "Rose Portal",
+        "description": "A stone building with rose-colored windows that held the shrine dedicated to [[Lathander]] that somewhat falled out of favour by the late 15 century [[DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "117",
+      "name": "The Fool's Altar",
+      "categoryId": "5",
+      "type": "marker",
+      "position": [
+        1242.0328129442883,
+        1378.505383566385
+      ],
+      "popup": {
+        "title": "The Fool's Altar",
+        "description": "A shrine dedicated to [[Finder Wyvernspur]], the Nameless Bard, next-door to [[Ascloakan's Fine Inn]]; the shrine was supervised by the [[saurial]] [[priest]] named [[Aszloakh the Hooded]] in the late 15 century [[DR]].",
+        "image": "File:The Fool's Altar.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "146",
+      "name": "Manycoins House",
+      "categoryId": "5",
+      "type": "marker",
+      "position": [
+        1214.1963814228175,
+        1298.8753583774599
+      ],
+      "popup": {
+        "title": "Manycoins House",
+        "description": "The office of the [[Merchant's League]] – a four-storied temple dedicated to [[Waukeen]] that offered mercantile services, short-term lodgings, and priestly services.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "196",
+      "name": "Stormshore Tabernacle",
+      "categoryId": "5",
+      "type": "marker",
+      "position": [
+        1202.0817897769482,
+        1384.5152190216497
+      ],
+      "popup": {
+        "title": "Stormshore Tabernacle",
+        "description": "A non-denominational shrine on [[Stormshore Street]].",
+        "image": "File:Stormshore Tabernacle.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

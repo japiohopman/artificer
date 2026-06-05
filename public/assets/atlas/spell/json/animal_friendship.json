@@ -1,0 +1,56 @@
+{
+  "higher_level": [],
+  "index": "animal_friendship",
+  "name": "animal friendship",
+  "desc": [
+    "This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a wisdom saving throw or be charmed by you for the spell's duration. If you or one of your companions harms the target, the spells ends."
+  ],
+  "range": "30 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A morsel of food.",
+  "ritual": false,
+  "duration": "24 hours",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "wis",
+      "url": "/assets/atlas/ability_scores/json/wisdom.json"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "enchantment",
+    "name": "enchantment",
+    "url": "/assets/atlas/magic_schools/json/enchantment.json"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "/assets/atlas/class/json/ranger.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/animal_friendship.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/animal_friendship.webp",
+  "sprite_index": 5,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet1.webp"
+}

@@ -1,0 +1,43 @@
+{
+  "desc": [
+    "A deck of cards that have been marked for cheating."
+  ],
+  "special": [],
+  "index": "marked_cards",
+  "name": "marked cards",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/marked_cards.json",
+  "updated_at": "2026-05-25T12:18:36.860965Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/marked_cards.webp",
+  "imageUrl": "/assets/atlas/equipment/images/marked_cards.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "25-5-2026",
+  "gear_category": {
+    "index": "gaming_sets",
+    "name": "gaming sets",
+    "url": "/assets/atlas/equipment_categories/gaming_sets"
+  },
+  "category": "Gaming Sets",
+  "tool_category": "Gaming Sets",
+  "kind": "tool",
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ]
+}

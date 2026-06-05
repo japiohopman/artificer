@@ -1,0 +1,118 @@
+{
+  "id": "baldurs_gate",
+  "name": "Baldur's Gate",
+  "type": "metropolis",
+  "parent": "cities",
+  "title": "Baldur's Gate: Metropolis of the Coast",
+  "description": "A 15th century DR map of Baldur's Gate. Index and references can be found [https://forgottenrealms.fandom.com/wiki/File:Baldurs-Gate-Promo.jpg here].",
+  "wiki": "Located at the mouth of the River Chionthar, Baldur's Gate is a massive trading city regulated by the Council of Four. It is divided into the Upper, Lower, and Outer Cities.",
+  "image": "baldurs_gate.webp",
+  "thumbnail": "baldurs_gate_thumb.webp",
+  "banner": "baldurs_gate_banner.webp",
+  "tags": ["city", "metropolis", "port"],
+  "map": "assets/atlas/world/toril/faerun/cities/baldurs_gate/baldurs_gate_map.webp",
+  "children": ["upper_city", "lower_city", "outer_city"],
+  "sub_location_files": [
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/districts.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/docks.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/estates.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/gates.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/geographical.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/inns.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/landmarks.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/points_of_interest.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/roads.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/shops.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/taverns_eateries.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/temples_shrines.json",
+    "assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/water.json"
+  ],
+  "coordinates": {
+    "lat": 1035.5,
+    "lng": 2029.5
+  },
+  "bounds": [
+    [0, 0],
+    [3000, 1994]
+  ],
+  "origin": "bottom-left",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "metadata": {
+    "government": "The Council of Four",
+    "military": "The Flaming Fist",
+    "population": "125,000+"
+  },
+  "categories": [
+    {
+      "id": "1",
+      "listId": 1,
+      "name": "Districts",
+    },
+    {
+      "id": "5",
+      "listId": 2,
+      "name": "Temples & Shrines",
+    },
+    {
+      "id": "6",
+      "listId": 3,
+      "name": "Landmarks",
+    },
+    {
+      "id": "7",
+      "listId": 4,
+      "name": "Shops & Coasters",
+    },
+    {
+      "id": "8",
+      "listId": 5,
+      "name": "Points of Interest",
+    },
+    {
+      "id": "9",
+      "listId": 6,
+      "name": "Taverns & Eateries",
+    },
+    {
+      "id": "12",
+      "listId": 7,
+      "name": "Inns",
+    },
+    {
+      "id": "10",
+      "listId": 8,
+      "name": "Residences & Estates",
+    },
+    {
+      "id": "11",
+      "listId": 9,
+      "name": "Gates",
+    },
+    {
+      "id": "14",
+      "listId": 10,
+      "name": "Streets & Roads",
+    },
+    {
+      "id": "13",
+      "listId": 11,
+      "name": "Geographical",
+    },
+    {
+      "id": "16",
+      "listId": 12,
+      "name": "Docks & Wharves",
+      "color": "#fa005a",
+    },
+    {
+      "id": "15",
+      "listId": 13,
+      "name": "Bodies of Water",
+    }
+  ],
+}

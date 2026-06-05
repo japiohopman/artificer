@@ -1,0 +1,18 @@
+{
+  "index": "cooks_utensils",
+  "type": "artisans_tools",
+  "name": "cook's utensils",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/cooks_utensils.json",
+  "reference": {
+    "index": "cooks_utensils",
+    "name": "cook's utensils",
+    "url": "/assets/atlas/equipment/json/cooks_utensils.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/cooks_utensils.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

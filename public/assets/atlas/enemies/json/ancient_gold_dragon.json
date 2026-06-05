@@ -1,0 +1,322 @@
+{
+  "index": "ancient_gold_dragon",
+  "name": "ancient gold dragon",
+  "size": "Gargantuan",
+  "type": "dragon",
+  "alignment": "lawful good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 22
+    }
+  ],
+  "hit_points": 546,
+  "hit_dice": "28d20",
+  "hit_points_roll": "28d20+252",
+  "speed": {
+    "walk": "40 ft.",
+    "fly": "80 ft.",
+    "swim": "40 ft."
+  },
+  "strength": 30,
+  "dexterity": 14,
+  "constitution": 29,
+  "intelligence": 18,
+  "wisdom": 17,
+  "charisma": 28,
+  "proficiencies": [
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_dex.json"
+      }
+    },
+    {
+      "value": 16,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    },
+    {
+      "value": 16,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_cha.json"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "skill_insight",
+        "name": "skill: insight",
+        "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+      }
+    },
+    {
+      "value": 17,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    },
+    {
+      "value": 16,
+      "proficiency": {
+        "index": "skill_persuasion",
+        "name": "skill: persuasion",
+        "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "60 ft.",
+    "darkvision": "120 ft.",
+    "passive_perception": 27
+  },
+  "languages": "Common, Draconic",
+  "challenge_rating": 24,
+  "proficiency_bonus": 7,
+  "xp": 62000,
+  "special_abilities": [
+    {
+      "name": "amphibious",
+      "desc": "The dragon can breathe air and water.",
+      "damage": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the dragon fails a saving throw, it can choose to succeed instead.",
+      "usage": {
+        "type": "per day",
+        "times": 3,
+        "rest_types": []
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.",
+      "actions": [
+        {
+          "action_name": "Frightful Presence",
+          "count": "1",
+          "type": "ability"
+        },
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +17 to hit, reach 15 ft., one target. Hit: 21 (2d10 + 10) piercing damage.",
+      "attack_bonus": 17,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +17 to hit, reach 10 ft., one target. Hit: 17 (2d6 + 10) slashing damage.",
+      "attack_bonus": 17,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "Melee Weapon Attack: +17 to hit, reach 20 ft., one target. Hit: 19 (2d8 + 10) bludgeoning damage.",
+      "attack_bonus": 17,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "frightful presence",
+      "desc": "Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 24 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.",
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "wis",
+          "url": "/assets/atlas/ability_scores/json/wisdom.json"
+        },
+        "dc_value": 24,
+        "success_type": "none"
+      },
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "breath weapons",
+      "desc": "The dragon uses one of the following breath weapons.\nFire Breath. The dragon exhales fire in a 90-foot cone. Each creature in that area must make a DC 24 Dexterity saving throw, taking 71 (13d10) fire damage on a failed save, or half as much damage on a successful one.\nWeakening Breath. The dragon exhales gas in a 90-foot cone. Each creature in that area must succeed on a DC 24 Strength saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "options": {
+        "choose": 1,
+        "type": "attack",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "breath",
+              "name": "fire breath",
+              "dc": {
+                "dc_type": {
+                  "index": "dex",
+                  "name": "dex",
+                  "url": "/assets/atlas/ability_scores/json/dexterity.json"
+                },
+                "dc_value": 24,
+                "success_type": "half"
+              },
+              "damage": [
+                {
+                  "damage_type": {
+                    "index": "fire",
+                    "name": "fire",
+                    "url": "/assets/atlas/damage_types/json/fire.json"
+                  },
+                  "damage_dice": "13d10"
+                }
+              ]
+            },
+            {
+              "option_type": "breath",
+              "name": "weakening breath",
+              "dc": {
+                "dc_type": {
+                  "index": "str",
+                  "name": "str",
+                  "url": "/assets/atlas/ability_scores/json/strength.json"
+                },
+                "dc_value": 24,
+                "success_type": "none"
+              }
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "change shape",
+      "desc": "The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).\nIn a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.",
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "detect",
+      "desc": "The dragon makes a Wisdom (Perception) check.",
+      "damage": []
+    },
+    {
+      "name": "tail attack",
+      "desc": "The dragon makes a tail attack.",
+      "damage": []
+    },
+    {
+      "name": "wing attack (costs 2 actions)",
+      "desc": "The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 25 Dexterity saving throw or take 17 (2d6 + 10) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.",
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "/assets/atlas/ability_scores/json/dexterity.json"
+        },
+        "dc_value": 25,
+        "success_type": "none"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+10"
+        }
+      ]
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/ancient_gold_dragon.webp",
+  "url": "/assets/atlas/enemies/json/ancient_gold_dragon.json",
+  "updated_at": "2026-04-22T14:39:35.532Z",
+  "forms": [],
+  "reactions": [],
+  "sprite_index": 18,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "imageUrl": "/assets/atlas/enemies/images/ancient_gold_dragon.webp",
+  "_type": "enemies",
+  "background_type": "land_mountains",
+  "rarity": "Legendary",
+  "last_updated": "22-4-2026"
+}

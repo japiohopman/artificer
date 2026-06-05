@@ -1,0 +1,27 @@
+{
+  "index": "eldritch_invocation_armor_of_shadows",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "eldritch invocation: armor of shadows",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "You can cast mage armor on yourself at will, without expending a spell slot or material components."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "/assets/atlas/features/eldritch_invocations.json"
+  },
+  "url": "/assets/atlas/features/json/eldritch_invocation_armor_of_shadows.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/eldritch_invocation_armor_of_shadows.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "ac_set": "13 + dexterity_modifier"
+    }
+  }
+}

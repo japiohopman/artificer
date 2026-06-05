@@ -1,0 +1,28 @@
+{
+  "index": "potion_of_resistance_thunder",
+  "name": "potion of thunder resistance",
+  "equipment_category": {
+    "index": "potion",
+    "name": "potion",
+    "url": "/assets/atlas/equipment_categories/potion"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Potion, uncommon",
+    "When you drink this potion, you gain resistance to thunder damage for 1 hour."
+  ],
+  "url": "/assets/atlas/magic_items/json/potion_of_resistance_thunder.json",
+  "updated_at": "2026-05-09T18:48:36.625Z",
+  "image": "/assets/atlas/magic_items/potion_of_resistance_thunder.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/potion_of_resistance_thunder.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "9-5-2026"
+}

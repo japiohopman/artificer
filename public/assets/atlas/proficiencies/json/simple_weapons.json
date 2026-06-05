@@ -1,0 +1,64 @@
+{
+  "index": "simple_weapons",
+  "type": "weapons",
+  "name": "simple weapons",
+  "classes": [
+    {
+      "index": "barbarian",
+      "name": "barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    {
+      "index": "fighter",
+      "name": "fighter",
+      "url": "/assets/atlas/class/json/fighter.json"
+    },
+    {
+      "index": "monk",
+      "name": "monk",
+      "url": "/assets/atlas/class/json/monk.json"
+    },
+    {
+      "index": "paladin",
+      "name": "paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "/assets/atlas/class/json/ranger.json"
+    },
+    {
+      "index": "rogue",
+      "name": "rogue",
+      "url": "/assets/atlas/class/json/rogue.json"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    }
+  ],
+  "url": "/assets/atlas/proficiencies/json/simple_weapons.json",
+  "reference": {
+    "index": "simple_weapons",
+    "name": "simple weapons",
+    "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/simple_weapons.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment_categories"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "category": "geographical",
+  "categoryId": "13",
+  "updatedAt": "2026-06-04T07:02:42.036026Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
+    {
+      "id": "80",
+      "name": "Dusthawk Hill",
+      "categoryId": "13",
+      "type": "marker",
+      "position": [
+        1889.9970916379996,
+        1419.066105475922
+      ],
+      "popup": {
+        "title": "Dusthawk Hill",
+        "description": "A tall, yellow [[granite]] steep-faced hill east of the city walls.",
+        "image": "File:Dusthawk Hill.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "82",
+      "name": "Riverveins",
+      "categoryId": "13",
+      "type": "marker",
+      "position": [
+        1462.296529704853,
+        904.4017050721753
+      ],
+      "popup": {
+        "title": "Riverveins",
+        "description": "A collection of subterranean mostly submerged tunnels that mazed and drained into subterranean aquifers.",
+        "image": "File:Tumbledown.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

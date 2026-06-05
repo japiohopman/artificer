@@ -1,0 +1,19 @@
+{
+  "index": "pact_magic",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "pact magic",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "Your arcane research and the magic bestowed on you by your patron have given you facility with spells."
+  ],
+  "reference": "public/assets/atlas/class/json/warlock/spellcasting.json",
+  "url": "/assets/atlas/features/json/pact_magic.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/pact_magic.webp",
+  "feature_specific": {}
+}

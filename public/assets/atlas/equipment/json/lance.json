@@ -1,0 +1,55 @@
+{
+  "desc": [],
+  "index": "lance",
+  "name": "lance",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d12",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 6,
+  "properties": [
+    {
+      "index": "reach",
+      "name": "reach",
+      "url": "/assets/atlas/weapon_properties/reach"
+    },
+    {
+      "index": "special",
+      "name": "special",
+      "url": "/assets/atlas/weapon_properties/special"
+    }
+  ],
+  "special": [
+    "You have disadvantage when you use a lance to attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren't mounted."
+  ],
+  "url": "/assets/atlas/equipment/json/lance.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/lance.webp",
+  "sprite_index": 20,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

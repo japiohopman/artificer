@@ -1,0 +1,66 @@
+{
+  "index": "vampiric_touch",
+  "name": "vampiric touch",
+  "desc": [
+    "The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against a creature within your reach. On a hit, the target takes 3d6 necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
+  ],
+  "range": "Self",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 3,
+  "attack_type": "melee",
+  "damage": {
+    "damage_type": {
+      "index": "necrotic",
+      "name": "necrotic",
+      "url": "/assets/atlas/damage_types/json/necrotic.json"
+    },
+    "damage_at_slot_level": {
+      "3": "3d6",
+      "4": "4d6",
+      "5": "5d6",
+      "6": "6d6",
+      "7": "7d6",
+      "8": "8d6",
+      "9": "9d6"
+    }
+  },
+  "school": {
+    "index": "necromancy",
+    "name": "necromancy",
+    "url": "/assets/atlas/magic_schools/json/necromancy.json"
+  },
+  "classes": [
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/vampiric_touch.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/vampiric_touch.webp",
+  "sprite_index": 2,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet13.webp"
+}

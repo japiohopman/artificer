@@ -1,0 +1,42 @@
+{
+  "special": [],
+  "index": "quiver",
+  "name": "quiver",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "A quiver can hold up to 20 arrows."
+  ],
+  "url": "/assets/atlas/equipment/json/quiver.json",
+  "updated_at": "2026-04-25T10:04:06.285Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/quiver.webp",
+  "sprite_index": 17,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/quiver.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "25-4-2026",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

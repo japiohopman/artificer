@@ -1,0 +1,56 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "greatclub",
+  "name": "greatclub",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "cost": {
+    "quantity": 2,
+    "unit": "sp"
+  },
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 10,
+  "properties": [
+    {
+      "index": "two_handed",
+      "name": "two_handed",
+      "url": "/assets/atlas/weapon_properties/two_handed"
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/greatclub.json",
+  "updated_at": "2026-04-30T11:41:20.108Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/greatclub.webp",
+  "sprite_index": 21,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/greatclub.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "last_updated": "30-4-2026",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "index": "ring_mail",
+  "type": "armor",
+  "name": "ring mail",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/ring_mail.json",
+  "reference": {
+    "index": "ring_mail",
+    "name": "ring mail",
+    "url": "/assets/atlas/equipment/json/ring_mail.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/ring_mail.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

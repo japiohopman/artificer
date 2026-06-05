@@ -1,0 +1,140 @@
+{
+  "index": "azer",
+  "name": "azer",
+  "size": "Medium",
+  "type": "elemental",
+  "alignment": "lawful neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    },
+    {
+      "type": "armor",
+      "value": 17,
+      "armor": [
+        {
+          "index": "shield",
+          "name": "shield",
+          "url": "/assets/atlas/equipment/shield"
+        }
+      ]
+    }
+  ],
+  "hit_points": 39,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8+12",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "dexterity": 12,
+  "constitution": 15,
+  "intelligence": 12,
+  "wisdom": 13,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "Ignan",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "heated body",
+      "desc": "A creature that touches the azer or hits it with a melee attack while within 5 ft. of it takes 5 (1d10) fire damage.",
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "/assets/atlas/damage_types/json/fire.json"
+          },
+          "damage_dice": "1d10"
+        }
+      ]
+    },
+    {
+      "name": "heated weapons",
+      "desc": "When the azer hits with a metal melee weapon, it deals an extra 3 (1d6) fire damage (included in the attack).",
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "/assets/atlas/damage_types/json/fire.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ]
+    },
+    {
+      "name": "illumination",
+      "desc": "The azer sheds bright light in a 10-foot radius and dim light for an additional 10 ft..",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "warhammer",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage, or 8 (1d10 + 3) bludgeoning damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d8+3"
+        },
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "/assets/atlas/damage_types/json/fire.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/azer.webp",
+  "url": "/assets/atlas/enemies/json/azer.json",
+  "updated_at": "2026-04-11T04:46:10.198Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 7,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet2.webp",
+  "imageUrl": null,
+  "_type": "enemies",
+  "rarity": "Rare",
+  "background_type": "fort",
+  "last_updated": "11-4-2026"
+}

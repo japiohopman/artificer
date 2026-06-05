@@ -1,0 +1,33 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "clothes_fine",
+  "name": "clothes, fine",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 15,
+    "unit": "gp"
+  },
+  "weight": 6,
+  "url": "/assets/atlas/equipment/json/clothes_fine.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/clothes_fine.webp",
+  "sprite_index": 11,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

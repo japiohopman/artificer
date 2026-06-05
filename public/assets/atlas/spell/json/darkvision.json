@@ -1,0 +1,64 @@
+{
+  "higher_level": [],
+  "index": "darkvision",
+  "name": "darkvision",
+  "desc": [
+    "You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Either a pinch of dried carrot or an agate.",
+  "ritual": false,
+  "duration": "8 hours",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "transmutation",
+    "name": "transmutation",
+    "url": "/assets/atlas/magic_schools/json/transmutation.json"
+  },
+  "classes": [
+    {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "/assets/atlas/class/json/artificer.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "/assets/atlas/class/json/ranger.json"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/darkvision.json",
+  "updated_at": "2026-06-01T06:56:15.190Z",
+  "image": "/assets/atlas/spell/json/images/darkvision.webp",
+  "sprite_index": 22,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet3.webp"
+}

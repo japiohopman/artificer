@@ -1,0 +1,25 @@
+{
+  "index": "spellcasting_artificer",
+  "class": {
+    "index": "artificer",
+    "name": "artificer",
+    "url": "/assets/atlas/class/json/artificer.json"
+  },
+  "name": "spellcasting: artificer",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "You have studied the workings of magic and how to channel it through objects. As a result, you have gained the ability to cast spells. To observers, you don't appear to be casting spells in a conventional way; you look as though you're producing wonders through various items.",
+    "Tools Required. You produce your artificer spell effects through your tools. You must have a spellcasting focus — specifically thieves' tools or some kind of artisan's tool — in hand when you cast any spell with this spellcasting feature. You must be proficient with the tool to use it in this way. After you gain the Infuse Item feature at 2nd level, you can also use any item you've infused as a spellcasting focus."
+  ],
+  "url": "/assets/atlas/features/json/spellcasting_artificer.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/spellcasting_artificer.webp",
+  "feature_specific": {
+    "spellcasting_ability": {
+      "index": "intelligence",
+      "name": "intelligence",
+      "url": "/assets/atlas/ability_scores/json/intelligence.json"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "index": "lyre",
+  "type": "musical_instruments",
+  "name": "lyre",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/lyre.json",
+  "reference": {
+    "index": "lyre",
+    "name": "lyre",
+    "url": "/assets/atlas/equipment/json/lyre.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/lyre.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

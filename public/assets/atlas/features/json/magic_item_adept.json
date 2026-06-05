@@ -1,0 +1,20 @@
+{
+  "index": "magic_item_adept",
+  "class": {
+    "index": "artificer",
+    "name": "artificer",
+    "url": "/assets/atlas/class/json/artificer.json"
+  },
+  "name": "magic item adept",
+  "level": 10,
+  "prerequisites": [],
+  "desc": [
+    "When you reach 10th level, you achieve a profound understanding of how to use and make magic items:",
+    "• You can attune to up to four magic items at once.",
+    "• If you craft a magic item with a rarity of common or uncommon, it takes you a quarter of the normal time, and it costs you half as much of the usual gold."
+  ],
+  "url": "/assets/atlas/features/json/magic_item_adept.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/magic_item_adept.webp",
+  "feature_specific": {}
+}

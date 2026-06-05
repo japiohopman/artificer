@@ -1,0 +1,93 @@
+{
+  "index": "eagle",
+  "name": "eagle",
+  "size": "Small",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "hit_points": 3,
+  "hit_dice": "1d6",
+  "hit_points_roll": "1d6",
+  "speed": {
+    "walk": "10 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 6,
+  "dexterity": 15,
+  "constitution": 10,
+  "intelligence": 2,
+  "wisdom": 14,
+  "charisma": 7,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "keen sight",
+      "desc": "The eagle has advantage on Wisdom (Perception) checks that rely on sight.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "talons",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) slashing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/eagle.webp",
+  "url": "/assets/atlas/enemies/json/eagle.json",
+  "updated_at": "2026-04-13T04:38:45.409Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 17,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet4.webp",
+  "imageUrl": "/assets/atlas/enemies/eagle.webp",
+  "_type": "enemies",
+  "card_color": "#f7d488",
+  "background_type": "air1",
+  "item_drops": [
+    {
+      "name": "couatl feather",
+      "rarity": "Common",
+      "quantity": "1",
+      "type": "material"
+    }
+  ],
+  "last_updated": "13-4-2026"
+}

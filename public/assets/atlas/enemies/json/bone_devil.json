@@ -1,0 +1,176 @@
+{
+  "index": "bone_devil",
+  "name": "bone devil",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "devil",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 142,
+  "hit_dice": "15d10",
+  "hit_points_roll": "15d10+60",
+  "speed": {
+    "walk": "40 ft.",
+    "fly": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 16,
+  "constitution": 18,
+  "intelligence": 13,
+  "wisdom": 14,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving_throw_int",
+        "name": "saving throw: int",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_int.json"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_cha.json"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill_deception",
+        "name": "skill: deception",
+        "url": "/assets/atlas/skills/json/deception.json"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_insight",
+        "name": "skill: insight",
+        "url": "/assets/atlas/skills/json/insight.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 12
+  },
+  "languages": "Infernal, telepathy 120 ft.",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [
+    {
+      "name": "devil's sight",
+      "desc": "Magical darkness doesn't impede the devil's darkvision.",
+      "damage": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The devil has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The devil makes three attacks: two with its claws and one with its sting.",
+      "actions": [
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        },
+        {
+          "action_name": "Sting",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 8 (1d8 + 4) slashing damage.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "sting",
+      "desc": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 13 (2d8 + 4) piercing damage plus 17 (5d6) poison damage, and the target must succeed on a DC 14 Constitution saving throw or become poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+4"
+        },
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "poison",
+            "url": "/assets/atlas/damage_types/json/poison.json"
+          },
+          "damage_dice": "5d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/bone_devil.webp",
+  "url": "/assets/atlas/enemies/json/bone_devil.json",
+  "updated_at": "2026-04-02T08:11:10.061Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 1,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet3.webp",
+  "wikiData": null,
+  "imageUrl": null,
+  "last_updated": "2-4-2026"
+}

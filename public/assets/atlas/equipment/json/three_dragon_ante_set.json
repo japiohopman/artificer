@@ -1,0 +1,43 @@
+{
+  "desc": [
+    "A set of cards for the game of Three-Dragon Ante."
+  ],
+  "special": [],
+  "index": "three_dragon_ante_set",
+  "name": "three-dragon ante set",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/three_dragon_ante_set.json",
+  "updated_at": "2026-05-27T06:29:19.576Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/three_dragon_ante_set.webp",
+  "imageUrl": "/assets/atlas/equipment/images/three_dragon_ante_set.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "27-5-2026",
+  "gear_category": {
+    "index": "gaming_sets",
+    "name": "gaming sets",
+    "url": "/assets/atlas/equipment_categories/gaming_sets"
+  },
+  "category": "Gaming Sets",
+  "tool_category": "Gaming Sets",
+  "kind": "tool",
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ]
+}

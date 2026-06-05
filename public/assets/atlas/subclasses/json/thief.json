@@ -1,0 +1,50 @@
+{
+  "index": "thief",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "name": "thief",
+  "subclass_flavor": "Roguish Archetype",
+  "desc": [
+    "You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ."
+  ],
+  "features": [
+    {
+      "index": "fast_hands",
+      "name": "Fast Hands",
+      "level": 3,
+      "url": "/assets/atlas/features/json/fast_hands.json"
+    },
+    {
+      "index": "second_story_work",
+      "name": "Second-Story Work",
+      "level": 3,
+      "url": "/assets/atlas/features/json/second_story_work.json"
+    },
+    {
+      "index": "supreme_sneak",
+      "name": "Supreme Sneak",
+      "level": 9,
+      "url": "/assets/atlas/features/json/supreme_sneak.json"
+    },
+    {
+      "index": "use_magic_device",
+      "name": "Use Magic Device",
+      "level": 13,
+      "url": "/assets/atlas/features/json/use_magic_device.json"
+    },
+    {
+      "index": "thief_s_reflexes",
+      "name": "Thief's Reflexes",
+      "level": 17,
+      "url": "/assets/atlas/features/json/thief_s_reflexes.json"
+    }
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/thief/levels",
+  "url": "/assets/atlas/subclasses/json/thief.json",
+  "updated_at": "2025-10-24T20:42:14.748Z",
+  "spells": [],
+  "image": "/assets/atlas/subclasses/thief.webp"
+}

@@ -1,0 +1,30 @@
+{
+  "index": "hellish_resistance",
+  "races": [
+    {
+      "index": "tiefling",
+      "name": "tiefling",
+      "url": "/assets/atlas/species/json/tiefling.json"
+    }
+  ],
+  "subraces": [],
+  "name": "hellish resistance",
+  "desc": [
+    "You have resistance to fire damage."
+  ],
+  "proficiencies": [],
+  "trait_specific": {
+    "passive_modifiers": {
+      "resistance": [
+        {
+          "index": "fire",
+          "name": "fire",
+          "url": "/assets/atlas/damage_types/json/fire.json"
+        }
+      ]
+    }
+  },
+  "url": "/assets/atlas/traits/json/hellish_resistance.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "/assets/atlas/traits/hellish_resistance.webp"
+}

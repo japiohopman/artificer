@@ -1,0 +1,178 @@
+{
+  "index": "bandit_captain",
+  "name": "bandit captain",
+  "desc": "It takes a strong personality, ruthless cunning, and a silver tongue to keep a gang of bandits in line. The **bandit captain** has these qualities in spades.\n\nIn addition to managing a crew of selfish malcontents, the **pirate captain** is a variation of the bandit captain, with a ship to protect and command. To keep the crew in line, the captain must mete out rewards and punishment on a regular basis.\n\nMore than treasure, a bandit captain or pirate captain craves infamy. A prisoner who appeals to the captain’s vanity or ego is more likely to be treated fairly than a prisoner who does not or claims not to know anything of the captain’s colorful reputation.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any non-lawful alignment",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 15,
+      "armor": [
+        {
+          "index": "studded_leather_armor",
+          "name": "studded leather armor",
+          "url": "/assets/atlas/equipment/studded_leather_armor"
+        }
+      ]
+    }
+  ],
+  "hit_points": 65,
+  "hit_dice": "10d8",
+  "hit_points_roll": "10d8+20",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 16,
+  "constitution": 14,
+  "intelligence": 14,
+  "wisdom": 11,
+  "charisma": 14,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_str",
+        "name": "saving throw: str",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_str.json"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_dex.json"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_athletics",
+        "name": "skill: athletics",
+        "url": "/assets/atlas/skills/json/athletics.json"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_deception",
+        "name": "skill: deception",
+        "url": "/assets/atlas/skills/json/deception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any two languages",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "action_options",
+      "desc": "The captain makes three melee attacks: two with its scimitar and one with its dagger. Or the captain makes two ranged attacks with its daggers.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Scimitar",
+                  "count": 2,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Dagger",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            },
+            {
+              "option_type": "action",
+              "action_name": "Dagger",
+              "count": 2,
+              "type": "ranged"
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "scimitar",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "dagger",
+      "desc": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4 + 3) piercing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "reactions": [
+    {
+      "name": "parry",
+      "desc": "The captain adds 2 to its AC against one melee attack that would hit it. To do so, the captain must see the attacker and be wielding a melee weapon."
+    }
+  ],
+  "image": "/assets/atlas/enemies/bandit_captain.webp",
+  "url": "/assets/atlas/enemies/json/bandit_captain.json",
+  "updated_at": "2026-04-03T19:30:26.119Z",
+  "forms": [],
+  "legendary_actions": [],
+  "special_abilities": [],
+  "sprite_index": 11,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet2.webp",
+  "imageUrl": null,
+  "rarity": "Rare",
+  "background_type": "land_urban",
+  "last_updated": "3-4-2026"
+}

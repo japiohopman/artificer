@@ -1,0 +1,85 @@
+{
+  "index": "cure_wounds",
+  "name": "cure wounds",
+  "desc": [
+    "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "heal_at_slot_level": {
+    "1": "1d8 + MOD",
+    "2": "2d8 + MOD",
+    "3": "3d8 + MOD",
+    "4": "4d8 + MOD",
+    "5": "5d8 + MOD",
+    "6": "6d8 + MOD",
+    "7": "7d8 + MOD",
+    "8": "8d8 + MOD",
+    "9": "9d8 + MOD"
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "/assets/atlas/class/json/artificer.json"
+    },
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "paladin",
+      "name": "paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "/assets/atlas/class/json/ranger.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    },
+    {
+      "index": "life",
+      "name": "life",
+      "url": "/assets/atlas/subclasses/json/life.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/cure_wounds.json",
+  "updated_at": "2026-06-01T06:56:15.190Z",
+  "image": "/assets/atlas/spell/json/images/cure_wounds.webp",
+  "sprite_index": 19,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet3.webp"
+}

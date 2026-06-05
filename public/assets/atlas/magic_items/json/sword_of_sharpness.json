@@ -1,0 +1,61 @@
+{
+  "index": "sword_of_sharpness",
+  "name": "sword of sharpness",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "rarity": "Very Rare",
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Weapon (any sword that deals slashing damage), very rare (requires attunement)",
+    "When you attack an object with this magic sword and hit, maximize your weapon damage dice against the target.",
+    "When you attack a creature with this weapon and roll a 20 on the attack roll, that target takes an extra 4d6 slashing damage. Then roll another d20. If you roll a 20, you lop off one of the target's limbs, with the effect of such loss determined by the GM. If the creature has no limb to sever, you lop off a portion of its body instead.",
+    "In addition, you can speak the sword's command word to cause the blade to shed bright light in a 10 foot radius and dim light for an additional 10 feet. Speaking the command word again or sheathing the sword puts out the light."
+  ],
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "secondary_effects": [
+    {
+      "damage_dice": "4d6",
+      "damage_type": {
+        "index": "slashing",
+        "name": "slashing",
+        "url": "/assets/atlas/damage_types/json/slashing.json"
+      },
+      "condition": "on critical hit"
+    }
+  ],
+  "feature_specific": {
+    "extra_damage": "4d6",
+    "damage_type": "slashing",
+    "crit_threshold": 20,
+    "light": {
+      "bright": 10,
+      "dim": 10
+    },
+    "base_equipment_options": [
+      "public/assets/atlas/equipment/json/greatsword.json",
+      "public/assets/atlas/equipment/json/longsword.json",
+      "public/assets/atlas/equipment/json/scimitar.json"
+    ]
+  },
+  "url": "/assets/atlas/magic_items/json/sword_of_sharpness.json",
+  "updated_at": "2026-05-15T05:01:36.246Z",
+  "image": "/assets/atlas/magic_items/sword_of_sharpness.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/sword_of_sharpness.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "15-5-2026"
+}

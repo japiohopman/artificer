@@ -1,0 +1,43 @@
+{
+  "desc": [
+    "This viscous ink, drawn from the pallid veins of a drowned kraken, whispers secrets on the page, but each stroke draws the writer closer to the abyss. It is said that pacts sealed with this ink bind not just the signatory, but their very soul to the unseen horrors that lurk beneath the waves.\n"
+  ],
+  "special": [],
+  "index": "ink_1_ounce_bottle",
+  "name": "ink (1 ounce bottle)",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
+  "updated_at": "2026-04-23T09:40:01.455Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
+  "sprite_index": 12,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "imageUrl": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "23-4-2026",
+  "slot": [
+    "extra"
+  ],
+  "category": "Adventuring Gear",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

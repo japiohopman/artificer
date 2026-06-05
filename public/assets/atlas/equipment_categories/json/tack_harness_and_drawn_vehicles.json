@@ -1,0 +1,134 @@
+{
+  "index": "tack_harness_and_drawn_vehicles",
+  "name": "tack, harness, and drawn vehicles",
+  "equipment": [
+    {
+      "index": "barding_padded",
+      "name": "barding: padded",
+      "url": "/assets/atlas/equipment/json/barding_padded.json"
+    },
+    {
+      "index": "barding_leather",
+      "name": "barding: leather",
+      "url": "/assets/atlas/equipment/json/barding_leather.json"
+    },
+    {
+      "index": "barding_studded_leather",
+      "name": "barding: studded leather",
+      "url": "/assets/atlas/equipment/json/barding_studded_leather.json"
+    },
+    {
+      "index": "barding_hide",
+      "name": "barding: hide",
+      "url": "/assets/atlas/equipment/json/barding_hide.json"
+    },
+    {
+      "index": "barding_chain_shirt",
+      "name": "barding: chain shirt",
+      "url": "/assets/atlas/equipment/json/barding_chain_shirt.json"
+    },
+    {
+      "index": "barding_scale_mail",
+      "name": "barding: scale mail",
+      "url": "/assets/atlas/equipment/json/barding_scale_mail.json"
+    },
+    {
+      "index": "barding_breastplate",
+      "name": "barding: breastplate",
+      "url": "/assets/atlas/equipment/json/barding_breastplate.json"
+    },
+    {
+      "index": "barding_half_plate",
+      "name": "barding: half plate",
+      "url": "/assets/atlas/equipment/json/barding_half_plate.json"
+    },
+    {
+      "index": "barding_ring_mail",
+      "name": "barding: ring mail",
+      "url": "/assets/atlas/equipment/json/barding_ring_mail.json"
+    },
+    {
+      "index": "barding_chain_mail",
+      "name": "barding: chain mail",
+      "url": "/assets/atlas/equipment/json/barding_chain_mail.json"
+    },
+    {
+      "index": "barding_splint",
+      "name": "barding: splint",
+      "url": "/assets/atlas/equipment/json/barding_splint.json"
+    },
+    {
+      "index": "barding_plate",
+      "name": "barding: plate",
+      "url": "/assets/atlas/equipment/json/barding_plate.json"
+    },
+    {
+      "index": "bit_and_bridle",
+      "name": "bit and bridle",
+      "url": "/assets/atlas/equipment/json/bit_and_bridle.json"
+    },
+    {
+      "index": "carriage",
+      "name": "carriage",
+      "url": "/assets/atlas/transport/json/carriage.json"
+    },
+    {
+      "index": "cart",
+      "name": "cart",
+      "url": "/assets/atlas/transport/json/cart.json"
+    },
+    {
+      "index": "chariot",
+      "name": "chariot",
+      "url": "/assets/atlas/equipment/json/charismariot.json"
+    },
+    {
+      "index": "animal_feed_1_day",
+      "name": "animal feed (1 day)",
+      "url": "/assets/atlas/equipment/json/animal_feed_1_day.json"
+    },
+    {
+      "index": "saddle_exotic",
+      "name": "saddle, exotic",
+      "url": "/assets/atlas/equipment/json/saddle_exotic.json"
+    },
+    {
+      "index": "saddle_military",
+      "name": "saddle, military",
+      "url": "/assets/atlas/equipment/json/saddle_military.json"
+    },
+    {
+      "index": "saddle_pack",
+      "name": "saddle, pack",
+      "url": "/assets/atlas/equipment/json/saddle_pack.json"
+    },
+    {
+      "index": "saddle_riding",
+      "name": "saddle, riding",
+      "url": "/assets/atlas/equipment/json/saddle_riding.json"
+    },
+    {
+      "index": "saddlebags",
+      "name": "saddlebags",
+      "url": "/assets/atlas/equipment/json/saddlebags.json"
+    },
+    {
+      "index": "sled",
+      "name": "sled",
+      "url": "/assets/atlas/transport/json/sled.json"
+    },
+    {
+      "index": "stabling_1_day",
+      "name": "stabling (1 day)",
+      "url": "/assets/atlas/equipment/json/stabling_1_day.json"
+    },
+    {
+      "index": "wagon",
+      "name": "wagon",
+      "url": "/assets/atlas/transport/json/wagon.json"
+    }
+  ],
+  "url": "/assets/atlas/equipment_categories/json/tack_harness_and_drawn_vehicles.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "/assets/atlas/equipment_categories/tack_harness_and_drawn_vehicles.webp"
+}

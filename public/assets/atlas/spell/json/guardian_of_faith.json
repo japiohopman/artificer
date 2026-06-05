@@ -1,0 +1,58 @@
+{
+  "higher_level": [],
+  "index": "guardian_of_faith",
+  "name": "guardian of faith",
+  "desc": [
+    "A Large spectral guardian appears and hovers for the duration in an unoccupied space of your choice that you can see within range. The guardian occupies that space and is indistinct except for a gleaming sword and shield emblazoned with the symbol of your deity.",
+    "Any creature hostile to you that moves to a space within 10 feet of the guardian for the first time on a turn must succeed on a dexterity saving throw. The creature takes 20 radiant damage on a failed save, or half as much damage on a successful one. The guardian vanishes when it has dealt a total of 60 damage."
+  ],
+  "range": "30 feet",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "8 hours",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 4,
+  "damage": {
+    "damage_type": {
+      "index": "radiant",
+      "name": "radiant",
+      "url": "/assets/atlas/damage_types/json/radiant.json"
+    },
+    "damage_at_slot_level": {
+      "4": "20"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "dex",
+      "url": "/assets/atlas/ability_scores/json/dexterity.json"
+    },
+    "dc_success": "half"
+  },
+  "area_of_effect": {
+    "type": "cylinder",
+    "size": 10
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/guardian_of_faith.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/guardian_of_faith.webp",
+  "sprite_index": 18,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet6.webp"
+}

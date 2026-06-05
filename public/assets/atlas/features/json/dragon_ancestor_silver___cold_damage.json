@@ -1,0 +1,29 @@
+{
+  "index": "dragon_ancestor_silver___cold_damage",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "/assets/atlas/class/json/sorcerer.json"
+  },
+  "subclass": {
+    "index": "draconic",
+    "name": "draconic",
+    "url": "/assets/atlas/subclasses/json/draconic.json"
+  },
+  "name": "dragon ancestor: silver _ cold damage",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "At 1st level, you choose one type of dragon as your ancestor. The damage type associated with each dragon is used by features you gain later.",
+    "You can speak, read, and write Draconic. Additionally, whenever you make a Charisma check when interacting with dragons, your proficiency bonus is doubled if it applies to the check."
+  ],
+  "parent": {
+    "index": "dragon_ancestor",
+    "name": "dragon ancestor",
+    "url": "/assets/atlas/features/dragon_ancestor.json"
+  },
+  "url": "/assets/atlas/features/json/dragon_ancestor_silver___cold_damage.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/dragon_ancestor_silver___cold_damage.webp",
+  "feature_specific": {}
+}

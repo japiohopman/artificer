@@ -1,0 +1,54 @@
+{
+  "higher_level": [],
+  "index": "harm",
+  "name": "harm",
+  "desc": [
+    "You unleash a virulent disease on a creature that you can see within range. The target must make a constitution saving throw. On a failed save, it takes 14d6 necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes."
+  ],
+  "range": "60 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 6,
+  "damage": {
+    "damage_type": {
+      "index": "necrotic",
+      "name": "necrotic",
+      "url": "/assets/atlas/damage_types/json/necrotic.json"
+    },
+    "damage_at_slot_level": {
+      "6": "14d6"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "con",
+      "name": "con",
+      "url": "/assets/atlas/ability_scores/json/constitution.json"
+    },
+    "dc_success": "half"
+  },
+  "school": {
+    "index": "necromancy",
+    "name": "necromancy",
+    "url": "/assets/atlas/magic_schools/json/necromancy.json"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/harm.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/harm.webp",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet7.webp"
+}

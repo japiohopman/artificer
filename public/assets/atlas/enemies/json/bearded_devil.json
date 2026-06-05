@@ -1,0 +1,159 @@
+{
+  "index": "bearded_devil",
+  "name": "bearded devil",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "devil",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8+16",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 15,
+  "constitution": 15,
+  "intelligence": 9,
+  "wisdom": 11,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving_throw_str",
+        "name": "saving throw: str",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_str.json"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "/assets/atlas/constitutionditions/json/poisoned.json"
+    }
+  ],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 10
+  },
+  "languages": "Infernal, telepathy 120 ft.",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [
+    {
+      "name": "devil's sight",
+      "desc": "Magical darkness doesn't impede the devil's darkvision.",
+      "damage": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The devil has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    },
+    {
+      "name": "steadfast",
+      "desc": "The devil can't be frightened while it can see an allied creature within 30 feet of it.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The devil makes two attacks: one with its beard and one with its glaive.",
+      "actions": [
+        {
+          "action_name": "Beard",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Glaive",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "beard",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 6 (1d8 + 2) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or be poisoned for 1 minute. While poisoned in this way, the target can't regain hit points. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "glaive",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 8 (1d10 + 3) slashing damage. If the target is a creature other than an undead or a construct, it must succeed on a DC 12 Constitution saving throw or lose 5 (1d10) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 5 (1d10). Any creature can take an action to stanch the wound with a successful DC 12 Wisdom (Medicine) check. The wound also closes if the target receives magical healing.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/bearded_devil.webp",
+  "url": "/assets/atlas/enemies/json/bearded_devil.json",
+  "updated_at": "2026-04-13T22:20:30.376Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 16,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet2.webp",
+  "imageUrl": "/assets/atlas/enemies/bearded_devil.webp",
+  "_type": "enemies",
+  "background_type": "ruins",
+  "card_color": "#e6aa65",
+  "rarity": "Uncommon",
+  "last_updated": "14-4-2026"
+}

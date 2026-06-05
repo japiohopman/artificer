@@ -1,0 +1,56 @@
+{
+  "index": "phantasmal_killer",
+  "name": "phantasmal killer",
+  "desc": [
+    "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature. The target must make a wisdom saving throw. On a failed save, the target becomes frightened for the duration. At the start of each of the target's turns before the spell ends, the target must succeed on a wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d10 for each slot level above 4th."
+  ],
+  "range": "120 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 4,
+  "damage": {
+    "damage_type": {
+      "index": "psychic",
+      "name": "psychic",
+      "url": "/assets/atlas/damage_types/json/psychic.json"
+    },
+    "damage_at_slot_level": {
+      "4": "4d10"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "wis",
+      "url": "/assets/atlas/ability_scores/json/wisdom.json"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "illusion",
+    "name": "illusion",
+    "url": "/assets/atlas/magic_schools/json/illusion.json"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/phantasmal_killer.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/phantasmal_killer.webp",
+  "sprite_index": 15,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet9.webp"
+}

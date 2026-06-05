@@ -1,0 +1,100 @@
+{
+  "index": "killer_whale",
+  "name": "killer whale",
+  "size": "Huge",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": 12,
+  "hit_points": 90,
+  "hit_dice": "12d12",
+  "hit_points_roll": "12d12+12",
+  "speed": {
+    "swim": "60 ft."
+  },
+  "strength": 19,
+  "dexterity": 10,
+  "constitution": 13,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 7,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "120 ft.",
+    "passive_perception": 13
+  },
+  "languages": "",
+  "challenge_rating": "3",
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [
+    {
+      "name": "echolocation",
+      "desc": "The whale can't use its blindsight while deafened.",
+      "damage": []
+    },
+    {
+      "name": "hold breath",
+      "desc": "The whale can hold its breath for 30 minutes",
+      "damage": []
+    },
+    {
+      "name": "keen hearing",
+      "desc": "The whale has advantage on Wisdom (Perception) checks that rely on hearing.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 21 (5d6 + 4) piercing damage.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "5d6+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/killer_whale.webp",
+  "url": "/assets/atlas/enemies/json/killer_whale.json",
+  "updated_at": "2026-05-16T11:14:54.418Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 2,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet8.webp",
+  "stats": {
+    "str": 19,
+    "dex": 10,
+    "con": 13,
+    "int": 3,
+    "wis": 12,
+    "cha": 7
+  },
+  "imageUrl": "/assets/atlas/enemies/images/killer_whale.webp",
+  "_type": "enemies",
+  "background_type": "water3",
+  "lore": "/assets/atlas/enemies/enemies_wiki/killer_whale.json",
+  "wikiData": {},
+  "rarity": "Rare",
+  "last_updated": "16-5-2026"
+}

@@ -1,0 +1,23 @@
+{
+  "index": "reliable_talent",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "name": "reliable talent",
+  "level": 11,
+  "prerequisites": [],
+  "desc": [
+    "By 11th level, you have refined your chosen skills until they approach perfection. Whenever you make an ability check that lets you add your proficiency bonus, you can treat a d20 roll of 9 or lower as a 10."
+  ],
+  "url": "/assets/atlas/features/json/reliable_talent.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/reliable_talent.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "minimum_die_roll": 10,
+      "condition": "proficient_skill"
+    }
+  }
+}

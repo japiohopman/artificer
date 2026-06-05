@@ -1,0 +1,36 @@
+{
+  "special": [],
+  "index": "magnifying_glass",
+  "name": "magnifying glass",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "desc": [
+    "This lens allows a closer look at small objects. It is also useful as a substitute for flint and steel when starting fires. Lighting a fire with a magnifying glass requires light as bright as sunlight to focus, tinder to ignite, and about 5 minutes for the fire to ignite.",
+    "A magnifying glass grants advantage on any ability check made to appraise or inspect an item that is small or highly detailed."
+  ],
+  "url": "/assets/atlas/equipment/json/magnifying_glass.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/magnifying_glass.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

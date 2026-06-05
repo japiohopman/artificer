@@ -1,0 +1,18 @@
+{
+  "index": "skill_animal_handling",
+  "type": "skills",
+  "name": "skill: animal handling",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json",
+  "reference": {
+    "index": "animal_handling",
+    "name": "animal handling",
+    "url": "/assets/atlas/skills/json/animal_handling.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/skills/json/animal_handling.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
+}

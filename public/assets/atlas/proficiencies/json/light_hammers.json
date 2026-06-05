@@ -1,0 +1,18 @@
+{
+  "index": "light_hammers",
+  "type": "weapons",
+  "name": "light hammers",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/light_hammers.json",
+  "reference": {
+    "index": "light_hammer",
+    "name": "light hammer",
+    "url": "/assets/atlas/equipment/json/light_hammer.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/light_hammers.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

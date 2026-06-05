@@ -1,0 +1,24 @@
+{
+  "index": "elemental_affinity",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "/assets/atlas/class/json/sorcerer.json"
+  },
+  "subclass": {
+    "index": "draconic",
+    "name": "draconic",
+    "url": "/assets/atlas/subclasses/json/draconic.json"
+  },
+  "name": "elemental affinity",
+  "level": 6,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 6th level, when you cast a spell that deals damage of the type associated with your draconic ancestry, you can add your Charisma modifier to one damage roll of that spell. At the same time, you can spend 1 sorcery point to gain resistance to that damage type for 1 hour."
+  ],
+  "reference": "public/assets/atlas/subclasses/json/draconic.json",
+  "url": "/assets/atlas/features/json/elemental_affinity.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/elemental_affinity.webp",
+  "feature_specific": {}
+}

@@ -1,0 +1,82 @@
+{
+  "index": "giant_bat",
+  "name": "giant bat",
+  "size": "Large",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 13
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "4d10",
+  "hit_points_roll": "4d10",
+  "speed": {
+    "walk": "10 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 15,
+  "dexterity": 16,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 6,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "60 ft.",
+    "passive_perception": 11
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "echolocation",
+      "desc": "The bat can't use its blindsight while deafened.",
+      "damage": []
+    },
+    {
+      "name": "keen hearing",
+      "desc": "The bat has advantage on Wisdom (Perception) checks that rely on hearing.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 5 (1d6 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/giant_bat.webp",
+  "url": "/assets/atlas/enemies/json/giant_bat.json",
+  "updated_at": "2026-04-14T21:03:41.370Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 14,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet5.webp",
+  "imageUrl": "/assets/atlas/enemies/giant_bat.webp",
+  "_type": "enemies",
+  "background_type": "cave",
+  "rarity": "Uncommon",
+  "last_updated": "14-4-2026"
+}

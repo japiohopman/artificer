@@ -1,0 +1,189 @@
+{
+  "index": "ice_mephit",
+  "name": "ice mephit",
+  "size": "Small",
+  "type": "elemental",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 11
+    }
+  ],
+  "hit_points": 21,
+  "hit_dice": "6d6",
+  "hit_points_roll": "6d6",
+  "speed": {
+    "walk": "30 ft.",
+    "fly": "30 ft."
+  },
+  "strength": 7,
+  "dexterity": 13,
+  "constitution": 10,
+  "intelligence": 9,
+  "wisdom": 11,
+  "charisma": 12,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [
+    "bludgeoning",
+    "fire"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "/assets/atlas/constitutionditions/json/poisoned.json"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 12
+  },
+  "languages": "Aquan, Auran",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "death burst",
+      "desc": "When the mephit dies, it explodes in a burst of jagged ice. Each creature within 5 ft. of it must make a DC 10 Dexterity saving throw, taking 4 (1d8) slashing damage on a failed save, or half as much damage on a successful one.",
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "/assets/atlas/ability_scores/json/dexterity.json"
+        },
+        "dc_value": 10,
+        "success_type": "half"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8"
+        }
+      ]
+    },
+    {
+      "name": "false appearance",
+      "desc": "While the mephit remains motionless, it is indistinguishable from an ordinary shard of ice.",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The mephit can innately cast fog cloud, requiring no material components. Its innate spellcasting ability is Charisma.",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "/assets/atlas/ability_scores/json/charisma.json"
+        },
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "fog cloud",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/fog_cloud.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "claws",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 3 (1d4 + 1) slashing damage plus 2 (1d4) cold damage.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4+1"
+        },
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "cold",
+            "url": "/assets/atlas/damage_types/json/cold.json"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "frost breath",
+      "desc": "The mephit exhales a 15-foot cone of cold air. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 5 (2d4) cold damage on a failed save, or half as much damage on a successful one.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 6
+      },
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "/assets/atlas/ability_scores/json/dexterity.json"
+        },
+        "dc_value": 10,
+        "success_type": "half"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "cold",
+            "url": "/assets/atlas/damage_types/json/cold.json"
+          },
+          "damage_dice": "2d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/ice_mephit.webp",
+  "url": "/assets/atlas/enemies/json/ice_mephit.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 22,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.webp"
+}

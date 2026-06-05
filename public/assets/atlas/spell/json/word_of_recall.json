@@ -1,0 +1,40 @@
+{
+  "higher_level": [],
+  "index": "word_of_recall",
+  "name": "word of recall",
+  "desc": [
+    "You and up to five willing creatures within 5 feet of you instantly teleport to a previously designated sanctuary. You and any creatures that teleport with you appear in the nearest unoccupied space to the spot you designated when you prepared your sanctuary (see below). If you cast this spell without first preparing a sanctuary, the spell has no effect.",
+    "You must designate a sanctuary by casting this spell within a location, such as a temple, dedicated to or strongly linked to your deity. If you attempt to cast the spell in this manner in an area that isn't dedicated to your deity, the spell has no effect."
+  ],
+  "range": "5 feet",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 6,
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 5
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/word_of_recall.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/word_of_recall.webp",
+  "sprite_index": 17,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet13.webp"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "restorative_ointment",
+  "name": "restorative ointment",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, uncommon",
+    "This glass jar, 3 inches in diameter, contains 1d4 + 1 doses of a thick mixture that smells faintly of aloe. The jar and its contents weigh 1/2 pound.",
+    "As an action, one dose of the ointment can be swallowed or applied to the skin. The creature that receives it regains 2d8 + 2 hit points, ceases to be poisoned, and is cured of any disease."
+  ],
+  "url": "/assets/atlas/magic_items/json/restorative_ointment.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/restorative_ointment.webp"
+}

@@ -1,0 +1,332 @@
+{
+  "category": "points_of_interest",
+  "categoryId": "8",
+  "updatedAt": "2026-06-04T07:02:42.036026Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
+    {
+      "id": "31",
+      "name": "Fury of the Fist",
+      "categoryId": "8",
+      "type": "marker",
+      "position": [
+        602.4992729095,
+        955.9894029389743
+      ],
+      "popup": {
+        "title": "Fury of the Fist",
+        "description": "A statue located outside the [[Seatower of Balduran]], west of the drawbridge, vandalized by [[thieves]] in [[1482 DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "57",
+      "name": "Beloved Ranger",
+      "categoryId": "8",
+      "type": "marker",
+      "position": [
+        679.9992561836684,
+        1550.0035323536752
+      ],
+      "popup": {
+        "title": "Beloved Ranger",
+        "description": "A large statue that portrayed a larger-than-life depiction of the [[Rashemaar]] [[ranger]] [[Minsc]] and his rodent companion, both were revealed to be [[petrified]] heroes, released in the 1480s [[DR]].",
+        "image": "File:Beloved ranger-5e.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "70",
+      "name": "Insight Park",
+      "categoryId": "8",
+      "type": "marker",
+      "position": [
+        1328.6524666938126,
+        987.8274596743962
+      ],
+      "popup": {
+        "title": "Insight Park",
+        "description": "A public park that was magically created during the mid–15 century [[DR]].",
+        "image": "File:Insight Park.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "77",
+      "name": "The Oasis",
+      "categoryId": "8",
+      "type": "marker",
+      "position": [
+        1674.9991690394286,
+        1768.5042892866056
+      ],
+      "popup": {
+        "title": "The Oasis",
+        "description": "A theater known for the rich production values of its show and the lavish spectacles it was capable of exhibiting in the late 15 century [[DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "78",
+      "name": "Balduran Looks Out to Sea",
+      "categoryId": "8",
+      "type": "marker",
+      "position": [
+        1612.9106956303017,
+        888.8375058107541
+      ],
+      "popup": {
+        "title": "Balduran Looks Out to Sea",
+        "description": "A statue that depicted the famous explorer [[Balduran]], after whom the city was named.",
+        "image": "File:Balduran the Brave concept art.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "79",
+      "name": "Cliffside Cemetery",
+      "categoryId": "8",
+      "type": "marker",
+      "position": [
+        1566.2415203282026,
+        949.6461912415598
+      ],
+      "popup": {
+        "title": "Cliffside Cemetery",
+        "description": "The largest graveyard in [[Baldur's Gate]], a sprawling plot of land turned cemetery around the  [[Szarr]] family tombs and the [[Szarr Mansion]].",
+        "image": "File:Tumbledown.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "104",
+      "name": "Seaserpent Tamed by Umberlee",
+      "categoryId": "8",
+      "type": "marker",
+      "position": [
+        742.108860644209,
+        1268.1988666309155
+      ],
+      "popup": {
+        "title": "Seaserpent Tamed by Umberlee",
+        "description": "A statue dedicated to [[Umberlee]], the Bitch Queen, that rose out of the [[Gray Harbor]] waters.",
+        "image": "File:Water Queen's House.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "105",
+      "name": "Six Wise Machinists",
+      "categoryId": "8",
+      "type": "marker",
+      "position": [
+        554.0004154802857,
+        1387.9994953780465
+      ],
+      "popup": {
+        "title": "Six Wise Machinists",
+        "description": "A statue that was vandalized in [[1482 DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "106",
+      "name": "Faithful Shopkeeper Meets the Honest Trader",
+      "categoryId": "8",
+      "type": "marker",
+      "position": [
+        711.3496072314072,
+        1324.411714805614
+      ],
+      "popup": {
+        "title": "Faithful Shopkeeper Meets the Honest Trader",
+        "description": "A statue vandalized by thieves in [[1482 DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "110",
+      "name": "The Queen's Favor",
+      "categoryId": "8",
+      "type": "marker",
+      "position": [
+        698.2502621354304,
+        1219.2497476890233
+      ],
+      "popup": {
+        "title": "The Queen's Favor",
+        "description": "A statue landmark of note.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "195",
+      "name": "Statue of Balduran",
+      "categoryId": "8",
+      "type": "marker",
+      "position": [
+        889.5395486790941,
+        910.7435431633239
+      ],
+      "popup": {
+        "title": "Statue of Balduran",
+        "description": "A monolithic statue of [[Balduran]], looming over the ships entering the [[Gray Harbor]].",
+        "image": "File:Statue of balduran.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "202",
+      "name": "Bloomridge Park",
+      "categoryId": "8",
+      "type": "marker",
+      "position": [
+        512.9999452521268,
+        1207.50022505892
+      ],
+      "popup": {
+        "title": "Bloomridge Park",
+        "description": "A small public park nestled at the [[Old Wall (Baldur's Gate)|Old Wall]], east of the [[Manor Gate]].",
+        "image": "File:Bloomridge Park statues.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

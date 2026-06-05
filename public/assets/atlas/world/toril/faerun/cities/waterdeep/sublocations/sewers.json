@@ -1,0 +1,1978 @@
+{
+  "category": "sewers",
+  "updatedAt": "2026-06-03T05:50:02.274151Z",
+  "location_id": "waterdeep",
+  "sub_locations": [
+    {
+      "id": "455",
+      "name": "Burdag Lane",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1708.7235367373,
+        1818.6786412118
+      ],
+      "popup": {
+        "title": "Burdag Lane",
+        "description": "An entrance to the sewers of Waterdeep could be found on the intersection of Burdag Lane and Tsarnen Alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "858",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        994.89924112947,
+        3743.069746211
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF3: A surface shaft in the center of Shank Alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "859",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        847.11392386148,
+        3684.3798833725
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF2: A surface shaft in the northernmost corner of Sabbar's Alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "860",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        717.00627612316,
+        3498.0572465299
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF1: A surface shaft underneath trees in the interior of the block northwest of the shrine to Silvanus within the Shrines of Nature.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "861",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        919.75,
+        3554.625
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF4: A surface shaft south off the Street of Glances and just south of the tree in Sniff Alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "862",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1118.2893744465,
+        3610.4872247385
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "A surface shaft in the central stand of trees in the southern end of Heroes' Garden, covered by a stone hut. Halfway down this shaft was a secret entrance leading to the [[Catacombs of Yintros]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "863",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1018.2337649086,
+        3424.5181412864
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF6: A surface shaft under a lone tree in the alleyway west of Eltorchul Villa, south of Ivory Street and north of Pharra's Alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "864",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        813.87990514572,
+        3398.3551903825
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF10: A surface shaft just south of the Ilitul Villa, at the northern end of a dead alley opening off Grimwald\u2019s Way.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "865",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1200.3137610642,
+        3397.2945302108
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF7: A surface shaft in the mouth of an alleyway opening north off Chasso\u2019s Trot, just west of Sul Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "866",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1422.3452903567,
+        3442.1958108161
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF8: A surface shaft due south of Jhansczil Villa.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "867",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1547.1496372362,
+        3478.2582566566
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF9: A surface shaft underneath a tree, in an alleyway just south of Brossfeather Villa.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "868",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1096.5,
+        3333.375
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF11: A surface shaft just west off Mendever Street, in the easternmost cul-de-sac that opens off the alleyway bounding Nesher Villa.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "869",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1289,
+        3211
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF12: A surface shaft in an alleyway just west of the gates of Manthar Villa, off Delzorin Street, between Sul Street and Shield Street. Opens into a junction room.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "870",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1438.25,
+        3244.25
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF13: A surface shaft in the alleyway within the block surrounded by Copper Street, Delzorin Street, the High road, and Vordil Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "871",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1687.8638866923,
+        3220.5178349141
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF14: A surface shaft in Trollskull Alley, southwestern corner, near the intersection of Delzorin Stret and Whaelgund Way. The ladder of this shaft was a 20\u202fft (6.1\u202fm) descent.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "872",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1687.5103333017,
+        3320.573444452
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF15: A surface shaft in a cul-de-sac north of Horn Street, between Tower March and Whaelgund Way.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "873",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1576.1410152648,
+        3148.0393898425
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF16: A surface shaft at the intersection of Sharra's Flight and the Street of Whispers.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "874",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1555.988472001,
+        2548.7663927869
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF30: A surface shaft located at the southeastern corner of an alleyway, opening off the High Road and to the west of Andamaar's Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "875",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1571.1912677965,
+        2465.6813459975
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF40: A surface shaft located on the lane that paralleled Irimar's Walk.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "876",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1659.5796154448,
+        2404.5166094249
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF41: A surface shaft located in an alleyway that opened west off of Wall Way, just south of Andamaar's Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "877",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1579.6765491707,
+        2317.5424753389
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF39: A surface shaft located on Spindle Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "878",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1605.4859466841,
+        2165.1609639932
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF42: A surface shaft located in an alleyway that opened west off of Wall Way, just north of Ironpost Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "879",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1551.7458313139,
+        2072.5299756578
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF43: A surface shaft located within a copse of trees, in a dead-end alleyway just north of the Costumers' Hall.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "880",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1613.2641212771,
+        2071.469315486
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF44: A surface shaft located at the mouth of a dead-end alleyway that opened east off of the Street of the Tusks.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "881",
+      "name": "Sewer Location",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1562,
+        1981.5
+      ],
+      "popup": {
+        "title": "Sewer Location",
+        "description": "SF45: A junction room without any surface entrance, located beneath an alleyway that opened south off of Spendthrift Alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "882",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1534.0681617842,
+        1918.0271439685
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF52: A surface shaft located in the westernmost dead-end of Quaff Alley. Opened into a junction room.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "883",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1626.6991501197,
+        1805.9507191504
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF56: A surface shaft at the westernmost end of a dead-end alley that opened south off of Simples Street. Opened into a junction room.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "884",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1711.551963862,
+        1652.508547633
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF61: A surface shaft located at the halfway point of Beacon Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "885",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1779.25,
+        1936.75
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF58: A surface shaft located at the mouth of a dead-end alley, where it joined Quilley Alley between Nethpranter's Street and the Wide Way.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "886",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        758.01846943198,
+        2815.3456492942
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF18: A surface shaft in a cul-de-sac opening northeast off of Toalar's Lane.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "887",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        906.51089348115,
+        2783.5258441408
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF19: A surface shaft at the intersection of Calamastyr Lane and Gothal Street. Opens into a junction room.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "888",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        945.75,
+        2599.625
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF23: A surface shaft at the western end of Marlar's Lane.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "890",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1463.003930275,
+        2492.5514036826
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF29: A surface shaft located at a northwestern junction of alleyways, in the block bounded by the High Road, Lamp Street, Selduth Street, and the Street of Bells.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "891",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1363.6554275183,
+        2444.8216959525
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF28: A surface shaft located in the southwest corner of a dead-end alley, in the block bounded by Lamp Street, the Street of Bells, Cymbril's Walk, and the Street of the Sword. Opened into a junction room.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "892",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        996.66700808244,
+        2334.1594846968
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF26: A surface shaft located in Turnback Court. Opened into a junction room.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "893",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1046.375,
+        2258.375
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF34: A surface shaft located at the northern mouth of an alleyway that opened off of Sevenlamps Cut.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "894",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1189.0000525652,
+        2370.9290373185
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF27: A surface shaft located in the southwest corner of an alleyway that opened south off Cymbril's Walk, at the intersection of Street of Silver and Warriors' Way.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "895",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1456.6399692443,
+        2387.899600067
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF36: A surface shaft located in an alleyway just north of the Pampered Traveler inn.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "896",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1468.6607845245,
+        2235.5180887213
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF37: A surface shaft located in the wide alleyway between the High Road and the Street of Bells.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "897",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1491.9953083036,
+        2165.8680707744
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF38: A surface shaft beneath the House of the Fine Carvers, leading into a junction room.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "898",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1494.8237354284,
+        2047.7812383162
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF47: A surface shaft located in the alleyway behind Olmhazan's Jewels.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "899",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        905.45023330937,
+        2558.3123343329
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF24: A surface shaft at the base of a rocky cliff-face, just behind Blackstaff Tower.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "900",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        933.38095116624,
+        2306.2287668399
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF25: A surface shaft near the top of the rocky slope of Mount Waterdeep, at a point due southwest of Turnback Court.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "901",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1020.0015318616,
+        2897.7235893025
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF20: A surface shaft at the southwestern corner of Runer's Alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "902",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1442.8513870112,
+        2930.6040546276
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF22: A surface shaft in a copse of trees at the center of a block bounded by Copper Street, Hassantyr's Street, the High Road, and Julthoon Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "903",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1819.7393013836,
+        2710.340292288
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF32: A surface shaft located at the northwestern corner of an alleyway, opening off Golden Serpent Street and Nindabar Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "904",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1835.2956505697,
+        2858.125609556
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF33: A surface shaft located at the halfway point of Belzound Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "906",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1114.7538405406,
+        2093.0360723122
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF35: A surface shaft located at the intersection of Lemontree Alley and Shadows Alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "907",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        983.93908602108,
+        2026.9215882712
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF70: A locked surface shaft within the cellar of [[Piergeiron's Palace]]. It was guarded at all times by five [[City Guard]] and an [[armar]]. Whenever they saw or heard anything suspicious from the sewers, they would sound alarm on the wall.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "908",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1422.25,
+        1807.625
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF53: A surface shaft located on Soldier's Street, just east of the Bell Tower.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "909",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1385.575737735,
+        1489.8739879601
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF48: A surface shaft located at the end of a dead-end alleyway, which opened south off of Nelnuk's Walk.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "910",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1518.875,
+        1623.5
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF49: A surface shaft located in the southwestern corner of a dead-end alleyway, which opened off of Shesstra's Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "911",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1550.25,
+        1981.5
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF46: A surface shaft located within the cellar of the Unicorn's Horn.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "912",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1617,
+        1391.375
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF54: A surface shaft located at the intersection of alleyways north of the Three Pearls Nightclub.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "913",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1776.375,
+        1088.25
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF68: A surface shaft located in the cellar of the Spouting Fish tavern.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "914",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1806.125,
+        1243.625
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF66: A surface shaft located in the wide alley north of Coach Street and west of the High Road.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "915",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1860.3979413018,
+        1520.2795795511
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF63: A surface shaft in Rednose Alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "917",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1976.875,
+        1114.75
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF67: A surface shaft located east of Carter's Way and south of Coachlamp Lane.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "918",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1954.625,
+        1065.25
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF69: A surface shaft located on the second alleyway north of Bellister's House.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "919",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1928.6337456863,
+        1334.6640494896
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF65: A surface shaft located in the widest part of the alley that opened south off of Olaim's Cut.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "920",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1901.625,
+        1580.25
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF64: A surface shaft located in a cul-de-sac opening off the Rising Ride, between Caravan Court and Juth Alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "921",
+      "name": "Sewer Location",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1760.75,
+        1310.5
+      ],
+      "popup": {
+        "title": "Sewer Location",
+        "description": "SF62: A junction room without any surface entrance, located under the intersection of Grocer's Lane and Snake Alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "922",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1811.625,
+        1701.75
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF60: A surface shaft in a in a cul-de-sac opening, east off the northern end of Drovers' Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "923",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1707.25,
+        1837.75
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF57: A surface shaft located at the intersection of Burdag Lane and Tsarnen Alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "924",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1683,
+        1999.25
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF59: A surface shaft located at the western end of a dead-end forked alley, which opened east off of Rivon Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "925",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1523.815113457,
+        1757.8674580298
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF51: A surface shaft located in a cul-de-sac that opened off of Belnimbra's Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "926",
+      "name": "Sewer Location",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1181.75,
+        3024.75
+      ],
+      "popup": {
+        "title": "Sewer Location",
+        "description": "SF21: A junction room without any surface entrance, located under the southern mouth of Cloaksweep Alley.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "927",
+      "name": "Sewer Location",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1685.75,
+        2694
+      ],
+      "popup": {
+        "title": "Sewer Location",
+        "description": "SF31: A junction room without any surface entrance, located beneath the Grinning Lion. Sometime between 1368 and 1372, the proprietor of the Grinning Lion installed a secret passage between this junction room and the stairs beneath his tavern's midden.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "928",
+      "name": "Sewer Location",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1494.5,
+        1657.5
+      ],
+      "popup": {
+        "title": "Sewer Location",
+        "description": "SF50: A junction room without any surface entrance, located beneath the westernmost section of alleyways that opened off of Snail Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "929",
+      "name": "Sewer Location",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1660.5,
+        1468.5
+      ],
+      "popup": {
+        "title": "Sewer Location",
+        "description": "SF55: A junction room without any surface shaft, located under the wide part of Candle Lane.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "930",
+      "name": "Sewer Location",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1582.5,
+        1490
+      ],
+      "popup": {
+        "title": "Sewer Location",
+        "description": "SF72: The lair of Xanathar, located directly beneath the Philosopher's Court.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "931",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1274.2064196982,
+        1799.5867581198
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF73: North entrance into the Citadel of the Bloody Hand. Connected the secondary passage west of SF53 with the once-secret northern entrance. There was a guard station here, once used to defend Castle Waterdeep from subterranean attacks.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "932",
+      "name": "Sewer Entrance",
+      "categoryId": "sewers",
+      "type": "marker",
+      "position": [
+        1161.0693347083,
+        1772.0095936535
+      ],
+      "popup": {
+        "title": "Sewer Entrance",
+        "description": "SF74: Southern entrance into the Citadel of the Bloody Hand. Connected the secondary passages running north and west of SF48 with the once-secret southern entrance.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

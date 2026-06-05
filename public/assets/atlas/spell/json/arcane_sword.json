@@ -1,0 +1,55 @@
+{
+  "higher_level": [],
+  "index": "arcane_sword",
+  "name": "arcane sword",
+  "desc": [
+    "You create a sword-shaped plane of force that hovers within range. It lasts for the duration.",
+    "When the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one."
+  ],
+  "range": "60 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A miniature platinum sword with a grip and pommel of copper and zinc, worth 250 gp.",
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 7,
+  "attack_type": "melee",
+  "damage": {
+    "damage_type": {
+      "index": "force",
+      "name": "force",
+      "url": "/assets/atlas/damage_types/json/force.json"
+    },
+    "damage_at_slot_level": {
+      "7": "3d10"
+    }
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/arcane_sword.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/arcane_sword.webp",
+  "sprite_index": 16,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet1.webp"
+}

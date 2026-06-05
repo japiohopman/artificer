@@ -1,0 +1,21 @@
+{
+  "index": "potion_of_clairvoyance",
+  "name": "potion of clairvoyance",
+  "equipment_category": {
+    "index": "potion",
+    "name": "potion",
+    "url": "/assets/atlas/equipment_categories/potion"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Potion, rare",
+    "When you drink this potion, you gain the effect of the clairvoyance spell. An eyeball bobs in this yellowish liquid but vanishes when the potion is opened."
+  ],
+  "url": "/assets/atlas/magic_items/json/potion_of_clairvoyance.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/potion_of_clairvoyance.webp"
+}

@@ -1,0 +1,23 @@
+{
+  "index": "telekinetic_master",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "subclass": {
+    "index": "psi_warrior",
+    "name": "psi warrior",
+    "url": "/assets/atlas/subclasses/json/psi_warrior.json"
+  },
+  "name": "telekinetic master",
+  "level": 18,
+  "prerequisites": [],
+  "desc": [
+    "At 18th level, your ability to move creatures and objects with your mind is unmatched. You can cast the telekinesis spell without expending a spell slot, and Intelligence is your spellcasting ability for it. Once you cast the spell in this way, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to cast it again."
+  ],
+  "url": "/assets/atlas/features/json/telekinetic_master.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/telekinetic_master.webp",
+  "feature_specific": {}
+}

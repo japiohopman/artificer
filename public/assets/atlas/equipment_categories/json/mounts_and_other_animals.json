@@ -1,0 +1,44 @@
+{
+  "index": "mounts_and_other_animals",
+  "name": "mounts and other animals",
+  "equipment": [
+    {
+      "index": "mule",
+      "name": "mule",
+      "url": "/assets/atlas/transport/json/mule.json"
+    },
+    {
+      "index": "elephant",
+      "name": "elephant",
+      "url": "/assets/atlas/transport/json/elephant.json"
+    },
+    {
+      "index": "horse_draft",
+      "name": "horse, draft",
+      "url": "/assets/atlas/transport/json/horse_draft.json"
+    },
+    {
+      "index": "horse_riding",
+      "name": "horse, riding",
+      "url": "/assets/atlas/transport/json/horse_riding.json"
+    },
+    {
+      "index": "mastiff",
+      "name": "mastiff",
+      "url": "/assets/atlas/transport/json/mastiff.json"
+    },
+    {
+      "index": "pony",
+      "name": "pony",
+      "url": "/assets/atlas/transport/json/pony.json"
+    },
+    {
+      "index": "warhorse",
+      "name": "warhorse",
+      "url": "/assets/atlas/transport/json/warhorse.json"
+    }
+  ],
+  "url": "/assets/atlas/equipment_categories/json/mounts_and_other_animals.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "/assets/atlas/equipment_categories/mounts_and_other_animals.webp"
+}

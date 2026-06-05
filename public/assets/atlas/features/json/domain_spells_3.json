@@ -1,0 +1,23 @@
+{
+  "index": "domain_spells_3",
+  "class": {
+    "index": "cleric",
+    "name": "cleric",
+    "url": "/assets/atlas/class/json/cleric.json"
+  },
+  "name": "domain spells",
+  "level": 5,
+  "prerequisites": [],
+  "desc": [
+    "Each domain has a list of spells--its domain spells--that you gain at the cleric levels noted in the domain description. Once you gain a domain spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day.",
+    "If you have a domain spell that doesn't appear on the cleric spell list, the spell is nonetheless a cleric spell for you."
+  ],
+  "url": "/assets/atlas/features/json/domain_spells_3.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/domain_spells_3.webp",
+  "feature_specific": {
+    "subfeature_options": {
+      "type": "spell"
+    }
+  }
+}

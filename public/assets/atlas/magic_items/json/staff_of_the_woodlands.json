@@ -1,0 +1,141 @@
+{
+  "index": "staff_of_the_woodlands",
+  "name": "staff of the woodlands",
+  "equipment_category": {
+    "index": "staff",
+    "name": "staff",
+    "url": "/assets/atlas/equipment_categories/staff"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Staff, rare (requires attunement by a druid)",
+    "This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you have a +2 bonus to spell attack rolls.",
+    "The staff has 10 charges for the following properties. It regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff loses its properties and becomes a nonmagical quarterstaff.",
+    "***Spells.*** You can use an action to expend 1 or more of the staff's charges to cast one of the following spells from it, using your spell save DC: animal friendship (1 charge), awaken (5 charges), barkskin (2 charges), locate animals or plants (2 charges), speak with animals (1 charge), speak with plants (3 charges), or wall of thorns (6 charges).",
+    "You can also use an action to cast the pass without trace spell from the staff without using any charges. Tree Form. You can use an action to plant one end of the staff in fertile earth and expend 1 charge to transform the staff into a healthy tree. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius.",
+    "The tree appears ordinary but radiates a faint aura of transmutation magic if targeted by detect magic. While touching the tree and using another action to speak its command word, you return the staff to its normal form. Any creature in the tree falls when it reverts to a staff."
+  ],
+  "feature_specific": {
+    "charges": {
+      "max": 10,
+      "recovery": "1d6 + 4",
+      "type": "day"
+    },
+    "spells": [
+      {
+        "spell": {
+          "index": "animal_friendship",
+          "name": "animal friendship",
+          "url": "/assets/atlas/spell/json/animal_friendship.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "awaken",
+          "name": "awaken",
+          "url": "/assets/atlas/spell/json/awaken.json"
+        },
+        "usage": {
+          "times": 5,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "barkskin",
+          "name": "barkskin",
+          "url": "/assets/atlas/spell/json/barkskin.json"
+        },
+        "usage": {
+          "times": 2,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "locate_animals_or_plants",
+          "name": "locate animals or plants",
+          "url": "/assets/atlas/spell/json/locate_animals_or_plants.json"
+        },
+        "usage": {
+          "times": 2,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "speak_with_animals",
+          "name": "speak with animals",
+          "url": "/assets/atlas/spell/json/speak_with_animals.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "speak_with_plants",
+          "name": "speak with plants",
+          "url": "/assets/atlas/spell/json/speak_with_plants.json"
+        },
+        "usage": {
+          "times": 3,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "wall_of_thorns",
+          "name": "wall of thorns",
+          "url": "/assets/atlas/spell/json/wall_of_thorns.json"
+        },
+        "usage": {
+          "times": 6,
+          "type": "charge"
+        },
+        "special_action": "action"
+      },
+      {
+        "spell": {
+          "index": "pass_without_trace",
+          "name": "pass without trace",
+          "url": "/assets/atlas/spell/json/pass_without_trace.json"
+        },
+        "usage": {
+          "type": "at_will"
+        },
+        "special_action": "action"
+      }
+    ],
+    "passive_modifiers": {
+      "attack_bonus": 2,
+      "damage_bonus": 2,
+      "spell_attack_bonus": 2
+    }
+  },
+  "url": "/assets/atlas/magic_items/json/staff_of_the_woodlands.json",
+  "updated_at": "2026-05-15T12:34:42.193Z",
+  "image": "/assets/atlas/magic_items/staff_of_the_woodlands.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/staff_of_the_woodlands.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "15-5-2026"
+}

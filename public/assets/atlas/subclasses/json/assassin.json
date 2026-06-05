@@ -1,0 +1,50 @@
+{
+  "index": "assassin",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "name": "assassin",
+  "subclass_flavor": "Roguish Archetype",
+  "desc": [
+    "You focus your training on the grim art of death. Those who adhere to this archetype are diverse: hired killers, spies, bounty hunters, and even specially anointed priests trained to exterminate enemies of their deity. Stealth, poison, and disguise help you eliminate your foes with deadly efficiency."
+  ],
+  "features": [
+    {
+      "index": "bonus_proficiencies_assassin",
+      "name": "Bonus Proficiencies",
+      "level": 3,
+      "url": "/assets/atlas/features/json/bonus_proficiencies_assassin.json"
+    },
+    {
+      "index": "assassinate",
+      "name": "Assassinate",
+      "level": 3,
+      "url": "/assets/atlas/features/json/assassinate.json"
+    },
+    {
+      "index": "infiltration_expertise",
+      "name": "Infiltration Expertise",
+      "level": 9,
+      "url": "/assets/atlas/features/json/infiltration_expertise.json"
+    },
+    {
+      "index": "impostor",
+      "name": "Impostor",
+      "level": 13,
+      "url": "/assets/atlas/features/json/impostor.json"
+    },
+    {
+      "index": "death_strike",
+      "name": "Death Strike",
+      "level": 17,
+      "url": "/assets/atlas/features/json/death_strike.json"
+    }
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/assassin/levels",
+  "url": "/assets/atlas/subclasses/json/assassin.json",
+  "updated_at": "2025-10-24T20:42:14.748Z",
+  "spells": [],
+  "image": "/assets/atlas/subclasses/assassin.webp"
+}

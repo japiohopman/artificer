@@ -1,0 +1,18 @@
+{
+  "index": "land_vehicles",
+  "type": "vehicles",
+  "name": "land vehicles",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/land_vehicles.json",
+  "reference": {
+    "index": "land_vehicles",
+    "name": "land vehicles",
+    "url": "/assets/atlas/equipment_categories/json/land_vehicles.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/land_vehicles.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment_categories"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "index": "potion",
+  "name": "potion",
+  "equipment": [
+    {
+      "index": "oil_of_etherealness",
+      "name": "oil of etherealness",
+      "url": "/assets/atlas/magic_items/json/oil_of_etherealness.json"
+    },
+    {
+      "index": "oil_of_sharpness",
+      "name": "oil of sharpness",
+      "url": "/assets/atlas/magic_items/json/oil_of_sharpness.json"
+    },
+    {
+      "index": "oil_of_slipperiness",
+      "name": "oil of slipperiness",
+      "url": "/assets/atlas/magic_items/json/oil_of_slipperiness.json"
+    },
+    {
+      "index": "philter_of_love",
+      "name": "philter of love",
+      "url": "/assets/atlas/magic_items/json/philter_of_love.json"
+    },
+    {
+      "index": "potion_of_animal_friendship",
+      "name": "potion of animal friendship",
+      "url": "/assets/atlas/magic_items/json/potion_of_animal_friendship.json"
+    },
+    {
+      "index": "potion_of_clairvoyance",
+      "name": "potion of clairvoyance",
+      "url": "/assets/atlas/magic_items/json/potion_of_clairvoyance.json"
+    },
+    {
+      "index": "potion_of_climbing",
+      "name": "potion of climbing",
+      "url": "/assets/atlas/magic_items/json/potion_of_climbing.json"
+    },
+    {
+      "index": "potion_of_diminution",
+      "name": "potion of diminution",
+      "url": "/assets/atlas/magic_items/json/potion_of_diminution.json"
+    },
+    {
+      "index": "potion_of_flying",
+      "name": "potion of flying",
+      "url": "/assets/atlas/magic_items/json/potion_of_flying.json"
+    },
+    {
+      "index": "potion_of_gaseous_form",
+      "name": "potion of gaseous form",
+      "url": "/assets/atlas/magic_items/json/potion_of_gaseous_form.json"
+    },
+    {
+      "index": "potion_of_giant_strength",
+      "name": "potion of giant strength",
+      "url": "/assets/atlas/magic_items/json/potion_of_giant_strength.json"
+    },
+    {
+      "index": "potion_of_growth",
+      "name": "potion of growth",
+      "url": "/assets/atlas/magic_items/json/potion_of_growth.json"
+    },
+    {
+      "index": "potion_of_healing",
+      "name": "potion of healing",
+      "url": "/assets/atlas/magic_items/json/potion_of_healing.json"
+    },
+    {
+      "index": "potion_of_heroism",
+      "name": "potion of heroism",
+      "url": "/assets/atlas/magic_items/json/potion_of_heroism.json"
+    },
+    {
+      "index": "potion_of_invisibility",
+      "name": "potion of invisibility",
+      "url": "/assets/atlas/magic_items/json/potion_of_invisibility.json"
+    },
+    {
+      "index": "potion_of_mind_reading",
+      "name": "potion of mind reading",
+      "url": "/assets/atlas/magic_items/json/potion_of_mind_reading.json"
+    },
+    {
+      "index": "potion_of_poison",
+      "name": "potion of poison",
+      "url": "/assets/atlas/magic_items/json/potion_of_poison.json"
+    },
+    {
+      "index": "potion_of_resistance",
+      "name": "potion of resistance",
+      "url": "/assets/atlas/magic_items/json/potion_of_resistance.json"
+    },
+    {
+      "index": "potion_of_speed",
+      "name": "potion of speed",
+      "url": "/assets/atlas/magic_items/json/potion_of_speed.json"
+    },
+    {
+      "index": "potion_of_water_breathing",
+      "name": "potion of water breathing",
+      "url": "/assets/atlas/magic_items/json/potion_of_water_breathing.json"
+    },
+    {
+      "index": "potion_of_giant_strength_hill",
+      "name": "potion of hill giant strength",
+      "url": "/assets/atlas/magic_items/json/potion_of_giant_strength_hill.json"
+    },
+    {
+      "index": "potion_of_giant_strength_frost",
+      "name": "potion of frost giant strength",
+      "url": "/assets/atlas/magic_items/json/potion_of_giant_strength_frost.json"
+    },
+    {
+      "index": "potion_of_giant_strength_stone",
+      "name": "potion of stone giant strength",
+      "url": "/assets/atlas/magic_items/json/potion_of_giant_strength_stone.json"
+    },
+    {
+      "index": "potion_of_giant_strength_fire",
+      "name": "potion of fire giant strength",
+      "url": "/assets/atlas/magic_items/json/potion_of_giant_strength_fire.json"
+    },
+    {
+      "index": "potion_of_giant_strength_cloud",
+      "name": "potion of cloud giant strength",
+      "url": "/assets/atlas/magic_items/json/potion_of_giant_strength_cloud.json"
+    },
+    {
+      "index": "potion_of_giant_strength_storm",
+      "name": "potion of storm giant strength",
+      "url": "/assets/atlas/magic_items/json/potion_of_giant_strength_storm.json"
+    },
+    {
+      "index": "potion_of_healing_common",
+      "name": "potion of healing",
+      "url": "/assets/atlas/magic_items/json/potion_of_healing_common.json"
+    },
+    {
+      "index": "potion_of_healing_greater",
+      "name": "potion of greater healing",
+      "url": "/assets/atlas/magic_items/json/potion_of_healing_greater.json"
+    },
+    {
+      "index": "potion_of_healing_superior",
+      "name": "potion of superior healing",
+      "url": "/assets/atlas/magic_items/json/potion_of_healing_superior.json"
+    },
+    {
+      "index": "potion_of_healing_supreme",
+      "name": "potion of supreme healing",
+      "url": "/assets/atlas/magic_items/json/potion_of_healing_supreme.json"
+    },
+    {
+      "index": "potion_of_resistance_acid",
+      "name": "potion of acid resistance",
+      "url": "/assets/atlas/magic_items/json/potion_of_resistance_acid.json"
+    },
+    {
+      "index": "potion_of_resistance_cold",
+      "name": "potion of cold resistance",
+      "url": "/assets/atlas/magic_items/json/potion_of_resistance_cold.json"
+    },
+    {
+      "index": "potion_of_resistance_fire",
+      "name": "potion of fire resistance",
+      "url": "/assets/atlas/magic_items/json/potion_of_resistance_fire.json"
+    },
+    {
+      "index": "potion_of_resistance_force",
+      "name": "potion of force resistance",
+      "url": "/assets/atlas/magic_items/json/potion_of_resistance_force.json"
+    },
+    {
+      "index": "potion_of_resistance_lightning",
+      "name": "potion of lightning resistance",
+      "url": "/assets/atlas/magic_items/json/potion_of_resistance_lightning.json"
+    },
+    {
+      "index": "potion_of_resistance_necrotic",
+      "name": "potion of necrotic resistance",
+      "url": "/assets/atlas/magic_items/json/potion_of_resistance_necrotic.json"
+    },
+    {
+      "index": "potion_of_resistance_poison",
+      "name": "potion of poison resistance",
+      "url": "/assets/atlas/magic_items/json/potion_of_resistance_poison.json"
+    },
+    {
+      "index": "potion_of_resistance_psychic",
+      "name": "potion of psychic resistance",
+      "url": "/assets/atlas/magic_items/json/potion_of_resistance_psychic.json"
+    },
+    {
+      "index": "potion_of_resistance_radiant",
+      "name": "potion of radiant resistance",
+      "url": "/assets/atlas/magic_items/json/potion_of_resistance_radiant.json"
+    },
+    {
+      "index": "potion_of_resistance_thunder",
+      "name": "potion of thunder resistance",
+      "url": "/assets/atlas/magic_items/json/potion_of_resistance_thunder.json"
+    }
+  ],
+  "url": "/assets/atlas/equipment_categories/json/potion.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "/assets/atlas/equipment_categories/potion.webp"
+}

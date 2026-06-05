@@ -1,0 +1,49 @@
+{
+  "higher_level": [],
+  "index": "divine_word",
+  "name": "divine word",
+  "desc": [
+    "You utter a divine word, imbued with the power that shaped the world at the dawn of creation. Choose any number of creatures you can see within range. Each creature that can hear you must make a Charisma saving throw. On a failed save, a creature suffers an effect based on its current hit points:",
+    "- 50 hit points or fewer: deafened for 1 minute",
+    "- 40 hit points or fewer: deafened and blinded for 10 minutes",
+    "- 30 hit points or fewer: blinded, deafened, and stunned for 1 hour",
+    "- 20 hit points or fewer: killed instantly",
+    "Regardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell."
+  ],
+  "range": "30 feet",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 bonus action",
+  "level": 7,
+  "dc": {
+    "dc_type": {
+      "index": "cha",
+      "name": "cha",
+      "url": "/assets/atlas/ability_scores/json/charisma.json"
+    },
+    "dc_success": "none",
+    "desc": "On a failed save, a creature suffers an effect based on its current hit points."
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/divine_word.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/divine_word.webp",
+  "sprite_index": 13,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet4.webp"
+}

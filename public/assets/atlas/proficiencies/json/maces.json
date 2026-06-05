@@ -1,0 +1,24 @@
+{
+  "index": "maces",
+  "type": "weapons",
+  "name": "maces",
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    }
+  ],
+  "url": "/assets/atlas/proficiencies/json/maces.json",
+  "reference": {
+    "index": "mace",
+    "name": "mace",
+    "url": "/assets/atlas/equipment/json/mace.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/maces.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

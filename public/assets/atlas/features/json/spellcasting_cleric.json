@@ -1,0 +1,25 @@
+{
+  "index": "spellcasting_cleric",
+  "class": {
+    "index": "cleric",
+    "name": "cleric",
+    "url": "/assets/atlas/class/json/cleric.json"
+  },
+  "name": "spellcasting: cleric",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "As a conduit for divine power, you can cast cleric spells."
+  ],
+  "reference": "public/assets/atlas/class/json/cleric/spellcasting.json",
+  "url": "/assets/atlas/features/json/spellcasting_cleric.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/spellcasting_cleric.webp",
+  "feature_specific": {
+    "spellcasting_ability": {
+      "index": "wisdom",
+      "name": "wisdom",
+      "url": "/assets/atlas/ability_scores/json/wisdom.json"
+    }
+  }
+}

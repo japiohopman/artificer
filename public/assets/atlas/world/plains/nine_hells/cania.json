@@ -1,0 +1,23 @@
+{
+  "id": "cania",
+  "name": "Cania",
+  "type": "plane_layer",
+  "parent": "nine_hells",
+  "title": "Cania: The Eighth Layer",
+  "description": "Cania is the eighth layer of the Nine Hells, an unimaginably cold wasteland with huge glaciers racing across the landscape.",
+  "wiki": "Cania is the domain of Mephistopheles, who rules from the citadel of Mephistar. It is a realm of absolute zero, where the very air can freeze a creature solid in seconds.",
+  "image": "cania.webp",
+  "tags": [
+    "plane_layer",
+    "nine_hells",
+    "cania"
+  ],
+  "metadata": {
+    "ruler": "Mephistopheles",
+    "key_locations": [
+      "Mephistar",
+      "Kintyre"
+    ]
+  },
+  "updated_at": "2024-06-19T00:00:00.000Z"
+}

@@ -1,0 +1,47 @@
+{
+  "desc": [
+    "The longship was similar to the drakkar but much smaller—typically 70​ to ​80 feet (21​ to ​24 meters) along the keel and 15​ to ​20 feet (4.6​ to ​6.1 meters) across the beam. With 20 oars on each side, the minimum crew size was 40 plus three watchmen and could carry a maximum crew of between 60 and 200 including rowers. Longships could sail, assuming moderate, favorable winds and calm seas, at a maximum speed of 16 nautical miles per hour with sail and between two and ten while propelled by oars."
+  ],
+  "special": [],
+  "index": "longship",
+  "name": "longship",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Waterborne Vehicles",
+  "cost": {
+    "quantity": 10000,
+    "unit": "gp"
+  },
+  "speed": {
+    "water": {
+      "ft_per_round": 26.4,
+      "mph": 3
+    }
+  },
+  "url": "/assets/atlas/transport/json/longship.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/transport/images/longship.webp",
+  "sprite_index": 4,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/images/longship.webp",
+  "_type": "equipment",
+  "rarity": "Very Rare",
+  "category": "Waterborne Vehicles",
+  "last_updated": "11-4-2026",
+  "transport_type": "vehicle",
+  "combat_stats": {
+    "armor_class": 15,
+    "hit_points": 300,
+    "damage_threshold": 15
+  },
+  "capacity": {
+    "crew_required": 40,
+    "max_passengers": 100
+  },
+  "transport_specific": {}
+}

@@ -1,0 +1,16 @@
+{
+  "index": "finesse",
+  "name": "finesse",
+  "desc": [
+    "When making an attack with a finesse weapon, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls."
+  ],
+  "property_specific": {
+    "stat_choice": [
+      "strength",
+      "dexterity"
+    ]
+  },
+  "url": "/assets/atlas/weapon_properties/json/finesse.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/weapon_properties/images/finesse.webp"
+}

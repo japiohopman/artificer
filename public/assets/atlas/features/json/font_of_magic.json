@@ -1,0 +1,22 @@
+{
+  "index": "font_of_magic",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "/assets/atlas/class/json/sorcerer.json"
+  },
+  "name": "font of magic",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "At 2nd level, you tap into a deep wellspring of magic within yourself. This wellspring is represented by sorcery points, which allow you to create a variety of magical effects.",
+    "Sorcery Points",
+    "You have 2 sorcery points, and you gain more as you reach higher levels, as shown in the Sorcery Points column of the Sorcerer table. You can never have more sorcery points than shown on the table for your level. You regain all spent sorcery points when you finish a long rest."
+  ],
+  "url": "/assets/atlas/features/json/font_of_magic.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/font_of_magic.webp",
+  "feature_specific": {
+    "sorcery_points": "sorcerer_level"
+  }
+}

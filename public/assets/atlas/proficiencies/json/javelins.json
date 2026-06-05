@@ -1,0 +1,24 @@
+{
+  "index": "javelins",
+  "type": "weapons",
+  "name": "javelins",
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    }
+  ],
+  "url": "/assets/atlas/proficiencies/json/javelins.json",
+  "reference": {
+    "index": "javelin",
+    "name": "javelin",
+    "url": "/assets/atlas/equipment/json/javelin.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/javelins.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "index": "hand_crossbows",
+  "type": "weapons",
+  "name": "hand crossbows",
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "rogue",
+      "name": "rogue",
+      "url": "/assets/atlas/class/json/rogue.json"
+    }
+  ],
+  "url": "/assets/atlas/proficiencies/json/hand_crossbows.json",
+  "reference": {
+    "index": "crossbow_hand",
+    "name": "crossbow, hand",
+    "url": "/assets/atlas/equipment/json/crossbow_hand.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/hand_crossbows.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

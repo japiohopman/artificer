@@ -1,0 +1,106 @@
+{
+  "index": "orc",
+  "name": "orc",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "orc",
+  "alignment": "chaotic evil",
+  "armor_class": 13,
+  "hit_points": 15,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8+6",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 12,
+  "constitution": 16,
+  "intelligence": 7,
+  "wisdom": 11,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_intimidation",
+        "name": "skill: intimidation",
+        "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "Common, Orc",
+  "challenge_rating": "0.5",
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "aggressive",
+      "desc": "As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "greataxe",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 9 (1d12 + 3) slashing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d12+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "javelin",
+      "desc": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 6 (1d6 + 3) piercing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/orc.webp",
+  "url": "/assets/atlas/enemies/json/orc.json",
+  "updated_at": "2026-05-10T22:17:25.908Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 12,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.webp",
+  "stats": {
+    "str": 16,
+    "dex": 12,
+    "con": 16,
+    "int": 7,
+    "wis": 11,
+    "cha": 10
+  },
+  "imageUrl": "/assets/atlas/enemies/images/orc.webp",
+  "_type": "enemies",
+  "background_type": "underdark",
+  "lore": "/assets/atlas/enemies/enemies_wiki/orc.json",
+  "wikiData": {},
+  "last_updated": "11-5-2026"
+}

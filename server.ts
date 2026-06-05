@@ -1,0 +1,284 @@
+import express from "express";
+import { createServer as createViteServer } from "vite";
+import path from "path";
+import { fileURLToPath } from "url";
+import dotenv from "dotenv";
+import fs from "fs/promises";
+
+dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+async function startServer() {
+  const app = express();
+  const PORT = 3000;
+
+  app.use(express.json({ limit: '10mb' }));
+
+  // API: Proxy Wiki (for scraping Fandom)
+  app.get("/api/proxy-wiki", async (req, res) => {
+    const { url } = req.query;
+    if (!url || typeof url !== 'string') {
+      return res.status(400).json({ error: "URL parameter is required." });
+    }
+
+    try {
+      const fetchRes = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+          'Accept-Language': 'en-US,en;q=0.9'
+        }
+      });
+      if (!fetchRes.ok) {
+        return res.status(fetchRes.status).json({ error: fetchRes.statusText });
+      }
+      const text = await fetchRes.text();
+      res.send(text);
+    } catch (error) {
+      console.error("Server Error during wiki proxy:", error);
+      res.status(500).json({ error: "Internal server error during wiki fetch." });
+    }
+  });
+
+  // API: Fetch Proxy (to handle private repos securely)
+  app.get("/api/fetch", async (req, res) => {
+    const { url } = req.query;
+    const token = process.env.GITHUB_TOKEN;
+
+    if (!url || typeof url !== 'string') {
+      return res.status(400).json({ error: "URL parameter is required." });
+    }
+
+    try {
+      const headers: HeadersInit = {
+        'Accept': 'application/vnd.github.v3+json'
+      };
+
+      if (token) {
+        headers['Authorization'] = `token ${token}`;
+      }
+
+      const fetchRes = await fetch(url, { headers });
+      
+      if (!fetchRes.ok) {
+        const errorData = await fetchRes.json().catch(() => ({ message: fetchRes.statusText }));
+        return res.status(fetchRes.status).json({ error: errorData.message });
+      }
+
+      const data = await fetchRes.json();
+      res.json(data);
+    } catch (error) {
+      console.error("Server Error during fetch proxy:", error);
+      res.status(500).json({ error: "Internal server error during GitHub fetch." });
+    }
+  });
+
+  // API: Raw Proxy (for raw content)
+  app.get("/api/raw", async (req, res) => {
+    const { url } = req.query;
+    const token = process.env.GITHUB_TOKEN;
+
+    if (!url || typeof url !== 'string') {
+      return res.status(400).json({ error: "URL parameter is required." });
+    }
+
+    try {
+      const headers: HeadersInit = {};
+      if (token) {
+        headers['Authorization'] = `token ${token}`;
+      }
+
+      const fetchRes = await fetch(url, { headers });
+      
+      if (!fetchRes.ok) {
+        return res.status(fetchRes.status).json({ error: fetchRes.statusText });
+      }
+
+      // If it's an image, pipe it
+      const contentType = fetchRes.headers.get('content-type');
+      const urlWithoutQuery = url.split('?')[0].toLowerCase();
+      const isImage = contentType?.startsWith('image/') || 
+                      urlWithoutQuery.match(/\.(webp|png|jpg|jpeg|gif|svg|avif)$/) ||
+                      url.toLowerCase().match(/wiki_image|images/i);
+
+      if (isImage) {
+        // Prioritize extensions if content-type is generic or missing
+        let targetContentType = contentType || 'image/webp';
+        if (urlWithoutQuery.endsWith('.webp')) targetContentType = 'image/webp';
+        else if (urlWithoutQuery.endsWith('.png')) targetContentType = 'image/png';
+        else if (urlWithoutQuery.endsWith('.jpg') || urlWithoutQuery.endsWith('.jpeg')) targetContentType = 'image/jpeg';
+        else if (urlWithoutQuery.endsWith('.svg')) targetContentType = 'image/svg+xml';
+        else if (urlWithoutQuery.endsWith('.avif')) targetContentType = 'image/avif';
+        
+        res.setHeader('Content-Type', targetContentType);
+        // Add cache headers for images
+        res.setHeader('Cache-Control', 'public, max-age=3600');
+        
+        const buffer = await fetchRes.arrayBuffer();
+        return res.send(Buffer.from(buffer));
+      }
+
+      const data = await fetchRes.text();
+      try {
+        res.json(JSON.parse(data));
+      } catch {
+        res.send(data);
+      }
+    } catch (error) {
+      console.error("Server Error during raw proxy:", error);
+      res.status(500).json({ error: "Internal server error during GitHub raw fetch." });
+    }
+  });
+
+  // API: Commit Proxy
+  app.post("/api/commit", async (req, res) => {
+    const { path: filePath, content, isBase64, message } = req.body;
+    const token = process.env.GITHUB_TOKEN;
+    const repo = process.env.GITHUB_REPO;
+
+    if (!token || !repo) {
+      console.error("GITHUB_TOKEN or GITHUB_REPO missing in server environment.");
+      return res.status(500).json({ error: "GitHub configuration missing on server." });
+    }
+
+    try {
+      // 1. Get current file SHA if it exists
+      const getUrl = `https://api.github.com/repos/${repo}/contents/${filePath}`;
+      const getRes = await fetch(getUrl, {
+        headers: {
+          'Authorization': `token ${token}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+
+      let sha: string | undefined;
+      if (getRes.ok) {
+        const data = await getRes.json();
+        sha = data.sha;
+      }
+
+      // 2. Create or update file
+      const putRes = await fetch(getUrl, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `token ${token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: message || `Bake bestiary entry: ${filePath}`,
+          content: isBase64 ? content : Buffer.from(content).toString('base64'),
+          sha: sha
+        })
+      });
+
+      if (!putRes.ok) {
+        const errorData = await putRes.json();
+        console.error("GitHub API Error:", errorData);
+        return res.status(putRes.status).json({ error: errorData.message });
+      }
+
+      // 3. ALSO save locally if we are in the sandbox environment
+      try {
+        const localPath = path.join(process.cwd(), filePath);
+        await fs.mkdir(path.dirname(localPath), { recursive: true });
+        const buffer = isBase64 ? Buffer.from(content, 'base64') : Buffer.from(content);
+        await fs.writeFile(localPath, buffer);
+        console.log(`Saved file locally: ${localPath}`);
+      } catch (err) {
+        console.error("Failed to save file locally:", err);
+        // We don't fail the request if local save fails, as GitHub commit succeeded
+      }
+
+      res.json({ success: true });
+    } catch (error) {
+      console.error("Server Error during commit:", error);
+      res.status(500).json({ error: "Internal server error during GitHub commit." });
+    }
+  });
+
+  // API: Delete Proxy
+  app.post("/api/delete", async (req, res) => {
+    const { path: filePath, message } = req.body;
+    const token = process.env.GITHUB_TOKEN;
+    const repo = process.env.GITHUB_REPO;
+
+    if (!token || !repo) {
+      return res.status(500).json({ error: "GitHub configuration missing on server." });
+    }
+
+    try {
+      // 1. Get current file SHA (required for delete)
+      const getUrl = `https://api.github.com/repos/${repo}/contents/${filePath}`;
+      const getRes = await fetch(getUrl, {
+        headers: {
+          'Authorization': `token ${token}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+
+      if (!getRes.ok) {
+        return res.status(getRes.status).json({ error: "File not found or inaccessible." });
+      }
+
+      const data = await getRes.json();
+      const sha = data.sha;
+
+      // 2. Delete file
+      const delRes = await fetch(getUrl, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `token ${token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: message || `Delete file: ${filePath}`,
+          sha: sha
+        })
+      });
+
+      if (!delRes.ok) {
+        const errorData = await delRes.json();
+        return res.status(delRes.status).json({ error: errorData.message });
+      }
+
+      // 3. ALSO delete locally if we are in the sandbox environment
+      try {
+        const localPath = path.join(process.cwd(), filePath);
+        await fs.unlink(localPath);
+        console.log(`Deleted file locally: ${localPath}`);
+      } catch (err) {
+        // Silently fail local delete if it doesn't exist
+      }
+
+      res.json({ success: true });
+    } catch (error) {
+      console.error("Server Error during delete:", error);
+      res.status(500).json({ error: "Internal server error during GitHub delete." });
+    }
+  });
+
+  // Vite middleware for development
+  if (process.env.NODE_ENV !== "production") {
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: "spa",
+    });
+    app.use(vite.middlewares);
+  } else {
+    const distPath = path.join(process.cwd(), 'dist');
+    app.use(express.static(distPath));
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(distPath, 'index.html'));
+    });
+  }
+
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
+
+startServer();

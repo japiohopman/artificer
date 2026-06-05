@@ -1,0 +1,22 @@
+{
+  "index": "persistent_rage",
+  "class": {
+    "index": "barbarian",
+    "name": "barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "name": "persistent rage",
+  "level": 15,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it."
+  ],
+  "url": "/assets/atlas/features/json/persistent_rage.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/persistent_rage.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "rage_ends_only_if_unconscious_or_voluntary": true
+    }
+  }
+}

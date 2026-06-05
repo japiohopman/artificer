@@ -1,0 +1,61 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "scimitar",
+  "name": "scimitar",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 3,
+  "properties": [
+    {
+      "index": "finesse",
+      "name": "finesse",
+      "url": "/assets/atlas/weapon_properties/finesse"
+    },
+    {
+      "index": "light",
+      "name": "light",
+      "url": "/assets/atlas/weapon_properties/light"
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/scimitar.json",
+  "updated_at": "2026-05-17T22:26:28.630Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/scimitar.webp",
+  "sprite_index": 13,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/scimitar.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "18-5-2026",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

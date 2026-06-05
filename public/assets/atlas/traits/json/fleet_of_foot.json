@@ -1,0 +1,29 @@
+{
+  "index": "fleet_of_foot",
+  "races": [
+    {
+      "index": "elf",
+      "name": "elf",
+      "url": "/assets/atlas/species/json/elf.json"
+    }
+  ],
+  "subraces": [
+    {
+      "index": "wood_elf",
+      "name": "wood elf",
+      "url": "/assets/atlas/subraces/json/wood_elf.json"
+    }
+  ],
+  "name": "fleet of foot",
+  "desc": [
+    "Your base walking speed increases to 35 feet."
+  ],
+  "trait_specific": {
+    "passive_modifiers": {
+      "speed_set": 35
+    }
+  },
+  "url": "/assets/atlas/traits/json/fleet_of_foot.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "/assets/atlas/traits/fleet_of_foot.webp"
+}

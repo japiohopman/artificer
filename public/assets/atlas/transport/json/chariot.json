@@ -1,0 +1,40 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "chariot",
+  "name": "chariot",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 250,
+    "unit": "gp"
+  },
+  "weight": 100,
+  "url": "/assets/atlas/transport/json/chariot.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/transport/images/chariot.webp",
+  "sprite_index": 6,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/equipment/images/chariot.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Land Vehicles",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "2-5-2026",
+  "transport_type": "vehicle",
+  "speed": {
+    "land": {
+      "ft_per_round": 35,
+      "mph": 3.98
+    }
+  },
+  "transport_specific": {}
+}

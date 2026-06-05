@@ -1,0 +1,22 @@
+{
+  "index": "slippery_mind",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "name": "slippery mind",
+  "level": 15,
+  "prerequisites": [],
+  "desc": [
+    "By 15th level, you have acquired greater mental strength. You gain proficiency in Wisdom saving throws."
+  ],
+  "url": "/assets/atlas/features/json/slippery_mind.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/slippery_mind.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "wisdom_saving_throw_proficiency": true
+    }
+  }
+}

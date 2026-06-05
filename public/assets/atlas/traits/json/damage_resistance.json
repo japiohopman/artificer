@@ -1,0 +1,19 @@
+{
+  "index": "damage_resistance",
+  "races": [
+    {
+      "index": "dragonborn",
+      "name": "dragonborn",
+      "url": "/assets/atlas/species/json/dragonborn.json"
+    }
+  ],
+  "subraces": [],
+  "name": "damage resistance",
+  "desc": [
+    "You have resistance to the damage type associated with your draconic ancestry."
+  ],
+  "proficiencies": [],
+  "url": "/assets/atlas/traits/json/damage_resistance.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "/assets/atlas/traits/damage_resistance.webp"
+}

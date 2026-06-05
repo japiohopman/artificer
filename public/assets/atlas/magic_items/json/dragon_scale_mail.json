@@ -1,0 +1,86 @@
+{
+  "index": "dragon_scale_mail",
+  "name": "dragon scale mail",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "rarity": {
+    "name": "very rare"
+  },
+  "variants": [
+    {
+      "index": "dragon_scale_mail_black",
+      "name": "black dragon scale mail",
+      "url": "/assets/atlas/magic_items/dragon_scale_mail_black"
+    },
+    {
+      "index": "dragon_scale_mail_blue",
+      "name": "blue dragon scale mail",
+      "url": "/assets/atlas/magic_items/dragon_scale_mail_blue"
+    },
+    {
+      "index": "dragon_scale_mail_brass",
+      "name": "brass dragon scale mail",
+      "url": "/assets/atlas/magic_items/dragon_scale_mail_brass"
+    },
+    {
+      "index": "dragon_scale_mail_bronze",
+      "name": "bronze dragon scale mail",
+      "url": "/assets/atlas/magic_items/dragon_scale_mail_bronze"
+    },
+    {
+      "index": "dragon_scale_mail_copper",
+      "name": "copper dragon scale mail",
+      "url": "/assets/atlas/magic_items/dragon_scale_mail_copper"
+    },
+    {
+      "index": "dragon_scale_mail_gold",
+      "name": "gold dragon scale mail",
+      "url": "/assets/atlas/magic_items/dragon_scale_mail_gold"
+    },
+    {
+      "index": "dragon_scale_mail_green",
+      "name": "green dragon scale mail",
+      "url": "/assets/atlas/magic_items/dragon_scale_mail_green"
+    },
+    {
+      "index": "dragon_scale_mail_red",
+      "name": "red dragon scale mail",
+      "url": "/assets/atlas/magic_items/dragon_scale_mail_red"
+    },
+    {
+      "index": "dragon_scale_mail_silver",
+      "name": "silver dragon scale mail",
+      "url": "/assets/atlas/magic_items/dragon_scale_mail_silver"
+    },
+    {
+      "index": "dragon_scale_mail_white",
+      "name": "white dragon scale mail",
+      "url": "/assets/atlas/magic_items/dragon_scale_mail_white"
+    }
+  ],
+  "variant": false,
+  "desc": [
+    "Armor (scale mail), very rare (requires attunement)",
+    "Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued.",
+    "While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to one damage type that is determined by the kind of dragon that provided the scales (see the table).",
+    "Additionally, you can focus your senses as an action to magically discern the distance and direction to the closest dragon within 30 miles of you that is of the same type as the armor. This special action can't be used again until the next dawn.",
+    "| Dragon | Resistance |",
+    "|---|---|",
+    "| Black | Acid |",
+    "| Blue | Lightning |",
+    "| Brass | Fire |",
+    "| Bronze | Lightning |",
+    "| Copper | Acid |",
+    "| Gold | Fire |",
+    "| Green | Poison |",
+    "| Red | Fire |",
+    "| Silver | Cold |",
+    "| White | Cold |"
+  ],
+  "image": "/assets/atlas/magic_items/dragon_scale_mail.webp",
+  "url": "/assets/atlas/magic_items/json/dragon_scale_mail.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "impostor",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "subclass": {
+    "index": "assassin",
+    "name": "assassin",
+    "url": "/assets/atlas/subclasses/json/assassin.json"
+  },
+  "name": "impostor",
+  "level": 13,
+  "prerequisites": [],
+  "desc": [
+    "At 13th level, you gain the ability to unerringly mimic another person's speech, writing, and behavior. You must spend at least three hours studying these three components of a person's behavior, listening to speech, examining handwriting, and observing mannerisms. Your ruse is indiscernible to the casual observer. If a wary creature suspects something is amiss, you have advantage on any Charisma (Deception) check you make to avoid detection."
+  ],
+  "url": "/assets/atlas/features/json/impostor.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "/assets/atlas/features/images/impostor.webp"
+}

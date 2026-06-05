@@ -1,0 +1,25 @@
+{
+  "index": "flash_of_genius",
+  "class": {
+    "index": "artificer",
+    "name": "artificer",
+    "url": "/assets/atlas/class/json/artificer.json"
+  },
+  "name": "flash of genius",
+  "level": 7,
+  "prerequisites": [],
+  "desc": [
+    "At 7th level, you gain the ability to come up with solutions under pressure. When you or another creature you can see within 30 feet of you makes an ability check or a saving throw, you can use your reaction to add your Intelligence modifier to the roll.",
+    "You can use this feature a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses when you finish a long rest."
+  ],
+  "url": "/assets/atlas/features/json/flash_of_genius.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/flash_of_genius.webp",
+  "feature_specific": {
+    "special_action": "reaction",
+    "usage": {
+      "times": "intelligence_modifier",
+      "type": "long_rest"
+    }
+  }
+}

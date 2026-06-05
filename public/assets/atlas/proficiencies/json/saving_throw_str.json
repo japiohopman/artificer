@@ -1,0 +1,39 @@
+{
+  "index": "saving_throw_str",
+  "type": "saving_throws",
+  "name": "saving throw: str",
+  "classes": [
+    {
+      "index": "barbarian",
+      "name": "barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    {
+      "index": "fighter",
+      "name": "fighter",
+      "url": "/assets/atlas/class/json/fighter.json"
+    },
+    {
+      "index": "monk",
+      "name": "monk",
+      "url": "/assets/atlas/class/json/monk.json"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "/assets/atlas/class/json/ranger.json"
+    }
+  ],
+  "url": "/assets/atlas/proficiencies/json/saving_throw_str.json",
+  "reference": {
+    "index": "strength",
+    "name": "strength",
+    "url": "/assets/atlas/ability_scores/json/strength.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/saving_throw_str.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "ability_scores"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "index": "potion_of_speed",
+  "name": "potion of speed",
+  "equipment_category": {
+    "index": "potion",
+    "name": "potion",
+    "url": "/assets/atlas/equipment_categories/potion"
+  },
+  "rarity": {
+    "name": "very rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Potion, very rare",
+    "When you drink this potion, you gain the effect of the haste spell for 1 minute (no concentration required). The potion's yellow fluid is streaked with black and swirls on its own."
+  ],
+  "url": "/assets/atlas/magic_items/json/potion_of_speed.json",
+  "updated_at": "2026-05-03T19:19:18.536Z",
+  "image": "/assets/atlas/magic_items/potion_of_speed.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/potion_of_speed.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Potion",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "3-5-2026"
+}

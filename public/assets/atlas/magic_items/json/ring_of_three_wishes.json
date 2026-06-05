@@ -1,0 +1,41 @@
+{
+  "index": "ring_of_three_wishes",
+  "name": "ring of three wishes",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": {
+    "name": "legendary"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Ring, legendary",
+    "While wearing this ring, you can use an action to expend 1 of its 3 charges to cast the wish spell from it. The ring becomes nonmagical when you use the last charge."
+  ],
+  "feature_specific": {
+    "charges": {
+      "max": 3,
+      "type": "total"
+    },
+    "spells": [
+      {
+        "spell": {
+          "index": "wish",
+          "name": "wish",
+          "url": "/assets/atlas/spell/json/wish.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "charge"
+        },
+        "special_action": "action"
+      }
+    ]
+  },
+  "url": "/assets/atlas/magic_items/json/ring_of_three_wishes.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/ring_of_three_wishes.webp"
+}

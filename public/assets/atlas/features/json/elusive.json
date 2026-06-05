@@ -1,0 +1,22 @@
+{
+  "index": "elusive",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "name": "elusive",
+  "level": 18,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 18th level, you are so evasive that attackers rarely gain the upper hand against you. No attack roll has advantage against you while you aren't incapacitated."
+  ],
+  "url": "/assets/atlas/features/json/elusive.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/elusive.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "no_advantage_against": true
+    }
+  }
+}

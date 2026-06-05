@@ -1,0 +1,21 @@
+{
+  "index": "ring_of_regeneration",
+  "name": "ring of regeneration",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": {
+    "name": "very rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Ring, very rare (requires attunement)",
+    "While wearing this ring, you regain 1d6 hit points every 10 minutes, provided that you have at least 1 hit point. If you lose a body part, the ring causes the missing part to regrow and return to full functionality after 1d6 + 1 days if you have at least 1 hit point the whole time."
+  ],
+  "url": "/assets/atlas/magic_items/json/ring_of_regeneration.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/ring_of_regeneration.webp"
+}

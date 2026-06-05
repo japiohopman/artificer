@@ -1,0 +1,29 @@
+{
+  "index": "goggles_of_night",
+  "name": "goggles of night",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, uncommon",
+    "While wearing these dark lenses, you have darkvision out to a range of 60 feet. If you already have darkvision, wearing the goggles increases its range by 60 feet."
+  ],
+  "url": "/assets/atlas/magic_items/json/goggles_of_night.json",
+  "updated_at": "2026-04-17T15:15:06.300Z",
+  "image": "/assets/atlas/magic_items/goggles_of_night.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/goggles_of_night.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Wondrous Items",
+  "slot": [
+    "head"
+  ],
+  "last_updated": "17-4-2026"
+}

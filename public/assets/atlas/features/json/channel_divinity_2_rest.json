@@ -1,0 +1,23 @@
+{
+  "index": "channel_divinity_2_rest",
+  "class": {
+    "index": "cleric",
+    "name": "cleric",
+    "url": "/assets/atlas/class/json/cleric.json"
+  },
+  "name": "channel divinity (2/rest)",
+  "level": 6,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 6th level, you can use your Channel Divinity twice between rests, and beginning at 18th level, you can use it three times between rests. When you finish a short or long rest, you regain your expended uses."
+  ],
+  "url": "/assets/atlas/features/json/channel_divinity_2_rest.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/channel_divinity_2_rest.webp",
+  "feature_specific": {
+    "usage": {
+      "times": 2,
+      "type": "rest"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "sled",
+  "name": "sled",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 20,
+    "unit": "gp"
+  },
+  "weight": 300,
+  "url": "/assets/atlas/transport/json/sled.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/transport/images/sled.webp",
+  "sprite_index": 23,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/sled.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "29-4-2026",
+  "transport_type": "vehicle",
+  "speed": {
+    "land": {
+      "ft_per_round": 30,
+      "mph": 3.41
+    }
+  },
+  "transport_specific": {}
+}

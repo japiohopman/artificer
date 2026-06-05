@@ -1,0 +1,32 @@
+{
+  "special": [],
+  "index": "masons_tools",
+  "name": "mason's tools",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Artisan's Tools",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 8,
+  "desc": [
+    "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+  ],
+  "url": "/assets/atlas/equipment/json/masons_tools.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/masons_tools.webp",
+  "sprite_index": 11,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "kind": "tool",
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ]
+}

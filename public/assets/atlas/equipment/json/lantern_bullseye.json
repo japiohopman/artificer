@@ -1,0 +1,42 @@
+{
+  "special": [],
+  "index": "lantern_bullseye",
+  "name": "lantern, bullseye",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "desc": [
+    "A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
+  ],
+  "url": "/assets/atlas/equipment/json/lantern_bullseye.json",
+  "updated_at": "2026-06-02T08:20:09.630Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/lantern_bullseye.webp",
+  "sprite_index": 21,
+  "sprite_sheet": "/assets/atlas/equipment/sprites/equipment_sheet5.0webp",
+  "imageUrl": "/assets/atlas/equipment/images/lantern_bullseye.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "2-6-2026",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

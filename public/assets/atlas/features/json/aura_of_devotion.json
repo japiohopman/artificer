@@ -1,0 +1,33 @@
+{
+  "index": "aura_of_devotion",
+  "class": {
+    "index": "paladin",
+    "name": "paladin",
+    "url": "/assets/atlas/class/json/paladin.json"
+  },
+  "subclass": {
+    "index": "devotion",
+    "name": "devotion",
+    "url": "/assets/atlas/subclasses/json/devotion.json"
+  },
+  "name": "aura of devotion",
+  "level": 7,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 7th level, you and friendly creatures within 10 feet of you can't be charmed while you are conscious.",
+    "At 18th level, the range of this aura increases to 30 feet."
+  ],
+  "url": "/assets/atlas/features/json/aura_of_devotion.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/aura_of_devotion.webp",
+  "feature_specific": {
+    "aura": {
+      "radius": 10,
+      "passive_modifiers": {
+        "immunity": [
+          "charmed"
+        ]
+      }
+    }
+  }
+}

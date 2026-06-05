@@ -1,0 +1,32 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "galley",
+  "name": "galley",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Waterborne Vehicles",
+  "cost": {
+    "quantity": 30000,
+    "unit": "gp"
+  },
+  "speed": {
+    "quantity": 4,
+    "unit": "mph"
+  },
+  "url": "/assets/atlas/equipment/json/galley.json",
+  "updated_at": "2026-04-21T14:07:41.325Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/galley.webp",
+  "sprite_index": 16,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/galley.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "21-4-2026",
+  "kind": "adventuring_gear"
+}

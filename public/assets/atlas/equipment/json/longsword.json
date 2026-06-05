@@ -1,0 +1,64 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "longsword",
+  "name": "longsword",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 15,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 3,
+  "properties": [
+    {
+      "index": "versatile",
+      "name": "versatile",
+      "url": "/assets/atlas/weapon_properties/versatile"
+    }
+  ],
+  "two_handed_damage": {
+    "damage_dice": "1d10",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "url": "/assets/atlas/equipment/json/longsword.json",
+  "updated_at": "2026-05-10T15:49:49.472Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/longsword.webp",
+  "sprite_index": 5,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/images/longsword.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Simple Melee Weapons",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "10-5-2026",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

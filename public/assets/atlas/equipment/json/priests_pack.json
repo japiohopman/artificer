@@ -1,0 +1,115 @@
+{
+  "desc": [
+    "The canvas is stained with the copper tang of dried blood and the cloying scent of stale incense, concealing holy symbols that have long since stopped warding off the encroaching dark. Tucked beneath the frayed straps are the tools of a shepherd who buried his faith in the same soil as his slaughtered flock."
+  ],
+  "special": [],
+  "index": "priests_pack",
+  "name": "priest's pack",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "equipment_packs",
+    "name": "equipment packs",
+    "url": "/assets/atlas/equipment_categories/equipment_packs"
+  },
+  "cost": {
+    "quantity": 19,
+    "unit": "gp"
+  },
+  "contents": [
+    {
+      "item": {
+        "index": "backpack",
+        "name": "backpack",
+        "url": "/assets/atlas/equipment/backpack"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "blanket",
+        "name": "blanket",
+        "url": "/assets/atlas/equipment/blanket"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "candle",
+        "name": "candle",
+        "url": "/assets/atlas/equipment/candle"
+      },
+      "quantity": 10
+    },
+    {
+      "item": {
+        "index": "tinderbox",
+        "name": "tinderbox",
+        "url": "/assets/atlas/equipment/tinderbox"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "rations_1_day",
+        "name": "rations (1 day)",
+        "url": "/assets/atlas/equipment/rations_1_day"
+      },
+      "quantity": 2
+    },
+    {
+      "item": {
+        "index": "waterskin",
+        "name": "waterskin",
+        "url": "/assets/atlas/equipment/waterskin"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "alms_box",
+        "name": "alms box",
+        "url": "/assets/atlas/equipment/alms_box"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "block_of_incense",
+        "name": "block of incense",
+        "url": "/assets/atlas/equipment/block_of_incense"
+      },
+      "quantity": 2
+    },
+    {
+      "item": {
+        "index": "censer",
+        "name": "censer",
+        "url": "/assets/atlas/equipment/censer"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "vestments",
+        "name": "vestments",
+        "url": "/assets/atlas/equipment/vestments"
+      },
+      "quantity": 1
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/priests_pack.json",
+  "updated_at": "2026-04-12T07:42:05.565Z",
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/priests_pack.webp",
+  "sprite_index": 15,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/priests_pack.webp",
+  "_type": "equipment",
+  "category": "Equipment Packs",
+  "last_updated": "12-4-2026",
+  "kind": "equipment_pack"
+}

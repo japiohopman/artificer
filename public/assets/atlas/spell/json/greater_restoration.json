@@ -1,0 +1,57 @@
+{
+  "higher_level": [],
+  "index": "greater_restoration",
+  "name": "greater restoration",
+  "desc": [
+    "You imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target's exhaustion level by one, or end one of the following effects on the target:",
+    "- One effect that charmed or petrified the target",
+    "- One curse, including the target's attunement to a cursed magic item",
+    "- Any reduction to one of the target's ability scores",
+    "- One effect reducing the target's hit point maximum"
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Diamond dust worth at least 100gp, which the spell consumes.",
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "abjuration",
+    "name": "abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [
+    {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "/assets/atlas/class/json/artificer.json"
+    },
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/greater_restoration.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/greater_restoration.webp",
+  "sprite_index": 17,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet6.webp"
+}

@@ -1,0 +1,37 @@
+{
+  "index": "weapon",
+  "name": "weapon, +1, +2, or +3",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "rarity": {
+    "name": "varies"
+  },
+  "variants": [
+    {
+      "index": "weapon_1",
+      "name": "weapon, +1",
+      "url": "/assets/atlas/magic_items/weapon_1"
+    },
+    {
+      "index": "weapon_2",
+      "name": "weapon, +2",
+      "url": "/assets/atlas/magic_items/weapon_2"
+    },
+    {
+      "index": "weapon_3",
+      "name": "weapon, +3",
+      "url": "/assets/atlas/magic_items/weapon_3"
+    }
+  ],
+  "variant": false,
+  "desc": [
+    "Weapon (any), uncommon (+1), rare (+2), or very rare (+3)",
+    "You have a bonus to attack and damage rolls made with this magic weapon. The bonus is determined by the weapon's rarity."
+  ],
+  "url": "/assets/atlas/magic_items/json/weapon.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/weapon.webp"
+}

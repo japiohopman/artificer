@@ -1,0 +1,64 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "longbow",
+  "name": "longbow",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Ranged",
+  "category_range": "Martial Ranged",
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 150,
+    "long": 600
+  },
+  "weight": 2,
+  "properties": [
+    {
+      "index": "ammunition",
+      "name": "ammunition",
+      "url": "/assets/atlas/weapon_properties/ammunition"
+    },
+    {
+      "index": "heavy",
+      "name": "heavy",
+      "url": "/assets/atlas/weapon_properties/heavy"
+    },
+    {
+      "index": "two_handed",
+      "name": "two_handed",
+      "url": "/assets/atlas/weapon_properties/two_handed"
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/longbow.json",
+  "updated_at": "2026-04-29T17:13:37.946Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/longbow.webp",
+  "sprite_index": 3,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/longbow.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "rarity": "Uncommon",
+  "category": "Martial Ranged Weapons",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "last_updated": "29-4-2026"
+}

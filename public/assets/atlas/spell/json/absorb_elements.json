@@ -1,0 +1,55 @@
+{
+  "index": "absorb_elements",
+  "name": "absorb elements",
+  "desc": [
+    "The spell captures some of the incoming energy, lessening its effect on you and storing it for your next melee attack. You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes an extra 1d6 damage of the triggering type, and the spell ends."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level above 1st."
+  ],
+  "range": "Self",
+  "components": [
+    "S"
+  ],
+  "ritual": false,
+  "duration": "1 round",
+  "concentration": false,
+  "casting_time": "1 reaction",
+  "level": 1,
+  "school": {
+    "index": "abjuration",
+    "name": "abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [
+    {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "/assets/atlas/class/json/artificer.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "/assets/atlas/class/json/ranger.json"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/absorb_elements.json",
+  "updated_at": "2026-06-01T06:56:15.190Z",
+  "image": "/assets/atlas/spell/json/images/absorb_elements.webp"
+}

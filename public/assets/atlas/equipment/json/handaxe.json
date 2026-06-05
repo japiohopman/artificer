@@ -1,0 +1,67 @@
+{
+  "desc": [
+    "The iron head is permanently stained a rusted, bruised violet, as if the steel itself has grown weary of the thirst it developed in the hands of the previous owner. Its haft is wrapped in cured, sun-bleached hide that hums with a faint, rhythmic vibration, mimicking the final, frantic heartbeat of its last victim."
+  ],
+  "special": [],
+  "index": "handaxe",
+  "name": "handaxe",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 2,
+  "properties": [
+    {
+      "index": "light",
+      "name": "light",
+      "url": "/assets/atlas/weapon_properties/light"
+    },
+    {
+      "index": "thrown",
+      "name": "thrown",
+      "url": "/assets/atlas/weapon_properties/thrown"
+    },
+    {
+      "index": "monk",
+      "name": "monk",
+      "url": "/assets/atlas/weapon_properties/monk"
+    }
+  ],
+  "throw_range": {
+    "normal": 20,
+    "long": 60
+  },
+  "url": "/assets/atlas/equipment/json/handaxe.json",
+  "updated_at": "2026-04-14T08:19:56.274Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/handaxe.webp",
+  "sprite_index": 2,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "imageUrl": "/assets/atlas/equipment/images/handaxe.webp",
+  "_type": "equipment",
+  "last_updated": "14-4-2026",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

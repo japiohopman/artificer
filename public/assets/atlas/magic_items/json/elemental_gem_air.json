@@ -1,0 +1,22 @@
+{
+  "index": "elemental_gem_air",
+  "name": "air elemental gem",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": "Uncommon",
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Wondrous item, uncommon",
+    "This blue sapphire contains a mote of elemental energy. When you use an action to break the gem, an air elemental is summoned as if you had cast the conjure elemental spell, and the gem's magic is lost."
+  ],
+  "image": "/assets/atlas/magic_items/elemental_gem_air.webp",
+  "url": "/assets/atlas/magic_items/json/elemental_gem_air.json",
+  "updated_at": "2026-04-14T10:31:23.374Z",
+  "imageUrl": "/assets/atlas/magic_items/images/elemental_gem_air.webp",
+  "_type": "equipment",
+  "last_updated": "14-4-2026"
+}

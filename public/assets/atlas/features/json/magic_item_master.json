@@ -1,0 +1,18 @@
+{
+  "index": "magic_item_master",
+  "class": {
+    "index": "artificer",
+    "name": "artificer",
+    "url": "/assets/atlas/class/json/artificer.json"
+  },
+  "name": "magic item master",
+  "level": 18,
+  "prerequisites": [],
+  "desc": [
+    "At 18th level, you can attune to up to six magic items at once."
+  ],
+  "url": "/assets/atlas/features/json/magic_item_master.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/magic_item_master.webp",
+  "feature_specific": {}
+}

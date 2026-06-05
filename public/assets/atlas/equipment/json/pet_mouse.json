@@ -1,0 +1,28 @@
+{
+  "index": "pet_mouse",
+  "name": "Pet mouse",
+  "equipment_category": {
+    "index": "adventure_gear",
+    "name": "adventure gear",
+    "url": "/assets/atlas/equipment_categories/json/adventure_gear.json"
+  },
+  "cost": {
+    "quantity": 100,
+    "unit": "gp"
+  },
+  "weight": 0.01,
+  "desc": [
+    "Clutched in your palm, the pet mouse twitches, its obsidian eyes reflecting a grim knowing that stretches far beyond its tiny life, hinting at a bond forged in shadows and whispers of forgotten gods. Its fur, the color of graveyard dust, feels unnervingly warm against your skin, a silent promise of secrets yet to be unearthed in the encroaching darkness.\n"
+  ],
+  "url": "/assets/atlas/equipment/json/pet_mouse.json",
+  "image": "/assets/atlas/equipment/images/pet_mouse.webp",
+  "imageUrl": "/assets/atlas/equipment/images/pet_mouse.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "21-5-2026",
+  "updated_at": "2026-05-21T07:20:24.707Z",
+  "kind": "adventuring_gear"
+}

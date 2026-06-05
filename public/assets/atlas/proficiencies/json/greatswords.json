@@ -1,0 +1,18 @@
+{
+  "index": "greatswords",
+  "type": "weapons",
+  "name": "greatswords",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/greatswords.json",
+  "reference": {
+    "index": "greatsword",
+    "name": "greatsword",
+    "url": "/assets/atlas/equipment/json/greatsword.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/greatswords.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

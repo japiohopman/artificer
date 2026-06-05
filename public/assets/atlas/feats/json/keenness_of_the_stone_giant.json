@@ -1,0 +1,36 @@
+{
+  "index": "keenness_of_the_stone_giant",
+  "name": "keenness of the stone giant",
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You’ve manifested the earthen power of stone giants, granting you the following benefits:",
+    "- Increase your Strength, Constitution, or Wisdom score by 1, to a maximum of 20.",
+    "- You gain darkvision out to a range of 60 feet. If you already have darkvision, its range increases by 30 feet.",
+    "- Stone Throw: As a bonus action, you can magically create and throw a stone at a creature you can see within 60 feet of you. The target must make a Strength saving throw (DC 8 + your proficiency bonus + the ability modifier of the score increased by this feat). On a failed save, the target takes 1d10 force damage and is knocked prone. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Strength, Constitution, or Wisdom bonus",
+          "options": [
+            "strength_bonus",
+            "constitution_bonus",
+            "wisdom_bonus"
+          ],
+          "amount": 1
+        }
+      ]
+    },
+    "special_action": "bonus_action"
+  },
+  "url": "/assets/atlas/feats/json/keenness_of_the_stone_giant.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/keenness_of_the_stone_giant.webp"
+}

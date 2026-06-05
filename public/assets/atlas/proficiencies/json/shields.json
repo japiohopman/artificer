@@ -1,0 +1,49 @@
+{
+  "index": "shields",
+  "type": "armor",
+  "name": "shields",
+  "classes": [
+    {
+      "index": "barbarian",
+      "name": "barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "fighter",
+      "name": "fighter",
+      "url": "/assets/atlas/class/json/fighter.json"
+    },
+    {
+      "index": "paladin",
+      "name": "paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "/assets/atlas/class/json/ranger.json"
+    }
+  ],
+  "url": "/assets/atlas/proficiencies/json/shields.json",
+  "reference": {
+    "index": "shield",
+    "name": "shield",
+    "url": "/assets/atlas/equipment/json/shield.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/shields.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

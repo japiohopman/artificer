@@ -1,0 +1,44 @@
+{
+  "higher_level": [],
+  "index": "goodberry",
+  "name": "goodberry",
+  "desc": [
+    "Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for a day.",
+    "The berries lose their potency if they have not been consumed within 24 hours of the casting of this spell."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A sprig of mistletoe.",
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "transmutation",
+    "name": "transmutation",
+    "url": "/assets/atlas/magic_schools/json/transmutation.json"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "/assets/atlas/class/json/ranger.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/goodberry.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/goodberry.webp",
+  "sprite_index": 14,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet6.webp"
+}

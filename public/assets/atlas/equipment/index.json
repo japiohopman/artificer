@@ -1,0 +1,3673 @@
+[
+  {
+    "index": "abacus",
+    "name": "abacus",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
+    "path": "/assets/atlas/equipment/json/abacus.json"
+  },
+  {
+    "index": "acid_vial",
+    "name": "acid (vial)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/acid_vial.webp",
+    "path": "/assets/atlas/equipment/json/acid_vial.json"
+  },
+  {
+    "index": "alchemists_fire_flask",
+    "name": "alchemist's fire (flask)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/alchemists_fire_flask.webp",
+    "path": "/assets/atlas/equipment/json/alchemists_fire_flask.json"
+  },
+  {
+    "index": "alchemists_supplies",
+    "name": "alchemist's supplies",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "weight": 8,
+    "imageUrl": "/assets/atlas/equipment/images/alchemists_supplies.webp",
+    "path": "/assets/atlas/equipment/json/alchemists_supplies.json"
+  },
+  {
+    "index": "alms_box",
+    "name": "alms box",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "cp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/alms_box.webp",
+    "path": "/assets/atlas/equipment/json/alms_box.json"
+  },
+  {
+    "index": "amulet",
+    "name": "amulet",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/amulet.webp",
+    "path": "/assets/atlas/equipment/json/amulet.json"
+  },
+  {
+    "index": "animal_feed_1_day",
+    "name": "animal feed (1 day)",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "cp"
+    },
+    "weight": 10,
+    "imageUrl": "/assets/atlas/equipment/images/animal_feed_1_day.webp",
+    "path": "/assets/atlas/equipment/json/animal_feed_1_day.json"
+  },
+  {
+    "index": "antitoxin_vial",
+    "name": "antitoxin (vial)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/antitoxin_vial.webp",
+    "path": "/assets/atlas/equipment/json/antitoxin_vial.json"
+  },
+  {
+    "index": "arrow",
+    "name": "arrow",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/arrow.webp",
+    "path": "/assets/atlas/equipment/json/arrow.json"
+  },
+  {
+    "index": "backpack",
+    "name": "backpack",
+    "kind": "equipment_pack",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/backpack.webp",
+    "path": "/assets/atlas/equipment/json/backpack.json"
+  },
+  {
+    "index": "bagpipes",
+    "name": "bagpipes",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 30,
+      "unit": "gp"
+    },
+    "weight": 6,
+    "imageUrl": "/assets/atlas/equipment/images/bagpipes.webp",
+    "path": "/assets/atlas/equipment/json/bagpipes.json"
+  },
+  {
+    "index": "ball_bearings_bag_of_1000",
+    "name": "ball bearings (bag of 1,000)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/ball_bearings_bag_of_1000.webp",
+    "path": "/assets/atlas/equipment/json/ball_bearings_bag_of_1000.json"
+  },
+  {
+    "index": "barding_breastplate",
+    "name": "barding: breastplate",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1600,
+      "unit": "gp"
+    },
+    "weight": 40,
+    "imageUrl": "/assets/atlas/equipment/images/barding_breastplate.webp",
+    "path": "/assets/atlas/equipment/json/barding_breastplate.json"
+  },
+  {
+    "index": "barding_chain_mail",
+    "name": "barding: chain mail",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 300,
+      "unit": "gp"
+    },
+    "weight": 110,
+    "imageUrl": "/assets/atlas/equipment/images/barding_chain_mail.webp",
+    "path": "/assets/atlas/equipment/json/barding_chain_mail.json"
+  },
+  {
+    "index": "barding_chain_shirt",
+    "name": "barding: chain shirt",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 200,
+      "unit": "gp"
+    },
+    "weight": 40,
+    "imageUrl": "/assets/atlas/equipment/images/barding_chain_shirt.webp",
+    "path": "/assets/atlas/equipment/json/barding_chain_shirt.json"
+  },
+  {
+    "index": "barding_half_plate",
+    "name": "barding: half plate",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 3000,
+      "unit": "gp"
+    },
+    "weight": 80,
+    "imageUrl": "/assets/atlas/equipment/images/barding_half_plate.webp",
+    "path": "/assets/atlas/equipment/json/barding_half_plate.json"
+  },
+  {
+    "index": "barding_hide",
+    "name": "barding: hide",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 40,
+      "unit": "gp"
+    },
+    "weight": 24,
+    "imageUrl": "/assets/atlas/equipment/images/barding_hide.webp",
+    "path": "/assets/atlas/equipment/json/barding_hide.json"
+  },
+  {
+    "index": "barding_leather",
+    "name": "barding: leather",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 40,
+      "unit": "gp"
+    },
+    "weight": 20,
+    "imageUrl": "/assets/atlas/equipment/images/barding_leather.webp",
+    "path": "/assets/atlas/equipment/json/barding_leather.json"
+  },
+  {
+    "index": "barding_padded",
+    "name": "barding: padded",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 20,
+      "unit": "gp"
+    },
+    "weight": 16,
+    "imageUrl": "/assets/atlas/equipment/images/barding_padded.webp",
+    "path": "/assets/atlas/equipment/json/barding_padded.json"
+  },
+  {
+    "index": "barding_plate",
+    "name": "barding: plate",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 6000,
+      "unit": "gp"
+    },
+    "weight": 130,
+    "imageUrl": "/assets/atlas/equipment/images/barding_plate.webp",
+    "path": "/assets/atlas/equipment/json/barding_plate.json"
+  },
+  {
+    "index": "barding_ring_mail",
+    "name": "barding: ring mail",
+    "kind": "ring",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 12,
+      "unit": "gp"
+    },
+    "weight": 80,
+    "imageUrl": "/assets/atlas/equipment/images/barding_ring_mail.webp",
+    "path": "/assets/atlas/equipment/json/barding_ring_mail.json"
+  },
+  {
+    "index": "barding_scale_mail",
+    "name": "barding: scale mail",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 200,
+      "unit": "gp"
+    },
+    "weight": 90,
+    "imageUrl": "/assets/atlas/equipment/images/barding_scale_mail.webp",
+    "path": "/assets/atlas/equipment/json/barding_scale_mail.json"
+  },
+  {
+    "index": "barding_splint",
+    "name": "barding: splint",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 800,
+      "unit": "gp"
+    },
+    "weight": 120,
+    "imageUrl": "/assets/atlas/equipment/images/barding_splint.webp",
+    "path": "/assets/atlas/equipment/json/barding_splint.json"
+  },
+  {
+    "index": "barding_studded_leather",
+    "name": "barding: studded leather",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 180,
+      "unit": "gp"
+    },
+    "weight": 26,
+    "imageUrl": "/assets/atlas/equipment/images/barding_studded_leather.webp",
+    "path": "/assets/atlas/equipment/json/barding_studded_leather.json"
+  },
+  {
+    "index": "barrel",
+    "name": "barrel",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 70,
+    "imageUrl": "/assets/atlas/equipment/images/barrel.webp",
+    "path": "/assets/atlas/equipment/json/barrel.json"
+  },
+  {
+    "index": "basket",
+    "name": "basket",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 4,
+      "unit": "sp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/basket.webp",
+    "path": "/assets/atlas/equipment/json/basket.json"
+  },
+  {
+    "index": "battleaxe",
+    "name": "battleaxe",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 4,
+    "imageUrl": "/assets/atlas/equipment/images/battleaxe.webp",
+    "path": "/assets/atlas/equipment/json/battleaxe.json"
+  },
+  {
+    "index": "bedroll",
+    "name": "bedroll",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 7,
+    "imageUrl": "/assets/atlas/equipment/images/bedroll.webp",
+    "path": "/assets/atlas/equipment/json/bedroll.json"
+  },
+  {
+    "index": "bell",
+    "name": "bell",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/bell.webp",
+    "path": "/assets/atlas/equipment/json/bell.json"
+  },
+  {
+    "index": "bit_and_bridle",
+    "name": "bit and bridle",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/bit_and_bridle.webp",
+    "path": "/assets/atlas/equipment/json/bit_and_bridle.json"
+  },
+  {
+    "index": "blanket",
+    "name": "blanket",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "sp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/blanket.webp",
+    "path": "/assets/atlas/equipment/json/blanket.json"
+  },
+  {
+    "index": "block_and_tackle",
+    "name": "block and tackle",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/block_and_tackle.webp",
+    "path": "/assets/atlas/equipment/json/block_and_tackle.json"
+  },
+  {
+    "index": "block_of_incense",
+    "name": "block of incense",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "cp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/block_of_incense.webp",
+    "path": "/assets/atlas/equipment/json/block_of_incense.json"
+  },
+  {
+    "index": "blowgun",
+    "name": "blowgun",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/blowgun.webp",
+    "path": "/assets/atlas/equipment/json/blowgun.json"
+  },
+  {
+    "index": "blowgun_needle",
+    "name": "blowgun needle",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/blowgun_needle.webp",
+    "path": "/assets/atlas/equipment/json/blowgun_needle.json"
+  },
+  {
+    "index": "book",
+    "name": "book",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/book.webp",
+    "path": "/assets/atlas/equipment/json/book.json"
+  },
+  {
+    "index": "bottle_glass",
+    "name": "bottle, glass",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/bottle_glass.webp",
+    "path": "/assets/atlas/equipment/json/bottle_glass.json"
+  },
+  {
+    "index": "breastplate",
+    "name": "breastplate",
+    "kind": "armor",
+    "equipment_category": "armor",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 400,
+      "unit": "gp"
+    },
+    "weight": 20,
+    "imageUrl": "/assets/atlas/equipment/images/breastplate.webp",
+    "path": "/assets/atlas/equipment/json/breastplate.json"
+  },
+  {
+    "index": "brewers_supplies",
+    "name": "brewer's supplies",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 20,
+      "unit": "gp"
+    },
+    "weight": 9,
+    "imageUrl": "/assets/atlas/equipment/images/brewers_supplies.webp",
+    "path": "/assets/atlas/equipment/json/brewers_supplies.json"
+  },
+  {
+    "index": "bucket",
+    "name": "bucket",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "cp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/bucket.webp",
+    "path": "/assets/atlas/equipment/json/bucket.json"
+  },
+  {
+    "index": "burglars_pack",
+    "name": "burglar's pack",
+    "kind": "equipment_pack",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 16,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/burglars_pack.webp",
+    "path": "/assets/atlas/equipment/json/burglars_pack.json"
+  },
+  {
+    "index": "calligraphers_supplies",
+    "name": "calligrapher's supplies",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/calligraphers_supplies.webp",
+    "path": "/assets/atlas/equipment/json/calligraphers_supplies.json"
+  },
+  {
+    "index": "caltrops",
+    "name": "caltrops",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "cp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/caltrops.webp",
+    "path": "/assets/atlas/equipment/json/caltrops.json"
+  },
+  {
+    "index": "camel",
+    "name": "camel",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/camel.webp",
+    "path": "/assets/atlas/equipment/json/camel.json"
+  },
+  {
+    "index": "candle",
+    "name": "candle",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "cp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/candle.webp",
+    "path": "/assets/atlas/equipment/json/candle.json"
+  },
+  {
+    "index": "carpenters_tools",
+    "name": "carpenter's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 8,
+      "unit": "gp"
+    },
+    "weight": 6,
+    "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp",
+    "path": "/assets/atlas/equipment/json/carpenters_tools.json"
+  },
+  {
+    "index": "carriage",
+    "name": "carriage",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 100,
+      "unit": "gp"
+    },
+    "weight": 600,
+    "imageUrl": "/assets/atlas/equipment/images/carriage.webp",
+    "path": "/assets/atlas/equipment/json/carriage.json"
+  },
+  {
+    "index": "cart",
+    "name": "cart",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 15,
+      "unit": "gp"
+    },
+    "weight": 200,
+    "imageUrl": "/assets/atlas/equipment/images/cart.webp",
+    "path": "/assets/atlas/equipment/json/cart.json"
+  },
+  {
+    "index": "cartographers_tools",
+    "name": "cartographer's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 15,
+      "unit": "gp"
+    },
+    "weight": 6,
+    "imageUrl": "/assets/atlas/equipment/images/cartographers_tools.webp",
+    "path": "/assets/atlas/equipment/json/cartographers_tools.json"
+  },
+  {
+    "index": "case_crossbow_bolt",
+    "name": "case, crossbow bolt",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/case_crossbow_bolt.webp",
+    "path": "/assets/atlas/equipment/json/case_crossbow_bolt.json"
+  },
+  {
+    "index": "case_map_or_scroll",
+    "name": "case, map or scroll",
+    "kind": "consumable",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/case_map_or_scroll.webp",
+    "path": "/assets/atlas/equipment/json/case_map_or_scroll.json"
+  },
+  {
+    "index": "censer",
+    "name": "censer",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "cp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/censer.webp",
+    "path": "/assets/atlas/equipment/json/censer.json"
+  },
+  {
+    "index": "chain_10_feet",
+    "name": "chain (10 feet)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 10,
+    "imageUrl": "/assets/atlas/equipment/images/chain_10_feet.webp",
+    "path": "/assets/atlas/equipment/json/chain_10_feet.json"
+  },
+  {
+    "index": "chain_mail",
+    "name": "chain mail",
+    "kind": "armor",
+    "equipment_category": "armor",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 75,
+      "unit": "gp"
+    },
+    "weight": 55,
+    "imageUrl": "/assets/atlas/equipment/images/chain_mail.webp",
+    "path": "/assets/atlas/equipment/json/chain_mail.json"
+  },
+  {
+    "index": "chain_shirt",
+    "name": "chain shirt",
+    "kind": "armor",
+    "equipment_category": "armor",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "weight": 20,
+    "imageUrl": "/assets/atlas/equipment/images/chain_shirt.webp",
+    "path": "/assets/atlas/equipment/json/chain_shirt.json"
+  },
+  {
+    "index": "chalk_1_piece",
+    "name": "chalk (1 piece)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "cp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/charismalk_1_piece.webp",
+    "path": "/assets/atlas/equipment/json/chalk_1_piece.json"
+  },
+  {
+    "index": "chariot",
+    "name": "chariot",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 250,
+      "unit": "gp"
+    },
+    "weight": 100,
+    "imageUrl": "/assets/atlas/equipment/images/chariot.webp",
+    "path": "/assets/atlas/equipment/json/chariot.json"
+  },
+  {
+    "index": "chest",
+    "name": "chest",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 25,
+    "imageUrl": "/assets/atlas/equipment/images/chest.webp",
+    "path": "/assets/atlas/equipment/json/chest.json"
+  },
+  {
+    "index": "city_map",
+    "name": "city map",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/city_map.webp",
+    "path": "/assets/atlas/equipment/json/city_map.json"
+  },
+  {
+    "index": "climbers_kit",
+    "name": "climber's kit",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 12,
+    "imageUrl": "/assets/atlas/equipment/images/climbers_kit.webp",
+    "path": "/assets/atlas/equipment/json/climbers_kit.json"
+  },
+  {
+    "index": "clothes_common",
+    "name": "clothes, common",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "sp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/clothes_common.webp",
+    "path": "/assets/atlas/equipment/json/clothes_common.json"
+  },
+  {
+    "index": "clothes_costume",
+    "name": "clothes, costume",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 4,
+    "imageUrl": "/assets/atlas/equipment/images/clothes_costume.webp",
+    "path": "/assets/atlas/equipment/json/clothes_costume.json"
+  },
+  {
+    "index": "clothes_fine",
+    "name": "clothes, fine",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 15,
+      "unit": "gp"
+    },
+    "weight": 6,
+    "imageUrl": "/assets/atlas/equipment/images/clothes_fine.webp",
+    "path": "/assets/atlas/equipment/json/clothes_fine.json"
+  },
+  {
+    "index": "clothes_travelers",
+    "name": "clothes, traveler's",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 4,
+    "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp",
+    "path": "/assets/atlas/equipment/json/clothes_travelers.json"
+  },
+  {
+    "index": "club",
+    "name": "club",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "sp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/club.webp",
+    "path": "/assets/atlas/equipment/json/club.json"
+  },
+  {
+    "index": "cobblers_tools",
+    "name": "cobbler's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/cobblers_tools.webp",
+    "path": "/assets/atlas/equipment/json/cobblers_tools.json"
+  },
+  {
+    "index": "component_pouch",
+    "name": "component pouch",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/component_pouch.webp",
+    "path": "/assets/atlas/equipment/json/component_pouch.json"
+  },
+  {
+    "index": "cooks_utensils",
+    "name": "cook's utensils",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 8,
+    "imageUrl": "/assets/atlas/equipment/images/cooks_utensils.webp",
+    "path": "/assets/atlas/equipment/json/cooks_utensils.json"
+  },
+  {
+    "index": "crossbow_bolt",
+    "name": "crossbow bolt",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 1.5,
+    "imageUrl": "/assets/atlas/equipment/images/crossbow_bolt.webp",
+    "path": "/assets/atlas/equipment/json/crossbow_bolt.json"
+  },
+  {
+    "index": "crossbow_hand",
+    "name": "crossbow, hand",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 75,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/crossbow_hand.webp",
+    "path": "/assets/atlas/equipment/json/crossbow_hand.json"
+  },
+  {
+    "index": "crossbow_heavy",
+    "name": "crossbow, heavy",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "weight": 18,
+    "imageUrl": "/assets/atlas/equipment/images/crossbow_heavy.webp",
+    "path": "/assets/atlas/equipment/json/crossbow_heavy.json"
+  },
+  {
+    "index": "crossbow_light",
+    "name": "crossbow, light",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/crossbow_light.webp",
+    "path": "/assets/atlas/equipment/json/crossbow_light.json"
+  },
+  {
+    "index": "crowbar",
+    "name": "crowbar",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/crowbar.webp",
+    "path": "/assets/atlas/equipment/json/crowbar.json"
+  },
+  {
+    "index": "crystal",
+    "name": "crystal",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/crystal.webp",
+    "path": "/assets/atlas/equipment/json/crystal.json"
+  },
+  {
+    "index": "dagger",
+    "name": "dagger",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/dagger.webp",
+    "path": "/assets/atlas/equipment/json/dagger.json"
+  },
+  {
+    "index": "dart",
+    "name": "dart",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "cp"
+    },
+    "weight": 0.25,
+    "imageUrl": "/assets/atlas/equipment/images/dart.webp",
+    "path": "/assets/atlas/equipment/json/dart.json"
+  },
+  {
+    "index": "dice_set",
+    "name": "dice set",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "sp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/dice_set.webp",
+    "path": "/assets/atlas/equipment/json/dice_set.json"
+  },
+  {
+    "index": "diplomats_pack",
+    "name": "diplomat's pack",
+    "kind": "equipment_pack",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 39,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/diplomats_pack.webp",
+    "path": "/assets/atlas/equipment/json/diplomats_pack.json"
+  },
+  {
+    "index": "disguise_kit",
+    "name": "disguise kit",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/disguise_kit.webp",
+    "path": "/assets/atlas/equipment/json/disguise_kit.json"
+  },
+  {
+    "index": "donkey",
+    "name": "donkey",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 8,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/donkey.webp",
+    "path": "/assets/atlas/equipment/json/donkey.json"
+  },
+  {
+    "index": "dragonchess_set",
+    "name": "Dragonchess Set",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 0.5,
+    "imageUrl": "/assets/atlas/equipment/images/dragonchess_set.webp",
+    "path": "/assets/atlas/equipment/json/dragonchess_set.json"
+  },
+  {
+    "index": "drum",
+    "name": "drum",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 6,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/drum.webp",
+    "path": "/assets/atlas/equipment/json/drum.json"
+  },
+  {
+    "index": "dulcimer",
+    "name": "dulcimer",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 10,
+    "imageUrl": "/assets/atlas/equipment/images/dulcimer.webp",
+    "path": "/assets/atlas/equipment/json/dulcimer.json"
+  },
+  {
+    "index": "dungeoneers_pack",
+    "name": "dungeoneer's pack",
+    "kind": "equipment_pack",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 12,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/dungeoneers_pack.webp",
+    "path": "/assets/atlas/equipment/json/dungeoneers_pack.json"
+  },
+  {
+    "index": "elephant",
+    "name": "elephant",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 200,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/elephant.webp",
+    "path": "/assets/atlas/equipment/json/elephant.json"
+  },
+  {
+    "index": "emblem",
+    "name": "emblem",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/emblem.webp",
+    "path": "/assets/atlas/equipment/json/emblem.json"
+  },
+  {
+    "index": "entertainers_pack",
+    "name": "entertainer's pack",
+    "kind": "equipment_pack",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 40,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/entertainers_pack.webp",
+    "path": "/assets/atlas/equipment/json/entertainers_pack.json"
+  },
+  {
+    "index": "explorers_pack",
+    "name": "explorer's pack",
+    "kind": "equipment_pack",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/explorers_pack.webp",
+    "path": "/assets/atlas/equipment/json/explorers_pack.json"
+  },
+  {
+    "index": "fake_signet_ring",
+    "name": "fake signet ring",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/fake_signet_ring.webp",
+    "path": "/assets/atlas/equipment/json/fake_signet_ring.json"
+  },
+  {
+    "index": "fishing_tackle",
+    "name": "fishing tackle",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 4,
+    "imageUrl": "/assets/atlas/equipment/images/fishing_tackle.webp",
+    "path": "/assets/atlas/equipment/json/fishing_tackle.json"
+  },
+  {
+    "index": "flail",
+    "name": "flail",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/flail.webp",
+    "path": "/assets/atlas/equipment/json/flail.json"
+  },
+  {
+    "index": "flask_or_tankard",
+    "name": "flask or tankard",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "cp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/flask_or_tankard.webp",
+    "path": "/assets/atlas/equipment/json/flask_or_tankard.json"
+  },
+  {
+    "index": "flute",
+    "name": "flute",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/flute.webp",
+    "path": "/assets/atlas/equipment/json/flute.json"
+  },
+  {
+    "index": "forgery_kit",
+    "name": "forgery kit",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 15,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/forgery_kit.webp",
+    "path": "/assets/atlas/equipment/json/forgery_kit.json"
+  },
+  {
+    "index": "galley",
+    "name": "galley",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 30000,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/galley.webp",
+    "path": "/assets/atlas/equipment/json/galley.json"
+  },
+  {
+    "index": "glaive",
+    "name": "glaive",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 20,
+      "unit": "gp"
+    },
+    "weight": 6,
+    "imageUrl": "/assets/atlas/equipment/images/glaive.webp",
+    "path": "/assets/atlas/equipment/json/glaive.json"
+  },
+  {
+    "index": "glassblowers_tools",
+    "name": "glassblower's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 30,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/glassblowers_tools.webp",
+    "path": "/assets/atlas/equipment/json/glassblowers_tools.json"
+  },
+  {
+    "index": "gold",
+    "name": "Gold Pieces",
+    "kind": "currency",
+    "equipment_category": "standard gear",
+    "rarity": "Common",
+    "cost": "",
+    "weight": 0.02,
+    "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+    "path": "/assets/atlas/equipment/json/gold.json"
+  },
+  {
+    "index": "grappling_hook",
+    "name": "grappling hook",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 4,
+    "imageUrl": "/assets/atlas/equipment/images/grappling_hook.webp",
+    "path": "/assets/atlas/equipment/json/grappling_hook.json"
+  },
+  {
+    "index": "greataxe",
+    "name": "greataxe",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 30,
+      "unit": "gp"
+    },
+    "weight": 7,
+    "imageUrl": "/assets/atlas/equipment/images/greataxe.webp",
+    "path": "/assets/atlas/equipment/json/greataxe.json"
+  },
+  {
+    "index": "greatclub",
+    "name": "greatclub",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "sp"
+    },
+    "weight": 10,
+    "imageUrl": "/assets/atlas/equipment/images/greatclub.webp",
+    "path": "/assets/atlas/equipment/json/greatclub.json"
+  },
+  {
+    "index": "greatsword",
+    "name": "greatsword",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "weight": 6,
+    "imageUrl": "/assets/atlas/equipment/images/greatsword.webp",
+    "path": "/assets/atlas/equipment/json/greatsword.json"
+  },
+  {
+    "index": "halberd",
+    "name": "halberd",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 20,
+      "unit": "gp"
+    },
+    "weight": 6,
+    "imageUrl": "/assets/atlas/equipment/images/halberd.webp",
+    "path": "/assets/atlas/equipment/json/halberd.json"
+  },
+  {
+    "index": "half_plate_armor",
+    "name": "half plate armor",
+    "kind": "armor",
+    "equipment_category": "armor",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 750,
+      "unit": "gp"
+    },
+    "weight": 40,
+    "imageUrl": "/assets/atlas/equipment/images/half_plate_armor.webp",
+    "path": "/assets/atlas/equipment/json/half_plate_armor.json"
+  },
+  {
+    "index": "hammer",
+    "name": "hammer",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/hammer.webp",
+    "path": "/assets/atlas/equipment/json/hammer.json"
+  },
+  {
+    "index": "hammer_sledge",
+    "name": "hammer, sledge",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 10,
+    "imageUrl": "/assets/atlas/equipment/images/hammer_sledge.webp",
+    "path": "/assets/atlas/equipment/json/hammer_sledge.json"
+  },
+  {
+    "index": "handaxe",
+    "name": "handaxe",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/handaxe.webp",
+    "path": "/assets/atlas/equipment/json/handaxe.json"
+  },
+  {
+    "index": "healers_kit",
+    "name": "healer's kit",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/healers_kit.webp",
+    "path": "/assets/atlas/equipment/json/healers_kit.json"
+  },
+  {
+    "index": "herbalism_kit",
+    "name": "herbalism kit",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/herbalism_kit.webp",
+    "path": "/assets/atlas/equipment/json/herbalism_kit.json"
+  },
+  {
+    "index": "hide_armor",
+    "name": "hide armor",
+    "kind": "armor",
+    "equipment_category": "armor",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 12,
+    "imageUrl": "/assets/atlas/equipment/images/hide_armor.webp",
+    "path": "/assets/atlas/equipment/json/hide_armor.json"
+  },
+  {
+    "index": "holy_water_flask",
+    "name": "holy water (flask)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/holy_water_flask.webp",
+    "path": "/assets/atlas/equipment/json/holy_water_flask.json"
+  },
+  {
+    "index": "horn",
+    "name": "horn",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 3,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/horn.webp",
+    "path": "/assets/atlas/equipment/json/horn.json"
+  },
+  {
+    "index": "horse_draft",
+    "name": "horse, draft",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/horse_draft.webp",
+    "path": "/assets/atlas/equipment/json/horse_draft.json"
+  },
+  {
+    "index": "horse_riding",
+    "name": "horse, riding",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 75,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/horse_riding.webp",
+    "path": "/assets/atlas/equipment/json/horse_riding.json"
+  },
+  {
+    "index": "hourglass",
+    "name": "hourglass",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/hourglass.webp",
+    "path": "/assets/atlas/equipment/json/hourglass.json"
+  },
+  {
+    "index": "hunting_trap",
+    "name": "hunting trap",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 25,
+    "imageUrl": "/assets/atlas/equipment/images/hunting_trap.webp",
+    "path": "/assets/atlas/equipment/json/hunting_trap.json"
+  },
+  {
+    "index": "ink_1_ounce_bottle",
+    "name": "ink (1 ounce bottle)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
+    "path": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json"
+  },
+  {
+    "index": "ink_pen",
+    "name": "ink pen",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "cp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/ink_pen.webp",
+    "path": "/assets/atlas/equipment/json/ink_pen.json"
+  },
+  {
+    "index": "insignia_of_rank",
+    "name": "insignia of rank",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/insignia_of_rank.webp",
+    "path": "/assets/atlas/equipment/json/insignia_of_rank.json"
+  },
+  {
+    "index": "javelin",
+    "name": "javelin",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "sp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/javelin.webp",
+    "path": "/assets/atlas/equipment/json/javelin.json"
+  },
+  {
+    "index": "jewelers_tools",
+    "name": "jeweler's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/jewelers_tools.webp",
+    "path": "/assets/atlas/equipment/json/jewelers_tools.json"
+  },
+  {
+    "index": "jug_or_pitcher",
+    "name": "jug or pitcher",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "cp"
+    },
+    "weight": 4,
+    "imageUrl": "/assets/atlas/equipment/images/jug_or_pitcher.webp",
+    "path": "/assets/atlas/equipment/json/jug_or_pitcher.json"
+  },
+  {
+    "index": "keelboat",
+    "name": "keelboat",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 3000,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/keelboat.webp",
+    "path": "/assets/atlas/equipment/json/keelboat.json"
+  },
+  {
+    "index": "ladder_10_foot",
+    "name": "ladder (10_foot)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "sp"
+    },
+    "weight": 25,
+    "imageUrl": "/assets/atlas/equipment/images/ladder_10_foot.webp",
+    "path": "/assets/atlas/equipment/json/ladder_10_foot.json"
+  },
+  {
+    "index": "lamp",
+    "name": "lamp",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "sp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/lamp.webp",
+    "path": "/assets/atlas/equipment/json/lamp.json"
+  },
+  {
+    "index": "lance",
+    "name": "lance",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 6,
+    "imageUrl": "/assets/atlas/equipment/images/lance.webp",
+    "path": "/assets/atlas/equipment/json/lance.json"
+  },
+  {
+    "index": "lantern_bullseye",
+    "name": "lantern, bullseye",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/lantern_bullseye.webp",
+    "path": "/assets/atlas/equipment/json/lantern_bullseye.json"
+  },
+  {
+    "index": "lantern_hooded",
+    "name": "lantern, hooded",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/lantern_hooded.webp",
+    "path": "/assets/atlas/equipment/json/lantern_hooded.json"
+  },
+  {
+    "index": "leatherworkers_tools",
+    "name": "leatherworker's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/leatherworkers_tools.webp",
+    "path": "/assets/atlas/equipment/json/leatherworkers_tools.json"
+  },
+  {
+    "index": "leather_armor",
+    "name": "leather armor",
+    "kind": "armor",
+    "equipment_category": "armor",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 10,
+    "imageUrl": "/assets/atlas/equipment/images/leather_armor.webp",
+    "path": "/assets/atlas/equipment/json/leather_armor.json"
+  },
+  {
+    "index": "leather_pouch",
+    "name": "leather pouch",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "sp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/leather_pouch.webp",
+    "path": "/assets/atlas/equipment/json/leather_pouch.json"
+  },
+  {
+    "index": "letter_from_dead_colleague",
+    "name": "letter from a dead colleague",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/letter_from_dead_colleague.webp",
+    "path": "/assets/atlas/equipment/json/letter_from_dead_colleague.json"
+  },
+  {
+    "index": "letter_of_introduction",
+    "name": "letter of introduction",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/letter_of_introduction.webp",
+    "path": "/assets/atlas/equipment/json/letter_of_introduction.json"
+  },
+  {
+    "index": "light_hammer",
+    "name": "light hammer",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/light_hammer.webp",
+    "path": "/assets/atlas/equipment/json/light_hammer.json"
+  },
+  {
+    "index": "little_bag_of_sand",
+    "name": "little bag of sand",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "cp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/little_bag_of_sand.webp",
+    "path": "/assets/atlas/equipment/json/little_bag_of_sand.json"
+  },
+  {
+    "index": "lock",
+    "name": "lock",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/lock.webp",
+    "path": "/assets/atlas/equipment/json/lock.json"
+  },
+  {
+    "index": "lock_of_hair",
+    "name": "lock of hair",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/lock_of_hair.webp",
+    "path": "/assets/atlas/equipment/json/lock_of_hair.json"
+  },
+  {
+    "index": "longbow",
+    "name": "longbow",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/longbow.webp",
+    "path": "/assets/atlas/equipment/json/longbow.json"
+  },
+  {
+    "index": "longship",
+    "name": "longship",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Very Rare",
+    "cost": {
+      "quantity": 10000,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/longship.webp",
+    "path": "/assets/atlas/equipment/json/longship.json"
+  },
+  {
+    "index": "longsword",
+    "name": "longsword",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 15,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/longsword.webp",
+    "path": "/assets/atlas/equipment/json/longsword.json"
+  },
+  {
+    "index": "love_letter",
+    "name": "love letter",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/love_letter.webp",
+    "path": "/assets/atlas/equipment/json/love_letter.json"
+  },
+  {
+    "index": "lucky_charm",
+    "name": "lucky charm",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/lucky_charm.webp",
+    "path": "/assets/atlas/equipment/json/lucky_charm.json"
+  },
+  {
+    "index": "lute",
+    "name": "lute",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 35,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/lute.webp",
+    "path": "/assets/atlas/equipment/json/lute.json"
+  },
+  {
+    "index": "lyre",
+    "name": "lyre",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 30,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/lyre.webp",
+    "path": "/assets/atlas/equipment/json/lyre.json"
+  },
+  {
+    "index": "mace",
+    "name": "mace",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 4,
+    "imageUrl": "/assets/atlas/equipment/images/mace.webp",
+    "path": "/assets/atlas/equipment/json/mace.json"
+  },
+  {
+    "index": "magnifying_glass",
+    "name": "magnifying glass",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 100,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/magnifying_glass.webp",
+    "path": "/assets/atlas/equipment/json/magnifying_glass.json"
+  },
+  {
+    "index": "manacles",
+    "name": "manacles",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 6,
+    "imageUrl": "/assets/atlas/equipment/images/manacles.webp",
+    "path": "/assets/atlas/equipment/json/manacles.json"
+  },
+  {
+    "index": "marked_cards",
+    "name": "marked cards",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/marked_cards.webp",
+    "path": "/assets/atlas/equipment/json/marked_cards.json"
+  },
+  {
+    "index": "masons_tools",
+    "name": "mason's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 8,
+    "imageUrl": "/assets/atlas/equipment/images/masons_tools.webp",
+    "path": "/assets/atlas/equipment/json/masons_tools.json"
+  },
+  {
+    "index": "mastiff",
+    "name": "mastiff",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/mastiff.webp",
+    "path": "/assets/atlas/equipment/json/mastiff.json"
+  },
+  {
+    "index": "maul",
+    "name": "maul",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 10,
+    "imageUrl": "/assets/atlas/equipment/images/maul.webp",
+    "path": "/assets/atlas/equipment/json/maul.json"
+  },
+  {
+    "index": "mess_kit",
+    "name": "mess kit",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "sp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/mess_kit.webp",
+    "path": "/assets/atlas/equipment/json/mess_kit.json"
+  },
+  {
+    "index": "mirror_steel",
+    "name": "mirror, steel",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 0.5,
+    "imageUrl": "/assets/atlas/equipment/images/mirror_steel.webp",
+    "path": "/assets/atlas/equipment/json/mirror_steel.json"
+  },
+  {
+    "index": "monster_hunters_pack",
+    "name": "monster hunter's pack",
+    "kind": "equipment_pack",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 33,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/monster_hunters_pack.webp",
+    "path": "/assets/atlas/equipment/json/monster_hunters_pack.json"
+  },
+  {
+    "index": "morningstar",
+    "name": "morningstar",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 15,
+      "unit": "gp"
+    },
+    "weight": 4,
+    "imageUrl": "/assets/atlas/equipment/images/morningstar.webp",
+    "path": "/assets/atlas/equipment/json/morningstar.json"
+  },
+  {
+    "index": "mule",
+    "name": "mule",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 8,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/mule.webp",
+    "path": "/assets/atlas/equipment/json/mule.json"
+  },
+  {
+    "index": "navigators_tools",
+    "name": "navigator's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/navigators_tools.webp",
+    "path": "/assets/atlas/equipment/json/navigators_tools.json"
+  },
+  {
+    "index": "net",
+    "name": "net",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/net.webp",
+    "path": "/assets/atlas/equipment/json/net.json"
+  },
+  {
+    "index": "oil_flask",
+    "name": "oil (flask)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "sp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/oil_flask.webp",
+    "path": "/assets/atlas/equipment/json/oil_flask.json"
+  },
+  {
+    "index": "orb",
+    "name": "orb",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 20,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/orb.webp",
+    "path": "/assets/atlas/equipment/json/orb.json"
+  },
+  {
+    "index": "padded_armor",
+    "name": "padded armor",
+    "kind": "armor",
+    "equipment_category": "armor",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 8,
+    "imageUrl": "/assets/atlas/equipment/images/padded_armor.webp",
+    "path": "/assets/atlas/equipment/json/padded_armor.json"
+  },
+  {
+    "index": "painters_supplies",
+    "name": "painter's supplies",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/painters_supplies.webp",
+    "path": "/assets/atlas/equipment/json/painters_supplies.json"
+  },
+  {
+    "index": "pan_flute",
+    "name": "pan flute",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 12,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/pan_flute.webp",
+    "path": "/assets/atlas/equipment/json/pan_flute.json"
+  },
+  {
+    "index": "paper_one_sheet",
+    "name": "paper (one sheet)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "sp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/paper_one_sheet.webp",
+    "path": "/assets/atlas/equipment/json/paper_one_sheet.json"
+  },
+  {
+    "index": "parchment_one_sheet",
+    "name": "parchment (one sheet)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "sp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/parchment_one_sheet.webp",
+    "path": "/assets/atlas/equipment/json/parchment_one_sheet.json"
+  },
+  {
+    "index": "perfume_vial",
+    "name": "perfume (vial)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/perfume_vial.webp",
+    "path": "/assets/atlas/equipment/json/perfume_vial.json"
+  },
+  {
+    "index": "pet_mouse",
+    "name": "Pet mouse",
+    "kind": "adventuring_gear",
+    "equipment_category": "adventure gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 100,
+      "unit": "gp"
+    },
+    "weight": 0.01,
+    "imageUrl": "/assets/atlas/equipment/images/pet_mouse.webp",
+    "path": "/assets/atlas/equipment/json/pet_mouse.json"
+  },
+  {
+    "index": "pick_miners",
+    "name": "pick, miner's",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 10,
+    "imageUrl": "/assets/atlas/equipment/images/pick_miners.webp",
+    "path": "/assets/atlas/equipment/json/pick_miners.json"
+  },
+  {
+    "index": "piece_of_exotic_jewelry",
+    "name": "piece of exotic jewelry",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/piece_of_exotic_jewelry.webp",
+    "path": "/assets/atlas/equipment/json/piece_of_exotic_jewelry.json"
+  },
+  {
+    "index": "pike",
+    "name": "pike",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 18,
+    "imageUrl": "/assets/atlas/equipment/images/pike.webp",
+    "path": "/assets/atlas/equipment/json/pike.json"
+  },
+  {
+    "index": "piton",
+    "name": "piton",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "cp"
+    },
+    "weight": 0.25,
+    "imageUrl": "/assets/atlas/equipment/images/piton.webp",
+    "path": "/assets/atlas/equipment/json/piton.json"
+  },
+  {
+    "index": "plate_armor",
+    "name": "plate armor",
+    "kind": "armor",
+    "equipment_category": "armor",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1500,
+      "unit": "gp"
+    },
+    "weight": 65,
+    "imageUrl": "/assets/atlas/equipment/images/plate_armor.webp",
+    "path": "/assets/atlas/equipment/json/plate_armor.json"
+  },
+  {
+    "index": "playing_card_set",
+    "name": "playing card set",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "sp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/playing_card_set.webp",
+    "path": "/assets/atlas/equipment/json/playing_card_set.json"
+  },
+  {
+    "index": "poisoners_kit",
+    "name": "poisoner's kit",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/poisoners_kit.webp",
+    "path": "/assets/atlas/equipment/json/poisoners_kit.json"
+  },
+  {
+    "index": "poison_basic_vial",
+    "name": "poison, basic (vial)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 100,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/poison_basic_vial.webp",
+    "path": "/assets/atlas/equipment/json/poison_basic_vial.json"
+  },
+  {
+    "index": "pole_10_foot",
+    "name": "pole (10_foot)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "cp"
+    },
+    "weight": 7,
+    "imageUrl": "/assets/atlas/equipment/images/pole_10_foot.webp",
+    "path": "/assets/atlas/equipment/json/pole_10_foot.json"
+  },
+  {
+    "index": "pony",
+    "name": "pony",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 30,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/pony.webp",
+    "path": "/assets/atlas/equipment/json/pony.json"
+  },
+  {
+    "index": "potters_tools",
+    "name": "potter's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/potters_tools.webp",
+    "path": "/assets/atlas/equipment/json/potters_tools.json"
+  },
+  {
+    "index": "pot_iron",
+    "name": "pot, iron",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 10,
+    "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp",
+    "path": "/assets/atlas/equipment/json/pot_iron.json"
+  },
+  {
+    "index": "pouch",
+    "name": "pouch",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "sp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
+    "path": "/assets/atlas/equipment/json/pouch.json"
+  },
+  {
+    "index": "priests_pack",
+    "name": "priest's pack",
+    "kind": "equipment_pack",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 19,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/priests_pack.webp",
+    "path": "/assets/atlas/equipment/json/priests_pack.json"
+  },
+  {
+    "index": "purse",
+    "name": "purse",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "sp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/purse.webp",
+    "path": "/assets/atlas/equipment/json/purse.json"
+  },
+  {
+    "index": "quarterstaff",
+    "name": "quarterstaff",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "sp"
+    },
+    "weight": 4,
+    "imageUrl": "/assets/atlas/equipment/images/quarterstaff.webp",
+    "path": "/assets/atlas/equipment/json/quarterstaff.json"
+  },
+  {
+    "index": "quill",
+    "name": "quill",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "cp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/quill.webp",
+    "path": "/assets/atlas/equipment/json/quill.json"
+  },
+  {
+    "index": "quiver",
+    "name": "quiver",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/quiver.webp",
+    "path": "/assets/atlas/equipment/json/quiver.json"
+  },
+  {
+    "index": "ram_portable",
+    "name": "ram, portable",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 4,
+      "unit": "gp"
+    },
+    "weight": 35,
+    "imageUrl": "/assets/atlas/equipment/images/ram_portable.webp",
+    "path": "/assets/atlas/equipment/json/ram_portable.json"
+  },
+  {
+    "index": "rapier",
+    "name": "rapier",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/rapier.webp",
+    "path": "/assets/atlas/equipment/json/rapier.json"
+  },
+  {
+    "index": "rations_1_day",
+    "name": "rations (1 day)",
+    "kind": "consumable",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "sp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/rations_1_day.webp",
+    "path": "/assets/atlas/equipment/json/rations_1_day.json"
+  },
+  {
+    "index": "reliquary",
+    "name": "reliquary",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/reliquary.webp",
+    "path": "/assets/atlas/equipment/json/reliquary.json"
+  },
+  {
+    "index": "ring_mail",
+    "name": "ring mail",
+    "kind": "armor",
+    "equipment_category": "armor",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 30,
+      "unit": "gp"
+    },
+    "weight": 40,
+    "imageUrl": "/assets/atlas/equipment/images/ring_mail.webp",
+    "path": "/assets/atlas/equipment/json/ring_mail.json"
+  },
+  {
+    "index": "robes",
+    "name": "robes",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 4,
+    "imageUrl": "/assets/atlas/equipment/images/robes.webp",
+    "path": "/assets/atlas/equipment/json/robes.json"
+  },
+  {
+    "index": "rod",
+    "name": "rod",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/rod.webp",
+    "path": "/assets/atlas/equipment/json/rod.json"
+  },
+  {
+    "index": "rope_hempen_50_feet",
+    "name": "rope, hempen (50 feet)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 10,
+    "imageUrl": "/assets/atlas/equipment/images/rope_hempen_50_feet.webp",
+    "path": "/assets/atlas/equipment/json/rope_hempen_50_feet.json"
+  },
+  {
+    "index": "rope_silk_50_feet",
+    "name": "rope, silk (50 feet)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/rope_silk_50_feet.webp",
+    "path": "/assets/atlas/equipment/json/rope_silk_50_feet.json"
+  },
+  {
+    "index": "rowboat",
+    "name": "rowboat",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/rowboat.webp",
+    "path": "/assets/atlas/equipment/json/rowboat.json"
+  },
+  {
+    "index": "sack",
+    "name": "sack",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "cp"
+    },
+    "weight": 0.5,
+    "imageUrl": "/assets/atlas/equipment/images/sack.webp",
+    "path": "/assets/atlas/equipment/json/sack.json"
+  },
+  {
+    "index": "saddlebags",
+    "name": "saddlebags",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 4,
+      "unit": "gp"
+    },
+    "weight": 8,
+    "imageUrl": "/assets/atlas/equipment/images/saddlebags.webp",
+    "path": "/assets/atlas/equipment/json/saddlebags.json"
+  },
+  {
+    "index": "saddle_exotic",
+    "name": "saddle, exotic",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 60,
+      "unit": "gp"
+    },
+    "weight": 50,
+    "imageUrl": "/assets/atlas/equipment/images/saddle_exotic.webp",
+    "path": "/assets/atlas/equipment/json/saddle_exotic.json"
+  },
+  {
+    "index": "saddle_military",
+    "name": "saddle, military",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 20,
+      "unit": "gp"
+    },
+    "weight": 30,
+    "imageUrl": "/assets/atlas/equipment/images/saddle_military.webp",
+    "path": "/assets/atlas/equipment/json/saddle_military.json"
+  },
+  {
+    "index": "saddle_pack",
+    "name": "saddle, pack",
+    "kind": "equipment_pack",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 15,
+    "imageUrl": "/assets/atlas/equipment/images/saddle_pack.webp",
+    "path": "/assets/atlas/equipment/json/saddle_pack.json"
+  },
+  {
+    "index": "saddle_riding",
+    "name": "saddle, riding",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 25,
+    "imageUrl": "/assets/atlas/equipment/images/saddle_riding.webp",
+    "path": "/assets/atlas/equipment/json/saddle_riding.json"
+  },
+  {
+    "index": "sailing_ship",
+    "name": "sailing ship",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10000,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/sailing_ship.webp",
+    "path": "/assets/atlas/equipment/json/sailing_ship.json"
+  },
+  {
+    "index": "scale_mail",
+    "name": "scale mail",
+    "kind": "armor",
+    "equipment_category": "armor",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "weight": 45,
+    "imageUrl": "/assets/atlas/equipment/images/scale_mail.webp",
+    "path": "/assets/atlas/equipment/json/scale_mail.json"
+  },
+  {
+    "index": "scale_merchants",
+    "name": "scale, merchant's",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/scale_merchants.webp",
+    "path": "/assets/atlas/equipment/json/scale_merchants.json"
+  },
+  {
+    "index": "scholars_pack",
+    "name": "scholar's pack",
+    "kind": "equipment_pack",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 40,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/scholars_pack.webp",
+    "path": "/assets/atlas/equipment/json/scholars_pack.json"
+  },
+  {
+    "index": "scimitar",
+    "name": "scimitar",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/scimitar.webp",
+    "path": "/assets/atlas/equipment/json/scimitar.json"
+  },
+  {
+    "index": "scroll_case",
+    "name": "scroll case",
+    "kind": "consumable",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/scroll_case.webp",
+    "path": "/assets/atlas/equipment/json/scroll_case.json"
+  },
+  {
+    "index": "scroll_of_pedigree",
+    "name": "scroll of pedigree",
+    "kind": "consumable",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/scroll_of_pedigree.webp",
+    "path": "/assets/atlas/equipment/json/scroll_of_pedigree.json"
+  },
+  {
+    "index": "sealing_wax",
+    "name": "sealing wax",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "sp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/sealing_wax.webp",
+    "path": "/assets/atlas/equipment/json/sealing_wax.json"
+  },
+  {
+    "index": "shawm",
+    "name": "shawm",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/shawm.webp",
+    "path": "/assets/atlas/equipment/json/shawm.json"
+  },
+  {
+    "index": "shield",
+    "name": "shield",
+    "kind": "shield",
+    "equipment_category": "armor",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 6,
+    "imageUrl": "/assets/atlas/equipment/images/shield.webp",
+    "path": "/assets/atlas/equipment/json/shield.json"
+  },
+  {
+    "index": "shortbow",
+    "name": "shortbow",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/shortbow.webp",
+    "path": "/assets/atlas/equipment/json/shortbow.json"
+  },
+  {
+    "index": "shortsword",
+    "name": "shortsword",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/shortsword.webp",
+    "path": "/assets/atlas/equipment/json/shortsword.json"
+  },
+  {
+    "index": "shovel",
+    "name": "shovel",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/shovel.webp",
+    "path": "/assets/atlas/equipment/json/shovel.json"
+  },
+  {
+    "index": "sickle",
+    "name": "sickle",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
+    "path": "/assets/atlas/equipment/json/sickle.json"
+  },
+  {
+    "index": "signal_whistle",
+    "name": "signal whistle",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "cp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/signal_whistle.webp",
+    "path": "/assets/atlas/equipment/json/signal_whistle.json"
+  },
+  {
+    "index": "signet_ring",
+    "name": "signet ring",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/signet_ring.webp",
+    "path": "/assets/atlas/equipment/json/signet_ring.json"
+  },
+  {
+    "index": "sled",
+    "name": "sled",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 20,
+      "unit": "gp"
+    },
+    "weight": 300,
+    "imageUrl": "/assets/atlas/equipment/images/sled.webp",
+    "path": "/assets/atlas/equipment/json/sled.json"
+  },
+  {
+    "index": "sling",
+    "name": "sling",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "sp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/sling.webp",
+    "path": "/assets/atlas/equipment/json/sling.json"
+  },
+  {
+    "index": "sling_bullet",
+    "name": "sling bullet",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 4,
+      "unit": "cp"
+    },
+    "weight": 1.5,
+    "imageUrl": "/assets/atlas/equipment/images/sling_bullet.webp",
+    "path": "/assets/atlas/equipment/json/sling_bullet.json"
+  },
+  {
+    "index": "small_knife",
+    "name": "small knife",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "cp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/small_knife.webp",
+    "path": "/assets/atlas/equipment/json/small_knife.json"
+  },
+  {
+    "index": "smiths_tools",
+    "name": "smith's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 20,
+      "unit": "gp"
+    },
+    "weight": 8,
+    "imageUrl": "/assets/atlas/equipment/images/smiths_tools.webp",
+    "path": "/assets/atlas/equipment/json/smiths_tools.json"
+  },
+  {
+    "index": "soap",
+    "name": "soap",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "cp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/soap.webp",
+    "path": "/assets/atlas/equipment/json/soap.json"
+  },
+  {
+    "index": "spear",
+    "name": "spear",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/spear.webp",
+    "path": "/assets/atlas/equipment/json/spear.json"
+  },
+  {
+    "index": "spellbook",
+    "name": "spellbook",
+    "kind": "focus",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/spellbook.webp",
+    "path": "/assets/atlas/equipment/json/spellbook.json"
+  },
+  {
+    "index": "spike_iron",
+    "name": "spike, iron",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "sp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/spike_iron.webp",
+    "path": "/assets/atlas/equipment/json/spike_iron.json"
+  },
+  {
+    "index": "splint_armor",
+    "name": "splint armor",
+    "kind": "armor",
+    "equipment_category": "armor",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 200,
+      "unit": "gp"
+    },
+    "weight": 60,
+    "imageUrl": "/assets/atlas/equipment/images/splint_armor.webp",
+    "path": "/assets/atlas/equipment/json/splint_armor.json"
+  },
+  {
+    "index": "sprig_of_mistletoe",
+    "name": "sprig of mistletoe",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/sprig_of_mistletoe.webp",
+    "path": "/assets/atlas/equipment/json/sprig_of_mistletoe.json"
+  },
+  {
+    "index": "spyglass",
+    "name": "spyglass",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1000,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/spyglass.webp",
+    "path": "/assets/atlas/equipment/json/spyglass.json"
+  },
+  {
+    "index": "stabling_1_day",
+    "name": "stabling (1 day)",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "sp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/stabling_1_day.webp",
+    "path": "/assets/atlas/equipment/json/stabling_1_day.json"
+  },
+  {
+    "index": "staff",
+    "name": "staff",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 4,
+    "imageUrl": "/assets/atlas/equipment/images/staff.webp",
+    "path": "/assets/atlas/equipment/json/staff.json"
+  },
+  {
+    "index": "stoppered_bottles",
+    "name": "stoppered bottles",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/stoppered_bottles.webp",
+    "path": "/assets/atlas/equipment/json/stoppered_bottles.json"
+  },
+  {
+    "index": "string_10_feet",
+    "name": "string (10 feet)",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "cp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/string_10_feet.webp",
+    "path": "/assets/atlas/equipment/json/string_10_feet.json"
+  },
+  {
+    "index": "studded_leather_armor",
+    "name": "studded leather armor",
+    "kind": "armor",
+    "equipment_category": "armor",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 45,
+      "unit": "gp"
+    },
+    "weight": 13,
+    "imageUrl": "/assets/atlas/equipment/images/studded_leather_armor.webp",
+    "path": "/assets/atlas/equipment/json/studded_leather_armor.json"
+  },
+  {
+    "index": "tda_card_set",
+    "name": "tda card set",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 28,
+      "unit": "gp"
+    },
+    "weight": 0.5,
+    "imageUrl": "/assets/atlas/equipment/images/tda_card_set.webp",
+    "path": "/assets/atlas/equipment/json/tda_card_set.json"
+  },
+  {
+    "index": "tent_two_person",
+    "name": "tent, two_person",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 20,
+    "imageUrl": "/assets/atlas/equipment/images/tent_two_person.webp",
+    "path": "/assets/atlas/equipment/json/tent_two_person.json"
+  },
+  {
+    "index": "thieves_tools",
+    "name": "thieves' tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/thieves_tools.webp",
+    "path": "/assets/atlas/equipment/json/thieves_tools.json"
+  },
+  {
+    "index": "three_dragon_ante_set",
+    "name": "three-dragon ante set",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/three_dragon_ante_set.webp",
+    "path": "/assets/atlas/equipment/json/three_dragon_ante_set.json"
+  },
+  {
+    "index": "tinderbox",
+    "name": "tinderbox",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "sp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/tinderbox.webp",
+    "path": "/assets/atlas/equipment/json/tinderbox.json"
+  },
+  {
+    "index": "tinkers_tools",
+    "name": "tinker's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 50,
+      "unit": "gp"
+    },
+    "weight": 10,
+    "imageUrl": "/assets/atlas/equipment/images/tinkers_tools.webp",
+    "path": "/assets/atlas/equipment/json/tinkers_tools.json"
+  },
+  {
+    "index": "token_of_parents",
+    "name": "token of parents",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/token_of_parents.webp",
+    "path": "/assets/atlas/equipment/json/token_of_parents.json"
+  },
+  {
+    "index": "torch",
+    "name": "torch",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "cp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/torch.webp",
+    "path": "/assets/atlas/equipment/json/torch.json"
+  },
+  {
+    "index": "totem",
+    "name": "totem",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/totem.webp",
+    "path": "/assets/atlas/equipment/json/totem.json"
+  },
+  {
+    "index": "trident",
+    "name": "trident",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 4,
+    "imageUrl": "/assets/atlas/equipment/images/trident.webp",
+    "path": "/assets/atlas/equipment/json/trident.json"
+  },
+  {
+    "index": "trinket",
+    "name": "trinket",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/trinket.webp",
+    "path": "/assets/atlas/equipment/json/trinket.json"
+  },
+  {
+    "index": "trophy_from_fallen_animal",
+    "name": "trophy from fallen animal",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/trophy_from_fallen_animal.webp",
+    "path": "/assets/atlas/equipment/json/trophy_from_fallen_animal.json"
+  },
+  {
+    "index": "trophy_from_fallen_enemy",
+    "name": "trophy from fallen enemy",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/trophy_from_fallen_enemy.webp",
+    "path": "/assets/atlas/equipment/json/trophy_from_fallen_enemy.json"
+  },
+  {
+    "index": "vestments",
+    "name": "vestments",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 0,
+      "unit": "cp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/vestments.webp",
+    "path": "/assets/atlas/equipment/json/vestments.json"
+  },
+  {
+    "index": "vial",
+    "name": "vial",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/vial.webp",
+    "path": "/assets/atlas/equipment/json/vial.json"
+  },
+  {
+    "index": "viol",
+    "name": "viol",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 30,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/viol.webp",
+    "path": "/assets/atlas/equipment/json/viol.json"
+  },
+  {
+    "index": "wagon",
+    "name": "wagon",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 35,
+      "unit": "gp"
+    },
+    "weight": 400,
+    "imageUrl": "/assets/atlas/equipment/images/wagon.webp",
+    "path": "/assets/atlas/equipment/json/wagon.json"
+  },
+  {
+    "index": "wand",
+    "name": "wand",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/wand.webp",
+    "path": "/assets/atlas/equipment/json/wand.json"
+  },
+  {
+    "index": "warhammer",
+    "name": "warhammer",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 15,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/warhammer.webp",
+    "path": "/assets/atlas/equipment/json/warhammer.json"
+  },
+  {
+    "index": "warhorse",
+    "name": "warhorse",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 400,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/warhorse.webp",
+    "path": "/assets/atlas/equipment/json/warhorse.json"
+  },
+  {
+    "index": "warship",
+    "name": "warship",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 25000,
+      "unit": "gp"
+    },
+    "imageUrl": "/assets/atlas/equipment/images/warship.webp",
+    "path": "/assets/atlas/equipment/json/warship.json"
+  },
+  {
+    "index": "war_pick",
+    "name": "war pick",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/war_pick.webp",
+    "path": "/assets/atlas/equipment/json/war_pick.json"
+  },
+  {
+    "index": "waterskin",
+    "name": "waterskin",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "sp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/waterskin.webp",
+    "path": "/assets/atlas/equipment/json/waterskin.json"
+  },
+  {
+    "index": "weavers_tools",
+    "name": "weaver's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/weavers_tools.webp",
+    "path": "/assets/atlas/equipment/json/weavers_tools.json"
+  },
+  {
+    "index": "weighted_dice",
+    "name": "weighted dice",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/weighted_dice.webp",
+    "path": "/assets/atlas/equipment/json/weighted_dice.json"
+  },
+  {
+    "index": "whetstone",
+    "name": "whetstone",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "cp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/whetstone.webp",
+    "path": "/assets/atlas/equipment/json/whetstone.json"
+  },
+  {
+    "index": "whip",
+    "name": "whip",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 3,
+    "imageUrl": "/assets/atlas/equipment/images/whip.webp",
+    "path": "/assets/atlas/equipment/json/whip.json"
+  },
+  {
+    "index": "woodcarvers_tools",
+    "name": "woodcarver's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 1,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/woodcarvers_tools.webp",
+    "path": "/assets/atlas/equipment/json/woodcarvers_tools.json"
+  },
+  {
+    "index": "wooden_staff",
+    "name": "wooden staff",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 4,
+    "imageUrl": "/assets/atlas/equipment/images/wooden_staff.webp",
+    "path": "/assets/atlas/equipment/json/wooden_staff.json"
+  },
+  {
+    "index": "yew_wand",
+    "name": "yew wand",
+    "kind": "ring",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 10,
+      "unit": "gp"
+    },
+    "weight": 1,
+    "imageUrl": "/assets/atlas/equipment/images/yew_wand.webp",
+    "path": "/assets/atlas/equipment/json/yew_wand.json"
+  }
+]

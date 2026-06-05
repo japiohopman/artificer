@@ -1,0 +1,1085 @@
+{
+  "category": "points_of_interest",
+  "updatedAt": "2026-05-03T05:02:00.473Z",
+  "location_id": "suzail",
+  "sub_locations": [
+    {
+      "id": "castle_obarskyr",
+      "name": "Castle Obarskyr",
+      "type": "point_of_interest",
+      "description": "The royal palace of [[Suzail]] and the Dragon Throne of [[Cormyr]].",
+      "coordinates": {
+        "x": 55.71324869791667,
+        "y": 52.247836828232224
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "cormyrs_royal_court",
+      "name": "Cormyr's Royal Court",
+      "type": "point_of_interest",
+      "description": "The center of governing.",
+      "coordinates": {
+        "x": 56.568568564016665,
+        "y": 46.01723046301074
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "tower_of_the_royal_magician",
+      "name": "Tower of the Royal Magician",
+      "type": "point_of_interest",
+      "description": "Also known as '''Vangerdahast's Tower'''. Home of the [[Royal Magician]] of [[Cormyr]].",
+      "coordinates": {
+        "x": 66.53336098378,
+        "y": 50.96681348090879
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "rowanmantle_castle",
+      "name": "Rowanmantle Castle",
+      "type": "point_of_interest",
+      "description": "Home estate of the noble House [[Rowanmantle]].",
+      "coordinates": {
+        "x": 62.81753963067,
+        "y": 74.43990572697734
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "greatgaunt_estate",
+      "name": "Greatgaunt Estate",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Greatgaunt]]. Formerly, the Estate of House [[Wyvernspur]].",
+      "coordinates": {
+        "x": 64.66657645020334,
+        "y": 70.98851582036289
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "cormaeril_compound",
+      "name": "Cormaeril Compound",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Cormaeril]].",
+      "coordinates": {
+        "x": 63.484323354039994,
+        "y": 66.80121469448848
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "dracohorn_mansion",
+      "name": "Dracohorn Mansion",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Dracohorn]].",
+      "coordinates": {
+        "x": 60.21708310952333,
+        "y": 66.40273666813535
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "huntcrown_estate",
+      "name": "Huntcrown Estate",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Huntcrown]].",
+      "coordinates": {
+        "x": 60.28376148186,
+        "y": 69.98903890530684
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "college_of_war_wizards",
+      "name": "College of War Wizards",
+      "type": "point_of_interest",
+      "description": "The base of [[Cormyr]]'s [[Wizards of War]].",
+      "coordinates": {
+        "x": 54.21174147825666,
+        "y": 73.81534701096406
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "emmarsk_mansion",
+      "name": "Emmarsk Mansion",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Emmarsk]].",
+      "coordinates": {
+        "x": 57.74998333305,
+        "y": 68.99284383942734
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "huntsilver_house",
+      "name": "Huntsilver House",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Huntsilver]].",
+      "coordinates": {
+        "x": 57.016521237339994,
+        "y": 65.47295460664472
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "alsevir_estate",
+      "name": "Alsevir Estate",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Alsevir]].",
+      "coordinates": {
+        "x": 52.333333333333336,
+        "y": 68.00013404020547
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "hawklin_house",
+      "name": "Hawklin House",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Hawklin]].",
+      "coordinates": {
+        "x": 48.60003608658667,
+        "y": 72.38294654020547
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "goldfeather_estate",
+      "name": "Goldfeather Estate",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Goldfeather]].",
+      "coordinates": {
+        "x": 48.09990978353667,
+        "y": 67.83413517023281
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "dauntinghorn_house",
+      "name": "Dauntinghorn House",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Dauntinghorn]].",
+      "coordinates": {
+        "x": 48.41501120585333,
+        "y": 64.34393353198087
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "illance_house",
+      "name": "Illance House",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Illance]]. Formerly, the estate of the House [[Silversword]].",
+      "coordinates": {
+        "x": 44.93340550650333,
+        "y": 70.4572323103082
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "royal_gardens",
+      "name": "Royal Gardens",
+      "type": "point_of_interest",
+      "description": "Also known as the '''Floral Gardens''' around the royal palace of [[Castle Obarskyr]].",
+      "coordinates": {
+        "x": 52.615748663093335,
+        "y": 62.55078241339511
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "truesilver_castle",
+      "name": "Truesilver Castle",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Truesilver]].",
+      "coordinates": {
+        "x": 44.39989174024333,
+        "y": 61.02741077010273
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "marliir_mansion",
+      "name": "Marliir Mansion",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Marliir]].",
+      "coordinates": {
+        "x": 42.69990978353667,
+        "y": 66.4064510603082
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "crownsilver_castle",
+      "name": "Crownsilver Castle",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Crownsilver]].",
+      "coordinates": {
+        "x": 40.30009021646333,
+        "y": 63.252070410181446
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "lord_magisters_estate",
+      "name": "Lord Magister's Estate",
+      "type": "point_of_interest",
+      "description": "Home of the Lord Magister of [[Suzail]]. Previously known as the '''[[Staghaven House]]''' in the 14{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 41.03331529004,
+        "y": 69.89266190013008
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "heralds_estate",
+      "name": "Herald's Estate",
+      "type": "point_of_interest",
+      "description": "The home of the [[High Heralds|Herald]] of [[Suzail]].",
+      "coordinates": {
+        "x": 38.10613018665,
+        "y": 68.09979121959726
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "monument_to_the_purple_dragon",
+      "name": "Monument to the Purple Dragon",
+      "type": "point_of_interest",
+      "description": "Monument to black dragon Thauglor, whose defeat inspired the name of Cormyr's Purple Dragons.",
+      "coordinates": {
+        "x": 37.015420904319996,
+        "y": 65.20730258907598
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "skatterhawk_family_house",
+      "name": "Skatterhawk Family House",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Skatterhawk]].",
+      "coordinates": {
+        "x": 34.74745490823333,
+        "y": 65.93784563739004
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "delcastle_manor",
+      "name": "Delcastle Manor",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Delcastle]].",
+      "coordinates": {
+        "x": 35.48091700394333,
+        "y": 62.285130395826364
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "house_of_oghma",
+      "name": "House of Oghma",
+      "type": "point_of_interest",
+      "description": "A school for scribes and scholars.",
+      "coordinates": {
+        "x": 74.20001843363335,
+        "y": 68.19922539236484
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_lockup",
+      "name": " The Lockup",
+      "type": "point_of_interest",
+      "description": "[[Suzail]]'s prison.",
+      "coordinates": {
+        "x": 85.21908477916666,
+        "y": 29.4792743859942
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "citadel_of_the_purple_dragons",
+      "name": "Citadel of the Purple Dragons",
+      "type": "point_of_interest",
+      "description": "The center of [[Cormyr]]'s military order \u2013 the [[Purple Dragons]].",
+      "coordinates": {
+        "x": 85.55247664085333,
+        "y": 20.91199681941463
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "harbor_tower",
+      "name": "Harbor Tower",
+      "type": "point_of_interest",
+      "description": "A part of the [[Citadel of the Purple Dragons]] and the [[Royal Docks]] under the command of the Royal Admiral of [[Cormyr]].",
+      "coordinates": {
+        "x": 74.26670178367667,
+        "y": 12.882819254392187
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "fields_of_the_dead",
+      "name": "Fields of the Dead",
+      "type": "point_of_interest",
+      "description": "[[Suzail]]'s burial garden.",
+      "coordinates": {
+        "x": 0.5579945479797667,
+        "y": 19.51415486931195
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "courtyard_of_zathchos",
+      "name": "Courtyard of Zathchos",
+      "type": "point_of_interest",
+      "description": "A courtyard named after the merchant [[Zathchos]] family.",
+      "coordinates": {
+        "x": 76.28778823248999,
+        "y": 44.22350171240527
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "tower_of_argul",
+      "name": "Tower of Argul",
+      "type": "point_of_interest",
+      "description": "The tower of the wizard [[Arg\u00fbl Marammas]], a magic [[scroll]]-scriber.",
+      "coordinates": {
+        "x": 11.1,
+        "y": 56.013695123273635
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "blackgorgons",
+      "name": "Blackgorgons",
+      "type": "point_of_interest",
+      "description": "The tower residence of [[wizard]] [[Baskor Tranth]] ''circa'' late 14{{th}} century [[DR]]. The wizard was willing to trade in [[spell]] [[scroll]]s.",
+      "coordinates": {
+        "x": 77.00003686726333,
+        "y": 46.91601894618242
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "talarkgates",
+      "name": "Talarkgates",
+      "type": "point_of_interest",
+      "description": "A decaying but grand manor. Once home to [[Umbran Daerith]], a merchant, property investor, and moneylender.",
+      "coordinates": {
+        "x": 78.34745742456333,
+        "y": 53.905857612600585
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "blackshield_apartments",
+      "name": "Blackshield Apartments",
+      "type": "point_of_interest",
+      "description": "A large apartment complex that housed clerks of the [[Royal Court]] as well as visiting dignitaries of lower rank.",
+      "coordinates": {
+        "x": 69.62648682447335,
+        "y": 44.326737558187894
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "thentias_mansion",
+      "name": "Thentias mansion",
+      "type": "point_of_interest",
+      "description": "The mansion that once belonged to [[Thentias]], a merchant and a landlord mogul of [[Suzail]].",
+      "coordinates": {
+        "x": 42.33211293249,
+        "y": 33.33899866604394
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "bleth_estate",
+      "name": "Bleth Estate",
+      "type": "point_of_interest",
+      "description": "Estate of the noble House [[Bleth]].",
+      "coordinates": {
+        "x": 55.50867031713666,
+        "y": 70.88774599929512
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "thistleflame_manor",
+      "name": "Thistleflame Manor",
+      "type": "point_of_interest",
+      "description": "Also known as '''Thistleflame Keep''', the gated home of the noble [[Thistle (family)|Thistle]] family of [[Suzail]].",
+      "coordinates": {
+        "x": 68.37100475165333,
+        "y": 66.97051374002618
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "hall_of_honor",
+      "name": "Hall of Honor",
+      "type": "point_of_interest",
+      "description": "A museum that held relics, [[weapon]]s, and [[armor]] used by [[Cormyr|Cormyte]] heroes of old.",
+      "coordinates": {
+        "x": 50.34609406230666,
+        "y": 45.7824395208502
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_refuge",
+      "name": "The Refuge",
+      "type": "point_of_interest",
+      "description": "The magical refuge monitored by the [[Royal Magician]] and created by [[Magister]] [[Maldiglas Turntower]].",
+      "coordinates": {
+        "x": 67.31659163805334,
+        "y": 52.3562993928914
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "plum_orchard",
+      "name": "Plum orchard",
+      "type": "point_of_interest",
+      "description": "200 acres of [[plum]] [[tree]]s.",
+      "coordinates": {
+        "x": 99.91097048137667,
+        "y": 37.61767777512285
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "high_oronel",
+      "name": "High Oronel",
+      "type": "point_of_interest",
+      "description": "Stone mansion estate of the noble House [[Haldoneir]]. Previously known as the '''Stormserpent Towers''' in the 14{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 46.24069261538,
+        "y": 57.938513740510736
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "jusks_stroll",
+      "name": "Jusk's Stroll",
+      "type": "point_of_interest",
+      "description": "A hidden magical two-way ''[[gate]]-link'' named after [[Imprur Jusk]], a rich [[hin]] investor and landlord.",
+      "coordinates": {
+        "x": 29.722068070421003,
+        "y": 19.416441101348866
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "thornposts",
+      "name": "Thornposts",
+      "type": "point_of_interest",
+      "description": "A grand house. Once home of [[Lorimel Rustellur]], the best mapmaker in [[Suzail]].",
+      "coordinates": {
+        "x": 51.14739050582667,
+        "y": 26.99990155500031
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "rental_lodgings",
+      "name": "Rental lodgings",
+      "type": "point_of_interest",
+      "description": "Rental lodgings, temporary home of [[Amarune Whitewave]] in the late 14{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 24.800036867264335,
+        "y": 37.718756642364845
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "house_with_access_to_the_palace_cellars",
+      "name": "House with access to the Palace cellars",
+      "type": "point_of_interest",
+      "description": "",
+      "coordinates": {
+        "x": 51.873066896249995,
+        "y": 58.82350670189453
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "royal_stables",
+      "name": "Royal Stables",
+      "type": "point_of_interest",
+      "description": "",
+      "coordinates": {
+        "x": 51.05310960167,
+        "y": 56.34759041324629
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "haunted_wing_of_the_royal_palace",
+      "name": "Haunted Wing of the Royal Palace",
+      "type": "point_of_interest",
+      "description": "",
+      "coordinates": {
+        "x": 59.50661621093666,
+        "y": 56.049541950225
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "mantlargard",
+      "name": "Mantlargard",
+      "type": "point_of_interest",
+      "description": "The manse home of the [[Mantlepard]] family of [[Suzail]], with the smaller building to the east being the mansion's stables.",
+      "coordinates": {
+        "x": 42.567828227430155,
+        "y": 56.91104734206103
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

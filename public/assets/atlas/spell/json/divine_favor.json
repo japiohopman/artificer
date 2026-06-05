@@ -1,0 +1,52 @@
+{
+  "higher_level": [],
+  "index": "divine_favor",
+  "name": "divine favor",
+  "desc": [
+    "Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit."
+  ],
+  "range": "Self",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Up to 1 minute",
+  "concentration": true,
+  "casting_time": "1 bonus action",
+  "level": 1,
+  "damage": {
+    "damage_type": {
+      "index": "radiant",
+      "name": "radiant",
+      "url": "/assets/atlas/damage_types/json/radiant.json"
+    },
+    "damage_at_slot_level": {
+      "1": "1d4"
+    }
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "paladin",
+      "name": "paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/divine_favor.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/divine_favor.webp",
+  "sprite_index": 12,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet4.webp"
+}

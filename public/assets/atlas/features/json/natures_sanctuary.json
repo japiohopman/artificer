@@ -1,0 +1,23 @@
+{
+  "index": "natures_sanctuary",
+  "class": {
+    "index": "druid",
+    "name": "druid",
+    "url": "/assets/atlas/class/json/druid.json"
+  },
+  "subclass": {
+    "index": "land",
+    "name": "land",
+    "url": "/assets/atlas/subclasses/json/land.json"
+  },
+  "name": "nature's sanctuary",
+  "level": 14,
+  "prerequisites": [],
+  "desc": [
+    "When you reach 14th level, creatures of the natural world sense your connection to nature and become hesitant to attack you. When a beast or plant creature attacks you, that creature must make a Wisdom saving throw against your druid spell save DC. On a failed save, the creature must choose a different target, or the attack automatically misses. On a successful save, the creature is immune to this effect for 24 hours. The creature is aware of this effect before it makes its attack against you."
+  ],
+  "url": "/assets/atlas/features/json/natures_sanctuary.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/natures_sanctuary.webp",
+  "feature_specific": {}
+}

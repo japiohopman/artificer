@@ -1,0 +1,55 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "mace",
+  "name": "mace",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 4,
+  "properties": [
+    {
+      "index": "monk",
+      "name": "monk",
+      "url": "/assets/atlas/weapon_properties/monk"
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/mace.json",
+  "updated_at": "2026-05-03T19:27:58.009Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/mace.webp",
+  "sprite_index": 8,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/images/mace.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "3-5-2026",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

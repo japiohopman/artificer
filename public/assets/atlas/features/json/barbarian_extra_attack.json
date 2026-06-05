@@ -1,0 +1,20 @@
+{
+  "index": "barbarian_extra_attack",
+  "class": {
+    "index": "barbarian",
+    "name": "barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "name": "extra attack",
+  "level": 5,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
+  ],
+  "url": "/assets/atlas/features/json/barbarian_extra_attack.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "/assets/atlas/features/images/barbarian_extra_attack.webp",
+  "feature_specific": {
+    "extra_attacks": 1
+  }
+}

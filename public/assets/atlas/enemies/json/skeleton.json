@@ -1,0 +1,102 @@
+{
+  "index": "skeleton",
+  "name": "skeleton",
+  "size": "Medium",
+  "type": "undead",
+  "alignment": "lawful evil",
+  "armor_class": [
+    {
+      "type": "armor",
+      "value": 13,
+      "desc": "armor scraps"
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8+4",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 14,
+  "constitution": 15,
+  "intelligence": 6,
+  "wisdom": 8,
+  "charisma": 5,
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "bludgeoning"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "/assets/atlas/constitutionditions/poisoned"
+    },
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "/assets/atlas/constitutionditions/exhaustion"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 9
+  },
+  "languages": "understands all languages it spoke in life but can't speak",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "actions": [
+    {
+      "name": "shortsword",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "shortbow",
+      "desc": "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/skeleton.webp",
+  "url": "/assets/atlas/enemies/json/skeleton.json",
+  "updated_at": "2026-04-18T04:02:41.381Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "sprite_index": 5,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet11.webp",
+  "imageUrl": "/assets/atlas/enemies/skeleton.webp",
+  "_type": "enemies",
+  "background_type": "fort",
+  "rarity": "Uncommon",
+  "last_updated": "18-4-2026"
+}

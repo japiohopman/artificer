@@ -1,0 +1,139 @@
+{
+  "category": "shops",
+  "updatedAt": "2026-05-03T05:01:59.733Z",
+  "location_id": "suzail",
+  "sub_locations": [
+    {
+      "id": "east_gate",
+      "name": "East Gate",
+      "type": "shop",
+      "description": "The '''East Gate''' or '''Eastgate''' that led to the road north of [[Suzail]] \u2013 [[Calantar's Way]].",
+      "coordinates": {
+        "x": 78.08578656284666,
+        "y": 72.57914607659883
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "horngate",
+      "name": "Horngate",
+      "type": "shop",
+      "description": "The northwestern gate of [[Suzail]] and the beginning of the [[Way of the Dragon]].",
+      "coordinates": {
+        "x": 22.278599281195,
+        "y": 62.285130395826364
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "field_gates",
+      "name": "Field-Gates",
+      "type": "shop",
+      "description": "[[Suzail]]'s western gates that led to a small trail between the [[Stormhorns]] and the [[Dragonmere]].",
+      "coordinates": {
+        "x": 6.458037798282,
+        "y": 18.782760827114807
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_caskhouse",
+      "name": "The Caskhouse",
+      "type": "shop",
+      "description": "The guildhall of the [[Brewers and Cheesemakers Guild]], above the tavern in the same building.",
+      "coordinates": {
+        "x": 36.63335176696667,
+        "y": 41.47071308854727
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "hardshutters_house",
+      "name": "Hardshutters House",
+      "type": "shop",
+      "description": "The guildhall of the the [[Roofers, Thatchers, and Glaziers Guild]].",
+      "coordinates": {
+        "x": 17.100009216815998,
+        "y": 24.238301177091873
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "starsails_house",
+      "name": "Starsails House",
+      "type": "shop",
+      "description": "The guildhall of the [[Seafarers Guild]].",
+      "coordinates": {
+        "x": 38.43331554679333,
+        "y": 24.45410575612873
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

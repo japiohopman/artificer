@@ -1,0 +1,177 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/city.schema.json",
+  "title": "City",
+  "description": "A city or major settlement in the game atlas.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "type",
+    "title",
+    "description",
+    "coordinates"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the city (slug)."
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the city."
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of settlement (e.g., metropolis, city, settlement)."
+    },
+    "plain": {
+      "type": "string",
+      "description": "The plane the city is on."
+    },
+    "world": {
+      "type": "string",
+      "description": "The world the city is in."
+    },
+    "continent": {
+      "type": "string",
+      "description": "The continent the city is on."
+    },
+    "region": {
+      "type": "string",
+      "description": "The region the city is in."
+    },
+    "sub_region": {
+      "type": "string",
+      "description": "The sub-region the city is in."
+    },
+    "parent": {
+      "type": "string",
+      "description": "The parent category ID (e.g., cities)."
+    },
+    "title": {
+      "type": "string",
+      "description": "Formal title or epithet of the city."
+    },
+    "description": {
+      "type": "string",
+      "description": "Short summary or introduction to the city."
+    },
+    "wiki": {
+      "type": "string",
+      "description": "Brief encyclopedic summary, often from a wiki."
+    },
+    "image": {
+      "type": "string",
+      "description": "Path or filename of the main city image."
+    },
+    "thumbnail": {
+      "type": "string",
+      "description": "Path or filename of the city thumbnail."
+    },
+    "banner": {
+      "type": "string",
+      "description": "Path or filename of the city banner image."
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Keywords describing the city features."
+    },
+    "map": {
+      "type": "string",
+      "description": "Path to the interactive city map image."
+    },
+    "sub_map": {
+      "type": "string",
+      "description": "Path to a sub-map image."
+    },
+    "children": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs of sub-regions or districts within the city."
+    },
+    "sub_location_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Paths to JSON files containing sub-locations like shops, inns, etc."
+    },
+    "coordinates": {
+      "type": "object",
+      "properties": {
+        "lat": { "type": "number" },
+        "lng": { "type": "number" }
+      },
+      "required": ["lat", "lng"]
+    },
+    "bounds": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": { "type": "number" },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "The leaflet-style map bounds [[lat, lng], [lat, lng]]."
+    },
+    "origin": {
+      "type": "string",
+      "description": "The coordinate origin for the city map."
+    },
+    "unitsPerMile": {
+      "type": "number",
+      "description": "Scale of the city map in units per mile."
+    },
+    "geography": {
+      "type": "string",
+      "description": "Detailed geographical description (markdown)."
+    },
+    "history": {
+      "type": "string",
+      "description": "Detailed historical information (markdown)."
+    },
+    "bestiary": {
+      "type": "string",
+      "description": "Markdown link or index for bestiary data."
+    },
+    "politics": {
+      "type": "string",
+      "description": "Markdown link or index for political data."
+    },
+    "religion": {
+      "type": "string",
+      "description": "Markdown link or index for religious data."
+    },
+    "trade": {
+      "type": "string",
+      "description": "Markdown link or index for trade data."
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "government": { "type": "string" },
+        "military": { "type": "string" },
+        "population": { "type": "string" },
+        "organizations": { "type": "string" },
+        "trade": { "type": "string" }
+      },
+      "additionalProperties": { "type": "string" }
+    },
+    "categories": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

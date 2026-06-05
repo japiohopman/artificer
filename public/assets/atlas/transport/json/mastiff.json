@@ -1,0 +1,45 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "mastiff",
+  "name": "mastiff",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "speed": {
+    "land": {
+      "ft_per_round": 40,
+      "mph": 4.55
+    }
+  },
+  "capacity": {
+    "cargo": "195 lb."
+  },
+  "url": "/assets/atlas/transport/json/mastiff.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/enemies/images/mastiff.webp",
+  "sprite_index": 12,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "transport_type": "mount",
+  "transport_specific": {
+    "stat_block": {
+      "index": "mastiff",
+      "name": "mastiff",
+      "url": "/assets/atlas/enemies/json/mastiff.json"
+    },
+    "feed": {
+      "index": "animal_feed_1_day",
+      "name": "animal feed (1 day)",
+      "url": "/assets/atlas/equipment/json/animal_feed_1_day.json"
+    }
+  }
+}

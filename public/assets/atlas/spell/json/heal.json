@@ -1,0 +1,49 @@
+{
+  "index": "heal",
+  "name": "heal",
+  "desc": [
+    "Choose a creature that you can see within range. A surge of positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends blindness, deafness, and any diseases affecting the target. This spell has no effect on constructs or undead."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 7th level or higher, the amount of healing increases by 10 for each slot level above 6th."
+  ],
+  "range": "60 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 6,
+  "heal_at_slot_level": {
+    "6": "70",
+    "7": "80",
+    "8": "90",
+    "9": "100"
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/heal.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/heal.webp",
+  "sprite_index": 2,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet7.webp"
+}

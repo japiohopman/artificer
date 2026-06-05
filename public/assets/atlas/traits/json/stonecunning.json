@@ -1,0 +1,19 @@
+{
+  "index": "stonecunning",
+  "races": [
+    {
+      "index": "dwarf",
+      "name": "dwarf",
+      "url": "/assets/atlas/species/json/dwarf.json"
+    }
+  ],
+  "subraces": [],
+  "name": "stonecunning",
+  "desc": [
+    "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+  ],
+  "proficiencies": [],
+  "url": "/assets/atlas/traits/json/stonecunning.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "/assets/atlas/traits/stonecunning.webp"
+}

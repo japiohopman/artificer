@@ -1,0 +1,115 @@
+{
+  "index": "dragon_ancestor",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "/assets/atlas/class/json/sorcerer.json"
+  },
+  "subclass": {
+    "index": "draconic",
+    "name": "draconic",
+    "url": "/assets/atlas/subclasses/json/draconic.json"
+  },
+  "name": "dragon ancestor",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "At 1st level, you choose one type of dragon as your ancestor. The damage type associated with each dragon is used by features you gain later.",
+    "You can speak, read, and write Draconic. Additionally, whenever you make a Charisma check when interacting with dragons, your proficiency bonus is doubled if it applies to the check."
+  ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "feature",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragon_ancestor_black___acid_damage",
+              "name": "dragon ancestor: black _ acid damage",
+              "url": "/assets/atlas/features/json/dragon_ancestor_black___acid_damage.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragon_ancestor_blue___lightning_damage",
+              "name": "dragon ancestor: blue _ lightning damage",
+              "url": "/assets/atlas/features/json/dragon_ancestor_blue___lightning_damage.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragon_ancestor_brass___fire_damage",
+              "name": "dragon ancestor: brass _ fire damage",
+              "url": "/assets/atlas/features/json/dragon_ancestor_brass___fire_damage.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragon_ancestor_bronze___lightning_damage",
+              "name": "dragon ancestor: bronze _ lightning damage",
+              "url": "/assets/atlas/features/json/dragon_ancestor_bronze___lightning_damage.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragon_ancestor_copper___acid_damage",
+              "name": "dragon ancestor: copper _ acid damage",
+              "url": "/assets/atlas/features/json/dragon_ancestor_copper___acid_damage.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragon_ancestor_gold___fire_damage",
+              "name": "dragon ancestor: gold _ fire damage",
+              "url": "/assets/atlas/features/json/dragon_ancestor_gold___fire_damage.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragon_ancestor_green___poison_damage",
+              "name": "dragon ancestor: green _ poison damage",
+              "url": "/assets/atlas/features/json/dragon_ancestor_green___poison_damage.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragon_ancestor_red___fire_damage",
+              "name": "dragon ancestor: red _ fire damage",
+              "url": "/assets/atlas/features/json/dragon_ancestor_red___fire_damage.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragon_ancestor_silver___cold_damage",
+              "name": "dragon ancestor: silver _ cold damage",
+              "url": "/assets/atlas/features/json/dragon_ancestor_silver___cold_damage.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dragon_ancestor_white___cold_damage",
+              "name": "dragon ancestor: white _ cold damage",
+              "url": "/assets/atlas/features/json/dragon_ancestor_white___cold_damage.json"
+            }
+          }
+        ]
+      }
+    },
+    "invocations": []
+  },
+  "url": "/assets/atlas/features/json/dragon_ancestor.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "/assets/atlas/features/images/dragon_ancestor.webp"
+}

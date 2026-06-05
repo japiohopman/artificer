@@ -1,0 +1,37 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "chest",
+  "name": "chest",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 25,
+  "url": "/assets/atlas/equipment/json/chest.json",
+  "updated_at": "2026-04-21T14:12:30.734Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/chest.webp",
+  "sprite_index": 7,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/equipment/images/chest.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "21-4-2026",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

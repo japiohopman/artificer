@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Elan ITC Std';
+  src: url('https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/font/Elan%20ITC%20Std%20Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Elvish';
+  src: url('https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/languages/Elvish-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-header: "Cinzel", serif;
+  --font-subheader: "Cinzel Decorative", serif;
+  --font-body: "Crimson Text", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-rajdhani: "Rajdhani", sans-serif;
+  --font-bitcount: "Bitcount Grid Double", system-ui;
+  --font-handjet: "Handjet", sans-serif;
+  --font-anton: "Anton", sans-serif;
+  --font-quintessential: "Quintessential", serif;
+  --font-playfair: "Playfair", serif;
+  --font-elan: "Elan ITC Std", sans-serif;
+  --font-bodoni: "Bodoni Moda", serif;
+  --font-bodoni-sc: "Bodoni Moda SC", serif;
+  --font-stix: "STIX Two Text", serif;
+  --font-elvish: "Elvish", cursive;
+
+  --color-parchment-50: #fdfaf3;
+  --color-parchment-100: #f9f4e8;
+  --color-parchment-200: #f2e9d1;
+  --color-parchment-300: #e6d5b0;
+  --color-parchment-400: #d4bc8d;
+  --color-parchment-500: #c2a36b;
+  --color-parchment-600: #a68551;
+  --color-parchment-700: #8a6a3d;
+  --color-parchment-800: #6e5230;
+  --color-parchment-900: #523b23;
+
+  --color-dragon-red: #8b0000;
+  --color-dragon-darkRed: #5a0000;
+  --color-dragon-gold: #d4af37;
+}
+
+@layer base {
+  body {
+    @apply bg-parchment-100 text-parchment-900 font-body;
+  }
+}
+
+@layer utilities {
+  .bg-paper-texture {
+    background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  }
+
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #8b0000 1px, transparent 1px);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-parchment-200;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-dragon-red/50 rounded-full hover:bg-dragon-red/70;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  .animate-pulse-slow {
+    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .font-bitcount {
+    font-family: var(--font-bitcount);
+    font-optical-sizing: auto;
+    font-variation-settings:
+      "slnt" 0,
+      "CRSV" 0.5,
+      "ELSH" 0,
+      "ELXP" 0;
+  }
+
+  .font-handjet {
+    font-family: var(--font-handjet);
+    font-optical-sizing: auto;
+    font-variation-settings:
+      "ELGR" 1,
+      "ELSH" 2;
+  }
+
+  .font-anton {
+    font-family: var(--font-anton);
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .font-quintessential {
+    font-family: var(--font-quintessential);
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .font-playfair {
+    font-family: var(--font-playfair);
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
+  }
+
+  .font-bodoni-sc {
+    font-family: var(--font-bodoni-sc);
+    font-optical-sizing: auto;
+  }
+
+  .font-stix {
+    font-family: var(--font-stix);
+    font-optical-sizing: auto;
+  }
+
+  /* Markdown Styles */
+  .markdown-body {
+    @apply text-inherit;
+  }
+  
+  /* 3D Utilities */
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .perspective-2000 {
+    perspective: 2000px;
+  }
+
+  .markdown-body table {
+    @apply w-full border-collapse my-2 bg-parchment-200/30 rounded overflow-hidden;
+  }
+  .markdown-body th, .markdown-body td {
+    @apply border border-dragon-gold/20 p-1.5 text-left;
+  }
+  .markdown-body th {
+    @apply bg-dragon-red/10 font-header text-[9px] text-dragon-darkRed uppercase tracking-wider;
+  }
+  .markdown-body td {
+    @apply text-[9px] font-body;
+  }
+  .markdown-body p {
+    @apply mb-1.5;
+  }
+  .markdown-body p:last-child {
+    @apply mb-0;
+  }
+  .markdown-body ul, .markdown-body ol {
+    @apply ml-4 mb-2;
+  }
+  .markdown-body ul {
+    @apply list-disc;
+  }
+  .markdown-body ol {
+    @apply list-decimal;
+  }
+  .markdown-body li {
+    @apply mb-0.5;
+  }
+  .markdown-body strong {
+    @apply font-bold text-dragon-red;
+  }
+  .markdown-body em {
+    @apply italic;
+  }
+}

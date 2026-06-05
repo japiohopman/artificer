@@ -1,0 +1,32 @@
+{
+  "special": [],
+  "index": "shawm",
+  "name": "shawm",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Musical Instrument",
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+  ],
+  "url": "/assets/atlas/equipment/json/shawm.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/shawm.webp",
+  "sprite_index": 15,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "kind": "tool",
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ]
+}

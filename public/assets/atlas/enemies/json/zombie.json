@@ -1,0 +1,91 @@
+{
+  "index": "zombie",
+  "name": "zombie",
+  "size": "Medium",
+  "type": "undead",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 8
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8+9",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 13,
+  "dexterity": 6,
+  "constitution": 16,
+  "intelligence": 3,
+  "wisdom": 6,
+  "charisma": 5,
+  "proficiencies": [
+    {
+      "value": 0,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 8
+  },
+  "languages": "understands all languages it spoke in life but can't speak",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "undead fortitude",
+      "desc": "If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "slam",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/zombie.webp",
+  "url": "/assets/atlas/enemies/json/zombie.json",
+  "updated_at": "2026-03-31T13:33:04.453Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 8,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet14.webp",
+  "wikiData": null,
+  "imageUrl": null,
+  "last_updated": "31-3-2026"
+}

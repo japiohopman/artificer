@@ -1,0 +1,21 @@
+{
+  "index": "ring_of_water_walking",
+  "name": "ring of water walking",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Ring, uncommon",
+    "While wearing this ring, you can stand on and move across any liquid surface as if it were solid ground."
+  ],
+  "url": "/assets/atlas/magic_items/json/ring_of_water_walking.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/ring_of_water_walking.webp"
+}

@@ -1,0 +1,61 @@
+{
+  "index": "superior_hunters_defense",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "subclass": {
+    "index": "hunter",
+    "name": "hunter",
+    "url": "/assets/atlas/subclasses/json/hunter.json"
+  },
+  "name": "superior hunter's defense",
+  "level": 15,
+  "prerequisites": [],
+  "desc": [
+    "At 15th level, you gain one of the following features of your choice.",
+    "Evasion",
+    "Stand Against the Tide",
+    "Uncanny Dodge"
+  ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "feature",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "superior_hunters_defense_evasion",
+              "name": "superior hunter's defense: evasion",
+              "url": "/assets/atlas/features/json/superior_hunters_defense_evasion.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "superior_hunters_defense_stand_against_the_tide",
+              "name": "superior hunter's defense: stand against the tide",
+              "url": "/assets/atlas/features/json/superior_hunters_defense_stand_against_the_tide.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "superior_hunters_defense_uncanny_dodge",
+              "name": "superior hunter's defense: uncanny dodge",
+              "url": "/assets/atlas/features/json/superior_hunters_defense_uncanny_dodge.json"
+            }
+          }
+        ]
+      }
+    },
+    "invocations": []
+  },
+  "url": "/assets/atlas/features/json/superior_hunters_defense.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "/assets/atlas/features/images/superior_hunters_defense.webp"
+}

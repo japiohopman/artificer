@@ -1,0 +1,122 @@
+{
+  "index": "panther",
+  "name": "panther",
+  "size": "Medium",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8",
+  "speed": {
+    "walk": "50 ft.",
+    "climb": "40 ft."
+  },
+  "strength": 14,
+  "dexterity": 15,
+  "constitution": 10,
+  "intelligence": 3,
+  "wisdom": 14,
+  "charisma": 7,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "keen smell",
+      "desc": "The panther has advantage on Wisdom (Perception) checks that rely on smell.",
+      "damage": []
+    },
+    {
+      "name": "pounce",
+      "desc": "If the panther moves at least 20 ft. straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the panther can make one bite attack against it as a bonus action.",
+      "dc": {
+        "dc_type": {
+          "index": "str",
+          "name": "str",
+          "url": "/assets/atlas/ability_scores/json/strength.json"
+        },
+        "dc_value": 12,
+        "success_type": "none"
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) slashing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/panther.webp",
+  "url": "/assets/atlas/enemies/json/panther.json",
+  "updated_at": "2026-04-16T08:21:55.354Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 16,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.webp",
+  "imageUrl": "/assets/atlas/enemies/panther.webp",
+  "_type": "enemies",
+  "background_type": "jungle",
+  "last_updated": "16-4-2026"
+}

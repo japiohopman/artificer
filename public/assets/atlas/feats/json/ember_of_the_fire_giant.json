@@ -1,0 +1,41 @@
+{
+  "index": "ember_of_the_fire_giant",
+  "name": "ember of the fire giant",
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You’ve manifested the fiery power of fire giants, granting you the following benefits:",
+    "- Increase your Strength, Constitution, or Wisdom score by 1, to a maximum of 20.",
+    "- You have resistance to fire damage.",
+    "- Searing Cloud: As a bonus action, you can cause a cloud of embers to surround you. For 1 minute, the cloud provides you with half cover, and any creature that starts its turn within 5 feet of you takes fire damage equal to your proficiency bonus. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Strength, Constitution, or Wisdom bonus",
+          "options": [
+            "strength_bonus",
+            "constitution_bonus",
+            "wisdom_bonus"
+          ],
+          "amount": 1
+        }
+      ],
+      "resistance": [
+        {
+          "name": "Fire damage"
+        }
+      ]
+    },
+    "special_action": "bonus_action"
+  },
+  "url": "/assets/atlas/feats/json/ember_of_the_fire_giant.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/ember_of_the_fire_giant.webp"
+}

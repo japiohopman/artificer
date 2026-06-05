@@ -1,0 +1,85 @@
+{
+  "index": "burning_hands",
+  "name": "burning hands",
+  "desc": [
+    "As you hold your hands with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a dexterity saving throw. A creature takes 3d6 fire damage on a failed save, or half as much damage on a successful one.",
+    "The fire ignites any flammable objects in the area that aren't being worn or carried."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
+  ],
+  "range": "Self",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "fire",
+      "url": "/assets/atlas/damage_types/json/fire.json"
+    },
+    "damage_at_slot_level": {
+      "1": "3d6",
+      "2": "4d6",
+      "3": "5d6",
+      "4": "6d6",
+      "5": "7d6",
+      "6": "8d6",
+      "7": "9d6",
+      "8": "10d6",
+      "9": "11d6"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "dex",
+      "url": "/assets/atlas/ability_scores/json/dexterity.json"
+    },
+    "dc_success": "half"
+  },
+  "area_of_effect": {
+    "type": "cone",
+    "size": 15
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    },
+    {
+      "index": "fiend",
+      "name": "fiend",
+      "url": "/assets/atlas/subclasses/json/fiend.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/burning_hands.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/burning_hands.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet2.webp"
+}

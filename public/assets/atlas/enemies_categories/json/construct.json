@@ -1,0 +1,116 @@
+{
+  "name": "Constructs",
+  "index": "construct",
+  "monsters": [
+    {
+      "name": "animated armor",
+      "index": "animated_armor",
+      "size": "Medium",
+      "type": "construct",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/animated_armor.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/animated_armor.webp"
+    },
+    {
+      "name": "clay golem",
+      "index": "clay_golem",
+      "size": "Large",
+      "type": "construct",
+      "alignment": "unaligned",
+      "xp": 5000,
+      "challenge_rating": 9,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/clay_golem.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/clay_golem.webp"
+    },
+    {
+      "name": "flesh golem",
+      "index": "flesh_golem",
+      "size": "Medium",
+      "type": "construct",
+      "alignment": "neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/flesh_golem.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/flesh_golem.webp"
+    },
+    {
+      "name": "flying sword",
+      "index": "flying_sword",
+      "size": "Small",
+      "type": "construct",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/flying_sword.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/flying_sword.webp"
+    },
+    {
+      "name": "homunculus",
+      "index": "homunculus",
+      "size": "Tiny",
+      "type": "construct",
+      "alignment": "neutral",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/homunculus.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/homunculus.webp"
+    },
+    {
+      "name": "iron golem",
+      "index": "iron_golem",
+      "size": "Large",
+      "type": "construct",
+      "alignment": "unaligned",
+      "xp": 15000,
+      "challenge_rating": 16,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/iron_golem.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/iron_golem.webp"
+    },
+    {
+      "name": "rug of smothering",
+      "index": "rug_of_smothering",
+      "size": "Large",
+      "type": "construct",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/rug_of_smothering.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/rug_of_smothering.webp"
+    },
+    {
+      "name": "shield guardian",
+      "index": "shield_guardian",
+      "size": "Large",
+      "type": "construct",
+      "alignment": "unaligned",
+      "xp": 2900,
+      "challenge_rating": 7,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/shield_guardian.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/shield_guardian.webp"
+    },
+    {
+      "name": "stone golem",
+      "index": "stone_golem",
+      "size": "Large",
+      "type": "construct",
+      "alignment": "unaligned",
+      "xp": 5900,
+      "challenge_rating": 10,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/stone_golem.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/stone_golem.webp"
+    },
+    {
+      "name": "tomb tapper",
+      "index": "tomb_tapper",
+      "size": "Huge",
+      "type": "construct",
+      "alignment": "lawful neutral",
+      "xp": 5900,
+      "challenge_rating": 10,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/tomb_tapper.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/tomb_tapper.webp"
+    }
+  ]
+}

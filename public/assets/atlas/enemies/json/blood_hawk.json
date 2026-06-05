@@ -1,0 +1,94 @@
+{
+  "index": "blood_hawk",
+  "name": "blood hawk",
+  "desc": "Taking its name from its crimson feathers and aggressive nature, the blood hawk fearlessly attacks almost any animal, stabbing it with its daggerlike beak. Blood hawks flock together in large numbers, attacking as a pack to take down prey.",
+  "size": "Small",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": 12,
+  "hit_points": 7,
+  "hit_dice": "2d6",
+  "hit_points_roll": "2d6",
+  "speed": {
+    "walk": "10 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 6,
+  "dexterity": 14,
+  "constitution": 10,
+  "intelligence": 3,
+  "wisdom": 14,
+  "charisma": 5,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "",
+  "challenge_rating": "0.125",
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [
+    {
+      "name": "keen sight",
+      "desc": "The hawk has advantage on Wisdom (Perception) checks that rely on sight.",
+      "damage": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The hawk has advantage on an attack roll against a creature if at least one of the hawk's allies is within 5 ft. of the creature and the ally isn't incapacitated.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "beak",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/blood_hawk.webp",
+  "url": "/assets/atlas/enemies/json/blood_hawk.json",
+  "updated_at": "2026-05-10T20:55:21.711Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 23,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet2.webp",
+  "imageUrl": "/assets/atlas/enemies/images/blood_hawk.webp",
+  "_type": "enemies",
+  "background_type": "land_urban",
+  "last_updated": "10-5-2026",
+  "stats": {
+    "str": 6,
+    "dex": 14,
+    "con": 10,
+    "int": 3,
+    "wis": 14,
+    "cha": 5
+  },
+  "rarity": "Uncommon"
+}

@@ -1,0 +1,18 @@
+{
+  "index": "otherworldly_patron_improvement_1",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "otherworldly patron feature",
+  "level": 6,
+  "prerequisites": [],
+  "desc": [
+    "At 1st level, you have struck a bargain with an otherworldly being of your choice, such as the Fiend. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
+  ],
+  "url": "/assets/atlas/features/json/otherworldly_patron_improvement_1.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/otherworldly_patron_improvement_1.webp",
+  "feature_specific": {}
+}

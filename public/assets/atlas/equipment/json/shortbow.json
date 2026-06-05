@@ -1,0 +1,60 @@
+{
+  "desc": [
+    "The wood of this bow is perpetually cold to the touch, carved from the gnarled marrow-root of a hangman’s tree that has tasted nothing but shadow. Each drawn string hums with the low, discordant vibration of a death rattle, eager to trade the breath in a target's lungs for the silence of the grave."
+  ],
+  "special": [],
+  "index": "shortbow",
+  "name": "shortbow",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Ranged",
+  "category_range": "Simple Ranged",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 80,
+    "long": 320
+  },
+  "weight": 2,
+  "properties": [
+    {
+      "index": "ammunition",
+      "name": "ammunition",
+      "url": "/assets/atlas/weapon_properties/ammunition"
+    },
+    {
+      "index": "two_handed",
+      "name": "two_handed",
+      "url": "/assets/atlas/weapon_properties/two_handed"
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/shortbow.json",
+  "updated_at": "2026-04-12T08:12:42.550Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/shortbow.webp",
+  "sprite_index": 17,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/shortbow.webp",
+  "_type": "equipment",
+  "category": "Simple Ranged Weapons",
+  "last_updated": "12-4-2026",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

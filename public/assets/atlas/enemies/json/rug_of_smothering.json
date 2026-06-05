@@ -1,0 +1,120 @@
+{
+  "index": "rug_of_smothering",
+  "name": "rug of smothering",
+  "size": "Large",
+  "type": "construct",
+  "alignment": "unaligned",
+  "armor_class": 12,
+  "hit_points": 33,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 17,
+  "dexterity": 14,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 3,
+  "charisma": 1,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison",
+    "psychic"
+  ],
+  "condition_immunities": [
+    {
+      "index": "blinded",
+      "name": "blinded",
+      "url": "/assets/atlas/constitutionditions/blinded"
+    },
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "/assets/atlas/constitutionditions/charismarmed"
+    },
+    {
+      "index": "blinded",
+      "name": "blinded",
+      "url": "/assets/atlas/constitutionditions/blinded"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "/assets/atlas/constitutionditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "/assets/atlas/constitutionditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "petrified",
+      "url": "/assets/atlas/constitutionditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "/assets/atlas/constitutionditions/poisoned"
+    }
+  ],
+  "senses": {
+    "blindsight": "60 ft. (blind beyond this radius)",
+    "passive_perception": 6
+  },
+  "languages": "",
+  "challenge_rating": "2",
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "antimagic susceptibility",
+      "desc": "The rug is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the rug must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute.",
+      "damage": []
+    },
+    {
+      "name": "damage transfer",
+      "desc": "While it is grappling a creature, the rug takes only half the damage dealt to it, and the creature grappled by the rug takes the other half.",
+      "damage": []
+    },
+    {
+      "name": "false appearance",
+      "desc": "While the rug remains motionless, it is indistinguishable from a normal rug.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "smother",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one Medium or smaller creature. Hit: The creature is grappled (escape DC 13). Until this grapple ends, the target is restrained, blinded, and at risk of suffocating, and the rug can't smother another target. In addition, at the start of each of the target's turns, the target takes 10 (2d6 + 3) bludgeoning damage.",
+      "attack_bonus": 5,
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/rug_of_smothering.webp",
+  "url": "/assets/atlas/enemies/json/rug_of_smothering.json",
+  "updated_at": "2026-05-24T09:36:07.343Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 15,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.0webp",
+  "wikiData": {},
+  "imageUrl": "/assets/atlas/enemies/images/rug_of_smothering.webp",
+  "last_updated": "24-5-2026",
+  "stats": {
+    "str": 17,
+    "dex": 14,
+    "con": 10,
+    "int": 1,
+    "wis": 3,
+    "cha": 1
+  },
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "lore": "/assets/atlas/enemies/enemies_wiki/rug_of_smothering.json"
+}

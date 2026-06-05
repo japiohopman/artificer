@@ -1,0 +1,29 @@
+{
+  "index": "efficient_quiver",
+  "name": "efficient quiver",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, uncommon",
+    "Each of the quiver's three compartments connects to an extradimensional space that allows the quiver to hold numerous items while never weighing more than 2 pounds. The shortest compartment can hold up to sixty arrows, bolts, or similar objects. The midsize compartment holds up to eighteen javelins or similar objects. The longest compartment holds up to six long objects, such as bows, quarterstaffs, or spears.",
+    "You can draw any item the quiver contains as if doing so from a regular quiver or scabbard."
+  ],
+  "image": "/assets/atlas/magic_items/efficient_quiver.webp",
+  "url": "/assets/atlas/magic_items/json/efficient_quiver.json",
+  "updated_at": "2026-05-03T13:43:38.402Z",
+  "imageUrl": "/assets/atlas/magic_items/images/efficient_quiver.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "3-5-2026"
+}

@@ -1,0 +1,59 @@
+{
+  "index": "simple_melee_weapons",
+  "name": "simple melee weapons",
+  "equipment": [
+    {
+      "index": "club",
+      "name": "club",
+      "url": "/assets/atlas/equipment/json/club.json"
+    },
+    {
+      "index": "dagger",
+      "name": "dagger",
+      "url": "/assets/atlas/equipment/json/dagger.json"
+    },
+    {
+      "index": "greatclub",
+      "name": "greatclub",
+      "url": "/assets/atlas/equipment/json/greatclub.json"
+    },
+    {
+      "index": "handaxe",
+      "name": "handaxe",
+      "url": "/assets/atlas/equipment/json/handaxe.json"
+    },
+    {
+      "index": "javelin",
+      "name": "javelin",
+      "url": "/assets/atlas/equipment/json/javelin.json"
+    },
+    {
+      "index": "light_hammer",
+      "name": "light hammer",
+      "url": "/assets/atlas/equipment/json/light_hammer.json"
+    },
+    {
+      "index": "mace",
+      "name": "mace",
+      "url": "/assets/atlas/equipment/json/mace.json"
+    },
+    {
+      "index": "quarterstaff",
+      "name": "quarterstaff",
+      "url": "/assets/atlas/equipment/json/quarterstaff.json"
+    },
+    {
+      "index": "sickle",
+      "name": "sickle",
+      "url": "/assets/atlas/equipment/json/sickle.json"
+    },
+    {
+      "index": "spear",
+      "name": "spear",
+      "url": "/assets/atlas/equipment/json/spear.json"
+    }
+  ],
+  "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "/assets/atlas/equipment_categories/simple_melee_weapons.webp"
+}

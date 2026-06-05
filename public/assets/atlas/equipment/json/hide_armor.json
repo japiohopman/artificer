@@ -1,0 +1,44 @@
+{
+  "desc": [
+    "The hide armor smells faintly of wet earth and the grave, its cured leather stained with a darkness that seems to seep from the shadows themselves, whispering promises of protection forged in blood and bone. Wearing it, you feel the chilling embrace of the wilderness, both a shield and a shroud against the terrors that lurk just beyond the firelight.\n"
+  ],
+  "special": [],
+  "index": "hide_armor",
+  "name": "hide armor",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "armor_category": "Medium",
+  "armor_class": {
+    "base": 12,
+    "dex_bonus": true,
+    "max_bonus": 2
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false,
+  "weight": 12,
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "url": "/assets/atlas/equipment/json/hide_armor.json",
+  "updated_at": "2026-04-19T23:19:59.364Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/hide_armor.webp",
+  "sprite_index": 5,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "imageUrl": "/assets/atlas/equipment/images/hide_armor.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "chest"
+  ],
+  "last_updated": "20-4-2026",
+  "kind": "armor",
+  "equipSlots": [
+    "chest"
+  ]
+}

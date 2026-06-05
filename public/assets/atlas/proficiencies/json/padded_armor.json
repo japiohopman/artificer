@@ -1,0 +1,18 @@
+{
+  "index": "padded_armor",
+  "type": "armor",
+  "name": "padded armor",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/padded_armor.json",
+  "reference": {
+    "index": "padded_armor",
+    "name": "padded armor",
+    "url": "/assets/atlas/equipment/json/padded_armor.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/padded_armor.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

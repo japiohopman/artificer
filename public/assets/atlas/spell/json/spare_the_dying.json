@@ -1,0 +1,41 @@
+{
+  "higher_level": [],
+  "index": "spare_the_dying",
+  "name": "spare the dying",
+  "desc": [
+    "You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs."
+  ],
+  "range": "Touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "necromancy",
+    "name": "necromancy",
+    "url": "/assets/atlas/magic_schools/json/necromancy.json"
+  },
+  "classes": [
+    {
+      "index": "artificer",
+      "name": "artificer",
+      "url": "/assets/atlas/class/json/artificer.json"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/spare_the_dying.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/spare_the_dying.webp",
+  "sprite_index": 20,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet11.webp"
+}

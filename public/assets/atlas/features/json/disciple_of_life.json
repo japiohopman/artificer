@@ -1,0 +1,27 @@
+{
+  "index": "disciple_of_life",
+  "class": {
+    "index": "cleric",
+    "name": "cleric",
+    "url": "/assets/atlas/class/json/cleric.json"
+  },
+  "subclass": {
+    "index": "life",
+    "name": "life",
+    "url": "/assets/atlas/subclasses/json/life.json"
+  },
+  "name": "disciple of life",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level."
+  ],
+  "url": "/assets/atlas/features/json/disciple_of_life.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/disciple_of_life.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "healing_bonus": "2 + spell_level"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "index": "bagpipes",
+  "type": "musical_instruments",
+  "name": "bagpipes",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/bagpipes.json",
+  "reference": {
+    "index": "bagpipes",
+    "name": "bagpipes",
+    "url": "/assets/atlas/equipment/json/bagpipes.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/bagpipes.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

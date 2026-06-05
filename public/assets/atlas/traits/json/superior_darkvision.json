@@ -1,0 +1,29 @@
+{
+  "index": "superior_darkvision",
+  "races": [
+    {
+      "index": "elf",
+      "name": "elf",
+      "url": "/assets/atlas/species/json/elf.json"
+    }
+  ],
+  "subraces": [
+    {
+      "index": "drow",
+      "name": "drow",
+      "url": "/assets/atlas/subraces/json/drow.json"
+    }
+  ],
+  "name": "superior darkvision",
+  "desc": [
+    "Your darkvision has a radius of 120 feet."
+  ],
+  "trait_specific": {
+    "passive_modifiers": {
+      "darkvision": 120
+    }
+  },
+  "url": "/assets/atlas/traits/json/superior_darkvision.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "/assets/atlas/traits/superior_darkvision.webp"
+}

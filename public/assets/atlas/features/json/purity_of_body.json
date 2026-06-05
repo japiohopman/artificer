@@ -1,0 +1,25 @@
+{
+  "index": "purity_of_body",
+  "class": {
+    "index": "monk",
+    "name": "monk",
+    "url": "/assets/atlas/class/json/monk.json"
+  },
+  "name": "purity of body",
+  "level": 10,
+  "prerequisites": [],
+  "desc": [
+    "At 10th level, your mastery of the ki flowing through you makes you immune to disease and poison."
+  ],
+  "url": "/assets/atlas/features/json/purity_of_body.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/purity_of_body.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "immunity": [
+        "poison",
+        "disease"
+      ]
+    }
+  }
+}

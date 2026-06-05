@@ -1,0 +1,19 @@
+{
+  "index": "spell_mastery",
+  "class": {
+    "index": "wizard",
+    "name": "wizard",
+    "url": "/assets/atlas/class/json/wizard.json"
+  },
+  "name": "spell mastery",
+  "level": 18,
+  "prerequisites": [],
+  "desc": [
+    "At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your spellbook. You can cast those spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.",
+    "By spending 8 hours in study, you can exchange one or both of the spells you chose for different spells of the same levels."
+  ],
+  "url": "/assets/atlas/features/json/spell_mastery.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/spell_mastery.webp",
+  "feature_specific": {}
+}

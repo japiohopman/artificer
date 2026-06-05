@@ -1,0 +1,19 @@
+{
+  "index": "sorcerous_origin_improvement_2",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "/assets/atlas/class/json/sorcerer.json"
+  },
+  "name": "sorcerous origin feature",
+  "level": 14,
+  "prerequisites": [],
+  "desc": [
+    "Choose a sorcerous origin, which describes the source of your innate magical power, such as Draconic Bloodline.",
+    "Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level."
+  ],
+  "url": "/assets/atlas/features/json/sorcerous_origin_improvement_2.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/sorcerous_origin_improvement_2.webp",
+  "feature_specific": {}
+}

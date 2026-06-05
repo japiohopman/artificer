@@ -1,0 +1,23 @@
+{
+  "index": "guarded_mind",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "subclass": {
+    "index": "psi_warrior",
+    "name": "psi warrior",
+    "url": "/assets/atlas/subclasses/json/psi_warrior.json"
+  },
+  "name": "guarded mind",
+  "level": 10,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 10th level, the psionic energy within you fortifies your mind. You have resistance to psychic damage. Moreover, if you start your turn charmed or frightened, you can expend one Psionic Energy die and end every such effect on yourself."
+  ],
+  "url": "/assets/atlas/features/json/guarded_mind.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/guarded_mind.webp",
+  "feature_specific": {}
+}

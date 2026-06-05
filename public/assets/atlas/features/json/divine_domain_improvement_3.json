@@ -1,0 +1,19 @@
+{
+  "index": "divine_domain_improvement_3",
+  "class": {
+    "index": "cleric",
+    "name": "cleric",
+    "url": "/assets/atlas/class/json/cleric.json"
+  },
+  "name": "divine domain feature",
+  "level": 8,
+  "prerequisites": [],
+  "desc": [
+    "Choose one domain related to your deity, such as Knowledge, Life, Light, Nature, Tempest, Trickery, or War. Only the Life domain is detailed in the Open Game Licensed SRD. Additional Domains are described in the official rulebooks or products from other publishers.",
+    "Your domain grants you domain spells and other features when you choose it at 1st level. It also grants you additional ways to use Channel Divinity when you gain that feature at 2nd level, and additional benefits at 6th, 8th, and 17th levels."
+  ],
+  "url": "/assets/atlas/features/json/divine_domain_improvement_3.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/divine_domain_improvement_3.webp",
+  "feature_specific": {}
+}

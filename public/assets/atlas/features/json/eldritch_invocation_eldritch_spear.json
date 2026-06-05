@@ -1,0 +1,28 @@
+{
+  "index": "eldritch_invocation_eldritch_spear",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "eldritch invocation: eldritch spear",
+  "level": 2,
+  "prerequisites": [
+    {
+      "type": "spell",
+      "spell": "public/assets/atlas/spells/eldritch-blast.json"
+    }
+  ],
+  "desc": [
+    "When you cast eldritch blast, its range is 300 feet."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "/assets/atlas/features/eldritch_invocations.json"
+  },
+  "url": "/assets/atlas/features/json/eldritch_invocation_eldritch_spear.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/eldritch_invocation_eldritch_spear.webp",
+  "feature_specific": {}
+}

@@ -1,0 +1,124 @@
+{
+  "index": "tiger",
+  "name": "tiger",
+  "size": "Large",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 12
+    }
+  ],
+  "hit_points": 37,
+  "hit_dice": "5d10",
+  "hit_points_roll": "5d10+10",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 17,
+  "dexterity": 15,
+  "constitution": 14,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 8,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/skills/json/perception.json"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "/assets/atlas/skills/json/stealth.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 13
+  },
+  "languages": "",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "keen smell",
+      "desc": "The tiger has advantage on Wisdom (Perception) checks that rely on smell.",
+      "damage": []
+    },
+    {
+      "name": "pounce",
+      "desc": "If the tiger moves at least 20 ft. straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the tiger can make one bite attack against it as a bonus action.",
+      "dc": {
+        "dc_type": {
+          "index": "str",
+          "name": "str",
+          "url": "/assets/atlas/ability_scores/json/strength.json"
+        },
+        "dc_value": 13,
+        "success_type": "none"
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 8 (1d10 + 3) piercing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/tiger.webp",
+  "url": "/assets/atlas/enemies/json/tiger.json",
+  "updated_at": "2026-04-18T16:57:37.421Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 5,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet12.webp",
+  "wikiData": null,
+  "imageUrl": "/assets/atlas/enemies/tiger.webp",
+  "rarity": "Rare",
+  "background_type": "land_forest",
+  "last_updated": "18-4-2026",
+  "_type": "enemies"
+}

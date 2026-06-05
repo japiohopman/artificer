@@ -1,0 +1,2248 @@
+{
+  "category": "poi",
+  "updatedAt": "2026-05-30T02:39:55.118Z",
+  "location_id": "westgate",
+  "sub_locations": [
+    {
+      "id": "1",
+      "name": "Cormaeril Vale",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        56.388179065585,
+        1823.9303966095
+      ],
+      "popup": {
+        "title": "Cormaeril Vale",
+        "description": "Private park of the House [[Cormaeril]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "Castle Cormaeril",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        92.763013666867,
+        2095.8843906811
+      ],
+      "popup": {
+        "title": "Castle Cormaeril",
+        "description": "Also known as '''Castle Dhostar''', the estate of the noble House [[Cormaeril]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "Cormaeril yards",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        420.4520920262,
+        1779.9074094267
+      ],
+      "popup": {
+        "title": "Cormaeril yards",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "The Blind Eye",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        283.99783480486,
+        1834.0070647074
+      ],
+      "popup": {
+        "title": "The Blind Eye",
+        "description": "A tack, harness, and trail-goods shop, also a fence.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "Thessar's residence",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        399.99891740243,
+        1998.0050462195
+      ],
+      "popup": {
+        "title": "Thessar's residence",
+        "description": "Home once owned by [[Thessar]] the Warrior, famous 14{{th}} century [[DR]] adventurer.\n",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "The Shore",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        706,
+        1906.0070647074
+      ],
+      "popup": {
+        "title": "The Shore",
+        "description": "A slum neighborhood nestled between the cliff where the [[Water Gate]] stood and the [[Sea of Fallen Stars]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "Cormaeril Company sheds",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        856.43207532974,
+        1719.8907284621
+      ],
+      "popup": {
+        "title": "Cormaeril Company sheds",
+        "description": "Warehouses that belonged to the [[Cormaeril]] merchant company.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "Trader's Road",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        162,
+        1114.0040369756
+      ],
+      "popup": {
+        "title": "Trader's Road",
+        "description": "Road traveling from the [[Sunset Vale]] through the [[Dragon Coast]], turning to the [[King's March]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "Thorsar Company sheds",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        580.38220917366,
+        1353.8535014315
+      ],
+      "popup": {
+        "title": "Thorsar Company sheds",
+        "description": "Warehouses of the Thorsar merchant comapny.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "Thalavar Company sheds",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        662.3966071483,
+        1125.8303108222
+      ],
+      "popup": {
+        "title": "Thalavar Company sheds",
+        "description": "Warehouses of the [[Thalavar]] merchant company.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "Castle Ssemm",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        726.4893160582,
+        973.84800891876
+      ],
+      "popup": {
+        "title": "Castle Ssemm",
+        "description": "Estate of the noble House [[Ssemm]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "18",
+      "name": "Thalavar yards",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        336.38536970468,
+        981.8384478781
+      ],
+      "popup": {
+        "title": "Thalavar yards",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "23",
+      "name": "Ssemm Company sheds",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        860.49774414092,
+        837.8457712284
+      ],
+      "popup": {
+        "title": "Ssemm Company sheds",
+        "description": "Warehouses of the [[Ssemm]] merchant company.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "27",
+      "name": "Guldar Company Sheds",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1460.5560383797,
+        629.84210955325
+      ],
+      "popup": {
+        "title": "Guldar Company Sheds",
+        "description": "Warehouses that belonged to the [[Guldar]] merchant company.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "30",
+      "name": "The Grand Ride",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1252.4531455365,
+        81.827055999872
+      ],
+      "popup": {
+        "title": "The Grand Ride",
+        "description": "The road that connected [[Westgate]] and [[Reddansyr]].",
+        "image": "File:Grand Ride.PNG"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "31",
+      "name": "City Watch Barracks ",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1838.9978348049,
+        643.00454159758
+      ],
+      "popup": {
+        "title": "City Watch Barracks ",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "33",
+      "name": "Castle Thorsar",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2112.6062557059,
+        767.85614597464
+      ],
+      "popup": {
+        "title": "Castle Thorsar",
+        "description": "Estate of the noble House [[Thorsar]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "34",
+      "name": "Castle Urdo",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2004.5872925198,
+        765.85594254824
+      ],
+      "popup": {
+        "title": "Castle Urdo",
+        "description": "Estate of the noble House [[Urdo]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "35",
+      "name": "House of Silks",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2029.9967522073,
+        852.00201848781
+      ],
+      "popup": {
+        "title": "House of Silks",
+        "description": "Clothing and jewelry of the highest quality shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "37",
+      "name": "Shou Quarter",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        2724.18612016,
+        1368.0699786806
+      ],
+      "popup": {
+        "title": "Shou Quarter",
+        "description": "The district populated by the [[Shou]] immigrants. Also known as the '''East End'''. Formerly known as the '''Warrens.'''",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "38",
+      "name": "The Tower",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1698.9989174024,
+        1057.0035323537
+      ],
+      "popup": {
+        "title": "The Tower",
+        "description": "Counting house, nobles' offices, armory, barracks, and underground jail.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "39",
+      "name": "Market Triangle",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        1706.4264566079,
+        995.85716310663
+      ],
+      "popup": {
+        "title": "Market Triangle",
+        "description": "The market square at the heart of [[Westgate]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "40",
+      "name": "Castle Guldar",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2320.5342658327,
+        863.84373696443
+      ],
+      "popup": {
+        "title": "Castle Guldar",
+        "description": "Estate of the noble House [[Guldar]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "41",
+      "name": "Castle Vhammos",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2504.5665734831,
+        1157.8736406448
+      ],
+      "popup": {
+        "title": "Castle Vhammos",
+        "description": "The estate of the noble House [[Vhammos]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "42",
+      "name": "Vhammos Company sheds",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2740.597125283,
+        1703.9466707213
+      ],
+      "popup": {
+        "title": "Vhammos Company sheds",
+        "description": "Warehouses that belonged to the [[Vhammos]] merchant company.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "45",
+      "name": "River Bridge",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2588.5700851842,
+        1345.8575699594
+      ],
+      "popup": {
+        "title": "River Bridge",
+        "description": "The bridge over the [[River Thunn]] that connected the [[Shou Quarter]] to the rest of the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "46",
+      "name": "Vhammos yards",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2432.6459379287,
+        729.91798759933
+      ],
+      "popup": {
+        "title": "Vhammos yards",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "48",
+      "name": "Guldar yards",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1700.4152191643,
+        395.82868341105
+      ],
+      "popup": {
+        "title": "Guldar yards",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "49",
+      "name": "Ssemm yards",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1028.2972260063,
+        375.82664914708
+      ],
+      "popup": {
+        "title": "Ssemm yards",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "52",
+      "name": "Westlight",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2102.4847508467,
+        1977.9169704673
+      ],
+      "popup": {
+        "title": "Westlight",
+        "description": "[[Westgate]]'s lighthouse, also known as the the '''Harbor Tower.'''",
+        "image": "File:Westlight.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "53",
+      "name": "Shalush Myrkeer's Shop",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1832.9983761036,
+        923.00555084149
+      ],
+      "popup": {
+        "title": "Shalush Myrkeer's Shop",
+        "description": "A general goods store and the largest shop in [[Westgate]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "55",
+      "name": "Urdo Company Sheds",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1533.9956696097,
+        1444.0060554634
+      ],
+      "popup": {
+        "title": "Urdo Company Sheds",
+        "description": "Warehouses that belonged to the [[Urdo]] merchant company.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "56",
+      "name": "Thorsar yards",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        404.28458388218,
+        1497.8693686904
+      ],
+      "popup": {
+        "title": "Thorsar yards",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "57",
+      "name": "Castle Athagdal",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2180.6364563357,
+        1051.8937798581
+      ],
+      "popup": {
+        "title": "Castle Athagdal",
+        "description": "Estate of the noble House [[Athagdal]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "58",
+      "name": "Castle Thalavar",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        782.3407711003,
+        1297.8876770662
+      ],
+      "popup": {
+        "title": "Castle Thalavar",
+        "description": "Estate of the noble House [[Thalavar]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "59",
+      "name": "Castle Malavhan",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2698.6771920688,
+        1101.8427198324
+      ],
+      "popup": {
+        "title": "Castle Malavhan",
+        "description": "The estate of the noble House [[Malavhan]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "60",
+      "name": "Malavhan yards",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2830.6873760021,
+        949.82725942627
+      ],
+      "popup": {
+        "title": "Malavhan yards",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "61",
+      "name": "Malavhan Company Sheds",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1914.5033628627,
+        1385.9070025739
+      ],
+      "popup": {
+        "title": "Malavhan Company Sheds",
+        "description": "Warehouses that belonged to the [[Malavhan]] merchant company.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "62",
+      "name": "Cormaeril docks",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1602.3024351446,
+        1728.1704005063
+      ],
+      "popup": {
+        "title": "Cormaeril docks",
+        "description": "Formerly the '''Dhostar docks'''.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "63",
+      "name": "Thorsar Docks",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2448,
+        1524.0030286563
+      ],
+      "popup": {
+        "title": "Thorsar Docks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "64",
+      "name": "Malavhan Docks",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1730.4261054378,
+        1371.8553322691
+      ],
+      "popup": {
+        "title": "Malavhan Docks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "65",
+      "name": "Urdo Docks",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1534.4194186386,
+        1349.1625930768
+      ],
+      "popup": {
+        "title": "Urdo Docks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "66",
+      "name": "Thalavar Docks",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1303.9018424597,
+        1549.981632577
+      ],
+      "popup": {
+        "title": "Thalavar Docks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "67",
+      "name": "Guldar docks",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1491.9930117674,
+        1745.1423905412
+      ],
+      "popup": {
+        "title": "Guldar docks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "68",
+      "name": "The Watch Dock",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1760.4313729895,
+        1737.8925592997
+      ],
+      "popup": {
+        "title": "The Watch Dock",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "69",
+      "name": "Athagdal docks and shipyards",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2411.2341238461,
+        1790.4007927532
+      ],
+      "popup": {
+        "title": "Athagdal docks and shipyards",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "70",
+      "name": "Vhammos docks",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2474.8767962012,
+        1656.0462224685
+      ],
+      "popup": {
+        "title": "Vhammos docks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "71",
+      "name": "Ssemm Docks",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2043.5347700687,
+        1630.6003693508
+      ],
+      "popup": {
+        "title": "Ssemm Docks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "76",
+      "name": "City watch barracks",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2835.4958960218,
+        1425.5272708721
+      ],
+      "popup": {
+        "title": "City watch barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "77",
+      "name": "City watch meeting rooms & barracks",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        837.99675220729,
+        1642.0070647074
+      ],
+      "popup": {
+        "title": "City watch meeting rooms & barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "78",
+      "name": "Cassana's mansion",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1204.9989174024,
+        504.00504621954
+      ],
+      "popup": {
+        "title": "Cassana's mansion",
+        "description": "A mansion that once belonged to the evil sorceress [[Cassana]], and later to Melman, a Guildmaster of the [[Night Masks]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "79",
+      "name": "Jamal's house",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1006,
+        748.00403697563
+      ],
+      "popup": {
+        "title": "Jamal's house",
+        "description": "The house that once belonged to [[Jamal]], a street performer, a social critic, and an ally to [[Alias]] and [[Mintassan]] the Magnificent.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "82",
+      "name": "Mintassan's Mysteries",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1620.9972935061,
+        951.00353235368
+      ],
+      "popup": {
+        "title": "Mintassan's Mysteries",
+        "description": "A planar curio shop owned by [[Mintassan the Magnificent]] in a magically hidden and warded ''[[spelljammer]]'' ship, previously parked deeper into the block to the south.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "85",
+      "name": "Dawn's Dress Shop",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1932,
+        1041.0035323537
+      ],
+      "popup": {
+        "title": "Dawn's Dress Shop",
+        "description": "An [[elf|elven]] seamstress' shop and the most fashionable store in [[Westgate]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "90",
+      "name": "Entrance to the Sewers of Westgate",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2566.566222313,
+        1299.8762851879
+      ],
+      "popup": {
+        "title": "Entrance to the Sewers of Westgate",
+        "description": "Once used by the [[Faceless]] leader of the [[Night Masks]]. Connected to the [[Undergate]] and catacombs of [[Westgate]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "94",
+      "name": "Darkdance Manor",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1842.720271772143,
+        1137.0312723640218
+      ],
+      "popup": {
+        "title": "Darkdance Manor",
+        "description": "An abandoned manor, once home to the noble [[House Darkdance]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "96",
+      "name": "Chalaratha's Fragrances",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1111.9989174024,
+        908.00403697563
+      ],
+      "popup": {
+        "title": "Chalaratha's Fragrances",
+        "description": "A perfume shop and factory.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "97",
+      "name": "Gondeth's Mageries",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1588.1618305449858,
+        957.4247226562175
+      ],
+      "popup": {
+        "title": "Gondeth's Mageries",
+        "description": "A [[wizard]]'s [[scroll]] shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "98",
+      "name": "Tersonm's",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1508,
+        839.00302773172
+      ],
+      "popup": {
+        "title": "Tersonm's",
+        "description": "[[Potion]] maker and a seller of rare [[spells]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "101",
+      "name": "Castle Beth",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1731.2983870564,
+        118.90335668009
+      ],
+      "popup": {
+        "title": "Castle Beth",
+        "description": "Estate of the noble House [[Beth]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "102",
+      "name": "Beth yards",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1414.4798344651,
+        31.846991786777
+      ],
+      "popup": {
+        "title": "Beth yards",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "103",
+      "name": "Imryth's tower",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1136,
+        581.00201848781
+      ],
+      "popup": {
+        "title": "Imryth's tower",
+        "description": "The tower that once belonged to [[Audara Imryth|Audara \"Starshoulder\" Imryth]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "104",
+      "name": "Aurora's Emporium",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1691.399420598222,
+        844.2919195256336
+      ],
+      "popup": {
+        "title": "Aurora's Emporium",
+        "description": "Famed [[Aurora's Emporium]] that sold exotic items from all over [[Faerûn]] and operated as a curio shop in the late 1400s [[DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "105",
+      "name": "The Quivering Thumb",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2877.2518424645,
+        1715.8457396657
+      ],
+      "popup": {
+        "title": "The Quivering Thumb",
+        "description": "Gladigladiatorial arena just outside the city’s [[East End]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "106",
+      "name": "Arena District",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        2876.6210048507,
+        1671.9430090462
+      ],
+      "popup": {
+        "title": "Arena District",
+        "description": "The district built around the [[Quivering Thumb]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "107",
+      "name": "Magical Portal to the Undergate",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1336.5163561569,
+        1303.8809639951
+      ],
+      "popup": {
+        "title": "Magical Portal to the Undergate",
+        "description": "A broken lampost that served as a gate to the shady subterranean underbelly of [[Westgate]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "109",
+      "name": "Statue of Durgar the Just",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        924.38431619434,
+        1475.8659104417
+      ],
+      "popup": {
+        "title": "Statue of Durgar the Just",
+        "description": "The monument dedicated to the head of the city watch erected ''circa'' [[1368 DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "110",
+      "name": "City watch barracks",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        880.27018590753,
+        1481.9281589192
+      ],
+      "popup": {
+        "title": "City watch barracks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "111",
+      "name": "Lens Overlooking the Seven Hills",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1526.4812391456,
+        1115.843533538
+      ],
+      "popup": {
+        "title": "Lens Overlooking the Seven Hills",
+        "description": "[[Westgate Archeological Guild]]'s [[telescope]], activated for 5 [[gold]] [[coin|pieces]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "112",
+      "name": "Statue of Alias of the Azure Bonds",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1812.522677219,
+        995.85045003553
+      ],
+      "popup": {
+        "title": "Statue of Alias of the Azure Bonds",
+        "description": "A magically protected monument to a famed hero of the [[House Wyvernspur]], [[Alias]].",
+        "image": "File:Alias vision.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "113",
+      "name": "Thayan Enclave",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1960.5117909454,
+        1251.8886941982
+      ],
+      "popup": {
+        "title": "Thayan Enclave",
+        "description": "A merchant and political enclave of the [[Red Wizard]]s of [[Thay]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "114",
+      "name": "Statue of Kisonraathiisar",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2010.4900183984,
+        1313.8832016854
+      ],
+      "popup": {
+        "title": "Statue of Kisonraathiisar",
+        "description": "The statue dedicated to the ancient [[wyrm]] whose lair became the city of [[Westgate]].",
+        "image": "File:Kisonraathiisar.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "115",
+      "name": "Okuzo's Imports",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2033.639102692511,
+        1349.1618794335648
+      ],
+      "popup": {
+        "title": "Okuzo's Imports",
+        "description": "A shop that dealt in rare and exotic imports from the Eastern nations.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "116",
+      "name": "Sewer entrance",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2056.2665196904804,
+        1332.188462112245
+      ],
+      "popup": {
+        "title": "Sewer entrance",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "117",
+      "name": "Harbormaster's Office",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1937.471049427,
+        1555.63705954
+      ],
+      "popup": {
+        "title": "Harbormaster's Office",
+        "description": "The office of the Harbormaster of [[Westgate]] and a museum of the city's naval history.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "118",
+      "name": "Statue of Verovan Lorndessar",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2365.9792898501883,
+        1351.986024699047
+      ],
+      "popup": {
+        "title": "Statue of Verovan Lorndessar",
+        "description": "Statue of the last king of [[Westgate]]; the monument was beheaded in the late 14{{th}} century [[DR]].\n",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "119",
+      "name": "Brother Tobias Winery",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1279.9989174024,
+        1236.0030277317
+      ],
+      "popup": {
+        "title": "Brother Tobias Winery",
+        "description": "A favored local [[wine]]ry.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "120",
+      "name": "Rumbolt Mansion",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1128,
+        1269.0035323536752
+      ],
+      "popup": {
+        "title": "Rumbolt Mansion",
+        "description": "Once the estate of the noble [[House Rumbolt]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "121",
+      "name": "Sods and Sundries",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2200.5205701983,
+        1375.8634693249
+      ],
+      "popup": {
+        "title": "Sods and Sundries",
+        "description": "A shop of note.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "122",
+      "name": "Westblade Guild Headquarters",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1838,
+        958.00201848781
+      ],
+      "popup": {
+        "title": "Westblade Guild Headquarters",
+        "description": "A guildhall of note.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "123",
+      "name": "Temple District",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        964.29757717637,
+        1703.9057820155
+      ],
+      "popup": {
+        "title": "Temple District",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "125",
+      "name": "The Old City",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        2297.1507054719,
+        1235.7969173304
+      ],
+      "popup": {
+        "title": "The Old City",
+        "description": "The central area of Westgatre.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "126",
+      "name": "Dock Ward",
+      "categoryId": "districts",
+      "type": "marker",
+      "position": [
+        2177.0790667688,
+        1659.8579452495
+      ],
+      "popup": {
+        "title": "Dock Ward",
+        "description": "The center of [[Westgate]]'s trade.",
+        "image": "File:Quelzarn 3e.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

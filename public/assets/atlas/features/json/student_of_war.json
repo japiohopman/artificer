@@ -1,0 +1,23 @@
+{
+  "index": "student_of_war",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "subclass": {
+    "index": "battle_master",
+    "name": "battle master",
+    "url": "/assets/atlas/subclasses/json/battle_master.json"
+  },
+  "name": "student of war",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "At 3rd level, you gain proficiency with one type of artisan's tools of your choice."
+  ],
+  "url": "/assets/atlas/features/json/student_of_war.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/student_of_war.webp",
+  "feature_specific": {}
+}

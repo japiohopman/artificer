@@ -1,0 +1,91 @@
+{
+  "desc": [
+    "Bound in cracked, salt-stained leather, this kit holds the frantic scrawlings of men who looked too deep into the void and lost their minds to the ink. Its contents smell of ozone and dried blood, a grim reminder that knowledge is rarely gathered without a terrible price."
+  ],
+  "special": [],
+  "index": "scholars_pack",
+  "name": "scholar's pack",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "equipment_packs",
+    "name": "equipment packs",
+    "url": "/assets/atlas/equipment_categories/equipment_packs"
+  },
+  "cost": {
+    "quantity": 40,
+    "unit": "gp"
+  },
+  "contents": [
+    {
+      "item": {
+        "index": "backpack",
+        "name": "backpack",
+        "url": "/assets/atlas/equipment/backpack"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "book",
+        "name": "book",
+        "url": "/assets/atlas/equipment/book"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "ink_1_ounce_bottle",
+        "name": "ink (1 ounce bottle)",
+        "url": "/assets/atlas/equipment/ink_1_ounce_bottle"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "ink_pen",
+        "name": "ink pen",
+        "url": "/assets/atlas/equipment/ink_pen"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "parchment_one_sheet",
+        "name": "parchment (one sheet)",
+        "url": "/assets/atlas/equipment/parchment_one_sheet"
+      },
+      "quantity": 10
+    },
+    {
+      "item": {
+        "index": "little_bag_of_sand",
+        "name": "little bag of sand",
+        "url": "/assets/atlas/equipment/little_bag_of_sand"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "small_knife",
+        "name": "small knife",
+        "url": "/assets/atlas/equipment/small_knife"
+      },
+      "quantity": 1
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/scholars_pack.json",
+  "updated_at": "2026-04-12T07:40:02.561Z",
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/scholars_pack.webp",
+  "sprite_index": 12,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/scholars_pack.webp",
+  "_type": "equipment",
+  "category": "Equipment Packs",
+  "last_updated": "12-4-2026",
+  "kind": "equipment_pack"
+}

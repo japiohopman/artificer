@@ -1,0 +1,44 @@
+{
+  "index": "gaming_sets",
+  "name": "gaming sets",
+  "equipment": [
+    {
+      "index": "dice_set",
+      "name": "dice set",
+      "url": "/assets/atlas/equipment/json/dice_set.json"
+    },
+    {
+      "index": "dragonchess_set",
+      "name": "dragonchess set",
+      "url": "/assets/atlas/equipment/json/dragonchess_set.json"
+    },
+    {
+      "index": "marked_cards",
+      "name": "marked cards",
+      "url": "/assets/atlas/equipment/json/marked_cards.json"
+    },
+    {
+      "index": "playing_card_set",
+      "name": "playing card set",
+      "url": "/assets/atlas/equipment/json/playing_card_set.json"
+    },
+    {
+      "index": "tda_card_set",
+      "name": "three dragon ant card set",
+      "url": "/assets/atlas/equipment/json/tda_card_set.json"
+    },
+    {
+      "index": "three_dragon_ante_set",
+      "name": "three-dragon ante set",
+      "url": "/assets/atlas/equipment/json/three_dragon_ante_set.json"
+    },
+    {
+      "index": "weighted_dice",
+      "name": "weighted dice",
+      "url": "/assets/atlas/equipment/json/weighted_dice.json"
+    }
+  ],
+  "url": "/assets/atlas/equipment_categories/json/gaming_sets.json",
+  "updated_at": "2026-05-21T00:25:15.460Z",
+  "image": "/assets/atlas/equipment_categories/image/gaming_sets.webp"
+}

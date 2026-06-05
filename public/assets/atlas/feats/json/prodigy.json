@@ -1,0 +1,31 @@
+{
+  "index": "prodigy",
+  "name": "prodigy",
+  "prerequisites": [
+    {
+      "stat": "species",
+      "operator": "in",
+      "value": [
+        "half_elf",
+        "half_orc",
+        "human"
+      ]
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You have a knack for learning new things. You gain the following benefits:",
+    "- You gain one skill proficiency of your choice.",
+    "- You gain one tool proficiency of your choice.",
+    "- You learn one language of your choice.",
+    "- Choose one skill in which you have proficiency. You gain expertise with that skill, which means your proficiency bonus is doubled for any ability check you make with it. The skill you choose must be one that isn't already benefiting from a feature, such as Expertise, that doubles your proficiency bonus."
+  ],
+  "feature_specific": {},
+  "url": "/assets/atlas/feats/json/prodigy.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/prodigy.webp"
+}

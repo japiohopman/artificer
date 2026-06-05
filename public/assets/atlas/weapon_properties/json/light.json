@@ -1,0 +1,13 @@
+{
+  "index": "light",
+  "name": "light",
+  "desc": [
+    "A light weapon is small and easy to handle, making it ideal for use when fighting with two weapons."
+  ],
+  "property_specific": {
+    "dual_wield_eligible": true
+  },
+  "url": "/assets/atlas/weapon_properties/json/light.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/weapon_properties/images/light.webp"
+}

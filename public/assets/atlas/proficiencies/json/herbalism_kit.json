@@ -1,0 +1,24 @@
+{
+  "index": "herbalism_kit",
+  "type": "other",
+  "name": "herbalism kit",
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    }
+  ],
+  "url": "/assets/atlas/proficiencies/json/herbalism_kit.json",
+  "reference": {
+    "index": "herbalism_kit",
+    "name": "herbalism kit",
+    "url": "/assets/atlas/equipment/json/herbalism_kit.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/herbalism_kit.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

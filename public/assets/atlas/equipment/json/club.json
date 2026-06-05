@@ -1,0 +1,60 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "club",
+  "name": "club",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "cost": {
+    "quantity": 1,
+    "unit": "sp"
+  },
+  "damage": {
+    "damage_dice": "1d4",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 2,
+  "properties": [
+    {
+      "index": "light",
+      "name": "light",
+      "url": "/assets/atlas/weapon_properties/light"
+    },
+    {
+      "index": "monk",
+      "name": "monk",
+      "url": "/assets/atlas/weapon_properties/monk"
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/club.json",
+  "updated_at": "2026-06-04T08:17:14.585Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/club.webp",
+  "sprite_index": 13,
+  "sprite_sheet": "/assets/atlas/equipment/sprites/equipment_sheet3.0webp",
+  "imageUrl": "/assets/atlas/equipment/images/club.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "4-6-2026",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

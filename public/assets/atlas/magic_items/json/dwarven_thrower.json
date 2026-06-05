@@ -1,0 +1,54 @@
+{
+  "index": "dwarven_thrower",
+  "name": "dwarven thrower",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "rarity": "Very Rare",
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Weapon (warhammer), very rare (requires attunement by a dwarf)",
+    "You gain a +3 bonus to attack and damage rolls made with this magic weapon. It has the thrown property with a normal range of 20 feet and a long range of 60 feet. When you hit with a ranged attack using this weapon, it deals an extra 1d8 damage or, if the target is a giant, 2d8 damage. Immediately after the attack, the weapon flies back to your hand."
+  ],
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "secondary_effects": [
+    {
+      "damage_dice": "1d8",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      },
+      "condition": "on ranged attack"
+    },
+    {
+      "damage_dice": "2d8",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      },
+      "condition": "on ranged attack vs giants"
+    }
+  ],
+  "image": "/assets/atlas/magic_items/dwarven_thrower.webp",
+  "url": "/assets/atlas/magic_items/json/dwarven_thrower.json",
+  "updated_at": "2026-05-04T17:20:48.924Z",
+  "imageUrl": "/assets/atlas/magic_items/images/dwarven_thrower.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "4-5-2026"
+}

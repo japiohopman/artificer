@@ -1,0 +1,24 @@
+{
+  "index": "spears",
+  "type": "weapons",
+  "name": "spears",
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    }
+  ],
+  "url": "/assets/atlas/proficiencies/json/spears.json",
+  "reference": {
+    "index": "spear",
+    "name": "spear",
+    "url": "/assets/atlas/equipment/json/spear.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/spears.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

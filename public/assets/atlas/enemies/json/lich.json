@@ -1,0 +1,393 @@
+{
+  "index": "lich",
+  "name": "lich",
+  "size": "Medium",
+  "type": "undead",
+  "alignment": "any evil alignment",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 135,
+  "hit_dice": "18d8",
+  "hit_points_roll": "18d8+54",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 16,
+  "constitution": 16,
+  "intelligence": 20,
+  "wisdom": 14,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+      }
+    },
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "saving_throw_int",
+        "name": "saving throw: int",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_int.json"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    },
+    {
+      "value": 18,
+      "proficiency": {
+        "index": "skill_arcana",
+        "name": "skill: arcana",
+        "url": "/assets/atlas/proficiencies/json/skill_arcana.json"
+      }
+    },
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "skill_history",
+        "name": "skill: history",
+        "url": "/assets/atlas/proficiencies/json/skill_history.json"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill_insight",
+        "name": "skill: insight",
+        "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "lightning",
+    "necrotic"
+  ],
+  "damage_immunities": [
+    "poison",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "/assets/atlas/constitutionditions/json/charismarmed.json"
+    },
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "/assets/atlas/constitutionditions/json/exhaustion.json"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "/assets/atlas/constitutionditions/json/frightened.json"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "/assets/atlas/constitutionditions/json/paralyzed.json"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "/assets/atlas/constitutionditions/json/poisoned.json"
+    }
+  ],
+  "senses": {
+    "truesight": "120 ft.",
+    "passive_perception": 19
+  },
+  "languages": "Common plus up to five other languages",
+  "challenge_rating": 21,
+  "proficiency_bonus": 7,
+  "xp": 33000,
+  "special_abilities": [
+    {
+      "name": "legendary resistance",
+      "desc": "If the lich fails a saving throw, it can choose to succeed instead.",
+      "usage": {
+        "type": "per day",
+        "times": 3,
+        "rest_types": []
+      },
+      "damage": []
+    },
+    {
+      "name": "rejuvenation",
+      "desc": "If it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery.",
+      "damage": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). The lich has the following wizard spells prepared:\n\n- Cantrips (at will): mage hand, prestidigitation, ray of frost\n- 1st level (4 slots): detect magic, magic missile, shield, thunderwave\n- 2nd level (3 slots): acid arrow, detect thoughts, invisibility, mirror image\n- 3rd level (3 slots): animate dead, counterspell, dispel magic, fireball\n- 4th level (3 slots): blight, dimension door\n- 5th level (3 slots): cloudkill, scrying\n- 6th level (1 slot): disintegrate, globe of invulnerability\n- 7th level (1 slot): finger of death, plane shift\n- 8th level (1 slot): dominate monster, power word stun\n- 9th level (1 slot): power word kill",
+      "spellcasting": {
+        "level": 18,
+        "ability": {
+          "index": "int",
+          "name": "int",
+          "url": "/assets/atlas/ability_scores/json/intelligence.json"
+        },
+        "dc": 20,
+        "modifier": 12,
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "school": "wizard",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 1,
+          "7": 1,
+          "8": 1,
+          "9": 1
+        },
+        "spells": [
+          {
+            "name": "mage hand",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/json/mage_hand.json"
+          },
+          {
+            "name": "prestidigitation",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/json/prestidigitation.json"
+          },
+          {
+            "name": "ray of frost",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/json/ray_of_frost.json"
+          },
+          {
+            "name": "detect magic",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/detect_magic.json"
+          },
+          {
+            "name": "magic missile",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/magic_missile.json"
+          },
+          {
+            "name": "shield",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/shield.json"
+          },
+          {
+            "name": "thunderwave",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/thunderwave.json"
+          },
+          {
+            "name": "acid arrow",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/acid_arrow.json"
+          },
+          {
+            "name": "detect thoughts",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/detect_thoughts.json"
+          },
+          {
+            "name": "invisibility",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/invisibility.json"
+          },
+          {
+            "name": "mirror image",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/mirror_image.json"
+          },
+          {
+            "name": "animate dead",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/json/animate_dead.json"
+          },
+          {
+            "name": "counterspell",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/json/counterspell.json"
+          },
+          {
+            "name": "dispel magic",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/json/dispel_magic.json"
+          },
+          {
+            "name": "fireball",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/json/fireball.json"
+          },
+          {
+            "name": "blight",
+            "level": 4,
+            "url": "/assets/atlas/spell/json/json/blight.json"
+          },
+          {
+            "name": "dimension door",
+            "level": 4,
+            "url": "/assets/atlas/spell/json/json/dimension_door.json"
+          },
+          {
+            "name": "cloudkill",
+            "level": 5,
+            "url": "/assets/atlas/spell/json/json/cloudkill.json"
+          },
+          {
+            "name": "scrying",
+            "level": 5,
+            "url": "/assets/atlas/spell/json/json/scrying.json"
+          },
+          {
+            "name": "disintegrate",
+            "level": 6,
+            "url": "/assets/atlas/spell/json/json/disintegrate.json"
+          },
+          {
+            "name": "globe of invulnerability",
+            "level": 6,
+            "url": "/assets/atlas/spell/json/json/globe_of_invulnerability.json"
+          },
+          {
+            "name": "finger of death",
+            "level": 7,
+            "url": "/assets/atlas/spell/json/json/finger_of_death.json"
+          },
+          {
+            "name": "plane shift",
+            "level": 7,
+            "url": "/assets/atlas/spell/json/json/plane_shift.json"
+          },
+          {
+            "name": "dominate monster",
+            "level": 8,
+            "url": "/assets/atlas/spell/json/json/dominate_monster.json"
+          },
+          {
+            "name": "power word stun",
+            "level": 8,
+            "url": "/assets/atlas/spell/json/json/power_word_stun.json"
+          },
+          {
+            "name": "power word kill",
+            "level": 9,
+            "url": "/assets/atlas/spell/json/json/power_word_kill.json"
+          }
+        ]
+      },
+      "damage": []
+    },
+    {
+      "name": "turn resistance",
+      "desc": "The lich has advantage on saving throws against any effect that turns undead.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "paralyzing touch",
+      "desc": "Melee Spell Attack: +12 to hit, reach 5 ft., one creature. Hit: 10 (3d6) cold damage. The target must succeed on a DC 18 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "cold",
+            "url": "/assets/atlas/damage_types/json/cold.json"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "cantrip",
+      "desc": "The lich casts a cantrip.",
+      "damage": []
+    },
+    {
+      "name": "paralyzing touch (costs 2 actions)",
+      "desc": "The lich uses its Paralyzing Touch.",
+      "damage": []
+    },
+    {
+      "name": "frightening gaze (costs 2 actions)",
+      "desc": "The lich fixes its gaze on one creature it can see within 10 feet of it. The target must succeed on a DC 18 Wisdom saving throw against this magic or become frightened for 1 minute. The frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the lich's gaze for the next 24 hours.",
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "wis",
+          "url": "/assets/atlas/ability_scores/json/wisdom.json"
+        },
+        "dc_value": 18,
+        "success_type": "none"
+      },
+      "damage": []
+    },
+    {
+      "name": "disrupt life (costs 3 actions)",
+      "desc": "Each living creature within 20 feet of the lich must make a DC 18 Constitution saving throw against this magic, taking 21 (6d6) necrotic damage on a failed save, or half as much damage on a successful one.",
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "con",
+          "url": "/assets/atlas/ability_scores/json/constitution.json"
+        },
+        "dc_value": 18,
+        "success_type": "none"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "/assets/atlas/damage_types/json/necrotic.json"
+          },
+          "damage_dice": "6d6"
+        }
+      ]
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/lich.webp",
+  "url": "/assets/atlas/enemies/json/lich.json",
+  "updated_at": "2026-04-18T03:58:31.983Z",
+  "forms": [],
+  "reactions": [],
+  "sprite_index": 8,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet8.webp",
+  "imageUrl": "/assets/atlas/enemies/lich.webp",
+  "_type": "enemies",
+  "background_type": "ruins",
+  "rarity": "Very Rare",
+  "last_updated": "18-4-2026"
+}

@@ -1,0 +1,20 @@
+{
+  "index": "cunning_action",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "name": "cunning action",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat. This action can be used only to take the Dash, Disengage, or Hide action."
+  ],
+  "url": "/assets/atlas/features/json/cunning_action.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/cunning_action.webp",
+  "feature_specific": {
+    "special_action": "bonus_action"
+  }
+}

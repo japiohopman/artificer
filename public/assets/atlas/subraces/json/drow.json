@@ -1,0 +1,45 @@
+{
+  "index": "drow",
+  "name": "drow",
+  "race": {
+    "index": "elf",
+    "name": "elf",
+    "url": "/assets/atlas/species/json/elf.json"
+  },
+  "desc": "Descended from an earlier subrace of dark-skinned elves, the drow were banished from the surface world for following the goddess Lolth down the path to evil and corruption.",
+  "ability_bonuses": [
+    {
+      "ability_score": {
+        "index": "cha",
+        "name": "cha",
+        "url": "/assets/atlas/ability_scores/json/charisma.json"
+      },
+      "bonus": 1
+    }
+  ],
+  "racial_traits": [
+    {
+      "index": "superior_darkvision",
+      "name": "superior darkvision",
+      "url": "/assets/atlas/traits/superior_darkvision"
+    },
+    {
+      "index": "sunlight_sensitivity",
+      "name": "sunlight sensitivity",
+      "url": "/assets/atlas/traits/sunlight_sensitivity"
+    },
+    {
+      "index": "drow_magic",
+      "name": "drow magic",
+      "url": "/assets/atlas/traits/drow_magic"
+    },
+    {
+      "index": "drow_weapon_training",
+      "name": "drow weapon training",
+      "url": "/assets/atlas/traits/drow_weapon_training"
+    }
+  ],
+  "url": "/assets/atlas/subraces/json/drow.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "/assets/atlas/subraces/drow.webp"
+}

@@ -1,0 +1,25 @@
+{
+  "index": "menacing",
+  "races": [
+    {
+      "index": "half_orc",
+      "name": "half_orc",
+      "url": "/assets/atlas/species/json/half_orc.json"
+    }
+  ],
+  "subraces": [],
+  "name": "menacing",
+  "desc": [
+    "You gain proficiency in the Intimidation skill."
+  ],
+  "proficiencies": [
+    {
+      "index": "skill_intimidation",
+      "name": "skill: intimidation",
+      "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
+    }
+  ],
+  "url": "/assets/atlas/traits/json/menacing.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "/assets/atlas/traits/menacing.webp"
+}

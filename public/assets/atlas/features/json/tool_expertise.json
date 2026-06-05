@@ -1,0 +1,22 @@
+{
+  "index": "tool_expertise",
+  "class": {
+    "index": "artificer",
+    "name": "artificer",
+    "url": "/assets/atlas/class/json/artificer.json"
+  },
+  "name": "tool expertise",
+  "level": 6,
+  "prerequisites": [],
+  "desc": [
+    "At 6th level, your proficiency bonus is doubled for any ability check you make that uses your proficiency with a tool."
+  ],
+  "url": "/assets/atlas/features/json/tool_expertise.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/tool_expertise.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "doubled_tool_proficiency": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "index": "performance",
+  "name": "performance",
+  "desc": [
+    "Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some other form of entertainment."
+  ],
+  "ability_score": {
+    "index": "cha",
+    "name": "cha",
+    "url": "/assets/atlas/ability_scores/json/charisma.json"
+  },
+  "url": "/assets/atlas/skills/json/performance.json",
+  "updated_at": "2025-10-24T20:42:14.523Z",
+  "image": "/assets/atlas/skills/json/performance.webp"
+}

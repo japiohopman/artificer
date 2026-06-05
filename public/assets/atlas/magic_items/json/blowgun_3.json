@@ -1,0 +1,59 @@
+{
+  "desc": [
+    "Carved from the calcified marrow of a subterranean predator, this hollowed reed whispers with the lingering hum of the venomous silences it has inflicted. It is a weapon for the patient hand, turning a single, needle-thin breath into a soundless execution."
+  ],
+  "special": [],
+  "index": "blowgun_3",
+  "name": "blowgun, +3",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Ranged",
+  "category_range": "Martial Ranged",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 25,
+    "long": 100
+  },
+  "weight": 1,
+  "properties": [
+    {
+      "index": "ammunition",
+      "name": "ammunition",
+      "url": "/assets/atlas/weapon_properties/ammunition"
+    },
+    {
+      "index": "loading",
+      "name": "loading",
+      "url": "/assets/atlas/weapon_properties/loading"
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/blowgun.json",
+  "updated_at": "2026-04-18T09:42:22.571Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/blowgun.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/blowgun_3.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "rarity": "Very Rare",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "18-4-2026"
+}

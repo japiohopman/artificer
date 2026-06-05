@@ -1,0 +1,18 @@
+{
+  "index": "skill_medicine",
+  "type": "skills",
+  "name": "skill: medicine",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/skill_medicine.json",
+  "reference": {
+    "index": "medicine",
+    "name": "medicine",
+    "url": "/assets/atlas/skills/json/medicine.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/skills/json/medicine.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
+}

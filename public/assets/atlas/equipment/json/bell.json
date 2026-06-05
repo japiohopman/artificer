@@ -1,0 +1,41 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "bell",
+  "name": "bell",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/bell.json",
+  "updated_at": "2026-05-03T20:50:05.987Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/bell.webp",
+  "sprite_index": 3,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/images/bell.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "category": "Adventuring Gear",
+  "last_updated": "3-5-2026",
+  "kind": "ring",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

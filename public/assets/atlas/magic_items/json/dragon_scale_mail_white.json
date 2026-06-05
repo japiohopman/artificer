@@ -1,0 +1,30 @@
+{
+  "index": "dragon_scale_mail_white",
+  "name": "white dragon scale mail",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "rarity": {
+    "name": "very rare"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Armor (scale mail), very rare (requires attunement)",
+    "Dragon scale mail is made of the scales of a white dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued.",
+    "While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to cold damage.",
+    "Additionally, you can focus your senses as an action to magically discern the distance and direction to the closest white dragon within 30 miles of you. This special action can't be used again until the next dawn."
+  ],
+  "image": "/assets/atlas/magic_items/dragon_scale_mail_white.webp",
+  "url": "/assets/atlas/magic_items/json/dragon_scale_mail_white.json",
+  "updated_at": "2026-04-22T18:20:43.278Z",
+  "imageUrl": "/assets/atlas/magic_items/images/dragon_scale_mail_white.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "chest"
+  ],
+  "last_updated": "22-4-2026"
+}

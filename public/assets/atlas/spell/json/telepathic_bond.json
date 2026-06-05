@@ -1,0 +1,39 @@
+{
+  "higher_level": [],
+  "index": "telepathic_bond",
+  "name": "telepathic bond",
+  "desc": [
+    "You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures with Intelligence scores of 2 or less aren't affected by this spell.",
+    "Until the spell ends, the targets can communicate telepathically through the bond whether or not they have a common language. The communication is possible over any distance, though it can't extend to other planes of existence."
+  ],
+  "range": "30 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Pieces of eggshell from two different kinds of creatures",
+  "ritual": true,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "divination",
+    "name": "divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/telepathic_bond.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/telepathic_bond.webp",
+  "sprite_index": 12,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet12.webp"
+}

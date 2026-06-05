@@ -1,0 +1,120 @@
+{
+  "index": "pseudodragon",
+  "name": "pseudodragon",
+  "size": "Tiny",
+  "type": "dragon",
+  "alignment": "neutral good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 7,
+  "hit_dice": "2d4",
+  "hit_points_roll": "2d4+2",
+  "speed": {
+    "walk": "15 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 6,
+  "dexterity": 15,
+  "constitution": 13,
+  "intelligence": 10,
+  "wisdom": 12,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/skills/json/perception.json"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "/assets/atlas/skills/json/stealth.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "darkvision": "60 ft.",
+    "passive_perception": 13
+  },
+  "languages": "understands Common and Draconic but can't speak",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "keen senses",
+      "desc": "The pseudodragon has advantage on Wisdom (Perception) checks that rely on sight, hearing, or smell.",
+      "damage": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The pseudodragon has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    },
+    {
+      "name": "limited telepathy",
+      "desc": "The pseudodragon can magically communicate simple ideas, emotions, and images telepathically with any creature within 100 ft. of it that can understand a language.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "sting",
+      "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or become poisoned for 1 hour. If the saving throw fails by 5 or more, the target falls unconscious for the same duration, or until it takes damage or another creature uses an action to shake it awake.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/pseudodragon.webp",
+  "url": "/assets/atlas/enemies/json/pseudodragon.json",
+  "updated_at": "2026-04-16T09:15:28.091Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 1,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.webp",
+  "imageUrl": "/assets/atlas/enemies/pseudodragon.webp",
+  "_type": "enemies",
+  "background_type": "land_urban4",
+  "last_updated": "16-4-2026"
+}

@@ -1,0 +1,75 @@
+{
+  "index": "circle_of_death",
+  "name": "circle of death",
+  "desc": [
+    "A sphere of negative energy ripples out in a 60-foot radius sphere from a point within range. Each creature in that area must make a constitution saving throw. A target takes 8d6 necrotic damage on a failed save, or half as much damage on a successful one."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 2d6 for each slot level above 6th."
+  ],
+  "range": "150 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "The powder of a crushed black pearl worth at least 500 gp.",
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 6,
+  "damage": {
+    "damage_type": {
+      "index": "necrotic",
+      "name": "necrotic",
+      "url": "/assets/atlas/damage_types/json/necrotic.json"
+    },
+    "damage_at_slot_level": {
+      "6": "8d6",
+      "7": "10d6",
+      "8": "12d6",
+      "9": "14d6"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "con",
+      "name": "con",
+      "url": "/assets/atlas/ability_scores/json/constitution.json"
+    },
+    "dc_success": "half"
+  },
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 60
+  },
+  "school": {
+    "index": "necromancy",
+    "name": "necromancy",
+    "url": "/assets/atlas/magic_schools/json/necromancy.json"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/circle_of_death.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/circle_of_death.webp",
+  "sprite_index": 15,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet2.webp"
+}

@@ -1,0 +1,56 @@
+{
+  "index": "horn_of_valhalla",
+  "name": "horn of valhalla",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": "Rare",
+  "variants": [
+    {
+      "index": "horn_of_valhalla_silver",
+      "name": "silver horn of valhalla",
+      "url": "/assets/atlas/magic_items/horn_of_valhalla_silver"
+    },
+    {
+      "index": "horn_of_valhalla_brass",
+      "name": "brass horn of valhalla",
+      "url": "/assets/atlas/magic_items/horn_of_valhalla_brass"
+    },
+    {
+      "index": "horn_of_valhalla_bronze",
+      "name": "bronze horn of valhalla",
+      "url": "/assets/atlas/magic_items/horn_of_valhalla_bronze"
+    },
+    {
+      "index": "horn_of_valhalla_iron",
+      "name": "iron horn of valhalla",
+      "url": "/assets/atlas/magic_items/horn_of_valhalla_iron"
+    }
+  ],
+  "variant": false,
+  "desc": [
+    "Wondrous item, rare (silver or brass), very rare (bronze) or legendary (iron)",
+    "You can use an action to blow this horn. In response, warrior spirits from the Valhalla appear within 60 feet of you. They use the statistics of a berserker. They return to Valhalla after 1 hour or when they drop to 0 hit points. Once you use the horn, it can't be used again until 7 days have passed.",
+    "Four types of horn of Valhalla are known to exist, each made of a different metal. The horn's type determines how many berserkers answer its summons, as well as the requirement for its use. The GM chooses the horn's type or determines it randomly.",
+    "| d100 | Horn Type | Berserkers Summoned | Requirement |",
+    "|---|---|---|---|",
+    "| 01-40 | Silver | 2d4 + 2 | None |",
+    "| 41-75 | Brass | 3d4 + 3 | Proficiency with all simple weapons |",
+    "| 76-90 | Bronze | 4d4 + 4 | Proficiency with all medium armor |",
+    "| 91-00 | Iron | 5d4 + 5 | Proficiency with all martial weapons |",
+    "If you blow the horn without meeting its requirement, the summoned berserkers attack you. If you meet the requirement, they are friendly to you and your companions and follow your commands."
+  ],
+  "url": "/assets/atlas/magic_items/json/horn_of_valhalla.json",
+  "updated_at": "2026-05-16T07:22:28.167Z",
+  "image": "/assets/atlas/magic_items/horn_of_valhalla.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/horn_of_valhalla.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Wondrous Items",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "16-5-2026"
+}

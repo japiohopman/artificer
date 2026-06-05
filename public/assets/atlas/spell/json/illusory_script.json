@@ -1,0 +1,56 @@
+{
+  "higher_level": [],
+  "index": "illusory_script",
+  "name": "illusory script",
+  "desc": [
+    "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration.",
+    "To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know.",
+    "Should the spell be dispelled, the original script and the illusion both disappear.",
+    "A creature with truesight can read the hidden message."
+  ],
+  "range": "Touch",
+  "components": [
+    "S",
+    "M"
+  ],
+  "material": "A lead-based ink worth at least 10gp, which this spell consumes.",
+  "ritual": true,
+  "duration": "10 days",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 1,
+  "school": {
+    "index": "illusion",
+    "name": "illusion",
+    "url": "/assets/atlas/magic_schools/json/illusion.json"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/illusory_script.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/illusory_script.webp",
+  "sprite_index": 16,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet7.webp"
+}

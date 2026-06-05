@@ -1,0 +1,32 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "sled",
+  "name": "sled",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 20,
+    "unit": "gp"
+  },
+  "weight": 300,
+  "url": "/assets/atlas/equipment/json/sled.json",
+  "updated_at": "2026-04-29T00:44:31.591Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/sled.webp",
+  "sprite_index": 23,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/sled.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "29-4-2026",
+  "kind": "adventuring_gear"
+}

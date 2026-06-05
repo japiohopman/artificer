@@ -1,0 +1,47 @@
+{
+  "index": "javelin_of_lightning",
+  "name": "javelin of lightning",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "rarity": "Uncommon",
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Weapon (javelin), uncommon",
+    "This javelin is a magic weapon. When you hurl it and speak its command word, it transforms into a bolt of lightning, forming a line 5 feet wide that extends out from you to a target within 120 feet. Each creature in the line excluding you and the target must make a DC 13 Dexterity saving throw, taking 4d6 lightning damage on a failed save, and half as much damage on a successful one. The lightning bolt turns back into a javelin when it reaches the target. Make a ranged weapon attack against the target. On a hit, the target takes damage from the javelin plus 4d6 lightning damage.",
+    "The javelin's property can't be used again until the next dawn. In the meantime, the javelin can still be used as a magic weapon."
+  ],
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "secondary_effects": [
+    {
+      "damage_dice": "4d6",
+      "damage_type": {
+        "index": "lightning",
+        "name": "lightning",
+        "url": "/assets/atlas/damage_types/json/lightning.json"
+      }
+    }
+  ],
+  "url": "/assets/atlas/magic_items/json/javelin_of_lightning.json",
+  "updated_at": "2026-05-04T17:24:19.837Z",
+  "image": "/assets/atlas/magic_items/images/javelin_of_lightning.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/javelin_of_lightning.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "last_updated": "4-5-2026"
+}

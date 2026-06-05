@@ -1,0 +1,23 @@
+{
+  "index": "indomitable_3_uses",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "name": "indomitable (3 uses)",
+  "level": 17,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest. You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
+  ],
+  "url": "/assets/atlas/features/json/indomitable_3_uses.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/indomitable_3_uses.webp",
+  "feature_specific": {
+    "usage": {
+      "times": 3,
+      "type": "long_rest"
+    }
+  }
+}

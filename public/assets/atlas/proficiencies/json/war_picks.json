@@ -1,0 +1,18 @@
+{
+  "index": "war_picks",
+  "type": "weapons",
+  "name": "war picks",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/war_picks.json",
+  "reference": {
+    "index": "war_pick",
+    "name": "war pick",
+    "url": "/assets/atlas/equipment/json/war_pick.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/war_picks.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

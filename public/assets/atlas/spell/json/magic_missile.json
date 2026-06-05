@@ -1,0 +1,67 @@
+{
+  "index": "magic_missile",
+  "name": "magic missile",
+  "desc": [
+    "You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st."
+  ],
+  "range": "120 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "damage": {
+    "damage_type": {
+      "index": "force",
+      "name": "force",
+      "url": "/assets/atlas/damage_types/json/force.json"
+    },
+    "damage_at_slot_level": {
+      "1": "1d4 + 1",
+      "2": "1d4 + 1",
+      "3": "1d4 + 1",
+      "4": "1d4 + 1",
+      "5": "1d4 + 1",
+      "6": "1d4 + 1",
+      "7": "1d4 + 1",
+      "8": "1d4 + 1",
+      "9": "1d4 + 1"
+    }
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/magic_missile.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/magic_missile.webp",
+  "sprite_index": 14,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet8.webp"
+}

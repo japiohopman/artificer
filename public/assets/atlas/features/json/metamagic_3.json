@@ -1,0 +1,94 @@
+{
+  "index": "metamagic_3",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "/assets/atlas/class/json/sorcerer.json"
+  },
+  "name": "metamagic",
+  "level": 17,
+  "prerequisites": [],
+  "desc": [
+    "At 3rd level, you gain the ability to twist your spells to suit your needs. You gain two of the following Metamagic options of your choice. You gain another one at 10th and 17th level.",
+    "You can use only one Metamagic option on a spell when you cast it, unless otherwise noted."
+  ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "feature",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "metamagic_careful_spell",
+              "name": "metamagic: careful spell",
+              "url": "/assets/atlas/features/json/metamagic_careful_spell.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "metamagic_distant_spell",
+              "name": "metamagic: distant spell",
+              "url": "/assets/atlas/features/json/metamagic_distant_spell.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "metamagic_empowered_spell",
+              "name": "metamagic: empowered spell",
+              "url": "/assets/atlas/features/json/metamagic_empowered_spell.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "metamagic_extended_spell",
+              "name": "metamagic: extended spell",
+              "url": "/assets/atlas/features/json/metamagic_extended_spell.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "metamagic_heightened_spell",
+              "name": "metamagic: heightened spell",
+              "url": "/assets/atlas/features/json/metamagic_heightened_spell.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "metamagic_quickened_spell",
+              "name": "metamagic: quickened spell",
+              "url": "/assets/atlas/features/json/metamagic_quickened_spell.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "metamagic_subtle_spell",
+              "name": "metamagic: subtle spell",
+              "url": "/assets/atlas/features/json/metamagic_subtle_spell.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "metamagic_twinned_spell",
+              "name": "metamagic: twinned spell",
+              "url": "/assets/atlas/features/json/metamagic_twinned_spell.json"
+            }
+          }
+        ]
+      }
+    },
+    "invocations": []
+  },
+  "url": "/assets/atlas/features/json/metamagic_3.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "/assets/atlas/features/images/metamagic_3.webp"
+}
