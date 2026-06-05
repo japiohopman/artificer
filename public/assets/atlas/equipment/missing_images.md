@@ -1,0 +1,203 @@
+# Missing Equipment Images Report
+
+## Missing .webp files (based on JSON filename convention)
+These .webp files are expected in `public/assets/atlas/equipment/images/` based on the JSON filenames in `public/assets/atlas/equipment/json/`.
+
+- alms_box.webp
+- amulet.webp
+- bagpipes.webp
+- barding_breastplate.webp
+- barding_chain_mail.webp
+- barding_chain_shirt.webp
+- barding_half_plate.webp
+- barding_hide.webp
+- barding_leather.webp
+- barding_padded.webp
+- barding_plate.webp
+- barding_ring_mail.webp
+- barding_scale_mail.webp
+- barding_splint.webp
+- barding_studded_leather.webp
+- battleaxe.webp
+- bit_and_bridle.webp
+- brewers_supplies.webp
+- calligraphers_supplies.webp
+- caltrops.webp
+- camel.webp
+- carpenters_tools.webp
+- case_crossbow_bolt.webp
+- censer.webp
+- chalk_1_piece.webp
+- city_map.webp
+- clothes_costume.webp
+- clothes_fine.webp
+- clothes_travelers.webp
+- cobblers_tools.webp
+- component_pouch.webp
+- cooks_utensils.webp
+- donkey.webp
+- elephant.webp
+- fake_signet_ring.webp
+- flail.webp
+- flask_or_tankard.webp
+- flute.webp
+- glaive.webp
+- glassblowers_tools.webp
+- greatsword.webp
+- hammer_sledge.webp
+- holy_water_flask.webp
+- hunting_trap.webp
+- insignia_of_rank.webp
+- jewelers_tools.webp
+- ladder_10_foot.webp
+- lamp.webp
+- lance.webp
+- lantern_hooded.webp
+- leather_pouch.webp
+- leatherworkers_tools.webp
+- letter_from_dead_colleague.webp
+- letter_of_introduction.webp
+- little_bag_of_sand.webp
+- lock.webp
+- lock_of_hair.webp
+- love_letter.webp
+- lucky_charm.webp
+- magnifying_glass.webp
+- manacles.webp
+- marked_cards.webp
+- masons_tools.webp
+- mastiff.webp
+- mirror_steel.webp
+- monster_hunters_pack.webp
+- mule.webp
+- oil_flask.webp
+- painters_supplies.webp
+- piece_of_exotic_jewelry.webp
+- pole_10_foot.webp
+- pot_iron.webp
+- quill.webp
+- saddle_military.webp
+- saddle_pack.webp
+- saddle_riding.webp
+- saddlebags.webp
+- scroll_case.webp
+- scroll_of_pedigree.webp
+- shawm.webp
+- stoppered_bottles.webp
+- token_of_parents.webp
+- trinket.webp
+- trophy_from_fallen_animal.webp
+- trophy_from_fallen_enemy.webp
+- warhammer.webp
+- warhorse.webp
+
+## Broken Image References in JSON files
+These JSON files contain references to images that do not exist in `public/assets/atlas/equipment/images/`.
+
+- **alms_box.json**: `image` references `/assets/atlas/equipment/images/alms_box.webp` (Missing)
+- **amulet.json**: `image` references `/assets/atlas/equipment/images/amulet.webp` (Missing)
+- **bagpipes.json**: `image` references `/assets/atlas/equipment/images/bagpipes.webp` (Missing)
+- **barding_breastplate.json**: `image` references `/assets/atlas/equipment/images/barding_breastplate.webp` (Missing)
+- **barding_chain_mail.json**: `image` references `/assets/atlas/equipment/images/barding_chain_mail.webp` (Missing)
+- **barding_chain_shirt.json**: `image` references `/assets/atlas/equipment/images/barding_chain_shirt.webp` (Missing)
+- **barding_half_plate.json**: `image` references `/assets/atlas/equipment/images/barding_half_plate.webp` (Missing)
+- **barding_hide.json**: `image` references `/assets/atlas/equipment/images/barding_hide.webp` (Missing)
+- **barding_leather.json**: `image` references `/assets/atlas/equipment/images/barding_leather.webp` (Missing)
+- **barding_padded.json**: `image` references `/assets/atlas/equipment/images/barding_padded.webp` (Missing)
+- **barding_plate.json**: `image` references `/assets/atlas/equipment/images/barding_plate.webp` (Missing)
+- **barding_ring_mail.json**: `image` references `/assets/atlas/equipment/images/barding_ring_mail.webp` (Missing)
+- **barding_scale_mail.json**: `image` references `/assets/atlas/equipment/images/barding_scale_mail.webp` (Missing)
+- **barding_splint.json**: `image` references `/assets/atlas/equipment/images/barding_splint.webp` (Missing)
+- **barding_studded_leather.json**: `image` references `/assets/atlas/equipment/images/barding_studded_leather.webp` (Missing)
+- **battleaxe.json**: `image` references `/assets/atlas/equipment/images/battleaxe.webp` (Missing)
+- **bit_and_bridle.json**: `image` references `/assets/atlas/equipment/images/bit_and_bridle.webp` (Missing)
+- **brewers_supplies.json**: `image` references `/assets/atlas/equipment/images/brewers_supplies.webp` (Missing)
+- **calligraphers_supplies.json**: `image` references `/assets/atlas/equipment/images/calligraphers_supplies.webp` (Missing)
+- **caltrops.json**: `image` references `/assets/atlas/equipment/images/caltrops.webp` (Missing)
+- **camel.json**: `image` references `/assets/atlas/equipment/images/camel.webp` (Missing)
+- **carpenters_tools.json**: `image` references `/assets/atlas/equipment/images/carpenters_tools.webp` (Missing)
+- **case_crossbow_bolt.json**: `image` references `/assets/atlas/equipment/images/case_crossbow_bolt.webp` (Missing)
+- **censer.json**: `image` references `/assets/atlas/equipment/images/censer.webp` (Missing)
+- **chalk_1_piece.json**: `image` references `/assets/atlas/equipment/images/chalk_1_piece.webp` (Missing)
+- **city_map.json**: `image` references `/assets/atlas/equipment/images/city_map.webp` (Missing)
+- **city_map.json**: `imageUrl` references `/assets/atlas/equipment/images/city_map.webp` (Missing)
+- **clothes_costume.json**: `image` references `/assets/atlas/equipment/images/clothes_costume.webp` (Missing)
+- **clothes_fine.json**: `image` references `/assets/atlas/equipment/images/clothes_fine.webp` (Missing)
+- **clothes_travelers.json**: `image` references `/assets/atlas/equipment/images/clothes_travelers.webp` (Missing)
+- **cobblers_tools.json**: `image` references `/assets/atlas/equipment/images/cobblers_tools.webp` (Missing)
+- **component_pouch.json**: `image` references `/assets/atlas/equipment/images/component_pouch.webp` (Missing)
+- **cooks_utensils.json**: `image` references `/assets/atlas/equipment/images/cooks_utensils.webp` (Missing)
+- **donkey.json**: `image` references `/assets/atlas/equipment/images/donkey.webp` (Missing)
+- **elephant.json**: `image` references `/assets/atlas/equipment/images/elephant.webp` (Missing)
+- **fake_signet_ring.json**: `image` references `/assets/atlas/equipment/images/fake_signet_ring.webp` (Missing)
+- **fake_signet_ring.json**: `imageUrl` references `/assets/atlas/equipment/images/fake_signet_ring.webp` (Missing)
+- **flail.json**: `image` references `/assets/atlas/equipment/images/flail.webp` (Missing)
+- **flask_or_tankard.json**: `image` references `/assets/atlas/equipment/images/flask_or_tankard.webp` (Missing)
+- **flute.json**: `image` references `/assets/atlas/equipment/images/flute.webp` (Missing)
+- **glaive.json**: `image` references `/assets/atlas/equipment/images/glaive.webp` (Missing)
+- **glassblowers_tools.json**: `image` references `/assets/atlas/equipment/images/glassblowers_tools.webp` (Missing)
+- **greatsword.json**: `image` references `/assets/atlas/equipment/images/greatsword.webp` (Missing)
+- **hammer_sledge.json**: `image` references `/assets/atlas/equipment/images/hammer_sledge.webp` (Missing)
+- **holy_water_flask.json**: `image` references `/assets/atlas/equipment/images/holy_water_flask.webp` (Missing)
+- **hunting_trap.json**: `image` references `/assets/atlas/equipment/images/hunting_trap.webp` (Missing)
+- **insignia_of_rank.json**: `image` references `/assets/atlas/equipment/images/insignia_of_rank.webp` (Missing)
+- **insignia_of_rank.json**: `imageUrl` references `/assets/atlas/equipment/images/insignia_of_rank.webp` (Missing)
+- **jewelers_tools.json**: `image` references `/assets/atlas/equipment/images/jewelers_tools.webp` (Missing)
+- **ladder_10_foot.json**: `image` references `/assets/atlas/equipment/images/ladder_10_foot.webp` (Missing)
+- **lamp.json**: `image` references `/assets/atlas/equipment/images/lamp.webp` (Missing)
+- **lance.json**: `image` references `/assets/atlas/equipment/images/lance.webp` (Missing)
+- **lantern_hooded.json**: `image` references `/assets/atlas/equipment/images/lantern_hooded.webp` (Missing)
+- **leather_pouch.json**: `image` references `/assets/atlas/equipment/images/leather_pouch.webp` (Missing)
+- **leather_pouch.json**: `imageUrl` references `/assets/atlas/equipment/images/leather_pouch.webp` (Missing)
+- **leatherworkers_tools.json**: `image` references `/assets/atlas/equipment/images/leatherworkers_tools.webp` (Missing)
+- **letter_from_dead_colleague.json**: `image` references `/assets/atlas/equipment/images/letter_from_dead_colleague.webp` (Missing)
+- **letter_from_dead_colleague.json**: `imageUrl` references `/assets/atlas/equipment/images/letter_from_dead_colleague.webp` (Missing)
+- **letter_of_introduction.json**: `image` references `/assets/atlas/equipment/images/letter_of_introduction.webp` (Missing)
+- **letter_of_introduction.json**: `imageUrl` references `/assets/atlas/equipment/images/letter_of_introduction.webp` (Missing)
+- **little_bag_of_sand.json**: `image` references `/assets/atlas/equipment/images/little_bag_of_sand.webp` (Missing)
+- **lock_of_hair.json**: `image` references `/assets/atlas/equipment/images/lock_of_hair.webp` (Missing)
+- **lock_of_hair.json**: `imageUrl` references `/assets/atlas/equipment/images/lock_of_hair.webp` (Missing)
+- **lock.json**: `image` references `/assets/atlas/equipment/images/lock.webp` (Missing)
+- **love_letter.json**: `image` references `/assets/atlas/equipment/images/love_letter.webp` (Missing)
+- **love_letter.json**: `imageUrl` references `/assets/atlas/equipment/images/love_letter.webp` (Missing)
+- **lucky_charm.json**: `image` references `/assets/atlas/equipment/images/lucky_charm.webp` (Missing)
+- **lucky_charm.json**: `imageUrl` references `/assets/atlas/equipment/images/lucky_charm.webp` (Missing)
+- **magnifying_glass.json**: `image` references `/assets/atlas/equipment/images/magnifying_glass.webp` (Missing)
+- **manacles.json**: `image` references `/assets/atlas/equipment/images/manacles.webp` (Missing)
+- **marked_cards.json**: `image` references `/assets/atlas/equipment/images/marked_cards.webp` (Missing)
+- **marked_cards.json**: `imageUrl` references `/assets/atlas/equipment/images/marked_cards.webp` (Missing)
+- **masons_tools.json**: `image` references `/assets/atlas/equipment/images/masons_tools.webp` (Missing)
+- **mastiff.json**: `image` references `/assets/atlas/equipment/images/mastiff.webp` (Missing)
+- **mirror_steel.json**: `image` references `/assets/atlas/equipment/images/mirror_steel.webp` (Missing)
+- **monster_hunters_pack.json**: `image` references `/assets/atlas/equipment/images/monster_hunters_pack.webp` (Missing)
+- **monster_hunters_pack.json**: `imageUrl` references `/assets/atlas/equipment/images/monster_hunters_pack.webp` (Missing)
+- **mule.json**: `image` references `/assets/atlas/equipment/images/mule.webp` (Missing)
+- **oil_flask.json**: `image` references `/assets/atlas/equipment/images/oil_flask.webp` (Missing)
+- **painters_supplies.json**: `image` references `/assets/atlas/equipment/images/painters_supplies.webp` (Missing)
+- **piece_of_exotic_jewelry.json**: `image` references `/assets/atlas/equipment/images/piece_of_exotic_jewelry.webp` (Missing)
+- **piece_of_exotic_jewelry.json**: `imageUrl` references `/assets/atlas/equipment/images/piece_of_exotic_jewelry.webp` (Missing)
+- **pole_10_foot.json**: `image` references `/assets/atlas/equipment/images/pole_10_foot.webp` (Missing)
+- **pot_iron.json**: `image` references `/assets/atlas/equipment/images/pot_iron.webp` (Missing)
+- **quill.json**: `image` references `/assets/atlas/equipment/images/quill.webp` (Missing)
+- **quill.json**: `imageUrl` references `/assets/atlas/equipment/images/quill.webp` (Missing)
+- **saddle_military.json**: `image` references `/assets/atlas/equipment/images/saddle_military.webp` (Missing)
+- **saddle_pack.json**: `image` references `/assets/atlas/equipment/images/saddle_pack.webp` (Missing)
+- **saddle_riding.json**: `image` references `/assets/atlas/equipment/images/saddle_riding.webp` (Missing)
+- **saddlebags.json**: `image` references `/assets/atlas/equipment/images/saddlebags.webp` (Missing)
+- **scroll_case.json**: `image` references `/assets/atlas/equipment/images/scroll_case.webp` (Missing)
+- **scroll_case.json**: `imageUrl` references `/assets/atlas/equipment/images/scroll_case.webp` (Missing)
+- **scroll_of_pedigree.json**: `image` references `/assets/atlas/equipment/images/scroll_of_pedigree.webp` (Missing)
+- **scroll_of_pedigree.json**: `imageUrl` references `/assets/atlas/equipment/images/scroll_of_pedigree.webp` (Missing)
+- **shawm.json**: `image` references `/assets/atlas/equipment/images/shawm.webp` (Missing)
+- **stoppered_bottles.json**: `image` references `/assets/atlas/equipment/images/stoppered_bottles.webp` (Missing)
+- **stoppered_bottles.json**: `imageUrl` references `/assets/atlas/equipment/images/stoppered_bottles.webp` (Missing)
+- **token_of_parents.json**: `image` references `/assets/atlas/equipment/images/token_of_parents.webp` (Missing)
+- **token_of_parents.json**: `imageUrl` references `/assets/atlas/equipment/images/token_of_parents.webp` (Missing)
+- **trinket.json**: `image` references `/assets/atlas/equipment/images/trinket.webp` (Missing)
+- **trinket.json**: `imageUrl` references `/assets/atlas/equipment/images/trinket.webp` (Missing)
+- **trophy_from_fallen_animal.json**: `image` references `/assets/atlas/equipment/images/trophy_from_fallen_animal.webp` (Missing)
+- **trophy_from_fallen_animal.json**: `imageUrl` references `/assets/atlas/equipment/images/trophy_from_fallen_animal.webp` (Missing)
+- **trophy_from_fallen_enemy.json**: `image` references `/assets/atlas/equipment/images/trophy_from_fallen_enemy.webp` (Missing)
+- **trophy_from_fallen_enemy.json**: `imageUrl` references `/assets/atlas/equipment/images/trophy_from_fallen_enemy.webp` (Missing)
+- **warhammer.json**: `image` references `/assets/atlas/equipment/images/warhammer.webp` (Missing)
+- **warhorse.json**: `image` references `/assets/atlas/equipment/images/warhorse.webp` (Missing)
