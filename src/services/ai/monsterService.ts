@@ -1,4 +1,3 @@
-import { Type } from "@google/genai";
 import { ai, MODELS } from "./config";
 
 export interface MonsterStats {
@@ -121,103 +120,103 @@ export async function parseRawMonsterText(text: string): Promise<Partial<Monster
       config: {
         responseMimeType: "application/json",
         responseSchema: {
-          type: Type.OBJECT,
+          type: "OBJECT",
           properties: {
-            name: { type: Type.STRING },
-            index: { type: Type.STRING },
-            size: { type: Type.STRING },
-            type: { type: Type.STRING },
-            subtype: { type: Type.STRING },
-            alignment: { type: Type.STRING },
-            armor_class: { type: Type.INTEGER },
-            armor_desc: { type: Type.STRING },
-            hit_points: { type: Type.INTEGER },
-            hit_dice: { type: Type.STRING },
-            speed: { type: Type.STRING },
-            initiative: { type: Type.INTEGER },
+            name: { type: "STRING" },
+            index: { type: "STRING" },
+            size: { type: "STRING" },
+            type: { type: "STRING" },
+            subtype: { type: "STRING" },
+            alignment: { type: "STRING" },
+            armor_class: { type: "INTEGER" },
+            armor_desc: { type: "STRING" },
+            hit_points: { type: "INTEGER" },
+            hit_dice: { type: "STRING" },
+            speed: { type: "STRING" },
+            initiative: { type: "INTEGER" },
             stats: {
-              type: Type.OBJECT,
+              type: "OBJECT",
               properties: {
-                str: { type: Type.INTEGER },
-                dex: { type: Type.INTEGER },
-                con: { type: Type.INTEGER },
-                int: { type: Type.INTEGER },
-                wis: { type: Type.INTEGER },
-                cha: { type: Type.INTEGER },
+                str: { type: "INTEGER" },
+                dex: { type: "INTEGER" },
+                con: { type: "INTEGER" },
+                int: { type: "INTEGER" },
+                wis: { type: "INTEGER" },
+                cha: { type: "INTEGER" },
               }
             },
-            rarity: { type: Type.STRING, enum: ['Common', 'Uncommon', 'Rare', 'Very Rare', 'Legendary', 'Artifact'] },
-            card_color: { type: Type.STRING },
-            background_type: { type: Type.STRING },
-            challenge_rating: { type: Type.STRING },
-            xp: { type: Type.INTEGER },
-            senses: { type: Type.STRING },
-            languages: { type: Type.STRING },
-            skills: { type: Type.STRING },
-            habitat: { type: Type.STRING },
-            treasure: { type: Type.STRING },
+            rarity: { type: "STRING", enum: ['Common', 'Uncommon', 'Rare', 'Very Rare', 'Legendary', 'Artifact'] },
+            card_color: { type: "STRING" },
+            background_type: { type: "STRING" },
+            challenge_rating: { type: "STRING" },
+            xp: { type: "INTEGER" },
+            senses: { type: "STRING" },
+            languages: { type: "STRING" },
+            skills: { type: "STRING" },
+            habitat: { type: "STRING" },
+            treasure: { type: "STRING" },
             item_drops: {
-              type: Type.ARRAY,
+              type: "ARRAY",
               items: {
-                type: Type.OBJECT,
+                type: "OBJECT",
                 properties: {
-                  name: { type: Type.STRING },
-                  rarity: { type: Type.STRING },
-                  quantity: { type: Type.STRING }
+                  name: { type: "STRING" },
+                  rarity: { type: "STRING" },
+                  quantity: { type: "STRING" }
                 }
               }
             },
             actions: {
-              type: Type.ARRAY,
+              type: "ARRAY",
               items: {
-                type: Type.OBJECT,
+                type: "OBJECT",
                 properties: {
-                  name: { type: Type.STRING },
-                  desc: { type: Type.STRING }
+                  name: { type: "STRING" },
+                  desc: { type: "STRING" }
                 }
               }
             },
             special_abilities: {
-              type: Type.ARRAY,
+              type: "ARRAY",
               items: {
-                type: Type.OBJECT,
+                type: "OBJECT",
                 properties: {
-                  name: { type: Type.STRING },
-                  desc: { type: Type.STRING }
+                  name: { type: "STRING" },
+                  desc: { type: "STRING" }
                 }
               }
             },
             bonus_actions: {
-              type: Type.ARRAY,
+              type: "ARRAY",
               items: {
-                type: Type.OBJECT,
+                type: "OBJECT",
                 properties: {
-                  name: { type: Type.STRING },
-                  desc: { type: Type.STRING }
+                  name: { type: "STRING" },
+                  desc: { type: "STRING" }
                 }
               }
             },
             reactions: {
-              type: Type.ARRAY,
+              type: "ARRAY",
               items: {
-                type: Type.OBJECT,
+                type: "OBJECT",
                 properties: {
-                  name: { type: Type.STRING },
-                  desc: { type: Type.STRING }
+                  name: { type: "STRING" },
+                  desc: { type: "STRING" }
                 }
               }
             },
             legendary_actions: {
-              type: Type.ARRAY,
+              type: "ARRAY",
               items: {
-                type: Type.OBJECT,
+                type: "OBJECT",
                 properties: {
-                  name: { type: Type.STRING },
-                  desc: { type: Type.STRING }
+                  name: { type: "STRING" },
+                  desc: { type: "STRING" }
                 }
               }
             },
-            lore: { type: Type.STRING }
+            lore: { type: "STRING" }
           },
           required: ["name", "index", "stats"]
         }
@@ -313,10 +312,10 @@ export async function scrapeMonsterWiki(name: string, wikiUrl?: string): Promise
       config: {
         responseMimeType: "application/json",
         responseSchema: {
-          type: Type.OBJECT,
+          type: "OBJECT",
           properties: {
-            mainLore: { type: Type.STRING },
-            sections: { type: Type.OBJECT }
+            mainLore: { type: "STRING" },
+            sections: { type: "OBJECT" }
           }
         }
       }

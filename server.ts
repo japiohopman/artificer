@@ -16,11 +16,50 @@ async function startServer() {
 
   app.use(express.json({ limit: '10mb' }));
 
+  // Helper: Validate Host Allowlist
+  const allowedHosts = [
+    'api.github.com',
+    'raw.githubusercontent.com',
+    'forgottenrealms.fandom.com',
+    'dnd5e.fandom.com'
+  ];
+
+  function isUrlAllowed(urlStr: string): boolean {
+    try {
+      const url = new URL(urlStr);
+      if (url.protocol !== 'https:') return false;
+      return allowedHosts.some(host =>
+        url.hostname === host || url.hostname.endsWith('.' + host)
+      );
+    } catch {
+      return false;
+    }
+  }
+
+  // Helper: Validate Path Allowlist
+  const allowedPathPrefixes = [
+    'public/assets/atlas/',
+    'data/character_save/'
+  ];
+
+  function isPathAllowed(filePath: any): boolean {
+    if (typeof filePath !== 'string') return false;
+    // Prevent traversal
+    if (filePath.includes('..') || path.isAbsolute(filePath) || filePath.includes('\\')) {
+      return false;
+    }
+    return allowedPathPrefixes.some(prefix => filePath.startsWith(prefix));
+  }
+
   // API: Proxy Wiki (for scraping Fandom)
   app.get("/api/proxy-wiki", async (req, res) => {
     const { url } = req.query;
     if (!url || typeof url !== 'string') {
       return res.status(400).json({ error: "URL parameter is required." });
+    }
+
+    if (!isUrlAllowed(url)) {
+      return res.status(403).json({ error: "URL not allowed." });
     }
 
     try {
@@ -49,6 +88,10 @@ async function startServer() {
 
     if (!url || typeof url !== 'string') {
       return res.status(400).json({ error: "URL parameter is required." });
+    }
+
+    if (!isUrlAllowed(url)) {
+      return res.status(403).json({ error: "URL not allowed." });
     }
 
     try {
@@ -82,6 +125,10 @@ async function startServer() {
 
     if (!url || typeof url !== 'string') {
       return res.status(400).json({ error: "URL parameter is required." });
+    }
+
+    if (!isUrlAllowed(url)) {
+      return res.status(403).json({ error: "URL not allowed." });
     }
 
     try {
@@ -135,6 +182,11 @@ async function startServer() {
   // API: Commit Proxy
   app.post("/api/commit", async (req, res) => {
     const { path: filePath, content, isBase64, message } = req.body;
+
+    if (!isPathAllowed(filePath)) {
+      return res.status(403).json({ error: "Path not allowed." });
+    }
+
     const token = process.env.GITHUB_TOKEN;
     const repo = process.env.GITHUB_REPO;
 
@@ -202,6 +254,11 @@ async function startServer() {
   // API: Delete Proxy
   app.post("/api/delete", async (req, res) => {
     const { path: filePath, message } = req.body;
+
+    if (!isPathAllowed(filePath)) {
+      return res.status(403).json({ error: "Path not allowed." });
+    }
+
     const token = process.env.GITHUB_TOKEN;
     const repo = process.env.GITHUB_REPO;
 
@@ -258,6 +315,65 @@ async function startServer() {
     } catch (error) {
       console.error("Server Error during delete:", error);
       res.status(500).json({ error: "Internal server error during GitHub delete." });
+    }
+  });
+
+  // API: AI Proxy (Google Gemini)
+  app.post("/api/ai/generate-content", async (req, res) => {
+    const { model, contents, config } = req.body;
+    const apiKey = process.env.GEMINI_API_KEY;
+
+    if (!apiKey) {
+      return res.status(500).json({ error: "Gemini API key missing on server." });
+    }
+
+    try {
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contents, generationConfig: config })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        return res.status(response.status).json(errorData);
+      }
+
+      const data = await response.json();
+      res.json(data);
+    } catch (error) {
+      console.error("Server Error during AI generate-content:", error);
+      res.status(500).json({ error: "Internal server error during AI generation." });
+    }
+  });
+
+  app.post("/api/ai/generate-image", async (req, res) => {
+    const { model, contents, config } = req.body;
+    const apiKey = process.env.GEMINI_API_KEY;
+
+    if (!apiKey) {
+      return res.status(500).json({ error: "Gemini API key missing on server." });
+    }
+
+    try {
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contents, generationConfig: config })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        return res.status(response.status).json(errorData);
+      }
+
+      const data = await response.json();
+      res.json(data);
+    } catch (error) {
+      console.error("Server Error during AI generate-image:", error);
+      res.status(500).json({ error: "Internal server error during AI image generation." });
     }
   });
 

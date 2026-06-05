@@ -25,7 +25,13 @@ function checkPath(filePath, refPath, sourceFile) {
 
   // Normalize path
   let absolutePath;
-  if (refPath.startsWith('/')) {
+  if (refPath.startsWith('public/assets/')) {
+    // Resolve from project root
+    absolutePath = path.join(__dirname, '..', refPath);
+  } else if (refPath.startsWith('/assets/')) {
+    // Resolve from public/
+    absolutePath = path.join(PUBLIC_DIR, refPath);
+  } else if (refPath.startsWith('/')) {
     absolutePath = path.join(PUBLIC_DIR, refPath);
   } else {
     absolutePath = path.resolve(path.dirname(filePath), refPath);

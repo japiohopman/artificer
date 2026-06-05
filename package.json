@@ -8,7 +8,12 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "validate:assets": "node tools/validateAssets.cjs",
+    "generate:equipment-index": "node tools/generateEquipmentIndex.cjs",
+    "generate:spell-index": "node tools/generateSpellIndex.cjs",
+    "generate:enemy-index": "node tools/generateEnemyIndex.cjs",
+    "normalize:assets": "node tools/normalizeAllAssets.cjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

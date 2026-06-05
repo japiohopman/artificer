@@ -359,9 +359,6 @@ const DEFAULT_CHARACTERS: Character[] = [
       movement: { current: 30, max: 30 },
       objectInteractions: { current: 1, max: 1 }
     },
-    items: {},
-    containers: {},
-    equipment: { containerId: 'equipment_char2', slots: [] },
     inventory: {},
     backpack: [],
     // Registry v2
