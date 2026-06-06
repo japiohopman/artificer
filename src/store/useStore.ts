@@ -199,15 +199,7 @@ interface AppState {
   deleteCharacter: (id: string) => Promise<boolean>;
 
   // Dice Rolls
-  recentRolls: {
-    id: string;
-    result: number;
-    modifier: number;
-    total: number;
-    label: string;
-    dieType: number;
-    timestamp: number;
-  }[];
+  recentRolls: any[];
   levelUpQueue: {
     characterId: string;
     newLevel: number;
@@ -262,6 +254,7 @@ interface AppState {
   setMainCharacter: (char: Character) => void;
   reorderCharacters: (startIndex: number, endIndex: number) => void;
   rollDice: (label: string, modifier: number, dieType?: number) => void;
+  rollDice3D: (notation: string, label: string) => Promise<void>;
   removeRoll: (id: string) => void;
   clearRoll: () => void;
   addToBackpack: (item: any) => void;
@@ -443,33 +436,13 @@ const DEFAULT_CHARACTERS: Character[] = [
       movement: { current: 30, max: 30 },
       objectInteractions: { current: 1, max: 1 }
     },
-    inventory: {},
-    backpack: [],
-    items: {
-      "rogue_dagger_1": { id: "rogue_dagger_1", template: "dagger", quantity: 1, kind: "weapon" },
-      "rogue_leather_armor_1": { id: "rogue_leather_armor_1", template: "leather-armor", quantity: 1, kind: "armor" },
-      "rogue_thieves_tools_1": { id: "rogue_thieves_tools_1", template: "thieves-tools", quantity: 1, kind: "tool" }
+    inventory: {
+      "main-hand": { id: "rogue-dagger", name: "Dagger", index: "dagger", _type: "equipment", weight: 1, slot: "main-hand", damage: { damage_dice: "1d4", damage_type: { name: "Piercing" } }, properties: [{ index: "finesse", name: "Finesse" }] },
+      "chest": { id: "rogue-armor", name: "Leather Armor", index: "leather-armor", _type: "equipment", weight: 10, slot: "chest", armor_class: { base: 11, dex_bonus: true } },
     },
-    containers: {
-      "backpack_char2": {
-        id: "backpack_char2",
-        type: "backpack",
-        slots: [
-          { id: "bag_0", itemId: "rogue_thieves_tools_1" },
-          { id: "bag_1", itemId: null },
-          { id: "bag_2", itemId: null },
-          { id: "bag_3", itemId: null }
-        ]
-      }
-    },
-    equipment: {
-      containerId: "equipment_char2",
-      slots: [
-        { id: "main_hand", itemId: "rogue_dagger_1" },
-        { id: "off_hand", itemId: null },
-        { id: "chest", itemId: "rogue_leather_armor_1" }
-      ]
-    },
+    backpack: [
+      { id: "rogue-tools", name: "Thieves' Tools", index: "thieves-tools", weight: 1 }
+    ],
     knownSpells: [],
     preparedSpells: [],
     spellSlots: {},
@@ -623,26 +596,46 @@ export const useStore = create<AppState>((set, get) => ({
   },
 
   rollDice: (label, modifier, dieType = 20) => {
-    const result = Math.floor(Math.random() * dieType) + 1;
-    const roll = {
-      id: crypto.randomUUID(),
-      result,
-      modifier,
-      total: result + modifier,
-      label,
-      dieType,
-      timestamp: Date.now()
-    };
-    set((state) => ({ 
-      recentRolls: [roll, ...state.recentRolls].slice(0, 5) 
-    }));
+    import('../dice_roller/diceService').then(({ diceService }) => {
+      const notation = `1d${dieType}${modifier >= 0 ? '+' : ''}${modifier !== 0 ? modifier : ''}`;
+      const result = diceService.rollBackground(notation, label);
+      set((state) => ({ 
+        recentRolls: [result, ...state.recentRolls].slice(0, 5) 
+      }));
+    });
+  },
+
+  rollDice3D: async (notation, label) => {
+    const { diceService } = await import('../dice_roller/diceService');
+    try {
+      const result = await diceService.roll3D(notation, label);
+      set((state) => ({ 
+        recentRolls: [result, ...state.recentRolls].slice(0, 5) 
+      }));
+      
+      // Auto-clear 3D dice after a delay
+      setTimeout(() => {
+        diceService.clear();
+      }, 5000);
+    } catch (error) {
+      console.error("3D Roll failed, falling back to background", error);
+      const result = diceService.rollBackground(notation, label);
+      set((state) => ({ 
+        recentRolls: [result, ...state.recentRolls].slice(0, 5) 
+      }));
+    }
   },
 
   removeRoll: (id) => set((state) => ({
     recentRolls: state.recentRolls.filter(r => r.id !== id)
   })),
 
-  clearRoll: () => set({ recentRolls: [] }),
+  clearRoll: () => {
+    set({ recentRolls: [] });
+    import('../dice_roller/diceService').then(({ diceService }) => {
+      diceService.clear();
+    });
+  },
   
   setIsGameStarted: (isGameStarted) => set({ isGameStarted }),
 
@@ -779,10 +772,8 @@ export const useStore = create<AppState>((set, get) => ({
     const newCharacters = state.characters.map(char => {
       if (char.id !== state.activeCharacterId) return char;
       
-      const itemId = typeof itemOrItemId === 'string' ? itemOrItemId : itemOrItemId.id;
-
-      // V2 Logic (Preferred)
-      if (char.saveVersion === 2 || char.items) {
+      if (char.saveVersion === 2) {
+        const itemId = typeof itemOrItemId === 'string' ? itemOrItemId : itemOrItemId.id;
         const equipment = { ...char.equipment! };
         const containers = { ...char.containers! };
         const backpack = Object.values(containers).find(c => c.type === 'backpack')!;
@@ -796,11 +787,8 @@ export const useStore = create<AppState>((set, get) => ({
           if (emptyBagSlot) emptyBagSlot.itemId = targetSlot.itemId;
         }
 
-        // Remove from backpack or other slots
-        Object.values(containers).forEach(c => {
-          c.slots = c.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
-        });
-        equipment.slots = equipment.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
+        // Remove from backpack
+        backpack.slots = backpack.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
         
         // Put in slot
         targetSlot.itemId = itemId;
@@ -809,7 +797,7 @@ export const useStore = create<AppState>((set, get) => ({
         return { ...char, equipment, containers };
       }
 
-      // Legacy v1 fallback
+      // Legacy v1
       const item = itemOrItemId;
       let newBackpack = char.backpack.filter(i => i.id !== item.id);
       const newInventory = { ...char.inventory };
@@ -841,8 +829,7 @@ export const useStore = create<AppState>((set, get) => ({
     const activeChar = state.characters.find(c => c.id === state.activeCharacterId);
     if (!activeChar) return state;
 
-    // V2 Logic
-    if (activeChar.saveVersion === 2 || activeChar.items) {
+    if (activeChar.saveVersion === 2) {
         return {
           characters: state.characters.map(c => {
             if (c.id !== state.activeCharacterId) return c;

@@ -15,10 +15,13 @@ interface CombatActionProps {
   damageIcon: GameIconName;
   cost?: number;
   special?: string;
+  onHitClick?: () => void;
+  onDamageClick?: () => void;
 }
 
 const CombatActionCard: React.FC<CombatActionProps> = ({ 
-  icon, name, type, range, hit, damage, damageIcon, cost = 1, special 
+  icon, name, type, range, hit, damage, damageIcon, cost = 1, special,
+  onHitClick, onDamageClick
 }) => {
   return (
     <motion.div 
@@ -50,20 +53,26 @@ const CombatActionCard: React.FC<CombatActionProps> = ({
 
       {/* Stats row: Dice and Damage */}
       <div className="grid grid-cols-2 gap-2">
-        <div className="bg-parchment-100/50 rounded-sm p-1 border border-parchment-200 flex flex-col items-center">
-           <span className="text-[6px] font-black text-parchment-400 uppercase tracking-tighter mb-0.5">To Hit</span>
-           <span className="text-[12px] font-cinzel font-black text-parchment-900 leading-none">{hit}</span>
-        </div>
-        <div className="bg-parchment-100/50 rounded-sm p-1 border border-parchment-200 flex flex-col items-center relative overflow-hidden">
+        <button 
+          onClick={onHitClick}
+          className="bg-parchment-100/50 hover:bg-dragon-red/10 rounded-sm p-1 border border-parchment-200 flex flex-col items-center transition-colors group/stat"
+        >
+           <span className="text-[6px] font-black text-parchment-400 uppercase tracking-tighter mb-0.5 group-hover/stat:text-dragon-red">To Hit</span>
+           <span className="text-[12px] font-cinzel font-black text-parchment-900 leading-none group-hover/stat:scale-110 transition-transform">{hit}</span>
+        </button>
+        <button 
+          onClick={onDamageClick}
+          className="bg-parchment-100/50 hover:bg-dragon-red/10 rounded-sm p-1 border border-parchment-200 flex flex-col items-center relative overflow-hidden transition-colors group/stat"
+        >
            <div className="absolute -right-2 -top-2 opacity-10">
               <GameIcon name={damageIcon} size={20} color="#8B0000" />
            </div>
-           <span className="text-[6px] font-black text-parchment-400 uppercase tracking-tighter mb-0.5">Damage</span>
-           <div className="flex items-center gap-1 leading-none">
+           <span className="text-[6px] font-black text-parchment-400 uppercase tracking-tighter mb-0.5 group-hover/stat:text-dragon-red">Damage</span>
+           <div className="flex items-center gap-1 leading-none group-hover/stat:scale-110 transition-transform">
               <span className="text-[12px] font-cinzel font-black text-dragon-red">{damage}</span>
               <GameIcon name={damageIcon} size={10} color="#8B0000" className="opacity-60" />
            </div>
-        </div>
+        </button>
       </div>
 
       {special && (
@@ -79,7 +88,7 @@ const CombatActionCard: React.FC<CombatActionProps> = ({
 };
 
 export const CombatActions: React.FC = () => {
-  const { characters, activeCharacterId } = useStore();
+  const { characters, activeCharacterId, rollDice3D } = useStore();
   const activeCharacter = characters.find(c => c.id === activeCharacterId) || characters[0];
   
   if (!activeCharacter) return null;
@@ -148,11 +157,14 @@ export const CombatActions: React.FC = () => {
           damage={fullDamage}
           damageIcon={getDamageIcon(dmgType)}
           cost={1}
+          onHitClick={() => rollDice3D(`1d20${bonus >= 0 ? '+' : ''}${bonus !== 0 ? bonus : ''}`, `${w.name} Attack`)}
+          onDamageClick={() => rollDice3D(fullDamage, `${w.name} Damage`)}
         />
       );
     });
 
     // Unarmed Strike
+    const unarmedBonus = derived.proficiencyBonus + strMod;
     actions.push(
       <CombatActionCard 
         key="unarmed"
@@ -160,10 +172,12 @@ export const CombatActions: React.FC = () => {
         icon="unarmed_strike"
         type="Melee Attack"
         range="5 ft"
-        hit={(derived.proficiencyBonus + strMod) >= 0 ? `+${derived.proficiencyBonus + strMod}` : (derived.proficiencyBonus + strMod).toString()}
+        hit={unarmedBonus >= 0 ? `+${unarmedBonus}` : unarmedBonus.toString()}
         damage={`1${strMod >= 0 ? '+' : ''}${strMod}`}
         damageIcon="bludgeoning"
         cost={1}
+        onHitClick={() => rollDice3D(`1d20${unarmedBonus >= 0 ? '+' : ''}${unarmedBonus !== 0 ? unarmedBonus : ''}`, "Unarmed Attack")}
+        onDamageClick={() => rollDice3D(`1${strMod >= 0 ? '+' : ''}${strMod}`, "Unarmed Damage")}
       />
     );
 

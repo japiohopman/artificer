@@ -25,7 +25,8 @@ import { PartyLogistics } from './PartyLogistics';
 import { DraggableCard } from './DraggableCard';
 import { ErrorBoundary } from './ErrorBoundary';
 import { DevKit } from './devkit/DevKit';
-import { DiceRollOverlay } from './DiceRollOverlay';
+import { DiceRollOverlay } from '../dice_roller/DiceRollOverlay';
+import { DiceBoxCanvas } from '../dice_roller/DiceBoxCanvas';
 import { cn } from '../lib/utils';
 import { isBookLike } from '../lib/bookUtils';
 import { loadBooksFromStaticJson } from '../lib/bookUtils';
@@ -364,6 +365,7 @@ const ArcaneCodex: React.FC = () => {
 
       {/* Dice Roll Global Overlay */}
       <DiceRollOverlay />
+      <DiceBoxCanvas />
 
       {/* Level Up Reward Overlay */}
       <LevelUpOverlay />
