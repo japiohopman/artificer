@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/background.schema.json",
+  "title": "Background",
+  "description": "A character background in the game atlas based on 5e 2024 rules.",
+  "type": "object",
+  "required": [
+    "index",
+    "name",
+    "description",
+    "ability_scores",
+    "feat",
+    "starting_proficiencies",
+    "starting_equipment_options",
+    "url",
+    "updated_at"
+  ],
+  "properties": {
+    "index": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "ability_scores": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "string" },
+          "name": { "type": "string" },
+          "url": { "type": "string" }
+        },
+        "required": ["index", "name", "url"]
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "feat": {
+      "type": "object",
+      "properties": {
+        "index": { "type": "string" },
+        "name": { "type": "string" },
+        "url": { "type": "string" }
+      },
+      "required": ["index", "name", "url"]
+    },
+    "starting_proficiencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "string" },
+          "name": { "type": "string" },
+          "url": { "type": "string" }
+        },
+        "required": ["index", "name", "url"]
+      }
+    },
+    "starting_equipment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "equipment": {
+            "type": "object",
+            "properties": {
+              "index": { "type": "string" },
+              "name": { "type": "string" },
+              "url": { "type": "string" }
+            },
+            "required": ["index", "name", "url"]
+          },
+          "quantity": { "type": "integer" }
+        },
+        "required": ["equipment", "quantity"]
+      }
+    },
+    "starting_equipment_options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "desc": { "type": "string" },
+          "choose": { "type": "integer" },
+          "type": { "type": "string" },
+          "from": {
+            "type": "object",
+            "properties": {
+              "option_set_type": { "type": "string" },
+              "options": { "type": "array" },
+              "equipment_category": {
+                "type": "object",
+                "properties": {
+                  "index": { "type": "string" },
+                  "name": { "type": "string" },
+                  "url": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "suggested_characteristics": {
+      "type": "object",
+      "properties": {
+        "traits": { "type": "array", "items": { "type": "string" } },
+        "ideals": { "type": "array", "items": { "type": "string" } },
+        "bonds": { "type": "array", "items": { "type": "string" } },
+        "flaws": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^/assets/atlas/backgrounds/json/.+\\.json$"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "image": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "index": "crafter",
+  "name": "crafter",
+  "prerequisites": [],
+  "desc": [
+    "You gain the following benefits:",
+    "- Tool Proficiency. You gain proficiency with three different Artisan's Tools of your choice.",
+    "- Discount. Whenever you buy a nonmagical item, you receive a 20 percent discount on it.",
+    "- Faster Crafting. When you craft a nonmagical item, the time required to craft it is reduced by 20 percent."
+  ],
+  "feature_specific": {
+    "choice": [
+      {
+        "desc": "Choose three different Artisan's Tools",
+        "choose": 3,
+        "type": "proficiencies",
+        "from": {
+          "option_set_type": "equipment_category",
+          "equipment_category": {
+            "index": "artisans_tools",
+            "name": "artisan's tools",
+            "url": "/assets/atlas/equipment_categories/json/artisans_tools.json"
+          }
+        }
+      }
+    ]
+  },
+  "url": "/assets/atlas/feats/json/crafter.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/crafter.webp"
+}

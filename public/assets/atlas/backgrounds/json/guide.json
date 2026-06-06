@@ -1,0 +1,131 @@
+{
+  "index": "guide",
+  "name": "Guide",
+  "description": "You helped others navigate the wilderness and survive its dangers.",
+  "ability_scores": [
+    {
+      "index": "dex",
+      "name": "dexterity",
+      "url": "/assets/atlas/ability_scores/json/dexterity.json"
+    },
+    {
+      "index": "con",
+      "name": "constitution",
+      "url": "/assets/atlas/ability_scores/json/constitution.json"
+    },
+    {
+      "index": "wis",
+      "name": "wisdom",
+      "url": "/assets/atlas/ability_scores/json/wisdom.json"
+    }
+  ],
+  "feat": {
+    "index": "magic_initiate",
+    "name": "Magic Initiate",
+    "url": "/assets/atlas/feats/json/magic_initiate.json"
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_stealth",
+      "name": "Skill: Stealth",
+      "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+    },
+    {
+      "index": "skill_survival",
+      "name": "Skill: Survival",
+      "url": "/assets/atlas/proficiencies/json/skill_survival.json"
+    },
+    {
+      "index": "cartographers_tools",
+      "name": "Cartographer'S Tools",
+      "url": "/assets/atlas/proficiencies/json/cartographers_tools.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "cartographers_tools",
+        "name": "Cartographer'S Tools",
+        "url": "/assets/atlas/equipment/json/cartographers_tools.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "bedroll",
+        "name": "Bedroll",
+        "url": "/assets/atlas/equipment/json/bedroll.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "quiver",
+        "name": "Quiver",
+        "url": "/assets/atlas/equipment/json/quiver.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "shortbow",
+        "name": "Shortbow",
+        "url": "/assets/atlas/equipment/json/shortbow.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "arrow",
+        "name": "Arrow",
+        "url": "/assets/atlas/equipment/json/arrow.json"
+      },
+      "quantity": 20
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Clothes Traveler'S",
+        "url": "/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 3
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "Choose this background package or 50 GP",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "gold",
+                  "name": "Gold",
+                  "url": "/assets/atlas/equipment/json/gold.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "url": "/assets/atlas/backgrounds/json/guide.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/backgrounds/wiki_image/guide.webp"
+}

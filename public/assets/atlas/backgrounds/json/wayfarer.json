@@ -1,0 +1,131 @@
+{
+  "index": "wayfarer",
+  "name": "Wayfarer",
+  "description": "You grew up on the streets, surviving by your wits and luck.",
+  "ability_scores": [
+    {
+      "index": "dex",
+      "name": "dexterity",
+      "url": "/assets/atlas/ability_scores/json/dexterity.json"
+    },
+    {
+      "index": "wis",
+      "name": "wisdom",
+      "url": "/assets/atlas/ability_scores/json/wisdom.json"
+    },
+    {
+      "index": "cha",
+      "name": "charisma",
+      "url": "/assets/atlas/ability_scores/json/charisma.json"
+    }
+  ],
+  "feat": {
+    "index": "lucky",
+    "name": "Lucky",
+    "url": "/assets/atlas/feats/json/lucky.json"
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_insight",
+      "name": "Skill: Insight",
+      "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+    },
+    {
+      "index": "skill_stealth",
+      "name": "Skill: Stealth",
+      "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+    },
+    {
+      "index": "thieves_tools",
+      "name": "Thieves' Tools",
+      "url": "/assets/atlas/proficiencies/json/thieves_tools.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "thieves_tools",
+        "name": "Thieves' Tools",
+        "url": "/assets/atlas/equipment/json/thieves_tools.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "bedroll",
+        "name": "Bedroll",
+        "url": "/assets/atlas/equipment/json/bedroll.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "crowbar",
+        "name": "Crowbar",
+        "url": "/assets/atlas/equipment/json/crowbar.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "dagger",
+        "name": "Dagger",
+        "url": "/assets/atlas/equipment/json/dagger.json"
+      },
+      "quantity": 2
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 2
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Clothes Traveler'S",
+        "url": "/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 11
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "Choose this background package or 50 GP",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "gold",
+                  "name": "Gold",
+                  "url": "/assets/atlas/equipment/json/gold.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "url": "/assets/atlas/backgrounds/json/wayfarer.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/backgrounds/wiki_image/wayfarer.webp"
+}

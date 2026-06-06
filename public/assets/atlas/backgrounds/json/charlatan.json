@@ -1,0 +1,107 @@
+{
+  "index": "charlatan",
+  "name": "Charlatan",
+  "description": "You have a talent for deceptions, and you used it to make your way in the world.",
+  "ability_scores": [
+    {
+      "index": "dex",
+      "name": "dexterity",
+      "url": "/assets/atlas/ability_scores/json/dexterity.json"
+    },
+    {
+      "index": "con",
+      "name": "constitution",
+      "url": "/assets/atlas/ability_scores/json/constitution.json"
+    },
+    {
+      "index": "cha",
+      "name": "charisma",
+      "url": "/assets/atlas/ability_scores/json/charisma.json"
+    }
+  ],
+  "feat": {
+    "index": "skilled",
+    "name": "Skilled",
+    "url": "/assets/atlas/feats/json/skilled.json"
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_deception",
+      "name": "Skill: Deception",
+      "url": "/assets/atlas/proficiencies/json/skill_deception.json"
+    },
+    {
+      "index": "skill_sleight_of_hand",
+      "name": "Skill: Sleight Of Hand",
+      "url": "/assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
+    },
+    {
+      "index": "forgery_kit",
+      "name": "Forgery Kit",
+      "url": "/assets/atlas/proficiencies/json/forgery_kit.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "forgery_kit",
+        "name": "Forgery Kit",
+        "url": "/assets/atlas/equipment/json/forgery_kit.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_costume",
+        "name": "Clothes Costume",
+        "url": "/assets/atlas/equipment/json/clothes_costume.json"
+      },
+      "quantity": 2
+    },
+    {
+      "equipment": {
+        "index": "clothes_fine",
+        "name": "Clothes Fine",
+        "url": "/assets/atlas/equipment/json/clothes_fine.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 15
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "Choose this background package or 50 GP",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "gold",
+                  "name": "Gold",
+                  "url": "/assets/atlas/equipment/json/gold.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "url": "/assets/atlas/backgrounds/json/charlatan.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/backgrounds/wiki_image/charlatan.webp"
+}
