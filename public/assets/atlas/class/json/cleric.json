@@ -1,0 +1,374 @@
+{
+  "index": "cleric",
+  "name": "cleric",
+  "hit_die": 8,
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from History, Insight, Medicine, Persuasion, and Religion",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_history",
+              "name": "skill: history",
+              "url": "public/assets/atlas/proficiencies/json/skill_history.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "public/assets/atlas/proficiencies/json/skill_insight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_medicine",
+              "name": "skill: medicine",
+              "url": "public/assets/atlas/proficiencies/json/skill_medicine.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_persuasion",
+              "name": "skill: persuasion",
+              "url": "public/assets/atlas/proficiencies/json/skill_persuasion.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_religion",
+              "name": "skill: religion",
+              "url": "public/assets/atlas/proficiencies/json/skill_religion.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "light_armor",
+      "name": "light armor",
+      "url": "public/assets/atlas/proficiencies/json/light_armor.json"
+    },
+    {
+      "index": "medium_armor",
+      "name": "medium armor",
+      "url": "public/assets/atlas/proficiencies/json/medium_armor.json"
+    },
+    {
+      "index": "shields",
+      "name": "shields",
+      "url": "public/assets/atlas/proficiencies/json/shields.json"
+    },
+    {
+      "index": "simple_weapons",
+      "name": "simple weapons",
+      "url": "public/assets/atlas/proficiencies/json/simple_weapons.json"
+    },
+    {
+      "index": "saving_throw_wis",
+      "name": "saving throw: wis",
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_wis.json"
+    },
+    {
+      "index": "saving_throw_cha",
+      "name": "saving throw: cha",
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_cha.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "wis",
+      "name": "wis",
+      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
+    },
+    {
+      "index": "cha",
+      "name": "cha",
+      "url": "public/assets/atlas/ability_scores/json/charisma.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "shield",
+        "name": "shield",
+        "url": "public/assets/atlas/equipment/json/shield.json"
+      },
+      "quantity": 1
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) a mace or (b) a warhammer (if proficient)",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "mace",
+              "name": "mace",
+              "url": "public/assets/atlas/equipment/json/mace.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "warhammer",
+              "name": "warhammer",
+              "url": "public/assets/atlas/equipment/json/warhammer.json"
+            },
+            "prerequisites": [
+              {
+                "type": "proficiency",
+                "proficiency": {
+                  "index": "warhammers",
+                  "name": "warhammers",
+                  "url": "public/assets/atlas/proficiencies/json/warhammers.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) scale mail, (b) leather armor, or (c) chain mail (if proficient)",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "scale_mail",
+              "name": "scale mail",
+              "url": "public/assets/atlas/equipment/json/scale_mail.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "leather_armor",
+              "name": "leather armor",
+              "url": "public/assets/atlas/equipment/json/leather_armor.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "chain_mail",
+              "name": "chain mail",
+              "url": "public/assets/atlas/equipment/json/charismain_mail.json"
+            },
+            "prerequisites": [
+              {
+                "type": "proficiency",
+                "proficiency": {
+                  "index": "chain_mail",
+                  "name": "chain mail",
+                  "url": "public/assets/atlas/proficiencies/json/charismain_mail.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a light crossbow and 20 bolts or (b) any simple weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "crossbow_light",
+                  "name": "crossbow, light",
+                  "url": "public/assets/atlas/equipment/json/crossbow_light.json"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 20,
+                "of": {
+                  "index": "crossbow_bolt",
+                  "name": "crossbow bolt",
+                  "url": "public/assets/atlas/equipment/json/crossbow_bolt.json"
+                }
+              }
+            ]
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any simple weapon",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "simple_weapons",
+                  "name": "simple weapons",
+                  "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a priest\u2019s pack or (b) an explorer\u2019s pack",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "priests_pack",
+              "name": "priest's pack",
+              "url": "public/assets/atlas/equipment/json/priests_pack.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "explorers_pack",
+              "name": "explorer's pack",
+              "url": "public/assets/atlas/equipment/json/explorers_pack.json"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "holy symbol",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "equipment_category",
+        "equipment_category": {
+          "index": "holy_symbols",
+          "name": "holy symbols",
+          "url": "public/assets/atlas/equipment_categories/json/holy_symbols.json"
+        }
+      }
+    }
+  ],
+  "class_levels": "public/assets/atlas/class/levels/cleric.json",
+  "multi_classing": {
+    "prerequisites": [
+      {
+        "ability_score": {
+          "index": "wis",
+          "name": "wis",
+          "url": "public/assets/atlas/ability_scores/json/wisdom.json"
+        },
+        "minimum_score": 13
+      }
+    ],
+    "proficiencies": [
+      {
+        "index": "light_armor",
+        "name": "light armor",
+        "url": "public/assets/atlas/proficiencies/json/light_armor.json"
+      },
+      {
+        "index": "medium_armor",
+        "name": "medium armor",
+        "url": "public/assets/atlas/proficiencies/json/medium_armor.json"
+      },
+      {
+        "index": "shields",
+        "name": "shields",
+        "url": "public/assets/atlas/proficiencies/json/shields.json"
+      }
+    ]
+  },
+  "subclasses": [
+    {
+      "index": "life",
+      "name": "life",
+      "url": "public/assets/atlas/subclasses/json/life.json"
+    }
+  ],
+  "spellcasting": {
+    "level": 1,
+    "spellcasting_ability": {
+      "index": "wis",
+      "name": "wis",
+      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
+    },
+    "info": [
+      {
+        "name": "cantrips",
+        "desc": [
+          "At 1st level, you know three cantrips of your choice from the cleric spell list. You learn additional cleric cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Cleric table."
+        ]
+      },
+      {
+        "name": "preparing and casting spells",
+        "desc": [
+          "The Cleric table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+          "You prepare the list of cleric spells that are available for you to cast, choosing from the cleric spell list. When you do so, choose a number of cleric spells equal to your Wisdom modifier + your cleric level (minimum of one spell). The spells must be of a level for which you have spell slots.",
+          "For example, if you are a 3rd-level cleric, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
+          "You can change your list of prepared spells when you finish a long rest. Preparing a new list of cleric spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
+        ]
+      },
+      {
+        "name": "spellcasting ability",
+        "desc": [
+          "Wisdom is your spellcasting ability for your cleric spells. The power of your spells comes from your devotion to your deity. You use your Wisdom whenever a cleric spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a cleric spell you cast and when making an attack roll with one.",
+          "Spell save DC = 8 + your proficiency bonus + your Wisdom modifier",
+          "Spell attack modifier = your proficiency bonus + your Wisdom modifier"
+        ]
+      },
+      {
+        "name": "ritual casting",
+        "desc": [
+          "You can cast a cleric spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+        ]
+      },
+      {
+        "name": "spellcasting focus",
+        "desc": [
+          "You can use a holy symbol (see Equipment) as a spellcasting focus for your cleric spells."
+        ]
+      }
+    ]
+  },
+  "spells": "public/assets/atlas/spell/json/",
+  "url": "public/assets/atlas/class/json/cleric.json",
+  "updated_at": "2025-10-24T20:42:12.459Z",
+  "image": "public/assets/atlas/class/wiki_image/cleric.webp"
+}

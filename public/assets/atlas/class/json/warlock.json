@@ -1,0 +1,334 @@
+{
+  "index": "warlock",
+  "name": "warlock",
+  "hit_die": 8,
+  "proficiency_choices": [
+    {
+      "desc": "Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_arcana",
+              "name": "skill: arcana",
+              "url": "public/assets/atlas/proficiencies/json/skill_arcana.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_deception",
+              "name": "skill: deception",
+              "url": "public/assets/atlas/proficiencies/json/skill_deception.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_history",
+              "name": "skill: history",
+              "url": "public/assets/atlas/proficiencies/json/skill_history.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_intimidation",
+              "name": "skill: intimidation",
+              "url": "public/assets/atlas/proficiencies/json/skill_intimidation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_investigation",
+              "name": "skill: investigation",
+              "url": "public/assets/atlas/proficiencies/json/skill_investigation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_nature",
+              "name": "skill: nature",
+              "url": "public/assets/atlas/proficiencies/json/skill_nature.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_religion",
+              "name": "skill: religion",
+              "url": "public/assets/atlas/proficiencies/json/skill_religion.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "light_armor",
+      "name": "light armor",
+      "url": "public/assets/atlas/proficiencies/json/light_armor.json"
+    },
+    {
+      "index": "simple_weapons",
+      "name": "simple weapons",
+      "url": "public/assets/atlas/proficiencies/json/simple_weapons.json"
+    },
+    {
+      "index": "saving_throw_wis",
+      "name": "saving throw: wis",
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_wis.json"
+    },
+    {
+      "index": "saving_throw_cha",
+      "name": "saving throw: cha",
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_cha.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "wis",
+      "name": "wis",
+      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
+    },
+    {
+      "index": "cha",
+      "name": "cha",
+      "url": "public/assets/atlas/ability_scores/json/charisma.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "dagger",
+        "name": "dagger",
+        "url": "public/assets/atlas/equipment/json/dagger.json"
+      },
+      "quantity": 2
+    },
+    {
+      "equipment": {
+        "index": "leather_armor",
+        "name": "leather armor",
+        "url": "public/assets/atlas/equipment/json/leather_armor.json"
+      },
+      "quantity": 1
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) a light crossbow and 20 bolts or (b) any simple weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "crossbow_light",
+                  "name": "crossbow, light",
+                  "url": "public/assets/atlas/equipment/json/crossbow_light.json"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 20,
+                "of": {
+                  "index": "crossbow_bolt",
+                  "name": "crossbow bolt",
+                  "url": "public/assets/atlas/equipment/json/crossbow_bolt.json"
+                }
+              }
+            ]
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any simple weapon",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "simple_weapons",
+                  "name": "simple weapons",
+                  "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a component pouch or (b) an arcane focus",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "component_pouch",
+              "name": "component pouch",
+              "url": "public/assets/atlas/equipment/json/component_pouch.json"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "arcane focus",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "arcane_foci",
+                  "name": "arcane foci",
+                  "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a scholar\u2019s pack or (b) a dungeoneer\u2019s pack",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "scholars_pack",
+              "name": "scholar's pack",
+              "url": "public/assets/atlas/equipment/json/scholars_pack.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "dungeoneers_pack",
+              "name": "dungeoneer's pack",
+              "url": "public/assets/atlas/equipment/json/dungeoneers_pack.json"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "any simple weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "equipment_category",
+        "equipment_category": {
+          "index": "simple_weapons",
+          "name": "simple weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        }
+      }
+    }
+  ],
+  "class_levels": "public/assets/atlas/class/levels/warlock.json",
+  "multi_classing": {
+    "prerequisites": [
+      {
+        "ability_score": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/json/charisma.json"
+        },
+        "minimum_score": 13
+      }
+    ],
+    "proficiencies": [
+      {
+        "index": "light_armor",
+        "name": "light armor",
+        "url": "public/assets/atlas/proficiencies/json/light_armor.json"
+      },
+      {
+        "index": "simple_weapons",
+        "name": "simple weapons",
+        "url": "public/assets/atlas/proficiencies/json/simple_weapons.json"
+      }
+    ]
+  },
+  "subclasses": [
+    {
+      "index": "fiend",
+      "name": "fiend",
+      "url": "public/assets/atlas/subclasses/json/fiend.json"
+    }
+  ],
+  "spellcasting": {
+    "level": 1,
+    "spellcasting_ability": {
+      "index": "cha",
+      "name": "cha",
+      "url": "public/assets/atlas/ability_scores/json/charisma.json"
+    },
+    "info": [
+      {
+        "name": "cantrips",
+        "desc": [
+          "You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table."
+        ]
+      },
+      {
+        "name": "spell slots",
+        "desc": [
+          "The Warlock table shows how many spell slots you have. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.",
+          "For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1st-level spell thunderwave, you must spend one of those slots, and you cast it as a 3rd-level spell."
+        ]
+      },
+      {
+        "name": "spells known of 1st level and higher",
+        "desc": [
+          "At 1st level, you know two 1st-level spells of your choice from the warlock spell list.",
+          "The Spells Known column of the Warlock table shows when you learn more warlock spells of your choice of 1st level and higher. ",
+          "A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.",
+          "Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots."
+        ]
+      },
+      {
+        "name": "spellcasting ability",
+        "desc": [
+          "Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.",
+          "Spell save DC = 8 + your proficiency bonus + your Charisma modifier.",
+          "Spell attack modifier = your proficiency bonus + your Charisma modifier."
+        ]
+      },
+      {
+        "name": "spellcasting focus",
+        "desc": [
+          "You can use an arcane focus as a spellcasting focus for your warlock spells."
+        ]
+      }
+    ]
+  },
+  "spells": "public/assets/atlas/spell/json/",
+  "url": "public/assets/atlas/class/json/warlock.json",
+  "updated_at": "2025-10-24T20:42:12.459Z",
+  "image": "public/assets/atlas/class/wiki_image/warlock.webp"
+}

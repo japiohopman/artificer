@@ -1,0 +1,761 @@
+{
+  "index": "bard",
+  "name": "bard",
+  "hit_die": 8,
+  "proficiency_choices": [
+    {
+      "desc": "Choose any three",
+      "choose": 3,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_acrobatics",
+              "name": "skill: acrobatics",
+              "url": "public/assets/atlas/proficiencies/json/skill_acrobatics.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_animal_handling",
+              "name": "skill: animal handling",
+              "url": "public/assets/atlas/proficiencies/json/skill_animal_handling.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_arcana",
+              "name": "skill: arcana",
+              "url": "public/assets/atlas/proficiencies/json/skill_arcana.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_athletics",
+              "name": "skill: athletics",
+              "url": "public/assets/atlas/proficiencies/json/skill_athletics.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_deception",
+              "name": "skill: deception",
+              "url": "public/assets/atlas/proficiencies/json/skill_deception.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_history",
+              "name": "skill: history",
+              "url": "public/assets/atlas/proficiencies/json/skill_history.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "public/assets/atlas/proficiencies/json/skill_insight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_intimidation",
+              "name": "skill: intimidation",
+              "url": "public/assets/atlas/proficiencies/json/skill_intimidation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_investigation",
+              "name": "skill: investigation",
+              "url": "public/assets/atlas/proficiencies/json/skill_investigation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_medicine",
+              "name": "skill: medicine",
+              "url": "public/assets/atlas/proficiencies/json/skill_medicine.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_nature",
+              "name": "skill: nature",
+              "url": "public/assets/atlas/proficiencies/json/skill_nature.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_perception",
+              "name": "skill: perception",
+              "url": "public/assets/atlas/proficiencies/json/skill_perception.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_performance",
+              "name": "skill: performance",
+              "url": "public/assets/atlas/proficiencies/json/skill_performance.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_persuasion",
+              "name": "skill: persuasion",
+              "url": "public/assets/atlas/proficiencies/json/skill_persuasion.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_religion",
+              "name": "skill: religion",
+              "url": "public/assets/atlas/proficiencies/json/skill_religion.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_sleight_of_hand",
+              "name": "skill: sleight of hand",
+              "url": "public/assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_stealth",
+              "name": "skill: stealth",
+              "url": "public/assets/atlas/proficiencies/json/skill_stealth.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_survival",
+              "name": "skill: survival",
+              "url": "public/assets/atlas/proficiencies/json/skill_survival.json"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "Three musical instruments of your choice",
+      "choose": 3,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "bagpipes",
+              "name": "bagpipes",
+              "url": "public/assets/atlas/proficiencies/json/bagpipes.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "drum",
+              "name": "drum",
+              "url": "public/assets/atlas/proficiencies/json/drum.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dulcimer",
+              "name": "dulcimer",
+              "url": "public/assets/atlas/proficiencies/json/dulcimer.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "flute",
+              "name": "flute",
+              "url": "public/assets/atlas/proficiencies/json/flute.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "lute",
+              "name": "lute",
+              "url": "public/assets/atlas/proficiencies/json/lute.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "lyre",
+              "name": "lyre",
+              "url": "public/assets/atlas/proficiencies/json/lyre.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "horn",
+              "name": "horn",
+              "url": "public/assets/atlas/proficiencies/json/horn.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "pan_flute",
+              "name": "pan flute",
+              "url": "public/assets/atlas/proficiencies/json/pan_flute.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "shawm",
+              "name": "shawm",
+              "url": "public/assets/atlas/proficiencies/json/shawm.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "viol",
+              "name": "viol",
+              "url": "public/assets/atlas/proficiencies/json/viol.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "light_armor",
+      "name": "light armor",
+      "url": "public/assets/atlas/proficiencies/json/light_armor.json"
+    },
+    {
+      "index": "simple_weapons",
+      "name": "simple weapons",
+      "url": "public/assets/atlas/proficiencies/json/simple_weapons.json"
+    },
+    {
+      "index": "longswords",
+      "name": "longswords",
+      "url": "public/assets/atlas/proficiencies/json/longswords.json"
+    },
+    {
+      "index": "rapiers",
+      "name": "rapiers",
+      "url": "public/assets/atlas/proficiencies/json/rapiers.json"
+    },
+    {
+      "index": "shortswords",
+      "name": "shortswords",
+      "url": "public/assets/atlas/proficiencies/json/shortswords.json"
+    },
+    {
+      "index": "hand_crossbows",
+      "name": "hand crossbows",
+      "url": "public/assets/atlas/proficiencies/json/hand_crossbows.json"
+    },
+    {
+      "index": "saving_throw_dex",
+      "name": "saving throw: dex",
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_dex.json"
+    },
+    {
+      "index": "saving_throw_cha",
+      "name": "saving throw: cha",
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_cha.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "dex",
+      "name": "dex",
+      "url": "public/assets/atlas/ability_scores/json/dexterity.json"
+    },
+    {
+      "index": "cha",
+      "name": "cha",
+      "url": "public/assets/atlas/ability_scores/json/charisma.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "leather_armor",
+        "name": "leather armor",
+        "url": "public/assets/atlas/equipment/json/leather_armor.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "dagger",
+        "name": "dagger",
+        "url": "public/assets/atlas/equipment/json/dagger.json"
+      },
+      "quantity": 1
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) a rapier, (b) a longsword, or (c) any simple weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "rapier",
+              "name": "rapier",
+              "url": "public/assets/atlas/equipment/json/rapier.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "longsword",
+              "name": "longsword",
+              "url": "public/assets/atlas/equipment/json/longsword.json"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any simple weapon",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "simple_weapons",
+                  "name": "simple weapons",
+                  "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a diplomat\u2019s pack or (b) an entertainer\u2019s pack",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "diplomats_pack",
+              "name": "diplomat's pack",
+              "url": "public/assets/atlas/equipment/json/diplomats_pack.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "entertainers_pack",
+              "name": "entertainer's pack",
+              "url": "public/assets/atlas/equipment/json/entertainers_pack.json"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a lute or (b) any other musical instrument",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "lute",
+              "name": "lute",
+              "url": "public/assets/atlas/equipment/json/lute.json"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any other musical instrument",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "musical_instruments",
+                  "name": "musical instruments",
+                  "url": "public/assets/atlas/equipment_categories/json/musical_instruments.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "class_levels": "public/assets/atlas/class/levels/bard.json",
+  "multi_classing": {
+    "prerequisites": [
+      {
+        "ability_score": {
+          "index": "cha",
+          "name": "cha",
+          "url": "public/assets/atlas/ability_scores/json/charisma.json"
+        },
+        "minimum_score": 13
+      }
+    ],
+    "proficiencies": [
+      {
+        "index": "light_armor",
+        "name": "light armor",
+        "url": "public/assets/atlas/proficiencies/json/light_armor.json"
+      }
+    ],
+    "proficiency_choices": [
+      {
+        "desc": "skill",
+        "choose": 1,
+        "type": "proficiencies",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_acrobatics",
+                "name": "skill: acrobatics",
+                "url": "public/assets/atlas/proficiencies/json/skill_acrobatics.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_animal_handling",
+                "name": "skill: animal handling",
+                "url": "public/assets/atlas/proficiencies/json/skill_animal_handling.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_arcana",
+                "name": "skill: arcana",
+                "url": "public/assets/atlas/proficiencies/json/skill_arcana.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_athletics",
+                "name": "skill: athletics",
+                "url": "public/assets/atlas/proficiencies/json/skill_athletics.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_deception",
+                "name": "skill: deception",
+                "url": "public/assets/atlas/proficiencies/json/skill_deception.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_history",
+                "name": "skill: history",
+                "url": "public/assets/atlas/proficiencies/json/skill_history.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_insight",
+                "name": "skill: insight",
+                "url": "public/assets/atlas/proficiencies/json/skill_insight.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_intimidation",
+                "name": "skill: intimidation",
+                "url": "public/assets/atlas/proficiencies/json/skill_intimidation.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_investigation",
+                "name": "skill: investigation",
+                "url": "public/assets/atlas/proficiencies/json/skill_investigation.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_medicine",
+                "name": "skill: medicine",
+                "url": "public/assets/atlas/proficiencies/json/skill_medicine.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_nature",
+                "name": "skill: nature",
+                "url": "public/assets/atlas/proficiencies/json/skill_nature.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_perception",
+                "name": "skill: perception",
+                "url": "public/assets/atlas/proficiencies/json/skill_perception.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_performance",
+                "name": "skill: performance",
+                "url": "public/assets/atlas/proficiencies/json/skill_performance.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_persuasion",
+                "name": "skill: persuasion",
+                "url": "public/assets/atlas/proficiencies/json/skill_persuasion.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_religion",
+                "name": "skill: religion",
+                "url": "public/assets/atlas/proficiencies/json/skill_religion.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_sleight_of_hand",
+                "name": "skill: sleight of hand",
+                "url": "public/assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_stealth",
+                "name": "skill: stealth",
+                "url": "public/assets/atlas/proficiencies/json/skill_stealth.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_survival",
+                "name": "skill: survival",
+                "url": "public/assets/atlas/proficiencies/json/skill_survival.json"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "desc": "musical instrument",
+        "choose": 1,
+        "type": "proficiencies",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "bagpipes",
+                "name": "bagpipes",
+                "url": "public/assets/atlas/proficiencies/json/bagpipes.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "drum",
+                "name": "drum",
+                "url": "public/assets/atlas/proficiencies/json/drum.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "dulcimer",
+                "name": "dulcimer",
+                "url": "public/assets/atlas/proficiencies/json/dulcimer.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "flute",
+                "name": "flute",
+                "url": "public/assets/atlas/proficiencies/json/flute.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "lute",
+                "name": "lute",
+                "url": "public/assets/atlas/proficiencies/json/lute.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "lyre",
+                "name": "lyre",
+                "url": "public/assets/atlas/proficiencies/json/lyre.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "horn",
+                "name": "horn",
+                "url": "public/assets/atlas/proficiencies/json/horn.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "pan_flute",
+                "name": "pan flute",
+                "url": "public/assets/atlas/proficiencies/json/pan_flute.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "shawm",
+                "name": "shawm",
+                "url": "public/assets/atlas/proficiencies/json/shawm.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "viol",
+                "name": "viol",
+                "url": "public/assets/atlas/proficiencies/json/viol.json"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "public/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "spellcasting": {
+    "level": 1,
+    "spellcasting_ability": {
+      "index": "cha",
+      "name": "cha",
+      "url": "public/assets/atlas/ability_scores/json/charisma.json"
+    },
+    "info": [
+      {
+        "name": "cantrips",
+        "desc": [
+          "You know two cantrips of your choice from the bard spell list. You learn additional bard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Bard table."
+        ]
+      },
+      {
+        "name": "spell slots",
+        "desc": [
+          "The Bard table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+          "For example, if you know the 1st-level spell cure wounds and have a 1st-level and a 2nd-level spell slot available, you can cast cure wounds using either slot."
+        ]
+      },
+      {
+        "name": "spells known of 1st level and higher",
+        "desc": [
+          "You know four 1st-level spells of your choice from the bard spell list.",
+          "The Spells Known column of the Bard table shows when you learn more bard spells of your choice.",
+          "Each of these spells must be of a level for which you have spell slots, as shown on the table. For instance, when you reach 3rd level in this class, you can learn one new spell of 1st or 2nd level.",
+          "Additionally, when you gain a level in this class, you can choose one of the bard spells you know and replace it with another spell from the bard spell list, which also must be of a level for which you have spell slots."
+        ]
+      },
+      {
+        "name": "spellcasting ability",
+        "desc": [
+          "Charisma is your spellcasting ability for your bard spells. Your magic comes from the heart and soul you pour into the performance of your music or oration. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a bard spell you cast and when making an attack roll with one.",
+          "Spell save DC = 8 + your proficiency bonus + your Charisma modifier.",
+          "Spell attack modifier = your proficiency bonus + your Charisma modifier."
+        ]
+      },
+      {
+        "name": "ritual casting",
+        "desc": [
+          "You can cast any bard spell you know as a ritual if that spell has the ritual tag."
+        ]
+      },
+      {
+        "name": "spellcasting focus",
+        "desc": [
+          "You can use a musical instrument (see Equipment) as a spellcasting focus for your bard spells."
+        ]
+      }
+    ]
+  },
+  "spells": "public/assets/atlas/spell/json/",
+  "url": "public/assets/atlas/class/json/bard.json",
+  "updated_at": "2025-10-24T20:42:12.459Z",
+  "image": "public/assets/atlas/class/wiki_image/bard.webp"
+}

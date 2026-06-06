@@ -1,0 +1,293 @@
+{
+  "index": "wizard",
+  "name": "wizard",
+  "hit_die": 6,
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_arcana",
+              "name": "skill: arcana",
+              "url": "public/assets/atlas/proficiencies/json/skill_arcana.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_history",
+              "name": "skill: history",
+              "url": "public/assets/atlas/proficiencies/json/skill_history.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "public/assets/atlas/proficiencies/json/skill_insight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_investigation",
+              "name": "skill: investigation",
+              "url": "public/assets/atlas/proficiencies/json/skill_investigation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_medicine",
+              "name": "skill: medicine",
+              "url": "public/assets/atlas/proficiencies/json/skill_medicine.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_religion",
+              "name": "skill: religion",
+              "url": "public/assets/atlas/proficiencies/json/skill_religion.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "daggers",
+      "name": "daggers",
+      "url": "public/assets/atlas/proficiencies/json/daggers.json"
+    },
+    {
+      "index": "darts",
+      "name": "darts",
+      "url": "public/assets/atlas/proficiencies/json/darts.json"
+    },
+    {
+      "index": "slings",
+      "name": "slings",
+      "url": "public/assets/atlas/proficiencies/json/slings.json"
+    },
+    {
+      "index": "quarterstaffs",
+      "name": "quarterstaffs",
+      "url": "public/assets/atlas/proficiencies/json/quarterstaffs.json"
+    },
+    {
+      "index": "crossbows_light",
+      "name": "crossbows, light",
+      "url": "public/assets/atlas/proficiencies/json/crossbows_light.json"
+    },
+    {
+      "index": "saving_throw_int",
+      "name": "saving throw: int",
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_int.json"
+    },
+    {
+      "index": "saving_throw_wis",
+      "name": "saving throw: wis",
+      "url": "public/assets/atlas/proficiencies/json/saving_throw_wis.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "int",
+      "name": "int",
+      "url": "public/assets/atlas/ability_scores/json/intelligence.json"
+    },
+    {
+      "index": "wis",
+      "name": "wis",
+      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "spellbook",
+        "name": "spellbook",
+        "url": "public/assets/atlas/equipment/json/spellbook.json"
+      },
+      "quantity": 1
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) a quarterstaff or (b) a dagger",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "quarterstaff",
+              "name": "quarterstaff",
+              "url": "public/assets/atlas/equipment/json/quarterstaff.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "dagger",
+              "name": "dagger",
+              "url": "public/assets/atlas/equipment/json/dagger.json"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a component pouch or (b) an arcane focus",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "component_pouch",
+              "name": "component pouch",
+              "url": "public/assets/atlas/equipment/json/component_pouch.json"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "arcane focus",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "arcane_foci",
+                  "name": "arcane foci",
+                  "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a scholar\u2019s pack or (b) an explorer\u2019s pack",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "scholars_pack",
+              "name": "scholar's pack",
+              "url": "public/assets/atlas/equipment/json/scholars_pack.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "explorers_pack",
+              "name": "explorer's pack",
+              "url": "public/assets/atlas/equipment/json/explorers_pack.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "class_levels": "public/assets/atlas/class/levels/wizard.json",
+  "multi_classing": {
+    "prerequisites": [
+      {
+        "ability_score": {
+          "index": "int",
+          "name": "int",
+          "url": "public/assets/atlas/ability_scores/json/intelligence.json"
+        },
+        "minimum_score": 13
+      }
+    ],
+    "proficiencies": []
+  },
+  "subclasses": [
+    {
+      "index": "evocation",
+      "name": "evocation",
+      "url": "public/assets/atlas/subclasses/json/evocation.json"
+    }
+  ],
+  "spellcasting": {
+    "level": 1,
+    "spellcasting_ability": {
+      "index": "int",
+      "name": "int",
+      "url": "public/assets/atlas/ability_scores/json/intelligence.json"
+    },
+    "info": [
+      {
+        "name": "cantrips",
+        "desc": [
+          "At 1st level, you know three cantrips of your choice from the wizard spell list. You learn additional wizard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Wizard table."
+        ]
+      },
+      {
+        "name": "spellbook",
+        "desc": [
+          "At 1st level, you have a spellbook containing six 1st- level wizard spells of your choice. Your spellbook is the repository of the wizard spells you know, except your cantrips, which are fixed in your mind."
+        ]
+      },
+      {
+        "name": "preparing and casting spells",
+        "desc": [
+          "The Wizard table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+          "You prepare the list of wizard spells that are available for you to cast. To do so, choose a number of wizard spells from your spellbook equal to your Intelligence modifier + your wizard level (minimum of one spell). The spells must be of a level for which you have spell slots.",
+          "For example, if you're a 3rd-level wizard, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination, chosen from your spellbook. If you prepare the 1st-level spell magic missile, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
+          "You can change your list of prepared spells when you finish a long rest. Preparing a new list of wizard spells requires time spent studying your spellbook and memorizing the incantations and gestures you must make to cast the spell: at least 1 minute per spell level for each spell on your list."
+        ]
+      },
+      {
+        "name": "spellcasting ability",
+        "desc": [
+          "Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.",
+          "Spell save DC = 8 + your proficiency bonus + your Intelligence modifier.",
+          "Spell attack modifier = your proficiency bonus + your Intelligence modifier."
+        ]
+      },
+      {
+        "name": "ritual casting",
+        "desc": [
+          "You can cast a wizard spell as a ritual if that spell has the ritual tag and you have the spell in your spellbook. You don't need to have the spell prepared."
+        ]
+      },
+      {
+        "name": "spellcasting focus",
+        "desc": [
+          "You can use an arcane focus as a spellcasting focus for your wizard spells."
+        ]
+      }
+    ]
+  },
+  "spells": "public/assets/atlas/spell/json/",
+  "url": "public/assets/atlas/class/json/wizard.json",
+  "updated_at": "2025-10-24T20:42:12.459Z",
+  "image": "public/assets/atlas/class/wiki_image/wizard.webp"
+}
