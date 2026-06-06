@@ -1,0 +1,25 @@
+{
+  "level": 17,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "roguish_archetype_improvement_3",
+      "name": "Roguish Archetype feature",
+      "url": "/assets/atlas/features/json/roguish_archetype_improvement_3.json"
+    }
+  ],
+  "class_specific": {
+    "sneak_attack": {
+      "dice_count": 9,
+      "dice_value": 6
+    }
+  },
+  "index": "rogue_level_17",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "url": "/assets/atlas/class/levels/17/rogue_level_17.json"
+}

@@ -1,0 +1,29 @@
+{
+  "level": 20,
+  "ability_score_bonuses": 5,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "sacred_oath_improvement_3",
+      "name": "Sacred Oath feature",
+      "url": "/assets/atlas/features/json/sacred_oath_improvement_3.json"
+    }
+  ],
+  "class_specific": {
+    "aura_range": 30
+  },
+  "index": "paladin_level_20",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/paladin.json"
+  },
+  "url": "/assets/atlas/class/levels/20/paladin_level_20.json",
+  "spellcasting": {
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 3,
+    "spell_slots_level_5": 2
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "level": 17,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 6,
+  "features": [],
+  "class_specific": {
+    "aura_range": 10
+  },
+  "index": "paladin_level_17",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/paladin.json"
+  },
+  "url": "/assets/atlas/class/levels/17/paladin_level_17.json",
+  "spellcasting": {
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 3,
+    "spell_slots_level_5": 1
+  }
+}

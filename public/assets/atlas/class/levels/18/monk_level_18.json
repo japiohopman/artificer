@@ -1,0 +1,27 @@
+{
+  "level": 18,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "empty_body",
+      "name": "Empty Body",
+      "url": "/assets/atlas/features/json/empty_body.json"
+    }
+  ],
+  "class_specific": {
+    "martial_arts": {
+      "dice_count": 1,
+      "dice_value": 10
+    },
+    "ki_points": 18,
+    "unarmored_movement": 30
+  },
+  "index": "monk_level_18",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/18/monk_level_18.json"
+}

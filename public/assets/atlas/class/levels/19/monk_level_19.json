@@ -1,0 +1,27 @@
+{
+  "level": 19,
+  "ability_score_bonuses": 5,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "monk_ability_score_improvement_5",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/monk_ability_score_improvement_5.json"
+    }
+  ],
+  "class_specific": {
+    "martial_arts": {
+      "dice_count": 1,
+      "dice_value": 10
+    },
+    "ki_points": 19,
+    "unarmored_movement": 30
+  },
+  "index": "monk_level_19",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/19/monk_level_19.json"
+}

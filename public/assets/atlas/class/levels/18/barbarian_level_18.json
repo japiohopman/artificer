@@ -1,0 +1,24 @@
+{
+  "level": 18,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "indomitable_might",
+      "name": "Indomitable Might",
+      "url": "/assets/atlas/features/json/indomitable_might.json"
+    }
+  ],
+  "class_specific": {
+    "rage_count": 6,
+    "rage_damage_bonus": 4,
+    "brutal_critical_dice": 3
+  },
+  "index": "barbarian_level_18",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "url": "/assets/atlas/class/levels/18/barbarian_level_18.json"
+}

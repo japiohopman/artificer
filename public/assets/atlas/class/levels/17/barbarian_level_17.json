@@ -1,0 +1,24 @@
+{
+  "level": 17,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "brutal_critical_3_dice",
+      "name": "Brutal Critical (3 dice)",
+      "url": "/assets/atlas/features/json/brutal_critical_3_dice.json"
+    }
+  ],
+  "class_specific": {
+    "rage_count": 6,
+    "rage_damage_bonus": 4,
+    "brutal_critical_dice": 3
+  },
+  "index": "barbarian_level_17",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "url": "/assets/atlas/class/levels/17/barbarian_level_17.json"
+}
