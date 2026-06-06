@@ -3,6 +3,7 @@ import { Monster } from '../services/ai/monsterService';
 import { AudioLayer, LayerState } from '../types/audio.ts';
 import { ItemInstance, InventoryContainer, InventorySlot } from '../types/inventory';
 import { getPackContents } from '../lib/itemPacks';
+import { canEquipItem } from '../lib/inventoryUtils';
 import { 
   fetchMonsterList, fetchMonsterData, fetchMonsterCategories, fetchMonsterCategoryMapping,
   fetchMaterialsList, fetchMaterialData, fetchMaterialCategoryMapping, fetchMaterialCategories,
@@ -815,6 +816,20 @@ export const useStore = create<AppState>((set, get) => ({
       if (char.id !== state.activeCharacterId) return char;
       
       const itemId = typeof itemOrItemId === 'string' ? itemOrItemId : itemOrItemId.id;
+      const itemInstance = char.items?.[itemId];
+      if (!itemInstance) return char;
+
+      // Validation
+      const { equipmentList } = get();
+      const template = equipmentList.find(e => e.index === itemInstance.template);
+      if (template) {
+        const { canEquip, reason } = canEquipItem(template, slotId);
+        if (!canEquip) {
+          console.warn(`Cannot equip: ${reason}`);
+          return char;
+        }
+      }
+
       const updatedEquipment = { ...char.equipment! };
       const updatedContainers = { ...char.containers! };
       const backpackKey = Object.keys(updatedContainers).find(key => updatedContainers[key].type === 'backpack');
