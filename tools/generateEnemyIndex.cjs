@@ -29,7 +29,7 @@ function generateIndex() {
         hit_points: data.hit_points,
         armor_class: Array.isArray(data.armor_class) ? data.armor_class[0]?.value : data.armor_class,
         imageUrl: data.imageUrl || data.image || null,
-        path: `/assets/atlas/enemies/json/${file}`
+        json_path: `/assets/atlas/enemies/json/${file}`
       });
     } catch (e) {
       console.error(`Error parsing ${file}:`, e.message);

@@ -14,7 +14,7 @@
     "casting_time": "1 reaction",
     "range": "Self",
     "duration": "1 round",
-    "path": "/assets/atlas/spell/json/absorb_elements.json"
+    "json_path": "/assets/atlas/spell/json/absorb_elements.json"
   },
   {
     "index": "acid_arrow",
@@ -27,7 +27,7 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/acid_arrow.json"
+    "json_path": "/assets/atlas/spell/json/acid_arrow.json"
   },
   {
     "index": "acid_splash",
@@ -42,7 +42,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/acid_splash.json"
+    "json_path": "/assets/atlas/spell/json/acid_splash.json"
   },
   {
     "index": "aid",
@@ -57,7 +57,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/aid.json"
+    "json_path": "/assets/atlas/spell/json/aid.json"
   },
   {
     "index": "alarm",
@@ -72,7 +72,7 @@
     "casting_time": "1 minute",
     "range": "30 feet",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/alarm.json"
+    "json_path": "/assets/atlas/spell/json/alarm.json"
   },
   {
     "index": "alter_self",
@@ -87,7 +87,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/alter_self.json"
+    "json_path": "/assets/atlas/spell/json/alter_self.json"
   },
   {
     "index": "animal_friendship",
@@ -102,7 +102,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "24 hours",
-    "path": "/assets/atlas/spell/json/animal_friendship.json"
+    "json_path": "/assets/atlas/spell/json/animal_friendship.json"
   },
   {
     "index": "animal_messenger",
@@ -117,7 +117,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "24 hours",
-    "path": "/assets/atlas/spell/json/animal_messenger.json"
+    "json_path": "/assets/atlas/spell/json/animal_messenger.json"
   },
   {
     "index": "animal_shapes",
@@ -130,7 +130,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 24 hours",
-    "path": "/assets/atlas/spell/json/animal_shapes.json"
+    "json_path": "/assets/atlas/spell/json/animal_shapes.json"
   },
   {
     "index": "animate_dead",
@@ -144,7 +144,7 @@
     "casting_time": "1 minute",
     "range": "10 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/animate_dead.json"
+    "json_path": "/assets/atlas/spell/json/animate_dead.json"
   },
   {
     "index": "animate_objects",
@@ -160,7 +160,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/animate_objects.json"
+    "json_path": "/assets/atlas/spell/json/animate_objects.json"
   },
   {
     "index": "antilife_shell",
@@ -173,7 +173,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/antilife_shell.json"
+    "json_path": "/assets/atlas/spell/json/antilife_shell.json"
   },
   {
     "index": "antimagic_field",
@@ -187,7 +187,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/antimagic_field.json"
+    "json_path": "/assets/atlas/spell/json/antimagic_field.json"
   },
   {
     "index": "antipathy_sympathy",
@@ -201,7 +201,7 @@
     "casting_time": "1 hour",
     "range": "60 feet",
     "duration": "10 days",
-    "path": "/assets/atlas/spell/json/antipathy_sympathy.json"
+    "json_path": "/assets/atlas/spell/json/antipathy_sympathy.json"
   },
   {
     "index": "arcane_eye",
@@ -216,7 +216,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/arcane_eye.json"
+    "json_path": "/assets/atlas/spell/json/arcane_eye.json"
   },
   {
     "index": "arcane_hand",
@@ -230,7 +230,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/arcane_hand.json"
+    "json_path": "/assets/atlas/spell/json/arcane_hand.json"
   },
   {
     "index": "arcane_lock",
@@ -244,7 +244,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Until dispelled",
-    "path": "/assets/atlas/spell/json/arcane_lock.json"
+    "json_path": "/assets/atlas/spell/json/arcane_lock.json"
   },
   {
     "index": "arcane_sword",
@@ -258,7 +258,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/arcane_sword.json"
+    "json_path": "/assets/atlas/spell/json/arcane_sword.json"
   },
   {
     "index": "arcanists_magic_aura",
@@ -271,7 +271,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "24 hours",
-    "path": "/assets/atlas/spell/json/arcanists_magic_aura.json"
+    "json_path": "/assets/atlas/spell/json/arcanists_magic_aura.json"
   },
   {
     "index": "astral_projection",
@@ -286,7 +286,7 @@
     "casting_time": "1 hour",
     "range": "10 feet",
     "duration": "Special",
-    "path": "/assets/atlas/spell/json/astral_projection.json"
+    "json_path": "/assets/atlas/spell/json/astral_projection.json"
   },
   {
     "index": "augury",
@@ -299,7 +299,7 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/augury.json"
+    "json_path": "/assets/atlas/spell/json/augury.json"
   },
   {
     "index": "awaken",
@@ -313,7 +313,7 @@
     "casting_time": "8 hours",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/awaken.json"
+    "json_path": "/assets/atlas/spell/json/awaken.json"
   },
   {
     "index": "bane",
@@ -327,7 +327,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/bane.json"
+    "json_path": "/assets/atlas/spell/json/bane.json"
   },
   {
     "index": "banishment",
@@ -344,7 +344,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/banishment.json"
+    "json_path": "/assets/atlas/spell/json/banishment.json"
   },
   {
     "index": "barkskin",
@@ -358,7 +358,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/barkskin.json"
+    "json_path": "/assets/atlas/spell/json/barkskin.json"
   },
   {
     "index": "beacon_of_hope",
@@ -371,7 +371,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/beacon_of_hope.json"
+    "json_path": "/assets/atlas/spell/json/beacon_of_hope.json"
   },
   {
     "index": "bestow_curse",
@@ -386,7 +386,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/bestow_curse.json"
+    "json_path": "/assets/atlas/spell/json/bestow_curse.json"
   },
   {
     "index": "black_tentacles",
@@ -399,7 +399,7 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/black_tentacles.json"
+    "json_path": "/assets/atlas/spell/json/black_tentacles.json"
   },
   {
     "index": "blade_barrier",
@@ -412,7 +412,7 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/blade_barrier.json"
+    "json_path": "/assets/atlas/spell/json/blade_barrier.json"
   },
   {
     "index": "bless",
@@ -426,7 +426,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/bless.json"
+    "json_path": "/assets/atlas/spell/json/bless.json"
   },
   {
     "index": "blight",
@@ -442,7 +442,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/blight.json"
+    "json_path": "/assets/atlas/spell/json/blight.json"
   },
   {
     "index": "blindness_deafness",
@@ -458,7 +458,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/blindness_deafness.json"
+    "json_path": "/assets/atlas/spell/json/blindness_deafness.json"
   },
   {
     "index": "blink",
@@ -473,7 +473,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/blink.json"
+    "json_path": "/assets/atlas/spell/json/blink.json"
   },
   {
     "index": "blur",
@@ -488,7 +488,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/blur.json"
+    "json_path": "/assets/atlas/spell/json/blur.json"
   },
   {
     "index": "branding_smite",
@@ -501,7 +501,7 @@
     "casting_time": "1 bonus action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/branding_smite.json"
+    "json_path": "/assets/atlas/spell/json/branding_smite.json"
   },
   {
     "index": "burning_hands",
@@ -515,7 +515,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/burning_hands.json"
+    "json_path": "/assets/atlas/spell/json/burning_hands.json"
   },
   {
     "index": "call_lightning",
@@ -528,7 +528,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/call_lightning.json"
+    "json_path": "/assets/atlas/spell/json/call_lightning.json"
   },
   {
     "index": "calm_emotions",
@@ -542,7 +542,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/calm_emotions.json"
+    "json_path": "/assets/atlas/spell/json/calm_emotions.json"
   },
   {
     "index": "catapult",
@@ -557,7 +557,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/catapult.json"
+    "json_path": "/assets/atlas/spell/json/catapult.json"
   },
   {
     "index": "chain_lightning",
@@ -571,7 +571,7 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/chain_lightning.json"
+    "json_path": "/assets/atlas/spell/json/chain_lightning.json"
   },
   {
     "index": "charm_person",
@@ -588,7 +588,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/charm_person.json"
+    "json_path": "/assets/atlas/spell/json/charm_person.json"
   },
   {
     "index": "chill_touch",
@@ -603,7 +603,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "1 round",
-    "path": "/assets/atlas/spell/json/chill_touch.json"
+    "json_path": "/assets/atlas/spell/json/chill_touch.json"
   },
   {
     "index": "circle_of_death",
@@ -618,7 +618,7 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/circle_of_death.json"
+    "json_path": "/assets/atlas/spell/json/circle_of_death.json"
   },
   {
     "index": "clairvoyance",
@@ -634,7 +634,7 @@
     "casting_time": "10 minutes",
     "range": "1 mile",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/clairvoyance.json"
+    "json_path": "/assets/atlas/spell/json/clairvoyance.json"
   },
   {
     "index": "clone",
@@ -647,7 +647,7 @@
     "casting_time": "1 hour",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/clone.json"
+    "json_path": "/assets/atlas/spell/json/clone.json"
   },
   {
     "index": "cloudkill",
@@ -661,7 +661,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/cloudkill.json"
+    "json_path": "/assets/atlas/spell/json/cloudkill.json"
   },
   {
     "index": "color_spray",
@@ -675,7 +675,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 round",
-    "path": "/assets/atlas/spell/json/color_spray.json"
+    "json_path": "/assets/atlas/spell/json/color_spray.json"
   },
   {
     "index": "command",
@@ -689,7 +689,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "1 round",
-    "path": "/assets/atlas/spell/json/command.json"
+    "json_path": "/assets/atlas/spell/json/command.json"
   },
   {
     "index": "commune",
@@ -702,7 +702,7 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/commune.json"
+    "json_path": "/assets/atlas/spell/json/commune.json"
   },
   {
     "index": "commune_with_nature",
@@ -716,7 +716,7 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/commune_with_nature.json"
+    "json_path": "/assets/atlas/spell/json/commune_with_nature.json"
   },
   {
     "index": "comprehend_languages",
@@ -732,7 +732,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/comprehend_languages.json"
+    "json_path": "/assets/atlas/spell/json/comprehend_languages.json"
   },
   {
     "index": "compulsion",
@@ -745,7 +745,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/compulsion.json"
+    "json_path": "/assets/atlas/spell/json/compulsion.json"
   },
   {
     "index": "cone_of_cold",
@@ -759,7 +759,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/cone_of_cold.json"
+    "json_path": "/assets/atlas/spell/json/cone_of_cold.json"
   },
   {
     "index": "confusion",
@@ -775,7 +775,7 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/confusion.json"
+    "json_path": "/assets/atlas/spell/json/confusion.json"
   },
   {
     "index": "conjure_animals",
@@ -789,7 +789,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/conjure_animals.json"
+    "json_path": "/assets/atlas/spell/json/conjure_animals.json"
   },
   {
     "index": "conjure_celestial",
@@ -802,7 +802,7 @@
     "casting_time": "1 minute",
     "range": "90 feet",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/conjure_celestial.json"
+    "json_path": "/assets/atlas/spell/json/conjure_celestial.json"
   },
   {
     "index": "conjure_elemental",
@@ -816,7 +816,7 @@
     "casting_time": "1 minute",
     "range": "90 feet",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/conjure_elemental.json"
+    "json_path": "/assets/atlas/spell/json/conjure_elemental.json"
   },
   {
     "index": "conjure_fey",
@@ -830,7 +830,7 @@
     "casting_time": "1 minute",
     "range": "90 feet",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/conjure_fey.json"
+    "json_path": "/assets/atlas/spell/json/conjure_fey.json"
   },
   {
     "index": "conjure_minor_elementals",
@@ -844,7 +844,7 @@
     "casting_time": "1 minute",
     "range": "90 feet",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/conjure_minor_elementals.json"
+    "json_path": "/assets/atlas/spell/json/conjure_minor_elementals.json"
   },
   {
     "index": "conjure_woodland_beings",
@@ -858,7 +858,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/conjure_woodland_beings.json"
+    "json_path": "/assets/atlas/spell/json/conjure_woodland_beings.json"
   },
   {
     "index": "contact_other_plane",
@@ -872,7 +872,7 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/contact_other_plane.json"
+    "json_path": "/assets/atlas/spell/json/contact_other_plane.json"
   },
   {
     "index": "contagion",
@@ -886,7 +886,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "7 days",
-    "path": "/assets/atlas/spell/json/contagion.json"
+    "json_path": "/assets/atlas/spell/json/contagion.json"
   },
   {
     "index": "contingency",
@@ -899,7 +899,7 @@
     "casting_time": "10 minutes",
     "range": "Self",
     "duration": "10 days",
-    "path": "/assets/atlas/spell/json/contingency.json"
+    "json_path": "/assets/atlas/spell/json/contingency.json"
   },
   {
     "index": "continual_flame",
@@ -914,7 +914,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Until dispelled",
-    "path": "/assets/atlas/spell/json/continual_flame.json"
+    "json_path": "/assets/atlas/spell/json/continual_flame.json"
   },
   {
     "index": "control_water",
@@ -929,7 +929,7 @@
     "casting_time": "1 action",
     "range": "300 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/control_water.json"
+    "json_path": "/assets/atlas/spell/json/control_water.json"
   },
   {
     "index": "control_weather",
@@ -944,7 +944,7 @@
     "casting_time": "10 minutes",
     "range": "Self",
     "duration": "Up to 8 hours",
-    "path": "/assets/atlas/spell/json/control_weather.json"
+    "json_path": "/assets/atlas/spell/json/control_weather.json"
   },
   {
     "index": "counterspell",
@@ -959,7 +959,7 @@
     "casting_time": "1 reaction",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/counterspell.json"
+    "json_path": "/assets/atlas/spell/json/counterspell.json"
   },
   {
     "index": "create_food_and_water",
@@ -974,7 +974,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/create_food_and_water.json"
+    "json_path": "/assets/atlas/spell/json/create_food_and_water.json"
   },
   {
     "index": "create_or_destroy_water",
@@ -988,7 +988,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/create_or_destroy_water.json"
+    "json_path": "/assets/atlas/spell/json/create_or_destroy_water.json"
   },
   {
     "index": "create_undead",
@@ -1003,7 +1003,7 @@
     "casting_time": "1 minute",
     "range": "10 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/create_undead.json"
+    "json_path": "/assets/atlas/spell/json/create_undead.json"
   },
   {
     "index": "creation",
@@ -1018,7 +1018,7 @@
     "casting_time": "1 minute",
     "range": "30 feet",
     "duration": "Special",
-    "path": "/assets/atlas/spell/json/creation.json"
+    "json_path": "/assets/atlas/spell/json/creation.json"
   },
   {
     "index": "cure_wounds",
@@ -1036,7 +1036,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/cure_wounds.json"
+    "json_path": "/assets/atlas/spell/json/cure_wounds.json"
   },
   {
     "index": "dancing_lights",
@@ -1052,7 +1052,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/dancing_lights.json"
+    "json_path": "/assets/atlas/spell/json/dancing_lights.json"
   },
   {
     "index": "darkness",
@@ -1067,7 +1067,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/darkness.json"
+    "json_path": "/assets/atlas/spell/json/darkness.json"
   },
   {
     "index": "darkvision",
@@ -1084,7 +1084,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/darkvision.json"
+    "json_path": "/assets/atlas/spell/json/darkvision.json"
   },
   {
     "index": "daylight",
@@ -1101,7 +1101,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/daylight.json"
+    "json_path": "/assets/atlas/spell/json/daylight.json"
   },
   {
     "index": "death_ward",
@@ -1115,7 +1115,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/death_ward.json"
+    "json_path": "/assets/atlas/spell/json/death_ward.json"
   },
   {
     "index": "delayed_blast_fireball",
@@ -1129,7 +1129,7 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/delayed_blast_fireball.json"
+    "json_path": "/assets/atlas/spell/json/delayed_blast_fireball.json"
   },
   {
     "index": "demiplane",
@@ -1143,7 +1143,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/demiplane.json"
+    "json_path": "/assets/atlas/spell/json/demiplane.json"
   },
   {
     "index": "detect_evil_and_good",
@@ -1157,7 +1157,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/detect_evil_and_good.json"
+    "json_path": "/assets/atlas/spell/json/detect_evil_and_good.json"
   },
   {
     "index": "detect_magic",
@@ -1177,7 +1177,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/detect_magic.json"
+    "json_path": "/assets/atlas/spell/json/detect_magic.json"
   },
   {
     "index": "detect_poison_and_disease",
@@ -1193,7 +1193,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/detect_poison_and_disease.json"
+    "json_path": "/assets/atlas/spell/json/detect_poison_and_disease.json"
   },
   {
     "index": "detect_thoughts",
@@ -1208,7 +1208,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/detect_thoughts.json"
+    "json_path": "/assets/atlas/spell/json/detect_thoughts.json"
   },
   {
     "index": "dimension_door",
@@ -1224,7 +1224,7 @@
     "casting_time": "1 action",
     "range": "500 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/dimension_door.json"
+    "json_path": "/assets/atlas/spell/json/dimension_door.json"
   },
   {
     "index": "disguise_self",
@@ -1240,7 +1240,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/disguise_self.json"
+    "json_path": "/assets/atlas/spell/json/disguise_self.json"
   },
   {
     "index": "disintegrate",
@@ -1254,7 +1254,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/disintegrate.json"
+    "json_path": "/assets/atlas/spell/json/disintegrate.json"
   },
   {
     "index": "dispel_evil_and_good",
@@ -1268,7 +1268,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/dispel_evil_and_good.json"
+    "json_path": "/assets/atlas/spell/json/dispel_evil_and_good.json"
   },
   {
     "index": "dispel_magic",
@@ -1288,7 +1288,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/dispel_magic.json"
+    "json_path": "/assets/atlas/spell/json/dispel_magic.json"
   },
   {
     "index": "divination",
@@ -1301,7 +1301,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/divination.json"
+    "json_path": "/assets/atlas/spell/json/divination.json"
   },
   {
     "index": "divine_favor",
@@ -1314,7 +1314,7 @@
     "casting_time": "1 bonus action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/divine_favor.json"
+    "json_path": "/assets/atlas/spell/json/divine_favor.json"
   },
   {
     "index": "divine_word",
@@ -1327,7 +1327,7 @@
     "casting_time": "1 bonus action",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/divine_word.json"
+    "json_path": "/assets/atlas/spell/json/divine_word.json"
   },
   {
     "index": "dominate_beast",
@@ -1341,7 +1341,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/dominate_beast.json"
+    "json_path": "/assets/atlas/spell/json/dominate_beast.json"
   },
   {
     "index": "dominate_monster",
@@ -1357,7 +1357,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/dominate_monster.json"
+    "json_path": "/assets/atlas/spell/json/dominate_monster.json"
   },
   {
     "index": "dominate_person",
@@ -1372,7 +1372,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/dominate_person.json"
+    "json_path": "/assets/atlas/spell/json/dominate_person.json"
   },
   {
     "index": "dream",
@@ -1387,7 +1387,7 @@
     "casting_time": "1 minute",
     "range": "Special",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/dream.json"
+    "json_path": "/assets/atlas/spell/json/dream.json"
   },
   {
     "index": "druidcraft",
@@ -1400,7 +1400,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/druidcraft.json"
+    "json_path": "/assets/atlas/spell/json/druidcraft.json"
   },
   {
     "index": "earthquake",
@@ -1415,7 +1415,7 @@
     "casting_time": "1 action",
     "range": "500 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/earthquake.json"
+    "json_path": "/assets/atlas/spell/json/earthquake.json"
   },
   {
     "index": "eldritch_blast",
@@ -1428,7 +1428,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/eldritch_blast.json"
+    "json_path": "/assets/atlas/spell/json/eldritch_blast.json"
   },
   {
     "index": "enhance_ability",
@@ -1445,7 +1445,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/enhance_ability.json"
+    "json_path": "/assets/atlas/spell/json/enhance_ability.json"
   },
   {
     "index": "enlarge_reduce",
@@ -1460,7 +1460,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/enlarge_reduce.json"
+    "json_path": "/assets/atlas/spell/json/enlarge_reduce.json"
   },
   {
     "index": "entangle",
@@ -1473,7 +1473,7 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/entangle.json"
+    "json_path": "/assets/atlas/spell/json/entangle.json"
   },
   {
     "index": "enthrall",
@@ -1487,7 +1487,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/enthrall.json"
+    "json_path": "/assets/atlas/spell/json/enthrall.json"
   },
   {
     "index": "etherealness",
@@ -1504,7 +1504,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/etherealness.json"
+    "json_path": "/assets/atlas/spell/json/etherealness.json"
   },
   {
     "index": "expeditious_retreat",
@@ -1520,7 +1520,7 @@
     "casting_time": "1 bonus action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/expeditious_retreat.json"
+    "json_path": "/assets/atlas/spell/json/expeditious_retreat.json"
   },
   {
     "index": "eyebite",
@@ -1536,7 +1536,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/eyebite.json"
+    "json_path": "/assets/atlas/spell/json/eyebite.json"
   },
   {
     "index": "fabricate",
@@ -1550,7 +1550,7 @@
     "casting_time": "10 minutes",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/fabricate.json"
+    "json_path": "/assets/atlas/spell/json/fabricate.json"
   },
   {
     "index": "faerie_fire",
@@ -1564,7 +1564,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/faerie_fire.json"
+    "json_path": "/assets/atlas/spell/json/faerie_fire.json"
   },
   {
     "index": "faithful_hound",
@@ -1578,7 +1578,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/faithful_hound.json"
+    "json_path": "/assets/atlas/spell/json/faithful_hound.json"
   },
   {
     "index": "false_life",
@@ -1593,7 +1593,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/false_life.json"
+    "json_path": "/assets/atlas/spell/json/false_life.json"
   },
   {
     "index": "fear",
@@ -1609,7 +1609,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/fear.json"
+    "json_path": "/assets/atlas/spell/json/fear.json"
   },
   {
     "index": "feather_fall",
@@ -1625,7 +1625,7 @@
     "casting_time": "1 reaction",
     "range": "60 feet",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/feather_fall.json"
+    "json_path": "/assets/atlas/spell/json/feather_fall.json"
   },
   {
     "index": "feeblemind",
@@ -1641,7 +1641,7 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/feeblemind.json"
+    "json_path": "/assets/atlas/spell/json/feeblemind.json"
   },
   {
     "index": "find_familiar",
@@ -1654,7 +1654,7 @@
     "casting_time": "1 hour",
     "range": "10 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/find_familiar.json"
+    "json_path": "/assets/atlas/spell/json/find_familiar.json"
   },
   {
     "index": "find_steed",
@@ -1667,7 +1667,7 @@
     "casting_time": "10 minutes",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/find_steed.json"
+    "json_path": "/assets/atlas/spell/json/find_steed.json"
   },
   {
     "index": "find_the_path",
@@ -1682,7 +1682,7 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "Up to 24 hours",
-    "path": "/assets/atlas/spell/json/find_the_path.json"
+    "json_path": "/assets/atlas/spell/json/find_the_path.json"
   },
   {
     "index": "find_traps",
@@ -1697,7 +1697,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/find_traps.json"
+    "json_path": "/assets/atlas/spell/json/find_traps.json"
   },
   {
     "index": "finger_of_death",
@@ -1712,21 +1712,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/finger_of_death.json"
-  },
-  {
-    "index": "fireball",
-    "name": "fireball",
-    "level": 3,
-    "school": "evocation",
-    "classes": [
-      "sorcerer",
-      "wizard"
-    ],
-    "casting_time": "1 action",
-    "range": "150 feet",
-    "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/fireball.json"
+    "json_path": "/assets/atlas/spell/json/finger_of_death.json"
   },
   {
     "index": "fire_bolt",
@@ -1741,7 +1727,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/fire_bolt.json"
+    "json_path": "/assets/atlas/spell/json/fire_bolt.json"
   },
   {
     "index": "fire_shield",
@@ -1754,7 +1740,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "10 minutes",
-    "path": "/assets/atlas/spell/json/fire_shield.json"
+    "json_path": "/assets/atlas/spell/json/fire_shield.json"
   },
   {
     "index": "fire_storm",
@@ -1769,7 +1755,21 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/fire_storm.json"
+    "json_path": "/assets/atlas/spell/json/fire_storm.json"
+  },
+  {
+    "index": "fireball",
+    "name": "fireball",
+    "level": 3,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "duration": "Instantaneous",
+    "json_path": "/assets/atlas/spell/json/fireball.json"
   },
   {
     "index": "flame_blade",
@@ -1782,7 +1782,7 @@
     "casting_time": "1 bonus action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/flame_blade.json"
+    "json_path": "/assets/atlas/spell/json/flame_blade.json"
   },
   {
     "index": "flame_strike",
@@ -1795,7 +1795,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/flame_strike.json"
+    "json_path": "/assets/atlas/spell/json/flame_strike.json"
   },
   {
     "index": "flaming_sphere",
@@ -1809,7 +1809,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/flaming_sphere.json"
+    "json_path": "/assets/atlas/spell/json/flaming_sphere.json"
   },
   {
     "index": "flesh_to_stone",
@@ -1823,7 +1823,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/flesh_to_stone.json"
+    "json_path": "/assets/atlas/spell/json/flesh_to_stone.json"
   },
   {
     "index": "floating_disk",
@@ -1836,7 +1836,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/floating_disk.json"
+    "json_path": "/assets/atlas/spell/json/floating_disk.json"
   },
   {
     "index": "fly",
@@ -1852,7 +1852,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/fly.json"
+    "json_path": "/assets/atlas/spell/json/fly.json"
   },
   {
     "index": "fog_cloud",
@@ -1868,7 +1868,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/fog_cloud.json"
+    "json_path": "/assets/atlas/spell/json/fog_cloud.json"
   },
   {
     "index": "forbiddance",
@@ -1881,7 +1881,7 @@
     "casting_time": "10 minutes",
     "range": "Touch",
     "duration": "24 hours",
-    "path": "/assets/atlas/spell/json/forbiddance.json"
+    "json_path": "/assets/atlas/spell/json/forbiddance.json"
   },
   {
     "index": "forcecage",
@@ -1896,7 +1896,7 @@
     "casting_time": "1 action",
     "range": "100 feet",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/forcecage.json"
+    "json_path": "/assets/atlas/spell/json/forcecage.json"
   },
   {
     "index": "foresight",
@@ -1912,7 +1912,7 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/foresight.json"
+    "json_path": "/assets/atlas/spell/json/foresight.json"
   },
   {
     "index": "freedom_of_movement",
@@ -1929,7 +1929,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/freedom_of_movement.json"
+    "json_path": "/assets/atlas/spell/json/freedom_of_movement.json"
   },
   {
     "index": "freezing_sphere",
@@ -1942,7 +1942,7 @@
     "casting_time": "1 action",
     "range": "300 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/freezing_sphere.json"
+    "json_path": "/assets/atlas/spell/json/freezing_sphere.json"
   },
   {
     "index": "gaseous_form",
@@ -1958,7 +1958,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/gaseous_form.json"
+    "json_path": "/assets/atlas/spell/json/gaseous_form.json"
   },
   {
     "index": "gate",
@@ -1973,7 +1973,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/gate.json"
+    "json_path": "/assets/atlas/spell/json/gate.json"
   },
   {
     "index": "grease",
@@ -1987,7 +1987,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/geas.json"
+    "json_path": "/assets/atlas/spell/json/geas.json"
   },
   {
     "index": "gentle_repose",
@@ -2001,7 +2001,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "10 days",
-    "path": "/assets/atlas/spell/json/gentle_repose.json"
+    "json_path": "/assets/atlas/spell/json/gentle_repose.json"
   },
   {
     "index": "giant_insect",
@@ -2014,7 +2014,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/giant_insect.json"
+    "json_path": "/assets/atlas/spell/json/giant_insect.json"
   },
   {
     "index": "glibness",
@@ -2028,7 +2028,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/glibness.json"
+    "json_path": "/assets/atlas/spell/json/glibness.json"
   },
   {
     "index": "globe_of_invulnerability",
@@ -2042,7 +2042,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/globe_of_invulnerability.json"
+    "json_path": "/assets/atlas/spell/json/globe_of_invulnerability.json"
   },
   {
     "index": "glyph_of_warding",
@@ -2057,7 +2057,7 @@
     "casting_time": "1 hour",
     "range": "Touch",
     "duration": "Until dispelled",
-    "path": "/assets/atlas/spell/json/glyph_of_warding.json"
+    "json_path": "/assets/atlas/spell/json/glyph_of_warding.json"
   },
   {
     "index": "goodberry",
@@ -2071,7 +2071,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/goodberry.json"
+    "json_path": "/assets/atlas/spell/json/goodberry.json"
   },
   {
     "index": "glyph_of_warding",
@@ -2087,7 +2087,7 @@
     "casting_time": "1 hour",
     "range": "Touch",
     "duration": "Until dispelled",
-    "path": "/assets/atlas/spell/json/grease.json"
+    "json_path": "/assets/atlas/spell/json/grease.json"
   },
   {
     "index": "greater_invisibility",
@@ -2102,7 +2102,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/greater_invisibility.json"
+    "json_path": "/assets/atlas/spell/json/greater_invisibility.json"
   },
   {
     "index": "greater_restoration",
@@ -2118,7 +2118,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/greater_restoration.json"
+    "json_path": "/assets/atlas/spell/json/greater_restoration.json"
   },
   {
     "index": "guardian_of_faith",
@@ -2131,7 +2131,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/guardian_of_faith.json"
+    "json_path": "/assets/atlas/spell/json/guardian_of_faith.json"
   },
   {
     "index": "guards_and_wards",
@@ -2145,7 +2145,7 @@
     "casting_time": "10 minutes",
     "range": "Touch",
     "duration": "24 hours",
-    "path": "/assets/atlas/spell/json/guards_and_wards.json"
+    "json_path": "/assets/atlas/spell/json/guards_and_wards.json"
   },
   {
     "index": "guidance",
@@ -2160,7 +2160,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/guidance.json"
+    "json_path": "/assets/atlas/spell/json/guidance.json"
   },
   {
     "index": "guiding_bolt",
@@ -2173,7 +2173,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "1 round",
-    "path": "/assets/atlas/spell/json/guiding_bolt.json"
+    "json_path": "/assets/atlas/spell/json/guiding_bolt.json"
   },
   {
     "index": "gust_of_wind",
@@ -2188,7 +2188,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/gust_of_wind.json"
+    "json_path": "/assets/atlas/spell/json/gust_of_wind.json"
   },
   {
     "index": "hallow",
@@ -2201,7 +2201,7 @@
     "casting_time": "24 hours",
     "range": "Touch",
     "duration": "Until dispelled",
-    "path": "/assets/atlas/spell/json/hallow.json"
+    "json_path": "/assets/atlas/spell/json/hallow.json"
   },
   {
     "index": "hallucinatory_terrain",
@@ -2217,7 +2217,7 @@
     "casting_time": "10 minutes",
     "range": "300 feet",
     "duration": "24 hours",
-    "path": "/assets/atlas/spell/json/hallucinatory_terrain.json"
+    "json_path": "/assets/atlas/spell/json/hallucinatory_terrain.json"
   },
   {
     "index": "harm",
@@ -2230,7 +2230,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/harm.json"
+    "json_path": "/assets/atlas/spell/json/harm.json"
   },
   {
     "index": "haste",
@@ -2245,7 +2245,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/haste.json"
+    "json_path": "/assets/atlas/spell/json/haste.json"
   },
   {
     "index": "heal",
@@ -2259,7 +2259,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/heal.json"
+    "json_path": "/assets/atlas/spell/json/heal.json"
   },
   {
     "index": "healing_word",
@@ -2274,7 +2274,7 @@
     "casting_time": "1 bonus action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/healing_word.json"
+    "json_path": "/assets/atlas/spell/json/healing_word.json"
   },
   {
     "index": "heat_metal",
@@ -2289,7 +2289,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/heat_metal.json"
+    "json_path": "/assets/atlas/spell/json/heat_metal.json"
   },
   {
     "index": "hellish_rebuke",
@@ -2302,7 +2302,7 @@
     "casting_time": "1 reaction",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/hellish_rebuke.json"
+    "json_path": "/assets/atlas/spell/json/hellish_rebuke.json"
   },
   {
     "index": "heroes_feast",
@@ -2316,7 +2316,7 @@
     "casting_time": "10 minutes",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/heroes_feast.json"
+    "json_path": "/assets/atlas/spell/json/heroes_feast.json"
   },
   {
     "index": "heroism",
@@ -2330,7 +2330,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/heroism.json"
+    "json_path": "/assets/atlas/spell/json/heroism.json"
   },
   {
     "index": "hideous_laughter",
@@ -2344,7 +2344,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/hideous_laughter.json"
+    "json_path": "/assets/atlas/spell/json/hideous_laughter.json"
   },
   {
     "index": "hold_monster",
@@ -2360,7 +2360,7 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/hold_monster.json"
+    "json_path": "/assets/atlas/spell/json/hold_monster.json"
   },
   {
     "index": "hold_person",
@@ -2378,7 +2378,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/hold_person.json"
+    "json_path": "/assets/atlas/spell/json/hold_person.json"
   },
   {
     "index": "holy_aura",
@@ -2391,7 +2391,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/holy_aura.json"
+    "json_path": "/assets/atlas/spell/json/holy_aura.json"
   },
   {
     "index": "hunters_mark",
@@ -2404,7 +2404,7 @@
     "casting_time": "1 bonus action",
     "range": "90 feet",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/hunters_mark.json"
+    "json_path": "/assets/atlas/spell/json/hunters_mark.json"
   },
   {
     "index": "hypnotic_pattern",
@@ -2420,7 +2420,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/hypnotic_pattern.json"
+    "json_path": "/assets/atlas/spell/json/hypnotic_pattern.json"
   },
   {
     "index": "ice_storm",
@@ -2435,7 +2435,7 @@
     "casting_time": "1 action",
     "range": "300 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/ice_storm.json"
+    "json_path": "/assets/atlas/spell/json/ice_storm.json"
   },
   {
     "index": "identify",
@@ -2450,7 +2450,7 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/identify.json"
+    "json_path": "/assets/atlas/spell/json/identify.json"
   },
   {
     "index": "illusory_script",
@@ -2465,7 +2465,7 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "10 days",
-    "path": "/assets/atlas/spell/json/illusory_script.json"
+    "json_path": "/assets/atlas/spell/json/illusory_script.json"
   },
   {
     "index": "imprisonment",
@@ -2479,7 +2479,7 @@
     "casting_time": "1 minute",
     "range": "30 feet",
     "duration": "Until dispelled",
-    "path": "/assets/atlas/spell/json/imprisonment.json"
+    "json_path": "/assets/atlas/spell/json/imprisonment.json"
   },
   {
     "index": "incendiary_cloud",
@@ -2493,7 +2493,7 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/incendiary_cloud.json"
+    "json_path": "/assets/atlas/spell/json/incendiary_cloud.json"
   },
   {
     "index": "inflict_wounds",
@@ -2506,7 +2506,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/inflict_wounds.json"
+    "json_path": "/assets/atlas/spell/json/inflict_wounds.json"
   },
   {
     "index": "insect_plague",
@@ -2521,7 +2521,7 @@
     "casting_time": "1 action",
     "range": "300 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/insect_plague.json"
+    "json_path": "/assets/atlas/spell/json/insect_plague.json"
   },
   {
     "index": "instant_summons",
@@ -2534,7 +2534,7 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "Until dispelled",
-    "path": "/assets/atlas/spell/json/instant_summons.json"
+    "json_path": "/assets/atlas/spell/json/instant_summons.json"
   },
   {
     "index": "invisibility",
@@ -2551,7 +2551,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/invisibility.json"
+    "json_path": "/assets/atlas/spell/json/invisibility.json"
   },
   {
     "index": "irresistible_dance",
@@ -2565,7 +2565,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/irresistible_dance.json"
+    "json_path": "/assets/atlas/spell/json/irresistible_dance.json"
   },
   {
     "index": "jump",
@@ -2582,7 +2582,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/jump.json"
+    "json_path": "/assets/atlas/spell/json/jump.json"
   },
   {
     "index": "knock",
@@ -2597,7 +2597,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/knock.json"
+    "json_path": "/assets/atlas/spell/json/knock.json"
   },
   {
     "index": "legend_lore",
@@ -2612,7 +2612,7 @@
     "casting_time": "10 minutes",
     "range": "Self",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/legend_lore.json"
+    "json_path": "/assets/atlas/spell/json/legend_lore.json"
   },
   {
     "index": "lesser_restoration",
@@ -2630,7 +2630,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/lesser_restoration.json"
+    "json_path": "/assets/atlas/spell/json/lesser_restoration.json"
   },
   {
     "index": "levitate",
@@ -2645,7 +2645,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/levitate.json"
+    "json_path": "/assets/atlas/spell/json/levitate.json"
   },
   {
     "index": "light",
@@ -2662,7 +2662,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/light.json"
+    "json_path": "/assets/atlas/spell/json/light.json"
   },
   {
     "index": "lightning_bolt",
@@ -2676,7 +2676,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/lightning_bolt.json"
+    "json_path": "/assets/atlas/spell/json/lightning_bolt.json"
   },
   {
     "index": "locate_animals_or_plants",
@@ -2691,7 +2691,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/locate_animals_or_plants.json"
+    "json_path": "/assets/atlas/spell/json/locate_animals_or_plants.json"
   },
   {
     "index": "locate_creature",
@@ -2709,7 +2709,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/locate_creature.json"
+    "json_path": "/assets/atlas/spell/json/locate_creature.json"
   },
   {
     "index": "locate_object",
@@ -2727,7 +2727,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/locate_object.json"
+    "json_path": "/assets/atlas/spell/json/locate_object.json"
   },
   {
     "index": "longstrider",
@@ -2744,7 +2744,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/longstrider.json"
+    "json_path": "/assets/atlas/spell/json/longstrider.json"
   },
   {
     "index": "mage_armor",
@@ -2758,7 +2758,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/mage_armor.json"
+    "json_path": "/assets/atlas/spell/json/mage_armor.json"
   },
   {
     "index": "mage_hand",
@@ -2775,7 +2775,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/mage_hand.json"
+    "json_path": "/assets/atlas/spell/json/mage_hand.json"
   },
   {
     "index": "magic_circle",
@@ -2791,7 +2791,7 @@
     "casting_time": "1 minute",
     "range": "10 feet",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/magic_circle.json"
+    "json_path": "/assets/atlas/spell/json/magic_circle.json"
   },
   {
     "index": "magic_jar",
@@ -2804,7 +2804,7 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "Until dispelled",
-    "path": "/assets/atlas/spell/json/magic_jar.json"
+    "json_path": "/assets/atlas/spell/json/magic_jar.json"
   },
   {
     "index": "magic_missile",
@@ -2818,7 +2818,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/magic_missile.json"
+    "json_path": "/assets/atlas/spell/json/magic_missile.json"
   },
   {
     "index": "magic_mouth",
@@ -2833,7 +2833,7 @@
     "casting_time": "1 minute",
     "range": "30 feet",
     "duration": "Until dispelled",
-    "path": "/assets/atlas/spell/json/magic_mouth.json"
+    "json_path": "/assets/atlas/spell/json/magic_mouth.json"
   },
   {
     "index": "magic_weapon",
@@ -2848,7 +2848,7 @@
     "casting_time": "1 bonus action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/magic_weapon.json"
+    "json_path": "/assets/atlas/spell/json/magic_weapon.json"
   },
   {
     "index": "magnificent_mansion",
@@ -2862,7 +2862,7 @@
     "casting_time": "1 minute",
     "range": "300 feet",
     "duration": "24 hours",
-    "path": "/assets/atlas/spell/json/magnificent_mansion.json"
+    "json_path": "/assets/atlas/spell/json/magnificent_mansion.json"
   },
   {
     "index": "major_image",
@@ -2878,7 +2878,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/major_image.json"
+    "json_path": "/assets/atlas/spell/json/major_image.json"
   },
   {
     "index": "mass_cure_wounds",
@@ -2893,7 +2893,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/mass_cure_wounds.json"
+    "json_path": "/assets/atlas/spell/json/mass_cure_wounds.json"
   },
   {
     "index": "mass_heal",
@@ -2906,7 +2906,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/mass_heal.json"
+    "json_path": "/assets/atlas/spell/json/mass_heal.json"
   },
   {
     "index": "mass_healing_word",
@@ -2919,7 +2919,7 @@
     "casting_time": "1 bonus action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/mass_healing_word.json"
+    "json_path": "/assets/atlas/spell/json/mass_healing_word.json"
   },
   {
     "index": "mass_suggestion",
@@ -2935,7 +2935,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "24 hours",
-    "path": "/assets/atlas/spell/json/mass_suggestion.json"
+    "json_path": "/assets/atlas/spell/json/mass_suggestion.json"
   },
   {
     "index": "maze",
@@ -2948,7 +2948,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/maze.json"
+    "json_path": "/assets/atlas/spell/json/maze.json"
   },
   {
     "index": "meld_into_stone",
@@ -2961,7 +2961,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/meld_into_stone.json"
+    "json_path": "/assets/atlas/spell/json/meld_into_stone.json"
   },
   {
     "index": "mending",
@@ -2979,7 +2979,7 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/mending.json"
+    "json_path": "/assets/atlas/spell/json/mending.json"
   },
   {
     "index": "message",
@@ -2995,7 +2995,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "1 round",
-    "path": "/assets/atlas/spell/json/message.json"
+    "json_path": "/assets/atlas/spell/json/message.json"
   },
   {
     "index": "meteor_swarm",
@@ -3009,7 +3009,7 @@
     "casting_time": "1 action",
     "range": "1 mile",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/meteor_swarm.json"
+    "json_path": "/assets/atlas/spell/json/meteor_swarm.json"
   },
   {
     "index": "mind_blank",
@@ -3023,7 +3023,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "24 hours",
-    "path": "/assets/atlas/spell/json/mind_blank.json"
+    "json_path": "/assets/atlas/spell/json/mind_blank.json"
   },
   {
     "index": "minor_illusion",
@@ -3039,7 +3039,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/minor_illusion.json"
+    "json_path": "/assets/atlas/spell/json/minor_illusion.json"
   },
   {
     "index": "mirage_arcane",
@@ -3054,7 +3054,7 @@
     "casting_time": "10 minutes",
     "range": "Sight",
     "duration": "10 days",
-    "path": "/assets/atlas/spell/json/mirage_arcane.json"
+    "json_path": "/assets/atlas/spell/json/mirage_arcane.json"
   },
   {
     "index": "mirror_image",
@@ -3069,7 +3069,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/mirror_image.json"
+    "json_path": "/assets/atlas/spell/json/mirror_image.json"
   },
   {
     "index": "mislead",
@@ -3083,7 +3083,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/mislead.json"
+    "json_path": "/assets/atlas/spell/json/mislead.json"
   },
   {
     "index": "misty_step",
@@ -3098,7 +3098,7 @@
     "casting_time": "1 bonus action",
     "range": "Self",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/misty_step.json"
+    "json_path": "/assets/atlas/spell/json/misty_step.json"
   },
   {
     "index": "modify_memory",
@@ -3112,7 +3112,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/modify_memory.json"
+    "json_path": "/assets/atlas/spell/json/modify_memory.json"
   },
   {
     "index": "moonbeam",
@@ -3125,7 +3125,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/moonbeam.json"
+    "json_path": "/assets/atlas/spell/json/moonbeam.json"
   },
   {
     "index": "move_earth",
@@ -3140,7 +3140,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 2 hours",
-    "path": "/assets/atlas/spell/json/move_earth.json"
+    "json_path": "/assets/atlas/spell/json/move_earth.json"
   },
   {
     "index": "nondetection",
@@ -3155,20 +3155,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/nondetection.json"
-  },
-  {
-    "index": "passwall",
-    "name": "passwall",
-    "level": 5,
-    "school": "transmutation",
-    "classes": [
-      "wizard"
-    ],
-    "casting_time": "1 action",
-    "range": "30 feet",
-    "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/passwall.json"
+    "json_path": "/assets/atlas/spell/json/nondetection.json"
   },
   {
     "index": "pass_without_trace",
@@ -3182,7 +3169,20 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/pass_without_trace.json"
+    "json_path": "/assets/atlas/spell/json/pass_without_trace.json"
+  },
+  {
+    "index": "passwall",
+    "name": "passwall",
+    "level": 5,
+    "school": "transmutation",
+    "classes": [
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "1 hour",
+    "json_path": "/assets/atlas/spell/json/passwall.json"
   },
   {
     "index": "phantasmal_killer",
@@ -3195,7 +3195,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/phantasmal_killer.json"
+    "json_path": "/assets/atlas/spell/json/phantasmal_killer.json"
   },
   {
     "index": "phantom_steed",
@@ -3208,7 +3208,7 @@
     "casting_time": "1 minute",
     "range": "30 feet",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/phantom_steed.json"
+    "json_path": "/assets/atlas/spell/json/phantom_steed.json"
   },
   {
     "index": "planar_ally",
@@ -3221,7 +3221,7 @@
     "casting_time": "10 minutes",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/planar_ally.json"
+    "json_path": "/assets/atlas/spell/json/planar_ally.json"
   },
   {
     "index": "planar_binding",
@@ -3237,7 +3237,7 @@
     "casting_time": "1 hour",
     "range": "60 feet",
     "duration": "24 hours",
-    "path": "/assets/atlas/spell/json/planar_binding.json"
+    "json_path": "/assets/atlas/spell/json/planar_binding.json"
   },
   {
     "index": "plane_shift",
@@ -3254,7 +3254,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/plane_shift.json"
+    "json_path": "/assets/atlas/spell/json/plane_shift.json"
   },
   {
     "index": "plant_growth",
@@ -3269,7 +3269,7 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/plant_growth.json"
+    "json_path": "/assets/atlas/spell/json/plant_growth.json"
   },
   {
     "index": "poison_spray",
@@ -3286,7 +3286,7 @@
     "casting_time": "1 action",
     "range": "10 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/poison_spray.json"
+    "json_path": "/assets/atlas/spell/json/poison_spray.json"
   },
   {
     "index": "polymorph",
@@ -3302,7 +3302,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/polymorph.json"
+    "json_path": "/assets/atlas/spell/json/polymorph.json"
   },
   {
     "index": "power_word_kill",
@@ -3318,7 +3318,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/power_word_kill.json"
+    "json_path": "/assets/atlas/spell/json/power_word_kill.json"
   },
   {
     "index": "power_word_stun",
@@ -3334,7 +3334,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/power_word_stun.json"
+    "json_path": "/assets/atlas/spell/json/power_word_stun.json"
   },
   {
     "index": "prayer_of_healing",
@@ -3347,7 +3347,7 @@
     "casting_time": "10 minutes",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/prayer_of_healing.json"
+    "json_path": "/assets/atlas/spell/json/prayer_of_healing.json"
   },
   {
     "index": "prestidigitation",
@@ -3364,7 +3364,7 @@
     "casting_time": "1 action",
     "range": "10 feet",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/prestidigitation.json"
+    "json_path": "/assets/atlas/spell/json/prestidigitation.json"
   },
   {
     "index": "prismatic_spray",
@@ -3378,7 +3378,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/prismatic_spray.json"
+    "json_path": "/assets/atlas/spell/json/prismatic_spray.json"
   },
   {
     "index": "prismatic_wall",
@@ -3391,7 +3391,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "10 minutes",
-    "path": "/assets/atlas/spell/json/prismatic_wall.json"
+    "json_path": "/assets/atlas/spell/json/prismatic_wall.json"
   },
   {
     "index": "private_sanctum",
@@ -3405,7 +3405,7 @@
     "casting_time": "10 minutes",
     "range": "120 feet",
     "duration": "24 hours",
-    "path": "/assets/atlas/spell/json/private_sanctum.json"
+    "json_path": "/assets/atlas/spell/json/private_sanctum.json"
   },
   {
     "index": "produce_flame",
@@ -3418,7 +3418,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "10 minutes",
-    "path": "/assets/atlas/spell/json/produce_flame.json"
+    "json_path": "/assets/atlas/spell/json/produce_flame.json"
   },
   {
     "index": "programmed_illusion",
@@ -3432,7 +3432,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Until dispelled",
-    "path": "/assets/atlas/spell/json/programmed_illusion.json"
+    "json_path": "/assets/atlas/spell/json/programmed_illusion.json"
   },
   {
     "index": "project_image",
@@ -3446,7 +3446,7 @@
     "casting_time": "1 action",
     "range": "500 miles",
     "duration": "Up to 24 hours",
-    "path": "/assets/atlas/spell/json/project_image.json"
+    "json_path": "/assets/atlas/spell/json/project_image.json"
   },
   {
     "index": "protection_from_energy",
@@ -3464,7 +3464,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/protection_from_energy.json"
+    "json_path": "/assets/atlas/spell/json/protection_from_energy.json"
   },
   {
     "index": "protection_from_evil_and_good",
@@ -3480,7 +3480,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/protection_from_evil_and_good.json"
+    "json_path": "/assets/atlas/spell/json/protection_from_evil_and_good.json"
   },
   {
     "index": "protection_from_poison",
@@ -3497,7 +3497,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/protection_from_poison.json"
+    "json_path": "/assets/atlas/spell/json/protection_from_poison.json"
   },
   {
     "index": "purify_food_and_drink",
@@ -3513,7 +3513,7 @@
     "casting_time": "1 action",
     "range": "10 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/purify_food_and_drink.json"
+    "json_path": "/assets/atlas/spell/json/purify_food_and_drink.json"
   },
   {
     "index": "raise_dead",
@@ -3528,7 +3528,7 @@
     "casting_time": "1 hour",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/raise_dead.json"
+    "json_path": "/assets/atlas/spell/json/raise_dead.json"
   },
   {
     "index": "ray_of_enfeeblement",
@@ -3542,7 +3542,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/ray_of_enfeeblement.json"
+    "json_path": "/assets/atlas/spell/json/ray_of_enfeeblement.json"
   },
   {
     "index": "ray_of_frost",
@@ -3557,7 +3557,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/ray_of_frost.json"
+    "json_path": "/assets/atlas/spell/json/ray_of_frost.json"
   },
   {
     "index": "regenerate",
@@ -3572,7 +3572,7 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/regenerate.json"
+    "json_path": "/assets/atlas/spell/json/regenerate.json"
   },
   {
     "index": "reincarnate",
@@ -3585,7 +3585,7 @@
     "casting_time": "1 hour",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/reincarnate.json"
+    "json_path": "/assets/atlas/spell/json/reincarnate.json"
   },
   {
     "index": "remove_curse",
@@ -3601,7 +3601,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/remove_curse.json"
+    "json_path": "/assets/atlas/spell/json/remove_curse.json"
   },
   {
     "index": "resilient_sphere",
@@ -3615,7 +3615,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/resilient_sphere.json"
+    "json_path": "/assets/atlas/spell/json/resilient_sphere.json"
   },
   {
     "index": "resistance",
@@ -3630,7 +3630,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/resistance.json"
+    "json_path": "/assets/atlas/spell/json/resistance.json"
   },
   {
     "index": "resurrection",
@@ -3644,7 +3644,7 @@
     "casting_time": "1 hour",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/resurrection.json"
+    "json_path": "/assets/atlas/spell/json/resurrection.json"
   },
   {
     "index": "reverse_gravity",
@@ -3659,7 +3659,7 @@
     "casting_time": "1 action",
     "range": "100 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/reverse_gravity.json"
+    "json_path": "/assets/atlas/spell/json/reverse_gravity.json"
   },
   {
     "index": "revivify",
@@ -3674,7 +3674,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/revivify.json"
+    "json_path": "/assets/atlas/spell/json/revivify.json"
   },
   {
     "index": "rope_trick",
@@ -3688,7 +3688,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/rope_trick.json"
+    "json_path": "/assets/atlas/spell/json/rope_trick.json"
   },
   {
     "index": "sacred_flame",
@@ -3701,7 +3701,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/sacred_flame.json"
+    "json_path": "/assets/atlas/spell/json/sacred_flame.json"
   },
   {
     "index": "sanctuary",
@@ -3715,7 +3715,7 @@
     "casting_time": "1 bonus action",
     "range": "30 feet",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/sanctuary.json"
+    "json_path": "/assets/atlas/spell/json/sanctuary.json"
   },
   {
     "index": "scorching_ray",
@@ -3729,7 +3729,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/scorching_ray.json"
+    "json_path": "/assets/atlas/spell/json/scorching_ray.json"
   },
   {
     "index": "scrying",
@@ -3746,7 +3746,7 @@
     "casting_time": "10 minutes",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/scrying.json"
+    "json_path": "/assets/atlas/spell/json/scrying.json"
   },
   {
     "index": "secret_chest",
@@ -3759,22 +3759,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/secret_chest.json"
-  },
-  {
-    "index": "seeming",
-    "name": "seeming",
-    "level": 5,
-    "school": "illusion",
-    "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
-    ],
-    "casting_time": "1 action",
-    "range": "30 feet",
-    "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/seeming.json"
+    "json_path": "/assets/atlas/spell/json/secret_chest.json"
   },
   {
     "index": "see_invisibility",
@@ -3790,7 +3775,22 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/see_invisibility.json"
+    "json_path": "/assets/atlas/spell/json/see_invisibility.json"
+  },
+  {
+    "index": "seeming",
+    "name": "seeming",
+    "level": 5,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "duration": "8 hours",
+    "json_path": "/assets/atlas/spell/json/seeming.json"
   },
   {
     "index": "sending",
@@ -3805,7 +3805,7 @@
     "casting_time": "1 action",
     "range": "Unlimited",
     "duration": "1 round",
-    "path": "/assets/atlas/spell/json/sending.json"
+    "json_path": "/assets/atlas/spell/json/sending.json"
   },
   {
     "index": "sequester",
@@ -3818,7 +3818,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Until dispelled",
-    "path": "/assets/atlas/spell/json/sequester.json"
+    "json_path": "/assets/atlas/spell/json/sequester.json"
   },
   {
     "index": "shapechange",
@@ -3832,7 +3832,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/shapechange.json"
+    "json_path": "/assets/atlas/spell/json/shapechange.json"
   },
   {
     "index": "shatter",
@@ -3848,7 +3848,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/shatter.json"
+    "json_path": "/assets/atlas/spell/json/shatter.json"
   },
   {
     "index": "shield",
@@ -3862,7 +3862,7 @@
     "casting_time": "1 reaction",
     "range": "Self",
     "duration": "1 round",
-    "path": "/assets/atlas/spell/json/shield.json"
+    "json_path": "/assets/atlas/spell/json/shield.json"
   },
   {
     "index": "shield_of_faith",
@@ -3876,7 +3876,7 @@
     "casting_time": "1 bonus action",
     "range": "60 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/shield_of_faith.json"
+    "json_path": "/assets/atlas/spell/json/shield_of_faith.json"
   },
   {
     "index": "shillelagh",
@@ -3889,7 +3889,7 @@
     "casting_time": "1 bonus action",
     "range": "Touch",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/shillelagh.json"
+    "json_path": "/assets/atlas/spell/json/shillelagh.json"
   },
   {
     "index": "shocking_grasp",
@@ -3904,7 +3904,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/shocking_grasp.json"
+    "json_path": "/assets/atlas/spell/json/shocking_grasp.json"
   },
   {
     "index": "silence",
@@ -3919,7 +3919,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/silence.json"
+    "json_path": "/assets/atlas/spell/json/silence.json"
   },
   {
     "index": "silent_image",
@@ -3934,7 +3934,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/silent_image.json"
+    "json_path": "/assets/atlas/spell/json/silent_image.json"
   },
   {
     "index": "simulacrum",
@@ -3947,7 +3947,7 @@
     "casting_time": "12 hours",
     "range": "Touch",
     "duration": "Until dispelled",
-    "path": "/assets/atlas/spell/json/simulacrum.json"
+    "json_path": "/assets/atlas/spell/json/simulacrum.json"
   },
   {
     "index": "sleep",
@@ -3962,7 +3962,7 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/sleep.json"
+    "json_path": "/assets/atlas/spell/json/sleep.json"
   },
   {
     "index": "sleet_storm",
@@ -3977,7 +3977,7 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/sleet_storm.json"
+    "json_path": "/assets/atlas/spell/json/sleet_storm.json"
   },
   {
     "index": "slow",
@@ -3991,7 +3991,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/slow.json"
+    "json_path": "/assets/atlas/spell/json/slow.json"
   },
   {
     "index": "spare_the_dying",
@@ -4005,7 +4005,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/spare_the_dying.json"
+    "json_path": "/assets/atlas/spell/json/spare_the_dying.json"
   },
   {
     "index": "speak_with_animals",
@@ -4020,7 +4020,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "10 minutes",
-    "path": "/assets/atlas/spell/json/speak_with_animals.json"
+    "json_path": "/assets/atlas/spell/json/speak_with_animals.json"
   },
   {
     "index": "speak_with_dead",
@@ -4034,7 +4034,7 @@
     "casting_time": "1 action",
     "range": "10 feet",
     "duration": "10 minutes",
-    "path": "/assets/atlas/spell/json/speak_with_dead.json"
+    "json_path": "/assets/atlas/spell/json/speak_with_dead.json"
   },
   {
     "index": "speak_with_plants",
@@ -4049,7 +4049,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "10 minutes",
-    "path": "/assets/atlas/spell/json/speak_with_plants.json"
+    "json_path": "/assets/atlas/spell/json/speak_with_plants.json"
   },
   {
     "index": "spider_climb",
@@ -4065,7 +4065,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/spider_climb.json"
+    "json_path": "/assets/atlas/spell/json/spider_climb.json"
   },
   {
     "index": "spike_growth",
@@ -4079,20 +4079,7 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/spike_growth.json"
-  },
-  {
-    "index": "spiritual_weapon",
-    "name": "spiritual weapon",
-    "level": 2,
-    "school": "evocation",
-    "classes": [
-      "cleric"
-    ],
-    "casting_time": "1 bonus action",
-    "range": "60 feet",
-    "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/spiritual_weapon.json"
+    "json_path": "/assets/atlas/spell/json/spike_growth.json"
   },
   {
     "index": "spirit_guardians",
@@ -4105,7 +4092,20 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/spirit_guardians.json"
+    "json_path": "/assets/atlas/spell/json/spirit_guardians.json"
+  },
+  {
+    "index": "spiritual_weapon",
+    "name": "spiritual weapon",
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "casting_time": "1 bonus action",
+    "range": "60 feet",
+    "duration": "1 minute",
+    "json_path": "/assets/atlas/spell/json/spiritual_weapon.json"
   },
   {
     "index": "stinking_cloud",
@@ -4120,7 +4120,23 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/stinking_cloud.json"
+    "json_path": "/assets/atlas/spell/json/stinking_cloud.json"
+  },
+  {
+    "index": "stone_shape",
+    "name": "stone shape",
+    "level": 4,
+    "school": "transmutation",
+    "classes": [
+      "artificer",
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "casting_time": "1 action",
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "json_path": "/assets/atlas/spell/json/stone_shape.json"
   },
   {
     "index": "stoneskin",
@@ -4137,23 +4153,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/stoneskin.json"
-  },
-  {
-    "index": "stone_shape",
-    "name": "stone shape",
-    "level": 4,
-    "school": "transmutation",
-    "classes": [
-      "artificer",
-      "cleric",
-      "druid",
-      "wizard"
-    ],
-    "casting_time": "1 action",
-    "range": "Touch",
-    "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/stone_shape.json"
+    "json_path": "/assets/atlas/spell/json/stoneskin.json"
   },
   {
     "index": "storm_of_vengeance",
@@ -4166,7 +4166,7 @@
     "casting_time": "1 action",
     "range": "Sight",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/storm_of_vengeance.json"
+    "json_path": "/assets/atlas/spell/json/storm_of_vengeance.json"
   },
   {
     "index": "suggestion",
@@ -4182,7 +4182,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 8 hours",
-    "path": "/assets/atlas/spell/json/suggestion.json"
+    "json_path": "/assets/atlas/spell/json/suggestion.json"
   },
   {
     "index": "sunbeam",
@@ -4197,7 +4197,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/sunbeam.json"
+    "json_path": "/assets/atlas/spell/json/sunbeam.json"
   },
   {
     "index": "sunburst",
@@ -4212,7 +4212,7 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/sunburst.json"
+    "json_path": "/assets/atlas/spell/json/sunburst.json"
   },
   {
     "index": "symbol",
@@ -4227,7 +4227,7 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "Until dispelled",
-    "path": "/assets/atlas/spell/json/symbol.json"
+    "json_path": "/assets/atlas/spell/json/symbol.json"
   },
   {
     "index": "tashas_caustic_brew",
@@ -4242,7 +4242,7 @@
     "casting_time": "1 action",
     "range": "Self (30-foot line)",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/tashas_caustic_brew.json"
+    "json_path": "/assets/atlas/spell/json/tashas_caustic_brew.json"
   },
   {
     "index": "telekinesis",
@@ -4256,7 +4256,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/telekinesis.json"
+    "json_path": "/assets/atlas/spell/json/telekinesis.json"
   },
   {
     "index": "telepathic_bond",
@@ -4269,7 +4269,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/telepathic_bond.json"
+    "json_path": "/assets/atlas/spell/json/telepathic_bond.json"
   },
   {
     "index": "teleport",
@@ -4284,7 +4284,7 @@
     "casting_time": "1 action",
     "range": "10 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/teleport.json"
+    "json_path": "/assets/atlas/spell/json/teleport.json"
   },
   {
     "index": "teleportation_circle",
@@ -4299,7 +4299,7 @@
     "casting_time": "1 minute",
     "range": "10 feet",
     "duration": "1 round",
-    "path": "/assets/atlas/spell/json/teleportation_circle.json"
+    "json_path": "/assets/atlas/spell/json/teleportation_circle.json"
   },
   {
     "index": "thaumaturgy",
@@ -4312,7 +4312,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 minute",
-    "path": "/assets/atlas/spell/json/thaumaturgy.json"
+    "json_path": "/assets/atlas/spell/json/thaumaturgy.json"
   },
   {
     "index": "thorn_whip",
@@ -4326,7 +4326,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/thorn_whip.json"
+    "json_path": "/assets/atlas/spell/json/thorn_whip.json"
   },
   {
     "index": "thunderwave",
@@ -4342,7 +4342,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/thunderwave.json"
+    "json_path": "/assets/atlas/spell/json/thunderwave.json"
   },
   {
     "index": "time_stop",
@@ -4356,7 +4356,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/time_stop.json"
+    "json_path": "/assets/atlas/spell/json/time_stop.json"
   },
   {
     "index": "tiny_hut",
@@ -4370,7 +4370,7 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/tiny_hut.json"
+    "json_path": "/assets/atlas/spell/json/tiny_hut.json"
   },
   {
     "index": "tongues",
@@ -4387,7 +4387,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/tongues.json"
+    "json_path": "/assets/atlas/spell/json/tongues.json"
   },
   {
     "index": "transport_via_plants",
@@ -4400,7 +4400,7 @@
     "casting_time": "1 action",
     "range": "10 feet",
     "duration": "1 round",
-    "path": "/assets/atlas/spell/json/transport_via_plants.json"
+    "json_path": "/assets/atlas/spell/json/transport_via_plants.json"
   },
   {
     "index": "tree_stride",
@@ -4414,7 +4414,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/tree_stride.json"
+    "json_path": "/assets/atlas/spell/json/tree_stride.json"
   },
   {
     "index": "true_polymorph",
@@ -4429,7 +4429,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/true_polymorph.json"
+    "json_path": "/assets/atlas/spell/json/true_polymorph.json"
   },
   {
     "index": "true_resurrection",
@@ -4443,7 +4443,7 @@
     "casting_time": "1 hour",
     "range": "Touch",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/true_resurrection.json"
+    "json_path": "/assets/atlas/spell/json/true_resurrection.json"
   },
   {
     "index": "true_seeing",
@@ -4460,7 +4460,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/true_seeing.json"
+    "json_path": "/assets/atlas/spell/json/true_seeing.json"
   },
   {
     "index": "true_strike",
@@ -4476,7 +4476,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 round",
-    "path": "/assets/atlas/spell/json/true_strike.json"
+    "json_path": "/assets/atlas/spell/json/true_strike.json"
   },
   {
     "index": "unseen_servant",
@@ -4491,7 +4491,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/unseen_servant.json"
+    "json_path": "/assets/atlas/spell/json/unseen_servant.json"
   },
   {
     "index": "vampiric_touch",
@@ -4505,7 +4505,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/vampiric_touch.json"
+    "json_path": "/assets/atlas/spell/json/vampiric_touch.json"
   },
   {
     "index": "vicious_mockery",
@@ -4518,7 +4518,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/vicious_mockery.json"
+    "json_path": "/assets/atlas/spell/json/vicious_mockery.json"
   },
   {
     "index": "wall_of_fire",
@@ -4533,7 +4533,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/wall_of_fire.json"
+    "json_path": "/assets/atlas/spell/json/wall_of_fire.json"
   },
   {
     "index": "wall_of_force",
@@ -4546,7 +4546,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/wall_of_force.json"
+    "json_path": "/assets/atlas/spell/json/wall_of_force.json"
   },
   {
     "index": "wall_of_ice",
@@ -4559,7 +4559,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/wall_of_ice.json"
+    "json_path": "/assets/atlas/spell/json/wall_of_ice.json"
   },
   {
     "index": "wall_of_stone",
@@ -4575,7 +4575,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/wall_of_stone.json"
+    "json_path": "/assets/atlas/spell/json/wall_of_stone.json"
   },
   {
     "index": "wall_of_thorns",
@@ -4588,7 +4588,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "path": "/assets/atlas/spell/json/wall_of_thorns.json"
+    "json_path": "/assets/atlas/spell/json/wall_of_thorns.json"
   },
   {
     "index": "warding_bond",
@@ -4601,7 +4601,7 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/warding_bond.json"
+    "json_path": "/assets/atlas/spell/json/warding_bond.json"
   },
   {
     "index": "water_breathing",
@@ -4618,7 +4618,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "24 hours",
-    "path": "/assets/atlas/spell/json/water_breathing.json"
+    "json_path": "/assets/atlas/spell/json/water_breathing.json"
   },
   {
     "index": "water_walk",
@@ -4635,7 +4635,7 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 hour",
-    "path": "/assets/atlas/spell/json/water_walk.json"
+    "json_path": "/assets/atlas/spell/json/water_walk.json"
   },
   {
     "index": "web",
@@ -4650,7 +4650,7 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 hour",
-    "path": "/assets/atlas/spell/json/web.json"
+    "json_path": "/assets/atlas/spell/json/web.json"
   },
   {
     "index": "weird",
@@ -4663,7 +4663,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/weird.json"
+    "json_path": "/assets/atlas/spell/json/weird.json"
   },
   {
     "index": "wind_walk",
@@ -4676,7 +4676,7 @@
     "casting_time": "1 minute",
     "range": "30 feet",
     "duration": "8 hours",
-    "path": "/assets/atlas/spell/json/wind_walk.json"
+    "json_path": "/assets/atlas/spell/json/wind_walk.json"
   },
   {
     "index": "wind_wall",
@@ -4690,7 +4690,7 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "path": "/assets/atlas/spell/json/wind_wall.json"
+    "json_path": "/assets/atlas/spell/json/wind_wall.json"
   },
   {
     "index": "wish",
@@ -4704,7 +4704,7 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/wish.json"
+    "json_path": "/assets/atlas/spell/json/wish.json"
   },
   {
     "index": "word_of_recall",
@@ -4717,7 +4717,7 @@
     "casting_time": "1 action",
     "range": "5 feet",
     "duration": "Instantaneous",
-    "path": "/assets/atlas/spell/json/word_of_recall.json"
+    "json_path": "/assets/atlas/spell/json/word_of_recall.json"
   },
   {
     "index": "zone_of_truth",
@@ -4732,6 +4732,6 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "10 minutes",
-    "path": "/assets/atlas/spell/json/zone_of_truth.json"
+    "json_path": "/assets/atlas/spell/json/zone_of_truth.json"
   }
 ]

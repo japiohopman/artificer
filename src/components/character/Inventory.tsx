@@ -6,6 +6,10 @@ import { cn } from '../../lib/utils';
 
 interface InventoryProps {
   onEquipRequest?: (item: any) => void;
+  forceCharacterId?: string;
+  showCategoryTabs?: boolean;
+  compactEquipped?: boolean;
+  gridCols?: number;
 }
 
 type BackpackCategory = 'all' | 'equipment' | 'materials' | 'key' | 'books';
