@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/armor.schema.json",
+  "title": "Armor",
+  "description": "Schema for armor and shield equipment items.",
+  "allOf": [
+    { "$ref": "equipment.schema.json" },
+    {
+      "type": "object",
+      "required": ["armor_category", "armor_class"],
+      "properties": {
+        "armor_category": { "type": "string" },
+        "armor_class": {
+          "type": "object",
+          "properties": {
+            "base": { "type": "integer" },
+            "dex_bonus": { "type": "boolean" },
+            "max_bonus": { "type": "integer" }
+          },
+          "required": ["base", "dex_bonus"]
+        },
+        "str_minimum": { "type": "integer" },
+        "stealth_disadvantage": { "type": "boolean" }
+      }
+    }
+  ]
+}

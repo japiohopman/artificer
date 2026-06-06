@@ -8,32 +8,28 @@
   "equipment_category": {
     "index": "adventuring_gear",
     "name": "adventuring gear",
-    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+    "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
   },
   "gear_category": {
     "index": "standard_gear",
     "name": "standard gear",
-    "url": "/assets/atlas/equipment_categories/standard_gear"
+    "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
   },
   "cost": {
     "quantity": 2,
     "unit": "gp"
   },
   "weight": 5,
-  "url": "/assets/atlas/equipment/json/backpack.json",
-  "updated_at": "2026-05-17T06:32:30.427Z",
+  "url": "public/assets/atlas/equipment/json/backpack.json",
+  "updated_at": "2026-06-05T08:00:00.000Z",
   "contents": [],
   "properties": [],
-  "image": "/assets/atlas/equipment/images/backpack.webp",
-  "sprite_index": 9,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
-  "imageUrl": "/assets/atlas/equipment/images/backpack.webp",
+  "image": "public/assets/atlas/equipment/images/backpack.webp",
+  "imageUrl": "public/assets/atlas/equipment/images/backpack.webp",
   "_type": "equipment",
+  "kind": "container",
   "background_type": "land_forest",
-  "slot": [
-    "back"
-  ],
-  "last_updated": "17-5-2026",
-  "category": "Adventuring Gear",
-  "kind": "equipment_pack"
+  "equipSlots": ["back"],
+  "last_updated": "5-6-2026",
+  "category": "Adventuring Gear"
 }

@@ -1,0 +1,170 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/equipment.schema.json",
+  "title": "Equipment",
+  "description": "Base schema for all equipment items in the game atlas.",
+  "type": "object",
+  "required": [
+    "index",
+    "name",
+    "kind",
+    "cost",
+    "weight",
+    "desc",
+    "url",
+    "imageUrl",
+    "updated_at"
+  ],
+  "properties": {
+    "index": {
+      "type": "string",
+      "description": "The unique identifier for the equipment."
+    },
+    "name": {
+      "type": "string",
+      "description": "The human-readable name of the equipment."
+    },
+    "kind": {
+      "type": "string",
+      "description": "The discriminator for the type of equipment.",
+      "enum": [
+        "weapon",
+        "armor",
+        "shield",
+        "adventuring_gear",
+        "equipment_pack",
+        "tool",
+        "focus",
+        "vehicle",
+        "mount",
+        "container",
+        "consumable",
+        "trinket",
+        "currency"
+      ]
+    },
+    "equipment_category": {
+      "type": "object",
+      "properties": {
+        "index": { "type": "string" },
+        "name": { "type": "string" },
+        "url": { "type": "string" }
+      },
+      "required": ["index", "name", "url"]
+    },
+    "cost": {
+      "type": "object",
+      "properties": {
+        "quantity": { "type": "integer", "minimum": 0 },
+        "unit": { "type": "string", "enum": ["cp", "sp", "ep", "gp", "pp"] }
+      },
+      "required": ["quantity", "unit"]
+    },
+    "weight": {
+      "type": "number",
+      "minimum": 0
+    },
+    "desc": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^public/assets/atlas/equipment/json/.+\\.json$"
+    },
+    "imageUrl": {
+      "type": "string",
+      "pattern": "^public/assets/atlas/equipment/images/.+\\.webp$"
+    },
+    "image": {
+      "type": "string",
+      "description": "Legacy image path."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_updated": {
+      "type": "string"
+    },
+    "sprite_index": {
+      "type": "integer"
+    },
+    "sprite_sheet": {
+      "type": "string",
+       "pattern": "^public/assets/.+\\.webp$"
+    },
+    "contents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "type": "object",
+            "properties": {
+              "index": { "type": "string" },
+              "name": { "type": "string" },
+              "url": { "type": "string" }
+            },
+            "required": ["index", "name", "url"]
+          },
+          "quantity": { "type": "integer", "minimum": 1 }
+        },
+        "required": ["item", "quantity"]
+      }
+    },
+    "properties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "string" },
+          "name": { "type": "string" },
+          "url": { "type": "string" }
+        },
+        "required": ["index", "name", "url"]
+      }
+    },
+    "slot": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Legacy slot definition."
+    },
+    "equipSlots": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "main_hand",
+          "off_hand",
+          "ranged",
+          "ammo",
+          "chest",
+          "clothes",
+          "head",
+          "hands",
+          "feet",
+          "back",
+          "neck",
+          "belt",
+          "ring_1",
+          "ring_2",
+          "tool_1",
+          "tool_2",
+          "tool_3",
+          "focus",
+          "component_pouch",
+          "quick_1",
+          "quick_2",
+          "quick_3",
+          "quick_4",
+          "none"
+        ]
+      }
+    },
+    "requiredSlots": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
