@@ -1,0 +1,39 @@
+{
+  "level": 4,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "bard_ability_score_improvement_1",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/bard_ability_score_improvement_1.json"
+    }
+  ],
+  "class_specific": {
+    "bardic_inspiration_die": 6,
+    "song_of_rest_die": 6,
+    "magical_secrets_max_5": 0,
+    "magical_secrets_max_7": 0,
+    "magical_secrets_max_9": 0
+  },
+  "index": "bard_level_4",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/bard.json"
+  },
+  "url": "/assets/atlas/class/levels/4/bard_level_4.json",
+  "spellcasting": {
+    "cantrips_known": 3,
+    "spells_known": 7,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

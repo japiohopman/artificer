@@ -1,0 +1,31 @@
+{
+  "level": 4,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "ranger_ability_score_improvement_1",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/ranger_ability_score_improvement_1.json"
+    }
+  ],
+  "class_specific": {
+    "favored_enemies": 1,
+    "favored_terrain": 1
+  },
+  "index": "ranger_level_4",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "url": "/assets/atlas/class/levels/4/ranger_level_4.json",
+  "spellcasting": {
+    "spells_known": 3,
+    "spell_slots_level_1": 3,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0
+  }
+}

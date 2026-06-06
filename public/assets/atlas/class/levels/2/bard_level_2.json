@@ -1,0 +1,44 @@
+{
+  "level": 2,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "jack_of_all_trades",
+      "name": "Jack of All Trades",
+      "url": "/assets/atlas/features/json/jack_of_all_trades.json"
+    },
+    {
+      "index": "song_of_rest_d6",
+      "name": "Song of Rest (d6)",
+      "url": "/assets/atlas/features/json/song_of_rest_d6.json"
+    }
+  ],
+  "class_specific": {
+    "bardic_inspiration_die": 6,
+    "song_of_rest_die": 6,
+    "magical_secrets_max_5": 0,
+    "magical_secrets_max_7": 0,
+    "magical_secrets_max_9": 0
+  },
+  "index": "bard_level_2",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/bard.json"
+  },
+  "url": "/assets/atlas/class/levels/2/bard_level_2.json",
+  "spellcasting": {
+    "cantrips_known": 2,
+    "spells_known": 5,
+    "spell_slots_level_1": 3,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

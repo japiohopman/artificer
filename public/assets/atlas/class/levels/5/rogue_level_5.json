@@ -1,0 +1,25 @@
+{
+  "level": 5,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "uncanny_dodge",
+      "name": "Uncanny Dodge",
+      "url": "/assets/atlas/features/json/uncanny_dodge.json"
+    }
+  ],
+  "class_specific": {
+    "sneak_attack": {
+      "dice_count": 3,
+      "dice_value": 6
+    }
+  },
+  "index": "rogue_level_5",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "url": "/assets/atlas/class/levels/5/rogue_level_5.json"
+}

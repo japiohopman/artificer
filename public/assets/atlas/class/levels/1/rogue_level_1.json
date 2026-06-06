@@ -1,0 +1,35 @@
+{
+  "level": 1,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "rogue_expertise_1",
+      "name": "Expertise",
+      "url": "/assets/atlas/features/json/rogue_expertise_1.json"
+    },
+    {
+      "index": "sneak_attack",
+      "name": "Sneak Attack",
+      "url": "/assets/atlas/features/json/sneak_attack.json"
+    },
+    {
+      "index": "thieves_cant",
+      "name": "Thieves' Cant",
+      "url": "/assets/atlas/features/json/thieves_cant.json"
+    }
+  ],
+  "class_specific": {
+    "sneak_attack": {
+      "dice_count": 1,
+      "dice_value": 6
+    }
+  },
+  "index": "rogue_level_1",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "url": "/assets/atlas/class/levels/1/rogue_level_1.json"
+}

@@ -1,0 +1,32 @@
+{
+  "level": 3,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "monastic_tradition",
+      "name": "Monastic Tradition",
+      "url": "/assets/atlas/features/json/monastic_tradition.json"
+    },
+    {
+      "index": "deflect_missiles",
+      "name": "Deflect Missiles",
+      "url": "/assets/atlas/features/json/deflect_missiles.json"
+    }
+  ],
+  "class_specific": {
+    "martial_arts": {
+      "dice_count": 1,
+      "dice_value": 4
+    },
+    "ki_points": 3,
+    "unarmored_movement": 10
+  },
+  "index": "monk_level_3",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/3/monk_level_3.json"
+}

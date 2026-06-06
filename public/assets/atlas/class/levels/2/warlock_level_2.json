@@ -1,0 +1,39 @@
+{
+  "level": 2,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "eldritch_invocations",
+      "name": "Eldritch Invocations",
+      "url": "/assets/atlas/features/json/eldritch_invocations.json"
+    }
+  ],
+  "class_specific": {
+    "invocations_known": 2,
+    "mystic_arcanum_level_6": 0,
+    "mystic_arcanum_level_7": 0,
+    "mystic_arcanum_level_8": 0,
+    "mystic_arcanum_level_9": 0
+  },
+  "index": "warlock_level_2",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "url": "/assets/atlas/class/levels/2/warlock_level_2.json",
+  "spellcasting": {
+    "cantrips_known": 2,
+    "spells_known": 3,
+    "spell_slots_level_1": 2,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

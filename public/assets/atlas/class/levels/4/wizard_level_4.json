@@ -1,0 +1,34 @@
+{
+  "level": 4,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "wizard_ability_score_improvement_1",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/wizard_ability_score_improvement_1.json"
+    }
+  ],
+  "class_specific": {
+    "arcane_recovery_levels": 2
+  },
+  "index": "wizard_level_4",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/wizard.json"
+  },
+  "url": "/assets/atlas/class/levels/4/wizard_level_4.json",
+  "spellcasting": {
+    "cantrips_known": 4,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

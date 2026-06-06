@@ -1,0 +1,39 @@
+{
+  "level": 4,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "warlock_ability_score_improvement_1",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/warlock_ability_score_improvement_1.json"
+    }
+  ],
+  "class_specific": {
+    "invocations_known": 3,
+    "mystic_arcanum_level_6": 0,
+    "mystic_arcanum_level_7": 0,
+    "mystic_arcanum_level_8": 0,
+    "mystic_arcanum_level_9": 0
+  },
+  "index": "warlock_level_4",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "url": "/assets/atlas/class/levels/4/warlock_level_4.json",
+  "spellcasting": {
+    "cantrips_known": 3,
+    "spells_known": 5,
+    "spell_slots_level_1": 0,
+    "spell_slots_level_2": 2,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

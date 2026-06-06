@@ -1,0 +1,39 @@
+{
+  "level": 2,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "paladin_fighting_style",
+      "name": "Fighting Style",
+      "url": "/assets/atlas/features/json/paladin_fighting_style.json"
+    },
+    {
+      "index": "spellcasting_paladin",
+      "name": "Spellcasting: Paladin",
+      "url": "/assets/atlas/features/json/spellcasting_paladin.json"
+    },
+    {
+      "index": "divine_smite",
+      "name": "Divine Smite",
+      "url": "/assets/atlas/features/json/divine_smite.json"
+    }
+  ],
+  "class_specific": {
+    "aura_range": 0
+  },
+  "index": "paladin_level_2",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/paladin.json"
+  },
+  "url": "/assets/atlas/class/levels/2/paladin_level_2.json",
+  "spellcasting": {
+    "spell_slots_level_1": 2,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0
+  }
+}
