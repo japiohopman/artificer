@@ -1,0 +1,763 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "otherworldly_patron",
+        "name": "Otherworldly Patron",
+        "url": "/assets/atlas/features/json/otherworldly_patron.json"
+      },
+      {
+        "index": "pact_magic",
+        "name": "Pact Magic",
+        "url": "/assets/atlas/features/json/pact_magic.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 0,
+      "mystic_arcanum_level_6": 0,
+      "mystic_arcanum_level_7": 0,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_1",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/1/warlock_level_1.json",
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spells_known": 2,
+      "spell_slots_level_1": 1,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "eldritch_invocations",
+        "name": "Eldritch Invocations",
+        "url": "/assets/atlas/features/json/eldritch_invocations.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 2,
+      "mystic_arcanum_level_6": 0,
+      "mystic_arcanum_level_7": 0,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_2",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/2/warlock_level_2.json",
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spells_known": 3,
+      "spell_slots_level_1": 2,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "pact_boon",
+        "name": "Pact Boon",
+        "url": "/assets/atlas/features/json/pact_boon.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 2,
+      "mystic_arcanum_level_6": 0,
+      "mystic_arcanum_level_7": 0,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_3",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/3/warlock_level_3.json",
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spells_known": 4,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "warlock_ability_score_improvement_1",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/warlock_ability_score_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 3,
+      "mystic_arcanum_level_6": 0,
+      "mystic_arcanum_level_7": 0,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_4",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/4/warlock_level_4.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spells_known": 5,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [],
+    "class_specific": {
+      "invocations_known": 3,
+      "mystic_arcanum_level_6": 0,
+      "mystic_arcanum_level_7": 0,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_5",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/5/warlock_level_5.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spells_known": 6,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "otherworldly_patron_improvement_1",
+        "name": "Otherworldly Patron feature",
+        "url": "/assets/atlas/features/json/otherworldly_patron_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 4,
+      "mystic_arcanum_level_6": 0,
+      "mystic_arcanum_level_7": 0,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_6",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/6/warlock_level_6.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spells_known": 7,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [],
+    "class_specific": {
+      "invocations_known": 4,
+      "mystic_arcanum_level_6": 0,
+      "mystic_arcanum_level_7": 0,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_7",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/7/warlock_level_7.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spells_known": 8,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "warlock_ability_score_improvement_2",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/warlock_ability_score_improvement_2.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 4,
+      "mystic_arcanum_level_6": 0,
+      "mystic_arcanum_level_7": 0,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_8",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/8/warlock_level_8.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spells_known": 9,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [],
+    "class_specific": {
+      "invocations_known": 5,
+      "mystic_arcanum_level_6": 0,
+      "mystic_arcanum_level_7": 0,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_9",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/9/warlock_level_9.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spells_known": 10,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "otherworldly_patron_improvement_2",
+        "name": "Otherworldly Patron feature",
+        "url": "/assets/atlas/features/json/otherworldly_patron_improvement_2.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 5,
+      "mystic_arcanum_level_6": 0,
+      "mystic_arcanum_level_7": 0,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_10",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/10/warlock_level_10.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 10,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "mystic_arcanum_6th_level",
+        "name": "Mystic Arcanum (6th level)",
+        "url": "/assets/atlas/features/json/mystic_arcanum_6th_level.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 5,
+      "mystic_arcanum_level_6": 1,
+      "mystic_arcanum_level_7": 0,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_11",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/11/warlock_level_11.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 11,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "warlock_ability_score_improvement_3",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/warlock_ability_score_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 6,
+      "mystic_arcanum_level_6": 1,
+      "mystic_arcanum_level_7": 0,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_12",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/12/warlock_level_12.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 11,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "mystic_arcanum_7th_level",
+        "name": "Mystic Arcanum (7th level)",
+        "url": "/assets/atlas/features/json/mystic_arcanum_7th_level.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 6,
+      "mystic_arcanum_level_6": 1,
+      "mystic_arcanum_level_7": 1,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_13",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/13/warlock_level_13.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 12,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "otherworldly_patron_improvement_3",
+        "name": "Otherworldly Patron feature",
+        "url": "/assets/atlas/features/json/otherworldly_patron_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 6,
+      "mystic_arcanum_level_6": 1,
+      "mystic_arcanum_level_7": 1,
+      "mystic_arcanum_level_8": 0,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_14",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/14/warlock_level_14.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 12,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "mystic_arcanum_8th_level",
+        "name": "Mystic Arcanum (8th level)",
+        "url": "/assets/atlas/features/json/mystic_arcanum_8th_level.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 7,
+      "mystic_arcanum_level_6": 1,
+      "mystic_arcanum_level_7": 1,
+      "mystic_arcanum_level_8": 1,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_15",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/15/warlock_level_15.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 13,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "warlock_ability_score_improvement_4",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/warlock_ability_score_improvement_4.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 7,
+      "mystic_arcanum_level_6": 1,
+      "mystic_arcanum_level_7": 1,
+      "mystic_arcanum_level_8": 1,
+      "mystic_arcanum_level_9": 0
+    },
+    "index": "warlock_level_16",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/16/warlock_level_16.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 13,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "mystic_arcanum_9th_level",
+        "name": "Mystic Arcanum (9th level)",
+        "url": "/assets/atlas/features/json/mystic_arcanum_9th_level.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 7,
+      "mystic_arcanum_level_6": 1,
+      "mystic_arcanum_level_7": 1,
+      "mystic_arcanum_level_8": 1,
+      "mystic_arcanum_level_9": 1
+    },
+    "index": "warlock_level_17",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/17/warlock_level_17.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 14,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 4,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [],
+    "class_specific": {
+      "invocations_known": 8,
+      "mystic_arcanum_level_6": 1,
+      "mystic_arcanum_level_7": 1,
+      "mystic_arcanum_level_8": 1,
+      "mystic_arcanum_level_9": 1
+    },
+    "index": "warlock_level_18",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/18/warlock_level_18.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 14,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 4,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "warlock_ability_score_improvement_5",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/warlock_ability_score_improvement_5.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 8,
+      "mystic_arcanum_level_6": 1,
+      "mystic_arcanum_level_7": 1,
+      "mystic_arcanum_level_8": 1,
+      "mystic_arcanum_level_9": 1
+    },
+    "index": "warlock_level_19",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/19/warlock_level_19.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 15,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 4,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "eldritch_master",
+        "name": "Eldritch Master",
+        "url": "/assets/atlas/features/json/eldritch_master.json"
+      }
+    ],
+    "class_specific": {
+      "invocations_known": 8,
+      "mystic_arcanum_level_6": 1,
+      "mystic_arcanum_level_7": 1,
+      "mystic_arcanum_level_8": 1,
+      "mystic_arcanum_level_9": 1
+    },
+    "index": "warlock_level_20",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    "url": "/assets/atlas/class/levels/20/warlock_level_20.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 15,
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 4,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  }
+]

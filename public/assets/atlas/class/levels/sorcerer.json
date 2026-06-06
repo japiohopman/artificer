@@ -1,0 +1,1120 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "spellcasting_sorcerer",
+        "name": "Spellcasting: Sorcerer",
+        "url": "/assets/atlas/features/json/spellcasting_sorcerer.json"
+      },
+      {
+        "index": "sorcerous_origin",
+        "name": "Sorcerous Origin",
+        "url": "/assets/atlas/features/json/sorcerous_origin.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 0,
+      "metamagic_known": 0,
+      "creating_spell_slots": []
+    },
+    "index": "sorcerer_level_1",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/1/sorcerer_level_1.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 2,
+      "spell_slots_level_1": 2,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "font_of_magic",
+        "name": "Font of Magic",
+        "url": "/assets/atlas/features/json/font_of_magic.json"
+      },
+      {
+        "index": "flexible_casting_creating_spell_slots",
+        "name": "Flexible Casting: Creating Spell Slots",
+        "url": "/assets/atlas/features/json/flexible_casting_creating_spell_slots.json"
+      },
+      {
+        "index": "flexible_casting_converting_spell_slot",
+        "name": "Flexible Casting: Converting Spell Slot",
+        "url": "/assets/atlas/features/json/flexible_casting_converting_spell_slot.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 2,
+      "metamagic_known": 0,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_2",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/2/sorcerer_level_2.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 3,
+      "spell_slots_level_1": 3,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "metamagic_1",
+        "name": "Metamagic",
+        "url": "/assets/atlas/features/json/metamagic_1.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 3,
+      "metamagic_known": 2,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_3",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/3/sorcerer_level_3.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spells_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "sorcerer_ability_score_improvement_1",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/sorcerer_ability_score_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 4,
+      "metamagic_known": 2,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_4",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/4/sorcerer_level_4.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spells_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [],
+    "class_specific": {
+      "sorcery_points": 5,
+      "metamagic_known": 2,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_5",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/5/sorcerer_level_5.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spells_known": 6,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "sorcerous_origin_improvement_1",
+        "name": "Sorcerous Origin feature",
+        "url": "/assets/atlas/features/json/sorcerous_origin_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 6,
+      "metamagic_known": 2,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_6",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/6/sorcerer_level_6.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spells_known": 7,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [],
+    "class_specific": {
+      "sorcery_points": 7,
+      "metamagic_known": 2,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_7",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/7/sorcerer_level_7.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spells_known": 8,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 1,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "sorcerer_ability_score_improvement_2",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/sorcerer_ability_score_improvement_2.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 8,
+      "metamagic_known": 2,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_8",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/8/sorcerer_level_8.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spells_known": 9,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [],
+    "class_specific": {
+      "sorcery_points": 9,
+      "metamagic_known": 2,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_9",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/9/sorcerer_level_9.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spells_known": 10,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 1,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "metamagic_2",
+        "name": "Metamagic",
+        "url": "/assets/atlas/features/json/metamagic_2.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 10,
+      "metamagic_known": 3,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_10",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/10/sorcerer_level_10.json",
+    "spellcasting": {
+      "cantrips_known": 6,
+      "spells_known": 11,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [],
+    "class_specific": {
+      "sorcery_points": 11,
+      "metamagic_known": 3,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_11",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/11/sorcerer_level_11.json",
+    "spellcasting": {
+      "cantrips_known": 6,
+      "spells_known": 12,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "sorcerer_ability_score_improvement_3",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/sorcerer_ability_score_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 12,
+      "metamagic_known": 3,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_12",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/12/sorcerer_level_12.json",
+    "spellcasting": {
+      "cantrips_known": 6,
+      "spells_known": 12,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "class_specific": {
+      "sorcery_points": 13,
+      "metamagic_known": 3,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_13",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/13/sorcerer_level_13.json",
+    "spellcasting": {
+      "cantrips_known": 6,
+      "spells_known": 13,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "sorcerous_origin_improvement_2",
+        "name": "Sorcerous Origin feature",
+        "url": "/assets/atlas/features/json/sorcerous_origin_improvement_2.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 14,
+      "metamagic_known": 3,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_14",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/14/sorcerer_level_14.json",
+    "spellcasting": {
+      "cantrips_known": 6,
+      "spells_known": 13,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "class_specific": {
+      "sorcery_points": 15,
+      "metamagic_known": 3,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_15",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/15/sorcerer_level_15.json",
+    "spellcasting": {
+      "cantrips_known": 6,
+      "spells_known": 14,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "sorcerer_ability_score_improvement_4",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/sorcerer_ability_score_improvement_4.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 16,
+      "metamagic_known": 4,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_16",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/16/sorcerer_level_16.json",
+    "spellcasting": {
+      "cantrips_known": 6,
+      "spells_known": 14,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "metamagic_3",
+        "name": "Metamagic",
+        "url": "/assets/atlas/features/json/metamagic_3.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 17,
+      "metamagic_known": 4,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_17",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/17/sorcerer_level_17.json",
+    "spellcasting": {
+      "cantrips_known": 6,
+      "spells_known": 15,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "sorcerous_origin_improvement_3",
+        "name": "Sorcerous Origin feature",
+        "url": "/assets/atlas/features/json/sorcerous_origin_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 18,
+      "metamagic_known": 4,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_18",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/18/sorcerer_level_18.json",
+    "spellcasting": {
+      "cantrips_known": 6,
+      "spells_known": 15,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "sorcerer_ability_score_improvement_5",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/sorcerer_ability_score_improvement_5.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 19,
+      "metamagic_known": 4,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_19",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/19/sorcerer_level_19.json",
+    "spellcasting": {
+      "cantrips_known": 6,
+      "spells_known": 15,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 2,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "sorcerous_restoration",
+        "name": "Sorcerous Restoration",
+        "url": "/assets/atlas/features/json/sorcerous_restoration.json"
+      }
+    ],
+    "class_specific": {
+      "sorcery_points": 20,
+      "metamagic_known": 4,
+      "creating_spell_slots": [
+        {
+          "spell_slot_level": 1,
+          "sorcery_point_cost": 2
+        },
+        {
+          "spell_slot_level": 2,
+          "sorcery_point_cost": 3
+        },
+        {
+          "spell_slot_level": 3,
+          "sorcery_point_cost": 5
+        },
+        {
+          "spell_slot_level": 4,
+          "sorcery_point_cost": 6
+        },
+        {
+          "spell_slot_level": 5,
+          "sorcery_point_cost": 7
+        }
+      ]
+    },
+    "index": "sorcerer_level_20",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    "url": "/assets/atlas/class/levels/20/sorcerer_level_20.json",
+    "spellcasting": {
+      "cantrips_known": 6,
+      "spells_known": 15,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 2,
+      "spell_slots_level_7": 2,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  }
+]
