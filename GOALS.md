@@ -82,7 +82,7 @@ The AI DM should access "Tools" via the API to:
 *   **Profile Consolidation**: Create a unified `EntityProfile` component that handles Monsters, NPCs, and Transports through a shared interface.
 *   **Service Hardening**: Improve error handling in `storageService.ts` for GitHub API rate limits.
 
-## 17. Missing Systems Analysis
+## 17. Missing Systems Analysis (this is in progress)
 *   **Map System**: Currently missing a way to link locations in the Atlas to interactive battle maps.
 *   **Soundscape Engine**: `soundService.ts` is robust but needs better integration with AI narration (e.g., AI requesting background music shifts).
 
