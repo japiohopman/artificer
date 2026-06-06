@@ -443,13 +443,33 @@ const DEFAULT_CHARACTERS: Character[] = [
       movement: { current: 30, max: 30 },
       objectInteractions: { current: 1, max: 1 }
     },
-    inventory: {
-      "main-hand": { id: "rogue-dagger", name: "Dagger", index: "dagger", _type: "equipment", weight: 1, slot: "main-hand", damage: { damage_dice: "1d4", damage_type: { name: "Piercing" } }, properties: [{ index: "finesse", name: "Finesse" }] },
-      "chest": { id: "rogue-armor", name: "Leather Armor", index: "leather-armor", _type: "equipment", weight: 10, slot: "chest", armor_class: { base: 11, dex_bonus: true } },
+    inventory: {},
+    backpack: [],
+    items: {
+      "rogue_dagger_1": { id: "rogue_dagger_1", template: "dagger", quantity: 1, kind: "weapon" },
+      "rogue_leather_armor_1": { id: "rogue_leather_armor_1", template: "leather-armor", quantity: 1, kind: "armor" },
+      "rogue_thieves_tools_1": { id: "rogue_thieves_tools_1", template: "thieves-tools", quantity: 1, kind: "tool" }
     },
-    backpack: [
-      { id: "rogue-tools", name: "Thieves' Tools", index: "thieves-tools", weight: 1 }
-    ],
+    containers: {
+      "backpack_char2": {
+        id: "backpack_char2",
+        type: "backpack",
+        slots: [
+          { id: "bag_0", itemId: "rogue_thieves_tools_1" },
+          { id: "bag_1", itemId: null },
+          { id: "bag_2", itemId: null },
+          { id: "bag_3", itemId: null }
+        ]
+      }
+    },
+    equipment: {
+      containerId: "equipment_char2",
+      slots: [
+        { id: "main_hand", itemId: "rogue_dagger_1" },
+        { id: "off_hand", itemId: null },
+        { id: "chest", itemId: "rogue_leather_armor_1" }
+      ]
+    },
     knownSpells: [],
     preparedSpells: [],
     spellSlots: {},
@@ -759,8 +779,10 @@ export const useStore = create<AppState>((set, get) => ({
     const newCharacters = state.characters.map(char => {
       if (char.id !== state.activeCharacterId) return char;
       
-      if (char.saveVersion === 2) {
-        const itemId = typeof itemOrItemId === 'string' ? itemOrItemId : itemOrItemId.id;
+      const itemId = typeof itemOrItemId === 'string' ? itemOrItemId : itemOrItemId.id;
+
+      // V2 Logic (Preferred)
+      if (char.saveVersion === 2 || char.items) {
         const equipment = { ...char.equipment! };
         const containers = { ...char.containers! };
         const backpack = Object.values(containers).find(c => c.type === 'backpack')!;
@@ -774,8 +796,11 @@ export const useStore = create<AppState>((set, get) => ({
           if (emptyBagSlot) emptyBagSlot.itemId = targetSlot.itemId;
         }
 
-        // Remove from backpack
-        backpack.slots = backpack.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
+        // Remove from backpack or other slots
+        Object.values(containers).forEach(c => {
+          c.slots = c.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
+        });
+        equipment.slots = equipment.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
         
         // Put in slot
         targetSlot.itemId = itemId;
@@ -784,7 +809,7 @@ export const useStore = create<AppState>((set, get) => ({
         return { ...char, equipment, containers };
       }
 
-      // Legacy v1
+      // Legacy v1 fallback
       const item = itemOrItemId;
       let newBackpack = char.backpack.filter(i => i.id !== item.id);
       const newInventory = { ...char.inventory };
@@ -816,7 +841,8 @@ export const useStore = create<AppState>((set, get) => ({
     const activeChar = state.characters.find(c => c.id === state.activeCharacterId);
     if (!activeChar) return state;
 
-    if (activeChar.saveVersion === 2) {
+    // V2 Logic
+    if (activeChar.saveVersion === 2 || activeChar.items) {
         return {
           characters: state.characters.map(c => {
             if (c.id !== state.activeCharacterId) return c;

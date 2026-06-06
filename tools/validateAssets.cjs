@@ -1,12 +1,30 @@
 const fs = require('fs');
 const path = require('path');
+const { Validator } = require('jsonschema');
 
 const PROJECT_ROOT = path.join(__dirname, '..');
 const BASE_DIR = path.join(PROJECT_ROOT, 'public/assets/atlas');
 const PUBLIC_DIR = path.join(PROJECT_ROOT, 'public');
+const SCHEMA_DIR = path.join(BASE_DIR, 'schemas');
 
 const errors = [];
 const warnings = [];
+const validator = new Validator();
+const schemas = {};
+
+// Preload schemas
+if (fs.existsSync(SCHEMA_DIR)) {
+    fs.readdirSync(SCHEMA_DIR).forEach(file => {
+        if (file.endsWith('.schema.json')) {
+            const schemaName = file.replace('.schema.json', '');
+            try {
+                schemas[schemaName] = JSON.parse(fs.readFileSync(path.join(SCHEMA_DIR, file), 'utf8'));
+            } catch (e) {
+                console.error(`Failed to load schema ${file}: ${e.message}`);
+            }
+        }
+    });
+}
 
 function logError(file, message) {
   errors.push({ file, message });
@@ -104,6 +122,38 @@ function validateJson(filePath) {
       logError(relativePath, `Contains typo "strengthing_10_feet" (should be "string_10_feet")`);
     }
 
+    // 5. Schema validation
+    let schemaType = null;
+    if (filePath.includes('enemies/json')) schemaType = 'enemy';
+    else if (filePath.includes('spell/json')) schemaType = 'spell';
+    else if (filePath.includes('equipment/json')) {
+        if (data.kind === 'weapon') schemaType = 'weapon';
+        else if (data.kind === 'armor') schemaType = 'armor';
+        else if (data.kind === 'tool') schemaType = 'tool';
+        else if (data.kind === 'focus') schemaType = 'focus';
+        else if (data.kind === 'equipment_pack') schemaType = 'equipment_pack';
+        else schemaType = 'equipment';
+    }
+    else if (filePath.includes('magic_items/json')) schemaType = 'magic_item';
+    else if (filePath.includes('transport/json')) schemaType = 'transport';
+    else if (filePath.includes('alignments/json')) schemaType = 'alignment';
+    else if (filePath.includes('backgrounds/json')) schemaType = 'background';
+    else if (filePath.includes('proficiencies/json')) schemaType = 'proficiency';
+    else if (filePath.includes('sub_regions')) schemaType = 'sub_region';
+    else if (filePath.includes('cities') || filePath.includes('towns_settlements') || filePath.includes('fortresses_keeps')) {
+        if (!filePath.includes('sublocations')) schemaType = 'city';
+    }
+
+    if (schemaType && schemas[schemaType]) {
+        // Schema validation is currently informative due to high legacy debt
+        const result = validator.validate(data, schemas[schemaType]);
+        if (!result.valid) {
+            result.errors.forEach(err => {
+                logWarning(relativePath, `Schema violation (${schemaType}): ${err.stack}`);
+            });
+        }
+    }
+
   } catch (e) {
     logError(relativePath, `JSON Parse Error: ${e.message}`);
   }
@@ -121,7 +171,7 @@ function walk(dir) {
   });
 }
 
-console.log('Starting Asset Validation...');
+console.log('Starting Asset Validation with Schema Checks...');
 if (fs.existsSync(BASE_DIR)) {
   walk(BASE_DIR);
 } else {

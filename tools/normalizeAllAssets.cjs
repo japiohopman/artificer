@@ -76,12 +76,14 @@ function normalizePath(val) {
     .replace(/^assets\/atlas\//, '/assets/atlas/');
 
   // Ensure leading slash for assets
-  if (newVal.includes('assets/atlas/') && !newVal.startsWith('/')) {
+  if ((newVal.includes('assets/atlas/') || newVal.includes('assets/images/')) && !newVal.startsWith('/')) {
     newVal = '/' + newVal;
   }
 
   // 3. Fix directory name mismatches and missing json/ subfolder
   newVal = newVal
+    .replace(/\/assets\/atlas\/world\/toril\/(?!json\/)/g, '/assets/atlas/world/toril/')
+    .replace(/\/assets\/atlas\/world\/world_wiki\/(?!json\/)/g, '/assets/atlas/world/world_wiki/')
     .replace(/\/assets\/atlas\/spells\//g, '/assets/atlas/spell/json/')
     .replace(/\/assets\/atlas\/proficiencies\/skill_/g, '/assets/atlas/skills/json/')
     .replace(/\/assets\/atlas\/proficiencies\/(?!json\/)/g, '/assets/atlas/proficiencies/json/')

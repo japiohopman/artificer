@@ -3,7 +3,7 @@ import { cn } from '../../lib/utils';
 import { 
   User, Shield, Sword, Footprints, Hand, 
   Gem, Zap, Wrench, Circle, Layers, 
-  Shirt, Ghost, Disc
+  Shirt, Ghost, Disc, Package
 } from 'lucide-react';
 import { ChromaKeyImage } from '../ChromaKeyImage';
 
@@ -12,13 +12,21 @@ export type ItemSlot =
   | 'main-hand' | 'off-hand' | 'hands' | 'feet' 
   | 'ring-1' | 'ring-2' | 'focus'
   | 'clothes' | 'acc-1' | 'acc-2' | 'acc-3' | 'acc-4'
+  | 'extra' | 'ammo'
   | 'tool-1' | 'tool-2' | 'tool-3' | 'tool-4' | 'tool-5';
 
 interface ItemDollProps {
-  activeSlots: ItemSlot[];
+  activeSlots?: ItemSlot[];
   equippedItems?: Record<string, any | null>;
   onSlotClick?: (slot: ItemSlot) => void;
   className?: string;
+  showSupplements?: boolean;
+  alignment?: string;
+  characterImageUrl?: string;
+  maxWidth?: string;
+  items?: Record<string, any>;
+  equipment?: any;
+  equipmentDetails?: any;
 }
 
 const ITEM_BACKGROUND = "https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1775921630292-back_item_slug.webp";
@@ -48,6 +56,8 @@ const SLOT_ICONS: Record<ItemSlot, React.ElementType> = {
   'tool-3': Wrench,
   'tool-4': Wrench,
   'tool-5': Wrench,
+  'extra': Package,
+  'ammo': Layers,
 };
 
 const SLOT_LABELS: Record<ItemSlot, string> = {
@@ -72,6 +82,8 @@ const SLOT_LABELS: Record<ItemSlot, string> = {
   'tool-3': 'T3',
   'tool-4': 'T4',
   'tool-5': 'T5',
+  'extra': 'EXT',
+  'ammo': 'AMMO',
 };
 
 const DOLL_GRID: (ItemSlot | null)[][] = [
@@ -85,7 +97,17 @@ const DOLL_GRID: (ItemSlot | null)[][] = [
 const SIDE_SLOTS: ItemSlot[] = ['clothes', 'acc-1', 'acc-2', 'acc-3', 'acc-4'];
 const BOTTOM_SLOTS: ItemSlot[] = ['tool-1', 'tool-2', 'tool-3', 'tool-4', 'tool-5'];
 
-export const EquipmentDoll: React.FC<ItemDollProps> = ({ activeSlots, equippedItems = {}, onSlotClick, className }) => {
+export const EquipmentDoll: React.FC<ItemDollProps> = ({
+  activeSlots = [],
+  equippedItems = {},
+  onSlotClick,
+  className,
+  showSupplements,
+  alignment,
+  characterImageUrl,
+  items,
+  equipment
+}) => {
   const renderSlot = (slot: ItemSlot) => {
     const isActive = activeSlots.includes(slot);
     const equippedItem = equippedItems[slot];

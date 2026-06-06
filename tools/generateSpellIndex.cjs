@@ -29,7 +29,7 @@ function generateIndex() {
         casting_time: data.casting_time,
         range: data.range,
         duration: data.duration,
-        path: `/assets/atlas/spell/json/${file}`
+        json_path: `/assets/atlas/spell/json/${file}`
       });
     } catch (e) {
       console.error(`Error parsing ${file}:`, e.message);
