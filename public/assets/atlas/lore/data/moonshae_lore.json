@@ -1,0 +1,66 @@
+{
+  "region_name": "The Moonshae Isles",
+  "deity": "The Earth Mother",
+  "capital": "Caer Calidyrr",
+  "ruling_dynasty": "Kendrick Dynasty",
+  "islands": [
+    {
+      "id": "alaron",
+      "name": "Alaron",
+      "dominant_culture": "The Folk",
+      "terrain": "Hills and Mountains",
+      "key_locations": ["Caer Calidyrr", "Derrynane Moonwell"]
+    },
+    {
+      "id": "gwynneth",
+      "name": "Gwynneth",
+      "dominant_culture": "Llewyrr (Elves) / Fey",
+      "terrain": "Ancient Forests",
+      "key_locations": ["Chrysalis", "Myrloch Vale"]
+    },
+    {
+      "id": "norland",
+      "name": "Norland",
+      "dominant_culture": "Northlanders",
+      "terrain": "Rugged Mountains",
+      "key_locations": ["Great Jarl's Hall"]
+    },
+    {
+      "id": "snowdown",
+      "name": "Snowdown",
+      "dominant_culture": "Amnian Occupation",
+      "terrain": "Exploited Plains",
+      "key_locations": ["Caer Westphal"]
+    }
+  ],
+  "divine_avatars": [
+    {
+      "name": "The Leviathan",
+      "domain": "The Sea"
+    },
+    {
+      "name": "The Unicorn (Kamerynn)",
+      "domain": "The Land / Life"
+    },
+    {
+      "name": "The Pack",
+      "domain": "Death / The Hunt"
+    }
+  ],
+  "hazards": [
+    {
+      "name": "The Rusting",
+      "description": "Supernatural corruption of Moonwells and the land."
+    },
+    {
+      "name": "Kazgaroth the Beast",
+      "description": "Ancient shapeshifting evil seeking to destroy the Earth Mother."
+    }
+  ],
+  "unique_features": [
+    "Moonwells",
+    "Fey Crossing",
+    "The Balance",
+    "Kendrick High Kingship"
+  ]
+}

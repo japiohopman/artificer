@@ -1,0 +1,392 @@
+[
+  {
+    "name": "Akadi",
+    "alignment": "N",
+    "domains": [
+      "Air",
+      "Tempest"
+    ],
+    "portfolio": "Air, movement, speed, flying creatures",
+    "symbol": "White cloud on blue background"
+  },
+  {
+    "name": "Amaunator",
+    "alignment": "LN",
+    "domains": [
+      "Life",
+      "Light"
+    ],
+    "portfolio": "The sun, law, time, bureaucracy",
+    "symbol": "Golden sun with a face"
+  },
+  {
+    "name": "Asmodeus",
+    "alignment": "LE",
+    "domains": [
+      "Knowledge",
+      "Trickery"
+    ],
+    "portfolio": "Indulgence, sin, power, tyranny",
+    "symbol": "Three-pointed star with a ruby"
+  },
+  {
+    "name": "Auril",
+    "alignment": "NE",
+    "domains": [
+      "Nature",
+      "Tempest"
+    ],
+    "portfolio": "Winter, cold",
+    "symbol": "Six-pointed snowflake"
+  },
+  {
+    "name": "Azuth",
+    "alignment": "LN",
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Wizards, mages, spellcasters",
+    "symbol": "Left hand pointing upward outlined in fire"
+  },
+  {
+    "name": "Bane",
+    "alignment": "LE",
+    "domains": [
+      "War"
+    ],
+    "portfolio": "Tyranny, fear, hatred",
+    "symbol": "Upright black right hand, thumb and fingers together"
+  },
+  {
+    "name": "Beshaba",
+    "alignment": "CE",
+    "domains": [
+      "Trickery"
+    ],
+    "portfolio": "Misfortune, bad luck, accidents",
+    "symbol": "Black antlers on a red background"
+  },
+  {
+    "name": "Bhaal",
+    "alignment": "NE",
+    "domains": [
+      "Death"
+    ],
+    "portfolio": "Murder",
+    "symbol": "Skull surrounded by a ring of blood droplets"
+  },
+  {
+    "name": "Chauntea",
+    "alignment": "NG",
+    "domains": [
+      "Life"
+    ],
+    "portfolio": "Agriculture, plants, summer",
+    "symbol": "Sheaf of grain or a blooming rose on grain"
+  },
+  {
+    "name": "Cyric",
+    "alignment": "CE",
+    "domains": [
+      "Trickery"
+    ],
+    "portfolio": "Lies, strife, deception",
+    "symbol": "White jawless skull on a black or purple sunburst"
+  },
+  {
+    "name": "Deneir",
+    "alignment": "NG",
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Writing, glyphs, images, literature",
+    "symbol": "Lit candle above an open eye"
+  },
+  {
+    "name": "Eldath",
+    "alignment": "NG",
+    "domains": [
+      "Life",
+      "Nature"
+    ],
+    "portfolio": "Quiet places, springs, pools, peace",
+    "symbol": "Waterfall plunging into a still pool"
+  },
+  {
+    "name": "Gond",
+    "alignment": "N",
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Craft, construction, smithwork",
+    "symbol": "Toothed cog with four spokes"
+  },
+  {
+    "name": "Grumbar",
+    "alignment": "N",
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Earth, solidity, changelessness",
+    "symbol": "Mountains on a brown background"
+  },
+  {
+    "name": "Gwaeron Windstrom",
+    "alignment": "NG",
+    "domains": [
+      "Nature"
+    ],
+    "portfolio": "Tracking, rangers of the North",
+    "symbol": "Paw print with a star on the palm"
+  },
+  {
+    "name": "Helm",
+    "alignment": "LN",
+    "domains": [
+      "Life",
+      "Light"
+    ],
+    "portfolio": "Protection, vigilance, guardians",
+    "symbol": "Staring eye on an upright left gauntlet"
+  },
+  {
+    "name": "Hoar",
+    "alignment": "LN",
+    "domains": [
+      "War"
+    ],
+    "portfolio": "Revenge, retribution, poetic justice",
+    "symbol": "A coin with a two-faced head"
+  },
+  {
+    "name": "Ilmater",
+    "alignment": "LG",
+    "domains": [
+      "Life"
+    ],
+    "portfolio": "Endurance, suffering, martyrdom, perseverance",
+    "symbol": "Hands bound at the wrist with red cord"
+  },
+  {
+    "name": "Istishia",
+    "alignment": "N",
+    "domains": [
+      "Tempest"
+    ],
+    "portfolio": "Water, purification",
+    "symbol": "A cresting wave"
+  },
+  {
+    "name": "Jergal",
+    "alignment": "LN",
+    "domains": [
+      "Death",
+      "Knowledge"
+    ],
+    "portfolio": "Fatalism, proper burial, guardian of tombs",
+    "symbol": "A skull biting a scroll"
+  },
+  {
+    "name": "Kelemvor",
+    "alignment": "LN",
+    "domains": [
+      "Death"
+    ],
+    "portfolio": "Death, the dead",
+    "symbol": "Upright skeletal arm holding the scales of justice"
+  },
+  {
+    "name": "Kossuth",
+    "alignment": "N",
+    "domains": [
+      "Light"
+    ],
+    "portfolio": "Fire, purification through fire",
+    "symbol": "A flickering flame"
+  },
+  {
+    "name": "Lathander",
+    "alignment": "NG",
+    "domains": [
+      "Life",
+      "Light"
+    ],
+    "portfolio": "Birth, renewal, spring, self-perfection",
+    "symbol": "Road stretching toward a rising sun"
+  },
+  {
+    "name": "Leira",
+    "alignment": "CN",
+    "domains": [
+      "Trickery"
+    ],
+    "portfolio": "Illusion, mist, deception",
+    "symbol": "Point-down triangle containing a swirl of mist"
+  },
+  {
+    "name": "Lliira",
+    "alignment": "CG",
+    "domains": [
+      "Life"
+    ],
+    "portfolio": "Joy, happiness, dance, festivals",
+    "symbol": "Six-pointed star made of five gold coins"
+  },
+  {
+    "name": "Loviatar",
+    "alignment": "LE",
+    "domains": [
+      "Death"
+    ],
+    "portfolio": "Pain, hurt, agony",
+    "symbol": "Nine-tailed barbed scourge"
+  },
+  {
+    "name": "Malar",
+    "alignment": "CE",
+    "domains": [
+      "Nature"
+    ],
+    "portfolio": "The hunt, bloodlust, marauding monsters",
+    "symbol": "Clawed paw"
+  },
+  {
+    "name": "Mask",
+    "alignment": "CN",
+    "domains": [
+      "Trickery"
+    ],
+    "portfolio": "Thieves, thievery, shadows",
+    "symbol": "Black velvet mask tinged with red"
+  },
+  {
+    "name": "Myrkul",
+    "alignment": "NE",
+    "domains": [
+      "Death"
+    ],
+    "portfolio": "Death, decay, old age, exhaustion",
+    "symbol": "White human skull"
+  },
+  {
+    "name": "Mystra",
+    "alignment": "NG",
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Magic, spells, the Weave",
+    "symbol": "Circle of seven stars, or nine stars encircling a mist"
+  },
+  {
+    "name": "Oghma",
+    "alignment": "N",
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Knowledge, invention, inspiration, bards",
+    "symbol": "Blank scroll"
+  },
+  {
+    "name": "Red Knight",
+    "alignment": "LN",
+    "domains": [
+      "War"
+    ],
+    "portfolio": "Strategy, planning, tactics",
+    "symbol": "Red knight chess piece with stars for eyes"
+  },
+  {
+    "name": "Savras",
+    "alignment": "LN",
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Divination, fate, truth",
+    "symbol": "Crystal ball containing many eyes"
+  },
+  {
+    "name": "Sel\u00fbne",
+    "alignment": "CG",
+    "domains": [
+      "Knowledge",
+      "Life"
+    ],
+    "portfolio": "The moon, stars, navigation, prophecy",
+    "symbol": "Pair of female eyes surrounded by seven silver stars"
+  },
+  {
+    "name": "Shar",
+    "alignment": "NE",
+    "domains": [
+      "Death",
+      "Trickery"
+    ],
+    "portfolio": "Darkness, night, loss, secrets",
+    "symbol": "Black disk with a purple border"
+  },
+  {
+    "name": "Shaundakul",
+    "alignment": "CN",
+    "domains": [
+      "Nature",
+      "Tempest"
+    ],
+    "portfolio": "Travel, exploration, portals, caravans",
+    "symbol": "Wind-walking bearded man in traveling clothes"
+  },
+  {
+    "name": "Silvanus",
+    "alignment": "N",
+    "domains": [
+      "Nature"
+    ],
+    "portfolio": "Wild nature, druids",
+    "symbol": "Oak leaf"
+  },
+  {
+    "name": "Sune",
+    "alignment": "CG",
+    "domains": [
+      "Life",
+      "Light"
+    ],
+    "portfolio": "Beauty, love, passion",
+    "symbol": "Face of a beautiful red-haired woman"
+  },
+  {
+    "name": "Talona",
+    "alignment": "CE",
+    "domains": [
+      "Death"
+    ],
+    "portfolio": "Disease, poison",
+    "symbol": "Three teardrops on a triangle"
+  },
+  {
+    "name": "Talos",
+    "alignment": "CE",
+    "domains": [
+      "Tempest"
+    ],
+    "portfolio": "Storms, destruction, rebellion",
+    "symbol": "Three lightning bolts radiating from a central point"
+  },
+  {
+    "name": "Tempus",
+    "alignment": "N",
+    "domains": [
+      "War"
+    ],
+    "portfolio": "War, battle, warriors",
+    "symbol": "Upright flaming sword"
+  },
+  {
+    "name": "Torm",
+    "alignment": "LG",
+    "domains": [
+      "War"
+    ],
+    "portfolio": "Duty, loyalty, righteousness",
+    "symbol": "White right-hand gauntlet"
+  }
+]

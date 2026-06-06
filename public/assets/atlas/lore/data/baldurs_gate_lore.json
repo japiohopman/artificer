@@ -1,0 +1,76 @@
+{
+  "city_name": "Baldur's Gate",
+  "titles": ["City of Blood", "Gateway to the West"],
+  "population_estimate": 125000,
+  "government": {
+    "type": "Council of Four",
+    "grand_duke": "Ulder Ravengard",
+    "advisory_body": "Parliament of Peers",
+    "ruling_body": "Council of Four"
+  },
+  "districten": [
+    {
+      "id": "upper_city",
+      "name": "Upper City",
+      "description": "Home to the patriars and the city's government.",
+      "security_level": "Extremely High (The Watch)",
+      "wealth_level": "Extremely High",
+      "landmarks": ["High Hall", "Watch Citadel", "High House of Wonders"]
+    },
+    {
+      "id": "lower_city",
+      "name": "Lower City",
+      "description": "The commercial heart and port of the city.",
+      "security_level": "High (Flaming Fist)",
+      "wealth_level": "Moderate-High",
+      "landmarks": ["Gray Harbor", "The Wide", "Elfsong Tavern"]
+    },
+    {
+      "id": "outer_city",
+      "name": "Outer City",
+      "description": "Lawless sprawl beyond the walls.",
+      "security_level": "Low (The Guild)",
+      "wealth_level": "Low",
+      "landmarks": ["Wyrm's Crossing", "Little Calimshan", "Twin Songs"]
+    }
+  ],
+  "factions": [
+    {
+      "name": "The Flaming Fist",
+      "alignment": "Lawful Neutral",
+      "focus": "Military and Law Enforcement",
+      "leader": "Ulder Ravengard"
+    },
+    {
+      "name": "The Guild",
+      "alignment": "Neutral Evil",
+      "focus": "Crime and Shadow Government",
+      "leader": "The King of Beggars (Hidden)"
+    },
+    {
+      "name": "The Watch",
+      "alignment": "Lawful Neutral",
+      "focus": "Protection of the Patriars",
+      "leader": "High Constable"
+    },
+    {
+      "name": "The Harpers",
+      "alignment": "Good",
+      "focus": "Anti-Tyranny and Balance",
+      "leader_hidden": true
+    }
+  ],
+  "key_figures": [
+    "Balduran (Founder)",
+    "Ulder Ravengard",
+    "Minsc & Boo",
+    "The Dead Three (Bhaal, Bane, Myrkul)"
+  ],
+  "unique_features": [
+    "Gray Harbor",
+    "Wyrm's Rock",
+    "The Code of the Flaming Fist",
+    "Patriar Estates",
+    "The Wide Market"
+  ]
+}
