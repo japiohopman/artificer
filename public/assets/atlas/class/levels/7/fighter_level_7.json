@@ -1,0 +1,24 @@
+{
+  "level": 7,
+  "ability_score_bonuses": 2,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "martial_archetype_improvement_1",
+      "name": "Martial Archetype feature",
+      "url": "/assets/atlas/features/json/martial_archetype_improvement_1.json"
+    }
+  ],
+  "class_specific": {
+    "action_surges": 1,
+    "indomitable_uses": 0,
+    "extra_attacks": 1
+  },
+  "index": "fighter_level_7",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "url": "/assets/atlas/class/levels/7/fighter_level_7.json"
+}

@@ -1,0 +1,36 @@
+{
+  "level": 6,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "favored_enemy_2_types",
+      "name": "Favored Enemy (2 types)",
+      "url": "/assets/atlas/features/json/favored_enemy_2_types.json"
+    },
+    {
+      "index": "natural_explorer_2_terrain_types",
+      "name": "Natural Explorer (2 terrain types)",
+      "url": "/assets/atlas/features/json/natural_explorer_2_terrain_types.json"
+    }
+  ],
+  "class_specific": {
+    "favored_enemies": 2,
+    "favored_terrain": 2
+  },
+  "index": "ranger_level_6",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "url": "/assets/atlas/class/levels/6/ranger_level_6.json",
+  "spellcasting": {
+    "spells_known": 4,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 2,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0
+  }
+}

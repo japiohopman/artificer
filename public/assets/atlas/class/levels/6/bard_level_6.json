@@ -1,0 +1,44 @@
+{
+  "level": 6,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "countercharm",
+      "name": "Countercharm",
+      "url": "/assets/atlas/features/json/countercharm.json"
+    },
+    {
+      "index": "bard_college_improvement_1",
+      "name": "Bard College feature",
+      "url": "/assets/atlas/features/json/bard_college_improvement_1.json"
+    }
+  ],
+  "class_specific": {
+    "bardic_inspiration_die": 8,
+    "song_of_rest_die": 6,
+    "magical_secrets_max_5": 0,
+    "magical_secrets_max_7": 0,
+    "magical_secrets_max_9": 0
+  },
+  "index": "bard_level_6",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/bard.json"
+  },
+  "url": "/assets/atlas/class/levels/6/bard_level_6.json",
+  "spellcasting": {
+    "cantrips_known": 3,
+    "spells_known": 9,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

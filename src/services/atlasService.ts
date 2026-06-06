@@ -340,6 +340,7 @@ class AtlasService {
     
     // Look for explicit level file if it exists, otherwise usually class data or special levels folder
     const paths = [
+      `/assets/atlas/class/levels/${level}/${slug}_level_${level}.json`,
       `/assets/atlas/levels/json/${slug}_${level}.json`,
       `/assets/atlas/levels/json/${hyphenSlug}_${level}.json`,
       `/assets/atlas/class/levels/${slug}_${level}.json`,

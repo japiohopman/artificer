@@ -1,0 +1,25 @@
+{
+  "level": 11,
+  "ability_score_bonuses": 2,
+  "prof_bonus": 4,
+  "features": [
+    {
+      "index": "reliable_talent",
+      "name": "Reliable Talent",
+      "url": "/assets/atlas/features/json/reliable_talent.json"
+    }
+  ],
+  "class_specific": {
+    "sneak_attack": {
+      "dice_count": 6,
+      "dice_value": 6
+    }
+  },
+  "index": "rogue_level_11",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "url": "/assets/atlas/class/levels/11/rogue_level_11.json"
+}

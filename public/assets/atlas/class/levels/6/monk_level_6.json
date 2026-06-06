@@ -1,0 +1,32 @@
+{
+  "level": 6,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "ki_empowered_strikes",
+      "name": "Ki Empowered Strikes",
+      "url": "/assets/atlas/features/json/ki_empowered_strikes.json"
+    },
+    {
+      "index": "monastic_tradition_improvement_1",
+      "name": "Monastic Tradition feature",
+      "url": "/assets/atlas/features/json/monastic_tradition_improvement_1.json"
+    }
+  ],
+  "class_specific": {
+    "martial_arts": {
+      "dice_count": 1,
+      "dice_value": 6
+    },
+    "ki_points": 6,
+    "unarmored_movement": 15
+  },
+  "index": "monk_level_6",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/6/monk_level_6.json"
+}

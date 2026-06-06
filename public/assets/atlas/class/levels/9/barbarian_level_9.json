@@ -1,0 +1,24 @@
+{
+  "level": 9,
+  "ability_score_bonuses": 2,
+  "prof_bonus": 4,
+  "features": [
+    {
+      "index": "brutal_critical_1_die",
+      "name": "Brutal Critical (1 die)",
+      "url": "/assets/atlas/features/json/brutal_critical_1_die.json"
+    }
+  ],
+  "class_specific": {
+    "rage_count": 4,
+    "rage_damage_bonus": 3,
+    "brutal_critical_dice": 1
+  },
+  "index": "barbarian_level_9",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "url": "/assets/atlas/class/levels/9/barbarian_level_9.json"
+}

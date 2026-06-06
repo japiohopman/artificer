@@ -1,0 +1,39 @@
+{
+  "level": 11,
+  "ability_score_bonuses": 2,
+  "prof_bonus": 4,
+  "features": [
+    {
+      "index": "mystic_arcanum_6th_level",
+      "name": "Mystic Arcanum (6th level)",
+      "url": "/assets/atlas/features/json/mystic_arcanum_6th_level.json"
+    }
+  ],
+  "class_specific": {
+    "invocations_known": 5,
+    "mystic_arcanum_level_6": 1,
+    "mystic_arcanum_level_7": 0,
+    "mystic_arcanum_level_8": 0,
+    "mystic_arcanum_level_9": 0
+  },
+  "index": "warlock_level_11",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "url": "/assets/atlas/class/levels/11/warlock_level_11.json",
+  "spellcasting": {
+    "cantrips_known": 4,
+    "spells_known": 11,
+    "spell_slots_level_1": 0,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 3,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

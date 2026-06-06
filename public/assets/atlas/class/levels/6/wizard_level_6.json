@@ -1,0 +1,34 @@
+{
+  "level": 6,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "arcane_tradition_improvement_1",
+      "name": "Arcane Tradition feature",
+      "url": "/assets/atlas/features/json/arcane_tradition_improvement_1.json"
+    }
+  ],
+  "class_specific": {
+    "arcane_recovery_levels": 3
+  },
+  "index": "wizard_level_6",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/wizard.json"
+  },
+  "url": "/assets/atlas/class/levels/6/wizard_level_6.json",
+  "spellcasting": {
+    "cantrips_known": 4,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

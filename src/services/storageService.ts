@@ -1007,15 +1007,37 @@ export async function fetchSubraceData(index: string): Promise<any> {
 }
 
 export async function fetchClassLevels(classIndex: string): Promise<any[]> {
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/class/levels/${classIndex}.json?t=${Date.now()}`;
-  const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
+  // First try the new structure (individual level files)
+  try {
+    const levels: any[] = [];
+    for (let level = 1; level <= 20; level++) {
+      const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/class/levels/${level}/${classIndex}_level_${level}.json?t=${Date.now()}`;
+      const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
+      const res = await fetch(url);
+      if (res.ok) {
+        const levelData = await safeJson(res);
+        if (levelData) levels.push(levelData);
+      } else if (level === 1) {
+        // If level 1 fails, fall back to legacy single-file array
+        break;
+      }
+    }
+    
+    if (levels.length > 0) return levels;
+  } catch (e) {
+    console.warn("New class levels structure fetch failed, trying legacy:", e);
+  }
+
+  // Fallback to legacy single-file array structure
+  const legacyUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/class/levels/${classIndex}.json?t=${Date.now()}`;
+  const url = `/api/raw?url=${encodeURIComponent(legacyUrl)}`;
   try {
     const res = await fetch(url);
     if (!res.ok) return [];
     const levels = await safeJson(res);
     return Array.isArray(levels) ? levels : [];
   } catch (e) {
-    console.error("Error fetching class levels:", e);
+    console.error("Error fetching legacy class levels:", e);
     return [];
   }
 }
