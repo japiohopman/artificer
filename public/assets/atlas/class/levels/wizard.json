@@ -1,0 +1,639 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "spellcasting_wizard",
+        "name": "Spellcasting: Wizard",
+        "url": "/assets/atlas/features/json/spellcasting_wizard.json"
+      },
+      {
+        "index": "arcane_recovery",
+        "name": "Arcane Recovery",
+        "url": "/assets/atlas/features/json/arcane_recovery.json"
+      }
+    ],
+    "class_specific": {
+      "arcane_recovery_levels": 1
+    },
+    "index": "wizard_level_1",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/1/wizard_level_1.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 2,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "arcane_tradition",
+        "name": "Arcane Tradition",
+        "url": "/assets/atlas/features/json/arcane_tradition.json"
+      }
+    ],
+    "class_specific": {
+      "arcane_recovery_levels": 1
+    },
+    "index": "wizard_level_2",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/2/wizard_level_2.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 3,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [],
+    "class_specific": {
+      "arcane_recovery_levels": 2
+    },
+    "index": "wizard_level_3",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/3/wizard_level_3.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "wizard_ability_score_improvement_1",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/wizard_ability_score_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "arcane_recovery_levels": 2
+    },
+    "index": "wizard_level_4",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/4/wizard_level_4.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [],
+    "class_specific": {
+      "arcane_recovery_levels": 3
+    },
+    "index": "wizard_level_5",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/5/wizard_level_5.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "arcane_tradition_improvement_1",
+        "name": "Arcane Tradition feature",
+        "url": "/assets/atlas/features/json/arcane_tradition_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "arcane_recovery_levels": 3
+    },
+    "index": "wizard_level_6",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/6/wizard_level_6.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [],
+    "class_specific": {
+      "arcane_recovery_levels": 4
+    },
+    "index": "wizard_level_7",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/7/wizard_level_7.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 1,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "wizard_ability_score_improvement_2",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/wizard_ability_score_improvement_2.json"
+      }
+    ],
+    "class_specific": {
+      "arcane_recovery_levels": 4
+    },
+    "index": "wizard_level_8",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/8/wizard_level_8.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [],
+    "class_specific": {
+      "arcane_recovery_levels": 5
+    },
+    "index": "wizard_level_9",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/9/wizard_level_9.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 1,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "arcane_tradition_improvement_2",
+        "name": "Arcane Tradition feature",
+        "url": "/assets/atlas/features/json/arcane_tradition_improvement_2.json"
+      }
+    ],
+    "class_specific": {
+      "arcane_recovery_levels": 5
+    },
+    "index": "wizard_level_10",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/10/wizard_level_10.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [],
+    "class_specific": {
+      "arcane_recovery_levels": 6
+    },
+    "index": "wizard_level_11",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/11/wizard_level_11.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "wizard_ability_score_improvement_3",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/wizard_ability_score_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "arcane_recovery_levels": 6
+    },
+    "index": "wizard_level_12",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/12/wizard_level_12.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "class_specific": {
+      "arcane_recovery_levels": 7
+    },
+    "index": "wizard_level_13",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/13/wizard_level_13.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "arcane_tradition_improvement_3",
+        "name": "Arcane Tradition feature",
+        "url": "/assets/atlas/features/json/arcane_tradition_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "arcane_recovery_levels": 7
+    },
+    "index": "wizard_level_14",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/14/wizard_level_14.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "class_specific": {
+      "arcane_recovery_levels": 8
+    },
+    "index": "wizard_level_15",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/15/wizard_level_15.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "wizard_ability_score_improvement_4",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/wizard_ability_score_improvement_4.json"
+      }
+    ],
+    "class_specific": {
+      "arcane_recovery_levels": 8
+    },
+    "index": "wizard_level_16",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/16/wizard_level_16.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [],
+    "class_specific": {
+      "arcane_recovery_levels": 9
+    },
+    "index": "wizard_level_17",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/17/wizard_level_17.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "spell_mastery",
+        "name": "Spell Mastery",
+        "url": "/assets/atlas/features/json/spell_mastery.json"
+      }
+    ],
+    "class_specific": {
+      "arcane_recovery_levels": 9
+    },
+    "index": "wizard_level_18",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/18/wizard_level_18.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "wizard_ability_score_improvement_5",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/wizard_ability_score_improvement_5.json"
+      }
+    ],
+    "class_specific": {
+      "arcane_recovery_levels": 10
+    },
+    "index": "wizard_level_19",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/19/wizard_level_19.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 2,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "signature_spell",
+        "name": "Signature Spell",
+        "url": "/assets/atlas/features/json/signature_spell.json"
+      }
+    ],
+    "class_specific": {
+      "arcane_recovery_levels": 10
+    },
+    "index": "wizard_level_20",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/20/wizard_level_20.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 2,
+      "spell_slots_level_7": 2,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  }
+]

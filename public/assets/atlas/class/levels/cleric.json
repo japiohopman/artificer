@@ -1,0 +1,735 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "spellcasting_cleric",
+        "name": "Spellcasting: Cleric",
+        "url": "/assets/atlas/features/json/spellcasting_cleric.json"
+      },
+      {
+        "index": "divine_domain",
+        "name": "Divine Domain",
+        "url": "/assets/atlas/features/json/divine_domain.json"
+      },
+      {
+        "index": "domain_spells_1",
+        "name": "Domain Spells",
+        "url": "/assets/atlas/features/json/domain_spells_1.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 0,
+      "destroy_undead_cr": 0
+    },
+    "index": "cleric_level_1",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/1/cleric_level_1.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 2,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "channel_divinity_1_rest",
+        "name": "Channel Divinity (1/rest)",
+        "url": "/assets/atlas/features/json/channel_divinity_1_rest.json"
+      },
+      {
+        "index": "channel_divinity_turn_undead",
+        "name": "Channel Divinity: Turn Undead",
+        "url": "/assets/atlas/features/json/channel_divinity_turn_undead.json"
+      },
+      {
+        "index": "divine_domain_improvement_1",
+        "name": "Divine Domain feature",
+        "url": "/assets/atlas/features/json/divine_domain_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 1,
+      "destroy_undead_cr": 0
+    },
+    "index": "cleric_level_2",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/2/cleric_level_2.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 3,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "domain_spells_2",
+        "name": "Domain Spells",
+        "url": "/assets/atlas/features/json/domain_spells_2.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 1,
+      "destroy_undead_cr": 0
+    },
+    "index": "cleric_level_3",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/3/cleric_level_3.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "cleric_ability_score_improvement_1",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/cleric_ability_score_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 1,
+      "destroy_undead_cr": 0
+    },
+    "index": "cleric_level_4",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/4/cleric_level_4.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "domain_spells_3",
+        "name": "Domain Spells",
+        "url": "/assets/atlas/features/json/domain_spells_3.json"
+      },
+      {
+        "index": "destroy_undead_cr_1_2_or_below",
+        "name": "Destroy Undead (CR 1/2 or below)",
+        "url": "/assets/atlas/features/json/destroy_undead_cr_1_2_or_below.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 1,
+      "destroy_undead_cr": 0.5
+    },
+    "index": "cleric_level_5",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/5/cleric_level_5.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "channel_divinity_2_rest",
+        "name": "Channel Divinity (2/rest)",
+        "url": "/assets/atlas/features/json/channel_divinity_2_rest.json"
+      },
+      {
+        "index": "divine_domain_improvement_2",
+        "name": "Divine Domain feature",
+        "url": "/assets/atlas/features/json/divine_domain_improvement_2.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 2,
+      "destroy_undead_cr": 0.5
+    },
+    "index": "cleric_level_6",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/6/cleric_level_6.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "domain_spells_4",
+        "name": "Domain Spells",
+        "url": "/assets/atlas/features/json/domain_spells_4.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 2,
+      "destroy_undead_cr": 0.5
+    },
+    "index": "cleric_level_7",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/7/cleric_level_7.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 1,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "cleric_ability_score_improvement_2",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/cleric_ability_score_improvement_2.json"
+      },
+      {
+        "index": "destroy_undead_cr_1_or_below",
+        "name": "Destroy Undead (CR 1 or below)",
+        "url": "/assets/atlas/features/json/destroy_undead_cr_1_or_below.json"
+      },
+      {
+        "index": "divine_domain_improvement_3",
+        "name": "Divine Domain feature",
+        "url": "/assets/atlas/features/json/divine_domain_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 2,
+      "destroy_undead_cr": 1
+    },
+    "index": "cleric_level_8",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/8/cleric_level_8.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "domain_spells_5",
+        "name": "Domain Spells",
+        "url": "/assets/atlas/features/json/domain_spells_5.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 2,
+      "destroy_undead_cr": 1
+    },
+    "index": "cleric_level_9",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/9/cleric_level_9.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 1,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "divine_intervention",
+        "name": "Divine Intervention",
+        "url": "/assets/atlas/features/json/divine_intervention.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 2,
+      "destroy_undead_cr": 1
+    },
+    "index": "cleric_level_10",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/10/cleric_level_10.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "destroy_undead_cr_2_or_below",
+        "name": "Destroy Undead (CR 2 or below)",
+        "url": "/assets/atlas/features/json/destroy_undead_cr_2_or_below.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 2,
+      "destroy_undead_cr": 2
+    },
+    "index": "cleric_level_11",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/11/cleric_level_11.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "cleric_ability_score_improvement_3",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/cleric_ability_score_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 2,
+      "destroy_undead_cr": 2
+    },
+    "index": "cleric_level_12",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/12/cleric_level_12.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "class_specific": {
+      "channel_divinity_charges": 2,
+      "destroy_undead_cr": 2
+    },
+    "index": "cleric_level_13",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/13/cleric_level_13.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "destroy_undead_cr_3_or_below",
+        "name": "Destroy Undead (CR 3 or below)",
+        "url": "/assets/atlas/features/json/destroy_undead_cr_3_or_below.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 2,
+      "destroy_undead_cr": 3
+    },
+    "index": "cleric_level_14",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/14/cleric_level_14.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "class_specific": {
+      "channel_divinity_charges": 2,
+      "destroy_undead_cr": 3
+    },
+    "index": "cleric_level_15",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/15/cleric_level_15.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "cleric_ability_score_improvement_4",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/cleric_ability_score_improvement_4.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 2,
+      "destroy_undead_cr": 3
+    },
+    "index": "cleric_level_16",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/16/cleric_level_16.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "destroy_undead_cr_4_or_below",
+        "name": "Destroy Undead (CR 4 or below)",
+        "url": "/assets/atlas/features/json/destroy_undead_cr_4_or_below.json"
+      },
+      {
+        "index": "divine_domain_improvement_4",
+        "name": "Divine Domain feature",
+        "url": "/assets/atlas/features/json/divine_domain_improvement_4.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 2,
+      "destroy_undead_cr": 4
+    },
+    "index": "cleric_level_17",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/17/cleric_level_17.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "channel_divinity_3_rest",
+        "name": "Channel Divinity (3/rest)",
+        "url": "/assets/atlas/features/json/channel_divinity_3_rest.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 3,
+      "destroy_undead_cr": 4
+    },
+    "index": "cleric_level_18",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/18/cleric_level_18.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "cleric_ability_score_improvement_5",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/cleric_ability_score_improvement_5.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 3,
+      "destroy_undead_cr": 4
+    },
+    "index": "cleric_level_19",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/19/cleric_level_19.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 2,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "divine_intervention_improvement",
+        "name": "Divine Intervention Improvement",
+        "url": "/assets/atlas/features/json/divine_intervention_improvement.json"
+      }
+    ],
+    "class_specific": {
+      "channel_divinity_charges": 3,
+      "destroy_undead_cr": 4
+    },
+    "index": "cleric_level_20",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    "url": "/assets/atlas/class/levels/20/cleric_level_20.json",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 2,
+      "spell_slots_level_7": 2,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  }
+]
