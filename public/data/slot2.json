@@ -4,12 +4,12 @@
   "saveVersion": 2,
   "gender": "Female",
   "stats": {
-    "str": 16,
-    "dex": 16,
-    "con": 15,
-    "int": 14,
-    "wis": 11,
-    "cha": 9
+    "str": 13,
+    "dex": 15,
+    "con": 13,
+    "int": 12,
+    "wis": 8,
+    "cha": 15
   },
   "proficiencies": [
     "skill: perception",
@@ -17,17 +17,17 @@
     "shortswords",
     "shortbows",
     "longbows",
-    "Skill: Sleight Of Hand",
-    "Skill: Stealth",
-    "Thieves' Tools",
-    "all armor",
-    "shields",
+    "Skill: Investigation",
+    "Skill: Perception",
+    "Calligrapher'S Supplies",
     "simple weapons",
-    "martial weapons",
+    "saving throw: dex",
     "saving throw: str",
-    "saving throw: con",
     "Saving Throw: str",
-    "Saving Throw: con"
+    "Saving Throw: dex",
+    "skill_investigation",
+    "skill_perception",
+    "calligraphers_supplies"
   ],
   "traits": [
     "darkvision",
@@ -35,8 +35,8 @@
     "trance",
     "keen senses",
     "elf weapon training",
-    "high elf cantrip",
-    "extra language"
+    "fleet of foot",
+    "mask of the wild"
   ],
   "features": [
     {
@@ -70,124 +70,68 @@
       "source": "Species"
     },
     {
-      "name": "high elf cantrip",
-      "index": "high_elf_cantrip",
-      "desc": "You know one cantrip of your choice form the wizard spell list. Intelligence is your spellcasting ability for it.",
+      "name": "fleet of foot",
+      "index": "fleet_of_foot",
+      "desc": "Your base walking speed increases to 35 feet.",
       "source": "Species"
     },
     {
-      "name": "extra language",
-      "index": "extra_language",
-      "desc": "You can speak, read, and write one extra language of your choice.",
+      "name": "mask of the wild",
+      "index": "mask_of_the_wild",
+      "desc": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.",
       "source": "Species"
     },
     {
-      "index": "alert",
-      "name": "Alert",
-      "url": "/assets/atlas/feats/json/alert.json",
+      "index": "skilled",
+      "name": "Skilled",
+      "url": "/assets/atlas/feats/json/skilled.json",
       "source": "Background"
     },
     {
-      "index": "fighter_fighting_style",
+      "index": "monk_unarmored_defense",
       "class": {
-        "index": "fighter",
-        "name": "fighter",
-        "url": "/assets/atlas/class/json/fighter.json"
+        "index": "monk",
+        "name": "monk",
+        "url": "/assets/atlas/class/json/monk.json"
       },
-      "name": "fighting style",
+      "name": "unarmored defense",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
+        "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier."
       ],
+      "url": "/assets/atlas/features/json/monk_unarmored_defense.json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/monk_unarmored_defense.webp",
       "feature_specific": {
-        "subfeature_options": {
-          "choose": 1,
-          "type": "feature",
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_archery",
-                  "name": "fighting style: archery",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_archery.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_defense",
-                  "name": "fighting style: defense",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_defense.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_dueling",
-                  "name": "fighting style: dueling",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_dueling.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_great_weapon_fighting",
-                  "name": "fighting style: great weapon fighting",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_great_weapon_fighting.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_protection",
-                  "name": "fighting style: protection",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_protection.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_two_weapon_fighting",
-                  "name": "fighting style: two_weapon fighting",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_two_weapon_fighting.json"
-                }
-              }
-            ]
-          }
-        },
-        "invocations": []
+        "passive_modifiers": {
+          "ac_set": "10 + dexterity_modifier + wisdom_modifier"
+        }
       },
-      "url": "/assets/atlas/features/json/fighter_fighting_style.json",
-      "updated_at": "2025-10-24T20:42:13.150Z",
-      "image": "/assets/atlas/features/images/fighter_fighting_style.webp",
       "source": "Class"
     },
     {
-      "index": "second_wind",
+      "index": "martial_arts",
       "class": {
-        "index": "fighter",
-        "name": "fighter",
-        "url": "/assets/atlas/class/json/fighter.json"
+        "index": "monk",
+        "name": "monk",
+        "url": "/assets/atlas/class/json/monk.json"
       },
-      "name": "second wind",
+      "name": "martial arts",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again."
+        "At 1st level, your practice of martial arts gives you mastery of combat styles that use unarmed strikes and monk weapons, which are shortswords and any simple melee weapons that don't have the two- handed or heavy property.",
+        "You gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield:",
+        "- You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.",
+        "- You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of Table: The Monk.",
+        "- When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn.",
+        "Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon."
       ],
-      "feature_specific": {
-        "special_action": "bonus_action",
-        "healing": {
-          "dice": "1d10",
-          "modifier": "fighter_level"
-        }
-      },
-      "url": "/assets/atlas/features/json/second_wind.json",
-      "updated_at": "2025-10-24T20:42:13.150Z",
-      "image": "/assets/atlas/features/images/second_wind.webp",
+      "url": "/assets/atlas/features/json/martial_arts.json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/martial_arts.webp",
+      "feature_specific": {},
       "source": "Class"
     }
   ],
@@ -198,7 +142,7 @@
     "cp": 0,
     "sp": 0,
     "ep": 0,
-    "gp": 26,
+    "gp": 49,
     "pp": 0
   },
   "appearance": {
@@ -212,7 +156,92 @@
     "size": "Medium",
     "specialFeatures": []
   },
-  "items": {},
+  "items": {
+    "dart_o18hvx4hf": {
+      "id": "dart_o18hvx4hf",
+      "template": "dart",
+      "quantity": 10,
+      "addedAt": 1780764317277,
+      "kind": "weapon"
+    },
+    "dungeoneers_pack_df3zx0tze": {
+      "id": "dungeoneers_pack_df3zx0tze",
+      "template": "dungeoneers_pack",
+      "quantity": 1,
+      "addedAt": 1780764343913,
+      "kind": "equipment_pack"
+    },
+    "backpack_0eqs38xjf": {
+      "id": "backpack_0eqs38xjf",
+      "template": "backpack",
+      "quantity": 1,
+      "addedAt": 1780764344267,
+      "kind": "container"
+    },
+    "crowbar_llx0khli7": {
+      "id": "crowbar_llx0khli7",
+      "template": "crowbar",
+      "quantity": 1,
+      "addedAt": 1780764344345,
+      "kind": "ring"
+    },
+    "hammer_l9dghs5zj": {
+      "id": "hammer_l9dghs5zj",
+      "template": "hammer",
+      "quantity": 1,
+      "addedAt": 1780764344557,
+      "kind": "ring"
+    },
+    "piton_hvlqr443y": {
+      "id": "piton_hvlqr443y",
+      "template": "piton",
+      "quantity": 10,
+      "addedAt": 1780764344835,
+      "kind": "ring"
+    },
+    "torch_i0hmpdcqb": {
+      "id": "torch_i0hmpdcqb",
+      "template": "torch",
+      "quantity": 10,
+      "addedAt": 1780764345071,
+      "kind": "ring"
+    },
+    "tinderbox_jatj7woc9": {
+      "id": "tinderbox_jatj7woc9",
+      "template": "tinderbox",
+      "quantity": 1,
+      "addedAt": 1780764345327,
+      "kind": "ring"
+    },
+    "rations_1_day_ghu523die": {
+      "id": "rations_1_day_ghu523die",
+      "template": "rations_1_day",
+      "quantity": 10,
+      "addedAt": 1780764345528,
+      "kind": "consumable"
+    },
+    "waterskin_qqbahpeir": {
+      "id": "waterskin_qqbahpeir",
+      "template": "waterskin",
+      "quantity": 1,
+      "addedAt": 1780764345778,
+      "kind": "ring"
+    },
+    "rope_hempen_50_feet_wtq7qea7q": {
+      "id": "rope_hempen_50_feet_wtq7qea7q",
+      "template": "rope_hempen_50_feet",
+      "quantity": 1,
+      "addedAt": 1780764345991,
+      "kind": "ring"
+    },
+    "greatclub_mrjafib4y": {
+      "id": "greatclub_mrjafib4y",
+      "template": "greatclub",
+      "quantity": 1,
+      "addedAt": 1780764346790,
+      "kind": "weapon"
+    }
+  },
   "containers": {
     "backpack_new_character": {
       "id": "backpack_new_character",
@@ -221,91 +250,91 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": null
+          "itemId": "backpack_w6l25ff37"
         },
         {
           "id": "bag_1",
-          "itemId": null
+          "itemId": "backpack_0eqs38xjf"
         },
         {
           "id": "bag_2",
-          "itemId": null
+          "itemId": "crowbar_2c006zyrn"
         },
         {
           "id": "bag_3",
-          "itemId": null
+          "itemId": "crowbar_llx0khli7"
         },
         {
           "id": "bag_4",
-          "itemId": null
+          "itemId": "hammer_kew57gm04"
         },
         {
           "id": "bag_5",
-          "itemId": null
+          "itemId": "hammer_l9dghs5zj"
         },
         {
           "id": "bag_6",
-          "itemId": null
+          "itemId": "piton_0hnq0is0a"
         },
         {
           "id": "bag_7",
-          "itemId": null
+          "itemId": "piton_hvlqr443y"
         },
         {
           "id": "bag_8",
-          "itemId": null
+          "itemId": "torch_23r2m47wg"
         },
         {
           "id": "bag_9",
-          "itemId": null
+          "itemId": "torch_i0hmpdcqb"
         },
         {
           "id": "bag_10",
-          "itemId": null
+          "itemId": "tinderbox_jatj7woc9"
         },
         {
           "id": "bag_11",
-          "itemId": null
+          "itemId": "tinderbox_vld14tyb1"
         },
         {
           "id": "bag_12",
-          "itemId": null
+          "itemId": "rations_1_day_ghu523die"
         },
         {
           "id": "bag_13",
-          "itemId": null
+          "itemId": "rations_1_day_gbmrl08j5"
         },
         {
           "id": "bag_14",
-          "itemId": null
+          "itemId": "waterskin_qqbahpeir"
         },
         {
           "id": "bag_15",
-          "itemId": null
+          "itemId": "waterskin_ia3ntlicb"
         },
         {
           "id": "bag_16",
-          "itemId": null
+          "itemId": "rope_hempen_50_feet_wtq7qea7q"
         },
         {
           "id": "bag_17",
-          "itemId": null
+          "itemId": "dungeoneers_pack_df3zx0tze"
         },
         {
           "id": "bag_18",
-          "itemId": null
+          "itemId": "rope_hempen_50_feet_2yju26w5a"
         },
         {
           "id": "bag_19",
-          "itemId": null
+          "itemId": "dungeoneers_pack_73k6k4185"
         },
         {
           "id": "bag_20",
-          "itemId": null
+          "itemId": "greatclub_mrjafib4y"
         },
         {
           "id": "bag_21",
-          "itemId": null
+          "itemId": "greatclub_m5vb21n2b"
         },
         {
           "id": "bag_22",
@@ -323,7 +352,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": null
+        "itemId": "dart_o18hvx4hf"
       },
       {
         "id": "off_hand",
@@ -421,38 +450,35 @@
   },
   "backpack": [
     {
-      "id": "thieves_tools_10902mglt",
-      "index": "thieves_tools",
-      "name": "Thieves' Tools",
+      "id": "carpenters_tools_nu8ehfc9z",
+      "index": "carpenters_tools",
+      "name": "Carpenter'S Tools",
       "quantity": 1,
-      "weight": 1,
+      "weight": 6,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/thieves_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/thieves_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/thieves_tools.webp",
+      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp",
       "special": [],
       "equipment_category": {
         "index": "tools",
         "name": "tools",
         "url": "/assets/atlas/equipment_categories/tools"
       },
-      "tool_category": "Other Tools",
+      "tool_category": "Artisan's Tools",
       "cost": {
-        "quantity": 25,
+        "quantity": 8,
         "unit": "gp"
       },
       "desc": [
-        "This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks."
+        "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
       ],
-      "updated_at": "2026-05-04T20:40:21.383Z",
+      "updated_at": "2025-10-24T20:42:12.926Z",
       "contents": [],
       "properties": [],
-      "image": "/assets/atlas/equipment/images/thieves_tools.webp",
-      "sprite_index": 15,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet9.0webp",
-      "category": "Other Tools",
-      "last_updated": "4-5-2026",
-      "background_type": "land_forest",
+      "image": "/assets/atlas/equipment/images/carpenters_tools.webp",
+      "sprite_index": 20,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp",
       "kind": "tool",
       "equipSlots": [
         "tool_1",
@@ -461,15 +487,16 @@
       ]
     },
     {
-      "id": "crowbar_h9z4s1uoe",
-      "index": "crowbar",
-      "name": "Crowbar",
+      "id": "pot_iron_7xz5svr6h",
+      "index": "pot_iron",
+      "name": "Pot Iron",
       "quantity": 1,
-      "weight": 5,
+      "weight": 10,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/crowbar.json",
-      "image_url": "public/assets/atlas/equipment/images/crowbar.webp",
-      "imageUrl": "/assets/atlas/equipment/images/crowbar.webp",
+      "url": "/assets/atlas/equipment/json/pot_iron.json",
+      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp",
+      "desc": [],
       "special": [],
       "equipment_category": {
         "index": "adventuring_gear",
@@ -485,15 +512,87 @@
         "quantity": 2,
         "unit": "gp"
       },
-      "desc": [
-        "Using a crowbar grants advantage to Strength checks where the crowbar's leverage can be applied."
-      ],
-      "updated_at": "2026-04-21T14:16:41.674Z",
+      "updated_at": "2025-10-24T20:42:12.926Z",
       "contents": [],
       "properties": [],
-      "image": "/assets/atlas/equipment/images/crowbar.webp",
-      "sprite_index": 21,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
+      "image": "/assets/atlas/equipment/images/pot_iron.webp",
+      "sprite_index": 12,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.0webp",
+      "kind": "ring",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "calligraphers_supplies_xccf6e2f0",
+      "index": "calligraphers_supplies",
+      "name": "Calligrapher'S Supplies",
+      "quantity": 2,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
+      "image_url": "public/assets/atlas/equipment/images/calligraphers_supplies.webp",
+      "imageUrl": "/assets/atlas/equipment/images/calligraphers_supplies.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "tools",
+        "name": "tools",
+        "url": "/assets/atlas/equipment_categories/tools"
+      },
+      "tool_category": "Artisan's Tools",
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "desc": [
+        "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/calligraphers_supplies.webp",
+      "sprite_index": 16,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp",
+      "kind": "tool",
+      "equipSlots": [
+        "tool_1",
+        "tool_2",
+        "tool_3"
+      ]
+    },
+    {
+      "id": "abacus_0nj0dq2ln",
+      "index": "abacus",
+      "name": "Abacus",
+      "quantity": 2,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
+      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-21T14:13:36.560Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/abacus.webp",
+      "sprite_index": 0,
+      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp",
       "background_type": "land_forest",
       "last_updated": "21-4-2026",
       "kind": "ring",
@@ -503,15 +602,15 @@
       ]
     },
     {
-      "id": "pouch_j9x44gqs1",
-      "index": "pouch",
-      "name": "Pouch",
+      "id": "book_99w6k8m5r",
+      "index": "book",
+      "name": "Book",
       "quantity": 2,
-      "weight": 1,
+      "weight": 5,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/pouch.json",
-      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pouch.webp",
+      "url": "/assets/atlas/equipment/json/book.json",
+      "image_url": "public/assets/atlas/equipment/images/book.webp",
+      "imageUrl": "/assets/atlas/equipment/images/book.webp",
       "special": [],
       "equipment_category": {
         "index": "adventuring_gear",
@@ -524,21 +623,181 @@
         "url": "/assets/atlas/equipment_categories/standard_gear"
       },
       "cost": {
-        "quantity": 5,
-        "unit": "sp"
+        "quantity": 25,
+        "unit": "gp"
       },
       "desc": [
-        "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
+        "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook (described later in this section)."
       ],
-      "updated_at": "2026-05-01T07:55:16.273Z",
+      "updated_at": "2026-05-01T09:04:11.871Z",
       "contents": [],
       "properties": [],
-      "image": "/assets/atlas/equipment/images/pouch.webp",
-      "sprite_index": 14,
+      "image": "/assets/atlas/equipment/images/book.webp",
+      "sprite_index": 10,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp",
+      "background_type": "land_forest",
+      "last_updated": "1-5-2026",
+      "kind": "ring",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "ink_1_ounce_bottle_mnriaowl9",
+      "index": "ink_1_ounce_bottle",
+      "name": "Ink 1 Ounce Bottle",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
+      "image_url": "public/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
+      "desc": [
+        "This viscous ink, drawn from the pallid veins of a drowned kraken, whispers secrets on the page, but each stroke draws the writer closer to the abyss. It is said that pacts sealed with this ink bind not just the signatory, but their very soul to the unseen horrors that lurk beneath the waves.\n"
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-23T09:40:01.455Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
+      "sprite_index": 12,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp",
+      "background_type": "land_forest",
+      "last_updated": "23-4-2026",
+      "category": "Adventuring Gear",
+      "kind": "ring",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "ink_pen_3ddynl60l",
+      "index": "ink_pen",
+      "name": "Ink Pen",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/ink_pen.json",
+      "image_url": "public/assets/atlas/equipment/images/ink_pen.webp",
+      "imageUrl": "/assets/atlas/equipment/images/ink_pen.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "cp"
+      },
+      "updated_at": "2026-04-21T14:10:12.749Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/ink_pen.webp",
+      "sprite_index": 13,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp",
+      "background_type": "land_forest",
+      "last_updated": "21-4-2026",
+      "kind": "ring",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "parchment_one_sheet_t8v9yu5or",
+      "index": "parchment_one_sheet",
+      "name": "Parchment (One Sheet)",
+      "quantity": 20,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
+      "image_url": "public/assets/atlas/equipment/images/parchment_one_sheet.webp",
+      "imageUrl": "/assets/atlas/equipment/images/parchment_one_sheet.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "sp"
+      },
+      "updated_at": "2026-04-21T14:20:56.451Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/parchment_one_sheet.webp",
+      "sprite_index": 1,
       "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.0webp",
       "background_type": "land_forest",
-      "category": "Adventuring Gear",
-      "last_updated": "1-5-2026",
+      "last_updated": "21-4-2026",
+      "kind": "ring",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "clothes_travelers_3pvyv05rb",
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "quantity": 2,
+      "weight": 4,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/clothes_travelers.webp",
+      "sprite_index": 12,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
       "kind": "ring",
       "equipSlots": [
         "ring_1",
@@ -548,16 +807,18 @@
   ],
   "inventory": {
     "main-hand": {
-      "id": "dagger_fajqxcwg8",
-      "index": "dagger",
-      "name": "Dagger",
-      "quantity": 2,
-      "weight": 1,
+      "id": "sickle_1qw7z8wxe",
+      "index": "sickle",
+      "name": "Sickle",
+      "quantity": 1,
+      "weight": 2,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/dagger.json",
-      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
-      "imageUrl": "/assets/atlas/equipment/images/dagger.webp",
-      "desc": [],
+      "url": "/assets/atlas/equipment/json/sickle.json",
+      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
+      "desc": [
+        "The cold, serrated edge of this blade is stained with a permanent, rusted patina, whispering of harvests that yielded blood instead of grain. It hungers for the soft sinew of the living, leaving wounds that fester with the bitter chill of an unmarked grave."
+      ],
       "special": [],
       "equipment_category": {
         "index": "weapon",
@@ -568,15 +829,15 @@
       "weapon_range": "Melee",
       "category_range": "Simple Melee",
       "cost": {
-        "quantity": 2,
+        "quantity": 1,
         "unit": "gp"
       },
       "damage": {
         "damage_dice": "1d4",
         "damage_type": {
-          "index": "piercing",
-          "name": "piercing",
-          "url": "/assets/atlas/damage_types/json/piercing.json"
+          "index": "slashing",
+          "name": "slashing",
+          "url": "/assets/atlas/damage_types/json/slashing.json"
         }
       },
       "range": {
@@ -584,19 +845,9 @@
       },
       "properties": [
         {
-          "index": "finesse",
-          "name": "finesse",
-          "url": "/assets/atlas/weapon_properties/finesse"
-        },
-        {
           "index": "light",
           "name": "light",
           "url": "/assets/atlas/weapon_properties/light"
-        },
-        {
-          "index": "thrown",
-          "name": "thrown",
-          "url": "/assets/atlas/weapon_properties/thrown"
         },
         {
           "index": "monk",
@@ -604,28 +855,23 @@
           "url": "/assets/atlas/weapon_properties/monk"
         }
       ],
-      "throw_range": {
-        "normal": 20,
-        "long": 60
-      },
-      "updated_at": "2026-04-28T13:26:26.921Z",
+      "updated_at": "2026-04-14T08:14:43.387Z",
       "contents": [],
-      "image": "/assets/atlas/equipment/images/dagger.webp",
-      "sprite_index": 23,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
-      "background_type": "land_forest",
-      "slot": "main-hand",
-      "category": "Simple Melee Weapons",
-      "last_updated": "28-4-2026",
+      "image": "/assets/atlas/equipment/images/sickle.webp",
+      "sprite_index": 20,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
+      "category": "Melee Weapons",
+      "last_updated": "14-4-2026",
       "kind": "weapon",
       "equipSlots": [
         "main_hand",
         "off_hand"
       ],
-      "main_hand_slot": "Dagger"
+      "slot": "main-hand",
+      "main_hand_slot": "Sickle"
     },
     "clothes": {
-      "id": "clothes_travelers_i8x2xsk5n",
+      "id": "clothes_travelers_it6g5de3c",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "quantity": 1,
@@ -675,27 +921,27 @@
   "choices": {
     "background_ability_options": [
       "dex",
-      "con",
-      "int"
+      "int",
+      "wis"
     ],
     "background_proficiencies": [
-      "Skill: Sleight Of Hand",
-      "Skill: Stealth",
-      "Thieves' Tools"
+      "Skill: Investigation",
+      "Skill: Perception",
+      "Calligrapher'S Supplies"
     ],
     "background_bonus_selections": [
-      "{\"dex\":1,\"con\":1,\"int\":1}"
+      "{\"dex\":2,\"wis\":1}"
     ]
   },
   "race": "elf",
-  "subrace": "high_elf",
-  "class": "fighter",
+  "subrace": "wood_elf",
+  "class": "monk",
   "spellcastingAbility": "cha",
-  "background": "criminal",
-  "alignment": "chaotic-evil",
-  "name": "hib",
+  "background": "scribe",
+  "alignment": "chaotic-neutral",
+  "name": "etu",
   "id": "slot2",
-  "hp": 7,
-  "maxHp": 7,
-  "lastSaved": "2026-06-06T16:24:42.934Z"
+  "hp": 5,
+  "maxHp": 5,
+  "lastSaved": "2026-06-06T16:47:23.568Z"
 }
