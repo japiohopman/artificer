@@ -1,0 +1,25 @@
+{
+  "level": 16,
+  "ability_score_bonuses": 5,
+  "prof_bonus": 5,
+  "features": [
+    {
+      "index": "rogue_ability_score_improvement_5",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/rogue_ability_score_improvement_5.json"
+    }
+  ],
+  "class_specific": {
+    "sneak_attack": {
+      "dice_count": 8,
+      "dice_value": 6
+    }
+  },
+  "index": "rogue_level_16",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "url": "/assets/atlas/class/levels/16/rogue_level_16.json"
+}

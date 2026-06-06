@@ -1,0 +1,29 @@
+{
+  "level": 14,
+  "ability_score_bonuses": 3,
+  "prof_bonus": 5,
+  "features": [
+    {
+      "index": "cleansing_touch",
+      "name": "Cleansing Touch",
+      "url": "/assets/atlas/features/json/cleansing_touch.json"
+    }
+  ],
+  "class_specific": {
+    "aura_range": 10
+  },
+  "index": "paladin_level_14",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/paladin.json"
+  },
+  "url": "/assets/atlas/class/levels/14/paladin_level_14.json",
+  "spellcasting": {
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 1,
+    "spell_slots_level_5": 0
+  }
+}

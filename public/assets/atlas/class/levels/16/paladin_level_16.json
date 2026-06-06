@@ -1,0 +1,29 @@
+{
+  "level": 16,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 5,
+  "features": [
+    {
+      "index": "paladin_ability_score_improvement_4",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/paladin_ability_score_improvement_4.json"
+    }
+  ],
+  "class_specific": {
+    "aura_range": 10
+  },
+  "index": "paladin_level_16",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/paladin.json"
+  },
+  "url": "/assets/atlas/class/levels/16/paladin_level_16.json",
+  "spellcasting": {
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 2,
+    "spell_slots_level_5": 0
+  }
+}

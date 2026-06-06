@@ -1,0 +1,29 @@
+{
+  "level": 13,
+  "ability_score_bonuses": 3,
+  "prof_bonus": 5,
+  "features": [],
+  "class_specific": {
+    "channel_divinity_charges": 2,
+    "destroy_undead_cr": 2
+  },
+  "index": "cleric_level_13",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/cleric.json"
+  },
+  "url": "/assets/atlas/class/levels/13/cleric_level_13.json",
+  "spellcasting": {
+    "cantrips_known": 5,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 3,
+    "spell_slots_level_5": 2,
+    "spell_slots_level_6": 1,
+    "spell_slots_level_7": 1,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

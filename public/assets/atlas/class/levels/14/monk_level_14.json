@@ -1,0 +1,27 @@
+{
+  "level": 14,
+  "ability_score_bonuses": 3,
+  "prof_bonus": 5,
+  "features": [
+    {
+      "index": "diamond_soul",
+      "name": "Diamond Soul",
+      "url": "/assets/atlas/features/json/diamond_soul.json"
+    }
+  ],
+  "class_specific": {
+    "martial_arts": {
+      "dice_count": 1,
+      "dice_value": 8
+    },
+    "ki_points": 14,
+    "unarmored_movement": 25
+  },
+  "index": "monk_level_14",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/14/monk_level_14.json"
+}
