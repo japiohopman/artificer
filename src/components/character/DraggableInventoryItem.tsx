@@ -11,7 +11,8 @@ import { ChromaKeyImage } from '../ChromaKeyImage';
 
 interface DraggableInventoryItemProps {
   item: any;
-  index: number | string;
+  index?: number | string;
+  itemId?: string;
   sourceId: string;
   slot?: string;
   compact?: boolean;
@@ -30,14 +31,16 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
   gridMode = false,
   onRemove,
   onEquip,
-  id
+  id,
+  itemId
 }) => {
+  const effectiveItemId = itemId || item.id || String(index);
   const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
-    id: slot ? `${sourceId}-equipped-${slot}` : `${sourceId}-${item.id}-${index}`,
+    id: slot ? `${sourceId}-equipped-${slot}` : `${sourceId}-${effectiveItemId}`,
     data: {
       item,
       sourceId,
-      index,
+      itemId: effectiveItemId,
       slot
     }
   });
@@ -63,7 +66,7 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
         if (isBookLike(item)) {
           useStore.getState().setFocusedItem(item);
         } else {
-          useStore.getState().setInspectingItem({ item, sourceId, index: index as any, slot });
+          useStore.getState().setInspectingItem({ item, sourceId, itemId: effectiveItemId, slot });
         }
       }}
       className={cn(
@@ -133,7 +136,7 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
             <button 
               onClick={(e) => {
                 e.stopPropagation();
-                onRemove(index);
+                onRemove(effectiveItemId);
               }}
               className="p-1 px-1.5 text-parchment-400 hover:text-red-600 transition-colors"
             >

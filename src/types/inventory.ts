@@ -65,36 +65,44 @@ export interface InventoryContainer {
  * STANDARD EQUIPMENT SLOTS
  * The "Equipable" catalog for characters
  */
+export interface SlotAcceptanceRules {
+  kinds?: ItemKind[];
+  weaponCategory?: string;
+  armorCategory?: string;
+  toolType?: string;
+  focusType?: string;
+}
+
 export const EQUIPMENT_SLOT_CATALOG = [
-  { id: 'main_hand', label: 'Main Hand' },
-  { id: 'off_hand', label: 'Off Hand' },
-  { id: 'ranged', label: 'Ranged' },
-  { id: 'ammo', label: 'Ammo' },
-  { id: 'chest', label: 'Body' },
-  { id: 'clothes', label: 'Clothes' },
-  { id: 'head', label: 'Head' },
-  { id: 'hands', label: 'Hands' },
-  { id: 'feet', label: 'Feet' },
-  { id: 'back', label: 'Back' },
-  { id: 'neck', label: 'Neck' },
-  { id: 'belt', label: 'Belt' },
-  { id: 'ring_1', label: 'Ring 1' },
-  { id: 'ring_2', label: 'Ring 2' },
-  { id: 'tool_1', label: 'Tool 1' },
-  { id: 'tool_2', label: 'Tool 2' },
-  { id: 'tool_3', label: 'Tool 3' },
-  { id: 'tool_4', label: 'Tool 4' },
-  { id: 'tool_5', label: 'Tool 5' },
-  { id: 'focus', label: 'Focus' },
-  { id: 'pouch', label: 'Pouch' },
-  { id: 'acc_1', label: 'Accessory 1' },
-  { id: 'acc_2', label: 'Accessory 2' },
-  { id: 'acc_3', label: 'Accessory 3' },
-  { id: 'acc_4', label: 'Accessory 4' },
-  { id: 'quick_1', label: 'Quick 1' },
-  { id: 'quick_2', label: 'Quick 2' },
-  { id: 'quick_3', label: 'Quick 3' },
-  { id: 'quick_4', label: 'Quick 4' },
+  { id: 'main_hand', label: 'Main Hand', accepts: { kinds: ['weapon', 'tool', 'focus'] } as SlotAcceptanceRules },
+  { id: 'off_hand', label: 'Off Hand', accepts: { kinds: ['shield', 'weapon', 'tool', 'focus'] } as SlotAcceptanceRules },
+  { id: 'ranged', label: 'Ranged', accepts: { kinds: ['weapon'] } as SlotAcceptanceRules },
+  { id: 'ammo', label: 'Ammo', accepts: { kinds: ['consumable'] } as SlotAcceptanceRules }, // Ammunition is often categorized as consumable or adventuring_gear
+  { id: 'chest', label: 'Body', accepts: { kinds: ['armor'] } as SlotAcceptanceRules },
+  { id: 'clothes', label: 'Clothes', accepts: { kinds: ['adventuring_gear', 'trinket'] } as SlotAcceptanceRules },
+  { id: 'head', label: 'Head', accepts: { kinds: ['head', 'trinket', 'armor'] } as SlotAcceptanceRules },
+  { id: 'hands', label: 'Hands', accepts: { kinds: ['hands', 'trinket', 'armor'] } as SlotAcceptanceRules },
+  { id: 'feet', label: 'Feet', accepts: { kinds: ['feet', 'trinket', 'armor'] } as SlotAcceptanceRules },
+  { id: 'back', label: 'Back', accepts: { kinds: ['back', 'container'] } as SlotAcceptanceRules },
+  { id: 'neck', label: 'Neck', accepts: { kinds: ['neck', 'trinket'] } as SlotAcceptanceRules },
+  { id: 'belt', label: 'Belt', accepts: { kinds: ['belt', 'container'] } as SlotAcceptanceRules },
+  { id: 'ring_1', label: 'Ring 1', accepts: { kinds: ['ring', 'trinket'] } as SlotAcceptanceRules },
+  { id: 'ring_2', label: 'Ring 2', accepts: { kinds: ['ring', 'trinket'] } as SlotAcceptanceRules },
+  { id: 'tool_1', label: 'Tool 1', accepts: { kinds: ['tool'] } as SlotAcceptanceRules },
+  { id: 'tool_2', label: 'Tool 2', accepts: { kinds: ['tool'] } as SlotAcceptanceRules },
+  { id: 'tool_3', label: 'Tool 3', accepts: { kinds: ['tool'] } as SlotAcceptanceRules },
+  { id: 'tool_4', label: 'Tool 4', accepts: { kinds: ['tool'] } as SlotAcceptanceRules },
+  { id: 'tool_5', label: 'Tool 5', accepts: { kinds: ['tool'] } as SlotAcceptanceRules },
+  { id: 'focus', label: 'Focus', accepts: { kinds: ['focus'] } as SlotAcceptanceRules },
+  { id: 'pouch', label: 'Pouch', accepts: { kinds: ['container'] } as SlotAcceptanceRules },
+  { id: 'acc_1', label: 'Accessory 1', accepts: { kinds: ['trinket', 'adventuring_gear'] } as SlotAcceptanceRules },
+  { id: 'acc_2', label: 'Accessory 2', accepts: { kinds: ['trinket', 'adventuring_gear'] } as SlotAcceptanceRules },
+  { id: 'acc_3', label: 'Accessory 3', accepts: { kinds: ['trinket', 'adventuring_gear'] } as SlotAcceptanceRules },
+  { id: 'acc_4', label: 'Accessory 4', accepts: { kinds: ['trinket', 'adventuring_gear'] } as SlotAcceptanceRules },
+  { id: 'quick_1', label: 'Quick 1', accepts: { kinds: ['consumable', 'weapon', 'tool'] } as SlotAcceptanceRules },
+  { id: 'quick_2', label: 'Quick 2', accepts: { kinds: ['consumable', 'weapon', 'tool'] } as SlotAcceptanceRules },
+  { id: 'quick_3', label: 'Quick 3', accepts: { kinds: ['consumable', 'weapon', 'tool'] } as SlotAcceptanceRules },
+  { id: 'quick_4', label: 'Quick 4', accepts: { kinds: ['consumable', 'weapon', 'tool'] } as SlotAcceptanceRules },
 ] as const;
 
 export type EquipmentSlotId = (typeof EQUIPMENT_SLOT_CATALOG)[number]['id'];

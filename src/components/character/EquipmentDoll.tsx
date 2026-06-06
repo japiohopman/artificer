@@ -9,10 +9,10 @@ import { ChromaKeyImage } from '../ChromaKeyImage';
 
 export type ItemSlot = 
   | 'head' | 'neck' | 'chest' | 'back' 
-  | 'main-hand' | 'off-hand' | 'hands' | 'feet' 
-  | 'ring-1' | 'ring-2' | 'focus'
-  | 'clothes' | 'acc-1' | 'acc-2' | 'acc-3' | 'acc-4'
-  | 'tool-1' | 'tool-2' | 'tool-3' | 'tool-4' | 'tool-5';
+  | 'main_hand' | 'off_hand' | 'hands' | 'feet'
+  | 'ring_1' | 'ring_2' | 'focus'
+  | 'clothes' | 'acc_1' | 'acc_2' | 'acc_3' | 'acc_4'
+  | 'tool_1' | 'tool_2' | 'tool_3' | 'tool_4' | 'tool_5';
 
 interface ItemDollProps {
   activeSlots?: ItemSlot[];
@@ -38,23 +38,23 @@ const SLOT_ICONS: Record<ItemSlot, React.ElementType> = {
   'neck': Gem,
   'chest': Shirt,
   'back': Ghost,
-  'main-hand': Sword,
-  'off-hand': Shield,
+  'main_hand': Sword,
+  'off_hand': Shield,
   'hands': Hand,
   'feet': Footprints,
-  'ring-1': Gem,
-  'ring-2': Gem,
+  'ring_1': Gem,
+  'ring_2': Gem,
   'focus': Zap,
   'clothes': Shirt,
-  'acc-1': Gem,
-  'acc-2': Gem,
-  'acc-3': Gem,
-  'acc-4': Gem,
-  'tool-1': Wrench,
-  'tool-2': Wrench,
-  'tool-3': Wrench,
-  'tool-4': Wrench,
-  'tool-5': Wrench,
+  'acc_1': Gem,
+  'acc_2': Gem,
+  'acc_3': Gem,
+  'acc_4': Gem,
+  'tool_1': Wrench,
+  'tool_2': Wrench,
+  'tool_3': Wrench,
+  'tool_4': Wrench,
+  'tool_5': Wrench,
 };
 
 const SLOT_LABELS: Record<ItemSlot, string> = {
@@ -62,35 +62,35 @@ const SLOT_LABELS: Record<ItemSlot, string> = {
   'neck': 'Neck',
   'chest': 'Chest',
   'back': 'Back',
-  'main-hand': 'Main',
-  'off-hand': 'Off',
+  'main_hand': 'Main',
+  'off_hand': 'Off',
   'hands': 'Hands',
   'feet': 'Feet',
-  'ring-1': 'R1',
-  'ring-2': 'R2',
+  'ring_1': 'R1',
+  'ring_2': 'R2',
   'focus': 'Focus',
   'clothes': 'Cloth',
-  'acc-1': 'Acc 1',
-  'acc-2': 'Acc 2',
-  'acc-3': 'Acc 3',
-  'acc-4': 'Acc 4',
-  'tool-1': 'T1',
-  'tool-2': 'T2',
-  'tool-3': 'T3',
-  'tool-4': 'T4',
-  'tool-5': 'T5',
+  'acc_1': 'Acc 1',
+  'acc_2': 'Acc 2',
+  'acc_3': 'Acc 3',
+  'acc_4': 'Acc 4',
+  'tool_1': 'T1',
+  'tool_2': 'T2',
+  'tool_3': 'T3',
+  'tool_4': 'T4',
+  'tool_5': 'T5',
 };
 
 const DOLL_GRID: (ItemSlot | null)[][] = [
   [null, 'head', null],
   ['focus', 'neck', 'hands'],
-  ['main-hand', 'chest', 'off-hand'],
-  ['ring-1', 'back', 'ring-2'],
+  ['main_hand', 'chest', 'off_hand'],
+  ['ring_1', 'back', 'ring_2'],
   [null, 'feet', null]
 ];
 
-const SIDE_SLOTS: ItemSlot[] = ['clothes', 'acc-1', 'acc-2', 'acc-3', 'acc-4'];
-const BOTTOM_SLOTS: ItemSlot[] = ['tool-1', 'tool-2', 'tool-3', 'tool-4', 'tool-5'];
+const SIDE_SLOTS: ItemSlot[] = ['clothes', 'acc_1', 'acc_2', 'acc_3', 'acc_4'];
+const BOTTOM_SLOTS: ItemSlot[] = ['tool_1', 'tool_2', 'tool_3', 'tool_4', 'tool_5'];
 
 export const EquipmentDoll: React.FC<ItemDollProps> = ({ 
   activeSlots = [], 
