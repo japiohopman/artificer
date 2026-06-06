@@ -1,0 +1,27 @@
+{
+  "index": "lawful_evil",
+  "name": "Lawful Evil",
+  "abbreviation": "LE",
+  "color": "#7F1D1D",
+  "desc": "Lawful evil (LE) creatures methodically take what they want, within the limits of a code of tradition, loyalty, or order.",
+  "description": "Lawful evil (LE) creatures methodically take what they want, within the limits of a code of tradition, loyalty, or order. Devils, blue dragons, and hobgoblins are lawful evil.",
+  "gods": [
+    {
+      "index": "asmodeus",
+      "name": "Asmodeus",
+      "url": "/assets/atlas/gods/asmodeus.json"
+    },
+    {
+      "index": "bane",
+      "name": "Bane",
+      "url": "/assets/atlas/gods/bane.json"
+    },
+    {
+      "index": "loviatar",
+      "name": "Loviatar",
+      "url": "/assets/atlas/gods/loviatar.json"
+    }
+  ],
+  "url": "/assets/atlas/alignments/json/lawful_evil.json",
+  "updated_at": "2026-06-06T10:34:52.343224Z"
+}

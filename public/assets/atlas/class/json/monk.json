@@ -15,7 +15,7 @@
             "item": {
               "index": "skill_acrobatics",
               "name": "skill: acrobatics",
-              "url": "public/assets/atlas/proficiencies/json/skill_acrobatics.json"
+              "url": "/assets/atlas/proficiencies/json/skill_acrobatics.json"
             }
           },
           {
@@ -23,7 +23,7 @@
             "item": {
               "index": "skill_athletics",
               "name": "skill: athletics",
-              "url": "public/assets/atlas/proficiencies/json/skill_athletics.json"
+              "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
             }
           },
           {
@@ -31,7 +31,7 @@
             "item": {
               "index": "skill_history",
               "name": "skill: history",
-              "url": "public/assets/atlas/proficiencies/json/skill_history.json"
+              "url": "/assets/atlas/proficiencies/json/skill_history.json"
             }
           },
           {
@@ -39,7 +39,7 @@
             "item": {
               "index": "skill_insight",
               "name": "skill: insight",
-              "url": "public/assets/atlas/proficiencies/json/skill_insight.json"
+              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
             }
           },
           {
@@ -47,7 +47,7 @@
             "item": {
               "index": "skill_religion",
               "name": "skill: religion",
-              "url": "public/assets/atlas/proficiencies/json/skill_religion.json"
+              "url": "/assets/atlas/proficiencies/json/skill_religion.json"
             }
           },
           {
@@ -55,14 +55,14 @@
             "item": {
               "index": "skill_stealth",
               "name": "skill: stealth",
-              "url": "public/assets/atlas/proficiencies/json/skill_stealth.json"
+              "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
             }
           }
         ]
       }
     },
     {
-      "desc": "Choose one type of artisan\u2019s tools or one musical instrument",
+      "desc": "Choose one type of artisan’s tools or one musical instrument",
       "type": "proficiencies",
       "choose": 1,
       "from": {
@@ -82,7 +82,7 @@
                     "item": {
                       "index": "alchemists_supplies",
                       "name": "alchemist's supplies",
-                      "url": "public/assets/atlas/proficiencies/json/alchemists_supplies.json"
+                      "url": "/assets/atlas/proficiencies/json/alchemists_supplies.json"
                     }
                   },
                   {
@@ -90,7 +90,7 @@
                     "item": {
                       "index": "brewers_supplies",
                       "name": "brewer's supplies",
-                      "url": "public/assets/atlas/proficiencies/json/brewers_supplies.json"
+                      "url": "/assets/atlas/proficiencies/json/brewers_supplies.json"
                     }
                   },
                   {
@@ -98,7 +98,7 @@
                     "item": {
                       "index": "calligraphers_supplies",
                       "name": "calligrapher's supplies",
-                      "url": "public/assets/atlas/proficiencies/json/calligraphers_supplies.json"
+                      "url": "/assets/atlas/proficiencies/json/calligraphers_supplies.json"
                     }
                   },
                   {
@@ -106,7 +106,7 @@
                     "item": {
                       "index": "carpenters_tools",
                       "name": "carpenter's tools",
-                      "url": "public/assets/atlas/proficiencies/json/carpenters_tools.json"
+                      "url": "/assets/atlas/proficiencies/json/carpenters_tools.json"
                     }
                   },
                   {
@@ -114,7 +114,7 @@
                     "item": {
                       "index": "cartographers_tools",
                       "name": "cartographer's tools",
-                      "url": "public/assets/atlas/proficiencies/json/cartographers_tools.json"
+                      "url": "/assets/atlas/proficiencies/json/cartographers_tools.json"
                     }
                   },
                   {
@@ -122,7 +122,7 @@
                     "item": {
                       "index": "cobblers_tools",
                       "name": "cobbler's tools",
-                      "url": "public/assets/atlas/proficiencies/json/cobblers_tools.json"
+                      "url": "/assets/atlas/proficiencies/json/cobblers_tools.json"
                     }
                   },
                   {
@@ -130,7 +130,7 @@
                     "item": {
                       "index": "cooks_utensils",
                       "name": "cook's utensils",
-                      "url": "public/assets/atlas/proficiencies/json/cooks_utensils.json"
+                      "url": "/assets/atlas/proficiencies/json/cooks_utensils.json"
                     }
                   },
                   {
@@ -138,7 +138,7 @@
                     "item": {
                       "index": "glassblowers_tools",
                       "name": "glassblower's tools",
-                      "url": "public/assets/atlas/proficiencies/json/glassblowers_tools.json"
+                      "url": "/assets/atlas/proficiencies/json/glassblowers_tools.json"
                     }
                   },
                   {
@@ -146,7 +146,7 @@
                     "item": {
                       "index": "jewelers_tools",
                       "name": "jeweler's tools",
-                      "url": "public/assets/atlas/proficiencies/json/jewelers_tools.json"
+                      "url": "/assets/atlas/proficiencies/json/jewelers_tools.json"
                     }
                   },
                   {
@@ -154,7 +154,7 @@
                     "item": {
                       "index": "leatherworkers_tools",
                       "name": "leatherworker's tools",
-                      "url": "public/assets/atlas/proficiencies/json/leatherworkers_tools.json"
+                      "url": "/assets/atlas/proficiencies/json/leatherworkers_tools.json"
                     }
                   },
                   {
@@ -162,7 +162,7 @@
                     "item": {
                       "index": "masons_tools",
                       "name": "mason's tools",
-                      "url": "public/assets/atlas/proficiencies/json/masons_tools.json"
+                      "url": "/assets/atlas/proficiencies/json/masons_tools.json"
                     }
                   },
                   {
@@ -170,7 +170,7 @@
                     "item": {
                       "index": "painters_supplies",
                       "name": "painter's supplies",
-                      "url": "public/assets/atlas/proficiencies/json/painters_supplies.json"
+                      "url": "/assets/atlas/proficiencies/json/painters_supplies.json"
                     }
                   },
                   {
@@ -178,7 +178,7 @@
                     "item": {
                       "index": "potters_tools",
                       "name": "potter's tools",
-                      "url": "public/assets/atlas/proficiencies/json/potters_tools.json"
+                      "url": "/assets/atlas/proficiencies/json/potters_tools.json"
                     }
                   },
                   {
@@ -186,7 +186,7 @@
                     "item": {
                       "index": "smiths_tools",
                       "name": "smith's tools",
-                      "url": "public/assets/atlas/proficiencies/json/smiths_tools.json"
+                      "url": "/assets/atlas/proficiencies/json/smiths_tools.json"
                     }
                   },
                   {
@@ -194,7 +194,7 @@
                     "item": {
                       "index": "tinkers_tools",
                       "name": "tinker's tools",
-                      "url": "public/assets/atlas/proficiencies/json/tinkers_tools.json"
+                      "url": "/assets/atlas/proficiencies/json/tinkers_tools.json"
                     }
                   },
                   {
@@ -202,7 +202,7 @@
                     "item": {
                       "index": "weavers_tools",
                       "name": "weaver's tools",
-                      "url": "public/assets/atlas/proficiencies/json/weavers_tools.json"
+                      "url": "/assets/atlas/proficiencies/json/weavers_tools.json"
                     }
                   },
                   {
@@ -210,7 +210,7 @@
                     "item": {
                       "index": "woodcarvers_tools",
                       "name": "woodcarver's tools",
-                      "url": "public/assets/atlas/proficiencies/json/woodcarvers_tools.json"
+                      "url": "/assets/atlas/proficiencies/json/woodcarvers_tools.json"
                     }
                   },
                   {
@@ -218,7 +218,7 @@
                     "item": {
                       "index": "disguise_kit",
                       "name": "disguise kit",
-                      "url": "public/assets/atlas/proficiencies/json/disguise_kit.json"
+                      "url": "/assets/atlas/proficiencies/json/disguise_kit.json"
                     }
                   },
                   {
@@ -226,7 +226,7 @@
                     "item": {
                       "index": "forgery_kit",
                       "name": "forgery kit",
-                      "url": "public/assets/atlas/proficiencies/json/forgery_kit.json"
+                      "url": "/assets/atlas/proficiencies/json/forgery_kit.json"
                     }
                   }
                 ]
@@ -247,7 +247,7 @@
                     "item": {
                       "index": "bagpipes",
                       "name": "bagpipes",
-                      "url": "public/assets/atlas/proficiencies/json/bagpipes.json"
+                      "url": "/assets/atlas/proficiencies/json/bagpipes.json"
                     }
                   },
                   {
@@ -255,7 +255,7 @@
                     "item": {
                       "index": "drum",
                       "name": "drum",
-                      "url": "public/assets/atlas/proficiencies/json/drum.json"
+                      "url": "/assets/atlas/proficiencies/json/drum.json"
                     }
                   },
                   {
@@ -263,7 +263,7 @@
                     "item": {
                       "index": "dulcimer",
                       "name": "dulcimer",
-                      "url": "public/assets/atlas/proficiencies/json/dulcimer.json"
+                      "url": "/assets/atlas/proficiencies/json/dulcimer.json"
                     }
                   },
                   {
@@ -271,7 +271,7 @@
                     "item": {
                       "index": "flute",
                       "name": "flute",
-                      "url": "public/assets/atlas/proficiencies/json/flute.json"
+                      "url": "/assets/atlas/proficiencies/json/flute.json"
                     }
                   },
                   {
@@ -279,7 +279,7 @@
                     "item": {
                       "index": "lute",
                       "name": "lute",
-                      "url": "public/assets/atlas/proficiencies/json/lute.json"
+                      "url": "/assets/atlas/proficiencies/json/lute.json"
                     }
                   },
                   {
@@ -287,7 +287,7 @@
                     "item": {
                       "index": "lyre",
                       "name": "lyre",
-                      "url": "public/assets/atlas/proficiencies/json/lyre.json"
+                      "url": "/assets/atlas/proficiencies/json/lyre.json"
                     }
                   },
                   {
@@ -295,7 +295,7 @@
                     "item": {
                       "index": "horn",
                       "name": "horn",
-                      "url": "public/assets/atlas/proficiencies/json/horn.json"
+                      "url": "/assets/atlas/proficiencies/json/horn.json"
                     }
                   },
                   {
@@ -303,7 +303,7 @@
                     "item": {
                       "index": "pan_flute",
                       "name": "pan flute",
-                      "url": "public/assets/atlas/proficiencies/json/pan_flute.json"
+                      "url": "/assets/atlas/proficiencies/json/pan_flute.json"
                     }
                   },
                   {
@@ -311,7 +311,7 @@
                     "item": {
                       "index": "shawm",
                       "name": "shawm",
-                      "url": "public/assets/atlas/proficiencies/json/shawm.json"
+                      "url": "/assets/atlas/proficiencies/json/shawm.json"
                     }
                   },
                   {
@@ -319,7 +319,7 @@
                     "item": {
                       "index": "viol",
                       "name": "viol",
-                      "url": "public/assets/atlas/proficiencies/json/viol.json"
+                      "url": "/assets/atlas/proficiencies/json/viol.json"
                     }
                   }
                 ]
@@ -334,34 +334,34 @@
     {
       "index": "simple_weapons",
       "name": "simple weapons",
-      "url": "public/assets/atlas/proficiencies/json/simple_weapons.json"
+      "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
     },
     {
       "index": "shortswords",
       "name": "shortswords",
-      "url": "public/assets/atlas/proficiencies/json/shortswords.json"
+      "url": "/assets/atlas/proficiencies/json/shortswords.json"
     },
     {
       "index": "saving_throw_dex",
       "name": "saving throw: dex",
-      "url": "public/assets/atlas/proficiencies/json/saving_throw_dex.json"
+      "url": "/assets/atlas/proficiencies/json/saving_throw_dex.json"
     },
     {
       "index": "saving_throw_str",
       "name": "saving throw: str",
-      "url": "public/assets/atlas/proficiencies/json/saving_throw_str.json"
+      "url": "/assets/atlas/proficiencies/json/saving_throw_str.json"
     }
   ],
   "saving_throws": [
     {
       "index": "str",
       "name": "str",
-      "url": "public/assets/atlas/ability_scores/json/strength.json"
+      "url": "/assets/atlas/ability_scores/json/strength.json"
     },
     {
       "index": "dex",
       "name": "dex",
-      "url": "public/assets/atlas/ability_scores/json/dexterity.json"
+      "url": "/assets/atlas/ability_scores/json/dexterity.json"
     }
   ],
   "starting_equipment": [
@@ -369,7 +369,7 @@
       "equipment": {
         "index": "dart",
         "name": "dart",
-        "url": "public/assets/atlas/equipment/json/dart.json"
+        "url": "/assets/atlas/equipment/json/dart.json"
       },
       "quantity": 10
     }
@@ -388,7 +388,7 @@
             "of": {
               "index": "shortsword",
               "name": "shortsword",
-              "url": "public/assets/atlas/equipment/json/shortsword.json"
+              "url": "/assets/atlas/equipment/json/shortsword.json"
             }
           },
           {
@@ -402,7 +402,7 @@
                 "equipment_category": {
                   "index": "simple_weapons",
                   "name": "simple weapons",
-                  "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+                  "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
                 }
               }
             }
@@ -411,7 +411,7 @@
       }
     },
     {
-      "desc": "(a) a dungeoneer\u2019s pack or (b) an explorer\u2019s pack",
+      "desc": "(a) a dungeoneer’s pack or (b) an explorer’s pack",
       "choose": 1,
       "type": "equipment",
       "from": {
@@ -423,7 +423,7 @@
             "of": {
               "index": "dungeoneers_pack",
               "name": "dungeoneer's pack",
-              "url": "public/assets/atlas/equipment/json/dungeoneers_pack.json"
+              "url": "/assets/atlas/equipment/json/dungeoneers_pack.json"
             }
           },
           {
@@ -432,7 +432,7 @@
             "of": {
               "index": "explorers_pack",
               "name": "explorer's pack",
-              "url": "public/assets/atlas/equipment/json/explorers_pack.json"
+              "url": "/assets/atlas/equipment/json/explorers_pack.json"
             }
           }
         ]
@@ -446,7 +446,7 @@
         "ability_score": {
           "index": "dex",
           "name": "dex",
-          "url": "public/assets/atlas/ability_scores/json/dexterity.json"
+          "url": "/assets/atlas/ability_scores/json/dexterity.json"
         },
         "minimum_score": 13
       },
@@ -454,7 +454,7 @@
         "ability_score": {
           "index": "wis",
           "name": "wis",
-          "url": "public/assets/atlas/ability_scores/json/wisdom.json"
+          "url": "/assets/atlas/ability_scores/json/wisdom.json"
         },
         "minimum_score": 13
       }
@@ -463,12 +463,12 @@
       {
         "index": "simple_weapons",
         "name": "simple weapons",
-        "url": "public/assets/atlas/proficiencies/json/simple_weapons.json"
+        "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
       },
       {
         "index": "shortswords",
         "name": "shortswords",
-        "url": "public/assets/atlas/proficiencies/json/shortswords.json"
+        "url": "/assets/atlas/proficiencies/json/shortswords.json"
       }
     ]
   },
@@ -476,10 +476,10 @@
     {
       "index": "open_hand",
       "name": "open hand",
-      "url": "public/assets/atlas/subclasses/json/open_hand.json"
+      "url": "/assets/atlas/subclasses/json/open_hand.json"
     }
   ],
-  "url": "public/assets/atlas/class/json/monk.json",
+  "url": "/assets/atlas/class/json/monk.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
-  "image": "public/assets/atlas/class/wiki_image/monk.webp"
+  "image": "/assets/atlas/class/wiki_image/monk.webp"
 }

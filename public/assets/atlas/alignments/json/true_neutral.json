@@ -1,0 +1,52 @@
+{
+  "index": "true_neutral",
+  "name": "True Neutral",
+  "abbreviation": "N",
+  "color": "#9CA3AF",
+  "desc": "True neutral (N) is the alignment of those who prefer to steer clear of moral questions and don't take sides.",
+  "description": "True neutral (N) is the alignment of those who prefer to steer clear of moral questions and don't take sides, doing what seems best at the time. Druids and many humans are true neutral.",
+  "gods": [
+    {
+      "index": "akadi",
+      "name": "Akadi",
+      "url": "/assets/atlas/gods/akadi.json"
+    },
+    {
+      "index": "gond",
+      "name": "Gond",
+      "url": "/assets/atlas/gods/gond.json"
+    },
+    {
+      "index": "grumbar",
+      "name": "Grumbar",
+      "url": "/assets/atlas/gods/grumbar.json"
+    },
+    {
+      "index": "istishia",
+      "name": "Istishia",
+      "url": "/assets/atlas/gods/istishia.json"
+    },
+    {
+      "index": "kossuth",
+      "name": "Kossuth",
+      "url": "/assets/atlas/gods/kossuth.json"
+    },
+    {
+      "index": "oghma",
+      "name": "Oghma",
+      "url": "/assets/atlas/gods/oghma.json"
+    },
+    {
+      "index": "silvanus",
+      "name": "Silvanus",
+      "url": "/assets/atlas/gods/silvanus.json"
+    },
+    {
+      "index": "tempus",
+      "name": "Tempus",
+      "url": "/assets/atlas/gods/tempus.json"
+    }
+  ],
+  "url": "/assets/atlas/alignments/json/true_neutral.json",
+  "updated_at": "2026-06-06T10:34:52.343224Z"
+}

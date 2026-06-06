@@ -1,0 +1,32 @@
+{
+  "index": "neutral_evil",
+  "name": "Neutral Evil",
+  "abbreviation": "NE",
+  "color": "#991B1B",
+  "desc": "Neutral evil (NE) is the alignment of those who do whatever they can get away with, without compassion or qualms.",
+  "description": "Neutral evil (NE) is the alignment of those who do whatever they can get away with, without compassion or qualms. Many drow, some cloud giants, and yugoloths are neutral evil.",
+  "gods": [
+    {
+      "index": "auril",
+      "name": "Auril",
+      "url": "/assets/atlas/gods/auril.json"
+    },
+    {
+      "index": "bhaal",
+      "name": "Bhaal",
+      "url": "/assets/atlas/gods/bhaal.json"
+    },
+    {
+      "index": "myrkul",
+      "name": "Myrkul",
+      "url": "/assets/atlas/gods/myrkul.json"
+    },
+    {
+      "index": "shar",
+      "name": "Shar",
+      "url": "/assets/atlas/gods/shar.json"
+    }
+  ],
+  "url": "/assets/atlas/alignments/json/neutral_evil.json",
+  "updated_at": "2026-06-06T10:34:52.343224Z"
+}

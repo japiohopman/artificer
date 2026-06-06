@@ -1,0 +1,52 @@
+{
+  "index": "lawful_neutral",
+  "name": "Lawful Neutral",
+  "abbreviation": "LN",
+  "color": "#475569",
+  "desc": "Lawful neutral (LN) individuals act in accordance with law, tradition, or personal codes.",
+  "description": "Lawful neutral (LN) individuals act in accordance with law, tradition, or personal codes. Many monks and some wizards are lawful neutral.",
+  "gods": [
+    {
+      "index": "amaunator",
+      "name": "Amaunator",
+      "url": "/assets/atlas/gods/amaunator.json"
+    },
+    {
+      "index": "azuth",
+      "name": "Azuth",
+      "url": "/assets/atlas/gods/azuth.json"
+    },
+    {
+      "index": "helm",
+      "name": "Helm",
+      "url": "/assets/atlas/gods/helm.json"
+    },
+    {
+      "index": "hoar",
+      "name": "Hoar",
+      "url": "/assets/atlas/gods/hoar.json"
+    },
+    {
+      "index": "jergal",
+      "name": "Jergal",
+      "url": "/assets/atlas/gods/jergal.json"
+    },
+    {
+      "index": "kelemvor",
+      "name": "Kelemvor",
+      "url": "/assets/atlas/gods/kelemvor.json"
+    },
+    {
+      "index": "red_knight",
+      "name": "Red Knight",
+      "url": "/assets/atlas/gods/red_knight.json"
+    },
+    {
+      "index": "savras",
+      "name": "Savras",
+      "url": "/assets/atlas/gods/savras.json"
+    }
+  ],
+  "url": "/assets/atlas/alignments/json/lawful_neutral.json",
+  "updated_at": "2026-06-06T10:34:52.343224Z"
+}

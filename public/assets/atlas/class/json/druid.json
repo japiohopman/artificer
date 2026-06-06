@@ -15,7 +15,7 @@
             "item": {
               "index": "skill_arcana",
               "name": "skill: arcana",
-              "url": "public/assets/atlas/proficiencies/json/skill_arcana.json"
+              "url": "/assets/atlas/proficiencies/json/skill_arcana.json"
             }
           },
           {
@@ -23,7 +23,7 @@
             "item": {
               "index": "skill_animal_handling",
               "name": "skill: animal handling",
-              "url": "public/assets/atlas/proficiencies/json/skill_animal_handling.json"
+              "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json"
             }
           },
           {
@@ -31,7 +31,7 @@
             "item": {
               "index": "skill_insight",
               "name": "skill: insight",
-              "url": "public/assets/atlas/proficiencies/json/skill_insight.json"
+              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
             }
           },
           {
@@ -39,7 +39,7 @@
             "item": {
               "index": "skill_medicine",
               "name": "skill: medicine",
-              "url": "public/assets/atlas/proficiencies/json/skill_medicine.json"
+              "url": "/assets/atlas/proficiencies/json/skill_medicine.json"
             }
           },
           {
@@ -47,7 +47,7 @@
             "item": {
               "index": "skill_nature",
               "name": "skill: nature",
-              "url": "public/assets/atlas/proficiencies/json/skill_nature.json"
+              "url": "/assets/atlas/proficiencies/json/skill_nature.json"
             }
           },
           {
@@ -55,7 +55,7 @@
             "item": {
               "index": "skill_perception",
               "name": "skill: perception",
-              "url": "public/assets/atlas/proficiencies/json/skill_perception.json"
+              "url": "/assets/atlas/proficiencies/json/skill_perception.json"
             }
           },
           {
@@ -63,7 +63,7 @@
             "item": {
               "index": "skill_religion",
               "name": "skill: religion",
-              "url": "public/assets/atlas/proficiencies/json/skill_religion.json"
+              "url": "/assets/atlas/proficiencies/json/skill_religion.json"
             }
           },
           {
@@ -71,7 +71,7 @@
             "item": {
               "index": "skill_survival",
               "name": "skill: survival",
-              "url": "public/assets/atlas/proficiencies/json/skill_survival.json"
+              "url": "/assets/atlas/proficiencies/json/skill_survival.json"
             }
           }
         ]
@@ -82,94 +82,94 @@
     {
       "index": "light_armor",
       "name": "light armor",
-      "url": "public/assets/atlas/proficiencies/json/light_armor.json"
+      "url": "/assets/atlas/proficiencies/json/light_armor.json"
     },
     {
       "index": "medium_armor",
       "name": "medium armor",
-      "url": "public/assets/atlas/proficiencies/json/medium_armor.json"
+      "url": "/assets/atlas/proficiencies/json/medium_armor.json"
     },
     {
       "index": "shields",
       "name": "shields",
-      "url": "public/assets/atlas/proficiencies/json/shields.json"
+      "url": "/assets/atlas/proficiencies/json/shields.json"
     },
     {
       "index": "clubs",
       "name": "clubs",
-      "url": "public/assets/atlas/proficiencies/json/clubs.json"
+      "url": "/assets/atlas/proficiencies/json/clubs.json"
     },
     {
       "index": "daggers",
       "name": "daggers",
-      "url": "public/assets/atlas/proficiencies/json/daggers.json"
+      "url": "/assets/atlas/proficiencies/json/daggers.json"
     },
     {
       "index": "javelins",
       "name": "javelins",
-      "url": "public/assets/atlas/proficiencies/json/javelins.json"
+      "url": "/assets/atlas/proficiencies/json/javelins.json"
     },
     {
       "index": "maces",
       "name": "maces",
-      "url": "public/assets/atlas/proficiencies/json/maces.json"
+      "url": "/assets/atlas/proficiencies/json/maces.json"
     },
     {
       "index": "quarterstaffs",
       "name": "quarterstaffs",
-      "url": "public/assets/atlas/proficiencies/json/quarterstaffs.json"
+      "url": "/assets/atlas/proficiencies/json/quarterstaffs.json"
     },
     {
       "index": "sickles",
       "name": "sickles",
-      "url": "public/assets/atlas/proficiencies/json/sickles.json"
+      "url": "/assets/atlas/proficiencies/json/sickles.json"
     },
     {
       "index": "spears",
       "name": "spears",
-      "url": "public/assets/atlas/proficiencies/json/spears.json"
+      "url": "/assets/atlas/proficiencies/json/spears.json"
     },
     {
       "index": "darts",
       "name": "darts",
-      "url": "public/assets/atlas/proficiencies/json/darts.json"
+      "url": "/assets/atlas/proficiencies/json/darts.json"
     },
     {
       "index": "slings",
       "name": "slings",
-      "url": "public/assets/atlas/proficiencies/json/slings.json"
+      "url": "/assets/atlas/proficiencies/json/slings.json"
     },
     {
       "index": "scimitars",
       "name": "scimitars",
-      "url": "public/assets/atlas/proficiencies/json/scimitars.json"
+      "url": "/assets/atlas/proficiencies/json/scimitars.json"
     },
     {
       "index": "herbalism_kit",
       "name": "herbalism kit",
-      "url": "public/assets/atlas/proficiencies/json/herbalism_kit.json"
+      "url": "/assets/atlas/proficiencies/json/herbalism_kit.json"
     },
     {
       "index": "saving_throw_int",
       "name": "saving throw: int",
-      "url": "public/assets/atlas/proficiencies/json/saving_throw_int.json"
+      "url": "/assets/atlas/proficiencies/json/saving_throw_int.json"
     },
     {
       "index": "saving_throw_wis",
       "name": "saving throw: wis",
-      "url": "public/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
     }
   ],
   "saving_throws": [
     {
       "index": "int",
       "name": "int",
-      "url": "public/assets/atlas/ability_scores/json/intelligence.json"
+      "url": "/assets/atlas/ability_scores/json/intelligence.json"
     },
     {
       "index": "wis",
       "name": "wis",
-      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
+      "url": "/assets/atlas/ability_scores/json/wisdom.json"
     }
   ],
   "starting_equipment": [
@@ -177,7 +177,7 @@
       "equipment": {
         "index": "leather_armor",
         "name": "leather armor",
-        "url": "public/assets/atlas/equipment/json/leather_armor.json"
+        "url": "/assets/atlas/equipment/json/leather_armor.json"
       },
       "quantity": 1
     },
@@ -185,7 +185,7 @@
       "equipment": {
         "index": "explorers_pack",
         "name": "explorer's pack",
-        "url": "public/assets/atlas/equipment/json/explorers_pack.json"
+        "url": "/assets/atlas/equipment/json/explorers_pack.json"
       },
       "quantity": 1
     }
@@ -204,7 +204,7 @@
             "of": {
               "index": "shield",
               "name": "shield",
-              "url": "public/assets/atlas/equipment/json/shield.json"
+              "url": "/assets/atlas/equipment/json/shield.json"
             }
           },
           {
@@ -218,7 +218,7 @@
                 "equipment_category": {
                   "index": "simple_weapons",
                   "name": "simple weapons",
-                  "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+                  "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
                 }
               }
             }
@@ -239,7 +239,7 @@
             "of": {
               "index": "scimitar",
               "name": "scimitar",
-              "url": "public/assets/atlas/equipment/json/scimitar.json"
+              "url": "/assets/atlas/equipment/json/scimitar.json"
             }
           },
           {
@@ -253,7 +253,7 @@
                 "equipment_category": {
                   "index": "simple_melee_weapons",
                   "name": "simple melee weapons",
-                  "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+                  "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
                 }
               }
             }
@@ -270,7 +270,7 @@
         "equipment_category": {
           "index": "druidic_foci",
           "name": "druidic foci",
-          "url": "public/assets/atlas/equipment_categories/json/druidic_foci.json"
+          "url": "/assets/atlas/equipment_categories/json/druidic_foci.json"
         }
       }
     }
@@ -282,7 +282,7 @@
         "ability_score": {
           "index": "wis",
           "name": "wis",
-          "url": "public/assets/atlas/ability_scores/json/wisdom.json"
+          "url": "/assets/atlas/ability_scores/json/wisdom.json"
         },
         "minimum_score": 13
       }
@@ -291,17 +291,17 @@
       {
         "index": "light_armor",
         "name": "light armor",
-        "url": "public/assets/atlas/proficiencies/json/light_armor.json"
+        "url": "/assets/atlas/proficiencies/json/light_armor.json"
       },
       {
         "index": "medium_armor",
         "name": "medium armor",
-        "url": "public/assets/atlas/proficiencies/json/medium_armor.json"
+        "url": "/assets/atlas/proficiencies/json/medium_armor.json"
       },
       {
         "index": "shields",
         "name": "shields",
-        "url": "public/assets/atlas/proficiencies/json/shields.json"
+        "url": "/assets/atlas/proficiencies/json/shields.json"
       }
     ]
   },
@@ -309,7 +309,7 @@
     {
       "index": "land",
       "name": "land",
-      "url": "public/assets/atlas/subclasses/json/land.json"
+      "url": "/assets/atlas/subclasses/json/land.json"
     }
   ],
   "spellcasting": {
@@ -317,7 +317,7 @@
     "spellcasting_ability": {
       "index": "wis",
       "name": "wis",
-      "url": "public/assets/atlas/ability_scores/json/wisdom.json"
+      "url": "/assets/atlas/ability_scores/json/wisdom.json"
     },
     "info": [
       {
@@ -358,7 +358,7 @@
     ]
   },
   "spells": "public/assets/atlas/spell/json/",
-  "url": "public/assets/atlas/class/json/druid.json",
+  "url": "/assets/atlas/class/json/druid.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
-  "image": "public/assets/atlas/class/wiki_image/druid.webp"
+  "image": "/assets/atlas/class/wiki_image/druid.webp"
 }
