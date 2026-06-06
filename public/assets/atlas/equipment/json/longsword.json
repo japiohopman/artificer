@@ -6,7 +6,7 @@
   "equipment_category": {
     "index": "weapon",
     "name": "weapon",
-    "url": "public/assets/atlas/equipment_categories/json/weapon.json"
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
   },
   "weapon_category": "Martial",
   "weapon_range": "Melee",
@@ -20,7 +20,7 @@
     "damage_type": {
       "index": "slashing",
       "name": "slashing",
-      "url": "public/assets/atlas/damage_types/json/slashing.json"
+      "url": "/assets/atlas/damage_types/json/slashing.json"
     }
   },
   "range": {
@@ -31,7 +31,7 @@
     {
       "index": "versatile",
       "name": "versatile",
-      "url": "public/assets/atlas/weapon_properties/json/versatile.json"
+      "url": "/assets/atlas/weapon_properties/json/versatile.json"
     }
   ],
   "two_handed_damage": {
@@ -39,18 +39,20 @@
     "damage_type": {
       "index": "slashing",
       "name": "slashing",
-      "url": "public/assets/atlas/damage_types/json/slashing.json"
+      "url": "/assets/atlas/damage_types/json/slashing.json"
     }
   },
-  "url": "public/assets/atlas/equipment/json/longsword.json",
+  "url": "/assets/atlas/equipment/json/longsword.json",
   "updated_at": "2026-06-05T08:00:00.000Z",
   "contents": [],
-  "image": "public/assets/atlas/equipment/images/longsword.webp",
-  "imageUrl": "public/assets/atlas/equipment/images/longsword.webp",
+  "image": "/assets/atlas/equipment/images/longsword.webp",
+  "imageUrl": "/assets/atlas/equipment/images/longsword.webp",
   "_type": "equipment",
   "kind": "weapon",
   "background_type": "land_forest",
   "category": "Simple Melee Weapons",
-  "equipSlots": ["main_hand"],
+  "equipSlots": [
+    "main_hand"
+  ],
   "last_updated": "5-6-2026"
 }

@@ -8,7 +8,7 @@
   "equipment_category": {
     "index": "armor",
     "name": "armor",
-    "url": "public/assets/atlas/equipment_categories/json/armor.json"
+    "url": "/assets/atlas/equipment_categories/json/armor.json"
   },
   "armor_category": "Heavy",
   "armor_class": {
@@ -22,16 +22,18 @@
     "quantity": 1500,
     "unit": "gp"
   },
-  "url": "public/assets/atlas/equipment/json/plate_armor.json",
+  "url": "/assets/atlas/equipment/json/plate_armor.json",
   "updated_at": "2026-06-05T08:00:00.000Z",
   "contents": [],
   "properties": [],
-  "image": "public/assets/atlas/equipment/images/plate_armor.webp",
-  "imageUrl": "public/assets/atlas/equipment/images/plate_armor.webp",
+  "image": "/assets/atlas/equipment/images/plate_armor.webp",
+  "imageUrl": "/assets/atlas/equipment/images/plate_armor.webp",
   "_type": "equipment",
   "kind": "armor",
   "background_type": "land_forest",
   "category": "Heavy Armor",
-  "equipSlots": ["chest"],
+  "equipSlots": [
+    "chest"
+  ],
   "last_updated": "5-6-2026"
 }

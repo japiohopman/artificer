@@ -5,14 +5,14 @@
   "equipment_category": {
     "index": "weapon",
     "name": "weapon",
-    "url": "public/assets/atlas/equipment_categories/json/weapon.json"
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
   },
   "rarity": "Rare",
   "requires_attunement": true,
   "attunement_rules": {
     "index": "attunement",
     "name": "attunement",
-    "url": "public/assets/atlas/mechanic/rule_sections/json/attunement.json"
+    "url": "/assets/atlas/mechanic/rule_sections/json/attunement.json"
   },
   "desc": [
     "Weapon (mace), rare (requires attunement)",
@@ -29,7 +29,7 @@
     "damage_type": {
       "index": "bludgeoning",
       "name": "bludgeoning",
-      "url": "public/assets/atlas/damage_types/json/bludgeoning.json"
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
     }
   },
   "effects": [
@@ -39,7 +39,10 @@
       "details": {
         "damage_dice": "2d6",
         "damage_type": "radiant",
-        "conditions": ["fiend", "undead"]
+        "conditions": [
+          "fiend",
+          "undead"
+        ]
       }
     },
     {
@@ -51,7 +54,10 @@
         "threshold_hp": 25,
         "failure": "destroyed",
         "success": "frightened",
-        "conditions": ["fiend", "undead"]
+        "conditions": [
+          "fiend",
+          "undead"
+        ]
       }
     },
     {
@@ -63,11 +69,13 @@
       }
     }
   ],
-  "url": "public/assets/atlas/magic_items/json/mace_of_disruption.json",
+  "url": "/assets/atlas/magic_items/json/mace_of_disruption.json",
   "updated_at": "2026-06-05T08:00:00.000Z",
-  "image": "public/assets/atlas/magic_items/images/mace_of_disruption.webp",
-  "imageUrl": "public/assets/atlas/magic_items/images/mace_of_disruption.webp",
+  "image": "/assets/atlas/magic_items/images/mace_of_disruption.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/mace_of_disruption.webp",
   "_type": "equipment",
-  "equipSlots": ["main_hand"],
+  "equipSlots": [
+    "main_hand"
+  ],
   "last_updated": "5-6-2026"
 }
