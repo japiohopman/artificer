@@ -24,12 +24,12 @@
     },
     "world": {
       "type": "string",
-      "enum": ["totil"],
+      "enum": ["toril", "totil"],
       "description": "The world the sub-region is in."
     },
     "continent": {
       "type": "string",
-      "enum": ["fearun"],
+      "enum": ["faerun", "fearun"],
       "description": "The continent the sub-region is on."
     },
     "region": {

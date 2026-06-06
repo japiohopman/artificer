@@ -15,7 +15,7 @@
             "item": {
               "index": "skill_arcana",
               "name": "skill: arcana",
-              "url": "public/assets/atlas/proficiencies/json/skill_arcana.json"
+              "url": "/assets/atlas/proficiencies/json/skill_arcana.json"
             }
           },
           {
@@ -23,7 +23,7 @@
             "item": {
               "index": "skill_deception",
               "name": "skill: deception",
-              "url": "public/assets/atlas/proficiencies/json/skill_deception.json"
+              "url": "/assets/atlas/proficiencies/json/skill_deception.json"
             }
           },
           {
@@ -31,7 +31,7 @@
             "item": {
               "index": "skill_insight",
               "name": "skill: insight",
-              "url": "public/assets/atlas/proficiencies/json/skill_insight.json"
+              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
             }
           },
           {
@@ -39,7 +39,7 @@
             "item": {
               "index": "skill_intimidation",
               "name": "skill: intimidation",
-              "url": "public/assets/atlas/proficiencies/json/skill_intimidation.json"
+              "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
             }
           },
           {
@@ -47,7 +47,7 @@
             "item": {
               "index": "skill_persuasion",
               "name": "skill: persuasion",
-              "url": "public/assets/atlas/proficiencies/json/skill_persuasion.json"
+              "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
             }
           },
           {
@@ -55,7 +55,7 @@
             "item": {
               "index": "skill_religion",
               "name": "skill: religion",
-              "url": "public/assets/atlas/proficiencies/json/skill_religion.json"
+              "url": "/assets/atlas/proficiencies/json/skill_religion.json"
             }
           }
         ]
@@ -66,49 +66,49 @@
     {
       "index": "daggers",
       "name": "daggers",
-      "url": "public/assets/atlas/proficiencies/json/daggers.json"
+      "url": "/assets/atlas/proficiencies/json/daggers.json"
     },
     {
       "index": "darts",
       "name": "darts",
-      "url": "public/assets/atlas/proficiencies/json/darts.json"
+      "url": "/assets/atlas/proficiencies/json/darts.json"
     },
     {
       "index": "slings",
       "name": "slings",
-      "url": "public/assets/atlas/proficiencies/json/slings.json"
+      "url": "/assets/atlas/proficiencies/json/slings.json"
     },
     {
       "index": "quarterstaffs",
       "name": "quarterstaffs",
-      "url": "public/assets/atlas/proficiencies/json/quarterstaffs.json"
+      "url": "/assets/atlas/proficiencies/json/quarterstaffs.json"
     },
     {
       "index": "crossbows_light",
       "name": "crossbows, light",
-      "url": "public/assets/atlas/proficiencies/json/crossbows_light.json"
+      "url": "/assets/atlas/proficiencies/json/crossbows_light.json"
     },
     {
       "index": "saving_throw_con",
       "name": "saving throw: con",
-      "url": "public/assets/atlas/proficiencies/json/saving_throw_con.json"
+      "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
     },
     {
       "index": "saving_throw_cha",
       "name": "saving throw: cha",
-      "url": "public/assets/atlas/proficiencies/json/saving_throw_cha.json"
+      "url": "/assets/atlas/proficiencies/json/saving_throw_cha.json"
     }
   ],
   "saving_throws": [
     {
       "index": "con",
       "name": "con",
-      "url": "public/assets/atlas/ability_scores/json/constitution.json"
+      "url": "/assets/atlas/ability_scores/json/constitution.json"
     },
     {
       "index": "cha",
       "name": "cha",
-      "url": "public/assets/atlas/ability_scores/json/charisma.json"
+      "url": "/assets/atlas/ability_scores/json/charisma.json"
     }
   ],
   "starting_equipment": [
@@ -116,7 +116,7 @@
       "equipment": {
         "index": "dagger",
         "name": "dagger",
-        "url": "public/assets/atlas/equipment/json/dagger.json"
+        "url": "/assets/atlas/equipment/json/dagger.json"
       },
       "quantity": 2
     }
@@ -138,7 +138,7 @@
                 "of": {
                   "index": "crossbow_light",
                   "name": "crossbow, light",
-                  "url": "public/assets/atlas/equipment/json/crossbow_light.json"
+                  "url": "/assets/atlas/equipment/json/crossbow_light.json"
                 }
               },
               {
@@ -147,7 +147,7 @@
                 "of": {
                   "index": "crossbow_bolt",
                   "name": "crossbow bolt",
-                  "url": "public/assets/atlas/equipment/json/crossbow_bolt.json"
+                  "url": "/assets/atlas/equipment/json/crossbow_bolt.json"
                 }
               }
             ]
@@ -163,7 +163,7 @@
                 "equipment_category": {
                   "index": "simple_weapons",
                   "name": "simple weapons",
-                  "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+                  "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
                 }
               }
             }
@@ -184,7 +184,7 @@
             "of": {
               "index": "component_pouch",
               "name": "component pouch",
-              "url": "public/assets/atlas/equipment/json/component_pouch.json"
+              "url": "/assets/atlas/equipment/json/component_pouch.json"
             }
           },
           {
@@ -198,7 +198,7 @@
                 "equipment_category": {
                   "index": "arcane_foci",
                   "name": "arcane foci",
-                  "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
+                  "url": "/assets/atlas/equipment_categories/json/arcane_foci.json"
                 }
               }
             }
@@ -207,7 +207,7 @@
       }
     },
     {
-      "desc": "(a) a dungeoneer\u2019s pack or (b) an explorer\u2019s pack",
+      "desc": "(a) a dungeoneer’s pack or (b) an explorer’s pack",
       "choose": 1,
       "type": "equipment",
       "from": {
@@ -219,7 +219,7 @@
             "of": {
               "index": "dungeoneers_pack",
               "name": "dungeoneer's pack",
-              "url": "public/assets/atlas/equipment/json/dungeoneers_pack.json"
+              "url": "/assets/atlas/equipment/json/dungeoneers_pack.json"
             }
           },
           {
@@ -228,7 +228,7 @@
             "of": {
               "index": "explorers_pack",
               "name": "explorer's pack",
-              "url": "public/assets/atlas/equipment/json/explorers_pack.json"
+              "url": "/assets/atlas/equipment/json/explorers_pack.json"
             }
           }
         ]
@@ -242,7 +242,7 @@
         "ability_score": {
           "index": "cha",
           "name": "cha",
-          "url": "public/assets/atlas/ability_scores/json/charisma.json"
+          "url": "/assets/atlas/ability_scores/json/charisma.json"
         },
         "minimum_score": 13
       }
@@ -253,7 +253,7 @@
     {
       "index": "draconic",
       "name": "draconic",
-      "url": "public/assets/atlas/subclasses/json/draconic.json"
+      "url": "/assets/atlas/subclasses/json/draconic.json"
     }
   ],
   "spellcasting": {
@@ -261,7 +261,7 @@
     "spellcasting_ability": {
       "index": "cha",
       "name": "cha",
-      "url": "public/assets/atlas/ability_scores/json/charisma.json"
+      "url": "/assets/atlas/ability_scores/json/charisma.json"
     },
     "info": [
       {
@@ -302,7 +302,7 @@
     ]
   },
   "spells": "public/assets/atlas/spell/json/",
-  "url": "public/assets/atlas/class/json/sorcerer.json",
+  "url": "/assets/atlas/class/json/sorcerer.json",
   "updated_at": "2025-10-24T20:42:12.459Z",
-  "image": "public/assets/atlas/class/wiki_image/sorcerer.webp"
+  "image": "/assets/atlas/class/wiki_image/sorcerer.webp"
 }
