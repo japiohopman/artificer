@@ -25,9 +25,9 @@ export const ItemActionCard: React.FC = () => {
 
   if (!inspectingItem) return null;
 
-  const { item, sourceId, index, slot } = inspectingItem;
+  const { item, sourceId, itemId, slot } = inspectingItem;
   const activeChar = characters.find(c => c.id === activeCharacterId) || characters[0];
-  const isEquipment = item._type === 'equipment';
+  const isEquipment = item.kind === 'weapon' || item.kind === 'armor' || item.kind === 'shield' || item.kind === 'focus' || item._type === 'equipment';
   const isEquipped = !!slot;
   const isOurItem = sourceId === activeCharacterId;
   const isPartyItem = sourceId === 'party';
@@ -61,8 +61,10 @@ export const ItemActionCard: React.FC = () => {
     if (window.confirm(`Discard ${item.name}? This cannot be undone.`)) {
       if (sourceId === 'party') {
         removeFromPartyInventory(item.id);
-      } else if (index !== undefined) {
-        removeFromBackpack(index);
+      } else if (itemId) {
+        removeFromBackpack(itemId);
+      } else if (item.id) {
+        removeFromBackpack(item.id);
       }
       handleClose();
     }
