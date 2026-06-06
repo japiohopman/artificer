@@ -1,6 +1,10 @@
 {
   "name": "Talona",
-  "alignment": "CE",
+  "alignment": {
+    "index": "chaotic_evil",
+    "name": "Chaotic Evil",
+    "url": "/assets/atlas/alignments/json/chaotic_evil.json"
+  },
   "domains": [
     "Death"
   ],

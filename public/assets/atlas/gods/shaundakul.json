@@ -1,6 +1,10 @@
 {
   "name": "Shaundakul",
-  "alignment": "CN",
+  "alignment": {
+    "index": "chaotic_neutral",
+    "name": "Chaotic Neutral",
+    "url": "/assets/atlas/alignments/json/chaotic_neutral.json"
+  },
   "domains": [
     "Nature",
     "Tempest"

@@ -1,6 +1,10 @@
 {
   "name": "Tempus",
-  "alignment": "N",
+  "alignment": {
+    "index": "true_neutral",
+    "name": "True Neutral",
+    "url": "/assets/atlas/alignments/json/true_neutral.json"
+  },
   "domains": [
     "War"
   ],

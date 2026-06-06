@@ -1,6 +1,10 @@
 {
   "name": "Hoar",
-  "alignment": "LN",
+  "alignment": {
+    "index": "lawful_neutral",
+    "name": "Lawful Neutral",
+    "url": "/assets/atlas/alignments/json/lawful_neutral.json"
+  },
   "domains": [
     "War"
   ],

@@ -1,6 +1,10 @@
 {
   "name": "Sune",
-  "alignment": "CG",
+  "alignment": {
+    "index": "chaotic_good",
+    "name": "Chaotic Good",
+    "url": "/assets/atlas/alignments/json/chaotic_good.json"
+  },
   "domains": [
     "Life",
     "Light"

@@ -1,6 +1,10 @@
 {
   "name": "Ilmater",
-  "alignment": "LG",
+  "alignment": {
+    "index": "lawful_good",
+    "name": "Lawful Good",
+    "url": "/assets/atlas/alignments/json/lawful_good.json"
+  },
   "domains": [
     "Life"
   ],
