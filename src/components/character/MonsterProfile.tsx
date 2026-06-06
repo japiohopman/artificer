@@ -15,7 +15,8 @@ export const MonsterProfile: React.FC = () => {
   const { 
     isMonsterProfileOpen, 
     setIsMonsterProfileOpen, 
-    focusedItem: monster 
+    focusedItem: monster,
+    rollDice3D
   } = useStore();
 
   const formatName = (name: string) => {
@@ -184,17 +185,22 @@ export const MonsterProfile: React.FC = () => {
                            </div>
                            <div className="flex items-baseline gap-2">
                               <span className="text-sm font-black uppercase tracking-widest text-[#8B0000]">Hit Points</span>
-                              <span className="text-lg">{monster.hit_points} {monster.hit_dice ? `(${monster.hit_dice})` : ''}</span>
+                              <span className="text-lg">
+                                {monster.hit_points} {monster.hit_dice ? <span>(<DiceText>{monster.hit_dice}</DiceText>)</span> : ''}
+                              </span>
                            </div>
                            <div className="flex items-baseline gap-2">
                               <span className="text-sm font-black uppercase tracking-widest text-[#8B0000]">Speed</span>
                               <span className="text-lg">{formatComplexity(monster.speed)}</span>
                            </div>
                            {monster.initiative !== undefined && (
-                             <div className="flex items-baseline gap-2">
+                             <button 
+                               onClick={() => rollDice3D(`1d20${monster.initiative >= 0 ? '+' : ''}${monster.initiative !== 0 ? monster.initiative : ''}`, `${monster.name} Initiative`)}
+                               className="flex items-baseline gap-2 hover:bg-[#8B0000]/5 transition-colors rounded px-1 -ml-1 active:scale-95"
+                             >
                                <span className="text-sm font-black uppercase tracking-widest text-[#8B0000]">Initiative</span>
                                <span className="text-lg">+{monster.initiative} ({10 + monster.initiative})</span>
-                             </div>
+                             </button>
                            )}
                         </section>
 
@@ -204,10 +210,14 @@ export const MonsterProfile: React.FC = () => {
                              const val = monster.stats?.[stat.toLowerCase() as keyof typeof monster.stats] || 10;
                              const mod = Math.floor((val - 10) / 2);
                              return (
-                               <div key={stat} className="flex flex-col">
+                               <button 
+                                 key={stat} 
+                                 onClick={() => rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, `${monster.name} ${stat} Check`)}
+                                 className="flex flex-col hover:bg-[#8B0000]/5 transition-colors rounded py-1 active:scale-95"
+                               >
                                   <span className="text-[12px] font-black uppercase text-[#8B0000]">{stat}</span>
                                   <span className="text-[16px] text-[#8B0000]">{val} ({mod >= 0 ? `+${mod}` : mod})</span>
-                               </div>
+                               </button>
                              );
                            })}
                         </div>

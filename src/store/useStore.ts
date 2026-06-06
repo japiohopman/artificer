@@ -3,7 +3,6 @@ import { Monster } from '../services/ai/monsterService';
 import { AudioLayer, LayerState } from '../types/audio.ts';
 import { ItemInstance, InventoryContainer, InventorySlot } from '../types/inventory';
 import { getPackContents } from '../lib/itemPacks';
-import { canEquipItem } from '../lib/inventoryUtils';
 import { 
   fetchMonsterList, fetchMonsterData, fetchMonsterCategories, fetchMonsterCategoryMapping,
   fetchMaterialsList, fetchMaterialData, fetchMaterialCategoryMapping, fetchMaterialCategories,
@@ -73,8 +72,8 @@ export interface Character {
   };
   
   // Inventory v1 (Legacy)
-  inventory?: Record<string, any | null>;
-  backpack?: any[];
+  inventory: Record<string, any | null>;
+  backpack: any[];
   
   // Inventory v2 (Registry/Slot based)
   items?: Record<string, ItemInstance>;
@@ -157,7 +156,7 @@ interface AppState {
   materialsList: { name: string; index: string }[];
   materialCategories: { name: string; index: string; materials: any[] }[];
   materialCategoryMapping: Record<string, string>;
-  equipmentList: any[];
+  equipmentList: { name: string; index: string }[];
   keyItemsList: { name: string; index: string }[];
   booksList: { name: string; index: string }[];
   spellsList: { name: string; index: string }[];
@@ -179,7 +178,7 @@ interface AppState {
   inspectingItem: { 
     item: any; 
     sourceId: string; 
-    itemId?: string;
+    index?: number; 
     slot?: string;
   } | null;
   
@@ -242,7 +241,7 @@ interface AppState {
   setIsExplorerOpen: (isOpen: boolean) => void;
   setSearchQuery: (query: string) => void;
   setFocusedItem: (item: any | null) => void;
-  setInspectingItem: (data: { item: any; sourceId: string; itemId?: string; slot?: string; } | null) => void;
+  setInspectingItem: (data: { item: any; sourceId: string; index?: number; slot?: string; } | null) => void;
   setIsInventoryOpen: (isOpen: boolean) => void;
   setIsInventoryMenuOpen: (isOpen: boolean) => void;
   setIsProfileMenuOpen: (isOpen: boolean) => void;
@@ -259,7 +258,7 @@ interface AppState {
   removeRoll: (id: string) => void;
   clearRoll: () => void;
   addToBackpack: (item: any) => void;
-  removeFromBackpack: (itemId: string) => void;
+  removeFromBackpack: (index: number) => void;
   equipItem: (item: any, slot: string) => void;
   unequipItem: (slot: string) => void;
   updatePartyStats: (stats: Partial<AppState['partyStats']>) => void;
@@ -353,8 +352,9 @@ const DEFAULT_CHARACTERS: Character[] = [
       movement: { current: 30, max: 30 },
       objectInteractions: { current: 1, max: 1 }
     },
+    inventory: {},
+    backpack: [],
     // Registry v2
-    saveVersion: 2,
     items: {
       "warhammer_1": { id: "warhammer_1", template: "warhammer", quantity: 1, kind: "weapon" },
       "half_plate_1": { id: "half_plate_1", template: "half-plate", quantity: 1, kind: "armor" },
@@ -365,11 +365,11 @@ const DEFAULT_CHARACTERS: Character[] = [
       "backpack_char1": {
         id: "backpack_char1",
         type: "backpack",
-        ownerId: "char-1",
         slots: [
           { id: "bag_0", itemId: "smiths_tools_1" },
           { id: "bag_1", itemId: "book_1" },
-          ...Array.from({ length: 22 }, (_, i) => ({ id: `bag_${i+2}`, itemId: null }))
+          { id: "bag_2", itemId: null },
+          { id: "bag_3", itemId: null }
         ]
       }
     },
@@ -378,34 +378,9 @@ const DEFAULT_CHARACTERS: Character[] = [
       slots: [
         { id: "main_hand", itemId: "warhammer_1" },
         { id: "off_hand", itemId: null },
-        { id: "chest", itemId: "half_plate_1" },
-        { id: "head", itemId: null },
-        { id: "hands", itemId: null },
-        { id: "feet", itemId: null },
-        { id: "back", itemId: null },
-        { id: "neck", itemId: null },
-        { id: "belt", itemId: null },
-        { id: "ring_1", itemId: null },
-        { id: "ring_2", itemId: null },
-        { id: "tool_1", itemId: null },
-        { id: "tool_2", itemId: null },
-        { id: "tool_3", itemId: null },
-        { id: "tool_4", itemId: null },
-        { id: "tool_5", itemId: null },
-        { id: "focus", itemId: null },
-        { id: "pouch", itemId: null },
-        { id: "acc_1", itemId: null },
-        { id: "acc_2", itemId: null },
-        { id: "acc_3", itemId: null },
-        { id: "acc_4", itemId: null },
-        { id: "quick_1", itemId: null },
-        { id: "quick_2", itemId: null },
-        { id: "quick_3", itemId: null },
-        { id: "quick_4", itemId: null }
+        { id: "chest", itemId: "half_plate_1" }
       ]
     },
-    inventory: {},
-    backpack: [],
     knownSpells: [],
     preparedSpells: [],
     spellSlots: {
@@ -461,37 +436,13 @@ const DEFAULT_CHARACTERS: Character[] = [
       movement: { current: 30, max: 30 },
       objectInteractions: { current: 1, max: 1 }
     },
-    items: {
-      "rogue_dagger_1": { id: "rogue_dagger_1", template: "dagger", quantity: 1, kind: "weapon" },
-      "rogue_armor_1": { id: "rogue_armor_1", template: "leather-armor", quantity: 1, kind: "armor" },
-      "rogue_tools_1": { id: "rogue_tools_1", template: "thieves-tools", quantity: 1, kind: "tool" }
+    inventory: {
+      "main-hand": { id: "rogue-dagger", name: "Dagger", index: "dagger", _type: "equipment", weight: 1, slot: "main-hand", damage: { damage_dice: "1d4", damage_type: { name: "Piercing" } }, properties: [{ index: "finesse", name: "Finesse" }] },
+      "chest": { id: "rogue-armor", name: "Leather Armor", index: "leather-armor", _type: "equipment", weight: 10, slot: "chest", armor_class: { base: 11, dex_bonus: true } },
     },
-    containers: {
-      "backpack_char2": {
-        id: "backpack_char2",
-        type: "backpack",
-        ownerId: "char-2",
-        slots: [
-          { id: "bag_0", itemId: "rogue_tools_1" },
-          ...Array.from({ length: 23 }, (_, i) => ({ id: `bag_${i+1}`, itemId: null }))
-        ]
-      }
-    },
-    equipment: {
-      containerId: "equipment_char2",
-      slots: [
-        { id: "main_hand", itemId: "rogue_dagger_1" },
-        { id: "chest", itemId: "rogue_armor_1" },
-        ...([
-          'off_hand', 'ranged', 'ammo', 'head', 'hands', 'feet', 'back', 'neck',
-          'belt', 'ring_1', 'ring_2', 'tool_1', 'tool_2', 'tool_3', 'tool_4',
-          'tool_5', 'focus', 'pouch', 'acc_1', 'acc_2', 'acc_3', 'acc_4',
-          'quick_1', 'quick_2', 'quick_3', 'quick_4'
-        ].map(id => ({ id, itemId: null })))
-      ]
-    },
-    inventory: {},
-    backpack: [],
+    backpack: [
+      { id: "rogue-tools", name: "Thieves' Tools", index: "thieves-tools", weight: 1 }
+    ],
     knownSpells: [],
     preparedSpells: [],
     spellSlots: {},
@@ -750,156 +701,176 @@ export const useStore = create<AppState>((set, get) => ({
       characters: state.characters.map(char => {
         if (char.id !== state.activeCharacterId) return char;
         
-        let updatedItems = { ...(char.items || {}) };
-        let updatedContainers = { ...(char.containers || {}) };
-        const backpackKey = Object.keys(updatedContainers).find(key => updatedContainers[key].type === 'backpack');
+        const updatedChar = { ...char };
         
-        if (!backpackKey) return char;
-        let updatedBackpack = { ...updatedContainers[backpackKey] };
-        let updatedSlots = [...updatedBackpack.slots];
+        if (char.saveVersion === 2) {
+          const items = { ...(char.items || {}) };
+          const containers = { ...(char.containers || {}) };
+          const backpack = Object.values(containers).find(c => c.type === 'backpack');
+          if (!backpack) return char;
 
-        itemsToAdd.forEach(toAdd => {
-          const template = toAdd.index || toAdd.name;
-          const existingId = updatedSlots.find(s => s.itemId && updatedItems[s.itemId]?.template === template)?.itemId;
-
-          if (existingId) {
-            updatedItems[existingId] = {
-              ...updatedItems[existingId],
-              quantity: (updatedItems[existingId].quantity || 1) + (toAdd.quantity || 1)
-            };
-          } else {
-            const newId = crypto.randomUUID();
-            updatedItems[newId] = {
-              id: newId,
-              template,
-              quantity: toAdd.quantity || 1,
-              addedAt: Date.now()
-            };
-
-            const emptySlotIndex = updatedSlots.findIndex(s => s.itemId === null);
-            if (emptySlotIndex !== -1) {
-              updatedSlots[emptySlotIndex] = { ...updatedSlots[emptySlotIndex], itemId: newId };
+          itemsToAdd.forEach(toAdd => {
+            const template = toAdd.index || toAdd.name;
+            const existingId = backpack.slots.find(s => s.itemId && items[s.itemId].template === template)?.itemId;
+            
+            if (existingId) {
+              items[existingId] = { ...items[existingId], quantity: (items[existingId].quantity || 1) + (toAdd.quantity || 1) };
+            } else {
+              const newId = crypto.randomUUID();
+              items[newId] = {
+                id: newId,
+                template,
+                quantity: toAdd.quantity || 1,
+                addedAt: Date.now()
+              };
+              const slot = backpack.slots.find(s => s.itemId === null);
+              if (slot) slot.itemId = newId;
             }
+          });
+          return { ...updatedChar, items, containers };
+        }
+
+        // v1 logic
+        const newBackpack = [...char.backpack];
+        itemsToAdd.forEach(toAdd => {
+          const existingItemIndex = newBackpack.findIndex(i => (i.index && i.index === toAdd.index) || (i.name === toAdd.name));
+          if (existingItemIndex > -1) {
+            const existingItem = { ...newBackpack[existingItemIndex] };
+            existingItem.quantity = (existingItem.quantity || 1) + (toAdd.quantity || 1);
+            newBackpack[existingItemIndex] = existingItem;
+          } else {
+            newBackpack.push({ ...toAdd, id: crypto.randomUUID(), quantity: toAdd.quantity || 1 });
           }
         });
-
-        updatedBackpack.slots = updatedSlots;
-        updatedContainers[backpackKey] = updatedBackpack;
         
-        return { ...char, items: updatedItems, containers: updatedContainers };
+        return { ...updatedChar, backpack: newBackpack };
       })
     };
   }),
-  removeFromBackpack: (itemId) => set((state) => ({
+  removeFromBackpack: (indexOrItemId) => set((state) => ({
     characters: state.characters.map(char => {
       if (char.id !== state.activeCharacterId) return char;
 
-      const updatedItems = { ...(char.items || {}) };
-      const updatedContainers = { ...(char.containers || {}) };
-      const backpackKey = Object.keys(updatedContainers).find(key => updatedContainers[key].type === 'backpack');
+      if (char.saveVersion === 2) {
+        // Here indexOrItemId is treated as itemId
+        const itemId = indexOrItemId as any;
+        const items = { ...(char.items || {}) };
+        const containers = { ...(char.containers || {}) };
+        const backpack = Object.values(containers).find(c => c.type === 'backpack');
+        if (!backpack) return char;
 
-      if (!backpackKey) return char;
-      const updatedBackpack = { ...updatedContainers[backpackKey] };
+        backpack.slots = backpack.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
+        delete items[itemId];
+        
+        return { ...char, items, containers };
+      }
 
-      updatedBackpack.slots = updatedBackpack.slots.map(s =>
-        s.itemId === itemId ? { ...s, itemId: null } : s
-      );
-
-      updatedContainers[backpackKey] = updatedBackpack;
-      delete updatedItems[itemId];
-
-      return { ...char, items: updatedItems, containers: updatedContainers };
+      return { ...char, backpack: char.backpack.filter((_, i) => i === indexOrItemId ? false : true) };
     })
   })),
   equipItem: (itemOrItemId, slotId) => set((state) => {
     const newCharacters = state.characters.map(char => {
       if (char.id !== state.activeCharacterId) return char;
       
-      const itemId = typeof itemOrItemId === 'string' ? itemOrItemId : itemOrItemId.id;
-      const itemInstance = char.items?.[itemId];
-      if (!itemInstance) return char;
+      if (char.saveVersion === 2) {
+        const itemId = typeof itemOrItemId === 'string' ? itemOrItemId : itemOrItemId.id;
+        const equipment = { ...char.equipment! };
+        const containers = { ...char.containers! };
+        const backpack = Object.values(containers).find(c => c.type === 'backpack')!;
+        
+        const targetSlot = equipment.slots.find(s => s.id === slotId);
+        if (!targetSlot) return char;
 
-      // Validation
-      const { equipmentList } = get();
-      const template = equipmentList.find(e => e.index === itemInstance.template);
-      if (template) {
-        const { canEquip, reason } = canEquipItem(template, slotId);
-        if (!canEquip) {
-          console.warn(`Cannot equip: ${reason}`);
-          return char;
+        // If target slot is full, move current item to backpack
+        if (targetSlot.itemId) {
+          const emptyBagSlot = backpack.slots.find(s => s.itemId === null);
+          if (emptyBagSlot) emptyBagSlot.itemId = targetSlot.itemId;
         }
+
+        // Remove from backpack
+        backpack.slots = backpack.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
+        
+        // Put in slot
+        targetSlot.itemId = itemId;
+
+        playSlotSound();
+        return { ...char, equipment, containers };
       }
 
-      const updatedEquipment = { ...char.equipment! };
-      const updatedContainers = { ...char.containers! };
-      const backpackKey = Object.keys(updatedContainers).find(key => updatedContainers[key].type === 'backpack');
-
-      if (!backpackKey) return char;
-      const updatedBackpack = { ...updatedContainers[backpackKey] };
-      let updatedBackpackSlots = [...updatedBackpack.slots];
-      let updatedEquipSlots = [...updatedEquipment.slots];
-
-      const targetSlotIndex = updatedEquipSlots.findIndex(s => s.id === slotId);
-      if (targetSlotIndex === -1) return char;
-
-      const previousItemId = updatedEquipSlots[targetSlotIndex].itemId;
-
-      // If target slot is full, move current item to backpack
-      if (previousItemId) {
-        const emptyBagSlotIndex = updatedBackpackSlots.findIndex(s => s.itemId === null);
-        if (emptyBagSlotIndex !== -1) {
-          updatedBackpackSlots[emptyBagSlotIndex] = { ...updatedBackpackSlots[emptyBagSlotIndex], itemId: previousItemId };
-        }
-      }
-
-      // Remove from backpack
-      updatedBackpackSlots = updatedBackpackSlots.map(s =>
-        s.itemId === itemId ? { ...s, itemId: null } : s
-      );
+      // Legacy v1
+      const item = itemOrItemId;
+      let newBackpack = char.backpack.filter(i => i.id !== item.id);
+      const newInventory = { ...char.inventory };
+      const itemSlots = Array.isArray(item.slot) ? item.slot : [slotId];
       
-      // Put in slot
-      updatedEquipSlots[targetSlotIndex] = { ...updatedEquipSlots[targetSlotIndex], itemId };
+      itemSlots.forEach(s => {
+        const existingItem = newInventory[s];
+        if (existingItem) {
+          const existingSlots = Array.isArray(existingItem.slot) ? existingItem.slot : [s];
+          existingSlots.forEach(es => delete newInventory[es]);
+          if (!newBackpack.find(i => i.id === existingItem.id)) {
+            newBackpack.push(existingItem);
+          }
+        }
+      });
 
-      updatedBackpack.slots = updatedBackpackSlots;
-      updatedContainers[backpackKey] = updatedBackpack;
-      updatedEquipment.slots = updatedEquipSlots;
+      itemSlots.forEach(s => {
+        newInventory[s] = item;
+      });
 
       playSlotSound();
-      return { ...char, equipment: updatedEquipment, containers: updatedContainers };
+
+      return { ...char, inventory: newInventory, backpack: newBackpack };
     });
 
     return { characters: newCharacters };
   }),
-  unequipItem: (slotId) => set((state) => ({
-    characters: state.characters.map(c => {
-      if (c.id !== state.activeCharacterId) return c;
-      const updatedEquipment = { ...c.equipment! };
-      const updatedContainers = { ...c.containers! };
-      const backpackKey = Object.keys(updatedContainers).find(key => updatedContainers[key].type === 'backpack');
+  unequipItem: (slotId) => set((state) => {
+    const activeChar = state.characters.find(c => c.id === state.activeCharacterId);
+    if (!activeChar) return state;
 
-      if (!backpackKey) return c;
-      const updatedBackpack = { ...updatedContainers[backpackKey] };
-      let updatedBackpackSlots = [...updatedBackpack.slots];
-      let updatedEquipSlots = [...updatedEquipment.slots];
+    if (activeChar.saveVersion === 2) {
+        return {
+          characters: state.characters.map(c => {
+            if (c.id !== state.activeCharacterId) return c;
+            const equipment = { ...c.equipment! };
+            const containers = { ...c.containers! };
+            const backpack = Object.values(containers).find(con => con.type === 'backpack')!;
+            
+            const slot = equipment.slots.find(s => s.id === slotId);
+            if (!slot || !slot.itemId) return c;
 
-      const slotIndex = updatedEquipSlots.findIndex(s => s.id === slotId);
-      if (slotIndex === -1 || !updatedEquipSlots[slotIndex].itemId) return c;
+            const itemId = slot.itemId;
+            slot.itemId = null;
 
-      const itemId = updatedEquipSlots[slotIndex].itemId;
-      updatedEquipSlots[slotIndex] = { ...updatedEquipSlots[slotIndex], itemId: null };
+            const emptyBagSlot = backpack.slots.find(s => s.itemId === null);
+            if (emptyBagSlot) emptyBagSlot.itemId = itemId;
 
-      const emptyBagSlotIndex = updatedBackpackSlots.findIndex(s => s.itemId === null);
-      if (emptyBagSlotIndex !== -1) {
-        updatedBackpackSlots[emptyBagSlotIndex] = { ...updatedBackpackSlots[emptyBagSlotIndex], itemId: itemId };
-      }
+            return { ...c, equipment, containers };
+          })
+        };
+    }
 
-      updatedBackpack.slots = updatedBackpackSlots;
-      updatedContainers[backpackKey] = updatedBackpack;
-      updatedEquipment.slots = updatedEquipSlots;
+    // Legacy v1
+    const item = activeChar.inventory[slotId];
+    if (!item) return state;
 
-      return { ...c, equipment: updatedEquipment, containers: updatedContainers };
-    })
-  })),
+    const newCharacters = state.characters.map(char => {
+      if (char.id !== state.activeCharacterId) return char;
+      
+      const newInventory = { ...char.inventory };
+      const itemSlots = Array.isArray(item.slot) ? item.slot : [slotId];
+      itemSlots.forEach(s => delete newInventory[s]);
+      
+      return { 
+        ...char, 
+        inventory: newInventory, 
+        backpack: [...char.backpack, item] 
+      };
+    });
+
+    return { characters: newCharacters };
+  }),
   updatePartyStats: (stats) => set((state) => ({
     partyStats: { ...state.partyStats, ...stats }
   })),
@@ -907,6 +878,7 @@ export const useStore = create<AppState>((set, get) => ({
     if (sourceId === targetId) return state;
 
     let itemToMove: any = null;
+    let itemInstance: any = null;
     let newCharacters = [...state.characters];
     let newPartyInventory = [...state.partyInventory];
 
@@ -918,29 +890,33 @@ export const useStore = create<AppState>((set, get) => ({
       const charIndex = newCharacters.findIndex(c => c.id === sourceId);
       if (charIndex !== -1) {
         const char = newCharacters[charIndex];
-        const itemInstance = char.items?.[itemId];
         
-        if (itemInstance) {
-          const updatedItems = { ...char.items };
-          const updatedEquipment = { ...char.equipment! };
-          const updatedContainers = { ...char.containers! };
-
-          updatedEquipment.slots = updatedEquipment.slots.map(s =>
-            s.itemId === itemId ? { ...s, itemId: null } : s
-          );
-
-          Object.keys(updatedContainers).forEach(key => {
-            updatedContainers[key] = {
-              ...updatedContainers[key],
-              slots: updatedContainers[key].slots.map(s =>
-                s.itemId === itemId ? { ...s, itemId: null } : s
-              )
-            };
-          });
-
-          delete updatedItems[itemId];
-          newCharacters[charIndex] = { ...char, equipment: updatedEquipment, containers: updatedContainers, items: updatedItems };
-          itemToMove = { ...itemInstance };
+        if (char.saveVersion === 2) {
+          itemInstance = { ...char.items?.[itemId] };
+          if (itemInstance) {
+            // Remove from slots
+            const equipment = { ...char.equipment! };
+            const containers = { ...char.containers! };
+            
+            equipment.slots = equipment.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
+            Object.values(containers).forEach(c => {
+              c.slots = c.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
+            });
+            
+            // Remove from items registry of source
+            const newItems = { ...char.items };
+            delete newItems[itemId];
+            
+            newCharacters[charIndex] = { ...char, equipment, containers, items: newItems };
+            itemToMove = itemInstance; // In v2, itemToMove is the instance + some metadata maybe?
+            // Note: If moving to another v2 character, we need to preserve metadata or re-fetch it.
+          }
+        } else {
+          itemToMove = char.backpack.find(i => i.id === itemId);
+          newCharacters[charIndex] = {
+            ...char,
+            backpack: char.backpack.filter(i => i.id !== itemId)
+          };
         }
       }
     }
@@ -949,9 +925,7 @@ export const useStore = create<AppState>((set, get) => ({
 
     // Add item to target (with stacking check)
     if (targetId === 'party') {
-      const existingInTargetIndex = newPartyInventory.findIndex(i =>
-        (i.index && i.index === (itemToMove.index || itemToMove.template)) || (i.name === itemToMove.name)
-      );
+      const existingInTargetIndex = newPartyInventory.findIndex(i => (i.index && i.index === (itemToMove.index || itemToMove.template)) || (i.name === itemToMove.name));
       if (existingInTargetIndex > -1) {
         const existingItem = { ...newPartyInventory[existingInTargetIndex] };
         existingItem.quantity = (existingItem.quantity || 1) + (itemToMove.quantity || 1);
@@ -963,42 +937,46 @@ export const useStore = create<AppState>((set, get) => ({
       const charIndex = newCharacters.findIndex(c => c.id === targetId);
       if (charIndex !== -1) {
         const char = { ...newCharacters[charIndex] };
-        const updatedItems = { ...(char.items || {}) };
-        const updatedContainers = { ...(char.containers || {}) };
-        const backpackKey = Object.keys(updatedContainers).find(key => updatedContainers[key].type === 'backpack');
         
-        if (backpackKey) {
-          const updatedBackpack = { ...updatedContainers[backpackKey] };
-          let updatedSlots = [...updatedBackpack.slots];
-
-          // Check if item already exists in target (stacking) - using template as key
-          const existingId = updatedSlots.find(s => s.itemId && updatedItems[s.itemId]?.template === (itemToMove.template || itemToMove.index))?.itemId;
+        if (char.saveVersion === 2) {
+          const items = { ...(char.items || {}) };
+          const containers = { ...(char.containers || {}) };
+          const backpack = Object.values(containers).find(c => c.type === 'backpack');
           
-          if (existingId) {
-            updatedItems[existingId] = {
-              ...updatedItems[existingId],
-              quantity: (updatedItems[existingId].quantity || 1) + (itemToMove.quantity || 1)
-            };
-          } else {
-            // Add as new instance
-            const newId = itemId.includes('_') ? itemId : `${itemToMove.template || itemToMove.index}_${crypto.randomUUID()}`;
-            updatedItems[newId] = {
-              ...itemToMove,
-              id: newId,
-              template: itemToMove.template || itemToMove.index,
-              quantity: itemToMove.quantity || 1,
-              addedAt: Date.now()
-            };
-            const emptySlotIndex = updatedSlots.findIndex(s => s.itemId === null);
-            if (emptySlotIndex !== -1) {
-              updatedSlots[emptySlotIndex] = { ...updatedSlots[emptySlotIndex], itemId: newId };
+          if (backpack) {
+            // Check if item already exists in target (stacking) - using template as key
+            const existingId = backpack.slots.find(s => s.itemId && items[s.itemId].template === (itemToMove.template || itemToMove.index))?.itemId;
+            
+            if (existingId) {
+              items[existingId] = { ...items[existingId], quantity: (items[existingId].quantity || 1) + (itemToMove.quantity || 1) };
+            } else {
+              // Add as new instance
+              const newId = itemId.includes('_') ? itemId : `${itemToMove.template || itemToMove.index}_${crypto.randomUUID()}`;
+              items[newId] = {
+                ...itemToMove,
+                id: newId,
+                template: itemToMove.template || itemToMove.index,
+                quantity: itemToMove.quantity || 1,
+                addedAt: Date.now()
+              };
+              const slot = backpack.slots.find(s => s.itemId === null);
+              if (slot) slot.itemId = newId;
             }
+            char.items = items;
+            char.containers = containers;
           }
+        } else {
+          const newBackpack = [...char.backpack];
+          const existingInTargetIndex = newBackpack.findIndex(i => (i.index && i.index === (itemToMove.index || itemToMove.template)) || (i.name === itemToMove.name));
           
-          updatedBackpack.slots = updatedSlots;
-          updatedContainers[backpackKey] = updatedBackpack;
-          char.items = updatedItems;
-          char.containers = updatedContainers;
+          if (existingInTargetIndex > -1) {
+            const existingItem = { ...newBackpack[existingInTargetIndex] };
+            existingItem.quantity = (existingItem.quantity || 1) + (itemToMove.quantity || 1);
+            newBackpack[existingInTargetIndex] = existingItem;
+          } else {
+            newBackpack.push(itemToMove);
+          }
+          char.backpack = newBackpack;
         }
         
         newCharacters[charIndex] = char;
@@ -1280,10 +1258,7 @@ export const useStore = create<AppState>((set, get) => ({
     set({ isLoadingSaves: true });
     try {
       const { saveService } = await import('../services/saveService');
-      const { migrateCharacterV1ToV2 } = await import('../lib/migrationUtils');
-      const rawChars = await saveService.loadCharacters();
-
-      const chars = rawChars.map(c => migrateCharacterV1ToV2(c));
+      const chars = await saveService.loadCharacters();
       
       const slots: (Character | null)[] = [null, null, null];
       chars.forEach(c => {

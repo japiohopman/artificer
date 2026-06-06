@@ -1,6 +1,7 @@
 import React from 'react';
 import { GameIcon, GAME_ICONS } from '../game_icons';
 import { cn } from '../lib/utils';
+import { useStore } from '../store/useStore';
 
 interface DiceTextProps {
   children: React.ReactNode;
@@ -25,6 +26,8 @@ const DAMAGE_TYPE_CONFIG: Record<string, { color: string; icon: keyof typeof GAM
 };
 
 export const DiceText: React.FC<DiceTextProps> = ({ children, iconSize = 10, className }) => {
+  const { rollDice3D } = useStore();
+
   const processString = (text: string) => {
     // Regex matches dice patterns OR any of our damage types
     const types = Object.keys(DAMAGE_TYPE_CONFIG).join('|');
@@ -42,10 +45,11 @@ export const DiceText: React.FC<DiceTextProps> = ({ children, iconSize = 10, cla
         const hasIcon = Object.prototype.hasOwnProperty.call(GAME_ICONS, iconName);
         
         return (
-          <span 
+          <button 
             key={i} 
+            onClick={() => rollDice3D(part, "Manual Roll")}
             className={cn(
-              "inline-flex items-center gap-1 font-bold text-dragon-red bg-dragon-red/10 rounded mx-0.5 border border-dragon-red/20 h-fit align-middle shadow-sm transition-all duration-200",
+              "inline-flex items-center gap-1 font-bold text-dragon-red bg-dragon-red/10 rounded mx-0.5 border border-dragon-red/20 h-fit align-middle shadow-sm transition-all duration-200 hover:bg-dragon-red/20 hover:scale-105 active:scale-95 cursor-pointer",
               iconSize > 15 ? "py-1 px-3" : "px-0.5"
             )}
             style={{ fontSize: iconSize > 15 ? `${Math.max(1, iconSize/24)}em` : 'inherit' }}
@@ -59,7 +63,7 @@ export const DiceText: React.FC<DiceTextProps> = ({ children, iconSize = 10, cla
               />
             )}
             <span className={iconSize > 15 ? "ml-1" : ""}>{part}</span>
-          </span>
+          </button>
         );
       }
 

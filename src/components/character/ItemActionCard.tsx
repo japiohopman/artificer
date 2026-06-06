@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { normalizeImageUrl } from '../../services/storageService';
-import { ItemSlot } from './EquipmentDoll';
+import { EquipmentSlotId } from '../../lib/equipmentConstants';
 
 export const ItemActionCard: React.FC = () => {
   const { 
@@ -25,9 +25,9 @@ export const ItemActionCard: React.FC = () => {
 
   if (!inspectingItem) return null;
 
-  const { item, sourceId, itemId, slot } = inspectingItem;
+  const { item, sourceId, index, slot } = inspectingItem;
   const activeChar = characters.find(c => c.id === activeCharacterId) || characters[0];
-  const isEquipment = item.kind === 'weapon' || item.kind === 'armor' || item.kind === 'shield' || item.kind === 'focus' || item._type === 'equipment';
+  const isEquipment = item._type === 'equipment';
   const isEquipped = !!slot;
   const isOurItem = sourceId === activeCharacterId;
   const isPartyItem = sourceId === 'party';
@@ -36,7 +36,7 @@ export const ItemActionCard: React.FC = () => {
 
   const handleEquip = () => {
     if (isEquipment && item.slot) {
-      const slots = Array.isArray(item.slot) ? item.slot : [item.slot as ItemSlot];
+      const slots = Array.isArray(item.slot) ? item.slot : [item.slot as EquipmentSlotId];
       // Simple logic: if multiple slots, pick first available or first in general
       const targetSlot = slots[0];
       equipItem(item, targetSlot);
@@ -46,7 +46,7 @@ export const ItemActionCard: React.FC = () => {
 
   const handleUnequip = () => {
     if (slot) {
-      unequipItem(slot as ItemSlot);
+      unequipItem(slot as EquipmentSlotId);
       handleClose();
     }
   };
@@ -61,10 +61,8 @@ export const ItemActionCard: React.FC = () => {
     if (window.confirm(`Discard ${item.name}? This cannot be undone.`)) {
       if (sourceId === 'party') {
         removeFromPartyInventory(item.id);
-      } else if (itemId) {
-        removeFromBackpack(itemId);
-      } else if (item.id) {
-        removeFromBackpack(item.id);
+      } else if (index !== undefined) {
+        removeFromBackpack(index);
       }
       handleClose();
     }

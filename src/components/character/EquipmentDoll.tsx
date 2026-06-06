@@ -1,23 +1,18 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
-import { 
-  User, Shield, Sword, Footprints, Hand, 
-  Gem, Zap, Wrench, Circle, Layers, 
-  Shirt, Ghost, Disc
-} from 'lucide-react';
 import { ChromaKeyImage } from '../ChromaKeyImage';
-
-export type ItemSlot = 
-  | 'head' | 'neck' | 'chest' | 'back' 
-  | 'main_hand' | 'off_hand' | 'hands' | 'feet'
-  | 'ring_1' | 'ring_2' | 'focus'
-  | 'clothes' | 'acc_1' | 'acc_2' | 'acc_3' | 'acc_4'
-  | 'tool_1' | 'tool_2' | 'tool_3' | 'tool_4' | 'tool_5';
+import { 
+  EQUIPMENT_SLOTS, 
+  EquipmentSlotId, 
+  DOLL_GRID, 
+  SIDE_SLOTS, 
+  BOTTOM_SLOTS 
+} from '../../lib/equipmentConstants';
 
 interface ItemDollProps {
-  activeSlots?: ItemSlot[];
+  activeSlots?: EquipmentSlotId[];
   equippedItems?: Record<string, any | null>;
-  onSlotClick?: (slot: ItemSlot) => void;
+  onSlotClick?: (slot: EquipmentSlotId) => void;
   className?: string;
   alignment?: string;
   equipment?: any;
@@ -29,68 +24,6 @@ interface ItemDollProps {
 }
 
 const ITEM_BACKGROUND = "https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1775921630292-back_item_slug.webp";
-
-// Custom Plus icon since Lucide Plus is imported as Plus elsewhere
-const PlusIcon = () => <div className="w-3 h-3 border-2 border-current rounded-sm relative"><div className="absolute inset-0 flex items-center justify-center">+</div></div>;
-
-const SLOT_ICONS: Record<ItemSlot, React.ElementType> = {
-  'head': Circle,
-  'neck': Gem,
-  'chest': Shirt,
-  'back': Ghost,
-  'main_hand': Sword,
-  'off_hand': Shield,
-  'hands': Hand,
-  'feet': Footprints,
-  'ring_1': Gem,
-  'ring_2': Gem,
-  'focus': Zap,
-  'clothes': Shirt,
-  'acc_1': Gem,
-  'acc_2': Gem,
-  'acc_3': Gem,
-  'acc_4': Gem,
-  'tool_1': Wrench,
-  'tool_2': Wrench,
-  'tool_3': Wrench,
-  'tool_4': Wrench,
-  'tool_5': Wrench,
-};
-
-const SLOT_LABELS: Record<ItemSlot, string> = {
-  'head': 'Head',
-  'neck': 'Neck',
-  'chest': 'Chest',
-  'back': 'Back',
-  'main_hand': 'Main',
-  'off_hand': 'Off',
-  'hands': 'Hands',
-  'feet': 'Feet',
-  'ring_1': 'R1',
-  'ring_2': 'R2',
-  'focus': 'Focus',
-  'clothes': 'Cloth',
-  'acc_1': 'Acc 1',
-  'acc_2': 'Acc 2',
-  'acc_3': 'Acc 3',
-  'acc_4': 'Acc 4',
-  'tool_1': 'T1',
-  'tool_2': 'T2',
-  'tool_3': 'T3',
-  'tool_4': 'T4',
-  'tool_5': 'T5',
-};
-
-const DOLL_GRID: (ItemSlot | null)[][] = [
-  [null, 'head', null],
-  ['focus', 'neck', 'hands'],
-  ['main_hand', 'chest', 'off_hand'],
-  ['ring_1', 'back', 'ring_2'],
-  [null, 'feet', null]
-];
-
-const SIDE_SLOTS: ItemSlot[] = ['clothes', 'acc_1', 'acc_2', 'acc_3', 'acc_4'];
-const BOTTOM_SLOTS: ItemSlot[] = ['tool_1', 'tool_2', 'tool_3', 'tool_4', 'tool_5'];
 
 export const EquipmentDoll: React.FC<ItemDollProps> = ({ 
   activeSlots = [], 
@@ -105,10 +38,11 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
   maxWidth,
   characterImageUrl
 }) => {
-  const renderSlot = (slot: ItemSlot) => {
+  const renderSlot = (slot: EquipmentSlotId) => {
     const isActive = activeSlots.includes(slot);
     const equippedItem = equippedItems[slot];
-    const Icon = SLOT_ICONS[slot];
+    const slotDef = EQUIPMENT_SLOTS[slot];
+    const Icon = slotDef.icon;
     
     return (
       <button 
@@ -145,7 +79,7 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
               "text-[5px] uppercase font-bold tracking-tighter text-center leading-none",
               isActive ? "text-dragon-red" : "text-red-600/60"
             )}>
-              {SLOT_LABELS[slot]}
+              {slotDef.label}
             </span>
           </div>
         )}

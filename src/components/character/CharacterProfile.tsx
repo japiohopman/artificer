@@ -14,6 +14,7 @@ import { useStore, SKILL_LIST } from '../../store/useStore';
 import { Inventory } from './Inventory';
 import { EquipmentDoll } from './EquipmentDoll';
 import { EquipmentCard } from '../EquipmentCard';
+import { EQUIPMENT_SLOTS, AUX_SLOTS, EquipmentSlotId } from '../../lib/equipmentConstants';
 import { GameIcon, GAME_ICONS, GameIconName } from '../../game_icons';
 import { ChromaKeyImage } from '../ChromaKeyImage';
 import { cn } from '../../lib/utils';
@@ -32,7 +33,8 @@ const SpellListRow: React.FC<{
   spell: any; 
   onCast: (spell: any) => void;
   isCastable: boolean;
-}> = ({ spell, onCast, isCastable }) => {
+  onInvokeRoll?: (notation: string, label: string) => void;
+}> = ({ spell, onCast, isCastable, onInvokeRoll }) => {
   return (
     <div className="flex items-center gap-4 py-2 px-3 border-b border-dragon-red/5 hover:bg-dragon-red/5 group transition-colors">
        <div className="w-10 h-10 bg-dragon-red/10 rounded flex items-center justify-center shrink-0 border border-dragon-red/10 overflow-hidden">
@@ -54,7 +56,14 @@ const SpellListRow: React.FC<{
           </div>
        </div>
        <button 
-         onClick={() => onCast(spell)}
+         onClick={() => {
+           onCast(spell);
+           if (onInvokeRoll) {
+             const dmg = spell.damage?.damage_at_character_level || spell.damage?.damage_at_slot_level;
+             const notation = dmg ? (dmg[spell.level] || dmg[Object.keys(dmg)[0]]) : null;
+             if (notation) onInvokeRoll(notation, `${spell.name} Effect`);
+           }
+         }}
          disabled={!isCastable}
          className={cn(
            "px-3 py-1.5 rounded-sm border text-[8px] font-black uppercase tracking-widest transition-all",
@@ -167,6 +176,7 @@ export const CharacterProfile: React.FC = () => {
   };
 
   const totalCharacterWeight = calculateWeight();
+  const { rollDice3D } = useStore();
   const derived = calculateDerivedStats(character);
 
   const getSpellSlots = (lvl: number, cls: string) => {
@@ -676,12 +686,42 @@ export const CharacterProfile: React.FC = () => {
                           <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Core_Attributes</h3>
                        </div>
                        <div className="flex flex-col gap-2">
-                          <VerticalStat label="STRENGTH" value={effectiveStats.str} abbr="STR" icon="sword" />
-                          <VerticalStat label="DEXTERITY" value={effectiveStats.dex} abbr="DEX" icon="wind" />
-                          <VerticalStat label="CONSTITUTION" value={effectiveStats.con}    abbr="CON" icon="heart" />
-                          <VerticalStat label="INTELLIGENCE" value={effectiveStats.int} abbr="INT" icon="sparkles" />
-                          <VerticalStat label="WISDOM" value={effectiveStats.wis} abbr="WIS" icon="scroll" />
-                          <VerticalStat label="CHARISMA" value={effectiveStats.cha} abbr="CHA" icon="user" />
+                          <VerticalStat label="STRENGTH" value={effectiveStats.str} abbr="STR" icon="sword" 
+                            onClick={() => {
+                              const mod = Math.floor((effectiveStats.str - 10) / 2);
+                              rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Strength Check");
+                            }}
+                          />
+                          <VerticalStat label="DEXTERITY" value={effectiveStats.dex} abbr="DEX" icon="wind" 
+                            onClick={() => {
+                              const mod = Math.floor((effectiveStats.dex - 10) / 2);
+                              rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Dexterity Check");
+                            }}
+                          />
+                          <VerticalStat label="CONSTITUTION" value={effectiveStats.con} abbr="CON" icon="heart" 
+                            onClick={() => {
+                              const mod = Math.floor((effectiveStats.con - 10) / 2);
+                              rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Constitution Check");
+                            }}
+                          />
+                          <VerticalStat label="INTELLIGENCE" value={effectiveStats.int} abbr="INT" icon="sparkles" 
+                            onClick={() => {
+                              const mod = Math.floor((effectiveStats.int - 10) / 2);
+                              rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Intelligence Check");
+                            }}
+                          />
+                          <VerticalStat label="WISDOM" value={effectiveStats.wis} abbr="WIS" icon="scroll" 
+                            onClick={() => {
+                              const mod = Math.floor((effectiveStats.wis - 10) / 2);
+                              rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Wisdom Check");
+                            }}
+                          />
+                          <VerticalStat label="CHARISMA" value={effectiveStats.cha} abbr="CHA" icon="user" 
+                            onClick={() => {
+                              const mod = Math.floor((effectiveStats.cha - 10) / 2);
+                              rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Charisma Check");
+                            }}
+                          />
                        </div>
 
                        <div className="grid grid-cols-2 gap-2 mt-6">
@@ -712,10 +752,11 @@ export const CharacterProfile: React.FC = () => {
                                 const totalMod = abilityMod + (isProficient ? derived.proficiencyBonus : 0);
                                 
                                 return (
-                                   <div 
+                                   <button 
                                       key={abbr}
+                                      onClick={() => rollDice3D(`1d20${totalMod >= 0 ? '+' : ''}${totalMod !== 0 ? totalMod : ''}`, `${abbr} Saving Throw`)}
                                       className={cn(
-                                         "flex flex-col items-center justify-center p-2 rounded-sm border transition-all",
+                                         "flex flex-col items-center justify-center p-2 rounded-sm border transition-all hover:bg-dragon-red/10 group/save active:scale-95",
                                          isProficient ? "bg-dragon-red/5 border-dragon-red/20" : "bg-white/20 border-parchment-200/40 opacity-70"
                                       )}
                                    >
@@ -732,7 +773,7 @@ export const CharacterProfile: React.FC = () => {
                                       )}>
                                          {totalMod >= 0 ? `+${totalMod}` : totalMod}
                                       </span>
-                                   </div>
+                                   </button>
                                 );
                              })}
                           </div>
@@ -752,10 +793,11 @@ export const CharacterProfile: React.FC = () => {
                             const totalMod = abilityMod + (isProficient ? proficiencyBonus : 0);
                             
                             return (
-                              <div 
+                              <button 
                                 key={skill.name}
+                                onClick={() => rollDice3D(`1d20${totalMod >= 0 ? '+' : ''}${totalMod !== 0 ? totalMod : ''}`, `${skill.name} Check`)}
                                 className={cn(
-                                  "flex items-center justify-between py-1.5 px-2 rounded-sm transition-all group border-b border-parchment-200/50 last:border-0",
+                                  "flex items-center justify-between py-1.5 px-2 rounded-sm transition-all group border-b border-parchment-200/50 last:border-0 hover:bg-dragon-red/10 active:scale-[0.98] w-full text-left",
                                   isProficient ? "bg-dragon-red/5" : "opacity-60"
                                 )}
                               >
@@ -790,7 +832,7 @@ export const CharacterProfile: React.FC = () => {
                                 )}>
                                   {totalMod >= 0 ? `+${totalMod}` : totalMod}
                                 </span>
-                              </div>
+                              </button>
                             );
                           })}
                        </div>
@@ -1029,16 +1071,15 @@ export const CharacterProfile: React.FC = () => {
                             </div>
                             
                             <div className="grid grid-cols-6 md:grid-cols-12 gap-1.5">
-                              {/* Port the logic from EquipmentDoll segments */}
-                              {['clothes', 'acc-1', 'acc-2', 'acc-3', 'acc-4', 'extra', 'ammo', 'tool-1', 'tool-2', 'tool-3', 'tool-4', 'tool-5'].map(slot => (
+                              {AUX_SLOTS.map(slot => (
                                 <DroppableSlotWrapper 
                                   key={slot}
-                                  slot={slot as any}
+                                  slot={slot}
                                   item={character.inventory?.[slot]}
                                   onClick={() => {
                                     const itemAtSlot = character.inventory?.[slot];
                                     if (itemAtSlot) {
-                                        setInspectingItem({ item: itemAtSlot, sourceId: character.id, slot: slot as any });
+                                        setInspectingItem({ item: itemAtSlot, sourceId: character.id, slot });
                                     }
                                   }}
                                   alignment={character.alignment}
@@ -1232,6 +1273,7 @@ export const CharacterProfile: React.FC = () => {
                                        spell={spell} 
                                        onCast={() => castSpell(spell.index, spell.level)}
                                        isCastable={spell.level === 0 || currentSlots > 0}
+                                       onInvokeRoll={rollDice3D}
                                      />
                                    );
                                  })
@@ -1260,6 +1302,7 @@ export const CharacterProfile: React.FC = () => {
                                      spell={spell} 
                                      onCast={() => castSpell(spell.index, 0)}
                                      isCastable={true}
+                                     onInvokeRoll={rollDice3D}
                                    />
                                  ))
                                ) : (
@@ -1420,7 +1463,7 @@ const CompactCombatCard: React.FC<{ label: string; value: string; subValue: stri
 );
 
 const DroppableSlotWrapper: React.FC<{ 
-  slot: any; 
+  slot: EquipmentSlotId; 
   item: any; 
   onClick: () => void; 
   alignment: string;
@@ -1430,14 +1473,7 @@ const DroppableSlotWrapper: React.FC<{
     data: { slot }
   });
 
-  const SLOT_ICONS: Record<string, GameIconName> = {
-    'head': 'head', 'neck': 'neckles', 'chest': 'chest', 'back': 'cloak',
-    'main-hand': 'weapon', 'off-hand': 'shield', 'hands': 'hand', 'feet': 'boots',
-    'ring-1': 'ring', 'ring-2': 'ring', 'focus': 'focus', 'clothes': 'shirt',
-    'acc-1': 'gem', 'acc-2': 'gem', 'acc-3': 'gem', 'acc-4': 'gem',
-    'tool-1': 'tools', 'tool-2': 'tools', 'tool-3': 'tools', 'tool-4': 'tools', 'tool-5': 'tools',
-    'extra': 'pouch', 'ammo': 'ammunition',
-  };
+  const slotDef = EQUIPMENT_SLOTS[slot];
 
   return (
     <div ref={setNodeRef} className="relative">
@@ -1455,12 +1491,12 @@ const DroppableSlotWrapper: React.FC<{
            <ChromaKeyImage src={item.imageUrl} alt={item.name} className="h-[90%] w-auto object-contain mx-auto p-0.5" />
         ) : (
            <div className="opacity-20">
-             <GameIcon name={SLOT_ICONS[slot] || 'info'} size={12} color="#8B0000" />
+             <GameIcon name={slotDef?.gameIcon || 'info'} size={12} color="#8B0000" />
            </div>
         )}
       </div>
       <div className="absolute -bottom-1 -right-1 bg-dragon-red text-[6px] text-white px-1 rounded-sm uppercase font-black tracking-tighter shadow-sm pointer-events-none">
-        {slot.replace('acc-', 'A').replace('tool-', 'T').replace('ring-', 'R').toUpperCase()}
+        {slot.replace('acc_', 'A').replace('tool_', 'T').replace('ring_', 'R').toUpperCase()}
       </div>
     </div>
   );
@@ -1554,14 +1590,16 @@ const HeaderField: React.FC<{ label: string; value: string; icon: any }> = ({ la
   </div>
 );
 
-const VerticalStat: React.FC<{ label: string; value: number; abbr: string; icon: string; isModified?: boolean }> = ({ label, value, abbr, icon, isModified }) => {
+const VerticalStat: React.FC<{ label: string; value: number; abbr: string; icon: string; isModified?: boolean; onClick?: () => void }> = ({ label, value, abbr, icon, isModified, onClick }) => {
   const mod = Math.floor((value - 10) / 2);
   const customIconPath = abilityScoreIcons[abbr.toLowerCase()];
 
   return (
-    <div className={cn(
-      "flex items-center gap-4 py-3 px-3 border border-dragon-red/5 rounded-sm group transition-all",
-      isModified ? "bg-dragon-red/5 border-dragon-red/20 shadow-[0_0_15px_rgba(139,0,0,0.1)]" : "bg-white/40 hover:bg-white/60"
+    <button 
+      onClick={onClick}
+      className={cn(
+        "flex items-center gap-4 py-3 px-3 border border-dragon-red/5 rounded-sm group transition-all text-left w-full active:scale-[0.98]",
+        isModified ? "bg-dragon-red/5 border-dragon-red/20 shadow-[0_0_15px_rgba(139,0,0,0.1)]" : "bg-white/40 hover:bg-white/60"
     )}>
        <div className={cn(
          "w-10 h-10 flex items-center justify-center transition-opacity shrink-0 rounded-full",
@@ -1597,7 +1635,7 @@ const VerticalStat: React.FC<{ label: string; value: number; abbr: string; icon:
              </div>
           </div>
        </div>
-    </div>
+    </button>
   );
 };
 

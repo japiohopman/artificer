@@ -19,37 +19,16 @@ export const Inventory: React.FC<InventoryProps> = ({ onEquipRequest }) => {
   const [activeCategory, setActiveCategory] = React.useState<BackpackCategory>('all');
   
   const activeCharacter = characters.find(c => c.id === activeCharacterId) || characters[0];
+  const inventory = activeCharacter.inventory;
+  const backpack = activeCharacter.backpack;
+  const equippedItems = Object.entries(inventory).filter(([_, item]) => item !== null);
 
-  // v2 registry support
-  const itemsRegistry = activeCharacter.items || {};
-  const backpackContainer = Object.values(activeCharacter.containers || {}).find(c => c.type === 'backpack');
-  const equipmentSlots = activeCharacter.equipment?.slots || [];
-  const { equipmentList } = useStore();
-
-  const resolveItem = (itemId: string | null) => {
-    if (!itemId || !itemsRegistry[itemId]) return null;
-    const instance = itemsRegistry[itemId];
-    const template = equipmentList.find(e => e.index === instance.template);
-    return { ...template, ...instance };
-  };
-
-  const equippedItems = equipmentSlots
-    .filter(s => s.itemId !== null)
-    .map(s => [s.id, resolveItem(s.itemId)])
-    .filter(([_, item]) => item !== null) as [string, any][];
-
-  const backpackItems = (backpackContainer?.slots || [])
-    .filter(s => s.itemId !== null)
-    .map(s => resolveItem(s.itemId))
-    .filter(Boolean);
-
-  const filteredBackpack = backpackItems.filter(item => {
+  const filteredBackpack = backpack.filter(item => {
     if (activeCategory === 'all') return true;
-    const type = item.kind || item._type;
-    if (activeCategory === 'equipment') return type === 'equipment' || type === 'weapon' || type === 'armor' || type === 'shield';
-    if (activeCategory === 'materials') return type === 'materials' || type === 'material';
-    if (activeCategory === 'key') return item.isKeyItem || item.category?.index === 'key-items' || type === 'key';
-    if (activeCategory === 'books') return item.isBook || item.category?.index === 'books' || type === 'books' || type === 'book';
+    if (activeCategory === 'equipment') return item._type === 'equipment';
+    if (activeCategory === 'materials') return item._type === 'materials' || item._type === 'material';
+    if (activeCategory === 'key') return item.isKeyItem || item.category?.index === 'key-items' || item._type === 'key';
+    if (activeCategory === 'books') return item.isBook || item.category?.index === 'books' || item._type === 'books';
     return true;
   });
 
@@ -115,7 +94,7 @@ export const Inventory: React.FC<InventoryProps> = ({ onEquipRequest }) => {
           <h3 className="text-[10px] font-bold text-dragon-red uppercase tracking-widest flex items-center gap-2">
             <Package size={12} /> Backpack
           </h3>
-          <span className="text-[9px] text-parchment-500 font-mono">{backpackItems.length}</span>
+          <span className="text-[9px] text-parchment-500 font-mono">{backpack.length}</span>
         </div>
 
         {/* Backpack Categories */}
@@ -181,7 +160,7 @@ export const Inventory: React.FC<InventoryProps> = ({ onEquipRequest }) => {
                       </button>
                     )}
                     <button 
-                      onClick={() => removeFromBackpack(item.id)}
+                      onClick={() => removeFromBackpack(index)}
                       className="p-1.5 text-parchment-400 hover:text-red-600 transition-colors"
                       title="Discard Item"
                     >

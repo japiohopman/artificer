@@ -5,7 +5,7 @@ import { EquipmentDoll } from './EquipmentDoll';
 import { Inventory } from './Inventory';
 import { CharacterStats } from './CharacterStats';
 import { X, Shield, Package, BarChart3, Info, Truck, ChevronLeft, ChevronRight } from 'lucide-react';
-import { ItemSlot } from './EquipmentDoll';
+import { EquipmentSlotId } from '../../lib/equipmentConstants';
 import { cn } from '../../lib/utils';
 
 type CharacterTab = 'equipment' | 'inventory' | 'stats' | 'vehicle';
@@ -28,7 +28,7 @@ export const CharacterPanel: React.FC = () => {
   const activeCharacter = characters.find(c => c.id === activeCharacterId) || characters[0];
   const inventory = activeCharacter.inventory;
 
-  const handleEquip = (slot: ItemSlot) => {
+  const handleEquip = (slot: EquipmentSlotId) => {
     if (focusedItem?._type === 'equipment') {
       const allowedSlots = Array.isArray(focusedItem.slot) ? focusedItem.slot : [focusedItem.slot];
       if (allowedSlots.includes(slot)) {
@@ -134,7 +134,7 @@ export const CharacterPanel: React.FC = () => {
                       }}
                       activeSlots={
                         focusedItem?._type === 'equipment' 
-                          ? (Array.isArray(focusedItem.slot) ? focusedItem.slot : (focusedItem.slot ? [focusedItem.slot as ItemSlot] : []))
+                          ? (Array.isArray(focusedItem.slot) ? focusedItem.slot : (focusedItem.slot ? [focusedItem.slot as EquipmentSlotId] : []))
                           : []
                       }
                     />
@@ -159,7 +159,7 @@ export const CharacterPanel: React.FC = () => {
               {activeTab === 'inventory' && (
                 <Inventory 
                   onEquipRequest={(item) => {
-                    const slots = Array.isArray(item.slot) ? item.slot : (item.slot ? [item.slot as ItemSlot] : []);
+                    const slots = Array.isArray(item.slot) ? item.slot : (item.slot ? [item.slot as EquipmentSlotId] : []);
                     // Find first empty slot among allowed slots, or default to first
                     const targetSlot = slots.find(s => !inventory[s]) || slots[0];
                     

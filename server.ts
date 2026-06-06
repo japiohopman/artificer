@@ -28,6 +28,10 @@ async function startServer() {
     try {
       const url = new URL(urlStr);
       if (url.protocol !== 'https:') return false;
+
+      // Prevent use of credentials in URLs to avoid SSRF with auth bypass or leak
+      if (url.username || url.password) return false;
+
       return allowedHosts.some(host =>
         url.hostname === host || url.hostname.endsWith('.' + host)
       );
@@ -44,11 +48,23 @@ async function startServer() {
 
   function isPathAllowed(filePath: any): boolean {
     if (typeof filePath !== 'string') return false;
-    // Prevent traversal
-    if (filePath.includes('..') || path.isAbsolute(filePath) || filePath.includes('\\')) {
+    
+    // Normalize and check for traversal
+    const normalizedPath = path.normalize(filePath).replace(/\\/g, '/');
+    
+    if (
+      normalizedPath.includes('..') || 
+      path.isAbsolute(normalizedPath) || 
+      normalizedPath.startsWith('/') ||
+      normalizedPath.includes('\0') // Null byte check
+    ) {
       return false;
     }
-    return allowedPathPrefixes.some(prefix => filePath.startsWith(prefix));
+
+    // Must start with an allowed prefix and not try to escape it
+    return allowedPathPrefixes.some(prefix => 
+      normalizedPath.startsWith(prefix) && !normalizedPath.includes('//')
+    );
   }
 
   // API: Proxy Wiki (for scraping Fandom)

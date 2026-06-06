@@ -39,10 +39,36 @@ Arcane Codex is a high-fidelity digital grimoire for character management, lore 
 Arcane Codex utilizes a sophisticated **Registry/Slot pattern** to manage character equipment and items, ensuring long-term save stability and data integrity.
 
 ### Core Entities
-- **Item Templates**: Immutable definitions of items (e.g., `longsword`, `leather_armor`) stored in `public/assets/atlas/equipment/json/`.
-- **Item Instances**: Specific items owned by a character, stored in the character's `items` registry with instance-specific state (quantity, durability, attuned status).
+- **Item Templates**: Immutable definitions of items (e.g., `longsword`, `leather_armor`) stored in `public/assets/atlas/equipment/json/`. They define base stats, cost, weight, and visual assets.
+- **Item Instances**: Specific items owned by a character, stored in the character's `items` registry.
+  ```typescript
+  interface ItemInstance {
+    id: string;        // Unique instance UUID
+    template: string;  // Reference to template index (e.g., "longsword")
+    quantity: number;
+    kind: string;      // weapon, armor, consumable, etc.
+    isMagic?: boolean;
+    attuned?: boolean;
+    addedAt: number;
+  }
+  ```
 - **Containers**: Uniform objects (backpacks, chests, pouches) consisting of a fixed number of `InventorySlots`.
-- **Equipment Slots**: Character-specific slots (e.g., `main_hand`, `off_hand`, `chest`, `focus`, `tool_1`) that hold a reference to an `itemId`.
+  ```typescript
+  interface InventoryContainer {
+    id: string;
+    type: 'backpack' | 'chest' | 'pouch' | 'corpse' | 'merchant';
+    ownerId: string;
+    slots: InventorySlot[];
+  }
+  ```
+- **Inventory Slots**: Individual storage units within a container or equipment set.
+  ```typescript
+  interface InventorySlot {
+    id: string;        // e.g., "bag_0", "main_hand"
+    itemId: string | null; // Reference to ItemInstance.id
+  }
+  ```
+- **Equipment Set**: A specialized container for a character's equipped items, using standardized slot IDs (e.g., `main_hand`, `off_hand`, `chest`, `head`, `feet`, `neck`, `ring_1`, `ring_2`, `tool_1-5`, `focus`, `quick_1-4`).
 
 ### Advantages
 - **Save Stability**: Changes to item templates propagate to all existing saves without breaking them.

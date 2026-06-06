@@ -132,7 +132,15 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
               At Higher Levels
             </h4>
             <div className="text-[12px] leading-relaxed text-parchment-800 font-serif italic">
-               <Markdown remarkPlugins={[remarkGfm]}>{higherLevelsMarkdown}</Markdown>
+               <Markdown 
+                 remarkPlugins={[remarkGfm]}
+                 components={{
+                   p: ({ children }) => <p className="mb-2"><DiceText iconSize={14}>{children}</DiceText></p>,
+                   li: ({ children }) => <li className="mb-1"><DiceText iconSize={14}>{children}</DiceText></li>
+                 }}
+               >
+                 {higherLevelsMarkdown}
+               </Markdown>
             </div>
           </div>
         )}

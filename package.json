@@ -13,10 +13,8 @@
     "generate:equipment-index": "node tools/generateEquipmentIndex.cjs",
     "generate:spell-index": "node tools/generateSpellIndex.cjs",
     "generate:enemy-index": "node tools/generateEnemyIndex.cjs",
-    "generate:indices": "npm run generate:equipment-index && npm run generate:spell-index && npm run generate:enemy-index",
     "normalize:assets": "node tools/normalizeAllAssets.cjs",
-    "check:assets": "npm run normalize:assets && npm run validate:assets",
-    "check": "npm run lint && npm run check:assets"
+    "check:assets": "npm run normalize:assets && npm run validate:assets"
   },
   "dependencies": {
     "@3d-dice/dice-box": "^1.1.4",
@@ -52,10 +50,10 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.21",
+    "jsonschema": "^1.5.0",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
-    "jsonschema": "^1.5.0",
     "vite": "^6.2.0"
   }
 }
