@@ -51,6 +51,8 @@ export interface AtlasBackground {
   index: string;
   name: string;
   description?: string;
+  ability_scores?: Array<{ index: string; name: string; url: string }>;
+  feat?: { index: string; name: string; url: string };
   starting_proficiencies: any[];
   languages?: any[];
   language_options?: any;

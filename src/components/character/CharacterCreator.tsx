@@ -855,6 +855,7 @@ const StepContent: React.FC<{
             setNewChar(prev => {
                 const newBackpack = [...(prev.backpack || [])];
                 const newProficiencies = prev.proficiencies ? [...prev.proficiencies] : [];
+                const newFeatures = prev.features ? [...prev.features] : [];
 
                 if (bgData?.starting_equipment) {
                     bgData.starting_equipment.forEach((entry: any) => {
@@ -873,6 +874,20 @@ const StepContent: React.FC<{
                     });
                 }
 
+                // Handle 2024 Feat structure
+                if (bgData?.feat) {
+                    const featFeature = {
+                        name: bgData.feat.name,
+                        index: bgData.feat.index,
+                        desc: 'Granted by your ' + bgData.name + ' background.',
+                        source: 'Background'
+                    };
+                    if (!newFeatures.find(f => f.index === featFeature.index)) {
+                        newFeatures.push(featFeature);
+                    }
+                }
+
+                // Legacy feature support
                 if (bgData?.feature) {
                     const feature = {
                         name: bgData.feature.name,
@@ -880,24 +895,17 @@ const StepContent: React.FC<{
                         desc: Array.isArray(bgData.feature.desc) ? bgData.feature.desc.join('\n') : bgData.feature.desc,
                         source: 'Background'
                     };
-                    const newFeatures = prev.features ? [...prev.features] : [];
                     if (!newFeatures.find(f => f.name === feature.name)) {
                         newFeatures.push(feature);
                     }
-                    return {
-                        ...prev,
-                        background: val,
-                        backpack: newBackpack,
-                        proficiencies: newProficiencies,
-                        features: newFeatures
-                    };
                 }
 
                 return {
                     ...prev,
                     background: val,
                     backpack: newBackpack,
-                    proficiencies: newProficiencies
+                    proficiencies: newProficiencies,
+                    features: newFeatures
                 };
             });
          }}

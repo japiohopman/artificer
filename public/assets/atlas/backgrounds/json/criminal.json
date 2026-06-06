@@ -1,0 +1,123 @@
+{
+  "index": "criminal",
+  "name": "Criminal",
+  "description": "You have a history of breaking the law and survive by your wits.",
+  "ability_scores": [
+    {
+      "index": "dex",
+      "name": "dexterity",
+      "url": "/assets/atlas/ability_scores/json/dexterity.json"
+    },
+    {
+      "index": "con",
+      "name": "constitution",
+      "url": "/assets/atlas/ability_scores/json/constitution.json"
+    },
+    {
+      "index": "int",
+      "name": "intelligence",
+      "url": "/assets/atlas/ability_scores/json/intelligence.json"
+    }
+  ],
+  "feat": {
+    "index": "alert",
+    "name": "Alert",
+    "url": "/assets/atlas/feats/json/alert.json"
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_sleight_of_hand",
+      "name": "Skill: Sleight Of Hand",
+      "url": "/assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
+    },
+    {
+      "index": "skill_stealth",
+      "name": "Skill: Stealth",
+      "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+    },
+    {
+      "index": "thieves_tools",
+      "name": "Thieves' Tools",
+      "url": "/assets/atlas/proficiencies/json/thieves_tools.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "thieves_tools",
+        "name": "Thieves' Tools",
+        "url": "/assets/atlas/equipment/json/thieves_tools.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "crowbar",
+        "name": "Crowbar",
+        "url": "/assets/atlas/equipment/json/crowbar.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "dagger",
+        "name": "Dagger",
+        "url": "/assets/atlas/equipment/json/dagger.json"
+      },
+      "quantity": 2
+    },
+    {
+      "equipment": {
+        "index": "pouch",
+        "name": "Pouch",
+        "url": "/assets/atlas/equipment/json/pouch.json"
+      },
+      "quantity": 2
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Clothes Traveler'S",
+        "url": "/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 16
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "Choose this background package or 50 GP",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "gold",
+                  "name": "Gold",
+                  "url": "/assets/atlas/equipment/json/gold.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "url": "/assets/atlas/backgrounds/json/criminal.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/backgrounds/wiki_image/criminal.webp"
+}

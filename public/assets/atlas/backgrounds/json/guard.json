@@ -1,0 +1,131 @@
+{
+  "index": "guard",
+  "name": "Guard",
+  "description": "You served as a sentry, a jailer, or a member of a watch.",
+  "ability_scores": [
+    {
+      "index": "str",
+      "name": "strength",
+      "url": "/assets/atlas/ability_scores/json/strength.json"
+    },
+    {
+      "index": "int",
+      "name": "intelligence",
+      "url": "/assets/atlas/ability_scores/json/intelligence.json"
+    },
+    {
+      "index": "wis",
+      "name": "wisdom",
+      "url": "/assets/atlas/ability_scores/json/wisdom.json"
+    }
+  ],
+  "feat": {
+    "index": "alert",
+    "name": "Alert",
+    "url": "/assets/atlas/feats/json/alert.json"
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_athletics",
+      "name": "Skill: Athletics",
+      "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
+    },
+    {
+      "index": "skill_perception",
+      "name": "Skill: Perception",
+      "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+    },
+    {
+      "index": "dice_set",
+      "name": "Dice Set",
+      "url": "/assets/atlas/proficiencies/json/dice_set.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "dice_set",
+        "name": "Dice Set",
+        "url": "/assets/atlas/equipment/json/dice_set.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "lantern_hooded",
+        "name": "Lantern Hooded",
+        "url": "/assets/atlas/equipment/json/lantern_hooded.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "manacles",
+        "name": "Manacles",
+        "url": "/assets/atlas/equipment/json/manacles.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "quiver",
+        "name": "Quiver",
+        "url": "/assets/atlas/equipment/json/quiver.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "spear",
+        "name": "Spear",
+        "url": "/assets/atlas/equipment/json/spear.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Clothes Traveler'S",
+        "url": "/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 12
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "Choose this background package or 50 GP",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "gold",
+                  "name": "Gold",
+                  "url": "/assets/atlas/equipment/json/gold.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "url": "/assets/atlas/backgrounds/json/guard.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/backgrounds/wiki_image/guard.webp"
+}
