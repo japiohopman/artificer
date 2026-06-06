@@ -13,8 +13,10 @@
     "generate:equipment-index": "node tools/generateEquipmentIndex.cjs",
     "generate:spell-index": "node tools/generateSpellIndex.cjs",
     "generate:enemy-index": "node tools/generateEnemyIndex.cjs",
+    "generate:indices": "npm run generate:equipment-index && npm run generate:spell-index && npm run generate:enemy-index",
     "normalize:assets": "node tools/normalizeAllAssets.cjs",
-    "check:assets": "npm run normalize:assets && npm run validate:assets"
+    "check:assets": "npm run normalize:assets && npm run validate:assets",
+    "check": "npm run lint && npm run check:assets"
   },
   "dependencies": {
     "@3d-dice/dice-box": "^1.1.4",

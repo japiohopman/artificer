@@ -89,3 +89,41 @@ export const findFirstEmptySlot = (container: InventoryContainer): string | null
   const emptySlot = container.slots.find(s => s.itemId === null);
   return emptySlot ? emptySlot.id : null;
 };
+
+/**
+ * Validates if an item can be equipped in a specific slot
+ */
+export const canEquipItem = (itemTemplate: any, slotId: string): { canEquip: boolean; reason?: string } => {
+  const slotDef = EQUIPMENT_SLOT_CATALOG.find(s => s.id === slotId);
+  if (!slotDef) return { canEquip: false, reason: 'Invalid slot' };
+
+  const kind = deriveItemKind(itemTemplate);
+
+  // Basic Kind Check
+  if (slotDef.accepts?.kinds && !slotDef.accepts.kinds.includes(kind)) {
+    return {
+      canEquip: false,
+      reason: `Slot ${slotDef.label} does not accept ${kind}`
+    };
+  }
+
+  // Specialized checks
+
+  // Armor Category Check
+  if (kind === 'armor' && slotId === 'chest') {
+    const armorCat = itemTemplate.armor_category;
+    if (slotDef.accepts?.armorCategory && armorCat !== slotDef.accepts.armorCategory) {
+       // Currently we allow any armor in chest, but could be specific
+    }
+  }
+
+  // Weapon Handedness (simplified for now, full logic would need character state)
+  if (kind === 'weapon') {
+    const isTwoHanded = itemTemplate.properties?.some((p: any) => p.index === 'two-handed');
+    if (isTwoHanded && slotId === 'off_hand') {
+      return { canEquip: false, reason: 'Two-handed weapons cannot be equipped in the off-hand' };
+    }
+  }
+
+  return { canEquip: true };
+};
