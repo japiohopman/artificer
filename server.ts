@@ -16,6 +16,12 @@ async function startServer() {
 
   app.use(express.json({ limit: '10mb' }));
 
+  // Helper: Set correct MIME types for WASM and other assets
+  express.static.mime.define({ 'application/wasm': ['wasm'] });
+
+  // Serve static assets from public folder
+  app.use(express.static(path.join(process.cwd(), 'public')));
+
   // Helper: Validate Host Allowlist
   const allowedHosts = [
     'api.github.com',
