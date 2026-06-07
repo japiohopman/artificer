@@ -6,7 +6,7 @@ export const DiceBoxCanvas: React.FC = () => {
 
   useEffect(() => {
     if (containerRef.current) {
-      diceService.init('#dice-box-container');
+      diceService.init(containerRef.current);
     }
   }, []);
 
@@ -14,9 +14,18 @@ export const DiceBoxCanvas: React.FC = () => {
     <div 
       id="dice-box-container"
       ref={containerRef}
-      className="fixed inset-0 z-[9999] pointer-events-none"
-      style={{ width: '100vw', height: '100vh' }}
+      className="fixed inset-0 z-[21000] border-2 border-transparent block visible opacity-100 w-screen h-screen overflow-hidden pointer-events-none"
     >
+      <style>
+        {`
+          #dice-box-container canvas {
+            display: block !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            pointer-events: none !important;
+          }
+        `}
+      </style>
       {/* DiceBox will inject the canvas here */}
     </div>
   );

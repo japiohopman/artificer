@@ -8,7 +8,7 @@ export const DiceRollOverlay: React.FC = () => {
   const { recentRolls } = useStore();
 
   return (
-    <div className="fixed bottom-6 right-6 z-[100] flex flex-col gap-2 items-end pointer-events-none">
+    <div className="fixed bottom-6 right-6 z-[20000] flex flex-col gap-2 items-end pointer-events-none">
       <AnimatePresence mode="popLayout">
         {recentRolls.map((roll) => (
           <RollNotification key={roll.id} roll={roll} />
@@ -60,7 +60,14 @@ const RollNotification: React.FC<{ roll: any }> = ({ roll }) => {
         <div className="flex flex-wrap items-center gap-1.5">
           {roll.rolls && roll.rolls.length > 0 ? (
             roll.rolls.map((r: any, i: number) => (
-              <div key={i} className="flex items-center gap-1 bg-white/40 px-1.5 py-0.5 rounded border border-parchment-300">
+              <div 
+                key={i} 
+                className={cn(
+                  "flex items-center gap-1 bg-white/40 px-1.5 py-0.5 rounded border border-parchment-300 transition-opacity",
+                  r.valid === false && "opacity-40 line-through grayscale"
+                )}
+                title={r.valid === false ? "Dropped" : undefined}
+              >
                  <span className="text-[10px] font-bold text-dragon-darkRed">{r.result}</span>
                  <span className="text-[7px] text-parchment-400 font-black">d{r.die}</span>
               </div>

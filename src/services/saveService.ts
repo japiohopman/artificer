@@ -42,12 +42,40 @@ export const saveService = {
     const githubUrl = `https://api.github.com/repos/${REPO}/contents/data/character_save/json?ref=${BRANCH}&t=${Date.now()}`;
     const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
     
+    let files = [];
     try {
       const res = await fetch(url);
-      if (!res.ok) return [];
-      const files = await res.json();
-      if (!Array.isArray(files)) return [];
+      if (res.ok) {
+        files = await res.json();
+      }
+    } catch (e) {
+      console.warn("GitHub fetch failed, attempting local fallback:", e);
+    }
 
+    if (!Array.isArray(files) || files.length === 0) {
+      // Fallback to local public/data slots if github is empty or fails
+      const localSlots = ['slot1', 'slot2', 'slot3'];
+      const localChars = await Promise.all(
+        localSlots.map(async (slot) => {
+          try {
+            const res = await fetch(`/data/${slot}.json?t=${Date.now()}`);
+            if (res.ok) {
+              const data = await res.json();
+              if (data) {
+                data.id = slot;
+                if (data.avatarUrl) data.avatarUrl = normalizeImageUrl(data.avatarUrl, 'character', slot);
+                if (data.imageUrl) data.imageUrl = normalizeImageUrl(data.imageUrl, 'character', slot);
+                return data;
+              }
+            }
+          } catch (e) {}
+          return null;
+        })
+      );
+      return localChars.filter(c => c !== null) as Character[];
+    }
+
+    try {
       const characters = await Promise.all(
         files
           .filter((f: any) => f.name.endsWith('.json'))

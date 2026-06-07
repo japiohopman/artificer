@@ -133,9 +133,14 @@ class AtlasService {
   }
 
   private async fetchAtlasData(path: string, remotePath?: string): Promise<any> {
+    const isDev = window.location.hostname === 'localhost';
+    
     // 1. Try local fetch first (for speed/offline)
     try {
-      const localRes = await fetch(path);
+      // Ensure leading slash for local fetch
+      const localPath = path.startsWith('/') ? path : `/${path}`;
+      const localRes = await fetch(localPath);
+      
       if (localRes.ok) {
         const text = await localRes.text();
         if (this.isJson(text)) {
@@ -143,8 +148,17 @@ class AtlasService {
             const cleaned = this.cleanJsonText(text);
             return JSON.parse(cleaned);
           } catch (parseError) {
-            console.error(`Failed to parse local JSON for ${path}:`, parseError);
+            console.error(`[AtlasService] Failed to parse local JSON for ${path}:`, parseError);
           }
+        } else if (text.trim().startsWith('<!DOCTYPE') || text.includes('<html')) {
+          // This is an SPA fallback page, not the JSON we wanted.
+          if (isDev && !path.includes('classes')) {
+             console.log(`[AtlasService] Local fetch for ${path} returned HTML (likely SPA fallback).`);
+          }
+        }
+      } else {
+        if (isDev && localRes.status !== 404) {
+           console.log(`[AtlasService] Local fetch for ${path} failed with status ${localRes.status}`);
         }
       }
     } catch (e) {
@@ -158,19 +172,32 @@ class AtlasService {
       const githubUrl = `https://raw.githubusercontent.com/${this.repo}/${this.branch}/public${normalizedPath}`;
       const proxyUrl = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
       
+      if (isDev) console.log(`[AtlasService] Attempting proxy fallback for ${path}...`);
+
       const response = await fetch(proxyUrl);
-      if (!response.ok) return null;
+      if (!response.ok) {
+        if (response.status !== 404) {
+          console.warn(`[AtlasService] Proxy fetch failed for ${path}: ${response.status} ${response.statusText}`);
+        }
+        return null;
+      }
       
       const text = await response.text();
-      if (!text || !this.isJson(text)) return null;
+      if (!text || !this.isJson(text)) {
+        if (isDev) console.log(`[AtlasService] Proxy response for ${path} is not JSON.`);
+        return null;
+      }
       
       try {
         const cleaned = this.cleanJsonText(text);
         const data = JSON.parse(cleaned);
-        if (data && !data.error) return data;
+        if (data && !data.error) {
+          if (isDev) console.log(`[AtlasService] Successfully loaded ${path} via proxy.`);
+          return data;
+        }
         return null;
       } catch (e) {
-        console.error(`Failed to parse remote JSON for ${path}:`, e);
+        console.error(`[AtlasService] Failed to parse remote JSON for ${path}:`, e);
         return null;
       }
     } catch (err) {
@@ -184,11 +211,12 @@ class AtlasService {
     
     if (this.classCache[slug]) return this.classCache[slug];
 
+    // Reordered to check singular 'class' first as it matches the filesystem
     const paths = [
-      `/assets/atlas/classes/json/${slug}.json`,
-      `/assets/atlas/classes/json/${hyphenSlug}.json`,
       `/assets/atlas/class/json/${slug}.json`,
-      `/assets/atlas/class/json/${hyphenSlug}.json`
+      `/assets/atlas/class/json/${hyphenSlug}.json`,
+      `/assets/atlas/classes/json/${slug}.json`,
+      `/assets/atlas/classes/json/${hyphenSlug}.json`
     ];
 
     for (const p of paths) {
@@ -207,6 +235,7 @@ class AtlasService {
     
     if (this.speciesCache[slug]) return this.speciesCache[slug];
 
+    // Reordered to check plural 'species' first as it matches the filesystem
     const paths = [
       `/assets/atlas/species/json/${slug}.json`,
       `/assets/atlas/species/json/${hyphenSlug}.json`,
@@ -230,7 +259,7 @@ class AtlasService {
     
     if (this.backgroundCache[slug]) return this.backgroundCache[slug];
 
-    // Try multiple possible paths
+    // Reordered to check plural 'backgrounds' first as it matches the filesystem
     const paths = [
       `/assets/atlas/backgrounds/json/${slug}.json`,
       `/assets/atlas/backgrounds/json/${hyphenSlug}.json`,
