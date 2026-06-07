@@ -178,21 +178,31 @@ class DiceService {
     }
   }
   rollBackground(notation: string, label: string = "Roll"): DiceResult {
-    const roll = this.roller.roll(notation);
-    
-    // The dice-roller-parser returns a complex object. 
-    // We'll simplify it for our needs.
-    // Note: This is a simplified version, as the parser output can be deeply nested.
-    
-    return {
-      id: crypto.randomUUID(),
-      notation,
-      total: roll.value,
-      label,
-      rolls: [], // Extracting individual rolls from parser can be complex depending on notation
-      modifier: 0,
-      timestamp: Date.now()
-    };
+    try {
+      const parsedResult = this.roller.roll(notation);
+      const allRolls = this.extractRolls(parsedResult);
+      
+      return {
+        id: crypto.randomUUID(),
+        notation,
+        total: parsedResult.value,
+        label,
+        rolls: allRolls.map(r => ({ die: r.die, result: r.result, valid: r.valid })),
+        modifier: 0,
+        timestamp: Date.now()
+      };
+    } catch (error) {
+      console.error("[DiceService] Background roll failed:", error);
+      return {
+        id: crypto.randomUUID(),
+        notation,
+        total: 0,
+        label: `${label} (Failed)`,
+        rolls: [],
+        modifier: 0,
+        timestamp: Date.now()
+      };
+    }
   }
 
   clear() {

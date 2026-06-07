@@ -14,6 +14,30 @@ import {
 
 export type ExplorerTab = 'enemies' | 'materials' | 'equipment' | 'key' | 'books' | 'spells' | 'transport';
 
+export type Emotion = 'Neutral' | 'Curious' | 'Skeptical' | 'Happy' | 'Greedy' | 'Angry' | 'Sad' | 'Surprised' | 'Proud';
+
+export interface SavedLocation {
+  id: string;
+  name: string;
+  category: string;
+}
+
+export const CategoryIcons: Record<string, { icon: string, color: string }> = {
+  city: { icon: 'castle', color: '#D4AF37' },
+  village: { icon: 'home', color: '#D4AF37' },
+  forest: { icon: 'tree', color: '#228B22' },
+  wetlands: { icon: 'waves', color: '#4682B4' },
+  mountain: { icon: 'mountain', color: '#A9A9A9' },
+  underdark: { icon: 'skull', color: '#4B0082' }
+};
+
+export interface LogEntry {
+  id: string;
+  message: string;
+  type: 'info' | 'success' | 'warning' | 'error';
+  timestamp: number;
+}
+
 export interface UserProfile {
   uid: string;
   email: string;
@@ -136,10 +160,37 @@ export const SKILL_LIST = [
 interface AppState {
   // Navigation
   viewMode: 'combat' | 'collection';
+  currentView: string;
   explorerTab: ExplorerTab;
   isDevKitOpen: boolean;
   isExplorerOpen: boolean;
+  isAdvancedRollerOpen: boolean;
+  chatExpanded: boolean;
+  isEditingSubMap: boolean;
+  isInsideSubMap: boolean;
   
+  // World State
+  currentLocation: any | null;
+  currentSubLocation: any | null;
+  currentShop: any | null;
+  partyLocation: any | null;
+  savedLocations: any[];
+  gameTime: number;
+  gameDay: number;
+  isNight: () => boolean;
+
+  // NPC State
+  currentNPC: any | null;
+  emotion: Emotion;
+  beastRegistry: Record<string, any>;
+  testAnimalInteraction: {
+    active: boolean;
+    animals: string[];
+    currentAnimalIndex: number;
+    frameIndex: number;
+    url: string;
+  } | null;
+
   // Party & Characters
   characters: Character[]; // Active Party (Max 6)
   mainCharacterSlots: (Character | null)[]; // The 3 save manifest slots
@@ -179,6 +230,7 @@ interface AppState {
     item: any; 
     sourceId: string; 
     index?: number; 
+    itemId?: string;
     slot?: string;
   } | null;
   
@@ -198,7 +250,11 @@ interface AppState {
   activeCards: any[];
   deleteCharacter: (id: string) => Promise<boolean>;
 
+  // Logs
+  logs: LogEntry[];
+
   // Dice Rolls
+  isDiceReady: boolean;
   recentRolls: any[];
   levelUpQueue: {
     characterId: string;
@@ -236,12 +292,19 @@ interface AppState {
 
   // Actions
   setViewMode: (mode: 'combat' | 'collection') => void;
+  setCurrentView: (view: string) => void;
   setExplorerTab: (tab: ExplorerTab) => void;
   setIsDevKitOpen: (isOpen: boolean) => void;
   setIsExplorerOpen: (isOpen: boolean) => void;
+  setIsAdvancedRollerOpen: (isOpen: boolean) => void;
+  setChatExpanded: (expanded: boolean) => void;
+  setIsEditingSubMap: (isEditing: boolean) => void;
+  setIsInsideSubMap: (isInside: boolean) => void;
+  setPartySubLocation: (location: any) => void;
+  
   setSearchQuery: (query: string) => void;
   setFocusedItem: (item: any | null) => void;
-  setInspectingItem: (data: { item: any; sourceId: string; index?: number; slot?: string; } | null) => void;
+  setInspectingItem: (data: { item: any; sourceId: string; index?: number; itemId?: string; slot?: string; } | null) => void;
   setIsInventoryOpen: (isOpen: boolean) => void;
   setIsInventoryMenuOpen: (isOpen: boolean) => void;
   setIsProfileMenuOpen: (isOpen: boolean) => void;
@@ -257,6 +320,7 @@ interface AppState {
   rollDice3D: (notation: string, label: string) => Promise<void>;
   removeRoll: (id: string) => void;
   clearRoll: () => void;
+  setIsDiceReady: (isReady: boolean) => void;
   addToBackpack: (item: any) => void;
   removeFromBackpack: (index: number) => void;
   equipItem: (item: any, slot: string) => void;
@@ -273,6 +337,19 @@ interface AppState {
   dismissLevelUp: () => void;
   updateCharacterStats: (id: string, stats: Partial<Character['stats']>) => void;
   
+  // NPC/Emotion Actions
+  setEmotion: (emotion: Emotion) => void;
+  setTestAnimalInteraction: (interaction: any) => void;
+  getActiveBackground: () => string;
+  addLog: (message: string, type?: LogEntry['type']) => void;
+  clearLogs: () => void;
+
+  // Time Actions
+  advanceTime: (minutes: number) => void;
+
+  // Audio Actions
+  playSound: (soundId: string) => void;
+
   // Spell Actions
   learnSpell: (spell: any) => void;
   forgetSpell: (spellIndex: string) => void;
@@ -455,10 +532,32 @@ const DEFAULT_CHARACTERS: Character[] = [
 
 export const useStore = create<AppState>((set, get) => ({
   viewMode: 'collection',
+  currentView: 'world',
   explorerTab: 'enemies',
   isDevKitOpen: false,
   isExplorerOpen: true,
-  
+  isAdvancedRollerOpen: false,
+  chatExpanded: false,
+  isEditingSubMap: false,
+  isInsideSubMap: false,
+
+  currentLocation: null,
+  currentSubLocation: null,
+  currentShop: null,
+  partyLocation: null,
+  savedLocations: [],
+  gameTime: 480, // 8:00 AM
+  gameDay: 1,
+  isNight: () => {
+    const time = get().gameTime;
+    return time < 360 || time > 1200; // Night between 8 PM and 6 AM
+  },
+
+  currentNPC: null,
+  emotion: 'Neutral',
+  beastRegistry: {},
+  testAnimalInteraction: null,
+
   characters: [],
   mainCharacterSlots: [null, null, null],
   activeCharacterId: '',
@@ -552,17 +651,26 @@ export const useStore = create<AppState>((set, get) => ({
   setAuthReady: (isAuthReady) => set({ isAuthReady }),
   
   activeCards: [],
+  logs: [],
+  isDiceReady: true,
   recentRolls: [],
   levelUpQueue: [],
   classLevelingData: {},
 
   setViewMode: (viewMode) => set({ viewMode }),
+  setCurrentView: (currentView) => set({ currentView }),
   setExplorerTab: (explorerTab) => {
     set({ explorerTab, selectedItem: null });
     get().loadList(explorerTab);
   },
   setIsDevKitOpen: (isDevKitOpen) => set({ isDevKitOpen }),
   setIsExplorerOpen: (isExplorerOpen) => set({ isExplorerOpen }),
+  setIsAdvancedRollerOpen: (isAdvancedRollerOpen) => set({ isAdvancedRollerOpen }),
+  setChatExpanded: (chatExpanded) => set({ chatExpanded }),
+  setIsEditingSubMap: (isEditingSubMap) => set({ isEditingSubMap }),
+  setIsInsideSubMap: (isInsideSubMap) => set({ isInsideSubMap }),
+  setPartySubLocation: (partyLocation) => set({ partyLocation }),
+
   setSearchQuery: (searchQuery) => set({ searchQuery }),
   setFocusedItem: (focusedItem) => set({ focusedItem }),
   setInspectingItem: (inspectingItem) => set({ inspectingItem }),
@@ -636,10 +744,16 @@ export const useStore = create<AppState>((set, get) => ({
       diceService.clear();
     });
   },
+  setIsDiceReady: (isDiceReady) => set({ isDiceReady }),
   
   setIsGameStarted: (isGameStarted) => set({ isGameStarted }),
 
   // Audio Actions
+  playSound: (soundId) => {
+    console.log(`[useStore] Playing sound: ${soundId}`);
+    // Sound implementation would go here or call soundService
+  },
+
   updateLayerVolume: (layerId, volume) => set((state) => {
     const newState = {
       layerStates: {
@@ -1046,6 +1160,40 @@ export const useStore = create<AppState>((set, get) => ({
   dismissLevelUp: () => set((state) => ({ 
     levelUpQueue: state.levelUpQueue.slice(1) 
   })),
+
+  addLog: (message, type = 'info') => set((state) => ({
+    logs: [{
+      id: crypto.randomUUID(),
+      message,
+      type,
+      timestamp: Date.now()
+    }, ...state.logs].slice(0, 50)
+  })),
+
+  clearLogs: () => set({ logs: [] }),
+
+  setEmotion: (emotion) => set({ emotion }),
+  setTestAnimalInteraction: (testAnimalInteraction) => set({ testAnimalInteraction }),
+  
+  getActiveBackground: () => {
+    const state = get();
+    if (state.currentShop?.image) return state.currentShop.image;
+    if (state.currentSubLocation?.image) return state.currentSubLocation.image;
+    if (state.currentLocation?.image) return state.currentLocation.image;
+    return '';
+  },
+
+  advanceTime: (minutes) => set((state) => {
+    let newTime = state.gameTime + minutes;
+    let newDay = state.gameDay;
+    
+    if (newTime >= 1440) {
+      newDay += Math.floor(newTime / 1440);
+      newTime %= 1440;
+    }
+    
+    return { gameTime: newTime, gameDay: newDay };
+  }),
 
   updateCharacterStats: (id, newStats) => set((state) => ({
     characters: state.characters.map(c => {
