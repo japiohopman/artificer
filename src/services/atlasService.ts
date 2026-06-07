@@ -111,6 +111,7 @@ class AtlasService {
   private speciesCache: Record<string, AtlasSpecies> = {};
   private backgroundCache: Record<string, AtlasBackground> = {};
   private traitCache: Record<string, AtlasTrait> = {};
+  private shopArchetypes: any = null;
   private transportCache: Record<string, AtlasTransport> = {};
   private repo = REPO;
   private branch = BRANCH;
@@ -400,6 +401,15 @@ class AtlasService {
     return this.fetchAtlasData(
       `/assets/atlas/subclasses/json/${index.toLowerCase().replace(/[\s-]/g, '_')}.json`
     );
+  }
+
+  async loadShopArchetypes(): Promise<any> {
+    if (this.shopArchetypes) return this.shopArchetypes;
+    const data = await this.fetchAtlasData('/assets/atlas/world/shop_archetypes.json');
+    if (data && data.archetypes) {
+      this.shopArchetypes = data.archetypes;
+    }
+    return this.shopArchetypes;
   }
 
   async loadTransport(index: string): Promise<AtlasTransport | null> {

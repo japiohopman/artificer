@@ -6294,6 +6294,50 @@
           "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
+    },
+    {
+      "id": "dice_shop_02",
+      "name": "The Gilded Die (Waterdeep)",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1500,
+        3000
+      ],
+      "popup": {
+        "title": "The Gilded Die",
+        "description": "The Waterdeep branch of the famed dice boutique. Premier purveyors of artisan rolling stones and magical thematic enhancers.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "dice_shop",
+      "equipment_categories": [
+        {
+          "index": "gaming_sets",
+          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+        },
+        {
+          "index": "dice_addons",
+          "url": "/assets/atlas/equipment_categories/json/dice_addons.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
     }
   ]
 }
