@@ -25,8 +25,6 @@ import { PartyLogistics } from './PartyLogistics';
 import { DraggableCard } from './DraggableCard';
 import { ErrorBoundary } from './ErrorBoundary';
 import { DevKit } from './devkit/DevKit';
-import { DiceRollOverlay } from '../dice_roller/DiceRollOverlay';
-import { DiceBoxCanvas } from '../dice_roller/DiceBoxCanvas';
 import { cn } from '../lib/utils';
 import { isBookLike } from '../lib/bookUtils';
 import { loadBooksFromStaticJson } from '../lib/bookUtils';
@@ -52,6 +50,7 @@ import {
 } from '@dnd-kit/core';
 import { playGrabSound, playPlaceSound, playEquipSound } from '../services/storageService';
 import { TitleScreen } from './TitleScreen';
+import { ActionView } from './hud/ActionView';
 
 const ArcaneCodex: React.FC = () => {
   const controls = useAnimation();
@@ -363,10 +362,6 @@ const ArcaneCodex: React.FC = () => {
       {/* Character Creator Modal */}
       <CharacterCreator />
 
-      {/* Dice Roll Global Overlay */}
-      <DiceRollOverlay />
-      <DiceBoxCanvas />
-
       {/* Level Up Reward Overlay */}
       <LevelUpOverlay />
 
@@ -409,6 +404,7 @@ const ArcaneCodex: React.FC = () => {
                 : "text-dragon-red bg-white/50 border-dragon-red/20 hover:bg-parchment-200"
             )}
             title={isCharacterCreatorOpen ? "Back to Title" : isMonsterProfileOpen ? "Back to Bestiary" : isProfileMenuOpen ? "Back to Collection" : "Toggle Explorer"}
+            aria-label={isCharacterCreatorOpen ? "Back to Title" : isMonsterProfileOpen ? "Back to Bestiary" : isProfileMenuOpen ? "Back to Collection" : "Toggle Explorer"}
           >
             {(isProfileMenuOpen || isMonsterProfileOpen || isCharacterCreatorOpen) ? (
               <GameIcon name="arrow_left" size={24} />
@@ -432,6 +428,8 @@ const ArcaneCodex: React.FC = () => {
                     setViewMode('combat');
                     playClickSound();
                   }}
+                  title="Combat Actions"
+                  aria-label="Combat Actions"
                   className={cn(
                     "flex items-center gap-2 px-3 md:px-6 py-2 rounded-full font-black text-[10px] uppercase shadow-inner transition-all shrink-0 border border-dragon-red/10",
                     viewMode === 'combat' ? 'bg-dragon-red text-white shadow-lg ring-2 ring-white/20' : 'bg-white/40 text-parchment-600 hover:bg-parchment-200'
@@ -443,6 +441,8 @@ const ArcaneCodex: React.FC = () => {
                   onClick={() => {
                     playClickSound();
                   }}
+                  title="View Map"
+                  aria-label="View Map"
                   className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-full font-black text-[10px] uppercase transition-all bg-white/40 text-parchment-600 hover:bg-parchment-200 hover:text-dragon-red shrink-0 border border-dragon-red/5"
                 >
                   <GameIcon name="compass" size={16} /> <span className="hidden lg:inline">Map</span>
@@ -451,6 +451,8 @@ const ArcaneCodex: React.FC = () => {
                   onClick={() => {
                     playClickSound();
                   }}
+                  title="View Journal"
+                  aria-label="View Journal"
                   className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-full font-black text-[10px] uppercase transition-all bg-white/40 text-parchment-600 hover:bg-parchment-200 hover:text-dragon-red shrink-0 border border-dragon-red/5"
                 >
                   <GameIcon name="book" size={16} /> <span className="hidden lg:inline">Journal</span>
@@ -460,6 +462,8 @@ const ArcaneCodex: React.FC = () => {
                     setIsSettingsModalOpen(true);
                     playClickSound();
                   }}
+                  title="Account Options"
+                  aria-label="Account Options"
                   className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-full font-black text-[10px] uppercase transition-all bg-white/40 text-parchment-600 hover:bg-parchment-200 hover:text-dragon-red shrink-0 border border-dragon-red/5"
                 >
                   <GameIcon name="settings" size={16} /> <span className="hidden lg:inline">Options</span>
@@ -496,6 +500,7 @@ const ArcaneCodex: React.FC = () => {
                 : "text-dragon-red bg-white/50 border-dragon-red/20 hover:bg-parchment-200"
             )}
             title="Toggle Character Panel"
+            aria-label="Toggle Character Panel"
           >
             <GameIcon name="party_stats" size={24} />
           </button>
@@ -521,6 +526,8 @@ const ArcaneCodex: React.FC = () => {
                       setShowProfileMenu(!showProfileMenu);
                       soundService.playEffect('UI_CLICK_LIGHT');
                     }}
+                    title="User Profile Menu"
+                    aria-label="User Profile Menu"
                     className="relative group z-[50]"
                   >
                     <div className="w-10 h-10 rounded bg-parchment-100 border border-parchment-300 overflow-hidden group-hover:border-dragon-red/50 transition-all shadow-md">
@@ -596,6 +603,8 @@ const ArcaneCodex: React.FC = () => {
                             setShowProfileMenu(false);
                             soundService.playEffect('UI_MODAL_OPEN');
                           }}
+                          title="View Profile"
+                          aria-label="View Profile"
                           className="w-full flex items-center gap-3 px-3 py-2 hover:bg-parchment-200 rounded text-parchment-600 hover:text-dragon-red transition-all text-xs font-medium group text-left"
                         >
                           <GameIcon name="shield" size={14} color="currentColor" className="text-dragon-red/40 group-hover:text-dragon-red" />
@@ -607,6 +616,8 @@ const ArcaneCodex: React.FC = () => {
                             setShowProfileMenu(false);
                             soundService.playEffect('UI_MODAL_OPEN');
                           }}
+                          title="Account Settings"
+                          aria-label="Account Settings"
                           className="w-full flex items-center gap-3 px-3 py-2 hover:bg-parchment-200 rounded text-parchment-600 hover:text-dragon-red transition-all text-xs font-medium group text-left"
                         >
                           <GameIcon name="gear" size={14} color="currentColor" className="text-parchment-400 group-hover:text-dragon-red" />
@@ -627,6 +638,8 @@ const ArcaneCodex: React.FC = () => {
                                 setShowProfileMenu(false);
                                 soundService.playEffect('UI_MODAL_OPEN');
                               }}
+                              title="Start New Game"
+                              aria-label="Start New Game"
                               className="flex items-center gap-1.5 px-2 py-1 bg-dragon-red text-white rounded text-[8px] font-black uppercase tracking-tighter hover:bg-dragon-darkRed transition-all shadow-sm"
                             >
                               <GameIcon name="plus" size={10} color="#FFFFFF" />
@@ -641,6 +654,8 @@ const ArcaneCodex: React.FC = () => {
                               setGrimoireMode(!grimoireMode);
                               playClickSound();
                             }}
+                            title={grimoireMode ? 'Exit Grimoire' : 'Open Grimoire'}
+                            aria-label={grimoireMode ? 'Exit Grimoire' : 'Open Grimoire'}
                             className={cn(
                               "flex items-center gap-2 px-4 py-2 rounded-lg border-2 transition-all font-header uppercase tracking-wider text-xs",
                               grimoireMode 
@@ -662,6 +677,8 @@ const ArcaneCodex: React.FC = () => {
                                 setActiveCharacter(char.id);
                                 soundService.playEffect('UI_CLICK_LIGHT');
                               }}
+                              title={`Switch to ${char.name}`}
+                              aria-label={`Switch to ${char.name}`}
                               className={`w-full flex items-center justify-between px-3 py-2 rounded transition-all group ${activeCharacterId === char.id ? 'bg-dragon-red text-white shadow-md' : 'text-parchment-600 hover:text-dragon-red hover:bg-parchment-200 border border-transparent'}`}
                             >
                               <div className="flex items-center gap-3">
@@ -692,6 +709,8 @@ const ArcaneCodex: React.FC = () => {
                           setShowProfileMenu(false); 
                           soundService.playEffect('UI_BACK_EXIT');
                         }}
+                        title="Logout"
+                        aria-label="Logout"
                         className="w-full flex items-center gap-3 px-3 py-2.5 hover:bg-dragon-red/10 rounded text-parchment-600 hover:text-dragon-red transition-all text-xs font-medium"
                       >
                         <GameIcon name="logout" size={14} />
@@ -733,6 +752,8 @@ const ArcaneCodex: React.FC = () => {
                     ].map(tab => (
                       <button
                         key={tab.id}
+                        title={tab.label}
+                        aria-label={tab.label}
                         onClick={() => {
                           setExplorerTab(tab.id as ExplorerTab);
                           playClickSound();
@@ -811,6 +832,8 @@ const ArcaneCodex: React.FC = () => {
                           setGrimoireMode(false);
                           playClickSound();
                         }}
+                        title="Back to Categories"
+                        aria-label="Back to Categories"
                         className="w-full flex items-center gap-2 p-2 text-[10px] font-bold uppercase text-dragon-red bg-dragon-red/5 hover:bg-dragon-red/10 border border-dragon-red/20 rounded-lg transition-all"
                       >
                         <GameIcon name="chevron_right" size={14} className="rotate-180" color="#8B0000" />
@@ -834,6 +857,8 @@ const ArcaneCodex: React.FC = () => {
                           <button 
                             key={hint}
                             onClick={() => setSearchQuery(hint)}
+                            title={`Search for ${hint}`}
+                            aria-label={`Search for ${hint}`}
                             className="px-1.5 py-0.5 rounded bg-dragon-red/5 border border-dragon-red/10 text-[9px] font-black text-dragon-red hover:bg-dragon-red/10 transition-colors uppercase"
                           >
                             {hint}
@@ -931,6 +956,8 @@ const ArcaneCodex: React.FC = () => {
                                               selectItem(version.index);
                                               playClickSound();
                                             }}
+                                            title={tierNum === 0 ? 'Base Version' : `Tier ${tierNum} Version`}
+                                            aria-label={tierNum === 0 ? 'Base Version' : `Tier ${tierNum} Version`}
                                             className={cn(
                                               "w-5 h-5 rounded-md flex items-center justify-center text-[8px] font-bold border transition-all",
                                               isSelectTier 
@@ -1038,6 +1065,7 @@ const ArcaneCodex: React.FC = () => {
                       }}
                       className="absolute -top-2 -left-2 z-30 w-10 h-10 bg-dragon-red text-white rounded-full flex items-center justify-center shadow-xl hover:bg-red-700 transition-all hover:scale-110 border-2 border-parchment-100"
                       title="Add to Inventory"
+                      aria-label="Add to Inventory"
                     >
                       <GameIcon name="plus" size={24} color="#FFFFFF" />
                     </button>
@@ -1057,61 +1085,8 @@ const ArcaneCodex: React.FC = () => {
           </>
         )}
 
-        {/* Combat Mode (Card Simulator) */}
-        {viewMode === 'combat' && (
-          <div className="w-full h-full bg-parchment-200/50 relative overflow-hidden">
-            <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none" />
-            
-            <div className="absolute top-4 left-4 z-30 flex flex-col gap-2">
-              <div className="bg-white/80 backdrop-blur-md p-4 rounded-xl border border-parchment-300 shadow-xl">
-                <h4 className="font-header text-lg text-dragon-darkRed uppercase tracking-widest">Combat Simulator</h4>
-                <p className="text-[10px] text-parchment-600 font-bold uppercase">Drag cards to organize your collection</p>
-                <div className="mt-4 flex gap-2">
-                  <button 
-                    onClick={() => clearPreview()}
-                    className="px-3 py-1.5 bg-parchment-200 text-parchment-700 rounded text-[10px] font-bold uppercase hover:bg-parchment-300"
-                  >
-                    Clear Board
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {activeCards.length === 0 && (
-              <div className="w-full h-full flex flex-col items-center justify-center text-parchment-400 space-y-4">
-                <GameIcon name="layout" size={64} className="opacity-10" />
-                <p className="font-header text-2xl uppercase tracking-widest">The board is empty</p>
-                <div className="flex gap-4">
-                  <button 
-                    onClick={() => setViewMode('collection')}
-                    className="px-6 py-2 bg-dragon-red text-white rounded-lg font-bold uppercase text-xs shadow-lg hover:bg-red-700"
-                  >
-                    Go to Collection
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {activeCards.map((monster, idx) => (
-              <div key={idx} className="relative">
-                <ErrorBoundary fallback={<div className="w-[380px] h-[500px] bg-red-100/50 border-2 border-red-200 rounded-xl flex items-center justify-center italic text-red-500">Card Distorted</div>}>
-                  <DraggableCard 
-                    monster={monster} 
-                    initialX={100 + (idx * 40)} 
-                    initialY={100 + (idx * 40)} 
-                  />
-                </ErrorBoundary>
-                <button 
-                  onClick={() => removeFromPreview(idx)}
-                  className="absolute top-0 right-0 z-[60] bg-red-500 text-white p-1 rounded-full shadow-lg hover:bg-red-600 transition-colors"
-                  style={{ transform: `translate(${100 + (idx * 40) + 360}px, ${100 + (idx * 40) - 10}px)` }}
-                >
-                  <GameIcon name="close" size={12} color="currentColor" />
-                </button>
-              </div>
-            ))}
-          </div>
-        )}
+        {/* Combat Mode (HUD / Card Simulator) */}
+        {viewMode === 'combat' && <ActionView />}
       </main>
 
       {/* Settings Modal Overlay */}
