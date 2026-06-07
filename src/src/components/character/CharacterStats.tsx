@@ -1,0 +1,48 @@
+import React from 'react';
+import { useStore } from '../../store/useStore';
+import { Users, Truck, Weight, Shield, Sword, Zap } from 'lucide-react';
+import { motion } from 'motion/react';
+
+export const CharacterStats: React.FC = () => {
+  const { characters, activeCharacterId } = useStore();
+
+  const activeCharacter = characters.find(c => c.id === activeCharacterId) || characters[0];
+
+  if (!activeCharacter) {
+    return (
+      <div className="py-8 text-center space-y-1.5 opacity-30">
+        <Users size={32} className="mx-auto text-parchment-400" />
+        <p className="text-[9px] font-bold uppercase tracking-widest">No Character Stats</p>
+      </div>
+    );
+  }
+
+  const inventory = activeCharacter.inventory;
+
+  return (
+    <div className="space-y-8">
+      {/* Combat Stats (Placeholders for future mechanics) */}
+      <div className="space-y-4">
+        <h3 className="text-xs font-bold text-dragon-red uppercase tracking-widest border-b border-dragon-red/20 pb-1 flex items-center gap-2">
+          <Zap size={14} /> Combat Readiness
+        </h3>
+        <div className="grid grid-cols-2 gap-3">
+          <div className="flex items-center gap-3 bg-white/30 p-2 rounded border border-dragon-red/5">
+            <Shield size={16} className="text-dragon-red/60" />
+            <div>
+              <div className="text-[8px] text-parchment-500 uppercase font-bold">Armor Class</div>
+              <div className="text-sm font-cinzel text-parchment-900">16</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 bg-white/30 p-2 rounded border border-dragon-red/5">
+            <Sword size={16} className="text-dragon-red/60" />
+            <div>
+              <div className="text-[8px] text-parchment-500 uppercase font-bold">Attack Bonus</div>
+              <div className="text-sm font-cinzel text-parchment-900">+5</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
