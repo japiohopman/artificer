@@ -1,13 +1,55 @@
 {
   "id": "immurks_hold",
-  "name": "immurks_hold",
+  "name": "Immurks Hold",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Immurk's Hold",
   "description": "The largest city found within the [[Pirate Isles]] ruled in accordance with a set of pirate traditions, known as [[Immurk's Code]].",
-  "image": "immurks_hold.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/immurks_hold/immurks_hold.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2674.5,
     "lng": 2120.25
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

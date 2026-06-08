@@ -1,13 +1,55 @@
 {
   "id": "amnwater",
-  "name": "amnwater",
+  "name": "Amnwater",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Amnwater",
   "description": "A small walled trade city on the [[Eshpurta Road]] between [[Crimmor]] and [[Keczulla]]  and the exporter of [[beer]] called [[Amnwater No.1]].",
-  "image": "amnwater.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/amnwater/amnwater.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 1363.3,
     "lng": 1690.33
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

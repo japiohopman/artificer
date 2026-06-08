@@ -1,13 +1,55 @@
 {
   "id": "airspur",
-  "name": "airspur",
+  "name": "Airspur",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Airspur",
   "description": "A powerful trading port city in western [[Chessenta]] in the [[Old Empires]] and a highly cosmopolitan and multiracial city, with an impressively high population of [[orc]]s and [[half-orc]]s.",
-  "image": "airspur.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/airspur/airspur.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 3054.98,
     "lng": 1829.57
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

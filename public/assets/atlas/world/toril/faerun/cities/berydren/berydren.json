@@ -1,13 +1,55 @@
 {
   "id": "berydren",
-  "name": "berydren",
+  "name": "Berydren",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Berydren",
   "description": "One of the Six Holy Cities of the [[ixitxachitl]] nation in the [[Sea of Fallen Stars]], known as the [[Xedran Reefs]].",
-  "image": "berydren.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/berydren/berydren.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2613.82,
     "lng": 1999.69
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

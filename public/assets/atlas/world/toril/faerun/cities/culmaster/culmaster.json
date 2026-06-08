@@ -1,13 +1,55 @@
 {
   "id": "culmaster",
-  "name": "culmaster",
+  "name": "Culmaster",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Culmaster",
   "description": "A settlement in [[Thesk]], a subject-city to [[Telflamm]].",
-  "image": "culmaster.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/culmaster/culmaster.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 3251.27,
     "lng": 2359.96
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

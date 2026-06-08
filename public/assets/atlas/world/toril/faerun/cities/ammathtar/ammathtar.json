@@ -1,13 +1,55 @@
 {
   "id": "ammathtar",
-  "name": "ammathtar",
+  "name": "Ammathtar",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Ammathtar",
   "description": "A city located in northeastern [[Dambrath]], home of the nation's largest [[horse]] pens.",
-  "image": "ammathtar.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/ammathtar/ammathtar.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 3684.02,
     "lng": 583.36
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

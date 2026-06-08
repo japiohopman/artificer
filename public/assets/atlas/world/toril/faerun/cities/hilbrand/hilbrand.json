@@ -1,13 +1,55 @@
 {
   "id": "hilbrand",
-  "name": "hilbrand",
+  "name": "Hilbrand",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Hilbrand",
   "description": "An independent city located just south of the country of [[Aglarond]] with a population of 20,000 in the mid-14{{th}} century [[DR]].",
-  "image": "hilbrand.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/hilbrand/hilbrand.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 3415.32,
     "lng": 2044.95
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

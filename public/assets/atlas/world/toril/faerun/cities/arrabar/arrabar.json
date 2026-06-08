@@ -1,13 +1,55 @@
 {
   "id": "arrabar",
-  "name": "arrabar",
+  "name": "Arrabar",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Arrabar",
   "description": "The capital city of [[Chondath]] and one of the primary port cities of the [[Vilhon Reach]], known for its crime and corruption. The heraldic symbol of the city was three golden balls on a white background.",
-  "image": "arrabar.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/arrabar/arrabar.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2545.49,
     "lng": 1510.99
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

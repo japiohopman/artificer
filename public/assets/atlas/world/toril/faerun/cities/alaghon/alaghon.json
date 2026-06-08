@@ -1,13 +1,55 @@
 {
   "id": "alaghon",
-  "name": "alaghon",
+  "name": "Alaghon",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Alaghôn",
   "description": "An ancient metropolis and the capital of [[Turmish]] and a busy port hub.",
-  "image": "alaghon.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/alaghon/alaghon.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2693.76,
     "lng": 1893.05
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

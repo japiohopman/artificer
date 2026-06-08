@@ -1,13 +1,55 @@
 {
   "id": "archenbridge",
-  "name": "archenbridge",
+  "name": "Archenbridge",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Archenbridge",
   "description": "The only major settlement in [[Archendale]] and one of the most important trading hubs in the [[Dalelands]].",
-  "image": "archenbridge.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/archenbridge/archenbridge.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2250,
     "lng": 2261.75
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

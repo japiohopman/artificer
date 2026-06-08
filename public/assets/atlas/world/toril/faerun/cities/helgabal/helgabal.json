@@ -1,13 +1,55 @@
 {
   "id": "helgabal",
-  "name": "helgabal",
+  "name": "Helgabal",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Helgabal",
   "description": "The metropolis formerly known as '''Heliogabalus''', once the seat of government until King [[Gareth]] moved the capital to [[Bloodstone Village]] in the mid-to-late 14{{th}} century [[DR]], and later, moved back to Helgabal in the mid-to-late 15{{th}} century DR.",
-  "image": "helgabal.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/helgabal/helgabal.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2940.14,
     "lng": 2863.07
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

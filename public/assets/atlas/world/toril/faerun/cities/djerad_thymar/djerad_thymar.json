@@ -1,13 +1,55 @@
 {
   "id": "djerad_thymar",
-  "name": "djerad_thymar",
+  "name": "Djerad Thymar",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Djerad Thymar",
   "description": "Thr citadel-city of [[Tymanther]] and its [[Abeir]]an [[dragonborn]], brought to [[Toril]] by the [[Spellplague]].",
-  "image": "djerad_thymar.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/djerad_thymar/djerad_thymar.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 3624.62,
     "lng": 1444.61
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

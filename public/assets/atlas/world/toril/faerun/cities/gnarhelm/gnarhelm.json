@@ -1,13 +1,55 @@
 {
   "id": "gnarhelm",
-  "name": "gnarhelm",
+  "name": "Gnarhelm",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Gnarhelm",
   "description": "The capital city of the kingdom of [[Gnarhelm]].",
-  "image": "gnarhelm.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/gnarhelm/gnarhelm.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 475.88,
     "lng": 1987.67
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

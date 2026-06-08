@@ -1,13 +1,55 @@
 {
   "id": "assam",
-  "name": "assam",
+  "name": "Assam",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Assam",
   "description": "Also known as the \"oasis in the plains.\" A small city and a caravan center, surrounded by herd animals and numerous caravans and their beasts of burden.",
-  "image": "assam.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/assam/assam.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2122.73,
     "lng": 1756.45
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

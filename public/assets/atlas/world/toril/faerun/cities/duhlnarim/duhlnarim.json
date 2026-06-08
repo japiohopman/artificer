@@ -1,13 +1,55 @@
 {
   "id": "duhlnarim",
-  "name": "duhlnarim",
+  "name": "Duhlnarim",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Duhlnarim",
   "description": "A port city to the north of the [[Cloven Mountains]] in [[Erlkazar]].",
-  "image": "duhlnarim.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/duhlnarim/duhlnarim.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2071.46,
     "lng": 1503.3
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

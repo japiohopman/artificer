@@ -1,13 +1,55 @@
 {
   "id": "fasruil",
-  "name": "fasruil",
+  "name": "Fasruil",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Fasruil",
   "description": "The northernmost city in [[Luiren]], famous for the tasty red [[rhubarb]] that was traded across all of Luiren and other countries of the [[Shining South]].",
-  "image": "fasruil.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/fasruil/fasruil.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 4108.29,
     "lng": 816
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

@@ -1,13 +1,55 @@
 {
   "id": "grand_tor_arcanal",
-  "name": "grand_tor_arcanal",
+  "name": "Grand Tor Arcanal",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Grand Tor Arcanal",
   "description": "The capital of the underwater [[kuo-toa]]n nation of [[Olleth]].",
-  "image": "grand_tor_arcanal.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/grand_tor_arcanal/grand_tor_arcanal.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2769.25,
     "lng": 1931.25
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

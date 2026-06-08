@@ -1,13 +1,55 @@
 {
   "id": "berdusk",
-  "name": "berdusk",
+  "name": "Berdusk",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Berdusk",
   "description": "Also known as the '''Jewel of the Vale''', a city in the [[Sunset Vale]] and the location of the [[Harper]] [[Twilight Hall]].",
-  "image": "berdusk.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/berdusk/berdusk.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 1487,
     "lng": 1989.5
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

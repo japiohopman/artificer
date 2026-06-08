@@ -1,13 +1,55 @@
 {
   "id": "hethar",
-  "name": "hethar",
+  "name": "Hethar",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Hethar",
   "description": "A city in [[Dambrath]], a prime position to defend the southern portion of Dambrath from attack, with its smiths fully dedicated to field artillery.",
-  "image": "hethar.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/hethar/hethar.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 3452.8,
     "lng": 166.16
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

@@ -1,13 +1,55 @@
 {
   "id": "eshpurta",
-  "name": "eshpurta",
+  "name": "Eshpurta",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Eshpurta",
   "description": "Or the '''\"Shield City\"''' of [[Amn]], a bustling military trade town in eastern [[Amn]].",
-  "image": "eshpurta.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/eshpurta/eshpurta.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 1588.25,
     "lng": 1718.25
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

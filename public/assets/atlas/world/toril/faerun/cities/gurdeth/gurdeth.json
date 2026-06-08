@@ -1,13 +1,55 @@
 {
   "id": "gurdeth",
-  "name": "gurdeth",
+  "name": "Gurdeth",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Gurdeth",
   "description": "Or the '''City of Stilts''', a small, regularly flooded city of buildings perched atop poles and tied to each other for stability.",
-  "image": "gurdeth.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/gurdeth/gurdeth.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 1285.87,
     "lng": 116.67
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

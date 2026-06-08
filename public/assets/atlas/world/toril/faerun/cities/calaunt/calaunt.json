@@ -1,13 +1,55 @@
 {
   "id": "calaunt",
-  "name": "calaunt",
+  "name": "Calaunt",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Calaunt",
   "description": "A city-state that grew out of the village of '''Vespermouth''' to become the largest and the most influential in [[the Vast]] by [[1372 DR]], only for the title to be reclaimed by [[Ravens Bluff]] by [[1479 DR]].",
-  "image": "calaunt.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/calaunt/calaunt.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2653.37,
     "lng": 2518.25
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

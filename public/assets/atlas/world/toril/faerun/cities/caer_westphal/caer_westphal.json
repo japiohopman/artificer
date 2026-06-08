@@ -1,13 +1,55 @@
 {
   "id": "caer_westphal",
-  "name": "caer_westphal",
+  "name": "Caer Westphal",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Caer Westphal",
   "description": "A fortified castle that overlooked the city of Westphal on [[Snowdown Ride]].",
-  "image": "caer_westphal.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/caer_westphal/caer_westphal.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 595.25,
     "lng": 1624.75
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

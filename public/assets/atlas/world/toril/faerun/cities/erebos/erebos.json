@@ -1,13 +1,55 @@
 {
   "id": "erebos",
-  "name": "erebos",
+  "name": "Erebos",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Erebos",
   "description": "A large city on the [[Sea of Fallen Stars]] that could call up 8,000 troops and had a large fleet of ships with 5,000 marine soldiers.",
-  "image": "erebos.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/erebos/erebos.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 3260.82,
     "lng": 1843.78
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

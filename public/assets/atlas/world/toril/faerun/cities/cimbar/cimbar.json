@@ -1,13 +1,55 @@
 {
   "id": "cimbar",
-  "name": "cimbar",
+  "name": "Cimbar",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Cimbar",
   "description": "A city-state in the [[Old Empires]] and a sometimes-capital of the empire of [[Chessenta]].",
-  "image": "cimbar.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/cimbar/cimbar.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 3175.75,
     "lng": 1822
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }
