@@ -4,12 +4,7 @@
   "size": "Tiny",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 1,
   "hit_dice": "1d4",
   "hit_points_roll": "1d4-1",
@@ -48,7 +43,7 @@
     "passive_perception": 13
   },
   "languages": "",
-  "challenge_rating": 0,
+  "challenge_rating": "0",
   "proficiency_bonus": 2,
   "xp": 10,
   "special_abilities": [
@@ -78,10 +73,20 @@
   ],
   "image": "/assets/atlas/enemies/weasel.webp",
   "url": "/assets/atlas/enemies/json/weasel.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-08T14:42:26.715Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 23,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet12.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet12.0webp",
+  "stats": {
+    "str": 3,
+    "dex": 16,
+    "con": 8,
+    "int": 2,
+    "wis": 12,
+    "cha": 3
+  },
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fimages%2Fweasel.webp%3Ft%3D1780929742949",
+  "last_updated": "8-6-2026"
 }
