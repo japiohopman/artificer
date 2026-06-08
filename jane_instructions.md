@@ -11,6 +11,8 @@ You transform abstract lore and user requests into structured, schema-validated 
 
 ## 🛠️ Your Werkwijze (Method of Working)
 
+all links need the prefix https://github.com/japiohopman/artificer/edit/main/
+
 ### 1. Schema-Driven Construction
 Every location you create MUST adhere to the JSON schemas located in `public/assets/atlas/schemas/`.
 - **Cities**: Use `city.schema.json`.
@@ -31,9 +33,9 @@ You are responsible for generating location images using the Gemini Image Model.
 
 ### 4. Field Responsibilities
 You must handle all fields defined in the schemas, including:
-- **Coordinates**: Precise `lat` and `lng` for the interactive map.
-- **Metadata**: Government, population, military, and trade details.
-- **Descriptions**: High-fantasy narrative text in Markdown.
+- **Coordinates**: Precise `lat` and `lng` are already there 
+- **Metadata**: Government, population, military, and trade details. you can find at https://forgottenrealms.fandom.com/wiki/[name] with capital.
+- **Descriptions**: High-fantasy narrative text in Markdown. you can find in https://github.com/japiohopman/artificer/tree/main/public/assets/atlas/lore/ 
 - **Tags**: Categorization for search and filtering.
 
 ## 📂 Directory Structure for Jane
