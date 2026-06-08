@@ -15,6 +15,7 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [Sound Engine](./modules/soundService.md) - Multi-layered audio mixer.
 - [Save System](./modules/saveService.md) - GitHub & Firebase persistence.
 - [Inventory V2](./modules/inventory_v2.md) - Registry/Slot pattern.
+- [Dice & Chat](./modules/dice_system.md) - 3D Dice and AI Chat.
 
 ## ⚙️ Systems
 - [Skill Database](./systems/SKILL_DATABASE.md) - D&D Skills & LLM Skills.
