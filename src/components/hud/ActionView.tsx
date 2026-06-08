@@ -3,8 +3,6 @@ import { useStore } from '../../store/useStore';
 import { FirstPersonView } from './view/FirstPersonView';
 import { ChatPanel } from './ChatPanel';
 import { GameIcon } from '../../game_icons';
-import { CORE_ICONS } from '../../assets/icons/core';
-import { UI_ICONS } from '../../assets/icons/ui';
 import { motion, AnimatePresence } from 'motion/react';
 import { DraggableCard } from '../DraggableCard';
 import { ErrorBoundary } from '../ErrorBoundary';
@@ -43,7 +41,7 @@ export const ActionView: React.FC = () => {
 
         {activeCards.length === 0 && (
           <div className="w-full h-full flex flex-col items-center justify-center text-parchment-400 space-y-4">
-            <GameIcon path={UI_ICONS.layout} size={64} className="opacity-10" />
+            <GameIcon name="layout" size={64} className="opacity-10" />
             <p className="font-header text-2xl uppercase tracking-widest">The board is empty</p>
             <div className="flex gap-4">
               <button 

@@ -372,7 +372,7 @@ export const SelectionStep: React.FC<{
                                                 onMouseLeave={() => setHoveredTrait(null)}
                                                 className="px-2 py-1 bg-dragon-red/5 border border-dragon-red/10 rounded-sm text-[9px] font-black text-dragon-red uppercase tracking-tighter flex items-center gap-1.5 hover:bg-dragon-red/10 transition-colors shadow-sm relative group/trait"
                                             >
-                                                {t.name || t}
+                                                <GameIcon name={t.index ? getTraitIcon(t.index) : getProficiencyIcon(t)} size={10} color="currentColor" fallbackName="award" /> {t.name || t}
 
                                                 <AnimatePresence>
                                                     {hoveredTrait === (pIndex || pName) && hydratedTraits[pIndex || pName] && (

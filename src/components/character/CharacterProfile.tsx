@@ -16,20 +16,16 @@ import { EquipmentDoll } from './EquipmentDoll';
 import { EquipmentCard } from '../EquipmentCard';
 import { EQUIPMENT_SLOTS, AUX_SLOTS, EquipmentSlotId } from '../../lib/equipmentConstants';
 import { GameIcon, GameIconName } from '../../game_icons';
-import { CORE_ICONS } from '../../assets/icons/core';
-import { ARCANE_CODEX_ICONS } from '../../assets/icons/arcane_codex';
 import { ChromaKeyImage } from '../ChromaKeyImage';
 import { cn } from '../../lib/utils';
 import { isBookLike } from '../../lib/bookUtils';
 import { getAlignmentColor, getAlignmentBackgroundStyle } from '../../lib/colors';
-import { SKILL_ICONS } from '../../assets/icons/skill';
-import { ABILITY_SCORE_ICONS } from '../../assets/icons/ability_score';
 
 import { normalizeImageUrl } from '../../services/storageService';
 import { calculateDerivedStats, getXpProgress, getEffectiveStats, XP_TABLE } from '../../lib/statCalculations';
 import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
-import { extractOptionsFromFeature, getChoiceLimit, getFeatureIcon, getTraitIcon, getFeatIcon , getAlignmentIcon, getBackgroundIcon, getProficiencyIcon , getMagicSchoolIcon , getLanguageIcon } from '../../lib/atlasUtils';
+import { extractOptionsFromFeature, getChoiceLimit, getFeatureIcon, getTraitIcon, getFeatIcon , getAlignmentIcon, getBackgroundIcon, getProficiencyIcon , getMagicSchoolIcon , getLanguageIcon , getAttackIcon } from '../../lib/atlasUtils';
 
 const SpellListRow: React.FC<{ 
   spell: any; 
@@ -685,7 +681,7 @@ export const CharacterProfile: React.FC = () => {
                     <div className="lg:col-span-1 space-y-4">
                        <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
                           <GameIcon name="dice" size={14} color="#8B0000" />
-                          <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Core_Attributes</h3>
+                          <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Ability Scores</h3>
                        </div>
                        <div className="flex flex-col gap-2">
                           <VerticalStat label="STRENGTH" value={effectiveStats.str} abbr="STR" icon="weapon" 
@@ -740,7 +736,7 @@ export const CharacterProfile: React.FC = () => {
                        <div className="space-y-4">
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
                              <GameIcon name="shield" size={14} color="#8B0000" />
-                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Saving_Throws</h3>
+                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Saving Throws</h3>
                           </div>
                           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
                              {['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'].map(abbr => {
@@ -784,8 +780,8 @@ export const CharacterProfile: React.FC = () => {
                        {/* Skill Registry */}
                        <div className="space-y-4">
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                             <GameIcon path={UI_ICONS.pen_line} size={14} color="#8B0000" />
-                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Skill_Registry</h3>
+                             <GameIcon name="pen_line" size={14} color="#8B0000" />
+                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Skills</h3>
                           </div>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1">
                           {SKILL_LIST.map(skill => {
@@ -810,7 +806,7 @@ export const CharacterProfile: React.FC = () => {
                                   )} />
                                   {(() => {
                                     const skillKey = skill.name.toLowerCase().replace(/\s+/g, '_');
-                                    const iconPath = SKILL_ICONS[skillKey];
+                                  <GameIcon name={skillKey} size={16} color={isProficient ? "#8B0000" : "#D4AF37"} />
                                     if (!iconPath) return null;
                                     return (
                                       <svg viewBox="0 0 512 512" className={cn("w-4 h-4 shrink-0", isProficient ? "fill-dragon-red" : "fill-parchment-300")}>
@@ -847,7 +843,7 @@ export const CharacterProfile: React.FC = () => {
                   <div className="mt-12 space-y-4">
                     <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
                       <GameIcon name="sparkles" size={14} color="#8B0000" />
-                      <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Improvements_&_Modifiers</h3>
+                      <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Feats & Features</h3>
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -1003,7 +999,7 @@ export const CharacterProfile: React.FC = () => {
                            {/* Portrait */}
                            <div className="w-[180px] space-y-2">
                               <div className="flex items-center gap-2">
-                                 <GameIcon path={UI_ICONS.fingerprint} size={12} color="#8B0000" />
+                                 <GameIcon name="fingerprint" size={12} color="#8B0000" />
                                  <span className="text-[8px] font-black text-dragon-darkRed uppercase tracking-widest">Profile_Node</span>
                               </div>
                               <div className="aspect-[9/16] bg-parchment-200 rounded-sm overflow-hidden relative shadow-inner border border-dragon-red/10">
@@ -1024,7 +1020,7 @@ export const CharacterProfile: React.FC = () => {
                            {/* Doll */}
                            <div className="w-[180px] space-y-2">
                               <div className="flex items-center gap-2">
-                                 <GameIcon path={UI_ICONS.dashboard} size={12} color="#8B0000" />
+                                 <GameIcon name="dashboard" size={12} color="#8B0000" />
                                  <span className="text-[8px] font-black text-dragon-darkRed uppercase tracking-widest">Equipped_Matrix</span>
                               </div>
                               <div className="aspect-[9/16]">
@@ -1037,7 +1033,7 @@ export const CharacterProfile: React.FC = () => {
                                           setInspectingItem({ item: itemAtSlot, sourceId: character.id, slot });
                                       }
                                    }} 
-                                   alignment={<div className="flex items-center gap-2"><GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={20} color="currentColor" fallbackName="award" /> {character.alignment || "Neutral"}</div>}
+                                   alignment={<><GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={20} color="currentColor" fallbackName="award" /> {character.alignment || "Neutral"}</>}
                                    characterImageUrl={character.imageUrl}
                                  />
                               </div>
@@ -1117,23 +1113,21 @@ export const CharacterProfile: React.FC = () => {
                         <div>
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
                             <GameIcon name="sparkles" size={14} color="#8B0000" />
-                            <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Biological_Traits</h3>
+                            <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Traits</h3>
                           </div>
                           <div className="grid grid-cols-1 gap-2">
-                            <div className="flex flex-wrap gap-2 mb-4">
-                              {character.traits?.map((trait, i) => (
-                                <div key={`trait-${i}`} className="bg-white/40 p-3 rounded border border-dragon-red/5 shadow-sm italic text-[10px]">
-                                  <GameIcon name={getTraitIcon(trait)} size={12} color="#8B0000" fallbackName="award" /> "{trait}"
-                                </div>
-                              ))}
-                            </div>
+                            <div className="flex flex-wrap gap-2 mb-4">{character.traits?.map((trait, i) => (
+                              <div key={`trait-${i}`} className="bg-white/40 p-3 rounded border border-dragon-red/5 shadow-sm italic text-[10px]">
+                                <GameIcon name={getTraitIcon(trait)} size={12} color="#8B0000" fallbackName="award" /> "{trait}"
+                               </div>
+                            ))}
                           </div>
                         </div>
 
                         <div>
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
                             <GameIcon name="scroll" size={14} color="#8B0000" />
-                            <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Known_Languages</h3>
+                            <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Languages</h3>
                           </div>
                           <div className="flex flex-wrap gap-2">
                             {character.languages?.map((lang, i) => (
@@ -1150,7 +1144,7 @@ export const CharacterProfile: React.FC = () => {
                         <div>
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
                             <GameIcon name="weapon" size={14} color="#8B0000" />
-                            <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Technical_Features</h3>
+                            <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Features</h3>
                           </div>
                           <div className="flex flex-wrap gap-2 mb-4">{character.proficiencies?.map((prof, i) => (
                               <div key={`prof-${i}`} className="bg-white/40 px-3 py-1 rounded border border-dragon-red/5 shadow-sm italic text-[9px] flex items-center gap-1.5">
@@ -1171,7 +1165,7 @@ export const CharacterProfile: React.FC = () => {
                      <div>
                         <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
                           <GameIcon name="scroll" size={14} color="#8B0000" />
-                          <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Chronicle_Data</h3>
+                          <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Backstory</h3>
                         </div>
                         <div className="bg-white/40 p-6 rounded border border-dragon-red/5 min-h-[400px]">
                           <p className="text-[11px] leading-relaxed text-parchment-800 font-serif whitespace-pre-wrap italic">
@@ -1522,10 +1516,10 @@ const ActionRow: React.FC<{
 }> = ({ name, type, range, hitBonus, damage, damageType, icon }) => {
   const getDamageIcon = (type: string): string => {
     const t = type.toLowerCase();
-    if (t.includes('pierce')) return "weapon"; 
-    if (t.includes('slash')) return "weapon"; 
-    if (t.includes('bludgeon')) return ATTACK_ICONS.hammer;
-    return ARCANE_CODEX_ICONS.sparkles;
+    if (t.includes("pierce")) return "piercing";
+    if (t.includes("slash")) return "slashing";
+    if (t.includes("bludgeon")) return "bludgeoning";
+    return t.replace(/-/g, "_");
   };
 
   return (
@@ -1533,7 +1527,7 @@ const ActionRow: React.FC<{
       <div className="flex items-center gap-2">
         <div className="relative">
           <GameIcon name="sparkles" size={12} color="#8B0000" className="absolute -top-1.5 -left-1.5 opacity-40" />
-          <GameIcon path={icon} size={16} color="#4A4A4A" className="relative z-10" />
+          <GameIcon name={getAttackIcon(icon || name)} size={16} color="#4A4A4A" className="relative z-10" />
         </div>
         <div className="flex flex-col min-w-0">
           <span className="text-[10px] font-bold text-parchment-900 leading-none truncate">{name}</span>
@@ -1570,7 +1564,7 @@ const ActionRow: React.FC<{
           <span className="text-[9px] font-black text-parchment-800 whitespace-nowrap">
             {damage}
           </span>
-          <GameIcon path={getDamageIcon(damageType)} size={8} color="#8B0000" className="opacity-60" />
+          <GameIcon name={getDamageIcon(damageType)} size={8} color="#8B0000" className="opacity-60" />
         </div>
       </div>
     </div>
@@ -1600,12 +1594,7 @@ const HeaderField: React.FC<{ label: string; value: string; icon: any }> = ({ la
 );
 
 const VerticalStat: React.FC<{ label: string; value: number; abbr: string; icon: string; isModified?: boolean; onClick?: () => void }> = ({ label, value, abbr, icon, isModified, onClick }) => {
-  const mod = Math.floor((value - 10) / 2);
-  const customIconPath = ABILITY_SCORE_ICONS[abbr.toLowerCase()];
-
-  return (
-    <button 
-      onClick={onClick}
+       <GameIcon name={abbr.toLowerCase()} size={18} color="#8B0000" />
       className={cn(
         "flex items-center gap-4 py-3 px-3 border border-dragon-red/5 rounded-sm group transition-all text-left w-full active:scale-[0.98]",
         isModified ? "bg-dragon-red/5 border-dragon-red/20 shadow-[0_0_15px_rgba(139,0,0,0.1)]" : "bg-white/40 hover:bg-white/60"

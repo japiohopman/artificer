@@ -6,9 +6,6 @@ import { useStore } from '../store/useStore';
 import { playClickSound, playSuccessSound, REPO, BRANCH } from '../services/storageService';
 import { soundService } from '../services/soundService';
 import { GameIcon } from '../game_icons';
-import { CORE_ICONS } from '../assets/icons/core';
-import { UI_ICONS } from '../assets/icons/ui';
-import { ARCANE_CODEX_ICONS } from '../assets/icons/arcane_codex';
 
 export const TitleScreen: React.FC = () => {
   const { 
@@ -66,7 +63,7 @@ export const TitleScreen: React.FC = () => {
   if (!hasLoaded && isLoadingSaves) {
     return (
       <div className="fixed inset-0 bg-[#0a0a0a] flex items-center justify-center flex-col gap-4 z-[100]">
-        <GameIcon path={UI_ICONS.loading} size={48} color="#8B0000" className="animate-spin" />
+        <GameIcon name="loading" size={48} color="#8B0000" className="animate-spin" />
         <p className="font-header text-parchment-400 uppercase tracking-widest animate-pulse">Decrypting Save Data...</p>
       </div>
     );

@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { SpellCard } from './SpellCard';
 import { BookReader } from './bookreader/BookReader';
 import { GameIcon, GameIconName } from '../game_icons';
-import { CORE_ICONS } from '../assets/icons/core';
-import { ARCANE_CODEX_ICONS } from '../assets/icons/arcane_codex';
 import { Monster } from '../services/ai/monsterService';
 import { playClickSound, playModalOpenSound, playModalCloseSound, normalizeImageUrl } from '../services/storageService';
 import { ChromaKeyImage } from './ChromaKeyImage';
@@ -503,7 +501,7 @@ const ArcaneCodex: React.FC = () => {
             title="Toggle Character Panel"
             aria-label="Toggle Character Panel"
           >
-            <GameIcon path={LOGISTICS_ICONS.party_stats} size={24} />
+            <GameIcon name="party_stats" size={24} />
           </button>
 
           <div className="h-8 w-px bg-parchment-300 mx-2" />
@@ -684,7 +682,7 @@ const ArcaneCodex: React.FC = () => {
                             >
                               <div className="flex items-center gap-3">
                                 <div className={`w-6 h-6 rounded bg-parchment-100 border flex items-center justify-center transition-colors ${activeCharacterId === char.id ? 'border-dragon-red text-white' : 'border-parchment-300 text-parchment-400 group-hover:text-dragon-red'}`}>
-                                  {index === 0 ? <GameIcon name="shield" size={12} /> : <GameIcon path={LOGISTICS_ICONS.users} size={12} />}
+                                  {index === 0 ? <GameIcon name="shield" size={12} /> : <GameIcon name="users" size={12} />}
                                 </div>
                                 <div className="flex flex-col items-start">
                                   <div className="flex items-center gap-2">
@@ -714,7 +712,7 @@ const ArcaneCodex: React.FC = () => {
                         aria-label="Logout"
                         className="w-full flex items-center gap-3 px-3 py-2.5 hover:bg-dragon-red/10 rounded text-parchment-600 hover:text-dragon-red transition-all text-xs font-medium"
                       >
-                        <GameIcon path={UI_ICONS.logout} size={14} />
+                        <GameIcon name="logout" size={14} />
                         <span>Logout</span>
                       </button>
                     </div>
@@ -1002,7 +1000,7 @@ const ArcaneCodex: React.FC = () => {
             <div className="flex-1 flex items-center justify-center p-4 md:p-8 overflow-hidden relative transition-all duration-500">
               {isLoadingItem ? (
                 <div className="flex flex-col items-center gap-4">
-                  <GameIcon path={UI_ICONS.loading} className="animate-spin" size={48} color="#8B0000" />
+                  <GameIcon name="loading" className="animate-spin" size={48} color="#8B0000" />
                   <p className="font-header text-xl text-dragon-darkRed animate-pulse">Summoning Entity Data...</p>
                 </div>
               ) : selectedItem ? (
@@ -1016,7 +1014,7 @@ const ArcaneCodex: React.FC = () => {
                     >
                       <ErrorBoundary name="ArcaneCard" fallback={(
                         <div className="w-[450px] h-[280px] bg-parchment-200/50 border-4 border-dashed border-dragon-gold/20 rounded-[24px] flex flex-col items-center justify-center p-8 text-center space-y-3">
-                          <GameIcon path={UI_ICONS.alert_triangle} size={48} color="#8B0000" className="opacity-40" />
+                          <GameIcon name="alert_triangle" size={48} color="#8B0000" className="opacity-40" />
                           <p className="font-header text-dragon-darkRed uppercase tracking-widest text-lg">Mystical Distortion</p>
                           <p className="font-body text-xs italic text-parchment-600">The essence of this entity is currently unstable or corrupted.</p>
                         </div>
@@ -1154,7 +1152,7 @@ const ArcaneCodex: React.FC = () => {
             className="absolute -top-6 -right-6 w-12 h-12 flex items-center justify-center p-2 rounded-full border-2 border-dragon-red bg-parchment-100 shadow-xl z-50"
           >
             <GameIcon 
-              path={overData?.slot ? UI_ICONS.equip : overData?.characterId ? UI_ICONS.place : UI_ICONS.grab} 
+              name={overData?.slot ? "equip" : overData?.characterId ? "place" : "grab"} 
               size={24} 
               color="#8B0000" 
             />

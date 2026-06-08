@@ -8,9 +8,6 @@ import { DiceText } from './DiceText';
 import { useStore } from '../store/useStore';
 import { renderNameValue, getOrdinal } from '../lib/dataUtils';
 import { GameIcon, GameIconName } from '../game_icons';
-import { CORE_ICONS } from '../assets/icons/core';
-import { UI_ICONS } from '../assets/icons/ui';
-import { ARCANE_CODEX_ICONS } from '../assets/icons/arcane_codex';
 
 interface SpellCardProps {
   spell: any;
@@ -88,10 +85,10 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
 
       {/* Main Info Blocks */}
       <div className="relative z-10 grid grid-cols-2 gap-3">
-        <InfoBlock iconPath={ARCANE_CODEX_ICONS.speed} label="Casting Time" value={spell.casting_time} />
-        <InfoBlock iconPath={ARCANE_CODEX_ICONS.target} label="Range" value={spell.range} />
-        <InfoBlock iconPath={ARCANE_CODEX_ICONS.sparkles} label="Components" value={spell.components?.join(', ') + (spell.material ? '*' : '')} tooltip={spell.material} />
-        <InfoBlock iconPath={UI_ICONS.loading} label="Duration" value={(spell.concentration ? 'Conc. ' : '') + spell.duration} />
+        <InfoBlock iconName="speed" label="Casting Time" value={spell.casting_time} />
+        <InfoBlock iconName="target" label="Range" value={spell.range} />
+        <InfoBlock iconName="sparkles" label="Components" value={spell.components?.join(', ') + (spell.material ? '*' : '')} tooltip={spell.material} />
+        <InfoBlock iconName="loading" label="Duration" value={(spell.concentration ? 'Conc. ' : '') + spell.duration} />
       </div>
 
       {/* Image / Illustration */}
@@ -167,10 +164,10 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
   );
 };
 
-const InfoBlock = ({ iconPath, label, value, tooltip }: { iconPath: string, label: string, value: string, tooltip?: string }) => (
+const InfoBlock = ({ iconName, iconPath, label, value, tooltip }: { iconName?: string, iconPath?: string, label: string, value: string, tooltip?: string }) => (
   <div className="flex flex-col min-w-0" title={tooltip}>
     <div className="flex items-center gap-1 opacity-60">
-      <GameIcon path={iconPath} size={10} color="#8B0000" />
+      <GameIcon name={iconName} path={iconPath} size={10} color="#8B0000" />
       <span className="text-[9px] font-bold uppercase tracking-wider text-parchment-500">{label}</span>
     </div>
     <span className="text-[11px] font-bold text-parchment-800 truncate leading-tight mt-0.5">

@@ -22,6 +22,16 @@ This registry tracks all non-code assets used in the project, including sounds, 
   - `maps/`: Tactical and world maps.
 
 ## Images
+## Icons
+- **Location**: `src/assets/icons/`
+- **Category Files**: 
+  - `core.ts`: System UI, navigation, and core combat icons.
+  - `equipment.ts`: Item category icons.
+  - `attacks.ts`: Weapon and natural attack icons.
+  - `feats.ts`, `features.ts`, `traits.ts`: Character ability icons.
+  - `magic_schools.ts`, `alignments.ts`, `languages.ts`: Lore and mechanic icons.
+  - `proficiencies.ts`, `skill.ts`, `ability_score.ts`: Character stat icons.
+- **Usage**: Icons are registered in `index.ts` and used via the `GameIcon` component by name.
 - **Characters**: `public/assets/atlas/characters/`
 - **Items**: `public/assets/atlas/equipment/images/`
 - **Monsters**: `public/assets/atlas/enemies/images/`

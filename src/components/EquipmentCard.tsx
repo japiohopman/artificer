@@ -8,10 +8,6 @@ import { ChromaKeyImage } from './ChromaKeyImage';
 import { useStore } from '../store/useStore';
 import { useBookStore } from '../store/useBookStore';
 import { GameIcon, GameIconName } from '../game_icons';
-import { CORE_ICONS } from '../assets/icons/core';
-import { ARCANE_CODEX_ICONS } from '../assets/icons/arcane_codex';
-import { EQUIPMENT_ICONS } from '../assets/icons/equipment';
-import { DICE_ICONS } from '../assets/icons/dice';
 import { DiceText } from './DiceText';
 import { BookReader } from './bookreader/BookReader';
 

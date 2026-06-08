@@ -3,7 +3,6 @@ import { useStore } from '../store/useStore';
 import { GameIcon } from '../game_icons';
 import { cn } from '../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
-import { DICE_ICONS } from '../assets/icons/dice';
 
 export const AdvancedRoller: React.FC = () => {
   const { rollDice3D, isAdvancedRollerOpen, setIsAdvancedRollerOpen } = useStore();

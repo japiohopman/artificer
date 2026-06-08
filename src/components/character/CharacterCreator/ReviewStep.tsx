@@ -8,7 +8,6 @@ import { NPCChoiceResolver, ResolvedItem } from '../../../lib/npcChoiceResolver'
 import { soundService } from '../../../services/soundService';
 import { atlasService } from '../../../services/atlasService';
 
-import { ARCANE_CODEX_ICONS } from '../../../assets/icons/arcane_codex';
 
 export const ReviewStep: React.FC<{ 
   newChar: Partial<Character>, 
@@ -153,7 +152,7 @@ export const ReviewStep: React.FC<{
                         {/* Background Decoration */}
                         <div className="absolute -right-8 -bottom-8 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity pointer-events-none rotate-12">
                             <svg viewBox="0 0 512 512" className="w-64 h-64 fill-dragon-red">
-                                <path d={ARCANE_CODEX_ICONS.book} />
+                                <GameIcon name="book" size={16} />
                             </svg>
                         </div>
 
