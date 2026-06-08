@@ -7,6 +7,7 @@ Welcome to the central documentation index for the Artificer project. This file 
 - **[Project Hub](./docs/PROJECT_HUB.md)** - The main entry point for all project documentation.
 - **[House Style Guide](./docs/STYLE_GUIDE.md)** - Visual language and UI/UX guidelines.
 - **[Task Board](./docs/TASK_BOARD.md)** - Current tasks and project status.
+- **[Project Progress](./docs/PROGRESS.md)** - High-level roadmap and status tracking.
 - **[Architecture](./docs/modules/atlasService.md)** - Technical overview of the Atlas Service.
 - **[Sound System](./docs/modules/soundService.md)** - Documentation for the audio engine.
 - **[Audio Registry](./docs/systems/AUDIO_REGISTRY.md)** - Index of all sound assets.
