@@ -19,6 +19,12 @@
 
 ---
 
+## 🎯 Project Vision
+
+Arcane Codex is on a journey to become a full-scale AI-powered D&D simulation platform. Read our **[Master Project Goals](./GOALS.md)** to see the full architectural roadmap and long-term vision.
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: [React 19](https://react.dev/), [Vite 6](https://vitejs.dev/)

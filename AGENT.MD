@@ -3,7 +3,10 @@
 Welcome to Artificer. If you are an AI agent, please follow these directions to understand your role and the project structure.
 
 ## 📍 First Stop
-Your primary source of truth for the project's documentation is the:
+Your primary source of truth for the project's vision and long-term goals is the:
+👉 **[GOALS.md](./GOALS.md)**
+
+For navigating the documentation system, use the:
 👉 **[DOCS_INDEX.md](./DOCS_INDEX.md)**
 
 ## 🏷️ Identified Agents

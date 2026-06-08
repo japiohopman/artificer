@@ -3,6 +3,7 @@
 Welcome to the central documentation index for the Artificer project. This file serves as the main bridge for both humans and AI agents to navigate the project's knowledge base.
 
 ## 🗺️ Navigation
+- **[Master Project Goals](./GOALS.md)** - 🎯 **The Ultimate Vision and Roadmap.**
 - **[Project Hub](./docs/PROJECT_HUB.md)** - The main entry point for all project documentation.
 - **[House Style Guide](./docs/STYLE_GUIDE.md)** - Visual language and UI/UX guidelines.
 - **[Task Board](./docs/TASK_BOARD.md)** - Current tasks and project status.
