@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "elemental",
   "alignment": "neutral",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 14
-    }
-  ],
+  "armor_class": 14,
   "hit_points": 114,
   "hit_dice": "12d10",
   "hit_points_roll": "12d10+48",
@@ -79,7 +74,7 @@
     "passive_perception": 10
   },
   "languages": "Aquan",
-  "challenge_rating": 5,
+  "challenge_rating": "5",
   "proficiency_bonus": 3,
   "xp": 1800,
   "special_abilities": [
@@ -156,10 +151,22 @@
   ],
   "image": "/assets/atlas/enemies/water_elemental.webp",
   "url": "/assets/atlas/enemies/json/water_elemental.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-08T14:33:29.578Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 22,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet12.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet12.0webp",
+  "stats": {
+    "str": 18,
+    "dex": 14,
+    "con": 18,
+    "int": 5,
+    "wis": 10,
+    "cha": 8
+  },
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fimages%2Fwater_elemental.webp%3Ft%3D1780929194567",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "8-6-2026"
 }
