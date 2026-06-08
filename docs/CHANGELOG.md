@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - 2025-02-17
 ### Added
+- Added `docs/STYLE_GUIDE.md` defining the "Parchment & Dragonstone" aesthetic and visual language.
 - Created `docs/reports/DEEP_DIVE_RAPPORT.md` providing a comprehensive analysis of Character Creation, Class systems, and Leveling logic.
 - Created `docs/reports/OPTIMALISATIE_ADVIES.md` evaluating system architecture and providing scaling recommendations.
 - Documentation for internal Atlas data fetching and XP progression mechanics.
