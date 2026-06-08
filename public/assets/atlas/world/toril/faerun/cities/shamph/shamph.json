@@ -1,13 +1,55 @@
 {
   "id": "shamph",
-  "name": "shamph",
+  "name": "Shamph",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Shamph",
   "description": "The metropolis known as the '''Crossroads City''' that grew fat and wealthy off of the [[Emerald Way]] trade.",
-  "image": "shamph.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/shamph/shamph.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2723.08,
     "lng": 1583.61
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

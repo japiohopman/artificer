@@ -1,13 +1,55 @@
 {
   "id": "tsenviilyq",
-  "name": "tsenviilyq",
+  "name": "Tsenviilyq",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Tsenviilyq",
   "description": "A [[derro]] city in the [[Underdark]].",
-  "image": "tsenviilyq.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/tsenviilyq/tsenviilyq.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 1181.22,
     "lng": 2289.96
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

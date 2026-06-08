@@ -1,13 +1,55 @@
 {
   "id": "velen",
-  "name": "velen",
+  "name": "Velen",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Velen",
   "description": "A port city on the [[Tethyrian Peninsula]], overlooking the [[Sea of Swords]], that served as the capital of the duchy of [[Cape Velen]], within the [[Kingdom of Tethyr]] in the 14{{th}} century [[DR]] and onward into the 15{{th}} century after the realm's independence was declared.",
-  "image": "velen.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/velen/velen.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 879.28,
     "lng": 1436.48
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

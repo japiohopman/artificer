@@ -1,13 +1,55 @@
 {
   "id": "ssessethenaa",
-  "name": "ssessethenaa",
+  "name": "Ssessethenaa",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Ss'essethen'aa",
   "description": "A city of twisting tunnels inhabited by [[yuan-ti]] [[cleric]]s of [[Sseth]] and [[ophidian]] laborers.",
-  "image": "ssessethenaa.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/ssessethenaa/ssessethenaa.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 1242.38,
     "lng": 2365.27
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

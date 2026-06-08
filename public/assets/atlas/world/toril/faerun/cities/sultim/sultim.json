@@ -1,13 +1,55 @@
 {
   "id": "sultim",
-  "name": "sultim",
+  "name": "Sultim",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Sultim",
   "description": "A city and a major center of worship for [[Anhur]].\n",
-  "image": "sultim.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/sultim/sultim.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 3890.5,
     "lng": 1919.08
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

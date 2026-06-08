@@ -1,13 +1,55 @@
 {
   "id": "thentia",
-  "name": "thentia",
+  "name": "Thentia",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Thentia",
   "description": "A metropolis of folk with an impassioned sense of self-determination and a significant population of [[arcane]] spellcasters, guarded by a cavalry known as the [[Riders of Thentia]].",
-  "image": "thentia.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/thentia/thentia.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2490,
     "lng": 2774.5
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

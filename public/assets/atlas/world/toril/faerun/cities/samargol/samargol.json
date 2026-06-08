@@ -1,13 +1,55 @@
 {
   "id": "samargol",
-  "name": "samargol",
+  "name": "Samargol",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Samargol",
   "description": "The '''City of Veils''', the tropical capital city of [[Samarach]] that housed a quarter of the Samarachan population.",
-  "image": "samargol.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/samargol/samargol.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 993.13,
     "lng": 115.25
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

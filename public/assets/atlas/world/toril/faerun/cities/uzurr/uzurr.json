@@ -1,13 +1,55 @@
 {
   "id": "uzurr",
-  "name": "uzurr",
+  "name": "Uzurr",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Uzurr",
   "description": "Or the '''City of Toiling Monks''', a member of the [[Lapal League]] and one of the [[Cities of the Seabreeze]]. It was devoted to [[Ilmater]], the Crying God.",
-  "image": "uzurr.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/uzurr/uzurr.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2079.95,
     "lng": 472.34
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

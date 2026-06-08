@@ -1,13 +1,55 @@
 {
   "id": "tyraturos",
-  "name": "tyraturos",
+  "name": "Tyraturos",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Tyraturos",
   "description": "The city founded during an age of expansion of [[Mulhorand]], eventually claimed by [[Thay]].",
-  "image": "tyraturos.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/tyraturos/tyraturos.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 3866.1,
     "lng": 2182.13
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

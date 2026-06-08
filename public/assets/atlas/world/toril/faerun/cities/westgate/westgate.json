@@ -1,39 +1,36 @@
 {
   "id": "westgate",
-  "name": "westgate",
+  "name": "Westgate",
   "type": "metropolis",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "westgate: Metropolis",
-  "description": "",
+  "description": "A seedy and squalid metropolis—with a history of piracy, powerful crime syndicates, and nameless vampiric crime-lords.<br/><br/>Interactive map can be found [[Map:Westgate|here]].",
   "wiki": "",
-  "image": "westgate.webp",
-  "thumbnail": "westgate_thumb.webp",
-  "banner": "westgate_banner.webp",
+  "image": "/assets/atlas/world/toril/faerun/cities/westgate/westgate.webp",
+  "thumbnail": "/assets/atlas/world/toril/faerun/cities/westgate/westgate_thumb.webp",
+  "banner": "/assets/atlas/world/toril/faerun/cities/westgate/westgate_banner.webp",
   "tags": [
     "city",
     "metropolis"
   ],
-  "map": "assets/atlas/world/toril/faerun/cities/westgate/westgate_map.webp",
+  "map": "/assets/atlas/world/toril/faerun/cities/westgate/westgate_map.webp",
+  "sub_map": "",
   "children": [],
   "sub_location_files": [
-    "assets/atlas/world/toril/faerun/cities/westgate/sublocations/inns_taverns.json",
-    "assets/atlas/world/toril/faerun/cities/westgate/sublocations/poi.json",
-    "assets/atlas/world/toril/faerun/cities/westgate/sublocations/temples_shrines.json",
-    "assets/atlas/world/toril/faerun/cities/westgate/sublocations/water.json",
-    "assets/atlas/world/toril/faerun/cities/westgate/sublocations/gates.json"
+    "/assets/atlas/world/toril/faerun/cities/westgate/sublocations/inns_taverns.json",
+    "/assets/atlas/world/toril/faerun/cities/westgate/sublocations/poi.json",
+    "/assets/atlas/world/toril/faerun/cities/westgate/sublocations/temples_shrines.json",
+    "/assets/atlas/world/toril/faerun/cities/westgate/sublocations/water.json",
+    "/assets/atlas/world/toril/faerun/cities/westgate/sublocations/gates.json"
   ],
   "coordinates": {
     "lat": 0,
     "lng": 0
-  },
-  "geography": "",
-  "history": "",
-  "metadata": {
-    "government": "Council of Six",
-    "organizations": "",
-    "trade": "",
-    "military": "The Mehelm",
-    "population": "100,000+"
   },
   "bounds": [
     [
@@ -46,5 +43,19 @@
     ]
   ],
   "origin": "bottom-left",
-  "unitsPerMile": 1
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "Council of Six",
+    "military": "The Mehelm",
+    "population": "100,000+",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

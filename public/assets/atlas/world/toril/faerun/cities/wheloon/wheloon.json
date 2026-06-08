@@ -1,13 +1,55 @@
 {
   "id": "wheloon",
-  "name": "wheloon",
+  "name": "Wheloon",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Wheloon",
   "description": "A small city on the junction of the [[Wyvernflow River]] and the [[Way of the Manticore]].",
-  "image": "wheloon.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/wheloon/wheloon.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2006,
     "lng": 2169
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

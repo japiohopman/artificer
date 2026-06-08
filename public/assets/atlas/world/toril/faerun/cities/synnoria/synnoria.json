@@ -1,13 +1,55 @@
 {
   "id": "synnoria",
-  "name": "synnoria",
+  "name": "Synnoria",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Synnoria",
   "description": "An ancient [[elf|elven]] kingdom hidden in the mountains bordering the [[Myrloch Vale]] and sheltered by a powerful ''mass illusion'' [[spell]].",
-  "image": "synnoria.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/synnoria/synnoria.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 475.88,
     "lng": 1627.22
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

@@ -1,13 +1,55 @@
 {
   "id": "tsurlagol",
-  "name": "tsurlagol",
+  "name": "Tsurlagol",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Tsurlagol",
   "description": "'''The Gateway to the Unapproachable East''', a persevering trade city.",
-  "image": "tsurlagol.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/tsurlagol/tsurlagol.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2781.05,
     "lng": 2355.37
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

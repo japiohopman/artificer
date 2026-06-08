@@ -1,13 +1,55 @@
 {
   "id": "zindalankh",
-  "name": "zindalankh",
+  "name": "Zindalankh",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Zindalankh",
   "description": "A coastal caravan city of [[Murghôm]] and the site of a large [[Shou]] Town.",
-  "image": "zindalankh.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/zindalankh/zindalankh.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 4620.94,
     "lng": 1773.42
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

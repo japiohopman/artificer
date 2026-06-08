@@ -1,13 +1,55 @@
 {
   "id": "vaelan",
-  "name": "vaelan",
+  "name": "Vaelan",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Vaelan",
   "description": "A huge city in [[Durpar]], made the nation's capital in [[1371 DR]].",
-  "image": "vaelan.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/vaelan/vaelan.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 4571.09,
     "lng": 1064.19
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

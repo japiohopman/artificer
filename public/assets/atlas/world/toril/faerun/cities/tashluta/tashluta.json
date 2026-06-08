@@ -1,13 +1,55 @@
 {
   "id": "tashluta",
-  "name": "tashluta",
+  "name": "Tashluta",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Tashluta",
   "description": "The '''City of Slithering Vines''' – the capital city of [[Tashalar]], constructed within and atop a volcanic crater that opened up into the [[Shining Sea]].",
-  "image": "tashluta.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/tashluta/tashluta.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 1569,
     "lng": 441.99
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

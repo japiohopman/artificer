@@ -1,13 +1,55 @@
 {
   "id": "surbroar",
-  "name": "surbroar",
+  "name": "Surbroar",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Surbroar",
   "description": "A city located in the country of [[Mulhorand]] that sat on the [[River of Spears]] and on the [[Great South Road]] due north of [[Ulzel]].",
-  "image": "surbroar.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/surbroar/surbroar.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 4017.5,
     "lng": 1478.99
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }
