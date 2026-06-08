@@ -1037,7 +1037,7 @@ export const CharacterProfile: React.FC = () => {
                                           setInspectingItem({ item: itemAtSlot, sourceId: character.id, slot });
                                       }
                                    }} 
-                                   alignment=<GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={20} color="currentColor" fallbackName="award" /> {character.alignment || "Neutral"}
+                                   alignment={<div className="flex items-center gap-2"><GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={20} color="currentColor" fallbackName="award" /> {character.alignment || "Neutral"}</div>}
                                    characterImageUrl={character.imageUrl}
                                  />
                               </div>
@@ -1120,11 +1120,13 @@ export const CharacterProfile: React.FC = () => {
                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Biological_Traits</h3>
                           </div>
                           <div className="grid grid-cols-1 gap-2">
-                            <div className="flex flex-wrap gap-2 mb-4">{character.traits?.map((trait, i) => (
-                              <div key={`trait-${i}`} className="bg-white/40 p-3 rounded border border-dragon-red/5 shadow-sm italic text-[10px]">
-                                <GameIcon name={getTraitIcon(trait)} size={12} color="#8B0000" fallbackName="award" /> "{trait}"
-                               </div>
-                            ))}
+                            <div className="flex flex-wrap gap-2 mb-4">
+                              {character.traits?.map((trait, i) => (
+                                <div key={`trait-${i}`} className="bg-white/40 p-3 rounded border border-dragon-red/5 shadow-sm italic text-[10px]">
+                                  <GameIcon name={getTraitIcon(trait)} size={12} color="#8B0000" fallbackName="award" /> "{trait}"
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         </div>
 

@@ -27,6 +27,7 @@ import { GameIcon } from '../../game_icons';
 import { NPCGenerator } from './npc_generator';
 import { NPCTester } from './npc_tester';
 import { Simulator } from './Simulator';
+import { Jane } from './Jane';
 
 import { Mixer } from '../audio/Mixer';
 
@@ -53,7 +54,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     addCharacter
   } = useStore();
 
-  const [activeTab, setActiveTab] = useState<'monsters' | 'materials' | 'equipment' | 'backgrounds' | 'npcs' | 'test' | 'simulator'>('monsters');
+  const [activeTab, setActiveTab] = useState<'monsters' | 'materials' | 'equipment' | 'backgrounds' | 'npcs' | 'test' | 'simulator' | 'jane'>('monsters');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [editingItem, setEditingItem] = useState<any | null>(initialMonster || null);
   const [editingCharId, setEditingCharId] = useState<string | null>(null);
@@ -833,6 +834,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               { id: 'npcs', icon: (props: any) => <GameIcon name="avatar" {...props} />, label: 'NPCS' },
               { id: 'test', icon: (props: any) => <GameIcon name="users" {...props} />, label: 'TESTER' },
               { id: 'simulator', icon: (props: any) => <GameIcon name="sparkles" {...props} />, label: 'SIMULATOR' },
+              { id: 'jane', icon: (props: any) => <GameIcon name="map" {...props} />, label: 'JANE' },
               { id: 'backgrounds', icon: (props: any) => <GameIcon name="image" {...props} />, label: 'HABITATS' }
             ].map(tab => (
               <button 
@@ -864,6 +866,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               <NPCTester />
             ) : activeTab === 'simulator' ? (
               <Simulator />
+            ) : activeTab === 'jane' ? (
+              <Jane />
             ) : activeTab !== 'backgrounds' ? (
               <>
                 {/* Left Drawer: Hierarchy & Checklist */}
