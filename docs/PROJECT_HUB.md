@@ -7,6 +7,7 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [Project Architecture](./modules/atlasService.md)
 - [House Style Guide](./STYLE_GUIDE.md)
 - [Task Board](./TASK_BOARD.md)
+- [Project Progress](./PROGRESS.md)
 - [Changelog](./CHANGELOG.md)
 - [Error Reports](./ERROR_REPORTS.md)
 - [Health Check](./HEALTH_CHECK.md)
