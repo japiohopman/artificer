@@ -1,4 +1,6 @@
-# Artificer: Project Goals & Architecture Blueprint
+# 🎯 Artificer: Master Project Goals & Architecture Blueprint
+
+> **IMPORTANT:** This is the central "Endpoint" document for the Artificer project. It defines the ultimate vision, architectural truth, and the final destination for all development efforts. All systems, features, and agents must align with the goals stated herein.
 
 ## 1. Project Vision
 Artificer is evolving from an immersive digital grimoire into a **complete AI-powered Dungeons & Dragons simulation platform**. The goal is to provide a seamless, high-fidelity experience where an LLM-driven Dungeon Master orchestrates complex game systems, maintains a persistent world state, and narrates adventures with perfect mechanical consistency.
@@ -90,3 +92,6 @@ The AI DM should access "Tools" via the API to:
 *   The AI DM can run a 30-minute session without human mechanical intervention.
 *   A new character can be created, leveled to 20, and equipped without schema violations.
 *   The system can automatically generate a "Post-Session Summary" that accurately reflects all game state changes.
+
+---
+*This document is the ultimate reference for the Artificer Project Orchestrator.*
