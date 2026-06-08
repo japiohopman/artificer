@@ -62,7 +62,7 @@
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "/assets/atlas/constitutionditions/json/poisoned.json"
+      "url": "/assets/atlas/conditions/json/poisoned.json"
     }
   ],
   "senses": {
@@ -144,8 +144,8 @@
       }
     }
   ],
-  "image": "/assets/atlas/enemies/images/charismain_devil.webp",
-  "url": "/assets/atlas/enemies/json/charismain_devil.json",
+  "image": "/assets/atlas/enemies/images/chain_devil.webp",
+  "url": "/assets/atlas/enemies/json/chain_devil.json",
   "updated_at": "2026-04-16T09:05:51.779Z",
   "forms": [],
   "legendary_actions": [],

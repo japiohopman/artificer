@@ -12,7 +12,7 @@
         {
           "index": "chain_mail",
           "name": "chain mail",
-          "url": "/assets/atlas/equipment/json/charismain_mail.json"
+          "url": "/assets/atlas/equipment/json/chain_mail.json"
         }
       ]
     }
@@ -137,7 +137,7 @@
           {
             "name": "charm person",
             "level": 1,
-            "url": "/assets/atlas/spell/json/json/charismarm_person.json",
+            "url": "/assets/atlas/spell/json/json/charm_person.json",
             "usage": {
               "type": "per day",
               "times": 1,

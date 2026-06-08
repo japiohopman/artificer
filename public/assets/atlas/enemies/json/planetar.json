@@ -62,17 +62,17 @@
     {
       "index": "charmed",
       "name": "charmed",
-      "url": "/assets/atlas/constitutionditions/charismarmed"
+      "url": "/assets/atlas/conditions/charmed"
     },
     {
       "index": "exhaustion",
       "name": "exhaustion",
-      "url": "/assets/atlas/constitutionditions/exhaustion"
+      "url": "/assets/atlas/conditions/exhaustion"
     },
     {
       "index": "frightened",
       "name": "frightened",
-      "url": "/assets/atlas/constitutionditions/frightened"
+      "url": "/assets/atlas/conditions/frightened"
     }
   ],
   "senses": {
@@ -181,7 +181,7 @@
           {
             "name": "control weather",
             "level": 8,
-            "url": "/assets/atlas/spell/json/constitutiontrol_weather.json",
+            "url": "/assets/atlas/spell/json/control_weather.json",
             "usage": {
               "type": "per day",
               "times": 1,

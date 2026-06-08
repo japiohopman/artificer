@@ -65,12 +65,12 @@
     {
       "index": "charmed",
       "name": "charmed",
-      "url": "/assets/atlas/constitutionditions/charismarmed"
+      "url": "/assets/atlas/conditions/charmed"
     },
     {
       "index": "poisoned",
       "name": "poisoned",
-      "url": "/assets/atlas/constitutionditions/poisoned"
+      "url": "/assets/atlas/conditions/poisoned"
     }
   ],
   "senses": {
@@ -129,7 +129,7 @@
           {
             "name": "charm person",
             "level": 1,
-            "url": "/assets/atlas/spell/json/charismarm_person.json"
+            "url": "/assets/atlas/spell/json/charm_person.json"
           },
           {
             "name": "detect magic",

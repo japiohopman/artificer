@@ -178,7 +178,7 @@
             "of": {
               "index": "chain_mail",
               "name": "chain mail",
-              "url": "/assets/atlas/equipment/json/charismain_mail.json"
+              "url": "/assets/atlas/equipment/json/chain_mail.json"
             },
             "prerequisites": [
               {
@@ -186,7 +186,7 @@
                 "proficiency": {
                   "index": "chain_mail",
                   "name": "chain mail",
-                  "url": "/assets/atlas/proficiencies/json/charismain_mail.json"
+                  "url": "/assets/atlas/proficiencies/json/chain_mail.json"
                 }
               }
             ]

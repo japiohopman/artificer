@@ -31,7 +31,7 @@ function generateIndex() {
           name: data.name || 'Unknown Item',
           kind: data.kind || 'unknown',
           equipment_category: data.equipment_category?.name || data.equipment_category || 'Other',
-          rarity: data.rarity || 'Common',
+          rarity: typeof data.rarity === 'object' ? (data.rarity.name || 'Common') : (data.rarity || 'Common'),
           cost: data.cost,
           weight: data.weight,
           imageUrl: data.imageUrl || data.image || null,
@@ -43,7 +43,7 @@ function generateIndex() {
     });
   });
 
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(index, null, 2));
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(index, null, 2) + '\n');
   console.log(`Successfully generated index with ${index.length} items at ${OUTPUT_FILE}`);
 }
 
