@@ -1,13 +1,55 @@
 {
   "id": "neldorild",
-  "name": "neldorild",
+  "name": "Neldorild",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Neldorild",
   "description": "Or '''Neldorild''' – the fourth largest city in [[Mulhorand]].",
-  "image": "neldorild.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/neldorild/neldorild.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 3803.43,
     "lng": 1528.18
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

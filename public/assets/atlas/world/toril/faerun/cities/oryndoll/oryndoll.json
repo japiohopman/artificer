@@ -1,20 +1,27 @@
 {
   "id": "oryndoll",
-  "name": "oryndoll",
+  "name": "Oryndoll",
   "type": "city",
-  "plain": "",
+  "plain": "Material Plane",
   "world": "totil",
   "continent": "fearun",
   "region": "underdark",
   "sub_region": "central_underdark",
+  "parent": "cities",
   "title": "Oryndoll: The City of Manifest Psionics",
   "description": "A terrifying [[mind_flayer|mind flayer]] city known for its mastery of psionics.",
   "wiki": "Oryndoll is a major illithid city located in the Lowerdark beneath the Shining Plains. It is a center of psionic research and the home of the Elder Brain collective.",
-  "image": "oryndoll.webp",
-  "thumbnail": "oryndoll_thumb.webp",
-  "banner": "oryndoll_banner.webp",
-  "tags": ["city", "underdark", "mind_flayer", "psionics"],
-  "map": "assets/atlas/world/toril/faerun/cities/oryndoll/oryndoll_map.webp",
+  "image": "/assets/atlas/world/toril/faerun/cities/oryndoll/oryndoll.webp",
+  "thumbnail": "/assets/atlas/world/toril/faerun/cities/oryndoll/oryndoll_thumb.webp",
+  "banner": "/assets/atlas/world/toril/faerun/cities/oryndoll/oryndoll_banner.webp",
+  "tags": [
+    "city",
+    "underdark",
+    "mind_flayer",
+    "psionics"
+  ],
+  "map": "/assets/atlas/world/toril/faerun/cities/oryndoll/oryndoll_map.webp",
+  "sub_map": "",
   "children": [],
   "sub_location_files": [],
   "coordinates": {
@@ -22,8 +29,14 @@
     "lng": 0
   },
   "bounds": [
-    [0, 0],
-    [3000, 1994]
+    [
+      0,
+      0
+    ],
+    [
+      3000,
+      1994
+    ]
   ],
   "origin": "bottom-left",
   "unitsPerMile": 1,
@@ -35,8 +48,10 @@
   "trade": "Psionic knowledge",
   "metadata": {
     "government": "Elder Brain Collective",
+    "military": "Thrall Armies",
     "population": "10,000",
-    "military": "Thrall Armies"
+    "organizations": "",
+    "trade": ""
   },
   "categories": []
 }

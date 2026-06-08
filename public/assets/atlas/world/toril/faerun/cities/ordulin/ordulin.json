@@ -1,13 +1,55 @@
 {
   "id": "ordulin",
-  "name": "ordulin",
+  "name": "Ordulin",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Ordulin",
   "description": "The capital of [[Sembia]], destroyed in a planar rift summoned by [[Elyril Hraven]] in [[1484 DR]], rebuilt and proclaimed a capital once again by [[1499 DR]].",
-  "image": "ordulin.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/ordulin/ordulin.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2449.5,
     "lng": 2343
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

@@ -1,13 +1,55 @@
 {
   "id": "nimpeth",
-  "name": "nimpeth",
+  "name": "Nimpeth",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Nimpeth",
   "description": "One of the [[Free Cities of the Vilhon Reach]] built on the back of slaves, renowned for its high quality [[wine]] from [[Woren Vineyards]].",
-  "image": "nimpeth.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/nimpeth/nimpeth.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2460.01,
     "lng": 1491.08
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

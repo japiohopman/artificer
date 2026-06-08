@@ -1,13 +1,55 @@
 {
   "id": "myth_nantar",
-  "name": "myth_nantar",
+  "name": "Myth Nantar",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Myth Nantar",
   "description": "Also known as the '''City of Destinies''', an underwater city about 56-64km (35-40 miles) west of the [[Whamite Isles]].",
-  "image": "myth_nantar.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/myth_nantar/myth_nantar.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2725,
     "lng": 1993
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

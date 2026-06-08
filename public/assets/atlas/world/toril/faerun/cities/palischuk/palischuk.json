@@ -1,13 +1,55 @@
 {
   "id": "palischuk",
-  "name": "palischuk",
+  "name": "Palischuk",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Palischuk",
   "description": "A city in the northeastern corner of [[Vaasa]] populated predominantly by [[half-orc]]s.",
-  "image": "palischuk.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/palischuk/palischuk.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2778,
     "lng": 3022.5
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

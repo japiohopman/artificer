@@ -1,13 +1,55 @@
 {
   "id": "kholtar",
-  "name": "kholtar",
+  "name": "Kholtar",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Khôltar",
   "description": "A small city on the edge of the [[Great Rift]] in south [[Faerûn]], known as the '''Iron City''' because of its high walls covered in [[iron]].",
-  "image": "kholtar.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/kholtar/kholtar.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 3379.97,
     "lng": 860.19
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

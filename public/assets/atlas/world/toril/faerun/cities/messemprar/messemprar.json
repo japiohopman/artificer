@@ -1,13 +1,55 @@
 {
   "id": "messemprar",
-  "name": "messemprar",
+  "name": "Messemprar",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Messemprar",
   "description": "A city in [[Unther]] that, at some point during the country's history, was its largest city, but by the 14{{th}} century [[DR]] had shrunk both in importance and in size.",
-  "image": "messemprar.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/messemprar/messemprar.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 3658.57,
     "lng": 1781.2
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

@@ -1,13 +1,55 @@
 {
   "id": "port_nyanzaru",
-  "name": "port_nyanzaru",
+  "name": "Port Nyanzaru",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Port Nyanzaru",
   "description": "A port city and an [[Amn]]ian colony that gained independence in late 1480s [[DR]].",
-  "image": "port_nyanzaru.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/port_nyanzaru/port_nyanzaru.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 760,
     "lng": 758
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

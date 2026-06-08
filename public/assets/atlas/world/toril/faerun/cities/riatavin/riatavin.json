@@ -1,13 +1,55 @@
 {
   "id": "riatavin",
-  "name": "riatavin",
+  "name": "Riatavin",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Riatavin",
   "description": "A city in [[Amn]] and later – [[Tethyr]], governed by a group of merchants known as the [[Chosen Council]] in the 15{{th}} century [[DR]].",
-  "image": "riatavin.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/riatavin/riatavin.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 1754.75,
     "lng": 1386
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

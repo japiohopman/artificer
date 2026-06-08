@@ -1,13 +1,55 @@
 {
   "id": "phlan",
-  "name": "phlan",
+  "name": "Phlan",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Phlan",
   "description": "A city-state trapped in a cycle of ruination and rebuilding across centuries. The city was dedicated to the deity [[Tyr]] and its spiritual and physical well-being to the artifact of the ''[[Hammer of Tyr]]''.",
-  "image": "phlan.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/phlan/phlan.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2388,
     "lng": 2803
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

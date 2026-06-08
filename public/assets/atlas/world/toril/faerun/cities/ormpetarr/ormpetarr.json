@@ -1,13 +1,55 @@
 {
   "id": "ormpetarr",
-  "name": "ormpetarr",
+  "name": "Ormpetarr",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Ormpetarr",
   "description": "The capital city of [[Sespech]] that was known as the '''City of the Scar''' during the century that followed the [[Spellplague]].",
-  "image": "ormpetarr.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/ormpetarr/ormpetarr.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2556.02,
     "lng": 1399.56
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

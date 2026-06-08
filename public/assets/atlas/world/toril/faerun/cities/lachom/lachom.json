@@ -1,13 +1,55 @@
 {
   "id": "lachom",
-  "name": "lachom",
+  "name": "Lachom",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Lachom",
   "description": "A free city that worked bountiful fiends in the valley between the [[Deepwing Mountains]] and the [[Cloven Mountains]].",
-  "image": "lachom.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/lachom/lachom.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2311.88,
     "lng": 1509.67
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

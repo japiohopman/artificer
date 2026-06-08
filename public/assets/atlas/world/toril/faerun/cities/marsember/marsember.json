@@ -1,13 +1,55 @@
 {
   "id": "marsember",
-  "name": "marsember",
+  "name": "Marsember",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Marsember",
   "description": "The '''City of Spices''', a metropolis and the busiest port in the entire kingdom of [[Cormyr]].<br/><br/>Interactive map can be found [[Map:Marsember|here]].",
-  "image": "marsember.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/marsember/marsember.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 1945,
     "lng": 2138.25
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

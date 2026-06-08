@@ -1,13 +1,55 @@
 {
   "id": "khaerbaal",
-  "name": "khaerbaal",
+  "name": "Khaerbaal",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Khaerbaal",
   "description": "The coastal city that was one of two bases for [[Halruaa]]'s navy, housing 50 ships, and 20 skyships, with most of its population working in the trade and shipping industries.",
-  "image": "khaerbaal.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/khaerbaal/khaerbaal.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2291.37,
     "lng": 123.74
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

@@ -1,13 +1,55 @@
 {
   "id": "reth",
-  "name": "reth",
+  "name": "Reth",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Reth",
   "description": "One of the largest and most powerful city-states in the [[Vilhon Reach]]. It was a high-walled and fast-growing trading port city of [[Chessenta]].",
-  "image": "reth.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/reth/reth.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 2975.9,
     "lng": 1840.9
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }

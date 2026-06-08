@@ -1,13 +1,55 @@
 {
   "id": "memnon",
-  "name": "memnon",
+  "name": "Memnon",
   "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
   "parent": "cities",
   "title": "Memnon",
   "description": "A key port of trade for [[Calimshan]] and the former capital of the [[efreeti]] kingdom of [[Memnonnar]].",
-  "image": "memnon.webp",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/memnon/memnon.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
   "coordinates": {
     "lat": 1263.24,
     "lng": 1034.85
-  }
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
 }
