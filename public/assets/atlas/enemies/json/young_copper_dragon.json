@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "dragon",
   "alignment": "chaotic good",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 119,
   "hit_dice": "14d10",
   "hit_points_roll": "14d10+42",
@@ -94,7 +89,7 @@
     "passive_perception": 17
   },
   "languages": "Common, Draconic",
-  "challenge_rating": 7,
+  "challenge_rating": "7",
   "proficiency_bonus": 3,
   "xp": 2900,
   "actions": [
@@ -207,11 +202,22 @@
   ],
   "image": "/assets/atlas/enemies/images/young_copper_dragon.webp",
   "url": "/assets/atlas/enemies/json/young_copper_dragon.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-08T14:41:11.532Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 2,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet14.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet14.0webp",
+  "stats": {
+    "str": 19,
+    "dex": 12,
+    "con": 17,
+    "int": 16,
+    "wis": 13,
+    "cha": 15
+  },
+  "imageUrl": "/assets/atlas/enemies/images/young_copper_dragon.webp",
+  "background_type": "land_forest3",
+  "last_updated": "8-6-2026"
 }
