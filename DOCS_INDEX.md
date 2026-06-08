@@ -7,13 +7,13 @@ Welcome to the central documentation index for the Artificer project. This file 
 - **[Project Hub](./docs/PROJECT_HUB.md)** - The main entry point for all project documentation.
 - **[House Style Guide](./docs/STYLE_GUIDE.md)** - Visual language and UI/UX guidelines.
 - **[Task Board](./docs/TASK_BOARD.md)** - Current tasks and project status.
-- **[Project Progress](./docs/PROGRESS.md)** - High-level roadmap and status tracking.
 - **[Architecture](./docs/modules/atlasService.md)** - Technical overview of the Atlas Service.
 - **[Sound System](./docs/modules/soundService.md)** - Documentation for the audio engine.
 - **[Audio Registry](./docs/systems/AUDIO_REGISTRY.md)** - Index of all sound assets.
 - **[Dice & Chat](./docs/modules/dice_system.md)** - 3D Dice and AI Chat documentation.
 - **[Deep Dive Report](./docs/reports/DEEP_DIVE_RAPPORT.md)** - Analysis of Classes, Leveling, and Character Creation.
 - **[Optimization Strategy](./docs/reports/OPTIMALISATIE_ADVIES.md)** - Evaluation of system optimality and scaling advice.
+- **[Future Modules](./docs/FUTURE_MODULES.md)** - Blueprint for missing core systems and AI memory architecture.
 
 ## 🤖 Agent Instructions
 These files contain specific instructions for AI agents working on this repository:
