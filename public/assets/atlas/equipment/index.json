@@ -3675,9 +3675,7 @@
     "name": "adamantine armor",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/images/adamantine_armor.webp",
     "json_path": "/assets/atlas/magic_items/json/adamantine_armor.json"
   },
@@ -3686,9 +3684,7 @@
     "name": "ammunition, +1, +2, or +3",
     "kind": "unknown",
     "equipment_category": "ammunition",
-    "rarity": {
-      "name": "varies"
-    },
+    "rarity": "varies",
     "imageUrl": "/assets/atlas/magic_items/ammunition.webp",
     "json_path": "/assets/atlas/magic_items/json/ammunition.json"
   },
@@ -3697,9 +3693,7 @@
     "name": "ammunition, +1",
     "kind": "unknown",
     "equipment_category": "ammunition",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/ammunition_1.webp",
     "json_path": "/assets/atlas/magic_items/json/ammunition_1.json"
   },
@@ -3708,9 +3702,7 @@
     "name": "ammunition, +2",
     "kind": "unknown",
     "equipment_category": "ammunition",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ammunition_2.webp",
     "json_path": "/assets/atlas/magic_items/json/ammunition_2.json"
   },
@@ -3719,9 +3711,7 @@
     "name": "ammunition, +3",
     "kind": "unknown",
     "equipment_category": "ammunition",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/ammunition_3.webp",
     "json_path": "/assets/atlas/magic_items/json/ammunition_3.json"
   },
@@ -3730,9 +3720,7 @@
     "name": "amulet of health",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/amulet_of_health.webp",
     "json_path": "/assets/atlas/magic_items/json/amulet_of_health.json"
   },
@@ -3741,9 +3729,7 @@
     "name": "amulet of proof against detection and location",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/amulet_of_proof_against_detection_and_location.webp",
     "json_path": "/assets/atlas/magic_items/json/amulet_of_proof_against_detection_and_location.json"
   },
@@ -3752,9 +3738,7 @@
     "name": "amulet of the planes",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/amulet_of_the_planes.webp",
     "json_path": "/assets/atlas/magic_items/json/amulet_of_the_planes.json"
   },
@@ -3763,9 +3747,7 @@
     "name": "animated shield",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/images/animated_shield.webp",
     "json_path": "/assets/atlas/magic_items/json/animated_shield.json"
   },
@@ -3774,9 +3756,7 @@
     "name": "apparatus of the crab",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/images/apparatus_of_the_crab.webp",
     "json_path": "/assets/atlas/magic_items/json/apparatus_of_the_crab.json"
   },
@@ -3785,9 +3765,7 @@
     "name": "armor, +1, +2, or +3",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "varies"
-    },
+    "rarity": "varies",
     "imageUrl": "/assets/atlas/magic_items/armor.webp",
     "json_path": "/assets/atlas/magic_items/json/armor.json"
   },
@@ -3796,9 +3774,7 @@
     "name": "armor, +1",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/armor_1.webp",
     "json_path": "/assets/atlas/magic_items/json/armor_1.json"
   },
@@ -3807,9 +3783,7 @@
     "name": "armor, +2",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/armor_2.webp",
     "json_path": "/assets/atlas/magic_items/json/armor_2.json"
   },
@@ -3818,9 +3792,7 @@
     "name": "armor, +3",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/armor_3.webp",
     "json_path": "/assets/atlas/magic_items/json/armor_3.json"
   },
@@ -3838,9 +3810,7 @@
     "name": "armor of resistance",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/armor_of_resistance.webp",
     "json_path": "/assets/atlas/magic_items/json/armor_of_resistance.json"
   },
@@ -3849,9 +3819,7 @@
     "name": "armor of vulnerability",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/armor_of_vulnerability.webp",
     "json_path": "/assets/atlas/magic_items/json/armor_of_vulnerability.json"
   },
@@ -3902,9 +3870,7 @@
     "name": "arrow_catching shield",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/arrow_catching_shield.webp",
     "json_path": "/assets/atlas/magic_items/json/arrow_catching_shield.json"
   },
@@ -3913,9 +3879,7 @@
     "name": "arrow of slaying",
     "kind": "unknown",
     "equipment_category": "ammunition",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/arrow_of_slaying.webp",
     "json_path": "/assets/atlas/magic_items/json/arrow_of_slaying.json"
   },
@@ -3924,9 +3888,7 @@
     "name": "bag of beans",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/bag_of_beans.webp",
     "json_path": "/assets/atlas/magic_items/json/bag_of_beans.json"
   },
@@ -3935,9 +3897,7 @@
     "name": "bag of devouring",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/bag_of_devouring.webp",
     "json_path": "/assets/atlas/magic_items/json/bag_of_devouring.json"
   },
@@ -3946,9 +3906,7 @@
     "name": "bag of holding",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/bag_of_holding.webp",
     "json_path": "/assets/atlas/magic_items/json/bag_of_holding.json"
   },
@@ -3957,9 +3915,7 @@
     "name": "bag of tricks",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/bag_of_tricks.webp",
     "json_path": "/assets/atlas/magic_items/json/bag_of_tricks.json"
   },
@@ -3968,9 +3924,7 @@
     "name": "gray bag of tricks",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/bag_of_tricks_gray.webp",
     "json_path": "/assets/atlas/magic_items/json/bag_of_tricks_gray.json"
   },
@@ -3979,9 +3933,7 @@
     "name": "rust bag of tricks",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/bag_of_tricks_rust.webp",
     "json_path": "/assets/atlas/magic_items/json/bag_of_tricks_rust.json"
   },
@@ -3990,9 +3942,7 @@
     "name": "tan bag of tricks",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/bag_of_tricks_tan.webp",
     "json_path": "/assets/atlas/magic_items/json/bag_of_tricks_tan.json"
   },
@@ -4001,9 +3951,7 @@
     "name": "bead of force",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/images/bead_of_force.webp",
     "json_path": "/assets/atlas/magic_items/json/bead_of_force.json"
   },
@@ -4012,9 +3960,7 @@
     "name": "belt of dwarvenkind",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/belt_of_dwarvenkind.webp",
     "json_path": "/assets/atlas/magic_items/json/belt_of_dwarvenkind.json"
   },
@@ -4023,9 +3969,7 @@
     "name": "belt of cloud giant strength",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/belt_of_giant_strength_cloud.webp",
     "json_path": "/assets/atlas/magic_items/json/belt_of_giant_strength.json"
   },
@@ -4034,9 +3978,7 @@
     "name": "belt of cloud giant strength",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/belt_of_giant_strength_cloud.webp",
     "json_path": "/assets/atlas/magic_items/json/belt_of_giant_strength_cloud.json"
   },
@@ -4045,9 +3987,7 @@
     "name": "belt of fire giant strength",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/belt_of_giant_strength_fire.webp",
     "json_path": "/assets/atlas/magic_items/json/belt_of_giant_strength_fire.json"
   },
@@ -4056,9 +3996,7 @@
     "name": "belt of frost giant strength",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/belt_of_giant_strength_frost.webp",
     "json_path": "/assets/atlas/magic_items/json/belt_of_giant_strength_frost.json"
   },
@@ -4076,9 +4014,7 @@
     "name": "belt of stone giant strength",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/belt_of_giant_strength_stone.webp",
     "json_path": "/assets/atlas/magic_items/json/belt_of_giant_strength_stone.json"
   },
@@ -4133,9 +4069,7 @@
     "name": "boots of elvenkind",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/boots_of_elvenkind.webp",
     "json_path": "/assets/atlas/magic_items/json/boots_of_elvenkind.json"
   },
@@ -4144,9 +4078,7 @@
     "name": "boots of levitation",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/boots_of_levitation.webp",
     "json_path": "/assets/atlas/magic_items/json/boots_of_levitation.json"
   },
@@ -4155,9 +4087,7 @@
     "name": "boots of speed",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/images/boots_of_speed.webp",
     "json_path": "/assets/atlas/magic_items/json/boots_of_speed.json"
   },
@@ -4166,9 +4096,7 @@
     "name": "boots of striding and springing",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/boots_of_striding_and_springing.webp",
     "json_path": "/assets/atlas/magic_items/json/boots_of_striding_and_springing.json"
   },
@@ -4177,9 +4105,7 @@
     "name": "boots of the winterlands",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/boots_of_the_winterlands.webp",
     "json_path": "/assets/atlas/magic_items/json/boots_of_the_winterlands.json"
   },
@@ -4188,9 +4114,7 @@
     "name": "bowl of commanding water elementals",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/bowl_of_commanding_water_elementals.webp",
     "json_path": "/assets/atlas/magic_items/json/bowl_of_commanding_water_elementals.json"
   },
@@ -4199,9 +4123,7 @@
     "name": "bracers of archery",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/bracers_of_archery.webp",
     "json_path": "/assets/atlas/magic_items/json/bracers_of_archery.json"
   },
@@ -4210,9 +4132,7 @@
     "name": "bracers of defense",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/bracers_of_defense.webp",
     "json_path": "/assets/atlas/magic_items/json/bracers_of_defense.json"
   },
@@ -4221,9 +4141,7 @@
     "name": "brazier of commanding fire elementals",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/brazier_of_commanding_fire_elementals.webp",
     "json_path": "/assets/atlas/magic_items/json/brazier_of_commanding_fire_elementals.json"
   },
@@ -4232,9 +4150,7 @@
     "name": "brooch of shielding",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/brooch_of_shielding.webp",
     "json_path": "/assets/atlas/magic_items/json/brooch_of_shielding.json"
   },
@@ -4252,9 +4168,7 @@
     "name": "candle of invocation",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/candle_of_invocation.webp",
     "json_path": "/assets/atlas/magic_items/json/candle_of_invocation.json"
   },
@@ -4272,9 +4186,7 @@
     "name": "carpet of flying",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/carpet_of_flying.webp",
     "json_path": "/assets/atlas/magic_items/json/carpet_of_flying.json"
   },
@@ -4283,9 +4195,7 @@
     "name": "carpet of flying (3 ft. × 5 ft.)",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/carpet_of_flying_3x5.webp",
     "json_path": "/assets/atlas/magic_items/json/carpet_of_flying_3x5.json"
   },
@@ -4294,9 +4204,7 @@
     "name": "carpet of flying (4 ft. × 6 ft.)",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/carpet_of_flying_4x6.webp",
     "json_path": "/assets/atlas/magic_items/json/carpet_of_flying_4x6.json"
   },
@@ -4305,9 +4213,7 @@
     "name": "carpet of flying (5 ft. × 7 ft.)",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/carpet_of_flying_5x7.webp",
     "json_path": "/assets/atlas/magic_items/json/carpet_of_flying_5x7.json"
   },
@@ -4316,9 +4222,7 @@
     "name": "carpet of flying (6 ft. × 9 ft.)",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/carpet_of_flying_6x9.webp",
     "json_path": "/assets/atlas/magic_items/json/carpet_of_flying_6x9.json"
   },
@@ -4327,9 +4231,7 @@
     "name": "censer of controlling air elementals",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/censer_of_controlling_air_elementals.webp",
     "json_path": "/assets/atlas/magic_items/json/censer_of_controlling_air_elementals.json"
   },
@@ -4338,9 +4240,7 @@
     "name": "chime of opening",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/chime_of_opening.webp",
     "json_path": "/assets/atlas/magic_items/json/chime_of_opening.json"
   },
@@ -4349,9 +4249,7 @@
     "name": "circlet of blasting",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/circlet_of_blasting.webp",
     "json_path": "/assets/atlas/magic_items/json/circlet_of_blasting.json"
   },
@@ -4360,9 +4258,7 @@
     "name": "cloak of arachnida",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/cloak_of_arachnida.webp",
     "json_path": "/assets/atlas/magic_items/json/cloak_of_arachnida.json"
   },
@@ -4371,9 +4267,7 @@
     "name": "cloak of displacement",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/cloak_of_displacement.webp",
     "json_path": "/assets/atlas/magic_items/json/cloak_of_displacement.json"
   },
@@ -4382,10 +4276,8 @@
     "name": "cloak of elvenkind",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
-    "imageUrl": "/assets/atlas/magic_items/cloak_of_elvenkind.webp",
+    "rarity": "uncommon",
+    "imageUrl": "/assets/atlas/magic_items/images/cloak_of_elvenkind.webp",
     "json_path": "/assets/atlas/magic_items/json/cloak_of_elvenkind.json"
   },
   {
@@ -4393,9 +4285,7 @@
     "name": "cloak of protection",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/cloak_of_protection.webp",
     "json_path": "/assets/atlas/magic_items/json/cloak_of_protection.json"
   },
@@ -4413,9 +4303,7 @@
     "name": "cloak of the manta ray",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/cloak_of_the_manta_ray.webp",
     "json_path": "/assets/atlas/magic_items/json/cloak_of_the_manta_ray.json"
   },
@@ -4438,9 +4326,7 @@
     "name": "crystal ball",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/crystal_ball.webp",
     "json_path": "/assets/atlas/magic_items/json/crystal_ball.json"
   },
@@ -4449,9 +4335,7 @@
     "name": "crystal ball of mind reading",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/crystal_ball_of_mind_reading.webp",
     "json_path": "/assets/atlas/magic_items/json/crystal_ball_of_mind_reading.json"
   },
@@ -4460,9 +4344,7 @@
     "name": "crystal ball of telepathy",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/crystal_ball_of_telepathy.webp",
     "json_path": "/assets/atlas/magic_items/json/crystal_ball_of_telepathy.json"
   },
@@ -4471,9 +4353,7 @@
     "name": "crystal ball of true seeing",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/crystal_ball_of_true_seeing.webp",
     "json_path": "/assets/atlas/magic_items/json/crystal_ball_of_true_seeing.json"
   },
@@ -4482,9 +4362,7 @@
     "name": "cube of force",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/images/cube_of_force.webp",
     "json_path": "/assets/atlas/magic_items/json/cube_of_force.json"
   },
@@ -4521,9 +4399,7 @@
     "name": "decanter of endless water",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/decanter_of_endless_water.webp",
     "json_path": "/assets/atlas/magic_items/json/decanter_of_endless_water.json"
   },
@@ -4570,9 +4446,7 @@
     "name": "dimensional shackles",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/dimensional_shackles.webp",
     "json_path": "/assets/atlas/magic_items/json/dimensional_shackles.json"
   },
@@ -4581,9 +4455,7 @@
     "name": "dragon scale mail",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/dragon_scale_mail.webp",
     "json_path": "/assets/atlas/magic_items/json/dragon_scale_mail.json"
   },
@@ -4592,9 +4464,7 @@
     "name": "black dragon scale mail",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/dragon_scale_mail_black.webp",
     "json_path": "/assets/atlas/magic_items/json/dragon_scale_mail_black.json"
   },
@@ -4603,9 +4473,7 @@
     "name": "blue dragon scale mail",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/dragon_scale_mail_blue.webp",
     "json_path": "/assets/atlas/magic_items/json/dragon_scale_mail_blue.json"
   },
@@ -4614,9 +4482,7 @@
     "name": "brass dragon scale mail",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/dragon_scale_mail_brass.webp",
     "json_path": "/assets/atlas/magic_items/json/dragon_scale_mail_brass.json"
   },
@@ -4625,9 +4491,7 @@
     "name": "bronze dragon scale mail",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/dragon_scale_mail_bronze.webp",
     "json_path": "/assets/atlas/magic_items/json/dragon_scale_mail_bronze.json"
   },
@@ -4636,9 +4500,7 @@
     "name": "copper dragon scale mail",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/dragon_scale_mail_copper.webp",
     "json_path": "/assets/atlas/magic_items/json/dragon_scale_mail_copper.json"
   },
@@ -4647,9 +4509,7 @@
     "name": "gold dragon scale mail",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/dragon_scale_mail_gold.webp",
     "json_path": "/assets/atlas/magic_items/json/dragon_scale_mail_gold.json"
   },
@@ -4658,9 +4518,7 @@
     "name": "green dragon scale mail",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/dragon_scale_mail_green.webp",
     "json_path": "/assets/atlas/magic_items/json/dragon_scale_mail_green.json"
   },
@@ -4669,9 +4527,7 @@
     "name": "red dragon scale mail",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/dragon_scale_mail_red.webp",
     "json_path": "/assets/atlas/magic_items/json/dragon_scale_mail_red.json"
   },
@@ -4680,9 +4536,7 @@
     "name": "silver dragon scale mail",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/dragon_scale_mail_silver.webp",
     "json_path": "/assets/atlas/magic_items/json/dragon_scale_mail_silver.json"
   },
@@ -4691,9 +4545,7 @@
     "name": "white dragon scale mail",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/images/dragon_scale_mail_white.webp",
     "json_path": "/assets/atlas/magic_items/json/dragon_scale_mail_white.json"
   },
@@ -4711,9 +4563,7 @@
     "name": "dust of disappearance",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/images/dust_of_disappearance.webp",
     "json_path": "/assets/atlas/magic_items/json/dust_of_disappearance.json"
   },
@@ -4722,9 +4572,7 @@
     "name": "dust of dryness",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/dust_of_dryness.webp",
     "json_path": "/assets/atlas/magic_items/json/dust_of_dryness.json"
   },
@@ -4733,9 +4581,7 @@
     "name": "dust of sneezing and choking",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/dust_of_sneezing_and_choking.webp",
     "json_path": "/assets/atlas/magic_items/json/dust_of_sneezing_and_choking.json"
   },
@@ -4744,9 +4590,7 @@
     "name": "dwarven plate",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/dwarven_plate.webp",
     "json_path": "/assets/atlas/magic_items/json/dwarven_plate.json"
   },
@@ -4764,9 +4608,7 @@
     "name": "efficient quiver",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/images/efficient_quiver.webp",
     "json_path": "/assets/atlas/magic_items/json/efficient_quiver.json"
   },
@@ -4775,9 +4617,7 @@
     "name": "efreeti bottle",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/efreeti_bottle.webp",
     "json_path": "/assets/atlas/magic_items/json/efreeti_bottle.json"
   },
@@ -4786,9 +4626,7 @@
     "name": "elemental gem",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/elemental_gem.webp",
     "json_path": "/assets/atlas/magic_items/json/elemental_gem.json"
   },
@@ -4806,9 +4644,7 @@
     "name": "earth elemental gem",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/elemental_gem_earth.webp",
     "json_path": "/assets/atlas/magic_items/json/elemental_gem_earth.json"
   },
@@ -4817,9 +4653,7 @@
     "name": "fire elemental gem",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/elemental_gem_fire.webp",
     "json_path": "/assets/atlas/magic_items/json/elemental_gem_fire.json"
   },
@@ -4828,9 +4662,7 @@
     "name": "water elemental gem",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/elemental_gem_water.webp",
     "json_path": "/assets/atlas/magic_items/json/elemental_gem_water.json"
   },
@@ -4852,9 +4684,7 @@
     "name": "elven chain",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/elven_chain.webp",
     "json_path": "/assets/atlas/magic_items/json/elven_chain.json"
   },
@@ -4881,9 +4711,7 @@
     "name": "eyes of minute seeing",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/eyes_of_minute_seeing.webp",
     "json_path": "/assets/atlas/magic_items/json/eyes_of_minute_seeing.json"
   },
@@ -4892,9 +4720,7 @@
     "name": "eyes of the eagle",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/eyes_of_the_eagle.webp",
     "json_path": "/assets/atlas/magic_items/json/eyes_of_the_eagle.json"
   },
@@ -4903,9 +4729,7 @@
     "name": "feather token",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/feather_token.webp",
     "json_path": "/assets/atlas/magic_items/json/feather_token.json"
   },
@@ -4914,9 +4738,7 @@
     "name": "anchor feather token",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/feather_token_anchor.webp",
     "json_path": "/assets/atlas/magic_items/json/feather_token_anchor.json"
   },
@@ -4925,9 +4747,7 @@
     "name": "bird feather token",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/feather_token_bird.webp",
     "json_path": "/assets/atlas/magic_items/json/feather_token_bird.json"
   },
@@ -4936,9 +4756,7 @@
     "name": "fan feather token",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/feather_token_fan.webp",
     "json_path": "/assets/atlas/magic_items/json/feather_token_fan.json"
   },
@@ -4947,9 +4765,7 @@
     "name": "swan boat feather token",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/feather_token_swan_boat.webp",
     "json_path": "/assets/atlas/magic_items/json/feather_token_swan_boat.json"
   },
@@ -4958,9 +4774,7 @@
     "name": "tree feather token",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/feather_token_tree.webp",
     "json_path": "/assets/atlas/magic_items/json/feather_token_tree.json"
   },
@@ -4969,9 +4783,7 @@
     "name": "whip feather token",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/feather_token_whip.webp",
     "json_path": "/assets/atlas/magic_items/json/feather_token_whip.json"
   },
@@ -4980,9 +4792,7 @@
     "name": "figurine of wondrous power",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "varies"
-    },
+    "rarity": "varies",
     "imageUrl": "/assets/atlas/magic_items/figurine_of_wondrous_power.webp",
     "json_path": "/assets/atlas/magic_items/json/figurine_of_wondrous_power.json"
   },
@@ -4991,9 +4801,7 @@
     "name": "bronze griffon figurine of wondrous power",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/figurine_of_wondrous_power_bronze_griffon.webp",
     "json_path": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_bronze_griffon.json"
   },
@@ -5002,9 +4810,7 @@
     "name": "ebony fly figurine of wondrous power",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/figurine_of_wondrous_power_ebony_fly.webp",
     "json_path": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_ebony_fly.json"
   },
@@ -5013,9 +4819,7 @@
     "name": "golden lions figurine of wondrous power",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/figurine_of_wondrous_power_golden_lions.webp",
     "json_path": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_golden_lions.json"
   },
@@ -5024,9 +4828,7 @@
     "name": "ivory goats figurine of wondrous power",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/figurine_of_wondrous_power_ivory_goats.webp",
     "json_path": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_ivory_goats.json"
   },
@@ -5035,9 +4837,7 @@
     "name": "marble elephant figurine of wondrous power",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/figurine_of_wondrous_power_marble_elephant.webp",
     "json_path": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_marble_elephant.json"
   },
@@ -5046,9 +4846,7 @@
     "name": "obsidian steed figurine of wondrous power",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/figurine_of_wondrous_power_obsidian_steed.webp",
     "json_path": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_obsidian_steed.json"
   },
@@ -5057,9 +4855,7 @@
     "name": "onyx dog figurine of wondrous power",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/figurine_of_wondrous_power_onyx_dog.webp",
     "json_path": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_onyx_dog.json"
   },
@@ -5068,9 +4864,7 @@
     "name": "serpentine owl figurine of wondrous power",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/figurine_of_wondrous_power_serpentine_owl.webp",
     "json_path": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_serpentine_owl.json"
   },
@@ -5079,9 +4873,7 @@
     "name": "silver raven figurine of wondrous power",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/figurine_of_wondrous_power_silver_raven.webp",
     "json_path": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_silver_raven.json"
   },
@@ -5099,9 +4891,7 @@
     "name": "folding boat",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/images/folding_boat.webp",
     "json_path": "/assets/atlas/magic_items/json/folding_boat.json"
   },
@@ -5119,9 +4909,7 @@
     "name": "gauntlets of ogre power",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/gauntlets_of_ogre_power.webp",
     "json_path": "/assets/atlas/magic_items/json/gauntlets_of_ogre_power.json"
   },
@@ -5130,9 +4918,7 @@
     "name": "gem of brightness",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/gem_of_brightness.webp",
     "json_path": "/assets/atlas/magic_items/json/gem_of_brightness.json"
   },
@@ -5141,9 +4927,7 @@
     "name": "gem of seeing",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/images/gem_of_seeing.webp",
     "json_path": "/assets/atlas/magic_items/json/gem_of_seeing.json"
   },
@@ -5161,9 +4945,7 @@
     "name": "glamoured studded leather armor",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/glamoured_studded_leather_armor.webp",
     "json_path": "/assets/atlas/magic_items/json/glamoured_studded_leather_armor.json"
   },
@@ -5190,9 +4972,7 @@
     "name": "goggles of night",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/images/goggles_of_night.webp",
     "json_path": "/assets/atlas/magic_items/json/goggles_of_night.json"
   },
@@ -5219,9 +4999,7 @@
     "name": "hat of disguise",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/images/hat_of_disguise.webp",
     "json_path": "/assets/atlas/magic_items/json/hat_of_disguise.json"
   },
@@ -5230,9 +5008,7 @@
     "name": "headband of intellect",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/images/headband_of_intellect.webp",
     "json_path": "/assets/atlas/magic_items/json/headband_of_intellect.json"
   },
@@ -5241,9 +5017,7 @@
     "name": "helm of brilliance",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/helm_of_brilliance.webp",
     "json_path": "/assets/atlas/magic_items/json/helm_of_brilliance.json"
   },
@@ -5252,9 +5026,7 @@
     "name": "helm of comprehending languages",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/helm_of_comprehending_languages.webp",
     "json_path": "/assets/atlas/magic_items/json/helm_of_comprehending_languages.json"
   },
@@ -5263,9 +5035,7 @@
     "name": "helm of telepathy",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/images/helm_of_telepathy.webp",
     "json_path": "/assets/atlas/magic_items/json/helm_of_telepathy.json"
   },
@@ -5274,9 +5044,7 @@
     "name": "helm of teleportation",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/images/helm_of_teleportation.webp",
     "json_path": "/assets/atlas/magic_items/json/helm_of_teleportation.json"
   },
@@ -5294,9 +5062,7 @@
     "name": "horn of blasting",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/horn_of_blasting.webp",
     "json_path": "/assets/atlas/magic_items/json/horn_of_blasting.json"
   },
@@ -5314,9 +5080,7 @@
     "name": "brass horn of valhalla",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/horn_of_valhalla_brass.webp",
     "json_path": "/assets/atlas/magic_items/json/horn_of_valhalla_brass.json"
   },
@@ -5325,9 +5089,7 @@
     "name": "bronze horn of valhalla",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/horn_of_valhalla_bronze.webp",
     "json_path": "/assets/atlas/magic_items/json/horn_of_valhalla_bronze.json"
   },
@@ -5336,9 +5098,7 @@
     "name": "iron horn of valhalla",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/horn_of_valhalla_iron.webp",
     "json_path": "/assets/atlas/magic_items/json/horn_of_valhalla_iron.json"
   },
@@ -5347,9 +5107,7 @@
     "name": "silver horn of valhalla",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/horn_of_valhalla_silver.webp",
     "json_path": "/assets/atlas/magic_items/json/horn_of_valhalla_silver.json"
   },
@@ -5358,9 +5116,7 @@
     "name": "horseshoes of a zephyr",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/horseshoes_of_a_zephyr.webp",
     "json_path": "/assets/atlas/magic_items/json/horseshoes_of_a_zephyr.json"
   },
@@ -5387,9 +5143,7 @@
     "name": "instant fortress",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/instant_fortress.webp",
     "json_path": "/assets/atlas/magic_items/json/instant_fortress.json"
   },
@@ -5398,9 +5152,7 @@
     "name": "ioun stone",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "varies"
-    },
+    "rarity": "varies",
     "imageUrl": "/assets/atlas/magic_items/images/ioun_stone.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone.json"
   },
@@ -5409,9 +5161,7 @@
     "name": "ioun stone of absorption",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/ioun_stone_of_absorption.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone_of_absorption.json"
   },
@@ -5420,9 +5170,7 @@
     "name": "ioun stone of agility",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/ioun_stone_of_agility.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone_of_agility.json"
   },
@@ -5431,9 +5179,7 @@
     "name": "ioun stone of awareness",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ioun_stone_of_awareness.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone_of_awareness.json"
   },
@@ -5442,9 +5188,7 @@
     "name": "ioun stone of fortitude",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/ioun_stone_of_fortitude.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone_of_fortitude.json"
   },
@@ -5453,9 +5197,7 @@
     "name": "ioun stone of greater absorption",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/ioun_stone_of_greater_absorption.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone_of_greater_absorption.json"
   },
@@ -5464,9 +5206,7 @@
     "name": "ioun stone of insight",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/ioun_stone_of_insight.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone_of_insight.json"
   },
@@ -5475,9 +5215,7 @@
     "name": "ioun stone of intellect",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/ioun_stone_of_intellect.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone_of_intellect.json"
   },
@@ -5486,9 +5224,7 @@
     "name": "ioun stone of leadership",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/ioun_stone_of_leadership.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone_of_leadership.json"
   },
@@ -5497,9 +5233,7 @@
     "name": "ioun stone of mastery",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/ioun_stone_of_mastery.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone_of_mastery.json"
   },
@@ -5508,9 +5242,7 @@
     "name": "ioun stone of protection",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ioun_stone_of_protection.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone_of_protection.json"
   },
@@ -5519,9 +5251,7 @@
     "name": "ioun stone of regeneration",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/ioun_stone_of_regeneration.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone_of_regeneration.json"
   },
@@ -5530,9 +5260,7 @@
     "name": "ioun stone of reserve",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ioun_stone_of_reserve.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone_of_reserve.json"
   },
@@ -5550,9 +5278,7 @@
     "name": "ioun stone of sustenance",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ioun_stone_of_sustenance.webp",
     "json_path": "/assets/atlas/magic_items/json/ioun_stone_of_sustenance.json"
   },
@@ -5561,9 +5287,7 @@
     "name": "iron bands of binding",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/iron_bands_of_binding.webp",
     "json_path": "/assets/atlas/magic_items/json/iron_bands_of_binding.json"
   },
@@ -5572,9 +5296,7 @@
     "name": "iron flask",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/iron_flask.webp",
     "json_path": "/assets/atlas/magic_items/json/iron_flask.json"
   },
@@ -5592,9 +5314,7 @@
     "name": "lantern of revealing",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/lantern_of_revealing.webp",
     "json_path": "/assets/atlas/magic_items/json/lantern_of_revealing.json"
   },
@@ -5658,9 +5378,7 @@
     "name": "mantle of spell resistance",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/mantle_of_spell_resistance.webp",
     "json_path": "/assets/atlas/magic_items/json/mantle_of_spell_resistance.json"
   },
@@ -5678,9 +5396,7 @@
     "name": "manual of gainful exercise",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/manual_of_gainful_exercise.webp",
     "json_path": "/assets/atlas/magic_items/json/manual_of_gainful_exercise.json"
   },
@@ -5689,9 +5405,7 @@
     "name": "manual of golems",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/manual_of_golems.webp",
     "json_path": "/assets/atlas/magic_items/json/manual_of_golems.json"
   },
@@ -5700,9 +5414,7 @@
     "name": "manual of clay golems",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/manual_of_golems_clay.webp",
     "json_path": "/assets/atlas/magic_items/json/manual_of_golems_clay.json"
   },
@@ -5720,9 +5432,7 @@
     "name": "manual of iron golems",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/images/manual_of_golems_iron.webp",
     "json_path": "/assets/atlas/magic_items/json/manual_of_golems_iron.json"
   },
@@ -5731,9 +5441,7 @@
     "name": "manual of stone golems",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/images/manual_of_golems_stone.webp",
     "json_path": "/assets/atlas/magic_items/json/manual_of_golems_stone.json"
   },
@@ -5742,9 +5450,7 @@
     "name": "manual of quickness of action",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/manual_of_quickness_of_action.webp",
     "json_path": "/assets/atlas/magic_items/json/manual_of_quickness_of_action.json"
   },
@@ -5753,9 +5459,7 @@
     "name": "marvelous pigments",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/marvelous_pigments.webp",
     "json_path": "/assets/atlas/magic_items/json/marvelous_pigments.json"
   },
@@ -5764,9 +5468,7 @@
     "name": "medallion of thoughts",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/medallion_of_thoughts.webp",
     "json_path": "/assets/atlas/magic_items/json/medallion_of_thoughts.json"
   },
@@ -5775,9 +5477,7 @@
     "name": "mirror of life trapping",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/images/mirror_of_life_trapping.webp",
     "json_path": "/assets/atlas/magic_items/json/mirror_of_life_trapping.json"
   },
@@ -5786,9 +5486,7 @@
     "name": "mithral armor",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/images/mithral_armor.webp",
     "json_path": "/assets/atlas/magic_items/json/mithral_armor.json"
   },
@@ -5797,9 +5495,7 @@
     "name": "necklace of adaptation",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/necklace_of_adaptation.webp",
     "json_path": "/assets/atlas/magic_items/json/necklace_of_adaptation.json"
   },
@@ -5808,9 +5504,7 @@
     "name": "necklace of fireballs",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/necklace_of_fireballs.webp",
     "json_path": "/assets/atlas/magic_items/json/necklace_of_fireballs.json"
   },
@@ -5819,9 +5513,7 @@
     "name": "necklace of prayer beads",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/necklace_of_prayer_beads.webp",
     "json_path": "/assets/atlas/magic_items/json/necklace_of_prayer_beads.json"
   },
@@ -5848,9 +5540,7 @@
     "name": "oil of etherealness",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/oil_of_etherealness.webp",
     "json_path": "/assets/atlas/magic_items/json/oil_of_etherealness.json"
   },
@@ -5859,9 +5549,7 @@
     "name": "oil of sharpness",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/oil_of_sharpness.webp",
     "json_path": "/assets/atlas/magic_items/json/oil_of_sharpness.json"
   },
@@ -5870,9 +5558,7 @@
     "name": "oil of slipperiness",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/oil_of_slipperiness.webp",
     "json_path": "/assets/atlas/magic_items/json/oil_of_slipperiness.json"
   },
@@ -5881,9 +5567,7 @@
     "name": "orb of dragonkind",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "artifact"
-    },
+    "rarity": "artifact",
     "imageUrl": "/assets/atlas/magic_items/orb_of_dragonkind.webp",
     "json_path": "/assets/atlas/magic_items/json/orb_of_dragonkind.json"
   },
@@ -5906,9 +5590,7 @@
     "name": "pearl of power",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/images/pearl_of_power.webp",
     "json_path": "/assets/atlas/magic_items/json/pearl_of_power.json"
   },
@@ -5917,9 +5599,7 @@
     "name": "periapt of health",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/periapt_of_health.webp",
     "json_path": "/assets/atlas/magic_items/json/periapt_of_health.json"
   },
@@ -5928,9 +5608,7 @@
     "name": "periapt of proof against poison",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/periapt_of_proof_against_poison.webp",
     "json_path": "/assets/atlas/magic_items/json/periapt_of_proof_against_poison.json"
   },
@@ -5939,9 +5617,7 @@
     "name": "periapt of wound closure",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/periapt_of_wound_closure.webp",
     "json_path": "/assets/atlas/magic_items/json/periapt_of_wound_closure.json"
   },
@@ -5950,9 +5626,7 @@
     "name": "philter of love",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/images/philter_of_love.webp",
     "json_path": "/assets/atlas/magic_items/json/philter_of_love.json"
   },
@@ -5961,9 +5635,7 @@
     "name": "pipes of haunting",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/pipes_of_haunting.webp",
     "json_path": "/assets/atlas/magic_items/json/pipes_of_haunting.json"
   },
@@ -5972,9 +5644,7 @@
     "name": "pipes of the sewers",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/pipes_of_the_sewers.webp",
     "json_path": "/assets/atlas/magic_items/json/pipes_of_the_sewers.json"
   },
@@ -5983,9 +5653,7 @@
     "name": "plate armor of etherealness",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/plate_armor_of_etherealness.webp",
     "json_path": "/assets/atlas/magic_items/json/plate_armor_of_etherealness.json"
   },
@@ -6008,9 +5676,7 @@
     "name": "portable hole",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/portable_hole.webp",
     "json_path": "/assets/atlas/magic_items/json/portable_hole.json"
   },
@@ -6019,9 +5685,7 @@
     "name": "potion of animal friendship",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_animal_friendship.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_animal_friendship.json"
   },
@@ -6030,9 +5694,7 @@
     "name": "potion of clairvoyance",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/potion_of_clairvoyance.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_clairvoyance.json"
   },
@@ -6041,9 +5703,7 @@
     "name": "potion of climbing",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "common"
-    },
+    "rarity": "common",
     "imageUrl": "/assets/atlas/magic_items/potion_of_climbing.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_climbing.json"
   },
@@ -6052,9 +5712,7 @@
     "name": "potion of diminution",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/potion_of_diminution.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_diminution.json"
   },
@@ -6063,9 +5721,7 @@
     "name": "potion of flying",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/images/potion_of_flying.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_flying.json"
   },
@@ -6074,9 +5730,7 @@
     "name": "potion of gaseous form",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/potion_of_gaseous_form.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_gaseous_form.json"
   },
@@ -6085,9 +5739,7 @@
     "name": "potion of giant strength",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "varies"
-    },
+    "rarity": "varies",
     "imageUrl": "/assets/atlas/magic_items/potion_of_giant_strength.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_giant_strength.json"
   },
@@ -6096,9 +5748,7 @@
     "name": "potion of cloud giant strength",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/potion_of_giant_strength_cloud.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_giant_strength_cloud.json"
   },
@@ -6107,9 +5757,7 @@
     "name": "potion of fire giant strength",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/potion_of_giant_strength_fire.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_giant_strength_fire.json"
   },
@@ -6118,9 +5766,7 @@
     "name": "potion of frost giant strength",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/potion_of_giant_strength_frost.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_giant_strength_frost.json"
   },
@@ -6129,9 +5775,7 @@
     "name": "potion of hill giant strength",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_giant_strength_hill.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_giant_strength_hill.json"
   },
@@ -6140,9 +5784,7 @@
     "name": "potion of stone giant strength",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/potion_of_giant_strength_stone.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_giant_strength_stone.json"
   },
@@ -6151,9 +5793,7 @@
     "name": "potion of storm giant strength",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/potion_of_giant_strength_storm.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_giant_strength_storm.json"
   },
@@ -6162,9 +5802,7 @@
     "name": "potion of growth",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_growth.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_growth.json"
   },
@@ -6173,9 +5811,7 @@
     "name": "potion of healing",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "varies"
-    },
+    "rarity": "varies",
     "imageUrl": "/assets/atlas/magic_items/potion_of_healing.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_healing.json"
   },
@@ -6184,9 +5820,7 @@
     "name": "potion of healing",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "common"
-    },
+    "rarity": "common",
     "imageUrl": "/assets/atlas/magic_items/images/potion_of_healing_common.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_healing_common.json"
   },
@@ -6195,9 +5829,7 @@
     "name": "potion of greater healing",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_healing_greater.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_healing_greater.json"
   },
@@ -6215,9 +5847,7 @@
     "name": "potion of superior healing",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/potion_of_healing_superior.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_healing_superior.json"
   },
@@ -6226,9 +5856,7 @@
     "name": "potion of supreme healing",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/potion_of_healing_supreme.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_healing_supreme.json"
   },
@@ -6237,9 +5865,7 @@
     "name": "potion of heroism",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/potion_of_heroism.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_heroism.json"
   },
@@ -6248,9 +5874,7 @@
     "name": "potion of invisibility",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/potion_of_invisibility.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_invisibility.json"
   },
@@ -6259,9 +5883,7 @@
     "name": "potion of mind reading",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/potion_of_mind_reading.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_mind_reading.json"
   },
@@ -6270,9 +5892,7 @@
     "name": "potion of poison",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_poison.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_poison.json"
   },
@@ -6281,9 +5901,7 @@
     "name": "potion of resistance",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_resistance.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_resistance.json"
   },
@@ -6292,9 +5910,7 @@
     "name": "potion of acid resistance",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_resistance_acid.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_resistance_acid.json"
   },
@@ -6303,9 +5919,7 @@
     "name": "potion of cold resistance",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_resistance_cold.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_resistance_cold.json"
   },
@@ -6314,9 +5928,7 @@
     "name": "potion of fire resistance",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_resistance_fire.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_resistance_fire.json"
   },
@@ -6325,9 +5937,7 @@
     "name": "potion of force resistance",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_resistance_force.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_resistance_force.json"
   },
@@ -6336,9 +5946,7 @@
     "name": "potion of lightning resistance",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_resistance_lightning.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_resistance_lightning.json"
   },
@@ -6347,9 +5955,7 @@
     "name": "potion of necrotic resistance",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_resistance_necrotic.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_resistance_necrotic.json"
   },
@@ -6358,9 +5964,7 @@
     "name": "potion of poison resistance",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_resistance_poison.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_resistance_poison.json"
   },
@@ -6378,9 +5982,7 @@
     "name": "potion of radiant resistance",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_resistance_radiant.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_resistance_radiant.json"
   },
@@ -6389,9 +5991,7 @@
     "name": "potion of thunder resistance",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/images/potion_of_resistance_thunder.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_resistance_thunder.json"
   },
@@ -6400,9 +6000,7 @@
     "name": "potion of speed",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/images/potion_of_speed.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_speed.json"
   },
@@ -6411,9 +6009,7 @@
     "name": "potion of water breathing",
     "kind": "unknown",
     "equipment_category": "potion",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/potion_of_water_breathing.webp",
     "json_path": "/assets/atlas/magic_items/json/potion_of_water_breathing.json"
   },
@@ -6422,9 +6018,7 @@
     "name": "restorative ointment",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/restorative_ointment.webp",
     "json_path": "/assets/atlas/magic_items/json/restorative_ointment.json"
   },
@@ -6433,9 +6027,7 @@
     "name": "ring of animal influence",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "cost": {
       "quantity": 500,
       "unit": "gp"
@@ -6462,9 +6054,7 @@
     "name": "ring of elemental command",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/ring_of_elemental_command.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_elemental_command.json"
   },
@@ -6473,9 +6063,7 @@
     "name": "ring of air elemental command",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/ring_of_elemental_command_air.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_elemental_command_air.json"
   },
@@ -6484,9 +6072,7 @@
     "name": "ring of earth elemental command",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/ring_of_elemental_command_earth.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_elemental_command_earth.json"
   },
@@ -6495,9 +6081,7 @@
     "name": "ring of fire elemental command",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/ring_of_elemental_command_fire.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_elemental_command_fire.json"
   },
@@ -6506,9 +6090,7 @@
     "name": "ring of water elemental command",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/ring_of_elemental_command_water.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_elemental_command_water.json"
   },
@@ -6517,9 +6099,7 @@
     "name": "ring of evasion",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_evasion.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_evasion.json"
   },
@@ -6528,9 +6108,7 @@
     "name": "ring of feather falling",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_feather_falling.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_feather_falling.json"
   },
@@ -6548,9 +6126,7 @@
     "name": "ring of invisibility",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/images/ring_of_invisibility.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_invisibility.json"
   },
@@ -6568,9 +6144,7 @@
     "name": "ring of mind shielding",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/ring_of_mind_shielding.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_mind_shielding.json"
   },
@@ -6579,9 +6153,7 @@
     "name": "ring of protection",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_protection.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_protection.json"
   },
@@ -6590,9 +6162,7 @@
     "name": "ring of regeneration",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_regeneration.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_regeneration.json"
   },
@@ -6601,9 +6171,7 @@
     "name": "ring of resistance",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_resistance.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_resistance.json"
   },
@@ -6612,9 +6180,7 @@
     "name": "ring of acid resistance",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_resistance_acid.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_resistance_acid.json"
   },
@@ -6623,9 +6189,7 @@
     "name": "ring of cold resistance",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_resistance_cold.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_resistance_cold.json"
   },
@@ -6634,9 +6198,7 @@
     "name": "ring of fire resistance",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_resistance_fire.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_resistance_fire.json"
   },
@@ -6645,9 +6207,7 @@
     "name": "ring of force resistance",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_resistance_force.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_resistance_force.json"
   },
@@ -6656,9 +6216,7 @@
     "name": "ring of lightning resistance",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_resistance_lightning.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_resistance_lightning.json"
   },
@@ -6676,9 +6234,7 @@
     "name": "ring of poison resistance",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_resistance_poison.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_resistance_poison.json"
   },
@@ -6687,9 +6243,7 @@
     "name": "ring of psychic resistance",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_resistance_psychic.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_resistance_psychic.json"
   },
@@ -6698,9 +6252,7 @@
     "name": "ring of radiant resistance",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_resistance_radiant.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_resistance_radiant.json"
   },
@@ -6709,9 +6261,7 @@
     "name": "ring of thunder resistance",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/images/ring_of_resistance_thunder.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_resistance_thunder.json"
   },
@@ -6720,9 +6270,7 @@
     "name": "ring of shooting stars",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_shooting_stars.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_shooting_stars.json"
   },
@@ -6731,9 +6279,7 @@
     "name": "ring of spell storing",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_spell_storing.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_spell_storing.json"
   },
@@ -6742,9 +6288,7 @@
     "name": "ring of spell turning",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/ring_of_spell_turning.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_spell_turning.json"
   },
@@ -6753,9 +6297,7 @@
     "name": "ring of swimming",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/ring_of_swimming.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_swimming.json"
   },
@@ -6764,9 +6306,7 @@
     "name": "ring of telekinesis",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_telekinesis.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_telekinesis.json"
   },
@@ -6775,9 +6315,7 @@
     "name": "ring of the ram",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_the_ram.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_the_ram.json"
   },
@@ -6786,9 +6324,7 @@
     "name": "ring of three wishes",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/ring_of_three_wishes.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_three_wishes.json"
   },
@@ -6797,9 +6333,7 @@
     "name": "ring of warmth",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/ring_of_warmth.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_warmth.json"
   },
@@ -6808,9 +6342,7 @@
     "name": "ring of water walking",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/ring_of_water_walking.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_water_walking.json"
   },
@@ -6819,9 +6351,7 @@
     "name": "ring of x_ray vision",
     "kind": "unknown",
     "equipment_category": "ring",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/ring_of_x_ray_vision.webp",
     "json_path": "/assets/atlas/magic_items/json/ring_of_x_ray_vision.json"
   },
@@ -6839,9 +6369,7 @@
     "name": "robe of scintillating colors",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/robe_of_scintillating_colors.webp",
     "json_path": "/assets/atlas/magic_items/json/robe_of_scintillating_colors.json"
   },
@@ -6850,9 +6378,7 @@
     "name": "robe of stars",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/robe_of_stars.webp",
     "json_path": "/assets/atlas/magic_items/json/robe_of_stars.json"
   },
@@ -6861,9 +6387,7 @@
     "name": "robe of the archmagi",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/robe_of_the_archmagi.webp",
     "json_path": "/assets/atlas/magic_items/json/robe_of_the_archmagi.json"
   },
@@ -6872,9 +6396,7 @@
     "name": "robe of useful items",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/robe_of_useful_items.webp",
     "json_path": "/assets/atlas/magic_items/json/robe_of_useful_items.json"
   },
@@ -6892,9 +6414,7 @@
     "name": "rod of alertness",
     "kind": "unknown",
     "equipment_category": "rod",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/images/rod_of_alertness.webp",
     "json_path": "/assets/atlas/magic_items/json/rod_of_alertness.json"
   },
@@ -6903,9 +6423,7 @@
     "name": "rod of lordly might",
     "kind": "unknown",
     "equipment_category": "rod",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/images/rod_of_lordly_might.webp",
     "json_path": "/assets/atlas/magic_items/json/rod_of_lordly_might.json"
   },
@@ -6932,9 +6450,7 @@
     "name": "rope of climbing",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/rope_of_climbing.webp",
     "json_path": "/assets/atlas/magic_items/json/rope_of_climbing.json"
   },
@@ -6943,9 +6459,7 @@
     "name": "rope of entanglement",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/rope_of_entanglement.webp",
     "json_path": "/assets/atlas/magic_items/json/rope_of_entanglement.json"
   },
@@ -6954,9 +6468,7 @@
     "name": "scarab of protection",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/scarab_of_protection.webp",
     "json_path": "/assets/atlas/magic_items/json/scarab_of_protection.json"
   },
@@ -6983,9 +6495,7 @@
     "name": "slippers of spider climbing",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/slippers_of_spider_climbing.webp",
     "json_path": "/assets/atlas/magic_items/json/slippers_of_spider_climbing.json"
   },
@@ -6994,9 +6504,7 @@
     "name": "sovereign glue",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/sovereign_glue.webp",
     "json_path": "/assets/atlas/magic_items/json/sovereign_glue.json"
   },
@@ -7005,9 +6513,7 @@
     "name": "spell scroll",
     "kind": "unknown",
     "equipment_category": "scroll",
-    "rarity": {
-      "name": "varies"
-    },
+    "rarity": "varies",
     "imageUrl": "/assets/atlas/magic_items/spell_scroll.webp",
     "json_path": "/assets/atlas/magic_items/json/spell_scroll.json"
   },
@@ -7016,9 +6522,7 @@
     "name": "spell scroll (1st)",
     "kind": "unknown",
     "equipment_category": "scroll",
-    "rarity": {
-      "name": "common"
-    },
+    "rarity": "common",
     "imageUrl": "/assets/atlas/magic_items/images/spell_scroll_1st.webp",
     "json_path": "/assets/atlas/magic_items/json/spell_scroll_1st.json"
   },
@@ -7027,9 +6531,7 @@
     "name": "spell scroll (2nd)",
     "kind": "unknown",
     "equipment_category": "scroll",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/spell_scroll_2nd.webp",
     "json_path": "/assets/atlas/magic_items/json/spell_scroll_2nd.json"
   },
@@ -7038,9 +6540,7 @@
     "name": "spell scroll (3rd)",
     "kind": "unknown",
     "equipment_category": "scroll",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/spell_scroll_3rd.webp",
     "json_path": "/assets/atlas/magic_items/json/spell_scroll_3rd.json"
   },
@@ -7049,9 +6549,7 @@
     "name": "spell scroll (4th)",
     "kind": "unknown",
     "equipment_category": "scroll",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/spell_scroll_4th.webp",
     "json_path": "/assets/atlas/magic_items/json/spell_scroll_4th.json"
   },
@@ -7060,9 +6558,7 @@
     "name": "spell scroll (5th)",
     "kind": "unknown",
     "equipment_category": "scroll",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/spell_scroll_5th.webp",
     "json_path": "/assets/atlas/magic_items/json/spell_scroll_5th.json"
   },
@@ -7071,9 +6567,7 @@
     "name": "spell scroll (6th)",
     "kind": "unknown",
     "equipment_category": "scroll",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/spell_scroll_6th.webp",
     "json_path": "/assets/atlas/magic_items/json/spell_scroll_6th.json"
   },
@@ -7082,9 +6576,7 @@
     "name": "spell scroll (7th)",
     "kind": "unknown",
     "equipment_category": "scroll",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/spell_scroll_7th.webp",
     "json_path": "/assets/atlas/magic_items/json/spell_scroll_7th.json"
   },
@@ -7093,9 +6585,7 @@
     "name": "spell scroll (8th)",
     "kind": "unknown",
     "equipment_category": "scroll",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/spell_scroll_8th.webp",
     "json_path": "/assets/atlas/magic_items/json/spell_scroll_8th.json"
   },
@@ -7104,9 +6594,7 @@
     "name": "spell scroll (9th)",
     "kind": "unknown",
     "equipment_category": "scroll",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/spell_scroll_9th.webp",
     "json_path": "/assets/atlas/magic_items/json/spell_scroll_9th.json"
   },
@@ -7115,9 +6603,7 @@
     "name": "spell scroll (cantrip)",
     "kind": "unknown",
     "equipment_category": "scroll",
-    "rarity": {
-      "name": "common"
-    },
+    "rarity": "common",
     "imageUrl": "/assets/atlas/magic_items/images/spell_scroll_cantrip.webp",
     "json_path": "/assets/atlas/magic_items/json/spell_scroll_cantrip.json"
   },
@@ -7126,9 +6612,7 @@
     "name": "spellguard shield",
     "kind": "unknown",
     "equipment_category": "armor",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/spellguard_shield.webp",
     "json_path": "/assets/atlas/magic_items/json/spellguard_shield.json"
   },
@@ -7137,9 +6621,7 @@
     "name": "sphere of annihilation",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/sphere_of_annihilation.webp",
     "json_path": "/assets/atlas/magic_items/json/sphere_of_annihilation.json"
   },
@@ -7148,9 +6630,7 @@
     "name": "staff of charming",
     "kind": "unknown",
     "equipment_category": "staff",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/staff_of_charming.webp",
     "json_path": "/assets/atlas/magic_items/json/staff_of_charming.json"
   },
@@ -7159,9 +6639,7 @@
     "name": "staff of fire",
     "kind": "unknown",
     "equipment_category": "staff",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/images/staff_of_fire.webp",
     "json_path": "/assets/atlas/magic_items/json/staff_of_fire.json"
   },
@@ -7170,9 +6648,7 @@
     "name": "staff of frost",
     "kind": "unknown",
     "equipment_category": "staff",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/staff_of_frost.webp",
     "json_path": "/assets/atlas/magic_items/json/staff_of_frost.json"
   },
@@ -7181,9 +6657,7 @@
     "name": "staff of healing",
     "kind": "unknown",
     "equipment_category": "staff",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/staff_of_healing.webp",
     "json_path": "/assets/atlas/magic_items/json/staff_of_healing.json"
   },
@@ -7192,9 +6666,7 @@
     "name": "staff of power",
     "kind": "unknown",
     "equipment_category": "staff",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/staff_of_power.webp",
     "json_path": "/assets/atlas/magic_items/json/staff_of_power.json"
   },
@@ -7203,9 +6675,7 @@
     "name": "staff of striking",
     "kind": "unknown",
     "equipment_category": "staff",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/staff_of_striking.webp",
     "json_path": "/assets/atlas/magic_items/json/staff_of_striking.json"
   },
@@ -7214,9 +6684,7 @@
     "name": "staff of swarming insects",
     "kind": "unknown",
     "equipment_category": "staff",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/staff_of_swarming_insects.webp",
     "json_path": "/assets/atlas/magic_items/json/staff_of_swarming_insects.json"
   },
@@ -7225,9 +6693,7 @@
     "name": "staff of the magi",
     "kind": "unknown",
     "equipment_category": "staff",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/staff_of_the_magi.webp",
     "json_path": "/assets/atlas/magic_items/json/staff_of_the_magi.json"
   },
@@ -7236,9 +6702,7 @@
     "name": "staff of the python",
     "kind": "unknown",
     "equipment_category": "staff",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/staff_of_the_python.webp",
     "json_path": "/assets/atlas/magic_items/json/staff_of_the_python.json"
   },
@@ -7247,9 +6711,7 @@
     "name": "staff of the woodlands",
     "kind": "unknown",
     "equipment_category": "staff",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/images/staff_of_the_woodlands.webp",
     "json_path": "/assets/atlas/magic_items/json/staff_of_the_woodlands.json"
   },
@@ -7258,9 +6720,7 @@
     "name": "staff of thunder and lightning",
     "kind": "unknown",
     "equipment_category": "staff",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/staff_of_thunder_and_lightning.webp",
     "json_path": "/assets/atlas/magic_items/json/staff_of_thunder_and_lightning.json"
   },
@@ -7278,9 +6738,7 @@
     "name": "stone of controlling earth elementals",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/stone_of_controlling_earth_elementals.webp",
     "json_path": "/assets/atlas/magic_items/json/stone_of_controlling_earth_elementals.json"
   },
@@ -7289,9 +6747,7 @@
     "name": "stone of good luck (luckstone)",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/stone_of_good_luck_luckstone.webp",
     "json_path": "/assets/atlas/magic_items/json/stone_of_good_luck_luckstone.json"
   },
@@ -7327,9 +6783,7 @@
     "name": "sword of wounding",
     "kind": "unknown",
     "equipment_category": "weapon",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/sword_of_wounding.webp",
     "json_path": "/assets/atlas/magic_items/json/sword_of_wounding.json"
   },
@@ -7338,9 +6792,7 @@
     "name": "talisman of pure good",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/talisman_of_pure_good.webp",
     "json_path": "/assets/atlas/magic_items/json/talisman_of_pure_good.json"
   },
@@ -7349,9 +6801,7 @@
     "name": "talisman of the sphere",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/talisman_of_the_sphere.webp",
     "json_path": "/assets/atlas/magic_items/json/talisman_of_the_sphere.json"
   },
@@ -7360,9 +6810,7 @@
     "name": "talisman of ultimate evil",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/talisman_of_ultimate_evil.webp",
     "json_path": "/assets/atlas/magic_items/json/talisman_of_ultimate_evil.json"
   },
@@ -7385,9 +6833,7 @@
     "name": "tome of clear thought",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/tome_of_clear_thought.webp",
     "json_path": "/assets/atlas/magic_items/json/tome_of_clear_thought.json"
   },
@@ -7396,9 +6842,7 @@
     "name": "tome of leadership and influence",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/tome_of_leadership_and_influence.webp",
     "json_path": "/assets/atlas/magic_items/json/tome_of_leadership_and_influence.json"
   },
@@ -7407,9 +6851,7 @@
     "name": "tome of understanding",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/tome_of_understanding.webp",
     "json_path": "/assets/atlas/magic_items/json/tome_of_understanding.json"
   },
@@ -7427,9 +6869,7 @@
     "name": "universal solvent",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/universal_solvent.webp",
     "json_path": "/assets/atlas/magic_items/json/universal_solvent.json"
   },
@@ -7438,9 +6878,7 @@
     "name": "vicious weapon",
     "kind": "unknown",
     "equipment_category": "weapon",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/vicious_weapon.webp",
     "json_path": "/assets/atlas/magic_items/json/vicious_weapon.json"
   },
@@ -7449,9 +6887,7 @@
     "name": "vorpal sword",
     "kind": "unknown",
     "equipment_category": "weapon",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/vorpal_sword.webp",
     "json_path": "/assets/atlas/magic_items/json/vorpal_sword.json"
   },
@@ -7460,9 +6896,7 @@
     "name": "wand of binding",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/wand_of_binding.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_binding.json"
   },
@@ -7471,9 +6905,7 @@
     "name": "wand of enemy detection",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/wand_of_enemy_detection.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_enemy_detection.json"
   },
@@ -7482,9 +6914,7 @@
     "name": "wand of fear",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/wand_of_fear.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_fear.json"
   },
@@ -7493,9 +6923,7 @@
     "name": "wand of fireballs",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/wand_of_fireballs.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_fireballs.json"
   },
@@ -7504,9 +6932,7 @@
     "name": "wand of lightning bolts",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/wand_of_lightning_bolts.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_lightning_bolts.json"
   },
@@ -7515,9 +6941,7 @@
     "name": "wand of magic detection",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/wand_of_magic_detection.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_magic_detection.json"
   },
@@ -7526,9 +6950,7 @@
     "name": "wand of magic missiles",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/wand_of_magic_missiles.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_magic_missiles.json"
   },
@@ -7537,9 +6959,7 @@
     "name": "wand of paralysis",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/wand_of_paralysis.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_paralysis.json"
   },
@@ -7548,9 +6968,7 @@
     "name": "wand of polymorph",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/wand_of_polymorph.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_polymorph.json"
   },
@@ -7568,9 +6986,7 @@
     "name": "wand of the war mage, +1, +2, or +3",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "varies"
-    },
+    "rarity": "varies",
     "imageUrl": "/assets/atlas/magic_items/wand_of_the_war_mage.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_the_war_mage.json"
   },
@@ -7579,9 +6995,7 @@
     "name": "wand of the war mage, +1",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/wand_of_the_war_mage_1.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_the_war_mage_1.json"
   },
@@ -7590,9 +7004,7 @@
     "name": "wand of the war mage, +2",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/wand_of_the_war_mage_2.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_the_war_mage_2.json"
   },
@@ -7601,9 +7013,7 @@
     "name": "wand of the war mage, +3",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/wand_of_the_war_mage_3.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_the_war_mage_3.json"
   },
@@ -7612,9 +7022,7 @@
     "name": "wand of web",
     "kind": "unknown",
     "equipment_category": "wand",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/images/wand_of_web.webp",
     "json_path": "/assets/atlas/magic_items/json/wand_of_web.json"
   },
@@ -7646,9 +7054,7 @@
     "name": "weapon, +1, +2, or +3",
     "kind": "unknown",
     "equipment_category": "weapon",
-    "rarity": {
-      "name": "varies"
-    },
+    "rarity": "varies",
     "imageUrl": "/assets/atlas/magic_items/weapon.webp",
     "json_path": "/assets/atlas/magic_items/json/weapon.json"
   },
@@ -7657,9 +7063,7 @@
     "name": "weapon, +1",
     "kind": "unknown",
     "equipment_category": "weapon",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/weapon_1.webp",
     "json_path": "/assets/atlas/magic_items/json/weapon_1.json"
   },
@@ -7668,9 +7072,7 @@
     "name": "weapon, +2",
     "kind": "unknown",
     "equipment_category": "weapon",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/weapon_2.webp",
     "json_path": "/assets/atlas/magic_items/json/weapon_2.json"
   },
@@ -7679,9 +7081,7 @@
     "name": "weapon, +3",
     "kind": "unknown",
     "equipment_category": "weapon",
-    "rarity": {
-      "name": "very rare"
-    },
+    "rarity": "very rare",
     "imageUrl": "/assets/atlas/magic_items/weapon_3.webp",
     "json_path": "/assets/atlas/magic_items/json/weapon_3.json"
   },
@@ -7690,9 +7090,7 @@
     "name": "well of many worlds",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "legendary"
-    },
+    "rarity": "legendary",
     "imageUrl": "/assets/atlas/magic_items/well_of_many_worlds.webp",
     "json_path": "/assets/atlas/magic_items/json/well_of_many_worlds.json"
   },
@@ -7701,9 +7099,7 @@
     "name": "wind fan",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/wind_fan.webp",
     "json_path": "/assets/atlas/magic_items/json/wind_fan.json"
   },
@@ -7712,9 +7108,7 @@
     "name": "winged boots",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "uncommon"
-    },
+    "rarity": "uncommon",
     "imageUrl": "/assets/atlas/magic_items/winged_boots.webp",
     "json_path": "/assets/atlas/magic_items/json/winged_boots.json"
   },
@@ -7723,9 +7117,7 @@
     "name": "wings of flying",
     "kind": "unknown",
     "equipment_category": "wondrous items",
-    "rarity": {
-      "name": "rare"
-    },
+    "rarity": "rare",
     "imageUrl": "/assets/atlas/magic_items/wings_of_flying.webp",
     "json_path": "/assets/atlas/magic_items/json/wings_of_flying.json"
   }
