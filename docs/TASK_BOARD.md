@@ -10,7 +10,7 @@
 - [ ] Fix equipment path issues (e.g., `longsword.json`, `backpack.json`, `burglars_pack.json`).
 - [ ] Establish canonical asset paths (use `/assets/atlas/...` for runtime).
 - [ ] Normalize references to other JSON records (ID-only + generated index).
-- [x] **Icon Optimization and Tactical Loading**
+- [ ] **Icon Optimization and Tactical Loading**
   - Audit `src/assets/icons/` for duplicates and placeholders.
   - Consolidate core/common icons into `core.ts`.
   - Refactor `src/game_icons.tsx` to support granular/tactical loading.
@@ -25,6 +25,9 @@
   - Migrate backpack array + inventory object to items registry + containers + equipment slots.
   - Add `saveVersion: 2`.
   - Implement item registry in saves.
+- [ ] Implement Store Slicing for `useStore.ts` (Character, Inventory, World stores).
+- [ ] Fix Fetch Waterfalls in `characterUtils.ts` (Parallel Feature Fetching).
+- [ ] Implement Atlas Data Caching (Offline First).
 
 ## Medium
 - [ ] Equipment Normalization:
@@ -34,9 +37,11 @@
 - [ ] Sound Asset Reorganization (In Progress).
 - [ ] Implement Skill Database documentation.
 - [ ] Asset Registry maintenance.
+- [ ] Implement Debouncing for Metadata Sync in `CharacterCreator.tsx`.
 
 ## Low
 - [ ] Size budgets for assets (WEBP/PNG < 1MB).
 - [ ] Lazy-load assets per game screen.
 - [ ] Create thumbnail variants for inventory/shop UI.
 - [ ] Documentation updates: `ASSETS.md`, `README.md` for modules.
+- [ ] Implement background Pre-fetching for common Atlas data.
