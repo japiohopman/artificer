@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { SpellCard } from './SpellCard';
 import { BookReader } from './bookreader/BookReader';
-import { 
-  GameIcon, GameIconName } from '../game_icons';
+import { GameIcon, GameIconName } from '../game_icons';
+import { CORE_ICONS } from '../assets/icons/core';
+import { ARCANE_CODEX_ICONS } from '../assets/icons/arcane_codex';
 import { Monster } from '../services/ai/monsterService';
 import { playClickSound, playModalOpenSound, playModalCloseSound, normalizeImageUrl } from '../services/storageService';
 import { ChromaKeyImage } from './ChromaKeyImage';
@@ -407,7 +408,7 @@ const ArcaneCodex: React.FC = () => {
             aria-label={isCharacterCreatorOpen ? "Back to Title" : isMonsterProfileOpen ? "Back to Bestiary" : isProfileMenuOpen ? "Back to Collection" : "Toggle Explorer"}
           >
             {(isProfileMenuOpen || isMonsterProfileOpen || isCharacterCreatorOpen) ? (
-              <GameIcon name="arrow_left" size={24} />
+              <GameIcon path={CORE_ICONS.arrow_left} size={24} />
             ) : (
               <div className="flex items-center justify-center w-6 h-6">
                 <FontAwesomeIcon 
@@ -435,7 +436,7 @@ const ArcaneCodex: React.FC = () => {
                     viewMode === 'combat' ? 'bg-dragon-red text-white shadow-lg ring-2 ring-white/20' : 'bg-white/40 text-parchment-600 hover:bg-parchment-200'
                   )}
                 >
-                  <GameIcon name="sword" size={16} /> <span className="hidden lg:inline">Actions</span>
+                  <GameIcon path={CORE_ICONS.weapon} size={16} /> <span className="hidden lg:inline">Actions</span>
                 </button>
                 <button 
                   onClick={() => {
@@ -455,7 +456,7 @@ const ArcaneCodex: React.FC = () => {
                   aria-label="View Journal"
                   className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-full font-black text-[10px] uppercase transition-all bg-white/40 text-parchment-600 hover:bg-parchment-200 hover:text-dragon-red shrink-0 border border-dragon-red/5"
                 >
-                  <GameIcon name="book" size={16} /> <span className="hidden lg:inline">Journal</span>
+                  <GameIcon path={ARCANE_CODEX_ICONS.book} size={16} /> <span className="hidden lg:inline">Journal</span>
                 </button>
                 <button 
                   onClick={() => {
@@ -466,7 +467,7 @@ const ArcaneCodex: React.FC = () => {
                   aria-label="Account Options"
                   className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-full font-black text-[10px] uppercase transition-all bg-white/40 text-parchment-600 hover:bg-parchment-200 hover:text-dragon-red shrink-0 border border-dragon-red/5"
                 >
-                  <GameIcon name="settings" size={16} /> <span className="hidden lg:inline">Options</span>
+                  <GameIcon path={CORE_ICONS.settings} size={16} /> <span className="hidden lg:inline">Options</span>
                 </button>
               </>
             )}
@@ -502,7 +503,7 @@ const ArcaneCodex: React.FC = () => {
             title="Toggle Character Panel"
             aria-label="Toggle Character Panel"
           >
-            <GameIcon name="party_stats" size={24} />
+            <GameIcon path={CORE_ICONS.party_stats} size={24} />
           </button>
 
           <div className="h-8 w-px bg-parchment-300 mx-2" />
@@ -535,12 +536,12 @@ const ArcaneCodex: React.FC = () => {
                         <img src={userProfile?.photoURL || user.photoURL || ''} className="w-full h-full object-cover" alt="" referrerPolicy="no-referrer" />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-parchment-400">
-                          <GameIcon name="user" size={20} />
+                          <GameIcon path={CORE_ICONS.user} size={20} />
                         </div>
                       )}
                     </div>
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-parchment-50 rounded border border-parchment-300 flex items-center justify-center text-parchment-500 group-hover:text-dragon-red transition-colors shadow-sm">
-                      <GameIcon name="chevron_down" size={10} color="currentColor" />
+                      <GameIcon path={CORE_ICONS.chevron_down} size={10} color="currentColor" />
                     </div>
                   </button>
                 </div>
@@ -579,7 +580,7 @@ const ArcaneCodex: React.FC = () => {
                             <img src={userProfile?.photoURL || user?.photoURL || ''} className="w-full h-full object-cover" alt="" referrerPolicy="no-referrer" />
                           ) : (
                             <div className="w-full h-full flex items-center justify-center text-parchment-300">
-                              <GameIcon name="user" size={20} />
+                              <GameIcon path={CORE_ICONS.user} size={20} />
                             </div>
                           )}
                         </div>
@@ -607,7 +608,7 @@ const ArcaneCodex: React.FC = () => {
                           aria-label="View Profile"
                           className="w-full flex items-center gap-3 px-3 py-2 hover:bg-parchment-200 rounded text-parchment-600 hover:text-dragon-red transition-all text-xs font-medium group text-left"
                         >
-                          <GameIcon name="shield" size={14} color="currentColor" className="text-dragon-red/40 group-hover:text-dragon-red" />
+                          <GameIcon path={CORE_ICONS.shield} size={14} color="currentColor" className="text-dragon-red/40 group-hover:text-dragon-red" />
                           <span>View Profile</span>
                         </button>
                         <button 
@@ -620,7 +621,7 @@ const ArcaneCodex: React.FC = () => {
                           aria-label="Account Settings"
                           className="w-full flex items-center gap-3 px-3 py-2 hover:bg-parchment-200 rounded text-parchment-600 hover:text-dragon-red transition-all text-xs font-medium group text-left"
                         >
-                          <GameIcon name="gear" size={14} color="currentColor" className="text-parchment-400 group-hover:text-dragon-red" />
+                          <GameIcon path={CORE_ICONS.gear} size={14} color="currentColor" className="text-parchment-400 group-hover:text-dragon-red" />
                           <span>Account Settings</span>
                         </button>
                       </div>
@@ -642,7 +643,7 @@ const ArcaneCodex: React.FC = () => {
                               aria-label="Start New Game"
                               className="flex items-center gap-1.5 px-2 py-1 bg-dragon-red text-white rounded text-[8px] font-black uppercase tracking-tighter hover:bg-dragon-darkRed transition-all shadow-sm"
                             >
-                              <GameIcon name="plus" size={10} color="#FFFFFF" />
+                              <GameIcon path={CORE_ICONS.plus} size={10} color="#FFFFFF" />
                               New Game
                             </button>
                           </div>
@@ -663,7 +664,7 @@ const ArcaneCodex: React.FC = () => {
                                 : "bg-parchment-200 text-dragon-red border-dragon-gold/30 hover:border-dragon-red/50"
                             )}
                           >
-                            <GameIcon name="book" size={16} />
+                            <GameIcon path={ARCANE_CODEX_ICONS.book} size={16} />
                             {grimoireMode ? 'Exit Grimoire' : 'Open Grimoire'}
                           </button>
                         </div>
@@ -683,7 +684,7 @@ const ArcaneCodex: React.FC = () => {
                             >
                               <div className="flex items-center gap-3">
                                 <div className={`w-6 h-6 rounded bg-parchment-100 border flex items-center justify-center transition-colors ${activeCharacterId === char.id ? 'border-dragon-red text-white' : 'border-parchment-300 text-parchment-400 group-hover:text-dragon-red'}`}>
-                                  {index === 0 ? <GameIcon name="shield" size={12} /> : <GameIcon name="users" size={12} />}
+                                  {index === 0 ? <GameIcon path={CORE_ICONS.shield} size={12} /> : <GameIcon path={CORE_ICONS.users} size={12} />}
                                 </div>
                                 <div className="flex flex-col items-start">
                                   <div className="flex items-center gap-2">
@@ -713,7 +714,7 @@ const ArcaneCodex: React.FC = () => {
                         aria-label="Logout"
                         className="w-full flex items-center gap-3 px-3 py-2.5 hover:bg-dragon-red/10 rounded text-parchment-600 hover:text-dragon-red transition-all text-xs font-medium"
                       >
-                        <GameIcon name="logout" size={14} />
+                        <GameIcon path={CORE_ICONS.logout} size={14} />
                         <span>Logout</span>
                       </button>
                     </div>
@@ -836,12 +837,12 @@ const ArcaneCodex: React.FC = () => {
                         aria-label="Back to Categories"
                         className="w-full flex items-center gap-2 p-2 text-[10px] font-bold uppercase text-dragon-red bg-dragon-red/5 hover:bg-dragon-red/10 border border-dragon-red/20 rounded-lg transition-all"
                       >
-                        <GameIcon name="chevron_right" size={14} className="rotate-180" color="#8B0000" />
+                        <GameIcon path={CORE_ICONS.chevron_right} size={14} className="rotate-180" color="#8B0000" />
                         Back to Categories
                       </button>
                     )}
                     <div className="relative">
-                      <GameIcon name="search" className="absolute left-3 top-1/2 -translate-y-1/2" size={16} color="#8B4513" />
+                      <GameIcon path={CORE_ICONS.search} className="absolute left-3 top-1/2 -translate-y-1/2" size={16} color="#8B4513" />
                       <input 
                         type="text"
                         placeholder="Search archives..."
@@ -983,7 +984,7 @@ const ArcaneCodex: React.FC = () => {
                                   )}
                                 </div>
                               </div>
-                              <GameIcon name="chevron_right" size={14} className={cn(
+                              <GameIcon path={CORE_ICONS.chevron_right} size={14} className={cn(
                                 "transition-transform",
                                 isSelected || ((explorerTab === 'equipment' || explorerTab === 'materials' || explorerTab === 'enemies') && !selectedCategory) ? "translate-x-1" : "opacity-0 group-hover:opacity-100"
                               )} />
@@ -1001,7 +1002,7 @@ const ArcaneCodex: React.FC = () => {
             <div className="flex-1 flex items-center justify-center p-4 md:p-8 overflow-hidden relative transition-all duration-500">
               {isLoadingItem ? (
                 <div className="flex flex-col items-center gap-4">
-                  <GameIcon name="loading" className="animate-spin" size={48} color="#8B0000" />
+                  <GameIcon path={CORE_ICONS.loading} className="animate-spin" size={48} color="#8B0000" />
                   <p className="font-header text-xl text-dragon-darkRed animate-pulse">Summoning Entity Data...</p>
                 </div>
               ) : selectedItem ? (
@@ -1015,7 +1016,7 @@ const ArcaneCodex: React.FC = () => {
                     >
                       <ErrorBoundary name="ArcaneCard" fallback={(
                         <div className="w-[450px] h-[280px] bg-parchment-200/50 border-4 border-dashed border-dragon-gold/20 rounded-[24px] flex flex-col items-center justify-center p-8 text-center space-y-3">
-                          <GameIcon name="alert_triangle" size={48} color="#8B0000" className="opacity-40" />
+                          <GameIcon path={CORE_ICONS.alert_triangle} size={48} color="#8B0000" className="opacity-40" />
                           <p className="font-header text-dragon-darkRed uppercase tracking-widest text-lg">Mystical Distortion</p>
                           <p className="font-body text-xs italic text-parchment-600">The essence of this entity is currently unstable or corrupted.</p>
                         </div>
@@ -1046,7 +1047,7 @@ const ArcaneCodex: React.FC = () => {
                                     headerContent: (
                                       <div className="mb-4 border-b border-black/10 pb-2 flex justify-between items-center text-black/40">
                                          <span className="text-[10px] font-bold uppercase tracking-widest">Enchanted Collection</span>
-                                         <GameIcon name="wand" size={12} color="#000000" className="opacity-40" />
+                                         <GameIcon path={ARCANE_CODEX_ICONS.wand} size={12} color="#000000" className="opacity-40" />
                                       </div>
                                     )
                                   }))
@@ -1067,13 +1068,13 @@ const ArcaneCodex: React.FC = () => {
                       title="Add to Inventory"
                       aria-label="Add to Inventory"
                     >
-                      <GameIcon name="plus" size={24} color="#FFFFFF" />
+                      <GameIcon path={CORE_ICONS.plus} size={24} color="#FFFFFF" />
                     </button>
                   </div>
                 </div>
               ) : (
                 <div className="text-center space-y-4 opacity-30">
-                  <GameIcon name="knowledge" size={120} color="#8B4513" className="mx-auto" />
+                  <GameIcon path={ARCANE_CODEX_ICONS.knowledge} size={120} color="#8B4513" className="mx-auto" />
                   <h3 className="font-header text-3xl text-parchment-600 uppercase">Select a legend to view</h3>
                   <p className="font-body italic text-parchment-500">The archives contain many secrets, waiting to be revealed.</p>
                 </div>
@@ -1153,7 +1154,7 @@ const ArcaneCodex: React.FC = () => {
             className="absolute -top-6 -right-6 w-12 h-12 flex items-center justify-center p-2 rounded-full border-2 border-dragon-red bg-parchment-100 shadow-xl z-50"
           >
             <GameIcon 
-              name={overData?.slot ? 'equip' : overData?.characterId ? 'place' : 'grab'} 
+              path={overData?.slot ? CORE_ICONS.equip : overData?.characterId ? CORE_ICONS.place : CORE_ICONS.grab} 
               size={24} 
               color="#8B0000" 
             />

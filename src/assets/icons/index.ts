@@ -1,3 +1,4 @@
+import { CORE_ICONS } from './core';
 import { UI_ICONS } from './ui';
 import { ATTACK_ICONS } from './attacks';
 import { EQUIPMENT_ICONS } from './equipment';
@@ -17,7 +18,12 @@ import { fightingStyleIcons } from './fighting_styles';
 import { abilityScoreIcons } from './ability_score';
 import { skillIcons } from './skill';
 
+/**
+ * @deprecated Use tactical imports from specific icon files instead of ALL_ICONS
+ * to reduce bundle size.
+ */
 export const ALL_ICONS = {
+  ...CORE_ICONS,
   ...UI_ICONS,
   ...ATTACK_ICONS,
   ...EQUIPMENT_ICONS,
@@ -39,6 +45,7 @@ export const ALL_ICONS = {
 };
 
 export {
+  CORE_ICONS,
   UI_ICONS,
   ATTACK_ICONS,
   EQUIPMENT_ICONS,

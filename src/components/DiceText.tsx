@@ -1,7 +1,9 @@
 import React from 'react';
-import { GameIcon, GAME_ICONS } from '../game_icons';
+import { GameIcon } from '../game_icons';
 import { cn } from '../lib/utils';
 import { useStore } from '../store/useStore';
+import { DAMAGE_TYPE_ICONS } from '../assets/icons/damage_types';
+import { DICE_ICONS } from '../assets/icons/dice';
 
 interface DiceTextProps {
   children: React.ReactNode;
@@ -9,20 +11,20 @@ interface DiceTextProps {
   className?: string;
 }
 
-const DAMAGE_TYPE_CONFIG: Record<string, { color: string; icon: keyof typeof GAME_ICONS }> = {
-  acid: { color: '#166534', icon: 'acid' }, // Dark Green
-  bludgeoning: { color: '#78350f', icon: 'bludgeoning' }, // Brown
-  cold: { color: '#3b82f6', icon: 'cold' }, // Blue
-  fire: { color: '#ef4444', icon: 'fire' }, // Red
-  force: { color: '#d946ef', icon: 'force' }, // Pink/Purple
-  lightning: { color: '#eab308', icon: 'lightning' }, // Yellow
-  necrotic: { color: '#a855f7', icon: 'necrotic' }, // Purple
-  piercing: { color: '#475569', icon: 'piercing' }, // Slate
-  poison: { color: '#22c55e', icon: 'poison' }, // Green
-  psychic: { color: '#f472b6', icon: 'psychic' }, // Hot Pink
-  radiant: { color: '#fbbf24', icon: 'radiant' }, // Gold
-  slashing: { color: '#991b1b', icon: 'slashing' }, // Dark Red
-  thunder: { color: '#94a3b8', icon: 'thunder' }, // Slate Blue
+const DAMAGE_TYPE_CONFIG: Record<string, { color: string; path: string }> = {
+  acid: { color: '#166534', path: DAMAGE_TYPE_ICONS.acid }, // Dark Green
+  bludgeoning: { color: '#78350f', path: DAMAGE_TYPE_ICONS.bludgeoning }, // Brown
+  cold: { color: '#3b82f6', path: DAMAGE_TYPE_ICONS.cold }, // Blue
+  fire: { color: '#ef4444', path: DAMAGE_TYPE_ICONS.fire }, // Red
+  force: { color: '#d946ef', path: DAMAGE_TYPE_ICONS.force }, // Pink/Purple
+  lightning: { color: '#eab308', path: DAMAGE_TYPE_ICONS.lightning }, // Yellow
+  necrotic: { color: '#a855f7', path: DAMAGE_TYPE_ICONS.necrotic }, // Purple
+  piercing: { color: '#475569', path: DAMAGE_TYPE_ICONS.piercing }, // Slate
+  poison: { color: '#22c55e', path: DAMAGE_TYPE_ICONS.poison }, // Green
+  psychic: { color: '#f472b6', path: DAMAGE_TYPE_ICONS.psychic }, // Hot Pink
+  radiant: { color: '#fbbf24', path: DAMAGE_TYPE_ICONS.radiant }, // Gold
+  slashing: { color: '#991b1b', path: DAMAGE_TYPE_ICONS.slashing }, // Dark Red
+  thunder: { color: '#94a3b8', path: DAMAGE_TYPE_ICONS.thunder }, // Slate Blue
 };
 
 export const DiceText: React.FC<DiceTextProps> = ({ children, iconSize = 10, className }) => {
@@ -41,8 +43,7 @@ export const DiceText: React.FC<DiceTextProps> = ({ children, iconSize = 10, cla
       // Handle Dice
       if (part.match(/^\d*d\d+$/i)) {
         // Use d8 specifically as requested by the user for all dice notations
-        const iconName = "d8" as keyof typeof GAME_ICONS;
-        const hasIcon = Object.prototype.hasOwnProperty.call(GAME_ICONS, iconName);
+        const dicePath = DICE_ICONS.d8;
         
         return (
           <button 
@@ -54,9 +55,9 @@ export const DiceText: React.FC<DiceTextProps> = ({ children, iconSize = 10, cla
             )}
             style={{ fontSize: iconSize > 15 ? `${Math.max(1, iconSize/24)}em` : 'inherit' }}
           >
-            {hasIcon && (
+            {dicePath && (
               <GameIcon 
-                name={iconName as any} 
+                path={dicePath} 
                 size={iconSize} 
                 className={cn("inline", iconSize > 15 ? "mb-0" : "mb-0.5")} 
                 color="#8B0000" 
@@ -86,7 +87,7 @@ export const DiceText: React.FC<DiceTextProps> = ({ children, iconSize = 10, cla
             }}
           >
             <GameIcon 
-              name={config.icon as any} 
+              path={config.path} 
               size={iconSize} 
               className={cn("inline", iconSize > 15 ? "mb-0" : "mb-0.5")} 
               color={config.color} 

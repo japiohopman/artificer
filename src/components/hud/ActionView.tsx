@@ -3,6 +3,7 @@ import { useStore } from '../../store/useStore';
 import { FirstPersonView } from './view/FirstPersonView';
 import { ChatPanel } from './ChatPanel';
 import { GameIcon } from '../../game_icons';
+import { CORE_ICONS } from '../../assets/icons/core';
 import { motion, AnimatePresence } from 'motion/react';
 import { DraggableCard } from '../DraggableCard';
 import { ErrorBoundary } from '../ErrorBoundary';
@@ -41,7 +42,7 @@ export const ActionView: React.FC = () => {
 
         {activeCards.length === 0 && (
           <div className="w-full h-full flex flex-col items-center justify-center text-parchment-400 space-y-4">
-            <GameIcon name="layout" size={64} className="opacity-10" />
+            <GameIcon path={CORE_ICONS.layout} size={64} className="opacity-10" />
             <p className="font-header text-2xl uppercase tracking-widest">The board is empty</p>
             <div className="flex gap-4">
               <button 
@@ -72,7 +73,7 @@ export const ActionView: React.FC = () => {
               className="absolute top-0 right-0 z-[60] bg-red-500 text-white p-1 rounded-full shadow-lg hover:bg-red-600 transition-colors"
               style={{ transform: `translate(${100 + (idx * 40) + 360}px, ${100 + (idx * 40) - 10}px)` }}
             >
-              <GameIcon name="close" size={12} color="currentColor" />
+              <GameIcon path={CORE_ICONS.close} size={12} color="currentColor" />
             </button>
           </div>
         ))}
@@ -111,7 +112,7 @@ export const ActionView: React.FC = () => {
               aria-label={chatExpanded ? "Collapse Chat" : "Expand Chat"}
             >
               <div className="transition-transform duration-300">
-                {chatExpanded ? <GameIcon name="chevron_down" size={14} /> : <GameIcon name="chevron_up" size={14} className="text-red-500 group-hover:text-white" />}
+                {chatExpanded ? <GameIcon path={CORE_ICONS.chevron_down} size={14} /> : <GameIcon path={CORE_ICONS.chevron_up} size={14} className="text-red-500 group-hover:text-white" />}
               </div>
             </button>
           </div>

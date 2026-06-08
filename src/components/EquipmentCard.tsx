@@ -8,6 +8,10 @@ import { ChromaKeyImage } from './ChromaKeyImage';
 import { useStore } from '../store/useStore';
 import { useBookStore } from '../store/useBookStore';
 import { GameIcon, GameIconName } from '../game_icons';
+import { CORE_ICONS } from '../assets/icons/core';
+import { ARCANE_CODEX_ICONS } from '../assets/icons/arcane_codex';
+import { EQUIPMENT_ICONS } from '../assets/icons/equipment';
+import { DICE_ICONS } from '../assets/icons/dice';
 import { DiceText } from './DiceText';
 import { BookReader } from './bookreader/BookReader';
 
@@ -141,7 +145,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
           onClick={onClose}
           className="absolute top-2 right-2 z-[60] w-8 h-8 bg-black/10 hover:bg-black/20 rounded-full flex items-center justify-center transition-colors text-black/40 hover:text-black"
         >
-          <GameIcon name="close" size={16} color="currentColor" />
+          <GameIcon path={CORE_ICONS.close} size={16} color="currentColor" />
         </button>
       )}
 
@@ -216,14 +220,14 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
                 <GameIcon name={categoryIndex as any} size={32} color="#8B4513" />
               </div>
             ) : (
-              <GameIcon name="package" size={32} color="#8B4513" className="animate-pulse" />
+              <GameIcon path={ARCANE_CODEX_ICONS.items} size={32} color="#8B4513" className="animate-pulse" />
             )}
           </div>
         )}
         
         <div className="absolute inset-0 bg-dragon-red/0 group-hover/image:bg-dragon-red/10 transition-colors z-20 flex items-center justify-center text-center">
             <div className="flex flex-col items-center opacity-0 group-hover/image:opacity-100 transition-opacity">
-                <GameIcon name="info" className="text-white scale-50 group-hover/image:scale-100 duration-300" size={24} color="#FFFFFF" />
+                <GameIcon path={CORE_ICONS.info} className="text-white scale-50 group-hover/image:scale-100 duration-300" size={24} color="#FFFFFF" />
                 <span className="text-[8px] text-white font-bold uppercase mt-1">Focus in Codex</span>
             </div>
         </div>
@@ -294,7 +298,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
             className="absolute top-2 right-2 z-50 w-10 h-10 bg-dragon-gold text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all border-2 border-white group/read"
             title="Read Book"
           >
-            <GameIcon name="book" size={20} color="#FFFFFF" className="group-hover/read:scale-110 transition-transform" />
+            <GameIcon path={ARCANE_CODEX_ICONS.book} size={20} color="#FFFFFF" className="group-hover/read:scale-110 transition-transform" />
           </button>
         )}
 
@@ -309,7 +313,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
             )}
             {currentItem.armor_category === 'Shield' && (
               <div className="flex items-center gap-1.5 px-2 py-0.5 bg-parchment-200/50 rounded-md border border-dragon-gold/20 text-[9px] font-bold text-dragon-red uppercase tracking-tight">
-                <GameIcon name="shields" size={10} color="#8B000099" />
+                <GameIcon path={EQUIPMENT_ICONS.shields} size={10} color="#8B000099" />
                 <span className="opacity-60">Type:</span> Shield
               </div>
             )}
@@ -327,13 +331,13 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
             )}
             {currentItem.str_minimum > 0 && (
               <div className="flex items-center gap-1.5 px-2 py-0.5 bg-red-900/10 rounded-md border border-red-900/20 text-[9px] font-bold text-red-900 uppercase tracking-tight">
-                <GameIcon name="weight" size={10} color="#7F1D1D99" />
+                <GameIcon path={CORE_ICONS.weight} size={10} color="#7F1D1D99" />
                 <span className="opacity-60">Req STR:</span> {renderValue(currentItem.str_minimum)}
               </div>
             )}
             {currentItem.stealth_disadvantage && (
               <div className="flex items-center gap-1.5 px-2 py-0.5 bg-orange-900/10 rounded-md border border-orange-900/20 text-[9px] font-bold text-orange-900 uppercase tracking-tight">
-                <GameIcon name="info" size={10} color="#7C2D1299" />
+                <GameIcon path={CORE_ICONS.info} size={10} color="#7C2D1299" />
                 Stealth Disadv.
               </div>
             )}
@@ -345,7 +349,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
             )}
             {currentItem.capacity && (
                <div className="flex items-center gap-1.5 px-2 py-0.5 bg-emerald-900/10 rounded-md border border-emerald-900/20 text-[9px] font-bold text-emerald-900 uppercase tracking-tight">
-                 <GameIcon name="box" size={10} color="#064E3B99" />
+                 <GameIcon path={ARCANE_CODEX_ICONS.box} size={10} color="#064E3B99" />
                  Capacity: {renderValue(currentItem.capacity.cargo || currentItem.capacity)}
                </div>
             )}
@@ -374,7 +378,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
             {currentItem.contents && Array.isArray(currentItem.contents) && (
               <div className="mt-4 pt-3 border-t border-dragon-gold/20">
                  <div className="flex items-center gap-2 mb-2">
-                    <GameIcon name="package" size={12} color="#8B0000" className="opacity-60" />
+                    <GameIcon path={ARCANE_CODEX_ICONS.items} size={12} color="#8B0000" className="opacity-60" />
                     <span className="text-[8px] font-black uppercase text-dragon-darkRed tracking-widest leading-none">Pack Contents</span>
                  </div>
                  <div className="grid grid-cols-2 gap-x-4 gap-y-1 not-italic font-sans text-[9px]">
@@ -403,13 +407,13 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
         <div className="mt-auto pt-1 border-t border-dragon-gold/10 flex justify-between items-center bg-parchment-100/80 backdrop-blur-sm">
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-1 text-parchment-600">
-              <GameIcon name="coins" size={10} color="#D97706" />
+              <GameIcon path={CORE_ICONS.coins} size={10} color="#D97706" />
               <span className="text-[9px] font-bold uppercase tracking-tight">
                 {renderValue(currentItem.cost?.quantity)} {renderValue(currentItem.cost?.unit)}
               </span>
             </div>
             <div className="flex items-center gap-1 text-parchment-600">
-              <GameIcon name="weight" size={10} color="#8B4513" />
+              <GameIcon path={CORE_ICONS.weight} size={10} color="#8B4513" />
               <span className="text-[9px] font-bold uppercase tracking-tight">
                 {renderValue(currentItem.weight)} lb.
               </span>
@@ -427,7 +431,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
                         }}
                         className="px-3 py-1 bg-amber-600 text-white rounded text-[9px] font-black uppercase tracking-widest hover:bg-amber-700 transition-colors shadow-sm flex items-center gap-1.5"
                     >
-                        <GameIcon name="book" size={10} color="#FFFFFF" />
+                        <GameIcon path={ARCANE_CODEX_ICONS.book} size={10} color="#FFFFFF" />
                         Read
                     </button>
                 )}
@@ -449,7 +453,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
                         }}
                         className="px-3 py-1 bg-amber-600 text-white rounded text-[9px] font-black uppercase tracking-widest hover:bg-amber-700 transition-colors shadow-sm flex items-center gap-1.5"
                     >
-                        <GameIcon name="search" size={10} color="#FFFFFF" />
+                        <GameIcon path={CORE_ICONS.search} size={10} color="#FFFFFF" />
                         Details
                     </button>
                 )}
@@ -468,7 +472,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
                         }}
                         className="px-3 py-1 bg-dragon-red text-white rounded text-[9px] font-black uppercase tracking-widest hover:bg-dragon-darkRed transition-colors shadow-sm flex items-center gap-1.5"
                     >
-                        <GameIcon name="land_vehicles" size={10} color="#FFFFFF" />
+                        <GameIcon path={EQUIPMENT_ICONS.land_vehicles} size={10} color="#FFFFFF" />
                         Assets
                     </button>
                 )}

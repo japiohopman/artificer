@@ -5,7 +5,8 @@ import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ChromaKeyImage';
 import { abilityScoreIcons } from '../../assets/icons/ability_score';
-import { UI_ICONS } from '../../assets/icons/ui';
+import { CORE_ICONS } from '../../assets/icons/core';
+import { ARCANE_CODEX_ICONS } from '../../assets/icons/arcane_codex';
 import { normalizeImageUrl } from '../../services/storageService';
 import { extractOptionsFromFeature, getChoiceLimit, FeatureOption, getFeatureIcon } from '../../lib/atlasUtils';
 import { soundService } from '../../services/soundService';
@@ -30,7 +31,7 @@ const Sparkle: React.FC<{ delay: number; x: string; y: string }> = ({ delay, x, 
     className="absolute pointer-events-none z-50"
     style={{ left: x, top: y }}
   >
-    <GameIcon name="sparkles" size={12} color="#D4AF37" />
+    <GameIcon path={ARCANE_CODEX_ICONS.sparkles} size={12} color="#D4AF37" />
   </motion.div>
 );
 
@@ -410,7 +411,7 @@ export const LevelUpOverlay: React.FC = () => {
         >
           {/* Header Shield/Emblem */}
           <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-dragon-darkRed rounded-full border-4 border-dragon-gold shadow-2xl flex items-center justify-center z-20">
-             <GameIcon name={character.class?.toLowerCase() as any || "award"} size={48} color="#D4AF37" />
+             <GameIcon name={character.class?.toLowerCase() as any} fallbackName="award" size={48} color="#D4AF37" />
           </div>
 
           <div className="relative z-10 flex flex-col h-full max-h-[92vh]">
@@ -455,9 +456,9 @@ export const LevelUpOverlay: React.FC = () => {
                     {/* Header Info - Moved to Top */}
                     <div className="text-center relative py-4">
                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-2">
-                          <GameIcon name="award" size={14} color="#D4AF37" className="animate-pulse" />
+                          <GameIcon path={CORE_ICONS.award} size={14} color="#D4AF37" className="animate-pulse" />
                           <div className="h-px w-12 bg-dragon-gold/30" />
-                          <GameIcon name="award" size={14} color="#D4AF37" className="animate-pulse" />
+                          <GameIcon path={CORE_ICONS.award} size={14} color="#D4AF37" className="animate-pulse" />
                        </div>
                        <h3 className="text-[32px] font-cinzel font-black text-dragon-darkRed uppercase tracking-[0.2em]">{character.class}</h3>
                        <p className="text-[11px] font-black text-parchment-500 uppercase tracking-[0.3em] mt-1">{character.race} // {character.alignment}</p>
@@ -478,7 +479,7 @@ export const LevelUpOverlay: React.FC = () => {
                              </>
                           ) : (
                             <div className="w-full h-full flex items-center justify-center text-dragon-darkRed/20">
-                              <GameIcon name="user" size={64} />
+                              <GameIcon path={CORE_ICONS.user} size={64} />
                             </div>
                           )}
                        </div>
@@ -505,7 +506,7 @@ export const LevelUpOverlay: React.FC = () => {
                                  animate={{ x: [0, 5, 0], opacity: [0.5, 1, 0.5] }}
                                  transition={{ duration: 1.5, repeat: Infinity }}
                                >
-                                 <GameIcon name="lightning" size={14} color="#D4AF37" />
+                                 <GameIcon path={CORE_ICONS.zap} size={14} color="#D4AF37" />
                                </motion.div>
                                <span className="text-[10px] font-black text-dragon-gold">+{levelUpResult.hpIncrease}</span>
                             </div>
@@ -521,7 +522,7 @@ export const LevelUpOverlay: React.FC = () => {
                       >
                          <span className="text-[9px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-2 block">Task Proficiency</span>
                          <div className="flex items-center justify-center gap-3">
-                            <GameIcon name="award" size={24} color="#D4AF37" className="drop-shadow-smAlpha" />
+                            <GameIcon path={CORE_ICONS.award} size={24} color="#D4AF37" className="drop-shadow-smAlpha" />
                             <span className="text-3xl font-header font-black text-dragon-darkRed">
                                +{Math.floor(2 + (levelUpResult.newLevel - 1) / 4)}
                             </span>
@@ -635,7 +636,7 @@ export const LevelUpOverlay: React.FC = () => {
                                    isSubclassFeature ? "border-dragon-red/60 bg-dragon-red/5" : "border-dragon-gold/40"
                                  )}>
                                    <div className="w-12 h-12 bg-white/20 rounded border border-dragon-gold/10 flex items-center justify-center shrink-0 shadow-inner group-hover:scale-105 transition-transform mt-1">
-                                      <GameIcon name={getFeatureIcon(feat.index, feat.name) as any} size={26} color={isSubclassFeature ? "#8B0000" : "#D4AF37"} fallbackName="award" />
+                                      <GameIcon name={getFeatureIcon(feat.index, feat.name)} size={26} color={isSubclassFeature ? "#8B0000" : "#D4AF37"} fallbackName="award" />
                                    </div>
                                    <div className="flex-1 min-w-0">
                                       <div className="flex items-center gap-2 mb-2">
@@ -710,12 +711,12 @@ export const LevelUpOverlay: React.FC = () => {
                                                        animate={{ scale: 1 }}
                                                        className="-rotate-45"
                                                      >
-                                                       <GameIcon name="check" size={12} color="#8B0000" />
+                                                       <GameIcon path={CORE_ICONS.check} size={12} color="#8B0000" />
                                                      </motion.div>
                                                    )}
                                                  </div>
                                                  <div className="flex items-center gap-3">
-                                                   <GameIcon name={getFeatureIcon(opt.index, opt.name) as any} size={16} color={isSelected ? "#D4AF37" : "#8B0000"} className="opacity-60 group-hover/opt:opacity-100 transition-opacity" fallbackName="award" />
+                                                   <GameIcon name={getFeatureIcon(opt.index, opt.name)} size={16} color={isSelected ? "#D4AF37" : "#8B0000"} className="opacity-60 group-hover/opt:opacity-100 transition-opacity" fallbackName="award" />
                                                    <span className="font-header font-black tracking-widest text-sm">
                                                      {opt.name.replace(/fighting style:\s*/i, '')
                                                               .replace(/expertise:\s*/i, '')
@@ -795,7 +796,7 @@ export const LevelUpOverlay: React.FC = () => {
                                              <path d={abilityScoreIcons[stat.abbr.toLowerCase()]} />
                                            </svg>
                                          ) : (
-                                           <GameIcon name="award" size={24} color="#4A4A4A" className="opacity-40 group-hover:opacity-100" />
+                                           <GameIcon path={CORE_ICONS.award} size={24} color="#4A4A4A" className="opacity-40 group-hover:opacity-100" />
                                          )}
                                       </div>
                                       <div>
@@ -858,9 +859,7 @@ export const LevelUpOverlay: React.FC = () => {
                      <div className="absolute inset-0 bg-dragon-gold/20 blur-2xl rounded-full animate-pulse" />
                      
                      <div className="w-24 h-24 rounded-full bg-dragon-darkRed border-4 border-dragon-gold shadow-[0_0_40px_rgba(212,175,55,0.4)] flex items-center justify-center transition-all hover:scale-110 active:scale-95 group-hover:shadow-[0_0_60px_rgba(212,175,55,0.6)]">
-                        <svg viewBox="0 0 512 512" className="w-12 h-12 fill-dragon-gold drop-shadow-lg">
-                           <path d={UI_ICONS.advance} />
-                        </svg>
+                        <GameIcon path={CORE_ICONS.advance} size={48} color="#D4AF37" className="drop-shadow-lg" />
                         
                         {/* Inner Spinning Ring */}
                         <motion.div 

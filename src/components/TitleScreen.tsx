@@ -6,6 +6,8 @@ import { useStore } from '../store/useStore';
 import { playClickSound, playSuccessSound, REPO, BRANCH } from '../services/storageService';
 import { soundService } from '../services/soundService';
 import { GameIcon } from '../game_icons';
+import { CORE_ICONS } from '../assets/icons/core';
+import { ARCANE_CODEX_ICONS } from '../assets/icons/arcane_codex';
 
 export const TitleScreen: React.FC = () => {
   const { 
@@ -63,7 +65,7 @@ export const TitleScreen: React.FC = () => {
   if (!hasLoaded && isLoadingSaves) {
     return (
       <div className="fixed inset-0 bg-[#0a0a0a] flex items-center justify-center flex-col gap-4 z-[100]">
-        <GameIcon name="loading" size={48} color="#8B0000" className="animate-spin" />
+        <GameIcon path={CORE_ICONS.loading} size={48} color="#8B0000" className="animate-spin" />
         <p className="font-header text-parchment-400 uppercase tracking-widest animate-pulse">Decrypting Save Data...</p>
       </div>
     );
@@ -115,7 +117,7 @@ export const TitleScreen: React.FC = () => {
         >
           <div className="flex items-center justify-center gap-4 mb-2">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-white/40" />
-            <GameIcon name="sparkles" size={24} color="#FFFFFF" />
+            <GameIcon path={ARCANE_CODEX_ICONS.sparkles} size={24} color="#FFFFFF" />
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-white/40" />
           </div>
           <h1 className="text-7xl font-elan font-black text-dragon-red tracking-tighter uppercase leading-none mb-4 flex items-center justify-center">
@@ -145,7 +147,7 @@ export const TitleScreen: React.FC = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
               <div className="relative flex items-center justify-center gap-4 text-white">
-                <GameIcon name="plus" size={24} color="#FFFFFF" />
+                <GameIcon path={CORE_ICONS.plus} size={24} color="#FFFFFF" />
                 <span className="text-2xl font-header font-black uppercase tracking-widest">New Game</span>
               </div>
             </button>
@@ -219,7 +221,7 @@ export const TitleScreen: React.FC = () => {
               className="w-full group relative overflow-hidden bg-dragon-gold/10 py-4 rounded-sm border border-dragon-gold/20 transition-all hover:bg-dragon-gold/20 disabled:opacity-20 disabled:cursor-not-allowed hover:scale-[1.02] active:scale-95 mt-4"
             >
               <div className="relative flex items-center justify-center gap-4 text-dragon-gold">
-                <GameIcon name="play" size={20} color="#D4AF37" />
+                <GameIcon path={CORE_ICONS.play} size={20} color="#D4AF37" />
                 <span className="text-sm font-header font-black uppercase tracking-[0.2em]">Continue Adventure</span>
               </div>
             </button>

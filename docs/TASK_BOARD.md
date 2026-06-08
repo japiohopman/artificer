@@ -10,6 +10,11 @@
 - [ ] Fix equipment path issues (e.g., `longsword.json`, `backpack.json`, `burglars_pack.json`).
 - [ ] Establish canonical asset paths (use `/assets/atlas/...` for runtime).
 - [ ] Normalize references to other JSON records (ID-only + generated index).
+- [ ] **Icon Optimization and Tactical Loading**
+  - Audit `src/assets/icons/` for duplicates and placeholders.
+  - Consolidate core/common icons into `core.ts`.
+  - Refactor `src/game_icons.tsx` to support granular/tactical loading.
+  - Deduplicate icons between UI and Codex Arcane.
 
 ## High
 - [ ] Generate indexes per domain (equipment, spell, enemies, magic_items, maps).

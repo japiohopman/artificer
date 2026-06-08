@@ -15,7 +15,9 @@ import { Inventory } from './Inventory';
 import { EquipmentDoll } from './EquipmentDoll';
 import { EquipmentCard } from '../EquipmentCard';
 import { EQUIPMENT_SLOTS, AUX_SLOTS, EquipmentSlotId } from '../../lib/equipmentConstants';
-import { GameIcon, GAME_ICONS, GameIconName } from '../../game_icons';
+import { GameIcon, GameIconName } from '../../game_icons';
+import { CORE_ICONS } from '../../assets/icons/core';
+import { ARCANE_CODEX_ICONS } from '../../assets/icons/arcane_codex';
 import { ChromaKeyImage } from '../ChromaKeyImage';
 import { cn } from '../../lib/utils';
 import { isBookLike } from '../../lib/bookUtils';
@@ -41,7 +43,7 @@ const SpellListRow: React.FC<{
           {spell.imageUrl ? (
             <img src={spell.imageUrl} alt="" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
           ) : (
-            <GameIcon name="sparkles" size={16} color="#8B0000" />
+            <GameIcon path={ARCANE_CODEX_ICONS.sparkles} size={16} color="#8B0000" />
           )}
        </div>
        <div className="flex-1 min-w-0">
@@ -354,7 +356,7 @@ export const CharacterProfile: React.FC = () => {
                                 className="opacity-40 hover:opacity-100 transition-all"
                                 title="Delete Character"
                              >
-                                <GameIcon name="trash" size={12} color="#8B0000" />
+                                <GameIcon path={CORE_ICONS.trash} size={12} color="#8B0000" />
                              </button>
                           </div>
                           <div className="text-6xl font-header font-black text-dragon-red leading-none drop-shadow-sm">{character.level || 1}</div>
@@ -381,7 +383,7 @@ export const CharacterProfile: React.FC = () => {
                        {/* Top Vitals Bar - Hero Position */}
                        <div className="flex items-center gap-10 bg-black/5 px-12 py-6 rounded-full border border-black/5 shadow-inner">
                           <div className="flex items-center gap-4 group">
-                             <GameIcon name="heart" size={28} color="#8B0000" className="animate-pulse" />
+                             <GameIcon path={CORE_ICONS.heart} size={28} color="#8B0000" className="animate-pulse" />
                              <div className="flex flex-col leading-none">
                                 <span className="font-header text-4xl font-black text-dragon-darkRed">{character.hp}/{character.maxHp}</span>
                                 <span className="text-[10px] font-sans text-parchment-400 uppercase tracking-widest font-black uppercase">HP MATRIX</span>
@@ -391,7 +393,7 @@ export const CharacterProfile: React.FC = () => {
                           <div className="w-px h-12 bg-dragon-red/10" />
                           
                           <div className="flex items-center gap-4 group">
-                             <GameIcon name="shield" size={28} color="#D4AF37" />
+                             <GameIcon path={CORE_ICONS.shield} size={28} color="#D4AF37" />
                              <div className="flex flex-col leading-none">
                                 <span className="font-header text-4xl font-black text-dragon-darkRed">{derived.ac}</span>
                                 <span className="text-[10px] font-sans text-parchment-400 uppercase tracking-widest font-black uppercase">ARMOR</span>
@@ -568,7 +570,7 @@ export const CharacterProfile: React.FC = () => {
                           <div className="mt-8 space-y-3 w-full max-w-[320px]">
                              {/* HP Quick Indicator */}
                              <div className="flex items-center gap-4 bg-black/5 px-6 py-2 rounded-full border border-black/5 hover:bg-black/10 transition-colors">
-                                <GameIcon name="heart" size={16} color="#8B0000" className="animate-pulse" />
+                                <GameIcon path={CORE_ICONS.heart} size={16} color="#8B0000" className="animate-pulse" />
                                 <span className="font-header text-2xl font-black text-dragon-darkRed">
                                   {character.hp}/{character.maxHp}
                                   <span className="text-[10px] font-sans text-parchment-400 ml-2 uppercase tracking-widest font-black">Hit Points</span>
@@ -578,7 +580,7 @@ export const CharacterProfile: React.FC = () => {
                              {/* AC and Speed Row */}
                              <div className="flex gap-3">
                                 <div className="flex-1 flex items-center gap-3 bg-black/5 px-4 py-2 rounded-full border border-black/5 hover:bg-black/10 transition-colors">
-                                   <GameIcon name="shield" size={14} color="#D4AF37" />
+                                   <GameIcon path={CORE_ICONS.shield} size={14} color="#D4AF37" />
                                    <span className="font-header text-xl font-black text-dragon-darkRed">
                                       {derived.ac}
                                       <span className="text-[9px] font-sans text-parchment-400 ml-1.5 uppercase tracking-widest font-black">AC</span>
@@ -618,7 +620,7 @@ export const CharacterProfile: React.FC = () => {
                                 className="opacity-40 hover:opacity-100 transition-all font-sans"
                                 title="Delete Character"
                              >
-                                <GameIcon name="trash" size={10} color="#8B0000" />
+                                <GameIcon path={CORE_ICONS.trash} size={10} color="#8B0000" />
                              </button>
                           </div>
                              <div className="text-6xl font-header font-black text-dragon-red leading-none drop-shadow-sm">{character.level || 1}</div>
@@ -686,7 +688,7 @@ export const CharacterProfile: React.FC = () => {
                           <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Core_Attributes</h3>
                        </div>
                        <div className="flex flex-col gap-2">
-                          <VerticalStat label="STRENGTH" value={effectiveStats.str} abbr="STR" icon="sword" 
+                          <VerticalStat label="STRENGTH" value={effectiveStats.str} abbr="STR" icon={CORE_ICONS.weapon} 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.str - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Strength Check");
@@ -698,25 +700,25 @@ export const CharacterProfile: React.FC = () => {
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Dexterity Check");
                             }}
                           />
-                          <VerticalStat label="CONSTITUTION" value={effectiveStats.con} abbr="CON" icon="heart" 
+                          <VerticalStat label="CONSTITUTION" value={effectiveStats.con} abbr="CON" icon={CORE_ICONS.heart} 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.con - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Constitution Check");
                             }}
                           />
-                          <VerticalStat label="INTELLIGENCE" value={effectiveStats.int} abbr="INT" icon="sparkles" 
+                          <VerticalStat label="INTELLIGENCE" value={effectiveStats.int} abbr="INT" icon={ARCANE_CODEX_ICONS.sparkles} 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.int - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Intelligence Check");
                             }}
                           />
-                          <VerticalStat label="WISDOM" value={effectiveStats.wis} abbr="WIS" icon="scroll" 
+                          <VerticalStat label="WISDOM" value={effectiveStats.wis} abbr="WIS" icon={ARCANE_CODEX_ICONS.scroll} 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.wis - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Wisdom Check");
                             }}
                           />
-                          <VerticalStat label="CHARISMA" value={effectiveStats.cha} abbr="CHA" icon="user" 
+                          <VerticalStat label="CHARISMA" value={effectiveStats.cha} abbr="CHA" icon={CORE_ICONS.user} 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.cha - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Charisma Check");
@@ -737,7 +739,7 @@ export const CharacterProfile: React.FC = () => {
                        {/* Saving Throws */}
                        <div className="space-y-4">
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                             <GameIcon name="shield" size={14} color="#8B0000" />
+                             <GameIcon path={CORE_ICONS.shield} size={14} color="#8B0000" />
                              <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Saving_Throws</h3>
                           </div>
                           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
@@ -782,7 +784,7 @@ export const CharacterProfile: React.FC = () => {
                        {/* Skill Registry */}
                        <div className="space-y-4">
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                             <GameIcon name="pen_line" size={14} color="#8B0000" />
+                             <GameIcon path={CORE_ICONS.pen_line} size={14} color="#8B0000" />
                              <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Skill_Registry</h3>
                           </div>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1">
@@ -1001,7 +1003,7 @@ export const CharacterProfile: React.FC = () => {
                            {/* Portrait */}
                            <div className="w-[180px] space-y-2">
                               <div className="flex items-center gap-2">
-                                 <GameIcon name="fingerprint" size={12} color="#8B0000" />
+                                 <GameIcon path={CORE_ICONS.fingerprint} size={12} color="#8B0000" />
                                  <span className="text-[8px] font-black text-dragon-darkRed uppercase tracking-widest">Profile_Node</span>
                               </div>
                               <div className="aspect-[9/16] bg-parchment-200 rounded-sm overflow-hidden relative shadow-inner border border-dragon-red/10">
@@ -1022,7 +1024,7 @@ export const CharacterProfile: React.FC = () => {
                            {/* Doll */}
                            <div className="w-[180px] space-y-2">
                               <div className="flex items-center gap-2">
-                                 <GameIcon name="dashboard" size={12} color="#8B0000" />
+                                 <GameIcon path={CORE_ICONS.dashboard} size={12} color="#8B0000" />
                                  <span className="text-[8px] font-black text-dragon-darkRed uppercase tracking-widest">Equipped_Matrix</span>
                               </div>
                               <div className="aspect-[9/16]">
@@ -1114,7 +1116,7 @@ export const CharacterProfile: React.FC = () => {
                      <div className="space-y-8">
                         <div>
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                            <GameIcon name="sparkles" size={14} color="#8B0000" />
+                            <GameIcon path={ARCANE_CODEX_ICONS.sparkles} size={14} color="#8B0000" />
                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Biological_Traits</h3>
                           </div>
                           <div className="grid grid-cols-1 gap-2">
@@ -1128,7 +1130,7 @@ export const CharacterProfile: React.FC = () => {
 
                         <div>
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                            <GameIcon name="scroll" size={14} color="#8B0000" />
+                            <GameIcon path={ARCANE_CODEX_ICONS.scroll} size={14} color="#8B0000" />
                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Known_Languages</h3>
                           </div>
                           <div className="flex flex-wrap gap-2">
@@ -1145,7 +1147,7 @@ export const CharacterProfile: React.FC = () => {
 
                         <div>
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                            <GameIcon name="sword" size={14} color="#8B0000" />
+                            <GameIcon path={CORE_ICONS.weapon} size={14} color="#8B0000" />
                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Technical_Features</h3>
                           </div>
                           <div className="space-y-2">
@@ -1161,7 +1163,7 @@ export const CharacterProfile: React.FC = () => {
 
                      <div>
                         <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                          <GameIcon name="scroll" size={14} color="#8B0000" />
+                          <GameIcon path={ARCANE_CODEX_ICONS.scroll} size={14} color="#8B0000" />
                           <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Chronicle_Data</h3>
                         </div>
                         <div className="bg-white/40 p-6 rounded border border-dragon-red/5 min-h-[400px]">
@@ -1198,7 +1200,7 @@ export const CharacterProfile: React.FC = () => {
                       </div>
                       <div className="bg-dragon-red/5 p-4 rounded border border-dragon-red/20 flex flex-col items-center justify-center space-y-2 group cursor-pointer hover:bg-dragon-red/10 transition-all shadow-sm"
                            onClick={() => setIsCharacterSpellbookOpen(true)}>
-                         <GameIcon name="book" size={24} color="#8B0000" className="group-hover:scale-110 transition-transform" />
+                         <GameIcon path={ARCANE_CODEX_ICONS.book} size={24} color="#8B0000" className="group-hover:scale-110 transition-transform" />
                          <span className="text-[9px] font-black text-dragon-red uppercase tracking-widest">Study Spellbook</span>
                       </div>
                    </div>
@@ -1216,7 +1218,7 @@ export const CharacterProfile: React.FC = () => {
                               }}
                               className="text-[9px] font-black text-dragon-red hover:text-dragon-darkRed uppercase tracking-widest flex items-center gap-1.5"
                             >
-                               <GameIcon name="sparkles" size={12} />
+                               <GameIcon path={ARCANE_CODEX_ICONS.sparkles} size={12} />
                                Long Rest
                             </button>
                          </div>
@@ -1255,7 +1257,7 @@ export const CharacterProfile: React.FC = () => {
                          {/* Prepared Spells */}
                          <div className="space-y-4">
                             <div className="flex items-center gap-3">
-                               <GameIcon name="scroll" size={16} color="#8B0000" />
+                               <GameIcon path={ARCANE_CODEX_ICONS.scroll} size={16} color="#8B0000" />
                                <h3 className="text-[11px] font-black text-dragon-darkRed uppercase tracking-widest">Memorized_Lexicon</h3>
                                <div className="h-px flex-1 bg-gradient-to-r from-dragon-red/20 to-transparent" />
                                <span className="text-[9px] font-black text-parchment-400 uppercase tracking-widest">{character.preparedSpells?.length ?? 0} Active</span>
@@ -1279,7 +1281,7 @@ export const CharacterProfile: React.FC = () => {
                                  })
                                ) : (
                                   <div className="flex flex-col items-center justify-center py-12 opacity-30 space-y-3">
-                                     <GameIcon name="book" size={24} />
+                                     <GameIcon path={ARCANE_CODEX_ICONS.book} size={24} />
                                      <span className="text-[10px] font-black uppercase tracking-widest">No Spells Prepared</span>
                                   </div>
                                )}
@@ -1509,22 +1511,22 @@ const ActionRow: React.FC<{
   hitBonus: number; 
   damage: string; 
   damageType: string;
-  icon: keyof typeof GAME_ICONS;
+  icon: any;
 }> = ({ name, type, range, hitBonus, damage, damageType, icon }) => {
-  const getDamageIcon = (type: string): keyof typeof GAME_ICONS => {
+  const getDamageIcon = (type: string): string => {
     const t = type.toLowerCase();
-    if (t.includes('pierce')) return 'sword'; 
-    if (t.includes('slash')) return 'sword'; 
-    if (t.includes('bludgeon')) return 'hammer';
-    return 'sparkles';
+    if (t.includes('pierce')) return CORE_ICONS.weapon; 
+    if (t.includes('slash')) return CORE_ICONS.weapon; 
+    if (t.includes('bludgeon')) return CORE_ICONS.hammer;
+    return ARCANE_CODEX_ICONS.sparkles;
   };
 
   return (
     <div className="grid grid-cols-[1fr_80px_60px_80px] items-center py-2 px-1 border-b border-parchment-200/50 hover:bg-parchment-200/20 transition-colors">
       <div className="flex items-center gap-2">
         <div className="relative">
-          <GameIcon name="sparkles" size={12} color="#8B0000" className="absolute -top-1.5 -left-1.5 opacity-40" />
-          <GameIcon name={icon} size={16} color="#4A4A4A" className="relative z-10" />
+          <GameIcon path={ARCANE_CODEX_ICONS.sparkles} size={12} color="#8B0000" className="absolute -top-1.5 -left-1.5 opacity-40" />
+          <GameIcon path={icon} size={16} color="#4A4A4A" className="relative z-10" />
         </div>
         <div className="flex flex-col min-w-0">
           <span className="text-[10px] font-bold text-parchment-900 leading-none truncate">{name}</span>
@@ -1561,7 +1563,7 @@ const ActionRow: React.FC<{
           <span className="text-[9px] font-black text-parchment-800 whitespace-nowrap">
             {damage}
           </span>
-          <GameIcon name={getDamageIcon(damageType)} size={8} color="#8B0000" className="opacity-60" />
+          <GameIcon path={getDamageIcon(damageType)} size={8} color="#8B0000" className="opacity-60" />
         </div>
       </div>
     </div>
@@ -1642,7 +1644,7 @@ const VerticalStat: React.FC<{ label: string; value: number; abbr: string; icon:
 const CurrencyPin: React.FC<{ type: string; value: number; color: string; pulse?: boolean }> = ({ type, value, color, pulse }) => (
   <div className="bg-white/60 px-2 py-1.5 rounded-sm border border-dragon-red/5 flex flex-col items-center">
     <div className="flex items-center gap-1">
-       <GameIcon name="coins" size={8} color={color} className={cn(pulse && "animate-pulse")} />
+       <GameIcon path={CORE_ICONS.coins} size={8} color={color} className={cn(pulse && "animate-pulse")} />
        <span className="text-[6px] font-black text-parchment-600 uppercase">{type}</span>
     </div>
     <span className={cn("text-[9px] font-black tabular-nums transition-colors", pulse && "animate-pulse")} style={{ color }}>{value}</span>

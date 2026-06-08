@@ -8,6 +8,8 @@ import { DiceText } from './DiceText';
 import { useStore } from '../store/useStore';
 import { renderNameValue, getOrdinal } from '../lib/dataUtils';
 import { GameIcon, GameIconName } from '../game_icons';
+import { CORE_ICONS } from '../assets/icons/core';
+import { ARCANE_CODEX_ICONS } from '../assets/icons/arcane_codex';
 
 interface SpellCardProps {
   spell: any;
@@ -61,13 +63,13 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
                 }}
                 className="mt-1 self-start flex items-center gap-1 px-2 py-0.5 bg-dragon-gold text-white text-[9px] font-black uppercase rounded shadow-sm hover:scale-105 active:scale-95 transition-all animate-pulse"
               >
-                <GameIcon name="book" size={10} color="currentColor" />
+                <GameIcon path={ARCANE_CODEX_ICONS.book} size={10} color="currentColor" />
                 Learn Spell
               </button>
             )}
             {isKnown && (
               <div className="mt-1 self-start flex items-center gap-1 text-dragon-gold text-[8px] font-black uppercase tracking-tighter italic opacity-60">
-                <GameIcon name="check" size={10} color="currentColor" />
+                <GameIcon path={CORE_ICONS.check} size={10} color="currentColor" />
                 In Spellbook
               </div>
             )}
@@ -85,10 +87,10 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
 
       {/* Main Info Blocks */}
       <div className="relative z-10 grid grid-cols-2 gap-3">
-        <InfoBlock icon="speed" label="Casting Time" value={spell.casting_time} />
-        <InfoBlock icon="target" label="Range" value={spell.range} />
-        <InfoBlock icon="sparkles" label="Components" value={spell.components?.join(', ') + (spell.material ? '*' : '')} tooltip={spell.material} />
-        <InfoBlock icon="loading" label="Duration" value={(spell.concentration ? 'Conc. ' : '') + spell.duration} />
+        <InfoBlock iconPath={ARCANE_CODEX_ICONS.speed} label="Casting Time" value={spell.casting_time} />
+        <InfoBlock iconPath={ARCANE_CODEX_ICONS.target} label="Range" value={spell.range} />
+        <InfoBlock iconPath={ARCANE_CODEX_ICONS.sparkles} label="Components" value={spell.components?.join(', ') + (spell.material ? '*' : '')} tooltip={spell.material} />
+        <InfoBlock iconPath={CORE_ICONS.loading} label="Duration" value={(spell.concentration ? 'Conc. ' : '') + spell.duration} />
       </div>
 
       {/* Image / Illustration */}
@@ -103,7 +105,7 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
           </div>
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center text-parchment-300">
-            <GameIcon name="book" size={48} color="currentColor" className="opacity-20 animate-pulse-slow" />
+            <GameIcon path={ARCANE_CODEX_ICONS.book} size={48} color="currentColor" className="opacity-20 animate-pulse-slow" />
             <span className="text-[10px] uppercase font-bold tracking-widest mt-2">Arcane Pattern</span>
           </div>
         )}
@@ -164,10 +166,10 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
   );
 };
 
-const InfoBlock = ({ icon, label, value, tooltip }: { icon: GameIconName, label: string, value: string, tooltip?: string }) => (
+const InfoBlock = ({ iconPath, label, value, tooltip }: { iconPath: string, label: string, value: string, tooltip?: string }) => (
   <div className="flex flex-col min-w-0" title={tooltip}>
     <div className="flex items-center gap-1 opacity-60">
-      <GameIcon name={icon} size={10} color="#8B0000" />
+      <GameIcon path={iconPath} size={10} color="#8B0000" />
       <span className="text-[9px] font-bold uppercase tracking-wider text-parchment-500">{label}</span>
     </div>
     <span className="text-[11px] font-bold text-parchment-800 truncate leading-tight mt-0.5">
