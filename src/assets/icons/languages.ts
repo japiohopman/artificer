@@ -1,0 +1,18 @@
+export const LANGUAGE_ICONS = {
+  abyssal: "",
+  celestial: "",
+  common: "",
+  deep_speech: "",
+  draconic: "",
+  dwarvish: "",
+  elvish: "",
+  giant: "",
+  gnomish: "",
+  goblin: "",
+  halfling: "",
+  infernal: "",
+  orc: "",
+  primordial: "",
+  sylvan: "",
+  undercommon: "",
+};

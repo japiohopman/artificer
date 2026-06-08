@@ -22,14 +22,14 @@ import { ChromaKeyImage } from '../ChromaKeyImage';
 import { cn } from '../../lib/utils';
 import { isBookLike } from '../../lib/bookUtils';
 import { getAlignmentColor, getAlignmentBackgroundStyle } from '../../lib/colors';
-import { skillIcons } from '../../assets/icons/skill';
-import { abilityScoreIcons } from '../../assets/icons/ability_score';
+import { SKILL_ICONS } from '../../assets/icons/skill';
+import { ABILITY_SCORE_ICONS } from '../../assets/icons/ability_score';
 
 import { normalizeImageUrl } from '../../services/storageService';
 import { calculateDerivedStats, getXpProgress, getEffectiveStats, XP_TABLE } from '../../lib/statCalculations';
 import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
-import { extractOptionsFromFeature, getChoiceLimit, getFeatureIcon } from '../../lib/atlasUtils';
+import { extractOptionsFromFeature, getChoiceLimit, getFeatureIcon, getTraitIcon, getFeatIcon , getAlignmentIcon, getBackgroundIcon, getProficiencyIcon , getMagicSchoolIcon , getLanguageIcon } from '../../lib/atlasUtils';
 
 const SpellListRow: React.FC<{ 
   spell: any; 
@@ -43,7 +43,7 @@ const SpellListRow: React.FC<{
           {spell.imageUrl ? (
             <img src={spell.imageUrl} alt="" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
           ) : (
-            <GameIcon path={ARCANE_CODEX_ICONS.sparkles} size={16} color="#8B0000" />
+            <GameIcon name="sparkles" size={16} color="#8B0000" />
           )}
        </div>
        <div className="flex-1 min-w-0">
@@ -52,7 +52,7 @@ const SpellListRow: React.FC<{
              <span className="text-[8px] font-black text-dragon-red/60 uppercase tracking-tighter">LVL {spell.level === 0 ? 'CANTRIP' : spell.level}</span>
           </div>
           <div className="flex items-center gap-3 mt-0.5">
-             <span className="text-[8px] font-bold text-parchment-400 uppercase tracking-widest">{spell.school?.name || 'Ancient Arts'}</span>
+             <span className="text-[8px] font-bold text-parchment-400 uppercase tracking-widest"><GameIcon name={getMagicSchoolIcon(spell.school?.index || "evocation")} size={10} color="currentColor" fallbackName="award" /> {spell.school?.name || "Ancient Arts"}</span>
              <div className="w-0.5 h-0.5 rounded-full bg-parchment-300" />
              <span className="text-[8px] font-bold text-parchment-400 uppercase tracking-widest">{spell.range}</span>
           </div>
@@ -356,7 +356,7 @@ export const CharacterProfile: React.FC = () => {
                                 className="opacity-40 hover:opacity-100 transition-all"
                                 title="Delete Character"
                              >
-                                <GameIcon path={CORE_ICONS.trash} size={12} color="#8B0000" />
+                                <GameIcon name="trash" size={12} color="#8B0000" />
                              </button>
                           </div>
                           <div className="text-6xl font-header font-black text-dragon-red leading-none drop-shadow-sm">{character.level || 1}</div>
@@ -368,7 +368,7 @@ export const CharacterProfile: React.FC = () => {
                           </h1>
                           
                           <div className="flex items-center justify-center gap-6 text-[18px] md:text-[22px] font-black text-dragon-red uppercase tracking-[0.4em] mt-2">
-                             <span>{character.class}</span>
+                             <span className="flex items-center gap-2"><GameIcon name={character.class?.toLowerCase()} size={20} color="currentColor" fallbackName="award" /> {character.class}</span>
                              {character.subclass && (
                                <>
                                  <span className="text-parchment-300">•</span>
@@ -376,14 +376,14 @@ export const CharacterProfile: React.FC = () => {
                                </>
                              )}
                              <span className="text-parchment-300">•</span>
-                             <span>{character.background || 'Adventurer'}</span>
+                             <span className="flex items-center gap-2"><GameIcon name={getBackgroundIcon(character.background || "adventurer")} size={20} color="currentColor" fallbackName="award" /> {character.background || "Adventurer"}</span>
                           </div>
                        </div>
 
                        {/* Top Vitals Bar - Hero Position */}
                        <div className="flex items-center gap-10 bg-black/5 px-12 py-6 rounded-full border border-black/5 shadow-inner">
                           <div className="flex items-center gap-4 group">
-                             <GameIcon path={CORE_ICONS.heart} size={28} color="#8B0000" className="animate-pulse" />
+                             <GameIcon name="heart" size={28} color="#8B0000" className="animate-pulse" />
                              <div className="flex flex-col leading-none">
                                 <span className="font-header text-4xl font-black text-dragon-darkRed">{character.hp}/{character.maxHp}</span>
                                 <span className="text-[10px] font-sans text-parchment-400 uppercase tracking-widest font-black uppercase">HP MATRIX</span>
@@ -393,7 +393,7 @@ export const CharacterProfile: React.FC = () => {
                           <div className="w-px h-12 bg-dragon-red/10" />
                           
                           <div className="flex items-center gap-4 group">
-                             <GameIcon path={CORE_ICONS.shield} size={28} color="#D4AF37" />
+                             <GameIcon name="shield" size={28} color="#D4AF37" />
                              <div className="flex flex-col leading-none">
                                 <span className="font-header text-4xl font-black text-dragon-darkRed">{derived.ac}</span>
                                 <span className="text-[10px] font-sans text-parchment-400 uppercase tracking-widest font-black uppercase">ARMOR</span>
@@ -534,7 +534,7 @@ export const CharacterProfile: React.FC = () => {
                        <div className="mt-12 flex items-center justify-center gap-16 border-y border-dragon-red/10 py-10 w-full mb-12">
                           <div className="flex flex-col items-center">
                              <span className="text-[10px] font-black text-dragon-red/40 uppercase tracking-[0.2em] mb-1">SPECIES</span>
-                             <span className="text-2xl font-header font-black text-dragon-darkRed uppercase tracking-tight">{character.race}</span>
+                             <span className="text-2xl font-header font-black text-dragon-darkRed uppercase tracking-tight"><GameIcon name={character.race?.toLowerCase().replace(/-/g, "_")} size={20} color="currentColor" fallbackName="award" /> {character.race}</span>
                           </div>
                           <div className="w-px h-12 bg-dragon-red/10" />
                           <div className="flex flex-col items-center">
@@ -544,7 +544,7 @@ export const CharacterProfile: React.FC = () => {
                           <div className="w-px h-12 bg-dragon-red/10" />
                           <div className="flex flex-col items-center">
                              <span className="text-[10px] font-black text-dragon-red/40 uppercase tracking-[0.2em] mb-1">ALIGNMENT</span>
-                             <span className="text-2xl font-header font-black text-dragon-red uppercase tracking-tight">{character.alignment || "Neutral"}</span>
+                             <span className="text-2xl font-header font-black text-dragon-red uppercase tracking-tight"><GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={20} color="currentColor" fallbackName="award" /> {character.alignment || "Neutral"}</span>
                           </div>
                        </div>
                     </div>
@@ -570,7 +570,7 @@ export const CharacterProfile: React.FC = () => {
                           <div className="mt-8 space-y-3 w-full max-w-[320px]">
                              {/* HP Quick Indicator */}
                              <div className="flex items-center gap-4 bg-black/5 px-6 py-2 rounded-full border border-black/5 hover:bg-black/10 transition-colors">
-                                <GameIcon path={CORE_ICONS.heart} size={16} color="#8B0000" className="animate-pulse" />
+                                <GameIcon name="heart" size={16} color="#8B0000" className="animate-pulse" />
                                 <span className="font-header text-2xl font-black text-dragon-darkRed">
                                   {character.hp}/{character.maxHp}
                                   <span className="text-[10px] font-sans text-parchment-400 ml-2 uppercase tracking-widest font-black">Hit Points</span>
@@ -580,7 +580,7 @@ export const CharacterProfile: React.FC = () => {
                              {/* AC and Speed Row */}
                              <div className="flex gap-3">
                                 <div className="flex-1 flex items-center gap-3 bg-black/5 px-4 py-2 rounded-full border border-black/5 hover:bg-black/10 transition-colors">
-                                   <GameIcon path={CORE_ICONS.shield} size={14} color="#D4AF37" />
+                                   <GameIcon name="shield" size={14} color="#D4AF37" />
                                    <span className="font-header text-xl font-black text-dragon-darkRed">
                                       {derived.ac}
                                       <span className="text-[9px] font-sans text-parchment-400 ml-1.5 uppercase tracking-widest font-black">AC</span>
@@ -620,7 +620,7 @@ export const CharacterProfile: React.FC = () => {
                                 className="opacity-40 hover:opacity-100 transition-all font-sans"
                                 title="Delete Character"
                              >
-                                <GameIcon path={CORE_ICONS.trash} size={10} color="#8B0000" />
+                                <GameIcon name="trash" size={10} color="#8B0000" />
                              </button>
                           </div>
                              <div className="text-6xl font-header font-black text-dragon-red leading-none drop-shadow-sm">{character.level || 1}</div>
@@ -633,7 +633,7 @@ export const CharacterProfile: React.FC = () => {
                              
                              <div className="flex flex-col items-center gap-4">
                                 <div className="flex items-center gap-4 text-[18px] md:text-[22px] font-black text-dragon-red uppercase tracking-[0.4em] mt-2 pl-[30px] pr-0">
-                                   <span>{character.class}</span>
+                                   <span className="flex items-center gap-2"><GameIcon name={character.class?.toLowerCase()} size={20} color="currentColor" fallbackName="award" /> {character.class}</span>
                                    {character.subclass && (
                                      <>
                                        <span className="text-parchment-300">•</span>
@@ -641,14 +641,14 @@ export const CharacterProfile: React.FC = () => {
                                      </>
                                    )}
                                    <span className="text-parchment-300">•</span>
-                                   <span>{character.background || 'Adventurer'}</span>
+                                   <span className="flex items-center gap-2"><GameIcon name={getBackgroundIcon(character.background || "adventurer")} size={20} color="currentColor" fallbackName="award" /> {character.background || "Adventurer"}</span>
                                 </div>
                                 
                                 {/* Species, Size, Alignment block */}
                                 <div className="mt-8 flex items-center justify-center gap-12 border-t border-dragon-red/10 pt-8 w-full max-w-[500px]">
                                    <div className="flex flex-col items-center">
                                       <span className="text-[10px] font-black text-dragon-red/40 uppercase tracking-[0.2em] mb-1">SPECIES</span>
-                                      <span className="text-2xl font-header font-black text-dragon-darkRed uppercase tracking-tight">{character.race}</span>
+                                      <span className="text-2xl font-header font-black text-dragon-darkRed uppercase tracking-tight"><GameIcon name={character.race?.toLowerCase().replace(/-/g, "_")} size={20} color="currentColor" fallbackName="award" /> {character.race}</span>
                                    </div>
                                    <div className="w-px h-10 bg-dragon-red/10" />
                                    <div className="flex flex-col items-center">
@@ -658,7 +658,7 @@ export const CharacterProfile: React.FC = () => {
                                    <div className="w-px h-10 bg-dragon-red/10" />
                                    <div className="flex flex-col items-center">
                                       <span className="text-[10px] font-black text-dragon-red/40 uppercase tracking-[0.2em] mb-1">ALIGNMENT</span>
-                                      <span className="text-2xl font-header font-black text-dragon-red uppercase tracking-tight">{character.alignment || "Neutral"}</span>
+                                      <span className="text-2xl font-header font-black text-dragon-red uppercase tracking-tight"><GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={20} color="currentColor" fallbackName="award" /> {character.alignment || "Neutral"}</span>
                                    </div>
                                 </div>
                              </div>
@@ -688,7 +688,7 @@ export const CharacterProfile: React.FC = () => {
                           <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Core_Attributes</h3>
                        </div>
                        <div className="flex flex-col gap-2">
-                          <VerticalStat label="STRENGTH" value={effectiveStats.str} abbr="STR" icon={CORE_ICONS.weapon} 
+                          <VerticalStat label="STRENGTH" value={effectiveStats.str} abbr="STR" icon="weapon" 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.str - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Strength Check");
@@ -700,25 +700,25 @@ export const CharacterProfile: React.FC = () => {
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Dexterity Check");
                             }}
                           />
-                          <VerticalStat label="CONSTITUTION" value={effectiveStats.con} abbr="CON" icon={CORE_ICONS.heart} 
+                          <VerticalStat label="CONSTITUTION" value={effectiveStats.con} abbr="CON" icon="heart" 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.con - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Constitution Check");
                             }}
                           />
-                          <VerticalStat label="INTELLIGENCE" value={effectiveStats.int} abbr="INT" icon={ARCANE_CODEX_ICONS.sparkles} 
+                          <VerticalStat label="INTELLIGENCE" value={effectiveStats.int} abbr="INT" icon="sparkles" 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.int - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Intelligence Check");
                             }}
                           />
-                          <VerticalStat label="WISDOM" value={effectiveStats.wis} abbr="WIS" icon={ARCANE_CODEX_ICONS.scroll} 
+                          <VerticalStat label="WISDOM" value={effectiveStats.wis} abbr="WIS" icon="scroll" 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.wis - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Wisdom Check");
                             }}
                           />
-                          <VerticalStat label="CHARISMA" value={effectiveStats.cha} abbr="CHA" icon={CORE_ICONS.user} 
+                          <VerticalStat label="CHARISMA" value={effectiveStats.cha} abbr="CHA" icon="user" 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.cha - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Charisma Check");
@@ -739,7 +739,7 @@ export const CharacterProfile: React.FC = () => {
                        {/* Saving Throws */}
                        <div className="space-y-4">
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                             <GameIcon path={CORE_ICONS.shield} size={14} color="#8B0000" />
+                             <GameIcon name="shield" size={14} color="#8B0000" />
                              <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Saving_Throws</h3>
                           </div>
                           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
@@ -784,7 +784,7 @@ export const CharacterProfile: React.FC = () => {
                        {/* Skill Registry */}
                        <div className="space-y-4">
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                             <GameIcon path={CORE_ICONS.pen_line} size={14} color="#8B0000" />
+                             <GameIcon path={UI_ICONS.pen_line} size={14} color="#8B0000" />
                              <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Skill_Registry</h3>
                           </div>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1">
@@ -810,7 +810,7 @@ export const CharacterProfile: React.FC = () => {
                                   )} />
                                   {(() => {
                                     const skillKey = skill.name.toLowerCase().replace(/\s+/g, '_');
-                                    const iconPath = skillIcons[skillKey];
+                                    const iconPath = SKILL_ICONS[skillKey];
                                     if (!iconPath) return null;
                                     return (
                                       <svg viewBox="0 0 512 512" className={cn("w-4 h-4 shrink-0", isProficient ? "fill-dragon-red" : "fill-parchment-300")}>
@@ -1003,7 +1003,7 @@ export const CharacterProfile: React.FC = () => {
                            {/* Portrait */}
                            <div className="w-[180px] space-y-2">
                               <div className="flex items-center gap-2">
-                                 <GameIcon path={CORE_ICONS.fingerprint} size={12} color="#8B0000" />
+                                 <GameIcon path={UI_ICONS.fingerprint} size={12} color="#8B0000" />
                                  <span className="text-[8px] font-black text-dragon-darkRed uppercase tracking-widest">Profile_Node</span>
                               </div>
                               <div className="aspect-[9/16] bg-parchment-200 rounded-sm overflow-hidden relative shadow-inner border border-dragon-red/10">
@@ -1024,7 +1024,7 @@ export const CharacterProfile: React.FC = () => {
                            {/* Doll */}
                            <div className="w-[180px] space-y-2">
                               <div className="flex items-center gap-2">
-                                 <GameIcon path={CORE_ICONS.dashboard} size={12} color="#8B0000" />
+                                 <GameIcon path={UI_ICONS.dashboard} size={12} color="#8B0000" />
                                  <span className="text-[8px] font-black text-dragon-darkRed uppercase tracking-widest">Equipped_Matrix</span>
                               </div>
                               <div className="aspect-[9/16]">
@@ -1037,7 +1037,7 @@ export const CharacterProfile: React.FC = () => {
                                           setInspectingItem({ item: itemAtSlot, sourceId: character.id, slot });
                                       }
                                    }} 
-                                   alignment={character.alignment || "Neutral"}
+                                   alignment=<GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={20} color="currentColor" fallbackName="award" /> {character.alignment || "Neutral"}
                                    characterImageUrl={character.imageUrl}
                                  />
                               </div>
@@ -1116,13 +1116,13 @@ export const CharacterProfile: React.FC = () => {
                      <div className="space-y-8">
                         <div>
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                            <GameIcon path={ARCANE_CODEX_ICONS.sparkles} size={14} color="#8B0000" />
+                            <GameIcon name="sparkles" size={14} color="#8B0000" />
                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Biological_Traits</h3>
                           </div>
                           <div className="grid grid-cols-1 gap-2">
-                            {character.traits?.map((trait, i) => (
+                            <div className="flex flex-wrap gap-2 mb-4">{character.traits?.map((trait, i) => (
                               <div key={`trait-${i}`} className="bg-white/40 p-3 rounded border border-dragon-red/5 shadow-sm italic text-[10px]">
-                                "{trait}"
+                                <GameIcon name={getTraitIcon(trait)} size={12} color="#8B0000" fallbackName="award" /> "{trait}"
                                </div>
                             ))}
                           </div>
@@ -1130,13 +1130,13 @@ export const CharacterProfile: React.FC = () => {
 
                         <div>
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                            <GameIcon path={ARCANE_CODEX_ICONS.scroll} size={14} color="#8B0000" />
+                            <GameIcon name="scroll" size={14} color="#8B0000" />
                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Known_Languages</h3>
                           </div>
                           <div className="flex flex-wrap gap-2">
                             {character.languages?.map((lang, i) => (
                               <div key={`lang-${i}`} className="bg-dragon-red/5 px-3 py-1 rounded border border-dragon-red/10 text-[9px] font-black text-dragon-darkRed uppercase tracking-widest">
-                                {lang}
+                                <GameIcon name={getLanguageIcon(lang)} size={10} color="currentColor" fallbackName="award" /> {lang}
                                </div>
                             ))}
                             {(!character.languages || character.languages.length === 0) && (
@@ -1147,9 +1147,14 @@ export const CharacterProfile: React.FC = () => {
 
                         <div>
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                            <GameIcon path={CORE_ICONS.weapon} size={14} color="#8B0000" />
+                            <GameIcon name="weapon" size={14} color="#8B0000" />
                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Technical_Features</h3>
                           </div>
+                          <div className="flex flex-wrap gap-2 mb-4">{character.proficiencies?.map((prof, i) => (
+                              <div key={`prof-${i}`} className="bg-white/40 px-3 py-1 rounded border border-dragon-red/5 shadow-sm italic text-[9px] flex items-center gap-1.5">
+                                <GameIcon name={getProficiencyIcon(prof)} size={10} color="#8B0000" fallbackName="award" /> {prof}
+                               </div>
+                            ))}</div>
                           <div className="space-y-2">
                             {character.features?.map((feat, i) => (
                               <div key={`feat-${i}`} className="bg-dragon-red/5 p-3 rounded-sm border-l-2 border-dragon-red/30">
@@ -1163,7 +1168,7 @@ export const CharacterProfile: React.FC = () => {
 
                      <div>
                         <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                          <GameIcon path={ARCANE_CODEX_ICONS.scroll} size={14} color="#8B0000" />
+                          <GameIcon name="scroll" size={14} color="#8B0000" />
                           <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Chronicle_Data</h3>
                         </div>
                         <div className="bg-white/40 p-6 rounded border border-dragon-red/5 min-h-[400px]">
@@ -1200,7 +1205,7 @@ export const CharacterProfile: React.FC = () => {
                       </div>
                       <div className="bg-dragon-red/5 p-4 rounded border border-dragon-red/20 flex flex-col items-center justify-center space-y-2 group cursor-pointer hover:bg-dragon-red/10 transition-all shadow-sm"
                            onClick={() => setIsCharacterSpellbookOpen(true)}>
-                         <GameIcon path={ARCANE_CODEX_ICONS.book} size={24} color="#8B0000" className="group-hover:scale-110 transition-transform" />
+                         <GameIcon name="book" size={24} color="#8B0000" className="group-hover:scale-110 transition-transform" />
                          <span className="text-[9px] font-black text-dragon-red uppercase tracking-widest">Study Spellbook</span>
                       </div>
                    </div>
@@ -1218,7 +1223,7 @@ export const CharacterProfile: React.FC = () => {
                               }}
                               className="text-[9px] font-black text-dragon-red hover:text-dragon-darkRed uppercase tracking-widest flex items-center gap-1.5"
                             >
-                               <GameIcon path={ARCANE_CODEX_ICONS.sparkles} size={12} />
+                               <GameIcon name="sparkles" size={12} />
                                Long Rest
                             </button>
                          </div>
@@ -1257,7 +1262,7 @@ export const CharacterProfile: React.FC = () => {
                          {/* Prepared Spells */}
                          <div className="space-y-4">
                             <div className="flex items-center gap-3">
-                               <GameIcon path={ARCANE_CODEX_ICONS.scroll} size={16} color="#8B0000" />
+                               <GameIcon name="scroll" size={16} color="#8B0000" />
                                <h3 className="text-[11px] font-black text-dragon-darkRed uppercase tracking-widest">Memorized_Lexicon</h3>
                                <div className="h-px flex-1 bg-gradient-to-r from-dragon-red/20 to-transparent" />
                                <span className="text-[9px] font-black text-parchment-400 uppercase tracking-widest">{character.preparedSpells?.length ?? 0} Active</span>
@@ -1281,7 +1286,7 @@ export const CharacterProfile: React.FC = () => {
                                  })
                                ) : (
                                   <div className="flex flex-col items-center justify-center py-12 opacity-30 space-y-3">
-                                     <GameIcon path={ARCANE_CODEX_ICONS.book} size={24} />
+                                     <GameIcon name="book" size={24} />
                                      <span className="text-[10px] font-black uppercase tracking-widest">No Spells Prepared</span>
                                   </div>
                                )}
@@ -1515,9 +1520,9 @@ const ActionRow: React.FC<{
 }> = ({ name, type, range, hitBonus, damage, damageType, icon }) => {
   const getDamageIcon = (type: string): string => {
     const t = type.toLowerCase();
-    if (t.includes('pierce')) return CORE_ICONS.weapon; 
-    if (t.includes('slash')) return CORE_ICONS.weapon; 
-    if (t.includes('bludgeon')) return CORE_ICONS.hammer;
+    if (t.includes('pierce')) return "weapon"; 
+    if (t.includes('slash')) return "weapon"; 
+    if (t.includes('bludgeon')) return ATTACK_ICONS.hammer;
     return ARCANE_CODEX_ICONS.sparkles;
   };
 
@@ -1525,7 +1530,7 @@ const ActionRow: React.FC<{
     <div className="grid grid-cols-[1fr_80px_60px_80px] items-center py-2 px-1 border-b border-parchment-200/50 hover:bg-parchment-200/20 transition-colors">
       <div className="flex items-center gap-2">
         <div className="relative">
-          <GameIcon path={ARCANE_CODEX_ICONS.sparkles} size={12} color="#8B0000" className="absolute -top-1.5 -left-1.5 opacity-40" />
+          <GameIcon name="sparkles" size={12} color="#8B0000" className="absolute -top-1.5 -left-1.5 opacity-40" />
           <GameIcon path={icon} size={16} color="#4A4A4A" className="relative z-10" />
         </div>
         <div className="flex flex-col min-w-0">
@@ -1594,7 +1599,7 @@ const HeaderField: React.FC<{ label: string; value: string; icon: any }> = ({ la
 
 const VerticalStat: React.FC<{ label: string; value: number; abbr: string; icon: string; isModified?: boolean; onClick?: () => void }> = ({ label, value, abbr, icon, isModified, onClick }) => {
   const mod = Math.floor((value - 10) / 2);
-  const customIconPath = abilityScoreIcons[abbr.toLowerCase()];
+  const customIconPath = ABILITY_SCORE_ICONS[abbr.toLowerCase()];
 
   return (
     <button 
@@ -1644,7 +1649,7 @@ const VerticalStat: React.FC<{ label: string; value: number; abbr: string; icon:
 const CurrencyPin: React.FC<{ type: string; value: number; color: string; pulse?: boolean }> = ({ type, value, color, pulse }) => (
   <div className="bg-white/60 px-2 py-1.5 rounded-sm border border-dragon-red/5 flex flex-col items-center">
     <div className="flex items-center gap-1">
-       <GameIcon path={CORE_ICONS.coins} size={8} color={color} className={cn(pulse && "animate-pulse")} />
+       <GameIcon name="coins" size={8} color={color} className={cn(pulse && "animate-pulse")} />
        <span className="text-[6px] font-black text-parchment-600 uppercase">{type}</span>
     </div>
     <span className={cn("text-[9px] font-black tabular-nums transition-colors", pulse && "animate-pulse")} style={{ color }}>{value}</span>

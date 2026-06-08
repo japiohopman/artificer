@@ -9,6 +9,7 @@ import { useStore } from '../store/useStore';
 import { renderNameValue, getOrdinal } from '../lib/dataUtils';
 import { GameIcon, GameIconName } from '../game_icons';
 import { CORE_ICONS } from '../assets/icons/core';
+import { UI_ICONS } from '../assets/icons/ui';
 import { ARCANE_CODEX_ICONS } from '../assets/icons/arcane_codex';
 
 interface SpellCardProps {
@@ -63,13 +64,13 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
                 }}
                 className="mt-1 self-start flex items-center gap-1 px-2 py-0.5 bg-dragon-gold text-white text-[9px] font-black uppercase rounded shadow-sm hover:scale-105 active:scale-95 transition-all animate-pulse"
               >
-                <GameIcon path={ARCANE_CODEX_ICONS.book} size={10} color="currentColor" />
+                <GameIcon name="book" size={10} color="currentColor" />
                 Learn Spell
               </button>
             )}
             {isKnown && (
               <div className="mt-1 self-start flex items-center gap-1 text-dragon-gold text-[8px] font-black uppercase tracking-tighter italic opacity-60">
-                <GameIcon path={CORE_ICONS.check} size={10} color="currentColor" />
+                <GameIcon name="check" size={10} color="currentColor" />
                 In Spellbook
               </div>
             )}
@@ -90,7 +91,7 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
         <InfoBlock iconPath={ARCANE_CODEX_ICONS.speed} label="Casting Time" value={spell.casting_time} />
         <InfoBlock iconPath={ARCANE_CODEX_ICONS.target} label="Range" value={spell.range} />
         <InfoBlock iconPath={ARCANE_CODEX_ICONS.sparkles} label="Components" value={spell.components?.join(', ') + (spell.material ? '*' : '')} tooltip={spell.material} />
-        <InfoBlock iconPath={CORE_ICONS.loading} label="Duration" value={(spell.concentration ? 'Conc. ' : '') + spell.duration} />
+        <InfoBlock iconPath={UI_ICONS.loading} label="Duration" value={(spell.concentration ? 'Conc. ' : '') + spell.duration} />
       </div>
 
       {/* Image / Illustration */}
@@ -105,7 +106,7 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
           </div>
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center text-parchment-300">
-            <GameIcon path={ARCANE_CODEX_ICONS.book} size={48} color="currentColor" className="opacity-20 animate-pulse-slow" />
+            <GameIcon name="book" size={48} color="currentColor" className="opacity-20 animate-pulse-slow" />
             <span className="text-[10px] uppercase font-bold tracking-widest mt-2">Arcane Pattern</span>
           </div>
         )}

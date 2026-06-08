@@ -1,0 +1,18 @@
+export const BACKGROUND_ICONS = {
+  acolyte: "",
+  artisan: "",
+  charlatan: "",
+  criminal: "",
+  entertainer: "",
+  farmer: "",
+  guard: "",
+  guide: "",
+  hermit: "",
+  merchant: "",
+  noble: "",
+  sage: "",
+  sailor: "",
+  scribe: "",
+  soldier: "",
+  wayfarer: "",
+};

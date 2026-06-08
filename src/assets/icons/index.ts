@@ -14,9 +14,17 @@ import { LOGISTICS_ICONS } from './logistics';
 import { POUCH_ICONS } from './pouch';
 import { ARCANE_CODEX_ICONS } from './arcane_codex';
 import { ATLAS_ICONS } from './atlas';
-import { fightingStyleIcons } from './fighting_styles';
-import { abilityScoreIcons } from './ability_score';
-import { skillIcons } from './skill';
+import { FIGHTING_STYLE_ICONS } from './fighting_styles';
+import { ABILITY_SCORE_ICONS } from './ability_score';
+import { SKILL_ICONS } from './skill';
+import { FEAT_ICONS } from './feats';
+import { FEATURE_ICONS } from './features';
+import { TRAIT_ICONS } from './traits';
+import { MAGIC_SCHOOL_ICONS } from './magic_schools';
+import { ALIGNMENT_ICONS } from './alignments';
+import { LANGUAGE_ICONS } from './languages';
+import { BACKGROUND_ICONS } from './backgrounds';
+import { PROFICIENCY_ICONS } from './proficiencies';
 
 /**
  * @deprecated Use tactical imports from specific icon files instead of ALL_ICONS
@@ -39,9 +47,17 @@ export const ALL_ICONS = {
   ...POUCH_ICONS,
   ...ARCANE_CODEX_ICONS,
   ...ATLAS_ICONS,
-  ...fightingStyleIcons,
-  ...abilityScoreIcons,
-  ...skillIcons,
+  ...FIGHTING_STYLE_ICONS,
+  ...ABILITY_SCORE_ICONS,
+  ...SKILL_ICONS,
+  ...FEAT_ICONS,
+  ...FEATURE_ICONS,
+  ...TRAIT_ICONS,
+  ...MAGIC_SCHOOL_ICONS,
+  ...ALIGNMENT_ICONS,
+  ...LANGUAGE_ICONS,
+  ...BACKGROUND_ICONS,
+  ...PROFICIENCY_ICONS,
 };
 
 export {
@@ -61,7 +77,15 @@ export {
   POUCH_ICONS,
   ARCANE_CODEX_ICONS,
   ATLAS_ICONS,
-  fightingStyleIcons,
-  abilityScoreIcons,
-  skillIcons,
+  FIGHTING_STYLE_ICONS,
+  ABILITY_SCORE_ICONS,
+  SKILL_ICONS,
+  FEAT_ICONS,
+  FEATURE_ICONS,
+  TRAIT_ICONS,
+  MAGIC_SCHOOL_ICONS,
+  ALIGNMENT_ICONS,
+  LANGUAGE_ICONS,
+  BACKGROUND_ICONS,
+  PROFICIENCY_ICONS,
 };

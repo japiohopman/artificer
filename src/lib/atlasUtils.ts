@@ -125,3 +125,38 @@ export function getFeatureIcon(index: string, name: string): string {
   // Exact matches for index or normalized name
   return lowerIndex;
 }
+
+export function getTraitIcon(index: string): string {
+  if (!index) return 'award';
+  return index.toLowerCase().replace(/-/g, '_');
+}
+
+export function getFeatIcon(index: string): string {
+  if (!index) return 'award';
+  return index.toLowerCase().replace(/-/g, '_');
+}
+
+export function getMagicSchoolIcon(index: string): string {
+  if (!index) return 'award';
+  return index.toLowerCase().replace(/-/g, '_');
+}
+
+export function getLanguageIcon(index: string): string {
+  if (!index) return 'award';
+  return index.toLowerCase().replace(/-/g, '_');
+}
+
+export function getAlignmentIcon(index: string): string {
+  if (!index) return 'award';
+  return index.toLowerCase().replace(/-/g, '_');
+}
+
+export function getBackgroundIcon(index: string): string {
+  if (!index) return 'award';
+  return index.toLowerCase().replace(/-/g, '_');
+}
+
+export function getProficiencyIcon(index: string): string {
+  if (!index) return 'award';
+  return index.toLowerCase().replace(/-/g, '_');
+}
