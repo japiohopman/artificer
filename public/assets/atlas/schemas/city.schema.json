@@ -169,9 +169,5 @@
       "type": "array",
       "items": { "type": "string" }
     },
-    "updated_at": {
-      "type": "string",
-      "format": "date-time"
-    }
   }
 }
