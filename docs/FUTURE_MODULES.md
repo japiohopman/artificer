@@ -16,6 +16,9 @@ This document outlines the architecture for missing core modules in the Artifice
     - Global reputation scores for major organizations (The Harpers, Zhentarim, Lords' Alliance).
     - Tracks "World Flags" (e.g., `is_waterdeep_under_siege: true`).
 
+### 🏗️ Architecture:
+- **Store Slicing**: Integrated into the `useWorldStore` slice of the global state, ensuring that world-wide updates (like time or weather) don't trigger unnecessary re-renders of character-specific components.
+
 ### 🤖 Token Optimization:
 - **Status Codes**: Instead of describing the world in text, the LLM receives a compressed "World Pulse" (e.g., `W:WDT,T:0800,E:Sunny,F:Z:3`).
 
@@ -29,7 +32,7 @@ This document outlines the architecture for missing core modules in the Artifice
 - **Interaction Log**: Stores a summarized "Memory Index" of past conversations.
     - *Short-term*: Full transcript of the current session.
     - *Long-term*: Bulleted list of key takeaways (e.g., "Player lied about the relic").
-- **Persona Context**: Dynamic traits that emerge during play (e.g., "Now suspicious of Elves").
+- **Persona Context**: Powered by `src/services/ai/npcService.ts`, it maintains dynamic traits that emerge during play (e.g., "Now suspicious of Elves").
 
 ### 🤖 Token Optimization:
 - **Pointer Referencing**: The AI only receives the NPC's `atlas_id`. If the AI needs to "remember" something, it calls `get_npc_memory(id)`.
@@ -61,8 +64,55 @@ This document outlines the architecture for missing core modules in the Artifice
 
 ---
 
-## 5. 🏗️ AI Memory Cache & Context Strategy
+## 5. ⚔️ Tactical Combat Engine (`combat_engine.tsx`)
+**Purpose**: Transitions the experience from "Card Simulator" to a tactical D&D battle interface.
+
+### 🧩 Key Systems:
+- **Grid-Based Movement**: Top-down maps with token management, collision detection, and line-of-sight.
+- **Initiative Tracker**: Dynamic turn-order management for players, NPCs, and lair actions.
+- **AOE & Spatial Logic**: Precise mechanical resolution for cones, spheres, and lines (e.g., *Fireball* or *Lightning Bolt*).
+- **AI Combat Logic**: AI-orchestrated enemy tactics based on their stat block (e.g., "Pack Tactics" for wolves).
+
+### 🤖 Token Optimization:
+- **Combat Snapshots**: Instead of sending full grid coordinates, the AI receives a "Tactical Summary" (e.g., `P1:Adjacent(E1),E1:LowHP,E2:Cover(Half)`).
+
+---
+
+## 6. ⚖️ Economic & Trade Module (`economy_manager.tsx`)
+**Purpose**: Manages the flow of gold, goods, and regional scarcity.
+
+### 🧩 Key Systems:
+- **Regional Pricing**: Dynamic price scaling for equipment and materials based on location (e.g., higher prices for armor in war-torn regions).
+- **Merchant Inventory**: Integration with the **Inventory V2 Registry** to handle stock rotation, buying, and selling.
+- **Crafting & Materials**: Mechanical support for gathering and using materials defined in `shop_archetypes.json`.
+
+---
+
+## 7. 🔊 Soundscape Orchestrator (`soundscape_engine.tsx`)
+**Purpose**: Deepens immersion by synchronizing audio with the AI-driven narrative.
+
+### 🧩 Key Systems:
+- **Mood-Based Transitions**: AI-requested shifts in background music via `src/services/soundService.ts` based on narrative tension.
+- **Ambient Layering**: Dynamic mixing of environmental sounds (e.g., rain, tavern bustle, eerie silence).
+- **Skeuomorphic Audio**: Physics-based SFX for dice rolls, coin flips, and page turns.
+
+---
+
+## 8. 📜 Rule Engine & Condition Tracker (`rule_engine.tsx`)
+**Purpose**: Ensures mechanical consistency with D&D 5.5e rules.
+
+### 🧩 Key Systems:
+- **Condition Management**: Automated tracking and application of mechanical penalties/bonuses for conditions like *Exhausted*, *Poisoned*, or *Restrained*.
+- **Passive Skill Resolution**: Background monitoring of passive Perception, Insight, and Investigation.
+- **Rest & Recovery**: Mechanical resolution of Short and Long Rests, including hit dice recovery and spell slot replenishment.
+
+---
+
+## 9. 🏗️ AI Memory Cache & Context Strategy
 The core challenge is maintaining a complex world state without exceeding the LLM's context window or wasting tokens.
+
+### 🛡️ Store Slicing & Scalability
+- **Architectural Shift**: To maintain performance as these modules are implemented, the global Zustand store is split into specialized slices: `useCharacterStore`, `useInventoryStore`, and `useWorldStore`. This prevents "God Store" bloat and optimizes re-render cycles.
 
 ### 🛡️ Context Distillation (The "Funnel" Method)
 Instead of sending the entire game state, the system uses a tiered approach:
@@ -81,8 +131,16 @@ When discussing an item like a "Sunblade," the system sends the AI: `[ITEM_REF:s
 
 ---
 
-## 📂 Implementation Roadmap
-1.  **Sprint 1**: Refactor `useStore.ts` to include `worldState` and `campaignJournal` slices.
-2.  **Sprint 2**: Create `Journal.tsx` component to visualize the recap logs.
-3.  **Sprint 3**: Implement basic `AtlasMap.tsx` using `public/assets/atlas/world` images.
-4.  **Sprint 4**: Connect Gemini API to the Tool-Calling pipeline.
+## 10. 📂 Implementation Roadmap
+1.  **Sprint 1: Core Foundations**
+    - Refactor `useStore.ts` into specialized slices (`useCharacterStore`, `useInventoryStore`, `useWorldStore`).
+    - Implement `worldState` and `campaignJournal` slices.
+2.  **Sprint 2: Narrative & Persistence**
+    - Create `Journal.tsx` component to visualize the recap logs and quest trackers.
+    - Implement the **Rule Engine** for basic condition tracking.
+3.  **Sprint 3: Spatial & Tactical**
+    - Implement basic `AtlasMap.tsx` using `public/assets/atlas/world` images.
+    - Develop the **Tactical Combat Engine** prototype (grid movement and initiative).
+4.  **Sprint 4: Intelligence & Immersion**
+    - Connect Gemini API to the Tool-Calling pipeline.
+    - Implement the **Soundscape Orchestrator** for AI-driven audio.
