@@ -73,7 +73,7 @@
   ],
   "image": "/assets/atlas/enemies/weasel.webp",
   "url": "/assets/atlas/enemies/json/weasel.json",
-  "updated_at": "2026-06-08T14:42:26.715Z",
+  "updated_at": "2026-06-08T14:42:40.968Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
@@ -87,6 +87,7 @@
     "wis": 12,
     "cha": 3
   },
-  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fimages%2Fweasel.webp%3Ft%3D1780929742949",
-  "last_updated": "8-6-2026"
+  "imageUrl": "/assets/atlas/enemies/images/weasel.webp",
+  "last_updated": "8-6-2026",
+  "background_type": "land_urban3"
 }
