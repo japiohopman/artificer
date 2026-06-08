@@ -6,6 +6,10 @@ The `soundService.ts` manages the atmospheric soundscape of Artificer. It suppor
 ## Owner
 Sound Agent
 
+## Resources
+- [Audio Registry](../systems/AUDIO_REGISTRY.md) - Complete index of audio assets.
+- [Audio Requests](../reports/AUDIO_REQUESTS.md) - Missing assets and roadmap.
+
 ## Dependencies
 - `AudioLayer` type definitions
 - `useStore.ts` (for volume and mute state)

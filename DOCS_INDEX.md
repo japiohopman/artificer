@@ -8,6 +8,7 @@ Welcome to the central documentation index for the Artificer project. This file 
 - **[Task Board](./docs/TASK_BOARD.md)** - Current tasks and project status.
 - **[Architecture](./docs/modules/atlasService.md)** - Technical overview of the Atlas Service.
 - **[Sound System](./docs/modules/soundService.md)** - Documentation for the audio engine.
+- **[Audio Registry](./docs/systems/AUDIO_REGISTRY.md)** - Index of all sound assets.
 - **[Dice & Chat](./docs/modules/dice_system.md)** - 3D Dice and AI Chat documentation.
 - **[Deep Dive Report](./docs/reports/DEEP_DIVE_RAPPORT.md)** - Analysis of Classes, Leveling, and Character Creation.
 - **[Optimization Strategy](./docs/reports/OPTIMALISATIE_ADVIES.md)** - Evaluation of system optimality and scaling advice.
