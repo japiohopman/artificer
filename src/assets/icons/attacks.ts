@@ -49,11 +49,4 @@ export const ATTACK_ICONS = {
   ram: "",
   talons: "",
   web: "",
-  sneak_attack: "",
-  uncanny_dodge: "",
-  cunning_action: "",
-  second_wind: "",
-  action_surge: "",
-  dual_personalities: "",
-  expertise: "",
 };
