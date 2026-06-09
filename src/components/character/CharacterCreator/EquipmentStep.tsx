@@ -9,7 +9,7 @@ import {
 } from '../../../services/storageService';
 import { atlasService } from '../../../services/atlasService';
 import { EquipmentDoll } from '../EquipmentDoll';
-import { ChromaKeyImage } from '../../ChromaKeyImage';
+import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
 import { GameIcon } from '../../../game_icons';
 
 const ITEM_BACKGROUND = "https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1775921630292-back_item_slug.webp";

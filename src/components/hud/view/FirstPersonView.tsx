@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { useStore } from '../../../store/useStore';
-import { NPCDisplay } from '../NPCDisplay';
+import { NPCDisplay } from './NPCDisplay';
 
 interface FirstPersonViewProps {
   selectedArch?: string;

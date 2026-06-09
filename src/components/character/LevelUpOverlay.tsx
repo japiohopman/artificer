@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useStore } from '../../store/useStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
-import { ChromaKeyImage } from '../ChromaKeyImage';
+import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { normalizeImageUrl } from '../../services/storageService';
 import { extractOptionsFromFeature, getChoiceLimit, FeatureOption, getFeatureIcon, getAlignmentIcon, getTraitIcon, getFeatIcon , getMagicSchoolIcon, getLanguageIcon, getBackgroundIcon, getProficiencyIcon, getAttackIcon } from '../../lib/atlasUtils';
 import { soundService } from '../../services/soundService';

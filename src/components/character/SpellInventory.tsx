@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStore } from '../../store/useStore';
-import { SpellCard } from '../SpellCard';
+import { SpellCard } from '../atlas/SpellCard';
 import { cn } from '../../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
 import { renderNameValue } from '../../lib/dataUtils';

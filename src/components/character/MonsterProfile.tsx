@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDAndD } from '@fortawesome/free-brands-svg-icons';
 import { useStore } from '../../store/useStore';
 import { GameIcon } from '../../game_icons';
-import { ChromaKeyImage } from '../ChromaKeyImage';
+import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { cn } from '../../lib/utils';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { DiceText } from '../DiceText';
+import { DiceText } from '../dice/DiceText';
 import { normalizeImageUrl } from '../../services/storageService';
 
 export const MonsterProfile: React.FC = () => {

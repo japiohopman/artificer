@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Character, useStore } from '../../../store/useStore';
 import { cn } from '../../../lib/utils';
 import { GameIcon, GameIconName } from '../../../game_icons';
-import { ChromaKeyImage } from '../../ChromaKeyImage';
+import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
 import { generateNPCImages } from '../../../services/ai/npcService';
 import { NPCChoiceResolver, ResolvedItem } from '../../../lib/npcChoiceResolver';
 import { soundService } from '../../../services/soundService';
