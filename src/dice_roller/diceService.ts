@@ -47,10 +47,10 @@ class DiceService {
           return this.init(containerArg);
         }
 
+        this.initialized = false;
         this.diceBox = new DiceBox({
           container: selector,
-          assetPath: "/assets/dice-box/",
-          origin: window.location.origin,
+          assetPath: "/assets/",
           theme: "default",
           offscreen: false,
           scale: 6,
@@ -81,7 +81,7 @@ class DiceService {
         // Check if canvas was created
         const canvas = containerElement.querySelector('canvas');
         if (canvas) {
-          console.log("[DiceService] Canvas element found and sized:", canvas);
+          console.log("[DiceService] Canvas element found and sized");
           canvas.style.pointerEvents = 'none'; 
           canvas.style.visibility = 'visible';
           canvas.style.opacity = '1';
