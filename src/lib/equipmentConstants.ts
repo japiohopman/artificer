@@ -21,7 +21,7 @@ export interface SlotDefinition {
 
 export const EQUIPMENT_SLOTS: Record<EquipmentSlotId, SlotDefinition> = {
   'head': { id: 'head', label: 'Head', icon: Circle, gameIcon: 'head' },
-  'neck': { id: 'neck', label: 'Neck', icon: Gem, gameIcon: 'neckles' },
+  'neck': { id: 'neck', label: 'Neck', icon: Gem, gameIcon: 'necklace' },
   'chest': { id: 'chest', label: 'Chest', icon: Shirt, gameIcon: 'chest' },
   'back': { id: 'back', label: 'Back', icon: Ghost, gameIcon: 'cloak' },
   'main_hand': { id: 'main_hand', label: 'Main', icon: Sword, gameIcon: 'weapon' },

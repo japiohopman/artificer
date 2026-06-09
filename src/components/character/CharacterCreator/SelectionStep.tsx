@@ -9,6 +9,7 @@ import {
   fetchBackgroundData, fetchAlignmentData,
   fetchSubraceData, fetchTraitData, fetchWikiAsset
 } from '../../../services/storageService';
+import { getTraitIcon, getProficiencyIcon } from '../../../lib/atlasUtils';
 
 const CATEGORY_ICONS: Record<string, any> = {
     // Classes

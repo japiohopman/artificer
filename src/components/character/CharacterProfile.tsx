@@ -804,16 +804,11 @@ export const CharacterProfile: React.FC = () => {
                                     "w-1.5 h-1.5 rounded-full shrink-0",
                                     isProficient ? "bg-dragon-red shadow-[0_0_5px_rgba(139,0,0,0.3)]" : "bg-parchment-300"
                                   )} />
-                                  {(() => {
-                                    const skillKey = skill.name.toLowerCase().replace(/\s+/g, '_');
-                                  <GameIcon name={skillKey} size={16} color={isProficient ? "#8B0000" : "#D4AF37"} />
-                                    if (!iconPath) return null;
-                                    return (
-                                      <svg viewBox="0 0 512 512" className={cn("w-4 h-4 shrink-0", isProficient ? "fill-dragon-red" : "fill-parchment-300")}>
-                                        <path d={iconPath} />
-                                      </svg>
-                                    );
-                                  })()}
+                                  <GameIcon 
+                                    name={skill.name.toLowerCase().replace(/\s+/g, '_') as any} 
+                                    size={16} 
+                                    color={isProficient ? "#8B0000" : "#D4AF37"} 
+                                  />
                                   <div className="flex flex-col min-w-0">
                                     <span className={cn(
                                       "text-[9px] font-black uppercase tracking-widest leading-none",
@@ -1033,7 +1028,7 @@ export const CharacterProfile: React.FC = () => {
                                           setInspectingItem({ item: itemAtSlot, sourceId: character.id, slot });
                                       }
                                    }} 
-                                   alignment={<><GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={20} color="currentColor" fallbackName="award" /> {character.alignment || "Neutral"}</>}
+                                   alignment={character.alignment || "Neutral"}
                                    characterImageUrl={character.imageUrl}
                                  />
                               </div>
@@ -1116,11 +1111,13 @@ export const CharacterProfile: React.FC = () => {
                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Traits</h3>
                           </div>
                           <div className="grid grid-cols-1 gap-2">
-                            <div className="flex flex-wrap gap-2 mb-4">{character.traits?.map((trait, i) => (
-                              <div key={`trait-${i}`} className="bg-white/40 p-3 rounded border border-dragon-red/5 shadow-sm italic text-[10px]">
-                                <GameIcon name={getTraitIcon(trait)} size={12} color="#8B0000" fallbackName="award" /> "{trait}"
-                               </div>
-                            ))}
+                            <div className="flex flex-wrap gap-2 mb-4">
+                              {character.traits?.map((trait, i) => (
+                                <div key={`trait-${i}`} className="bg-white/40 p-3 rounded border border-dragon-red/5 shadow-sm italic text-[10px]">
+                                  <GameIcon name={getTraitIcon(trait)} size={12} color="#8B0000" fallbackName="award" /> "{trait}"
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         </div>
 
@@ -1594,7 +1591,10 @@ const HeaderField: React.FC<{ label: string; value: string; icon: any }> = ({ la
 );
 
 const VerticalStat: React.FC<{ label: string; value: number; abbr: string; icon: string; isModified?: boolean; onClick?: () => void }> = ({ label, value, abbr, icon, isModified, onClick }) => {
-       <GameIcon name={abbr.toLowerCase()} size={18} color="#8B0000" />
+  const mod = Math.floor((value - 10) / 2);
+  return (
+    <button 
+      onClick={onClick}
       className={cn(
         "flex items-center gap-4 py-3 px-3 border border-dragon-red/5 rounded-sm group transition-all text-left w-full active:scale-[0.98]",
         isModified ? "bg-dragon-red/5 border-dragon-red/20 shadow-[0_0_15px_rgba(139,0,0,0.1)]" : "bg-white/40 hover:bg-white/60"
@@ -1603,13 +1603,7 @@ const VerticalStat: React.FC<{ label: string; value: number; abbr: string; icon:
          "w-10 h-10 flex items-center justify-center transition-opacity shrink-0 rounded-full",
          isModified ? "bg-dragon-red/10 opacity-100 shadow-[0_0_8px_rgba(139,0,0,0.2)]" : "bg-dragon-red/5 opacity-60 group-hover:opacity-100"
        )}>
-          {customIconPath ? (
-            <svg viewBox="0 0 512 512" className={cn("w-6 h-6 fill-[#8B0000]", isModified && "animate-pulse")}>
-              <path d={customIconPath} />
-            </svg>
-          ) : (
-            <GameIcon name={icon as any} size={18} color="#8B0000" />
-          )}
+          <GameIcon name={icon as any} size={18} color="#8B0000" />
        </div>
        <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between">

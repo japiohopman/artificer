@@ -160,3 +160,15 @@ export function getProficiencyIcon(index: string): string {
   if (!index) return 'award';
   return index.toLowerCase().replace(/-/g, '_');
 }
+
+export function getAttackIcon(name: string): string {
+  if (!name) return 'sword';
+  const n = name.toLowerCase();
+  if (n.includes('bow')) return 'bow';
+  if (n.includes('dagger')) return 'dagger';
+  if (n.includes('staff')) return 'staff';
+  if (n.includes('mace')) return 'mace';
+  if (n.includes('axe')) return 'axe';
+  if (n.includes('hammer')) return 'hammer';
+  return 'sword';
+}
