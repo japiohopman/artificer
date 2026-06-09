@@ -4,12 +4,7 @@
   "size": "Huge",
   "type": "giant",
   "alignment": "neutral",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 126,
   "hit_dice": "11d12",
   "hit_points_roll": "11d12+55",
@@ -73,7 +68,7 @@
     "passive_perception": 14
   },
   "languages": "Giant",
-  "challenge_rating": 7,
+  "challenge_rating": "7",
   "proficiency_bonus": 3,
   "xp": 2900,
   "special_abilities": [
@@ -138,9 +133,21 @@
   ],
   "image": "/assets/atlas/enemies/stone_giant.webp",
   "url": "/assets/atlas/enemies/json/stone_giant.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-09T07:17:28.418Z",
   "forms": [],
   "legendary_actions": [],
   "sprite_index": 14,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet11.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet11.0webp",
+  "stats": {
+    "str": 23,
+    "dex": 15,
+    "con": 20,
+    "int": 10,
+    "wis": 12,
+    "cha": 9
+  },
+  "imageUrl": "/assets/atlas/enemies/images/stone_giant.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "9-6-2026"
 }
