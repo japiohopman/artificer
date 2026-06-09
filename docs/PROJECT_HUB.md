@@ -4,6 +4,7 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 
 ## 📌 Core Documentation
 - [Master Project Goals](../GOALS.md) - 🎯 **The Project's Final Destination.**
+- [Component Map](./COMPONENT_MAP.md) - 🧩 **React Architecture.**
 - [Project Architecture](./modules/atlasService.md)
 - [House Style Guide](./STYLE_GUIDE.md)
 - [Task Board](./TASK_BOARD.md)

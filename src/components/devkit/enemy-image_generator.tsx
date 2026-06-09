@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { generateCodexImage, generateBackgroundImage } from '../../services/ai/imageService';
 import { commitFile } from '../../services/storageService';
 import { cn } from '../../lib/utils';
-import { ChromaKeyImage } from '../ChromaKeyImage';
+import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { GameIcon } from '../../game_icons';
 
 interface EnemyImageGeneratorProps {

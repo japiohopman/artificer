@@ -7,7 +7,7 @@ import { isBookLike } from '../../lib/bookUtils';
 import { useStore } from '../../store/useStore';
 import { normalizeImageUrl } from '../../services/storageService';
 import { GameIcon } from '../../game_icons';
-import { ChromaKeyImage } from '../ChromaKeyImage';
+import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 
 interface DraggableInventoryItemProps {
   item: any;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
-import { ChromaKeyImage } from '../ChromaKeyImage';
+import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { 
   EQUIPMENT_SLOTS, 
   EquipmentSlotId, 

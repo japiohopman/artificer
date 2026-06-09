@@ -5,7 +5,7 @@ import { Inventory } from './Inventory';
 import { PartyInventory } from './PartyInventory';
 import { cn } from '../../lib/utils';
 import { GameIcon, GameIconName } from '../../game_icons';
-import { ChromaKeyImage } from '../ChromaKeyImage';
+import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 
 export const FullInventoryMenu: React.FC = () => {
   const { 

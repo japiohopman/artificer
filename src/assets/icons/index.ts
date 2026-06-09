@@ -24,7 +24,7 @@ import { MAGIC_SCHOOL_ICONS } from './magic_schools';
 import { ALIGNMENT_ICONS } from './alignments';
 import { LANGUAGE_ICONS } from './languages';
 import { BACKGROUND_ICONS } from './backgrounds';
-import { PROFICIENCY_ICONS } from './proficiencies';
+// import { PROFICIENCY_ICONS } from './proficiencies';
 
 /**
  * @deprecated Use tactical imports from specific icon files instead of ALL_ICONS
@@ -57,7 +57,7 @@ export const ALL_ICONS = {
   ...ALIGNMENT_ICONS,
   ...LANGUAGE_ICONS,
   ...BACKGROUND_ICONS,
-  ...PROFICIENCY_ICONS,
+  // ...// PROFICIENCY_ICONS,
 };
 
 export {
@@ -87,5 +87,5 @@ export {
   ALIGNMENT_ICONS,
   LANGUAGE_ICONS,
   BACKGROUND_ICONS,
-  PROFICIENCY_ICONS,
+  // PROFICIENCY_ICONS,
 };
