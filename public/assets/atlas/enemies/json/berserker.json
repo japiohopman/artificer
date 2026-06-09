@@ -5,19 +5,7 @@
   "type": "humanoid",
   "subtype": "any race",
   "alignment": "any chaotic alignment",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 13,
-      "armor": [
-        {
-          "index": "hide_armor",
-          "name": "hide armor",
-          "url": "/assets/atlas/equipment/json/hide_armor.json"
-        }
-      ]
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 67,
   "hit_dice": "9d8",
   "hit_points_roll": "9d8+27",
@@ -39,7 +27,7 @@
     "passive_perception": 10
   },
   "languages": "any one language (usually Common)",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -69,10 +57,20 @@
   ],
   "image": "/assets/atlas/enemies/images/berserker.webp",
   "url": "/assets/atlas/enemies/json/berserker.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-09T07:51:24.498Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 18,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet2.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet2.0webp",
+  "stats": {
+    "str": 16,
+    "dex": 12,
+    "con": 17,
+    "int": 9,
+    "wis": 11,
+    "cha": 9
+  },
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fimages%2Fberserker.webp%3Ft%3D1780991480111",
+  "last_updated": "9-6-2026"
 }
