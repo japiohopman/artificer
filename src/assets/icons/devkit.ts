@@ -1,0 +1,16 @@
+export const DEVKIT_ICONS = {
+  scissors: "",
+  cut: "",
+  copy: "",
+  paste: "",
+  expand: "",
+  collapse: "",
+  resize: "",
+  duplicate: "",
+  move: "",
+  delete: "",
+  save: "",
+  undo: "",
+  redo: "",
+  settings: "",
+};

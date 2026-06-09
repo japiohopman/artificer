@@ -246,7 +246,7 @@ export const CombatActions: React.FC = () => {
             <CombatActionCard 
               key="defender-command"
               name="Command Defender"
-              icon="gear"
+              icon="settings"
               type="Bonus Action"
               range="60 ft"
               hit="Spell"
@@ -303,12 +303,12 @@ export const CombatActions: React.FC = () => {
           <CombatActionCard 
             key="dual-personalities"
             name="Dual Personalities"
-            icon="dual_personalities"
+            icon="fingerprint"
             type="Passive"
             range="Self"
             hit="N/A"
             damage="N/A"
-            damageIcon="dual_personalities"
+            damageIcon="fingerprint"
             cost={0}
             special="Your dual nature grants you unique advantages in and out of combat."
           />
@@ -323,7 +323,7 @@ export const CombatActions: React.FC = () => {
           <CombatActionCard 
             key="archery"
             name="Archery Fighting Style"
-            icon="fighter_fighting_style_archery"
+            icon="fighter_fighting_style"
             type="Passive"
             range="Ranged"
             hit="+2"
@@ -340,7 +340,7 @@ export const CombatActions: React.FC = () => {
           <CombatActionCard 
             key="defense"
             name="Defense Fighting Style"
-            icon="fighter_fighting_style_defense"
+            icon="fighter_fighting_style"
             type="Passive"
             range="Self"
             hit="N/A"
@@ -357,7 +357,7 @@ export const CombatActions: React.FC = () => {
           <CombatActionCard 
             key="gwf"
             name="Great Weapon Fighting"
-            icon="fighter_fighting_style_great_weapon_fighting"
+            icon="fighting_style_great_weapon_fighting"
             type="Passive"
             range="Self"
             hit="N/A"
@@ -373,7 +373,7 @@ export const CombatActions: React.FC = () => {
           <CombatActionCard 
             key="dueling"
             name="Dueling Style"
-            icon="fighter_fighting_style_dueling"
+            icon="fighter_fighting_style"
             type="Passive"
             range="Self"
             hit="N/A"
@@ -389,7 +389,7 @@ export const CombatActions: React.FC = () => {
           <CombatActionCard 
             key="protection"
             name="Protection"
-            icon="fighter_fighting_style_protection"
+            icon="fighting_style_protection"
             type="Reaction"
             range="5 ft"
             hit="Disadv"

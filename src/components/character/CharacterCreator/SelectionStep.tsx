@@ -11,42 +11,6 @@ import {
 } from '../../../services/storageService';
 import { getTraitIcon, getProficiencyIcon } from '../../../lib/atlasUtils';
 
-const CATEGORY_ICONS: Record<string, any> = {
-    // Classes
-    'barbarian': 'barbarian',
-    'bard': 'bard',
-    'cleric': 'cleric',
-    'druid': 'druid',
-    'fighter': 'fighter',
-    'monk': 'monk',
-    'paladin': 'paladin',
-    'ranger': 'ranger',
-    'rogue': 'rogue',
-    'sorcerer': 'sorcerer',
-    'warlock': 'warlock',
-    'wizard': 'wizard',
-    'artificer': 'artificer',
-    // Races
-    'dragonborn': 'dragonborn',
-    'dwarf': 'dwarf',
-    'elf': 'elf',
-    'gnome': 'gnome',
-    'halfling': 'halfling',
-    'human': 'human',
-    'tiefling': 'thiefling',
-    'half-elf': 'half_elf',
-    'half-orc': 'half_orc',
-    'drow': 'elf',
-    'high-elf': 'elf',
-    'wood-elf': 'elf',
-    'hill-dwarf': 'dwarf',
-    'mountain-dwarf': 'dwarf',
-    'lightfoot-halfling': 'halfling',
-    'stout-halfling': 'halfling',
-    'rock-gnome': 'gnome',
-    'forest-gnome': 'gnome'
-};
-
 const STAT_ICONS: Record<string, any> = {
     str: 'str',
     dex: 'dex',
@@ -76,6 +40,7 @@ export const SelectionStep: React.FC<{
   }, [selected]);
 
   const fetchDetail = async (index: string) => {
+    setDetailData(null);
     setLoadingDetail(true);
     let data = null;
     let statsData = null;
@@ -140,11 +105,9 @@ export const SelectionStep: React.FC<{
           {/* List - Grid for all, or sidebar for specific */}
           <div className={cn(
               "overflow-y-auto custom-scrollbar content-start py-2",
-              category === 'backgrounds' ? "w-full md:w-80 grid grid-cols-2 gap-2 pr-2" : "w-14 grid grid-cols-1 gap-1 pr-1 border-r border-dragon-gold/10"
+              category === 'backgrounds' ? "w-full md:w-80 grid grid-cols-2 gap-2 pr-2" : "w-48 grid grid-cols-1 gap-1 pr-1 border-r border-dragon-gold/10"
           )}>
               {items.map(item => {
-                const normalizedKey = item.index.toLowerCase().replace(/_/g, '-');
-                const iconName = CATEGORY_ICONS[normalizedKey] || 'info';
                 const isSelected = selected === item.index;
                 
                 return (
@@ -153,10 +116,10 @@ export const SelectionStep: React.FC<{
                         onClick={() => onSelect(item.index)}
                         title={item.name}
                         className={cn(
-                            "flex items-center justify-center rounded-sm border transition-all relative shrink-0 overflow-hidden",
-                            category === 'backgrounds' ? "w-full h-12 px-3 justify-start bg-white/40" : "w-10 h-10",
+                            "flex items-center rounded-sm border transition-all relative shrink-0 overflow-hidden",
+                            category === 'backgrounds' ? "w-full h-12 px-3 justify-start bg-white/40" : "w-full h-10 px-3 justify-start",
                             isSelected 
-                                ? "bg-dragon-red text-white border-dragon-red shadow-lg scale-105 z-10" 
+                                ? "bg-dragon-red text-white border-dragon-red shadow-lg scale-102 z-10" 
                                 : "bg-white/10 border-dragon-red/5 hover:border-dragon-red/20 text-parchment-950 hover:bg-white/40"
                         )}
                     >
@@ -168,22 +131,17 @@ export const SelectionStep: React.FC<{
                             />
                         )}
 
-                        {category === 'backgrounds' ? (
-                            <div className="flex flex-col items-start overflow-hidden w-full">
-                                <span className={cn(
-                                    "text-[9px] font-black uppercase tracking-widest truncate w-full",
-                                    isSelected ? "text-white" : "text-dragon-darkRed"
-                                )}>
-                                    {item.name}
-                                </span>
-                                {isSelected && <span className="text-[7px] text-white/60 font-medium uppercase tracking-tighter">Selected Path</span>}
-                            </div>
-                        ) : (
-                             <div className="w-6 h-6 flex items-center justify-center">
-                                <GameIcon name={iconName as any} color="currentColor" />
-                             </div>
-                        )}
-                        {isSelected && category !== 'backgrounds' && (
+                        <div className="flex flex-col items-start overflow-hidden w-full">
+                            <span className={cn(
+                                "text-[9px] font-black uppercase tracking-widest truncate w-full",
+                                isSelected ? "text-white" : "text-dragon-darkRed"
+                            )}>
+                                {item.name}
+                            </span>
+                            {isSelected && <span className="text-[7px] text-white/60 font-medium uppercase tracking-tighter">Selected</span>}
+                        </div>
+                        
+                        {isSelected && (
                             <div className="absolute top-0 right-0 w-2 h-2 bg-white rounded-full translate-x-1/3 -translate-y-1/3 shadow-sm border border-dragon-red" />
                         )}
                     </button>
@@ -217,11 +175,6 @@ export const SelectionStep: React.FC<{
                              <div className="flex-1 space-y-6 pt-24">
                                 <div className="space-y-1">
                                     <div className="flex items-center gap-4 justify-center lg:justify-start relative group/header">
-                                        {selected && CATEGORY_ICONS[selected.toLowerCase().replace(/_/g, '-')] && (
-                                            <div className="absolute -left-12 lg:-left-16 top-1/2 -translate-y-[60%] text-dragon-red/5 pointer-events-none group-hover/header:text-dragon-red/10 transition-all duration-700 -z-10 group-hover/header:scale-110">
-                                                <GameIcon name={CATEGORY_ICONS[selected.toLowerCase().replace(/_/g, '-')] as any} size={280} />
-                                            </div>
-                                        )}
                                         <div className="flex items-center gap-6 relative z-10 transition-transform group-hover/header:translate-x-2">
                                             <h3 className="text-7xl font-header font-black text-dragon-darkRed uppercase tracking-[0.05em] drop-shadow-md select-none leading-none">{detailData.name}</h3>
                                         </div>

@@ -1,0 +1,15 @@
+export const WORLD_ATLAS_ICONS = {
+  location: "",
+  city: "",
+  village: "",
+  dungeon: "",
+  cave: "",
+  castle: "",
+  temple: "",
+  landmark: "",
+  region: "",
+  continent: "",
+  quest_location: "",
+  forest: "",
+  mountain: "",
+};
