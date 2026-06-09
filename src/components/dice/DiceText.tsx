@@ -39,9 +39,10 @@ export const DiceText: React.FC<DiceTextProps> = ({ children, iconSize = 10, cla
       if (!part) return null;
 
       // Handle Dice
-      if (part.match(/^\d*d\d+$/i)) {
-        // Use d8 specifically as requested by the user for all dice notations
-        const dicePath = "d8";
+      if (part.match(/^\d*d(\d+)/i)) {
+        const match = part.match(/d(\d+)/i);
+        const dieType = match ? `d${match[1]}` : 'd20';
+        const dicePath = dieType;
         
         return (
           <button 

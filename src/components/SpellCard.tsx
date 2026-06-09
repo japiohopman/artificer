@@ -4,7 +4,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { cn } from '../lib/utils';
 import { ChromaKeyImage } from './ChromaKeyImage';
-import { DiceText } from './DiceText';
+import { DiceText } from './dice/DiceText';
 import { useStore } from '../store/useStore';
 import { renderNameValue, getOrdinal } from '../lib/dataUtils';
 import { GameIcon, GameIconName } from '../game_icons';

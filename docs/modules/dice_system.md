@@ -7,14 +7,14 @@ The Dice System provides both visual (3D) and logical dice rolling capabilities 
 Jules Agent
 
 ## Dependencies
-- `@3d-dice/dice-box`
-- `@3d-dice/dice-roller-parser`
+- `@3d-dice/dice-box`: 3D dice physics engine.
+- `@3d-dice/dice-parser-interface`: Unified interface for parsing and reconciling visual roll results.
 - `src/store/useStore.ts`
-- `public/assets/dice-box/` assets
+- `public/assets/dice-box/`: Standardized asset location for dice themes and textures.
 
 ## Architecture
 ### Dice System
-- **DiceService (`src/dice_roller/diceService.ts`)**: Core logic provider for 3D and background rolls.
+- **DiceService (`src/dice_roller/diceService.ts`)**: Core logic provider for 3D and background rolls. Integrates `DiceParser` for precise result reconciliation.
 - **DiceBoxCanvas (`src/dice_roller/DiceBoxCanvas.tsx`)**: Global React component container for the dice box.
 - **DiceRollOverlay (`src/dice_roller/DiceRollOverlay.tsx`)**: Parchment UI for displaying recent roll results.
 - **Zustand Integration**: `rollDice3D` and `rollDice` actions in the store.
@@ -26,11 +26,11 @@ Jules Agent
 
 ## API
 ### Dice Logic (diceService.ts)
-- `diceService.roll3D(notation, label)`: Triggers a 3D roll.
+- `diceService.roll3D(notation, label, theme)`: Triggers a 3D roll with an optional theme (default, rust, smooth, wooden).
 - `diceService.rollBackground(notation, label)`: Logical roll without animation.
 
 ### Store Integration (useStore.ts)
-- `rollDice3D(notation, label)`: Triggers a 3D roll and updates the `recentRolls` state.
+- `rollDice3D(notation, label, theme)`: Triggers a 3D roll and updates the `recentRolls` state.
 - `rollDice(label, modifier, dieType)`: Fallback/Background roll.
 
 ### Chat Commands
@@ -41,7 +41,7 @@ Jules Agent
 - Mobile touch interaction for dice and chat needs optimization.
 
 ## TODO's
-- [ ] Implement dice themes (colors, materials).
+- [x] Implement dice themes (colors, materials).
 - [ ] Integrate dice sounds with `soundService`.
 - [ ] Gemini AI integration for dynamic NPC conversations.
 - [ ] Context awareness for the AI (character state, lore).

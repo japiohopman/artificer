@@ -8,6 +8,7 @@ export const AdvancedRoller: React.FC = () => {
   const { rollDice3D, isAdvancedRollerOpen, setIsAdvancedRollerOpen } = useStore();
   const [notation, setNotation] = useState('');
   const [advantage, setAdvantage] = useState<'none' | 'adv' | 'dis'>('none');
+  const [selectedTheme, setSelectedTheme] = useState('default');
 
   if (!isAdvancedRollerOpen) return null;
 
@@ -29,7 +30,7 @@ export const AdvancedRoller: React.FC = () => {
         }
     }
 
-    rollDice3D(finalNotation, "Advanced Roll");
+    rollDice3D(finalNotation, "Advanced Roll", selectedTheme);
     setIsAdvancedRollerOpen(false);
   };
 
@@ -45,7 +46,7 @@ export const AdvancedRoller: React.FC = () => {
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-[25000] flex items-center justify-center pointer-events-none">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -53,8 +54,8 @@ export const AdvancedRoller: React.FC = () => {
           className="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-auto"
           aria-hidden="true"
         />
-        
-        <motion.div 
+
+        <motion.div
           initial={{ scale: 0.9, y: 20, opacity: 0 }}
           animate={{ scale: 1, y: 0, opacity: 1 }}
           exit={{ scale: 0.9, y: 20, opacity: 0 }}
@@ -62,15 +63,15 @@ export const AdvancedRoller: React.FC = () => {
         >
           {/* Decorative Background */}
           <div className="absolute inset-0 bg-dragon-red/5 pointer-events-none" />
-          
+
           <div className="relative z-10">
             <div className="flex justify-between items-center mb-6">
               <div className="flex flex-col">
                 <span className="text-[8px] font-black uppercase text-dragon-red tracking-[0.3em] leading-none mb-1">DICE CHAMBER</span>
                 <h3 className="text-sm font-header font-black text-white uppercase tracking-wider">Advanced Roller</h3>
               </div>
-              <button 
-                onClick={() => setIsAdvancedRollerOpen(false)} 
+              <button
+                onClick={() => setIsAdvancedRollerOpen(false)}
                 className="p-2 hover:bg-white/10 rounded-full text-white/40 hover:text-white transition-all"
                 title="Close Roller"
                 aria-label="Close Roller"
@@ -81,7 +82,7 @@ export const AdvancedRoller: React.FC = () => {
 
             <div className="grid grid-cols-4 gap-3 mb-6">
               {[4, 6, 8, 10, 12, 20, 100].map(s => (
-                <button 
+                <button
                   key={s}
                   onClick={() => addDie(s)}
                   title={`Add d${s}`}
@@ -89,18 +90,18 @@ export const AdvancedRoller: React.FC = () => {
                   className="group relative h-14 rounded-xl bg-white/5 border border-white/10 flex flex-col items-center justify-center hover:bg-dragon-red/20 hover:border-dragon-red/50 transition-all active:scale-95 overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  
-                  <GameIcon 
-                    name={s === 100 ? 'd10' : `d${s}`} 
-                    size={32} 
-                    className="text-white/20 group-hover:text-dragon-red/60 group-hover:scale-110 transition-all duration-300" 
+
+                  <GameIcon
+                    name={s === 100 ? 'd10' : `d${s}`}
+                    size={32}
+                    className="text-white/20 group-hover:text-dragon-red/60 group-hover:scale-110 transition-all duration-300"
                   />
-                  
+
                   <span className="absolute bottom-1 text-[9px] font-black text-white/40 group-hover:text-white transition-colors">d{s}</span>
                 </button>
               ))}
-              
-              <button 
+
+              <button
                 onClick={clearNotation}
                 title="Clear Notation"
                 aria-label="Clear Notation"
@@ -111,29 +112,50 @@ export const AdvancedRoller: React.FC = () => {
               </button>
             </div>
 
-            <div className="flex gap-2 mb-6">
-              <button 
-                onClick={() => setAdvantage(advantage === 'adv' ? 'none' : 'adv')}
-                className={cn(
-                  "flex-1 py-2 rounded-lg border text-[10px] font-black uppercase tracking-widest transition-all shadow-sm",
-                  advantage === 'adv' ? "bg-emerald-600 border-emerald-400 text-white shadow-emerald-900/40" : "bg-white/5 border-white/10 text-white/40 hover:bg-white/10"
-                )}
-              >
-                Advantage
-              </button>
-              <button 
-                onClick={() => setAdvantage(advantage === 'dis' ? 'none' : 'dis')}
-                className={cn(
-                  "flex-1 py-2 rounded-lg border text-[10px] font-black uppercase tracking-widest transition-all shadow-sm",
-                  advantage === 'dis' ? "bg-amber-600 border-amber-400 text-white shadow-amber-900/40" : "bg-white/5 border-white/10 text-white/40 hover:bg-white/10"
-                )}
-              >
-                Disadvantage
-              </button>
+            <div className="mb-6">
+              <div className="text-[8px] font-black uppercase text-white/20 mb-2 tracking-widest">Roll Modifier</div>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setAdvantage(advantage === 'adv' ? 'none' : 'adv')}
+                  className={cn(
+                    "flex-1 py-2 rounded-lg border text-[10px] font-black uppercase tracking-widest transition-all shadow-sm",
+                    advantage === 'adv' ? "bg-emerald-600 border-emerald-400 text-white shadow-emerald-900/40" : "bg-white/5 border-white/10 text-white/40 hover:bg-white/10"
+                  )}
+                >
+                  Advantage
+                </button>
+                <button
+                  onClick={() => setAdvantage(advantage === 'dis' ? 'none' : 'dis')}
+                  className={cn(
+                    "flex-1 py-2 rounded-lg border text-[10px] font-black uppercase tracking-widest transition-all shadow-sm",
+                    advantage === 'dis' ? "bg-amber-600 border-amber-400 text-white shadow-amber-900/40" : "bg-white/5 border-white/10 text-white/40 hover:bg-white/10"
+                  )}
+                >
+                  Disadvantage
+                </button>
+              </div>
+            </div>
+
+            <div className="mb-6">
+              <div className="text-[8px] font-black uppercase text-white/20 mb-2 tracking-widest">Dice Theme</div>
+              <div className="grid grid-cols-4 gap-2">
+                {['default', 'rust', 'smooth', 'wooden'].map(t => (
+                  <button
+                    key={t}
+                    onClick={() => setSelectedTheme(t)}
+                    className={cn(
+                      "py-2 rounded-lg border text-[8px] font-black uppercase transition-all",
+                      selectedTheme === t ? "bg-dragon-red border-dragon-red text-white" : "bg-white/5 border-white/10 text-white/40 hover:bg-white/10"
+                    )}
+                  >
+                    {t}
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div className="relative flex items-center bg-black/40 rounded-xl border border-white/10 p-1 group focus-within:border-dragon-red/50 transition-all">
-              <input 
+              <input
                 type="text"
                 value={notation}
                 onChange={(e) => setNotation(e.target.value)}
@@ -142,7 +164,7 @@ export const AdvancedRoller: React.FC = () => {
                 aria-label="Dice Notation"
                 className="w-full bg-transparent py-3 px-4 text-sm font-mono text-white placeholder:text-white/10 focus:outline-none"
               />
-              <button 
+              <button
                 onClick={handleRoll}
                 disabled={!notation.trim()}
                 title="Roll Dice"
@@ -152,7 +174,7 @@ export const AdvancedRoller: React.FC = () => {
                 <GameIcon name="dice" size={20} />
               </button>
             </div>
-            
+
             <p className="mt-4 text-[9px] text-center text-white/20 italic">
               Use standard D&D notation or pick dice above.
             </p>

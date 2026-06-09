@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm';
 import { cn } from '../lib/utils';
 import { isBookLike } from '../lib/bookUtils';
 import { GameIcon, GameIconName } from '../game_icons';
-import { DiceText as DiceTextComponent } from './DiceText';
+import { DiceText as DiceTextComponent } from './dice/DiceText';
 import { ChromaKeyImage } from './ChromaKeyImage';
 import { isMagicUser, generateNpcSpells, inferSpellClass } from '../services/magicService';
 import { BookReader } from './bookreader/BookReader';
