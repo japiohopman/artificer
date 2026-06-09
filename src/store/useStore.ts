@@ -652,7 +652,7 @@ export const useStore = create<AppState>((set, get) => ({
   
   activeCards: [],
   logs: [],
-  isDiceReady: true,
+  isDiceReady: false,
   recentRolls: [],
   levelUpQueue: [],
   classLevelingData: {},
