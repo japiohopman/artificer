@@ -1,14 +1,20 @@
 import React, { useEffect, useRef } from 'react';
 import { diceService } from './diceService';
+import { useStore } from '../store/useStore';
 
 export const DiceBoxCanvas: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const setIsDiceReady = useStore(state => state.setIsDiceReady);
 
   useEffect(() => {
     if (containerRef.current) {
-      diceService.init(containerRef.current);
+      diceService.init('#dice-box-container').then(() => {
+        setIsDiceReady(true);
+      }).catch(err => {
+        console.error("[DiceBoxCanvas] Init failed:", err);
+      });
     }
-  }, []);
+  }, [setIsDiceReady]);
 
   return (
     <div 
