@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useStore } from '../store/useStore';
 import { useBookStore } from '../store/useBookStore';
 import { ChromaKeyImage } from './ChromaKeyImage';
-import { DiceText } from './DiceText';
+import { DiceText } from './dice/DiceText';
 import { GameIcon } from '../game_icons';
 import { BookFocus } from './bookreader/BookFocus';
 import { isBookLike } from '../lib/bookUtils';

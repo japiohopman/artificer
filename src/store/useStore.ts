@@ -317,7 +317,7 @@ interface AppState {
   setMainCharacter: (char: Character) => void;
   reorderCharacters: (startIndex: number, endIndex: number) => void;
   rollDice: (label: string, modifier: number, dieType?: number) => void;
-  rollDice3D: (notation: string, label: string) => Promise<void>;
+  rollDice3D: (notation: string, label: string, theme?: string) => Promise<void>;
   removeRoll: (id: string) => void;
   clearRoll: () => void;
   setIsDiceReady: (isReady: boolean) => void;
@@ -713,10 +713,10 @@ export const useStore = create<AppState>((set, get) => ({
     });
   },
 
-  rollDice3D: async (notation, label) => {
+  rollDice3D: async (notation, label, theme) => {
     const { diceService } = await import('../dice_roller/diceService');
     try {
-      const result = await diceService.roll3D(notation, label);
+      const result = await diceService.roll3D(notation, label, theme);
       set((state) => ({ 
         recentRolls: [result, ...state.recentRolls].slice(0, 5) 
       }));

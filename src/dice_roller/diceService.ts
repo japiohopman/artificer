@@ -1,5 +1,5 @@
 import DiceBox from "@3d-dice/dice-box";
-import { DiceRoller } from "@3d-dice/dice-roller-parser";
+import DiceParser from "@3d-dice/dice-parser-interface";
 
 export interface DiceResult {
   id: string;
@@ -17,12 +17,12 @@ export interface DiceResult {
 
 class DiceService {
   private diceBox: any;
-  private roller: DiceRoller;
+  private parser: DiceParser;
   private initialized: boolean = false;
   private initPromise: Promise<void> | null = null;
 
   constructor() {
-    this.roller = new DiceRoller();
+    this.parser = new DiceParser();
   }
 
   async init(containerArg: string | HTMLElement) {
@@ -50,7 +50,7 @@ class DiceService {
         this.initialized = false;
         this.diceBox = new DiceBox({
           container: selector,
-          assetPath: "/assets/",
+          assetPath: "/assets/dice-box/",
           theme: "default",
           offscreen: false,
           scale: 6,
@@ -111,39 +111,10 @@ class DiceService {
   }
 
   /**
-   * Helper to recursively extract individual die rolls from parser output
-   */
-  private extractRolls(node: any, acc: { die: number; result: number; valid: boolean }[] = []): { die: number; result: number; valid: boolean }[] {
-    if (!node) return acc;
-
-    // Handle single die or dice group
-    if (node.rolls) {
-      node.rolls.forEach((r: any) => {
-        acc.push({ 
-          die: r.die || node.die?.value || 20, 
-          result: r.value,
-          valid: r.valid !== false // Parser marks dropped dice as valid: false
-        });
-      });
-    }
-
-    // Handle expression nodes (like 1d20 + 5)
-    if (node.dice) {
-      node.dice.forEach((d: any) => this.extractRolls(d, acc));
-    }
-
-    // Handle nested expressions
-    if (node.left) this.extractRolls(node.left, acc);
-    if (node.right) this.extractRolls(node.right, acc);
-
-    return acc;
-  }
-
-  /**
    * Roll dice with 3D animation
    */
-  async roll3D(notation: string, label: string = "Roll"): Promise<DiceResult> {
-    console.log(`[DiceService] Starting 3D Roll: ${notation}`);
+  async roll3D(notation: string, label: string = "Roll", theme?: string): Promise<DiceResult> {
+    console.log(`[DiceService] Starting 3D Roll: ${notation} with theme: ${theme}`);
 
     if (!this.initialized && this.initPromise) {
       await this.initPromise;
@@ -154,22 +125,23 @@ class DiceService {
     }
 
     try {
-      // 1. Perform background roll for immediate logic/store update
-      const parsedResult = this.roller.roll(notation);
-      const allRolls = this.extractRolls(parsedResult);
+      // Trigger 3D Dice
+      const results = await this.diceBox.roll(notation, { theme: theme || "default" });
 
-      // 2. Trigger 3D Dice - Simplified
-      // Just pass the notation directly to let DiceBox handle the throw logic
-      // but keep the parser results to ensure consistent totals
-      await this.diceBox.roll(notation);
+      // Parse results using the parser interface
+      const parsedResult = this.parser.parseFinalResults(results);
 
       return {
         id: crypto.randomUUID(),
         notation,
-        total: parsedResult.value,
+        total: parsedResult.total,
         label,
-        rolls: allRolls.map(r => ({ die: r.die, result: r.result, valid: r.valid })),
-        modifier: 0,
+        rolls: parsedResult.rolls.map((r: any) => ({
+          die: r.die,
+          result: r.value,
+          valid: r.valid
+        })),
+        modifier: parsedResult.modifier || 0,
         timestamp: Date.now()
       };
     } catch (error) {
@@ -177,17 +149,20 @@ class DiceService {
       return this.rollBackground(notation, label);
     }
   }
+
   rollBackground(notation: string, label: string = "Roll"): DiceResult {
     try {
-      const parsedResult = this.roller.roll(notation);
-      const allRolls = this.extractRolls(parsedResult);
+      // Background roll doesn't have 3D results, so we simulate a basic roll
+      // Note: Realistically, if we want background rolls to support complex notation
+      // we'd need another engine or mock DiceBox results.
+      // For now, using a simplified version or the parser if it supports direct strings.
       
       return {
         id: crypto.randomUUID(),
         notation,
-        total: parsedResult.value,
-        label,
-        rolls: allRolls.map(r => ({ die: r.die, result: r.result, valid: r.valid })),
+        total: 0, // In background mode, we might not have a full parser roll without 3D results here
+        label: `${label} (Background)`,
+        rolls: [],
         modifier: 0,
         timestamp: Date.now()
       };

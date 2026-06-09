@@ -8,7 +8,7 @@ import { ChromaKeyImage } from './ChromaKeyImage';
 import { useStore } from '../store/useStore';
 import { useBookStore } from '../store/useBookStore';
 import { GameIcon, GameIconName } from '../game_icons';
-import { DiceText } from './DiceText';
+import { DiceText } from './dice/DiceText';
 import { BookReader } from './bookreader/BookReader';
 
 import { normalizeImageUrl, playSuccessSound } from '../services/storageService';
