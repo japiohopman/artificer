@@ -29,9 +29,10 @@ export const DiceText: React.FC<DiceTextProps> = ({ children, iconSize = 10, cla
   const { rollDice3D } = useStore();
 
   const processString = (text: string) => {
-    // Regex matches dice patterns OR any of our damage types
+    // Regex matches dice patterns (including modifiers like +5, kh1, etc) OR any of our damage types
     const types = Object.keys(DAMAGE_TYPE_CONFIG).join('|');
-    const combinedRegex = new RegExp(`(\\d*d\\d+|\\b(?:${types})\\b)`, 'gi');
+    // Improved dice regex to capture modifiers: \d*d\d+(?:[+-]\d+|[a-z]{2}\d+)*
+    const combinedRegex = new RegExp(`(\\d*d\\d+(?:[+-]\\d+|[a-z]{2}\\d+)*|\\b(?:${types})\\b)`, 'gi');
     
     const parts = text.split(combinedRegex);
     
@@ -39,7 +40,7 @@ export const DiceText: React.FC<DiceTextProps> = ({ children, iconSize = 10, cla
       if (!part) return null;
 
       // Handle Dice
-      if (part.match(/^\d*d(\d+)/i)) {
+      if (part.match(/^\d*d\d+/i)) {
         const match = part.match(/d(\d+)/i);
         const dieType = match ? `d${match[1]}` : 'd20';
         const dicePath = dieType;

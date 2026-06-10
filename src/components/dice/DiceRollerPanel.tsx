@@ -139,16 +139,24 @@ export const AdvancedRoller: React.FC = () => {
             <div className="mb-6">
               <div className="text-[8px] font-black uppercase text-white/20 mb-2 tracking-widest">Dice Theme</div>
               <div className="grid grid-cols-4 gap-2">
-                {['default', 'rust', 'smooth', 'wooden'].map(t => (
+                {[
+                  { id: 'default', label: 'Default' },
+                  { id: 'rust', label: 'Rust' },
+                  { id: 'smooth', label: 'Smooth' },
+                  { id: 'wooden', label: 'Wooden' },
+                  { id: 'gemstone', label: 'Gem' },
+                  { id: 'blueGreenMetal', label: 'Metal' },
+                  { id: 'rock', label: 'Rock' }
+                ].map(t => (
                   <button
-                    key={t}
-                    onClick={() => setSelectedTheme(t)}
+                    key={t.id}
+                    onClick={() => setSelectedTheme(t.id)}
                     className={cn(
                       "py-2 rounded-lg border text-[8px] font-black uppercase transition-all",
-                      selectedTheme === t ? "bg-dragon-red border-dragon-red text-white" : "bg-white/5 border-white/10 text-white/40 hover:bg-white/10"
+                      selectedTheme === t.id ? "bg-dragon-red border-dragon-red text-white" : "bg-white/5 border-white/10 text-white/40 hover:bg-white/10"
                     )}
                   >
-                    {t}
+                    {t.label}
                   </button>
                 ))}
               </div>

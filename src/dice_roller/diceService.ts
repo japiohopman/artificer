@@ -1,5 +1,6 @@
 import DiceBox from "@3d-dice/dice-box";
 import DiceParser from "@3d-dice/dice-parser-interface";
+import { DiceRoller } from "@3d-dice/dice-roller-parser";
 
 export interface DiceResult {
   id: string;
@@ -18,11 +19,13 @@ export interface DiceResult {
 class DiceService {
   private diceBox: any;
   private parser: DiceParser;
+  private roller: DiceRoller;
   private initialized: boolean = false;
   private initPromise: Promise<void> | null = null;
 
   constructor() {
     this.parser = new DiceParser();
+    this.roller = new DiceRoller();
   }
 
   async init(containerArg: string | HTMLElement) {
@@ -125,6 +128,9 @@ class DiceService {
     }
 
     try {
+      // Pre-parse the notation to prepare the parser interface
+      this.parser.parseNotation(notation);
+
       // Trigger 3D Dice
       const results = await this.diceBox.roll(notation, { theme: theme || "default" });
 
@@ -152,17 +158,15 @@ class DiceService {
 
   rollBackground(notation: string, label: string = "Roll"): DiceResult {
     try {
-      // Background roll doesn't have 3D results, so we simulate a basic roll
-      // Note: Realistically, if we want background rolls to support complex notation
-      // we'd need another engine or mock DiceBox results.
-      // For now, using a simplified version or the parser if it supports direct strings.
+      const parsedResult = this.roller.roll(notation);
+      const allRolls = this.extractRolls(parsedResult);
       
       return {
         id: crypto.randomUUID(),
         notation,
-        total: 0, // In background mode, we might not have a full parser roll without 3D results here
-        label: `${label} (Background)`,
-        rolls: [],
+        total: parsedResult.value,
+        label,
+        rolls: allRolls.map(r => ({ die: r.die, result: r.result, valid: r.valid })),
         modifier: 0,
         timestamp: Date.now()
       };
