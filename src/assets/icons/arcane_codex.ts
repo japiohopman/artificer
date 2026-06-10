@@ -22,13 +22,5 @@ export const ARCANE_CODEX_ICONS = {
   oils: "",
   raw_materials: "",
   refined_materials: "",
-  abjuration: "",
-  conjuration: "",
-  divination: "",
-  enchantment: "",
-  evocation: "",
-  illusion: "",
-  necromancy: "",
-  transmutation: "",
   box: "",
 };
