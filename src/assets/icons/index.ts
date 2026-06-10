@@ -7,7 +7,7 @@ import { CREATURE_TYPE_ICONS } from './creatures';
 import { DICE_ICONS } from './dice';
 import { CHARACTER_ICONS } from './character';
 import { POUCH_ICONS } from './pouch';
-import { ARCANE_CODEX_ICONS } from './arcane_codex';
+import { MATERIALS_ICONS } from './materials';
 import { WORLD_ATLAS_ICONS } from './world_atlas';
 import { abilityScoreIcons as ABILITY_SCORE_ICONS } from './ability_score';
 import { SKILL_ICONS } from './skill';
@@ -18,7 +18,7 @@ import { MAGIC_SCHOOL_ICONS } from './magic_schools';
 import { ACTION_ICONS } from './actions';
 import { SUBCLASS_ICONS } from './subclasses';
 import { STAT_COMPARISON_ICONS } from './stat_comparison';
-import { DEVKIT_ICONS } from './devkit';
+import { EDITOR_ICONS } from './editor';
 import { MUSICAL_INSTRUMENT_ICONS } from './musical_instruments';
 
 /**
@@ -35,7 +35,7 @@ export const ALL_ICONS = {
   ...DICE_ICONS,
   ...CHARACTER_ICONS,
   ...POUCH_ICONS,
-  ...ARCANE_CODEX_ICONS,
+  ...EDITOR_ICONS,
   ...WORLD_ATLAS_ICONS,
   ...ABILITY_SCORE_ICONS,
   ...SKILL_ICONS,
@@ -46,7 +46,7 @@ export const ALL_ICONS = {
   ...ACTION_ICONS,
   ...SUBCLASS_ICONS,
   ...STAT_COMPARISON_ICONS,
-  ...DEVKIT_ICONS,
+  ...MATERIALS_ICONS,
   ...MUSICAL_INSTRUMENT_ICONS,
 };
 
@@ -60,7 +60,7 @@ export {
   DICE_ICONS,
   CHARACTER_ICONS,
   POUCH_ICONS,
-  ARCANE_CODEX_ICONS,
+  EDITOR_ICONS,
   WORLD_ATLAS_ICONS,
   ABILITY_SCORE_ICONS,
   SKILL_ICONS,
@@ -71,6 +71,6 @@ export {
   ACTION_ICONS,
   SUBCLASS_ICONS,
   STAT_COMPARISON_ICONS,
-  DEVKIT_ICONS,
+  MATERIALS_ICONS,
   MUSICAL_INSTRUMENT_ICONS,
 };
