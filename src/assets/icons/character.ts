@@ -2,6 +2,7 @@ export const CHARACTER_ICONS = {
   ac: "",
   hp: "",
   speed: "",
+  initative: "",
   senses: "",
   languages: "",
   dnd_class: "",
