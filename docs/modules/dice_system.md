@@ -14,9 +14,9 @@ Jules Agent
 
 ## Architecture
 ### Dice System
-- **DiceService (`src/dice_roller/diceService.ts`)**: Core logic provider for 3D and background rolls. Integrates `DiceParser` from `@3d-dice/dice-parser-interface` for precise result reconciliation. It uses `parser.parseNotation()` to initialize the engine before each 3D roll.
+- **DiceService (`src/dice_roller/diceService.ts`)**: Core logic provider for 3D and background rolls. Integrates `DiceParser` from `@3d-dice/dice-parser-interface` for precise result reconciliation and `@3d-dice/dice-roller-parser` for logical background rolls. It uses `parser.parseNotation()` to initialize the engine before each 3D roll.
 - **DiceBoxCanvas (`src/dice_roller/DiceBoxCanvas.tsx`)**: Global React component container for the dice box.
-- **DiceRollOverlay (`src/dice_roller/DiceRollOverlay.tsx`)**: Parchment UI for displaying recent roll results.
+- **DiceRollOverlay (`src/dice_roller/DiceRollOverlay.tsx`)**: Parchment UI for displaying recent roll results. This replaces the legacy `@3d-dice/display-results` addon with a theme-consistent parchment interface.
 - **Zustand Integration**: `rollDice3D` and `rollDice` actions in the store.
 
 ### Chat Interface
@@ -41,11 +41,16 @@ Jules Agent
 - Mobile touch interaction for dice and chat needs optimization.
 
 ## Themes
-Dice themes are loaded as textures from `public/assets/dice-box/themes/`. Each theme folder must contain a `theme.config.json` and the corresponding diffuse/normal maps. Supported themes:
+Dice themes are loaded as textures from `public/assets/dice-box/themes/`. Each theme folder must contain a `theme.config.json` and the corresponding diffuse/normal maps. Themes are sourced from `@3d-dice/dice-themes` and copied to the public directory to ensure accessibility by the BabylonJS engine.
+
+### Supported Themes:
 - **Default**: Classic opaque dice.
 - **Rust**: Weathered metallic look.
 - **Smooth**: Polished, vibrant plastic.
 - **Wooden**: Natural wood grain texture.
+- **Gemstone**: Translucent, crystalline appearance.
+- **Metal**: (blueGreenMetal) Ornate metallic design.
+- **Rock**: Rough, stony texture.
 
 ## TODO's
 - [x] Implement dice themes (colors, materials).
