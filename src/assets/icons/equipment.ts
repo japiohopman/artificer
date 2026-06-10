@@ -14,13 +14,4 @@ export const EQUIPMENT_ICONS = {
   scroll: "",
   staff: "",
   wondrous_items: "",
-  head: "",
-  necklace: "",
-  chest: "",
-  cloak: "",
-  hand: "",
-  boots: "",
-  focus: "",
-  shirt: "",
-  gem: "",
 };
