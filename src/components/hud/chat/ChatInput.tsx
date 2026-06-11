@@ -13,15 +13,15 @@ export const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, onSen
   const { isDiceReady, isAdvancedRollerOpen, setIsAdvancedRollerOpen, chatExpanded, setChatExpanded } = useStore();
 
   return (
-    <div className="p-3 bg-black/40 border-t border-white/10 backdrop-blur-xl">
+    <div className="p-3 bg-parchment-100/40 border-t border-dragon-gold/10 backdrop-blur-xl">
       <div className="relative flex items-center gap-2 group">
         <button
           onClick={() => setChatExpanded(!chatExpanded)}
-          className={`shrink-0 p-2.5 rounded-full transition-all border ${
+          className={`shrink-0 p-2.5 rounded-full transition-all border-2 ${
             chatExpanded
-              ? 'bg-emerald-500 border-emerald-400 text-black shadow-[0_0_15px_rgba(16,185,129,0.5)]' 
-              : 'bg-white/5 border-white/10 text-white/30 hover:bg-white/10'
-          } shadow-lg active:scale-90`}
+              ? 'bg-dragon-red border-dragon-gold text-white shadow-lg' 
+              : 'bg-parchment-200 border-dragon-gold/30 text-dragon-red/40 hover:text-dragon-red hover:bg-parchment-300'
+          } shadow-sm active:scale-90`}
           title={chatExpanded ? "Collapse History" : "Expand History"}
         >
           <GameIcon name={chatExpanded ? "chevron_down" : "chevron_up"} size={16} />
@@ -29,11 +29,11 @@ export const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, onSen
 
         <button
           onClick={() => setIsAdvancedRollerOpen(!isAdvancedRollerOpen)}
-          className={`shrink-0 p-2.5 rounded-full transition-all border ${
+          className={`shrink-0 p-2.5 rounded-full transition-all border-2 ${
             isDiceReady || isAdvancedRollerOpen
-              ? 'bg-amber-500 border-amber-400 text-black shadow-[0_0_15px_rgba(245,158,11,0.5)]' 
-              : 'bg-white/5 border-white/10 text-white/30 hover:bg-white/10'
-          } shadow-lg active:scale-90`}
+              ? 'bg-dragon-gold border-dragon-red text-dragon-darkRed shadow-lg' 
+              : 'bg-parchment-200 border-dragon-gold/30 text-dragon-red/40 hover:text-dragon-red hover:bg-parchment-300'
+          } shadow-sm active:scale-90`}
           title="Toggle Advanced Roller"
           aria-label="Toggle Advanced Roller"
         >
@@ -47,12 +47,12 @@ export const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, onSen
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && onSend()}
             placeholder={placeholder}
-            className="w-full bg-white/5 border border-white/10 rounded-full py-2.5 pl-4 pr-12 text-[10px] font-mono text-white placeholder:text-white/20 focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.07] transition-all shadow-inner"
+            className="w-full bg-parchment-50 border-2 border-dragon-gold/30 rounded-full py-2.5 pl-4 pr-12 text-[10px] font-mono text-dragon-darkRed placeholder:text-dragon-red/20 focus:outline-none focus:border-dragon-red focus:bg-white transition-all shadow-inner"
           />
           <button
             onClick={onSend}
             disabled={!message.trim()}
-            className="absolute right-1.5 p-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 disabled:hover:bg-emerald-600 text-white rounded-full transition-all shadow-lg shadow-emerald-900/40 active:scale-95"
+            className="absolute right-1.5 p-2 bg-dragon-red hover:bg-dragon-darkRed disabled:opacity-50 disabled:hover:bg-dragon-red text-white rounded-full transition-all shadow-lg shadow-dragon-red/40 active:scale-95"
           >
             <GameIcon name="send" size={14} />
           </button>

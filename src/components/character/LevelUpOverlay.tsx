@@ -63,6 +63,7 @@ export const LevelUpOverlay: React.FC = () => {
   const [subclassFeatures, setSubclassFeatures] = useState<any[]>([]);
   
   const character = characters.find(c => c.id === levelUpResult?.characterId);
+  const proficiencyBonus = Math.floor(2 + ((levelUpResult?.newLevel || 1) - 1) / 4);
 
   useEffect(() => {
     if (levelUpResult && character) {
@@ -788,11 +789,7 @@ export const LevelUpOverlay: React.FC = () => {
                                 <div key={stat.id} className="bg-black/5 p-4 rounded-sm flex items-center justify-between group hover:bg-black/10 transition-all border-b border-transparent hover:border-dragon-gold/20">
                                    <div className="flex items-center gap-5">
                                       <div className="w-12 h-12 rounded-full bg-white/40 flex items-center justify-center border border-dragon-gold/5 group-hover:bg-dragon-gold/10 transition-all shrink-0">
-                                         {true ? (
-                                             <GameIcon name={stat.abbr.toLowerCase()} size={24} color="#8B0000" />
-                                         ) : (
-                                           <GameIcon name="award" size={24} color="#4A4A4A" className="opacity-40 group-hover:opacity-100" />
-                                         )}
+                                          <GameIcon name={stat.abbr.toLowerCase() as any} size={24} color="#8B0000" />
                                       </div>
                                       <div>
                                          <div className="text-[10px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-1">{stat.name}</div>

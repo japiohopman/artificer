@@ -26,25 +26,7 @@ export const CharacterPanel: React.FC = () => {
   const [activeTab, setActiveTab] = useState<CharacterTab>('equipment');
 
   const activeCharacter = characters.find(c => c.id === activeCharacterId) || characters[0];
-  const isV2 = activeCharacter.saveVersion === 2;
-  const v2Items = activeCharacter.items || {};
-  const v2Equipment = activeCharacter.equipment;
-
-  // Resolve Equipped Items for Doll
-  const equippedItems = isV2 && v2Equipment
-    ? v2Equipment.slots.reduce((acc, slot) => {
-        if (slot.itemId) {
-          const instance = v2Items[slot.itemId];
-          const imgUrl = `/assets/atlas/equipment/images/${instance.template}.webp`;
-          acc[slot.id] = { 
-            ...instance, 
-            name: instance.template.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-            imageUrl: imgUrl
-          };
-        }
-        return acc;
-      }, {} as Record<string, any>)
-    : activeCharacter.inventory;
+  const inventory = activeCharacter.inventory;
 
   const handleEquip = (slot: EquipmentSlotId) => {
     if (focusedItem?._type === 'equipment') {
@@ -142,9 +124,9 @@ export const CharacterPanel: React.FC = () => {
                 <div className="space-y-6">
                   <div className="flex justify-center">
                     <EquipmentDoll 
-                      equippedItems={equippedItems}
+                      equippedItems={inventory}
                       onSlotClick={(slot) => {
-                        if (equippedItems[slot]) {
+                        if (inventory[slot]) {
                           unequipItem(slot);
                         } else {
                           handleEquip(slot);
@@ -179,7 +161,7 @@ export const CharacterPanel: React.FC = () => {
                   onEquipRequest={(item) => {
                     const slots = Array.isArray(item.slot) ? item.slot : (item.slot ? [item.slot as EquipmentSlotId] : []);
                     // Find first empty slot among allowed slots, or default to first
-                    const targetSlot = slots.find(s => !equippedItems[s]) || slots[0];
+                    const targetSlot = slots.find(s => !inventory[s]) || slots[0];
                     
                     if (targetSlot) {
                       equipItem(item, targetSlot);

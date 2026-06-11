@@ -19,7 +19,13 @@ const DefaultIcon = L.icon({
     shadowSize: [41, 41]
 });
 
-L.Marker.prototype.options.icon = DefaultIcon;
+// @ts-ignore
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: markerIconRetina,
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
 
 const ChangeView = ({ center, zoom }: { center: [number, number], zoom: number }) => {
   const map = useMap();
@@ -27,8 +33,32 @@ const ChangeView = ({ center, zoom }: { center: [number, number], zoom: number }
   return null;
 };
 
+const MapInvalidator = () => {
+  const map = useMap();
+  const { isWorldPanelOpen, isCharacterPanelOpen, isInventoryOpen } = useStore();
+
+  React.useEffect(() => {
+    // During sidebar animation (approx 350-500ms), invalidate multiple times for smoothness
+    const interval = setInterval(() => {
+      map.invalidateSize({ animate: false });
+    }, 50);
+
+    const timer = setTimeout(() => {
+      clearInterval(interval);
+      map.invalidateSize({ animate: true });
+    }, 600);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timer);
+    };
+  }, [map, isWorldPanelOpen, isCharacterPanelOpen, isInventoryOpen]);
+
+  return null;
+};
+
 export const WorldMap: React.FC = () => {
-  const { currentLocation, partyLocation } = useStore();
+  const { partyLocation } = useStore();
   
   // Default center (can be derived from partyLocation or currentSubLocation)
   const defaultCenter: [number, number] = [51.505, -0.09];
@@ -44,6 +74,7 @@ export const WorldMap: React.FC = () => {
         className="w-full h-full grayscale-[0.5] contrast-[1.1] brightness-[0.8]"
         zoomControl={false}
       >
+        <MapInvalidator />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

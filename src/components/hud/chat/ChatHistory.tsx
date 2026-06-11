@@ -26,7 +26,7 @@ export const ChatHistory: React.FC<ChatHistoryProps> = ({ history }) => {
   return (
     <div 
       ref={scrollRef}
-      className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar bg-gradient-to-b from-transparent to-black/20 pointer-events-none"
+      className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar bg-gradient-to-b from-transparent to-parchment-200/20 pointer-events-none"
     >
       <AnimatePresence initial={false}>
         {history.map((msg, i) => (
@@ -37,22 +37,22 @@ export const ChatHistory: React.FC<ChatHistoryProps> = ({ history }) => {
             className={`flex pointer-events-auto ${msg.role === 'user' ? 'justify-end' : msg.role === 'system' ? 'justify-center' : 'justify-start'}`}
           >
             {msg.role === 'system' ? (
-              <div className="px-3 py-1 bg-white/5 border border-white/5 rounded-full flex items-center gap-2">
-                <GameIcon name="magic_effect" size={8} className="text-emerald-500/60" />
-                <span className="text-[8px] font-mono uppercase tracking-[0.15em] text-white/30 italic">{msg.text}</span>
+              <div className="px-3 py-1 bg-parchment-200/50 border border-dragon-gold/20 rounded-full flex items-center gap-2 shadow-sm">
+                <GameIcon name="magic_effect" size={8} className="text-dragon-red/60" />
+                <span className="text-[8px] font-mono uppercase tracking-[0.15em] text-dragon-darkRed/60 italic font-black">{msg.text}</span>
               </div>
             ) : (
               <div className={`flex flex-col gap-1 max-w-[90%] ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
-                <div className="flex items-center gap-1.5 px-1 opacity-30">
-                  {msg.role === 'user' ? <GameIcon name="user" size={8} /> : <GameIcon name="identity" size={8} />}
-                  <span className="text-[7px] font-mono uppercase tracking-widest font-bold text-white">
+                <div className="flex items-center gap-1.5 px-1 opacity-60">
+                  {msg.role === 'user' ? <GameIcon name="user" size={8} color="#8B0000" /> : <GameIcon name="identity" size={8} color="#8B0000" />}
+                  <span className="text-[7px] font-mono uppercase tracking-widest font-black text-dragon-darkRed">
                     {msg.role === 'user' ? 'Traveler' : currentNPC?.name || 'Unknown'}
                   </span>
                 </div>
-                <div className={`p-3 rounded-md text-[11px] font-mono leading-relaxed transition-all ${
+                <div className={`p-3 rounded-xl text-[11px] font-serif leading-relaxed transition-all shadow-sm ${
                   msg.role === 'user' 
-                    ? 'bg-emerald-600/30 text-white rounded-tr-none border border-emerald-500/50 backdrop-blur-sm' 
-                    : 'bg-transparent text-white border border-white/10 rounded-tl-none'
+                    ? 'bg-dragon-red text-parchment-50 rounded-tr-none border border-dragon-gold shadow-dragon-red/10' 
+                    : 'bg-parchment-50 text-dragon-darkRed border border-dragon-gold/30 rounded-tl-none'
                 }`}>
                   {msg.text}
                 </div>

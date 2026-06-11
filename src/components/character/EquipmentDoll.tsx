@@ -1,7 +1,8 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
-import { ChromaKeyImage } from '../ChromaKeyImage';
-import { useDraggable, useDroppable } from '@dnd-kit/core';
+import { ChromaKeyImage } from '../ui/ChromaKeyImage';
+import { GameIcon } from '../../game_icons';
+import { normalizeImageUrl } from '../../services/storageService';
 import { 
   EQUIPMENT_SLOTS, 
   EquipmentSlotId, 
@@ -43,37 +44,17 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
     const isActive = activeSlots.includes(slot);
     const equippedItem = equippedItems[slot];
     const slotDef = EQUIPMENT_SLOTS[slot];
-    const Icon = slotDef.icon;
-    
-    const { setNodeRef, isOver } = useDroppable({
-      id: `drop-${slot}`,
-      data: { slotId: slot }
-    });
-
-    const { attributes, listeners, setNodeRef: setDragRef, transform, isDragging } = useDraggable({
-      id: `drag-${slot}`,
-      disabled: !equippedItem,
-      data: { item: equippedItem, slotId: slot }
-    });
-
-    const style = transform ? {
-      transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
-    } : undefined;
 
     return (
-      <button 
+      <button
         key={slot}
-        ref={setNodeRef}
         onClick={() => onSlotClick?.(slot)}
         className={cn(
           "aspect-[9/16] border rounded flex flex-col items-center justify-center p-0.5 transition-all duration-300 relative overflow-hidden group",
-          isActive 
-            ? "bg-dragon-red/30 border-dragon-red shadow-[0_0_10px_rgba(139,0,0,0.3)] scale-105 z-10" 
-            : isOver
-              ? "bg-dragon-red/20 border-dragon-red shadow-lg scale-105 z-10"
-              : "bg-black/10 border-parchment-300/30",
-          equippedItem && "opacity-100 border-dragon-red/40",
-          isDragging && "opacity-50"
+          isActive
+            ? "bg-dragon-red/30 border-dragon-red shadow-[0_0_10px_rgba(139,0,0,0.3)] scale-105 z-10"
+            : "bg-black/10 border-parchment-300/30",
+          equippedItem && "opacity-100 border-dragon-red/40"
         )}
       >
         {/* Background Image */}
@@ -82,22 +63,16 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
         </div>
 
         {equippedItem ? (
-          <div 
-            ref={setDragRef}
-            style={style}
-            {...listeners}
-            {...attributes}
-            className="absolute inset-0 flex items-center justify-center p-0.5 z-10 cursor-grab active:cursor-grabbing"
-          >
-            <ChromaKeyImage 
-              src={equippedItem.imageUrl} 
+          <div className="absolute inset-0 flex items-center justify-center p-0.5 z-10">
+            <ChromaKeyImage
+              src={normalizeImageUrl(equippedItem.imageUrl, equippedItem._type || 'equipment', equippedItem.index)}
               alt={equippedItem.name}
               className="w-full h-full object-contain drop-shadow-sm"
             />
           </div>
         ) : (
           <div className="flex flex-col items-center gap-0.5 z-10">
-            <Icon size={12} className={cn(
+            <GameIcon name={slotDef.gameIcon} size={12} className={cn(
               "transition-colors",
               isActive ? "text-dragon-red" : "text-red-600/80"
             )} />

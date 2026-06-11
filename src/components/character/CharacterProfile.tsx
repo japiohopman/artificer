@@ -10,6 +10,7 @@ import {
   useSortable
 } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
+import { X, Shield, Package, BarChart3, Info, Truck, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useStore, SKILL_LIST } from '../../store/useStore';
 import { Inventory } from './Inventory';
 import { EquipmentDoll } from './EquipmentDoll';
@@ -91,7 +92,8 @@ export const CharacterProfile: React.FC = () => {
     partyStats,
     inspectingItem,
     setInspectingItem,
-    deleteCharacter
+    deleteCharacter,
+    setViewMode
   } = useStore();
 
   const [activeTab, setActiveTab] = React.useState<'stats' | 'equipment' | 'bio' | 'spells'>('stats');
@@ -144,7 +146,7 @@ export const CharacterProfile: React.FC = () => {
     }
   }, [character?.id, character?.features?.length]);
 
-  if (!isProfileMenuOpen || !character) return null;
+  if (!character) return null;
 
   const xpPercentage = getXpProgress(character.level || 1, character.xp || 0);
   const alignmentColor = getAlignmentColor(character.alignment || "Neutral");
@@ -153,7 +155,7 @@ export const CharacterProfile: React.FC = () => {
   const calculateWeight = () => {
     const parseWeight = (weight: any): number => {
       if (!weight) return 0;
-      if (typeof weight === 'number') return weight;
+      if (typeof weight === 'number') weight;
       const weightMatch = String(weight).match(/(\d+(\.\d+)?)/);
       return weightMatch ? parseFloat(weightMatch[0]) : 0;
     };
@@ -192,8 +194,6 @@ export const CharacterProfile: React.FC = () => {
     return slots[cls.toLowerCase()] || [];
   };
 
-  if (!character) return null;
-
   const spellSlots = getSpellSlots(character.level || 1, character.class || "");
   const cantrips = character.knownSpells?.filter(s => s.level === 0) || [];
   const leveledSpells = character.knownSpells?.filter(s => s.level > 0) || [];
@@ -203,8 +203,28 @@ export const CharacterProfile: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 top-16 bg-black/40 backdrop-blur-md z-[60] overflow-hidden flex flex-col items-center justify-center p-4 md:p-6"
+      className="fixed inset-0 bg-black/80 backdrop-blur-2xl z-[5000] overflow-hidden flex flex-col items-center justify-center p-4 md:p-6"
     >
+      {/* Close/Back Navigation */}
+      <div className="absolute top-6 inset-x-6 flex justify-between items-center z-[5001] pointer-events-none">
+        <button 
+          onClick={() => setIsProfileMenuOpen(false)}
+          className="flex items-center gap-3 px-6 py-3 bg-dragon-red text-white rounded-sm border-2 border-dragon-gold shadow-2xl hover:scale-105 active:scale-95 transition-all pointer-events-auto group"
+          title="Return to Game"
+        >
+          <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+          <span className="text-xs font-black uppercase tracking-[0.2em]">Back to Journey</span>
+        </button>
+
+        <button 
+          onClick={() => setIsProfileMenuOpen(false)}
+          className="w-12 h-12 rounded-full bg-black/40 text-white/60 flex items-center justify-center border border-white/10 hover:bg-dragon-red hover:text-white hover:border-dragon-gold transition-all pointer-events-auto group"
+          title="Close Profile"
+        >
+          <X size={24} className="group-hover:rotate-90 transition-transform" />
+        </button>
+      </div>
+
       <div className="absolute inset-0 bg-paper-texture opacity-30 pointer-events-none" />
       
       {/* 1. Character Selection Tabs / Party Hub */}
@@ -1322,17 +1342,6 @@ export const CharacterProfile: React.FC = () => {
            </div>
         </div>
      </motion.div>
-
-
-
-
-
-
-
-
-
-
-
   );
 };
 

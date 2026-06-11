@@ -170,15 +170,15 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
   };
 
   return (
-    <div className="flex flex-col w-full rounded-md overflow-hidden relative transition-all duration-500 bg-transparent pointer-events-none">
+    <div className="flex flex-col w-full rounded-xl overflow-hidden relative transition-all duration-500 bg-parchment-100/90 border-2 border-dragon-gold shadow-2xl pointer-events-none bg-paper-texture">
       {/* Dynamic Background Layer - only for history area */}
       <AnimatePresence>
         {bgUrl && !isCollapsed && (
           <motion.div 
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.4 }}
+            animate={{ opacity: 0.2 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-t-md"
+            className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-t-xl"
           >
             <div 
               className="absolute inset-0 scale-110 transition-all duration-1000"
@@ -189,7 +189,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
                 backgroundRepeat: 'no-repeat'
               }}
             />
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-parchment-100/40" />
           </motion.div>
         )}
       </AnimatePresence>
@@ -203,14 +203,14 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
               animate={{ height: '30vh', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ type: 'spring', damping: 30, stiffness: 180 }}
-              className="overflow-hidden pointer-events-auto bg-black/20 backdrop-blur-sm border-t border-x border-white/5 rounded-t-md"
+              className="overflow-hidden pointer-events-auto bg-transparent border-b border-dragon-gold/20"
             >
               <ChatHistory history={history} />
             </motion.div>
           )}
         </AnimatePresence>
         
-        <div className="shrink-0 p-3 bg-black/80 backdrop-blur-xl border border-white/10 pointer-events-auto rounded-b-md shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+        <div className="shrink-0 p-3 bg-parchment-100/95 backdrop-blur-xl border-t border-dragon-gold/30 pointer-events-auto rounded-b-xl shadow-inner">
           <ChatInput 
             message={message} 
             setMessage={setMessage} 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useStore } from '../../store/useStore';
 import { FirstPersonView } from './view/FirstPersonView';
-import { ChatPanel } from './ChatPanel';
+import { ChatPanel } from './chat/ChatPanel';
 import { GameIcon } from '../../game_icons';
 import { motion, AnimatePresence } from 'motion/react';
 import { DraggableCard } from '../atlas/DraggableCard';
@@ -89,8 +89,9 @@ export const ActionView: React.FC = () => {
 
       {/* Visuals - Always Visible */}
       <div className="w-full max-w-5xl px-1.5 pointer-events-auto mt-1.5 flex flex-col gap-1.5">
-        <div className="h-[40vh] min-h-[300px] bg-zinc-950 rounded-md overflow-hidden shadow-2xl relative border border-white/10">
+        <div className="h-[40vh] min-h-[300px] bg-parchment-100 rounded-md overflow-hidden shadow-2xl relative border-2 border-dragon-gold bg-paper-texture">
           <FirstPersonView />
+          <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_50px_rgba(0,0,0,0.5)] z-10" />
         </div>
       </div>
 
@@ -98,20 +99,20 @@ export const ActionView: React.FC = () => {
       <div className="flex-1 w-full max-w-5xl flex flex-col justify-end px-1.5 overflow-hidden pointer-events-none pb-1 relative">
         {/* Chat History & Toggle Button Area */}
         <div className="z-10 w-full pointer-events-none flex flex-col justify-end relative">
-          <div className="pointer-events-auto">
+          <div className="pointer-events-auto shadow-2xl">
             <ChatPanel isCollapsed={!chatExpanded} />
           </div>
           
           {/* Minimal Toggle Icon Overlay - Positioned relative to bottom section */}
-          <div className="absolute -top-8 right-4 z-50 pointer-events-none">
+          <div className="absolute -top-10 right-6 z-50 pointer-events-none">
             <button 
               onClick={() => setChatExpanded(!chatExpanded)}
-              className="pointer-events-auto w-8 h-8 flex items-center justify-center bg-black/60 hover:bg-red-600 backdrop-blur-md rounded-full border border-white/10 text-white transition-all shadow-2xl cursor-pointer group active:scale-90"
+              className="pointer-events-auto w-10 h-10 flex items-center justify-center bg-dragon-red hover:bg-dragon-darkRed text-white rounded-full border-2 border-dragon-gold transition-all shadow-xl cursor-pointer group active:scale-90"
               title={chatExpanded ? "Collapse Chat" : "Expand Chat"}
               aria-label={chatExpanded ? "Collapse Chat" : "Expand Chat"}
             >
               <div className="transition-transform duration-300">
-                {chatExpanded ? <GameIcon name="chevron_down" size={14} /> : <GameIcon name="chevron_up" size={14} className="text-red-500 group-hover:text-white" />}
+                {chatExpanded ? <GameIcon name="chevron_down" size={16} /> : <GameIcon name="chevron_up" size={16} className="animate-bounce" />}
               </div>
             </button>
           </div>

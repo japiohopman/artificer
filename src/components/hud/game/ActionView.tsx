@@ -80,13 +80,15 @@ export const ActionView: React.FC = () => {
     <div className="flex-1 flex flex-col h-full overflow-hidden relative items-center pointer-events-auto">
       {/* Visuals - Core Scene Content */}
       <div className="w-full h-full max-w-5xl flex flex-col p-2">
-        <div className="flex-1 bg-zinc-950 rounded border border-white/10 overflow-hidden relative shadow-2xl">
+        <div className="flex-1 bg-parchment-100 rounded-lg overflow-hidden shadow-2xl relative border-2 border-dragon-gold bg-paper-texture">
           <FirstPersonView />
+          {/* Internal Overlay Vignette */}
+          <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_80px_rgba(0,0,0,0.5)] z-10" />
         </div>
       </div>
       
       {/* Bottom Spacer for SubMap Editor if needed */}
-      {isEditingSubMap && <div className="h-12 w-full bg-black/20" />}
+      {isEditingSubMap && <div className="h-12 w-full bg-dragon-darkRed/20" />}
     </div>
   );
 };

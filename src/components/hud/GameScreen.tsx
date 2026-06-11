@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useStore } from '../../store/useStore';
 import { WorldMap } from './WorldMap';
 import { NPCDisplay } from './NPCDisplay';
-import { ChatPanel } from './ChatPanel';
+import { ChatPanel } from './chat/ChatPanel';
 import { NotificationWindow } from './NotificationWindow';
 import { Rest } from './game/Rest';
 import { DraggableCard } from '../atlas/DraggableCard';
@@ -25,18 +25,39 @@ export const GameScreen: React.FC = () => {
   } = useStore();
 
   return (
-    <div className="flex-1 relative flex flex-col overflow-hidden bg-black">
+    <div className="flex-1 relative flex flex-col overflow-hidden">
       {/* 1. Background Map Layer (Leaflet) */}
-      <div className="absolute inset-0 z-0 opacity-40">
+      <motion.div 
+        animate={{ 
+          opacity: chatExpanded ? 0.4 : 1,
+          scale: chatExpanded ? 1.05 : 1
+        }}
+        className={cn(
+          "absolute inset-0 z-0 transition-opacity duration-500",
+          chatExpanded ? "pointer-events-none" : "pointer-events-auto"
+        )}
+      >
         <WorldMap />
-      </div>
+      </motion.div>
 
-      {/* 2. Main Game View (ActionView/Simulator/FirstPerson) */}
-      <div className="absolute inset-x-0 top-16 bottom-[100px] z-10 flex flex-col px-4 items-center">
-        <div className="w-full h-full max-w-5xl">
+      {/* 2. Main Game View (ActionView/Simulator/FirstPerson) - Slides up when chat is closed */}
+      <motion.div 
+        initial={false}
+        animate={{ 
+          y: chatExpanded ? 0 : -800,
+          opacity: chatExpanded ? 1 : 0,
+          scale: chatExpanded ? 1 : 0.9
+        }}
+        transition={{ type: 'spring', damping: 30, stiffness: 120 }}
+        className={cn(
+          "absolute inset-x-0 top-0 bottom-[100px] z-10 flex flex-col px-4 items-center",
+          chatExpanded ? "pointer-events-auto" : "pointer-events-none"
+        )}
+      >
+        <div className="w-full h-full max-w-5xl mt-8">
             <ActionView />
         </div>
-      </div>
+      </motion.div>
 
       {/* 3. NPC Layer - Slides up when chat history is expanded */}
       <div className="absolute inset-x-0 top-0 bottom-0 z-20 flex items-end justify-center pointer-events-none overflow-hidden">
@@ -72,14 +93,14 @@ export const GameScreen: React.FC = () => {
       <div className="absolute inset-x-0 bottom-0 z-40 flex flex-col items-center pointer-events-none">
         <div className="w-full max-w-5xl px-4 pb-4 pointer-events-auto relative">
            {/* Toggle Icon */}
-           <div className="absolute -top-10 right-8 z-50">
+           <div className="absolute -top-12 right-8 z-50">
               <button 
                 onClick={() => setChatExpanded(!chatExpanded)}
-                className="w-10 h-10 flex items-center justify-center bg-black/60 hover:bg-dragon-red backdrop-blur-md rounded-full border border-white/10 text-white transition-all shadow-2xl cursor-pointer group"
+                className="w-12 h-12 flex items-center justify-center bg-dragon-red hover:bg-dragon-darkRed text-white rounded-full border-2 border-dragon-gold transition-all shadow-2xl cursor-pointer group active:scale-90"
                 title={chatExpanded ? "[COLLAPSE_HISTORY]" : "[EXPAND_HISTORY]"}
               >
                   <div className={cn("transition-transform duration-300", chatExpanded ? "rotate-180" : "animate-bounce")}>
-                    <GameIcon name="chevron_up" size={16} />
+                    <GameIcon name="chevron_up" size={20} />
                   </div>
               </button>
            </div>
