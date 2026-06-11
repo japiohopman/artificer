@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/mountain.schema.json",
+  "title": "Mountain",
+  "description": "A mountain, peak, or mountain range.",
+  "type": "object",
+  "required": ["id", "name", "description"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "type": { "type": "string", "description": "e.g., peak, mountain, mountain_range, volcano, hill, hill_range." },
+    "parent": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "wiki": { "type": "string" },
+    "image": { "type": "string" },
+    "thumbnail": { "type": "string" },
+    "banner": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "coordinates": {
+      "type": "object",
+      "properties": {
+        "lat": { "type": "number" },
+        "lng": { "type": "number" }
+      }
+    },
+    "elevation": { "type": "string", "description": "Height of the mountain/peak." },
+    "trade": { "$ref": "trade.schema.json" },
+    "metadata": { "type": "object", "additionalProperties": true }
+  }
+}
