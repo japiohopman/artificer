@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/water.schema.json",
+  "title": "Water",
+  "description": "A body of water like a river, lake, or sea.",
+  "type": "object",
+  "required": ["id", "name", "description"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "type": { "type": "string", "description": "e.g., river, lake, sea, ocean, bay, waterfall." },
+    "parent": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "wiki": { "type": "string" },
+    "image": { "type": "string" },
+    "thumbnail": { "type": "string" },
+    "banner": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "coordinates": {
+      "type": "object",
+      "properties": {
+        "lat": { "type": "number" },
+        "lng": { "type": "number" }
+      }
+    },
+    "trade": { "$ref": "trade.schema.json" },
+    "metadata": { "type": "object", "additionalProperties": true }
+  }
+}

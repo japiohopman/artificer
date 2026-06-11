@@ -24,12 +24,10 @@
     },
     "world": {
       "type": "string",
-      "enum": ["toril", "totil"],
       "description": "The world the sub-region is in."
     },
     "continent": {
       "type": "string",
-      "enum": ["faerun", "fearun"],
       "description": "The continent the sub-region is on."
     },
     "region": {
@@ -63,6 +61,7 @@
       },
       "description": "Keywords describing the sub-region."
     },
+    "trade": { "$ref": "trade.schema.json" },
     "metadata": {
       "type": "object",
       "additionalProperties": true

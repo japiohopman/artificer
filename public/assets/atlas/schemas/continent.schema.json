@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/continent.schema.json",
+  "title": "Continent",
+  "description": "A continent-level landmass.",
+  "type": "object",
+  "required": ["id", "name", "type", "description"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "type": { "type": "string", "const": "continent" },
+    "parent": { "type": "string", "description": "The world this continent belongs to." },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "wiki": { "type": "string" },
+    "image": { "type": "string" },
+    "thumbnail": { "type": "string" },
+    "banner": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "children": { "type": "array", "items": { "type": "string" }, "description": "Regions within this continent." },
+    "coordinates": {
+      "type": "object",
+      "properties": {
+        "lat": { "type": "number" },
+        "lng": { "type": "number" }
+      }
+    },
+    "trade": { "$ref": "trade.schema.json" },
+    "metadata": { "type": "object", "additionalProperties": true }
+  }
+}

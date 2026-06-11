@@ -151,8 +151,11 @@
       "description": "Markdown link or index for religious data."
     },
     "trade": {
-      "type": "string",
-      "description": "Markdown link or index for trade data."
+      "oneOf": [
+        { "type": "string" },
+        { "$ref": "trade.schema.json" }
+      ],
+      "description": "Markdown link or structured trade data."
     },
     "metadata": {
       "type": "object",

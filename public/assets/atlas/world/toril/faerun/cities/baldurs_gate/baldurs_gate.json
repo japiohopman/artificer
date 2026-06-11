@@ -62,7 +62,17 @@
   "bestiary": "",
   "politics": "",
   "religion": "",
-  "trade": "Imports Stone Exports Dyes, fish, lamp oil, trade-coinage",
+  "trade": {
+    "imports": [
+      "Stone"
+    ],
+    "exports": [
+      "Dyes",
+      "fish",
+      "lamp oil",
+      "trade-coinage"
+    ]
+  },
   "metadata": {
     "government": "The Council of Four",
     "military": "The Flaming Fist",

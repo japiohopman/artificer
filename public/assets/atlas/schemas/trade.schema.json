@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/trade.schema.json",
+  "title": "Trade",
+  "description": "Structured trade and economy data for a location.",
+  "type": "object",
+  "properties": {
+    "imports": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of goods and resources imported by this location."
+    },
+    "exports": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of goods and resources exported by this location."
+    },
+    "resources": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Natural resources available in or around this location."
+    },
+    "scarcity": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Goods or resources that are rare or in high demand."
+    },
+    "wealth": {
+      "type": "string",
+      "description": "General economic status (e.g., affluent, prosperous, struggling)."
+    },
+    "currency": {
+      "type": "string",
+      "description": "Primary currency used in this location."
+    },
+    "trade_routes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Major trade routes connected to this location."
+    }
+  }
+}
