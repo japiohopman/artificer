@@ -11,5 +11,4 @@ export const CHARACTER_ICONS = {
   background: "",
   alignment: "",
   footprints: "",
-  avatar: "",
 };
