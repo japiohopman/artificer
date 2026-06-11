@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm';
 import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { GameIcon } from '../../game_icons';
+import { normalizeImageUrl } from '../../services/storageService';
 
 const ITEM_BACKGROUND = "https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1775921630292-back_item_slug.webp";
 
@@ -75,10 +76,10 @@ export const MaterialCard: React.FC<MaterialCardProps> = ({ material, className 
         />
         <div className="absolute inset-0 bg-black/10 z-[5]" />
         
-        {material.imageUrl ? (
+        {material.imageUrl || material.index ? (
           <div className="absolute inset-0 flex items-center justify-center p-2 z-10">
             <ChromaKeyImage 
-              src={material.imageUrl} 
+              src={normalizeImageUrl(material.imageUrl, 'materials', material.index)} 
               alt={renderValue(material.name) || 'Material'} 
               className="w-full h-full object-contain drop-shadow-[0_5px_15px_rgba(0,0,0,0.4)] group-hover/image:scale-110 transition-transform duration-500"
             />

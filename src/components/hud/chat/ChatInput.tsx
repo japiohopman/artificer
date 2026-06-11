@@ -10,11 +10,23 @@ interface ChatInputProps {
 }
 
 export const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, onSend, placeholder }) => {
-  const { isDiceReady, isAdvancedRollerOpen, setIsAdvancedRollerOpen } = useStore();
+  const { isDiceReady, isAdvancedRollerOpen, setIsAdvancedRollerOpen, chatExpanded, setChatExpanded } = useStore();
 
   return (
     <div className="p-3 bg-black/40 border-t border-white/10 backdrop-blur-xl">
       <div className="relative flex items-center gap-2 group">
+        <button
+          onClick={() => setChatExpanded(!chatExpanded)}
+          className={`shrink-0 p-2.5 rounded-full transition-all border ${
+            chatExpanded
+              ? 'bg-emerald-500 border-emerald-400 text-black shadow-[0_0_15px_rgba(16,185,129,0.5)]' 
+              : 'bg-white/5 border-white/10 text-white/30 hover:bg-white/10'
+          } shadow-lg active:scale-90`}
+          title={chatExpanded ? "Collapse History" : "Expand History"}
+        >
+          <GameIcon name={chatExpanded ? "chevron_down" : "chevron_up"} size={16} />
+        </button>
+
         <button
           onClick={() => setIsAdvancedRollerOpen(!isAdvancedRollerOpen)}
           className={`shrink-0 p-2.5 rounded-full transition-all border ${

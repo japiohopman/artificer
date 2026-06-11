@@ -36,8 +36,8 @@ const SpellListRow: React.FC<{
   return (
     <div className="flex items-center gap-4 py-2 px-3 border-b border-dragon-red/5 hover:bg-dragon-red/5 group transition-colors">
        <div className="w-10 h-10 bg-dragon-red/10 rounded flex items-center justify-center shrink-0 border border-dragon-red/10 overflow-hidden">
-          {spell.imageUrl ? (
-            <img src={spell.imageUrl} alt="" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+          {spell.imageUrl || spell.index ? (
+            <img src={normalizeImageUrl(spell.imageUrl, 'spells', spell.index)} alt="" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
           ) : (
             <GameIcon name="magic_effect" size={16} color="#8B0000" />
           )}

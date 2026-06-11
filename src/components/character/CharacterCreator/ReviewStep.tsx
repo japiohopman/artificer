@@ -4,6 +4,7 @@ import { cn } from '../../../lib/utils';
 import { GameIcon, GameIconName } from '../../../game_icons';
 import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
 import { generateNPCImages } from '../../../services/ai/npcService';
+import { normalizeImageUrl } from '../../../services/storageService';
 import { NPCChoiceResolver, ResolvedItem } from '../../../lib/npcChoiceResolver';
 import { soundService } from '../../../services/soundService';
 import { atlasService } from '../../../services/atlasService';
@@ -117,8 +118,8 @@ export const ReviewStep: React.FC<{
                 {/* Left Column: Visuals */}
                 <div className="xl:col-span-5 space-y-6">
                     <div className="aspect-[9/16] bg-parchment-100 border-2 border-dragon-gold/30 rounded-sm overflow-hidden shadow-2xl relative group">
-                        {newChar.imageUrl ? (
-                            <ChromaKeyImage src={newChar.imageUrl} alt={newChar.name || "Character"} className="w-full h-full object-cover" />
+                        {newChar.imageUrl || newChar.id ? (
+                            <ChromaKeyImage src={normalizeImageUrl(newChar.imageUrl, 'character', newChar.id || 'new')} alt={newChar.name || "Character"} className="w-full h-full object-cover" />
                         ) : (
                             <div className="absolute inset-0 flex flex-col items-center justify-center text-parchment-300 gap-4">
                                 <GameIcon name="user" size={80} color="currentColor" className="opacity-20" />
@@ -166,7 +167,7 @@ export const ReviewStep: React.FC<{
                                 </div>
                             </div>
                             <div className="w-16 h-16 bg-dragon-red/10 border border-dragon-red/20 rounded-full flex items-center justify-center shrink-0">
-                                {newChar.avatarUrl ? <img src={newChar.avatarUrl} className="w-full h-full object-cover rounded-full" alt="" /> : <GameIcon name="user" size={24} color="currentColor" className="text-dragon-red/30" />}
+                                {newChar.avatarUrl ? <img src={normalizeImageUrl(newChar.avatarUrl, 'character', (newChar.id || 'new') + '_avatar')} className="w-full h-full object-cover rounded-full" alt="" /> : <GameIcon name="user" size={24} color="currentColor" className="text-dragon-red/30" />}
                             </div>
                         </div>
 
@@ -318,7 +319,7 @@ export const ReviewStep: React.FC<{
                             {Object.entries(newChar.inventory || {}).map(([slot, item]: [string, any]) => item && (
                                 <div key={slot} className="flex items-center gap-3 p-3 bg-white border border-dragon-gold/10 rounded shadow-sm group">
                                     <div className="w-10 h-10 bg-dragon-red/5 border border-dragon-gold/20 rounded flex items-center justify-center shrink-0">
-                                        {item.imageUrl ? <ChromaKeyImage src={item.imageUrl} alt={item.name} className="w-full h-full object-contain" /> : <GameIcon name="shield" size={18} color="#8B0000" className="opacity-10" />}
+                                        {item.imageUrl || item.index ? <ChromaKeyImage src={normalizeImageUrl(item.imageUrl, item._type || 'equipment', item.index)} alt={item.name} className="w-full h-full object-contain" /> : <GameIcon name="shield" size={18} color="#8B0000" className="opacity-10" />}
                                     </div>
                                     <div className="flex flex-col overflow-hidden">
                                         <span className="text-[8px] font-black text-dragon-red/40 uppercase tracking-widest mb-0.5">{slot}</span>
@@ -330,7 +331,7 @@ export const ReviewStep: React.FC<{
                             {newChar.backpack?.map((item: any, i) => (
                                 <div key={`bp-${i}`} className="flex items-center gap-3 p-3 bg-parchment-50 border border-dragon-gold/5 rounded shadow-sm group">
                                     <div className="w-10 h-10 bg-black/5 border border-dragon-gold/10 rounded flex items-center justify-center shrink-0">
-                                        {item.imageUrl ? <ChromaKeyImage src={item.imageUrl} alt={item.name} className="w-full h-full object-contain" /> : <GameIcon name="package" size={18} color="#8B0000" className="opacity-20" />}
+                                        {item.imageUrl || item.index ? <ChromaKeyImage src={normalizeImageUrl(item.imageUrl, item._type || 'equipment', item.index)} alt={item.name} className="w-full h-full object-contain" /> : <GameIcon name="package" size={18} color="#8B0000" className="opacity-20" />}
                                     </div>
                                     <div className="flex flex-col overflow-hidden">
                                         <span className="text-[8px] font-black text-parchment-400 uppercase tracking-widest mb-0.5">Backpack</span>

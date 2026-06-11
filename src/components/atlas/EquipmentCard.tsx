@@ -203,7 +203,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
               animate={{ scale: 1, opacity: 1 }}
             >
               <ChromaKeyImage 
-                src={currentItem.imageUrl || normalizeImageUrl(undefined, currentItem._type === 'books' ? 'books' : 'equipment', currentItem.index)} 
+                src={normalizeImageUrl(currentItem.imageUrl, currentItem._type === 'books' ? 'books' : 'equipment', currentItem.index)} 
                 alt={renderValue(currentItem.name) || 'Equipment'} 
                 className="h-[90%] w-auto object-contain mx-auto drop-shadow-[0_5px_15px_rgba(0,0,0,0.4)] group-hover/image:scale-110 transition-transform duration-500"
               />

@@ -304,7 +304,7 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
 
   if (!url) {
     // Standard directory structure for atlas assets
-    const categoriesWithImagesFolder = ['magic_items', 'equipment', 'enemies', 'crafting', 'materials', 'npc_character_profiles', 'npc_profiles', 'spell'];
+    const categoriesWithImagesFolder = ['magic_items', 'equipment', 'enemies', 'crafting', 'materials', 'npc_character_profiles', 'npc_profiles', 'spell', 'transport'];
     const wikiImageCategories = ['class', 'species', 'subraces', 'backgrounds'];
     
     // We try both underscore and hyphen versions if guessing
@@ -314,7 +314,9 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
     } else if (wikiImageCategories.includes(folder)) {
       finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${folder}/wiki_image/${ddbIndex}.webp`;
     } else if (categoriesWithImagesFolder.includes(folder)) {
-      finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${folder}/images/${ddbIndex}.webp`;
+      // Prefer underscore for equipment/materials as they often match filenames
+      const filename = (folder === 'equipment' || folder === 'materials' || folder === 'transport') ? underscoreIndex : ddbIndex;
+      finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${folder}/images/${filename}.webp`;
     } else {
       finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${folder}/${ddbIndex}.webp`;
     }
@@ -326,7 +328,7 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
     if (!cleanUrl.startsWith('/')) cleanUrl = '/' + cleanUrl;
     
     // Inject images/ or wiki_image/ if missing in the path
-    const categoriesWithImages = ['equipment', 'enemies', 'magic_items', 'crafting', 'spell', 'npc_character_profiles', 'npc_profiles', 'materials'];
+    const categoriesWithImages = ['equipment', 'enemies', 'magic_items', 'crafting', 'spell', 'npc_character_profiles', 'npc_profiles', 'materials', 'transport'];
     const wikiImageCategories = ['class', 'species', 'subraces', 'backgrounds'];
     
     // Determine path category from URL
@@ -341,8 +343,11 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
     }
     
     finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public${cleanUrl}`;
-  } else if (url && url.includes('github.com') && url.includes('/blob/')) {
-    finalUrl = url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/').split('?')[0];
+  } else if (url && url.includes('github.com') && (url.includes('/blob/') || url.includes('/tree/'))) {
+    finalUrl = url.replace('github.com', 'raw.githubusercontent.com')
+                  .replace('/blob/', '/')
+                  .replace('/tree/', '/')
+                  .split('?')[0];
   } else if (url && !url.startsWith('http')) {
     // Simple filename or relative path from JSON
     const cleanPath = url.startsWith('/') ? url : '/' + url;

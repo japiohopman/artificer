@@ -5,7 +5,7 @@ import { soundService } from '../../../services/soundService';
 import { ItemInstance, InventoryContainer, InventorySlot, EQUIPMENT_SLOT_CATALOG } from '../../../types/inventory';
 import { createItemInstance, createDefaultBackpack, createDefaultEquipment } from '../../../lib/inventoryUtils';
 import { 
-  fetchClassData, fetchBackgroundJson, fetchEquipmentData 
+  fetchClassData, fetchBackgroundJson, fetchEquipmentData, normalizeImageUrl 
 } from '../../../services/storageService';
 import { atlasService } from '../../../services/atlasService';
 import { EquipmentDoll } from '../EquipmentDoll';
@@ -239,8 +239,8 @@ const EquipmentOptionChoice: React.FC<{
                                                         <div className="absolute inset-0 opacity-20 mix-blend-multiply pointer-events-none">
                                                             <img src={ITEM_BACKGROUND} alt="" className="w-full h-full object-cover" />
                                                         </div>
-                                                        {details?.imageUrl ? (
-                                                            <ChromaKeyImage src={details.imageUrl} alt={details.name} className="h-full w-full object-contain" />
+                                                        {details?.imageUrl || details?.index ? (
+                                                            <ChromaKeyImage src={normalizeImageUrl(details.imageUrl, 'equipment', details.index)} alt={details.name} className="h-full w-full object-contain" />
                                                         ) : (
                                                             <div className="h-full w-full flex items-center justify-center bg-black/5">
                                                                 <GameIcon name={subIsPack ? "backpack" : "weapon"} size={20} color="#8B0000" className="opacity-20" />
@@ -310,9 +310,9 @@ const EquipmentOptionChoice: React.FC<{
                             <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity bg-gradient-to-t from-dragon-red to-transparent pointer-events-none" />
                             
                             <div className="w-full h-full bg-black/5 rounded-sm flex items-center justify-center overflow-hidden relative z-10 border border-[#c5a059]/10">
-                                {details?.imageUrl ? (
+                                {details?.imageUrl || details?.index ? (
                                     <ChromaKeyImage 
-                                        src={details.imageUrl} 
+                                        src={normalizeImageUrl(details.imageUrl, 'equipment', details.index)} 
                                         alt={name} 
                                         className="h-[90%] w-auto object-contain filter group-hover:scale-110 transition-transform duration-500" 
                                     />
@@ -717,7 +717,7 @@ export const EquipmentStep: React.FC<{
                                                 <img src={ITEM_BACKGROUND} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                                             </div>
                                             <div className="w-full h-full bg-black/5 border border-[#c5a059]/10 rounded-sm overflow-hidden p-0.5 flex items-center justify-center relative z-10">
-                                                {item?.imageUrl ? <ChromaKeyImage src={item.imageUrl} alt={item.name} className="h-[90%] w-auto mt-auto object-contain" /> : <GameIcon name="backpack" size={16} color="#B8860B" className="opacity-10 mx-auto" />}
+                                                {item?.imageUrl || item?.index ? <ChromaKeyImage src={normalizeImageUrl(item.imageUrl, 'equipment', item.index)} alt={item.name} className="h-[90%] w-auto mt-auto object-contain" /> : <GameIcon name="backpack" size={16} color="#B8860B" className="opacity-10 mx-auto" />}
                                                 {isEquipped && (
                                                     <div className="absolute inset-0 bg-dragon-red/20 flex items-center justify-center">
                                                         <GameIcon name="check" size={16} color="#8B0000" />
@@ -805,7 +805,7 @@ export const EquipmentStep: React.FC<{
                                                 <img src={ITEM_BACKGROUND} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                                             </div>
                                             <div className="w-full h-full bg-black/5 rounded-sm overflow-hidden p-0.5 flex items-center justify-center relative z-10 border border-[#c5a059]/10">
-                                                {item?.imageUrl ? <ChromaKeyImage src={item.imageUrl} alt={item?.name} className="h-[90%] w-auto mx-auto object-contain filter group-hover:scale-110 transition-transform" /> : <GameIcon name="backpack" size={16} color={isEquipped ? "#FFFFFF" : "#B8860B"} className="opacity-20" />}
+                                                {item?.imageUrl || item?.index ? <ChromaKeyImage src={normalizeImageUrl(item.imageUrl, 'equipment', item.index)} alt={item?.name} className="h-[90%] w-auto mx-auto object-contain filter group-hover:scale-110 transition-transform" /> : <GameIcon name="backpack" size={16} color={isEquipped ? "#FFFFFF" : "#B8860B"} className="opacity-20" />}
                                                 {isEquipped && <div className="absolute top-1 right-1"><GameIcon name="check" size={10} color="#B8860B" /></div>}
                                             </div>
                                             <div className="absolute inset-x-0 bottom-0 bg-black/95 opacity-0 group-hover:opacity-100 transition-all p-1.5 text-center z-20 max-h-[90%] overflow-y-auto custom-scrollbar border-t border-dragon-gold/30 translate-y-2 group-hover:translate-y-0">

@@ -164,6 +164,9 @@ interface AppState {
   explorerTab: ExplorerTab;
   isDevKitOpen: boolean;
   isExplorerOpen: boolean;
+  isWorldPanelOpen: boolean;
+  isCharacterPanelOpen: boolean;
+  dynamicNavButtons: any[]; // Using any for simplicity in store to avoid circular imports, but interface is NavAction
   isAdvancedRollerOpen: boolean;
   chatExpanded: boolean;
   isEditingSubMap: boolean;
@@ -296,6 +299,9 @@ interface AppState {
   setExplorerTab: (tab: ExplorerTab) => void;
   setIsDevKitOpen: (isOpen: boolean) => void;
   setIsExplorerOpen: (isOpen: boolean) => void;
+  setIsWorldPanelOpen: (isOpen: boolean) => void;
+  setIsCharacterPanelOpen: (isOpen: boolean) => void;
+  setDynamicNavButtons: (buttons: any[]) => void;
   setIsAdvancedRollerOpen: (isOpen: boolean) => void;
   setChatExpanded: (expanded: boolean) => void;
   setIsEditingSubMap: (isEditing: boolean) => void;
@@ -536,6 +542,9 @@ export const useStore = create<AppState>((set, get) => ({
   explorerTab: 'enemies',
   isDevKitOpen: false,
   isExplorerOpen: true,
+  isWorldPanelOpen: false,
+  isCharacterPanelOpen: false,
+  dynamicNavButtons: [],
   isAdvancedRollerOpen: false,
   chatExpanded: false,
   isEditingSubMap: false,
@@ -665,6 +674,9 @@ export const useStore = create<AppState>((set, get) => ({
   },
   setIsDevKitOpen: (isDevKitOpen) => set({ isDevKitOpen }),
   setIsExplorerOpen: (isExplorerOpen) => set({ isExplorerOpen }),
+  setIsWorldPanelOpen: (isWorldPanelOpen) => set({ isWorldPanelOpen }),
+  setIsCharacterPanelOpen: (isCharacterPanelOpen) => set({ isCharacterPanelOpen }),
+  setDynamicNavButtons: (dynamicNavButtons) => set({ dynamicNavButtons }),
   setIsAdvancedRollerOpen: (isAdvancedRollerOpen) => set({ isAdvancedRollerOpen }),
   setChatExpanded: (chatExpanded) => set({ chatExpanded }),
   setIsEditingSubMap: (isEditingSubMap) => set({ isEditingSubMap }),

@@ -7,7 +7,8 @@ import {
   fetchSpeciesWikiData, fetchSpeciesData,
   fetchClassWikiData, fetchClassData,
   fetchBackgroundData, fetchAlignmentData,
-  fetchSubraceData, fetchTraitData, fetchWikiAsset
+  fetchSubraceData, fetchTraitData, fetchWikiAsset,
+  normalizeImageUrl
 } from '../../../services/storageService';
 import { getTraitIcon, getProficiencyIcon } from '../../../lib/atlasUtils';
 
@@ -163,7 +164,7 @@ export const SelectionStep: React.FC<{
                                 <div className="w-48 h-48 lg:w-56 lg:h-56 bg-dragon-red/5 border-2 border-dragon-gold/20 shadow-[0_0_40px_rgba(153,27,27,0.15)] overflow-hidden p-2 shrink-0 rounded-sm group relative">
                                     <div className="absolute inset-0 bg-paper-texture opacity-30 mix-blend-multiply" />
                                     <img 
-                                        src={artUrl} 
+                                        src={normalizeImageUrl(artUrl, category, detailData.index)} 
                                         alt={detailData.name}
                                         referrerPolicy="no-referrer"
                                         className="w-full h-full object-contain relative z-10 transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl"

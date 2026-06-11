@@ -25,19 +25,6 @@ export const FirstPersonView: React.FC<FirstPersonViewProps> = ({ selectedArch }
       >
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
       </div>
-
-      {/* NPC Layer */}
-      <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
-        <div className="w-full h-[120%] pointer-events-auto">
-          <NPCDisplay 
-            species={currentNPC?.species || 'Unknown'}
-            emotion={emotion}
-            name={currentNPC?.name || 'Unknown'}
-            type={currentNPC?.classJob || 'Traveler'}
-            portraitUrl={currentNPC?.image}
-          />
-        </div>
-      </div>
     </div>
   );
 };

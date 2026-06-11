@@ -6,6 +6,7 @@ import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { DiceText } from '../dice/DiceText';
 import { useStore } from '../../store/useStore';
+import { normalizeImageUrl } from '../../services/storageService';
 import { renderNameValue, getOrdinal } from '../../lib/dataUtils';
 import { GameIcon, GameIconName } from '../../game_icons';
 
@@ -93,10 +94,10 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
 
       {/* Image / Illustration */}
       <div className="relative h-40 w-full bg-parchment-200 border-2 border-dragon-gold/20 rounded-lg overflow-hidden shadow-inner group/image shrink-0">
-        {spell.imageUrl ? (
+        {spell.imageUrl || spell.index ? (
           <div className="absolute inset-0 flex items-center justify-center p-2">
              <ChromaKeyImage 
-                src={spell.imageUrl} 
+                src={normalizeImageUrl(spell.imageUrl, 'spell', spell.index)} 
                 alt={spell.name} 
                 className="w-full h-full object-contain drop-shadow-[0_5px_15px_rgba(0,0,0,0.4)] group-hover/image:scale-105 transition-transform duration-700"
               />

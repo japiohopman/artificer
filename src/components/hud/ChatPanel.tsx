@@ -14,8 +14,21 @@ interface ChatPanelProps {
   isCollapsed?: boolean;
 }
 
-export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => {
-  const { currentNPC, setEmotion, addLog, setTestAnimalInteraction, testAnimalInteraction, getActiveBackground, gameTime, isNight } = useStore();
+export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed: propCollapsed }) => {
+  const { 
+    currentNPC, 
+    setEmotion, 
+    addLog, 
+    setTestAnimalInteraction, 
+    testAnimalInteraction, 
+    getActiveBackground, 
+    gameTime, 
+    isNight,
+    chatExpanded,
+    setChatExpanded
+  } = useStore();
+
+  const isCollapsed = propCollapsed !== undefined ? propCollapsed : !chatExpanded;
   const bgUrl = getActiveBackground();
   
   // Use isNight() logic from store

@@ -1,5 +1,4 @@
 import DiceBox from "@3d-dice/dice-box";
-import DiceParser from "@3d-dice/dice-parser-interface";
 import { DiceRoller } from "@3d-dice/dice-roller-parser";
 
 export interface DiceResult {
@@ -18,13 +17,12 @@ export interface DiceResult {
 
 class DiceService {
   private diceBox: any;
-  private parser: DiceParser;
   private roller: DiceRoller;
   private initialized: boolean = false;
   private initPromise: Promise<void> | null = null;
 
   constructor() {
-    this.parser = new DiceParser();
+    // Some versions of dice-roller-parser require a random callback
     this.roller = new DiceRoller();
   }
 
@@ -51,9 +49,13 @@ class DiceService {
         }
 
         this.initialized = false;
+        
+        // Use a more reliable CDN for assets
+        const ASSET_PATH = "https://unpkg.com/@3d-dice/dice-box@1.1.4/dist/assets/";
+        
         this.diceBox = new DiceBox({
           container: selector,
-          assetPath: "/assets/dice-box/",
+          assetPath: ASSET_PATH,
           theme: "default",
           offscreen: false,
           scale: 6,
@@ -61,47 +63,28 @@ class DiceService {
           throwForce: 6,
           spinForce: 5,
           lightIntensity: 1,
-          gravity: 2, // Slightly lower gravity to keep them in view longer
+          gravity: 2,
           settleTimeout: 5000,
-          boxControls: true // Enabling box controls for debugging/manual interaction
+          boxControls: false
         });
 
-        // Add a timeout to initialization
+        // Add a longer timeout to initialization (30s)
         const initTimeout = new Promise((_, reject) => 
-          setTimeout(() => reject(new Error("DiceBox initialization timed out")), 10000)
+          setTimeout(() => reject(new Error("DiceBox initialization timed out after 30s")), 30000)
         );
 
+        console.log("[DiceService] Waiting for DiceBox.init()...");
         await Promise.race([
           this.diceBox.init(),
           initTimeout
         ]);
         
         console.log("[DiceService] DiceBox initialized successfully.");
-        
-        // Wait a frame for the DOM to settle and canvas to be injected
-        await new Promise(resolve => requestAnimationFrame(resolve));
+        this.initialized = true;
 
-        // Check if canvas was created
-        const canvas = containerElement.querySelector('canvas');
-        if (canvas) {
-          console.log("[DiceService] Canvas element found and sized");
-          canvas.style.pointerEvents = 'none'; 
-          canvas.style.visibility = 'visible';
-          canvas.style.opacity = '1';
-          canvas.style.width = '100%';
-          canvas.style.height = '100%';
-          canvas.style.display = 'block';
-        }
-
-        // Force a resize calculation to ensure Babylon uses full container resolution
+        // Force a resize calculation
         if (typeof this.diceBox.resize === 'function') {
           this.diceBox.resize();
-        }
-
-        this.initialized = true;
-        
-        if (typeof this.diceBox.show === 'function') {
-          this.diceBox.show();
         }
       } catch (error) {
         console.error("[DiceService] Failed to initialize DiceBox:", error);
@@ -128,26 +111,32 @@ class DiceService {
     }
 
     try {
-      // Pre-parse the notation to prepare the parser interface
-      this.parser.parseNotation(notation);
-
-      // Trigger 3D Dice
+      // 3D Roll
       const results = await this.diceBox.roll(notation, { theme: theme || "default" });
 
-      // Parse results using the parser interface
-      const parsedResult = this.parser.parseFinalResults(results);
+      // If results are empty or invalid, fallback
+      if (!results || results.length === 0) {
+        return this.rollBackground(notation, label);
+      }
+
+      // Calculate total manually if parser fails
+      let total = 0;
+      const rolls = results.map((r: any) => {
+        total += r.value;
+        return {
+          die: r.sides,
+          result: r.value,
+          valid: true
+        };
+      });
 
       return {
         id: crypto.randomUUID(),
         notation,
-        total: parsedResult.total,
+        total,
         label,
-        rolls: parsedResult.rolls.map((r: any) => ({
-          die: r.die,
-          result: r.value,
-          valid: r.valid
-        })),
-        modifier: parsedResult.modifier || 0,
+        rolls,
+        modifier: 0, // Simplified for now
         timestamp: Date.now()
       };
     } catch (error) {

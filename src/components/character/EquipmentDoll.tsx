@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
+import { normalizeImageUrl } from '../../services/storageService';
 import { 
   EQUIPMENT_SLOTS, 
   EquipmentSlotId, 
@@ -64,7 +65,7 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
         {equippedItem ? (
           <div className="absolute inset-0 flex items-center justify-center p-0.5 z-10">
             <ChromaKeyImage 
-              src={equippedItem.imageUrl} 
+              src={normalizeImageUrl(equippedItem.imageUrl, equippedItem._type || 'equipment', equippedItem.index)} 
               alt={equippedItem.name}
               className="w-full h-full object-contain drop-shadow-sm"
             />

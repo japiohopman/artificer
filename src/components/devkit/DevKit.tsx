@@ -30,6 +30,7 @@ import { Simulator } from './Simulator';
 import { Jane } from './Jane';
 
 import { Mixer } from '../audio/Mixer';
+import { AssetExplorer } from './AssetExplorer';
 
 interface DevKitProps {
   isOpen: boolean;
@@ -54,7 +55,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     addCharacter
   } = useStore();
 
-  const [activeTab, setActiveTab] = useState<'monsters' | 'materials' | 'equipment' | 'backgrounds' | 'npcs' | 'test' | 'simulator' | 'jane'>('monsters');
+  const [activeTab, setActiveTab] = useState<'monsters' | 'materials' | 'equipment' | 'backgrounds' | 'npcs' | 'test' | 'simulator' | 'jane' | 'codex'>('monsters');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [editingItem, setEditingItem] = useState<any | null>(initialMonster || null);
   const [editingCharId, setEditingCharId] = useState<string | null>(null);
@@ -835,6 +836,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               { id: 'test', icon: (props: any) => <GameIcon name="users" {...props} />, label: 'TESTER' },
               { id: 'simulator', icon: (props: any) => <GameIcon name="magic_effect" {...props} />, label: 'SIMULATOR' },
               { id: 'jane', icon: (props: any) => <GameIcon name="map" {...props} />, label: 'JANE' },
+              { id: 'codex', icon: (props: any) => <GameIcon name="save_data" {...props} />, label: 'CODEX' },
               { id: 'backgrounds', icon: (props: any) => <GameIcon name="image" {...props} />, label: 'HABITATS' }
             ].map(tab => (
               <button 
@@ -868,6 +870,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               <Simulator />
             ) : activeTab === 'jane' ? (
               <Jane />
+            ) : activeTab === 'codex' ? (
+              <AssetExplorer />
             ) : activeTab !== 'backgrounds' ? (
               <>
                 {/* Left Drawer: Hierarchy & Checklist */}
