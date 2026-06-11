@@ -22,6 +22,7 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 
 ## ⚙️ Systems
 - [Skill Database](./systems/SKILL_DATABASE.md) - D&D Skills & LLM Skills.
+- [Crafting System](./systems/CRAFTING_SYSTEM.md) - Materials and Recipes.
 - [Audio Registry](./systems/AUDIO_REGISTRY.md) - Complete index of audio assets.
 - [Asset Registry](./ASSET_REGISTRY.md) - Tracking sounds, sprites, and models.
 
