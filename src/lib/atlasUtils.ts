@@ -98,7 +98,7 @@ export function getFeatureIcon(index: string, name: string): string {
   if (lowerIndex.includes('expertise')) return 'expertise';
   if (lowerIndex.includes('second_wind')) return 'second_wind';
   if (lowerIndex.includes('action_surge')) return 'action_surge';
-  if (lowerIndex.includes('dual_personalities')) return 'fingerprint';
+  if (lowerIndex.includes('dual_personalities')) return 'identity';
   
   // Fighting Styles - map to feature icons
   if (lowerIndex.includes('fighting_style')) {

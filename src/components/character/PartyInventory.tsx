@@ -18,7 +18,7 @@ export const PartyInventory: React.FC = () => {
   const categories = [
     { id: 'all', icon: 'filter', label: 'All' },
     { id: 'equipment', icon: 'shield', label: 'Gear' },
-    { id: 'materials', icon: 'sparkles', label: 'Materials' },
+    { id: 'materials', icon: 'magic_effect', label: 'Materials' },
     { id: 'key', icon: 'key', label: 'Keys' },
     { id: 'books', icon: 'book', label: 'Books' }
   ];
@@ -116,7 +116,7 @@ export const PartyInventory: React.FC = () => {
           </div>
         ) : (
           <div className="h-full flex flex-col items-center justify-center text-parchment-400 opacity-30 select-none">
-            <GameIcon name="layout" size={48} className="mb-4" color="currentColor" />
+            <GameIcon name="panel" size={48} className="mb-4" color="currentColor" />
             <p className="text-[10px] font-bold uppercase tracking-[0.2em]">Armory Bay Empty</p>
             <p className="text-[8px] mt-1 italic">Drag items here to store</p>
           </div>

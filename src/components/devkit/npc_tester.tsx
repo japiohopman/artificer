@@ -251,7 +251,7 @@ export const NPCTester: React.FC = () => {
           <div className="flex-1 overflow-y-auto p-8 custom-scrollbar">
              {filteredList.length === 0 ? (
                <div className="flex flex-col items-center justify-center p-20 text-white/10 opacity-50">
-                  <GameIcon name="fingerprint" size={48} className="mb-4" />
+                  <GameIcon name="identity" size={48} className="mb-4" />
                   <span className="text-sm font-black uppercase tracking-widest">No matching templates found</span>
                </div>
              ) : (
@@ -261,7 +261,7 @@ export const NPCTester: React.FC = () => {
                       <div className="flex items-start justify-between mb-4">
                          <div className="flex items-center gap-4">
                             <div className="w-14 h-14 rounded-xl bg-black/40 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-purple-500/30 transition-all">
-                               <GameIcon name="fingerprint" size={28} className={cn("transition-colors", npc.index.includes('nada') ? 'text-dragon-red' : 'text-purple-500/40')} />
+                               <GameIcon name="identity" size={28} className={cn("transition-colors", npc.index.includes('nada') ? 'text-dragon-red' : 'text-purple-500/40')} />
                             </div>
                             <div className="flex flex-col min-w-0">
                                <span className="text-[14px] font-black text-white uppercase truncate tracking-tight">{npc.name}</span>

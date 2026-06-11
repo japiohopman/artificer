@@ -94,7 +94,7 @@ export const NotificationWindow: React.FC = () => {
                   recentLogs.type === 'warning' ? 'text-amber-400' : 'text-cyan-400'
                 }`}>
                   {recentLogs.type === 'error' ? <GameIcon name="shield_alert" size={12} /> :
-                   recentLogs.type === 'success' ? <GameIcon name="sparkles" size={12} /> :
+                   recentLogs.type === 'success' ? <GameIcon name="magic_effect" size={12} /> :
                    recentLogs.type === 'warning' ? <GameIcon name="bell" size={12} /> : <GameIcon name="info" size={12} />}
                 </div>
                 

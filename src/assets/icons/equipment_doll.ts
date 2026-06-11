@@ -8,5 +8,7 @@ export const EQUIPMENT_DOLL = {
   focus: "",
   shirt: "",
   gem: "",
-},
-  
+  cloak: "",
+  shield: "",
+  pouch: ""
+};

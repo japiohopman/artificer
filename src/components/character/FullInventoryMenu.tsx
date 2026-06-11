@@ -35,7 +35,7 @@ export const FullInventoryMenu: React.FC = () => {
       <div className="h-14 border-b border-dragon-red/20 bg-white/60 backdrop-blur-sm flex items-center justify-between px-6 shrink-0 z-10">
         <div className="flex items-center gap-4">
           <div className="w-10 h-10 rounded-xl bg-dragon-red flex items-center justify-center text-white shadow-lg rotate-3">
-            <GameIcon name="dashboard" size={20} color="#FFFFFF" />
+            <GameIcon name="overview" size={20} color="#FFFFFF" />
           </div>
           <div>
             <h2 className="font-header text-2xl text-dragon-darkRed uppercase tracking-[0.2em] leading-none">Party Armory</h2>

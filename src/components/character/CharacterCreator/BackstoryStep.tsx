@@ -109,7 +109,7 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <h3 className="text-xs font-black text-dragon-darkRed uppercase tracking-[0.2em] flex items-center gap-2">
-               <GameIcon name="quote" size={14} color="#B8860B" />
+               <GameIcon name="citation" size={14} color="#B8860B" />
                Soul Fragments
             </h3>
             <button 
@@ -126,13 +126,13 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
             <TraitBox 
                label="Personality Trait" 
                value={newChar.traits?.[0] || 'Unselected'} 
-               icon={<GameIcon name="quote" size={16} color="currentColor" />} 
+               icon={<GameIcon name="citation" size={16} color="currentColor" />} 
                color="text-dragon-red"
             />
             <TraitBox 
                label="Ideal" 
                value={newChar.ideals?.[0] || 'Unselected'} 
-               icon={<GameIcon name="target" size={16} color="currentColor" />} 
+               icon={<GameIcon name="range" size={16} color="currentColor" />} 
                color="text-blue-600"
             />
             <TraitBox 
@@ -173,7 +173,7 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
               disabled={isGenerating || !newChar.background}
               className="px-4 py-2 bg-dragon-red text-white border border-dragon-red/50 rounded-sm shadow-lg shadow-dragon-red/20 text-[10px] font-black uppercase tracking-widest transition-all hover:scale-105 active:scale-95 disabled:opacity-50 flex items-center gap-2"
             >
-               <GameIcon name={isGenerating ? "refresh" : "sparkles"} size={12} color="#FFFFFF" className={isGenerating ? "animate-spin" : ""} />
+               <GameIcon name={isGenerating ? "refresh" : "magic_effect"} size={12} color="#FFFFFF" className={isGenerating ? "animate-spin" : ""} />
                Invoke Scribe
             </button>
           </div>
@@ -199,7 +199,7 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
             {isGenerating && (
                <div className="absolute inset-0 bg-white/60 backdrop-blur-sm z-20 flex flex-col items-center justify-center space-y-4">
                   <div className="w-12 h-12 bg-dragon-red rounded-full flex items-center justify-center animate-pulse shadow-xl">
-                    <GameIcon name="sparkles" size={24} color="#FFFFFF" />
+                    <GameIcon name="magic_effect" size={24} color="#FFFFFF" />
                   </div>
                   <span className="text-[10px] font-black text-dragon-red uppercase tracking-widest animate-pulse">Weaving Threads of Fate...</span>
                </div>

@@ -216,7 +216,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
                 <GameIcon name={categoryIndex as any} size={32} color="#8B4513" />
               </div>
             ) : (
-              <GameIcon name="items" size={32} color="#8B4513" className="animate-pulse" />
+              <GameIcon name="loot" size={32} color="#8B4513" className="animate-pulse" />
             )}
           </div>
         )}
@@ -254,7 +254,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
               {/* Transport Stats */}
               {currentItem.speed && (typeof currentItem.speed === 'object') && (currentItem.speed.land || currentItem.speed.water || currentItem.speed.air) && (
                 <div className="flex items-center gap-1 px-2 py-0.5 bg-blue-900/10 rounded border border-blue-900/20 shadow-sm" key={`speed-${activeTier}`}>
-                  <GameIcon name="target" size={10} color="#1E3A8A" />
+                  <GameIcon name="range" size={10} color="#1E3A8A" />
                   <span className="text-[10px] font-anton text-blue-900 tracking-wider">
                     {currentItem.speed.land && `${renderValue(currentItem.speed.land.quantity)} ${renderValue(currentItem.speed.land.unit)} Land`}
                     {currentItem.speed.water && `${renderValue(currentItem.speed.water.quantity)} ${renderValue(currentItem.speed.water.unit)} Water`}
@@ -321,7 +321,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
             )}
             {currentItem.range && (
               <div className="flex items-center gap-1.5 px-2 py-0.5 bg-parchment-200/50 rounded-md border border-dragon-gold/20 text-[9px] font-bold text-dragon-red uppercase tracking-tight">
-                <GameIcon name="target" size={10} color="#8B000099" /> 
+                <GameIcon name="range" size={10} color="#8B000099" /> 
                 <span className="opacity-60">Range:</span> {renderValue(currentItem.range.normal)}{currentItem.range.long ? `/${renderValue(currentItem.range.long)}` : ''}ft.
               </div>
             )}
@@ -374,7 +374,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
             {currentItem.contents && Array.isArray(currentItem.contents) && (
               <div className="mt-4 pt-3 border-t border-dragon-gold/20">
                  <div className="flex items-center gap-2 mb-2">
-                    <GameIcon name="items" size={12} color="#8B0000" className="opacity-60" />
+                    <GameIcon name="loot" size={12} color="#8B0000" className="opacity-60" />
                     <span className="text-[8px] font-black uppercase text-dragon-darkRed tracking-widest leading-none">Pack Contents</span>
                  </div>
                  <div className="grid grid-cols-2 gap-x-4 gap-y-1 not-italic font-sans text-[9px]">

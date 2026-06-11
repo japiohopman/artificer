@@ -15,8 +15,12 @@ The icon system is located in `src/assets/icons/`. It is organized into categori
 Icons are grouped by their functional role in the game:
 
 - **UI_ICONS (`ui.ts`)**: General interface elements (navigation, controls, common status indicators). Merged from former Core, Logistics, and Navigation maps.
-- **WORLD_ATLAS_ICONS (`world_atlas.ts`)**: Locations, regions, and landmarks for the world map and discovery systems.
-- **DEVKIT_ICONS (`devkit.ts`)**: Icons specific to internal tools, editors, and development utilities.
+- **WORLD_ATLAS_ICONS (`world_atlas.ts`)**: Locations, regions, and landmarks for the world map and discovery systems. Recently expanded with more settlement and terrain types.
+- **EDITOR_ICONS (`editor.ts`)**: Icons specific to internal tools, editors, and development utilities (formerly `DEVKIT_ICONS`).
+- **BOOK_READER_ICONS (`book_reader.ts`)**: Controls and indicators for the in-game book reading experience.
+- **TAROT_ICONS (`tarot.ts`)**: Illustrations for the tarot/divination system.
+- **EQUIPMENT_DOLL (`equipment_doll.ts`)**: Slot indicators for the character equipment interface (Head, Chest, Boots, etc.).
+- **MATERIALS (`materials.ts`)**: Categorized icons for crafting materials and resources.
 - **SUBCLASS_ICONS (`subclasses.ts`)**: Unique identifiers for character archetypes.
 - **ACTION_ICONS (`actions.ts`)**: Combat and exploration actions (Attack, Dash, Hide, etc.).
 - **FEATURE_ICONS (`features.ts`)**: Class features, racial traits, and special abilities.
@@ -53,10 +57,11 @@ import { GameIcon } from '@/game_icons';
 3.  **Update the Registry**: If you created a *new* category file, you must import and export it in `src/assets/icons/index.ts`.
 
 ## Guiding Principles
-- **Avoid Duplication**: Check if a similar icon already exists in `UI_ICONS` before adding a new one.
+- **Avoid Duplication**: Check if a similar icon already exists in `UI_ICONS` or other categories before adding a new one.
 - **Path Data Only**: We do not use React Icon components (like those from `lucide-react`) directly in the game systems to maintain a consistent "Parchment & Dragonstone" aesthetic.
-- **Semantic Naming**: Name icon keys based on their *meaning* (e.g., `save`, `improvement`) rather than their visual appearance (e.g., `floppy_disk`, `arrow_up`).
-- **Simplification**: Features and variants should share icons where appropriate. Avoid numbered suffixes (e.g., `feature_1`, `feature_2`) if the icon is the same.
+- **Semantic Naming**: Name icon keys based on their *meaning* or *function* (e.g., `magic_effect`, `range`, `panel`) rather than their visual appearance (e.g., `sparkles`, `target`, `layout`).
+- **No Generic Names**: Avoid abstract or cryptic names like `zap`, `bot`, `activity`, or `knowledge`. Use descriptive names like `energy`, `identity`, `vitality`, or `lore`.
+- **Consistency**: Features and variants should share icons where appropriate. Avoid redundant class-specific prefixes or level-based suffixes if the icon is functionally identical.
 
 ## Performance
 By importing specific icon maps directly (e.g., `import { UI_ICONS } from '@/assets/icons/ui'`), Vite can tree-shake unused icons from the final build. Avoid using `ALL_ICONS` in production components.

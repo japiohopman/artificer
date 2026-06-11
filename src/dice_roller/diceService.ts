@@ -156,6 +156,23 @@ class DiceService {
     }
   }
 
+  private extractRolls(parsedResult: any): any[] {
+    const rolls: any[] = [];
+    const walk = (node: any) => {
+      if (!node) return;
+      if (node.type === "die") {
+        rolls.push({ die: node.sides, result: node.value, valid: true });
+      } else if (node.ops) {
+        node.ops.forEach(walk);
+      } else if (node.left) {
+        walk(node.left);
+        walk(node.right);
+      }
+    };
+    walk(parsedResult);
+    return rolls;
+  }
+
   rollBackground(notation: string, label: string = "Roll"): DiceResult {
     try {
       const parsedResult = this.roller.roll(notation);

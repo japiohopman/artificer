@@ -741,7 +741,7 @@ const ArcaneCodex: React.FC = () => {
                   {/* Explorer Tabs */}
                   <div className="flex border-b border-parchment-300 bg-parchment-100/50">
                     {[
-                      { id: 'enemies', icon: 'monsters', label: 'Monsters' },
+                      { id: 'enemies', icon: 'bestiary', label: 'Monsters' },
                       { id: 'materials', icon: 'materials', label: 'Materials' },
                       { id: 'spells', icon: 'spells', label: 'Spells' },
                       { id: 'equipment', icon: 'package', label: 'Equipment' },
@@ -1072,7 +1072,7 @@ const ArcaneCodex: React.FC = () => {
                 </div>
               ) : (
                 <div className="text-center space-y-4 opacity-30">
-                  <GameIcon name="knowledge" size={120} color="#8B4513" className="mx-auto" />
+                  <GameIcon name="lore" size={120} color="#8B4513" className="mx-auto" />
                   <h3 className="font-header text-3xl text-parchment-600 uppercase">Select a legend to view</h3>
                   <p className="font-body italic text-parchment-500">The archives contain many secrets, waiting to be revealed.</p>
                 </div>

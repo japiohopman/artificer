@@ -117,7 +117,7 @@ export const Jane: React.FC = () => {
                disabled={isGenerating}
                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase transition-all disabled:opacity-50"
              >
-               <GameIcon name="sparkles" size={12} className={isGenerating ? 'animate-spin' : ''} />
+               <GameIcon name="magic_effect" size={12} className={isGenerating ? 'animate-spin' : ''} />
                {isGenerating ? 'Synthesizing...' : 'AI_Gen_Details'}
              </button>
              <button

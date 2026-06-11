@@ -39,7 +39,7 @@ const SpellListRow: React.FC<{
           {spell.imageUrl ? (
             <img src={spell.imageUrl} alt="" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
           ) : (
-            <GameIcon name="sparkles" size={16} color="#8B0000" />
+            <GameIcon name="magic_effect" size={16} color="#8B0000" />
           )}
        </div>
        <div className="flex-1 min-w-0">
@@ -702,7 +702,7 @@ export const CharacterProfile: React.FC = () => {
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Constitution Check");
                             }}
                           />
-                          <VerticalStat label="INTELLIGENCE" value={effectiveStats.int} abbr="INT" icon="sparkles" 
+                          <VerticalStat label="INTELLIGENCE" value={effectiveStats.int} abbr="INT" icon="magic_effect" 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.int - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Intelligence Check");
@@ -837,7 +837,7 @@ export const CharacterProfile: React.FC = () => {
                {/* Improvements & Modifiers Section */}
                   <div className="mt-12 space-y-4">
                     <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                      <GameIcon name="sparkles" size={14} color="#8B0000" />
+                      <GameIcon name="magic_effect" size={14} color="#8B0000" />
                       <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Feats & Features</h3>
                     </div>
                     
@@ -970,7 +970,7 @@ export const CharacterProfile: React.FC = () => {
                       })}
                       {(!character.features || character.features.length === 0) && (
                         <div className="col-span-full py-12 flex flex-col items-center justify-center opacity-20">
-                          <GameIcon name="sparkles" size={48} color="#8B0000" />
+                          <GameIcon name="magic_effect" size={48} color="#8B0000" />
                           <span className="text-[10px] font-black uppercase tracking-[0.3em] mt-4">No Special Features Discovered</span>
                         </div>
                       )}
@@ -994,7 +994,7 @@ export const CharacterProfile: React.FC = () => {
                            {/* Portrait */}
                            <div className="w-[180px] space-y-2">
                               <div className="flex items-center gap-2">
-                                 <GameIcon name="fingerprint" size={12} color="#8B0000" />
+                                 <GameIcon name="identity" size={12} color="#8B0000" />
                                  <span className="text-[8px] font-black text-dragon-darkRed uppercase tracking-widest">Profile_Node</span>
                               </div>
                               <div className="aspect-[9/16] bg-parchment-200 rounded-sm overflow-hidden relative shadow-inner border border-dragon-red/10">
@@ -1015,7 +1015,7 @@ export const CharacterProfile: React.FC = () => {
                            {/* Doll */}
                            <div className="w-[180px] space-y-2">
                               <div className="flex items-center gap-2">
-                                 <GameIcon name="dashboard" size={12} color="#8B0000" />
+                                 <GameIcon name="overview" size={12} color="#8B0000" />
                                  <span className="text-[8px] font-black text-dragon-darkRed uppercase tracking-widest">Equipped_Matrix</span>
                               </div>
                               <div className="aspect-[9/16]">
@@ -1107,7 +1107,7 @@ export const CharacterProfile: React.FC = () => {
                      <div className="space-y-8">
                         <div>
                           <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                            <GameIcon name="sparkles" size={14} color="#8B0000" />
+                            <GameIcon name="magic_effect" size={14} color="#8B0000" />
                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Traits</h3>
                           </div>
                           <div className="grid grid-cols-1 gap-2">
@@ -1216,7 +1216,7 @@ export const CharacterProfile: React.FC = () => {
                               }}
                               className="text-[9px] font-black text-dragon-red hover:text-dragon-darkRed uppercase tracking-widest flex items-center gap-1.5"
                             >
-                               <GameIcon name="sparkles" size={12} />
+                               <GameIcon name="magic_effect" size={12} />
                                Long Rest
                             </button>
                          </div>
@@ -1523,7 +1523,7 @@ const ActionRow: React.FC<{
     <div className="grid grid-cols-[1fr_80px_60px_80px] items-center py-2 px-1 border-b border-parchment-200/50 hover:bg-parchment-200/20 transition-colors">
       <div className="flex items-center gap-2">
         <div className="relative">
-          <GameIcon name="sparkles" size={12} color="#8B0000" className="absolute -top-1.5 -left-1.5 opacity-40" />
+          <GameIcon name="magic_effect" size={12} color="#8B0000" className="absolute -top-1.5 -left-1.5 opacity-40" />
           <GameIcon name={getAttackIcon(icon || name)} size={16} color="#4A4A4A" className="relative z-10" />
         </div>
         <div className="flex flex-col min-w-0">

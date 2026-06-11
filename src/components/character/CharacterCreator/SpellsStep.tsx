@@ -63,7 +63,7 @@ export const SpellsStep: React.FC<{
         return (
             <div className="flex flex-col items-center justify-center h-full text-center space-y-6">
                 <div className="p-8 bg-dragon-gold/5 rounded-full border-2 border-dragon-gold/10 text-dragon-gold/20">
-                    <GameIcon name="skull" size={80} color="currentColor" />
+                    <GameIcon name="death" size={80} color="currentColor" />
                 </div>
                 <div className="space-y-1">
                     <h3 className="text-2xl font-header font-black text-dragon-darkRed uppercase">Physical Path</h3>
@@ -94,7 +94,7 @@ export const SpellsStep: React.FC<{
                     <div className="space-y-4">
                         <div className="flex items-center gap-3">
                             <div className="p-1.5 bg-dragon-red/10 text-dragon-red rounded-sm">
-                                <GameIcon name="sparkles" size={16} color="currentColor" />
+                                <GameIcon name="magic_effect" size={16} color="currentColor" />
                             </div>
                             <h4 className="text-[14px] font-black text-dragon-darkRed uppercase tracking-widest">Cantrips (Level 0)</h4>
                         </div>
@@ -112,7 +112,7 @@ export const SpellsStep: React.FC<{
                     <div className="space-y-4">
                         <div className="flex items-center gap-3">
                             <div className="p-1.5 bg-dragon-red/10 text-dragon-red rounded-sm">
-                                <GameIcon name="zap" size={16} color="currentColor" />
+                                <GameIcon name="energy" size={16} color="currentColor" />
                             </div>
                             <h4 className="text-[14px] font-black text-dragon-darkRed uppercase tracking-widest">Level 1 Spells</h4>
                         </div>
@@ -172,7 +172,7 @@ const SpellCard: React.FC<{ spell: any, active: boolean, onClick: () => void }> 
             "absolute -bottom-4 -right-4 opacity-5 transition-transform duration-500 group-hover:scale-110",
             active ? "text-dragon-gold" : "text-dragon-darkRed"
         )}>
-            <GameIcon name="zap" size={60} color="currentColor" />
+            <GameIcon name="energy" size={60} color="currentColor" />
         </div>
     </button>
 );

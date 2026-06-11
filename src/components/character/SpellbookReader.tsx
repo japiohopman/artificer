@@ -177,7 +177,7 @@ export const SpellbookReader: React.FC<SpellbookReaderProps> = ({ isOpen, onClos
                         ? "bg-dragon-red border-dragon-red text-white" 
                         : "bg-white/40 border-stone-200 text-stone-300 hover:text-dragon-red/40"
                     )}>
-                       <GameIcon name={isPrepared ? "check" : "sparkles"} size={20} color="currentColor" />
+                       <GameIcon name={isPrepared ? "check" : "magic_effect"} size={20} color="currentColor" />
                     </div>
                     <span className={cn(
                       "text-[7px] font-black uppercase tracking-widest",
@@ -261,7 +261,7 @@ export const SpellbookReader: React.FC<SpellbookReaderProps> = ({ isOpen, onClos
         content: (
           <div className="flex flex-col items-center justify-center h-full p-12 text-center">
              <div className="w-32 h-32 bg-dragon-gold/10 rounded-full flex items-center justify-center mb-8 border border-dragon-gold/20">
-                <GameIcon name="sparkles" size={64} color="#D4AF37" className="opacity-40" />
+                <GameIcon name="magic_effect" size={64} color="#D4AF37" className="opacity-40" />
              </div>
              <h2 className="font-header text-3xl text-dragon-darkRed uppercase mb-4">The Book is Silent</h2>
              <p className="font-playfair text-xl text-stone-600 leading-relaxed italic mb-8">

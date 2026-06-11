@@ -127,7 +127,7 @@ export const Simulator: React.FC = () => {
                     className="py-4 bg-white/5 border border-white/5 rounded-xl text-xs font-black text-white hover:bg-dragon-red/20 hover:border-dragon-red/40 transition-all uppercase tracking-widest flex items-center justify-center gap-3"
                     style={{ height: '22px', width: '400px' }}
                    >
-                     <GameIcon name="sparkles" size={14} className="text-dragon-red" />
+                     <GameIcon name="magic_effect" size={14} className="text-dragon-red" />
                      <span style={{ fontSize: '10px', lineHeight: '15px', fontFamily: 'monospace' }}>+{amt} XP</span>
                    </button>
                  ))}

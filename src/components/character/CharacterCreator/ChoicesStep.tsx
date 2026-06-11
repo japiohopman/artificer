@@ -52,12 +52,12 @@ export const CHOICE_ICON_MAP: Record<string, any> = {
     // Terrains
     'arctic': 'mountain',
     'coast': 'wind',
-    'desert': 'flame',
+    'desert': 'fire',
     'forest': 'trees',
     'grassland': 'compass',
     'mountain': 'mountain',
     'swamp': 'ghost',
-    'underdark': 'skull'
+    'underdark': 'death'
 };
 
 export const ChoicesStep: React.FC<{

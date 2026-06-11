@@ -789,7 +789,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               </div>
               <div className="h-4 w-[1px] bg-white/10 mx-2" />
               <div className="flex items-center gap-2 text-white/50 text-[11px] uppercase tracking-widest font-bold">
-                <GameIcon name="terminal" size={14} color="#8B0000" />
+                <GameIcon name="console" size={14} color="#8B0000" />
                 <span>ARCANE_OS // DM_TOOLKIT.v2</span>
               </div>
             </div>
@@ -807,7 +807,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                 }`}
                 title="Audio Mixer"
               >
-                <GameIcon name="sliders" size={18} />
+                <GameIcon name="adjust" size={18} />
               </button>
               <div className="flex items-center gap-1 px-3 py-1 bg-black/30 rounded border border-white/5 text-[10px] text-dragon-red/80 font-bold">
                 <div className="w-1.5 h-1.5 bg-dragon-red rounded-full animate-pulse" />
@@ -828,12 +828,12 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
           {/* Secondary Header: Tab Manager */}
           <div className="bg-[#1e1e1e] flex items-center border-b border-white/5 overflow-x-auto scrollbar-none">
             {[
-              { id: 'monsters', icon: (props: any) => <GameIcon name="bot" {...props} />, label: 'ENEMIES' },
-              { id: 'materials', icon: (props: any) => <GameIcon name="sparkles" {...props} />, label: 'MATERIALS' },
+              { id: 'monsters', icon: (props: any) => <GameIcon name="identity" {...props} />, label: 'ENEMIES' },
+              { id: 'materials', icon: (props: any) => <GameIcon name="magic_effect" {...props} />, label: 'MATERIALS' },
               { id: 'equipment', icon: (props: any) => <GameIcon name="package" {...props} />, label: 'EQUIPMENT' },
               { id: 'npcs', icon: (props: any) => <GameIcon name="avatar" {...props} />, label: 'NPCS' },
               { id: 'test', icon: (props: any) => <GameIcon name="users" {...props} />, label: 'TESTER' },
-              { id: 'simulator', icon: (props: any) => <GameIcon name="sparkles" {...props} />, label: 'SIMULATOR' },
+              { id: 'simulator', icon: (props: any) => <GameIcon name="magic_effect" {...props} />, label: 'SIMULATOR' },
               { id: 'jane', icon: (props: any) => <GameIcon name="map" {...props} />, label: 'JANE' },
               { id: 'backgrounds', icon: (props: any) => <GameIcon name="image" {...props} />, label: 'HABITATS' }
             ].map(tab => (
@@ -1067,8 +1067,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                       <div className="p-4 border-b border-white/5 flex items-center justify-between bg-black/20">
                         <div className="flex items-center gap-4">
                           <div className="p-2 bg-dragon-red/10 rounded border border-dragon-red/20 text-dragon-red">
-                            {activeTab === 'monsters' ? <GameIcon name="bot" size={16} color="currentColor" /> : 
-                             activeTab === 'materials' ? <GameIcon name="sparkles" size={16} color="currentColor" /> :
+                            {activeTab === 'monsters' ? <GameIcon name="identity" size={16} color="currentColor" /> : 
+                             activeTab === 'materials' ? <GameIcon name="magic_effect" size={16} color="currentColor" /> :
                              <GameIcon name="package" size={16} color="currentColor" />}
                           </div>
                           <div>
@@ -1096,7 +1096,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                            </div>
                            <div className="flex items-center justify-between relative z-10">
                               <div className="flex items-center gap-2">
-                                 <GameIcon name="terminal" size={14} className="text-dragon-red" />
+                                 <GameIcon name="console" size={14} className="text-dragon-red" />
                                  <h3 className="text-[10px] font-bold text-white/60 uppercase tracking-[0.2em]">5e.Tools / Raw Manifestation Ripper</h3>
                               </div>
                               <span className="text-[8px] font-mono text-white/20">v.1.0_PARSER</span>
@@ -1141,7 +1141,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                  disabled={isParsingRipper || !ripperText}
                                  className="px-4 py-1.5 bg-dragon-red/80 hover:bg-dragon-red text-white text-[10px] font-bold rounded transition-all flex items-center gap-2 shadow-inner disabled:opacity-30"
                               >
-                                 <GameIcon name="sparkles" size={12} color="#FFFFFF" />
+                                 <GameIcon name="magic_effect" size={12} color="#FFFFFF" />
                                  BAM! MANIFEST ESSENCE
                               </button>
                            </div>
@@ -1171,7 +1171,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                               disabled={isChecking}
                               className="px-6 bg-dragon-red border border-dragon-red/30 text-white text-[11px] font-anton uppercase tracking-widest hover:bg-red-700 transition-all rounded disabled:opacity-50 flex items-center gap-2 shadow-[0_0_15px_rgba(220,38,38,0.2)] active:scale-95"
                             >
-                              {isChecking ? <GameIcon name="refresh" size={14} color="#FFFFFF" className="animate-spin" /> : <GameIcon name="sparkles" size={14} color="#FFFFFF" />}
+                              {isChecking ? <GameIcon name="refresh" size={14} color="#FFFFFF" className="animate-spin" /> : <GameIcon name="magic_effect" size={14} color="#FFFFFF" />}
                               SCRAPE_LORE
                             </button>
                           </div>
@@ -1285,7 +1285,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                         {activeTab === 'monsters' && (
                           <div className="space-y-6 pt-6 border-t border-white/5 bg-black/5 p-4 rounded-lg">
                             <div className="flex items-center gap-2 text-dragon-red">
-                               <GameIcon name="sliders" size={16} color="currentColor" />
+                               <GameIcon name="adjust" size={16} color="currentColor" />
                                <h3 className="text-[10px] font-bold uppercase tracking-widest">Mechanical Essence</h3>
                             </div>
                             
@@ -1637,7 +1637,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                             <div className="space-y-3">
                               <div className="flex items-center justify-between">
                                 <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em] flex items-center gap-2">
-                                  <GameIcon name="sparkles" size={12} color="currentColor" /> HARVEST_NODES
+                                  <GameIcon name="magic_effect" size={12} color="currentColor" /> HARVEST_NODES
                                 </label>
                                 <button 
                                   onClick={() => {
@@ -1865,7 +1865,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                   onClick={generateDescription}
                                   className="text-[9px] text-dragon-red flex items-center gap-1 hover:text-red-400 font-bold uppercase"
                                 >
-                                  <GameIcon name="bot" size={10} color="currentColor" /> Execute_Gen
+                                  <GameIcon name="identity" size={10} color="currentColor" /> Execute_Gen
                                 </button>
                               </div>
                               <textarea 
@@ -1884,7 +1884,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                           <div className="space-y-3 p-4 bg-black/40 border border-white/5 rounded-lg border-l-2 border-l-dragon-red">
                             <div className="flex items-center justify-between">
                               <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em] flex items-center gap-2">
-                                <GameIcon name="bot" size={12} color="#8B0000" /> Synthesis_String
+                                <GameIcon name="identity" size={12} color="#8B0000" /> Synthesis_String
                               </label>
                               <button 
                                 onClick={() => {
@@ -1954,7 +1954,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                   </div>
                     ) : (
                       <div className="flex-1 flex flex-col items-center justify-center text-white/10 gap-6">
-                        <GameIcon name="terminal" size={80} color="currentColor" strokeWidth={1} />
+                        <GameIcon name="console" size={80} color="currentColor" strokeWidth={1} />
                         <div className="text-center space-y-2">
                           <p className="font-bold tracking-[0.3em] uppercase text-sm">Awaiting_Entry_Signal</p>
                           <p className="text-[10px] text-white/5 max-w-[240px]">Select an asset from the project hierarchy to initialize initialization protocols.</p>
@@ -2041,7 +2041,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                             disabled={isGeneratingBg}
                             className="w-full py-3 bg-blue-600 text-white text-[11px] font-bold rounded-lg uppercase hover:bg-blue-500 transition-all disabled:opacity-50 flex items-center justify-center gap-3 shadow-lg group"
                           >
-                            <GameIcon name="sparkles" size={14} className={isGeneratingBg ? 'animate-spin' : 'group-hover:animate-pulse'} />
+                            <GameIcon name="magic_effect" size={14} className={isGeneratingBg ? 'animate-spin' : 'group-hover:animate-pulse'} />
                             {isGeneratingBg ? 'SYNTHESIZING_ENVIRONMENT...' : 'EXECUTE_GENERATE'}
                           </button>
                           {generatedBackground && (

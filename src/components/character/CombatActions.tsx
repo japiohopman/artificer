@@ -104,7 +104,7 @@ export const CombatActions: React.FC = () => {
     if (t.includes('slash')) return 'slashing'; 
     if (t.includes('bludgeon')) return 'bludgeoning';
     if (t.includes('fire')) return 'fire';
-    return 'sparkles';
+    return 'magic_effect';
   };
 
   const getWeaponCategoryIcon = (w: any): GameIconName => {
@@ -214,7 +214,7 @@ export const CombatActions: React.FC = () => {
           range="Self"
           hit="N/A"
           damage="N/A"
-          damageIcon="sparkles"
+          damageIcon="magic_effect"
           cost={1}
           special="You can take a bonus action on each of your turns in combat to take the Dash, Disengage, or Hide action."
         />
@@ -303,12 +303,12 @@ export const CombatActions: React.FC = () => {
           <CombatActionCard 
             key="dual-personalities"
             name="Dual Personalities"
-            icon="fingerprint"
+            icon="identity"
             type="Passive"
             range="Self"
             hit="N/A"
             damage="N/A"
-            damageIcon="fingerprint"
+            damageIcon="identity"
             cost={0}
             special="Your dual nature grants you unique advantages in and out of combat."
           />

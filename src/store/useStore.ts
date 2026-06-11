@@ -23,12 +23,12 @@ export interface SavedLocation {
 }
 
 export const CategoryIcons: Record<string, { icon: string, color: string }> = {
-  city: { icon: 'castle', color: '#D4AF37' },
-  village: { icon: 'home', color: '#D4AF37' },
-  forest: { icon: 'tree', color: '#228B22' },
-  wetlands: { icon: 'waves', color: '#4682B4' },
-  mountain: { icon: 'mountain', color: '#A9A9A9' },
-  underdark: { icon: 'skull', color: '#4B0082' }
+  city: { icon: 'city', color: '#D4AF37' },
+  village: { icon: 'village', color: '#D4AF37' },
+  forest: { icon: 'forest', color: '#228B22' },
+  wetlands: { icon: 'waters', color: '#4682B4' },
+  mountain: { icon: 'mountains', color: '#A9A9A9' },
+  underdark: { icon: 'death', color: '#4B0082' }
 };
 
 export interface LogEntry {

@@ -117,7 +117,7 @@ export const Rest: React.FC = () => {
 
             <div className="mt-4 flex flex-col items-center gap-4">
               <div className="flex items-center gap-3 text-parchment-400 text-[10px] font-bold uppercase tracking-[0.2em]">
-                <GameIcon name="sparkles" size={12} className="text-dragon-red/40" />
+                <GameIcon name="magic_effect" size={12} className="text-dragon-red/40" />
                 Your strength returns in the quiet moments
               </div>
               

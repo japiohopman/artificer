@@ -167,7 +167,7 @@ export const TransportProfile: React.FC = () => {
                                 {transport.speed.land && (
                                   <div className="flex items-center gap-3">
                                      <div className="w-8 h-8 rounded bg-[#8B0000]/10 flex items-center justify-center text-[#8B0000]">
-                                        <GameIcon name="target" size={14} />
+                                        <GameIcon name="range" size={14} />
                                      </div>
                                      <div className="flex flex-col">
                                         <span className="text-[9px] font-black uppercase opacity-60">Land</span>

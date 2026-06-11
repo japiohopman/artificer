@@ -86,8 +86,8 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
       {/* Main Info Blocks */}
       <div className="relative z-10 grid grid-cols-2 gap-3">
         <InfoBlock iconName="speed" label="Casting Time" value={spell.casting_time} />
-        <InfoBlock iconName="target" label="Range" value={spell.range} />
-        <InfoBlock iconName="sparkles" label="Components" value={spell.components?.join(', ') + (spell.material ? '*' : '')} tooltip={spell.material} />
+        <InfoBlock iconName="range" label="Range" value={spell.range} />
+        <InfoBlock iconName="magic_effect" label="Components" value={spell.components?.join(', ') + (spell.material ? '*' : '')} tooltip={spell.material} />
         <InfoBlock iconName="loading" label="Duration" value={(spell.concentration ? 'Conc. ' : '') + spell.duration} />
       </div>
 

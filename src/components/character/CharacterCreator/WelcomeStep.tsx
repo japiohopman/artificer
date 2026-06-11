@@ -23,7 +23,7 @@ export const WelcomeStep: React.FC = () => (
 
      <div className="space-y-6 relative">
         <div className="absolute -top-10 left-1/2 -translate-x-1/2 text-dragon-gold opacity-30">
-          <GameIcon name="sparkles" size={40} color="currentColor" />
+          <GameIcon name="magic_effect" size={40} color="currentColor" />
         </div>
         <h2 className="text-6xl font-header font-black text-dragon-darkRed uppercase tracking-tight leading-none drop-shadow-sm">The Genesis Ritual</h2>
         <div className="w-24 h-1 bg-dragon-gold/30 mx-auto rounded-full" />
@@ -34,9 +34,9 @@ export const WelcomeStep: React.FC = () => (
 
      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full text-left">
         {[
-          { label: 'Bloodline', desc: 'Scribe your ancestry into the great records of the Atlas.', icon: 'dna' },
+          { label: 'Bloodline', desc: 'Scribe your ancestry into the great records of the Atlas.', icon: 'ancestry' },
           { label: 'Archetype', desc: 'Channel your innate talents into a disciplined calling.', icon: 'weapon' },
-          { label: 'Epithet', desc: 'Identify your moral compass and manifested form.', icon: 'scroll_text' },
+          { label: 'Epithet', desc: 'Identify your moral compass and manifested form.', icon: 'document' },
         ].map((feat, i) => (
           <div key={i} className="p-8 bg-white/40 border border-dragon-gold/10 rounded-sm space-y-4 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 group relative overflow-hidden">
              <div className="absolute top-0 right-0 w-16 h-16 bg-dragon-red/5 rounded-full -mr-8 -mt-8 transition-transform group-hover:scale-150" />

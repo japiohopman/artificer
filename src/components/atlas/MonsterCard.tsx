@@ -106,7 +106,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
       headerContent: (
         <div className="mb-4 border-b border-black/10 pb-2 flex justify-between items-center text-black/40">
            <span className="text-[10px] font-bold uppercase tracking-widest">Arcane Transcription</span>
-           <GameIcon name="knowledge" size={12} color="#000000" className="opacity-40" />
+           <GameIcon name="lore" size={12} color="#000000" className="opacity-40" />
         </div>
       )
     }));
@@ -402,7 +402,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
             </div>
           ) : (
             <div className="w-full h-full flex items-center justify-center text-parchment-400 italic text-xs p-8 text-center relative z-20">
-              <GameIcon name="sparkles" className="animate-pulse mr-2" size={16} color="#8B4513" />
+              <GameIcon name="magic_effect" className="animate-pulse mr-2" size={16} color="#8B4513" />
               Manifesting ethereal form...
             </div>
           )}
@@ -439,7 +439,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
       {/* Tab Navigation */}
       <div className="flex justify-around border-b border-dragon-gold/20 relative z-10">
         {[
-          { id: 'stats', icon: 'dashboard', label: 'Stats' },
+          { id: 'stats', icon: 'overview', label: 'Stats' },
           { id: 'actions', icon: 'sword', label: 'Actions' },
           { id: 'loot', icon: 'package', label: 'Loot' }
         ].map(tab => (
@@ -500,7 +500,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
               {(monster.proficiencies && monster.proficiencies.length > 0) && (
                 <div className="pt-3 border-t border-dragon-gold/10 space-y-2">
                   <div className="flex items-center gap-1.5 mb-1 text-dragon-red">
-                    <GameIcon name="knowledge" size={14} color="#8B0000" />
+                    <GameIcon name="lore" size={14} color="#8B0000" />
                     <h4 className="text-[12px] font-bold uppercase tracking-widest font-header">Proficiencies</h4>
                   </div>
                   <div className="text-[12px] grid grid-cols-2 gap-x-4 gap-y-1 text-black">
@@ -572,7 +572,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
                       <div className="flex items-center gap-2.5 overflow-hidden">
                         {drop.type === 'currency' ? <GameIcon name="coins" size={14} color="#D97706" className="shrink-0" /> : 
                           drop.type === 'equipment' ? <GameIcon name="sword" size={14} color="#8B0000" className="shrink-0" /> : 
-                          drop.type === 'material' ? <GameIcon name="sparkles" size={14} color="#D4AF37" className="shrink-0" /> :
+                          drop.type === 'material' ? <GameIcon name="magic_effect" size={14} color="#D4AF37" className="shrink-0" /> :
                           <GameIcon name="package" size={14} color="#8B4513" className="shrink-0 opacity-40" />}
                         <span className="font-medium text-parchment-800 truncate"><SafeValue value={drop.name} /></span>
                       </div>
@@ -604,7 +604,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
               {monster.special_abilities && monster.special_abilities.length > 0 && (
                 <div className="space-y-2.5">
                   <h4 className="text-[14px] font-bold uppercase text-dragon-red border-b border-dragon-red/20 flex items-center gap-1.5 font-header tracking-wider">
-                    <GameIcon name="sparkles" size={14} color="#8B0000" /> Traits
+                    <GameIcon name="magic_effect" size={14} color="#8B0000" /> Traits
                   </h4>
                   {monster.special_abilities.map((sa, i) => (
                     <div key={i} className="text-[15px] leading-snug">

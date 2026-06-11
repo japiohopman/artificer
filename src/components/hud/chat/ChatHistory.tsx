@@ -38,13 +38,13 @@ export const ChatHistory: React.FC<ChatHistoryProps> = ({ history }) => {
           >
             {msg.role === 'system' ? (
               <div className="px-3 py-1 bg-white/5 border border-white/5 rounded-full flex items-center gap-2">
-                <GameIcon name="sparkles" size={8} className="text-emerald-500/60" />
+                <GameIcon name="magic_effect" size={8} className="text-emerald-500/60" />
                 <span className="text-[8px] font-mono uppercase tracking-[0.15em] text-white/30 italic">{msg.text}</span>
               </div>
             ) : (
               <div className={`flex flex-col gap-1 max-w-[90%] ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
                 <div className="flex items-center gap-1.5 px-1 opacity-30">
-                  {msg.role === 'user' ? <GameIcon name="user" size={8} /> : <GameIcon name="bot" size={8} />}
+                  {msg.role === 'user' ? <GameIcon name="user" size={8} /> : <GameIcon name="identity" size={8} />}
                   <span className="text-[7px] font-mono uppercase tracking-widest font-bold text-white">
                     {msg.role === 'user' ? 'Traveler' : currentNPC?.name || 'Unknown'}
                   </span>

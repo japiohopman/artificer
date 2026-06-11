@@ -275,7 +275,7 @@ const EquipmentOptionChoice: React.FC<{
                                     <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
                                         <div className="animate-pulse flex items-center gap-1">
                                             <span className="text-[8px] font-black text-dragon-red uppercase tracking-widest">Ready to Manifest</span>
-                                            <GameIcon name="sparkles" size={12} color="#8B0000" />
+                                            <GameIcon name="magic_effect" size={12} color="#8B0000" />
                                         </div>
                                     </div>
                                 )}
@@ -747,7 +747,7 @@ export const EquipmentStep: React.FC<{
                         {/* Choice Options */}
                         <div className="space-y-4">
                             <div className="flex items-center gap-2">
-                                <GameIcon name="sparkles" size={14} color="#B8860B" />
+                                <GameIcon name="magic_effect" size={14} color="#B8860B" />
                                 <h3 className="text-[12px] font-black text-dragon-darkRed uppercase tracking-[0.2em]">Equipment Choices</h3>
                             </div>
                             <div className="space-y-4">

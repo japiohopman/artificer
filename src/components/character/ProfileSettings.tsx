@@ -139,7 +139,7 @@ export const ProfileSettings: React.FC<ProfileSettingsProps> = ({ onClose }) => 
                 title="Scribe image with AI"
                 className="p-2.5 bg-dragon-red text-white rounded-xl shadow-lg hover:bg-dragon-darkRed transition-all active:scale-95 disabled:opacity-50"
                >
-                  {isGenerating ? <GameIcon name="loading" size={16} color="#FFFFFF" className="animate-spin" /> : <GameIcon name="bot" size={16} color="#FFFFFF" />}
+                  {isGenerating ? <GameIcon name="loading" size={16} color="#FFFFFF" className="animate-spin" /> : <GameIcon name="identity" size={16} color="#FFFFFF" />}
                </button>
             </div>
           </div>
@@ -178,7 +178,7 @@ export const ProfileSettings: React.FC<ProfileSettingsProps> = ({ onClose }) => 
               <div className="space-y-2.5">
                  <label className="text-[11px] font-black text-dragon-red uppercase tracking-[0.15em] block ml-1">Avatar Source</label>
                  <div className="relative group">
-                    <GameIcon name="sparkles" className="absolute left-4 top-1/2 -translate-y-1/2 text-parchment-400 transition-colors group-focus-within:text-dragon-red" size={16} color="currentColor" />
+                    <GameIcon name="magic_effect" className="absolute left-4 top-1/2 -translate-y-1/2 text-parchment-400 transition-colors group-focus-within:text-dragon-red" size={16} color="currentColor" />
                     <input 
                       type="text" 
                       value={photoURL.startsWith('data:') ? 'Local asset uploaded...' : photoURL}

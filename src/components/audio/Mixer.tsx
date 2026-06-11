@@ -10,13 +10,13 @@ const LAYER_ICONS: Record<AudioLayer, React.ReactNode> = {
   1: <GameIcon name="music" size={16} />,
   2: <GameIcon name="wind" size={16} />,
   3: <GameIcon name="cloud" size={16} />,
-  4: <GameIcon name="zap" size={16} />,
+  4: <GameIcon name="energy" size={16} />,
   5: <GameIcon name="user" size={16} />,
-  6: <GameIcon name="zap" size={16} />,
+  6: <GameIcon name="energy" size={16} />,
   7: <GameIcon name="shield" size={16} />,
-  8: <GameIcon name="screen" size={16} />,
+  8: <GameIcon name="display" size={16} />,
   9: <GameIcon name="music" size={16} />,
-  10: <GameIcon name="screen" size={16} />,
+  10: <GameIcon name="display" size={16} />,
   11: <GameIcon name="wind" size={16} />,
 };
 
@@ -42,7 +42,7 @@ export const Mixer: React.FC<MixerProps> = ({ onClose }) => {
     <div className="flex flex-col h-[400px] bg-zinc-950 text-zinc-300 font-mono text-xs select-none border-t border-dragon-red/30 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
       <div className="flex items-center justify-between p-3 border-b border-zinc-800 bg-black/40">
         <div className="flex items-center gap-3">
-          <GameIcon name="sliders" className="text-dragon-red" size={18} />
+          <GameIcon name="adjust" className="text-dragon-red" size={18} />
           <h2 className="text-sm font-header uppercase tracking-widest text-white">Master Control Console</h2>
           <div className="px-2 py-0.5 bg-dragon-red/10 border border-dragon-red/20 rounded text-[8px] text-dragon-red font-black">SYSTEM_OVR</div>
         </div>
@@ -159,7 +159,7 @@ export const Mixer: React.FC<MixerProps> = ({ onClose }) => {
         {/* Master Fader */}
         <div className="ml-auto flex flex-col w-28 shrink-0 bg-stone-900 border-2 border-dragon-red/30 rounded-xl overflow-hidden shadow-2xl">
            <div className="p-2 border-b-2 border-dragon-red/20 bg-stone-950 flex flex-col items-center gap-1">
-              <GameIcon name="zap" className="text-dragon-red" size={16} />
+              <GameIcon name="energy" className="text-dragon-red" size={16} />
               <span className="text-[8px] text-dragon-red font-black tracking-[0.2em] uppercase">Master_Out</span>
               <div className="text-lg text-white font-black tabular-nums tracking-tight">100<span className="text-[8px] opacity-50 ml-0.5">%</span></div>
            </div>

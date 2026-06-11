@@ -70,7 +70,7 @@ export const MaterialImageGenerator: React.FC<MaterialImageGeneratorProps> = ({
           disabled={isGenerating}
           className="px-4 py-2 bg-dragon-red text-parchment-light rounded hover:bg-red-700 disabled:opacity-50 flex items-center gap-2 transition-colors shadow-md"
         >
-          {isGenerating ? <GameIcon name="loading" size={18} color="#FFFFFF" className="animate-spin" /> : <GameIcon name="sparkles" size={18} color="#FFFFFF" />}
+          {isGenerating ? <GameIcon name="loading" size={18} color="#FFFFFF" className="animate-spin" /> : <GameIcon name="magic_effect" size={18} color="#FFFFFF" />}
           {isGenerating ? 'Forging...' : 'Generate Art'}
         </button>
       </div>

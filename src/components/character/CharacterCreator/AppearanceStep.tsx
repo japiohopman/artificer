@@ -381,7 +381,7 @@ export const AppearanceStep: React.FC<{
 
                     <div className="absolute bottom-4 right-4 flex items-center gap-2 opacity-30 group-hover:opacity-60 transition-opacity">
                         <span className="text-[9px] font-black uppercase text-dragon-darkRed">{raceKey} Manifestation</span>
-                        <GameIcon name="dna" size={12} color="#8B0000" />
+                        <GameIcon name="ancestry" size={12} color="#8B0000" />
                     </div>
                 </div>
             </div>

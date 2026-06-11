@@ -20,6 +20,9 @@ import { SUBCLASS_ICONS } from './subclasses';
 import { STAT_COMPARISON_ICONS } from './stat_comparison';
 import { EDITOR_ICONS } from './editor';
 import { MUSICAL_INSTRUMENT_ICONS } from './musical_instruments';
+import { BOOK_READER_ICONS } from './book_reader';
+import { TAROT_ICONS } from './tarot';
+import { EQUIPMENT_DOLL } from './equipment_doll';
 
 /**
  * @deprecated Use tactical imports from specific icon files instead of ALL_ICONS
@@ -48,6 +51,9 @@ export const ALL_ICONS = {
   ...STAT_COMPARISON_ICONS,
   ...MATERIALS_ICONS,
   ...MUSICAL_INSTRUMENT_ICONS,
+  ...BOOK_READER_ICONS,
+  ...TAROT_ICONS,
+  ...EQUIPMENT_DOLL,
 };
 
 export {
@@ -73,4 +79,7 @@ export {
   STAT_COMPARISON_ICONS,
   MATERIALS_ICONS,
   MUSICAL_INSTRUMENT_ICONS,
+  BOOK_READER_ICONS,
+  TAROT_ICONS,
+  EQUIPMENT_DOLL,
 };

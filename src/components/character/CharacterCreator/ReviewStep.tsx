@@ -252,7 +252,7 @@ export const ReviewStep: React.FC<{
                         </div>
                         <div className="space-y-4">
                             <h4 className="text-[11px] font-black text-dragon-darkRed uppercase tracking-[0.4em] border-b border-dragon-gold/20 pb-2 flex items-center gap-2">
-                                <GameIcon name="sparkles" size={14} color="#8B0000" /> Spells
+                                <GameIcon name="magic_effect" size={14} color="#8B0000" /> Spells
                             </h4>
                             <div className="flex flex-wrap gap-1.5">
                                 {newChar.knownSpells?.map((s: any, i: number) => (
@@ -267,7 +267,7 @@ export const ReviewStep: React.FC<{
                     {/* Features & Traits: Grouped by Source */}
                     <div className="space-y-6">
                         <h4 className="text-[11px] font-black text-dragon-darkRed uppercase tracking-[0.4em] border-b border-dragon-gold/20 pb-2 flex items-center gap-2">
-                            <GameIcon name="sparkles" size={14} color="#8B0000" /> Features & Traits
+                            <GameIcon name="magic_effect" size={14} color="#8B0000" /> Features & Traits
                         </h4>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -355,8 +355,8 @@ export const ReviewStep: React.FC<{
                             <div className="space-y-4">
                                 <h4 className="text-[10px] font-black text-dragon-gold uppercase tracking-[0.4em] border-b border-dragon-gold/20 pb-2">Persona & Ethos</h4>
                                 <div className="space-y-3">
-                                    <TraitReview label="Personality" value={newChar.traits?.[0]} icon={<GameIcon name="quote" size={10} color="currentColor" />} />
-                                    <TraitReview label="Ideal" value={newChar.ideals?.[0]} icon={<GameIcon name="target" size={10} color="currentColor" />} />
+                                    <TraitReview label="Personality" value={newChar.traits?.[0]} icon={<GameIcon name="citation" size={10} color="currentColor" />} />
+                                    <TraitReview label="Ideal" value={newChar.ideals?.[0]} icon={<GameIcon name="range" size={10} color="currentColor" />} />
                                     <TraitReview label="Bond" value={newChar.bonds?.[0]} icon={<GameIcon name="heart" size={10} color="currentColor" />} />
                                     <TraitReview label="Flaw" value={newChar.flaws?.[0]} icon={<GameIcon name="alert" size={10} color="currentColor" />} />
                                 </div>

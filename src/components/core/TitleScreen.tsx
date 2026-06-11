@@ -115,7 +115,7 @@ export const TitleScreen: React.FC = () => {
         >
           <div className="flex items-center justify-center gap-4 mb-2">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-white/40" />
-            <GameIcon name="sparkles" size={24} color="#FFFFFF" />
+            <GameIcon name="magic_effect" size={24} color="#FFFFFF" />
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-white/40" />
           </div>
           <h1 className="text-7xl font-elan font-black text-dragon-red tracking-tighter uppercase leading-none mb-4 flex items-center justify-center">

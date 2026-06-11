@@ -85,7 +85,7 @@ export const MaterialCard: React.FC<MaterialCardProps> = ({ material, className 
           </div>
         ) : (
           <div className="w-full h-full flex items-center justify-center text-parchment-400 relative z-20">
-            <GameIcon name="sparkles" className="animate-pulse" size={32} color="#D4AF37" />
+            <GameIcon name="magic_effect" className="animate-pulse" size={32} color="#D4AF37" />
           </div>
         )}
       </div>
@@ -101,7 +101,7 @@ export const MaterialCard: React.FC<MaterialCardProps> = ({ material, className 
           <div className="flex flex-wrap gap-2 mt-1">
             {material.material_category && (
               <div className="flex items-center gap-1.5 bg-dragon-red/5 px-2 py-0.5 rounded border border-dragon-red/10">
-                <GameIcon name="sparkles" size={12} color="#8B0000" />
+                <GameIcon name="magic_effect" size={12} color="#8B0000" />
                 <span className="text-[9px] font-bold text-parchment-500 uppercase tracking-widest leading-none">
                   {renderValue(material.material_category)}
                 </span>

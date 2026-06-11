@@ -84,7 +84,7 @@ const RollNotification: React.FC<{ roll: any }> = ({ roll }) => {
       {/* Crit Mark */}
       {isCrit && (
         <div className="absolute top-0 right-0 p-1 bg-amber-500 rounded-bl-lg text-white">
-          <GameIcon name="sparkles" size={10} color="currentColor" />
+          <GameIcon name="magic_effect" size={10} color="currentColor" />
         </div>
       )}
 

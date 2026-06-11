@@ -205,7 +205,7 @@ export const SelectionStep: React.FC<{
                                             </div>
                                             <div className="col-span-2 mt-4 p-5 bg-dragon-gold/5 border border-dragon-gold/20 rounded-sm relative overflow-hidden group/counsel">
                                                 <div className="absolute top-0 right-0 p-1 opacity-10 group-hover/counsel:opacity-20 transition-opacity">
-                                                    <GameIcon name="dna" size={40} color="currentColor" />
+                                                    <GameIcon name="ancestry" size={40} color="currentColor" />
                                                 </div>
                                                 <h5 className="text-[10px] font-black text-dragon-darkRed uppercase tracking-[0.2em] flex items-center gap-2 mb-3">
                                                     <GameIcon name="info" size={14} color="#B8860B" className="animate-pulse" />

@@ -53,19 +53,19 @@ type CreationStep =
 const STEPS: { id: CreationStep; label: string; icon: any }[] = [
   { id: 'welcome', label: 'Welcome', icon: 'devkit' },
   { id: 'slot', label: 'Save Slot', icon: 'save_data' },
-  { id: 'species', label: 'Species', icon: 'dna' },
-  { id: 'subrace', label: 'Heritage', icon: 'dna' },
+  { id: 'species', label: 'Species', icon: 'ancestry' },
+  { id: 'subrace', label: 'Heritage', icon: 'ancestry' },
   { id: 'class', label: 'Class', icon: 'weapon' },
   { id: 'choices', label: 'Choices', icon: 'book' },
   { id: 'equipment', label: 'Gear', icon: 'shield' },
-  { id: 'spells', label: 'Arcana', icon: 'sparkles' },
+  { id: 'spells', label: 'Arcana', icon: 'magic_effect' },
   { id: 'background', label: 'Origins', icon: 'scroll' },
   { id: 'backstory', label: 'Chronicle', icon: 'book' },
   { id: 'alignment', label: 'Ethos', icon: 'shield' },
   { id: 'stats', label: 'Attributes', icon: 'dice' },
   { id: 'skills', label: 'Skills', icon: 'user' },
-  { id: 'appearance', label: 'Appearance', icon: 'fingerprint' },
-  { id: 'languages', label: 'Tongues', icon: 'sparkles' },
+  { id: 'appearance', label: 'Appearance', icon: 'identity' },
+  { id: 'languages', label: 'Tongues', icon: 'magic_effect' },
   { id: 'identity', label: 'Identity', icon: 'info' },
   { id: 'review', label: 'Commit', icon: 'save_data' },
 ];
@@ -626,7 +626,7 @@ export const CharacterCreator: React.FC = () => {
           <div className="flex items-center gap-2">
             <div className="p-1 bg-dragon-red/5 text-dragon-red border border-dragon-red/10 rounded-sm">
               {(() => {
-                const iconName = STEPS.find(s => s.id === currentStep)?.icon || 'bot';
+                const iconName = STEPS.find(s => s.id === currentStep)?.icon || 'identity';
                 return <GameIcon name={iconName as any} size={18} />;
               })()}
             </div>
@@ -805,7 +805,7 @@ const StepContent: React.FC<{
             return (
                 <div className="flex flex-col items-center justify-center h-full text-center space-y-6">
                     <div className="p-8 bg-dragon-red/5 rounded-full border-2 border-dragon-red/10 text-dragon-red/20">
-                        <GameIcon name="dna" size={80} color="currentColor" />
+                        <GameIcon name="ancestry" size={80} color="currentColor" />
                     </div>
                     <div className="space-y-2">
                         <h3 className="text-2xl font-header font-black text-dragon-darkRed uppercase">Pure Lineage</h3>
@@ -1031,7 +1031,7 @@ const StepContent: React.FC<{
                 <div className="flex flex-wrap gap-2 mt-3">
                     {(newChar.languages || []).sort().map(l => (
                         <div key={l} className="flex items-center gap-2 px-3 py-1.5 bg-white border border-dragon-gold/10 rounded-sm shadow-sm">
-                            <GameIcon name="sparkles" size={10} color="#B8860B" />
+                            <GameIcon name="magic_effect" size={10} color="#B8860B" />
                             <span className="text-[10px] font-black text-dragon-darkRed uppercase tracking-tight">
                                 {l.replace(/-/g, ' ')}
                             </span>

@@ -11,7 +11,7 @@ export const IdentityStep: React.FC<{
     return (
         <div className="h-full flex flex-col items-center justify-center space-y-12 p-8 max-w-4xl mx-auto">
             <div className="space-y-2 text-center relative">
-                <GameIcon name="fingerprint" size={80} color="#B8860B" className="opacity-20 mx-auto" />
+                <GameIcon name="identity" size={80} color="#B8860B" className="opacity-20 mx-auto" />
                 <h2 className="text-4xl font-header font-black text-dragon-darkRed uppercase tracking-tight">The Great Sigil</h2>
                 <p className="text-xs text-parchment-600 font-bold uppercase tracking-widest">Enshrine your identity.</p>
             </div>

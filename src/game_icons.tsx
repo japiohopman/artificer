@@ -16,7 +16,7 @@ export const GAME_ICONS = ALL_ICONS;
 export type GameIconName = keyof typeof GAME_ICONS;
 
 interface GameIconProps extends React.SVGAttributes<SVGElement> {
-  name?: GameIconName | string;
+  name?: string;
   path?: string;
   size?: number;
   width?: number;

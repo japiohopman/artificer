@@ -13,7 +13,7 @@ interface EnemyImageGeneratorProps {
   monsterSubtype?: string;
   monsterLore?: string;
   initialHabitat?: string;
-  initialCategory?: 'monsters' | 'characters' | 'equipment';
+  initialCategory?: 'bestiary' | 'characters' | 'equipment';
   level?: number;
   onImageGenerated: (url: string) => void;
 }
@@ -26,7 +26,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
   monsterSubtype,
   monsterLore,
   initialHabitat = 'land_forest',
-  initialCategory = 'monsters',
+  initialCategory = 'bestiary',
   level = 1,
   onImageGenerated 
 }) => {
@@ -35,7 +35,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [selectedHabitat, setSelectedHabitat] = useState('land_forest');
   const [selectedVariation, setSelectedVariation] = useState(0);
-  const [category, setCategory] = useState<'monsters' | 'characters' | 'equipment'>(initialCategory);
+  const [category, setCategory] = useState<'bestiary' | 'characters' | 'equipment'>(initialCategory);
   const [selectedLevel, setSelectedLevel] = useState(level);
 
   // Sync with initialHabitat prop
@@ -137,7 +137,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
         <div className="flex items-center gap-4">
           <h3 className="text-lg font-cinzel text-dragon-red flex items-center gap-2">
             <GameIcon name="image" size={20} color="#8B0000" />
-            {category === 'monsters' ? 'Enemy Designer' : category === 'characters' ? 'NPC Portraitist' : 'Item Forger'}
+            {category === 'bestiary' ? 'Enemy Designer' : category === 'characters' ? 'NPC Portraitist' : 'Item Forger'}
           </h3>
         </div>
         <button
@@ -145,7 +145,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
           disabled={isGenerating}
           className="px-4 py-2 bg-dragon-red text-parchment-light rounded hover:bg-red-700 disabled:opacity-50 flex items-center gap-2 transition-colors shadow-md"
         >
-          {isGenerating ? <GameIcon name="loading" size={18} color="#FFFFFF" className="animate-spin" /> : <GameIcon name="sparkles" size={18} color="#FFFFFF" />}
+          {isGenerating ? <GameIcon name="loading" size={18} color="#FFFFFF" className="animate-spin" /> : <GameIcon name="magic_effect" size={18} color="#FFFFFF" />}
           {isGenerating ? 'Forging...' : 'Generate Art'}
         </button>
       </div>
@@ -153,7 +153,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
       {error && <p className="text-red-500 text-sm font-bold">{error}</p>}
 
       <div className="flex gap-2 mb-2">
-        {(['monsters', 'characters', 'equipment'] as const).map(cat => (
+        {(['bestiary', 'characters', 'equipment'] as const).map(cat => (
           <button
             key={cat}
             onClick={() => setCategory(cat)}

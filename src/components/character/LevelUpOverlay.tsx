@@ -28,7 +28,7 @@ const Sparkle: React.FC<{ delay: number; x: string; y: string }> = ({ delay, x, 
     className="absolute pointer-events-none z-50"
     style={{ left: x, top: y }}
   >
-    <GameIcon name="sparkles" size={12} color="#D4AF37" />
+    <GameIcon name="magic_effect" size={12} color="#D4AF37" />
   </motion.div>
 );
 
@@ -503,7 +503,7 @@ export const LevelUpOverlay: React.FC = () => {
                                  animate={{ x: [0, 5, 0], opacity: [0.5, 1, 0.5] }}
                                  transition={{ duration: 1.5, repeat: Infinity }}
                                >
-                                 <GameIcon name="zap" size={14} color="#D4AF37" />
+                                 <GameIcon name="energy" size={14} color="#D4AF37" />
                                </motion.div>
                                <span className="text-[10px] font-black text-dragon-gold">+{levelUpResult.hpIncrease}</span>
                             </div>

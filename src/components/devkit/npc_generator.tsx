@@ -841,7 +841,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                 <div className="flex flex-wrap gap-x-8 gap-y-4 items-center border-t border-white/10 pt-4">
                   {[
                     { label: 'Class', value: npcData.class, icon: 'award' },
-                    { label: 'Species', value: npcData.race, icon: 'dna' },
+                    { label: 'Species', value: npcData.race, icon: 'ancestry' },
                     { label: 'Origin', value: npcData.background, icon: 'package' },
                     { label: 'Aura', value: npcData.alignment, icon: 'dice_roll' }
                   ].map((tag, i) => (
@@ -1104,13 +1104,13 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                     </div>
                     <div className="p-3 bg-white/5 border border-white/10 rounded-xl space-y-1">
                       <div className="flex items-center gap-2 text-[8px] text-white/30 uppercase font-black">
-                        <GameIcon name="zap" size={10} className="text-yellow-400/50" /> Initiative
+                        <GameIcon name="energy" size={10} className="text-yellow-400/50" /> Initiative
                       </div>
                       <div className="text-lg font-mono font-bold text-white">{computedInitiative >= 0 ? '+' : ''}{computedInitiative}</div>
                     </div>
                     <div className="p-3 bg-white/5 border border-white/10 rounded-xl space-y-1">
                       <div className="flex items-center gap-2 text-[8px] text-white/30 uppercase font-black">
-                        <GameIcon name="activity" size={10} className="text-green-400/50" /> Speed
+                        <GameIcon name="vitality" size={10} className="text-green-400/50" /> Speed
                       </div>
                       <div className="text-lg font-mono font-bold text-white">{computedSpeed}FT</div>
                     </div>
@@ -1259,7 +1259,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                        <div className="p-4 bg-purple-500/5 border border-purple-500/10 rounded-xl space-y-4">
                           <div className="text-[10px] font-black text-purple-400 uppercase tracking-widest flex items-center justify-between">
                              <div className="flex items-center gap-2">
-                                <GameIcon name="sparkles" size={12} /> Resource_Resolution
+                                <GameIcon name="magic_effect" size={12} /> Resource_Resolution
                              </div>
                              <div className="flex items-center gap-2">
                                 <button 
@@ -1320,7 +1320,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                          <div className="bg-white/5 border border-white/5 rounded-2xl p-6 space-y-4">
                            <div className="flex items-center justify-between border-b border-white/5 pb-2">
                              <label className="text-[10px] font-black text-white/40 uppercase tracking-[0.2em] flex items-center gap-2">
-                               <GameIcon name="activity" size={14} className="text-blue-500" />
+                               <GameIcon name="vitality" size={14} className="text-blue-500" />
                                Active_Skills
                              </label>
                              <div className="flex items-center gap-2">
@@ -1398,7 +1398,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                              
                              {(!npcData.proficiencies || npcData.proficiencies.length === 0) && (
                                <div className="w-full py-10 border border-dashed border-white/5 rounded-2xl flex flex-col items-center justify-center gap-3 opacity-20 italic">
-                                 <GameIcon name="bot" size={24} />
+                                 <GameIcon name="identity" size={24} />
                                  <span className="text-[9px] uppercase font-bold tracking-widest">No_Hardware_Optimization</span>
                                </div>
                              )}

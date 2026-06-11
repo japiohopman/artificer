@@ -25,7 +25,7 @@ export const SpellInventory: React.FC = () => {
 
   if (!activeCharacter) return null;
 
-  // The right panel ONLY shows prepared spells
+  // The right layout ONLY shows prepared spells
   const preparedIndices = activeCharacter.preparedSpells || [];
   const knownSpells = activeCharacter.knownSpells || [];
   const preparedSpells = knownSpells.filter(s => preparedIndices.includes(s.index));
@@ -140,7 +140,7 @@ export const SpellInventory: React.FC = () => {
       </div>
 
       <div className="flex items-center gap-2 mb-2">
-        <GameIcon name="sparkles" size={14} color="#8B0000" />
+        <GameIcon name="magic_effect" size={14} color="#8B0000" />
         <h3 className="text-[11px] font-bold uppercase tracking-widest text-dragon-darkRed">
           {levelFilter === null ? 'Prepared Spells' : `Level ${levelFilter === 0 ? 'Cantrips' : levelFilter}`}
         </h3>
@@ -182,7 +182,7 @@ export const SpellInventory: React.FC = () => {
               
               {activeCharacter.concentrationSpellId === spell.index && (
                 <div className="absolute top-0 right-10 bottom-0 flex items-center justify-center opacity-20 pointer-events-none">
-                    <GameIcon name="sparkles" size={24} color="#8B0000" className="animate-pulse" />
+                    <GameIcon name="magic_effect" size={24} color="#8B0000" className="animate-pulse" />
                 </div>
               )}
             </button>
