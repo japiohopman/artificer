@@ -10,6 +10,7 @@ Welcome to the central documentation index for the Artificer project. This file 
 - **[Architecture](./docs/modules/atlasService.md)** - Technical overview of the Atlas Service.
 - **[Sound System](./docs/modules/soundService.md)** - Documentation for the audio engine.
 - **[Audio Registry](./docs/systems/AUDIO_REGISTRY.md)** - Index of all sound assets.
+- **[Crafting System](./docs/systems/CRAFTING_SYSTEM.md)** - ⚒️ **Material and Recipe Architecture.**
 - **[Dice & Chat](./docs/modules/dice_system.md)** - 3D Dice and AI Chat documentation.
 - **[Icon System](./docs/modules/icons.md)** - 🎨 **Custom Icon Mapping and Architecture.**
 - **[Deep Dive Report](./docs/reports/DEEP_DIVE_RAPPORT.md)** - Analysis of Classes, Leveling, and Character Creation.

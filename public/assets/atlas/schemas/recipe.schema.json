@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/recipe.schema.json",
+  "title": "Recipe",
+  "description": "Schema for crafting recipes in the game atlas.",
+  "type": "object",
+  "required": ["index", "name", "outputTemplateId", "outputQuantity", "ingredients", "craftingType"],
+  "properties": {
+    "index": { "type": "string" },
+    "name": { "type": "string" },
+    "outputTemplateId": { "type": "string" },
+    "outputQuantity": { "type": "integer", "minimum": 1 },
+    "baseItemTemplateId": { "type": "string" },
+    "ingredients": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["templateId", "quantity"],
+        "properties": {
+          "templateId": { "type": "string" },
+          "quantity": { "type": "integer", "minimum": 1 },
+          "isPrimary": { "type": "boolean" }
+        }
+      }
+    },
+    "requiredTools": { "type": "array", "items": { "type": "string" } },
+    "skillChecks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["skill", "dc"],
+        "properties": {
+          "skill": { "type": "string" },
+          "dc": { "type": "integer" }
+        }
+      }
+    },
+    "craftingTime": { "type": "string" },
+    "goldCost": { "type": "number" },
+    "craftingType": { "type": "string", "enum": ["Smithing", "Alchemy", "Cooking", "Arcane"] },
+    "url": { "type": "string", "pattern": "^/assets/atlas/recipes/json/.+\\.json$" }
+  }
+}
