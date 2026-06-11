@@ -10,8 +10,9 @@ We are currently focused on **Phase 1: Inventory Unification** and core infrastr
 ## 🗺️ Roadmap Progress
 
 ### Phase 1: Inventory Unification & Core Infrastructure
-- [ ] **Inventory V2 Migration**: Transitioning characters to registry/slot-based system.
-  - [ ] Character Save Migration (SaveVersion: 2) - *In Progress*
+- [x] **Inventory V2 Migration**: Transitioning characters to registry/slot-based system.
+  - [x] Character Save Migration (SaveVersion: 2) - *Completed (Automatic migration on load)*
+  - [x] UI Unification (Inventory.tsx supports V2) - *Completed*
   - [ ] Equipment Normalization (Sub-schemas for weapons, armor, etc.) - *Pending*
 - [x] **Documentation & Orchestration**: Centralizing project knowledge.
   - [x] Project Hub, Task Board, and Progress Tracking established.

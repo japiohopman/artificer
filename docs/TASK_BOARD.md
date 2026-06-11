@@ -1,14 +1,14 @@
 # Artificer Task Board
 
 ## Critical
-- [ ] Create asset validation script.
+- [x] Create asset validation script.
   - Check all JSON parseable.
   - Index matches filename.
   - url/image/imageUrl existence.
   - Remove legacy paths (e.g., `/artificer-main/codex/assets/`).
   - No GitHub raw URLs in runtime JSON.
-- [ ] Fix equipment path issues (e.g., `longsword.json`, `backpack.json`, `burglars_pack.json`).
-- [ ] Establish canonical asset paths (use `/assets/atlas/...` for runtime).
+- [x] Fix equipment path issues (e.g., `longsword.json`, `backpack.json`, `burglars_pack.json`).
+- [x] Establish canonical asset paths (use `/assets/atlas/...` for runtime).
 - [ ] Normalize references to other JSON records (ID-only + generated index).
 - [x] **Icon Optimization and Tactical Loading**
   - Audit `src/assets/icons/` for duplicates and placeholders.
@@ -21,13 +21,13 @@
 - [ ] Fix references to category JSON (e.g., `equipment_categories`, `damage_types`).
 - [ ] Implement allowlist for external/special paths.
 - [ ] Check image coverage per domain.
-- [ ] Character Save Migration:
+- [x] Character Save Migration:
   - Migrate backpack array + inventory object to items registry + containers + equipment slots.
   - Add `saveVersion: 2`.
   - Implement item registry in saves.
 
 ## Medium
-- [ ] Equipment Normalization:
+- [x] Equipment Normalization:
   - Add `kind` field for game logic.
   - Create sub-schemas per equipment kind (weapon, armor, pack, tool, etc.).
   - Add `equipSlots` and `requiredSlots` to templates.

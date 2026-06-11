@@ -3,6 +3,7 @@ import { Monster } from '../services/ai/monsterService';
 import { AudioLayer, LayerState } from '../types/audio.ts';
 import { ItemInstance, InventoryContainer, InventorySlot } from '../types/inventory';
 import { getPackContents } from '../lib/itemPacks';
+import { migrateCharacterV1ToV2 } from '../lib/migrationUtils';
 import { 
   fetchMonsterList, fetchMonsterData, fetchMonsterCategories, fetchMonsterCategoryMapping,
   fetchMaterialsList, fetchMaterialData, fetchMaterialCategoryMapping, fetchMaterialCategories,
@@ -23,12 +24,12 @@ export interface SavedLocation {
 }
 
 export const CategoryIcons: Record<string, { icon: string, color: string }> = {
-  city: { icon: 'city', color: '#D4AF37' },
-  village: { icon: 'village', color: '#D4AF37' },
-  forest: { icon: 'forest', color: '#228B22' },
-  wetlands: { icon: 'waters', color: '#4682B4' },
-  mountain: { icon: 'mountains', color: '#A9A9A9' },
-  underdark: { icon: 'death', color: '#4B0082' }
+  city: { icon: 'castle', color: '#D4AF37' },
+  village: { icon: 'home', color: '#D4AF37' },
+  forest: { icon: 'tree', color: '#228B22' },
+  wetlands: { icon: 'waves', color: '#4682B4' },
+  mountain: { icon: 'mountain', color: '#A9A9A9' },
+  underdark: { icon: 'skull', color: '#4B0082' }
 };
 
 export interface LogEntry {
@@ -164,9 +165,6 @@ interface AppState {
   explorerTab: ExplorerTab;
   isDevKitOpen: boolean;
   isExplorerOpen: boolean;
-  isWorldPanelOpen: boolean;
-  isCharacterPanelOpen: boolean;
-  dynamicNavButtons: any[]; // Using any for simplicity in store to avoid circular imports, but interface is NavAction
   isAdvancedRollerOpen: boolean;
   chatExpanded: boolean;
   isEditingSubMap: boolean;
@@ -299,9 +297,6 @@ interface AppState {
   setExplorerTab: (tab: ExplorerTab) => void;
   setIsDevKitOpen: (isOpen: boolean) => void;
   setIsExplorerOpen: (isOpen: boolean) => void;
-  setIsWorldPanelOpen: (isOpen: boolean) => void;
-  setIsCharacterPanelOpen: (isOpen: boolean) => void;
-  setDynamicNavButtons: (buttons: any[]) => void;
   setIsAdvancedRollerOpen: (isOpen: boolean) => void;
   setChatExpanded: (expanded: boolean) => void;
   setIsEditingSubMap: (isEditing: boolean) => void;
@@ -323,7 +318,7 @@ interface AppState {
   setMainCharacter: (char: Character) => void;
   reorderCharacters: (startIndex: number, endIndex: number) => void;
   rollDice: (label: string, modifier: number, dieType?: number) => void;
-  rollDice3D: (notation: string, label: string, theme?: string) => Promise<void>;
+  rollDice3D: (notation: string, label: string) => Promise<void>;
   removeRoll: (id: string) => void;
   clearRoll: () => void;
   setIsDiceReady: (isReady: boolean) => void;
@@ -333,6 +328,7 @@ interface AppState {
   unequipItem: (slot: string) => void;
   updatePartyStats: (stats: Partial<AppState['partyStats']>) => void;
   transferItem: (params: { sourceId: string; targetId: string; itemId: string }) => void;
+  moveItemV2: (params: { characterId: string; sourceSlotId: string; targetSlotId: string }) => void;
   addToPartyInventory: (item: any) => void;
   removeFromPartyInventory: (itemId: string) => void;
   addVehicle: (vehicle: any) => void;
@@ -542,9 +538,6 @@ export const useStore = create<AppState>((set, get) => ({
   explorerTab: 'enemies',
   isDevKitOpen: false,
   isExplorerOpen: true,
-  isWorldPanelOpen: false,
-  isCharacterPanelOpen: false,
-  dynamicNavButtons: [],
   isAdvancedRollerOpen: false,
   chatExpanded: false,
   isEditingSubMap: false,
@@ -674,9 +667,6 @@ export const useStore = create<AppState>((set, get) => ({
   },
   setIsDevKitOpen: (isDevKitOpen) => set({ isDevKitOpen }),
   setIsExplorerOpen: (isExplorerOpen) => set({ isExplorerOpen }),
-  setIsWorldPanelOpen: (isWorldPanelOpen) => set({ isWorldPanelOpen }),
-  setIsCharacterPanelOpen: (isCharacterPanelOpen) => set({ isCharacterPanelOpen }),
-  setDynamicNavButtons: (dynamicNavButtons) => set({ dynamicNavButtons }),
   setIsAdvancedRollerOpen: (isAdvancedRollerOpen) => set({ isAdvancedRollerOpen }),
   setChatExpanded: (chatExpanded) => set({ chatExpanded }),
   setIsEditingSubMap: (isEditingSubMap) => set({ isEditingSubMap }),
@@ -725,10 +715,10 @@ export const useStore = create<AppState>((set, get) => ({
     });
   },
 
-  rollDice3D: async (notation, label, theme) => {
+  rollDice3D: async (notation, label) => {
     const { diceService } = await import('../dice_roller/diceService');
     try {
-      const result = await diceService.roll3D(notation, label, theme);
+      const result = await diceService.roll3D(notation, label);
       set((state) => ({ 
         recentRolls: [result, ...state.recentRolls].slice(0, 5) 
       }));
@@ -1111,6 +1101,68 @@ export const useStore = create<AppState>((set, get) => ({
 
     return { characters: newCharacters, partyInventory: newPartyInventory };
   }),
+  moveItemV2: ({ characterId, sourceSlotId, targetSlotId }) => set((state) => {
+    const charIndex = state.characters.findIndex(c => c.id === characterId);
+    if (charIndex === -1) return state;
+    const char = state.characters[charIndex];
+    if (char.saveVersion !== 2) return state;
+
+    const equipment = char.equipment ? { ...char.equipment, slots: [...char.equipment.slots] } : null;
+    const containers = char.containers ? { ...char.containers } : {};
+    const newContainers = { ...containers };
+    
+    // Deep clone slots for containers to ensure immutability
+    for (const cid in newContainers) {
+      newContainers[cid] = { ...newContainers[cid], slots: [...newContainers[cid].slots] };
+    }
+
+    let srcS: any = null;
+    let tgtS: any = null;
+
+    // Find and prepare source and target slots
+    if (equipment) {
+      const sIdx = equipment.slots.findIndex(s => s.id === sourceSlotId);
+      if (sIdx !== -1) {
+        equipment.slots[sIdx] = { ...equipment.slots[sIdx] };
+        srcS = equipment.slots[sIdx];
+      }
+      const tIdx = equipment.slots.findIndex(s => s.id === targetSlotId);
+      if (tIdx !== -1) {
+        equipment.slots[tIdx] = { ...equipment.slots[tIdx] };
+        tgtS = equipment.slots[tIdx];
+      }
+    }
+
+    for (const cid in newContainers) {
+      const sIdx = newContainers[cid].slots.findIndex(s => s.id === sourceSlotId);
+      if (sIdx !== -1) {
+        newContainers[cid].slots[sIdx] = { ...newContainers[cid].slots[sIdx] };
+        srcS = newContainers[cid].slots[sIdx];
+      }
+      const tIdx = newContainers[cid].slots.findIndex(s => s.id === targetSlotId);
+      if (tIdx !== -1) {
+        newContainers[cid].slots[tIdx] = { ...newContainers[cid].slots[tIdx] };
+        tgtS = newContainers[cid].slots[tIdx];
+      }
+    }
+
+    if (srcS && tgtS) {
+      const temp = srcS.itemId;
+      srcS.itemId = tgtS.itemId;
+      tgtS.itemId = temp;
+      
+      const newCharacters = [...state.characters];
+      newCharacters[charIndex] = { 
+        ...char, 
+        equipment: equipment || undefined, 
+        containers: newContainers 
+      };
+      
+      return { characters: newCharacters };
+    }
+
+    return state;
+  }),
   addToPartyInventory: (item) => set((state) => {
     const newInventory = [...state.partyInventory];
     const existingIndex = newInventory.findIndex(i => (i.index && i.index === item.index) || (i.name === item.name));
@@ -1418,7 +1470,10 @@ export const useStore = create<AppState>((set, get) => ({
     set({ isLoadingSaves: true });
     try {
       const { saveService } = await import('../services/saveService');
-      const chars = await saveService.loadCharacters();
+      const rawChars = await saveService.loadCharacters();
+      
+      // Automatic migration to Inventory V2
+      const chars = rawChars.map(migrateCharacterV1ToV2);
       
       const slots: (Character | null)[] = [null, null, null];
       chars.forEach(c => {
@@ -1430,10 +1485,11 @@ export const useStore = create<AppState>((set, get) => ({
 
       set({ 
         mainCharacterSlots: slots,
+        // If we have characters in slots, set the first one as active if none set
+        activeCharacterId: get().activeCharacterId || slots.find(s => s !== null)?.id || ''
       });
 
       // Pre-load leveled data for all characters in slots
-      const { atlasService } = await import('../services/atlasService');
       for (const char of chars) {
           if (char && char.level > 0) {
               const levels = Array.from({ length: char.level }, (_, i) => i + 1);
