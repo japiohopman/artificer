@@ -4,17 +4,41 @@ import { useStore } from '../store/useStore';
 
 export const DiceBoxCanvas: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const setIsDiceReady = useStore(state => state.setIsDiceReady);
+  const { setIsDiceReady, isWorldPanelOpen, isCharacterPanelOpen, isInventoryOpen } = useStore();
 
   useEffect(() => {
     if (containerRef.current) {
       diceService.init('#dice-box-container').then(() => {
         setIsDiceReady(true);
+        // Force initial resize
+        const handleResize = () => {
+          // @ts-ignore
+          if (diceService.diceBox && typeof diceService.diceBox.resize === 'function') {
+            // @ts-ignore
+            diceService.diceBox.resize();
+          }
+        };
+        handleResize();
       }).catch(err => {
         console.error("[DiceBoxCanvas] Init failed:", err);
       });
     }
   }, [setIsDiceReady]);
+
+  // Handle resizing when sidebars toggle
+  useEffect(() => {
+    const handleResize = () => {
+      // @ts-ignore
+      if (diceService.diceBox && typeof diceService.diceBox.resize === 'function') {
+        // @ts-ignore
+        diceService.diceBox.resize();
+      }
+    };
+    
+    // Dice need a short delay to wait for sidebar animation
+    const timeout = setTimeout(handleResize, 350);
+    return () => clearTimeout(timeout);
+  }, [isWorldPanelOpen, isCharacterPanelOpen, isInventoryOpen]);
 
   return (
     <div 

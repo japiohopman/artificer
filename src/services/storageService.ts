@@ -201,7 +201,7 @@ export async function fetchMonsterData(index: string): Promise<any> {
 }
 
 export async function fetchMaterialData(index: string): Promise<any> {
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/materials/json/${index}.json?t=${Date.now()}`;
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/crafting/json/${index}.json?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
   
   try {
@@ -210,7 +210,7 @@ export async function fetchMaterialData(index: string): Promise<any> {
     if (!data) return null;
     return {
       ...data,
-      imageUrl: normalizeImageUrl(data.imageUrl, 'materials', index)
+      imageUrl: normalizeImageUrl(data.imageUrl, 'crafting', index)
     };
   } catch (e) {
     console.error("Error fetching material data:", e);
@@ -531,7 +531,7 @@ export async function fetchNPCData(index: string): Promise<any> {
 }
 
 export async function fetchMaterialsList(): Promise<{ name: string; index: string }[]> {
-  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/materials/json?ref=${BRANCH}&t=${Date.now()}`;
+  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/crafting/json?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   
   try {

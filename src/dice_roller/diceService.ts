@@ -50,8 +50,8 @@ class DiceService {
 
         this.initialized = false;
         
-        // Use a more reliable CDN for assets
-        const ASSET_PATH = "https://unpkg.com/@3d-dice/dice-box@1.1.4/dist/assets/";
+        // Use local assets from the public directory
+        const ASSET_PATH = "/assets/dice-box/";
         
         this.diceBox = new DiceBox({
           container: selector,
@@ -62,7 +62,7 @@ class DiceService {
           startingHeight: 8,
           throwForce: 6,
           spinForce: 5,
-          lightIntensity: 1,
+          lightIntensity: 0.8,
           gravity: 2,
           settleTimeout: 5000,
           boxControls: false
@@ -111,18 +111,19 @@ class DiceService {
     }
 
     try {
-      // 3D Roll
-      const results = await this.diceBox.roll(notation, { theme: theme || "default" });
+      // 3D Roll - Ensure theme is passed correctly
+      const rollTheme = theme || "default";
+      const results = await this.diceBox.roll(notation, { theme: rollTheme });
 
       // If results are empty or invalid, fallback
       if (!results || results.length === 0) {
         return this.rollBackground(notation, label);
       }
 
-      // Calculate total manually if parser fails
-      let total = 0;
+      // Calculate total manually and extract modifier
+      let rollTotal = 0;
       const rolls = results.map((r: any) => {
-        total += r.value;
+        rollTotal += r.value;
         return {
           die: r.sides,
           result: r.value,
@@ -130,13 +131,22 @@ class DiceService {
         };
       });
 
+      // Simple regex to extract modifier from notation if total doesn't match sum of rolls
+      let modifier = 0;
+      const modMatch = notation.match(/([+-]\s*\d+)\s*$/);
+      if (modMatch) {
+        modifier = parseInt(modMatch[1].replace(/\s+/g, ''));
+      }
+      
+      const total = rollTotal + modifier;
+
       return {
         id: crypto.randomUUID(),
         notation,
         total,
         label,
         rolls,
-        modifier: 0, // Simplified for now
+        modifier,
         timestamp: Date.now()
       };
     } catch (error) {
@@ -162,18 +172,23 @@ class DiceService {
     return rolls;
   }
 
-  rollBackground(notation: string, label: string = "Roll"): DiceResult {
+  rollBackground(notation, label = "Roll"): DiceResult {
     try {
       const parsedResult = this.roller.roll(notation);
       const allRolls = this.extractRolls(parsedResult);
-      
+
+      // Calculate modifier
+      let rollSum = 0;
+      allRolls.forEach(r => rollSum += r.result);
+      const modifier = parsedResult.value - rollSum;
+
       return {
         id: crypto.randomUUID(),
         notation,
         total: parsedResult.value,
         label,
         rolls: allRolls.map(r => ({ die: r.die, result: r.result, valid: r.valid })),
-        modifier: 0,
+        modifier,
         timestamp: Date.now()
       };
     } catch (error) {
@@ -193,6 +208,12 @@ class DiceService {
   clear() {
     if (this.initialized) {
       this.diceBox.clear();
+    }
+  }
+
+  updateConfig(config: any) {
+    if (this.initialized && this.diceBox) {
+      this.diceBox.updateConfig(config);
     }
   }
 }
