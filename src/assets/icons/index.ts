@@ -1,4 +1,5 @@
 import { UI_ICONS } from './ui';
+// Icon system index - Refactored for consistency
 import { ATTACK_ICONS } from './attacks';
 import { EQUIPMENT_ICONS } from './equipment';
 import { DAMAGE_TYPE_ICONS } from './damage_types';
@@ -9,8 +10,8 @@ import { CHARACTER_ICONS } from './character';
 import { POUCH_ICONS } from './pouch';
 import { MATERIALS_ICONS } from './materials';
 import { WORLD_ATLAS_ICONS } from './world_atlas';
-import { abilityScoreIcons as ABILITY_SCORE_ICONS } from './ability_score';
-import { SKILL_ICONS } from './skill';
+import { ABILITY_SCORE_ICONS } from './ability_score_icons';
+import { SKILL_ICONS } from './skill_icons';
 import { FEAT_ICONS } from './feats';
 import { FEATURE_ICONS } from './features';
 import { TRAIT_ICONS } from './traits';
