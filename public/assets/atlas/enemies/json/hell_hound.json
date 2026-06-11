@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "fiend",
   "alignment": "lawful evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 15
-    }
-  ],
+  "armor_class": 15,
   "hit_points": 45,
   "hit_dice": "7d8",
   "hit_points_roll": "7d8+14",
@@ -43,7 +38,7 @@
     "passive_perception": 15
   },
   "languages": "understands Infernal but can't speak it",
-  "challenge_rating": 3,
+  "challenge_rating": "3",
   "proficiency_bonus": 2,
   "xp": 700,
   "special_abilities": [
@@ -115,10 +110,22 @@
   ],
   "image": "/assets/atlas/enemies/images/hell_hound.webp",
   "url": "/assets/atlas/enemies/json/hell_hound.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-11T10:30:11.397Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 11,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.0webp",
+  "stats": {
+    "str": 17,
+    "dex": 12,
+    "con": 14,
+    "int": 6,
+    "wis": 13,
+    "cha": 6
+  },
+  "imageUrl": "/assets/atlas/enemies/images/hell_hound.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "11-6-2026"
 }
