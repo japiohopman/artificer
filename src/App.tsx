@@ -28,7 +28,7 @@ import { useBookStore } from './store/useBookStore';
 export default function App() {
   const { 
     isGameStarted, isDevKitOpen, setIsDevKitOpen, updateSelectedItem, selectedItem, explorerTab,
-    isCharacterSpellbookOpen, setIsCharacterSpellbookOpen
+    isCharacterSpellbookOpen, setIsCharacterSpellbookOpen, isProfileMenuOpen
   } = useStore();
 
   const {
@@ -41,6 +41,11 @@ export default function App() {
   const activeBook = registeredBooks.find(b => b.id === activeBookId);
 
   useEffect(() => {
+    // Initial data load
+    const { loadCharacters, loadAllLists } = useStore.getState();
+    loadCharacters();
+    loadAllLists();
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.shiftKey && e.key.toLowerCase() === 'd') {
         e.preventDefault();
@@ -85,7 +90,9 @@ export default function App() {
       </AnimatePresence>
       
       <FullInventoryMenu />
-      <CharacterProfile />
+      <AnimatePresence>
+        {isProfileMenuOpen && <CharacterProfile />}
+      </AnimatePresence>
       <MonsterProfile />
       <TransportProfile />
       <CharacterCreator />
