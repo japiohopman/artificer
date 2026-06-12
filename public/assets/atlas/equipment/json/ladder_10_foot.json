@@ -19,15 +19,19 @@
   },
   "weight": 25,
   "url": "/assets/atlas/equipment/json/ladder_10_foot.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-12T08:04:18.192Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/ladder_10_foot.webp",
   "sprite_index": 18,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp",
   "kind": "adventuring_gear",
   "equipSlots": [
     "ring_1",
     "ring_2"
-  ]
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/ladder_10_foot.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
