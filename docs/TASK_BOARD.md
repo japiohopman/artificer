@@ -11,10 +11,11 @@
 - [x] Establish canonical asset paths (use `/assets/atlas/...` for runtime).
 - [ ] Normalize references to other JSON records (ID-only + generated index).
 - [x] **Icon Optimization and Tactical Loading**
-  - Audit `src/assets/icons/` for duplicates and placeholders.
-  - Consolidate core/common icons into `core.ts`.
-  - Refactor `src/game_icons.tsx` to support granular/tactical loading.
-  - Deduplicate icons between UI and Codex Arcane.
+  - [x] Audit `src/assets/icons/` for duplicates and placeholders.
+  - [x] Consolidate core/common icons into `core.ts`.
+  - [x] Refactor `src/game_icons.tsx` to support granular/tactical loading.
+  - [x] Deduplicate icons between UI and Codex Arcane.
+  - [x] Enhance `atlasUtils.ts` for automated feature/subclass mapping.
 
 ## High
 - [ ] Generate indexes per domain (equipment, spell, enemies, magic_items, maps).
@@ -31,7 +32,7 @@
   - Add `kind` field for game logic.
   - Create sub-schemas per equipment kind (weapon, armor, pack, tool, etc.).
   - Add `equipSlots` and `requiredSlots` to templates.
-- [ ] Sound Asset Reorganization (In Progress).
+- [x] Sound Asset Reorganization (Completed).
 - [ ] Implement Skill Database documentation.
 - [ ] Asset Registry maintenance.
 

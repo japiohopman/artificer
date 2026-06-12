@@ -171,6 +171,8 @@ interface AppState {
   chatExpanded: boolean;
   isEditingSubMap: boolean;
   isInsideSubMap: boolean;
+  selectedDiceTheme: string;
+  selectedDiceColor: string;
   
   // World State
   currentLocation: any | null;
@@ -308,6 +310,7 @@ interface AppState {
   setIsInsideSubMap: (isInside: boolean) => void;
   setPartySubLocation: (location: any) => void;
   setSelectedDiceTheme: (theme: string) => void;
+  setSelectedDiceColor: (color: string) => void;
   
   setSearchQuery: (query: string) => void;
   setFocusedItem: (item: any | null) => void;
@@ -324,7 +327,7 @@ interface AppState {
   setMainCharacter: (char: Character) => void;
   reorderCharacters: (startIndex: number, endIndex: number) => void;
   rollDice: (label: string, modifier: number, dieType?: number) => void;
-  rollDice3D: (notation: string, label: string, theme?: string) => Promise<void>;
+  rollDice3D: (notation: string, label: string, theme?: string, color?: string) => Promise<void>;
   removeRoll: (id: string) => void;
   clearRoll: () => void;
   setIsDiceReady: (isReady: boolean) => void;
@@ -550,6 +553,8 @@ export const useStore = create<AppState>((set, get) => ({
   chatExpanded: false,
   isEditingSubMap: false,
   isInsideSubMap: false,
+  selectedDiceTheme: 'default',
+  selectedDiceColor: '#8b0000',
 
   currentLocation: null,
   currentSubLocation: null,
@@ -684,6 +689,7 @@ export const useStore = create<AppState>((set, get) => ({
   setIsInsideSubMap: (isInsideSubMap) => set({ isInsideSubMap }),
   setPartySubLocation: (partyLocation) => set({ partyLocation }),
   setSelectedDiceTheme: (selectedDiceTheme) => set({ selectedDiceTheme }),
+  setSelectedDiceColor: (selectedDiceColor) => set({ selectedDiceColor }),
 
   setSearchQuery: (searchQuery) => set({ searchQuery }),
   setFocusedItem: (focusedItem) => set({ focusedItem }),
@@ -727,11 +733,11 @@ export const useStore = create<AppState>((set, get) => ({
     });
   },
 
-  rollDice3D: async (notation, label, theme) => {
+  rollDice3D: async (notation, label, theme, color) => {
     const { diceService } = await import('../dice_roller/diceService');
-    const { selectedDiceTheme } = get();
+    const { selectedDiceTheme, selectedDiceColor } = get();
     try {
-      const result = await diceService.roll3D(notation, label, theme || selectedDiceTheme);
+      const result = await diceService.roll3D(notation, label, theme || selectedDiceTheme, color || selectedDiceColor);
       set((state) => ({ 
         recentRolls: [result, ...state.recentRolls].slice(0, 5) 
       }));

@@ -704,37 +704,37 @@ export const CharacterProfile: React.FC = () => {
                           <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Ability Scores</h3>
                        </div>
                        <div className="flex flex-col gap-2">
-                          <VerticalStat label="STRENGTH" value={effectiveStats.str} abbr="STR" icon="weapon" 
+                          <VerticalStat label="STRENGTH" value={effectiveStats.str} abbr="STR" icon="str" 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.str - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Strength Check");
                             }}
                           />
-                          <VerticalStat label="DEXTERITY" value={effectiveStats.dex} abbr="DEX" icon="wind" 
+                          <VerticalStat label="DEXTERITY" value={effectiveStats.dex} abbr="DEX" icon="dex" 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.dex - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Dexterity Check");
                             }}
                           />
-                          <VerticalStat label="CONSTITUTION" value={effectiveStats.con} abbr="CON" icon="heart" 
+                          <VerticalStat label="CONSTITUTION" value={effectiveStats.con} abbr="CON" icon="con" 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.con - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Constitution Check");
                             }}
                           />
-                          <VerticalStat label="INTELLIGENCE" value={effectiveStats.int} abbr="INT" icon="magic_effect" 
+                          <VerticalStat label="INTELLIGENCE" value={effectiveStats.int} abbr="INT" icon="int" 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.int - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Intelligence Check");
                             }}
                           />
-                          <VerticalStat label="WISDOM" value={effectiveStats.wis} abbr="WIS" icon="scroll" 
+                          <VerticalStat label="WISDOM" value={effectiveStats.wis} abbr="WIS" icon="wis" 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.wis - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Wisdom Check");
                             }}
                           />
-                          <VerticalStat label="CHARISMA" value={effectiveStats.cha} abbr="CHA" icon="user" 
+                          <VerticalStat label="CHARISMA" value={effectiveStats.cha} abbr="CHA" icon="cha" 
                             onClick={() => {
                               const mod = Math.floor((effectiveStats.cha - 10) / 2);
                               rollDice3D(`1d20${mod >= 0 ? '+' : ''}${mod !== 0 ? mod : ''}`, "Charisma Check");

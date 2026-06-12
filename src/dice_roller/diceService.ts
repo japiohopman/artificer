@@ -99,8 +99,13 @@ class DiceService {
   /**
    * Roll dice with 3D animation
    */
-  async roll3D(notation: string, label: string = "Roll", theme?: string): Promise<DiceResult> {
-    console.log(`[DiceService] Starting 3D Roll: ${notation} with theme: ${theme}`);
+  async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string): Promise<DiceResult> {
+    console.log(`[DiceService] Starting 3D Roll: ${notation} with theme: ${theme}, color: ${color}`);
+
+    // Play roll sound effect
+    import('../services/soundService').then(({ soundService }) => {
+      soundService.playEffect('DICE_ROLL');
+    });
 
     if (!this.initialized && this.initPromise) {
       await this.initPromise;
@@ -111,9 +116,14 @@ class DiceService {
     }
 
     try {
-      // 3D Roll - Ensure theme is passed correctly
+      // 3D Roll - Ensure theme and color are passed correctly
       const rollTheme = theme || "default";
-      const results = await this.diceBox.roll(notation, { theme: rollTheme });
+      const rollOptions: any = { theme: rollTheme };
+      if (color) {
+        rollOptions.themeColor = color;
+      }
+      
+      const results = await this.diceBox.roll(notation, rollOptions);
 
       // If results are empty or invalid, fallback
       if (!results || results.length === 0) {

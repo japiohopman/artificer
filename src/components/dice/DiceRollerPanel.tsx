@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { diceService } from '../../dice_roller/diceService';
 
 export const AdvancedRoller: React.FC = () => {
-  const { rollDice3D, isAdvancedRollerOpen, setIsAdvancedRollerOpen, selectedDiceTheme, setSelectedDiceTheme } = useStore();
+  const { rollDice3D, isAdvancedRollerOpen, setIsAdvancedRollerOpen, selectedDiceTheme, setSelectedDiceTheme, selectedDiceColor, setSelectedDiceColor } = useStore();
   const [notation, setNotation] = useState('');
   const [advantage, setAdvantage] = useState<'none' | 'adv' | 'dis'>('none');
 
@@ -15,6 +15,11 @@ export const AdvancedRoller: React.FC = () => {
   const handleThemeChange = (themeId: string) => {
     setSelectedDiceTheme(themeId);
     diceService.updateConfig({ theme: themeId });
+  };
+
+  const handleColorChange = (color: string) => {
+    setSelectedDiceColor(color);
+    diceService.updateConfig({ themeColor: color });
   };
 
   const handleRoll = () => {
@@ -35,7 +40,7 @@ export const AdvancedRoller: React.FC = () => {
         }
     }
 
-    rollDice3D(finalNotation, "Advanced Roll", selectedDiceTheme);
+    rollDice3D(finalNotation, "Advanced Roll", selectedDiceTheme, selectedDiceColor);
     setIsAdvancedRollerOpen(false);
   };
 
@@ -163,6 +168,31 @@ export const AdvancedRoller: React.FC = () => {
                   >
                     {t.label}
                   </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="mb-6">
+              <div className="text-[8px] font-black uppercase text-dragon-red/40 mb-2 tracking-widest">Dice Color</div>
+              <div className="flex gap-2">
+                {[
+                  { id: 'red', value: '#8b0000' },
+                  { id: 'gold', value: '#d4af37' },
+                  { id: 'blue', value: '#1e40af' },
+                  { id: 'green', value: '#166534' },
+                  { id: 'purple', value: '#6b21a8' },
+                  { id: 'charcoal', value: '#523b23' }
+                ].map(c => (
+                  <button
+                    key={c.id}
+                    onClick={() => handleColorChange(c.value)}
+                    className={cn(
+                      "w-8 h-8 rounded-full border-2 transition-all shadow-sm",
+                      selectedDiceColor === c.value ? "border-dragon-red scale-110" : "border-transparent"
+                    )}
+                    style={{ backgroundColor: c.value }}
+                    title={c.id}
+                  />
                 ))}
               </div>
             </div>

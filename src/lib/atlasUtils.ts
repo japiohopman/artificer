@@ -92,24 +92,40 @@ export function getChoiceLimit(feat: any): number {
 }
 
 export function getFeatureIcon(index: string, name: string): string {
-  const lowerIndex = String(index || '').toLowerCase().replace(/-/g, '_');
+  let lowerIndex = String(index || '').toLowerCase().replace(/-/g, '_');
+  const lowerName = String(name || '').toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_');
   
+  // Strip common prefixes to get to the core identity
+  lowerIndex = lowerIndex.replace(/^feature_/, '').replace(/^subclass_/, '');
+
   // Basic Normalization for Features
-  if (lowerIndex.includes('expertise')) return 'expertise';
-  if (lowerIndex.includes('second_wind')) return 'second_wind';
-  if (lowerIndex.includes('action_surge')) return 'action_surge';
+  if (lowerIndex.includes('expertise') || lowerName.includes('expertise')) return 'expertise';
+  if (lowerIndex.includes('second_wind') || lowerName.includes('second_wind')) return 'second_wind';
+  if (lowerIndex.includes('action_surge') || lowerName.includes('action_surge')) return 'action_surge';
   if (lowerIndex.includes('dual_personalities')) return 'identity';
+  if (lowerIndex.includes('sneak_attack') || lowerName.includes('sneak_attack')) return 'sneak_attack';
+  if (lowerIndex.includes('unarmored_defense')) return 'unarmored_defense';
+  if (lowerIndex.includes('cunning_action')) return 'cunning_action';
   
   // Fighting Styles - map to feature icons
-  if (lowerIndex.includes('fighting_style')) {
-    if (lowerIndex.includes('archery')) return 'fighter_fighting_style';
-    if (lowerIndex.includes('defense')) return 'fighter_fighting_style';
-    if (lowerIndex.includes('dueling')) return 'fighter_fighting_style';
-    if (lowerIndex.includes('great_weapon')) return 'fighting_style_great_weapon_fighting';
-    if (lowerIndex.includes('protection')) return 'fighting_style_protection';
-    if (lowerIndex.includes('two_weapon')) return 'fighter_fighting_style';
+  if (lowerIndex.includes('fighting_style') || lowerName.includes('fighting_style')) {
+    if (lowerIndex.includes('archery') || lowerName.includes('archery')) return 'fighter_fighting_style_archery';
+    if (lowerIndex.includes('defense') || lowerName.includes('defense')) return 'fighting_style_defense';
+    if (lowerIndex.includes('dueling') || lowerName.includes('dueling')) return 'fighting_style_dueling';
+    if (lowerIndex.includes('great_weapon') || lowerName.includes('great_weapon')) return 'fighting_style_great_weapon_fighting';
+    if (lowerIndex.includes('protection') || lowerName.includes('protection')) return 'fighting_style_protection';
+    if (lowerIndex.includes('two_weapon') || lowerName.includes('two_weapon')) return 'fighter_fighting_style_two_weapon_fighting';
     return 'fighter_fighting_style';
   }
+
+  // Check if it's a subclass-related feature
+  if (lowerIndex.includes('thief') || lowerName.includes('thief')) return 'thief';
+  if (lowerIndex.includes('assassin') || lowerName.includes('assassin')) return 'assassin';
+  if (lowerIndex.includes('arcane_trickster') || lowerName.includes('arcane_trickster')) return 'arcane_trickster';
+  if (lowerIndex.includes('life_domain') || lowerName.includes('life_domain') || lowerName === 'life' || lowerIndex === 'life') return 'life';
+  if (lowerIndex.includes('open_hand') || lowerName.includes('open_hand')) return 'open_hand';
+  if (lowerIndex.includes('battle_master') || lowerName.includes('battle_master')) return 'battle_master';
+  if (lowerIndex.includes('eldritch_knight') || lowerName.includes('eldritch_knight')) return 'eldritch_knight';
 
   // Exact matches for index or normalized name
   return lowerIndex;
@@ -117,37 +133,46 @@ export function getFeatureIcon(index: string, name: string): string {
 
 export function getTraitIcon(index: string): string {
   if (!index) return 'award';
-  return index.toLowerCase().replace(/-/g, '_');
+  const lower = index.toLowerCase().replace(/-/g, '_').replace(/\s+/g, '_');
+  
+  // Common mappings for traits if they don't match index exactly
+  if (lower.includes('darkvision')) return 'darkvision';
+  if (lower.includes('resistance')) return 'damage_resistance';
+  if (lower.includes('luck')) return 'lucky';
+  if (lower.includes('brave')) return 'brave';
+  if (lower.includes('fey_ancestry')) return 'fey_ancestry';
+  
+  return lower;
 }
 
 export function getFeatIcon(index: string): string {
   if (!index) return 'award';
-  return index.toLowerCase().replace(/-/g, '_');
+  return index.toLowerCase().replace(/-/g, '_').replace(/\s+/g, '_');
 }
 
 export function getMagicSchoolIcon(index: string): string {
   if (!index) return 'award';
-  return index.toLowerCase().replace(/-/g, '_');
+  return index.toLowerCase().replace(/-/g, '_').replace(/\s+/g, '_');
 }
 
 export function getLanguageIcon(index: string): string {
   if (!index) return 'award';
-  return index.toLowerCase().replace(/-/g, '_');
+  return index.toLowerCase().replace(/-/g, '_').replace(/\s+/g, '_');
 }
 
 export function getAlignmentIcon(index: string): string {
   if (!index) return 'award';
-  return index.toLowerCase().replace(/-/g, '_');
+  return index.toLowerCase().replace(/-/g, '_').replace(/\s+/g, '_');
 }
 
 export function getBackgroundIcon(index: string): string {
   if (!index) return 'award';
-  return index.toLowerCase().replace(/-/g, '_');
+  return index.toLowerCase().replace(/-/g, '_').replace(/\s+/g, '_');
 }
 
 export function getProficiencyIcon(index: string): string {
   if (!index) return 'award';
-  return index.toLowerCase().replace(/-/g, '_');
+  return index.toLowerCase().replace(/-/g, '_').replace(/\s+/g, '_');
 }
 
 export function getAttackIcon(name: string): string {
