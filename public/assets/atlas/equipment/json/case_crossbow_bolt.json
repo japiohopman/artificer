@@ -21,15 +21,19 @@
     "This wooden case can hold up to twenty crossbow bolts."
   ],
   "url": "/assets/atlas/equipment/json/case_crossbow_bolt.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-12T06:52:36.814Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/case_crossbow_bolt.webp",
   "sprite_index": 24,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp",
   "kind": "adventuring_gear",
   "equipSlots": [
     "ring_1",
     "ring_2"
-  ]
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/case_crossbow_bolt.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
