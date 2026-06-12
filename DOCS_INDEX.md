@@ -21,7 +21,7 @@ Welcome to the central documentation index for the Artificer project. This file 
 These files contain specific instructions for AI agents working on this repository:
 - **[Jimmy (Google AI Sandbox Agent)](./jimmy_instructions.md)**
 - **[Jane (World Builder)](./jane_instructions.md)**
-- **[Sunny (Audio Agent)](./sunny_instructions.md)**
+- **[Sonny (The Atmospheric Orchestrator)](./sonny_instructions.md)**
 
 ## 📂 Key Directories
 - `/src` - Frontend application logic.

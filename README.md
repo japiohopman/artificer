@@ -15,7 +15,7 @@ Arcane Codex is forged and maintained by a specialized collective of AI agents, 
 - **👑 Jules (The Orchestrator)**: The project's master architect. Jules coordinates the efforts of all agents, manages the repository's integrity, and ensures the central documentation hub remains the source of truth.
 - **🛠️ Jimmy (The Artificer)**: Specialist in core systems and mechanics. Jimmy handles the complex logic of character creation, inventory logistics, and the internal plumbing of the sandbox.
 - **🗺️ Jane (The Cartographer)**: Architect of geography and world-building. Jane "bakes" the physical world, from the sprawling streets of Waterdeep to the smallest trail in the Sword Coast.
-- **🎵 Sunny (The Bard)**: Master of the atmospheric soundscape. Sunny orchestrates the multi-layered audio engine, ensuring every encounter is met with the perfect reactive melody and SFX.
+- **🎙️ Sonny (The Atmospheric Orchestrator)**: Professional Audio Architect and Environmental Lead. Sonny orchestrates the multi-layered audio engine and synchronizes it with physical lighting states (Philips Hue) to create immersive sensory realities.
 - **⚖️ Skill Agent (The Arbiter)**: Guardian of the mechanical law. This agent ensures strict adherence to D&D 5.5e rules, managing the dual-layer skill system and mechanical integrity.
 
 ---
