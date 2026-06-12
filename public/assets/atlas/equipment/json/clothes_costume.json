@@ -19,15 +19,19 @@
   },
   "weight": 4,
   "url": "/assets/atlas/equipment/json/clothes_costume.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-12T06:48:36.031Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/clothes_costume.webp",
   "sprite_index": 10,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
   "kind": "adventuring_gear",
   "equipSlots": [
     "ring_1",
     "ring_2"
-  ]
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/clothes_costume.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
