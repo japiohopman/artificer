@@ -24,15 +24,19 @@
     "The ritual takes 1 hour to perform, uses 25 gp worth of powdered silver, and requires the caster to expend a 1st-level spell slot."
   ],
   "url": "/assets/atlas/equipment/json/holy_water_flask.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-12T06:54:17.608Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/holy_water_flask.webp",
   "sprite_index": 6,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp",
   "kind": "adventuring_gear",
   "equipSlots": [
     "ring_1",
     "ring_2"
-  ]
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/holy_water_flask.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
