@@ -21,15 +21,19 @@
     "A small box for alms, typically found in a priest's pack."
   ],
   "url": "/assets/atlas/equipment/json/alms_box.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-12T05:01:49.655Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/alms_box.webp",
   "sprite_index": 4,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.0webp",
   "kind": "adventuring_gear",
   "equipSlots": [
     "ring_1",
     "ring_2"
-  ]
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/alms_box.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
