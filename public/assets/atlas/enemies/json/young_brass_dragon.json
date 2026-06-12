@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "dragon",
   "alignment": "chaotic good",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 110,
   "hit_dice": "13d10",
   "hit_points_roll": "13d10+39",
@@ -94,7 +89,7 @@
     "passive_perception": 16
   },
   "languages": "Common, Draconic",
-  "challenge_rating": 6,
+  "challenge_rating": "6",
   "proficiency_bonus": 3,
   "xp": 2300,
   "actions": [
@@ -207,11 +202,23 @@
   ],
   "image": "/assets/atlas/enemies/images/young_brass_dragon.webp",
   "url": "/assets/atlas/enemies/json/young_brass_dragon.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-12T04:43:48.772Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 0,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet14.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet14.0webp",
+  "stats": {
+    "str": 19,
+    "dex": 10,
+    "con": 17,
+    "int": 12,
+    "wis": 11,
+    "cha": 15
+  },
+  "imageUrl": "/assets/atlas/enemies/images/young_brass_dragon.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
