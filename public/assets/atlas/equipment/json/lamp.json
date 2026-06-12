@@ -21,15 +21,19 @@
     "A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
   ],
   "url": "/assets/atlas/equipment/json/lamp.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-12T06:56:19.448Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/lamp.webp",
   "sprite_index": 19,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp",
   "kind": "adventuring_gear",
   "equipSlots": [
     "ring_1",
     "ring_2"
-  ]
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/lamp.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
