@@ -5,12 +5,7 @@
   "size": "Large",
   "type": "monstrosity",
   "alignment": "neutral evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 26,
   "hit_dice": "4d10",
   "hit_points_roll": "4d10+4",
@@ -42,7 +37,7 @@
     "passive_perception": 14
   },
   "languages": "Goblin, Worg",
-  "challenge_rating": 0.5,
+  "challenge_rating": "0.5",
   "proficiency_bonus": 2,
   "xp": 100,
   "special_abilities": [
@@ -72,10 +67,22 @@
   ],
   "image": "/assets/atlas/enemies/worg.webp",
   "url": "/assets/atlas/enemies/json/worg.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-12T04:46:37.734Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 19,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet13.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet13.0webp",
+  "stats": {
+    "str": 16,
+    "dex": 13,
+    "con": 13,
+    "int": 7,
+    "wis": 11,
+    "cha": 8
+  },
+  "imageUrl": "/assets/atlas/enemies/images/worg.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
