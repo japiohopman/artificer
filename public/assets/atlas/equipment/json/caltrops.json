@@ -24,15 +24,19 @@
     "A creature moving through the area at half speed doesn't need to make the save."
   ],
   "url": "/assets/atlas/equipment/json/caltrops.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-12T06:47:17.290Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/caltrops.webp",
   "sprite_index": 17,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp",
   "kind": "adventuring_gear",
   "equipSlots": [
     "ring_1",
     "ring_2"
-  ]
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/caltrops.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
