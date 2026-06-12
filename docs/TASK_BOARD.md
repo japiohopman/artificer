@@ -41,3 +41,32 @@
 - [ ] Lazy-load assets per game screen.
 - [ ] Create thumbnail variants for inventory/shop UI.
 - [ ] Documentation updates: `ASSETS.md`, `README.md` for modules.
+
+## Phase 2: World State & Tactical Foundations
+- [ ] **Store Slicing (Infrastructure)**
+  - [ ] Refactor `useStore.ts` into specialized slices (`useCharacterStore`, `useInventoryStore`, `useWorldStore`).
+  - [ ] Migrate global state to appropriate slices.
+- [ ] **World State Module**
+  - [ ] Implement Temporal Progression (`gameYear`, `gameMonth`, `gameDay`, `gameTime`).
+  - [ ] Create Environmental Engine for dynamic weather.
+  - [ ] Setup Faction & World Flags system.
+- [ ] **Journal & Persistence**
+  - [ ] Implement `Journal.tsx` component.
+  - [ ] Setup Session Summaries and Quest Tracker logic.
+
+## Future Modules (Roadmap)
+- [ ] **NPC Memory Module**
+  - [ ] Affinity System (-10 to +10 scale).
+  - [ ] Interaction Log & Memory Index.
+- [ ] **Atlas Map Module**
+  - [ ] Interactive spatial interface (Leaflet-like).
+  - [ ] Dynamic Markers and Fog of War.
+- [ ] **Tactical Combat Engine**
+  - [ ] Grid-Based Movement & Collision.
+  - [ ] Initiative Tracker & AI Combat Logic.
+- [ ] **Economic & Trade Module**
+  - [ ] Regional Pricing & Merchant Inventory rotation.
+- [ ] **Soundscape Orchestrator**
+  - [ ] Mood-Based Transitions & Ambient Layering.
+- [ ] **Rule Engine & Condition Tracker**
+  - [ ] Condition Management & Rest/Recovery resolution.
