@@ -21,15 +21,22 @@
     "A key is provided with the lock. Without the key, a creature proficient with thieves' tools can pick this lock with a successful DC 15 Dexterity check. Your GM may decide that better locks are available for higher prices."
   ],
   "url": "/assets/atlas/equipment/json/lock.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-12T08:10:19.809Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/lock.webp",
   "sprite_index": 2,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.0webp",
   "kind": "adventuring_gear",
   "equipSlots": [
     "ring_1",
     "ring_2"
-  ]
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/lock.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "12-6-2026"
 }
