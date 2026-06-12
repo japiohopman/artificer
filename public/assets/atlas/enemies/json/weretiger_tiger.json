@@ -5,12 +5,7 @@
   "type": "humanoid",
   "subtype": "human",
   "alignment": "neutral",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 12
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 120,
   "hit_dice": "16d8",
   "forms": [
@@ -64,7 +59,7 @@
     "passive_perception": 15
   },
   "languages": "",
-  "challenge_rating": 4,
+  "challenge_rating": "4",
   "proficiency_bonus": 2,
   "xp": 1100,
   "special_abilities": [
@@ -129,9 +124,21 @@
   ],
   "image": "/assets/atlas/enemies/weretiger_tiger.webp",
   "url": "/assets/atlas/enemies/json/weretiger_tiger.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-12T04:51:24.278Z",
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 10,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet13.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet13.0webp",
+  "stats": {
+    "str": 17,
+    "dex": 15,
+    "con": 16,
+    "int": 10,
+    "wis": 13,
+    "cha": 11
+  },
+  "imageUrl": "/assets/atlas/enemies/images/weretiger_tiger.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
