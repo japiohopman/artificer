@@ -43,6 +43,10 @@
 - [ ] Documentation updates: `ASSETS.md`, `README.md` for modules.
 
 ## Phase 2: World State & Tactical Foundations
+- [x] **System Documentation (Architecture First)**
+  - [x] Define Party State & World State schemas.
+  - [x] Design Travel, Time, and Weather systems.
+  - [x] Blueprint World Panel Architecture & Data Flow.
 - [ ] **Store Slicing (Infrastructure)**
   - [ ] Refactor `useStore.ts` into specialized slices (`useCharacterStore`, `useInventoryStore`, `useWorldStore`).
   - [ ] Migrate global state to appropriate slices.
