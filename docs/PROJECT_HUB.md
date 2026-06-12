@@ -20,6 +20,11 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [Inventory V2](./modules/inventory_v2.md) - Registry/Slot pattern.
 - [Dice & Chat](./modules/dice_system.md) - 3D Dice and AI Chat.
 
+## 🤖 Agents
+- [Jimmy (Sandbox)](../jimmy_instructions.md) - Core systems and mechanics.
+- [Jane (World Builder)](../jane_instructions.md) - Geography and cartography.
+- [Sonny (Atmospheric Orchestrator)](../sonny_instructions.md) - Audio and Environmental ambiance.
+
 ## ⚙️ Systems
 - [Skill Database](./systems/SKILL_DATABASE.md) - D&D Skills & LLM Skills.
 - [Crafting System](./systems/CRAFTING_SYSTEM.md) - Materials and Recipes.

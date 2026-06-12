@@ -14,7 +14,7 @@ If you have been assigned one of the following roles, please read your specific 
 
 - **Jimmy (Sandbox/Core Agent)**: Read [jimmy_instructions.md](./jimmy_instructions.md)
 - **Jane (World Builder)**: Read [jane_instructions.md](./jane_instructions.md)
-- **Sunny (Audio Agent)**: Read [sunny_instructions.md](./sunny_instructions.md)
+- **Sonny (The Atmospheric Orchestrator)**: Read [sonny_instructions.md](./sonny_instructions.md)
 
 ## 🛠️ General Guidelines
 - **Groundedness**: Always verify your actions against the existing codebase.

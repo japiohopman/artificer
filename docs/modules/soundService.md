@@ -4,7 +4,7 @@
 The `soundService.ts` manages the atmospheric soundscape of Artificer. It supports multi-layered audio mixing, allowing for simultaneous background music, ambient loops, and directional sound effects.
 
 ## Owner
-Sound Agent
+Sonny (The Atmospheric Orchestrator)
 
 ## Resources
 - [Audio Registry](../systems/AUDIO_REGISTRY.md) - Complete index of audio assets.
@@ -17,6 +17,7 @@ Sound Agent
 
 ## Architecture
 - **Layer-Based Mixing**: Audio is divided into layers (Music, Ambient, UI, SFX, etc.).
+- **Arcane Ambiance**: Integration with Philips Hue for lighting synchronization (Synchronized by Sonny).
 - **Master Volume**: Global control over all audio output.
 - **Playlist Management**: Supports dynamic switching between "Startup" and "Game" playlists.
 - **Proxy Loading**: Assets are loaded via GitHub Raw proxy to ensure availability.

@@ -275,6 +275,16 @@ interface AppState {
   layerStates: Record<AudioLayer, LayerState>;
   isMusicPlaying: boolean;
 
+  // Hue Lighting (Arcane Ambiance)
+  hueState: {
+    enabled: boolean;
+    connected: boolean;
+    brightness: number;
+    color: string;
+    scene: string;
+    isSyncing: boolean;
+  };
+
   // Game flow
   isGameStarted: boolean;
   setIsGameStarted: (started: boolean) => void;
@@ -285,6 +295,9 @@ interface AppState {
   toggleLayerSolo: (layerId: AudioLayer) => void;
   stopAllAudio: () => void;
   setMusicPlaying: (isPlaying: boolean) => void;
+
+  // Hue Actions
+  setHueState: (updates: Partial<AppState['hueState']>) => void;
 
   // Auth State
   user: any | null;
@@ -615,6 +628,16 @@ export const useStore = create<AppState>((set, get) => ({
     11: { volume: 0.4, isMuted: false, isSolo: false, isPlaying: false },
   },
 
+  // Hue Lighting
+  hueState: {
+    enabled: false,
+    connected: false,
+    brightness: 100,
+    color: '#ffffff',
+    scene: 'default',
+    isSyncing: false
+  },
+
   selectedItem: null,
   isLoadingItem: false,
   focusedItem: null,
@@ -825,6 +848,10 @@ export const useStore = create<AppState>((set, get) => ({
   },
 
   setMusicPlaying: (isMusicPlaying) => set({ isMusicPlaying }),
+
+  setHueState: (updates) => set((state) => ({
+    hueState: { ...state.hueState, ...updates }
+  })),
 
   addToBackpack: (item) => set((state) => {
     const packContents = getPackContents(item.index || item.name);
