@@ -5,12 +5,7 @@
   "type": "humanoid",
   "subtype": "human",
   "alignment": "chaotic evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 12
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 58,
   "hit_dice": "9d8",
   "forms": [
@@ -55,7 +50,7 @@
     "passive_perception": 14
   },
   "languages": "Common",
-  "challenge_rating": 3,
+  "challenge_rating": "3",
   "proficiency_bonus": 2,
   "xp": 700,
   "special_abilities": [
@@ -124,9 +119,21 @@
   ],
   "image": "/assets/atlas/enemies/werewolf_hybrid.webp",
   "url": "/assets/atlas/enemies/json/werewolf_hybrid.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-12T04:49:34.471Z",
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 12,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet13.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet13.0webp",
+  "stats": {
+    "str": 15,
+    "dex": 13,
+    "con": 14,
+    "int": 10,
+    "wis": 11,
+    "cha": 10
+  },
+  "imageUrl": "/assets/atlas/enemies/images/werewolf_hybrid.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
