@@ -17,16 +17,20 @@
     "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
   ],
   "url": "/assets/atlas/equipment/json/jewelers_tools.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-12T12:24:08.226Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/jewelers_tools.webp",
   "sprite_index": 15,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp",
   "kind": "tool",
   "equipSlots": [
     "tool_1",
     "tool_2",
     "tool_3"
-  ]
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/jewelers_tools.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
