@@ -13,7 +13,7 @@
   "variant": true,
   "desc": [
     "Wondrous item, legendary (requires attunement)",
-    "While wearing this belt, your Strength score changes to 27. If your Strength is already equal to or greater than the belt's score, the item has no Effect on you."
+    "While wearing this belt, your Strength score changes to 27.0 If your Strength is already equal to or greater than the belt's score, the item has no Effect on you."
   ],
   "feature_specific": {
     "passive_modifiers": {
@@ -22,5 +22,9 @@
   },
   "image": "/assets/atlas/magic_items/belt_of_giant_strength_cloud.webp",
   "url": "/assets/atlas/magic_items/json/belt_of_giant_strength_cloud.json",
-  "updated_at": "2025-10-24T20:42:13.517Z"
+  "updated_at": "2026-06-12T16:42:43.118Z",
+  "imageUrl": "/assets/atlas/magic_items/images/belt_of_giant_strength_cloud.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
