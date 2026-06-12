@@ -22,15 +22,19 @@
     "Appendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
   ],
   "url": "/assets/atlas/equipment/json/amulet.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-12T06:32:23.384Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/amulet.webp",
   "sprite_index": 5,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.0webp",
   "kind": "trinket",
   "equipSlots": [
     "ring_1",
     "ring_2"
-  ]
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/amulet.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
