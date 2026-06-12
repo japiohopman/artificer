@@ -1,4 +1,4 @@
-# Jane: World Building Module
+Building Module
 
 ## Purpose
 The World Building module, spearheaded by the **Jane Agent**, is responsible for the procedural and manual creation of the physical environment in Artificer. This includes cities, settlements, roads, landmarks, and interior locations like shops.
