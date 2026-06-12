@@ -19,15 +19,19 @@
   },
   "weight": 0,
   "url": "/assets/atlas/equipment/json/chalk_1_piece.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-12T06:51:24.458Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/chalk_1_piece.webp",
   "sprite_index": 5,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
   "kind": "adventuring_gear",
   "equipSlots": [
     "ring_1",
     "ring_2"
-  ]
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/chalk_1_piece.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
 }
