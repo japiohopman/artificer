@@ -22,7 +22,7 @@ export const HUD: React.FC = () => {
   return (
     <div className="h-screen w-full flex flex-col overflow-hidden bg-parchment-100 text-parchment-900 font-body relative bg-paper-texture">
       {/* 1. Fixed Top Header / Navigation (Above sidebars) */}
-      <div className="w-full z-[2000] p-4 pointer-events-none">
+      <div className="w-full z-[2000] p-2 pointer-events-none">
         <Nav />
       </div>
 
