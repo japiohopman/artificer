@@ -4,7 +4,12 @@
   "size": "Large",
   "type": "dragon",
   "alignment": "lawful good",
-  "armor_class": 18,
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
   "hit_points": 142,
   "hit_dice": "15d10",
   "hit_points_roll": "15d10+60",
@@ -89,7 +94,7 @@
     "passive_perception": 17
   },
   "languages": "Common, Draconic",
-  "challenge_rating": "8",
+  "challenge_rating": 8,
   "proficiency_bonus": 3,
   "xp": 3900,
   "special_abilities": [
@@ -172,7 +177,7 @@
                 "dc_type": {
                   "index": "dex",
                   "name": "dex",
-                  "url": "/assets/atlas/ability_scores/json/dexterity.json"
+                  "url": "/assets/atlas/ability_scores/json/dex.json"
                 },
                 "dc_value": 15,
                 "success_type": "half"
@@ -195,7 +200,7 @@
                 "dc_type": {
                   "index": "str",
                   "name": "str",
-                  "url": "/assets/atlas/ability_scores/json/strength.json"
+                  "url": "/assets/atlas/ability_scores/json/str.json"
                 },
                 "dc_value": 15,
                 "success_type": "none"
@@ -209,21 +214,10 @@
   ],
   "image": "/assets/atlas/enemies/images/young_bronze_dragon.webp",
   "url": "/assets/atlas/enemies/json/young_bronze_dragon.json",
-  "updated_at": "2026-06-08T14:41:54.714Z",
+  "updated_at": "2025-10-24T20:42:13.742Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 1,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet14.0webp",
-  "stats": {
-    "str": 21,
-    "dex": 10,
-    "con": 19,
-    "int": 14,
-    "wis": 13,
-    "cha": 17
-  },
-  "imageUrl": "/assets/atlas/enemies/images/young_bronze_dragon.webp",
-  "last_updated": "8-6-2026",
-  "background_type": "land_forest"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet14.webp"
 }
