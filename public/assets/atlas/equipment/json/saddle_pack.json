@@ -15,11 +15,18 @@
   },
   "weight": 15,
   "url": "/assets/atlas/equipment/json/saddle_pack.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-13T21:02:12.900Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/saddle_pack.webp",
   "sprite_index": 6,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
-  "kind": "equipment_pack"
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
+  "kind": "equipment_pack",
+  "imageUrl": "/assets/atlas/equipment/images/saddle_pack.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "13-6-2026"
 }
