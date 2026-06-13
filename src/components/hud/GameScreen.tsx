@@ -92,19 +92,6 @@ export const GameScreen: React.FC = () => {
       {/* 4. Chat Panel Layer (Bottom) */}
       <div className="absolute inset-x-0 bottom-0 z-40 flex flex-col items-center pointer-events-none">
         <div className="w-full max-w-5xl px-4 pb-4 pointer-events-auto relative">
-           {/* Toggle Icon */}
-           <div className="absolute -top-12 right-8 z-50">
-              <button 
-                onClick={() => setChatExpanded(!chatExpanded)}
-                className="w-12 h-12 flex items-center justify-center bg-dragon-red hover:bg-dragon-darkRed text-white rounded-full border-2 border-dragon-gold transition-all shadow-2xl cursor-pointer group active:scale-90"
-                title={chatExpanded ? "[COLLAPSE_HISTORY]" : "[EXPAND_HISTORY]"}
-              >
-                  <div className={cn("transition-transform duration-300", chatExpanded ? "rotate-180" : "animate-bounce")}>
-                    <GameIcon name="chevron_up" size={20} />
-                  </div>
-              </button>
-           </div>
-
            <ChatPanel isCollapsed={!chatExpanded} />
         </div>
       </div>
