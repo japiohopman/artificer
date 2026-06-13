@@ -197,7 +197,7 @@
         "dc_type": {
           "index": "wis",
           "name": "wis",
-          "url": "/assets/atlas/ability_scores/json/wisdom.json"
+          "url": "/assets/atlas/ability_scores/json/wis.json"
         },
         "dc_value": 21,
         "success_type": "none"
@@ -226,7 +226,7 @@
                 "dc_type": {
                   "index": "dex",
                   "name": "dex",
-                  "url": "/assets/atlas/ability_scores/json/dexterity.json"
+                  "url": "/assets/atlas/ability_scores/json/dex.json"
                 },
                 "dc_value": 21,
                 "success_type": "half"
@@ -249,7 +249,7 @@
                 "dc_type": {
                   "index": "str",
                   "name": "str",
-                  "url": "/assets/atlas/ability_scores/json/strength.json"
+                  "url": "/assets/atlas/ability_scores/json/str.json"
                 },
                 "dc_value": 21,
                 "success_type": "none"
@@ -279,7 +279,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "/assets/atlas/ability_scores/json/dexterity.json"
+          "url": "/assets/atlas/ability_scores/json/dex.json"
         },
         "dc_value": 22,
         "success_type": "none"
@@ -298,11 +298,11 @@
   ],
   "image": "/assets/atlas/enemies/images/adult_gold_dragon.webp",
   "url": "/assets/atlas/enemies/json/adult_gold_dragon.json",
-  "updated_at": "2026-06-09T08:07:19.750Z",
+  "updated_at": "2026-05-18T11:48:19.512Z",
   "forms": [],
   "reactions": [],
   "sprite_index": 7,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.0webp",
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
   "wikiData": {
     "index": "adult_gold_dragon",
     "name": "adult gold dragon",
@@ -507,7 +507,7 @@
           "dc_type": {
             "index": "wis",
             "name": "wis",
-            "url": "/assets/atlas/ability_scores/json/wisdom.json"
+            "url": "/assets/atlas/ability_scores/json/wis.json"
           },
           "dc_value": 21,
           "success_type": "none"
@@ -536,7 +536,7 @@
                   "dc_type": {
                     "index": "dex",
                     "name": "dex",
-                    "url": "/assets/atlas/ability_scores/json/dexterity.json"
+                    "url": "/assets/atlas/ability_scores/json/dex.json"
                   },
                   "dc_value": 21,
                   "success_type": "half"
@@ -559,7 +559,7 @@
                   "dc_type": {
                     "index": "str",
                     "name": "str",
-                    "url": "/assets/atlas/ability_scores/json/strength.json"
+                    "url": "/assets/atlas/ability_scores/json/str.json"
                   },
                   "dc_value": 21,
                   "success_type": "none"
@@ -589,7 +589,7 @@
           "dc_type": {
             "index": "dex",
             "name": "dex",
-            "url": "/assets/atlas/ability_scores/json/dexterity.json"
+            "url": "/assets/atlas/ability_scores/json/dex.json"
           },
           "dc_value": 22,
           "success_type": "none"
@@ -616,7 +616,7 @@
     "bakedAt": 1768762087116
   },
   "imageUrl": "/assets/atlas/enemies/images/adult_gold_dragon.webp",
-  "last_updated": "9-6-2026",
+  "last_updated": "18-5-2026",
   "stats": {
     "str": 27,
     "dex": 14,

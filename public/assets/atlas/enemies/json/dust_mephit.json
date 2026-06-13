@@ -71,7 +71,7 @@
         "dc_type": {
           "index": "con",
           "name": "con",
-          "url": "/assets/atlas/ability_scores/json/constitution.json"
+          "url": "/assets/atlas/ability_scores/json/con.json"
         },
         "dc_value": 10,
         "success_type": "none"
@@ -85,7 +85,7 @@
         "ability": {
           "index": "cha",
           "name": "cha",
-          "url": "/assets/atlas/ability_scores/json/charisma.json"
+          "url": "/assets/atlas/ability_scores/json/cha.json"
         },
         "dc": 10,
         "components_required": [
@@ -138,7 +138,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "/assets/atlas/ability_scores/json/dexterity.json"
+          "url": "/assets/atlas/ability_scores/json/dex.json"
         },
         "dc_value": 10,
         "success_type": "none"

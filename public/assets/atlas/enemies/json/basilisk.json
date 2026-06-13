@@ -4,7 +4,12 @@
   "size": "Medium",
   "type": "monstrosity",
   "alignment": "unaligned",
-  "armor_class": 12,
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
   "hit_points": 52,
   "hit_dice": "8d8",
   "hit_points_roll": "8d8+16",
@@ -27,7 +32,7 @@
     "passive_perception": 9
   },
   "languages": "",
-  "challenge_rating": "3",
+  "challenge_rating": 3,
   "proficiency_bonus": 2,
   "xp": 700,
   "special_abilities": [
@@ -38,7 +43,7 @@
         "dc_type": {
           "index": "con",
           "name": "con",
-          "url": "/assets/atlas/ability_scores/json/constitution.json"
+          "url": "/assets/atlas/ability_scores/json/con.json"
         },
         "dc_value": 12,
         "success_type": "none"
@@ -74,20 +79,10 @@
   ],
   "image": "/assets/atlas/enemies/images/basilisk.webp",
   "url": "/assets/atlas/enemies/json/basilisk.json",
-  "updated_at": "2026-06-08T13:45:33.244Z",
+  "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 14,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet2.0webp",
-  "stats": {
-    "str": 16,
-    "dex": 8,
-    "con": 15,
-    "int": 2,
-    "wis": 8,
-    "cha": 7
-  },
-  "imageUrl": "/assets/atlas/enemies/images/basilisk.webp",
-  "last_updated": "8-6-2026"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet2.webp"
 }

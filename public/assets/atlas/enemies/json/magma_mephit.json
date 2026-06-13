@@ -64,7 +64,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "/assets/atlas/ability_scores/json/dexterity.json"
+          "url": "/assets/atlas/ability_scores/json/dex.json"
         },
         "dc_value": 11,
         "success_type": "half"
@@ -92,7 +92,7 @@
         "ability": {
           "index": "cha",
           "name": "cha",
-          "url": "/assets/atlas/ability_scores/json/charisma.json"
+          "url": "/assets/atlas/ability_scores/json/cha.json"
         },
         "components_required": [
           "V",
@@ -152,7 +152,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "/assets/atlas/ability_scores/json/dexterity.json"
+          "url": "/assets/atlas/ability_scores/json/dex.json"
         },
         "dc_value": 11,
         "success_type": "half"

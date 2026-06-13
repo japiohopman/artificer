@@ -77,7 +77,7 @@
         "ability": {
           "index": "cha",
           "name": "cha",
-          "url": "/assets/atlas/ability_scores/json/charisma.json"
+          "url": "/assets/atlas/ability_scores/json/cha.json"
         },
         "dc": 17,
         "modifier": 9,
@@ -275,7 +275,7 @@
         "dc_type": {
           "index": "str",
           "name": "str",
-          "url": "/assets/atlas/ability_scores/json/strength.json"
+          "url": "/assets/atlas/ability_scores/json/str.json"
         },
         "dc_value": 18,
         "success_type": "none"

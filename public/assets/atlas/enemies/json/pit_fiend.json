@@ -77,7 +77,7 @@
         "dc_type": {
           "index": "wis",
           "name": "wis",
-          "url": "/assets/atlas/ability_scores/json/wisdom.json"
+          "url": "/assets/atlas/ability_scores/json/wis.json"
         },
         "dc_value": 21,
         "success_type": "none"
@@ -101,7 +101,7 @@
         "ability": {
           "index": "cha",
           "name": "cha",
-          "url": "/assets/atlas/ability_scores/json/charisma.json"
+          "url": "/assets/atlas/ability_scores/json/cha.json"
         },
         "dc": 21,
         "components_required": [

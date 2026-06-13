@@ -4,7 +4,12 @@
   "size": "Medium",
   "type": "dragon",
   "alignment": "lawful good",
-  "armor_class": 17,
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
   "hit_points": 32,
   "hit_dice": "5d8",
   "hit_points_roll": "5d8+10",
@@ -81,7 +86,7 @@
     "passive_perception": 14
   },
   "languages": "Draconic",
-  "challenge_rating": "2",
+  "challenge_rating": 2,
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -130,7 +135,7 @@
                 "dc_type": {
                   "index": "dex",
                   "name": "dex",
-                  "url": "/assets/atlas/ability_scores/json/dexterity.json"
+                  "url": "/assets/atlas/ability_scores/json/dex.json"
                 },
                 "dc_value": 12,
                 "success_type": "half"
@@ -153,7 +158,7 @@
                 "dc_type": {
                   "index": "str",
                   "name": "str",
-                  "url": "/assets/atlas/ability_scores/json/strength.json"
+                  "url": "/assets/atlas/ability_scores/json/str.json"
                 },
                 "dc_value": 12,
                 "success_type": "none"
@@ -167,20 +172,10 @@
   ],
   "image": "/assets/atlas/enemies/images/bronze_dragon_wyrmling.webp",
   "url": "/assets/atlas/enemies/json/bronze_dragon_wyrmling.json",
-  "updated_at": "2026-06-09T07:52:54.839Z",
+  "updated_at": "2025-10-24T20:42:13.741Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 3,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet3.0webp",
-  "stats": {
-    "str": 17,
-    "dex": 10,
-    "con": 15,
-    "int": 12,
-    "wis": 11,
-    "cha": 15
-  },
-  "imageUrl": "/assets/atlas/enemies/images/bronze_dragon_wyrmling.webp",
-  "last_updated": "9-6-2026"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet3.webp"
 }

@@ -197,7 +197,7 @@
         "dc_type": {
           "index": "wis",
           "name": "wis",
-          "url": "/assets/atlas/ability_scores/json/wisdom.json"
+          "url": "/assets/atlas/ability_scores/json/wis.json"
         },
         "dc_value": 16,
         "success_type": "none"
@@ -226,7 +226,7 @@
                 "dc_type": {
                   "index": "dex",
                   "name": "dex",
-                  "url": "/assets/atlas/ability_scores/json/dexterity.json"
+                  "url": "/assets/atlas/ability_scores/json/dex.json"
                 },
                 "dc_value": 18,
                 "success_type": "half"
@@ -249,7 +249,7 @@
                 "dc_type": {
                   "index": "con",
                   "name": "con",
-                  "url": "/assets/atlas/ability_scores/json/constitution.json"
+                  "url": "/assets/atlas/ability_scores/json/con.json"
                 },
                 "dc_value": 18,
                 "success_type": "none"
@@ -279,7 +279,7 @@
         "dc_type": {
           "index": "dex",
           "name": "dex",
-          "url": "/assets/atlas/ability_scores/json/dexterity.json"
+          "url": "/assets/atlas/ability_scores/json/dex.json"
         },
         "dc_value": 19,
         "success_type": "none"
