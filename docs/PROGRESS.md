@@ -24,7 +24,7 @@ We have completed the core of Phase 1 and are now transitioning to **Phase 2: Wo
   - [x] Icon System Consolidation - *Completed*
 
 ### Phase 2: Tactical Foundations
-- [ ] **Grid-Based Movement**: Top-down map system.
+- [ ] **Grid-Based Movement**: Top-down map system. with roll20 type https://roll20.net/ for insiration 
 - [ ] **Initiative Tracking**: Combat state management.
 - [ ] **Spatial Analysis**: Line-of-sight and AOE calculations.
 
