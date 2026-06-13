@@ -98,12 +98,12 @@
     {
       "index": "wis",
       "name": "wis",
-      "url": "/assets/atlas/ability_scores/json/wisdom.json"
+      "url": "/assets/atlas/ability_scores/json/wis.json"
     },
     {
       "index": "cha",
       "name": "cha",
-      "url": "/assets/atlas/ability_scores/json/charisma.json"
+      "url": "/assets/atlas/ability_scores/json/cha.json"
     }
   ],
   "starting_equipment": [
@@ -257,7 +257,7 @@
         "ability_score": {
           "index": "str",
           "name": "str",
-          "url": "/assets/atlas/ability_scores/json/strength.json"
+          "url": "/assets/atlas/ability_scores/json/str.json"
         },
         "minimum_score": 13
       },
@@ -265,7 +265,7 @@
         "ability_score": {
           "index": "cha",
           "name": "cha",
-          "url": "/assets/atlas/ability_scores/json/charisma.json"
+          "url": "/assets/atlas/ability_scores/json/cha.json"
         },
         "minimum_score": 13
       }
@@ -310,7 +310,7 @@
     "spellcasting_ability": {
       "index": "cha",
       "name": "cha",
-      "url": "/assets/atlas/ability_scores/json/charisma.json"
+      "url": "/assets/atlas/ability_scores/json/cha.json"
     },
     "info": [
       {

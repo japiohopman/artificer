@@ -20,26 +20,43 @@ const EQUIPMENT_SLOT_MAP = {
 };
 
 function deriveItemKind(item) {
-  if (item.kind && item.kind !== 'unknown') return item.kind;
-  
   const idx = item.index?.toLowerCase() || '';
   const name = item.name?.toLowerCase() || '';
   const category = item.equipment_category?.index || item.equipment_category?.name?.toLowerCase() || '';
+  const gearCategory = item.gear_category?.index || item.gear_category?.name?.toLowerCase() || '';
   const armorCat = item.armor_category?.toLowerCase() || '';
   const weaponCat = item.weapon_category?.toLowerCase() || '';
 
+  // Prioritize clear consumables
+  if (idx.includes('potion') || idx.includes('vial') || idx.includes('flask') || 
+      idx.includes('ration') || idx.includes('antitoxin') || 
+      category.includes('consumable') || gearCategory.includes('consumable')) {
+    return 'consumable';
+  }
+
+  // Packs
+  if (idx.includes('pack') || item.contents?.length > 0 || category.includes('pack')) return 'equipment_pack';
+
+  // Core mechanical types
   if (weaponCat || idx.includes('weapon') || category === 'weapon') return 'weapon';
   if (armorCat === 'shield' || idx === 'shield' || category === 'shield') return 'shield';
   if (armorCat || category === 'armor') return 'armor';
   if (idx.includes('focus') || idx.includes('holy_symbol') || idx === 'spellbook' || category.includes('focus')) return 'focus';
-  if (idx.includes('pack') || item.contents?.length > 0 || category.includes('pack')) return 'equipment_pack';
+  
+  // Tools
   if (idx.includes('tool') || category.includes('tool') || category.includes('kits') || category.includes('supplies')) return 'tool';
-  if (idx.includes('potion') || idx.includes('scroll') || idx.includes('ration') || category.includes('consumable')) return 'consumable';
-  if (idx.includes('ring') || category.includes('ring')) return 'ring';
+  
+  // Jewelry/Accessories (be careful with 'ring' as it might match 'bearing')
+  if ((idx.startsWith('ring_') || idx === 'ring') || category === 'ring') return 'ring';
   if (idx.includes('amulet') || idx.includes('necklace') || category.includes('neck')) return 'neck';
+  
+  // Misc
   if (idx.includes('trinket')) return 'trinket';
   if (idx.includes('gp') || idx.includes('gold') || idx.includes('coin') || category.includes('currency')) return 'currency';
   if (idx.includes('book') || idx.includes('tome') || idx.includes('manual')) return 'book';
+  
+  // Default to existing kind if it's sane, otherwise adventuring_gear
+  if (item.kind && item.kind !== 'unknown' && item.kind !== 'ring') return item.kind;
   
   return 'adventuring_gear';
 }
@@ -82,24 +99,46 @@ function normalizePath(val) {
 
   // 3. Fix directory name mismatches and missing json/ subfolder
   newVal = newVal
-    .replace(/\/assets\/atlas\/world\/toril\/(?!json\/)/g, '/assets/atlas/world/toril/')
-    .replace(/\/assets\/atlas\/world\/world_wiki\/(?!json\/)/g, '/assets/atlas/world/world_wiki/')
+    .replace(/\/assets\/atlas\/world\/toril\/(?!json\/)/g, '/assets/atlas/world/toril/json/')
+    .replace(/\/assets\/atlas\/world\/world_wiki\/(?!json\/)/g, '/assets/atlas/world/world_wiki/json/')
     .replace(/\/assets\/atlas\/spells\//g, '/assets/atlas/spell/json/')
     .replace(/\/assets\/atlas\/proficiencies\/skill_/g, '/assets/atlas/skills/json/')
     .replace(/\/assets\/atlas\/proficiencies\/(?!json\/)/g, '/assets/atlas/proficiencies/json/')
     .replace(/\/assets\/atlas\/ability_scores\/(?!json\/)/g, '/assets/atlas/ability_scores/json/')
     .replace(/\/assets\/atlas\/damage_types\/(?!json\/)/g, '/assets/atlas/damage_types/json/')
     .replace(/\/assets\/atlas\/spell\/(?!json\/)/g, '/assets/atlas/spell/json/')
-    .replace(/\/assets\/atlas\/skills\/(?!json\/)/g, '/assets/atlas/skills/json/');
+    .replace(/\/assets\/atlas\/skills\/(?!json\/)/g, '/assets/atlas/skills/json/')
+    .replace(/\/assets\/atlas\/equipment_categories\/(?!json\/)/g, '/assets/atlas/equipment_categories/json/')
+    .replace(/\/assets\/atlas\/backgrounds\/(?!json\/)/g, '/assets/atlas/backgrounds/json/')
+    .replace(/\/assets\/atlas\/species\/(?!json\/)/g, '/assets/atlas/species/json/')
+    .replace(/\/assets\/atlas\/subraces\/(?!json\/)/g, '/assets/atlas/subraces/json/')
+    .replace(/\/assets\/atlas\/traits\/(?!json\/)/g, '/assets/atlas/traits/json/')
+    .replace(/\/assets\/atlas\/languages\/(?!json\/)/g, '/assets/atlas/languages/json/')
+    .replace(/\/assets\/atlas\/weapon_properties\/(?!json\/)/g, '/assets/atlas/weapon_properties/json/');
 
   // 4. Ensure .json extension for JSON references (excluding images/audio)
   if (newVal.includes('/json/') && !newVal.match(/\.(json|webp|png|mp3|wav|jpg|jpeg|gif)$/i)) {
     newVal += '.json';
   }
 
-  // 5. Special fix for equipment images (missing /images/ subfolder)
+  // 5. Special fix for images (missing folder segments)
   if (newVal.startsWith('/assets/atlas/equipment/') && !newVal.includes('/json/') && !newVal.includes('/images/') && newVal.match(/\.(webp|png|jpg)$/)) {
     newVal = newVal.replace('/assets/atlas/equipment/', '/assets/atlas/equipment/images/');
+  }
+  if (newVal.startsWith('/assets/atlas/species/') && !newVal.includes('/json/') && !newVal.includes('/wiki_image/') && newVal.match(/\.(webp|png|jpg)$/)) {
+    newVal = newVal.replace('/assets/atlas/species/', '/assets/atlas/species/wiki_image/');
+  }
+  if (newVal.startsWith('/assets/atlas/class/') && !newVal.includes('/json/') && !newVal.includes('/wiki_image/') && newVal.match(/\.(webp|png|jpg)$/)) {
+    newVal = newVal.replace('/assets/atlas/class/', '/assets/atlas/class/wiki_image/');
+  }
+  if (newVal.startsWith('/assets/atlas/backgrounds/') && !newVal.includes('/json/') && !newVal.includes('/wiki_image/') && newVal.match(/\.(webp|png|jpg)$/)) {
+    newVal = newVal.replace('/assets/atlas/backgrounds/', '/assets/atlas/backgrounds/wiki_image/');
+  }
+
+  // Final cleanup: don't double inject /json/ if it was accidentally added to a webp path
+  newVal = newVal.replace(/\/json\/(.*)\.webp$/, '/wiki_image/$1.webp');
+  if (newVal.includes('/equipment/') && newVal.endsWith('.webp')) {
+      newVal = newVal.replace('/json/', '/images/');
   }
 
   return newVal;
@@ -157,15 +196,24 @@ function processJson(filePath) {
     walkObj(data);
 
     // Equipment specific logic
-    if (filePath.includes('equipment\\json')) {
+    if (filePath.includes(path.join('equipment', 'json'))) {
       const originalKind = data.kind;
+      // ALWAYS derive kind to fix the incorrect "ring" values
       data.kind = deriveItemKind(data);
       if (data.kind !== originalKind) changed = true;
 
-      // Add equipSlots if missing
-      if (!data.equipSlots && EQUIPMENT_SLOT_MAP[data.kind]) {
-        data.equipSlots = EQUIPMENT_SLOT_MAP[data.kind];
+      // Ensure imageUrl is present if image is
+      if (data.image && (data.imageUrl === null || data.imageUrl === undefined || data.imageUrl === '')) {
+        data.imageUrl = data.image;
         changed = true;
+      }
+
+      // Add equipSlots if missing OR if kind changed (re-derive slots)
+      if (!data.equipSlots || data.kind !== originalKind) {
+        if (EQUIPMENT_SLOT_MAP[data.kind]) {
+          data.equipSlots = EQUIPMENT_SLOT_MAP[data.kind];
+          changed = true;
+        }
       }
     }
 

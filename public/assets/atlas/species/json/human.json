@@ -7,7 +7,7 @@
       "ability_score": {
         "index": "str",
         "name": "str",
-        "url": "/assets/atlas/ability_scores/json/strength.json"
+        "url": "/assets/atlas/ability_scores/json/str.json"
       },
       "bonus": 1
     },
@@ -15,7 +15,7 @@
       "ability_score": {
         "index": "dex",
         "name": "dex",
-        "url": "/assets/atlas/ability_scores/json/dexterity.json"
+        "url": "/assets/atlas/ability_scores/json/dex.json"
       },
       "bonus": 1
     },
@@ -23,7 +23,7 @@
       "ability_score": {
         "index": "con",
         "name": "con",
-        "url": "/assets/atlas/ability_scores/json/constitution.json"
+        "url": "/assets/atlas/ability_scores/json/con.json"
       },
       "bonus": 1
     },
@@ -31,7 +31,7 @@
       "ability_score": {
         "index": "int",
         "name": "int",
-        "url": "/assets/atlas/ability_scores/json/intelligence.json"
+        "url": "/assets/atlas/ability_scores/json/int.json"
       },
       "bonus": 1
     },
@@ -39,7 +39,7 @@
       "ability_score": {
         "index": "wis",
         "name": "wis",
-        "url": "/assets/atlas/ability_scores/json/wisdom.json"
+        "url": "/assets/atlas/ability_scores/json/wis.json"
       },
       "bonus": 1
     },
@@ -47,7 +47,7 @@
       "ability_score": {
         "index": "cha",
         "name": "cha",
-        "url": "/assets/atlas/ability_scores/json/charisma.json"
+        "url": "/assets/atlas/ability_scores/json/cha.json"
       },
       "bonus": 1
     }

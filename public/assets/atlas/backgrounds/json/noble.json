@@ -6,17 +6,17 @@
     {
       "index": "str",
       "name": "strength",
-      "url": "/assets/atlas/ability_scores/json/strength.json"
+      "url": "/assets/atlas/ability_scores/json/str.json"
     },
     {
       "index": "int",
       "name": "intelligence",
-      "url": "/assets/atlas/ability_scores/json/intelligence.json"
+      "url": "/assets/atlas/ability_scores/json/int.json"
     },
     {
       "index": "cha",
       "name": "charisma",
-      "url": "/assets/atlas/ability_scores/json/charisma.json"
+      "url": "/assets/atlas/ability_scores/json/cha.json"
     }
   ],
   "feat": {

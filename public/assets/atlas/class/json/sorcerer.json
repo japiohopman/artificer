@@ -103,12 +103,12 @@
     {
       "index": "con",
       "name": "con",
-      "url": "/assets/atlas/ability_scores/json/constitution.json"
+      "url": "/assets/atlas/ability_scores/json/con.json"
     },
     {
       "index": "cha",
       "name": "cha",
-      "url": "/assets/atlas/ability_scores/json/charisma.json"
+      "url": "/assets/atlas/ability_scores/json/cha.json"
     }
   ],
   "starting_equipment": [
@@ -242,7 +242,7 @@
         "ability_score": {
           "index": "cha",
           "name": "cha",
-          "url": "/assets/atlas/ability_scores/json/charisma.json"
+          "url": "/assets/atlas/ability_scores/json/cha.json"
         },
         "minimum_score": 13
       }
@@ -261,7 +261,7 @@
     "spellcasting_ability": {
       "index": "cha",
       "name": "cha",
-      "url": "/assets/atlas/ability_scores/json/charisma.json"
+      "url": "/assets/atlas/ability_scores/json/cha.json"
     },
     "info": [
       {

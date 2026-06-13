@@ -103,12 +103,12 @@
     {
       "index": "int",
       "name": "int",
-      "url": "/assets/atlas/ability_scores/json/intelligence.json"
+      "url": "/assets/atlas/ability_scores/json/int.json"
     },
     {
       "index": "wis",
       "name": "wis",
-      "url": "/assets/atlas/ability_scores/json/wisdom.json"
+      "url": "/assets/atlas/ability_scores/json/wis.json"
     }
   ],
   "starting_equipment": [
@@ -221,7 +221,7 @@
         "ability_score": {
           "index": "int",
           "name": "int",
-          "url": "/assets/atlas/ability_scores/json/intelligence.json"
+          "url": "/assets/atlas/ability_scores/json/int.json"
         },
         "minimum_score": 13
       }
@@ -240,7 +240,7 @@
     "spellcasting_ability": {
       "index": "int",
       "name": "int",
-      "url": "/assets/atlas/ability_scores/json/intelligence.json"
+      "url": "/assets/atlas/ability_scores/json/int.json"
     },
     "info": [
       {

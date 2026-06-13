@@ -7,7 +7,7 @@
       "ability_score": {
         "index": "str",
         "name": "str",
-        "url": "/assets/atlas/ability_scores/json/strength.json"
+        "url": "/assets/atlas/ability_scores/json/str.json"
       },
       "bonus": 2
     },
@@ -15,7 +15,7 @@
       "ability_score": {
         "index": "con",
         "name": "con",
-        "url": "/assets/atlas/ability_scores/json/constitution.json"
+        "url": "/assets/atlas/ability_scores/json/con.json"
       },
       "bonus": 1
     }
