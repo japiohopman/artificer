@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useStore } from '../../store/useStore';
+import { useCharacterStore } from '../../store/useCharacterStore';
+import { useInventoryStore } from '../../store/useInventoryStore';
 import { EquipmentDoll } from './EquipmentDoll';
 import { Inventory } from './Inventory';
 import { CharacterStats } from './CharacterStats';
@@ -12,16 +13,22 @@ type CharacterTab = 'equipment' | 'inventory' | 'stats' | 'vehicle';
 
 export const CharacterPanel: React.FC = () => {
   const { 
-    isInventoryOpen, 
-    setIsInventoryOpen, 
-    characters,
-    activeCharacterId,
-    setActiveCharacter,
-    equipItem,
-    unequipItem,
     focusedItem,
     setFocusedItem
-  } = useStore();
+  } = useCharacterStore();
+
+  const {
+    characters,
+    activeCharacterId,
+    setActiveCharacter
+  } = useCharacterStore();
+
+  const {
+    isInventoryOpen,
+    setIsInventoryOpen,
+    equipItem,
+    unequipItem
+  } = useInventoryStore();
 
   const [activeTab, setActiveTab] = useState<CharacterTab>('equipment');
 

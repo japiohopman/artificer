@@ -29,6 +29,8 @@ import { isBookLike } from '../../lib/bookUtils';
 import { loadBooksFromStaticJson } from '../../lib/bookUtils';
 import { useBookStore } from '../../store/useBookStore';
 import { useStore, ExplorerTab } from '../../store/useStore';
+import { useCharacterStore } from '../../store/useCharacterStore';
+import { useInventoryStore } from '../../store/useInventoryStore';
 import { Book } from '../../types';
 import { loginWithGoogle, logout } from './FirebaseProvider';
 
@@ -53,10 +55,13 @@ import { ActionView } from '../hud/game/ActionView';
 
 const ArcaneCodex: React.FC = () => {
   const controls = useAnimation();
+  const { characters, activeCharacterId, setActiveCharacter, reorderCharacters } = useCharacterStore();
+  const { isInventoryOpen, setIsInventoryOpen, addToBackpack, transferItem, equipItem } = useInventoryStore();
+  
   const {
     viewMode, setViewMode,
     explorerTab, setExplorerTab,
-    activeCards, addToPreview, removeFromPreview, clearPreview,
+    activeCards, removeFromPreview,
     monstersList, monsterCategories, monsterCategoryMapping, materialsList, equipmentList, keyItemsList, booksList, 
     spellsList, spellCategories, spellCategoryMapping,
     transportList, transportCategories, transportCategoryMapping,
@@ -65,15 +70,12 @@ const ArcaneCodex: React.FC = () => {
     selectedItem, selectItem, isLoadingItem,
     focusedItem, setFocusedItem,
     isDevKitOpen, setIsDevKitOpen,
-    isInventoryOpen, setIsInventoryOpen,
     isInventoryMenuOpen, setIsInventoryMenuOpen,
     isProfileMenuOpen, setIsProfileMenuOpen,
     isCharacterCreatorOpen, setIsCharacterCreatorOpen,
     isExplorerOpen, setIsExplorerOpen,
     isMonsterProfileOpen, setIsMonsterProfileOpen,
     isTransportProfileOpen, setIsTransportProfileOpen,
-    characters, activeCharacterId, setActiveCharacter,
-    addToBackpack,
     updateSelectedItem,
     equipmentCategories,
     materialCategories,
@@ -81,9 +83,6 @@ const ArcaneCodex: React.FC = () => {
     isGameStarted, setIsGameStarted,
     isCharacterSpellbookOpen,
     setIsCharacterSpellbookOpen,
-    transferItem,
-    equipItem,
-    reorderCharacters
   } = useStore();
 
   const [activeDragItem, setActiveDragItem] = React.useState<any>(null);
@@ -155,9 +154,6 @@ const ArcaneCodex: React.FC = () => {
     // Handle equip on equipment slot
     if (dropData?.slot) {
       if (item._type === 'equipment' || item.equipment_category || item.armor_category || item.weapon_category || item.tool) {
-        const itemType = item._type || 'equipment';
-        // For simple check, we check if the item is equipment
-        // In a more robust system we'd check if categories match
         equipItem(item, dropData.slot);
         soundService.playEffect('UI_ITEM_EQUIP');
         return;
@@ -972,14 +968,6 @@ const ArcaneCodex: React.FC = () => {
                                       })}
                                     </div>
                                   )}
-                                  {selectedCategory && (m.size || m.type || m.alignment) && (
-                                    <span className={cn(
-                                      "text-[9px] font-bold uppercase tracking-tighter",
-                                      isSelected ? "text-white/70" : "text-parchment-500"
-                                    )}>
-                                      {(typeof m.size === 'object' ? m.size?.name || m.size?.value : m.size)} {(typeof m.type === 'object' ? m.type?.name || m.type?.value : m.type)} {m.alignment && `• ${(typeof m.alignment === 'object' ? m.alignment?.name || m.alignment?.value : m.alignment)}`}
-                                    </span>
-                                  )}
                                 </div>
                               </div>
                               <GameIcon name="chevron_right" size={14} className={cn(
@@ -1072,7 +1060,7 @@ const ArcaneCodex: React.FC = () => {
                 </div>
               ) : (
                 <div className="text-center space-y-4 opacity-30">
-                  <GameIcon name="lore" size={120} color="#8B4513" className="mx-auto" />
+                  <GameIcon name="knowledge" size={120} color="#8B4513" className="mx-auto" />
                   <h3 className="font-header text-3xl text-parchment-600 uppercase">Select a legend to view</h3>
                   <p className="font-body italic text-parchment-500">The archives contain many secrets, waiting to be revealed.</p>
                 </div>

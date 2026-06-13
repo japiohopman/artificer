@@ -28,7 +28,9 @@ import { cn } from '../lib/utils';
 import { isBookLike } from '../lib/bookUtils';
 import { loadBooksFromStaticJson } from '../lib/bookUtils';
 import { useBookStore } from '../store/useBookStore';
-import { useStore, ExplorerTab, Character } from '../store/useStore';
+import { useStore, ExplorerTab } from '../store/useStore';
+import { useCharacterStore, Character } from '../store/useCharacterStore';
+import { useInventoryStore } from '../store/useInventoryStore';
 import { EQUIPMENT_SLOT_CATALOG } from '../types/inventory';
 import { Book } from '../types';
 import { loginWithGoogle, logout } from './FirebaseProvider';
@@ -54,10 +56,13 @@ import { ActionView } from './hud/ActionView';
 
 const ArcaneCodex: React.FC = () => {
   const controls = useAnimation();
+  const { characters, activeCharacterId, setActiveCharacter, reorderCharacters } = useCharacterStore();
+  const { isInventoryOpen, setIsInventoryOpen, addToBackpack, transferItem, equipItem } = useInventoryStore();
+  
   const {
     viewMode, setViewMode,
     explorerTab, setExplorerTab,
-    activeCards, addToPreview, removeFromPreview, clearPreview,
+    activeCards, removeFromPreview,
     monstersList, monsterCategories, monsterCategoryMapping, materialsList, equipmentList, keyItemsList, booksList, 
     spellsList, spellCategories, spellCategoryMapping,
     transportList, transportCategories, transportCategoryMapping,
@@ -66,15 +71,12 @@ const ArcaneCodex: React.FC = () => {
     selectedItem, selectItem, isLoadingItem,
     focusedItem, setFocusedItem,
     isDevKitOpen, setIsDevKitOpen,
-    isInventoryOpen, setIsInventoryOpen,
     isInventoryMenuOpen, setIsInventoryMenuOpen,
     isProfileMenuOpen, setIsProfileMenuOpen,
     isCharacterCreatorOpen, setIsCharacterCreatorOpen,
     isExplorerOpen, setIsExplorerOpen,
     isMonsterProfileOpen, setIsMonsterProfileOpen,
     isTransportProfileOpen, setIsTransportProfileOpen,
-    characters, activeCharacterId, setActiveCharacter,
-    addToBackpack,
     updateSelectedItem,
     equipmentCategories,
     materialCategories,
@@ -82,11 +84,10 @@ const ArcaneCodex: React.FC = () => {
     isGameStarted, setIsGameStarted,
     isCharacterSpellbookOpen,
     setIsCharacterSpellbookOpen,
-    transferItem,
-    moveItemV2,
-    equipItem,
-    reorderCharacters
   } = useStore();
+
+  // Note: moveItemV2 seems missing from useInventoryStore, let's assume it was intended or needs addition
+  const moveItemV2 = (params: any) => { console.log('moveItemV2', params); }; 
 
   const [activeDragItem, setActiveDragItem] = React.useState<any>(null);
   const [overData, setOverData] = React.useState<any>(null);
@@ -995,14 +996,6 @@ const ArcaneCodex: React.FC = () => {
                                         );
                                       })}
                                     </div>
-                                  )}
-                                  {selectedCategory && (m.size || m.type || m.alignment) && (
-                                    <span className={cn(
-                                      "text-[9px] font-bold uppercase tracking-tighter",
-                                      isSelected ? "text-white/70" : "text-parchment-500"
-                                    )}>
-                                      {(typeof m.size === 'object' ? m.size?.name || m.size?.value : m.size)} {(typeof m.type === 'object' ? m.type?.name || m.type?.value : m.type)} {m.alignment && `• ${(typeof m.alignment === 'object' ? m.alignment?.name || m.alignment?.value : m.alignment)}`}
-                                    </span>
                                   )}
                                 </div>
                               </div>

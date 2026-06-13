@@ -1,5 +1,6 @@
 import React from 'react';
-import { useStore } from '../../store/useStore';
+import { useCharacterStore } from '../../store/useCharacterStore';
+import { useInventoryStore } from '../../store/useInventoryStore';
 import { Package, Trash2, Weight, Shield, ArrowRight, Sparkles, Book, Key, Filter } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../../lib/utils';
@@ -15,7 +16,8 @@ interface InventoryProps {
 type BackpackCategory = 'all' | 'equipment' | 'materials' | 'key' | 'books';
 
 export const Inventory: React.FC<InventoryProps> = ({ onEquipRequest }) => {
-  const { characters, activeCharacterId, unequipItem, removeFromBackpack } = useStore();
+  const { characters, activeCharacterId } = useCharacterStore();
+  const { unequipItem, removeFromBackpack } = useInventoryStore();
   const [activeCategory, setActiveCategory] = React.useState<BackpackCategory>('all');
   
   const activeCharacter = characters.find(c => c.id === activeCharacterId) || characters[0];

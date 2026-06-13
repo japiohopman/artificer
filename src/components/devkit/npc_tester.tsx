@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { GameIcon } from '../../game_icons';
-import { useStore, Character } from '../../store/useStore';
+import { useCharacterStore, Character } from '../../store/useCharacterStore';
 import { fetchCharacterList, fetchCharacterData, playSuccessSound, playFailSound, playClickSound, normalizeImageUrl } from '../../services/storageService';
 import { cn } from '../../lib/utils';
 
 export const NPCTester: React.FC = () => {
-  const { characters, updateCharacter, addCharacter, deleteCharacter, setCharacters } = useStore();
+  const { characters, updateCharacter, addCharacter, deleteCharacter, setCharacters } = useCharacterStore();
   const [characterList, setCharacterList] = useState<{ name: string; index: string }[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');

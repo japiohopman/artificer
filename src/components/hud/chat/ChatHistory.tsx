@@ -14,7 +14,7 @@ interface ChatHistoryProps {
 }
 
 export const ChatHistory: React.FC<ChatHistoryProps> = ({ history }) => {
-  const { currentNPC } = useStore();
+  const { currentNPC } = useCharacterStore();
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

@@ -1,10 +1,10 @@
 import React from 'react';
-import { useStore } from '../../store/useStore';
+import { useCharacterStore } from '../../store/useCharacterStore';
 import { Users, Truck, Weight, Shield, Sword, Zap } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export const CharacterStats: React.FC = () => {
-  const { characters, activeCharacterId } = useStore();
+  const { characters, activeCharacterId } = useCharacterStore();
 
   const activeCharacter = characters.find(c => c.id === activeCharacterId) || characters[0];
   const inventory = activeCharacter.inventory;

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useStore } from '../../store/useStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
@@ -49,7 +48,7 @@ export const LevelUpOverlay: React.FC = () => {
     updateCharacterStats,
     updateCharacter,
     updateLayerVolume 
-  } = useStore();
+  } = useCharacterStore();
   
   const levelUpResult = levelUpQueue[0];
   

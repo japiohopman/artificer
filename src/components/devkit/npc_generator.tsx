@@ -20,14 +20,17 @@ interface NPCGeneratorProps {
 }
 
 export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
+  const { characters } = useCharacterStore();
+  const { equipmentList } = useStore();
+  const {  loadAllLists } = useStore();
   const { 
-    characters,
-    equipmentList,
-    loadAllLists,
+    
+    
     updateCharacter,
     deleteCharacter,
     addCharacter
-  } = useStore();
+  } = useCharacterStore();
+  const { equipmentList } = useStore();
 
   const [editingCharId, setEditingCharId] = useState<string | null>(null);
   const [npcData, setNpcData] = useState<Partial<NPCProfile>>({
@@ -197,7 +200,9 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
       const atlasBg = await atlasService.loadBackground(data.background);
       const atlasSpc = await atlasService.loadSpecies(data.race);
       
-      const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasCls, atlasBg);
+      const { characters } = useCharacterStore();
+  const { equipmentList } = useStore();
+  const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasCls, atlasBg);
       const personality = NPCChoiceResolver.resolvePersonality(atlasBg);
       const proficiencies = NPCChoiceResolver.resolveAllProficiencies(atlasCls, atlasBg, atlasSpc);
       const spells = await NPCChoiceResolver.resolveSpells(atlasCls);
@@ -544,7 +549,9 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
   const handleAutoResolvedEquipment = async () => {
     setIsApplyingGear(true);
     try {
-      const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasClass, atlasBackground);
+      const { characters } = useCharacterStore();
+  const { equipmentList } = useStore();
+  const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasClass, atlasBackground);
       
       setNpcData(prev => ({
         ...prev,
@@ -599,7 +606,9 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
       const allItems = [...staticItems, ...manualItems];
       const expanded = await NPCChoiceResolver.expandPacks(allItems);
       const standardized = await NPCChoiceResolver.standardizeItems(expanded);
-      const { inventory, backpack } = await NPCChoiceResolver.buildResolvedInventory(npcData, standardized);
+      const { characters } = useCharacterStore();
+  const { equipmentList } = useStore();
+  const { inventory, backpack } = await NPCChoiceResolver.buildResolvedInventory(npcData, standardized);
       const v2 = await NPCChoiceResolver.buildV2Inventory(standardized);
 
       setNpcData(prev => ({

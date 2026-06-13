@@ -7,6 +7,7 @@ import { HUD } from './components/hud/HUD';
 import { TitleScreen } from './components/core/TitleScreen';
 import { DevKit } from './components/devkit/DevKit';
 import { useStore } from './store/useStore';
+import { useCharacterStore } from './store/useCharacterStore';
 import { useEffect } from 'react';
 import { playModalOpenSound, playModalCloseSound } from './services/storageService';
 import { DiceBoxCanvas } from './dice_roller/DiceBoxCanvas';
@@ -42,7 +43,8 @@ export default function App() {
 
   useEffect(() => {
     // Initial data load
-    const { loadCharacters, loadAllLists } = useStore.getState();
+    const { loadAllLists } = useStore.getState();
+    const { loadCharacters } = useCharacterStore.getState();
     loadCharacters();
     loadAllLists();
 

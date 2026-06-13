@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useStore } from '../../../store/useStore';
+import { useWorldStore } from '../../../store/useWorldStore';
 import { GameIcon } from '../../../game_icons';
 
 const CAMPFIRE_IMAGE = 'https://gen.krea.ai/images/24562ed5-d072-4af4-936f-9d2d513503b5.png';
 
 export const Rest: React.FC = () => {
-  const { gameTime, gameDay, advanceTime, setCurrentView } = useStore();
+  const { setCurrentView } = useStore();
+  const { gameTime, gameDay, advanceTime } = useWorldStore();
   const [isResting, setIsResting] = useState(false);
   const [restType, setRestType] = useState<'short' | 'long' | null>(null);
 

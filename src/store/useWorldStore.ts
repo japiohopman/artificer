@@ -2,6 +2,21 @@ import { create } from 'zustand';
 
 export type WeatherType = 'Sunny' | 'Rainy' | 'Cloudy' | 'Stormy' | 'Snowy' | 'Foggy';
 
+export interface SavedLocation {
+  id: string;
+  name: string;
+  category: string;
+}
+
+export const CategoryIcons: Record<string, { icon: string, color: string }> = {
+  city: { icon: 'city', color: '#D4AF37' },
+  village: { icon: 'village', color: '#D4AF37' },
+  forest: { icon: 'forest', color: '#228B22' },
+  wetlands: { icon: 'waters', color: '#4682B4' },
+  mountain: { icon: 'mountains', color: '#A9A9A9' },
+  underdark: { icon: 'death', color: '#4B0082' }
+};
+
 export interface WorldState {
   // Temporal Progression
   gameYear: number;
@@ -19,7 +34,7 @@ export interface WorldState {
   currentShop: any | null;
   partyLocation: any | null;
   partySubLocation: any | null;
-  savedLocations: any[];
+  savedLocations: SavedLocation[];
 
   // Global State / Faction Flags
   worldFlags: Record<string, any>;

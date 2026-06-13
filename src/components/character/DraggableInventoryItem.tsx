@@ -4,7 +4,8 @@ import { CSS } from '@dnd-kit/utilities';
 import { motion } from 'motion/react';
 import { cn } from '../../lib/utils';
 import { isBookLike } from '../../lib/bookUtils';
-import { useStore } from '../../store/useStore';
+import { useCharacterStore } from '../../store/useCharacterStore';
+import { useInventoryStore } from '../../store/useInventoryStore';
 import { normalizeImageUrl } from '../../services/storageService';
 import { GameIcon } from '../../game_icons';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
@@ -31,17 +32,25 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
   gridMode = false,
   onRemove,
   onEquip,
-  id,
-  itemId
+  id
 }) => {
-  const effectiveItemId = itemId || item.id || String(index);
-  const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
-    id: slot ? `${sourceId}-equipped-${slot}` : `${sourceId}-${effectiveItemId}`,
+  const { setInspectingItem } = useCharacterStore();
+  const { characters, activeCharacterId } = useCharacterStore();
+  const activeChar = characters.find(c => c.id === activeCharacterId) || characters[0];
+
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    isDragging
+  } = useDraggable({
+    id: id || `item-${item.id || index}-${sourceId}`,
     data: {
       item,
+      index,
       sourceId,
-      itemId: effectiveItemId,
-      slot
+      slotId: slot
     }
   });
 
@@ -49,128 +58,82 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
     transform: CSS.Translate.toString(transform),
   } : undefined;
 
-  const renderValue = (val: any) => {
-    if (!val) return null;
-    if (typeof val === 'object') return val.name || val.value || JSON.stringify(val);
-    return val;
+  const handleInspect = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setInspectingItem({
+      item,
+      sourceId,
+      index: typeof index === 'number' ? index : undefined,
+      itemId: item.id,
+      slot
+    });
   };
+
+  const isMagic = item.rarity && item.rarity !== 'Common';
+
+  if (compact) {
+     return (
+        <div 
+          ref={setNodeRef}
+          style={style}
+          {...attributes}
+          {...listeners}
+          onClick={handleInspect}
+          className={cn(
+            "w-12 h-12 rounded border-2 transition-all flex items-center justify-center relative cursor-grab active:cursor-grabbing",
+            isMagic ? "border-dragon-gold bg-dragon-gold/5" : "border-parchment-300 bg-white/40",
+            isDragging && "opacity-0"
+          )}
+        >
+          <img 
+            src={normalizeImageUrl(item.imageUrl, item._type || 'equipment', item.index || item.id)} 
+            className="w-full h-full object-contain p-1"
+            alt=""
+            referrerPolicy="no-referrer"
+          />
+        </div>
+     );
+  }
 
   return (
     <div
       ref={setNodeRef}
-      id={id}
       style={style}
       {...attributes}
       {...listeners}
-      onClick={() => {
-        if (isBookLike(item)) {
-          useStore.getState().setFocusedItem(item);
-        } else {
-          useStore.getState().setInspectingItem({ item, sourceId, itemId: effectiveItemId, slot });
-        }
-      }}
+      onClick={handleInspect}
       className={cn(
-        "bg-white border border-[#c5a059]/30 rounded-sm transition-colors cursor-grab active:cursor-grabbing touch-none relative",
-        !gridMode && "flex items-center gap-2 p-1.5",
-        gridMode && "aspect-[9/16] flex flex-col items-center justify-center p-0.5",
-        "group hover:bg-white/60",
-        isDragging && "opacity-50 ring-2 ring-dragon-red/40 z-50",
-        compact && !gridMode && "p-1 gap-1.5"
+        "group relative flex items-center gap-3 p-3 bg-white/40 hover:bg-white/60 border border-dragon-red/10 hover:border-dragon-red/30 rounded-xl transition-all cursor-grab active:cursor-grabbing shadow-sm",
+        isMagic && "ring-1 ring-dragon-gold/30 border-dragon-gold/40 bg-dragon-gold/[0.03]",
+        isDragging && "opacity-0"
       )}
     >
-      <div className="absolute inset-0 opacity-40 mix-blend-multiply pointer-events-none">
-        <img src="https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1775921630292-back_item_slug.webp" alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-      </div>
-      <div className={cn(
-        "bg-black/5 rounded-sm border border-[#c5a059]/10 flex-none relative z-10",
-        gridMode ? "w-full h-full" : (compact ? "w-8 aspect-[9/16]" : "w-10 aspect-[9/16]")
-      )}>
-        <ChromaKeyImage 
+      <div className="w-12 aspect-[9/16] bg-black/5 rounded-lg overflow-hidden shrink-0 border border-dragon-red/5">
+        <img 
           src={normalizeImageUrl(item.imageUrl, item._type || 'equipment', item.index || item.id)} 
-          alt={String(renderValue(item.name))} 
-          className="h-[90%] w-auto object-contain mx-auto"
+          alt={item.name}
+          className="w-full h-full object-contain p-1"
+          referrerPolicy="no-referrer"
         />
-        {item.quantity > 1 && (
-          <div className="absolute top-0 left-0 bg-dragon-darkRed text-white text-[6px] font-black italic px-0.5 min-w-[12px] text-center border-b border-r border-[#c5a059]/30 rounded-br-sm z-10 shadow-sm">
-            {item.quantity}
-          </div>
-        )}
       </div>
       
-      {!gridMode && (
-        <div className="flex-1 min-w-0">
-          <div className={cn(
-            "font-bold text-dragon-red uppercase tracking-tighter truncate",
-            compact ? "text-[8px]" : "text-[9px]"
-          )}>
-            {renderValue(item.name)}{item.quantity > 1 && <span className="ml-1 text-[#8B4513] font-black underline italic">x{item.quantity}</span>}
-          </div>
-          {!compact && (
-            <div className="text-[7px] text-parchment-500 uppercase font-bold flex items-center gap-1.5">
-              {item.weight && (
-                <span className="flex items-center gap-0.5">
-                  <GameIcon name="weight" size={7} color="#8B4513" /> {item.weight}
-                </span>
-              )}
-              <span className="text-dragon-red/40">•</span>
-              <span>{item._type}</span>
-            </div>
-          )}
+      <div className="flex-1 min-w-0">
+        <h4 className="text-[11px] font-black text-dragon-darkRed uppercase tracking-tight truncate leading-none mb-1">
+          {item.name}
+        </h4>
+        <div className="flex items-center gap-2">
+           <span className="text-[8px] font-bold text-parchment-500 uppercase tracking-tighter">
+             {item._type || 'item'}
+           </span>
+           {item.quantity > 1 && (
+             <span className="text-[9px] font-black text-dragon-red">x{item.quantity}</span>
+           )}
         </div>
-      )}
+      </div>
 
-      {!gridMode && (
-        <div className="flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
-          {onEquip && item._type === 'equipment' && (
-            <button 
-              onClick={(e) => {
-                e.stopPropagation();
-                onEquip(item);
-              }}
-              className="p-1 bg-dragon-red text-white rounded hover:bg-red-700 transition-colors shadow-sm"
-            >
-              <GameIcon name="chevron_right" size={10} color="#FFFFFF" />
-            </button>
-          )}
-          {onRemove && (
-            <button 
-              onClick={(e) => {
-                e.stopPropagation();
-                onRemove(effectiveItemId);
-              }}
-              className="p-1 px-1.5 text-parchment-400 hover:text-red-600 transition-colors"
-            >
-              <GameIcon name="trash" size={12} color="currentColor" />
-            </button>
-          )}
-        </div>
-      )}
-      
-      {gridMode && (
-         <>
-          <div className="absolute inset-x-0 bottom-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity p-0.5 text-center pointer-events-none z-20">
-              <div className="text-[5px] text-white font-black truncate uppercase tracking-tighter">
-                 {renderValue(item.name)}
-              </div>
-          </div>
-          {item._type === 'equipment' && (
-            <button 
-              onClick={(e) => {
-                e.stopPropagation();
-                // Find first valid slot for this item and equip
-                const slot = Array.isArray(item.slot) ? item.slot[0] : item.slot;
-                if (slot) {
-                  useStore.getState().equipItem(item, slot);
-                }
-              }}
-              className="absolute top-1 right-1 p-1 bg-dragon-red text-white rounded-sm opacity-0 group-hover:opacity-100 transition-opacity z-30 shadow-lg"
-              title="Equip"
-            >
-              <GameIcon name="chevron_right" size={8} color="#FFFFFF" />
-            </button>
-          )}
-         </>
-      )}
+      <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+         <GameIcon name="grab" size={14} color="#8B0000" />
+      </div>
     </div>
   );
 };

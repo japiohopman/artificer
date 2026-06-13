@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Character, useStore } from '../../store/useStore';
+import { useCharacterStore, Character } from '../../store/useCharacterStore';
 import { cn } from '../../lib/utils';
 import { soundService } from '../../services/soundService';
 import { GameIcon } from '../../game_icons';
@@ -76,11 +75,16 @@ export const CharacterCreator: React.FC = () => {
   const { 
     isCharacterCreatorOpen, 
     setIsCharacterCreatorOpen, 
-    setCharacters, 
-    characters,
-    setMainCharacter,
     setIsGameStarted
-  } = useStore();
+  } = useCharacterStore();
+
+  const {
+    characters,
+    setCharacters,
+    setMainCharacter,
+    loadCharacters,
+    setActiveCharacter
+  } = useCharacterStore();
   const [currentStep, setCurrentStep] = useState<CreationStep>('welcome');
   const [direction, setDirection] = useState(0);
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
@@ -591,14 +595,14 @@ export const CharacterCreator: React.FC = () => {
 
         // 3. Update local store
         setMainCharacter(finalizedChar);
-        useStore.getState().setActiveCharacter(charId);
-        useStore.getState().setIsGameStarted(true);
+        setActiveCharacter(charId);
+        setIsGameStarted(true);
         
         // Switch to game playlist as character is manifested
         soundService.playMusic('game');
         
         // Refresh slots in store
-        await useStore.getState().loadCharacters();
+        await loadCharacters();
         
         soundService.playEffect('TRANSACTION_SUCCESS');
         setIsCharacterCreatorOpen(false);

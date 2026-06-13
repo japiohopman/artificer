@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useStore } from '../../store/useStore';
+import { useCharacterStore } from '../../store/useCharacterStore';
+import { useInventoryStore } from '../../store/useInventoryStore';
 import { Inventory } from './Inventory';
 import { PartyInventory } from './PartyInventory';
 import { cn } from '../../lib/utils';
@@ -10,12 +11,18 @@ import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 export const FullInventoryMenu: React.FC = () => {
   const { 
     isInventoryMenuOpen, 
-    setIsInventoryMenuOpen, 
+    setIsInventoryMenuOpen
+  } = useCharacterStore();
+
+  const {
     characters,
     activeCharacterId,
-    setActiveCharacter,
+    setActiveCharacter
+  } = useCharacterStore();
+
+  const {
     transferItem
-  } = useStore();
+  } = useInventoryStore();
 
   if (!isInventoryMenuOpen) return null;
 
@@ -29,142 +36,155 @@ export const FullInventoryMenu: React.FC = () => {
       exit={{ opacity: 0 }}
       className="fixed inset-x-0 bottom-0 top-16 bg-parchment-100 z-50 overflow-hidden flex flex-col"
     >
-      <div className="absolute inset-0 bg-paper-texture opacity-20 pointer-events-none" />
+      {/* Texture Overlays */}
+      <div className="absolute inset-0 bg-paper-texture opacity-30 pointer-events-none" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none" />
       
-      {/* Header Area */}
-      <div className="h-14 border-b border-dragon-red/20 bg-white/60 backdrop-blur-sm flex items-center justify-between px-6 shrink-0 z-10">
+      {/* Header */}
+      <div className="shrink-0 bg-dragon-darkRed h-16 border-b-4 border-dragon-gold flex items-center justify-between px-8 relative z-10 shadow-xl">
         <div className="flex items-center gap-4">
-          <div className="w-10 h-10 rounded-xl bg-dragon-red flex items-center justify-center text-white shadow-lg rotate-3">
-            <GameIcon name="overview" size={20} color="#FFFFFF" />
+          <div className="w-12 h-12 rounded bg-white/10 flex items-center justify-center border border-white/20">
+             <GameIcon name="package" size={32} color="#FFFFFF" />
           </div>
           <div>
-            <h2 className="font-header text-2xl text-dragon-darkRed uppercase tracking-[0.2em] leading-none">Party Armory</h2>
-            <div className="flex items-center gap-2 mt-1">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <p className="text-[9px] font-black text-parchment-500 uppercase tracking-widest flex items-center gap-2">
-                <GameIcon name="package" size={10} color="#8B4513" /> 6 Syncronized Biological Nodes
-              </p>
-            </div>
+            <h1 className="font-header text-2xl text-white uppercase tracking-[0.2em] leading-none">Grand Party Manifest</h1>
+            <p className="text-[10px] text-white/50 uppercase font-bold tracking-widest mt-1.5 flex items-center gap-2">
+              <span className="w-1 h-1 bg-green-500 rounded-full animate-pulse" />
+              Unified Inventory Management System v2.0
+            </p>
           </div>
         </div>
-        
+
         <button 
           onClick={() => setIsInventoryMenuOpen(false)}
-          className="p-2.5 hover:bg-dragon-red hover:text-white text-dragon-red rounded-xl transition-all border-2 border-dragon-red/10 shadow-sm hover:rotate-90"
+          className="w-10 h-10 rounded-full bg-white/10 text-white hover:bg-dragon-red hover:rotate-90 transition-all flex items-center justify-center border border-white/20 group"
         >
           <GameIcon name="close" size={24} color="currentColor" />
         </button>
       </div>
 
-      {/* 3-Panel Layout */}
-      <div className="flex-1 flex overflow-hidden p-6 gap-6">
-        
-        {/* Left Panel: Characters 1-3 */}
-        <div className="w-80 flex flex-col gap-4 overflow-y-auto custom-scrollbar pr-2">
-          {leftChars.map((char) => (
-            <CharacterMiniPanel 
-              key={char.id} 
-              char={char} 
-              isActive={activeCharacterId === char.id}
-              onClick={() => setActiveCharacter(char.id)}
-            />
-          ))}
+      <div className="flex-1 overflow-hidden flex relative z-0">
+        {/* Left Column: Chars 1-3 */}
+        <div className="w-1/4 h-full border-r border-dragon-red/10 p-4 space-y-4 overflow-y-auto custom-scrollbar bg-black/5">
+           <SectionLabel label="Primary Cohort" />
+           {leftChars.map(char => (
+             <CharacterInventoryCard 
+               key={char.id} 
+               character={char} 
+               isActive={activeCharacterId === char.id}
+               onClick={() => setActiveCharacter(char.id)}
+             />
+           ))}
         </div>
 
-        {/* Middle Panel: Shared Party Inventory */}
-        <div className="flex-1 flex flex-col min-w-0">
-          <PartyInventory />
+        {/* Center Column: Focused Character & Shared Storage */}
+        <div className="flex-1 h-full flex flex-col p-6 gap-6 bg-parchment-50/50 relative overflow-hidden">
+           {/* Visual Flourish */}
+           <div className="absolute top-0 right-0 p-8 opacity-5 rotate-12">
+              <GameIcon name="chest" size={200} color="#8B0000" />
+           </div>
+
+           <div className="flex-1 flex gap-6 min-h-0">
+              {/* Focused Character Detail */}
+              <div className="flex-[1.5] flex flex-col bg-white/40 rounded-2xl border-2 border-dragon-red/20 shadow-2xl overflow-hidden group">
+                 <div className="bg-dragon-red p-4 text-white flex justify-between items-center shrink-0">
+                    <div className="flex items-center gap-3">
+                       <GameIcon name="shield" size={18} color="#FFFFFF" />
+                       <span className="font-header uppercase tracking-widest">{characters.find(c => c.id === activeCharacterId)?.name || 'Select Member'}'s Gear</span>
+                    </div>
+                    <div className="text-[10px] font-mono opacity-50 uppercase">Character_Focus_Active</div>
+                 </div>
+                 <div className="flex-1 overflow-y-auto custom-scrollbar p-6">
+                    <Inventory />
+                 </div>
+              </div>
+
+              {/* Shared Party Storage */}
+              <div className="flex-1 flex flex-col min-w-[320px]">
+                 <PartyInventory />
+              </div>
+           </div>
         </div>
 
-        {/* Right Panel: Characters 4-6 */}
-        <div className="w-80 flex flex-col gap-4 overflow-y-auto custom-scrollbar pr-2">
-          {rightChars.map((char) => (
-            <CharacterMiniPanel 
-              key={char.id} 
-              char={char} 
-              isActive={activeCharacterId === char.id}
-              onClick={() => setActiveCharacter(char.id)}
-            />
-          ))}
+        {/* Right Column: Chars 4-6 */}
+        <div className="w-1/4 h-full border-l border-dragon-red/10 p-4 space-y-4 overflow-y-auto custom-scrollbar bg-black/5">
+           <SectionLabel label="Reserve Contingent" />
+           {rightChars.map(char => (
+             <CharacterInventoryCard 
+               key={char.id} 
+               character={char} 
+               isActive={activeCharacterId === char.id}
+               onClick={() => setActiveCharacter(char.id)}
+             />
+           ))}
+           {rightChars.length === 0 && (
+             <div className="h-32 border-2 border-dashed border-dragon-red/5 rounded-xl flex flex-col items-center justify-center opacity-20">
+                <GameIcon name="users" size={32} />
+                <span className="text-[10px] font-black uppercase tracking-widest mt-2">No Reserves Detected</span>
+             </div>
+           )}
         </div>
-
       </div>
 
-      {/* Footer */}
-      <div className="h-10 bg-dragon-darkRed text-white/90 text-[9px] font-mono flex items-center justify-between px-8 z-10 border-t border-white/5">
-        <div className="flex items-center gap-6">
-          <span className="flex items-center gap-2 opacity-60">
-            <span className="w-1 h-1 bg-white rounded-full" />
-            SYSTEM_BOOT: SUCCESSFUL
-          </span>
-          <span className="flex items-center gap-2 opacity-60">
-            <span className="w-1 h-1 bg-white rounded-full" />
-            DATA_LINK: ENCRYPTED
-          </span>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="px-2 py-0.5 bg-white/10 rounded uppercase tracking-tighter">DRAG ITEMS TO SWAP</span>
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            <span className="font-bold">REALTIME_SYNC: NOMINAL</span>
+      {/* Footer System Status */}
+      <div className="h-10 bg-parchment-200 border-t border-parchment-300 px-8 flex items-center justify-between text-[10px] font-mono text-parchment-400">
+         <div className="flex items-center gap-6">
+            <span className="flex items-center gap-2"><span className="w-2 h-2 bg-green-500 rounded-full" /> LINK_STABLE</span>
+            <span className="flex items-center gap-2"><span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" /> SYNCING_MANIFEST...</span>
+         </div>
+         <div className="flex items-center gap-4">
+            <span className="uppercase font-bold">Encrypted Archive Access</span>
+            <span className="px-2 py-0.5 bg-black/5 rounded">NODE:INV-ALPHA-01</span>
+         </div>
+      </div>
+    </motion.div>
+  );
+};
+
+const SectionLabel: React.FC<{ label: string }> = ({ label }) => (
+  <div className="flex items-center gap-3 px-2">
+    <span className="text-[10px] font-black text-dragon-red uppercase tracking-[0.3em] whitespace-nowrap">{label}</span>
+    <div className="h-px w-full bg-dragon-red/10" />
+  </div>
+);
+
+const CharacterInventoryCard: React.FC<{ character: any, isActive: boolean, onClick: () => void }> = ({ character, isActive, onClick }) => (
+  <button 
+    onClick={onClick}
+    className={cn(
+      "w-full p-3 rounded-xl border-2 transition-all text-left flex items-center gap-4 group relative overflow-hidden",
+      isActive 
+        ? "bg-dragon-red border-dragon-gold shadow-xl -translate-y-1" 
+        : "bg-white/40 border-dragon-red/10 hover:bg-white/60 hover:border-dragon-red/30 shadow-md"
+    )}
+  >
+     <div className={cn(
+       "w-12 h-12 rounded-lg border-2 overflow-hidden bg-parchment-200 shrink-0 shadow-inner",
+       isActive ? "border-dragon-gold" : "border-dragon-red/20 group-hover:border-dragon-red/40"
+     )}>
+        {character.avatarUrl ? (
+          <img src={character.avatarUrl} className="w-full h-full object-cover" alt="" referrerPolicy="no-referrer" />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-dragon-red/20">
+            <GameIcon name="user" size={24} />
           </div>
+        )}
+     </div>
+     <div className="flex-1 min-w-0">
+        <p className={cn(
+          "font-header text-sm uppercase tracking-wider leading-none mb-1 truncate",
+          isActive ? "text-white" : "text-dragon-darkRed"
+        )}>{character.name}</p>
+        <div className="flex items-center gap-2">
+           <span className={cn("text-[9px] font-bold uppercase", isActive ? "text-white/60" : "text-parchment-500")}>
+             Lvl {character.level} {character.class}
+           </span>
         </div>
-      </div>
-    </motion.div>
-  );
-};
-
-interface CharacterMiniPanelProps {
-  char: any;
-  isActive: boolean;
-  onClick: () => void;
-}
-
-const CharacterMiniPanel: React.FC<CharacterMiniPanelProps> = ({ char, isActive, onClick }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      className={cn(
-        "flex flex-col rounded-2xl border-2 transition-all h-[380px] shrink-0 bg-white/80 backdrop-blur-md shadow-lg",
-        isActive 
-          ? "border-dragon-red shadow-dragon-red/10 ring-4 ring-dragon-red/5" 
-          : "border-parchment-300 hover:border-parchment-400"
-      )}
-      onClick={onClick}
-    >
-      <div className={cn(
-        "p-3 border-b flex items-center justify-between rounded-t-2xl px-4",
-        isActive ? "bg-dragon-red text-white" : "bg-parchment-50 text-parchment-800"
-      )}>
-        <h3 
-          className="font-header text-xs uppercase tracking-widest truncate cursor-pointer hover:underline decoration-white/40 underline-offset-4"
-          onClick={(e) => {
-            e.stopPropagation();
-            onClick(); // Set active
-            useStore.getState().setIsProfileMenuOpen(true);
-          }}
-        >
-          {char.name}
-        </h3>
-        <div className={cn(
-          "text-[8px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full",
-          isActive ? "bg-white/20" : "bg-dragon-red/10 text-dragon-red text-[7px]"
-        )}>
-          {(char.saveVersion === 2 
-            ? Object.values(char.items || {}).length 
-            : char.backpack.length + Object.keys(char.inventory || {}).length
-          )} ITEMS
-        </div>
-      </div>
-      
-      <div className="flex-1 overflow-hidden p-3 pt-4">
-        <Inventory 
-          forceCharacterId={char.id}
-          showCategoryTabs={true} 
-          compactEquipped={true}
-        />
-      </div>
-    </motion.div>
-  );
-};
+     </div>
+     {isActive && (
+       <div className="absolute top-0 right-0 p-2">
+          <GameIcon name="check" size={14} color="#D4AF37" />
+       </div>
+     )}
+  </button>
+);

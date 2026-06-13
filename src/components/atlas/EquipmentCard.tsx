@@ -25,7 +25,9 @@ interface EquipmentCardProps {
 }
 
 export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, className, isModal, onClose }) => {
-  const { setFocusedItem, explorerTab, equipItem, unequipItem, transferItem, activeCharacterId } = useStore();
+  const { setFocusedItem, explorerTab } = useStore();
+  const { activeCharacterId } = useCharacterStore();
+  const { equipItem, unequipItem, transferItem } = useInventoryStore();
   const { registerBook, openBook } = useBookStore();
   const [activeTier, setActiveTier] = React.useState<number>(() => {
     // Detect current tier from index
@@ -456,7 +458,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
                 {(currentItem.vehicle_category || (currentItem as any).speed) && (
                     <button 
                         onClick={() => {
-                          const { addVehicle } = useStore.getState();
+                          const { addVehicle } = useInventoryStore.getState();
                           addVehicle({ 
                             name: currentItem.name, 
                             capacity: typeof currentItem.capacity === 'number' ? currentItem.capacity : parseInt(String(currentItem.capacity || "0")),

@@ -1,5 +1,5 @@
 import { commitFile, deleteFile, normalizeImageUrl, REPO, BRANCH } from './storageService';
-import { Character } from '../store/useStore';
+import { Character } from '../store/useCharacterStore';
 
 export const saveService = {
   async saveCharacter(character: Character, slot?: number): Promise<boolean> {

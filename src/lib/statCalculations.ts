@@ -1,4 +1,4 @@
-import { Character } from "../store/useStore";
+import { Character } from "../store/useCharacterStore";
 import { getModifier } from "./npcGeneratorUtils";
 
 export interface DerivedStats {

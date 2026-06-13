@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { useStore } from '../../store/useStore';
+import { useWorldStore } from '../../store/useWorldStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 
@@ -8,11 +9,14 @@ export const WorldPanel: React.FC = () => {
   const { 
     isWorldPanelOpen, 
     setIsWorldPanelOpen,
+  } = useStore();
+
+  const {
     currentLocation,
     savedLocations,
     gameTime,
     gameDay
-  } = useStore();
+  } = useWorldStore();
 
   const formatTime = (minutes: number) => {
     const hours = Math.floor(minutes / 60) % 24;

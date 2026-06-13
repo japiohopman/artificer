@@ -1,13 +1,13 @@
 import React from 'react';
 import { useDroppable } from '@dnd-kit/core';
 import { motion, AnimatePresence } from 'motion/react';
-import { useStore } from '../../store/useStore';
+import { useInventoryStore } from '../../store/useInventoryStore';
 import { DraggableInventoryItem } from './DraggableInventoryItem';
 import { cn } from '../../lib/utils';
 import { GameIcon, GameIconName } from '../../game_icons';
 
 export const PartyInventory: React.FC = () => {
-  const { partyInventory, removeFromPartyInventory } = useStore();
+  const { partyInventory, removeFromPartyInventory } = useInventoryStore();
   const [activeCategory, setActiveCategory] = React.useState<string>('all');
   const [searchQuery, setSearchQuery] = React.useState('');
 

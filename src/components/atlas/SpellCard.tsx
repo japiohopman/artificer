@@ -5,7 +5,6 @@ import remarkGfm from 'remark-gfm';
 import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { DiceText } from '../dice/DiceText';
-import { useStore } from '../../store/useStore';
 import { normalizeImageUrl } from '../../services/storageService';
 import { renderNameValue, getOrdinal } from '../../lib/dataUtils';
 import { GameIcon, GameIconName } from '../../game_icons';
@@ -16,7 +15,7 @@ interface SpellCardProps {
 }
 
 export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
-  const { characters, activeCharacterId, learnSpell } = useStore();
+  const { characters, activeCharacterId, learnSpell } = useCharacterStore();
   if (!spell) return null;
 
   const activeCharacter = characters.find(c => c.id === activeCharacterId);

@@ -4,7 +4,8 @@ import { useStore } from '../store/useStore';
 
 export const DiceBoxCanvas: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { setIsDiceReady, isWorldPanelOpen, isCharacterPanelOpen, isInventoryOpen } = useStore();
+  const { setIsDiceReady, isWorldPanelOpen, isCharacterPanelOpen } = useStore();
+  const { isInventoryOpen } = useInventoryStore();
 
   useEffect(() => {
     if (containerRef.current) {

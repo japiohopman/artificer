@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { useStore, Emotion } from '../../../store/useStore';
+import { useStore } from '../../../store/useStore';
+import { useWorldStore } from '../../../store/useWorldStore';
+import { useCharacterStore, Emotion } from '../../../store/useCharacterStore';
 import { ChatHistory } from './ChatHistory';
 import { ChatInput } from './ChatInput';
 import { motion, AnimatePresence } from 'motion/react';
@@ -15,7 +17,10 @@ interface ChatPanelProps {
 }
 
 export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => {
-  const { currentNPC, setEmotion, addLog, setTestAnimalInteraction, testAnimalInteraction, getActiveBackground, gameTime, isNight } = useStore();
+  const { addLog } = useStore();
+  const { getActiveBackground, isNight } = useWorldStore();
+  const { currentNPC, setEmotion, setTestAnimalInteraction, testAnimalInteraction } = useCharacterStore();
+
   const bgUrl = getActiveBackground();
   
   // Use isNight() logic from store
@@ -80,7 +85,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
     const matchedTrigger = animalTriggers.find(t => lowerMessage.includes(t));
 
     if (matchedTrigger) {
-      const { beastRegistry } = useStore.getState();
+      const { beastRegistry } = useCharacterStore.getState();
       
       let target = lowerMessage.split(matchedTrigger)[1]?.trim() || '';
       if (target.startsWith('the ')) {
@@ -170,15 +175,15 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
   };
 
   return (
-    <div className="flex flex-col w-full rounded-xl overflow-hidden relative transition-all duration-500 bg-parchment-100/90 border-2 border-dragon-gold shadow-2xl pointer-events-none bg-paper-texture">
+    <div className="flex flex-col w-full rounded-md overflow-hidden relative transition-all duration-500 bg-transparent pointer-events-none">
       {/* Dynamic Background Layer - only for history area */}
       <AnimatePresence>
         {bgUrl && !isCollapsed && (
           <motion.div 
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.2 }}
+            animate={{ opacity: 0.4 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-t-xl"
+            className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-t-md"
           >
             <div 
               className="absolute inset-0 scale-110 transition-all duration-1000"
@@ -189,7 +194,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
                 backgroundRepeat: 'no-repeat'
               }}
             />
-            <div className="absolute inset-0 bg-parchment-100/40" />
+            <div className="absolute inset-0 bg-black/40" />
           </motion.div>
         )}
       </AnimatePresence>
@@ -203,14 +208,14 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
               animate={{ height: '30vh', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ type: 'spring', damping: 30, stiffness: 180 }}
-              className="overflow-hidden pointer-events-auto bg-transparent border-b border-dragon-gold/20"
+              className="overflow-hidden pointer-events-auto bg-black/20 backdrop-blur-sm border-t border-x border-white/5 rounded-t-md"
             >
               <ChatHistory history={history} />
             </motion.div>
           )}
         </AnimatePresence>
         
-        <div className="shrink-0 p-3 bg-parchment-100/95 backdrop-blur-xl border-t border-dragon-gold/30 pointer-events-auto rounded-b-xl shadow-inner">
+        <div className="shrink-0 p-3 bg-black/80 backdrop-blur-xl border border-white/10 pointer-events-auto rounded-b-md shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
           <ChatInput 
             message={message} 
             setMessage={setMessage} 

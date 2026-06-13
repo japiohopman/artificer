@@ -42,18 +42,20 @@ interface DevKitProps {
 
 export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdated, initialMonster, currentExplorerTab }) => {
   const [isMixerOpen, setIsMixerOpen] = useState(false);
+  const { characters } = useCharacterStore();
+  const {      loadAllLists } = useStore();
+  const { monstersList, materialsList, equipmentList, equipmentCategories: storeEquipmentCategories, materialCategories: storeMaterialCategories } = useStore();
   const { 
-    monstersList,
-    materialsList,
-    equipmentList,
-    characters,
-    equipmentCategories: storeEquipmentCategories,
-    materialCategories: storeMaterialCategories,
-    loadAllLists,
+    
+    
+    
+    
+    
+    
     updateCharacter,
     deleteCharacter,
     addCharacter
-  } = useStore();
+  } = useCharacterStore();
 
   const [activeTab, setActiveTab] = useState<'monsters' | 'materials' | 'equipment' | 'backgrounds' | 'npcs' | 'test' | 'simulator' | 'jane' | 'codex'>('monsters');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -293,13 +295,14 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     setIsChecking(true);
     
     // 1. Check current item
-    const { fetchMonsterList, fetchMaterialsList, fetchEquipmentList } = await import('../../services/storageService');
+    const { characters } = useCharacterStore();
+  const { fetchMonsterList, fetchMaterialsList, fetchEquipmentList } = await import('../../services/storageService');
     let currentList: any[] = [];
     if (activeTab === 'monsters') currentList = monstersList;
     else if (activeTab === 'materials') currentList = materialsList;
     else if (activeTab === 'equipment') {
       // Use original equipment list to check for physical file presence
-      currentList = useStore.getState().equipmentList;
+      currentList = useCharacterStore.getState().equipmentList;
     }
 
     const jsonExists = currentList.some(m => m.index === item.index);
@@ -426,7 +429,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
   const generateBackground = async () => {
     setIsGeneratingBg(true);
     try {
-      const { generateBackgroundImage } = await import('../../services/ai/imageService');
+      const { characters } = useCharacterStore();
+  const { generateBackgroundImage } = await import('../../services/ai/imageService');
       const isSmall = editingItem && 
                      ((editingItem.size || "").toLowerCase().includes('tiny') || 
                       (editingItem.size || "").toLowerCase().includes('small')) &&
@@ -962,11 +966,11 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                     
                                     if (data) {
                                       if (activeTab === 'equipment' && !data.category) {
-                                        const mapping = useStore.getState().equipmentCategoryMapping;
+                                        const mapping = useCharacterStore.getState().equipmentCategoryMapping;
                                         if (mapping[m.index]) data.category = mapping[m.index];
                                       }
                                       if (activeTab === 'materials' && !data.category) {
-                                        const mapping = useStore.getState().materialCategoryMapping;
+                                        const mapping = useCharacterStore.getState().materialCategoryMapping;
                                         if (mapping[m.index]) data.category = mapping[m.index];
                                       }
                                       setItemDataMap(prev => ({ ...prev, [m.index]: data }));

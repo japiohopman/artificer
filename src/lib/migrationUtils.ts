@@ -1,5 +1,5 @@
 
-import { Character } from '../store/useStore';
+import { Character } from '../store/useCharacterStore';
 import { ItemInstance, InventoryContainer, InventorySlot } from '../types/inventory';
 import { generateInstanceId, deriveItemKind, createDefaultEquipment, createDefaultBackpack } from './inventoryUtils';
 

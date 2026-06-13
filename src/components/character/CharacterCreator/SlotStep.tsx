@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { useStore, Character } from '../../../store/useStore';
+import { useStore } from '../../../store/useStore';
+import { useCharacterStore, Character } from '../../../store/useCharacterStore';
 import { cn } from '../../../lib/utils';
 import { GameIcon } from '../../../game_icons';
 
@@ -10,7 +11,7 @@ interface SlotStepProps {
 }
 
 export const SlotStep: React.FC<SlotStepProps> = ({ selectedSlot, onSelect }) => {
-  const { mainCharacterSlots } = useStore();
+  const { mainCharacterSlots } = useCharacterStore();
   
   const slots = [1, 2, 3];
   

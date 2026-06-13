@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { useStore } from '../../../store/useStore';
+import { useWorldStore } from '../../../store/useWorldStore';
+import { useCharacterStore } from '../../../store/useCharacterStore';
 import { NPCDisplay } from './NPCDisplay';
 
 interface FirstPersonViewProps {
@@ -8,7 +10,8 @@ interface FirstPersonViewProps {
 }
 
 export const FirstPersonView: React.FC<FirstPersonViewProps> = ({ selectedArch }) => {
-  const { currentNPC, emotion, getActiveBackground } = useStore();
+  const { currentNPC, emotion } = useCharacterStore();
+  const { getActiveBackground } = useWorldStore();
   const bgUrl = getActiveBackground();
 
   return (

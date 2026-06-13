@@ -1,4 +1,4 @@
-import { Character } from "../store/useStore";
+import { Character } from "../store/useCharacterStore";
 import { atlasService } from "../services/atlasService";
 import { XP_TABLE } from "./statCalculations";
 

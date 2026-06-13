@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { useStore, Emotion } from '../../store/useStore';
+import { useStore } from '../../store/useStore';
+import { useWorldStore } from '../../store/useWorldStore';
+import { useCharacterStore, Emotion } from '../../store/useCharacterStore';
 import { ChatHistory } from './chat/ChatHistory';
 import { ChatInput } from './chat/ChatInput';
 import { motion, AnimatePresence } from 'motion/react';
@@ -16,17 +18,22 @@ interface ChatPanelProps {
 
 export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed: propCollapsed }) => {
   const { 
-    currentNPC, 
-    setEmotion, 
     addLog, 
-    setTestAnimalInteraction, 
-    testAnimalInteraction, 
-    getActiveBackground, 
-    gameTime, 
-    isNight,
     chatExpanded,
     setChatExpanded
   } = useStore();
+
+  const {
+    getActiveBackground,
+    isNight
+  } = useWorldStore();
+
+  const {
+    currentNPC,
+    setEmotion,
+    setTestAnimalInteraction,
+    testAnimalInteraction
+  } = useCharacterStore();
 
   const isCollapsed = propCollapsed !== undefined ? propCollapsed : !chatExpanded;
   const bgUrl = getActiveBackground();
@@ -93,7 +100,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed: propCollapsed
     const matchedTrigger = animalTriggers.find(t => lowerMessage.includes(t));
 
     if (matchedTrigger) {
-      const { beastRegistry } = useStore.getState();
+      const { beastRegistry } = useCharacterStore.getState();
       
       let target = lowerMessage.split(matchedTrigger)[1]?.trim() || '';
       if (target.startsWith('the ')) {

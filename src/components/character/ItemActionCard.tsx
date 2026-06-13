@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useStore } from '../../store/useStore';
+import { useCharacterStore } from '../../store/useCharacterStore';
+import { useInventoryStore } from '../../store/useInventoryStore';
 import { 
   X, Shield, Package, ArrowRight, ArrowLeft, Trash2, 
   Weight as WeightIcon, ShieldCheck, Sword, Zap, Info, Share2, CornerUpLeft
@@ -13,211 +14,167 @@ export const ItemActionCard: React.FC = () => {
   const { 
     inspectingItem, 
     setInspectingItem, 
+    setFocusedItem
+  } = useCharacterStore();
+
+  const {
     activeCharacterId, 
-    characters,
+    characters
+  } = useCharacterStore();
+
+  const {
     equipItem,
     unequipItem,
     transferItem,
     removeFromBackpack,
-    removeFromPartyInventory,
-    setFocusedItem
-  } = useStore();
+    removeFromPartyInventory
+  } = useInventoryStore();
 
   if (!inspectingItem) return null;
 
   const { item, sourceId, index, slot } = inspectingItem;
   const activeChar = characters.find(c => c.id === activeCharacterId) || characters[0];
   const isEquipment = item._type === 'equipment';
-  const isEquipped = !!slot;
-  const isOurItem = sourceId === activeCharacterId;
-  const isPartyItem = sourceId === 'party';
-
-  const handleClose = () => setInspectingItem(null);
-
-  const handleEquip = () => {
-    if (isEquipment && item.slot) {
-      const slots = Array.isArray(item.slot) ? item.slot : [item.slot as EquipmentSlotId];
-      // Simple logic: if multiple slots, pick first available or first in general
-      const targetSlot = slots[0];
-      equipItem(item, targetSlot);
-      handleClose();
-    }
+  
+  const handleEquip = (slotId: string) => {
+    equipItem(item, slotId);
+    setInspectingItem(null);
   };
 
   const handleUnequip = () => {
     if (slot) {
-      unequipItem(slot as EquipmentSlotId);
-      handleClose();
+      unequipItem(slot);
+      setInspectingItem(null);
     }
-  };
-
-  const handleTransfer = () => {
-    const targetId = isOurItem ? 'party' : activeCharacterId;
-    transferItem({ sourceId, targetId, itemId: item.id });
-    handleClose();
   };
 
   const handleDiscard = () => {
-    if (window.confirm(`Discard ${item.name}? This cannot be undone.`)) {
-      if (sourceId === 'party') {
-        removeFromPartyInventory(item.id);
-      } else if (index !== undefined) {
-        removeFromBackpack(index);
-      }
-      handleClose();
+    if (sourceId === 'party') {
+      removeFromPartyInventory(item.id);
+    } else {
+      removeFromBackpack(index !== undefined ? index : item.id);
     }
+    setInspectingItem(null);
+  };
+
+  const handleTransfer = (targetId: string) => {
+    transferItem({ sourceId, targetId, itemId: item.id });
+    setInspectingItem(null);
   };
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.9 }}
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-parchment-50 w-[85%] max-h-[85%] rounded-lg shadow-[0_0_50px_rgba(0,0,0,0.5)] border-2 border-dragon-red overflow-hidden flex flex-col"
-      >
-        <div className="absolute inset-0 bg-paper-texture opacity-30 pointer-events-none" />
-        <div className="relative z-10 flex flex-col h-full bg-parchment-50/90 backdrop-blur-sm p-4">
-          {/* Header */}
-          <div className="flex items-center justify-between mb-4 border-b border-dragon-red/10 pb-2">
-            <div className="flex flex-col">
-              <span className="text-[8px] font-black text-parchment-400 uppercase tracking-widest leading-none mb-1">
-                Relic Analysis
-              </span>
-              <h2 className="text-base font-header font-black text-dragon-darkRed uppercase tracking-tight leading-none">
-                {item.name}
-              </h2>
-            </div>
-            <button 
-              onClick={handleClose}
-              className="p-1 hover:bg-parchment-200 rounded-full text-parchment-600 transition-colors"
-            >
-              <X size={20} />
-            </button>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      className="w-full max-w-sm bg-parchment-100 rounded-2xl border-2 border-dragon-red overflow-hidden shadow-2xl flex flex-col"
+    >
+      {/* Header */}
+      <div className="bg-dragon-darkRed p-4 text-white flex justify-between items-center">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded bg-white/10 flex items-center justify-center">
+             <Package size={18} />
           </div>
+          <span className="font-header uppercase tracking-widest text-sm">Item Manifest</span>
+        </div>
+        <button onClick={() => setInspectingItem(null)} className="hover:rotate-90 transition-transform">
+          <X size={20} />
+        </button>
+      </div>
 
-          {/* content */}
-          <div className="flex-1 overflow-y-auto space-y-4 pr-1 custom-scrollbar">
-            {/* Main Visual - Larger preview */}
-            <div className="aspect-square w-full max-w-[200px] mx-auto bg-white/50 rounded-lg border border-parchment-300 p-6 flex items-center justify-center relative overflow-hidden group shadow-inner">
-               <img 
-                 src={normalizeImageUrl(item.imageUrl, item._type || 'equipment', item.index || item.id)} 
-                 alt={item.name} 
-                 className="max-w-full max-h-full object-contain relative z-10 transition-transform group-hover:scale-110 drop-shadow-xl"
-                 referrerPolicy="no-referrer"
-               />
-               <div className="absolute bottom-2 right-2 flex items-center gap-1 opacity-40">
-                  <span className="text-[6px] font-black uppercase text-parchment-400">UID:</span>
-                  <span className="text-[6px] font-mono font-bold text-parchment-500">{item.id?.split('-')[0]}</span>
+      <div className="p-6 space-y-6">
+        {/* Item Preview */}
+        <div className="flex gap-4">
+           <div className="w-24 aspect-[9/16] bg-black/5 rounded-lg border border-dragon-red/10 overflow-hidden shrink-0">
+             <img 
+               src={normalizeImageUrl(item.imageUrl, item._type || 'equipment', item.index || item.id)} 
+               alt={item.name}
+               className="w-full h-full object-contain p-2"
+               referrerPolicy="no-referrer"
+             />
+           </div>
+           <div className="flex-1">
+             <h3 className="font-header text-xl text-dragon-darkRed uppercase tracking-tight leading-none mb-2">{item.name}</h3>
+             <div className="flex flex-wrap gap-2">
+               <span className="px-2 py-0.5 bg-dragon-red/10 text-dragon-red text-[8px] font-black uppercase rounded border border-dragon-red/20">{item._type || 'item'}</span>
+               {item.weight && (
+                 <span className="flex items-center gap-1 text-[9px] text-parchment-500 font-bold uppercase">
+                   <WeightIcon size={10} /> {item.weight} lbs
+                 </span>
+               )}
+             </div>
+             <p className="mt-3 text-[10px] text-parchment-600 italic leading-relaxed">
+               {Array.isArray(item.desc) ? item.desc[0] : (item.desc || 'No description available.')}
+             </p>
+           </div>
+        </div>
+
+        {/* Actions Grid */}
+        <div className="grid grid-cols-1 gap-2">
+          {/* Equip Actions */}
+          {isEquipment && !slot && (
+             <div className="space-y-2">
+               <p className="text-[8px] font-black text-parchment-400 uppercase tracking-widest px-1">Available Slots</p>
+               <div className="flex flex-wrap gap-2">
+                 {(Array.isArray(item.slot) ? item.slot : [item.slot]).map((s: string) => (
+                   <button
+                     key={s}
+                     onClick={() => handleEquip(s)}
+                     className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-dragon-red text-white rounded-lg text-[10px] font-black uppercase hover:bg-dragon-darkRed transition-all shadow-md group"
+                   >
+                     <ShieldCheck size={14} />
+                     Equip to {s.replace('_', ' ')}
+                   </button>
+                 ))}
                </div>
-            </div>
+             </div>
+          )}
 
-            {/* Stats Bar */}
-            <div className="grid grid-cols-2 gap-2">
-              <div className="bg-parchment-100/50 rounded p-2 flex items-center gap-2 border border-parchment-300">
-                <WeightIcon size={12} className="text-dragon-red/60" />
-                <div className="flex flex-col">
-                  <span className="text-[7px] font-black text-parchment-500 uppercase">Weight</span>
-                  <span className="text-xs font-cinzel text-parchment-900">{item.weight || '0'} lb</span>
-                </div>
-              </div>
-              <div className="bg-parchment-100/50 rounded p-2 flex items-center gap-2 border border-parchment-300">
-                <Info size={12} className="text-dragon-red/60" />
-                <div className="flex flex-col">
-                  <span className="text-[7px] font-black text-parchment-500 uppercase">Type</span>
-                  <span className="text-xs font-cinzel text-parchment-900 uppercase">{item._type || 'Misc'}</span>
-                </div>
-              </div>
-            </div>
+          {/* Unequip */}
+          {slot && (
+            <button
+              onClick={handleUnequip}
+              className="flex items-center justify-center gap-2 py-2.5 bg-parchment-200 text-dragon-darkRed rounded-lg text-[10px] font-black uppercase hover:bg-parchment-300 transition-all border border-dragon-red/20"
+            >
+              <CornerUpLeft size={14} />
+              Return to Backpack
+            </button>
+          )}
 
-            {/* Detailed Info (if available in JSON) */}
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                 <ScrollIcon size={12} className="text-dragon-red" />
-                 <span className="text-[8px] font-black text-dragon-darkRed uppercase tracking-widest">Description</span>
-              </div>
-              <p className="text-[10px] text-parchment-700 leading-relaxed italic border-l-2 border-dragon-red/20 pl-3">
-                {item.description || item.desc?.[0] || 'Standard issue or found artifact. Details are scarce in the current archives.'}
-              </p>
-            </div>
-
-            {/* Specific Combat Stats if equipment */}
-            {isEquipment && item.armor_class && (
-              <div className="bg-blue-50/50 rounded border border-blue-200 p-3 flex justify-between items-center">
-                 <div className="flex items-center gap-3">
-                    <ShieldCheck size={16} className="text-blue-600" />
-                    <span className="text-[10px] font-bold text-blue-800 uppercase">Armor Class</span>
-                 </div>
-                 <span className="text-sm font-header font-black text-blue-900">{item.armor_class.base}</span>
-              </div>
-            )}
-          </div>
-
-          {/* Actions Footer */}
-          <div className="mt-4 pt-4 border-t border-parchment-300 space-y-2">
+          {/* Transfer Actions */}
+          <div className="pt-2 border-t border-dragon-red/10 space-y-2">
+             <p className="text-[8px] font-black text-parchment-400 uppercase tracking-widest px-1">Logistics</p>
              <div className="grid grid-cols-2 gap-2">
-                {isEquipment && (
+                {sourceId !== 'party' && (
                   <button 
-                    onClick={isEquipped ? handleUnequip : handleEquip}
-                    className={cn(
-                      "flex items-center justify-center gap-2 py-2.5 rounded text-[10px] font-black uppercase tracking-widest transition-all shadow-sm",
-                      isEquipped 
-                        ? "bg-amber-100 text-amber-800 border border-amber-300 hover:bg-amber-200" 
-                        : "bg-dragon-red text-white hover:bg-red-700"
-                    )}
+                    onClick={() => handleTransfer('party')}
+                    className="flex items-center justify-center gap-2 py-2 bg-white border border-dragon-red/20 text-dragon-red rounded text-[9px] font-bold uppercase hover:bg-dragon-red hover:text-white transition-all"
                   >
-                    {isEquipped ? <CornerUpLeft size={14} /> : <Shield size={14} />}
-                    {isEquipped ? 'Unequip' : 'Equip Now'}
+                    <Share2 size={12} /> Party Armory
                   </button>
                 )}
-                
+                {sourceId !== activeChar.id && (
+                  <button 
+                    onClick={() => handleTransfer(activeChar.id)}
+                    className="flex items-center justify-center gap-2 py-2 bg-white border border-dragon-red/20 text-dragon-red rounded text-[9px] font-bold uppercase hover:bg-dragon-red hover:text-white transition-all"
+                  >
+                    <ArrowLeft size={12} /> To {activeChar.name.split(' ')[0]}
+                  </button>
+                )}
                 <button 
-                  onClick={handleTransfer}
-                  className="flex items-center justify-center gap-2 py-2.5 bg-parchment-200 text-parchment-700 border border-parchment-300 rounded text-[10px] font-black uppercase tracking-widest hover:bg-parchment-300 transition-all shadow-sm"
+                  onClick={handleDiscard}
+                  className="flex items-center justify-center gap-2 py-2 bg-red-50 text-red-600 border border-red-200 rounded text-[9px] font-bold uppercase hover:bg-red-600 hover:text-white transition-all"
                 >
-                  {isOurItem ? <Share2 size={14} /> : <ArrowRight size={14} />}
-                  {isOurItem ? 'To Party' : 'Take Item'}
+                  <Trash2 size={12} /> Discard
                 </button>
              </div>
-
-             <button 
-               onClick={() => {
-                  setFocusedItem(item);
-                  handleClose();
-               }}
-               className="w-full py-2 bg-dragon-gold text-white rounded text-[10px] font-black uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-sm"
-             >
-                <Zap size={14} /> Focus in Codex
-             </button>
-
-             <button 
-               onClick={handleDiscard}
-               className="w-full py-2 text-red-600/60 hover:text-red-600 transition-colors text-[8px] font-bold uppercase tracking-[0.2em] flex items-center justify-center gap-1"
-             >
-               <Trash2 size={10} /> Discard Permanently
-             </button>
           </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+
+      <div className="bg-parchment-200 p-2 text-[8px] text-parchment-400 font-mono text-center border-t border-parchment-300">
+         ITEM_INSTANCE_ID: {item.id}
+      </div>
+    </motion.div>
   );
 };
-
-const ScrollIcon = ({ size, className }: { size: number; className: string }) => (
-  <svg 
-    width={size} 
-    height={size} 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
-    className={className}
-  >
-    <path d="M19 17h2c.6 0 1-.4 1-1V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2" />
-    <path d="M15 21v-2a4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v2a2 2 0 0 0 2 2h11a3 3 0 0 0 3-3V4" />
-    <path d="M15 6h4" />
-    <path d="M15 10h4" />
-  </svg>
-);

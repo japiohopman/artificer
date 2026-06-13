@@ -1,4 +1,5 @@
 import { AudioLayer } from '../types/audio.ts';
+import { useStore } from '../store/useStore';
 
 const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/japiohopman/artificer/main/public";
 
@@ -37,16 +38,12 @@ class SoundEngine {
     const path = playlist[this.currentMusicIndex];
     this.playLayer(1, path, true);
     
-    import('../store/useStore').then(({ useStore }) => {
-      useStore.getState().setMusicPlaying(true);
-    });
+    useStore.getState().setMusicPlaying(true);
   }
 
   stopMusic() {
     this.stopLayer(1);
-    import('../store/useStore').then(({ useStore }) => {
-      useStore.getState().setMusicPlaying(false);
-    });
+    useStore.getState().setMusicPlaying(false);
   }
 
   skipMusic() {
@@ -67,24 +64,22 @@ class SoundEngine {
     // Register immediately so subsequent calls to playLayer or stopLayer find it
     this.layers.set(layerId, audio);
 
-    import('../store/useStore').then(({ useStore }) => {
-      // Check if this audio is still the active one for this layer
-      if (this.layers.get(layerId) !== audio) {
-        audio.pause();
-        return;
-      }
+    // Check if this audio is still the active one for this layer
+    if (this.layers.get(layerId) !== audio) {
+      audio.pause();
+      return;
+    }
 
-      const state = useStore.getState().layerStates[layerId];
-      audio.volume = state.isMuted ? 0 : state.volume * this.masterVolume;
-      const anySolo = Object.values(useStore.getState().layerStates).some(s => s.isSolo);
-      
-      if (anySolo && !state.isSolo) {
-        audio.volume = 0;
-      }
-      
-      audio.play().catch(e => {
-        console.warn(`Layer ${layerId} playback failed:`, e.message);
-      });
+    const state = useStore.getState().layerStates[layerId];
+    audio.volume = state.isMuted ? 0 : state.volume * this.masterVolume;
+    const anySolo = Object.values(useStore.getState().layerStates).some(s => s.isSolo);
+    
+    if (anySolo && !state.isSolo) {
+      audio.volume = 0;
+    }
+    
+    audio.play().catch(e => {
+      console.warn(`Layer ${layerId} playback failed:`, e.message);
     });
   }
 
@@ -100,18 +95,16 @@ class SoundEngine {
   updateLayerVolume(layerId: AudioLayer, volume: number) {
     const audio = this.layers.get(layerId);
     if (audio) {
-      import('../store/useStore').then(({ useStore }) => {
-        const state = useStore.getState().layerStates[layerId];
-        const anySolo = Object.values(useStore.getState().layerStates).some(s => s.isSolo);
-        
-        if (state.isMuted) {
-          audio.volume = 0;
-        } else if (anySolo && !state.isSolo) {
-          audio.volume = 0;
-        } else {
-          audio.volume = volume * this.masterVolume;
-        }
-      });
+      const state = useStore.getState().layerStates[layerId];
+      const anySolo = Object.values(useStore.getState().layerStates).some(s => s.isSolo);
+      
+      if (state.isMuted) {
+        audio.volume = 0;
+      } else if (anySolo && !state.isSolo) {
+        audio.volume = 0;
+      } else {
+        audio.volume = volume * this.masterVolume;
+      }
     }
   }
 
@@ -121,33 +114,29 @@ class SoundEngine {
       if (isMuted) {
         audio.volume = 0;
       } else {
-        import('../store/useStore').then(({ useStore }) => {
-          const state = useStore.getState().layerStates[layerId];
-          const anySolo = Object.values(useStore.getState().layerStates).some(s => s.isSolo);
-          if (anySolo && !state.isSolo) {
-            audio.volume = 0;
-          } else {
-            audio.volume = state.volume * this.masterVolume;
-          }
-        });
+        const state = useStore.getState().layerStates[layerId];
+        const anySolo = Object.values(useStore.getState().layerStates).some(s => s.isSolo);
+        if (anySolo && !state.isSolo) {
+          audio.volume = 0;
+        } else {
+          audio.volume = state.volume * this.masterVolume;
+        }
       }
     }
   }
 
   updateLayerSolo(layerId: AudioLayer, isSolo: boolean) {
     // If any layer is soloed, normalize all volumes
-    import('../store/useStore').then(({ useStore }) => {
-      const { layerStates } = useStore.getState();
-      const anySolo = Object.values(layerStates).some(s => s.isSolo);
+    const { layerStates } = useStore.getState();
+    const anySolo = Object.values(layerStates).some(s => s.isSolo);
 
-      this.layers.forEach((audio, id) => {
-        const state = layerStates[id];
-        if (anySolo) {
-          audio.volume = state.isSolo ? state.volume * this.masterVolume : 0;
-        } else {
-          audio.volume = state.isMuted ? 0 : state.volume * this.masterVolume;
-        }
-      });
+    this.layers.forEach((audio, id) => {
+      const state = layerStates[id];
+      if (anySolo) {
+        audio.volume = state.isSolo ? state.volume * this.masterVolume : 0;
+      } else {
+        audio.volume = state.isMuted ? 0 : state.volume * this.masterVolume;
+      }
     });
   }
 
@@ -184,11 +173,9 @@ class SoundEngine {
 
     const audio = new Audio(this.getUrl(path));
     // Use UI layer volume (Layer 8)
-    import('../store/useStore').then(({ useStore }) => {
-      const uiLayer = useStore.getState().layerStates[8];
-      audio.volume = uiLayer.isMuted ? 0 : uiLayer.volume * this.masterVolume;
-      audio.play().catch(e => console.warn("Effect playback failed", e.message));
-    });
+    const uiLayer = useStore.getState().layerStates[8];
+    audio.volume = uiLayer.isMuted ? 0 : uiLayer.volume * this.masterVolume;
+    audio.play().catch(e => console.warn("Effect playback failed", e.message));
   }
 }
 

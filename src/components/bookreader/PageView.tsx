@@ -171,7 +171,7 @@ const SinglePageContent = ({
     bookAuthor,
     language
 }: any) => {
-  const { characters, activeCharacterId } = useStore();
+  const { characters, activeCharacterId } = useCharacterStore();
   const character = characters.find(c => c.id === activeCharacterId) || characters[0];
   const knowsLanguage = !language || (character?.languages || []).includes(language.toLowerCase());
   const { fontLoaded } = useLanguageFont(knowsLanguage ? undefined : language);

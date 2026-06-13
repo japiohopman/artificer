@@ -11,7 +11,8 @@ import {
 } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import { X, Shield, Package, BarChart3, Info, Truck, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useStore, SKILL_LIST } from '../../store/useStore';
+import { useCharacterStore, SKILL_LIST } from '../../store/useCharacterStore';
+import { useInventoryStore } from '../../store/useInventoryStore';
 import { Inventory } from './Inventory';
 import { EquipmentDoll } from './EquipmentDoll';
 import { EquipmentCard } from '../atlas/EquipmentCard';
@@ -81,25 +82,34 @@ export const CharacterProfile: React.FC = () => {
   const { 
     isProfileMenuOpen, 
     setIsProfileMenuOpen, 
-    characters, 
+    setFocusedItem,
+    inspectingItem,
+    setInspectingItem,
+    setViewMode,
+    rollDice3D,
+    setIsCharacterSpellbookOpen
+  } = useCharacterStore();
+
+  const {
+    characters,
     activeCharacterId,
     setActiveCharacter,
-    setFocusedItem,
+    reorderCharacters,
+    deleteCharacter,
+    castSpell,
+    restoreSlots,
+    updateCharacter
+  } = useCharacterStore();
+
+  const {
     equipItem,
     unequipItem,
     transferItem,
-    reorderCharacters,
-    partyStats,
-    inspectingItem,
-    setInspectingItem,
-    deleteCharacter,
-    setViewMode
-  } = useStore();
+    partyStats
+  } = useInventoryStore();
 
   const [activeTab, setActiveTab] = React.useState<'stats' | 'equipment' | 'bio' | 'spells'>('stats');
   const [optionDetails, setOptionDetails] = React.useState<Record<string, string>>({});
-
-  const { setIsCharacterSpellbookOpen, castSpell, restoreSlots } = useStore();
 
   const character = characters.find(c => c.id === activeCharacterId) || characters[0];
   const effectiveStats = getEffectiveStats(character);
@@ -176,7 +186,6 @@ export const CharacterProfile: React.FC = () => {
   };
 
   const totalCharacterWeight = calculateWeight();
-  const { rollDice3D } = useStore();
   const derived = calculateDerivedStats(character);
 
   const getSpellSlots = (lvl: number, cls: string) => {
@@ -944,7 +953,7 @@ export const CharacterProfile: React.FC = () => {
                                            updateData.subclass = currentChoices['subclass'];
                                         }
                                         
-                                        useStore.getState().updateCharacter(character.id, updateData);
+                                        updateCharacter(character.id, updateData);
                                         soundService.playEffect('UI_CLICK_LIGHT');
                                       }}
                                       className={cn(

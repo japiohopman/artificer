@@ -35,7 +35,8 @@ const ChangeView = ({ center, zoom }: { center: [number, number], zoom: number }
 
 const MapInvalidator = () => {
   const map = useMap();
-  const { isWorldPanelOpen, isCharacterPanelOpen, isInventoryOpen } = useStore();
+  const { isWorldPanelOpen, isCharacterPanelOpen } = useStore();
+  const { isInventoryOpen } = useInventoryStore();
 
   React.useEffect(() => {
     // During sidebar animation (approx 350-500ms), invalidate multiple times for smoothness
@@ -58,7 +59,7 @@ const MapInvalidator = () => {
 };
 
 export const WorldMap: React.FC = () => {
-  const { partyLocation } = useStore();
+  const { partyLocation } = useWorldStore();
   
   // Default center (can be derived from partyLocation or currentSubLocation)
   const defaultCenter: [number, number] = [51.505, -0.09];
