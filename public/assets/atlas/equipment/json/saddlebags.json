@@ -15,11 +15,15 @@
   },
   "weight": 8,
   "url": "/assets/atlas/equipment/json/saddlebags.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-13T20:52:57.670Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/saddlebags.webp",
   "sprite_index": 8,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
-  "kind": "adventuring_gear"
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
+  "kind": "adventuring_gear",
+  "imageUrl": "/assets/atlas/equipment/images/saddlebags.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "13-6-2026"
 }
