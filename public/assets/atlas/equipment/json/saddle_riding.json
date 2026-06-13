@@ -15,11 +15,15 @@
   },
   "weight": 25,
   "url": "/assets/atlas/equipment/json/saddle_riding.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-13T21:00:43.430Z",
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/saddle_riding.webp",
   "sprite_index": 7,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
-  "kind": "adventuring_gear"
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
+  "kind": "adventuring_gear",
+  "imageUrl": "/assets/atlas/equipment/images/saddle_riding.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "13-6-2026"
 }
