@@ -43,14 +43,22 @@
     }
   },
   "url": "/assets/atlas/equipment/json/warhammer.json",
-  "updated_at": "2025-10-24T20:42:12.926Z",
+  "updated_at": "2026-06-13T20:36:19.975Z",
   "contents": [],
   "image": "/assets/atlas/equipment/images/warhammer.webp",
   "sprite_index": 2,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet10.webp",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet10.0webp",
   "kind": "weapon",
   "equipSlots": [
     "main_hand",
     "off_hand"
-  ]
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/warhammer.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "last_updated": "13-6-2026"
 }
