@@ -27,7 +27,7 @@
               "item": {
                 "index": "strength",
                 "name": "strength",
-                "url": "/assets/atlas/ability_scores/json/strength.json"
+                "url": "/assets/atlas/ability_scores/json/str.json"
               }
             },
             {
@@ -35,7 +35,7 @@
               "item": {
                 "index": "dexterity",
                 "name": "dexterity",
-                "url": "/assets/atlas/ability_scores/json/dexterity.json"
+                "url": "/assets/atlas/ability_scores/json/dex.json"
               }
             },
             {
@@ -43,7 +43,7 @@
               "item": {
                 "index": "constitution",
                 "name": "constitution",
-                "url": "/assets/atlas/ability_scores/json/constitution.json"
+                "url": "/assets/atlas/ability_scores/json/con.json"
               }
             },
             {
@@ -51,7 +51,7 @@
               "item": {
                 "index": "intelligence",
                 "name": "intelligence",
-                "url": "/assets/atlas/ability_scores/json/intelligence.json"
+                "url": "/assets/atlas/ability_scores/json/int.json"
               }
             },
             {
@@ -59,7 +59,7 @@
               "item": {
                 "index": "wisdom",
                 "name": "wisdom",
-                "url": "/assets/atlas/ability_scores/json/wisdom.json"
+                "url": "/assets/atlas/ability_scores/json/wis.json"
               }
             },
             {
@@ -67,7 +67,7 @@
               "item": {
                 "index": "charisma",
                 "name": "charisma",
-                "url": "/assets/atlas/ability_scores/json/charisma.json"
+                "url": "/assets/atlas/ability_scores/json/cha.json"
               }
             }
           ]
