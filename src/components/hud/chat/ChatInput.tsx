@@ -16,18 +16,6 @@ export const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, onSen
     <div className="p-3 bg-parchment-100/40 border-t border-dragon-gold/10 backdrop-blur-xl">
       <div className="relative flex items-center gap-2 group">
         <button
-          onClick={() => setChatExpanded(!chatExpanded)}
-          className={`shrink-0 p-2.5 rounded-full transition-all border-2 ${
-            chatExpanded
-              ? 'bg-dragon-red border-dragon-gold text-white shadow-lg' 
-              : 'bg-parchment-200 border-dragon-gold/30 text-dragon-red/40 hover:text-dragon-red hover:bg-parchment-300'
-          } shadow-sm active:scale-90`}
-          title={chatExpanded ? "Collapse History" : "Expand History"}
-        >
-          <GameIcon name={chatExpanded ? "chevron_down" : "chevron_up"} size={16} />
-        </button>
-
-        <button
           onClick={() => setIsAdvancedRollerOpen(!isAdvancedRollerOpen)}
           className={`shrink-0 p-2.5 rounded-full transition-all border-2 ${
             isDiceReady || isAdvancedRollerOpen
