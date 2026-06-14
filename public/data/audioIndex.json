@@ -134,6 +134,15 @@
         "createdAt": "2026-06-14T09:57:01.881Z"
       },
       "file": "public/assets/sounds/sfx/ui_armory_open.wav"
+    },
+    "dice_roll_wood": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "Physics-based SFX: multiple polyhedral dice rolling on solid oak. Varied impact, sharp resin clacks, natural dispersion.",
+        "createdAt": "2026-06-14T09:57:06.524Z"
+      },
+      "file": "public/assets/sounds/sfx/dice_roll_wood.wav"
     }
   }
 }
