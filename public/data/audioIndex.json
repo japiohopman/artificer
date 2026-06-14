@@ -125,6 +125,15 @@
         "createdAt": "2026-06-14T09:56:57.030Z"
       },
       "file": "public/assets/sounds/sfx/ui_character_select.wav"
+    },
+    "ui_armory_open": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "Heavy cinematic SFX: large mechanical lock disengaging, slow groan of a stone portal. Deep low-end, metallic clinks.",
+        "createdAt": "2026-06-14T09:57:01.881Z"
+      },
+      "file": "public/assets/sounds/sfx/ui_armory_open.wav"
     }
   }
 }
