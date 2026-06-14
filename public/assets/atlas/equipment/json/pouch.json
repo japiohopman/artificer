@@ -35,9 +35,11 @@
     "extra"
   ],
   "last_updated": "1-5-2026",
-  "kind": "adventuring_gear",
+  "kind": "container",
+  "capacity": "1/5 cubic foot/6 pounds",
+  "capacity_weight": 6,
+  "capacity_volume": 0.2,
   "equipSlots": [
-    "ring_1",
-    "ring_2"
+    "belt"
   ]
 }

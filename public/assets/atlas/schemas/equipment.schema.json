@@ -40,7 +40,9 @@
         "container",
         "consumable",
         "trinket",
-        "currency"
+        "currency",
+        "clothing",
+        "light_source"
       ]
     },
     "equipment_category": {
@@ -70,11 +72,11 @@
     },
     "url": {
       "type": "string",
-      "pattern": "^public/assets/atlas/equipment/json/.+\\.json$"
+      "pattern": "^\\/?(public/)?assets/atlas/equipment/json/.+\\.json$"
     },
     "imageUrl": {
       "type": "string",
-      "pattern": "^public/assets/atlas/equipment/images/.+\\.webp$"
+      "pattern": "^\\/?(public/)?assets/atlas/equipment/images/.+\\.webp$"
     },
     "image": {
       "type": "string",
@@ -92,7 +94,7 @@
     },
     "sprite_sheet": {
       "type": "string",
-       "pattern": "^public/assets/.+\\.webp$"
+      "pattern": "^\\/?(public/)?assets/.+\\.webp$"
     },
     "contents": {
       "type": "array",

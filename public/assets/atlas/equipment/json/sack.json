@@ -32,9 +32,11 @@
     "extra"
   ],
   "last_updated": "9-5-2026",
-  "kind": "adventuring_gear",
+  "kind": "container",
+  "capacity": "1 cubic foot/30 pounds",
+  "capacity_weight": 30,
+  "capacity_volume": 1,
   "equipSlots": [
-    "ring_1",
-    "ring_2"
+    "none"
   ]
 }

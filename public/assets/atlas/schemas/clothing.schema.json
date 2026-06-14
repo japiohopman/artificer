@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/clothing.schema.json",
+  "title": "Clothing",
+  "description": "Schema for non-armor clothing items.",
+  "allOf": [
+    { "$ref": "equipment.schema.json" },
+    {
+      "type": "object",
+      "properties": {
+        "clothing_type": {
+          "type": "string",
+          "enum": ["common", "fine", "costume", "traveler", "vestments", "jewelry"]
+        }
+      }
+    }
+  ]
+}

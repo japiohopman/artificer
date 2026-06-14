@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/container.schema.json",
+  "title": "Container",
+  "description": "Schema for container equipment items like backpacks, chests, and pouches.",
+  "allOf": [
+    { "$ref": "equipment.schema.json" },
+    {
+      "type": "object",
+      "properties": {
+        "capacity": {
+          "type": "string",
+          "description": "Description of the container's carrying capacity."
+        },
+        "capacity_weight": {
+          "type": "number",
+          "description": "Maximum weight capacity in lbs."
+        },
+        "capacity_volume": {
+          "type": "number",
+          "description": "Maximum volume capacity in cubic feet."
+        }
+      }
+    }
+  ]
+}

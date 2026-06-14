@@ -159,6 +159,9 @@ function validateJson(filePath) {
         else if (data.kind === 'tool') schemaType = 'tool';
         else if (data.kind === 'focus') schemaType = 'focus';
         else if (data.kind === 'equipment_pack') schemaType = 'equipment_pack';
+        else if (data.kind === 'container') schemaType = 'container';
+        else if (data.kind === 'clothing') schemaType = 'clothing';
+        else if (data.kind === 'light_source') schemaType = 'light_source';
         else schemaType = 'equipment';
     }
     else if (filePath.includes('magic_items/json')) schemaType = 'magic_item';

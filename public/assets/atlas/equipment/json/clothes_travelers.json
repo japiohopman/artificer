@@ -23,11 +23,12 @@
   "contents": [],
   "properties": [],
   "image": "/assets/atlas/equipment/images/clothes_travelers.webp",
+  "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp",
   "sprite_index": 12,
   "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
-  "kind": "adventuring_gear",
+  "kind": "clothing",
+  "clothing_type": "traveler",
   "equipSlots": [
-    "ring_1",
-    "ring_2"
+    "clothes"
   ]
 }

@@ -34,9 +34,12 @@
     "off-hand"
   ],
   "last_updated": "24-4-2026",
-  "kind": "adventuring_gear",
+  "kind": "light_source",
+  "bright_radius": 20,
+  "dim_radius": 20,
+  "duration": "1 hour",
   "equipSlots": [
-    "ring_1",
-    "ring_2"
+    "main_hand",
+    "off_hand"
   ]
 }

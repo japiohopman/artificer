@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/light_source.schema.json",
+  "title": "Light Source",
+  "description": "Schema for light-producing equipment items like torches and lanterns.",
+  "allOf": [
+    { "$ref": "equipment.schema.json" },
+    {
+      "type": "object",
+      "properties": {
+        "bright_radius": {
+          "type": "integer",
+          "description": "Radius of bright light produced (in feet)."
+        },
+        "dim_radius": {
+          "type": "integer",
+          "description": "Additional radius of dim light produced (in feet)."
+        },
+        "duration": {
+          "type": "string",
+          "description": "How long the light source lasts (e.g., '1 hour')."
+        },
+        "fuel_type": {
+          "type": "string",
+          "description": "The type of fuel required (e.g., 'oil', 'none')."
+        }
+      }
+    }
+  ]
+}

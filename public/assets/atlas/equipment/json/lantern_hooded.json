@@ -26,11 +26,15 @@
   "properties": [],
   "image": "/assets/atlas/equipment/images/lantern_hooded.webp",
   "sprite_index": 22,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp",
-  "kind": "adventuring_gear",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "kind": "light_source",
+  "bright_radius": 30,
+  "dim_radius": 30,
+  "duration": "6 hours",
+  "fuel_type": "oil",
   "equipSlots": [
-    "ring_1",
-    "ring_2"
+    "main_hand",
+    "off_hand"
   ],
   "imageUrl": "/assets/atlas/equipment/images/lantern_hooded.webp",
   "_type": "equipment",

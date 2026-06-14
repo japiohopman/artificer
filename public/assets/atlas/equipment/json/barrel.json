@@ -32,9 +32,10 @@
     "extra"
   ],
   "last_updated": "28-4-2026",
-  "kind": "adventuring_gear",
+  "kind": "container",
+  "capacity": "40 gallons liquid/4 cubic feet solid",
+  "capacity_volume": 4,
   "equipSlots": [
-    "ring_1",
-    "ring_2"
+    "none"
   ]
 }

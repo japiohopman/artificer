@@ -29,9 +29,11 @@
   "_type": "equipment",
   "background_type": "land_forest",
   "last_updated": "21-4-2026",
-  "kind": "adventuring_gear",
+  "kind": "container",
+  "capacity": "12 cubic feet/300 pounds",
+  "capacity_weight": 300,
+  "capacity_volume": 12,
   "equipSlots": [
-    "ring_1",
-    "ring_2"
+    "none"
   ]
 }

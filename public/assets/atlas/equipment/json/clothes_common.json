@@ -24,14 +24,14 @@
   "properties": [],
   "image": "/assets/atlas/equipment/images/clothes_common.webp",
   "sprite_index": 9,
-  "sprite_sheet": "/assets/atlas/equipment/sprites/equipment_sheet3.0webp",
+  "sprite_sheet": "/assets/atlas/equipment/sprites/equipment_sheet3.webp",
   "imageUrl": "/assets/atlas/equipment/images/clothes_common.webp",
   "_type": "equipment",
   "background_type": "land_forest",
   "last_updated": "2-6-2026",
-  "kind": "adventuring_gear",
+  "kind": "clothing",
+  "clothing_type": "common",
   "equipSlots": [
-    "ring_1",
-    "ring_2"
+    "clothes"
   ]
 }

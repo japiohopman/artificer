@@ -28,6 +28,9 @@
   "imageUrl": "/assets/atlas/equipment/images/backpack.webp",
   "_type": "equipment",
   "kind": "container",
+  "capacity": "1 cubic foot/30 pounds",
+  "capacity_weight": 30,
+  "capacity_volume": 1,
   "background_type": "land_forest",
   "equipSlots": [
     "back"

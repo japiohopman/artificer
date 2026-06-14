@@ -24,11 +24,11 @@
   "properties": [],
   "image": "/assets/atlas/equipment/images/clothes_costume.webp",
   "sprite_index": 10,
-  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
-  "kind": "adventuring_gear",
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "kind": "clothing",
+  "clothing_type": "costume",
   "equipSlots": [
-    "ring_1",
-    "ring_2"
+    "clothes"
   ],
   "imageUrl": "/assets/atlas/equipment/images/clothes_costume.webp",
   "_type": "equipment",

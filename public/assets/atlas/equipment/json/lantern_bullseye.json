@@ -26,7 +26,7 @@
   "properties": [],
   "image": "/assets/atlas/equipment/images/lantern_bullseye.webp",
   "sprite_index": 21,
-  "sprite_sheet": "/assets/atlas/equipment/sprites/equipment_sheet5.0webp",
+  "sprite_sheet": "/assets/atlas/equipment/sprites/equipment_sheet5.webp",
   "imageUrl": "/assets/atlas/equipment/images/lantern_bullseye.webp",
   "_type": "equipment",
   "background_type": "land_forest",
@@ -34,9 +34,13 @@
     "extra"
   ],
   "last_updated": "2-6-2026",
-  "kind": "adventuring_gear",
+  "kind": "light_source",
+  "bright_radius": 60,
+  "dim_radius": 60,
+  "duration": "6 hours",
+  "fuel_type": "oil",
   "equipSlots": [
-    "ring_1",
-    "ring_2"
+    "main_hand",
+    "off_hand"
   ]
 }
