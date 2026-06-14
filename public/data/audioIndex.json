@@ -161,6 +161,15 @@
         "createdAt": "2026-06-14T09:57:16.050Z"
       },
       "file": "public/assets/sounds/sfx/ui_page_turn.wav"
+    },
+    "ui_map_token_move": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "Organic SFX: solid wooden thud and slide on parchment. Short, dry, clear wood-on-paper friction.",
+        "createdAt": "2026-06-14T09:57:21.325Z"
+      },
+      "file": "public/assets/sounds/sfx/ui_map_token_move.wav"
     }
   }
 }
