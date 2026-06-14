@@ -107,6 +107,15 @@
         "createdAt": "2026-06-14T09:56:47.874Z"
       },
       "file": "public/assets/sounds/sfx/ui_parchment_open.wav"
+    },
+    "ui_parchment_close": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "High-quality fantasy UI: parchment scroll rolling shut. Short decisive friction, light paper thud, tactile rustle.",
+        "createdAt": "2026-06-14T09:56:52.570Z"
+      },
+      "file": "public/assets/sounds/sfx/ui_parchment_close.wav"
     }
   }
 }
