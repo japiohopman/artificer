@@ -2,6 +2,8 @@ import React from 'react';
 import { useWorldStore } from '../../../store/useWorldStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useInventoryStore } from '../../../store/useInventoryStore';
+import { useStore } from '../../../store/useStore';
+import { PartyLogistics } from '../../ui/PartyLogistics';
 import { GameIcon, GameIconName } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
@@ -25,7 +27,7 @@ export const Nav: React.FC = () => {
     isProfileMenuOpen,
     setIsProfileMenuOpen,
     dynamicNavButtons,
-  } = useCharacterStore();
+  } = useStore();
 
   const {
     currentLocation,
@@ -192,7 +194,9 @@ export const Nav: React.FC = () => {
           </div>
         )}
 
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
+          <PartyLogistics />
+          <div className="h-8 w-px bg-dragon-gold/20 mx-1" />
           {rightActions.map(action => (
             <button 
               key={action.id}

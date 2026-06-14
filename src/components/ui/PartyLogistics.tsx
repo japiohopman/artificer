@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
+import { useStore } from '../../store/useStore';
 import { GameIcon } from '../../game_icons';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../../lib/utils';
@@ -30,12 +31,27 @@ export const PartyLogistics: React.FC = () => {
     const sharedWeight = partyInventory.reduce((acc, item) => acc + calculateItemWeight(item), 0);
     
     const characterWeights = characters.reduce((acc, char) => {
-       const equippedWeight = Object.values(char.inventory || {}).reduce((cAcc, item) => cAcc + calculateItemWeight(item), 0);
-       const backpackWeight = (char.backpack || []).reduce((cAcc, item) => cAcc + calculateItemWeight(item), 0);
+       let personalWeight = 0;
+
+       if (char.saveVersion === 2 && char.items) {
+          // Inventory V2: Sum all items in the registry
+          personalWeight = Object.values(char.items).reduce((cAcc, item) => {
+             // For V2, we might need to resolve the template for the weight if it's not cached
+             // But usually it should be in the item instance if cached, or we assume calculateItemWeight handles it
+             return cAcc + calculateItemWeight(item);
+          }, 0);
+       } else {
+          // Inventory V1: Sum legacy fields
+          const equippedWeight = Object.values(char.inventory || {}).reduce((cAcc, item) => cAcc + calculateItemWeight(item), 0);
+          const backpackWeight = (char.backpack || []).reduce((cAcc, item) => cAcc + calculateItemWeight(item), 0);
+          personalWeight = equippedWeight + backpackWeight;
+       }
+
        const money = char.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 };
        const totalCoins = (money.cp || 0) + (money.sp || 0) + (money.ep || 0) + (money.gp || 0) + (money.pp || 0);
        const moneyWeight = totalCoins * (partyStats.currencyWeightPerCoin || 0.02);
-       return acc + equippedWeight + backpackWeight + moneyWeight;
+
+       return acc + personalWeight + moneyWeight;
     }, 0);
 
     return sharedWeight + characterWeights;
@@ -116,7 +132,7 @@ export const PartyLogistics: React.FC = () => {
                          <span className="text-[10px] font-black text-dragon-red uppercase tracking-widest">Vehicle Hangar</span>
                          <button 
                            onClick={() => {
-                              const { selectItem, setIsTransportProfileOpen } = useCharacterStore.getState();
+                              const { selectItem, setIsTransportProfileOpen } = useStore.getState();
                               setIsOpen(false);
                            }}
                            className="text-[8px] font-black bg-dragon-red text-white px-2 py-1 rounded uppercase tracking-widest hover:bg-dragon-darkRed transition-colors"

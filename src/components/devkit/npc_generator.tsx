@@ -9,7 +9,8 @@ import {
 import { atlasService, AtlasClass, AtlasSpecies, AtlasBackground, StartingEquipmentOption } from '../../services/atlasService';
 import { generateNPCData, generateNPCImages, NPCProfile } from '../../services/ai/npcService';
 import { commitFile, playSuccessSound, playFailSound, playClickSound, normalizeImageUrl } from '../../services/storageService';
-import { useStore, SKILL_LIST } from '../../store/useStore';
+import { useStore } from '../../store/useStore';
+import { useCharacterStore, SKILL_LIST } from '../../store/useCharacterStore';
 import { EquipmentDoll } from '../character/EquipmentDoll';
 import { GameIcon, GameIconName } from '../../game_icons';
 
@@ -20,17 +21,16 @@ interface NPCGeneratorProps {
 }
 
 export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
-  const { characters } = useCharacterStore();
-  const { equipmentList } = useStore();
-  const {  loadAllLists } = useStore();
   const { 
-    
-    
+    characters,
     updateCharacter,
     deleteCharacter,
     addCharacter
   } = useCharacterStore();
-  const { equipmentList } = useStore();
+  const {
+    equipmentList,
+    loadAllLists
+  } = useStore();
 
   const [editingCharId, setEditingCharId] = useState<string | null>(null);
   const [npcData, setNpcData] = useState<Partial<NPCProfile>>({
@@ -200,9 +200,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
       const atlasBg = await atlasService.loadBackground(data.background);
       const atlasSpc = await atlasService.loadSpecies(data.race);
       
-      const { characters } = useCharacterStore();
-  const { equipmentList } = useStore();
-  const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasCls, atlasBg);
+      const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasCls, atlasBg);
       const personality = NPCChoiceResolver.resolvePersonality(atlasBg);
       const proficiencies = NPCChoiceResolver.resolveAllProficiencies(atlasCls, atlasBg, atlasSpc);
       const spells = await NPCChoiceResolver.resolveSpells(atlasCls);
@@ -549,9 +547,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
   const handleAutoResolvedEquipment = async () => {
     setIsApplyingGear(true);
     try {
-      const { characters } = useCharacterStore();
-  const { equipmentList } = useStore();
-  const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasClass, atlasBackground);
+      const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasClass, atlasBackground);
       
       setNpcData(prev => ({
         ...prev,
@@ -606,9 +602,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
       const allItems = [...staticItems, ...manualItems];
       const expanded = await NPCChoiceResolver.expandPacks(allItems);
       const standardized = await NPCChoiceResolver.standardizeItems(expanded);
-      const { characters } = useCharacterStore();
-  const { equipmentList } = useStore();
-  const { inventory, backpack } = await NPCChoiceResolver.buildResolvedInventory(npcData, standardized);
+      const { inventory, backpack } = await NPCChoiceResolver.buildResolvedInventory(npcData, standardized);
       const v2 = await NPCChoiceResolver.buildV2Inventory(standardized);
 
       setNpcData(prev => ({

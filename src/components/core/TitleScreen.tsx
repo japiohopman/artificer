@@ -4,21 +4,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDAndD } from '@fortawesome/free-brands-svg-icons';
 import { playClickSound, playSuccessSound, REPO, BRANCH } from '../../services/storageService';
 import { soundService } from '../../services/soundService';
+import { useCharacterStore } from '../../store/useCharacterStore';
+import { useStore } from '../../store/useStore';
 import { GameIcon } from '../../game_icons';
 
 export const TitleScreen: React.FC = () => {
   const { 
     characters,
     mainCharacterSlots,
-    isLoadingSaves, 
     loadCharacters, 
-    setIsCharacterCreatorOpen,
-    activeCharacterId,
     setActiveCharacter,
     setMainCharacter,
+  } = useCharacterStore();
+
+  const {
+    isLoadingSaves,
+    setIsCharacterCreatorOpen,
     setIsGameStarted,
     isMusicPlaying
-  } = useCharacterStore();
+  } = useStore();
 
   const [hasLoaded, setHasLoaded] = useState(false);
   const [selectedSlotIndex, setSelectedSlotIndex] = useState<number | null>(null);
