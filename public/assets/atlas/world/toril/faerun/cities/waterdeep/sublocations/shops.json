@@ -1,6 +1,6 @@
 {
   "category": "shops",
-  "updatedAt": "2026-06-03T08:34:21.967284Z",
+  "updatedAt": "2026-06-14T07:04:24.686778Z",
   "location_id": "waterdeep",
   "sub_locations": [
     {
@@ -23,7 +23,7 @@
           {
             "index": "osbrin_selchoun",
             "name": "Osbrin Selchoun",
-            "url": "/assets/atlas/characters/npc/osbrin_selchoun.json"
+            "url": "public/assets/atlas/characters/npc/osbrin_selchoun.json"
           }
         ],
         "map": null,
@@ -35,7 +35,7 @@
           {
             "index": "osbrin_selchoun",
             "name": "Osbrin Selchoun",
-            "url": "/assets/atlas/characters/npc/osbrin_selchoun.json"
+            "url": "public/assets/atlas/characters/npc/osbrin_selchoun.json"
           }
         ],
         "map": null,
@@ -45,33 +45,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -105,21 +105,21 @@
       "equipment_categories": [
         {
           "index": "ring",
-          "url": "/assets/atlas/equipment_categories/json/ring.json"
+          "url": "public/assets/atlas/equipment_categories/json/ring.json"
         },
         {
           "index": "necklace",
-          "url": "/assets/atlas/equipment_categories/json/necklace.json"
+          "url": "public/assets/atlas/equipment_categories/json/necklace.json"
         },
         {
           "index": "head",
-          "url": "/assets/atlas/equipment_categories/json/head.json"
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
         }
       ],
       "material_categories": [
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         }
       ]
     },
@@ -153,33 +153,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -213,33 +213,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -273,25 +273,25 @@
       "equipment_categories": [
         {
           "index": "waterborne_vehicles",
-          "url": "/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -315,7 +315,7 @@
           {
             "index": "torpus_the_tanner",
             "name": "Torpus the Tanner",
-            "url": "/assets/atlas/characters/npc/torpus_the_tanner.json"
+            "url": "public/assets/atlas/characters/npc/torpus_the_tanner.json"
           }
         ],
         "map": null,
@@ -327,7 +327,7 @@
           {
             "index": "torpus_the_tanner",
             "name": "Torpus the Tanner",
-            "url": "/assets/atlas/characters/npc/torpus_the_tanner.json"
+            "url": "public/assets/atlas/characters/npc/torpus_the_tanner.json"
           }
         ],
         "map": null,
@@ -337,25 +337,25 @@
       "equipment_categories": [
         {
           "index": "boots",
-          "url": "/assets/atlas/equipment_categories/json/boots.json"
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         },
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -389,33 +389,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -439,7 +439,7 @@
           {
             "index": "orgul_telethar",
             "name": "Orgul Telethar",
-            "url": "/assets/atlas/characters/npc/orgul_telethar.json"
+            "url": "public/assets/atlas/characters/npc/orgul_telethar.json"
           }
         ],
         "map": null,
@@ -451,7 +451,7 @@
           {
             "index": "orgul_telethar",
             "name": "Orgul Telethar",
-            "url": "/assets/atlas/characters/npc/orgul_telethar.json"
+            "url": "public/assets/atlas/characters/npc/orgul_telethar.json"
           }
         ],
         "map": null,
@@ -461,25 +461,25 @@
       "equipment_categories": [
         {
           "index": "boots",
-          "url": "/assets/atlas/equipment_categories/json/boots.json"
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         },
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -513,25 +513,25 @@
       "equipment_categories": [
         {
           "index": "waterborne_vehicles",
-          "url": "/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -555,7 +555,7 @@
           {
             "index": "gelfuril",
             "name": "Gelfuril",
-            "url": "/assets/atlas/characters/npc/gelfuril.json"
+            "url": "public/assets/atlas/characters/npc/gelfuril.json"
           }
         ],
         "map": null,
@@ -567,43 +567,35 @@
           {
             "index": "gelfuril",
             "name": "Gelfuril",
-            "url": "/assets/atlas/characters/npc/gelfuril.json"
+            "url": "public/assets/atlas/characters/npc/gelfuril.json"
           }
         ],
         "map": null,
         "image": null
       },
-      "archetype": "general_store",
+      "archetype": "leatherworker",
       "equipment_categories": [
         {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
-        },
-        {
-          "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
-        },
-        {
-          "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
-        },
-        {
-          "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
-        },
-        {
-          "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
-          "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         },
         {
-          "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -637,33 +629,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -697,21 +689,21 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "head",
-          "url": "/assets/atlas/equipment_categories/json/head.json"
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -726,7 +718,7 @@
       ],
       "popup": {
         "title": "Thomm Warehouse",
-        "description": "The Thomm Warehouse was a storage warehouse that was privately owned by [[Haerlit Thomm]] in the mid–14th century DR.",
+        "description": "The Thomm Warehouse was a storage warehouse that was privately owned by [[Haerlit Thomm]] in the mid\u201314th century DR.",
         "image": ""
       },
       "day": {
@@ -735,7 +727,7 @@
           {
             "index": "haerlit_thomm",
             "name": "Haerlit Thomm",
-            "url": "/assets/atlas/characters/npc/haerlit_thomm.json"
+            "url": "public/assets/atlas/characters/npc/haerlit_thomm.json"
           }
         ],
         "map": null,
@@ -747,7 +739,7 @@
           {
             "index": "haerlit_thomm",
             "name": "Haerlit Thomm",
-            "url": "/assets/atlas/characters/npc/haerlit_thomm.json"
+            "url": "public/assets/atlas/characters/npc/haerlit_thomm.json"
           }
         ],
         "map": null,
@@ -757,33 +749,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -817,33 +809,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -877,57 +869,57 @@
       "equipment_categories": [
         {
           "index": "armor",
-          "url": "/assets/atlas/equipment_categories/json/armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
         },
         {
           "index": "heavy_armor",
-          "url": "/assets/atlas/equipment_categories/json/heavy_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
         },
         {
           "index": "medium_armor",
-          "url": "/assets/atlas/equipment_categories/json/medium_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "shields",
-          "url": "/assets/atlas/equipment_categories/json/shields.json"
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
         },
         {
           "index": "martial_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
         },
         {
           "index": "simple_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
         },
         {
           "index": "melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
         },
         {
           "index": "martial_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
         },
         {
           "index": "simple_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -961,13 +953,13 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -991,7 +983,7 @@
           {
             "index": "baerhar_surtlan",
             "name": "Baerhar Surtlan",
-            "url": "/assets/atlas/characters/npc/baerhar_surtlan.json"
+            "url": "public/assets/atlas/characters/npc/baerhar_surtlan.json"
           }
         ],
         "map": null,
@@ -1003,7 +995,7 @@
           {
             "index": "baerhar_surtlan",
             "name": "Baerhar Surtlan",
-            "url": "/assets/atlas/characters/npc/baerhar_surtlan.json"
+            "url": "public/assets/atlas/characters/npc/baerhar_surtlan.json"
           }
         ],
         "map": null,
@@ -1013,57 +1005,57 @@
       "equipment_categories": [
         {
           "index": "armor",
-          "url": "/assets/atlas/equipment_categories/json/armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
         },
         {
           "index": "heavy_armor",
-          "url": "/assets/atlas/equipment_categories/json/heavy_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
         },
         {
           "index": "medium_armor",
-          "url": "/assets/atlas/equipment_categories/json/medium_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "shields",
-          "url": "/assets/atlas/equipment_categories/json/shields.json"
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
         },
         {
           "index": "martial_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
         },
         {
           "index": "simple_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
         },
         {
           "index": "melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
         },
         {
           "index": "martial_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
         },
         {
           "index": "simple_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -1078,7 +1070,7 @@
       ],
       "popup": {
         "title": "Helmstar Warehouse",
-        "description": "The Helmstar Warehouse was an old storage warehouse that was privately owned by [[Chuldan Helmstar]] in the mid–14th century DR.",
+        "description": "The Helmstar Warehouse was an old storage warehouse that was privately owned by [[Chuldan Helmstar]] in the mid\u201314th century DR.",
         "image": ""
       },
       "day": {
@@ -1087,7 +1079,7 @@
           {
             "index": "chuldan_helmstar",
             "name": "Chuldan Helmstar",
-            "url": "/assets/atlas/characters/npc/chuldan_helmstar.json"
+            "url": "public/assets/atlas/characters/npc/chuldan_helmstar.json"
           }
         ],
         "map": null,
@@ -1099,7 +1091,7 @@
           {
             "index": "chuldan_helmstar",
             "name": "Chuldan Helmstar",
-            "url": "/assets/atlas/characters/npc/chuldan_helmstar.json"
+            "url": "public/assets/atlas/characters/npc/chuldan_helmstar.json"
           }
         ],
         "map": null,
@@ -1109,33 +1101,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -1169,25 +1161,25 @@
       "equipment_categories": [
         {
           "index": "waterborne_vehicles",
-          "url": "/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -1221,33 +1213,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -1271,7 +1263,7 @@
           {
             "index": "zorth_ulmaril",
             "name": "Zorth Ulmaril",
-            "url": "/assets/atlas/characters/npc/zorth_ulmaril.json"
+            "url": "public/assets/atlas/characters/npc/zorth_ulmaril.json"
           }
         ],
         "map": null,
@@ -1283,43 +1275,67 @@
           {
             "index": "zorth_ulmaril",
             "name": "Zorth Ulmaril",
-            "url": "/assets/atlas/characters/npc/zorth_ulmaril.json"
+            "url": "public/assets/atlas/characters/npc/zorth_ulmaril.json"
           }
         ],
         "map": null,
         "image": null
       },
-      "archetype": "general_store",
+      "archetype": "smithy",
       "equipment_categories": [
         {
-          "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
         },
         {
-          "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
         },
         {
-          "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
-        },
-        {
-          "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
-          "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         },
         {
-          "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -1349,37 +1365,29 @@
         "map": null,
         "image": null
       },
-      "archetype": "general_store",
+      "archetype": "apothecary",
       "equipment_categories": [
         {
-          "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
-        },
-        {
-          "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "index": "potion",
+          "url": "public/assets/atlas/equipment_categories/json/potion.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
-        },
-        {
-          "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
-        },
-        {
-          "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         }
       ],
       "material_categories": [
         {
-          "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "index": "herbs",
+          "url": "public/assets/atlas/materials_categories/json/herbs.json"
         },
         {
-          "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        },
+        {
+          "index": "oils",
+          "url": "public/assets/atlas/materials_categories/json/oils.json"
         }
       ]
     },
@@ -1413,33 +1421,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -1473,25 +1481,25 @@
       "equipment_categories": [
         {
           "index": "waterborne_vehicles",
-          "url": "/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -1525,21 +1533,21 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "head",
-          "url": "/assets/atlas/equipment_categories/json/head.json"
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -1573,21 +1581,21 @@
       "equipment_categories": [
         {
           "index": "wondrous_items",
-          "url": "/assets/atlas/equipment_categories/json/wondrous_items.json"
+          "url": "public/assets/atlas/equipment_categories/json/wondrous_items.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         }
       ],
       "material_categories": [
         {
           "index": "monster_parts",
-          "url": "/assets/atlas/materials_categories/json/monster_parts.json"
+          "url": "public/assets/atlas/materials_categories/json/monster_parts.json"
         },
         {
           "index": "consumables",
-          "url": "/assets/atlas/materials_categories/json/consumables.json"
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
         }
       ]
     },
@@ -1617,25 +1625,29 @@
         "map": null,
         "image": null
       },
-      "archetype": "carpenter",
+      "archetype": "leatherworker",
       "equipment_categories": [
         {
-          "index": "artisans_tools",
-          "url": "/assets/atlas/equipment_categories/json/artisans_tools.json"
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
         },
         {
-          "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         },
         {
-          "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -1669,37 +1681,37 @@
       "equipment_categories": [
         {
           "index": "arcane_foci",
-          "url": "/assets/atlas/equipment_categories/json/arcane_foci.json"
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
         },
         {
           "index": "wand",
-          "url": "/assets/atlas/equipment_categories/json/wand.json"
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
         },
         {
           "index": "staff",
-          "url": "/assets/atlas/equipment_categories/json/staff.json"
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
         },
         {
           "index": "rod",
-          "url": "/assets/atlas/equipment_categories/json/rod.json"
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
         },
         {
           "index": "scroll",
-          "url": "/assets/atlas/equipment_categories/json/scroll.json"
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
         },
         {
           "index": "magic_tokens",
-          "url": "/assets/atlas/equipment_categories/json/magic_tokens.json"
+          "url": "public/assets/atlas/equipment_categories/json/magic_tokens.json"
         },
         {
           "index": "wondrous_items",
-          "url": "/assets/atlas/equipment_categories/json/wondrous_items.json"
+          "url": "public/assets/atlas/equipment_categories/json/wondrous_items.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -1733,37 +1745,37 @@
       "equipment_categories": [
         {
           "index": "arcane_foci",
-          "url": "/assets/atlas/equipment_categories/json/arcane_foci.json"
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
         },
         {
           "index": "wand",
-          "url": "/assets/atlas/equipment_categories/json/wand.json"
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
         },
         {
           "index": "staff",
-          "url": "/assets/atlas/equipment_categories/json/staff.json"
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
         },
         {
           "index": "rod",
-          "url": "/assets/atlas/equipment_categories/json/rod.json"
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
         },
         {
           "index": "scroll",
-          "url": "/assets/atlas/equipment_categories/json/scroll.json"
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
         },
         {
           "index": "magic_tokens",
-          "url": "/assets/atlas/equipment_categories/json/magic_tokens.json"
+          "url": "public/assets/atlas/equipment_categories/json/magic_tokens.json"
         },
         {
           "index": "wondrous_items",
-          "url": "/assets/atlas/equipment_categories/json/wondrous_items.json"
+          "url": "public/assets/atlas/equipment_categories/json/wondrous_items.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -1797,33 +1809,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -1857,33 +1869,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -1917,21 +1929,21 @@
       "equipment_categories": [
         {
           "index": "ring",
-          "url": "/assets/atlas/equipment_categories/json/ring.json"
+          "url": "public/assets/atlas/equipment_categories/json/ring.json"
         },
         {
           "index": "necklace",
-          "url": "/assets/atlas/equipment_categories/json/necklace.json"
+          "url": "public/assets/atlas/equipment_categories/json/necklace.json"
         },
         {
           "index": "head",
-          "url": "/assets/atlas/equipment_categories/json/head.json"
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
         }
       ],
       "material_categories": [
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         }
       ]
     },
@@ -1965,25 +1977,25 @@
       "equipment_categories": [
         {
           "index": "potion",
-          "url": "/assets/atlas/equipment_categories/json/potion.json"
+          "url": "public/assets/atlas/equipment_categories/json/potion.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         }
       ],
       "material_categories": [
         {
           "index": "herbs",
-          "url": "/assets/atlas/materials_categories/json/herbs.json"
+          "url": "public/assets/atlas/materials_categories/json/herbs.json"
         },
         {
           "index": "consumables",
-          "url": "/assets/atlas/materials_categories/json/consumables.json"
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
         },
         {
           "index": "oils",
-          "url": "/assets/atlas/materials_categories/json/oils.json"
+          "url": "public/assets/atlas/materials_categories/json/oils.json"
         }
       ]
     },
@@ -2017,21 +2029,21 @@
       "equipment_categories": [
         {
           "index": "artisans_tools",
-          "url": "/assets/atlas/equipment_categories/json/artisans_tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         },
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         }
       ]
     },
@@ -2065,21 +2077,21 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "head",
-          "url": "/assets/atlas/equipment_categories/json/head.json"
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -2113,57 +2125,57 @@
       "equipment_categories": [
         {
           "index": "armor",
-          "url": "/assets/atlas/equipment_categories/json/armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
         },
         {
           "index": "heavy_armor",
-          "url": "/assets/atlas/equipment_categories/json/heavy_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
         },
         {
           "index": "medium_armor",
-          "url": "/assets/atlas/equipment_categories/json/medium_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "shields",
-          "url": "/assets/atlas/equipment_categories/json/shields.json"
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
         },
         {
           "index": "martial_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
         },
         {
           "index": "simple_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
         },
         {
           "index": "melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
         },
         {
           "index": "martial_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
         },
         {
           "index": "simple_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -2197,25 +2209,25 @@
       "equipment_categories": [
         {
           "index": "boots",
-          "url": "/assets/atlas/equipment_categories/json/boots.json"
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         },
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -2239,7 +2251,7 @@
           {
             "index": "zarondar_riautar",
             "name": "Zarondar Riautar",
-            "url": "/assets/atlas/characters/npc/zarondar_riautar.json"
+            "url": "public/assets/atlas/characters/npc/zarondar_riautar.json"
           }
         ],
         "map": null,
@@ -2251,7 +2263,7 @@
           {
             "index": "zarondar_riautar",
             "name": "Zarondar Riautar",
-            "url": "/assets/atlas/characters/npc/zarondar_riautar.json"
+            "url": "public/assets/atlas/characters/npc/zarondar_riautar.json"
           }
         ],
         "map": null,
@@ -2261,57 +2273,57 @@
       "equipment_categories": [
         {
           "index": "armor",
-          "url": "/assets/atlas/equipment_categories/json/armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
         },
         {
           "index": "heavy_armor",
-          "url": "/assets/atlas/equipment_categories/json/heavy_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
         },
         {
           "index": "medium_armor",
-          "url": "/assets/atlas/equipment_categories/json/medium_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "shields",
-          "url": "/assets/atlas/equipment_categories/json/shields.json"
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
         },
         {
           "index": "martial_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
         },
         {
           "index": "simple_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
         },
         {
           "index": "melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
         },
         {
           "index": "martial_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
         },
         {
           "index": "simple_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -2345,25 +2357,25 @@
       "equipment_categories": [
         {
           "index": "waterborne_vehicles",
-          "url": "/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -2387,7 +2399,7 @@
           {
             "index": "dannath_lisosar",
             "name": "Dannath Lisosar",
-            "url": "/assets/atlas/characters/npc/dannath_lisosar.json"
+            "url": "public/assets/atlas/characters/npc/dannath_lisosar.json"
           }
         ],
         "map": null,
@@ -2399,7 +2411,7 @@
           {
             "index": "dannath_lisosar",
             "name": "Dannath Lisosar",
-            "url": "/assets/atlas/characters/npc/dannath_lisosar.json"
+            "url": "public/assets/atlas/characters/npc/dannath_lisosar.json"
           }
         ],
         "map": null,
@@ -2409,21 +2421,21 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "head",
-          "url": "/assets/atlas/equipment_categories/json/head.json"
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -2447,7 +2459,7 @@
           {
             "index": "jhalassan_thond",
             "name": "Jhalassan Thond",
-            "url": "/assets/atlas/characters/npc/jhalassan_thond.json"
+            "url": "public/assets/atlas/characters/npc/jhalassan_thond.json"
           }
         ],
         "map": null,
@@ -2459,43 +2471,31 @@
           {
             "index": "jhalassan_thond",
             "name": "Jhalassan Thond",
-            "url": "/assets/atlas/characters/npc/jhalassan_thond.json"
+            "url": "public/assets/atlas/characters/npc/jhalassan_thond.json"
           }
         ],
         "map": null,
         "image": null
       },
-      "archetype": "general_store",
+      "archetype": "carpenter",
       "equipment_categories": [
         {
-          "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
-        },
-        {
-          "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
-        },
-        {
-          "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
-        },
-        {
-          "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
-          "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         },
         {
-          "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         }
       ]
     },
@@ -2529,33 +2529,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -2589,33 +2589,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -2649,25 +2649,25 @@
       "equipment_categories": [
         {
           "index": "boots",
-          "url": "/assets/atlas/equipment_categories/json/boots.json"
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         },
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -2682,7 +2682,7 @@
       ],
       "popup": {
         "title": "Meraedos Fine Furs",
-        "description": "Meraedos Fine Furs was a furrier shop operated by [[Shalrin Meraedos]] in the mid–14th century DR.",
+        "description": "Meraedos Fine Furs was a furrier shop operated by [[Shalrin Meraedos]] in the mid\u201314th century DR.",
         "image": ""
       },
       "day": {
@@ -2691,7 +2691,7 @@
           {
             "index": "shalrin_meraedos",
             "name": "Shalrin Meraedos",
-            "url": "/assets/atlas/characters/npc/shalrin_meraedos.json"
+            "url": "public/assets/atlas/characters/npc/shalrin_meraedos.json"
           }
         ],
         "map": null,
@@ -2703,7 +2703,7 @@
           {
             "index": "shalrin_meraedos",
             "name": "Shalrin Meraedos",
-            "url": "/assets/atlas/characters/npc/shalrin_meraedos.json"
+            "url": "public/assets/atlas/characters/npc/shalrin_meraedos.json"
           }
         ],
         "map": null,
@@ -2713,25 +2713,25 @@
       "equipment_categories": [
         {
           "index": "boots",
-          "url": "/assets/atlas/equipment_categories/json/boots.json"
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         },
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -2761,37 +2761,25 @@
         "map": null,
         "image": null
       },
-      "archetype": "general_store",
+      "archetype": "carpenter",
       "equipment_categories": [
         {
-          "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
-        },
-        {
-          "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
-        },
-        {
-          "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
-        },
-        {
-          "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
-          "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         },
         {
-          "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         }
       ]
     },
@@ -2806,7 +2794,7 @@
       ],
       "popup": {
         "title": "Dhaermos Warehouse",
-        "description": "The Dhaermos Warehouse was a storage warehouse that was privately owned by [[Lhund Dhaermos]] in the mid–14th century DR.",
+        "description": "The Dhaermos Warehouse was a storage warehouse that was privately owned by [[Lhund Dhaermos]] in the mid\u201314th century DR.",
         "image": ""
       },
       "day": {
@@ -2815,7 +2803,7 @@
           {
             "index": "lhund_dhaermos",
             "name": "Lhund Dhaermos",
-            "url": "/assets/atlas/characters/npc/lhund_dhaermos.json"
+            "url": "public/assets/atlas/characters/npc/lhund_dhaermos.json"
           }
         ],
         "map": null,
@@ -2827,7 +2815,7 @@
           {
             "index": "lhund_dhaermos",
             "name": "Lhund Dhaermos",
-            "url": "/assets/atlas/characters/npc/lhund_dhaermos.json"
+            "url": "public/assets/atlas/characters/npc/lhund_dhaermos.json"
           }
         ],
         "map": null,
@@ -2837,33 +2825,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -2897,33 +2885,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -2938,7 +2926,7 @@
       ],
       "popup": {
         "title": "Crommor's Warehouse",
-        "description": "Crommor's Warehouse was a storage warehouse that was privately owned by the [[Crommor]] noble family in the mid–14th century DR.[",
+        "description": "Crommor's Warehouse was a storage warehouse that was privately owned by the [[Crommor]] noble family in the mid\u201314th century DR.[",
         "image": ""
       },
       "day": {
@@ -2957,33 +2945,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -3017,39 +3005,39 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
     {
       "id": "702",
-      "name": "Melvar’s Chapbooks and Folios",
+      "name": "Melvar\u2019s Chapbooks and Folios",
       "categoryId": "shops",
       "type": "marker",
       "position": [
@@ -3057,7 +3045,7 @@
         3368
       ],
       "popup": {
-        "title": "Melvar’s Chapbooks and Folios",
+        "title": "Melvar\u2019s Chapbooks and Folios",
         "description": "",
         "image": ""
       },
@@ -3077,13 +3065,13 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -3113,37 +3101,25 @@
         "map": null,
         "image": null
       },
-      "archetype": "general_store",
+      "archetype": "carpenter",
       "equipment_categories": [
         {
-          "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
-        },
-        {
-          "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
-        },
-        {
-          "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
-        },
-        {
-          "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
-          "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         },
         {
-          "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         }
       ]
     },
@@ -3177,21 +3153,21 @@
       "equipment_categories": [
         {
           "index": "artisans_tools",
-          "url": "/assets/atlas/equipment_categories/json/artisans_tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         },
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         }
       ]
     },
@@ -3225,13 +3201,13 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "consumables",
-          "url": "/assets/atlas/materials_categories/json/consumables.json"
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
         }
       ]
     },
@@ -3265,33 +3241,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -3315,7 +3291,7 @@
           {
             "index": "bronwyn_caradoon",
             "name": "Bronwyn Caradoon",
-            "url": "/assets/atlas/characters/npc/bronwyn_caradoon.json"
+            "url": "public/assets/atlas/characters/npc/bronwyn_caradoon.json"
           }
         ],
         "map": null,
@@ -3327,7 +3303,7 @@
           {
             "index": "bronwyn_caradoon",
             "name": "Bronwyn Caradoon",
-            "url": "/assets/atlas/characters/npc/bronwyn_caradoon.json"
+            "url": "public/assets/atlas/characters/npc/bronwyn_caradoon.json"
           }
         ],
         "map": null,
@@ -3337,37 +3313,37 @@
       "equipment_categories": [
         {
           "index": "arcane_foci",
-          "url": "/assets/atlas/equipment_categories/json/arcane_foci.json"
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
         },
         {
           "index": "wand",
-          "url": "/assets/atlas/equipment_categories/json/wand.json"
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
         },
         {
           "index": "staff",
-          "url": "/assets/atlas/equipment_categories/json/staff.json"
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
         },
         {
           "index": "rod",
-          "url": "/assets/atlas/equipment_categories/json/rod.json"
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
         },
         {
           "index": "scroll",
-          "url": "/assets/atlas/equipment_categories/json/scroll.json"
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
         },
         {
           "index": "magic_tokens",
-          "url": "/assets/atlas/equipment_categories/json/magic_tokens.json"
+          "url": "public/assets/atlas/equipment_categories/json/magic_tokens.json"
         },
         {
           "index": "wondrous_items",
-          "url": "/assets/atlas/equipment_categories/json/wondrous_items.json"
+          "url": "public/assets/atlas/equipment_categories/json/wondrous_items.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -3401,25 +3377,25 @@
       "equipment_categories": [
         {
           "index": "potion",
-          "url": "/assets/atlas/equipment_categories/json/potion.json"
+          "url": "public/assets/atlas/equipment_categories/json/potion.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         }
       ],
       "material_categories": [
         {
           "index": "herbs",
-          "url": "/assets/atlas/materials_categories/json/herbs.json"
+          "url": "public/assets/atlas/materials_categories/json/herbs.json"
         },
         {
           "index": "consumables",
-          "url": "/assets/atlas/materials_categories/json/consumables.json"
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
         },
         {
           "index": "oils",
-          "url": "/assets/atlas/materials_categories/json/oils.json"
+          "url": "public/assets/atlas/materials_categories/json/oils.json"
         }
       ]
     },
@@ -3453,21 +3429,21 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "head",
-          "url": "/assets/atlas/equipment_categories/json/head.json"
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -3501,33 +3477,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -3561,25 +3537,25 @@
       "equipment_categories": [
         {
           "index": "boots",
-          "url": "/assets/atlas/equipment_categories/json/boots.json"
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         },
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -3613,33 +3589,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -3673,25 +3649,25 @@
       "equipment_categories": [
         {
           "index": "waterborne_vehicles",
-          "url": "/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -3725,33 +3701,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -3785,13 +3761,13 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "consumables",
-          "url": "/assets/atlas/materials_categories/json/consumables.json"
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
         }
       ]
     },
@@ -3825,33 +3801,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -3885,33 +3861,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -3945,33 +3921,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -4005,33 +3981,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -4065,13 +4041,13 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -4105,33 +4081,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -4165,33 +4141,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -4225,57 +4201,57 @@
       "equipment_categories": [
         {
           "index": "armor",
-          "url": "/assets/atlas/equipment_categories/json/armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
         },
         {
           "index": "heavy_armor",
-          "url": "/assets/atlas/equipment_categories/json/heavy_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
         },
         {
           "index": "medium_armor",
-          "url": "/assets/atlas/equipment_categories/json/medium_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "shields",
-          "url": "/assets/atlas/equipment_categories/json/shields.json"
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
         },
         {
           "index": "martial_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
         },
         {
           "index": "simple_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
         },
         {
           "index": "melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
         },
         {
           "index": "martial_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
         },
         {
           "index": "simple_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -4309,25 +4285,25 @@
       "equipment_categories": [
         {
           "index": "waterborne_vehicles",
-          "url": "/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -4361,37 +4337,37 @@
       "equipment_categories": [
         {
           "index": "arcane_foci",
-          "url": "/assets/atlas/equipment_categories/json/arcane_foci.json"
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
         },
         {
           "index": "wand",
-          "url": "/assets/atlas/equipment_categories/json/wand.json"
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
         },
         {
           "index": "staff",
-          "url": "/assets/atlas/equipment_categories/json/staff.json"
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
         },
         {
           "index": "rod",
-          "url": "/assets/atlas/equipment_categories/json/rod.json"
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
         },
         {
           "index": "scroll",
-          "url": "/assets/atlas/equipment_categories/json/scroll.json"
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
         },
         {
           "index": "magic_tokens",
-          "url": "/assets/atlas/equipment_categories/json/magic_tokens.json"
+          "url": "public/assets/atlas/equipment_categories/json/magic_tokens.json"
         },
         {
           "index": "wondrous_items",
-          "url": "/assets/atlas/equipment_categories/json/wondrous_items.json"
+          "url": "public/assets/atlas/equipment_categories/json/wondrous_items.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -4425,33 +4401,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -4485,33 +4461,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -4545,33 +4521,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -4605,57 +4581,57 @@
       "equipment_categories": [
         {
           "index": "armor",
-          "url": "/assets/atlas/equipment_categories/json/armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
         },
         {
           "index": "heavy_armor",
-          "url": "/assets/atlas/equipment_categories/json/heavy_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
         },
         {
           "index": "medium_armor",
-          "url": "/assets/atlas/equipment_categories/json/medium_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "shields",
-          "url": "/assets/atlas/equipment_categories/json/shields.json"
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
         },
         {
           "index": "martial_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
         },
         {
           "index": "simple_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
         },
         {
           "index": "melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
         },
         {
           "index": "martial_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
         },
         {
           "index": "simple_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -4689,33 +4665,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -4749,25 +4725,25 @@
       "equipment_categories": [
         {
           "index": "waterborne_vehicles",
-          "url": "/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -4801,33 +4777,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -4861,13 +4837,13 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -4901,57 +4877,57 @@
       "equipment_categories": [
         {
           "index": "armor",
-          "url": "/assets/atlas/equipment_categories/json/armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
         },
         {
           "index": "heavy_armor",
-          "url": "/assets/atlas/equipment_categories/json/heavy_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
         },
         {
           "index": "medium_armor",
-          "url": "/assets/atlas/equipment_categories/json/medium_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "shields",
-          "url": "/assets/atlas/equipment_categories/json/shields.json"
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
         },
         {
           "index": "martial_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
         },
         {
           "index": "simple_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
         },
         {
           "index": "melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
         },
         {
           "index": "martial_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
         },
         {
           "index": "simple_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -4985,33 +4961,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -5035,7 +5011,7 @@
           {
             "index": "hemmerem",
             "name": "Hemmerem",
-            "url": "/assets/atlas/characters/npc/hemmerem.json"
+            "url": "public/assets/atlas/characters/npc/hemmerem.json"
           }
         ],
         "map": null,
@@ -5047,7 +5023,7 @@
           {
             "index": "hemmerem",
             "name": "Hemmerem",
-            "url": "/assets/atlas/characters/npc/hemmerem.json"
+            "url": "public/assets/atlas/characters/npc/hemmerem.json"
           }
         ],
         "map": null,
@@ -5057,21 +5033,21 @@
       "equipment_categories": [
         {
           "index": "mounts_and_other_animals",
-          "url": "/assets/atlas/equipment_categories/json/mounts_and_other_animals.json"
+          "url": "public/assets/atlas/equipment_categories/json/mounts_and_other_animals.json"
         },
         {
           "index": "mounts_and_vehicles",
-          "url": "/assets/atlas/equipment_categories/json/mounts_and_vehicles.json"
+          "url": "public/assets/atlas/equipment_categories/json/mounts_and_vehicles.json"
         },
         {
           "index": "tack_harness_and_drawn_vehicles",
-          "url": "/assets/atlas/equipment_categories/json/tack_harness_and_drawn_vehicles.json"
+          "url": "public/assets/atlas/equipment_categories/json/tack_harness_and_drawn_vehicles.json"
         }
       ],
       "material_categories": [
         {
           "index": "consumables",
-          "url": "/assets/atlas/materials_categories/json/consumables.json"
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
         }
       ]
     },
@@ -5095,7 +5071,7 @@
           {
             "index": "piatran",
             "name": "Piatran",
-            "url": "/assets/atlas/characters/npc/piatran.json"
+            "url": "public/assets/atlas/characters/npc/piatran.json"
           }
         ],
         "map": null,
@@ -5107,7 +5083,7 @@
           {
             "index": "piatran",
             "name": "Piatran",
-            "url": "/assets/atlas/characters/npc/piatran.json"
+            "url": "public/assets/atlas/characters/npc/piatran.json"
           }
         ],
         "map": null,
@@ -5117,21 +5093,21 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "head",
-          "url": "/assets/atlas/equipment_categories/json/head.json"
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -5165,33 +5141,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -5225,57 +5201,57 @@
       "equipment_categories": [
         {
           "index": "armor",
-          "url": "/assets/atlas/equipment_categories/json/armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
         },
         {
           "index": "heavy_armor",
-          "url": "/assets/atlas/equipment_categories/json/heavy_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
         },
         {
           "index": "medium_armor",
-          "url": "/assets/atlas/equipment_categories/json/medium_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "shields",
-          "url": "/assets/atlas/equipment_categories/json/shields.json"
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
         },
         {
           "index": "martial_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
         },
         {
           "index": "simple_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
         },
         {
           "index": "melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
         },
         {
           "index": "martial_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
         },
         {
           "index": "simple_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -5309,33 +5285,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -5369,33 +5345,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -5429,33 +5405,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -5489,57 +5465,57 @@
       "equipment_categories": [
         {
           "index": "armor",
-          "url": "/assets/atlas/equipment_categories/json/armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
         },
         {
           "index": "heavy_armor",
-          "url": "/assets/atlas/equipment_categories/json/heavy_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
         },
         {
           "index": "medium_armor",
-          "url": "/assets/atlas/equipment_categories/json/medium_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "shields",
-          "url": "/assets/atlas/equipment_categories/json/shields.json"
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
         },
         {
           "index": "martial_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
         },
         {
           "index": "simple_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
         },
         {
           "index": "melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
         },
         {
           "index": "martial_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
         },
         {
           "index": "simple_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -5573,48 +5549,48 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
     {
-      "id": "943",
-      "name": "Market",
+      "id": "941",
+      "name": "Trades Ward",
       "categoryId": "shops",
       "type": "marker",
       "position": [
-        1277,
-        2660
+        1723,
+        1803
       ],
       "popup": {
-        "title": "Market",
-        "description": "The largest open area within the city was the marketplace between Trader's Way and Bazaar street. It was full of merchants carts and stalls both day and night and was the best place in the city to find a good price for any trade good found in Faerûn, assuming one had some skill at haggling.",
+        "title": "Trades Ward",
+        "description": "The Trades Ward was one of the seven wards of the city of Waterdeep. It was the main shopping district of Waterdeep and housed many of the city's guildhalls.",
         "image": ""
       },
       "day": {
@@ -5633,33 +5609,93 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "943",
+      "name": "Market",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1277,
+        2660
+      ],
+      "popup": {
+        "title": "Market",
+        "description": "The largest open area within the city was the marketplace between Trader's Way and Bazaar street. It was full of merchants carts and stalls both day and night and was the best place in the city to find a good price for any trade good found in Faer\u00fbn, assuming one had some skill at haggling.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -5693,57 +5729,57 @@
       "equipment_categories": [
         {
           "index": "armor",
-          "url": "/assets/atlas/equipment_categories/json/armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
         },
         {
           "index": "heavy_armor",
-          "url": "/assets/atlas/equipment_categories/json/heavy_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
         },
         {
           "index": "medium_armor",
-          "url": "/assets/atlas/equipment_categories/json/medium_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
         },
         {
           "index": "light_armor",
-          "url": "/assets/atlas/equipment_categories/json/light_armor.json"
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
         },
         {
           "index": "shields",
-          "url": "/assets/atlas/equipment_categories/json/shields.json"
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
         },
         {
           "index": "martial_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
         },
         {
           "index": "simple_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
         },
         {
           "index": "melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
         },
         {
           "index": "martial_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
         },
         {
           "index": "simple_melee_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -5777,21 +5813,21 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "head",
-          "url": "/assets/atlas/equipment_categories/json/head.json"
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -5825,13 +5861,13 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -5861,37 +5897,17 @@
         "map": null,
         "image": null
       },
-      "archetype": "general_store",
+      "archetype": "bookshop",
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
-        },
-        {
-          "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
-        },
-        {
-          "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
-        },
-        {
-          "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
-        },
-        {
-          "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
-        },
-        {
-          "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -5925,29 +5941,29 @@
       "equipment_categories": [
         {
           "index": "ranged_weapons",
-          "url": "/assets/atlas/equipment_categories/json/ranged_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/ranged_weapons.json"
         },
         {
           "index": "martial_ranged_weapons",
-          "url": "/assets/atlas/equipment_categories/json/martial_ranged_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/martial_ranged_weapons.json"
         },
         {
           "index": "simple_ranged_weapons",
-          "url": "/assets/atlas/equipment_categories/json/simple_ranged_weapons.json"
+          "url": "public/assets/atlas/equipment_categories/json/simple_ranged_weapons.json"
         },
         {
           "index": "ammunition",
-          "url": "/assets/atlas/equipment_categories/json/ammunition.json"
+          "url": "public/assets/atlas/equipment_categories/json/ammunition.json"
         }
       ],
       "material_categories": [
         {
           "index": "refined_materials",
-          "url": "/assets/atlas/materials_categories/json/refined_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         },
         {
           "index": "raw_materials",
-          "url": "/assets/atlas/materials_categories/json/raw_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -5981,33 +5997,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -6041,37 +6057,37 @@
       "equipment_categories": [
         {
           "index": "arcane_foci",
-          "url": "/assets/atlas/equipment_categories/json/arcane_foci.json"
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
         },
         {
           "index": "wand",
-          "url": "/assets/atlas/equipment_categories/json/wand.json"
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
         },
         {
           "index": "staff",
-          "url": "/assets/atlas/equipment_categories/json/staff.json"
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
         },
         {
           "index": "rod",
-          "url": "/assets/atlas/equipment_categories/json/rod.json"
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
         },
         {
           "index": "scroll",
-          "url": "/assets/atlas/equipment_categories/json/scroll.json"
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
         },
         {
           "index": "magic_tokens",
-          "url": "/assets/atlas/equipment_categories/json/magic_tokens.json"
+          "url": "public/assets/atlas/equipment_categories/json/magic_tokens.json"
         },
         {
           "index": "wondrous_items",
-          "url": "/assets/atlas/equipment_categories/json/wondrous_items.json"
+          "url": "public/assets/atlas/equipment_categories/json/wondrous_items.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         }
       ]
     },
@@ -6105,33 +6121,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     },
@@ -6165,25 +6181,25 @@
       "equipment_categories": [
         {
           "index": "potion",
-          "url": "/assets/atlas/equipment_categories/json/potion.json"
+          "url": "public/assets/atlas/equipment_categories/json/potion.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         }
       ],
       "material_categories": [
         {
           "index": "herbs",
-          "url": "/assets/atlas/materials_categories/json/herbs.json"
+          "url": "public/assets/atlas/materials_categories/json/herbs.json"
         },
         {
           "index": "consumables",
-          "url": "/assets/atlas/materials_categories/json/consumables.json"
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
         },
         {
           "index": "oils",
-          "url": "/assets/atlas/materials_categories/json/oils.json"
+          "url": "public/assets/atlas/materials_categories/json/oils.json"
         }
       ]
     },
@@ -6213,25 +6229,61 @@
         "map": null,
         "image": null
       },
-      "archetype": "tailor",
+      "archetype": "smithy",
       "equipment_categories": [
         {
-          "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
         },
         {
-          "index": "head",
-          "url": "/assets/atlas/equipment_categories/json/head.json"
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
+        },
+        {
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         }
       ],
       "material_categories": [
         {
-          "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
         },
         {
-          "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
         }
       ]
     },
@@ -6265,77 +6317,33 @@
       "equipment_categories": [
         {
           "index": "standard_gear",
-          "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
         },
         {
           "index": "adventuring_gear",
-          "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
         },
         {
           "index": "kits",
-          "url": "/assets/atlas/equipment_categories/json/kits.json"
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
         },
         {
           "index": "tools",
-          "url": "/assets/atlas/equipment_categories/json/tools.json"
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
         },
         {
           "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
         }
       ],
       "material_categories": [
         {
           "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
         },
         {
           "index": "bundled_materials",
-          "url": "/assets/atlas/materials_categories/json/bundled_materials.json"
-        }
-      ]
-    },
-    {
-      "id": "dice_shop_02",
-      "name": "The Gilded Die (Waterdeep)",
-      "categoryId": "shops",
-      "type": "marker",
-      "position": [
-        1500,
-        3000
-      ],
-      "popup": {
-        "title": "The Gilded Die",
-        "description": "The Waterdeep branch of the famed dice boutique. Premier purveyors of artisan rolling stones and magical thematic enhancers.",
-        "image": ""
-      },
-      "day": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "night": {
-        "ambient": null,
-        "npcs": [],
-        "map": null,
-        "image": null
-      },
-      "archetype": "dice_shop",
-      "equipment_categories": [
-        {
-          "index": "gaming_sets",
-          "url": "/assets/atlas/equipment_categories/json/gaming_sets.json"
-        },
-        {
-          "index": "dice_addons",
-          "url": "/assets/atlas/equipment_categories/json/dice_addons.json"
-        }
-      ],
-      "material_categories": [
-        {
-          "index": "common_materials",
-          "url": "/assets/atlas/materials_categories/json/common_materials.json"
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
         }
       ]
     }
