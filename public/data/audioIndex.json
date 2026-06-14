@@ -143,6 +143,15 @@
         "createdAt": "2026-06-14T09:57:06.524Z"
       },
       "file": "public/assets/sounds/sfx/dice_roll_wood.wav"
+    },
+    "dice_crit_success": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "Magical UI Sting: triumphant crystalline chime with subtle arcane flare. High-frequency shimmer, rewarding tonality.",
+        "createdAt": "2026-06-14T09:57:11.133Z"
+      },
+      "file": "public/assets/sounds/sfx/dice_crit_success.wav"
     }
   }
 }
