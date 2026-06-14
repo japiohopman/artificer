@@ -2,6 +2,11 @@
   "index": "necrotic",
   "name": "necrotic",
   "desc": [
-    "Standard D&D damage type: necrotic"
-  ]
+    "Necrotic damage, dealt by certain undead and a spell such as chill touch, withers matter and even the soul."
+  ],
+  "url": "/assets/atlas/damage_types/json/necrotic.json",
+  "updated_at": "2026-06-14T08:21:17Z",
+  "dot_logic": {
+    "has_dot": false
+  }
 }

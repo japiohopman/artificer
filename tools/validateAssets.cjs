@@ -166,6 +166,8 @@ function validateJson(filePath) {
     else if (filePath.includes('alignments/json')) schemaType = 'alignment';
     else if (filePath.includes('backgrounds/json')) schemaType = 'background';
     else if (filePath.includes('proficiencies/json')) schemaType = 'proficiency';
+    else if (filePath.includes('damage_types/json')) schemaType = 'damage_type';
+    else if (filePath.includes('weapon_properties/json')) schemaType = 'weapon_property';
     else if (filePath.includes('materials_categories/json')) schemaType = 'material';
     else if (filePath.includes('recipes/json')) schemaType = 'recipe';
     else if (filePath.includes('sub_regions')) schemaType = 'sub_region';

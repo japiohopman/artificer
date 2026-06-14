@@ -2,6 +2,14 @@
   "index": "poison",
   "name": "poison",
   "desc": [
-    "Standard D&D damage type: poison"
-  ]
+    "Venomous stings and the toxic gas of a green dragon's breath deal poison damage."
+  ],
+  "url": "/assets/atlas/damage_types/json/poison.json",
+  "updated_at": "2026-06-14T08:21:17Z",
+  "dot_logic": {
+    "has_dot": true,
+    "condition": "poisoned",
+    "damage_dice": "1d4",
+    "duration": 3
+  }
 }

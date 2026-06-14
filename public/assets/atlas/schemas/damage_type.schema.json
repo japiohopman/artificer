@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/damage_type.schema.json",
+  "title": "Damage Type",
+  "description": "Schema for damage types in the game atlas.",
+  "type": "object",
+  "required": [
+    "index",
+    "name",
+    "desc",
+    "url",
+    "updated_at",
+    "dot_logic"
+  ],
+  "properties": {
+    "index": {
+      "type": "string",
+      "description": "The unique identifier for the damage type."
+    },
+    "name": {
+      "type": "string",
+      "description": "The human-readable name of the damage type."
+    },
+    "desc": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "A description of the damage type."
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^/assets/atlas/damage_types/json/.+\\.json$",
+      "description": "The canonical URL to the JSON file."
+    },
+    "image": {
+      "type": "string",
+      "pattern": "^/assets/atlas/damage_types/images/.+\\.webp$",
+      "description": "The canonical URL to the image file."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The timestamp of the last update."
+    },
+    "dot_logic": {
+      "type": "object",
+      "properties": {
+        "has_dot": { "type": "boolean" },
+        "condition": { "type": "string" },
+        "damage_dice": { "type": "string" },
+        "duration": { "type": "integer" }
+      },
+      "required": ["has_dot"],
+      "description": "Logic for Damage Over Time effects."
+    }
+  }
+}

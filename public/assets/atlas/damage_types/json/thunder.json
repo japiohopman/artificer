@@ -2,6 +2,11 @@
   "index": "thunder",
   "name": "thunder",
   "desc": [
-    "Standard D&D damage type: thunder"
-  ]
+    "A concussive burst of sound, such as the effect of the thunderwave spell, deals thunder damage."
+  ],
+  "url": "/assets/atlas/damage_types/json/thunder.json",
+  "updated_at": "2026-06-14T08:21:17Z",
+  "dot_logic": {
+    "has_dot": false
+  }
 }

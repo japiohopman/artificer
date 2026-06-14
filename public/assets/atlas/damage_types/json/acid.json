@@ -2,6 +2,14 @@
   "index": "acid",
   "name": "acid",
   "desc": [
-    "Standard D&D damage type: acid"
-  ]
+    "The corrosive spray of a black dragon's breath and the dissolving enzymes secreted by a black pudding deal acid damage."
+  ],
+  "url": "/assets/atlas/damage_types/json/acid.json",
+  "updated_at": "2026-06-14T08:21:17Z",
+  "dot_logic": {
+    "has_dot": true,
+    "condition": "corroding",
+    "damage_dice": "1d4",
+    "duration": 2
+  }
 }
