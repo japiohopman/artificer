@@ -26,6 +26,7 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [Sonny (Atmospheric Orchestrator)](../sonny_instructions.md) - Audio and Environmental ambiance.
 
 ## ⚙️ Systems
+- [AI Orchestration](./systems/AI_ORCHESTRATION.md) - **Narrator vs. Engine.**
 - [Skill Database](./systems/SKILL_DATABASE.md) - D&D Skills & LLM Skills.
 - [Crafting System](./systems/CRAFTING_SYSTEM.md) - Materials and Recipes.
 - [Audio Registry](./systems/AUDIO_REGISTRY.md) - Complete index of audio assets.

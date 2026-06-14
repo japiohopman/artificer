@@ -6,6 +6,9 @@ Welcome to Artificer. If you are an AI agent, please follow these directions to 
 Your primary source of truth for the project's vision and long-term goals is the:
 👉 **[GOALS.md](./GOALS.md)**
 
+For understanding the boundary between AI narration and game mechanics, read:
+👉 **[AI Orchestration](./docs/systems/AI_ORCHESTRATION.md)**
+
 For navigating the documentation system, use the:
 👉 **[DOCS_INDEX.md](./DOCS_INDEX.md)**
 

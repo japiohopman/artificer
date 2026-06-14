@@ -25,10 +25,16 @@ This document describes the flow of information between the UI, Stores, Services
 5.  `atlas_map.tsx` (Leaflet) detects the state change and animates the party marker.
 
 ### AI Event (e.g., "AI declares an ambush")
-1.  Gemini sends a tool call: `triggerEncounter(encounterId)`.
+1.  Gemini sends a tool call: `triggerEncounter(encounterId)`. 
+    - *Note: The AI never modifies state directly; it triggers a system function.*
 2.  `aiService` processes the call and updates `usePartyStore` with `activeEncounter`.
 3.  UI switches to `combat` mode.
 4.  `soundService` transitions the music layer to `tension_high`.
+
+## 🛡️ Mechanical Integrity & Validation
+The LLM acts as a **facilitator**. It can request actions, but it cannot override the underlying game rules.
+- **State as Truth**: The stores (`useCharacterStore`, etc.) are the source of truth. If the LLM narrates a health change but doesn't call a tool, the UI will not reflect it.
+- **Rule Enforcement**: Tools and stores validate all incoming data. For example, `addItem` will fail if the inventory is full, regardless of LLM narration.
 
 ### Persistence
 - Every significant state change triggers a background save to the proxy, which syncs with GitHub/Firebase.

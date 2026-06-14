@@ -8,7 +8,8 @@ Artificer is evolving from an immersive digital grimoire into a **complete AI-po
 ## 2. Core Design Principles
 *   **Immersive Skeuomorphism**: Maintain the "feel" of a physical artifact (books, cards, dice) while leveraging digital power.
 *   **Schema-Driven Reality**: Every entity (NPC, Item, Spell, Map) is governed by strict JSON schemas. The AI interprets these schemas rather than hallucinating stats.
-*   **AI Orchestration**: The AI DM is a narrator and coordinator. It uses tools to modify the game state, which then reflects in the UI.
+*   **AI Orchestration & The Narrator Model**: The AI DM is a narrator and facilitator. It interacts with the game via tool calls; the core mechanics (combat, inventory, progression) are implemented in code.
+*   **Mechanical Integrity**: The game must remain fully playable without an LLM. The game state is the absolute source of truth.
 *   **Data Integrity**: Use validation scripts and schemas to ensure the "Atlas" remains the single source of truth for all game rules.
 
 ## 3. Architectural Goals
@@ -59,11 +60,12 @@ Transition from "Card Simulator" to a **Tactical Battle Interface**:
 *   **Schema First**: No asset should be added without passing its respective JSON schema validation.
 
 ## 12. Tooling Architecture
-The AI DM should access "Tools" via the API to:
+The AI DM is prohibited from altering game state directly through text. It must access "Tools" via the API to:
 *   `generateAsset(type, context)`
 *   `updateCampaignState(key, value)`
 *   `resolveCombatAction(actorId, actionId, targetId)`
 *   `updateJournal(entry)`
+*   *Note: Tools are the only bridge between AI narration and the mechanical core.*
 
 ## 13. Persistence & Memory Systems
 *   **GitHub as Database**: Continue using GitHub for long-term storage of atlas data and character saves.
