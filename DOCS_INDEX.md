@@ -14,6 +14,7 @@ Welcome to the central documentation index for the Artificer project. This file 
 - **[AI Orchestration](./docs/systems/AI_ORCHESTRATION.md)** - 🎭 **Narrator vs. Engine Architecture.**
 - **[Dice & Chat](./docs/modules/dice_system.md)** - 3D Dice and AI Chat documentation.
 - **[Icon System](./docs/modules/icons.md)** - 🎨 **Custom Icon Mapping and Architecture.**
+- **[Journal Module](./docs/modules/journal.md)** - 📜 **Campaign Journal & Codex.**
 - **[Deep Dive Report](./docs/reports/DEEP_DIVE_RAPPORT.md)** - Analysis of Classes, Leveling, and Character Creation.
 - **[Optimization Strategy](./docs/reports/OPTIMALISATIE_ADVIES.md)** - Evaluation of system optimality and scaling advice.
 - **[Future Modules](./docs/FUTURE_MODULES.md)** - Blueprint for missing core systems and AI memory architecture.

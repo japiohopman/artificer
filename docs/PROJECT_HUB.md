@@ -19,6 +19,7 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [Save System](./modules/saveService.md) - GitHub & Firebase persistence.
 - [Inventory V2](./modules/inventory_v2.md) - Registry/Slot pattern.
 - [Dice & Chat](./modules/dice_system.md) - 3D Dice and AI Chat.
+- [Journal](./modules/journal.md) - Campaign Journal & Codex.
 
 ## 🤖 Agents
 - [Jimmy (Sandbox)](../jimmy_instructions.md) - Core systems and mechanics.

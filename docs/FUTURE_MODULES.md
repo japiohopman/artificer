@@ -53,14 +53,15 @@ This document outlines the architecture for missing core modules in the Artifice
 ---
 
 ## 4. 📜 Journal Module (`journal.tsx`)
-**Purpose**: Automatically records the party's journey for both the player and the AI.
+**Purpose**: Automatically records the party's journey, acting as the central memory for both the player and the AI Dungeon Master.
 
 ### 🧩 Key Systems:
-- **Session Summaries**: LLM-generated recap of the last 4 hours of gameplay.
-- **Quest Tracker**: 
-    - Active vs. Completed quests.
-    - "Rumors" list (potential quest hooks).
-- **Loot History**: A log of significant items acquired and where they were found.
+- **Daily Summaries (LLM Component)**: Automated recaps triggered by Long Rests, capturing events, NPCs, locations, and mission progress.
+- **Quest Log**: Categorized tracking of Main Quests, Side Quests, and Tasks with detailed status and reward info.
+- **Bestiary & Lore Codex**: Integrated repository of encountered creatures and unlocked lore from the Atlas.
+
+### 🏗️ Architecture:
+Detailed specifications can be found in the **[Journal Module Documentation](./modules/journal.md)**.
 
 ---
 
