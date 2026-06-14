@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Character, SKILL_LIST } from '../../../store/useStore';
+import { Character } from '../../../store/useStore';
+import { SKILL_LIST } from '../../../store/useCharacterStore';
 import { cn } from '../../../lib/utils';
 import { soundService } from '../../../services/soundService';
 import { fetchClassData } from '../../../services/storageService';
@@ -56,7 +57,7 @@ export const SkillsStep: React.FC<{
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-                {SKILL_LIST.map(skill => {
+                {(SKILL_LIST as any).map((skill: any) => {
                     const isRecommended = classSkillOptions.includes(skill.name);
                     const active = isProficient(skill.name);
                     

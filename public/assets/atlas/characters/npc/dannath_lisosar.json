@@ -1,6 +1,28 @@
 {
   "id": "dannath_lisosar",
   "name": "Dannath Lisosar",
-  "backstory": "Dannath Lisosar is a known figure in Waterdeep, associated with Patient Fingers Finework.",
-  "updated_at": "2026-06-03T08:26:20.441387Z"
+  "species": "Unknown",
+  "classJob": "Unknown",
+  "gender": "unknown",
+  "baseMood": "Neutral",
+  "visualTraits": {
+    "skinTone": "#d2b48c",
+    "hairStyle": "Common",
+    "clothingStyle": "Local",
+    "distinguishingFeatures": "None"
+  },
+  "personalityTraits": [],
+  "secrets": [],
+  "goals": [],
+  "locationId": "/assets/atlas/world/toril/faerun/cities/waterdeep.json",
+  "isEssential": false,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "backstory": "Dannath Lisosar is a known figure in Waterdeep, associated with Patient Fingers Finework."
 }

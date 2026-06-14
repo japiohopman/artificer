@@ -1,14 +1,28 @@
 {
   "id": "zorth_ulmaril",
   "name": "Zorth Ulmaril",
-  "sex": "Male",
-  "race": {
-    "index": "human",
-    "name": "Human",
-    "url": "public/assets/atlas/species/spicies_wiki/human.json"
+  "species": "Human",
+  "classJob": "Shopkeeper (Lanternmaker)",
+  "gender": "male",
+  "baseMood": "Neutral",
+  "visualTraits": {
+    "skinTone": "#d2b48c",
+    "hairStyle": "Common",
+    "clothingStyle": "Local",
+    "distinguishingFeatures": "None"
   },
-  "occupation": "Shopkeeper (Lanternmaker)",
-  "home": "Dock Ward, Waterdeep",
-  "backstory": "Zorth Ulmaril was a shopkeeper inhabiting Waterdeep during the mid-to-late 14th century DR. He made lanterns in a small shop located in Waterdeep's Dock Ward on Presper Street, just south of the end of Bitter Alley.",
-  "updated_at": "2024-06-19T00:00:00.000Z"
+  "personalityTraits": [],
+  "secrets": [],
+  "goals": [],
+  "locationId": "/assets/atlas/world/toril/faerun/cities/waterdeep.json",
+  "isEssential": false,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "backstory": "Zorth Ulmaril was a shopkeeper inhabiting Waterdeep during the mid-to-late 14th century DR. He made lanterns in a small shop located in Waterdeep's Dock Ward on Presper Street, just south of the end of Bitter Alley."
 }

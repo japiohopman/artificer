@@ -24,6 +24,7 @@ import { MUSICAL_INSTRUMENT_ICONS } from './musical_instruments';
 import { BOOK_READER_ICONS } from './book_reader';
 import { TAROT_ICONS } from './tarot';
 import { EQUIPMENT_DOLL } from './equipment_doll';
+import { MINI_GAME_ICONS } from './mini_game_icons';
 
 /**
  * @deprecated Use tactical imports from specific icon files instead of ALL_ICONS
@@ -55,6 +56,7 @@ export const ALL_ICONS = {
   ...BOOK_READER_ICONS,
   ...TAROT_ICONS,
   ...EQUIPMENT_DOLL,
+  ...MINI_GAME_ICONS,
 };
 
 export {
@@ -83,4 +85,5 @@ export {
   BOOK_READER_ICONS,
   TAROT_ICONS,
   EQUIPMENT_DOLL,
+  MINI_GAME_ICONS,
 };

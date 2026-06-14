@@ -1,14 +1,28 @@
 {
   "id": "chuldan_helmstar",
   "name": "Chuldan Helmstar",
-  "sex": "Male",
-  "race": {
-    "index": "human",
-    "name": "Human",
-    "url": "public/assets/atlas/species/spicies_wiki/human.json"
+  "species": "Human",
+  "classJob": "Fence, Warehouse Owner",
+  "gender": "male",
+  "baseMood": "Neutral",
+  "visualTraits": {
+    "skinTone": "#d2b48c",
+    "hairStyle": "Common",
+    "clothingStyle": "Local",
+    "distinguishingFeatures": "None"
   },
-  "occupation": "Fence, Warehouse Owner",
-  "home": "Dock Ward, Waterdeep",
-  "backstory": "Chuldan Helmstar was a fence of stolen goods inhabiting Waterdeep during the mid-to-late 14th century DR. He operated out of the Helmstar Warehouse on Dock Street, primarily dealing in statues and large architectural pieces that were hard to trace.",
-  "updated_at": "2024-06-19T00:00:00.000Z"
+  "personalityTraits": [],
+  "secrets": [],
+  "goals": [],
+  "locationId": "/assets/atlas/world/toril/faerun/cities/waterdeep.json",
+  "isEssential": false,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "backstory": "Chuldan Helmstar was a fence of stolen goods inhabiting Waterdeep during the mid-to-late 14th century DR. He operated out of the Helmstar Warehouse on Dock Street, primarily dealing in statues and large architectural pieces that were hard to trace."
 }

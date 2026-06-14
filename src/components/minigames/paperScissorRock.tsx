@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Bot, Sparkles } from 'lucide-react';
 import { GameIcon } from '@/src/game_icons';
 import { useGameStore } from '@/src/store/useGameStore';
@@ -9,12 +9,12 @@ interface PaperScissorRockProps {
 }
 
 export default function PaperScissorRock({ isArena = false }: PaperScissorRockProps) {
-  const { currentNPC, rpsState, characters, activeCharacterId } = useGameStore();
+  const { currentNPC, rpsState, setRpsChoice, startRpsMatch } = useGameStore();
   const { status, userChoice, cpuChoice, countdown, score } = rpsState;
 
   // ANNOUNCEMENT: The color of the hand is decided by the character's appearance metadata (e.g., character Jason)
   // Skin color is retrieved from the visualTraits.skinTone hexadecimal code.
-  const cpuSkinColor = currentNPC.visualTraits?.skinTone || '#d2b48c'; 
+  const cpuSkinColor = currentNPC?.visualTraits?.skinTone || '#d2b48c'; 
   const travelerSkinColor = '#f3c091'; 
 
   return (
@@ -27,7 +27,7 @@ export default function PaperScissorRock({ isArena = false }: PaperScissorRockPr
             <h1 className="font-bold text-[8px] uppercase tracking-[0.2em] text-indigo-400/80">Ritual Arena</h1>
           </div>
           <div className="flex items-center gap-3 bg-white/5 px-2 py-1 rounded-lg border border-white/10">
-              <span className="text-[7px] text-zinc-500 uppercase font-black tracking-tight">{currentNPC.name.substring(0, 5)}:{score.cpu}</span>
+              <span className="text-[7px] text-zinc-500 uppercase font-black tracking-tight">{currentNPC?.name?.substring(0, 5) || 'CPU'}:{score.cpu}</span>
               <div className="h-3 w-px bg-white/10" />
               <span className="text-[7px] text-zinc-500 uppercase font-black tracking-tight">You:{score.user}</span>
           </div>
@@ -53,10 +53,10 @@ export default function PaperScissorRock({ isArena = false }: PaperScissorRockPr
                         repeat: Infinity,
                         duration: 0.6,
                         ease: "easeInOut"
-                    } : { type: "spring" }}
+                    } : { type: "spring" } as any}
                     className="flex flex-col items-center gap-2"
                 >
-                    <div className="text-amber-500 font-mono text-[8px] uppercase font-bold tracking-[0.3em] opacity-40">{currentNPC.name}</div>
+                    <div className="text-amber-500 font-mono text-[8px] uppercase font-bold tracking-[0.3em] opacity-40">{currentNPC?.name || 'NPC'}</div>
                     <div className="relative">
                         {status === 'result' && (
                              <motion.div 
@@ -117,6 +117,28 @@ export default function PaperScissorRock({ isArena = false }: PaperScissorRockPr
                         />
                     </div>
                 </motion.div>
+            </div>
+
+            {/* Controls */}
+            <div className="absolute bottom-4 flex gap-4 z-30">
+                {status === 'ritual' && (
+                    <>
+                        <button onClick={() => setRpsChoice('rock')} className="p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition-colors">
+                            <GameIcon name="rock" size={32} color={travelerSkinColor} />
+                        </button>
+                        <button onClick={() => setRpsChoice('paper')} className="p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition-colors">
+                            <GameIcon name="paper" size={32} color={travelerSkinColor} />
+                        </button>
+                        <button onClick={() => setRpsChoice('scissors')} className="p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition-colors">
+                            <GameIcon name="scissors" size={32} color={travelerSkinColor} />
+                        </button>
+                    </>
+                )}
+                {status === 'result' && (
+                    <button onClick={() => startRpsMatch()} className="px-4 py-2 bg-indigo-500/20 hover:bg-indigo-500/40 text-indigo-400 text-[10px] font-bold uppercase tracking-widest rounded-full border border-indigo-500/30 transition-colors">
+                        Re-Engage
+                    </button>
+                )}
             </div>
 
             {/* Status Text Underneath */}

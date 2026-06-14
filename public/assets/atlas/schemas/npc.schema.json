@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/npc.schema.json",
+  "title": "NPC",
+  "description": "A Non-Player Character in the game atlas.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "species",
+    "classJob",
+    "gender",
+    "baseMood",
+    "visualTraits",
+    "personalityTraits",
+    "secrets",
+    "goals",
+    "locationId",
+    "isEssential",
+    "stats"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the NPC (slug)."
+    },
+    "name": {
+      "type": "string",
+      "description": "Full name of the NPC."
+    },
+    "species": {
+      "type": "string",
+      "description": "The race or species of the NPC."
+    },
+    "classJob": {
+      "type": "string",
+      "description": "The occupation or class of the NPC."
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["male", "female", "non-binary", "unknown"],
+      "description": "The gender of the NPC."
+    },
+    "baseMood": {
+      "type": "string",
+      "enum": ["Neutral", "Curious", "Skeptical", "Happy", "Greedy", "Angry", "Sad", "Surprised", "Proud"],
+      "description": "The default emotional state of the NPC."
+    },
+    "visualTraits": {
+      "type": "object",
+      "properties": {
+        "skinTone": { "type": "string" },
+        "hairStyle": { "type": "string" },
+        "clothingStyle": { "type": "string" },
+        "distinguishingFeatures": { "type": "string" }
+      },
+      "required": ["skinTone", "hairStyle", "clothingStyle", "distinguishingFeatures"]
+    },
+    "personalityTraits": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "secrets": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "goals": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "locationId": {
+      "type": "string",
+      "pattern": "^/assets/atlas/.*\\.json$",
+      "description": "Reference to the city or settlement where the NPC resides."
+    },
+    "factionId": {
+      "type": "string",
+      "description": "Optional reference to a faction the NPC belongs to."
+    },
+    "isEssential": {
+      "type": "boolean",
+      "description": "Whether the NPC is critical for the story/gameplay."
+    },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "str": { "type": "number" },
+        "dex": { "type": "number" },
+        "con": { "type": "number" },
+        "int": { "type": "number" },
+        "wis": { "type": "number" },
+        "cha": { "type": "number" }
+      },
+      "required": ["str", "dex", "con", "int", "wis", "cha"]
+    },
+    "imageUrl": {
+      "type": "string",
+      "description": "Path to the NPC's portrait image."
+    },
+    "avatarUrl": {
+      "type": "string",
+      "description": "Path to the NPC's avatar image."
+    },
+    "backstory": {
+      "type": "string",
+      "description": "Detailed background story of the NPC."
+    }
+  }
+}

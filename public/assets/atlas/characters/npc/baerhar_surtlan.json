@@ -1,14 +1,28 @@
 {
   "id": "baerhar_surtlan",
   "name": "Baerhar Surtlan",
-  "sex": "Male",
-  "race": {
-    "index": "human",
-    "name": "Human",
-    "url": "public/assets/atlas/species/spicies_wiki/human.json"
+  "species": "Human",
+  "classJob": "Shopkeeper (Metalwares)",
+  "gender": "male",
+  "baseMood": "Neutral",
+  "visualTraits": {
+    "skinTone": "#d2b48c",
+    "hairStyle": "Common",
+    "clothingStyle": "Local",
+    "distinguishingFeatures": "None"
   },
-  "occupation": "Shopkeeper (Metalwares)",
-  "home": "Trades Ward, Waterdeep",
-  "backstory": "Baerhar Surtlan was a shopkeeper inhabiting the city of Waterdeep in the mid-to-late 14th century DR. He owned Surtlan's Metalwares, which specialized in selling various metal products and equipment. He was also known as a public spokesman for the Guild of Butchers.",
-  "updated_at": "2024-06-19T00:00:00.000Z"
+  "personalityTraits": [],
+  "secrets": [],
+  "goals": [],
+  "locationId": "/assets/atlas/world/toril/faerun/cities/waterdeep.json",
+  "isEssential": false,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "backstory": "Baerhar Surtlan was a shopkeeper inhabiting the city of Waterdeep in the mid-to-late 14th century DR. He owned Surtlan's Metalwares, which specialized in selling various metal products and equipment. He was also known as a public spokesman for the Guild of Butchers."
 }

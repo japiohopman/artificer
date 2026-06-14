@@ -1,13 +1,28 @@
 {
   "id": "elemos_dunblast",
   "name": "Elemos Dunblast",
-  "sex": "Unknown",
-  "race": {
-    "index": "human",
-    "name": "Human",
-    "url": "public/assets/atlas/species/spicies_wiki/human.json"
+  "species": "Human",
+  "classJob": "Proprietor of Dunblast Roofing Company",
+  "gender": "unknown",
+  "baseMood": "Neutral",
+  "visualTraits": {
+    "skinTone": "#d2b48c",
+    "hairStyle": "Common",
+    "clothingStyle": "Local",
+    "distinguishingFeatures": "None"
   },
-  "occupation": "Proprietor of Dunblast Roofing Company",
-  "backstory": "Elemos Dunblast is a known figure in Waterdeep, associated with Dunblast Roofing Company.",
-  "updated_at": "2026-06-14T06:57:02.445523Z"
+  "personalityTraits": [],
+  "secrets": [],
+  "goals": [],
+  "locationId": "/assets/atlas/world/toril/faerun/cities/waterdeep.json",
+  "isEssential": false,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "backstory": "Elemos Dunblast is a known figure in Waterdeep, associated with Dunblast Roofing Company."
 }

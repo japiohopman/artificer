@@ -1,14 +1,19 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { useStore, CategoryIcons, SavedLocation } from '../../store/useStore';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useStore } from '../../store/useStore';
+import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorldStore';
 import { GameIcon } from '../../game_icons';
 
 export const NotificationWindow: React.FC = () => {
   const { 
-    logs, currentLocation, currentSubLocation, currentShop, clearLogs,
-    partyLocation, savedLocations, setIsInsideSubMap, setPartySubLocation,
+    logs, clearLogs, setIsInsideSubMap,
     playSound, addLog
   } = useStore();
+
+  const {
+    currentLocation, currentSubLocation, currentShop,
+    partyLocation, savedLocations, setPartySubLocation
+  } = useWorldStore();
   
   // Check if we are currently AT a location with a submap
   const locationWithSubMap = savedLocations.find(l => 

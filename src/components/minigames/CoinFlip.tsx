@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { CircleDollarSign, Sparkles, Target, Trophy } from 'lucide-react';
 import { GameIcon } from '@/src/game_icons';
 import { useGameStore } from '@/src/store/useGameStore';
@@ -9,7 +9,7 @@ interface CoinFlipProps {
 }
 
 export default function CoinFlip({ isArena = false }: CoinFlipProps) {
-  const { coinFlipState } = useGameStore();
+  const { coinFlipState, startCoinFlip, resetCoinFlip } = useGameStore();
   const { status, prediction, result, score } = coinFlipState;
   
   const [rotations, setRotations] = useState(0);
@@ -102,6 +102,25 @@ export default function CoinFlip({ isArena = false }: CoinFlipProps) {
                             className="bg-gradient-to-t from-black/20 to-transparent"
                         />
                     </motion.div>
+
+                    {/* Controls */}
+                    <div className="absolute top-1/2 -translate-y-1/2 flex flex-col gap-4 z-[120]">
+                        {status === 'idle' && (
+                            <>
+                                <button onClick={() => startCoinFlip('heads')} className="px-6 py-3 bg-amber-500/20 hover:bg-amber-500/40 text-amber-500 text-[10px] font-bold uppercase tracking-widest rounded-full border border-amber-500/30 transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(245,158,11,0.1)]">
+                                    Predict Heads
+                                </button>
+                                <button onClick={() => startCoinFlip('tails')} className="px-6 py-3 bg-amber-500/20 hover:bg-amber-500/40 text-amber-500 text-[10px] font-bold uppercase tracking-widest rounded-full border border-amber-500/30 transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(245,158,11,0.1)]">
+                                    Predict Tails
+                                </button>
+                            </>
+                        )}
+                        {status === 'result' && (
+                            <button onClick={() => resetCoinFlip()} className="px-6 py-3 bg-amber-500/20 hover:bg-amber-500/40 text-amber-500 text-[10px] font-bold uppercase tracking-widest rounded-full border border-amber-500/30 transition-all hover:scale-105 active:scale-95">
+                                Try Fate Again
+                            </button>
+                        )}
+                    </div>
 
                     <div className="perspective-1000 relative z-[100] overflow-visible">
                         <motion.div
