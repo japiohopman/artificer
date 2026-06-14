@@ -4,6 +4,7 @@ import { useInventoryStore } from '../../store/useInventoryStore';
 import { WorldPanel } from './WorldPanel';
 import { GameScreen } from './GameScreen';
 import { CharacterPanel } from '../character/CharacterPanel';
+import { Journal } from './Journal';
 import { motion, AnimatePresence } from 'motion/react';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
@@ -25,6 +26,9 @@ export const HUD: React.FC = () => {
 
   return (
     <div className="h-screen w-full flex flex-col overflow-hidden bg-parchment-100 text-parchment-900 font-body relative bg-paper-texture">
+      {/* Journal Modal */}
+      <Journal />
+
       {/* 1. Fixed Top Header / Navigation (Above sidebars) */}
       <div className="w-full z-[2000] p-4 pointer-events-none">
         <Nav />

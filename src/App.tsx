@@ -29,7 +29,7 @@ import { useBookStore } from './store/useBookStore';
 export default function App() {
   const { 
     isGameStarted, isDevKitOpen, setIsDevKitOpen, updateSelectedItem, selectedItem, explorerTab,
-    isCharacterSpellbookOpen, setIsCharacterSpellbookOpen, isProfileMenuOpen
+    isCharacterSpellbookOpen, setIsCharacterSpellbookOpen, isProfileMenuOpen, isJournalOpen, setIsJournalOpen
   } = useStore();
 
   const {
@@ -53,6 +53,14 @@ export default function App() {
         e.preventDefault();
         const nextState = !isDevKitOpen;
         setIsDevKitOpen(nextState);
+        if (nextState) playModalOpenSound();
+        else playModalCloseSound();
+      }
+
+      if (e.key.toLowerCase() === 'j') {
+        e.preventDefault();
+        const nextState = !isJournalOpen;
+        setIsJournalOpen(nextState);
         if (nextState) playModalOpenSound();
         else playModalCloseSound();
       }

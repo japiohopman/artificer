@@ -39,6 +39,7 @@ interface AppState {
   explorerTab: ExplorerTab;
   isDevKitOpen: boolean;
   isExplorerOpen: boolean;
+  isJournalOpen: boolean;
   isWorldPanelOpen: boolean;
   isCharacterPanelOpen: boolean;
   dynamicNavButtons: any[]; 
@@ -143,6 +144,7 @@ interface AppState {
   setExplorerTab: (tab: ExplorerTab) => void;
   setIsDevKitOpen: (isOpen: boolean) => void;
   setIsExplorerOpen: (isOpen: boolean) => void;
+  setIsJournalOpen: (isOpen: boolean) => void;
   setIsWorldPanelOpen: (isOpen: boolean) => void;
   setIsCharacterPanelOpen: (isOpen: boolean) => void;
   setDynamicNavButtons: (buttons: any[]) => void;
@@ -190,6 +192,7 @@ export const useStore = create<AppState>((set, get) => ({
   explorerTab: 'enemies',
   isDevKitOpen: false,
   isExplorerOpen: true,
+  isJournalOpen: false,
   isWorldPanelOpen: false,
   isCharacterPanelOpen: false,
   dynamicNavButtons: [],
@@ -301,6 +304,7 @@ export const useStore = create<AppState>((set, get) => ({
   },
   setIsDevKitOpen: (isDevKitOpen) => set({ isDevKitOpen }),
   setIsExplorerOpen: (isExplorerOpen) => set({ isExplorerOpen }),
+  setIsJournalOpen: (isJournalOpen) => set({ isJournalOpen }),
   setIsWorldPanelOpen: (isWorldPanelOpen) => set({ isWorldPanelOpen }),
   setIsCharacterPanelOpen: (isCharacterPanelOpen) => set({ isCharacterPanelOpen }),
   setDynamicNavButtons: (dynamicNavButtons) => set({ dynamicNavButtons }),

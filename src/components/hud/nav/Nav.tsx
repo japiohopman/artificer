@@ -24,6 +24,8 @@ export const Nav: React.FC = () => {
     setIsWorldPanelOpen,
     isCharacterPanelOpen, 
     setIsCharacterPanelOpen,
+    isJournalOpen,
+    setIsJournalOpen,
     isProfileMenuOpen,
     setIsProfileMenuOpen,
     dynamicNavButtons,
@@ -60,6 +62,14 @@ export const Nav: React.FC = () => {
       onClick: () => setIsWorldPanelOpen(!isWorldPanelOpen),
       isActive: isWorldPanelOpen,
       shortcut: 'M'
+    },
+    {
+      id: 'journal-panel',
+      icon: 'book',
+      label: 'Journal',
+      onClick: () => setIsJournalOpen(!isJournalOpen),
+      isActive: isJournalOpen,
+      shortcut: 'J'
     }
   ];
 
