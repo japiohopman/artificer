@@ -116,6 +116,15 @@
         "createdAt": "2026-06-14T09:56:52.570Z"
       },
       "file": "public/assets/sounds/sfx/ui_parchment_close.wav"
+    },
+    "ui_character_select": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "Minimal fantasy UI: light organic thud of a wooden miniature or heavy parchment tab. Crystalline clarity, warm resonance.",
+        "createdAt": "2026-06-14T09:56:57.030Z"
+      },
+      "file": "public/assets/sounds/sfx/ui_character_select.wav"
     }
   }
 }
