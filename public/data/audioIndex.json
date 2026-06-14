@@ -152,6 +152,15 @@
         "createdAt": "2026-06-14T09:57:11.133Z"
       },
       "file": "public/assets/sounds/sfx/dice_crit_success.wav"
+    },
+    "ui_page_turn": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "Tactile SFX: heavy slow flip of a large vellum page. Deep paper rustle, binding flex, immersive fiber textures.",
+        "createdAt": "2026-06-14T09:57:16.050Z"
+      },
+      "file": "public/assets/sounds/sfx/ui_page_turn.wav"
     }
   }
 }
