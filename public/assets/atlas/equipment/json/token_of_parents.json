@@ -1,0 +1,41 @@
+{
+  "desc": [
+    "A small object given to you by your parents."
+  ],
+  "special": [],
+  "index": "token_of_parents",
+  "name": "token of parents",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/token_of_parents.json",
+  "updated_at": "2026-06-13T20:44:32.976Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/token_of_parents.webp",
+  "imageUrl": "/assets/atlas/equipment/images/token_of_parents.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "13-6-2026",
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "category": "Standard Gear",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

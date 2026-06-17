@@ -1,0 +1,60 @@
+{
+  "higher_level": [],
+  "index": "fire_shield",
+  "name": "fire shield",
+  "desc": [
+    "Thin and vaporous flame surround your body for the duration of the spell, radiating a bright light bright light in a 10-foot radius and dim light for an additional 10 feet. You can end the spell using an action to make it disappear.",
+    "The flames are around you a heat shield or cold, your choice. The heat shield gives you cold damage resistance and the cold resistance to fire damage.",
+    "In addition, whenever a creature within 5 feet of you hits you with a melee attack, flames spring from the shield. The attacker then suffers 2d8 points of fire damage or cold, depending on the model."
+  ],
+  "range": "Self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A little phosphorus or a firefly.",
+  "ritual": false,
+  "duration": "10 minutes",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 4,
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "fire",
+      "url": "/assets/atlas/damage_types/json/fire.json"
+    },
+    "damage_at_slot_level": {
+      "4": "2d8"
+    }
+  },
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 5
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "fiend",
+      "name": "fiend",
+      "url": "/assets/atlas/subclasses/json/fiend.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/fire_shield.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/fire_shield.webp",
+  "sprite_index": 16,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet5.webp"
+}

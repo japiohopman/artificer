@@ -1,0 +1,30 @@
+{
+  "index": "gauntlets_of_ogre_power",
+  "name": "gauntlets of ogre power",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, uncommon (requires attunement)",
+    "Your Strength score is 19 while you wear these gauntlets. They have no effect on you if your Strength is already 19 or higher."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "strength_set": 19
+    }
+  },
+  "url": "/assets/atlas/magic_items/json/gauntlets_of_ogre_power.json",
+  "updated_at": "2026-06-12T16:48:59.707Z",
+  "image": "/assets/atlas/magic_items/gauntlets_of_ogre_power.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/gauntlets_of_ogre_power.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
+}

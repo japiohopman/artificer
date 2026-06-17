@@ -1,0 +1,54 @@
+{
+  "higher_level": [],
+  "index": "commune_with_nature",
+  "name": "commune with nature",
+  "desc": [
+    "You briefly become one with nature and gain knowledge of the surrounding territory. In the outdoors, the spell gives you knowledge of the land within 3 miles of you. In caves and other natural underground settings, the radius is limited to 300 feet. The spell doesn't function where nature has been replaced by construction, such as in dungeons and towns.",
+    "You instantly gain knowledge of up to three facts of your choice about any of the following subjects as they relate to the area:",
+    "- terrain and bodies of water",
+    "- prevalent plants, minerals, animals, or peoples",
+    "- powerful celestials, fey, fiends, elementals, or undead",
+    "- influence from other planes of existence",
+    "- buildings",
+    "For example, you could determine the location of powerful undead in the area, the location of major sources of safe drinking water, and the location of any nearby towns."
+  ],
+  "range": "Self",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": true,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 5,
+  "school": {
+    "index": "divination",
+    "name": "divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "ranger",
+      "name": "ranger",
+      "url": "/assets/atlas/class/json/ranger.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "land",
+      "url": "/assets/atlas/subclasses/json/land.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/commune_with_nature.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/commune_with_nature.webp",
+  "sprite_index": 21,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet2.webp"
+}

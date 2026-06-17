@@ -1,0 +1,35 @@
+{
+  "special": [],
+  "index": "tda_card_set",
+  "name": "tda card set",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Gaming Sets",
+  "cost": {
+    "quantity": 28,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "Three-Dragon Ante was a card game played in many taverns across Faerûn, including Waterdeep and Baldur's Gate in the late 15th century DR. Played across all levels of society, the game was sometimes called copper dragons or three-copper when played by peasants, as well as golds or plats when played by adventurers and aristocrats"
+  ],
+  "image": "/assets/atlas/equipment/images/tda_card_set.webp",
+  "url": "/assets/atlas/equipment/json/tda_card_set.json",
+  "updated_at": "2026-05-04T20:30:58.483Z",
+  "contents": [],
+  "properties": [],
+  "sprite_index": 17,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/tda_card_set.webp",
+  "_type": "equipment",
+  "category": "Gaming Sets",
+  "last_updated": "4-5-2026",
+  "background_type": "land_forest",
+  "rarity": "Rare",
+  "slot": [
+    "tool"
+  ]
+}

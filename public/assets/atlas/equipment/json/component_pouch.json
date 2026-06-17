@@ -1,0 +1,35 @@
+{
+  "special": [],
+  "index": "component_pouch",
+  "name": "component pouch",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "desc": [
+    "A component pouch is a small, watertight leather belt pouch that has compartments to hold all the material components and other special items you need to cast your spells, except for those components that have a specific cost (as indicated in a spell's description)."
+  ],
+  "url": "/assets/atlas/equipment/json/component_pouch.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/component_pouch.webp",
+  "sprite_index": 15,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

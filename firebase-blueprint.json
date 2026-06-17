@@ -1,0 +1,176 @@
+{
+  "entities": {
+    "Location": {
+      "title": "Location",
+      "description": "A geographic site or region in Toril.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "coordinates": {
+          "type": "object",
+          "properties": {
+            "x": { "type": "number" },
+            "y": { "type": "number" }
+          },
+          "required": ["x", "y"]
+        },
+        "polygon": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": { "type": "number" },
+              "y": { "type": "number" }
+            }
+          }
+        },
+        "path": { "type": "array", "items": { "type": "string" } },
+        "lore": { "type": "string" },
+        "category": { "type": "string", "enum": ["city", "settlement", "mountain", "forest", "water", "ruin", "landmark", "plain"] },
+        "grounding": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "uri": { "type": "string" }
+            }
+          }
+        },
+        "image": { "type": "string" },
+        "population": { "type": "string" },
+        "imports": { "type": "string" },
+        "exports": { "type": "string" },
+        "subLocations": { "type": "array", "items": { "type": "object" } },
+        "subPaths": { "type": "array", "items": { "type": "object" } },
+        "authorUid": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "coordinates", "category"]
+    },
+    "Path": {
+      "title": "Path",
+      "description": "A road, trail, or secret path connecting locations.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": { "type": "number" },
+              "y": { "type": "number" }
+            }
+          }
+        },
+        "type": { "type": "string", "enum": ["road", "trail", "secret"] },
+        "lore": { "type": "string" },
+        "travelers": { "type": "string" },
+        "dangerLevel": { "type": "string" },
+        "connections": { "type": "array", "items": { "type": "string" } },
+        "image": { "type": "string" },
+        "authorUid": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "points", "type"]
+    },
+    "Crossroad": {
+      "title": "Crossroad",
+      "description": "A junction where multiple paths meet.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "coordinates": {
+          "type": "object",
+          "properties": {
+            "x": { "type": "number" },
+            "y": { "type": "number" }
+          },
+          "required": ["x", "y"]
+        },
+        "connectedPaths": { "type": "array", "items": { "type": "string" } },
+        "lore": { "type": "string" },
+        "npcs": { "type": "string" },
+        "image": { "type": "string" },
+        "authorUid": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "coordinates"]
+    },
+    "User": {
+      "title": "User",
+      "description": "A user profile in the Toril Atlas.",
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string", "enum": ["admin", "lorekeeper", "traveler"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["email", "role"]
+    },
+    "Character": {
+      "title": "Character",
+      "description": "A character sheet for the user.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "class": { "type": "string" },
+        "race": { "type": "string" },
+        "level": { "type": "integer" },
+        "xp": { "type": "integer" },
+        "stats": { "type": "object" },
+        "inventory": { "type": "object" },
+        "backpack": { "type": "array" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "class", "race"]
+    },
+    "PartyState": {
+      "title": "PartyState",
+      "description": "The current state and location of the traveling party.",
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "object",
+          "properties": {
+            "x": { "type": "number" },
+            "y": { "type": "number" }
+          },
+          "required": ["x", "y"]
+        },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["location"]
+    }
+  },
+  "firestore": {
+    "/locations/{locationId}": {
+      "schema": "Location",
+      "description": "Global locations in Toril."
+    },
+    "/paths/{pathId}": {
+      "schema": "Path",
+      "description": "Roads and trails in Toril."
+    },
+    "/crossroads/{crossroadId}": {
+      "schema": "Crossroad",
+      "description": "Junctions in Toril."
+    },
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles and permissions."
+    },
+    "/users/{userId}/characters/{charId}": {
+      "schema": "Character",
+      "description": "User's personal characters/NPCs."
+    },
+    "/party_state/{stateId}": {
+      "schema": "PartyState",
+      "description": "Real-time party tracking."
+    }
+  }
+}

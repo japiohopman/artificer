@@ -1,0 +1,25 @@
+{
+  "index": "wings_of_flying",
+  "name": "wings of flying",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, rare (requires attunement)",
+    "While wearing this cloak, you can use an action to speak its command word. This turns the cloak into a pair of bat wings or bird wings on your back for 1 hour or until you repeat the command word as an action. The wings give you a flying speed of 60 feet. When they disappear, you can't use them again for 1d12 hours."
+  ],
+  "url": "/assets/atlas/magic_items/json/wings_of_flying.json",
+  "updated_at": "2026-06-12T16:43:56.548Z",
+  "image": "/assets/atlas/magic_items/wings_of_flying.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/wings_of_flying.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
+}

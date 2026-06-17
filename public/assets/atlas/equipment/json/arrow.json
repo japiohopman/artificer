@@ -1,0 +1,42 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "arrow",
+  "name": "arrow",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "ammunition",
+    "name": "ammunition",
+    "url": "/assets/atlas/equipment_categories/ammunition"
+  },
+  "quantity": 20,
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/arrow.json",
+  "updated_at": "2026-05-17T03:51:57.696Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/arrow.webp",
+  "sprite_index": 8,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
+  "imageUrl": "/assets/atlas/equipment/images/arrow.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Ammunition",
+  "last_updated": "17-5-2026",
+  "slot": [
+    "ammo"
+  ],
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

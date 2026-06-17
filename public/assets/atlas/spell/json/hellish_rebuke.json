@@ -1,0 +1,64 @@
+{
+  "index": "hellish_rebuke",
+  "name": "hellish rebuke",
+  "desc": [
+    "You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a dexterity saving throw. It takes 2d10 fire damage on a failed save, or half as much damage on a successful one."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st."
+  ],
+  "range": "60 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 reaction",
+  "level": 1,
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "fire",
+      "url": "/assets/atlas/damage_types/json/fire.json"
+    },
+    "damage_at_slot_level": {
+      "1": "2d10",
+      "2": "3d10",
+      "3": "4d10",
+      "4": "5d10",
+      "5": "6d10",
+      "6": "7d10",
+      "7": "8d10",
+      "8": "9d10",
+      "9": "10d10"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "dex",
+      "url": "/assets/atlas/ability_scores/json/dex.json"
+    },
+    "dc_success": "half"
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/hellish_rebuke.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/hellish_rebuke.webp",
+  "sprite_index": 5,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet7.webp"
+}

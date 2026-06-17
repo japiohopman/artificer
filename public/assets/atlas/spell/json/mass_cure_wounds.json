@@ -1,0 +1,65 @@
+{
+  "index": "mass_cure_wounds",
+  "name": "mass cure wounds",
+  "desc": [
+    "A wave of healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius sphere centered on that point. Each target regains hit points equal to 3d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 6th level or higher, the healing increases by 1d8 for each slot level above 5th."
+  ],
+  "range": "60 feet",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "heal_at_slot_level": {
+    "5": "3d8 + MOD",
+    "6": "4d8 + MOD",
+    "7": "5d8 + MOD",
+    "8": "6d8 + MOD",
+    "9": "7d8 + MOD"
+  },
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 30
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "life",
+      "name": "life",
+      "url": "/assets/atlas/subclasses/json/life.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/mass_cure_wounds.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/mass_cure_wounds.webp",
+  "sprite_index": 19,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet8.webp"
+}

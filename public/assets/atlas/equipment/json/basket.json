@@ -1,0 +1,40 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "basket",
+  "name": "basket",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 4,
+    "unit": "sp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/basket.json",
+  "updated_at": "2026-04-22T18:02:07.754Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/basket.webp",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/images/basket.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "22-4-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

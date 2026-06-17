@@ -1,0 +1,28 @@
+{
+  "level": 13,
+  "ability_score_bonuses": 3,
+  "prof_bonus": 5,
+  "features": [],
+  "class_specific": {
+    "arcane_recovery_levels": 7
+  },
+  "index": "wizard_level_13",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/wizard.json"
+  },
+  "url": "/assets/atlas/class/levels/13/wizard_level_13.json",
+  "spellcasting": {
+    "cantrips_known": 5,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 3,
+    "spell_slots_level_5": 2,
+    "spell_slots_level_6": 1,
+    "spell_slots_level_7": 1,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

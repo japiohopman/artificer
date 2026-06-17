@@ -1,0 +1,24 @@
+{
+  "level": 3,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "primal_path",
+      "name": "Primal Path",
+      "url": "/assets/atlas/features/json/primal_path.json"
+    }
+  ],
+  "class_specific": {
+    "rage_count": 3,
+    "rage_damage_bonus": 2,
+    "brutal_critical_dice": 0
+  },
+  "index": "barbarian_level_3",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "url": "/assets/atlas/class/levels/3/barbarian_level_3.json"
+}

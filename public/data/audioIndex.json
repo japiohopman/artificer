@@ -1,0 +1,175 @@
+{
+  "sounds": {
+    "sfx_secret_room": {
+      "type": "sfx",
+      "category": "SFX",
+      "layer": 7,
+      "volume": 1,
+      "loop": false,
+      "priority": 1,
+      "tags": [],
+      "meta": {
+        "prompt": "Heroic fantasy RPG level-up sound. Warm orchestral swell, holy magical energy, ancient bell tones, deep bass pulse, subtle choir, noble and mature emotional tone. Feels rewarding and prestigious in a serious D&D-inspired world.",
+        "duration": 3,
+        "influence": 0.6,
+        "createdBy": "ElevenLabs SFX v2",
+        "createdAt": "2026-05-26T03:50:36.049Z"
+      },
+      "file": "public/assets/sounds/sfx/sfx_secret_room.wav"
+    },
+    "sfx_level_up": {
+      "type": "sfx",
+      "category": "SFX",
+      "layer": 7,
+      "volume": 1,
+      "loop": false,
+      "priority": 1,
+      "tags": [],
+      "meta": {
+        "prompt": "Arcane mage level-up sound effect. Ethereal magical energy, enchanted rune hum, layered spell resonance, sparkling high frequencies with deep magical bass. Mature fantasy atmosphere, cinematic RPG progression sound, mysterious and intelligent rather than cheerful. No cartoon style.",
+        "duration": 3,
+        "influence": 0.6,
+        "createdBy": "ElevenLabs SFX v2",
+        "createdAt": "2026-05-26T03:51:54.707Z"
+      },
+      "file": "public/assets/sounds/sfx/sfx_level_up.wav"
+    },
+    "unselected_scene_light_rain_nigh": {
+      "category": "sfx",
+      "loop": false,
+      "volume": 1,
+      "priority": 1,
+      "tags": [
+        "sfx"
+      ],
+      "file": "public/assets/sounds/sfx/unselected_scene_light_rain_nigh.wav",
+      "meta": {
+        "createdAt": "2026-06-01T11:00:10.004Z"
+      }
+    },
+    "thunder": {
+      "category": "sfx",
+      "loop": false,
+      "volume": 1,
+      "priority": 1,
+      "tags": [
+        "sfx"
+      ],
+      "file": "public/assets/sounds/sfx/thunder.wav",
+      "meta": {
+        "createdAt": "2026-06-01T22:07:52.521Z"
+      }
+    },
+    "healing": {
+      "category": "sfx",
+      "loop": false,
+      "volume": 1,
+      "priority": 1,
+      "tags": [
+        "sfx"
+      ],
+      "file": "public/assets/sounds/sfx/healing.wav",
+      "meta": {
+        "createdAt": "2026-06-01T22:08:49.140Z"
+      }
+    },
+    "lightning": {
+      "category": "sfx",
+      "loop": false,
+      "volume": 1,
+      "priority": 1,
+      "tags": [
+        "sfx"
+      ],
+      "file": "public/assets/sounds/sfx/lightning.wav",
+      "meta": {
+        "createdAt": "2026-06-01T22:53:36.447Z"
+      }
+    },
+    "welcome_adventure_dm": {
+      "category": "npc_voice",
+      "loop": false,
+      "volume": 1,
+      "priority": 1,
+      "tags": [
+        "npc_voice"
+      ],
+      "file": "public/assets/sounds/npc_voice/welcome_adventure_dm.wav",
+      "meta": {
+        "createdAt": "2026-06-04T10:34:31.495Z"
+      }
+    },
+    "ui_parchment_open": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "High-quality fantasy UI: crisp parchment scroll unrolling. Tactile mid-high crinkling, quick transient, dry texture.",
+        "createdAt": "2026-06-14T09:56:47.874Z"
+      },
+      "file": "public/assets/sounds/sfx/ui_parchment_open.wav"
+    },
+    "ui_parchment_close": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "High-quality fantasy UI: parchment scroll rolling shut. Short decisive friction, light paper thud, tactile rustle.",
+        "createdAt": "2026-06-14T09:56:52.570Z"
+      },
+      "file": "public/assets/sounds/sfx/ui_parchment_close.wav"
+    },
+    "ui_character_select": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "Minimal fantasy UI: light organic thud of a wooden miniature or heavy parchment tab. Crystalline clarity, warm resonance.",
+        "createdAt": "2026-06-14T09:56:57.030Z"
+      },
+      "file": "public/assets/sounds/sfx/ui_character_select.wav"
+    },
+    "ui_armory_open": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "Heavy cinematic SFX: large mechanical lock disengaging, slow groan of a stone portal. Deep low-end, metallic clinks.",
+        "createdAt": "2026-06-14T09:57:01.881Z"
+      },
+      "file": "public/assets/sounds/sfx/ui_armory_open.wav"
+    },
+    "dice_roll_wood": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "Physics-based SFX: multiple polyhedral dice rolling on solid oak. Varied impact, sharp resin clacks, natural dispersion.",
+        "createdAt": "2026-06-14T09:57:06.524Z"
+      },
+      "file": "public/assets/sounds/sfx/dice_roll_wood.wav"
+    },
+    "dice_crit_success": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "Magical UI Sting: triumphant crystalline chime with subtle arcane flare. High-frequency shimmer, rewarding tonality.",
+        "createdAt": "2026-06-14T09:57:11.133Z"
+      },
+      "file": "public/assets/sounds/sfx/dice_crit_success.wav"
+    },
+    "ui_page_turn": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "Tactile SFX: heavy slow flip of a large vellum page. Deep paper rustle, binding flex, immersive fiber textures.",
+        "createdAt": "2026-06-14T09:57:16.050Z"
+      },
+      "file": "public/assets/sounds/sfx/ui_page_turn.wav"
+    },
+    "ui_map_token_move": {
+      "category": "sfx",
+      "loop": false,
+      "meta": {
+        "prompt": "Organic SFX: solid wooden thud and slide on parchment. Short, dry, clear wood-on-paper friction.",
+        "createdAt": "2026-06-14T09:57:21.325Z"
+      },
+      "file": "public/assets/sounds/sfx/ui_map_token_move.wav"
+    }
+  }
+}

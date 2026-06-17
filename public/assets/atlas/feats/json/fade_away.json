@@ -1,0 +1,39 @@
+{
+  "index": "fade_away",
+  "name": "fade away",
+  "prerequisites": [
+    {
+      "stat": "species",
+      "operator": "==",
+      "value": "gnome"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "Your people are clever at hiding from the world, and you’ve mastered their way of vanishing. You gain the following benefits:",
+    "- Increase your Dexterity or Intelligence score by 1, to a maximum of 20.",
+    "- Immediately after you take damage, you can use your reaction to magically become invisible until the end of your next turn or until you attack, deal damage, or force someone to make a saving throw. Once you use this ability, you can’t do so again until you finish a short or long rest."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Dexterity or Intelligence bonus",
+          "options": [
+            "dexterity_bonus",
+            "intelligence_bonus"
+          ],
+          "amount": 1
+        }
+      ]
+    },
+    "special_action": "reaction"
+  },
+  "url": "/assets/atlas/feats/json/fade_away.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/fade_away.webp"
+}

@@ -1,0 +1,15 @@
+{
+  "index": "history",
+  "name": "history",
+  "desc": [
+    "Your Intelligence (History) check measures your ability to recall lore about historical events, legendary people, ancient kingdoms, past disputes, recent wars, and lost civilizations."
+  ],
+  "ability_score": {
+    "index": "int",
+    "name": "int",
+    "url": "/assets/atlas/ability_scores/json/int.json"
+  },
+  "url": "/assets/atlas/skills/json/history.json",
+  "updated_at": "2025-10-24T20:42:14.523Z",
+  "image": "/assets/atlas/skills/json/history.webp"
+}

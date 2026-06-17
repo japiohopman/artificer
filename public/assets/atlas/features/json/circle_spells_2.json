@@ -1,0 +1,29 @@
+{
+  "index": "circle_spells_2",
+  "class": {
+    "index": "druid",
+    "name": "druid",
+    "url": "/assets/atlas/class/json/druid.json"
+  },
+  "subclass": {
+    "index": "land",
+    "name": "land",
+    "url": "/assets/atlas/subclasses/json/land.json"
+  },
+  "name": "circle spells",
+  "level": 5,
+  "prerequisites": [],
+  "desc": [
+    "Your mystical connection to the land infuses you with the ability to cast certain spells. At 3rd, 5th, 7th, and 9th level you gain access to circle spells connected to the land where you became a druid.",
+    "Choose that land--arctic, coast, desert, forest, grassland, mountain, or swamp--and consult the associated list of spells.",
+    "Once you gain access to a circle spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day. If you gain access to a spell that doesn't appear on the druid spell list, the spell is nonetheless a druid spell for you."
+  ],
+  "url": "/assets/atlas/features/json/circle_spells_2.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/circle_spells_2.webp",
+  "feature_specific": {
+    "subfeature_options": {
+      "type": "spell"
+    }
+  }
+}

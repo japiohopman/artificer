@@ -1,0 +1,42 @@
+{
+  "index": "ring_of_jumping",
+  "name": "ring of jumping",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": "Uncommon",
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Ring, uncommon (requires attunement)",
+    "While wearing this ring, you can cast the jump spell from it as a bonus action at will, but can target only yourself when you do so."
+  ],
+  "feature_specific": {
+    "spells": [
+      {
+        "spell": {
+          "index": "jump",
+          "name": "jump",
+          "url": "/assets/atlas/spell/json/jump.json"
+        },
+        "usage": {
+          "type": "at_will"
+        },
+        "special_action": "bonus_action"
+      }
+    ]
+  },
+  "url": "/assets/atlas/magic_items/json/ring_of_jumping.json",
+  "updated_at": "2026-05-03T19:23:54.271Z",
+  "image": "/assets/atlas/magic_items/ring_of_jumping.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/ring_of_jumping.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "ring-1",
+    "ring-2"
+  ],
+  "last_updated": "3-5-2026"
+}

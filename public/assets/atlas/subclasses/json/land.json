@@ -1,0 +1,1227 @@
+{
+  "index": "land",
+  "class": {
+    "index": "druid",
+    "name": "druid",
+    "url": "/assets/atlas/class/json/druid.json"
+  },
+  "name": "land",
+  "subclass_flavor": "Druid Circle",
+  "desc": [
+    "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites."
+  ],
+  "features": [
+    {
+      "index": "bonus_cantrip",
+      "name": "Bonus Cantrip",
+      "level": 2,
+      "url": "/assets/atlas/features/json/bonus_cantrip.json"
+    },
+    {
+      "index": "natural_recovery",
+      "name": "Natural Recovery",
+      "level": 2,
+      "url": "/assets/atlas/features/json/natural_recovery.json"
+    },
+    {
+      "index": "druid_lands_stride",
+      "name": "Land's Stride",
+      "level": 6,
+      "url": "/assets/atlas/features/json/druid_lands_stride.json"
+    },
+    {
+      "index": "natures_ward",
+      "name": "Nature's Ward",
+      "level": 10,
+      "url": "/assets/atlas/features/json/natures_ward.json"
+    },
+    {
+      "index": "natures_sanctuary",
+      "name": "Nature's Sanctuary",
+      "level": 14,
+      "url": "/assets/atlas/features/json/natures_sanctuary.json"
+    }
+  ],
+  "spells": [
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_arctic",
+          "type": "feature",
+          "name": "circle of the land: arctic",
+          "url": "/assets/atlas/features/circle_of_the_land_arctic"
+        }
+      ],
+      "spell": {
+        "index": "hold_person",
+        "name": "hold person",
+        "url": "/assets/atlas/spell/json/hold_person.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_arctic",
+          "type": "feature",
+          "name": "circle of the land: arctic",
+          "url": "/assets/atlas/features/circle_of_the_land_arctic"
+        }
+      ],
+      "spell": {
+        "index": "spike_growth",
+        "name": "spike growth",
+        "url": "/assets/atlas/spell/json/spike_growth.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_arctic",
+          "type": "feature",
+          "name": "circle of the land: arctic",
+          "url": "/assets/atlas/features/circle_of_the_land_arctic"
+        }
+      ],
+      "spell": {
+        "index": "sleet_storm",
+        "name": "sleet storm",
+        "url": "/assets/atlas/spell/json/sleet_storm.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_arctic",
+          "type": "feature",
+          "name": "circle of the land: arctic",
+          "url": "/assets/atlas/features/circle_of_the_land_arctic"
+        }
+      ],
+      "spell": {
+        "index": "slow",
+        "name": "slow",
+        "url": "/assets/atlas/spell/json/slow.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_arctic",
+          "type": "feature",
+          "name": "circle of the land: arctic",
+          "url": "/assets/atlas/features/circle_of_the_land_arctic"
+        }
+      ],
+      "spell": {
+        "index": "freedom_of_movement",
+        "name": "freedom of movement",
+        "url": "/assets/atlas/spell/json/freedom_of_movement.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_arctic",
+          "type": "feature",
+          "name": "circle of the land: arctic",
+          "url": "/assets/atlas/features/circle_of_the_land_arctic"
+        }
+      ],
+      "spell": {
+        "index": "ice_storm",
+        "name": "ice storm",
+        "url": "/assets/atlas/spell/json/ice_storm.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_arctic",
+          "type": "feature",
+          "name": "circle of the land: arctic",
+          "url": "/assets/atlas/features/circle_of_the_land_arctic"
+        }
+      ],
+      "spell": {
+        "index": "commune_with_nature",
+        "name": "commune with nature",
+        "url": "/assets/atlas/spell/json/commune_with_nature.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_arctic",
+          "type": "feature",
+          "name": "circle of the land: arctic",
+          "url": "/assets/atlas/features/circle_of_the_land_arctic"
+        }
+      ],
+      "spell": {
+        "index": "cone_of_cold",
+        "name": "cone of cold",
+        "url": "/assets/atlas/spell/json/cone_of_cold.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_coast",
+          "type": "feature",
+          "name": "circle of the land: coast",
+          "url": "/assets/atlas/features/circle_of_the_land_coast"
+        }
+      ],
+      "spell": {
+        "index": "mirror_image",
+        "name": "mirror image",
+        "url": "/assets/atlas/spell/json/mirror_image.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_coast",
+          "type": "feature",
+          "name": "circle of the land: coast",
+          "url": "/assets/atlas/features/circle_of_the_land_coast"
+        }
+      ],
+      "spell": {
+        "index": "misty_step",
+        "name": "misty step",
+        "url": "/assets/atlas/spell/json/misty_step.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_coast",
+          "type": "feature",
+          "name": "circle of the land: coast",
+          "url": "/assets/atlas/features/circle_of_the_land_coast"
+        }
+      ],
+      "spell": {
+        "index": "water_breathing",
+        "name": "water breathing",
+        "url": "/assets/atlas/spell/json/water_breathing.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_coast",
+          "type": "feature",
+          "name": "circle of the land: coast",
+          "url": "/assets/atlas/features/circle_of_the_land_coast"
+        }
+      ],
+      "spell": {
+        "index": "water_walk",
+        "name": "water walk",
+        "url": "/assets/atlas/spell/json/water_walk.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_coast",
+          "type": "feature",
+          "name": "circle of the land: coast",
+          "url": "/assets/atlas/features/circle_of_the_land_coast"
+        }
+      ],
+      "spell": {
+        "index": "control_water",
+        "name": "control water",
+        "url": "/assets/atlas/spell/json/control_water.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_coast",
+          "type": "feature",
+          "name": "circle of the land: coast",
+          "url": "/assets/atlas/features/circle_of_the_land_coast"
+        }
+      ],
+      "spell": {
+        "index": "freedom_of_movement",
+        "name": "freedom of movement",
+        "url": "/assets/atlas/spell/json/freedom_of_movement.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_coast",
+          "type": "feature",
+          "name": "circle of the land: coast",
+          "url": "/assets/atlas/features/circle_of_the_land_coast"
+        }
+      ],
+      "spell": {
+        "index": "conjure_elemental",
+        "name": "conjure elemental",
+        "url": "/assets/atlas/spell/json/conjure_elemental.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_coast",
+          "type": "feature",
+          "name": "circle of the land: coast",
+          "url": "/assets/atlas/features/circle_of_the_land_coast"
+        }
+      ],
+      "spell": {
+        "index": "scrying",
+        "name": "scrying",
+        "url": "/assets/atlas/spell/json/scrying.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_desert",
+          "type": "feature",
+          "name": "circle of the land: desert",
+          "url": "/assets/atlas/features/circle_of_the_land_desert"
+        }
+      ],
+      "spell": {
+        "index": "blur",
+        "name": "blur",
+        "url": "/assets/atlas/spell/json/blur.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_desert",
+          "type": "feature",
+          "name": "circle of the land: desert",
+          "url": "/assets/atlas/features/circle_of_the_land_desert"
+        }
+      ],
+      "spell": {
+        "index": "silence",
+        "name": "silence",
+        "url": "/assets/atlas/spell/json/silence.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_desert",
+          "type": "feature",
+          "name": "circle of the land: desert",
+          "url": "/assets/atlas/features/circle_of_the_land_desert"
+        }
+      ],
+      "spell": {
+        "index": "create_food_and_water",
+        "name": "create food and water",
+        "url": "/assets/atlas/spell/json/create_food_and_water.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_desert",
+          "type": "feature",
+          "name": "circle of the land: desert",
+          "url": "/assets/atlas/features/circle_of_the_land_desert"
+        }
+      ],
+      "spell": {
+        "index": "protection_from_energy",
+        "name": "protection from energy",
+        "url": "/assets/atlas/spell/json/protection_from_energy.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_desert",
+          "type": "feature",
+          "name": "circle of the land: desert",
+          "url": "/assets/atlas/features/circle_of_the_land_desert"
+        }
+      ],
+      "spell": {
+        "index": "blight",
+        "name": "blight",
+        "url": "/assets/atlas/spell/json/blight.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_desert",
+          "type": "feature",
+          "name": "circle of the land: desert",
+          "url": "/assets/atlas/features/circle_of_the_land_desert"
+        }
+      ],
+      "spell": {
+        "index": "hallucinatory_terrain",
+        "name": "hallucinatory terrain",
+        "url": "/assets/atlas/spell/json/hallucinatory_terrain.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_desert",
+          "type": "feature",
+          "name": "circle of the land: desert",
+          "url": "/assets/atlas/features/circle_of_the_land_desert"
+        }
+      ],
+      "spell": {
+        "index": "insect_plague",
+        "name": "insect plague",
+        "url": "/assets/atlas/spell/json/insect_plague.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_desert",
+          "type": "feature",
+          "name": "circle of the land: desert",
+          "url": "/assets/atlas/features/circle_of_the_land_desert"
+        }
+      ],
+      "spell": {
+        "index": "wall_of_stone",
+        "name": "wall of stone",
+        "url": "/assets/atlas/spell/json/wall_of_stone.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_forest",
+          "type": "feature",
+          "name": "circle of the land: forest",
+          "url": "/assets/atlas/features/circle_of_the_land_forest"
+        }
+      ],
+      "spell": {
+        "index": "barkskin",
+        "name": "barkskin",
+        "url": "/assets/atlas/spell/json/barkskin.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_forest",
+          "type": "feature",
+          "name": "circle of the land: forest",
+          "url": "/assets/atlas/features/circle_of_the_land_forest"
+        }
+      ],
+      "spell": {
+        "index": "spider_climb",
+        "name": "spider climb",
+        "url": "/assets/atlas/spell/json/spider_climb.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_forest",
+          "type": "feature",
+          "name": "circle of the land: forest",
+          "url": "/assets/atlas/features/circle_of_the_land_forest"
+        }
+      ],
+      "spell": {
+        "index": "call_lightning",
+        "name": "call lightning",
+        "url": "/assets/atlas/spell/json/call_lightning.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_forest",
+          "type": "feature",
+          "name": "circle of the land: forest",
+          "url": "/assets/atlas/features/circle_of_the_land_forest"
+        }
+      ],
+      "spell": {
+        "index": "plant_growth",
+        "name": "plant growth",
+        "url": "/assets/atlas/spell/json/plant_growth.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_forest",
+          "type": "feature",
+          "name": "circle of the land: forest",
+          "url": "/assets/atlas/features/circle_of_the_land_forest"
+        }
+      ],
+      "spell": {
+        "index": "divination",
+        "name": "divination",
+        "url": "/assets/atlas/spell/json/divination.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_forest",
+          "type": "feature",
+          "name": "circle of the land: forest",
+          "url": "/assets/atlas/features/circle_of_the_land_forest"
+        }
+      ],
+      "spell": {
+        "index": "freedom_of_movement",
+        "name": "freedom of movement",
+        "url": "/assets/atlas/spell/json/freedom_of_movement.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_forest",
+          "type": "feature",
+          "name": "circle of the land: forest",
+          "url": "/assets/atlas/features/circle_of_the_land_forest"
+        }
+      ],
+      "spell": {
+        "index": "commune_with_nature",
+        "name": "commune with nature",
+        "url": "/assets/atlas/spell/json/commune_with_nature.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_forest",
+          "type": "feature",
+          "name": "circle of the land: forest",
+          "url": "/assets/atlas/features/circle_of_the_land_forest"
+        }
+      ],
+      "spell": {
+        "index": "tree_stride",
+        "name": "tree stride",
+        "url": "/assets/atlas/spell/json/tree_stride.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_grassland",
+          "type": "feature",
+          "name": "circle of the land: grassland",
+          "url": "/assets/atlas/features/circle_of_the_land_grassland"
+        }
+      ],
+      "spell": {
+        "index": "invisibility",
+        "name": "invisibility",
+        "url": "/assets/atlas/spell/json/invisibility.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_grassland",
+          "type": "feature",
+          "name": "circle of the land: grassland",
+          "url": "/assets/atlas/features/circle_of_the_land_grassland"
+        }
+      ],
+      "spell": {
+        "index": "pass_without_trace",
+        "name": "pass without trace",
+        "url": "/assets/atlas/spell/json/pass_without_trace.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_grassland",
+          "type": "feature",
+          "name": "circle of the land: grassland",
+          "url": "/assets/atlas/features/circle_of_the_land_grassland"
+        }
+      ],
+      "spell": {
+        "index": "daylight",
+        "name": "daylight",
+        "url": "/assets/atlas/spell/json/daylight.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_grassland",
+          "type": "feature",
+          "name": "circle of the land: grassland",
+          "url": "/assets/atlas/features/circle_of_the_land_grassland"
+        }
+      ],
+      "spell": {
+        "index": "haste",
+        "name": "haste",
+        "url": "/assets/atlas/spell/json/haste.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_grassland",
+          "type": "feature",
+          "name": "circle of the land: grassland",
+          "url": "/assets/atlas/features/circle_of_the_land_grassland"
+        }
+      ],
+      "spell": {
+        "index": "divination",
+        "name": "divination",
+        "url": "/assets/atlas/spell/json/divination.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_grassland",
+          "type": "feature",
+          "name": "circle of the land: grassland",
+          "url": "/assets/atlas/features/circle_of_the_land_grassland"
+        }
+      ],
+      "spell": {
+        "index": "freedom_of_movement",
+        "name": "freedom of movement",
+        "url": "/assets/atlas/spell/json/freedom_of_movement.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_grassland",
+          "type": "feature",
+          "name": "circle of the land: grassland",
+          "url": "/assets/atlas/features/circle_of_the_land_grassland"
+        }
+      ],
+      "spell": {
+        "index": "dream",
+        "name": "dream",
+        "url": "/assets/atlas/spell/json/dream.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_grassland",
+          "type": "feature",
+          "name": "circle of the land: grassland",
+          "url": "/assets/atlas/features/circle_of_the_land_grassland"
+        }
+      ],
+      "spell": {
+        "index": "insect_plague",
+        "name": "insect plague",
+        "url": "/assets/atlas/spell/json/insect_plague.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_mountain",
+          "type": "feature",
+          "name": "circle of the land: mountain",
+          "url": "/assets/atlas/features/circle_of_the_land_mountain"
+        }
+      ],
+      "spell": {
+        "index": "spider_climb",
+        "name": "spider climb",
+        "url": "/assets/atlas/spell/json/spider_climb.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_mountain",
+          "type": "feature",
+          "name": "circle of the land: mountain",
+          "url": "/assets/atlas/features/circle_of_the_land_mountain"
+        }
+      ],
+      "spell": {
+        "index": "spike_growth",
+        "name": "spike growth",
+        "url": "/assets/atlas/spell/json/spike_growth.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_mountain",
+          "type": "feature",
+          "name": "circle of the land: mountain",
+          "url": "/assets/atlas/features/circle_of_the_land_mountain"
+        }
+      ],
+      "spell": {
+        "index": "lightning_bolt",
+        "name": "lightning bolt",
+        "url": "/assets/atlas/spell/json/lightning_bolt.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_mountain",
+          "type": "feature",
+          "name": "circle of the land: mountain",
+          "url": "/assets/atlas/features/circle_of_the_land_mountain"
+        }
+      ],
+      "spell": {
+        "index": "meld_into_stone",
+        "name": "meld into stone",
+        "url": "/assets/atlas/spell/json/meld_into_stone.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_mountain",
+          "type": "feature",
+          "name": "circle of the land: mountain",
+          "url": "/assets/atlas/features/circle_of_the_land_mountain"
+        }
+      ],
+      "spell": {
+        "index": "stone_shape",
+        "name": "stone shape",
+        "url": "/assets/atlas/spell/json/stone_shape.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_mountain",
+          "type": "feature",
+          "name": "circle of the land: mountain",
+          "url": "/assets/atlas/features/circle_of_the_land_mountain"
+        }
+      ],
+      "spell": {
+        "index": "stoneskin",
+        "name": "stoneskin",
+        "url": "/assets/atlas/spell/json/stoneskin.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_mountain",
+          "type": "feature",
+          "name": "circle of the land: mountain",
+          "url": "/assets/atlas/features/circle_of_the_land_mountain"
+        }
+      ],
+      "spell": {
+        "index": "passwall",
+        "name": "passwall",
+        "url": "/assets/atlas/spell/json/passwall.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_mountain",
+          "type": "feature",
+          "name": "circle of the land: mountain",
+          "url": "/assets/atlas/features/circle_of_the_land_mountain"
+        }
+      ],
+      "spell": {
+        "index": "wall_of_stone",
+        "name": "wall of stone",
+        "url": "/assets/atlas/spell/json/wall_of_stone.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_swamp",
+          "type": "feature",
+          "name": "circle of the land: swamp",
+          "url": "/assets/atlas/features/circle_of_the_land_swamp"
+        }
+      ],
+      "spell": {
+        "index": "acid_arrow",
+        "name": "acid arrow",
+        "url": "/assets/atlas/spell/json/acid_arrow.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_3",
+          "type": "level",
+          "name": "druid 3",
+          "url": "/assets/atlas/classes/druid/levels/3"
+        },
+        {
+          "index": "circle_of_the_land_swamp",
+          "type": "feature",
+          "name": "circle of the land: swamp",
+          "url": "/assets/atlas/features/circle_of_the_land_swamp"
+        }
+      ],
+      "spell": {
+        "index": "darkness",
+        "name": "darkness",
+        "url": "/assets/atlas/spell/json/darkness.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_swamp",
+          "type": "feature",
+          "name": "circle of the land: swamp",
+          "url": "/assets/atlas/features/circle_of_the_land_swamp"
+        }
+      ],
+      "spell": {
+        "index": "water_walk",
+        "name": "water walk",
+        "url": "/assets/atlas/spell/json/water_walk.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_5",
+          "type": "level",
+          "name": "druid 5",
+          "url": "/assets/atlas/classes/druid/levels/5"
+        },
+        {
+          "index": "circle_of_the_land_swamp",
+          "type": "feature",
+          "name": "circle of the land: swamp",
+          "url": "/assets/atlas/features/circle_of_the_land_swamp"
+        }
+      ],
+      "spell": {
+        "index": "stinking_cloud",
+        "name": "stinking cloud",
+        "url": "/assets/atlas/spell/json/stinking_cloud.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_swamp",
+          "type": "feature",
+          "name": "circle of the land: swamp",
+          "url": "/assets/atlas/features/circle_of_the_land_swamp"
+        }
+      ],
+      "spell": {
+        "index": "freedom_of_movement",
+        "name": "freedom of movement",
+        "url": "/assets/atlas/spell/json/freedom_of_movement.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_7",
+          "type": "level",
+          "name": "druid 7",
+          "url": "/assets/atlas/classes/druid/levels/7"
+        },
+        {
+          "index": "circle_of_the_land_swamp",
+          "type": "feature",
+          "name": "circle of the land: swamp",
+          "url": "/assets/atlas/features/circle_of_the_land_swamp"
+        }
+      ],
+      "spell": {
+        "index": "locate_creature",
+        "name": "locate creature",
+        "url": "/assets/atlas/spell/json/locate_creature.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_swamp",
+          "type": "feature",
+          "name": "circle of the land: swamp",
+          "url": "/assets/atlas/features/circle_of_the_land_swamp"
+        }
+      ],
+      "spell": {
+        "index": "insect_plague",
+        "name": "insect plague",
+        "url": "/assets/atlas/spell/json/insect_plague.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "druid_9",
+          "type": "level",
+          "name": "druid 9",
+          "url": "/assets/atlas/classes/druid/levels/9"
+        },
+        {
+          "index": "circle_of_the_land_swamp",
+          "type": "feature",
+          "name": "circle of the land: swamp",
+          "url": "/assets/atlas/features/circle_of_the_land_swamp"
+        }
+      ],
+      "spell": {
+        "index": "scrying",
+        "name": "scrying",
+        "url": "/assets/atlas/spell/json/scrying.json"
+      }
+    }
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/land/levels",
+  "url": "/assets/atlas/subclasses/json/land.json",
+  "updated_at": "2025-10-24T20:42:14.748Z",
+  "image": "/assets/atlas/subclasses/land.webp"
+}

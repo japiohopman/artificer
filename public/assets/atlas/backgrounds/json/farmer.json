@@ -1,0 +1,115 @@
+{
+  "index": "farmer",
+  "name": "Farmer",
+  "description": "You lived a life of hard work, tending the soil or raising livestock.",
+  "ability_scores": [
+    {
+      "index": "str",
+      "name": "strength",
+      "url": "/assets/atlas/ability_scores/json/str.json"
+    },
+    {
+      "index": "con",
+      "name": "constitution",
+      "url": "/assets/atlas/ability_scores/json/con.json"
+    },
+    {
+      "index": "wis",
+      "name": "wisdom",
+      "url": "/assets/atlas/ability_scores/json/wis.json"
+    }
+  ],
+  "feat": {
+    "index": "tough",
+    "name": "Tough",
+    "url": "/assets/atlas/feats/json/tough.json"
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_animal_handling",
+      "name": "Skill: Animal Handling",
+      "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json"
+    },
+    {
+      "index": "skill_nature",
+      "name": "Skill: Nature",
+      "url": "/assets/atlas/proficiencies/json/skill_nature.json"
+    },
+    {
+      "index": "carpenters_tools",
+      "name": "Carpenter'S Tools",
+      "url": "/assets/atlas/proficiencies/json/carpenters_tools.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "carpenters_tools",
+        "name": "Carpenter'S Tools",
+        "url": "/assets/atlas/equipment/json/carpenters_tools.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "pot_iron",
+        "name": "Pot Iron",
+        "url": "/assets/atlas/equipment/json/pot_iron.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "sickle",
+        "name": "Sickle",
+        "url": "/assets/atlas/equipment/json/sickle.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Clothes Traveler'S",
+        "url": "/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 23
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "Choose this background package or 50 GP",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "gold",
+                  "name": "Gold",
+                  "url": "/assets/atlas/equipment/json/gold.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "url": "/assets/atlas/backgrounds/json/farmer.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/backgrounds/wiki_image/farmer.webp"
+}

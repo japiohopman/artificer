@@ -1,0 +1,25 @@
+{
+  "level": 7,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "rogue_evasion",
+      "name": "Evasion",
+      "url": "/assets/atlas/features/json/rogue_evasion.json"
+    }
+  ],
+  "class_specific": {
+    "sneak_attack": {
+      "dice_count": 4,
+      "dice_value": 6
+    }
+  },
+  "index": "rogue_level_7",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "url": "/assets/atlas/class/levels/7/rogue_level_7.json"
+}

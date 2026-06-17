@@ -1,0 +1,145 @@
+{
+  "desc": [
+    "Stained with the phantom scent of cold stone and graveyard loam, this kit contains the desperate tools needed to breach the thresholds of the dead and the damned. Within its oil-slicked canvas, a collection of skeleton keys and silenced implements wait to serve the hands of those who prefer the shadow of a lockpick to the weight of a sword."
+  ],
+  "special": [],
+  "index": "burglars_pack",
+  "name": "burglar's pack",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+  },
+  "gear_category": {
+    "index": "equipment_packs",
+    "name": "equipment packs",
+    "url": "/assets/atlas/equipment_categories/json/equipment_packs.json"
+  },
+  "cost": {
+    "quantity": 16,
+    "unit": "gp"
+  },
+  "contents": [
+    {
+      "item": {
+        "index": "backpack",
+        "name": "backpack",
+        "url": "/assets/atlas/equipment/json/backpack.json"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "ball_bearings_bag_of_1000",
+        "name": "ball bearings (bag of 1,000)",
+        "url": "/assets/atlas/equipment/json/ball_bearings_bag_of_1000.json"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "string_10_feet",
+        "name": "string (10 feet)",
+        "url": "/assets/atlas/equipment/json/string_10_feet.json"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "bell",
+        "name": "bell",
+        "url": "/assets/atlas/equipment/json/bell.json"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "candle",
+        "name": "candle",
+        "url": "/assets/atlas/equipment/json/candle.json"
+      },
+      "quantity": 5
+    },
+    {
+      "item": {
+        "index": "crowbar",
+        "name": "crowbar",
+        "url": "/assets/atlas/equipment/json/crowbar.json"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "hammer",
+        "name": "hammer",
+        "url": "/assets/atlas/equipment/json/hammer.json"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "piton",
+        "name": "piton",
+        "url": "/assets/atlas/equipment/json/piton.json"
+      },
+      "quantity": 10
+    },
+    {
+      "item": {
+        "index": "lantern_hooded",
+        "name": "lantern, hooded",
+        "url": "/assets/atlas/equipment/json/lantern_hooded.json"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "oil_flask",
+        "name": "oil (flask)",
+        "url": "/assets/atlas/equipment/json/oil_flask.json"
+      },
+      "quantity": 2
+    },
+    {
+      "item": {
+        "index": "rations_1_day",
+        "name": "rations (1 day)",
+        "url": "/assets/atlas/equipment/json/rations_1_day.json"
+      },
+      "quantity": 5
+    },
+    {
+      "item": {
+        "index": "tinderbox",
+        "name": "tinderbox",
+        "url": "/assets/atlas/equipment/json/tinderbox.json"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "waterskin",
+        "name": "waterskin",
+        "url": "/assets/atlas/equipment/json/waterskin.json"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "rope_hempen_50_feet",
+        "name": "rope, hempen (50 feet)",
+        "url": "/assets/atlas/equipment/json/rope_hempen_50_feet.json"
+      },
+      "quantity": 1
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/burglars_pack.json",
+  "updated_at": "2026-06-05T08:00:00.000Z",
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/burglars_pack.webp",
+  "imageUrl": "/assets/atlas/equipment/images/burglars_pack.webp",
+  "_type": "equipment",
+  "kind": "equipment_pack",
+  "category": "Equipment Packs",
+  "last_updated": "5-6-2026"
+}

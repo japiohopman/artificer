@@ -1,0 +1,36 @@
+{
+  "special": [],
+  "index": "dice_set",
+  "name": "dice set",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Gaming Sets",
+  "cost": {
+    "quantity": 1,
+    "unit": "sp"
+  },
+  "weight": 0,
+  "desc": [
+    "Carved from the calcified knuckles of a gambler who cheated death, these dice feel unnaturally cold and pulse with the faint, rhythmic heartbeat of a soul forever trapped in the roll. Each face is stained with dried arterial spray, ensuring that every time they tumble, the odds are weighted by a desperate, lingering malice."
+  ],
+  "url": "/assets/atlas/equipment/json/dice_set.json",
+  "updated_at": "2026-04-11T16:15:01.192Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/dice_set.webp",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/dice_set.webp",
+  "_type": "equipment",
+  "category": "Gaming Sets",
+  "last_updated": "11-4-2026",
+  "kind": "tool",
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ]
+}

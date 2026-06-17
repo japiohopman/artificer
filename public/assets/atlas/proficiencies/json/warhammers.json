@@ -1,0 +1,18 @@
+{
+  "index": "warhammers",
+  "type": "weapons",
+  "name": "warhammers",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/warhammers.json",
+  "reference": {
+    "index": "warhammer",
+    "name": "warhammer",
+    "url": "/assets/atlas/equipment/json/warhammer.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/warhammers.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

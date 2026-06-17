@@ -1,0 +1,22 @@
+{
+  "index": "potion_of_giant_strength_stone",
+  "name": "potion of stone giant strength",
+  "equipment_category": {
+    "index": "potion",
+    "name": "potion",
+    "url": "/assets/atlas/equipment_categories/potion"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Potion, rare",
+    "When you drink this potion, your Strength score changes to 23 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score.",
+    "This potion's transparent liquid has floating in it a sliver of fingernail from a stone giant."
+  ],
+  "url": "/assets/atlas/magic_items/json/potion_of_giant_strength_stone.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/potion_of_giant_strength_stone.webp"
+}

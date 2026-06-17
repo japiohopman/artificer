@@ -1,0 +1,30 @@
+{
+  "index": "ring_of_resistance_thunder",
+  "name": "ring of thunder resistance",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Ring, rare (requires attunement)",
+    "You have resistance to thunder damage while wearing this spinel ring."
+  ],
+  "url": "/assets/atlas/magic_items/json/ring_of_resistance_thunder.json",
+  "updated_at": "2026-04-29T01:09:49.382Z",
+  "image": "/assets/atlas/magic_items/ring_of_resistance_thunder.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/ring_of_resistance_thunder.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "ring-1",
+    "ring-2"
+  ],
+  "category": "Ring",
+  "last_updated": "29-4-2026"
+}

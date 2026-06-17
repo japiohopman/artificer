@@ -1,0 +1,63 @@
+{
+  "index": "infernal_legacy",
+  "races": [
+    {
+      "index": "tiefling",
+      "name": "tiefling",
+      "url": "/assets/atlas/species/json/tiefling.json"
+    }
+  ],
+  "subraces": [],
+  "name": "infernal legacy",
+  "desc": [
+    "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+  ],
+  "proficiencies": [],
+  "trait_specific": {
+    "spellcasting_ability": {
+      "index": "charisma",
+      "name": "charisma",
+      "url": "/assets/atlas/ability_scores/json/cha.json"
+    },
+    "spells": [
+      {
+        "spell": {
+          "index": "thaumaturgy",
+          "name": "thaumaturgy",
+          "url": "/assets/atlas/spell/json/thaumaturgy.json"
+        },
+        "usage": {
+          "type": "at will"
+        }
+      },
+      {
+        "spell": {
+          "index": "hellish_rebuke",
+          "name": "hellish rebuke",
+          "url": "/assets/atlas/spell/json/hellish_rebuke.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "long_rest"
+        },
+        "level_required": 3,
+        "spell_level": 2
+      },
+      {
+        "spell": {
+          "index": "darkness",
+          "name": "darkness",
+          "url": "/assets/atlas/spell/json/darkness.json"
+        },
+        "usage": {
+          "times": 1,
+          "type": "long_rest"
+        },
+        "level_required": 5
+      }
+    ]
+  },
+  "url": "/assets/atlas/traits/json/infernal_legacy.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "/assets/atlas/traits/infernal_legacy.webp"
+}

@@ -1,0 +1,20 @@
+{
+  "index": "soul_of_artifice",
+  "class": {
+    "index": "artificer",
+    "name": "artificer",
+    "url": "/assets/atlas/class/json/artificer.json"
+  },
+  "name": "soul of artifice",
+  "level": 20,
+  "prerequisites": [],
+  "desc": [
+    "At 20th level, you develop a mystical connection to your magic items, which can draw on to protect you:",
+    "• You gain a +1 bonus to all saving throws per magic item you are currently attuned to.",
+    "• If you're reduced to 0 hit points but not killed outright, you can use your reaction to end one of your artificer infusions, causing you to drop to 1 hit point instead of 0."
+  ],
+  "url": "/assets/atlas/features/json/soul_of_artifice.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/soul_of_artifice.webp",
+  "feature_specific": {}
+}

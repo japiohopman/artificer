@@ -1,0 +1,75 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "dagger",
+  "name": "dagger",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d4",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 1,
+  "properties": [
+    {
+      "index": "finesse",
+      "name": "finesse",
+      "url": "/assets/atlas/weapon_properties/finesse"
+    },
+    {
+      "index": "light",
+      "name": "light",
+      "url": "/assets/atlas/weapon_properties/light"
+    },
+    {
+      "index": "thrown",
+      "name": "thrown",
+      "url": "/assets/atlas/weapon_properties/thrown"
+    },
+    {
+      "index": "monk",
+      "name": "monk",
+      "url": "/assets/atlas/weapon_properties/monk"
+    }
+  ],
+  "throw_range": {
+    "normal": 20,
+    "long": 60
+  },
+  "url": "/assets/atlas/equipment/json/dagger.json",
+  "updated_at": "2026-04-28T13:26:26.921Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/dagger.webp",
+  "sprite_index": 23,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/equipment/images/dagger.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand"
+  ],
+  "category": "Simple Melee Weapons",
+  "last_updated": "28-4-2026",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

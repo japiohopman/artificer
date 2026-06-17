@@ -1,0 +1,61 @@
+{
+  "index": "hunters_prey",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "subclass": {
+    "index": "hunter",
+    "name": "hunter",
+    "url": "/assets/atlas/subclasses/json/hunter.json"
+  },
+  "name": "hunter's prey",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "At 3rd level, you gain one of the following features of your choice.",
+    "Colossus Slayer",
+    "Giant Killer",
+    "Horde Breaker"
+  ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "feature",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "hunters_prey_colossus_slayer",
+              "name": "hunter's prey: colossus slayer",
+              "url": "/assets/atlas/features/json/hunters_prey_colossus_slayer.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "hunters_prey_giant_killer",
+              "name": "hunter's prey: giant killer",
+              "url": "/assets/atlas/features/json/hunters_prey_giant_killer.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "hunters_prey_horde_breaker",
+              "name": "hunter's prey: horde breaker",
+              "url": "/assets/atlas/features/json/hunters_prey_horde_breaker.json"
+            }
+          }
+        ]
+      }
+    },
+    "invocations": []
+  },
+  "url": "/assets/atlas/features/json/hunters_prey.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "/assets/atlas/features/images/hunters_prey.webp"
+}

@@ -1,0 +1,49 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "wagon",
+  "name": "wagon",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 35,
+    "unit": "gp"
+  },
+  "weight": 400,
+  "url": "/assets/atlas/transport/json/wagon.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/transport/images/wagon.webp",
+  "sprite_index": 24,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/images/wagon.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Land Vehicles",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "2-5-2026",
+  "transport_type": "vehicle",
+  "speed": {
+    "land": {
+      "ft_per_round": 30,
+      "mph": 3.41
+    }
+  },
+  "combat_stats": {
+    "armor_class": 12,
+    "hit_points": 100,
+    "damage_threshold": 0
+  },
+  "capacity": {
+    "crew_required": 1,
+    "max_passengers": 6
+  },
+  "transport_specific": {}
+}

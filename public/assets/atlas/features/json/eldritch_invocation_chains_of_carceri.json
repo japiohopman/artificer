@@ -1,0 +1,32 @@
+{
+  "index": "eldritch_invocation_chains_of_carceri",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "eldritch invocation: chains of carceri",
+  "level": 15,
+  "prerequisites": [
+    {
+      "type": "level",
+      "level": 15
+    },
+    {
+      "type": "feature",
+      "feature": "public/assets/atlas/features/pact-of-the-chain.json"
+    }
+  ],
+  "desc": [
+    "You can cast hold monster at will--targeting a celestial, fiend, or elemental--without expending a spell slot or material components. You must finish a long rest before you can use this invocation on the same creature again."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "/assets/atlas/features/eldritch_invocations.json"
+  },
+  "url": "/assets/atlas/features/json/eldritch_invocation_chains_of_carceri.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/eldritch_invocation_chains_of_carceri.webp",
+  "feature_specific": {}
+}

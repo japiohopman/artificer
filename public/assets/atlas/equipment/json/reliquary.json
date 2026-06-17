@@ -1,0 +1,43 @@
+{
+  "special": [],
+  "index": "reliquary",
+  "name": "reliquary",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "holy_symbols",
+    "name": "holy symbols",
+    "url": "/assets/atlas/equipment_categories/holy_symbols"
+  },
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "desc": [
+    "A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic.",
+    "Appendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
+  ],
+  "url": "/assets/atlas/equipment/json/reliquary.json",
+  "updated_at": "2026-04-22T16:17:35.911Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/reliquary.webp",
+  "sprite_index": 21,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/reliquary.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "focus"
+  ],
+  "last_updated": "22-4-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

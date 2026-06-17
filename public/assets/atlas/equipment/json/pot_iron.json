@@ -1,0 +1,37 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "pot_iron",
+  "name": "pot, iron",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 10,
+  "url": "/assets/atlas/equipment/json/pot_iron.json",
+  "updated_at": "2026-06-13T21:04:15.711Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/pot_iron.webp",
+  "sprite_index": 12,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.0webp",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "13-6-2026"
+}

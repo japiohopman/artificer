@@ -1,0 +1,139 @@
+{
+  "index": "phthisic",
+  "name": "phthisic",
+  "size": "Large",
+  "type": "aberration",
+  "alignment": "chaotic evil",
+  "armor_class": 18,
+  "hit_points": 126,
+  "hit_dice": "12d10+60",
+  "hit_points_roll": "12d10+60",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 23,
+  "dexterity": 12,
+  "constitution": 21,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 14,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 16
+  },
+  "languages": "Undercommon",
+  "challenge_rating": "6",
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [
+    {
+      "name": "mind feed",
+      "desc": "When the phthisic hits a creature with its bite attack, the target must succeed on a DC 15 Intelligence saving throw or take 7 (2d6) psychic damage, and its Intelligence score is reduced by 1d4.0 The target dies if this reduces its Intelligence to 0.0 Otherwise, the reduction lasts until the target finishes a short or long rest.",
+      "dc": {
+        "dc_type": {
+          "index": "int",
+          "name": "int",
+          "url": "/assets/atlas/ability_scores/json/int.json"
+        },
+        "dc_value": 15,
+        "success_type": "none"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "psychic",
+            "name": "psychic",
+            "url": "/assets/atlas/damage_types/json/psychic.json"
+          },
+          "damage_dice": "2d6"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The phthisic makes three attacks: one with its bite and two with its claws.",
+      "damage": []
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 15 (2d8 + 6) piercing damage plus mind feed.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/phthisic.webp",
+  "url": "/assets/atlas/enemies/json/phthisic.json",
+  "updated_at": "2026-06-04T13:48:05.989Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.0webp",
+  "rarity": "Rare",
+  "background_type": "underdark",
+  "item_drops": [
+    {
+      "name": "phthisic tooth",
+      "rarity": "Uncommon",
+      "quantity": "1",
+      "type": "material"
+    }
+  ],
+  "tags": [
+    "living",
+    "abomination",
+    "psionic"
+  ],
+  "stats": {
+    "str": 23,
+    "dex": 12,
+    "con": 21,
+    "int": 10,
+    "wis": 14,
+    "cha": 14
+  },
+  "imageUrl": "/assets/atlas/enemies/images/phthisic.webp",
+  "_type": "enemies",
+  "last_updated": "4-6-2026"
+}

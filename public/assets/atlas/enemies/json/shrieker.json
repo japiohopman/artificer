@@ -1,0 +1,75 @@
+{
+  "index": "shrieker",
+  "name": "shrieker",
+  "size": "Medium",
+  "type": "plant",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 5
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8",
+  "speed": {
+    "walk": "0 ft."
+  },
+  "strength": 1,
+  "dexterity": 1,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 3,
+  "charisma": 1,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "blinded",
+      "name": "blinded",
+      "url": "/assets/atlas/conditions/blinded"
+    },
+    {
+      "index": "blinded",
+      "name": "blinded",
+      "url": "/assets/atlas/conditions/blinded"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "/assets/atlas/conditions/frightened"
+    }
+  ],
+  "senses": {
+    "blindsight": "30 ft. (blind beyond this radius)",
+    "passive_perception": 6
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "false appearance",
+      "desc": "While the shrieker remains motionless, it is indistinguishable from an ordinary fungus.",
+      "damage": []
+    }
+  ],
+  "reactions": [
+    {
+      "name": "shriek",
+      "desc": "When bright light or a creature is within 30 feet of the shrieker, it emits a shriek audible within 300 feet of it. The shrieker continues to shriek until the disturbance moves out of range and for 1d4 of the shrieker's turns afterward"
+    }
+  ],
+  "image": "/assets/atlas/enemies/shrieker.webp",
+  "url": "/assets/atlas/enemies/json/shrieker.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "actions": [],
+  "forms": [],
+  "legendary_actions": [],
+  "sprite_index": 3,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet11.webp"
+}

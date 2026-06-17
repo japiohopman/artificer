@@ -1,0 +1,18 @@
+{
+  "index": "skill_acrobatics",
+  "type": "skills",
+  "name": "skill: acrobatics",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/skill_acrobatics.json",
+  "reference": {
+    "index": "acrobatics",
+    "name": "acrobatics",
+    "url": "/assets/atlas/skills/json/acrobatics.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/skills/json/acrobatics.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
+}

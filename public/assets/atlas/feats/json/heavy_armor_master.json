@@ -1,0 +1,30 @@
+{
+  "index": "heavy_armor_master",
+  "name": "heavy armor master",
+  "prerequisites": [
+    {
+      "stat": "feature",
+      "operator": "==",
+      "value": true,
+      "desc": "Proficiency with heavy armor"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You can use your armor to deflect strikes that would kill others. You gain the following benefits:",
+    "- Increase your Strength score by 1, to a maximum of 20.",
+    "- While you are wearing heavy armor, bludgeoning, piercing, and slashing damage that you take from nonmagical attacks is reduced by 3."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "strength_bonus": 1
+    }
+  },
+  "url": "/assets/atlas/feats/json/heavy_armor_master.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/heavy_armor_master.webp"
+}

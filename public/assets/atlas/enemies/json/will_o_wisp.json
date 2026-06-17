@@ -1,0 +1,159 @@
+{
+  "index": "will_o_wisp",
+  "name": "will_o'_wisp",
+  "size": "Tiny",
+  "type": "undead",
+  "alignment": "chaotic evil",
+  "armor_class": 19,
+  "hit_points": 22,
+  "hit_dice": "9d4",
+  "hit_points_roll": "9d4",
+  "speed": {
+    "walk": "0 ft.",
+    "fly": "50 ft.",
+    "hover": true
+  },
+  "strength": 1,
+  "dexterity": 28,
+  "constitution": 10,
+  "intelligence": 13,
+  "wisdom": 14,
+  "charisma": 11,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "acid",
+    "cold",
+    "fire",
+    "necrotic",
+    "thunder",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "lightning",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "/assets/atlas/conditions/exhaustion"
+    },
+    {
+      "index": "grappled",
+      "name": "grappled",
+      "url": "/assets/atlas/conditions/grappled"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "/assets/atlas/conditions/paralyzed"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "/assets/atlas/conditions/poisoned"
+    },
+    {
+      "index": "prone",
+      "name": "prone",
+      "url": "/assets/atlas/conditions/prone"
+    },
+    {
+      "index": "restrained",
+      "name": "restrained",
+      "url": "/assets/atlas/conditions/restrained"
+    },
+    {
+      "index": "unconscious",
+      "name": "unconscious",
+      "url": "/assets/atlas/conditions/unconscious"
+    }
+  ],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 12
+  },
+  "languages": "the languages it knew in life",
+  "challenge_rating": "2",
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "consume life",
+      "desc": "As a bonus action, the will-o'-wisp can target one creature it can see within 5 ft. of it that has 0 hit points and is still alive. The target must succeed on a DC 10 Constitution saving throw against this magic or die. If the target dies, the will-o'-wisp regains 10 (3d6) hit points.",
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "con",
+          "url": "/assets/atlas/ability_scores/json/con.json"
+        },
+        "dc_value": 10,
+        "success_type": "none"
+      },
+      "damage": []
+    },
+    {
+      "name": "ephemeral",
+      "desc": "The will-o'-wisp can't wear or carry anything.",
+      "damage": []
+    },
+    {
+      "name": "incorporeal movement",
+      "desc": "The will-o'-wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.",
+      "damage": []
+    },
+    {
+      "name": "variable illumination",
+      "desc": "The will-o'-wisp sheds bright light in a 5- to 20-foot radius and dim light for an additional number of ft. equal to the chosen radius. The will-o'-wisp can alter the radius as a bonus action.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "shock",
+      "desc": "Melee Spell Attack: +4 to hit, reach 5 ft., one creature. Hit: 9 (2d8) lightning damage.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "lightning",
+            "name": "lightning",
+            "url": "/assets/atlas/damage_types/json/lightning.json"
+          },
+          "damage_dice": "2d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "invisibility",
+      "desc": "The will-o'-wisp and its light magically become invisible until it attacks or uses its Consume Life, or until its concentration ends (as if concentrating on a spell).",
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/will_o_wisp.webp",
+  "url": "/assets/atlas/enemies/json/will_o_wisp.json",
+  "updated_at": "2026-05-18T10:43:08.371Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 16,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet13.webp",
+  "wikiData": {},
+  "imageUrl": "/assets/atlas/enemies/images/will_o_wisp.webp",
+  "last_updated": "18-5-2026",
+  "stats": {
+    "str": 1,
+    "dex": 28,
+    "con": 10,
+    "int": 13,
+    "wis": 14,
+    "cha": 11
+  },
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "lore": "/assets/atlas/enemies/enemies_wiki/will_o_wisp.json",
+  "rarity": "Uncommon"
+}

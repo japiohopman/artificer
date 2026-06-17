@@ -1,0 +1,13 @@
+{
+  "id": "port_llast",
+  "name": "port_llast",
+  "type": "settlement",
+  "parent": "towns_settlements",
+  "title": "Port Llast",
+  "description": "A harbor town closely allied with [[Neverwinter]].",
+  "image": "port_llast.webp",
+  "coordinates": {
+    "lat": 447.75,
+    "lng": 2765.5
+  }
+}

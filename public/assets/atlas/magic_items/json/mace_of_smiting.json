@@ -1,0 +1,56 @@
+{
+  "index": "mace_of_smiting",
+  "name": "mace of smiting",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "rarity": "Rare",
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Weapon (mace), rare",
+    "You gain a +1 bonus to attack and damage rolls made with this magic weapon. The bonus increases to +3 when you use the mace to attack a construct.",
+    "When you roll a 20 on an attack roll made with this weapon, the target takes an extra 2d6 bludgeoning damage, or 4d6 bludgeoning damage if it's a construct. If a construct has 25 hit points or fewer after taking this damage, it is destroyed."
+  ],
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "secondary_effects": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      },
+      "condition": "on critical hit"
+    },
+    {
+      "damage_dice": "4d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      },
+      "condition": "on critical hit vs constructs"
+    }
+  ],
+  "url": "/assets/atlas/magic_items/json/mace_of_smiting.json",
+  "updated_at": "2026-05-04T17:32:08.715Z",
+  "image": "/assets/atlas/magic_items/mace_of_smiting.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/mace_of_smiting.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "4-5-2026"
+}

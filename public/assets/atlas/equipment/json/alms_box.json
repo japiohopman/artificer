@@ -1,0 +1,39 @@
+{
+  "special": [],
+  "index": "alms_box",
+  "name": "alms box",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 0,
+    "unit": "cp"
+  },
+  "weight": 0,
+  "desc": [
+    "A small box for alms, typically found in a priest's pack."
+  ],
+  "url": "/assets/atlas/equipment/json/alms_box.json",
+  "updated_at": "2026-06-12T05:01:49.655Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/alms_box.webp",
+  "sprite_index": 4,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.0webp",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/alms_box.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
+}

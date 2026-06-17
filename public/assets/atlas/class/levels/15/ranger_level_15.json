@@ -1,0 +1,31 @@
+{
+  "level": 15,
+  "ability_score_bonuses": 3,
+  "prof_bonus": 5,
+  "features": [
+    {
+      "index": "ranger_archetype_improvement_3",
+      "name": "Ranger Archetype feature",
+      "url": "/assets/atlas/features/json/ranger_archetype_improvement_3.json"
+    }
+  ],
+  "class_specific": {
+    "favored_enemies": 3,
+    "favored_terrain": 3
+  },
+  "index": "ranger_level_15",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "url": "/assets/atlas/class/levels/15/ranger_level_15.json",
+  "spellcasting": {
+    "spells_known": 9,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 2,
+    "spell_slots_level_5": 0
+  }
+}

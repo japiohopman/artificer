@@ -1,0 +1,37 @@
+{
+  "index": "chaotic_evil",
+  "name": "Chaotic Evil",
+  "abbreviation": "CE",
+  "color": "#BE123C",
+  "desc": "Chaotic evil (CE) creatures act with arbitrary violence, spurred by their greed, hatred, or bloodlust.",
+  "description": "Chaotic evil (CE) creatures act with arbitrary violence, spurred by their greed, hatred, or bloodlust. Demons, red dragons, and orcs are chaotic evil.",
+  "gods": [
+    {
+      "index": "beshaba",
+      "name": "Beshaba",
+      "url": "/assets/atlas/gods/beshaba.json"
+    },
+    {
+      "index": "cyric",
+      "name": "Cyric",
+      "url": "/assets/atlas/gods/cyric.json"
+    },
+    {
+      "index": "malar",
+      "name": "Malar",
+      "url": "/assets/atlas/gods/malar.json"
+    },
+    {
+      "index": "talona",
+      "name": "Talona",
+      "url": "/assets/atlas/gods/talona.json"
+    },
+    {
+      "index": "talos",
+      "name": "Talos",
+      "url": "/assets/atlas/gods/talos.json"
+    }
+  ],
+  "url": "/assets/atlas/alignments/json/chaotic_evil.json",
+  "updated_at": "2026-06-06T10:34:52.343224Z"
+}

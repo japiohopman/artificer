@@ -1,0 +1,23 @@
+{
+  "index": "evocation_savant",
+  "class": {
+    "index": "wizard",
+    "name": "wizard",
+    "url": "/assets/atlas/class/json/wizard.json"
+  },
+  "name": "evocation savant",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "Beginning when you select this school at 2nd level, the gold and time you must spend to copy an evocation spell into your spellbook is halved."
+  ],
+  "url": "/assets/atlas/features/json/evocation_savant.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/evocation_savant.webp",
+  "magic_school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "feature_specific": {}
+}

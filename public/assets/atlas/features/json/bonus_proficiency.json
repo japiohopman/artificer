@@ -1,0 +1,23 @@
+{
+  "index": "bonus_proficiency",
+  "class": {
+    "index": "cleric",
+    "name": "cleric",
+    "url": "/assets/atlas/class/json/cleric.json"
+  },
+  "subclass": {
+    "index": "life",
+    "name": "life",
+    "url": "/assets/atlas/subclasses/json/life.json"
+  },
+  "name": "bonus proficiency",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "When you choose this domain at 1st level, you gain proficiency with heavy armor."
+  ],
+  "url": "/assets/atlas/features/json/bonus_proficiency.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/bonus_proficiency.webp",
+  "feature_specific": {}
+}

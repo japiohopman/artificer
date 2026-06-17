@@ -1,0 +1,120 @@
+{
+  "index": "giant_eagle",
+  "name": "giant eagle",
+  "desc": "A giant eagle is a noble creature that speaks its own language and understands speech in the Common tongue. A mated pair of giant eagles typically has up to four eggs or young in their nest (treat the young as normal eagles).",
+  "size": "Large",
+  "type": "beast",
+  "alignment": "neutral good",
+  "armor_class": 13,
+  "hit_points": 26,
+  "hit_dice": "4d10",
+  "hit_points_roll": "4d10+4",
+  "speed": {
+    "walk": "10 ft.",
+    "fly": "80 ft."
+  },
+  "strength": 16,
+  "dexterity": 17,
+  "constitution": 13,
+  "intelligence": 8,
+  "wisdom": 14,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "Giant Eagle, understands Common and Auran but can't speak",
+  "challenge_rating": "1",
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "keen sight",
+      "desc": "The eagle has advantage on Wisdom (Perception) checks that rely on sight.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The eagle makes two attacks: one with its beak and one with its talons.",
+      "actions": [
+        {
+          "action_name": "Beak",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Talons",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "beak",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "talons",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/giant_eagle.webp",
+  "url": "/assets/atlas/enemies/json/giant_eagle.json",
+  "updated_at": "2026-06-08T13:46:28.125Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 20,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet5.0webp",
+  "stats": {
+    "str": 16,
+    "dex": 17,
+    "con": 13,
+    "int": 8,
+    "wis": 14,
+    "cha": 10
+  },
+  "imageUrl": "/assets/atlas/enemies/images/giant_eagle.webp",
+  "last_updated": "8-6-2026"
+}

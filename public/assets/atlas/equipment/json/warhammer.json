@@ -1,0 +1,64 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "warhammer",
+  "name": "warhammer",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 15,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 2,
+  "properties": [
+    {
+      "index": "versatile",
+      "name": "versatile",
+      "url": "/assets/atlas/weapon_properties/versatile"
+    }
+  ],
+  "two_handed_damage": {
+    "damage_dice": "1d10",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "url": "/assets/atlas/equipment/json/warhammer.json",
+  "updated_at": "2026-06-13T20:36:19.975Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/warhammer.webp",
+  "sprite_index": 2,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet10.0webp",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/warhammer.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "last_updated": "13-6-2026"
+}

@@ -1,0 +1,24 @@
+{
+  "index": "song_of_rest_d8",
+  "class": {
+    "index": "bard",
+    "name": "bard",
+    "url": "/assets/atlas/class/json/bard.json"
+  },
+  "name": "song of rest (d8)",
+  "level": 9,
+  "prerequisites": [],
+  "desc": [
+    "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest by spending one or more Hit Dice, each of those creatures regains an extra 1d6 hit points. ",
+    "The extra hit points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level."
+  ],
+  "url": "/assets/atlas/features/json/song_of_rest_d8.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/song_of_rest_d8.webp",
+  "feature_specific": {
+    "healing": {
+      "dice": "1d8",
+      "condition": "short_rest"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "desc": [
+    "A collection of items for hunting monsters."
+  ],
+  "special": [],
+  "index": "monster_hunters_pack",
+  "name": "monster hunter's pack",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "cost": {
+    "quantity": 33,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/monster_hunters_pack.json",
+  "updated_at": "2026-06-12T17:15:39.159Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/monster_hunters_pack.webp",
+  "imageUrl": "/assets/atlas/equipment/images/monster_hunters_pack.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "12-6-2026",
+  "gear_category": {
+    "index": "equipment_packs",
+    "name": "equipment packs",
+    "url": "/assets/atlas/equipment_categories/equipment_packs"
+  },
+  "category": "Equipment Packs",
+  "kind": "equipment_pack"
+}

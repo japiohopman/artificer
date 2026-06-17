@@ -1,0 +1,40 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "signet_ring",
+  "name": "signet ring",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/signet_ring.json",
+  "updated_at": "2026-05-09T18:34:27.668Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/signet_ring.webp",
+  "sprite_index": 22,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/signet_ring.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "9-5-2026",
+  "kind": "trinket",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

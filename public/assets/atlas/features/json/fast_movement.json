@@ -1,0 +1,18 @@
+{
+  "index": "fast_movement",
+  "class": {
+    "index": "barbarian",
+    "name": "barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "name": "fast movement",
+  "level": 5,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor."
+  ],
+  "url": "/assets/atlas/features/json/fast_movement.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/fast_movement.webp",
+  "feature_specific": {}
+}

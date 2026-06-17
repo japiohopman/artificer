@@ -1,0 +1,40 @@
+{
+  "special": [],
+  "index": "dulcimer",
+  "name": "dulcimer",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Musical Instrument",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 10,
+  "desc": [
+    "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+  ],
+  "image": "/assets/atlas/equipment/images/dulcimer.webp",
+  "url": "/assets/atlas/equipment/json/dulcimer.json",
+  "updated_at": "2026-05-01T08:04:55.501Z",
+  "contents": [],
+  "properties": [],
+  "sprite_index": 5,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/dulcimer.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "tool"
+  ],
+  "category": "Tools",
+  "last_updated": "1-5-2026",
+  "kind": "tool",
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ]
+}

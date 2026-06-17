@@ -1,0 +1,24 @@
+{
+  "level": 11,
+  "ability_score_bonuses": 2,
+  "prof_bonus": 4,
+  "features": [
+    {
+      "index": "relentless_rage",
+      "name": "Relentless Rage",
+      "url": "/assets/atlas/features/json/relentless_rage.json"
+    }
+  ],
+  "class_specific": {
+    "rage_count": 4,
+    "rage_damage_bonus": 3,
+    "brutal_critical_dice": 1
+  },
+  "index": "barbarian_level_11",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "url": "/assets/atlas/class/levels/11/barbarian_level_11.json"
+}

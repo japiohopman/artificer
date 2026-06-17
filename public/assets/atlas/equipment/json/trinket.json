@@ -1,0 +1,41 @@
+{
+  "desc": [
+    "A small, mysterious object."
+  ],
+  "special": [],
+  "index": "trinket",
+  "name": "trinket",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/trinket.json",
+  "updated_at": "2026-06-13T20:41:02.498Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/trinket.webp",
+  "imageUrl": "/assets/atlas/equipment/images/trinket.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "13-6-2026",
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "category": "Standard Gear",
+  "kind": "trinket",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

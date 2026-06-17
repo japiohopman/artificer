@@ -1,0 +1,28 @@
+{
+  "index": "multiattack_whirlwind_attack",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "subclass": {
+    "index": "hunter",
+    "name": "hunter",
+    "url": "/assets/atlas/subclasses/json/hunter.json"
+  },
+  "name": "multiattack: whirlwind attack",
+  "level": 11,
+  "prerequisites": [],
+  "desc": [
+    "You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target."
+  ],
+  "parent": {
+    "index": "multiattack",
+    "name": "multiattack",
+    "url": "/assets/atlas/features/multiattack.json"
+  },
+  "url": "/assets/atlas/features/json/multiattack_whirlwind_attack.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/multiattack_whirlwind_attack.webp",
+  "feature_specific": {}
+}

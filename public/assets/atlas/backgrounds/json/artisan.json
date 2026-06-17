@@ -1,0 +1,107 @@
+{
+  "index": "artisan",
+  "name": "Artisan",
+  "description": "You served an apprenticeship with a master crafter, learning a trade.",
+  "ability_scores": [
+    {
+      "index": "str",
+      "name": "strength",
+      "url": "/assets/atlas/ability_scores/json/str.json"
+    },
+    {
+      "index": "dex",
+      "name": "dexterity",
+      "url": "/assets/atlas/ability_scores/json/dex.json"
+    },
+    {
+      "index": "int",
+      "name": "intelligence",
+      "url": "/assets/atlas/ability_scores/json/int.json"
+    }
+  ],
+  "feat": {
+    "index": "crafter",
+    "name": "Crafter",
+    "url": "/assets/atlas/feats/json/crafter.json"
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_investigation",
+      "name": "Skill: Investigation",
+      "url": "/assets/atlas/proficiencies/json/skill_investigation.json"
+    },
+    {
+      "index": "skill_persuasion",
+      "name": "Skill: Persuasion",
+      "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
+    },
+    {
+      "index": "potters_tools",
+      "name": "Potters Tools",
+      "url": "/assets/atlas/proficiencies/json/potters_tools.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "abacus",
+        "name": "Abacus",
+        "url": "/assets/atlas/equipment/json/abacus.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "scale_merchants",
+        "name": "Scale Merchant'S",
+        "url": "/assets/atlas/equipment/json/scale_merchants.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Clothes Traveler'S",
+        "url": "/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 25
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "Choose this background package or 50 GP",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "gold",
+                  "name": "Gold",
+                  "url": "/assets/atlas/equipment/json/gold.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "url": "/assets/atlas/backgrounds/json/artisan.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/backgrounds/wiki_image/artisan.webp"
+}

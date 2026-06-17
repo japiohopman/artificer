@@ -1,0 +1,358 @@
+{
+  "index": "mummy_lord",
+  "name": "mummy lord",
+  "size": "Medium",
+  "type": "undead",
+  "alignment": "lawful evil",
+  "armor_class": 17,
+  "hit_points": 97,
+  "hit_dice": "13d8",
+  "hit_points_roll": "13d8+39",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 18,
+  "dexterity": 10,
+  "constitution": 17,
+  "intelligence": 11,
+  "wisdom": 18,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving_throw_int",
+        "name": "saving throw: int",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_int.json"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_cha.json"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill_history",
+        "name": "skill: history",
+        "url": "/assets/atlas/proficiencies/json/skill_history.json"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill_religion",
+        "name": "skill: religion",
+        "url": "/assets/atlas/proficiencies/json/skill_religion.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "necrotic",
+    "poison",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "/assets/atlas/conditions/json/charmed.json"
+    },
+    {
+      "index": "exhaustion",
+      "name": "exhaustion",
+      "url": "/assets/atlas/conditions/json/exhaustion.json"
+    },
+    {
+      "index": "frightened",
+      "name": "frightened",
+      "url": "/assets/atlas/conditions/json/frightened.json"
+    },
+    {
+      "index": "paralyzed",
+      "name": "paralyzed",
+      "url": "/assets/atlas/conditions/json/paralyzed.json"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "/assets/atlas/conditions/json/poisoned.json"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "languages": "the languages it knew in life",
+  "challenge_rating": "15",
+  "proficiency_bonus": 5,
+  "xp": 13000,
+  "special_abilities": [
+    {
+      "name": "magic resistance",
+      "desc": "The mummy lord has advantage on saving throws against spells and other magical effects.",
+      "damage": []
+    },
+    {
+      "name": "rejuvenation",
+      "desc": "A destroyed mummy lord gains a new body in 24 hours if its heart is intact, regaining all its hit points and becoming active again. The new body appears within 5 feet of the mummy lord's heart.",
+      "damage": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The mummy lord is a 10th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 17, +9 to hit with spell attacks). The mummy lord has the following cleric spells prepared:\n\n- Cantrips (at will): sacred flame, thaumaturgy\n- 1st level (4 slots): command, guiding bolt, shield of faith\n- 2nd level (3 slots): hold person, silence, spiritual weapon\n- 3rd level (3 slots): animate dead, dispel magic\n- 4th level (3 slots): divination, guardian of faith\n- 5th level (2 slots): contagion, insect plague\n- 6th level (1 slot): harm",
+      "spellcasting": {
+        "level": 10,
+        "ability": {
+          "index": "wis",
+          "name": "wis",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
+        },
+        "dc": 17,
+        "modifier": 9,
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "school": "cleric",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 2,
+          "6": 1
+        },
+        "spells": [
+          {
+            "name": "sacred flame",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/json/sacred_flame.json"
+          },
+          {
+            "name": "thaumaturgy",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/json/thaumaturgy.json"
+          },
+          {
+            "name": "command",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/command.json"
+          },
+          {
+            "name": "guiding bolt",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/guiding_bolt.json"
+          },
+          {
+            "name": "shield of faith",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/shield_of_faith.json"
+          },
+          {
+            "name": "hold person",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/hold_person.json"
+          },
+          {
+            "name": "silence",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/silence.json"
+          },
+          {
+            "name": "spiritual weapon",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/spiritual_weapon.json"
+          },
+          {
+            "name": "animate dead",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/json/animate_dead.json"
+          },
+          {
+            "name": "dispel magic",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/json/dispel_magic.json"
+          },
+          {
+            "name": "divination",
+            "level": 4,
+            "url": "/assets/atlas/spell/json/json/divination.json"
+          },
+          {
+            "name": "guardian of faith",
+            "level": 4,
+            "url": "/assets/atlas/spell/json/json/guardian_of_faith.json"
+          },
+          {
+            "name": "contagion",
+            "level": 5,
+            "url": "/assets/atlas/spell/json/json/constitutiontagion.json"
+          },
+          {
+            "name": "insect plague",
+            "level": 5,
+            "url": "/assets/atlas/spell/json/json/insect_plague.json"
+          },
+          {
+            "name": "harm",
+            "level": 6,
+            "url": "/assets/atlas/spell/json/json/harm.json"
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The mummy can use its Dreadful Glare and makes one attack with its rotting fist.",
+      "actions": [
+        {
+          "action_name": "Dreadful Glare",
+          "count": "1",
+          "type": "ability"
+        },
+        {
+          "action_name": "Rotting Fist",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "rotting fist",
+      "desc": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 14 (3d6 + 4) bludgeoning damage plus 21 (6d6) necrotic damage. If the target is a creature, it must succeed on a DC 16 Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 (3d6) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the remove curse spell or other magic.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d6+4"
+        },
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "/assets/atlas/damage_types/json/necrotic.json"
+          },
+          "damage_dice": "6d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "dreadful glare",
+      "desc": "The mummy lord targets one creature it can see within 60 feet of it. If the target can see the mummy lord, it must succeed on a DC 16 Wisdom saving throw against this magic or become frightened until the end of the mummy's next turn. If the target fails the saving throw by 5 or more, it is also paralyzed for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies and mummy lords for the next 24 hours.",
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "wis",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
+        },
+        "dc_value": 16,
+        "success_type": "none"
+      },
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "attack",
+      "desc": "The mummy lord makes one attack with its rotting fist or uses its Dreadful Glare.",
+      "damage": []
+    },
+    {
+      "name": "blinding dust",
+      "desc": "Blinding dust and sand swirls magically around the mummy lord. Each creature within 5 feet of the mummy lord must succeed on a DC 16 Constitution saving throw or be blinded until the end of the creature's next turn.",
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "con",
+          "url": "/assets/atlas/ability_scores/json/con.json"
+        },
+        "dc_value": 16,
+        "success_type": "none"
+      },
+      "damage": []
+    },
+    {
+      "name": "blasphemous word (costs 2 actions)",
+      "desc": "The mummy lord utters a blasphemous word. Each non-undead creature within 10 feet of the mummy lord that can hear the magical utterance must succeed on a DC 16 Constitution saving throw or be stunned until the end of the mummy lord's next turn.",
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "con",
+          "url": "/assets/atlas/ability_scores/json/con.json"
+        },
+        "dc_value": 16,
+        "success_type": "none"
+      },
+      "damage": []
+    },
+    {
+      "name": "channel negative energy (costs 2 actions)",
+      "desc": "The mummy lord magically unleashes negative energy. Creatures within 60 feet of the mummy lord, including ones behind barriers and around corners, can't regain hit points until the end of the mummy lord's next turn.",
+      "damage": []
+    },
+    {
+      "name": "whirlwind of sand (costs 2 actions)",
+      "desc": "The mummy lord magically transforms into a whirlwind of sand, moves up to 60 feet, and reverts to its normal form. While in whirlwind form, the mummy lord is immune to all damage, and it can't be grappled, petrified, knocked prone, restrained, or stunned. Equipment worn or carried by the mummy lord remain in its possession.",
+      "damage": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/mummy_lord.webp",
+  "url": "/assets/atlas/enemies/json/mummy_lord.json",
+  "updated_at": "2026-05-18T10:52:00.785Z",
+  "forms": [],
+  "reactions": [],
+  "sprite_index": 1,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.webp",
+  "imageUrl": "/assets/atlas/enemies/images/mummy_lord.webp",
+  "_type": "enemies",
+  "background_type": "desert3",
+  "rarity": "Very Rare",
+  "last_updated": "18-5-2026",
+  "stats": {
+    "str": 18,
+    "dex": 10,
+    "con": 17,
+    "int": 11,
+    "wis": 18,
+    "cha": 16
+  },
+  "lore": "/assets/atlas/enemies/enemies_wiki/mummy_lord.json",
+  "wikiData": {}
+}

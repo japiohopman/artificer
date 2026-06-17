@@ -1,0 +1,298 @@
+{
+  "index": "djinni",
+  "name": "djinni",
+  "size": "Large",
+  "type": "elemental",
+  "alignment": "chaotic good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 161,
+  "hit_dice": "14d10",
+  "hit_points_roll": "14d10+84",
+  "speed": {
+    "walk": "30 ft.",
+    "fly": "90 ft."
+  },
+  "strength": 21,
+  "dexterity": 15,
+  "constitution": 22,
+  "intelligence": 15,
+  "wisdom": 16,
+  "charisma": 20,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_dex.json"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_cha.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning",
+    "thunder"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 13
+  },
+  "languages": "Auran",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [
+    {
+      "name": "elemental demise",
+      "desc": "If the djinni dies, its body disintegrates into a warm breeze, leaving behind only equipment the djinni was wearing or carrying.",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The djinni's innate spellcasting ability is Charisma (spell save DC 17, +9 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\n\nAt will: detect evil and good, detect magic, thunderwave\n3/day each: create food and water (can create wine instead of water), tongues, wind walk\n1/day each: conjure elemental (air elemental only), creation, gaseous form, invisibility, major image, plane shift",
+      "spellcasting": {
+        "ability": {
+          "index": "cha",
+          "name": "cha",
+          "url": "/assets/atlas/ability_scores/json/cha.json"
+        },
+        "dc": 17,
+        "modifier": 9,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "detect evil and good",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/detect_evil_and_good.json",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "detect magic",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/detect_magic.json",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "thunderwave",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/thunderwave.json",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "create food and water",
+            "level": 3,
+            "notes": "Can create wine instead of water",
+            "url": "/assets/atlas/spell/json/create_food_and_water.json",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "tongues",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/tongues.json",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "wind walk",
+            "level": 6,
+            "url": "/assets/atlas/spell/json/wind_walk.json",
+            "usage": {
+              "type": "per day",
+              "times": 3,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "conjure elemental",
+            "level": 5,
+            "notes": "Air Elemental Only",
+            "url": "/assets/atlas/spell/json/constitutionjure_elemental.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "creation",
+            "level": 5,
+            "url": "/assets/atlas/spell/json/creation.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "gaseous form",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/gaseous_form.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "invisibility",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/invisibility.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "major image",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/major_image.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "plane shift",
+            "level": 7,
+            "url": "/assets/atlas/spell/json/plane_shift.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The djinni makes three scimitar attacks.",
+      "actions": [
+        {
+          "action_name": "Scimitar",
+          "count": "3",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "scimitar",
+      "desc": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage plus 3 (1d6) lightning or thunder damage (djinni's choice).",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+5"
+        },
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "damage_type": {
+                  "index": "lightning",
+                  "name": "lightning",
+                  "url": "/assets/atlas/damage_types/json/lightning.json"
+                },
+                "damage_dice": "1d6"
+              },
+              {
+                "option_type": "damage",
+                "damage_type": {
+                  "index": "thunder",
+                  "name": "thunder",
+                  "url": "/assets/atlas/damage_types/json/thunder.json"
+                },
+                "damage_dice": "1d6"
+              }
+            ]
+          }
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "create whirlwind",
+      "desc": "A 5-foot-radius, 30-foot-tall cylinder of swirling air magically forms on a point the djinni can see within 120 feet of it. The whirlwind lasts as long as the djinni maintains concentration (as if concentrating on a spell). Any creature but the djinni that enters the whirlwind must succeed on a DC 18 Strength saving throw or be restrained by it. The djinni can move the whirlwind up to 60 feet as an action, and creatures restrained by the whirlwind move with it. The whirlwind ends if the djinni loses sight of it.\nA creature can use its action to free a creature restrained by the whirlwind, including itself, by succeeding on a DC 18 Strength check. If the check succeeds, the creature is no longer restrained and moves to the nearest space outside the whirlwind.",
+      "dc": {
+        "dc_type": {
+          "index": "str",
+          "name": "str",
+          "url": "/assets/atlas/ability_scores/json/str.json"
+        },
+        "dc_value": 18,
+        "success_type": "none"
+      },
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/djinni.webp",
+  "url": "/assets/atlas/enemies/json/djinni.json",
+  "updated_at": "2026-04-04T11:20:39.145Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 6,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet4.webp",
+  "imageUrl": null,
+  "background_type": "desert",
+  "rarity": "Very Rare",
+  "last_updated": "4-4-2026"
+}

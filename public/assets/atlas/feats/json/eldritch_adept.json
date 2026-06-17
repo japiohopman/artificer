@@ -1,0 +1,25 @@
+{
+  "index": "eldritch_adept",
+  "name": "eldritch adept",
+  "prerequisites": [
+    {
+      "stat": "spellcasting",
+      "operator": "==",
+      "value": true,
+      "desc": "Spellcasting or Pact Magic feature"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "Studying occult lore, you have unlocked eldritch power within yourself: you learn one Eldritch Invocation option of your choice from the warlock class. If the invocation has a prerequisite, you can choose that invocation only if you’re a warlock and only if you meet the prerequisite.",
+    "Whenever you gain a level, you can replace the invocation with another one from the warlock class."
+  ],
+  "feature_specific": {},
+  "url": "/assets/atlas/feats/json/eldritch_adept.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/eldritch_adept.webp"
+}

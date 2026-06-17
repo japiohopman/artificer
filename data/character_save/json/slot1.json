@@ -1,0 +1,787 @@
+{
+  "level": 0,
+  "xp": 0,
+  "saveVersion": 2,
+  "gender": "Female",
+  "stats": {
+    "str": 18,
+    "dex": 16,
+    "con": 13,
+    "int": 13,
+    "wis": 12,
+    "cha": 9
+  },
+  "proficiencies": [
+    "Skill: Athletics",
+    "Skill: Perception",
+    "Dice Set",
+    "light armor",
+    "medium armor",
+    "shields",
+    "simple weapons",
+    "martial weapons",
+    "saving throw: str",
+    "saving throw: con",
+    "Saving Throw: str",
+    "Saving Throw: con"
+  ],
+  "traits": [
+    ""
+  ],
+  "features": [
+    {
+      "name": "draconic ancestry",
+      "index": "draconic_ancestry",
+      "desc": "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.",
+      "source": "Species"
+    },
+    {
+      "name": "breath weapon",
+      "index": "breath_weapon",
+      "desc": "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.\nWhen you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.\nAfter you use your breath weapon, you cannot use it again until you complete a short or long rest.",
+      "source": "Species"
+    },
+    {
+      "name": "damage resistance",
+      "index": "damage_resistance",
+      "desc": "You have resistance to the damage type associated with your draconic ancestry.",
+      "source": "Species"
+    },
+    {
+      "index": "rage",
+      "class": {
+        "index": "barbarian",
+        "name": "barbarian",
+        "url": "/assets/atlas/class/json/barbarian.json"
+      },
+      "name": "rage",
+      "level": 1,
+      "prerequisites": [],
+      "desc": [
+        "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor:",
+        "- You have advantage on Strength checks and Strength saving throws.",
+        "- When you make a melee weapon Attack using Strength, you gain a +2 bonus to the damage roll. This bonus increases as you level.",
+        "- You have Resistance to bludgeoning, piercing, and slashing damage.",
+        "If you are able to cast Spells, you can't cast them or concentrate on them while raging.",
+        "Your rage lasts for 1 minute. It ends early if you are knocked Unconscious or if Your Turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on Your Turn as a Bonus Action.",
+        "Once you have raged the maximum number of times for your barbarian level, you must finish a Long Rest before you can rage again. You may rage 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th."
+      ],
+      "url": "/assets/atlas/features/json/rage.json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/rage.webp",
+      "feature_specific": {
+        "special_action": "bonus_action",
+        "passive_modifiers": {
+          "advantage": [
+            "strength_checks",
+            "strength_saving_throws"
+          ],
+          "resistance": [
+            "bludgeoning",
+            "piercing",
+            "slashing"
+          ],
+          "damage_bonus": 2
+        },
+        "usage": {
+          "type": "long_rest"
+        },
+        "duration": "1 minute"
+      },
+      "source": "Class"
+    },
+    {
+      "index": "barbarian_unarmored_defense",
+      "class": {
+        "index": "barbarian",
+        "name": "barbarian",
+        "url": "/assets/atlas/class/json/barbarian.json"
+      },
+      "name": "unarmored defense",
+      "level": 1,
+      "prerequisites": [],
+      "desc": [
+        "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit."
+      ],
+      "url": "/assets/atlas/features/json/barbarian_unarmored_defense.json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/barbarian_unarmored_defense.webp",
+      "feature_specific": {
+        "passive_modifiers": {
+          "ac_set": "10 + dexterity_modifier + constitution_modifier"
+        }
+      },
+      "source": "Class"
+    }
+  ],
+  "flaws": [
+    ""
+  ],
+  "ideals": [
+    ""
+  ],
+  "bonds": [
+    ""
+  ],
+  "inventory": {
+    "main-hand": {
+      "id": "spear_k5v4dhf7h",
+      "index": "spear",
+      "name": "Spear",
+      "quantity": 1,
+      "weight": 3,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/spear.json",
+      "image_url": "public/assets/atlas/equipment/images/spear.webp",
+      "imageUrl": "/assets/atlas/equipment/images/spear.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d6",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "/assets/atlas/damage_types/json/piercing.json"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "versatile",
+          "name": "versatile",
+          "url": "/assets/atlas/weapon_properties/versatile"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "two_handed_damage": {
+        "damage_dice": "1d8",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "/assets/atlas/damage_types/json/piercing.json"
+        }
+      },
+      "updated_at": "2026-04-28T13:23:58.298Z",
+      "contents": [],
+      "image": "/assets/atlas/equipment/images/spear.webp",
+      "sprite_index": 4,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet9.0webp",
+      "background_type": "land_forest",
+      "category": "Simple Weapons",
+      "slot": "main-hand",
+      "last_updated": "28-4-2026",
+      "kind": "weapon",
+      "equipSlots": [
+        "main_hand",
+        "off_hand"
+      ],
+      "main_hand_slot": "Spear"
+    },
+    "clothes": {
+      "id": "clothes_travelers_e8yko9c13",
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "quantity": 1,
+      "weight": 4,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/clothes_travelers.webp",
+      "sprite_index": 12,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
+      "kind": "ring",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ],
+      "slot": "clothes",
+      "clothes_slot": "Clothes Traveler'S"
+    }
+  },
+  "backpack": [
+    {
+      "id": "dice_set_lcowxeg15",
+      "index": "dice_set",
+      "name": "Dice Set",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/dice_set.json",
+      "image_url": "public/assets/atlas/equipment/images/dice_set.webp",
+      "imageUrl": "/assets/atlas/equipment/images/dice_set.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "tools",
+        "name": "tools",
+        "url": "/assets/atlas/equipment_categories/tools"
+      },
+      "tool_category": "Gaming Sets",
+      "cost": {
+        "quantity": 1,
+        "unit": "sp"
+      },
+      "desc": [
+        "Carved from the calcified knuckles of a gambler who cheated death, these dice feel unnaturally cold and pulse with the faint, rhythmic heartbeat of a soul forever trapped in the roll. Each face is stained with dried arterial spray, ensuring that every time they tumble, the odds are weighted by a desperate, lingering malice."
+      ],
+      "updated_at": "2026-04-11T16:15:01.192Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/dice_set.webp",
+      "sprite_index": 0,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.0webp",
+      "category": "Gaming Sets",
+      "last_updated": "11-4-2026",
+      "kind": "tool",
+      "equipSlots": [
+        "tool_1",
+        "tool_2",
+        "tool_3"
+      ]
+    },
+    {
+      "id": "lantern_hooded_ufoi201vx",
+      "index": "lantern_hooded",
+      "name": "Lantern Hooded",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/lantern_hooded.json",
+      "image_url": "public/assets/atlas/equipment/images/lantern_hooded.webp",
+      "imageUrl": "/assets/atlas/equipment/images/lantern_hooded.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "desc": [
+        "A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/lantern_hooded.webp",
+      "sprite_index": 22,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp",
+      "kind": "ring",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "manacles_4kb4cjrkx",
+      "index": "manacles",
+      "name": "Manacles",
+      "quantity": 1,
+      "weight": 6,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/manacles.json",
+      "image_url": "public/assets/atlas/equipment/images/manacles.webp",
+      "imageUrl": "/assets/atlas/equipment/images/manacles.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "desc": [
+        "These metal restraints can bind a Small or Medium creature. Escaping the manacles requires a successful DC 20 Dexterity check. Breaking them requires a successful DC 20 Strength check.",
+        "Each set of manacles comes with one key. Without the key, a creature proficient with thieves' tools can pick the manacles' lock with a successful DC 15 Dexterity check. Manacles have 15 hit points."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/manacles.webp",
+      "sprite_index": 10,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.0webp",
+      "kind": "ring",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "quiver_b04yaxpmu",
+      "index": "quiver",
+      "name": "Quiver",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/quiver.json",
+      "image_url": "public/assets/atlas/equipment/images/quiver.webp",
+      "imageUrl": "/assets/atlas/equipment/images/quiver.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "desc": [
+        "A quiver can hold up to 20 arrows."
+      ],
+      "updated_at": "2026-04-25T10:04:06.285Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/quiver.webp",
+      "sprite_index": 17,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.0webp",
+      "background_type": "land_forest",
+      "last_updated": "25-4-2026",
+      "kind": "ring",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "gold_cw378l115",
+      "index": "gold",
+      "name": "Gold",
+      "quantity": 12,
+      "weight": 0.02,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "image_url": "public/assets/atlas/equipment/images/gold.webp",
+      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+      "equipment_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+      },
+      "cost": "",
+      "desc": [
+        "The standard unit of currency in the game."
+      ],
+      "image": "/assets/atlas/equipment/images/gold.webp",
+      "background_type": "land_forest",
+      "category": "Standard Gear",
+      "last_updated": "21-5-2026",
+      "updated_at": "2026-05-21T01:11:21.699Z",
+      "kind": "currency"
+    }
+  ],
+  "equipment": {
+    "containerId": "equipment_slot1",
+    "slots": [
+      {
+        "id": "main_hand",
+        "itemId": "javelin_m5r33ykjb"
+      },
+      {
+        "id": "off_hand",
+        "itemId": null
+      },
+      {
+        "id": "ranged",
+        "itemId": null
+      },
+      {
+        "id": "ammo",
+        "itemId": null
+      },
+      {
+        "id": "chest",
+        "itemId": null
+      },
+      {
+        "id": "clothes",
+        "itemId": null
+      },
+      {
+        "id": "head",
+        "itemId": null
+      },
+      {
+        "id": "hands",
+        "itemId": null
+      },
+      {
+        "id": "feet",
+        "itemId": null
+      },
+      {
+        "id": "back",
+        "itemId": null
+      },
+      {
+        "id": "neck",
+        "itemId": null
+      },
+      {
+        "id": "belt",
+        "itemId": null
+      },
+      {
+        "id": "ring_1",
+        "itemId": null
+      },
+      {
+        "id": "ring_2",
+        "itemId": null
+      },
+      {
+        "id": "tool_1",
+        "itemId": null
+      },
+      {
+        "id": "tool_2",
+        "itemId": null
+      },
+      {
+        "id": "tool_3",
+        "itemId": null
+      },
+      {
+        "id": "tool_4",
+        "itemId": null
+      },
+      {
+        "id": "tool_5",
+        "itemId": null
+      },
+      {
+        "id": "focus",
+        "itemId": null
+      },
+      {
+        "id": "pouch",
+        "itemId": null
+      },
+      {
+        "id": "acc_1",
+        "itemId": null
+      },
+      {
+        "id": "acc_2",
+        "itemId": null
+      },
+      {
+        "id": "acc_3",
+        "itemId": null
+      },
+      {
+        "id": "acc_4",
+        "itemId": null
+      },
+      {
+        "id": "quick_1",
+        "itemId": null
+      },
+      {
+        "id": "quick_2",
+        "itemId": null
+      },
+      {
+        "id": "quick_3",
+        "itemId": null
+      },
+      {
+        "id": "quick_4",
+        "itemId": null
+      }
+    ]
+  },
+  "containers": {
+    "backpack_new_character": {
+      "id": "backpack_new_character",
+      "type": "backpack",
+      "ownerId": "new_character",
+      "slots": [
+        {
+          "id": "bag_0",
+          "itemId": "backpack_cpot7239f"
+        },
+        {
+          "id": "bag_1",
+          "itemId": "bedroll_kriu5ju64"
+        },
+        {
+          "id": "bag_2",
+          "itemId": "mess_kit_0yiba4k5s"
+        },
+        {
+          "id": "bag_3",
+          "itemId": "tinderbox_1ctqm1qbp"
+        },
+        {
+          "id": "bag_4",
+          "itemId": "torch_u9erpbvi9"
+        },
+        {
+          "id": "bag_5",
+          "itemId": "rations_1_day_f75fiikb6"
+        },
+        {
+          "id": "bag_6",
+          "itemId": "waterskin_mjel1re0d"
+        },
+        {
+          "id": "bag_7",
+          "itemId": "rope_hempen_50_feet_a9ec6q820"
+        },
+        {
+          "id": "bag_8",
+          "itemId": "explorers_pack_b9c98yjdd"
+        },
+        {
+          "id": "bag_9",
+          "itemId": "shortbow_29l94c0oi"
+        },
+        {
+          "id": "bag_10",
+          "itemId": "shortbow_tkyz832kh"
+        },
+        {
+          "id": "bag_11",
+          "itemId": "shortsword_wb9gcfygw"
+        },
+        {
+          "id": "bag_12",
+          "itemId": "shortsword_cu6zflhz6"
+        },
+        {
+          "id": "bag_13",
+          "itemId": null
+        },
+        {
+          "id": "bag_14",
+          "itemId": null
+        },
+        {
+          "id": "bag_15",
+          "itemId": null
+        },
+        {
+          "id": "bag_16",
+          "itemId": null
+        },
+        {
+          "id": "bag_17",
+          "itemId": null
+        },
+        {
+          "id": "bag_18",
+          "itemId": null
+        },
+        {
+          "id": "bag_19",
+          "itemId": null
+        },
+        {
+          "id": "bag_20",
+          "itemId": null
+        },
+        {
+          "id": "bag_21",
+          "itemId": null
+        },
+        {
+          "id": "bag_22",
+          "itemId": null
+        },
+        {
+          "id": "bag_23",
+          "itemId": null
+        }
+      ]
+    }
+  },
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 10,
+    "pp": 0
+  },
+  "appearance": {
+    "hairColor": "Raven Black",
+    "hairStyle": "Short",
+    "bodyType": "Medium",
+    "eyeColor": "Brown",
+    "skinColor": "#ffdbac",
+    "height": "5'10\"",
+    "weight": "160 lbs",
+    "size": "Medium",
+    "specialFeatures": []
+  },
+  "items": {
+    "explorers_pack_b9c98yjdd": {
+      "id": "explorers_pack_b9c98yjdd",
+      "template": "explorers_pack",
+      "quantity": 1,
+      "addedAt": 1781142431831,
+      "kind": "equipment_pack"
+    },
+    "backpack_cpot7239f": {
+      "id": "backpack_cpot7239f",
+      "template": "backpack",
+      "quantity": 1,
+      "addedAt": 1781142432020,
+      "kind": "container"
+    },
+    "bedroll_kriu5ju64": {
+      "id": "bedroll_kriu5ju64",
+      "template": "bedroll",
+      "quantity": 1,
+      "addedAt": 1781142432211,
+      "kind": "ring"
+    },
+    "mess_kit_0yiba4k5s": {
+      "id": "mess_kit_0yiba4k5s",
+      "template": "mess_kit",
+      "quantity": 1,
+      "addedAt": 1781142432395,
+      "kind": "ring"
+    },
+    "tinderbox_1ctqm1qbp": {
+      "id": "tinderbox_1ctqm1qbp",
+      "template": "tinderbox",
+      "quantity": 1,
+      "addedAt": 1781142432576,
+      "kind": "ring"
+    },
+    "torch_u9erpbvi9": {
+      "id": "torch_u9erpbvi9",
+      "template": "torch",
+      "quantity": 10,
+      "addedAt": 1781142432755,
+      "kind": "ring"
+    },
+    "rations_1_day_f75fiikb6": {
+      "id": "rations_1_day_f75fiikb6",
+      "template": "rations_1_day",
+      "quantity": 10,
+      "addedAt": 1781142432932,
+      "kind": "consumable"
+    },
+    "waterskin_mjel1re0d": {
+      "id": "waterskin_mjel1re0d",
+      "template": "waterskin",
+      "quantity": 1,
+      "addedAt": 1781142433125,
+      "kind": "ring"
+    },
+    "rope_hempen_50_feet_a9ec6q820": {
+      "id": "rope_hempen_50_feet_a9ec6q820",
+      "template": "rope_hempen_50_feet",
+      "quantity": 1,
+      "addedAt": 1781142433331,
+      "kind": "ring"
+    },
+    "javelin_m5r33ykjb": {
+      "id": "javelin_m5r33ykjb",
+      "template": "javelin",
+      "quantity": 4,
+      "addedAt": 1781142433331,
+      "kind": "weapon"
+    },
+    "shortbow_tkyz832kh": {
+      "id": "shortbow_tkyz832kh",
+      "template": "shortbow",
+      "quantity": 1,
+      "addedAt": 1781142461673,
+      "kind": "weapon"
+    },
+    "shortsword_wb9gcfygw": {
+      "id": "shortsword_wb9gcfygw",
+      "template": "shortsword",
+      "quantity": 1,
+      "addedAt": 1781142470756,
+      "kind": "weapon"
+    }
+  },
+  "knownSpells": [],
+  "languages": [
+    "common",
+    "draconic"
+  ],
+  "preparedSpells": [],
+  "spellSlots": {},
+  "choices": {},
+  "race": "dragonborn",
+  "class": "barbarian",
+  "spellcastingAbility": "cha",
+  "background": "guard",
+  "backstory": "He was once a sentinel of the High Peak, a dragonborn of brass scales and iron discipline who served as a sworn protector of the Sun-Touched Gates. For decades, his life was defined by the rhythmic clatter of the watch and the unwavering code of the Guard, a duty he performed with a stoicism that bordered on the divine. Yet, that life ended in a night of ash and betrayal when the citadel fell not to an invading army, but to an inner rot he had failed to see. As the flames consumed his kin and his station, the calm, measured breath of a soldier was replaced by a blistering, primal heat that surged from the depths of his draconic heart. He survived the slaughter by surrendering to a white-hot fury he never knew he possessed, carving a path through the ruin with a broken halberd and a voice that had forgotten how to speak in anything but a roar.\n\nStripped of his rank and his very identity, he abandoned his name to the embers of the gatehouse, believing himself unworthy of a title while those he was sworn to protect lay in the dust. He now wanders the borderlands as a nameless exile, his once-polished plate armor replaced by heavy furs and the scarred trophies of his survival. He did not choose the path of the barbarian; the path chose him when the structured world of law and order crumbled into chaos. His rage is not a lack of control, but a concentrated manifestation of his grief and his singular ideal: that no one else shall fall while he still draws breath. He is a shield that has forgotten its handle, a guardian who finds solace only in the visceral clarity of battle where the complexities of politics are replaced by the simple, brutal necessity of the strike.\n\nDriven by a flickering hope for redemption and the shadow of a bond he cannot let go—a promise made to a dying commander to find the architect of the citadel's betrayal—he moves toward the horizon. He seeks not gold or glory, but a weight to balance the scales of his soul and a reason to reclaim the name he cast aside. Until that day, he remains a ghost in tarnished brass, a silent sentinel who watches over the weak from the fringes of civilization. He is haunted by the flaw of his own perceived failure, a warrior who fears that if his rage ever truly cools, there will be nothing left of the dragon beneath the skin but cold, hollow stone.",
+  "alignment": "lawful_evil",
+  "name": "monio",
+  "id": "slot1",
+  "hp": 7,
+  "maxHp": 7,
+  "lastSaved": "2026-06-11T01:49:46.234Z"
+}

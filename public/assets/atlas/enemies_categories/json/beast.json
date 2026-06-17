@@ -1,0 +1,1031 @@
+{
+  "name": "Beasts",
+  "index": "beast",
+  "monsters": [
+    {
+      "name": "ape",
+      "index": "ape",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/ape.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/ape.webp"
+    },
+    {
+      "name": "axe beak",
+      "index": "axe_beak",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/axe_beak.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/axe_beak.webp"
+    },
+    {
+      "name": "baboon",
+      "index": "baboon",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/baboon.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/baboon.webp"
+    },
+    {
+      "name": "badger",
+      "index": "badger",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/badger.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/badger.webp"
+    },
+    {
+      "name": "bat",
+      "index": "bat",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/bat.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/bat.webp"
+    },
+    {
+      "name": "black bear",
+      "index": "black_bear",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/black_bear.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/black_bear.webp"
+    },
+    {
+      "name": "blood hawk",
+      "index": "blood_hawk",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/blood_hawk.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/blood_hawk.webp"
+    },
+    {
+      "name": "boar",
+      "index": "boar",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/boar.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/boar.webp"
+    },
+    {
+      "name": "brown bear",
+      "index": "brown_bear",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/brown_bear.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/brown_bear.webp"
+    },
+    {
+      "name": "camel",
+      "index": "camel",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/camel.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/camel.webp"
+    },
+    {
+      "name": "cat",
+      "index": "cat",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/cat.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/cat.webp"
+    },
+    {
+      "name": "constrictor snake",
+      "index": "constrictor_snake",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/constrictor_snake.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/constrictor_snake.webp"
+    },
+    {
+      "name": "crab",
+      "index": "crab",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/crab.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/crab.webp"
+    },
+    {
+      "name": "crocodile",
+      "index": "crocodile",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/crocodile.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/crocodile.webp"
+    },
+    {
+      "name": "deer",
+      "index": "deer",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/deer.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/deer.webp"
+    },
+    {
+      "name": "dire wolf",
+      "index": "dire_wolf",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/dire_wolf.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/dire_wolf.webp"
+    },
+    {
+      "name": "draft horse",
+      "index": "draft_horse",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/draft_horse.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/draft_horse.webp"
+    },
+    {
+      "name": "eagle",
+      "index": "eagle",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/eagle.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/eagle.webp"
+    },
+    {
+      "name": "elephant",
+      "index": "elephant",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 1100,
+      "challenge_rating": 4,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/elephant.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/elephant.webp"
+    },
+    {
+      "name": "elk",
+      "index": "elk",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/elk.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/elk.webp"
+    },
+    {
+      "name": "flying snake",
+      "index": "flying_snake",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/flying_snake.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/flying_snake.webp"
+    },
+    {
+      "name": "frog",
+      "index": "frog",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 0,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/frog.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/frog.webp"
+    },
+    {
+      "name": "giant ape",
+      "index": "giant_ape",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 2900,
+      "challenge_rating": 7,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_ape.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_ape.webp"
+    },
+    {
+      "name": "giant badger",
+      "index": "giant_badger",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_badger.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_badger.webp"
+    },
+    {
+      "name": "giant bat",
+      "index": "giant_bat",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_bat.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_bat.webp"
+    },
+    {
+      "name": "giant boar",
+      "index": "giant_boar",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_boar.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_boar.webp"
+    },
+    {
+      "name": "giant centipede",
+      "index": "giant_centipede",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_centipede.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_centipede.webp"
+    },
+    {
+      "name": "giant constrictor snake",
+      "index": "giant_constrictor_snake",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_constrictor_snake.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_constrictor_snake.webp"
+    },
+    {
+      "name": "giant crab",
+      "index": "giant_crab",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_crab.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_crab.webp"
+    },
+    {
+      "name": "giant crocodile",
+      "index": "giant_crocodile",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_crocodile.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_crocodile.webp"
+    },
+    {
+      "name": "giant eagle",
+      "index": "giant_eagle",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "neutral good",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_eagle.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_eagle.webp"
+    },
+    {
+      "name": "giant elk",
+      "index": "giant_elk",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_elk.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_elk.webp"
+    },
+    {
+      "name": "giant fire beetle",
+      "index": "giant_fire_beetle",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_fire_beetle.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_fire_beetle.webp"
+    },
+    {
+      "name": "giant frog",
+      "index": "giant_frog",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_frog.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_frog.webp"
+    },
+    {
+      "name": "giant goat",
+      "index": "giant_goat",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_goat.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_goat.webp"
+    },
+    {
+      "name": "giant hyena",
+      "index": "giant_hyena",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_hyena.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_hyena.webp"
+    },
+    {
+      "name": "giant lizard",
+      "index": "giant_lizard",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_lizard.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_lizard.webp"
+    },
+    {
+      "name": "giant octopus",
+      "index": "giant_octopus",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_octopus.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_octopus.webp"
+    },
+    {
+      "name": "giant owl",
+      "index": "giant_owl",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "neutral",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_owl.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_owl.webp"
+    },
+    {
+      "name": "giant poisonous snake",
+      "index": "giant_poisonous_snake",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_poisonous_snake.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_poisonous_snake.webp"
+    },
+    {
+      "name": "giant rat",
+      "index": "giant_rat",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_rat.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_rat.webp"
+    },
+    {
+      "name": "giant rat (diseased)",
+      "index": "giant_rat_diseased",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_rat_diseased.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_rat_diseased.webp"
+    },
+    {
+      "name": "giant scorpion",
+      "index": "giant_scorpion",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_scorpion.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_scorpion.webp"
+    },
+    {
+      "name": "giant sea horse",
+      "index": "giant_sea_horse",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_sea_horse.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_sea_horse.webp"
+    },
+    {
+      "name": "giant shark",
+      "index": "giant_shark",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_shark.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_shark.webp"
+    },
+    {
+      "name": "giant spider",
+      "index": "giant_spider",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_spider.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_spider.webp"
+    },
+    {
+      "name": "giant toad",
+      "index": "giant_toad",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_toad.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_toad.webp"
+    },
+    {
+      "name": "giant vulture",
+      "index": "giant_vulture",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "neutral evil",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_vulture.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_vulture.webp"
+    },
+    {
+      "name": "giant wasp",
+      "index": "giant_wasp",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_wasp.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_wasp.webp"
+    },
+    {
+      "name": "giant weasel",
+      "index": "giant_weasel",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_weasel.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_weasel.webp"
+    },
+    {
+      "name": "giant wolf spider",
+      "index": "giant_wolf_spider",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/giant_wolf_spider.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/giant_wolf_spider.webp"
+    },
+    {
+      "name": "goat",
+      "index": "goat",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/goat.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/images/enemies/goat.webp"
+    },
+    {
+      "name": "hawk",
+      "index": "hawk",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/hawk.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/hawk.webp"
+    },
+    {
+      "name": "hunter shark",
+      "index": "hunter_shark",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/hunter_shark.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/hunter_shark.webp"
+    },
+    {
+      "name": "hyena",
+      "index": "hyena",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/hyena.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/hyena.webp"
+    },
+    {
+      "name": "jackal",
+      "index": "jackal",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/jackal.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/jackal.webp"
+    },
+    {
+      "name": "killer whale",
+      "index": "killer_whale",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/killer_whale.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/killer_whale.webp"
+    },
+    {
+      "name": "lion",
+      "index": "lion",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/lion.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/lion.webp"
+    },
+    {
+      "name": "lizard",
+      "index": "lizard",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/lizard.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/lizard.webp"
+    },
+    {
+      "name": "mammoth",
+      "index": "mammoth",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 2300,
+      "challenge_rating": 6,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/mammoth.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/mammoth.webp"
+    },
+    {
+      "name": "mastiff",
+      "index": "mastiff",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/mastiff.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/mastiff.webp"
+    },
+    {
+      "name": "mule",
+      "index": "mule",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/mule.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/mule.webp"
+    },
+    {
+      "name": "octopus",
+      "index": "octopus",
+      "size": "Small",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/octopus.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/octopus.webp"
+    },
+    {
+      "name": "owl",
+      "index": "owl",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/owl.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/owl.webp"
+    },
+    {
+      "name": "panther",
+      "index": "panther",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/panther.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/panther.webp"
+    },
+    {
+      "name": "plesiosaurus",
+      "index": "plesiosaurus",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/plesiosaurus.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/plesiosaurus.webp"
+    },
+    {
+      "name": "poisonous snake",
+      "index": "poisonous_snake",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/poisonous_snake.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/poisonous_snake.webp"
+    },
+    {
+      "name": "polar bear",
+      "index": "polar_bear",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/polar_bear.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/polar_bear.webp"
+    },
+    {
+      "name": "pony",
+      "index": "pony",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/pony.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/pony.webp"
+    },
+    {
+      "name": "quipper",
+      "index": "quipper",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/quipper.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/quipper.webp"
+    },
+    {
+      "name": "rat",
+      "index": "rat",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/rat.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/rat.webp"
+    },
+    {
+      "name": "raven",
+      "index": "raven",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/raven.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/raven.webp"
+    },
+    {
+      "name": "reef shark",
+      "index": "reef_shark",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/reef_shark.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/reef_shark.webp"
+    },
+    {
+      "name": "rhinoceros",
+      "index": "rhinoceros",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/rhinoceros.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/rhinoceros.webp"
+    },
+    {
+      "name": "riding horse",
+      "index": "riding_horse",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/riding_horse.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/riding_horse.webp"
+    },
+    {
+      "name": "saber_toothed tiger",
+      "index": "saber_toothed_tiger",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/saber_toothed_tiger.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/saber_toothed_tiger.webp"
+    },
+    {
+      "name": "scorpion",
+      "index": "scorpion",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/scorpion.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/scorpion.webp"
+    },
+    {
+      "name": "sea horse",
+      "index": "sea_horse",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 0,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/sea_horse.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/sea_horse.webp"
+    },
+    {
+      "name": "spider",
+      "index": "spider",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/spider.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/spider.webp"
+    },
+    {
+      "name": "stirge",
+      "index": "stirge",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/stirge.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/stirge.webp"
+    },
+    {
+      "name": "tiger",
+      "index": "tiger",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/tiger.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/tiger.webp"
+    },
+    {
+      "name": "triceratops",
+      "index": "triceratops",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/triceratops.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/triceratops.webp"
+    },
+    {
+      "name": "tyrannosaurus rex",
+      "index": "tyrannosaurus_rex",
+      "size": "Huge",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 3900,
+      "challenge_rating": 8,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/tyrannosaurus_rex.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/tyrannosaurus_rex.webp"
+    },
+    {
+      "name": "vulture",
+      "index": "vulture",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/vulture.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/vulture.webp"
+    },
+    {
+      "name": "warhorse",
+      "index": "warhorse",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/warhorse.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/warhorse.webp"
+    },
+    {
+      "name": "weasel",
+      "index": "weasel",
+      "size": "Tiny",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/weasel.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/weasel.webp"
+    },
+    {
+      "name": "wolf",
+      "index": "wolf",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/wolf.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/images/wolf.webp"
+    },
+    {
+      "name": "guardian naga",
+      "index": "guardian_naga"
+    },
+    {
+      "name": "black dragon wyrmling",
+      "index": "black_dragon_wyrmling"
+    },
+    {
+      "name": "rug of smothering",
+      "index": "rug_of_smothering"
+    },
+    {
+      "name": "gibbering mouther",
+      "index": "gibbering_mouther"
+    },
+    {
+      "name": "salamander",
+      "index": "salamander"
+    },
+    {
+      "name": "basilisk",
+      "index": "basilisk"
+    },
+    {
+      "name": "water elemental",
+      "index": "water_elemental"
+    },
+    {
+      "name": "steam mephit",
+      "index": "steam_mephit"
+    },
+    {
+      "name": "young copper dragon",
+      "index": "young_copper_dragon"
+    },
+    {
+      "name": "young bronze dragon",
+      "index": "young_bronze_dragon"
+    },
+    {
+      "name": "stone giant",
+      "index": "stone_giant"
+    },
+    {
+      "name": "bronze dragon wyrmling",
+      "index": "bronze_dragon_wyrmling"
+    },
+    {
+      "name": "adult gold dragon",
+      "index": "adult_gold_dragon"
+    },
+    {
+      "name": "hell hound",
+      "index": "hell_hound"
+    },
+    {
+      "name": "young brass dragon",
+      "index": "young_brass_dragon"
+    },
+    {
+      "name": "werewolf, human form",
+      "index": "werewolf_human"
+    },
+    {
+      "name": "weretiger, human form",
+      "index": "weretiger_human"
+    }
+  ]
+}

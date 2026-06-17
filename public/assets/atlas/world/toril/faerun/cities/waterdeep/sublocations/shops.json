@@ -1,0 +1,6351 @@
+{
+  "category": "shops",
+  "updatedAt": "2026-06-14T07:04:24.686778Z",
+  "location_id": "waterdeep",
+  "sub_locations": [
+    {
+      "id": "338",
+      "name": "Selchoun's Sundries Shop",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1031.6687937512,
+        3219.8107281329
+      ],
+      "popup": {
+        "title": "Selchoun's Sundries Shop",
+        "description": "Selchoun's Sundries Shop was a prosperous general store. The proprietor, [[Osbrin Selchoun]], sold tourist trinkets and mundane useful items.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "osbrin_selchoun",
+            "name": "Osbrin Selchoun",
+            "url": "public/assets/atlas/characters/npc/osbrin_selchoun.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "osbrin_selchoun",
+            "name": "Osbrin Selchoun",
+            "url": "public/assets/atlas/characters/npc/osbrin_selchoun.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "358",
+      "name": "Halazar's Fine Gems",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1304.6120112892,
+        2898.4306960837
+      ],
+      "popup": {
+        "title": "Halazar's Fine Gems",
+        "description": "Halazar's Fine Gems was a jewelry shop. The finest gems could be found in the shop, expertly cut and presented in simple glass cases.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "jeweler",
+      "equipment_categories": [
+        {
+          "index": "ring",
+          "url": "public/assets/atlas/equipment_categories/json/ring.json"
+        },
+        {
+          "index": "necklace",
+          "url": "public/assets/atlas/equipment_categories/json/necklace.json"
+        },
+        {
+          "index": "head",
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "360",
+      "name": "Market Hall",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1335.3711562708,
+        2707.8654185539
+      ],
+      "popup": {
+        "title": "Market Hall",
+        "description": "Market Hall was the guildhall of the [[Council of Farmer-Grocers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "364",
+      "name": "Armory of Waterdeep",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        988.88883348939,
+        3822.2657057039
+      ],
+      "popup": {
+        "title": "Armory of Waterdeep",
+        "description": "This building was the armory of the [[City Guard]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "389",
+      "name": "Nestaur's Ropes",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1653.5692078047,
+        1060.6601717798
+      ],
+      "popup": {
+        "title": "Nestaur's Ropes",
+        "description": "Nestaur's Ropes sold gear for [[adventurer]]s, primarily specializing in [[rope]]s.",
+        "image": "File:Dockwardspring.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "395",
+      "name": "Torpus's Tannery",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1794.6370106515,
+        984.99974619286
+      ],
+      "popup": {
+        "title": "Torpus's Tannery",
+        "description": "Torpus's Tannery was a tannery owned by [[Torpus the Tanner]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "torpus_the_tanner",
+            "name": "Torpus the Tanner",
+            "url": "public/assets/atlas/characters/npc/torpus_the_tanner.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "torpus_the_tanner",
+            "name": "Torpus the Tanner",
+            "url": "public/assets/atlas/characters/npc/torpus_the_tanner.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "leatherworker",
+      "equipment_categories": [
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        },
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "397",
+      "name": "Butchers' Guildhall",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1872.418756582,
+        985.35329958345
+      ],
+      "popup": {
+        "title": "Butchers' Guildhall",
+        "description": "The Butchers' Guildhall was the headquarters of the [[Guild of Butchers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "398",
+      "name": "Telethar Leatherworks",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1823.6283886801,
+        935.5022715098
+      ],
+      "popup": {
+        "title": "Telethar Leatherworks",
+        "description": "Telethar Leatherworks was a leather goods store owned and operated by [[Orgul Telethar]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "orgul_telethar",
+            "name": "Orgul Telethar",
+            "url": "public/assets/atlas/characters/npc/orgul_telethar.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "orgul_telethar",
+            "name": "Orgul Telethar",
+            "url": "public/assets/atlas/characters/npc/orgul_telethar.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "leatherworker",
+      "equipment_categories": [
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        },
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "399",
+      "name": "Fellowship Warehouse",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1844.8415921157,
+        912.87485451183
+      ],
+      "popup": {
+        "title": "Fellowship Warehouse",
+        "description": "The Fellowship Warehouse, also known as the Fish Warehouse, was a warehouse that was owned by the [[Fishmongers' Fellowship]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "406",
+      "name": "Gelfuril the Trader",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1899.2888142671,
+        891.30809768564
+      ],
+      "popup": {
+        "title": "Gelfuril the Trader",
+        "description": "Gelfuril the Trader was an unusual shop that was owned by the merchant [[Gelfuril]] in the 14th century DR. It was a similar to a pawnshop, though its owner was adamant about it not being one.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "gelfuril",
+            "name": "Gelfuril",
+            "url": "public/assets/atlas/characters/npc/gelfuril.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "gelfuril",
+            "name": "Gelfuril",
+            "url": "public/assets/atlas/characters/npc/gelfuril.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "leatherworker",
+      "equipment_categories": [
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        },
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "413",
+      "name": "Bellister's Hand",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1929.3408524675,
+        1039.4469683442
+      ],
+      "popup": {
+        "title": "Bellister's Hand",
+        "description": "Bellister's Hand was a store. This business sold general goods. It was also possible to find stolen goods here.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "414",
+      "name": "Melgard's Fine Leathers",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1916.6129304061,
+        981.11065889633
+      ],
+      "popup": {
+        "title": "Melgard's Fine Leathers",
+        "description": "Melgard's Fine Leathers was a clothing store.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "head",
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "415",
+      "name": "Thomm Warehouse",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1903.5314549542,
+        983.23197923989
+      ],
+      "popup": {
+        "title": "Thomm Warehouse",
+        "description": "The Thomm Warehouse was a storage warehouse that was privately owned by [[Haerlit Thomm]] in the mid\u201314th century DR.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "haerlit_thomm",
+            "name": "Haerlit Thomm",
+            "url": "public/assets/atlas/characters/npc/haerlit_thomm.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "haerlit_thomm",
+            "name": "Haerlit Thomm",
+            "url": "public/assets/atlas/characters/npc/haerlit_thomm.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "416",
+      "name": "Pelauvir's Counter",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1897.1674939235,
+        1021.0621920334
+      ],
+      "popup": {
+        "title": "Pelauvir's Counter",
+        "description": "Pelauvir's Counter was a general store and the site of a former warehouse.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "436",
+      "name": "City Guard Smithy",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1526.6435405818,
+        1819.385747993
+      ],
+      "popup": {
+        "title": "City Guard Smithy",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
+        },
+        {
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "451",
+      "name": "Serpentil Books & Folios",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1620.6887424796,
+        1556.3420253916
+      ],
+      "popup": {
+        "title": "Serpentil Books & Folios",
+        "description": "Serpentil Books & Folios was a [[book]] shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "bookshop",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "460",
+      "name": "Surtlan's Metalwares",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1837.4169709132,
+        1791.4550301361
+      ],
+      "popup": {
+        "title": "Surtlan's Metalwares",
+        "description": "Surtlan's Metalwares sold metal products and equipment. It was owned by [[Baerhar Surtlan]] in the 14th century DR.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "baerhar_surtlan",
+            "name": "Baerhar Surtlan",
+            "url": "public/assets/atlas/characters/npc/baerhar_surtlan.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "baerhar_surtlan",
+            "name": "Baerhar Surtlan",
+            "url": "public/assets/atlas/characters/npc/baerhar_surtlan.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
+        },
+        {
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "470",
+      "name": "Helmstar Warehouse",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1348.0990783322,
+        1306.7333316327
+      ],
+      "popup": {
+        "title": "Helmstar Warehouse",
+        "description": "The Helmstar Warehouse was an old storage warehouse that was privately owned by [[Chuldan Helmstar]] in the mid\u201314th century DR.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "chuldan_helmstar",
+            "name": "Chuldan Helmstar",
+            "url": "public/assets/atlas/characters/npc/chuldan_helmstar.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "chuldan_helmstar",
+            "name": "Chuldan Helmstar",
+            "url": "public/assets/atlas/characters/npc/chuldan_helmstar.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "472",
+      "name": "Red Sails Warehouse",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1469.3678913056,
+        1226.1231585775
+      ],
+      "popup": {
+        "title": "Red Sails Warehouse",
+        "description": "The Red Sails Warehouse was a public storage warehouse.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "479",
+      "name": "Warehouse of the Salters",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1549.9780643609,
+        1179.4541110192
+      ],
+      "popup": {
+        "title": "Warehouse of the Salters",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "487",
+      "name": "Lanternmaker Zorth Ulmaril",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1493.0559684754,
+        1336.7853698332
+      ],
+      "popup": {
+        "title": "Lanternmaker Zorth Ulmaril",
+        "description": "Lanternmaker Zorth Ulmaril's shop was owned by its namesake, [[Zorth Ulmaril]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "zorth_ulmaril",
+            "name": "Zorth Ulmaril",
+            "url": "public/assets/atlas/characters/npc/zorth_ulmaril.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "zorth_ulmaril",
+            "name": "Zorth Ulmaril",
+            "url": "public/assets/atlas/characters/npc/zorth_ulmaril.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
+        },
+        {
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "495",
+      "name": "House of Pride",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1682.5605858334,
+        1214.4558966879
+      ],
+      "popup": {
+        "title": "House of Pride",
+        "description": "House of Pride was a [[perfume]] shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "apothecary",
+      "equipment_categories": [
+        {
+          "index": "potion",
+          "url": "public/assets/atlas/equipment_categories/json/potion.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "herbs",
+          "url": "public/assets/atlas/materials_categories/json/herbs.json"
+        },
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        },
+        {
+          "index": "oils",
+          "url": "public/assets/atlas/materials_categories/json/oils.json"
+        }
+      ]
+    },
+    {
+      "id": "496",
+      "name": "Fine Nuts",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1688.9245468641,
+        1153.9982668964
+      ],
+      "popup": {
+        "title": "Fine Nuts",
+        "description": "Fine Nuts, which was also called Khostal Hannass Fine Nuts, was a shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "497",
+      "name": "Felhaur's Fine Fish",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1658.1654018825,
+        1147.9878592564
+      ],
+      "popup": {
+        "title": "Felhaur's Fine Fish",
+        "description": "Felhaur's Fine Fish was a [[fish]] store. There were persistent rumors that the proprietor of this establishment was involved in smuggling.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "506",
+      "name": "Nelkaush the Weaver",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1970.7065991669,
+        1230.3657992646
+      ],
+      "popup": {
+        "title": "Nelkaush the Weaver",
+        "description": "Nelkaush the Weaver was a textiles shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "head",
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "512",
+      "name": "Old Monster Shop",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1943.4829880912,
+        1418.4562030602
+      ],
+      "popup": {
+        "title": "Old Monster Shop",
+        "description": "The shop specialized in [[poison]]s and other extraordinary items.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "monster_shop",
+      "equipment_categories": [
+        {
+          "index": "wondrous_items",
+          "url": "public/assets/atlas/equipment_categories/json/wondrous_items.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "monster_parts",
+          "url": "public/assets/atlas/materials_categories/json/monster_parts.json"
+        },
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        }
+      ]
+    },
+    {
+      "id": "514",
+      "name": "Prestar's Furniture",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1982.0203076659,
+        1034.4972208759
+      ],
+      "popup": {
+        "title": "Prestar's Furniture",
+        "description": "Prestar's Furniture was a furniture shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "leatherworker",
+      "equipment_categories": [
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        },
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "517",
+      "name": "Balthorr's Rare & Wondrous Treasures",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1367.5445148148,
+        2235.8716421119
+      ],
+      "popup": {
+        "title": "Balthorr's Rare & Wondrous Treasures",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "arcane",
+      "equipment_categories": [
+        {
+          "index": "arcane_foci",
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
+        },
+        {
+          "index": "wand",
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
+        },
+        {
+          "index": "staff",
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
+        },
+        {
+          "index": "rod",
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
+        },
+        {
+          "index": "scroll",
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
+        },
+        {
+          "index": "magic_tokens",
+          "url": "public/assets/atlas/equipment_categories/json/magic_tokens.json"
+        },
+        {
+          "index": "wondrous_items",
+          "url": "public/assets/atlas/equipment_categories/json/wondrous_items.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "519",
+      "name": "Riven Shield Shop",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1536.896588909,
+        2290.6724176538
+      ],
+      "popup": {
+        "title": "Riven Shield Shop",
+        "description": "The shop sold [[armor]] that was both mundance and magical.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "arcane",
+      "equipment_categories": [
+        {
+          "index": "arcane_foci",
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
+        },
+        {
+          "index": "wand",
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
+        },
+        {
+          "index": "staff",
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
+        },
+        {
+          "index": "rod",
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
+        },
+        {
+          "index": "scroll",
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
+        },
+        {
+          "index": "magic_tokens",
+          "url": "public/assets/atlas/equipment_categories/json/magic_tokens.json"
+        },
+        {
+          "index": "wondrous_items",
+          "url": "public/assets/atlas/equipment_categories/json/wondrous_items.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "535",
+      "name": "Halambar Lutes & Harps",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1379.9188834855,
+        2081.7223638132
+      ],
+      "popup": {
+        "title": "Halambar Lutes & Harps",
+        "description": "Halambar Lutes & Harps was a musical instrument shop.",
+        "image": "File:Halambar Lutes & Harps.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "538",
+      "name": "Hilmer Warehouse",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1397.2429996246,
+        2115.3099359196
+      ],
+      "popup": {
+        "title": "Hilmer Warehouse",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "539",
+      "name": "Olmhazan's Jewels",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1506.4909973179,
+        2048.1347917068
+      ],
+      "popup": {
+        "title": "Olmhazan's Jewels",
+        "description": "Olmhazan's Jewels was a jewelry shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "jeweler",
+      "equipment_categories": [
+        {
+          "index": "ring",
+          "url": "public/assets/atlas/equipment_categories/json/ring.json"
+        },
+        {
+          "index": "necklace",
+          "url": "public/assets/atlas/equipment_categories/json/necklace.json"
+        },
+        {
+          "index": "head",
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "540",
+      "name": "Phalantar's Philtres & Components",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1463.003930275,
+        2004.2941712733
+      ],
+      "popup": {
+        "title": "Phalantar's Philtres & Components",
+        "description": "Phalantar's Philtres & Components was a shop that specialized in medicines, [[herb]]s, [[spices]], rare substances, and [[spell]] [[Material component|components]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "apothecary",
+      "equipment_categories": [
+        {
+          "index": "potion",
+          "url": "public/assets/atlas/equipment_categories/json/potion.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "herbs",
+          "url": "public/assets/atlas/materials_categories/json/herbs.json"
+        },
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        },
+        {
+          "index": "oils",
+          "url": "public/assets/atlas/materials_categories/json/oils.json"
+        }
+      ]
+    },
+    {
+      "id": "545",
+      "name": "House of the Fine Carvers",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1500.4805896779,
+        2166.5751775556
+      ],
+      "popup": {
+        "title": "House of the Fine Carvers",
+        "description": "The House of the Fine Carvers was the guildhall of the [[Guild of Fine Carvers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "carpenter",
+      "equipment_categories": [
+        {
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        },
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "555",
+      "name": "Meiroth's Fine Silks",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1573.3125881401,
+        1860.7514946924
+      ],
+      "popup": {
+        "title": "Meiroth's Fine Silks",
+        "description": "Meiroth's Fine Silks was a clothing shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "head",
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "558",
+      "name": "Saern's Fine Swords",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1541.1392295961,
+        2104.7033342018
+      ],
+      "popup": {
+        "title": "Saern's Fine Swords",
+        "description": "The shop dealt in weaponry to include the occasional magical variety.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
+        },
+        {
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "561",
+      "name": "Thentavva's Boots",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1574.3732483118,
+        2011.7187924757
+      ],
+      "popup": {
+        "title": "Thentavva's Boots",
+        "description": "Thentavva's Boots was rather small,  narrow, and stood only one story tall. The exterior of the store was notably adorned with carved stone images of frolicking [[nymph]]s and pegasi.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "leatherworker",
+      "equipment_categories": [
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        },
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "562",
+      "name": "Riautar's Weaponry",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1592.0509178415,
+        1930.7550660299
+      ],
+      "popup": {
+        "title": "Riautar's Weaponry",
+        "description": "Riautar's Weaponry was a weapons shop owned by [[Zarondar Riautar]] in the mid-to-late 14th century DR.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "zarondar_riautar",
+            "name": "Zarondar Riautar",
+            "url": "public/assets/atlas/characters/npc/zarondar_riautar.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "zarondar_riautar",
+            "name": "Zarondar Riautar",
+            "url": "public/assets/atlas/characters/npc/zarondar_riautar.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
+        },
+        {
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "568",
+      "name": "Orsabbas's Fine Imports",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1616.799655183,
+        1986.9700551342
+      ],
+      "popup": {
+        "title": "Orsabbas's Fine Imports",
+        "description": "In addition to their normal business, Orsabbas's Fine Imports also dealt in stolen property.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "570",
+      "name": "Patient Fingers Finework",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1689.6316536453,
+        1971.7672593387
+      ],
+      "popup": {
+        "title": "Patient Fingers Finework",
+        "description": "Patient Fingers Finework was a woodcraft shop owned by [[Dannath Lisosar]] in the 14th century DR.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "dannath_lisosar",
+            "name": "Dannath Lisosar",
+            "url": "public/assets/atlas/characters/npc/dannath_lisosar.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "dannath_lisosar",
+            "name": "Dannath Lisosar",
+            "url": "public/assets/atlas/characters/npc/dannath_lisosar.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "head",
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "572",
+      "name": "Thond Glass and Glazing",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1682.5605858334,
+        1942.0687745289
+      ],
+      "popup": {
+        "title": "Thond Glass and Glazing",
+        "description": "Thond Glass and Glazing was a glass shop owned by [[Jhalassan Thond]] in the 14th century DR.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "jhalassan_thond",
+            "name": "Jhalassan Thond",
+            "url": "public/assets/atlas/characters/npc/jhalassan_thond.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "jhalassan_thond",
+            "name": "Jhalassan Thond",
+            "url": "public/assets/atlas/characters/npc/jhalassan_thond.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "carpenter",
+      "equipment_categories": [
+        {
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        },
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "573",
+      "name": "Belmonder's Meats",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1671.600430725,
+        1924.0375516086
+      ],
+      "popup": {
+        "title": "Belmonder's Meats",
+        "description": "Belmonder's Meats was a butcher shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "575",
+      "name": "Warehouse of the League",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1749.7357300461,
+        2003.2335111015
+      ],
+      "popup": {
+        "title": "Warehouse of the League",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "618",
+      "name": "Sulmest's Splendid Shoes & Boots",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1458.0541828067,
+        2756.6557864558
+      ],
+      "popup": {
+        "title": "Sulmest's Splendid Shoes & Boots",
+        "description": "Sulmest's Splendid Shoes & Boots was a high-quality shoe store.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "leatherworker",
+      "equipment_categories": [
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        },
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "619",
+      "name": "Meraedos Fine Furs",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1459.8219497596,
+        2787.768484828
+      ],
+      "popup": {
+        "title": "Meraedos Fine Furs",
+        "description": "Meraedos Fine Furs was a furrier shop operated by [[Shalrin Meraedos]] in the mid\u201314th century DR.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "shalrin_meraedos",
+            "name": "Shalrin Meraedos",
+            "url": "public/assets/atlas/characters/npc/shalrin_meraedos.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "shalrin_meraedos",
+            "name": "Shalrin Meraedos",
+            "url": "public/assets/atlas/characters/npc/shalrin_meraedos.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "leatherworker",
+      "equipment_categories": [
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        },
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "623",
+      "name": "House of Crystal Storage",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1362.2412139559,
+        2779.2832034537
+      ],
+      "popup": {
+        "title": "House of Crystal Storage",
+        "description": "House of Crystal Storage was a warehouse in Waterdeep that was owned by the [[Guild of Glassblowers, Glaziers, and Spectacle-Makers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "carpenter",
+      "equipment_categories": [
+        {
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        },
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "657",
+      "name": "Dhaermos Warehouse",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1191.4749262993,
+        1607.253713637
+      ],
+      "popup": {
+        "title": "Dhaermos Warehouse",
+        "description": "The Dhaermos Warehouse was a storage warehouse that was privately owned by [[Lhund Dhaermos]] in the mid\u201314th century DR.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "lhund_dhaermos",
+            "name": "Lhund Dhaermos",
+            "url": "public/assets/atlas/characters/npc/lhund_dhaermos.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "lhund_dhaermos",
+            "name": "Lhund Dhaermos",
+            "url": "public/assets/atlas/characters/npc/lhund_dhaermos.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "670",
+      "name": "Palace Warehouse",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        987.12106653642,
+        2134.4018190116
+      ],
+      "popup": {
+        "title": "Palace Warehouse",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "686",
+      "name": "Crommor's Warehouse",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1053.5,
+        1675.5
+      ],
+      "popup": {
+        "title": "Crommor's Warehouse",
+        "description": "Crommor's Warehouse was a storage warehouse that was privately owned by the [[Crommor]] noble family in the mid\u201314th century DR.[",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "701",
+      "name": "Aurora's Realms Shop, Singing Dolphin Counter",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        842,
+        3338.5
+      ],
+      "popup": {
+        "title": "Aurora's Realms Shop, Singing Dolphin Counter",
+        "description": "Aurora's Realms Shop, Singing Dolphin Catalogue Counter was an outlet of the [[Aurora's Emporium]] retail chain.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "702",
+      "name": "Melvar\u2019s Chapbooks and Folios",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        831,
+        3368
+      ],
+      "popup": {
+        "title": "Melvar\u2019s Chapbooks and Folios",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "bookshop",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "704",
+      "name": "Tammerbund's Glasswares",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1148,
+        3239
+      ],
+      "popup": {
+        "title": "Tammerbund's Glasswares",
+        "description": "Tammerbund's Glasswares was a glass goods shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "carpenter",
+      "equipment_categories": [
+        {
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        },
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "712",
+      "name": "Bent Nail",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1678,
+        3231.5
+      ],
+      "popup": {
+        "title": "Bent Nail",
+        "description": "The Bent Nail was a carpentry shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "carpenter",
+      "equipment_categories": [
+        {
+          "index": "artisans_tools",
+          "url": "public/assets/atlas/equipment_categories/json/artisans_tools.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        },
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "726",
+      "name": "Paethier's Pipeweed",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1189,
+        2748.5
+      ],
+      "popup": {
+        "title": "Paethier's Pipeweed",
+        "description": "Paethier's Pipeweed was a [[pipeweed]] shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tobacconist",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        }
+      ]
+    },
+    {
+      "id": "727",
+      "name": "Eilean's Maztica Delights",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1251,
+        2710
+      ],
+      "popup": {
+        "title": "Eilean's Maztica Delights",
+        "description": "The shop specialized in exotic goods from distant [[Maztica]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "734",
+      "name": "Curious Past",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1099.5510447451,
+        2298.0970388563
+      ],
+      "popup": {
+        "title": "Curious Past",
+        "description": "The Curious Past was the antiquities store of [[Bronwyn Caradoon]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "bronwyn_caradoon",
+            "name": "Bronwyn Caradoon",
+            "url": "public/assets/atlas/characters/npc/bronwyn_caradoon.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "bronwyn_caradoon",
+            "name": "Bronwyn Caradoon",
+            "url": "public/assets/atlas/characters/npc/bronwyn_caradoon.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "arcane",
+      "equipment_categories": [
+        {
+          "index": "arcane_foci",
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
+        },
+        {
+          "index": "wand",
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
+        },
+        {
+          "index": "staff",
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
+        },
+        {
+          "index": "rod",
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
+        },
+        {
+          "index": "scroll",
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
+        },
+        {
+          "index": "magic_tokens",
+          "url": "public/assets/atlas/equipment_categories/json/magic_tokens.json"
+        },
+        {
+          "index": "wondrous_items",
+          "url": "public/assets/atlas/equipment_categories/json/wondrous_items.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "740",
+      "name": "Diloontier's Apothecary",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1288.7021087125,
+        2253.1957582509
+      ],
+      "popup": {
+        "title": "Diloontier's Apothecary",
+        "description": "This store specialized in herbal and magical balms, [[potion]]s, and perfumes.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "apothecary",
+      "equipment_categories": [
+        {
+          "index": "potion",
+          "url": "public/assets/atlas/equipment_categories/json/potion.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "herbs",
+          "url": "public/assets/atlas/materials_categories/json/herbs.json"
+        },
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        },
+        {
+          "index": "oils",
+          "url": "public/assets/atlas/materials_categories/json/oils.json"
+        }
+      ]
+    },
+    {
+      "id": "741",
+      "name": "Rebeleigh's Elegant Headwear",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1348.4526317227,
+        1987.3236085248
+      ],
+      "popup": {
+        "title": "Rebeleigh's Elegant Headwear",
+        "description": "The shop sold clothing and specialized in fabulous headwear.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "head",
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "742",
+      "name": "Old Knot Shop",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1364.3625342994,
+        2287.1368837479
+      ],
+      "popup": {
+        "title": "Old Knot Shop",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "746",
+      "name": "Ragathan Furriers",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1881.6111447374,
+        2879.3388129916
+      ],
+      "popup": {
+        "title": "Ragathan Furriers",
+        "description": "Ragathan Furriers was a furrier shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "leatherworker",
+      "equipment_categories": [
+        {
+          "index": "boots",
+          "url": "public/assets/atlas/equipment_categories/json/boots.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        },
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "748",
+      "name": "Millomyr Harps",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1665.9435764755,
+        2623.3661582021
+      ],
+      "popup": {
+        "title": "Millomyr Harps",
+        "description": "Millomyr Harps was an instrument shop specializing in [[harps]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "752",
+      "name": "Fallen Stars Fish",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1528.7648609253,
+        2690.1877490242
+      ],
+      "popup": {
+        "title": "Fallen Stars Fish",
+        "description": "All of the fish sold here came from the [[Sea of Fallen Stars]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "754",
+      "name": "Aurora's Realms Shop High Road Counter",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1502.6019100214,
+        2756.3022330652
+      ],
+      "popup": {
+        "title": "Aurora's Realms Shop High Road Counter",
+        "description": "Aurora's Realms Shop, High Road Catalogue Counter was an outlet of the [[Aurora's Emporium]] retail chain.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "755",
+      "name": "Downybeard Tobacconist",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1647.5588001647,
+        2588.717925924
+      ],
+      "popup": {
+        "title": "Downybeard Tobacconist",
+        "description": "Downybeard Tobacconist was a shop that specialized in the sale of [[tobacco]] products.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tobacconist",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        }
+      ]
+    },
+    {
+      "id": "761",
+      "name": "Aurora's Realms Shop, Waterdeep Way Counter",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1489.5204345695,
+        1977.0705601976
+      ],
+      "popup": {
+        "title": "Aurora's Realms Shop, Waterdeep Way Counter",
+        "description": "Aurora's Realms Shop, Waterdeep Way Catalogue Counter was an outlet of the [[Aurora's Emporium]] retail chain.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "764",
+      "name": "Henndever's Coffins and Coffers",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1571.5,
+        2222.5
+      ],
+      "popup": {
+        "title": "Henndever's Coffins and Coffers",
+        "description": "Henndever's Coffins and Coffers was a shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "767",
+      "name": "Aurora's Realms Shop, Street of the Tusks Counter",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1583.5656364673,
+        1977.7776669788
+      ],
+      "popup": {
+        "title": "Aurora's Realms Shop, Street of the Tusks Counter",
+        "description": "Aurora's Realms Shop, Street of the Tusks Catalogue Counter was an outlet of the [[Aurora's Emporium]] retail chain.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "777",
+      "name": "Alex Lenter's Storage",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1185.8180720498,
+        1659.2260620542
+      ],
+      "popup": {
+        "title": "Alex Lenter's Storage",
+        "description": "Alex Lenter's Storage was a warehouse.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "785",
+      "name": "Stationers' Hall",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1651.0943340706,
+        1899.9959210483
+      ],
+      "popup": {
+        "title": "Stationers' Hall",
+        "description": "Stationers' Hall was the guildhall of the Stationers' Guild.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "bookshop",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "786",
+      "name": "House of Light Storage",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1636.5986450563,
+        1875.9542904879
+      ],
+      "popup": {
+        "title": "House of Light Storage",
+        "description": "House of Light Storage was a warehouse that was owned by the [[Guild of Chandlers and Lamplighters]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "795",
+      "name": "Ralagut's Wheelhouse",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1526.6435405818,
+        1617.5067619642
+      ],
+      "popup": {
+        "title": "Ralagut's Wheelhouse",
+        "description": "Ralagut's Wheelhouse was a general store.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "796",
+      "name": "Whistling Blades",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1510.7336380051,
+        1604.4252865123
+      ],
+      "popup": {
+        "title": "Whistling Blades",
+        "description": "Whistling Blades was a weapons shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
+        },
+        {
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "799",
+      "name": "Talnu's Ropeworks",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1349.8668452851,
+        1483.5100269294
+      ],
+      "popup": {
+        "title": "Talnu's Ropeworks",
+        "description": "The shop specialized in the sale of [[rope]]s and other gear suitable for [[adventurer]]s",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "801",
+      "name": "Old Xoblob Shop",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1650.74078068,
+        1248.3970221848
+      ],
+      "popup": {
+        "title": "Old Xoblob Shop",
+        "description": "The Old Xoblob Shop was a curiosity shop.It was famous for the stuffed [[beholder]] that hung above its front window by the main counter.",
+        "image": "File:Old xoblob shop-2e.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "arcane",
+      "equipment_categories": [
+        {
+          "index": "arcane_foci",
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
+        },
+        {
+          "index": "wand",
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
+        },
+        {
+          "index": "staff",
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
+        },
+        {
+          "index": "rod",
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
+        },
+        {
+          "index": "scroll",
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
+        },
+        {
+          "index": "magic_tokens",
+          "url": "public/assets/atlas/equipment_categories/json/magic_tokens.json"
+        },
+        {
+          "index": "wondrous_items",
+          "url": "public/assets/atlas/equipment_categories/json/wondrous_items.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "802",
+      "name": "Aurora's Realms Shop, Slut Street Counter",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1647.2052467741,
+        1280.2168273382
+      ],
+      "popup": {
+        "title": "Aurora's Realms Shop, Slut Street Counter",
+        "description": "Aurora's Realms Shop, Slut Street Catalogue Counter was an outlet of the [[Aurora's Emporium]] retail chain.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "803",
+      "name": "Alex Lenter's Storage",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1668.0648968191,
+        1443.5584937923
+      ],
+      "popup": {
+        "title": "Alex Lenter's Storage",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "804",
+      "name": "Maernath Storage",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1659.9331688354,
+        1459.468396369
+      ],
+      "popup": {
+        "title": "Maernath Storage",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "806",
+      "name": "Fishscale Smithy",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1408.203154733,
+        1449.2153480418
+      ],
+      "popup": {
+        "title": "Fishscale Smithy",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
+        },
+        {
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "810",
+      "name": "Aurora's Realms Shop, South High Road Counter",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1801.3545250727,
+        1070.913220107
+      ],
+      "popup": {
+        "title": "Aurora's Realms Shop, South High Road Counter",
+        "description": "Aurora's Realms Shop, South High Road Catalogue Counter was an outlet of the [[Aurora's Emporium]] retail chain.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "812",
+      "name": "Nueth's Fine Nets",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1802.0616318539,
+        1099.1974913545
+      ],
+      "popup": {
+        "title": "Nueth's Fine Nets",
+        "description": "In addition to finely made ropes, Nueth's Fine Nets sold such rope-related products as gauze, [[hammock]]s, [[net]]s, tarp and window mesh, tow rope, rope bridges, ship shrouds and lines. The store also sold thin, waxed climbing cables that were popular among [[thieves]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "harbor",
+      "equipment_categories": [
+        {
+          "index": "waterborne_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/waterborne_vehicles.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "813",
+      "name": "The Medusa's Glare",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1827.5174759766,
+        1105.5614523852
+      ],
+      "popup": {
+        "title": "The Medusa's Glare",
+        "description": "The Medusa's Glare was a sculptor's shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "814",
+      "name": "Berendarr's World of Words",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1892.9248532364,
+        1057.1246378739
+      ],
+      "popup": {
+        "title": "Berendarr's World of Words",
+        "description": "Berendarr's specialized in selling [[broadsheet]]s.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "bookshop",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "817",
+      "name": "Brian the Swordmaster's Smithy",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1774.130913997,
+        1463.3574836656
+      ],
+      "popup": {
+        "title": "Brian the Swordmaster's Smithy",
+        "description": "Brian the Swordmaster's Smithy was a blacksmith shop.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
+        },
+        {
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "819",
+      "name": "Essimuth's Equipment",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1764.25,
+        1352.375
+      ],
+      "popup": {
+        "title": "Essimuth's Equipment",
+        "description": "Essimuth's Equipment was a shop that sold tools and adventuring gear.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "824",
+      "name": "Hemmerem's Stables",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1798.25,
+        1338.125
+      ],
+      "popup": {
+        "title": "Hemmerem's Stables",
+        "description": "Hemmerem's Stables was a shop owned and run by [[Hemmerem]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "hemmerem",
+            "name": "Hemmerem",
+            "url": "public/assets/atlas/characters/npc/hemmerem.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "hemmerem",
+            "name": "Hemmerem",
+            "url": "public/assets/atlas/characters/npc/hemmerem.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "stable",
+      "equipment_categories": [
+        {
+          "index": "mounts_and_other_animals",
+          "url": "public/assets/atlas/equipment_categories/json/mounts_and_other_animals.json"
+        },
+        {
+          "index": "mounts_and_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/mounts_and_vehicles.json"
+        },
+        {
+          "index": "tack_harness_and_drawn_vehicles",
+          "url": "public/assets/atlas/equipment_categories/json/tack_harness_and_drawn_vehicles.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        }
+      ]
+    },
+    {
+      "id": "825",
+      "name": "Piatran's Clothiers",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1781.5,
+        1341
+      ],
+      "popup": {
+        "title": "Piatran's Clothiers",
+        "description": "As its name implied, the shop was owned and run by [[Piatran]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "piatran",
+            "name": "Piatran",
+            "url": "public/assets/atlas/characters/npc/piatran.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [
+          {
+            "index": "piatran",
+            "name": "Piatran",
+            "url": "public/assets/atlas/characters/npc/piatran.json"
+          }
+        ],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "head",
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "828",
+      "name": "Ingerr & Ingerr Warehouses",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1804.25,
+        1289.625
+      ],
+      "popup": {
+        "title": "Ingerr & Ingerr Warehouses",
+        "description": "Ingerr & Ingerr Warehouses was a warehouse compound",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "830",
+      "name": "Krabbellor Silversmiths",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1793.875,
+        1310
+      ],
+      "popup": {
+        "title": "Krabbellor Silversmiths",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
+        },
+        {
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "832",
+      "name": "Waukeen's Wares",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1768.75,
+        1308.25
+      ],
+      "popup": {
+        "title": "Waukeen's Wares",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "835",
+      "name": "Garrulous Grocer",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1765.125,
+        1325.125
+      ],
+      "popup": {
+        "title": "Garrulous Grocer",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "837",
+      "name": "The Medusa's Glare",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1746.5,
+        1295.125
+      ],
+      "popup": {
+        "title": "The Medusa's Glare",
+        "description": "The Medusa's Glare was a sculptor's shop",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "848",
+      "name": "Ilmar Gaukul Silversmith",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1753.125,
+        1400.5
+      ],
+      "popup": {
+        "title": "Ilmar Gaukul Silversmith",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
+        },
+        {
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "933",
+      "name": "Thrakkus's Butcher Shop",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1436.5,
+        3660.875
+      ],
+      "popup": {
+        "title": "Thrakkus's Butcher Shop",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "941",
+      "name": "Trades Ward",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1723,
+        1803
+      ],
+      "popup": {
+        "title": "Trades Ward",
+        "description": "The Trades Ward was one of the seven wards of the city of Waterdeep. It was the main shopping district of Waterdeep and housed many of the city's guildhalls.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "943",
+      "name": "Market",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1277,
+        2660
+      ],
+      "popup": {
+        "title": "Market",
+        "description": "The largest open area within the city was the marketplace between Trader's Way and Bazaar street. It was full of merchants carts and stalls both day and night and was the best place in the city to find a good price for any trade good found in Faer\u00fbn, assuming one had some skill at haggling.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "951",
+      "name": "Steam and Steel",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1674.4288578497,
+        3213.8003204929
+      ],
+      "popup": {
+        "title": "Steam and Steel",
+        "description": "Steam and Steel was a smithy. Operating during daylight hours, this smithy offered a wide variety of armors, shields, metal tools, and weaponry.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
+        },
+        {
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "954",
+      "name": "Nurneene's Marvelous Masks",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1456.6399692443,
+        2229.5076810812
+      ],
+      "popup": {
+        "title": "Nurneene's Marvelous Masks",
+        "description": "Nurneene's Marvelous Masks was a clothing boutique that sold stylish hand-made custom masks and costume accessories to the Waterdhavian elite.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tailor",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "head",
+          "url": "public/assets/atlas/equipment_categories/json/head.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "959",
+      "name": "Blackwell's Fine Books and Good Tomes",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1161.4228880989,
+        2828.7806781368
+      ],
+      "popup": {
+        "title": "Blackwell's Fine Books and Good Tomes",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "bookshop",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "960",
+      "name": "Book Wyrm's Treasure",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1595.2328983569,
+        3251.6305332863
+      ],
+      "popup": {
+        "title": "Book Wyrm's Treasure",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "bookshop",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "963",
+      "name": "Bronzeleaf Bowyers",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1530.8861812689,
+        3350.979036043
+      ],
+      "popup": {
+        "title": "Bronzeleaf Bowyers",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "bowyer",
+      "equipment_categories": [
+        {
+          "index": "ranged_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/ranged_weapons.json"
+        },
+        {
+          "index": "martial_ranged_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_ranged_weapons.json"
+        },
+        {
+          "index": "simple_ranged_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_ranged_weapons.json"
+        },
+        {
+          "index": "ammunition",
+          "url": "public/assets/atlas/equipment_categories/json/ammunition.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "965",
+      "name": "Chanszobur's Manywares",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1211.6274695631,
+        3321.6341046238
+      ],
+      "popup": {
+        "title": "Chanszobur's Manywares",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "975",
+      "name": "Kiana's Mystericum",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1662.5,
+        1967
+      ],
+      "popup": {
+        "title": "Kiana's Mystericum",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "arcane",
+      "equipment_categories": [
+        {
+          "index": "arcane_foci",
+          "url": "public/assets/atlas/equipment_categories/json/arcane_foci.json"
+        },
+        {
+          "index": "wand",
+          "url": "public/assets/atlas/equipment_categories/json/wand.json"
+        },
+        {
+          "index": "staff",
+          "url": "public/assets/atlas/equipment_categories/json/staff.json"
+        },
+        {
+          "index": "rod",
+          "url": "public/assets/atlas/equipment_categories/json/rod.json"
+        },
+        {
+          "index": "scroll",
+          "url": "public/assets/atlas/equipment_categories/json/scroll.json"
+        },
+        {
+          "index": "magic_tokens",
+          "url": "public/assets/atlas/equipment_categories/json/magic_tokens.json"
+        },
+        {
+          "index": "wondrous_items",
+          "url": "public/assets/atlas/equipment_categories/json/wondrous_items.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "987",
+      "name": "Sword Coast Traders' Bank",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1891.5,
+        1216
+      ],
+      "popup": {
+        "title": "Sword Coast Traders' Bank",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "999",
+      "name": "Verdas' potions and poisons",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1916.9664837967,
+        1306.0262248516
+      ],
+      "popup": {
+        "title": "Verdas' potions and poisons",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "apothecary",
+      "equipment_categories": [
+        {
+          "index": "potion",
+          "url": "public/assets/atlas/equipment_categories/json/potion.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "herbs",
+          "url": "public/assets/atlas/materials_categories/json/herbs.json"
+        },
+        {
+          "index": "consumables",
+          "url": "public/assets/atlas/materials_categories/json/consumables.json"
+        },
+        {
+          "index": "oils",
+          "url": "public/assets/atlas/materials_categories/json/oils.json"
+        }
+      ]
+    },
+    {
+      "id": "1004",
+      "name": "Hardyn Glorjarn's Business Rentals",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1628.5554101892155,
+        3262.254304272499
+      ],
+      "popup": {
+        "title": "Hardyn Glorjarn's Business Rentals",
+        "description": "A three-story building that housed several shops in the late 15{{th}} century [[DR]]: [[Laskalan's Lamps and Lanterns]], [[Erro Alhandrar's Nets]], [[Demra Samdro's Best Beds]], [[Tantra Jaressra's Fine Gowns]], and [[Vressa's Sweep Begone]], as well as [[Tiger's Eye (shop)|Tiger's Eye]].",
+        "image": "File:Saerdoun Street Thunderstaff Way.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "smithy",
+      "equipment_categories": [
+        {
+          "index": "armor",
+          "url": "public/assets/atlas/equipment_categories/json/armor.json"
+        },
+        {
+          "index": "heavy_armor",
+          "url": "public/assets/atlas/equipment_categories/json/heavy_armor.json"
+        },
+        {
+          "index": "medium_armor",
+          "url": "public/assets/atlas/equipment_categories/json/medium_armor.json"
+        },
+        {
+          "index": "light_armor",
+          "url": "public/assets/atlas/equipment_categories/json/light_armor.json"
+        },
+        {
+          "index": "shields",
+          "url": "public/assets/atlas/equipment_categories/json/shields.json"
+        },
+        {
+          "index": "martial_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_weapons.json"
+        },
+        {
+          "index": "simple_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_weapons.json"
+        },
+        {
+          "index": "melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/melee_weapons.json"
+        },
+        {
+          "index": "martial_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+        },
+        {
+          "index": "simple_melee_weapons",
+          "url": "public/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "refined_materials",
+          "url": "public/assets/atlas/materials_categories/json/refined_materials.json"
+        },
+        {
+          "index": "raw_materials",
+          "url": "public/assets/atlas/materials_categories/json/raw_materials.json"
+        }
+      ]
+    },
+    {
+      "id": "1006",
+      "name": "Alkul's Ice Storage",
+      "categoryId": "shops",
+      "type": "marker",
+      "position": [
+        1344.4399780941073,
+        1356.0652977592608
+      ],
+      "popup": {
+        "title": "Alkul's Ice Storage",
+        "description": "An icehouse that stood along [[Odd Street]] in [[1367 DR]].",
+        "image": "File:OddStreet-VgtW-p174.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "general_store",
+      "equipment_categories": [
+        {
+          "index": "standard_gear",
+          "url": "public/assets/atlas/equipment_categories/json/standard_gear.json"
+        },
+        {
+          "index": "adventuring_gear",
+          "url": "public/assets/atlas/equipment_categories/json/adventuring_gear.json"
+        },
+        {
+          "index": "kits",
+          "url": "public/assets/atlas/equipment_categories/json/kits.json"
+        },
+        {
+          "index": "tools",
+          "url": "public/assets/atlas/equipment_categories/json/tools.json"
+        },
+        {
+          "index": "gaming_sets",
+          "url": "public/assets/atlas/equipment_categories/json/gaming_sets.json"
+        }
+      ],
+      "material_categories": [
+        {
+          "index": "common_materials",
+          "url": "public/assets/atlas/materials_categories/json/common_materials.json"
+        },
+        {
+          "index": "bundled_materials",
+          "url": "public/assets/atlas/materials_categories/json/bundled_materials.json"
+        }
+      ]
+    }
+  ]
+}

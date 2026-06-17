@@ -1,0 +1,18 @@
+{
+  "index": "flails",
+  "type": "weapons",
+  "name": "flails",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/flails.json",
+  "reference": {
+    "index": "flail",
+    "name": "flail",
+    "url": "/assets/atlas/equipment/json/flail.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/flails.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "special": [],
+  "index": "playing_card_set",
+  "name": "playing card set",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Gaming Sets",
+  "cost": {
+    "quantity": 5,
+    "unit": "sp"
+  },
+  "weight": 0,
+  "desc": [
+    "These weathered cards are stained with the copper tang of dried blood, and it is said that those who lose a hand to their grim portraits often find their very souls shuffled into the deck. Each face stares back with unnerving intent, waiting for the moment a desperate gambler finally draws the Ace of Crows."
+  ],
+  "image": "/assets/atlas/equipment/images/playing_card_set.webp",
+  "url": "/assets/atlas/equipment/json/playing_card_set.json",
+  "updated_at": "2026-04-11T16:20:03.846Z",
+  "contents": [],
+  "properties": [],
+  "sprite_index": 7,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/playing_card_set.webp",
+  "_type": "equipment",
+  "category": "Gaming Sets",
+  "last_updated": "11-4-2026",
+  "kind": "tool",
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ]
+}

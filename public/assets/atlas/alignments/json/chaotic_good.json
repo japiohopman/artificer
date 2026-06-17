@@ -1,0 +1,27 @@
+{
+  "index": "chaotic_good",
+  "name": "Chaotic Good",
+  "abbreviation": "CG",
+  "color": "#22D3EE",
+  "desc": "Chaotic good (CG) creatures act as their conscience directs, with little regard for what others expect.",
+  "description": "Chaotic good (CG) creatures act as their conscience directs, with little regard for what others expect. Copper dragons, many elves, and unicorns are chaotic good.",
+  "gods": [
+    {
+      "index": "lliira",
+      "name": "Lliira",
+      "url": "/assets/atlas/gods/lliira.json"
+    },
+    {
+      "index": "selûne",
+      "name": "Selûne",
+      "url": "/assets/atlas/gods/selûne.json"
+    },
+    {
+      "index": "sune",
+      "name": "Sune",
+      "url": "/assets/atlas/gods/sune.json"
+    }
+  ],
+  "url": "/assets/atlas/alignments/json/chaotic_good.json",
+  "updated_at": "2026-06-06T10:34:52.343224Z"
+}

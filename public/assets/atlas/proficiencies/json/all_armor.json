@@ -1,0 +1,29 @@
+{
+  "index": "all_armor",
+  "type": "armor",
+  "name": "all armor",
+  "classes": [
+    {
+      "index": "fighter",
+      "name": "fighter",
+      "url": "/assets/atlas/class/json/fighter.json"
+    },
+    {
+      "index": "paladin",
+      "name": "paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    }
+  ],
+  "url": "/assets/atlas/proficiencies/json/all_armor.json",
+  "reference": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/json/armor.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/all_armor.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment_categories"
+  }
+}

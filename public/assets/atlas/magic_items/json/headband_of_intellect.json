@@ -1,0 +1,33 @@
+{
+  "index": "headband_of_intellect",
+  "name": "headband of intellect",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, uncommon (requires attunement)",
+    "Your Intelligence score is 19 while you wear this headband. It has no effect on you if your Intelligence is already 19 or higher."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "intelligence_set": 19
+    }
+  },
+  "url": "/assets/atlas/magic_items/json/headband_of_intellect.json",
+  "updated_at": "2026-04-15T13:44:43.228Z",
+  "image": "/assets/atlas/magic_items/headband_of_intellect.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/headband_of_intellect.webp",
+  "_type": "equipment",
+  "category": "Wondrous Items",
+  "slot": [
+    "head"
+  ],
+  "last_updated": "15-4-2026"
+}

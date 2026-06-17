@@ -1,0 +1,21 @@
+{
+  "index": "brooch_of_shielding",
+  "name": "brooch of shielding",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, uncommon (requires attunement)",
+    "While wearing this brooch, you have resistance to force damage, and you have immunity to damage from the magic missile spell."
+  ],
+  "image": "/assets/atlas/magic_items/brooch_of_shielding.webp",
+  "url": "/assets/atlas/magic_items/json/brooch_of_shielding.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

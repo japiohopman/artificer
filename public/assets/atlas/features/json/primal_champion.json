@@ -1,0 +1,25 @@
+{
+  "index": "primal_champion",
+  "class": {
+    "index": "barbarian",
+    "name": "barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "name": "primal champion",
+  "level": 20,
+  "prerequisites": [],
+  "desc": [
+    "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
+  ],
+  "url": "/assets/atlas/features/json/primal_champion.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/primal_champion.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "strength_bonus": 4,
+      "constitution_bonus": 4,
+      "strength_max_set": 24,
+      "constitution_max_set": 24
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "desc": [
+    "Each cold, interlocking ring is stained with the rusted patina of a thousand failed crusades, whispering the final, jagged breaths of the souls who wore them before you. To don this armor is to wrap yourself in the clattering shroud of the fallen, where every link feels like a heavy secret pressed against your skin."
+  ],
+  "special": [],
+  "index": "chain_mail",
+  "name": "chain mail",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "armor_category": "Heavy",
+  "armor_class": {
+    "base": 16,
+    "dex_bonus": false
+  },
+  "str_minimum": 13,
+  "stealth_disadvantage": true,
+  "weight": 55,
+  "cost": {
+    "quantity": 75,
+    "unit": "gp"
+  },
+  "url": "/assets/atlas/equipment/json/chain_mail.json",
+  "updated_at": "2026-04-29T17:15:09.598Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/chain_mail.webp",
+  "sprite_index": 3,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/equipment/images/chain_mail.webp",
+  "_type": "equipment",
+  "last_updated": "29-4-2026",
+  "background_type": "land_forest",
+  "slot": [
+    "chest"
+  ],
+  "kind": "armor",
+  "equipSlots": [
+    "chest"
+  ]
+}

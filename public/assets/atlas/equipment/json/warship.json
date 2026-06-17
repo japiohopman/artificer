@@ -1,0 +1,38 @@
+{
+  "desc": [
+    "Forged in the heart of a dying star and quenched in the blood of a forgotten god, the *Warship* whispers promises of absolute dominion, its obsidian hull etched with the agonized faces of those it has consumed. To wield it is to invite madness, for the victories it brings are always paid for in soul-rending despair.\n"
+  ],
+  "special": [],
+  "index": "warship",
+  "name": "warship",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Waterborne Vehicles",
+  "cost": {
+    "quantity": 25000,
+    "unit": "gp"
+  },
+  "speed": {
+    "quantity": 2.5,
+    "unit": "mph"
+  },
+  "url": "/assets/atlas/equipment/json/warship.json",
+  "updated_at": "2026-04-25T19:29:50.181Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/warship.webp",
+  "sprite_index": 4,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet10.webp",
+  "imageUrl": "/assets/atlas/equipment/images/warship.webp",
+  "_type": "equipment",
+  "background_type": "water",
+  "slot": [
+    "extra"
+  ],
+  "category": "Waterborne Vehicles",
+  "last_updated": "25-4-2026",
+  "kind": "adventuring_gear"
+}

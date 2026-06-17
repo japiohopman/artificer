@@ -1,0 +1,151 @@
+{
+  "id": "baldurs_gate",
+  "name": "Baldur's Gate",
+  "type": "metropolis",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "faerun",
+  "region": "west_faerun",
+  "sub_region": "western_heartlands",
+  "parent": "cities",
+  "title": "Baldur's Gate: Metropolis of the Coast",
+  "description": "Baldur's Gate, called the City of Blood and simply the Gate, was one of the largest metropolises and city-states on the Sword Coast, within the greater Western Heartlands. It was a crowded city of commerce and opportunity, and one of the most prosperous and influential merchant cities on the western coast of Faerûn. Despite its long-standing presence as a neutral power, the leaders of Baldur's Gate were members of the Lords' Alliance of powers in the west. It was described as being the \"halfway to everywhere\".\n\nThe strong peace-keeping force known as the Watch, along with the presence of the powerful Flaming Fists mercenary company, kept the city generally peaceful and safe. This inherent sense of security allowed the Gate to keep a tolerant and welcoming attitude towards outsiders, whether they were wealthy merchants, poor refugees or, as it historically attracted, less-scrupulous individuals such as pirates and smugglers",
+  "wiki": "Located at the mouth of the River Chionthar, Baldur's Gate is a massive trading city regulated by the Council of Four. It is divided into the Upper, Lower, and Outer Cities.",
+  "image": "/assets/atlas/world/toril/faerun/cities/images/baldurs_gate.webp",
+  "thumbnail": "/assets/atlas/world/toril/faerun/cities/images/baldurs_gate_thumb.webp",
+  "banner": "/assets/atlas/world/toril/faerun/cities/images/baldurs_gate_banner.webp",
+  "tags": [
+    "city",
+    "metropolis",
+    "port"
+  ],
+  "map": "/assets/atlas/world/toril/faerun/cities/baldurs_gate/baldurs_gate_map.webp",
+  "sub_map": "",
+  "children": [
+    "upper_city",
+    "lower_city",
+    "outer_city"
+  ],
+  "sub_location_files": [
+    "/assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/districts.json",
+    "/assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/docks.json",
+    "/assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/estates.json",
+    "/assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/gates.json",
+    "/assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/geographical.json",
+    "/assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/inns.json",
+    "/assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/landmarks.json",
+    "/assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/points_of_interest.json",
+    "/assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/roads.json",
+    "/assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/shops.json",
+    "/assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/taverns_eateries.json",
+    "/assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/temples_shrines.json",
+    "/assets/atlas/world/toril/faerun/cities/baldurs_gate/sublocations/water.json"
+  ],
+  "coordinates": {
+    "lat": 1035.5,
+    "lng": 2029.5
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      3000,
+      1994
+    ]
+  ],
+  "origin": "bottom-left",
+  "unitsPerMile": 1,
+  "geography": "assets/atlas/lore/geography/baldurs_gate.md",
+  "history": "assets/atlas/lore/essays/baldurs_gate.md",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": {
+    "imports": [
+      "Stone"
+    ],
+    "exports": [
+      "Dyes",
+      "fish",
+      "lamp oil",
+      "trade-coinage"
+    ]
+  },
+  "metadata": {
+    "government": "The Council of Four",
+    "military": "The Flaming Fist",
+    "population": "125,000+",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": [
+    {
+      "id": "1",
+      "listId": 1,
+      "name": "Districts"
+    },
+    {
+      "id": "5",
+      "listId": 2,
+      "name": "Temples & Shrines"
+    },
+    {
+      "id": "6",
+      "listId": 3,
+      "name": "Landmarks"
+    },
+    {
+      "id": "7",
+      "listId": 4,
+      "name": "Shops & Coasters"
+    },
+    {
+      "id": "8",
+      "listId": 5,
+      "name": "Points of Interest"
+    },
+    {
+      "id": "9",
+      "listId": 6,
+      "name": "Taverns & Eateries"
+    },
+    {
+      "id": "12",
+      "listId": 7,
+      "name": "Inns"
+    },
+    {
+      "id": "10",
+      "listId": 8,
+      "name": "Residences & Estates"
+    },
+    {
+      "id": "11",
+      "listId": 9,
+      "name": "Gates"
+    },
+    {
+      "id": "14",
+      "listId": 10,
+      "name": "Streets & Roads"
+    },
+    {
+      "id": "13",
+      "listId": 11,
+      "name": "Geographical"
+    },
+    {
+      "id": "16",
+      "listId": 12,
+      "name": "Docks & Wharves",
+      "color": "#fa005a"
+    },
+    {
+      "id": "15",
+      "listId": 13,
+      "name": "Bodies of Water"
+    }
+  ]
+}

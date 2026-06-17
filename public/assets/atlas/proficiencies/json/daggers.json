@@ -1,0 +1,34 @@
+{
+  "index": "daggers",
+  "type": "weapons",
+  "name": "daggers",
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "url": "/assets/atlas/proficiencies/json/daggers.json",
+  "reference": {
+    "index": "dagger",
+    "name": "dagger",
+    "url": "/assets/atlas/equipment/json/dagger.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/daggers.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

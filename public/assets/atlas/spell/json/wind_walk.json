@@ -1,0 +1,39 @@
+{
+  "higher_level": [],
+  "index": "wind_walk",
+  "name": "wind walk",
+  "desc": [
+    "You and up to ten willing creatures you can see within range assume a gaseous form for the duration, appearing as wisps of cloud. While in this cloud form, a creature has a flying speed of 300 feet and has resistance to damage from nonmagical weapons. The only actions a creature can take in this form are the Dash action or to revert to its normal form. Reverting takes 1 minute, during which time a creature is incapacitated and can't move. Until the spell ends, a creature can revert to cloud form, which also requires the 1-minute transformation.",
+    "If a creature is in cloud form and flying when the effect ends, the creature descends 60 feet per round for 1 minute until it lands, which it does safely. If it can't land after 1 minute, the creature falls the remaining distance."
+  ],
+  "range": "30 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Fire and holy water.",
+  "ritual": false,
+  "duration": "8 hours",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 6,
+  "school": {
+    "index": "transmutation",
+    "name": "transmutation",
+    "url": "/assets/atlas/magic_schools/json/transmutation.json"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/wind_walk.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/wind_walk.webp",
+  "sprite_index": 14,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet13.webp"
+}

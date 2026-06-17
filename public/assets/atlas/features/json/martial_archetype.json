@@ -1,0 +1,60 @@
+{
+  "index": "martial_archetype",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "name": "martial archetype",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques, such as Champion, Battle Master, Eldritch Knight or Psi Warrior. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level."
+  ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "subclass",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "champion",
+              "name": "champion",
+              "url": "/assets/atlas/subclasses/json/champion.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "battle_master",
+              "name": "battle master",
+              "url": "/assets/atlas/subclasses/json/battle_master.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "eldritch_knight",
+              "name": "eldritch knight",
+              "url": "/assets/atlas/subclasses/json/eldritch_knight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "psi_warrior",
+              "name": "psi warrior",
+              "url": "/assets/atlas/subclasses/json/psi_warrior.json"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "url": "/assets/atlas/features/json/martial_archetype.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "/assets/atlas/features/images/martial_archetype.webp"
+}

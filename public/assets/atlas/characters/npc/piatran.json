@@ -1,0 +1,28 @@
+{
+  "id": "piatran",
+  "name": "Piatran",
+  "species": "Human",
+  "classJob": "Shopkeeper (Clothier)",
+  "gender": "male",
+  "baseMood": "Neutral",
+  "visualTraits": {
+    "skinTone": "#d2b48c",
+    "hairStyle": "Common",
+    "clothingStyle": "Local",
+    "distinguishingFeatures": "None"
+  },
+  "personalityTraits": [],
+  "secrets": [],
+  "goals": [],
+  "locationId": "/assets/atlas/world/toril/faerun/cities/waterdeep.json",
+  "isEssential": false,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "backstory": "Piatran was the owner of Piatran's Clothiers, a single-story shop in the Southern Ward of Waterdeep. Known for his quality garments and personalized service, his shop featured a split-floor design with elevated dressing rooms."
+}

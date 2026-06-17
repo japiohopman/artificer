@@ -1,0 +1,36 @@
+{
+  "special": [],
+  "index": "navigators_tools",
+  "name": "navigator's tools",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Other Tools",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "desc": [
+    "This set of instruments is used for navigation at sea. Proficiency with navigator's tools lets you chart a ship's course and follow navigation charts. In addition, these tools allow you to add your proficiency bonus to any ability check you make to avoid getting lost at sea."
+  ],
+  "url": "/assets/atlas/equipment/json/navigators_tools.json",
+  "updated_at": "2026-04-12T08:04:43.633Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/navigators_tools.webp",
+  "sprite_index": 18,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/images/navigators_tools.webp",
+  "_type": "equipment",
+  "category": "Other Tools",
+  "last_updated": "12-4-2026",
+  "kind": "tool",
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ]
+}

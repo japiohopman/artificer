@@ -1,0 +1,29 @@
+{
+  "index": "crossbows_light",
+  "type": "weapons",
+  "name": "crossbows, light",
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "url": "/assets/atlas/proficiencies/json/crossbows_light.json",
+  "reference": {
+    "index": "crossbow_light",
+    "name": "crossbow, light",
+    "url": "/assets/atlas/equipment/json/crossbow_light.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/crossbows_light.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

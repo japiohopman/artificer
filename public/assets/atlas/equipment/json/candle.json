@@ -1,0 +1,43 @@
+{
+  "special": [],
+  "index": "candle",
+  "name": "candle",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "cp"
+  },
+  "weight": 0,
+  "desc": [
+    "For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet."
+  ],
+  "url": "/assets/atlas/equipment/json/candle.json",
+  "updated_at": "2026-05-08T04:36:10.603Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/candle.webp",
+  "sprite_index": 19,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/images/candle.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "category": "Adventuring Gear",
+  "last_updated": "8-5-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

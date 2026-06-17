@@ -1,0 +1,37 @@
+{
+  "index": "wand_of_the_war_mage",
+  "name": "wand of the war mage, +1, +2, or +3",
+  "equipment_category": {
+    "index": "wand",
+    "name": "wand",
+    "url": "/assets/atlas/equipment_categories/wand"
+  },
+  "rarity": {
+    "name": "varies"
+  },
+  "variants": [
+    {
+      "index": "wand_of_the_war_mage_1",
+      "name": "wand of the war mage, +1",
+      "url": "/assets/atlas/magic_items/wand_of_the_war_mage_1"
+    },
+    {
+      "index": "wand_of_the_war_mage_2",
+      "name": "wand of the war mage, +2",
+      "url": "/assets/atlas/magic_items/wand_of_the_war_mage_2"
+    },
+    {
+      "index": "wand_of_the_war_mage_3",
+      "name": "wand of the war mage, +3",
+      "url": "/assets/atlas/magic_items/wand_of_the_war_mage_3"
+    }
+  ],
+  "variant": false,
+  "desc": [
+    "Wand, uncommon (+1), rare (+2), or very rare (+3) (requires attunement by a spellcaster)",
+    "While holding this wand, you gain a bonus to spell attack rolls determined by the wand's rarity. In addition, you ignore half cover when making a spell attack."
+  ],
+  "url": "/assets/atlas/magic_items/json/wand_of_the_war_mage.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/wand_of_the_war_mage.webp"
+}

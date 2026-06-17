@@ -1,0 +1,24 @@
+{
+  "level": 4,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "fighter_ability_score_improvement_1",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/fighter_ability_score_improvement_1.json"
+    }
+  ],
+  "class_specific": {
+    "action_surges": 1,
+    "indomitable_uses": 0,
+    "extra_attacks": 0
+  },
+  "index": "fighter_level_4",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "url": "/assets/atlas/class/levels/4/fighter_level_4.json"
+}

@@ -1,0 +1,21 @@
+# Equipment Data Summary
+This directory contains equipment and magic item data.
+
+## Damage Implementation
+- Weapons and offensive items must reference damage types from `public/assets/atlas/damage_types/json/`.
+- Use the `damage` field to specify the amount (e.g., "1d8") and the `damage_type` object.
+- By default, attacks inherit the `default_interactions` from their damage type.
+- Individual items can opt-in or override secondary effects using a `secondary_effects` array:
+  ```json
+  "secondary_effects": [
+    {
+      "effect": "burning",
+      "chance": 0.3
+    }
+  ]
+  ```
+
+## Standards
+- JSON files are located in the `json/` subdirectory.
+- Images are located in the `images/` or root of this directory as `.webp`.
+- URLs must include the `public/` prefix.

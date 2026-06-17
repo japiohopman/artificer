@@ -1,0 +1,27 @@
+{
+  "index": "chaotic_neutral",
+  "name": "Chaotic Neutral",
+  "abbreviation": "CN",
+  "color": "#8B5CF6",
+  "desc": "Chaotic neutral (CN) creatures follow their whims, holding their personal freedom above all else.",
+  "description": "Chaotic neutral (CN) creatures follow their whims, holding their personal freedom above all else. Many rogues and some bards are chaotic neutral.",
+  "gods": [
+    {
+      "index": "leira",
+      "name": "Leira",
+      "url": "/assets/atlas/gods/leira.json"
+    },
+    {
+      "index": "mask",
+      "name": "Mask",
+      "url": "/assets/atlas/gods/mask.json"
+    },
+    {
+      "index": "shaundakul",
+      "name": "Shaundakul",
+      "url": "/assets/atlas/gods/shaundakul.json"
+    }
+  ],
+  "url": "/assets/atlas/alignments/json/chaotic_neutral.json",
+  "updated_at": "2026-06-06T10:34:52.343224Z"
+}

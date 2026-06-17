@@ -1,0 +1,39 @@
+{
+  "level": 6,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "otherworldly_patron_improvement_1",
+      "name": "Otherworldly Patron feature",
+      "url": "/assets/atlas/features/json/otherworldly_patron_improvement_1.json"
+    }
+  ],
+  "class_specific": {
+    "invocations_known": 4,
+    "mystic_arcanum_level_6": 0,
+    "mystic_arcanum_level_7": 0,
+    "mystic_arcanum_level_8": 0,
+    "mystic_arcanum_level_9": 0
+  },
+  "index": "warlock_level_6",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "url": "/assets/atlas/class/levels/6/warlock_level_6.json",
+  "spellcasting": {
+    "cantrips_known": 3,
+    "spells_known": 7,
+    "spell_slots_level_1": 0,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 2,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

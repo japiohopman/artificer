@@ -1,0 +1,45 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "elephant",
+  "name": "elephant",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 200,
+    "unit": "gp"
+  },
+  "speed": {
+    "land": {
+      "ft_per_round": 40,
+      "mph": 4.55
+    }
+  },
+  "capacity": {
+    "cargo": "1,320 lb."
+  },
+  "url": "/assets/atlas/transport/json/elephant.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/enemies/images/elephant.webp",
+  "sprite_index": 7,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "transport_type": "mount",
+  "transport_specific": {
+    "stat_block": {
+      "index": "elephant",
+      "name": "elephant",
+      "url": "/assets/atlas/enemies/json/elephant.json"
+    },
+    "feed": {
+      "index": "animal_feed_1_day",
+      "name": "animal feed (1 day)",
+      "url": "/assets/atlas/equipment/json/animal_feed_1_day.json"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/focus.schema.json",
+  "title": "Focus",
+  "description": "Schema for spellcasting foci.",
+  "allOf": [
+    { "$ref": "equipment.schema.json" },
+    {
+      "type": "object",
+      "properties": {
+        "focus_type": { "type": "string", "enum": ["arcane", "druidic", "holy_symbol"] }
+      }
+    }
+  ]
+}

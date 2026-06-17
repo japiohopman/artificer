@@ -1,0 +1,18 @@
+{
+  "index": "plate_armor",
+  "type": "armor",
+  "name": "plate armor",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/plate_armor.json",
+  "reference": {
+    "index": "plate_armor",
+    "name": "plate armor",
+    "url": "/assets/atlas/equipment/json/plate_armor.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/plate_armor.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "index": "druid",
+  "name": "druid",
+  "desc": "**Druids** dwell in forests and other secluded wilderness locations, where they protect the natural world from monsters and the encroachment of civilization. Some are **tribal shamans** who heal the sick, pray to animal spirits, and provide spiritual guidance.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any alignment",
+  "armor_class": 11,
+  "hit_points": 27,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8+5",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 12,
+  "constitution": 13,
+  "intelligence": 12,
+  "wisdom": 15,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_medicine",
+        "name": "skill: medicine",
+        "url": "/assets/atlas/proficiencies/json/skill_medicine.json"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_nature",
+        "name": "skill: nature",
+        "url": "/assets/atlas/proficiencies/json/skill_nature.json"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "Druidic plus any two languages",
+  "challenge_rating": "2",
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "spellcasting",
+      "desc": "The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It has the following druid spells prepared:\n\n- Cantrips (at will): druidcraft, produce flame, shillelagh\n- 1st level (4 slots): entangle, longstrider, speak with animals, thunderwave\n- 2nd level (3 slots): animal messenger, barkskin",
+      "spellcasting": {
+        "level": 4,
+        "ability": {
+          "index": "wis",
+          "name": "wis",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
+        },
+        "dc": 12,
+        "modifier": 4,
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "school": "druid",
+        "slots": {
+          "1": 4,
+          "2": 3
+        },
+        "spells": [
+          {
+            "name": "druidcraft",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/json/druidcraft.json"
+          },
+          {
+            "name": "produce flame",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/json/produce_flame.json"
+          },
+          {
+            "name": "shillelagh",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/json/shillelagh.json"
+          },
+          {
+            "name": "entangle",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/entangle.json"
+          },
+          {
+            "name": "longstrider",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/longstrider.json"
+          },
+          {
+            "name": "speak with animals",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/speak_with_animals.json"
+          },
+          {
+            "name": "thunderwave",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/json/thunderwave.json"
+          },
+          {
+            "name": "animal messenger",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/animal_messenger.json"
+          },
+          {
+            "name": "barkskin",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/json/barkskin.json"
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "quarterstaff",
+      "desc": " Melee Weapon Attack: +2 to hit (+4 to hit with shillelagh), reach 5 ft., one target. Hit: 3 (1d6) bludgeoning damage, 4 (1d8) bludgeoning damage if wielded with two hands, or 6 (1d8 + 2) bludgeoning damage with shillelagh.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "damage_type": {
+                  "index": "bludgeoning",
+                  "name": "bludgeoning",
+                  "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+                },
+                "damage_dice": "1d6",
+                "notes": "One handed"
+              },
+              {
+                "option_type": "damage",
+                "damage_type": {
+                  "index": "bludgeoning",
+                  "name": "bludgeoning",
+                  "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+                },
+                "damage_dice": "1d8",
+                "notes": "Two handed"
+              },
+              {
+                "option_type": "damage",
+                "damage_type": {
+                  "index": "bludgeoning",
+                  "name": "bludgeoning",
+                  "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+                },
+                "damage_dice": "1d8+2",
+                "notes": "With shillelagh"
+              }
+            ]
+          }
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/druid.webp",
+  "url": "/assets/atlas/enemies/json/druid.json",
+  "updated_at": "2026-05-18T16:03:37.891Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 13,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet4.webp",
+  "wikiData": {},
+  "imageUrl": "/assets/atlas/enemies/images/druid.webp",
+  "last_updated": "18-5-2026",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "stats": {
+    "str": 10,
+    "dex": 12,
+    "con": 13,
+    "int": 12,
+    "wis": 15,
+    "cha": 11
+  },
+  "lore": "/assets/atlas/enemies/enemies_wiki/druid.json"
+}

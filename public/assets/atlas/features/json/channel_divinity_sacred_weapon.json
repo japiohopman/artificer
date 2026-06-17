@@ -1,0 +1,29 @@
+{
+  "index": "channel_divinity_sacred_weapon",
+  "class": {
+    "index": "paladin",
+    "name": "paladin",
+    "url": "/assets/atlas/class/json/paladin.json"
+  },
+  "subclass": {
+    "index": "devotion",
+    "name": "devotion",
+    "url": "/assets/atlas/subclasses/json/devotion.json"
+  },
+  "name": "channel divinity: sacred weapon",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "As an action, you can imbue one weapon that you are holding with positive energy, using your Channel Divinity. For 1 minute, you add your Charisma modifier to attack rolls made with that weapon (with a minimum bonus of +1). The weapon also emits bright light in a 20-foot radius and dim light 20 feet beyond that. If the weapon is not already magical, it becomes magical for the duration.",
+    "You can end this effect on your turn as part of any other action. If you are no longer holding or carrying this weapon, or if you fall unconscious, this effect ends."
+  ],
+  "url": "/assets/atlas/features/json/channel_divinity_sacred_weapon.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/channel_divinity_sacred_weapon.webp",
+  "feature_specific": {
+    "special_action": "action",
+    "passive_modifiers": {
+      "attack_bonus": "charisma_modifier"
+    }
+  }
+}

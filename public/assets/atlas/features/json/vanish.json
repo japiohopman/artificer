@@ -1,0 +1,21 @@
+{
+  "index": "vanish",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "name": "vanish",
+  "level": 14,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail."
+  ],
+  "url": "/assets/atlas/features/json/vanish.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/vanish.webp",
+  "feature_specific": {
+    "special_action": "bonus_action",
+    "desc": "Hide action"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "desc": [
+    "Etched with faint runes of malice and quenched in still-warm blood, this black-fletched shaft hums with an unnatural, predatory hunger. It shivers against the bowstring, guided by a subtle, unseen gravity toward the warmth of living marrow."
+  ],
+  "special": [],
+  "index": "arrow_1",
+  "name": "arrow, +1",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "ammunition",
+    "name": "ammunition",
+    "url": "/assets/atlas/equipment_categories/ammunition"
+  },
+  "quantity": 20,
+  "cost": {
+    "quantity": 2,
+    "unit": "cp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/arrow.json",
+  "updated_at": "2026-06-04T08:38:43.279Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/arrow.webp",
+  "sprite_index": 8,
+  "sprite_sheet": "/assets/atlas/equipment/sprites/equipment_sheet1.0webp",
+  "imageUrl": "/assets/atlas/magic_items/images/arrow_1.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Ammunition",
+  "last_updated": "4-6-2026",
+  "slot": [
+    "ammo"
+  ],
+  "rarity": "Uncommon"
+}

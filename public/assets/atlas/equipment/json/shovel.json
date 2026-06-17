@@ -1,0 +1,41 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "shovel",
+  "name": "shovel",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/shovel.json",
+  "updated_at": "2026-05-09T18:36:11.386Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/shovel.webp",
+  "sprite_index": 19,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/shovel.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Adventuring Gear",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "9-5-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

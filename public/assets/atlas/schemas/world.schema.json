@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/world.schema.json",
+  "title": "World",
+  "description": "Global world or planetary data.",
+  "type": "object",
+  "required": ["name", "description"],
+  "properties": {
+    "name": { "type": "string" },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "pronunciation": {
+      "type": "object",
+      "properties": {
+        "ipa": { "type": "array", "items": { "type": "string" } },
+        "phonetic": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "description": { "oneOf": [{ "type": "string" }, { "type": "object" }] },
+    "astronomy": { "type": "object" },
+    "physical_characteristics": { "type": "object" },
+    "inhabitants": { "type": "object" },
+    "geography": { "type": "object" },
+    "historical_ages": { "type": "array", "items": { "type": "string" } },
+    "major_events": { "type": "array", "items": { "type": "object" } },
+    "related_worlds": { "type": "array", "items": { "type": "object" } },
+    "notable_quote": { "type": "object" },
+    "source_structure": { "type": "object" }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "index": "animal_handling",
+  "name": "animal handling",
+  "desc": [
+    "When there is any question whether you can calm down a domesticated animal, keep a mount from getting spooked, or intuit an animal's intentions, the GM might call for a Wisdom (Animal Handling) check. You also make a Wisdom (Animal Handling) check to control your mount when you attempt a risky maneuver."
+  ],
+  "ability_score": {
+    "index": "wis",
+    "name": "wis",
+    "url": "/assets/atlas/ability_scores/json/wis.json"
+  },
+  "url": "/assets/atlas/skills/json/animal_handling.json",
+  "updated_at": "2025-10-24T20:42:14.523Z",
+  "image": "/assets/atlas/skills/json/animal_handling.webp"
+}

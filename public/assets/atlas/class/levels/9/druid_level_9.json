@@ -1,0 +1,30 @@
+{
+  "level": 9,
+  "ability_score_bonuses": 2,
+  "prof_bonus": 4,
+  "features": [],
+  "class_specific": {
+    "wild_shape_max_cr": 1,
+    "wild_shape_swim": true,
+    "wild_shape_fly": true
+  },
+  "index": "druid_level_9",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/druid.json"
+  },
+  "url": "/assets/atlas/class/levels/9/druid_level_9.json",
+  "spellcasting": {
+    "cantrips_known": 3,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 3,
+    "spell_slots_level_5": 1,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

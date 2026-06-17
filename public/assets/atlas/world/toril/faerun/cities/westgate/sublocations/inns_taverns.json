@@ -1,0 +1,574 @@
+{
+  "category": "inns_taverns",
+  "updatedAt": "2026-05-30T02:39:55.118Z",
+  "location_id": "westgate",
+  "sub_locations": [
+    {
+      "id": "3",
+      "name": "The Leaning Man",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        233.99891740243,
+        1694.0030277317
+      ],
+      "popup": {
+        "title": "The Leaning Man",
+        "description": "A safe and quiet inn outside the city walls.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "Lilda's",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        573.99675220729,
+        1942.0080739513
+      ],
+      "popup": {
+        "title": "Lilda's",
+        "description": "A cheap and rowdy [[festhall]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "Jolly Warrior Inn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        630,
+        1698.0040369756
+      ],
+      "popup": {
+        "title": "Jolly Warrior Inn",
+        "description": "A posh inn located on the western Mulsantir’s Gate and Westgate Market Street.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "19",
+      "name": "The Spitting Cockatrice",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        210.00108259757,
+        1432.0040369756
+      ],
+      "popup": {
+        "title": "The Spitting Cockatrice",
+        "description": "Inn favored by merchants, known for average food and extravagant decor.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "20",
+      "name": "The Empty Fish",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        204,
+        1572.0050462195
+      ],
+      "popup": {
+        "title": "The Empty Fish",
+        "description": "Exuberantly-priced tavern favored as an anonymous meetup space.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "The Westward Eye",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        212.01299117083,
+        1284
+      ],
+      "popup": {
+        "title": "The Westward Eye",
+        "description": "A large well-guarded inn for merchants and traders.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "22",
+      "name": "The Gatereach Inn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        52.371674070263,
+        1003.9458570157
+      ],
+      "popup": {
+        "title": "The Gatereach Inn",
+        "description": "A luxurious inn for wealthy merchants along the [[Trader's Road]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "26",
+      "name": "Purple Lady",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        875.99891740243,
+        638.00403697563
+      ],
+      "popup": {
+        "title": "Purple Lady",
+        "description": "[[Festhall]] and a tavern renowned for its staff's see-through purple [[robe]]s.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "36",
+      "name": "Blue Banner",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1723.9989174024,
+        637.00555084149
+      ],
+      "popup": {
+        "title": "Blue Banner",
+        "description": "A tavern and inn located in [[Westgate]]'s [[Shou Quarter]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "44",
+      "name": "The Black Boot",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        2660.0021656359,
+        1402.0030286563
+      ],
+      "popup": {
+        "title": "The Black Boot",
+        "description": "A dangerous inn near the [[River Bridge]], known for its cheap prices, brawls, and shady characters.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "47",
+      "name": "Rising Raven Inn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        2130.4907207387,
+        393.82847998465
+      ],
+      "popup": {
+        "title": "Rising Raven Inn",
+        "description": "An inn packed with traders and adventurers, that offered small private apartments.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "51",
+      "name": "The Old Beard",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        2597.9087830552,
+        1797.468292349
+      ],
+      "popup": {
+        "title": "The Old Beard",
+        "description": "A tavern that catered mostly to retired sailors.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "54",
+      "name": "Black Eye",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1821.5070683365466,
+        1228.9522993454304
+      ],
+      "popup": {
+        "title": "Black Eye",
+        "description": "A rowdy tavern and a [[festhall]] frequented by dockhands and prostitutes.",
+        "image": "File:Black Eye Tavern.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "80",
+      "name": "Rotten Root Tavern",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        907.99783480486,
+        1008.0040369756
+      ],
+      "popup": {
+        "title": "Rotten Root Tavern",
+        "description": "The establishment best known for its bad food and drink and its sign depicting an evil-looking treant.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "81",
+      "name": "Big Edna's",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        688.7220048756974,
+        1517.4511524263312
+      ],
+      "popup": {
+        "title": "Big Edna's",
+        "description": "A tiny ramshackle bar that served fishermen and dock worker.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "83",
+      "name": "The Track",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1566,
+        1168.0030277317
+      ],
+      "popup": {
+        "title": "The Track",
+        "description": "A heavily-guarded underground racing track and a tavern.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "84",
+      "name": "Blais House",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1673.0146442873715,
+        762.2639646919409
+      ],
+      "popup": {
+        "title": "Blais House",
+        "description": "[[Mintassan]]'s inn that catered to planar guests, sealed off between the [[Spellplague]] and the [[Second Sundering]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "89",
+      "name": "The Rosebud",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        2283.9549032325485,
+        1452.4008967732218
+      ],
+      "popup": {
+        "title": "The Rosebud",
+        "description": "An outdoor [[ale]] garden favored by merchants and young nobles.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "95",
+      "name": "Bent Mermaid Inn",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1355.9978348049,
+        1466.0050462195
+      ],
+      "popup": {
+        "title": "Bent Mermaid Inn",
+        "description": "A shady tavern known for a figurehead of a bent-over [[mermaid]] out the front of the bar.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "99",
+      "name": "Rising Raven Annex",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1227.5373721398,
+        398.81036617259
+      ],
+      "popup": {
+        "title": "Rising Raven Annex",
+        "description": "An extension of the [[Rising Raven inn]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "100",
+      "name": "Rising Raven Warehouse",
+      "categoryId": "inns_taverns",
+      "type": "marker",
+      "position": [
+        1185.1086682649,
+        380.42344827836
+      ],
+      "popup": {
+        "title": "Rising Raven Warehouse",
+        "description": "An extension of the [[Rising Raven]] inn. Also offered rooms.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "index": "loading",
+  "name": "loading",
+  "desc": [
+    "Because of the time required to load this weapon, you can fire only one piece of ammunition from it when you use an action, bonus action, or reaction to fire it, regardless of the number of attacks you can normally make."
+  ],
+  "property_specific": {
+    "max_attacks_per_action": 1
+  },
+  "url": "/assets/atlas/weapon_properties/json/loading.json",
+  "updated_at": "2026-06-14T08:21:17Z"
+}

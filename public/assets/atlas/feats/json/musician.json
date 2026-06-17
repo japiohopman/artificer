@@ -1,0 +1,30 @@
+{
+  "index": "musician",
+  "name": "musician",
+  "prerequisites": [],
+  "desc": [
+    "You gain the following benefits:",
+    "- Instrument Training. You gain proficiency with three Musical Instruments of your choice.",
+    "- Encouraging Song. As you finish a Short Rest or a Long Rest, you can play a song on a Musical Instrument with which you have Tool Proficiency and give Heroic Inspiration to a number of allies equal to your Proficiency Bonus who hear the song."
+  ],
+  "feature_specific": {
+    "choice": [
+      {
+        "desc": "Choose three Musical Instruments",
+        "choose": 3,
+        "type": "proficiencies",
+        "from": {
+          "option_set_type": "equipment_category",
+          "equipment_category": {
+            "index": "musical_instruments",
+            "name": "musical instruments",
+            "url": "/assets/atlas/equipment_categories/json/musical_instruments.json"
+          }
+        }
+      }
+    ]
+  },
+  "url": "/assets/atlas/feats/json/musician.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/musician.webp"
+}

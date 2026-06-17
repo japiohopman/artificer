@@ -1,0 +1,48 @@
+{
+  "index": "oathbow",
+  "name": "oathbow",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "rarity": "Very Rare",
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Weapon (longbow), very rare (requires attunement)",
+    "When you nock an arrow on this bow, it whispers in Elvish, \"Swift defeat to my enemies.\" When you use this weapon to make a ranged attack, you can, as a command phrase, say, \"Swift death to you who have wronged me.\" The target of your attack becomes your sworn enemy until it dies or until dawn seven days later. You can have only one such sworn enemy at a time. When your sworn enemy dies, you can choose a new one after the next dawn.",
+    "When you make a ranged attack roll with this weapon against your sworn enemy, you have advantage on the roll. In addition, your target gains no benefit from cover, other than total cover, and you suffer no disadvantage due to long range. If the attack hits, your sworn enemy takes an extra 3d6 piercing damage.",
+    "While your sworn enemy lives, you have disadvantage on attack rolls with all other weapons."
+  ],
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "secondary_effects": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      },
+      "condition": "vs sworn enemy"
+    }
+  ],
+  "url": "/assets/atlas/magic_items/json/oathbow.json",
+  "updated_at": "2026-05-03T17:30:05.249Z",
+  "image": "/assets/atlas/magic_items/oathbow.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/oathbow.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "last_updated": "3-5-2026"
+}

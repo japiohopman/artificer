@@ -1,0 +1,22 @@
+{
+  "index": "gift_of_the_chromatic_dragon",
+  "name": "gift of the chromatic dragon",
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You've manifested some of the power of chromatic dragons, granting you the following benefits:",
+    "- Chromatic Infusion: As a bonus action, you can touch a simple or martial weapon and infuse it with one of the following damage types: acid, cold, fire, lightning, or poison. For the next minute, the weapon deals an extra 1d4 damage of the chosen type. Once you use this benefit, you can't use it again until you finish a long rest.",
+    "- Reactive Resistance: When you take acid, cold, fire, lightning, or poison damage, you can use your reaction to give yourself resistance to that instance of damage. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+  ],
+  "feature_specific": {
+    "special_action": "bonus_action"
+  },
+  "url": "/assets/atlas/feats/json/gift_of_the_chromatic_dragon.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/gift_of_the_chromatic_dragon.webp"
+}

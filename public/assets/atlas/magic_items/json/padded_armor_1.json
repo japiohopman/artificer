@@ -1,0 +1,41 @@
+{
+  "desc": [
+    "The padded armor smells faintly of mildew and fear, its uneven stitching a testament to desperate hands and the grim reality of the battlefield's butcher's bill. Beneath the worn fabric, a faint rustle whispers of straw and secrets best left buried with the fallen.\n"
+  ],
+  "special": [],
+  "index": "padded_armor_1",
+  "name": "padded armor, +1",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "armor_category": "Light",
+  "armor_class": {
+    "base": 11,
+    "dex_bonus": true
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": true,
+  "weight": 8,
+  "cost": {
+    "quantity": 15,
+    "unit": "gp"
+  },
+  "url": "/assets/atlas/equipment/json/padded_armor.json",
+  "updated_at": "2026-04-25T09:32:47.654Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/padded_armor.webp",
+  "sprite_index": 22,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/padded_armor_1.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Light Armor",
+  "slot": [
+    "chest"
+  ],
+  "last_updated": "25-4-2026",
+  "rarity": "Uncommon"
+}

@@ -1,0 +1,135 @@
+{
+  "index": "roper",
+  "name": "roper",
+  "size": "Large",
+  "type": "monstrosity",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 20
+    }
+  ],
+  "hit_points": 93,
+  "hit_dice": "11d10",
+  "hit_points_roll": "11d10+33",
+  "speed": {
+    "walk": "10 ft.",
+    "climb": "10 ft."
+  },
+  "strength": 18,
+  "dexterity": 8,
+  "constitution": 17,
+  "intelligence": 7,
+  "wisdom": 16,
+  "charisma": 6,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/skills/json/perception.json"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "/assets/atlas/skills/json/stealth.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 16
+  },
+  "languages": "",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [
+    {
+      "name": "false appearance",
+      "desc": "While the roper remains motionless, it is indistinguishable from a normal cave formation, such as a stalagmite.",
+      "damage": []
+    },
+    {
+      "name": "grasping tendrils",
+      "desc": "The roper can have up to six tendrils at a time. Each tendril can be attacked (AC 20; 10 hit points; immunity to poison and psychic damage). Destroying a tendril deals no damage to the roper, which can extrude a replacement tendril on its next turn. A tendril can also be broken if a creature takes an action and succeeds on a DC 15 Strength check against it.",
+      "damage": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The roper can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The roper makes four attacks with its tendrils, uses Reel, and makes one attack with its bite.",
+      "actions": [
+        {
+          "action_name": "Tendril",
+          "count": "4",
+          "type": "melee"
+        },
+        {
+          "action_name": "Reel",
+          "count": "1",
+          "type": "ability"
+        },
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 22 (4d8 + 4) piercing damage.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "4d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "tendril",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 50 ft., one creature. Hit: The target is grappled (escape DC 15). Until the grapple ends, the target is restrained and has disadvantage on Strength checks and Strength saving throws, and the roper can't use the same tendril on another target.",
+      "attack_bonus": 7,
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "reel",
+      "desc": "The roper pulls each creature grappled by it up to 25 ft. straight toward it.",
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/roper.webp",
+  "url": "/assets/atlas/enemies/json/roper.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 14,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.webp"
+}

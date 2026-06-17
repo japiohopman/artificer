@@ -1,0 +1,55 @@
+{
+  "id": "neverwinter",
+  "name": "Neverwinter",
+  "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
+  "parent": "cities",
+  "title": "Neverwinter",
+  "description": "The '''City of Skilled Hands''' and the '''Jewel of the North''', a major bustling, cultured, and cosmopolitan city-state in northwest [[Faerûn]].",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/neverwinter/neverwinter.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
+  "coordinates": {
+    "lat": 492.85,
+    "lng": 2738.8
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
+}

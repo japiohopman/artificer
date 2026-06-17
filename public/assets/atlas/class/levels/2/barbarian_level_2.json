@@ -1,0 +1,29 @@
+{
+  "level": 2,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "reckless_attack",
+      "name": "Reckless Attack",
+      "url": "/assets/atlas/features/json/reckless_attack.json"
+    },
+    {
+      "index": "danger_sense",
+      "name": "Danger Sense",
+      "url": "/assets/atlas/features/json/danger_sense.json"
+    }
+  ],
+  "class_specific": {
+    "rage_count": 2,
+    "rage_damage_bonus": 2,
+    "brutal_critical_dice": 0
+  },
+  "index": "barbarian_level_2",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "url": "/assets/atlas/class/levels/2/barbarian_level_2.json"
+}

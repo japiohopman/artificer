@@ -1,0 +1,38 @@
+{
+  "index": "skill_expert",
+  "name": "skill expert",
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You have honed your proficiency with particular skills, granting you the following benefits:",
+    "- Increase one ability score of your choice by 1, to a maximum of 20.",
+    "- You gain proficiency in one skill of your choice.",
+    "- You gain expertise in one skill of your choice in which you are already proficient."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Any ability score bonus",
+          "options": [
+            "strength_bonus",
+            "dexterity_bonus",
+            "constitution_bonus",
+            "intelligence_bonus",
+            "wisdom_bonus",
+            "charisma_bonus"
+          ],
+          "amount": 1
+        }
+      ]
+    }
+  },
+  "url": "/assets/atlas/feats/json/skill_expert.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/skill_expert.webp"
+}

@@ -1,0 +1,37 @@
+{
+  "desc": [
+    "A cylindrical leather case for carrying scrolls."
+  ],
+  "special": [],
+  "index": "scroll_case",
+  "name": "scroll case",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/scroll_case.json",
+  "updated_at": "2026-06-13T20:48:56.558Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/scroll_case.webp",
+  "imageUrl": "/assets/atlas/equipment/images/scroll_case.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "13-6-2026",
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "category": "Standard Gear",
+  "kind": "consumable"
+}

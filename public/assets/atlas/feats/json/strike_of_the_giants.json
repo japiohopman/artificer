@@ -1,0 +1,20 @@
+{
+  "index": "strike_of_the_giants",
+  "name": "strike of the giants",
+  "prerequisites": [
+    {
+      "stat": "proficiency",
+      "operator": "==",
+      "value": "martial_weapons",
+      "desc": "Proficiency with a martial weapon or Giant Foundling background"
+    }
+  ],
+  "desc": [
+    "You’ve learned to imbue your weapon strikes with the power of giants. When you take this feat, choose one of the following strike types: Cloud Strike, Fire Strike, Frost Strike, Hill Strike, Stone Strike, or Storm Strike.",
+    "Once per turn, when you hit a creature with a melee weapon attack or a ranged weapon attack using a thrown weapon, you can apply the chosen strike’s effect to the target. You can use this ability a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+  ],
+  "feature_specific": {},
+  "url": "/assets/atlas/feats/json/strike_of_the_giants.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/strike_of_the_giants.webp"
+}

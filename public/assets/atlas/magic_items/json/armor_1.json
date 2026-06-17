@@ -1,0 +1,26 @@
+{
+  "index": "armor_1",
+  "name": "armor, +1",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Armor (light, medium, or heavy), rare",
+    "You have a +1 bonus to AC while wearing this armor."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "ac_bonus": 1
+    }
+  },
+  "image": "/assets/atlas/magic_items/armor_1.webp",
+  "url": "/assets/atlas/magic_items/json/armor_1.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

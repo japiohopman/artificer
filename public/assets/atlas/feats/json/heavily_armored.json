@@ -1,0 +1,30 @@
+{
+  "index": "heavily_armored",
+  "name": "heavily armored",
+  "prerequisites": [
+    {
+      "stat": "feature",
+      "operator": "==",
+      "value": true,
+      "desc": "Proficiency with medium armor"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You have trained to master the use of heavy armor, gaining the following benefits:",
+    "- Increase your Strength score by 1, to a maximum of 20.",
+    "- You gain proficiency with heavy armor."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "strength_bonus": 1
+    }
+  },
+  "url": "/assets/atlas/feats/json/heavily_armored.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/heavily_armored.webp"
+}

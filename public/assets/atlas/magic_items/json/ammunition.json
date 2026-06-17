@@ -1,0 +1,37 @@
+{
+  "index": "ammunition",
+  "name": "ammunition, +1, +2, or +3",
+  "equipment_category": {
+    "index": "ammunition",
+    "name": "ammunition",
+    "url": "/assets/atlas/equipment_categories/ammunition"
+  },
+  "rarity": {
+    "name": "varies"
+  },
+  "variants": [
+    {
+      "index": "ammunition_1",
+      "name": "ammunition, +1",
+      "url": "/assets/atlas/magic_items/ammunition_1"
+    },
+    {
+      "index": "ammunition_2",
+      "name": "ammunition, +2",
+      "url": "/assets/atlas/magic_items/ammunition_2"
+    },
+    {
+      "index": "ammunition_3",
+      "name": "ammunition, +3",
+      "url": "/assets/atlas/magic_items/ammunition_3"
+    }
+  ],
+  "variant": false,
+  "desc": [
+    "Weapon (any ammunition), uncommon (+1), rare (+2), or very rare (+3)",
+    "You have a bonus to attack and damage rolls made with this piece of magic ammunition. The bonus is determined by the rarity of the ammunition. Once it hits a target, the ammunition is no longer magical."
+  ],
+  "image": "/assets/atlas/magic_items/ammunition.webp",
+  "url": "/assets/atlas/magic_items/json/ammunition.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

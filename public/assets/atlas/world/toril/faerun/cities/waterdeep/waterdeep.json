@@ -1,0 +1,66 @@
+{
+  "id": "waterdeep",
+  "name": "Waterdeep",
+  "type": "metropolis",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "west Faerûn",
+  "sub_region": "",
+  "parent": "cities",
+  "title": "waterdeep: Metropolis",
+  "description": "Interactive map of the city of Waterdeep during the 15th century DR. Index and references can be found [https://forgottenrealms.fandom.com/wiki/File:Waterdeep_map-5e.jpg here].",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep.webp",
+  "thumbnail": "/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_thumb.webp",
+  "banner": "/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_banner.webp",
+  "tags": [
+    "city",
+    "metropolis"
+  ],
+  "map": "/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep_map.webp",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [
+    "/assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/districts.json",
+    "/assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/estates.json",
+    "/assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/government.json",
+    "/assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/inns_taverns.json",
+    "/assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/landmarks.json",
+    "/assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/points_of_interest.json",
+    "/assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/roads.json",
+    "/assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/sewers.json",
+    "/assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/shops.json",
+    "/assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/temples_shrines.json"
+  ],
+  "coordinates": {
+    "lat": 0,
+    "lng": 0
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      3000,
+      4524
+    ]
+  ],
+  "origin": "bottom-left",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "Council of Six",
+    "military": "The Mehelm",
+    "population": "100,000+",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
+}

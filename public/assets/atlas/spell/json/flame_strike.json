@@ -1,0 +1,77 @@
+{
+  "index": "flame_strike",
+  "name": "flame strike",
+  "desc": [
+    "A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10-foot-radius, 40-foot-high cylinder centered on a point within range must make a dexterity saving throw. A creature takes 4d6 fire damage and 4d6 radiant damage on a failed save, or half as much damage on a successful one."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 6th level or higher, the fire damage or the radiant damage (your choice) increases by 1d6 for each slot level above 5th."
+  ],
+  "range": "60 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Pinch of sulfur.",
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "fire",
+      "url": "/assets/atlas/damage_types/json/fire.json"
+    },
+    "damage_at_slot_level": {
+      "5": "4d6 + 4d6",
+      "6": "4d6 + 5d6",
+      "7": "4d6 + 6d6",
+      "8": "4d6 + 7d6",
+      "9": "4d6 + 8d6"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "dex",
+      "url": "/assets/atlas/ability_scores/json/dex.json"
+    },
+    "dc_success": "half"
+  },
+  "area_of_effect": {
+    "type": "cylinder",
+    "size": 40
+  },
+  "school": {
+    "index": "evocation",
+    "name": "evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "devotion",
+      "name": "devotion",
+      "url": "/assets/atlas/subclasses/json/devotion.json"
+    },
+    {
+      "index": "fiend",
+      "name": "fiend",
+      "url": "/assets/atlas/subclasses/json/fiend.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/flame_strike.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/flame_strike.webp",
+  "sprite_index": 20,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet5.webp"
+}

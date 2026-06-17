@@ -1,0 +1,30 @@
+{
+  "index": "hill_dwarf",
+  "name": "hill dwarf",
+  "race": {
+    "index": "dwarf",
+    "name": "dwarf",
+    "url": "/assets/atlas/species/json/dwarf.json"
+  },
+  "desc": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.",
+  "ability_bonuses": [
+    {
+      "ability_score": {
+        "index": "wis",
+        "name": "wis",
+        "url": "/assets/atlas/ability_scores/json/wis.json"
+      },
+      "bonus": 1
+    }
+  ],
+  "racial_traits": [
+    {
+      "index": "dwarven_toughness",
+      "name": "dwarven toughness",
+      "url": "/assets/atlas/traits/json/dwarven_toughness.json"
+    }
+  ],
+  "url": "/assets/atlas/species/json/hill_dwarf.json",
+  "updated_at": "2025-10-24T20:42:14.841Z",
+  "image": "/assets/atlas/subraces/hill_dwarf.webp"
+}

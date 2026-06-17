@@ -1,0 +1,41 @@
+{
+  "desc": [
+    "A small bag for carrying coins."
+  ],
+  "special": [],
+  "index": "purse",
+  "name": "purse",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "cost": {
+    "quantity": 5,
+    "unit": "sp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/purse.json",
+  "updated_at": "2026-05-27T06:27:35.742Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/purse.webp",
+  "imageUrl": "/assets/atlas/equipment/images/purse.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "27-5-2026",
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "category": "Standard Gear",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

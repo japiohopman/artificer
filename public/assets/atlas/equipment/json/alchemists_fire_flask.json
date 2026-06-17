@@ -1,0 +1,41 @@
+{
+  "special": [],
+  "index": "alchemists_fire_flask",
+  "name": "alchemist's fire (flask)",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "desc": [
+    "This sticky, adhesive fluid ignites when exposed to air.",
+    "As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist's fire as an improvised weapon.",
+    "On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames."
+  ],
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/alchemists_fire_flask.json",
+  "updated_at": "2026-04-14T09:25:28.099Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/alchemists_fire_flask.webp",
+  "sprite_index": 2,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
+  "imageUrl": "/assets/atlas/equipment/images/alchemists_fire_flask.webp",
+  "_type": "equipment",
+  "category": "Standard Gear",
+  "last_updated": "14-4-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

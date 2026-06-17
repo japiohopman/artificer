@@ -1,0 +1,244 @@
+{
+  "index": "barbarian",
+  "name": "barbarian",
+  "hit_die": 12,
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_animal_handling",
+              "name": "skill: animal handling",
+              "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_athletics",
+              "name": "skill: athletics",
+              "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_intimidation",
+              "name": "skill: intimidation",
+              "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_nature",
+              "name": "skill: nature",
+              "url": "/assets/atlas/proficiencies/json/skill_nature.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_perception",
+              "name": "skill: perception",
+              "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_survival",
+              "name": "skill: survival",
+              "url": "/assets/atlas/proficiencies/json/skill_survival.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "light_armor",
+      "name": "light armor",
+      "url": "/assets/atlas/proficiencies/json/light_armor.json"
+    },
+    {
+      "index": "medium_armor",
+      "name": "medium armor",
+      "url": "/assets/atlas/proficiencies/json/medium_armor.json"
+    },
+    {
+      "index": "shields",
+      "name": "shields",
+      "url": "/assets/atlas/proficiencies/json/shields.json"
+    },
+    {
+      "index": "simple_weapons",
+      "name": "simple weapons",
+      "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
+    },
+    {
+      "index": "martial_weapons",
+      "name": "martial weapons",
+      "url": "/assets/atlas/proficiencies/json/martial_weapons.json"
+    },
+    {
+      "index": "saving_throw_str",
+      "name": "saving throw: str",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_str.json"
+    },
+    {
+      "index": "saving_throw_con",
+      "name": "saving throw: con",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "str",
+      "name": "str",
+      "url": "/assets/atlas/ability_scores/json/str.json"
+    },
+    {
+      "index": "con",
+      "name": "con",
+      "url": "/assets/atlas/ability_scores/json/con.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "explorers_pack",
+        "name": "explorer's pack",
+        "url": "/assets/atlas/equipment/json/explorers_pack.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "javelin",
+        "name": "javelin",
+        "url": "/assets/atlas/equipment/json/javelin.json"
+      },
+      "quantity": 4
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) a greataxe or (b) any martial melee weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "greataxe",
+              "name": "greataxe",
+              "url": "/assets/atlas/equipment/json/greataxe.json"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any martial melee weapon",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "martial_melee_weapons",
+                  "name": "martial melee weapons",
+                  "url": "/assets/atlas/equipment_categories/json/martial_melee_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) two handaxes or (b) any simple weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 2,
+            "of": {
+              "index": "handaxe",
+              "name": "handaxe",
+              "url": "/assets/atlas/equipment/json/handaxe.json"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any simple weapon",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "simple_weapons",
+                  "name": "simple weapons",
+                  "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "class_levels": "/assets/atlas/class/levels/barbarian.json",
+  "multi_classing": {
+    "prerequisites": [
+      {
+        "ability_score": {
+          "index": "str",
+          "name": "str",
+          "url": "/assets/atlas/ability_scores/json/str.json"
+        },
+        "minimum_score": 13
+      }
+    ],
+    "proficiencies": [
+      {
+        "index": "shields",
+        "name": "shields",
+        "url": "/assets/atlas/proficiencies/json/shields.json"
+      },
+      {
+        "index": "simple_weapons",
+        "name": "simple weapons",
+        "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
+      },
+      {
+        "index": "martial_weapons",
+        "name": "martial weapons",
+        "url": "/assets/atlas/proficiencies/json/martial_weapons.json"
+      }
+    ]
+  },
+  "subclasses": [
+    {
+      "index": "berserker",
+      "name": "berserker",
+      "url": "/assets/atlas/subclasses/json/berserker.json"
+    }
+  ],
+  "url": "/assets/atlas/class/json/barbarian.json",
+  "updated_at": "2025-10-24T20:42:12.459Z",
+  "image": "/assets/atlas/class/wiki_image/barbarian.webp"
+}

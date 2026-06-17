@@ -1,0 +1,408 @@
+{
+  "index": "ranger",
+  "name": "ranger",
+  "hit_die": 10,
+  "proficiency_choices": [
+    {
+      "desc": "Choose three from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, and Survival",
+      "choose": 3,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_animal_handling",
+              "name": "skill: animal handling",
+              "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_athletics",
+              "name": "skill: athletics",
+              "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_investigation",
+              "name": "skill: investigation",
+              "url": "/assets/atlas/proficiencies/json/skill_investigation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_nature",
+              "name": "skill: nature",
+              "url": "/assets/atlas/proficiencies/json/skill_nature.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_perception",
+              "name": "skill: perception",
+              "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_stealth",
+              "name": "skill: stealth",
+              "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_survival",
+              "name": "skill: survival",
+              "url": "/assets/atlas/proficiencies/json/skill_survival.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "light_armor",
+      "name": "light armor",
+      "url": "/assets/atlas/proficiencies/json/light_armor.json"
+    },
+    {
+      "index": "medium_armor",
+      "name": "medium armor",
+      "url": "/assets/atlas/proficiencies/json/medium_armor.json"
+    },
+    {
+      "index": "shields",
+      "name": "shields",
+      "url": "/assets/atlas/proficiencies/json/shields.json"
+    },
+    {
+      "index": "simple_weapons",
+      "name": "simple weapons",
+      "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
+    },
+    {
+      "index": "martial_weapons",
+      "name": "martial weapons",
+      "url": "/assets/atlas/proficiencies/json/martial_weapons.json"
+    },
+    {
+      "index": "saving_throw_dex",
+      "name": "saving throw: dex",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_dex.json"
+    },
+    {
+      "index": "saving_throw_str",
+      "name": "saving throw: str",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_str.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "str",
+      "name": "str",
+      "url": "/assets/atlas/ability_scores/json/str.json"
+    },
+    {
+      "index": "dex",
+      "name": "dex",
+      "url": "/assets/atlas/ability_scores/json/dex.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "longbow",
+        "name": "longbow",
+        "url": "/assets/atlas/equipment/json/longbow.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "arrow",
+        "name": "arrow",
+        "url": "/assets/atlas/equipment/json/arrow.json"
+      },
+      "quantity": 20
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) scale mail or (b) leather armor",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "scale_mail",
+              "name": "scale mail",
+              "url": "/assets/atlas/equipment/json/scale_mail.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "leather_armor",
+              "name": "leather armor",
+              "url": "/assets/atlas/equipment/json/leather_armor.json"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) two shortswords or (b) two simple melee weapons",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 2,
+            "of": {
+              "index": "shortsword",
+              "name": "shortsword",
+              "url": "/assets/atlas/equipment/json/shortsword.json"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "two simple melee weapons",
+              "choose": 2,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "simple_melee_weapons",
+                  "name": "simple melee weapons",
+                  "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a dungeoneer’s pack or (b) an explorer’s pack",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "dungeoneers_pack",
+              "name": "dungeoneer's pack",
+              "url": "/assets/atlas/equipment/json/dungeoneers_pack.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "explorers_pack",
+              "name": "explorer's pack",
+              "url": "/assets/atlas/equipment/json/explorers_pack.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "class_levels": "/assets/atlas/class/levels/ranger.json",
+  "multi_classing": {
+    "prerequisites": [
+      {
+        "ability_score": {
+          "index": "dex",
+          "name": "dex",
+          "url": "/assets/atlas/ability_scores/json/dex.json"
+        },
+        "minimum_score": 13
+      },
+      {
+        "ability_score": {
+          "index": "wis",
+          "name": "wis",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
+        },
+        "minimum_score": 13
+      }
+    ],
+    "proficiencies": [
+      {
+        "index": "light_armor",
+        "name": "light armor",
+        "url": "/assets/atlas/proficiencies/json/light_armor.json"
+      },
+      {
+        "index": "medium_armor",
+        "name": "medium armor",
+        "url": "/assets/atlas/proficiencies/json/medium_armor.json"
+      },
+      {
+        "index": "shields",
+        "name": "shields",
+        "url": "/assets/atlas/proficiencies/json/shields.json"
+      },
+      {
+        "index": "simple_weapons",
+        "name": "simple weapons",
+        "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
+      },
+      {
+        "index": "martial_weapons",
+        "name": "martial weapons",
+        "url": "/assets/atlas/proficiencies/json/martial_weapons.json"
+      }
+    ],
+    "proficiency_choices": [
+      {
+        "choose": 1,
+        "type": "proficiencies",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_animal_handling",
+                "name": "skill: animal handling",
+                "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_athletics",
+                "name": "skill: athletics",
+                "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_insight",
+                "name": "skill: insight",
+                "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_investigation",
+                "name": "skill: investigation",
+                "url": "/assets/atlas/proficiencies/json/skill_investigation.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_nature",
+                "name": "skill: nature",
+                "url": "/assets/atlas/proficiencies/json/skill_nature.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_perception",
+                "name": "skill: perception",
+                "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_stealth",
+                "name": "skill: stealth",
+                "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+              }
+            },
+            {
+              "option_type": "reference",
+              "item": {
+                "index": "skill_survival",
+                "name": "skill: survival",
+                "url": "/assets/atlas/proficiencies/json/skill_survival.json"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "subclasses": [
+    {
+      "index": "hunter",
+      "name": "hunter",
+      "url": "/assets/atlas/subclasses/json/hunter.json"
+    }
+  ],
+  "spellcasting": {
+    "level": 2,
+    "spellcasting_ability": {
+      "index": "wis",
+      "name": "wis",
+      "url": "/assets/atlas/ability_scores/json/wis.json"
+    },
+    "info": [
+      {
+        "name": "spell slots",
+        "desc": [
+          "The Ranger table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+          "For example, if you know the 1st-level spell animal friendship and have a 1st-level and a 2nd-level spell slot available, you can cast animal friendship using either slot."
+        ]
+      },
+      {
+        "name": "spells known of 1st level and higher",
+        "desc": [
+          "You know two 1st-level spells of your choice from the ranger spell list.",
+          "The Spells Known column of the Ranger table shows when you learn more ranger spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.",
+          "Additionally, when you gain a level in this class, you can choose one of the ranger spells you know and replace it with another spell from the ranger spell list, which also must be of a level for which you have spell slots."
+        ]
+      },
+      {
+        "name": "spellcasting ability",
+        "desc": [
+          "Wisdom is your spellcasting ability for your ranger spells, since your magic draws on your attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a ranger spell you cast and when making an attack roll with one.",
+          "Spell save DC = 8 + your proficiency bonus + your Wisdom modifier.",
+          "Spell attack modifier = your proficiency bonus + your Wisdom modifier."
+        ]
+      }
+    ]
+  },
+  "spells": "public/assets/atlas/spell/json/",
+  "url": "/assets/atlas/class/json/ranger.json",
+  "updated_at": "2025-10-24T20:42:12.459Z",
+  "image": "/assets/atlas/class/wiki_image/ranger.webp"
+}

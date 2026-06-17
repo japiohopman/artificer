@@ -1,0 +1,36 @@
+{
+  "level": 3,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "ranger_archetype",
+      "name": "Ranger Archetype",
+      "url": "/assets/atlas/features/json/ranger_archetype.json"
+    },
+    {
+      "index": "primeval_awareness",
+      "name": "Primeval Awareness",
+      "url": "/assets/atlas/features/json/primeval_awareness.json"
+    }
+  ],
+  "class_specific": {
+    "favored_enemies": 1,
+    "favored_terrain": 1
+  },
+  "index": "ranger_level_3",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "url": "/assets/atlas/class/levels/3/ranger_level_3.json",
+  "spellcasting": {
+    "spells_known": 3,
+    "spell_slots_level_1": 3,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0
+  }
+}

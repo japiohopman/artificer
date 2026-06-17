@@ -1,0 +1,28 @@
+{
+  "index": "circle_of_the_land_mountain",
+  "class": {
+    "index": "druid",
+    "name": "druid",
+    "url": "/assets/atlas/class/json/druid.json"
+  },
+  "subclass": {
+    "index": "land",
+    "name": "land",
+    "url": "/assets/atlas/subclasses/json/land.json"
+  },
+  "name": "circle of the land: mountain",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites."
+  ],
+  "parent": {
+    "index": "circle_of_the_land",
+    "name": "circle of the land",
+    "url": "/assets/atlas/features/circle_of_the_land.json"
+  },
+  "url": "/assets/atlas/features/json/circle_of_the_land_mountain.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/circle_of_the_land_mountain.webp",
+  "feature_specific": {}
+}

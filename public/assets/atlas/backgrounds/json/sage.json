@@ -1,0 +1,131 @@
+{
+  "index": "sage",
+  "name": "Sage",
+  "description": "You spent years studying the lore of the multiverse.",
+  "ability_scores": [
+    {
+      "index": "con",
+      "name": "constitution",
+      "url": "/assets/atlas/ability_scores/json/con.json"
+    },
+    {
+      "index": "int",
+      "name": "intelligence",
+      "url": "/assets/atlas/ability_scores/json/int.json"
+    },
+    {
+      "index": "wis",
+      "name": "wisdom",
+      "url": "/assets/atlas/ability_scores/json/wis.json"
+    }
+  ],
+  "feat": {
+    "index": "magic_initiate",
+    "name": "Magic Initiate",
+    "url": "/assets/atlas/feats/json/magic_initiate.json"
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_arcana",
+      "name": "Skill: Arcana",
+      "url": "/assets/atlas/proficiencies/json/skill_arcana.json"
+    },
+    {
+      "index": "skill_history",
+      "name": "Skill: History",
+      "url": "/assets/atlas/proficiencies/json/skill_history.json"
+    },
+    {
+      "index": "calligraphers_supplies",
+      "name": "Calligrapher'S Supplies",
+      "url": "/assets/atlas/proficiencies/json/calligraphers_supplies.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "calligraphers_supplies",
+        "name": "Calligrapher'S Supplies",
+        "url": "/assets/atlas/equipment/json/calligraphers_supplies.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "book",
+        "name": "Book",
+        "url": "/assets/atlas/equipment/json/book.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "ink_1_ounce_bottle",
+        "name": "Ink 1 Ounce Bottle",
+        "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "ink_pen",
+        "name": "Ink Pen",
+        "url": "/assets/atlas/equipment/json/ink_pen.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "parchment_one_sheet",
+        "name": "Parchment (One Sheet)",
+        "url": "/assets/atlas/equipment/json/parchment_one_sheet.json"
+      },
+      "quantity": 10
+    },
+    {
+      "equipment": {
+        "index": "robes",
+        "name": "Robes",
+        "url": "/assets/atlas/equipment/json/robes.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 8
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "Choose this background package or 50 GP",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "gold",
+                  "name": "Gold",
+                  "url": "/assets/atlas/equipment/json/gold.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "url": "/assets/atlas/backgrounds/json/sage.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/backgrounds/wiki_image/sage.webp"
+}

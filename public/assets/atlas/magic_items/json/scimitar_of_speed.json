@@ -1,0 +1,35 @@
+{
+  "index": "scimitar_of_speed",
+  "name": "scimitar of speed",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "rarity": "Very Rare",
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Weapon (scimitar), very rare (requires attunement)",
+    "You gain a +2 bonus to attack and damage rolls made with this magic weapon. In addition, you can make one attack with it as a bonus action on each of your turns."
+  ],
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "url": "/assets/atlas/magic_items/json/scimitar_of_speed.json",
+  "updated_at": "2026-05-03T19:33:40.634Z",
+  "image": "/assets/atlas/magic_items/scimitar_of_speed.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/scimitar_of_speed.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "3-5-2026"
+}

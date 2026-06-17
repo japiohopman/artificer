@@ -1,0 +1,59 @@
+{
+  "index": "musical_instruments",
+  "name": "musical instruments",
+  "equipment": [
+    {
+      "index": "bagpipes",
+      "name": "bagpipes",
+      "url": "/assets/atlas/equipment/json/bagpipes.json"
+    },
+    {
+      "index": "drum",
+      "name": "drum",
+      "url": "/assets/atlas/equipment/json/drum.json"
+    },
+    {
+      "index": "dulcimer",
+      "name": "dulcimer",
+      "url": "/assets/atlas/equipment/json/dulcimer.json"
+    },
+    {
+      "index": "flute",
+      "name": "flute",
+      "url": "/assets/atlas/equipment/json/flute.json"
+    },
+    {
+      "index": "lute",
+      "name": "lute",
+      "url": "/assets/atlas/equipment/json/lute.json"
+    },
+    {
+      "index": "lyre",
+      "name": "lyre",
+      "url": "/assets/atlas/equipment/json/lyre.json"
+    },
+    {
+      "index": "horn",
+      "name": "horn",
+      "url": "/assets/atlas/equipment/json/horn.json"
+    },
+    {
+      "index": "pan_flute",
+      "name": "pan flute",
+      "url": "/assets/atlas/equipment/json/pan_flute.json"
+    },
+    {
+      "index": "shawm",
+      "name": "shawm",
+      "url": "/assets/atlas/equipment/json/shawm.json"
+    },
+    {
+      "index": "viol",
+      "name": "viol",
+      "url": "/assets/atlas/equipment/json/viol.json"
+    }
+  ],
+  "url": "/assets/atlas/equipment_categories/json/musical_instruments.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "/assets/atlas/equipment_categories/musical_instruments.webp"
+}

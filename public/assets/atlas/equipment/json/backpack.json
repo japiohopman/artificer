@@ -1,0 +1,40 @@
+{
+  "desc": [
+    "Fashioned from the hide of a beast best left unnamed, this backpack whispers secrets of forgotten pilgrimages with every rustle, its depths a maw promising to swallow more than just supplies.\n"
+  ],
+  "special": [],
+  "index": "backpack",
+  "name": "backpack",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+  },
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/backpack.json",
+  "updated_at": "2026-06-05T08:00:00.000Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/backpack.webp",
+  "imageUrl": "/assets/atlas/equipment/images/backpack.webp",
+  "_type": "equipment",
+  "kind": "container",
+  "capacity": "1 cubic foot/30 pounds",
+  "capacity_weight": 30,
+  "capacity_volume": 1,
+  "background_type": "land_forest",
+  "equipSlots": [
+    "back"
+  ],
+  "last_updated": "5-6-2026",
+  "category": "Adventuring Gear"
+}

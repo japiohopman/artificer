@@ -1,0 +1,23 @@
+{
+  "index": "eldritch_invocation_mask_of_many_faces",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "eldritch invocation: mask of many faces",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "You can cast disguise self at will, without expending a spell slot."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "/assets/atlas/features/eldritch_invocations.json"
+  },
+  "url": "/assets/atlas/features/json/eldritch_invocation_mask_of_many_faces.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/eldritch_invocation_mask_of_many_faces.webp",
+  "feature_specific": {}
+}

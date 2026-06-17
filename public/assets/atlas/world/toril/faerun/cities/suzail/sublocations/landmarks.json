@@ -1,0 +1,755 @@
+{
+  "category": "landmarks",
+  "updatedAt": "2026-04-28T05:46:14.235Z",
+  "location_id": "suzail",
+  "sub_locations": [
+    {
+      "id": "the_royal_smithy",
+      "name": "The Royal Smithy",
+      "type": "landmark",
+      "description": "A long-running smithy.",
+      "coordinates": {
+        "x": 75.28333333333333,
+        "y": 52.826195123273635
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "dragoneye_dealing_coster_yards",
+      "name": "Dragoneye Dealing Coster yards",
+      "type": "landmark",
+      "description": "A prosperous merchant company based out of [[Cimbar]].",
+      "coordinates": {
+        "x": 85.28680495617333,
+        "y": 66.00425864178223
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "thousandheads_trading_coster_yards",
+      "name": "Thousandheads Trading Coster yards",
+      "type": "landmark",
+      "description": "A prosperous [[Amn]]ian merchant company.",
+      "coordinates": {
+        "x": 87.95393984966,
+        "y": 61.0232833123748
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "seven_suns_trading_coster_yards",
+      "name": "Seven Suns Trading Coster yards",
+      "type": "landmark",
+      "description": "The merchant company controlled by [[Bleth]] and [[Jhasso]] families.",
+      "coordinates": {
+        "x": 88.68740194536667,
+        "y": 54.24915686438164
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "six_coffers_trading_coster_yards",
+      "name": "Six Coffers Trading Coster yards",
+      "type": "landmark",
+      "description": "Also known as [[Six Coffers Market Priakos]] trading company.",
+      "coordinates": {
+        "x": 91.22118009417666,
+        "y": 50.33078960524922
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_market_hall",
+      "name": "The Market Hall",
+      "type": "landmark",
+      "description": "A hall used by greengrocers and farmers to sell their goods. Notice board advertised lodgings.",
+      "coordinates": {
+        "x": 93.48797552322,
+        "y": 41.96354807011171
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "tavernants_tellings",
+      "name": "Tavernant's Tellings",
+      "type": "landmark",
+      "description": "[[Suzail]]'s busy print shop started by the eccentric elderly [[Lady Tavernant]] in the late 14{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 84.23331489969999,
+        "y": 35.12893946182089
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "royal_docks",
+      "name": "Royal Docks",
+      "type": "landmark",
+      "description": "Docks of the [[Purple Dragons]]' Citadel and homeport of the Imperial Navy.",
+      "coordinates": {
+        "x": 77.41723528323666,
+        "y": 11.682000876860782
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_market_yard",
+      "name": "The Market Yard",
+      "type": "landmark",
+      "description": "A market of note.",
+      "coordinates": {
+        "x": 75.75473583524999,
+        "y": 18.92265291848373
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "ring_of_coins",
+      "name": "Ring of Coins",
+      "type": "landmark",
+      "description": "A pawn shop that carried a variety of wares.",
+      "coordinates": {
+        "x": 43.516666666666666,
+        "y": 26.03125
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "the_market",
+      "name": "The Market",
+      "type": "landmark",
+      "description": "[[Suzail]]'s sprawling market plaza.",
+      "coordinates": {
+        "x": 17.716666666666665,
+        "y": 18.79296875
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "rheubans_stables",
+      "name": "Rheuban's Stables",
+      "type": "landmark",
+      "description": "",
+      "coordinates": {
+        "x": 79.66736401368333,
+        "y": 69.16666765497558
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "iravans_rental_yards",
+      "name": "Iravan's Rental Yards",
+      "type": "landmark",
+      "description": "Rental yards owned by the [[Iravan]] merchant family.",
+      "coordinates": {
+        "x": 10.674010658381667,
+        "y": 26.28928201531387
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "trueshield_trading_priakos_yards",
+      "name": "Trueshield Trading Priakos yards",
+      "type": "landmark",
+      "description": "A merchant company based out of [[Telpir]].",
+      "coordinates": {
+        "x": 9.810890809859,
+        "y": 44.621162457313666
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "talahons_rental_yards",
+      "name": "Talahon's Rental Yards",
+      "type": "landmark",
+      "description": "Rental yards owned by the [[Talahon]] merchant family.",
+      "coordinates": {
+        "x": 9.479781553909334,
+        "y": 32.201207916040765
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "shipyards",
+      "name": "Shipyards",
+      "type": "landmark",
+      "description": "[[Suzail]]'s public Shipyards.",
+      "coordinates": {
+        "x": 25,
+        "y": 18.0791015625
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "zhaeluns_stockyard",
+      "name": "Zhaelun's Stockyard",
+      "type": "landmark",
+      "description": "One of [[Suzail]]'s stockyard.",
+      "coordinates": {
+        "x": 47.152488346523334,
+        "y": 29.545991338030174
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "zults",
+      "name": "Zult's",
+      "type": "landmark",
+      "description": "[[Suzail]]'s licensed moneychanger stop.",
+      "coordinates": {
+        "x": 58.46667588348333,
+        "y": 36.589857034726364
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "skatterhawk_warehouses_dock",
+      "name": "Skatterhawk warehouses & dock",
+      "type": "landmark",
+      "description": "A group of warehouses and a dock that belonged to the merchant [[Skatterhawk]] family, relatives of the crown.",
+      "coordinates": {
+        "x": 34.46666666666667,
+        "y": 11.986328125
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "danains",
+      "name": "Danain's",
+      "type": "landmark",
+      "description": "A hardware shop.",
+      "coordinates": {
+        "x": 36.21140359118333,
+        "y": 42.43464015678398
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "kriyeos_lathmils_stables",
+      "name": "Kriyeos Lathmil's stables",
+      "type": "landmark",
+      "description": "",
+      "coordinates": {
+        "x": 79.62024963069666,
+        "y": 63.907560969900196
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "jhassalan_warehouse",
+      "name": "Jhassalan warehouse",
+      "type": "landmark",
+      "description": "[[Oil]]s and [[perfume]]s warehouse of the merchant [[Jhassalan]] family.",
+      "coordinates": {
+        "x": 78.33335637537333,
+        "y": 49.75489443663848
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "jharkos_coffers_and_crates",
+      "name": "Jharko's Coffers and Crates",
+      "type": "landmark",
+      "description": "A [[rat]]-infested secondhand coffer, chest, and other containers vendor.",
+      "coordinates": {
+        "x": 78.83333794174,
+        "y": 52.04591006163848
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "faeri_warehouse",
+      "name": "Faeri warehouse",
+      "type": "landmark",
+      "description": "[[Ivory]] trade warehouse that belonged to the [[Faeri]] merchant family.",
+      "coordinates": {
+        "x": 78.46668970870665,
+        "y": 58.18849150781758
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "ossper_warehouse",
+      "name": "Ossper warehouse",
+      "type": "landmark",
+      "description": "A fine cloth trade warehouse of the [[Ossper]] merchant family.",
+      "coordinates": {
+        "x": 76.03758830723334,
+        "y": 60.85537735586621
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "fallas_treasures_of_thentia",
+      "name": "Fallas' Treasures of Thentia",
+      "type": "landmark",
+      "description": "A [[silk]] merchant.",
+      "coordinates": {
+        "x": 72.16666666666667,
+        "y": 46.949241998273635
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "stoutbold_marina",
+      "name": "Stoutbold Marina",
+      "type": "landmark",
+      "description": "Boats bought, sold, outfitted, rented, & repaired. No job too big. No job too small.\n",
+      "coordinates": {
+        "x": 59.14928099282333,
+        "y": 12.214939474882755
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "bollivers_wharf",
+      "name": "Bolliver's Wharf",
+      "type": "landmark",
+      "description": "A puplic wharf.",
+      "coordinates": {
+        "x": 43.7437871104476,
+        "y": 7.370387177372625
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "flar_oldbottles_nets",
+      "name": "Flar Oldbottle's Nets",
+      "type": "landmark",
+      "description": "A two-story warehouse shop, once owned by investor [[Imprur Jusk]].",
+      "coordinates": {
+        "x": 29.739779573085666,
+        "y": 20.617120537776017
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "jumbles_fresh_fish",
+      "name": "Jumble's Fresh Fish",
+      "type": "landmark",
+      "description": "More commonly known as '''Old Rak''', a foul-smelling [[fish]] vendor.",
+      "coordinates": {
+        "x": 29.3,
+        "y": 22.7939453125
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "red_sunsets_trading_company_warehouse",
+      "name": "Red Sunsets Trading Company warehouse",
+      "type": "landmark",
+      "description": "Built in the 14{{th}} century [[DR]] small cargo rental warehouse.",
+      "coordinates": {
+        "x": 29.908038210932332,
+        "y": 17.960157949410526
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "murrocks_fine_glass",
+      "name": "Murrock's Fine Glass",
+      "type": "landmark",
+      "description": "A sturdy stone building permanently blackened by a series of fires. Previously a [[Tireless Eyes]] trading coster HQ.",
+      "coordinates": {
+        "x": 39.83338746321333,
+        "y": 26.960987765077384
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "tathlins_discreet_errands",
+      "name": "Tathlin's Discreet Errands",
+      "type": "landmark",
+      "description": "A message runners' business.",
+      "coordinates": {
+        "x": 24.513035081133665,
+        "y": 38.57462015098339
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "culder_darshoons_cobbler_shop",
+      "name": "Culder Darshoon's Cobbler Shop",
+      "type": "landmark",
+      "description": "A humble cobbler's shop run by [[Culder Darshoon]] in the 14{{th}} century [[DR]].",
+      "coordinates": {
+        "x": 23.735237173648,
+        "y": 38.50418803488027
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

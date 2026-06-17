@@ -1,0 +1,61 @@
+{
+  "index": "tiefling",
+  "name": "tiefling",
+  "speed": 30,
+  "ability_bonuses": [
+    {
+      "ability_score": {
+        "index": "int",
+        "name": "int",
+        "url": "/assets/atlas/ability_scores/json/int.json"
+      },
+      "bonus": 1
+    },
+    {
+      "ability_score": {
+        "index": "cha",
+        "name": "cha",
+        "url": "/assets/atlas/ability_scores/json/cha.json"
+      },
+      "bonus": 2
+    }
+  ],
+  "alignment": "Tieflings might not have an innate tendency toward evil, but many of them end up there. Evil or not, an independent nature inclines many tieflings toward a chaotic alignment.",
+  "age": "Tieflings mature at the same rate as humans but live a few years longer.",
+  "size": "Medium",
+  "size_description": "Tieflings are about the same size and build as humans. Your size is Medium.",
+  "languages": [
+    {
+      "index": "common",
+      "name": "common",
+      "url": "/assets/atlas/languages/common"
+    },
+    {
+      "index": "infernal",
+      "name": "infernal",
+      "url": "/assets/atlas/languages/infernal"
+    }
+  ],
+  "language_desc": "You can speak, read, and write Common and Infernal.",
+  "traits": [
+    {
+      "index": "darkvision",
+      "name": "darkvision",
+      "url": "/assets/atlas/traits/darkvision"
+    },
+    {
+      "index": "hellish_resistance",
+      "name": "hellish resistance",
+      "url": "/assets/atlas/traits/hellish_resistance"
+    },
+    {
+      "index": "infernal_legacy",
+      "name": "infernal legacy",
+      "url": "/assets/atlas/traits/infernal_legacy"
+    }
+  ],
+  "subraces": [],
+  "url": "/assets/atlas/species/json/tiefling.json",
+  "updated_at": "2025-10-24T20:42:14.212Z",
+  "image": "/assets/atlas/species/tiefling.webp"
+}

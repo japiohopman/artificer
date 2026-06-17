@@ -1,0 +1,21 @@
+{
+  "index": "elven_chain",
+  "name": "elven chain",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "rarity": {
+    "name": "rare"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Armor (chain shirt), rare",
+    "You gain a +1 bonus to AC while you wear this armor. You are considered proficient with this armor even if you lack proficiency with medium armor."
+  ],
+  "url": "/assets/atlas/magic_items/json/elven_chain.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/elven_chain.webp"
+}

@@ -1,0 +1,23 @@
+{
+  "index": "bonus_cantrip",
+  "class": {
+    "index": "druid",
+    "name": "druid",
+    "url": "/assets/atlas/class/json/druid.json"
+  },
+  "subclass": {
+    "index": "land",
+    "name": "land",
+    "url": "/assets/atlas/subclasses/json/land.json"
+  },
+  "name": "bonus cantrip",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "When you choose this circle at 2nd level, you learn one additional druid cantrip of your choice."
+  ],
+  "url": "/assets/atlas/features/json/bonus_cantrip.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/bonus_cantrip.webp",
+  "feature_specific": {}
+}

@@ -1,0 +1,25 @@
+{
+  "level": 9,
+  "ability_score_bonuses": 2,
+  "prof_bonus": 4,
+  "features": [],
+  "class_specific": {
+    "favored_enemies": 2,
+    "favored_terrain": 2
+  },
+  "index": "ranger_level_9",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "url": "/assets/atlas/class/levels/9/ranger_level_9.json",
+  "spellcasting": {
+    "spells_known": 6,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 2,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0
+  }
+}

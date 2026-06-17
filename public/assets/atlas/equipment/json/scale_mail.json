@@ -1,0 +1,43 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "scale_mail",
+  "name": "scale mail",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "armor_category": "Medium",
+  "armor_class": {
+    "base": 14,
+    "dex_bonus": true,
+    "max_bonus": 2
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": true,
+  "weight": 45,
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "url": "/assets/atlas/equipment/json/scale_mail.json",
+  "updated_at": "2026-04-28T13:22:21.411Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/scale_mail.webp",
+  "sprite_index": 10,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/scale_mail.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Medium Armor",
+  "slot": [
+    "chest"
+  ],
+  "last_updated": "28-4-2026",
+  "kind": "armor",
+  "equipSlots": [
+    "chest"
+  ]
+}

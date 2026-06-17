@@ -1,0 +1,55 @@
+{
+  "id": "underhome",
+  "name": "Underhome",
+  "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
+  "parent": "cities",
+  "title": "Underhome",
+  "description": "The surface entrance into the '''Great City of the Dwarves''', the capital city of the [[Deep Realm]] of the [[gold dwarves]] located within the [[Great Rift]].",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/underhome/underhome.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
+  "coordinates": {
+    "lat": 3523,
+    "lng": 896.25
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
+}

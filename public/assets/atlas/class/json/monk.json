@@ -1,0 +1,485 @@
+{
+  "index": "monk",
+  "name": "monk",
+  "hit_die": 8,
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_acrobatics",
+              "name": "skill: acrobatics",
+              "url": "/assets/atlas/proficiencies/json/skill_acrobatics.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_athletics",
+              "name": "skill: athletics",
+              "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_history",
+              "name": "skill: history",
+              "url": "/assets/atlas/proficiencies/json/skill_history.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_religion",
+              "name": "skill: religion",
+              "url": "/assets/atlas/proficiencies/json/skill_religion.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_stealth",
+              "name": "skill: stealth",
+              "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "Choose one type of artisan’s tools or one musical instrument",
+      "type": "proficiencies",
+      "choose": 1,
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "artisan's tools",
+              "type": "proficiencies",
+              "choose": 1,
+              "from": {
+                "option_set_type": "options_array",
+                "options": [
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "alchemists_supplies",
+                      "name": "alchemist's supplies",
+                      "url": "/assets/atlas/proficiencies/json/alchemists_supplies.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "brewers_supplies",
+                      "name": "brewer's supplies",
+                      "url": "/assets/atlas/proficiencies/json/brewers_supplies.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "calligraphers_supplies",
+                      "name": "calligrapher's supplies",
+                      "url": "/assets/atlas/proficiencies/json/calligraphers_supplies.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "carpenters_tools",
+                      "name": "carpenter's tools",
+                      "url": "/assets/atlas/proficiencies/json/carpenters_tools.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "cartographers_tools",
+                      "name": "cartographer's tools",
+                      "url": "/assets/atlas/proficiencies/json/cartographers_tools.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "cobblers_tools",
+                      "name": "cobbler's tools",
+                      "url": "/assets/atlas/proficiencies/json/cobblers_tools.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "cooks_utensils",
+                      "name": "cook's utensils",
+                      "url": "/assets/atlas/proficiencies/json/cooks_utensils.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "glassblowers_tools",
+                      "name": "glassblower's tools",
+                      "url": "/assets/atlas/proficiencies/json/glassblowers_tools.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "jewelers_tools",
+                      "name": "jeweler's tools",
+                      "url": "/assets/atlas/proficiencies/json/jewelers_tools.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "leatherworkers_tools",
+                      "name": "leatherworker's tools",
+                      "url": "/assets/atlas/proficiencies/json/leatherworkers_tools.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "masons_tools",
+                      "name": "mason's tools",
+                      "url": "/assets/atlas/proficiencies/json/masons_tools.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "painters_supplies",
+                      "name": "painter's supplies",
+                      "url": "/assets/atlas/proficiencies/json/painters_supplies.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "potters_tools",
+                      "name": "potter's tools",
+                      "url": "/assets/atlas/proficiencies/json/potters_tools.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "smiths_tools",
+                      "name": "smith's tools",
+                      "url": "/assets/atlas/proficiencies/json/smiths_tools.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "tinkers_tools",
+                      "name": "tinker's tools",
+                      "url": "/assets/atlas/proficiencies/json/tinkers_tools.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "weavers_tools",
+                      "name": "weaver's tools",
+                      "url": "/assets/atlas/proficiencies/json/weavers_tools.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "woodcarvers_tools",
+                      "name": "woodcarver's tools",
+                      "url": "/assets/atlas/proficiencies/json/woodcarvers_tools.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "disguise_kit",
+                      "name": "disguise kit",
+                      "url": "/assets/atlas/proficiencies/json/disguise_kit.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "forgery_kit",
+                      "name": "forgery kit",
+                      "url": "/assets/atlas/proficiencies/json/forgery_kit.json"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "musical instrument",
+              "type": "proficiencies",
+              "choose": 1,
+              "from": {
+                "option_set_type": "options_array",
+                "options": [
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "bagpipes",
+                      "name": "bagpipes",
+                      "url": "/assets/atlas/proficiencies/json/bagpipes.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "drum",
+                      "name": "drum",
+                      "url": "/assets/atlas/proficiencies/json/drum.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "dulcimer",
+                      "name": "dulcimer",
+                      "url": "/assets/atlas/proficiencies/json/dulcimer.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "flute",
+                      "name": "flute",
+                      "url": "/assets/atlas/proficiencies/json/flute.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "lute",
+                      "name": "lute",
+                      "url": "/assets/atlas/proficiencies/json/lute.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "lyre",
+                      "name": "lyre",
+                      "url": "/assets/atlas/proficiencies/json/lyre.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "horn",
+                      "name": "horn",
+                      "url": "/assets/atlas/proficiencies/json/horn.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "pan_flute",
+                      "name": "pan flute",
+                      "url": "/assets/atlas/proficiencies/json/pan_flute.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "shawm",
+                      "name": "shawm",
+                      "url": "/assets/atlas/proficiencies/json/shawm.json"
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "viol",
+                      "name": "viol",
+                      "url": "/assets/atlas/proficiencies/json/viol.json"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "simple_weapons",
+      "name": "simple weapons",
+      "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
+    },
+    {
+      "index": "shortswords",
+      "name": "shortswords",
+      "url": "/assets/atlas/proficiencies/json/shortswords.json"
+    },
+    {
+      "index": "saving_throw_dex",
+      "name": "saving throw: dex",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_dex.json"
+    },
+    {
+      "index": "saving_throw_str",
+      "name": "saving throw: str",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_str.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "str",
+      "name": "str",
+      "url": "/assets/atlas/ability_scores/json/str.json"
+    },
+    {
+      "index": "dex",
+      "name": "dex",
+      "url": "/assets/atlas/ability_scores/json/dex.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "dart",
+        "name": "dart",
+        "url": "/assets/atlas/equipment/json/dart.json"
+      },
+      "quantity": 10
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) a shortsword or (b) any simple weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "shortsword",
+              "name": "shortsword",
+              "url": "/assets/atlas/equipment/json/shortsword.json"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any simple weapon",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "simple_weapons",
+                  "name": "simple weapons",
+                  "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a dungeoneer’s pack or (b) an explorer’s pack",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "dungeoneers_pack",
+              "name": "dungeoneer's pack",
+              "url": "/assets/atlas/equipment/json/dungeoneers_pack.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "explorers_pack",
+              "name": "explorer's pack",
+              "url": "/assets/atlas/equipment/json/explorers_pack.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "class_levels": "/assets/atlas/class/levels/monk.json",
+  "multi_classing": {
+    "prerequisites": [
+      {
+        "ability_score": {
+          "index": "dex",
+          "name": "dex",
+          "url": "/assets/atlas/ability_scores/json/dex.json"
+        },
+        "minimum_score": 13
+      },
+      {
+        "ability_score": {
+          "index": "wis",
+          "name": "wis",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
+        },
+        "minimum_score": 13
+      }
+    ],
+    "proficiencies": [
+      {
+        "index": "simple_weapons",
+        "name": "simple weapons",
+        "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
+      },
+      {
+        "index": "shortswords",
+        "name": "shortswords",
+        "url": "/assets/atlas/proficiencies/json/shortswords.json"
+      }
+    ]
+  },
+  "subclasses": [
+    {
+      "index": "open_hand",
+      "name": "open hand",
+      "url": "/assets/atlas/subclasses/json/open_hand.json"
+    }
+  ],
+  "url": "/assets/atlas/class/json/monk.json",
+  "updated_at": "2025-10-24T20:42:12.459Z",
+  "image": "/assets/atlas/class/wiki_image/monk.webp"
+}

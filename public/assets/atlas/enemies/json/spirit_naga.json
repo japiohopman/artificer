@@ -1,0 +1,215 @@
+{
+  "index": "spirit_naga",
+  "name": "spirit naga",
+  "size": "Large",
+  "type": "monstrosity",
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 75,
+  "hit_dice": "10d10",
+  "hit_points_roll": "10d10+20",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 17,
+  "constitution": 14,
+  "intelligence": 16,
+  "wisdom": 15,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_dex",
+        "name": "saving throw: dex",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_dex.json"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving_throw_con",
+        "name": "saving throw: con",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving_throw_wis",
+        "name": "saving throw: wis",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving_throw_cha",
+        "name": "saving throw: cha",
+        "url": "/assets/atlas/proficiencies/json/saving_throw_cha.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "charmed",
+      "url": "/assets/atlas/conditions/charmed"
+    },
+    {
+      "index": "poisoned",
+      "name": "poisoned",
+      "url": "/assets/atlas/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 12
+  },
+  "languages": "Abyssal, Common",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [
+    {
+      "name": "rejuvenation",
+      "desc": "If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning.",
+      "damage": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The naga is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following wizard spells prepared:\n\n- Cantrips (at will): mage hand, minor illusion, ray of frost\n- 1st level (4 slots): charm person, detect magic, sleep\n- 2nd level (3 slots): detect thoughts, hold person\n- 3rd level (3 slots): lightning bolt, water breathing\n- 4th level (3 slots): blight, dimension door\n- 5th level (2 slots): dominate person",
+      "spellcasting": {
+        "level": 10,
+        "ability": {
+          "index": "int",
+          "name": "int",
+          "url": "/assets/atlas/ability_scores/json/int.json"
+        },
+        "dc": 14,
+        "modifier": 6,
+        "components_required": [
+          "V"
+        ],
+        "school": "wizard",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 2
+        },
+        "spells": [
+          {
+            "name": "mage hand",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/mage_hand.json"
+          },
+          {
+            "name": "minor illusion",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/minor_illusion.json"
+          },
+          {
+            "name": "ray of frost",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/ray_of_frost.json"
+          },
+          {
+            "name": "charm person",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/charm_person.json"
+          },
+          {
+            "name": "detect magic",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/detect_magic.json"
+          },
+          {
+            "name": "sleep",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/sleep.json"
+          },
+          {
+            "name": "detect thoughts",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/detect_thoughts.json"
+          },
+          {
+            "name": "hold person",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/hold_person.json"
+          },
+          {
+            "name": "lightning bolt",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/lightning_bolt.json"
+          },
+          {
+            "name": "water breathing",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/water_breathing.json"
+          },
+          {
+            "name": "blight",
+            "level": 4,
+            "url": "/assets/atlas/spell/json/blight.json"
+          },
+          {
+            "name": "dimension door",
+            "level": 4,
+            "url": "/assets/atlas/spell/json/dimension_door.json"
+          },
+          {
+            "name": "dominate person",
+            "level": 5,
+            "url": "/assets/atlas/spell/json/dominate_person.json"
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 10 ft., one creature. Hit: 7 (1d6 + 4) piercing damage, and the target must make a DC 13 Constitution saving throw, taking 31 (7d8) poison damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/spirit_naga.webp",
+  "url": "/assets/atlas/enemies/json/spirit_naga.json",
+  "updated_at": "2026-04-14T21:27:44.038Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 9,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet11.webp",
+  "imageUrl": "/assets/atlas/enemies/spirit_naga.webp",
+  "_type": "enemies",
+  "rarity": "Legendary",
+  "background_type": "snowy",
+  "last_updated": "14-4-2026"
+}

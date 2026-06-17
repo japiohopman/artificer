@@ -1,0 +1,33 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "stabling_1_day",
+  "name": "stabling (1 day)",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 5,
+    "unit": "sp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/stabling_1_day.json",
+  "updated_at": "2026-05-04T17:08:25.253Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/stabling_1_day.webp",
+  "sprite_index": 10,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/images/stabling_1_day.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Mounts and Other Animals",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "4-5-2026",
+  "kind": "adventuring_gear"
+}

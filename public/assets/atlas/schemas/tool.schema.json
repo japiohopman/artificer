@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/tool.schema.json",
+  "title": "Tool",
+  "description": "Schema for tools.",
+  "allOf": [
+    { "$ref": "equipment.schema.json" },
+    {
+      "type": "object",
+      "required": ["tool_category"],
+      "properties": {
+        "tool_category": { "type": "string" }
+      }
+    }
+  ]
+}

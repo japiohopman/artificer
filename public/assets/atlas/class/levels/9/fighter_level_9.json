@@ -1,0 +1,24 @@
+{
+  "level": 9,
+  "ability_score_bonuses": 3,
+  "prof_bonus": 4,
+  "features": [
+    {
+      "index": "indomitable_1_use",
+      "name": "Indomitable (1 use)",
+      "url": "/assets/atlas/features/json/indomitable_1_use.json"
+    }
+  ],
+  "class_specific": {
+    "action_surges": 1,
+    "indomitable_uses": 1,
+    "extra_attacks": 1
+  },
+  "index": "fighter_level_9",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "url": "/assets/atlas/class/levels/9/fighter_level_9.json"
+}

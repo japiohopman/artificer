@@ -1,0 +1,45 @@
+{
+  "index": "natural_explorer_2_terrain_types",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "name": "natural explorer (2 terrain types)",
+  "level": 6,
+  "prerequisites": [],
+  "desc": [
+    "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.",
+    "While traveling for an hour or more in your favored terrain, you gain the following benefits:",
+    "- Difficult terrain doesn't slow your group's travel.",
+    "- Your group can't become lost except by magical means.",
+    "- Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
+    "- If you are traveling alone, you can move stealthily at a normal pace.",
+    "- When you forage, you find twice as much food as you normally would.",
+    "- While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.",
+    "You choose additional favored terrain types at 6th and 10th level."
+  ],
+  "feature_specific": {
+    "terrain_type_options": {
+      "desc": "one terrain type",
+      "choose": 1,
+      "type": "string",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          "arctic",
+          "coast",
+          "desert",
+          "forest",
+          "grassland",
+          "mountain",
+          "swamp"
+        ]
+      }
+    },
+    "invocations": []
+  },
+  "url": "/assets/atlas/features/json/natural_explorer_2_terrain_types.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "/assets/atlas/features/images/natural_explorer_2_terrain_types.webp"
+}

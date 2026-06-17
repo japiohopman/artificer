@@ -1,0 +1,817 @@
+{
+  "category": "poi",
+  "updatedAt": "2026-06-01T21:44:38.068Z",
+  "location_id": "oeble",
+  "sub_locations": [
+    {
+      "id": "2",
+      "name": "Alhan's Ride",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1077.6929015574,
+        1784.5576776258
+      ],
+      "popup": {
+        "title": "Alhan's Ride",
+        "description": "The street that began on [[Dead King's Walk]], crossed [[River Scelptar]] via [[Alhan's Span]] , and continued on north across the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "Alhan's Ride",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1207.9802943634,
+        904.08679497602
+      ],
+      "popup": {
+        "title": "Alhan's Ride",
+        "description": "The street that began on [[Dead King's Walk]], crossed [[River Scelptar]] via [[Alhan's Span]] , and continued on north across the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "Vriel's Walk",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2144.4926409154,
+        851.82439156015
+      ],
+      "popup": {
+        "title": "Vriel's Walk",
+        "description": "The street that began on [[Dead King's Walk]], crossed [[River Scelptar]] via [[Vriel's Leap]], and continued on north across the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "Vriel's Walk",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1948.030316364,
+        1952.2866252696
+      ],
+      "popup": {
+        "title": "Vriel's Walk",
+        "description": "The street that began on [[Dead King's Walk]], crossed [[River Scelptar]] via [[Vriel's Leap]], and continued on north across the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "Alhan's Span",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1146.3746628174,
+        1249.5610469816
+      ],
+      "popup": {
+        "title": "Alhan's Span",
+        "description": "The bridge across the [[River Scelptar]], part of [[Alhan's Ride]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "Vriel's Leap",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2095.8655712823,
+        1213.3923819433
+      ],
+      "popup": {
+        "title": "Vriel's Leap",
+        "description": "The bridge across the [[River Scelptar]], part of [[Vriel's Walk]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "Arch of Gargoyles",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1666.9660305701,
+        1186.749035518
+      ],
+      "popup": {
+        "title": "Arch of Gargoyles",
+        "description": "The bridge that linked [[Laskalar's Square]] to the northern side of [[River Scelptar]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "Laskalar's Square",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1666.9735334874,
+        835.86278868389
+      ],
+      "popup": {
+        "title": "Laskalar's Square",
+        "description": "The city square in front of the [[Griffingate House]] inn, on [[River Scelptar]]'s southern bank.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "Balamonthar's Street",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2746.0083370001,
+        654.89790565333
+      ],
+      "popup": {
+        "title": "Balamonthar's Street",
+        "description": "One of [[Oeble]]'s widest streets that began on [[Laskalar's Square]] and ran east, reaching the city's edge.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "Dead King's Walk",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1861.6596988138,
+        458.79294428698
+      ],
+      "popup": {
+        "title": "Dead King's Walk",
+        "description": "A curvy street in [[Oeble]]'s southern part that linked [[Alhan's Ride]] and [[Balamonthar's Street]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "The Rolling Shields",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1432.2012199895,
+        714.54728890038
+      ],
+      "popup": {
+        "title": "The Rolling Shields",
+        "description": "One of the two widest roads in [[Oeble]] that began on [[Laskalar's Square]], ran west, passed the [[Sixturrets]], and reached the city's edge.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "14",
+      "name": "Sixturrets",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1278.4501322306,
+        475.17004781167
+      ],
+      "popup": {
+        "title": "Sixturrets",
+        "description": "A wide and busy intersection of [[Mraedur Street]], [[the Rolling Shields]], [[the Street of Six Tombs]], and [[Dead King's Walk]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "Skulls New and Used",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1348.2368160648,
+        1026.8647613164
+      ],
+      "popup": {
+        "title": "Skulls New and Used",
+        "description": "A large infamous emporium of [[enchanted]] items and relics recovered by lucky or unlucky adventurers. The shop's name was inspired by its collection of drinking tankards carved out of various skulls.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "Sarl Street",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1440,
+        948.00403697563
+      ],
+      "popup": {
+        "title": "Sarl Street",
+        "description": "The street that began at [[Alhan's Span]]'s southern end and moved east, past [[Skulls New and Used]], and ended in a dead end.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "18",
+      "name": "Garbage-middens",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2979.0786516868,
+        466.11028365286
+      ],
+      "popup": {
+        "title": "Garbage-middens",
+        "description": "The final destination of [[Oeble]]'s Dead Cart that delivered the city's dead for a mass-grave burial.{{approx}}",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "20",
+      "name": "Tarandar Street",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1326.4883758475,
+        1660.2838676532
+      ],
+      "popup": {
+        "title": "Tarandar Street",
+        "description": "A bow-shaped street in the northern half of [[Oeble]] that ran parallel [[River Scelptar]] beginning and ending in curves south, towards the river edge.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "Tarandar Street",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2580.8824076058,
+        1685.0103684146
+      ],
+      "popup": {
+        "title": "Tarandar Street",
+        "description": "A bow-shaped street in the northern half of [[Oeble]] that ran parallel [[River Scelptar]] beginning and ending in curves south, towards the river edge.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "23",
+      "name": "Thaerl Street",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2326.7502689513,
+        999.41968475336
+      ],
+      "popup": {
+        "title": "Thaerl Street",
+        "description": "A narrow street that crossed [[Vriel's Walk]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "24",
+      "name": "Street of Six Tombs",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1566.5160750392,
+        328.83129555545
+      ],
+      "popup": {
+        "title": "Street of Six Tombs",
+        "description": "The street that began at the busy [[Sixturrets]] intersection and ran curving southeast.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "25",
+      "name": "Mraedur Street",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        858.0007579091,
+        712.00403697563
+      ],
+      "popup": {
+        "title": "Mraedur Street",
+        "description": "The street that began at the busy [[Sixturrets]] intersection and ran curving northwest, reaching the outskirts of [[Oeble]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "26",
+      "name": "Manywheels Street",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1367.9969683636,
+        1470.0010092439
+      ],
+      "popup": {
+        "title": "Manywheels Street",
+        "description": "The street that split from [[Tarandar Street]], ran parallel to it and, eventually, rejoined it as it curved south.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "27",
+      "name": "Manywheels Street",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2431.07162241,
+        1569.4812486317
+      ],
+      "popup": {
+        "title": "Manywheels Street",
+        "description": "The street that split from [[Tarandar Street]], ran parallel to it and, eventually, rejoined it as it curved south.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "28",
+      "name": "Jarthoun's Ride",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2391.4035145357,
+        1908.755841418
+      ],
+      "popup": {
+        "title": "Jarthoun's Ride",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "29",
+      "name": "Jarthoun's Ride",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2524.3138651109,
+        1308.6397317293
+      ],
+      "popup": {
+        "title": "Jarthoun's Ride",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "30",
+      "name": "Darkwind Street",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1466.007292975,
+        1900.0793036633
+      ],
+      "popup": {
+        "title": "Darkwind Street",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "35",
+      "name": "Ferry",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1327.5408416112,
+        1195.8480500534
+      ],
+      "popup": {
+        "title": "Ferry",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "36",
+      "name": "Cable ferry",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        1884.9521387161,
+        1150.1678847039
+      ],
+      "popup": {
+        "title": "Cable ferry",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "37",
+      "name": "Ferry",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2371.6259615691,
+        1184.1261376379
+      ],
+      "popup": {
+        "title": "Ferry",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "38",
+      "name": "Ferry",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2442.2037308669,
+        1161.4873023486
+      ],
+      "popup": {
+        "title": "Ferry",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "39",
+      "name": "Cable ferry",
+      "categoryId": "poi",
+      "type": "marker",
+      "position": [
+        2736.3773013658,
+        1071.1075174211
+      ],
+      "popup": {
+        "title": "Cable ferry",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

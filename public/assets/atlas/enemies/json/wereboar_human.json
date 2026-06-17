@@ -1,0 +1,118 @@
+{
+  "index": "wereboar_human",
+  "name": "wereboar, human form",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "human",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "dex",
+      "value": 10
+    }
+  ],
+  "hit_points": 78,
+  "hit_dice": "12d8",
+  "forms": [
+    {
+      "index": "wereboar_boar",
+      "name": "wereboar, boar form",
+      "url": "/assets/atlas/monsters/wereboar_boar"
+    },
+    {
+      "index": "wereboar_hybrid",
+      "name": "wereboar, hybrid form",
+      "url": "/assets/atlas/monsters/wereboar_hybrid"
+    }
+  ],
+  "hit_points_roll": "12d8+24",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "dexterity": 10,
+  "constitution": 15,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 8,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/skills/json/perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "Common (can't speak in boar form)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [
+    {
+      "name": "shapechanger",
+      "desc": "The wereboar can use its action to polymorph into a boar-humanoid hybrid or into a boar, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "damage": []
+    },
+    {
+      "name": "relentless",
+      "desc": "If the wereboar takes 14 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.",
+      "usage": {
+        "type": "recharge after rest",
+        "rest_types": [
+          "short",
+          "long"
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The wereboar makes two attacks, only one of which can be with its tusks.",
+      "actions": [
+        {
+          "action_name": "Maul",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "maul",
+      "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/wereboar_human.webp",
+  "url": "/assets/atlas/enemies/json/wereboar_human.json",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 3,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet13.webp"
+}

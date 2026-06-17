@@ -1,0 +1,139 @@
+{
+  "index": "werewolf_human",
+  "name": "werewolf, human form",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "human",
+  "alignment": "chaotic evil",
+  "armor_class": 11,
+  "hit_points": 58,
+  "hit_dice": "9d8",
+  "forms": [
+    {
+      "index": "werewolf_hybrid",
+      "name": "werewolf, hybrid form",
+      "url": "/assets/atlas/monsters/werewolf_hybrid"
+    },
+    {
+      "index": "werewolf_wolf",
+      "name": "werewolf, wolf form",
+      "url": "/assets/atlas/monsters/werewolf_wolf"
+    }
+  ],
+  "hit_points_roll": "9d8+18",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 13,
+  "constitution": 14,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/skills/json/perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "Common",
+  "challenge_rating": "3",
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [
+    {
+      "name": "shapechanger",
+      "desc": "The werewolf can use its action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "damage": []
+    },
+    {
+      "name": "keen hearing and smell",
+      "desc": "The werewolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The werewolf makes two attacks: two with its spear (humanoid form) or one with its bite and one with its claws (hybrid form).",
+      "actions": [
+        {
+          "action_name": "Spear",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "spear",
+      "desc": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one creature. Hit: 5 (1d6 + 2) piercing damage, or 6 (1d8 + 2) piercing damage if used with two hands to make a melee attack.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "notes": "One handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "piercing",
+                  "url": "/assets/atlas/damage_types/json/piercing.json"
+                },
+                "damage_dice": "1d6+2"
+              },
+              {
+                "option_type": "damage",
+                "notes": "Two handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "piercing",
+                  "url": "/assets/atlas/damage_types/json/piercing.json"
+                },
+                "damage_dice": "1d8+2"
+              }
+            ]
+          }
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/werewolf_human.webp",
+  "url": "/assets/atlas/enemies/json/werewolf_human.json",
+  "updated_at": "2026-06-12T04:50:24.312Z",
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 11,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet13.0webp",
+  "stats": {
+    "str": 15,
+    "dex": 13,
+    "con": 14,
+    "int": 10,
+    "wis": 11,
+    "cha": 10
+  },
+  "imageUrl": "/assets/atlas/enemies/images/werewolf_human.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
+}

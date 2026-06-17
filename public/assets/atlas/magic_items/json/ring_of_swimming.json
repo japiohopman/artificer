@@ -1,0 +1,21 @@
+{
+  "index": "ring_of_swimming",
+  "name": "ring of swimming",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Ring, uncommon",
+    "You have a swimming speed of 40 feet while wearing this ring."
+  ],
+  "url": "/assets/atlas/magic_items/json/ring_of_swimming.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/ring_of_swimming.webp"
+}

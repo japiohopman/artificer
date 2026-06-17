@@ -1,0 +1,37 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "clothes_costume",
+  "name": "clothes, costume",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 4,
+  "url": "/assets/atlas/equipment/json/clothes_costume.json",
+  "updated_at": "2026-06-12T06:49:10.968Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/clothes_costume.webp",
+  "sprite_index": 10,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "kind": "clothing",
+  "clothing_type": "costume",
+  "equipSlots": [
+    "clothes"
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/clothes_costume.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
+}

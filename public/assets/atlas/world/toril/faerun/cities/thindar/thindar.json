@@ -1,0 +1,55 @@
+{
+  "id": "thindar",
+  "name": "Thindar",
+  "type": "settlement",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
+  "parent": "cities",
+  "title": "Thindar",
+  "description": "A large unwalled city and the capital of [[Thindol]], sprawled across a filled-in marsh.",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/thindar/thindar.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "settlement"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
+  "coordinates": {
+    "lat": 1313.45,
+    "lng": 152.02
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
+}

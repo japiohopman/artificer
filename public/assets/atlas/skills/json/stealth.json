@@ -1,0 +1,15 @@
+{
+  "index": "stealth",
+  "name": "stealth",
+  "desc": [
+    "Make a Dexterity (Stealth) check when you attempt to conceal yourself from enemies, slink past guards, slip away without being noticed, or sneak up on someone without being seen or heard."
+  ],
+  "ability_score": {
+    "index": "dex",
+    "name": "dex",
+    "url": "/assets/atlas/ability_scores/json/dex.json"
+  },
+  "url": "/assets/atlas/skills/json/stealth.json",
+  "updated_at": "2025-10-24T20:42:14.523Z",
+  "image": "/assets/atlas/skills/json/stealth.webp"
+}

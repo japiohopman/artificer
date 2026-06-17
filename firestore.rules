@@ -1,0 +1,140 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ---------------------------------------------------------
+    // 1. GLOBAL HELPERS (The Fortress Primitives)
+    // ---------------------------------------------------------
+    
+    function isSignedIn() { return request.auth != null; }
+    function isEmailVerified() { return request.auth.token.email_verified == true; }
+    function incoming() { return request.resource.data; }
+    function existing() { return resource.data; }
+    function userId() { return request.auth.uid; }
+    
+    function isValidId(id) { 
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$'); 
+    }
+
+    // Role-based Access Control (RBAC) via DB Lookup
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(userId())).data;
+    }
+    function isAdmin() {
+      return isSignedIn() && getUserData().role == 'admin';
+    }
+    function isLorekeeper() {
+      return isSignedIn() && (getUserData().role == 'lorekeeper' || getUserData().role == 'admin');
+    }
+    function isOwner(ownerId) {
+      return isSignedIn() && userId() == ownerId;
+    }
+
+    // Default Deny Case
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // ---------------------------------------------------------
+    // 2. VALIDATION BLUEPRINTS (The Anti-Update-Gaps)
+    // ---------------------------------------------------------
+
+    function isValidUser(data) {
+      return data.keys().hasAll(['email', 'role']) && 
+             data.email is string && data.email.size() <= 200 &&
+             data.role in ['admin', 'lorekeeper', 'traveler'] &&
+             (!('displayName' in data) || (data.displayName is string && data.displayName.size() <= 200)) &&
+             (!('photoURL' in data) || (data.photoURL is string && data.photoURL.size() <= 1500000)) &&
+             (!('bio' in data) || (data.bio is string && data.bio.size() <= 5000)) &&
+             (!('settings' in data) || (data.settings is map));
+    }
+
+    function isValidLocation(data) {
+      return data.keys().hasAll(['name', 'coordinates', 'category']) &&
+             data.name is string && data.name.size() <= 150 &&
+             data.coordinates.x is number && data.coordinates.y is number &&
+             data.category in ['city', 'settlement', 'mountain', 'forest', 'water', 'ruin', 'landmark', 'plain'] &&
+             (!('lore' in data) || (data.lore is string && data.lore.size() <= 5000)) &&
+             (!('authorUid' in data) || data.authorUid == userId());
+    }
+
+    function isValidPath(data) {
+      return data.keys().hasAll(['name', 'points', 'type']) &&
+             data.name is string && data.name.size() <= 150 &&
+             data.points is list && data.points.size() <= 100 &&
+             data.type in ['road', 'trail', 'secret'] &&
+             (!('authorUid' in data) || data.authorUid == userId());
+    }
+
+    function isValidCharacter(data) {
+      return data.keys().hasAll(['name', 'class', 'race']) &&
+             data.name is string && data.name.size() <= 100 &&
+             data.class is string && data.class.size() <= 50 &&
+             data.race is string && data.race.size() <= 50;
+    }
+
+    function isValidPartyState(data) {
+      return data.location.x is number && data.location.y is number;
+    }
+
+    // ---------------------------------------------------------
+    // 3. COLLECTION MATCHES
+    // ---------------------------------------------------------
+
+    // Users Collection
+    match /users/{uid} {
+      allow get: if isSignedIn();
+      allow list: if isAdmin();
+      allow create: if isSignedIn() && uid == userId() && isValidUser(incoming()) && incoming().role == 'traveler';
+      allow update: if isSignedIn() && (
+        // Admin override
+        isAdmin() || 
+        // User updating their own profile (cannot change role)
+        (uid == userId() && isValidUser(incoming()) && incoming().role == existing().role && 
+         incoming().diff(existing()).affectedKeys().hasOnly(['displayName', 'photoURL', 'bio', 'settings', 'updatedAt']))
+      );
+    }
+
+    // Locations (Global)
+    match /locations/{locId} {
+      allow read: if isSignedIn();
+      allow create: if isLorekeeper() && isValidId(locId) && isValidLocation(incoming()) && incoming().authorUid == userId();
+      allow update: if isLorekeeper() && isValidLocation(incoming()) && (
+        isAdmin() || (existing().authorUid == userId() && incoming().authorUid == existing().authorUid)
+      );
+      allow delete: if isAdmin() || (isLorekeeper() && existing().authorUid == userId());
+    }
+
+    // Paths (Global)
+    match /paths/{pathId} {
+      allow read: if isSignedIn();
+      allow create: if isLorekeeper() && isValidId(pathId) && isValidPath(incoming()) && incoming().authorUid == userId();
+      allow update: if isLorekeeper() && isValidPath(incoming()) && (
+        isAdmin() || (existing().authorUid == userId() && incoming().authorUid == existing().authorUid)
+      );
+      allow delete: if isAdmin() || (isLorekeeper() && existing().authorUid == userId());
+    }
+
+    // Crossroads (Global)
+    match /crossroads/{crId} {
+      allow read: if isSignedIn();
+      allow create: if isLorekeeper() && isValidId(crId) && incoming().authorUid == userId();
+      allow update: if isLorekeeper() && (isAdmin() || existing().authorUid == userId());
+      allow delete: if isAdmin() || (isLorekeeper() && existing().authorUid == userId());
+    }
+
+    // Characters (Per User)
+    match /users/{uid}/characters/{charId} {
+      allow read: if isOwner(uid) || isAdmin();
+      allow create: if isOwner(uid) && isValidCharacter(incoming());
+      allow update: if isOwner(uid) && isValidCharacter(incoming());
+      allow delete: if isOwner(uid);
+    }
+
+    // Party State (Real-time tracking)
+    match /party_state/{stateId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn() && isValidPartyState(incoming());
+    }
+  }
+}

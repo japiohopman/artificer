@@ -1,0 +1,17 @@
+export const EQUIPMENT_ICONS = {
+  shields: "",
+  land_vehicles: "",
+  weapon: "",
+  armor: "",
+  tools: "",
+  adventuring_gear: "",
+  mounts: "",
+  vehicles: "",
+  ammunition: "",
+  potion: "",
+  ring: "",
+  wand: "",
+  scroll: "",
+  staff: "",
+  wondrous_items: "",
+};

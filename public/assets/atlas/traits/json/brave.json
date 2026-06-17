@@ -1,0 +1,33 @@
+{
+  "index": "brave",
+  "races": [
+    {
+      "index": "halfling",
+      "name": "halfling",
+      "url": "/assets/atlas/species/json/halfling.json"
+    }
+  ],
+  "subraces": [],
+  "name": "brave",
+  "desc": [
+    "You have advantage on saving throw against being frightened."
+  ],
+  "proficiencies": [],
+  "trait_specific": {
+    "passive_modifiers": {
+      "advantage": [
+        {
+          "name": "Saving Throws against being frightened",
+          "condition": {
+            "index": "frightened",
+            "name": "frightened",
+            "url": "/assets/atlas/conditions/json/frightened.json"
+          }
+        }
+      ]
+    }
+  },
+  "url": "/assets/atlas/traits/json/brave.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "/assets/atlas/traits/brave.webp"
+}

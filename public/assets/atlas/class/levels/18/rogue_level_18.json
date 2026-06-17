@@ -1,0 +1,25 @@
+{
+  "level": 18,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "elusive",
+      "name": "Elusive",
+      "url": "/assets/atlas/features/json/elusive.json"
+    }
+  ],
+  "class_specific": {
+    "sneak_attack": {
+      "dice_count": 9,
+      "dice_value": 6
+    }
+  },
+  "index": "rogue_level_18",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "url": "/assets/atlas/class/levels/18/rogue_level_18.json"
+}

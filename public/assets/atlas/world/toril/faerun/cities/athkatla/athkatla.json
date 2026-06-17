@@ -1,0 +1,64 @@
+{
+  "id": "athkatla",
+  "name": "Athkatla",
+  "type": "metropolis",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
+  "parent": "cities",
+  "title": "Athkatla: Metropolis",
+  "description": "An interactive map of [[Athkatla]].",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/athkatla/athkatla.webp",
+  "thumbnail": "/assets/atlas/world/toril/faerun/cities/athkatla/athkatla_thumb.webp",
+  "banner": "/assets/atlas/world/toril/faerun/cities/athkatla/athkatla_banner.webp",
+  "tags": [
+    "city",
+    "metropolis"
+  ],
+  "map": "/assets/atlas/world/toril/faerun/cities/athkatla/athkatla_map.webp",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [
+    "/assets/atlas/world/toril/faerun/cities/athkatla/sublocations/estates.json",
+    "/assets/atlas/world/toril/faerun/cities/athkatla/sublocations/inns_taverns.json",
+    "/assets/atlas/world/toril/faerun/cities/athkatla/sublocations/landmarks.json",
+    "/assets/atlas/world/toril/faerun/cities/athkatla/sublocations/poi.json",
+    "/assets/atlas/world/toril/faerun/cities/athkatla/sublocations/roads.json",
+    "/assets/atlas/world/toril/faerun/cities/athkatla/sublocations/shops.json",
+    "/assets/atlas/world/toril/faerun/cities/athkatla/sublocations/temples_shrines.json",
+    "/assets/atlas/world/toril/faerun/cities/athkatla/sublocations/water.json"
+  ],
+  "coordinates": {
+    "lat": 0,
+    "lng": 0
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      1107,
+      1567
+    ]
+  ],
+  "origin": "bottom-left",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "Council of Six",
+    "military": "The Mehelm",
+    "population": "100,000+",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
+}

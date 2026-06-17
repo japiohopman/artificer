@@ -1,0 +1,40 @@
+{
+  "level": 6,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "channel_divinity_2_rest",
+      "name": "Channel Divinity (2/rest)",
+      "url": "/assets/atlas/features/json/channel_divinity_2_rest.json"
+    },
+    {
+      "index": "divine_domain_improvement_2",
+      "name": "Divine Domain feature",
+      "url": "/assets/atlas/features/json/divine_domain_improvement_2.json"
+    }
+  ],
+  "class_specific": {
+    "channel_divinity_charges": 2,
+    "destroy_undead_cr": 0.5
+  },
+  "index": "cleric_level_6",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/cleric.json"
+  },
+  "url": "/assets/atlas/class/levels/6/cleric_level_6.json",
+  "spellcasting": {
+    "cantrips_known": 4,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

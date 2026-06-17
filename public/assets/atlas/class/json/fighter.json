@@ -1,0 +1,387 @@
+{
+  "index": "fighter",
+  "name": "fighter",
+  "hit_die": 10,
+  "proficiency_choices": [
+    {
+      "desc": "Choose two skills from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_acrobatics",
+              "name": "skill: acrobatics",
+              "url": "/assets/atlas/proficiencies/json/skill_acrobatics.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_animal_handling",
+              "name": "skill: animal handling",
+              "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_athletics",
+              "name": "skill: athletics",
+              "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_history",
+              "name": "skill: history",
+              "url": "/assets/atlas/proficiencies/json/skill_history.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_intimidation",
+              "name": "skill: intimidation",
+              "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_perception",
+              "name": "skill: perception",
+              "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_survival",
+              "name": "skill: survival",
+              "url": "/assets/atlas/proficiencies/json/skill_survival.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "all_armor",
+      "name": "all armor",
+      "url": "/assets/atlas/proficiencies/json/all_armor.json"
+    },
+    {
+      "index": "shields",
+      "name": "shields",
+      "url": "/assets/atlas/proficiencies/json/shields.json"
+    },
+    {
+      "index": "simple_weapons",
+      "name": "simple weapons",
+      "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
+    },
+    {
+      "index": "martial_weapons",
+      "name": "martial weapons",
+      "url": "/assets/atlas/proficiencies/json/martial_weapons.json"
+    },
+    {
+      "index": "saving_throw_str",
+      "name": "saving throw: str",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_str.json"
+    },
+    {
+      "index": "saving_throw_con",
+      "name": "saving throw: con",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "str",
+      "name": "str",
+      "url": "/assets/atlas/ability_scores/json/str.json"
+    },
+    {
+      "index": "con",
+      "name": "con",
+      "url": "/assets/atlas/ability_scores/json/con.json"
+    }
+  ],
+  "starting_equipment": [],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) chain mail or (b) leather armor, longbow, and 20 arrows",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "chain_mail",
+              "name": "chain mail",
+              "url": "/assets/atlas/equipment/json/chain_mail.json"
+            }
+          },
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "leather_armor",
+                  "name": "leather armor",
+                  "url": "/assets/atlas/equipment/json/leather_armor.json"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "longbow",
+                  "name": "longbow",
+                  "url": "/assets/atlas/equipment/json/longbow.json"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 20,
+                "of": {
+                  "index": "arrow",
+                  "name": "arrow",
+                  "url": "/assets/atlas/equipment/json/arrow.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a martial weapon and a shield or (b) two martial weapons",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "a martial weapon",
+                  "choose": 1,
+                  "type": "equipment",
+                  "from": {
+                    "option_set_type": "equipment_category",
+                    "equipment_category": {
+                      "index": "martial_weapons",
+                      "name": "martial weapons",
+                      "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+                    }
+                  }
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "shield",
+                  "name": "shield",
+                  "url": "/assets/atlas/equipment/json/shield.json"
+                }
+              }
+            ]
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "two martial weapons",
+              "choose": 2,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "martial_weapons",
+                  "name": "martial weapons",
+                  "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a light crossbow and 20 bolts or (b) two handaxes",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "crossbow_light",
+                  "name": "crossbow, light",
+                  "url": "/assets/atlas/equipment/json/crossbow_light.json"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 20,
+                "of": {
+                  "index": "crossbow_bolt",
+                  "name": "crossbow bolt",
+                  "url": "/assets/atlas/equipment/json/crossbow_bolt.json"
+                }
+              }
+            ]
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 2,
+            "of": {
+              "index": "handaxe",
+              "name": "handaxe",
+              "url": "/assets/atlas/equipment/json/handaxe.json"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a dungeoneer’s pack or (b) an explorer’s pack",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "dungeoneers_pack",
+              "name": "dungeoneer's pack",
+              "url": "/assets/atlas/equipment/json/dungeoneers_pack.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "explorers_pack",
+              "name": "explorer's pack",
+              "url": "/assets/atlas/equipment/json/explorers_pack.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "class_levels": "/assets/atlas/class/levels/fighter.json",
+  "multi_classing": {
+    "prerequisite_options": {
+      "type": "ability-scores",
+      "choose": 1,
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "score_prerequisite",
+            "ability_score": {
+              "index": "str",
+              "name": "str",
+              "url": "/assets/atlas/ability_scores/json/str.json"
+            },
+            "minimum_score": 13
+          },
+          {
+            "option_type": "score_prerequisite",
+            "ability_score": {
+              "index": "dex",
+              "name": "dex",
+              "url": "/assets/atlas/ability_scores/json/dex.json"
+            },
+            "minimum_score": 13
+          }
+        ]
+      }
+    },
+    "proficiencies": [
+      {
+        "index": "light_armor",
+        "name": "light armor",
+        "url": "/assets/atlas/proficiencies/json/light_armor.json"
+      },
+      {
+        "index": "medium_armor",
+        "name": "medium armor",
+        "url": "/assets/atlas/proficiencies/json/medium_armor.json"
+      },
+      {
+        "index": "shields",
+        "name": "shields",
+        "url": "/assets/atlas/proficiencies/json/shields.json"
+      },
+      {
+        "index": "simple_weapons",
+        "name": "simple weapons",
+        "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
+      },
+      {
+        "index": "martial_weapons",
+        "name": "martial weapons",
+        "url": "/assets/atlas/proficiencies/json/martial_weapons.json"
+      }
+    ]
+  },
+  "subclasses": [
+    {
+      "index": "champion",
+      "name": "champion",
+      "url": "/assets/atlas/subclasses/json/champion.json"
+    },
+    {
+      "index": "battle_master",
+      "name": "battle master",
+      "url": "/assets/atlas/subclasses/json/battle_master.json"
+    },
+    {
+      "index": "eldritch_knight",
+      "name": "eldritch knight",
+      "url": "/assets/atlas/subclasses/json/eldritch_knight.json"
+    },
+    {
+      "index": "psi_warrior",
+      "name": "psi warrior",
+      "url": "/assets/atlas/subclasses/json/psi_warrior.json"
+    }
+  ],
+  "url": "/assets/atlas/class/json/fighter.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/class/wiki_image/fighter.webp"
+}

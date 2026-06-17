@@ -1,0 +1,62 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "greataxe",
+  "name": "greataxe",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 30,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d12",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 7,
+  "properties": [
+    {
+      "index": "heavy",
+      "name": "heavy",
+      "url": "/assets/atlas/weapon_properties/heavy"
+    },
+    {
+      "index": "two_handed",
+      "name": "two_handed",
+      "url": "/assets/atlas/weapon_properties/two_handed"
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/greataxe.json",
+  "updated_at": "2026-04-30T10:34:22.621Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/greataxe.webp",
+  "sprite_index": 20,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/greataxe.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "category": "Martial Melee Weapons",
+  "last_updated": "30-4-2026",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

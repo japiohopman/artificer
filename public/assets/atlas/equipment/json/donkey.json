@@ -1,0 +1,29 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "donkey",
+  "name": "donkey",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 8,
+    "unit": "gp"
+  },
+  "speed": {
+    "quantity": 40,
+    "unit": "ft/round"
+  },
+  "capacity": "420 lb.",
+  "url": "/assets/atlas/equipment/json/donkey.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/donkey.webp",
+  "sprite_index": 3,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "kind": "adventuring_gear"
+}

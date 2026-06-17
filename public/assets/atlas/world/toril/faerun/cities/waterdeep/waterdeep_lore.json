@@ -1,0 +1,123 @@
+{
+  "city_name": "Waterdeep",
+  "titles": ["City of Splendors", "Crown of the North"],
+  "population_estimate": 130000,
+  "government": {
+    "type": "Council of Lords",
+    "open_lord": "Laeral Silverhand",
+    "masked_lords_count": 15,
+    "ruling_body": "Lords of Waterdeep"
+  },
+  "wards": [
+    {
+      "id": "castle_ward",
+      "name": "Castle Ward",
+      "description": "Administrative and military heart of the city.",
+      "security_level": "High",
+      "wealth_level": "High",
+      "landmarks": ["Castle Waterdeep", "Piergeiron's Palace", "The Market", "The Yawning Portal"]
+    },
+    {
+      "id": "sea_ward",
+      "name": "Sea Ward",
+      "description": "The wealthiest district, home to noble villas and grand temples.",
+      "security_level": "Very High",
+      "wealth_level": "Extremely High",
+      "landmarks": ["Field of Triumph", "House of Wonder", "Walking Statues"]
+    },
+    {
+      "id": "north_ward",
+      "name": "North Ward",
+      "description": "Quiet residential area for the well-to-do.",
+      "security_level": "High",
+      "wealth_level": "High",
+      "landmarks": ["Cliffwatch", "Noble Mansions"]
+    },
+    {
+      "id": "trades_ward",
+      "name": "Trades Ward",
+      "description": "The commercial center where commerce thrives day and night.",
+      "security_level": "Moderate",
+      "wealth_level": "Moderate",
+      "landmarks": ["Court of the White Bull", "Guildhall of the Order"]
+    },
+    {
+      "id": "southern_ward",
+      "name": "Southern Ward",
+      "description": "Primary entry point for caravans; home to laborers and travelers.",
+      "security_level": "Moderate",
+      "wealth_level": "Low-Moderate",
+      "landmarks": ["The Waymoot", "Caravan Court"]
+    },
+    {
+      "id": "dock_ward",
+      "name": "Dock Ward",
+      "description": "The roughest and most dangerous part of the city.",
+      "security_level": "Low",
+      "wealth_level": "Low",
+      "landmarks": ["The Harbor", "Muleskull Tavern"]
+    },
+    {
+      "id": "city_of_the_dead",
+      "name": "City of the Dead",
+      "description": "A vast, walled cemetery and public park.",
+      "security_level": "Special (Night patrols)",
+      "wealth_level": "N/A",
+      "landmarks": ["Ahghairon's Statue", "The Heroes' Garden"]
+    }
+  ],
+  "factions": [
+    {
+      "name": "The Harpers",
+      "alignment": "Good",
+      "focus": "Balance and Freedom",
+      "leader_hidden": true
+    },
+    {
+      "name": "The Zhentarim",
+      "alignment": "Lawful Evil / Neutral",
+      "focus": "Economic Control and Mercenary Work",
+      "leader": "Manshoon (Clone)"
+    },
+    {
+      "name": "The Xanathar Guild",
+      "alignment": "Neutral Evil",
+      "focus": "Crime and Information",
+      "leader": "The Xanathar (Beholder)"
+    },
+    {
+      "name": "The Lords' Alliance",
+      "alignment": "Lawful Neutral",
+      "focus": "Mutual Defense and Trade",
+      "leader": "Laeral Silverhand"
+    }
+  ],
+  "code_legal_summary": {
+    "crimes_against_lords": {
+      "assault_impersonation": "Death",
+      "espionage": "Death or Hard Labor"
+    },
+    "crimes_against_city": {
+      "arson": "Death or Hard Labor",
+      "treason": "Death",
+      "bribery": "Exile and Fine"
+    },
+    "crimes_against_citizens": {
+      "murder": "Death or Hard Labor",
+      "theft": "Flogging and Fine",
+      "assault": "Imprisonment and Fine"
+    }
+  },
+  "unique_features": [
+    "Walking Statues",
+    "Griffon Cavalry",
+    "Undermountain Entrance",
+    "Skullport (Subterranean)",
+    "The Code Legal"
+  ],
+  "lore_links": {
+    "politics": "public/assets/atlas/lore/politics/waterdeep.md",
+    "geography": "public/assets/atlas/lore/geography/waterdeep.md",
+    "essays": "public/assets/atlas/lore/essays/waterdeep.md"
+  }
+}

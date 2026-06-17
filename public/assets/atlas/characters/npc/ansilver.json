@@ -1,0 +1,28 @@
+{
+  "id": "ansilver",
+  "name": "Ansilver",
+  "species": "Human",
+  "classJob": "Proprietor of The Golden Key Locksmiths",
+  "gender": "unknown",
+  "baseMood": "Neutral",
+  "visualTraits": {
+    "skinTone": "#d2b48c",
+    "hairStyle": "Common",
+    "clothingStyle": "Local",
+    "distinguishingFeatures": "None"
+  },
+  "personalityTraits": [],
+  "secrets": [],
+  "goals": [],
+  "locationId": "/assets/atlas/world/toril/faerun/cities/waterdeep.json",
+  "isEssential": false,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "backstory": "Ansilver is a known figure in Waterdeep, associated with The Golden Key Locksmiths."
+}

@@ -1,0 +1,1249 @@
+{
+  "category": "landmarks",
+  "updatedAt": "2026-06-03T05:50:02.274151Z",
+  "location_id": "waterdeep",
+  "sub_locations": [
+    {
+      "id": "38",
+      "name": "Heroes' Garden",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1132,
+        3619
+      ],
+      "popup": {
+        "title": "Heroes' Garden",
+        "description": "Heroes' Garden was one of the only public gardens in the city besides the City of the Dead.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "40",
+      "name": "Trollwall",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1350.2203986757,
+        3636.2966222518
+      ],
+      "popup": {
+        "title": "Trollwall",
+        "description": "The Trollwall was a defensive barrier that encircled nearly the entirety of the city of Waterdeep.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "205",
+      "name": "Virgin's Square",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1607.253713637,
+        1845.5486988969
+      ],
+      "popup": {
+        "title": "Virgin's Square",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "314",
+      "name": "Tower Trail",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1833.1743302261,
+        957.77613511718
+      ],
+      "popup": {
+        "title": "Tower Trail",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "333",
+      "name": "Dragon Tower of Maaril",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        840.04285604962,
+        3293.3498333763
+      ],
+      "popup": {
+        "title": "Dragon Tower of Maaril",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "340",
+      "name": "Tespergates",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1031.6687937512,
+        3113.3911575644
+      ],
+      "popup": {
+        "title": "Tespergates",
+        "description": "Tespergates, which was also called Tesper Villa, was the family estate of the Waterdhavian noble house [[Tesper]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "351",
+      "name": "Field of Triumph",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        716.29916934197,
+        2915.7548122227
+      ],
+      "popup": {
+        "title": "Field of Triumph",
+        "description": "The Field of Triumph was a large outdoor stadium.\n\nThe Field of Triumph was the venue for many public spectacles from late spring until late autumn, weather permitting. The Open Lord of Waterdeep used the Field as a public forum to give proclamations to the city.",
+        "image": "File:Field of Triumph's Gate.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "356",
+      "name": "Blackstaff Tower",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        914.6426214648,
+        2593.6676733923
+      ],
+      "popup": {
+        "title": "Blackstaff Tower",
+        "description": "Blackstaff Tower (previously Arunsun Tower; renamed by Khelben in [[1322 DR]]) was the home of Khelben \"Blackstaff\" Arunsun in Waterdeep. The foreboding structure was one of the most recognizable landmarks in Waterdeep's [[Castle Ward]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "370",
+      "name": "Naingate",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        749.17963466715,
+        3348.8577156995
+      ],
+      "popup": {
+        "title": "Naingate",
+        "description": "Naingate was the tower of the [[wizard]] [[Nain Keenwhistler]] who was a former member of the [[Company of Crazed Venturers]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "385",
+      "name": "Tessalar's Tower",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1208.0919356572,
+        3391.6376759613
+      ],
+      "popup": {
+        "title": "Tessalar's Tower",
+        "description": "The tower was home to a wizard named [[Tessalar Hulicorm]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "405",
+      "name": "East Torch Tower",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1891.510639674,
+        842.16417639318
+      ],
+      "popup": {
+        "title": "East Torch Tower",
+        "description": "East Torch Tower was the formal name given to one of the major torchtowers of Waterdeep's [[Trollwall]].",
+        "image": "File:Map06-Fishmongers-Smokehouse.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "409",
+      "name": "South Gate",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1974.2421330728,
+        954.24060121125
+      ],
+      "popup": {
+        "title": "South Gate",
+        "description": "The South Gate was the southern point of entrance through the [[Trollwall]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "421",
+      "name": "Deepwater Harbor",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1274,
+        966
+      ],
+      "popup": {
+        "title": "Deepwater Harbor",
+        "description": "Thanks to continuous efforts by the [[Guild of Watermen]] and its [[merfolk]] population, the cold waters of Deepwater Harbor were exceptionally clean.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "422",
+      "name": "Deepwater Isle",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1067,
+        528
+      ],
+      "popup": {
+        "title": "Deepwater Isle",
+        "description": "Deepwater was the largest in a ring of islands that enclosed and protected [[Deepwater Harbor]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "423",
+      "name": "Deepwater Wall",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1256,
+        503
+      ],
+      "popup": {
+        "title": "Deepwater Wall",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "424",
+      "name": "Stormhaven Island",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        490,
+        1037
+      ],
+      "popup": {
+        "title": "Stormhaven Island",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "426",
+      "name": "Naval Harbor",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        798,
+        1257
+      ],
+      "popup": {
+        "title": "Naval Harbor",
+        "description": "The fleet of Waterdeep's navy was based in the Naval Harbor. Commercial and personal vessels were not permitted in this area.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "428",
+      "name": "Sea Chain Gates",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        854,
+        1161
+      ],
+      "popup": {
+        "title": "Sea Chain Gates",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "431",
+      "name": "Sea Stacks",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1419,
+        355
+      ],
+      "popup": {
+        "title": "Sea Stacks",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "432",
+      "name": "Sea Elf Trading Outpost",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        2160,
+        639
+      ],
+      "popup": {
+        "title": "Sea Elf Trading Outpost",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "458",
+      "name": "River Square",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1800.2938649009,
+        1808.7791462752
+      ],
+      "popup": {
+        "title": "River Square",
+        "description": "River Square was a hard-packed dirt and gravel courtyard.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "466",
+      "name": "River Gate",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1960.8071042303,
+        1830.3459031014
+      ],
+      "popup": {
+        "title": "River Gate",
+        "description": "The River Gate was the eastern point of entrance through the [[Trollwall]] into Waterdeep.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "475",
+      "name": "Shipwright's Square",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1515.3298320828,
+        1160.0086745365
+      ],
+      "popup": {
+        "title": "Shipwright's Square",
+        "description": "Shipwright's Square was a small courtyard.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "501",
+      "name": "The Boomgarden",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1787.212389449,
+        1292.591196009
+      ],
+      "popup": {
+        "title": "The Boomgarden",
+        "description": "The Boomgarden was a cul-de-sac, paved in hard-packed earth and gravel.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "516",
+      "name": "Tower of the Order",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1403.2534072647,
+        2270.8734277806
+      ],
+      "popup": {
+        "title": "Tower of the Order",
+        "description": "The Tower of the Order was the headquarters and seat of the [[Watchful Order of Magists and Protectors]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "521",
+      "name": "Mhair's Tower",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1600.8897526063,
+        2268.0450006559
+      ],
+      "popup": {
+        "title": "Mhair's Tower",
+        "description": "Mhair's Tower was the tower home of the wizard [[Mhair Szeltune]] in the 14th century DR.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "525",
+      "name": "Ahghairon's Statue",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1733.8258274694,
+        2305.1681066681
+      ],
+      "popup": {
+        "title": "Ahghairon's Statue",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "526",
+      "name": "Warriors' Monument",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1788.2730496208,
+        2225.2650403941
+      ],
+      "popup": {
+        "title": "Warriors' Monument",
+        "description": "Warriors' Monument, also occasionally known as the Warriors of Waterdeep, was a monument in Waterdeep's [[City of the Dead]] meant to honor all those who ever fought to defend the city.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "613",
+      "name": "North Trollwall",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1919.4413575309,
+        3132.1294872658
+      ],
+      "popup": {
+        "title": "North Trollwall",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "632",
+      "name": "Northgate",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1520,
+        3783
+      ],
+      "popup": {
+        "title": "Northgate",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "634",
+      "name": "Upper Towers",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1478.2067260705,
+        3600.9412831925
+      ],
+      "popup": {
+        "title": "Upper Towers",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "649",
+      "name": "Endcliff Fort",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1928.9872990769,
+        3491.3397321086
+      ],
+      "popup": {
+        "title": "Endcliff Fort",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "652",
+      "name": "Mount Wall",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        612,
+        1562
+      ],
+      "popup": {
+        "title": "Mount Wall",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "665",
+      "name": "Ahghairon's Tower",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1058.8924048269,
+        2001.1121907579
+      ],
+      "popup": {
+        "title": "Ahghairon's Tower",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "666",
+      "name": "Mountain Tower",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        933.38095116624,
+        2094.4502858746
+      ],
+      "popup": {
+        "title": "Mountain Tower",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "679",
+      "name": "West Gate",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        617,
+        3150
+      ],
+      "popup": {
+        "title": "West Gate",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "688",
+      "name": "Endcliff Tower",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1945.9578618254,
+        2923.1794334252
+      ],
+      "popup": {
+        "title": "Endcliff Tower",
+        "description": "Endcliff Tower was one of the major torchtowers of Waterdeep's [[Trollwall]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "715",
+      "name": "Seaseyes Tower",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        576.5,
+        2942.5
+      ],
+      "popup": {
+        "title": "Seaseyes Tower",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "730",
+      "name": "Syndra Wands' Tower",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        976.86801820922,
+        2522.603441883
+      ],
+      "popup": {
+        "title": "Syndra Wands' Tower",
+        "description": "Syndra Wands' Tower (also known as the Eightower) was the tower of [[Syndra Wands]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "747",
+      "name": "Brianne\u2019s Tower",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1808.4255928846,
+        2804.3854941858
+      ],
+      "popup": {
+        "title": "Brianne\u2019s Tower",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "753",
+      "name": "Greenglade Tower",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1549.6245109703,
+        2672.8636328851
+      ],
+      "popup": {
+        "title": "Greenglade Tower",
+        "description": "Greenglade Tower was a popular and rather clean rooming house.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "769",
+      "name": "Beacon Tower",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1857.5695141771,
+        2540.6346648033
+      ],
+      "popup": {
+        "title": "Beacon Tower",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "826",
+      "name": "Kolat Towers",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1787.125,
+        1327.5
+      ],
+      "popup": {
+        "title": "Kolat Towers",
+        "description": "Kolat Towers was a wizard's residence.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "841",
+      "name": "Deepwater Beacon",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1225,
+        849
+      ],
+      "popup": {
+        "title": "Deepwater Beacon",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "989",
+      "name": "Tarth's Towers",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1033,
+        3196.5
+      ],
+      "popup": {
+        "title": "Tarth's Towers",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "1002",
+      "name": "Dead End Gate approx location",
+      "categoryId": "landmarks",
+      "type": "marker",
+      "position": [
+        1741.7807787578,
+        2462.3225887869
+      ],
+      "popup": {
+        "title": "Dead End Gate approx location",
+        "description": "Secret entrance used by the Carver family for graveyard maintenance",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "index": "drow_high_magic",
+  "name": "drow high magic",
+  "prerequisites": [
+    {
+      "stat": "species",
+      "operator": "==",
+      "value": "elf"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You learn more of the magic typical of dark elves. You learn the detect magic spell and can cast it at will, without expending a spell slot. You also learn levitate and dispel magic, each of which you can cast once without expending a spell slot. You regain the ability to cast those two spells in this way when you finish a long rest. Charisma is your spellcasting ability for all three spells."
+  ],
+  "feature_specific": {
+    "spellcasting_ability": {
+      "index": "charisma",
+      "name": "charisma",
+      "url": "/assets/atlas/ability_scores/json/cha.json"
+    }
+  },
+  "url": "/assets/atlas/feats/json/drow_high_magic.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/drow_high_magic.webp"
+}

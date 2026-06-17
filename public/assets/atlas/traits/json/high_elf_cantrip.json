@@ -1,0 +1,147 @@
+{
+  "index": "high_elf_cantrip",
+  "races": [],
+  "subraces": [
+    {
+      "index": "high_elf",
+      "name": "high elf",
+      "url": "/assets/atlas/subraces/json/high_elf.json"
+    }
+  ],
+  "name": "high elf cantrip",
+  "desc": [
+    "You know one cantrip of your choice form the wizard spell list. Intelligence is your spellcasting ability for it."
+  ],
+  "proficiencies": [],
+  "trait_specific": {
+    "spellcasting_ability": {
+      "index": "intelligence",
+      "name": "intelligence",
+      "url": "/assets/atlas/ability_scores/json/int.json"
+    },
+    "spell_options": {
+      "choose": 1,
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "light",
+              "name": "light",
+              "url": "/assets/atlas/spell/json/light.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "mage_hand",
+              "name": "mage hand",
+              "url": "/assets/atlas/spell/json/mage_hand.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "mending",
+              "name": "mending",
+              "url": "/assets/atlas/spell/json/mending.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "message",
+              "name": "message",
+              "url": "/assets/atlas/spell/json/message.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "minor_illusion",
+              "name": "minor illusion",
+              "url": "/assets/atlas/spell/json/minor_illusion.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "acid_splash",
+              "name": "acid splash",
+              "url": "/assets/atlas/spell/json/acid_splash.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "prestidigitation",
+              "name": "prestidigitation",
+              "url": "/assets/atlas/spell/json/prestidigitation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "ray_of_frost",
+              "name": "ray of frost",
+              "url": "/assets/atlas/spell/json/ray_of_frost.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "shocking_grasp",
+              "name": "shocking grasp",
+              "url": "/assets/atlas/spell/json/shocking_grasp.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "true_strike",
+              "name": "true strike",
+              "url": "/assets/atlas/spell/json/true_strike.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "chill_touch",
+              "name": "chill touch",
+              "url": "/assets/atlas/spell/json/chill_touch.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "dancing_lights",
+              "name": "dancing lights",
+              "url": "/assets/atlas/spell/json/dancing_lights.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "fire_bolt",
+              "name": "fire bolt",
+              "url": "/assets/atlas/spell/json/fire_bolt.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "poison_spray",
+              "name": "poison spray",
+              "url": "/assets/atlas/spell/json/poison_spray.json"
+            }
+          }
+        ]
+      },
+      "type": "spell"
+    }
+  },
+  "url": "/assets/atlas/traits/json/high_elf_cantrip.json",
+  "updated_at": "2025-10-24T20:42:14.945Z",
+  "image": "/assets/atlas/traits/high_elf_cantrip.webp"
+}

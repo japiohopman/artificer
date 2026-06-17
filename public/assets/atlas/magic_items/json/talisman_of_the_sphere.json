@@ -1,0 +1,21 @@
+{
+  "index": "talisman_of_the_sphere",
+  "name": "talisman of the sphere",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "legendary"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, legendary (requires attunement)",
+    "When you make an Intelligence (Arcana) check to control a sphere of annihilation while you are holding this talisman, you double your proficiency bonus on the check. In addition, when you start your turn with control over a sphere of annihilation, you can use an action to levitate it 10 feet plus a number of additional feet equal to 10 × your Intelligence modifier."
+  ],
+  "url": "/assets/atlas/magic_items/json/talisman_of_the_sphere.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/talisman_of_the_sphere.webp"
+}

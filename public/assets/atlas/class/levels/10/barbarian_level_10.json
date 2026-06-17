@@ -1,0 +1,24 @@
+{
+  "level": 10,
+  "ability_score_bonuses": 2,
+  "prof_bonus": 4,
+  "features": [
+    {
+      "index": "primal_path_improvement_2",
+      "name": "Path feature",
+      "url": "/assets/atlas/features/json/primal_path_improvement_2.json"
+    }
+  ],
+  "class_specific": {
+    "rage_count": 4,
+    "rage_damage_bonus": 3,
+    "brutal_critical_dice": 1
+  },
+  "index": "barbarian_level_10",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "url": "/assets/atlas/class/levels/10/barbarian_level_10.json"
+}

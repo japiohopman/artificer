@@ -1,0 +1,43 @@
+{
+  "index": "natural_illusionist",
+  "races": [
+    {
+      "index": "gnome",
+      "name": "gnome",
+      "url": "/assets/atlas/species/json/gnome.json"
+    }
+  ],
+  "subraces": [
+    {
+      "index": "forest_gnome",
+      "name": "forest gnome",
+      "url": "/assets/atlas/subraces/json/forest_gnome.json"
+    }
+  ],
+  "name": "natural illusionist",
+  "desc": [
+    "You know the minor illusion cantrip. Intelligence is your spellcasting ability for it."
+  ],
+  "trait_specific": {
+    "spellcasting_ability": {
+      "index": "intelligence",
+      "name": "intelligence",
+      "url": "/assets/atlas/ability_scores/json/int.json"
+    },
+    "spells": [
+      {
+        "spell": {
+          "index": "minor_illusion",
+          "name": "minor illusion",
+          "url": "/assets/atlas/spell/json/minor_illusion.json"
+        },
+        "usage": {
+          "type": "at will"
+        }
+      }
+    ]
+  },
+  "url": "/assets/atlas/traits/json/natural_illusionist.json",
+  "updated_at": "2025-05-22T12:00:00.000Z",
+  "image": "/assets/atlas/traits/natural_illusionist.webp"
+}

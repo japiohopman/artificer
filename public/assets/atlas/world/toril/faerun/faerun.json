@@ -1,0 +1,23 @@
+{
+  "id": "faerun",
+  "name": "Faerûn",
+  "type": "continent",
+  "parent": "toril",
+  "title": "Faerûn: The Great Continent",
+  "description": "Faerûn is a major continent on the world of Toril. It is a land of immense geographic and cultural diversity, home to dozens of kingdoms and city-states.",
+  "wiki": "Faerûn is the central continent of the world of Toril. It is bordered by the Sea of Swords to the west, the Great Ice to the north, and the Shining Sea to the south.",
+  "image": "faerun.webp",
+  "thumbnail": "faerun_thumb.webp",
+  "banner": "faerun_banner.webp",
+  "tags": ["continent", "surface", "toril"],
+  "children": ["heartlands", "sword_coast", "the_north", "internal_lands", "south_faerun"],
+  "coordinates": {
+    "lat": 0,
+    "lng": 0
+  },
+  "metadata": {
+    "primary_races": ["Humans", "Elves", "Dwarves", "Halflings", "Gnomes"],
+    "major_pantheons": ["Faerûnian Pantheon"],
+    "climate": "Temperate to Arctic"
+  }
+}

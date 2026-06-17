@@ -1,0 +1,42 @@
+{
+  "special": [],
+  "index": "holy_water_flask",
+  "name": "holy water (flask)",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "desc": [
+    "As an action, you can splash the contents of this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. In either case, make a ranged attack against a target creature, treating the holy water as an improvised weapon.",
+    "If the target is a fiend or undead, it takes 2d6 radiant damage.",
+    "A cleric or paladin may create holy water by performing a special ritual.",
+    "The ritual takes 1 hour to perform, uses 25 gp worth of powdered silver, and requires the caster to expend a 1st-level spell slot."
+  ],
+  "url": "/assets/atlas/equipment/json/holy_water_flask.json",
+  "updated_at": "2026-06-12T06:54:17.608Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/holy_water_flask.webp",
+  "sprite_index": 6,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "imageUrl": "/assets/atlas/equipment/images/holy_water_flask.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "12-6-2026"
+}

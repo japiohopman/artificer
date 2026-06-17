@@ -1,0 +1,123 @@
+{
+  "desc": [
+    "Tucked amidst the pristine parchment and fine sealing wax are velvet-lined compartments for vials of quicksilver poison and a dagger honed to a needle point. It is a kit designed for those who understand that a well-placed word is merely the prelude to a quiet assassination."
+  ],
+  "special": [],
+  "index": "diplomats_pack",
+  "name": "diplomat's pack",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "equipment_packs",
+    "name": "equipment packs",
+    "url": "/assets/atlas/equipment_categories/equipment_packs"
+  },
+  "cost": {
+    "quantity": 39,
+    "unit": "gp"
+  },
+  "contents": [
+    {
+      "item": {
+        "index": "chest",
+        "name": "chest",
+        "url": "/assets/atlas/equipment/chest"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "case_map_or_scroll",
+        "name": "case, map or scroll",
+        "url": "/assets/atlas/equipment/case_map_or_scroll"
+      },
+      "quantity": 2
+    },
+    {
+      "item": {
+        "index": "clothes_fine",
+        "name": "clothes, fine",
+        "url": "/assets/atlas/equipment/clothes_fine"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "ink_1_ounce_bottle",
+        "name": "ink (1 ounce bottle)",
+        "url": "/assets/atlas/equipment/ink_1_ounce_bottle"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "ink_pen",
+        "name": "ink pen",
+        "url": "/assets/atlas/equipment/ink_pen"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "lamp",
+        "name": "lamp",
+        "url": "/assets/atlas/equipment/lamp"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "oil_flask",
+        "name": "oil (flask)",
+        "url": "/assets/atlas/equipment/oil_flask"
+      },
+      "quantity": 2
+    },
+    {
+      "item": {
+        "index": "paper_one_sheet",
+        "name": "paper (one sheet)",
+        "url": "/assets/atlas/equipment/paper_one_sheet"
+      },
+      "quantity": 5
+    },
+    {
+      "item": {
+        "index": "perfume_vial",
+        "name": "perfume (vial)",
+        "url": "/assets/atlas/equipment/perfume_vial"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "sealing_wax",
+        "name": "sealing wax",
+        "url": "/assets/atlas/equipment/sealing_wax"
+      },
+      "quantity": 1
+    },
+    {
+      "item": {
+        "index": "soap",
+        "name": "soap",
+        "url": "/assets/atlas/equipment/soap"
+      },
+      "quantity": 1
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/diplomats_pack.json",
+  "updated_at": "2026-04-12T07:45:27.035Z",
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/diplomats_pack.webp",
+  "sprite_index": 1,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/diplomats_pack.webp",
+  "_type": "equipment",
+  "category": "Equipment Packs",
+  "last_updated": "12-4-2026",
+  "kind": "equipment_pack"
+}

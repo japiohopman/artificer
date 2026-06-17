@@ -1,0 +1,53 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "greatsword",
+  "name": "greatsword",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "2d6",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 6,
+  "properties": [
+    {
+      "index": "heavy",
+      "name": "heavy",
+      "url": "/assets/atlas/weapon_properties/heavy"
+    },
+    {
+      "index": "two_handed",
+      "name": "two_handed",
+      "url": "/assets/atlas/weapon_properties/two_handed"
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/greatsword.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/greatsword.webp",
+  "sprite_index": 22,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

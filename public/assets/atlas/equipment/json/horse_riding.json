@@ -1,0 +1,36 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "horse_riding",
+  "name": "horse, riding",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 75,
+    "unit": "gp"
+  },
+  "speed": {
+    "quantity": 60,
+    "unit": "ft/round"
+  },
+  "capacity": "480 lb.",
+  "url": "/assets/atlas/equipment/json/horse_riding.json",
+  "updated_at": "2026-05-16T09:50:11.994Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/horse_riding.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "imageUrl": "/assets/atlas/equipment/images/horse_riding.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "16-5-2026",
+  "kind": "adventuring_gear"
+}

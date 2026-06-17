@@ -1,0 +1,23 @@
+{
+  "id": "malbolge",
+  "name": "Malbolge",
+  "type": "plane_layer",
+  "parent": "nine_hells",
+  "title": "Malbolge: The Sixth Layer",
+  "description": "Malbolge is the sixth layer of the Nine Hells, a land formed from the remains of its former ruler, the Hag Countess.",
+  "wiki": "Malbolge is now ruled by Glasya, the daughter of Asmodeus. The landscape is a twisted maze of bone and flesh, filled with prisons and places of punishment.",
+  "image": "malbolge.webp",
+  "tags": [
+    "plane_layer",
+    "nine_hells",
+    "malbolge"
+  ],
+  "metadata": {
+    "ruler": "Glasya",
+    "previous_ruler": "The Hag Countess",
+    "key_locations": [
+      "Glasya's Palace"
+    ]
+  },
+  "updated_at": "2024-06-19T00:00:00.000Z"
+}

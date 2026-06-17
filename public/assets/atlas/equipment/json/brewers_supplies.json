@@ -1,0 +1,32 @@
+{
+  "special": [],
+  "index": "brewers_supplies",
+  "name": "brewer's supplies",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Artisan's Tools",
+  "cost": {
+    "quantity": 20,
+    "unit": "gp"
+  },
+  "weight": 9,
+  "desc": [
+    "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+  ],
+  "url": "/assets/atlas/equipment/json/brewers_supplies.json",
+  "updated_at": "2025-10-24T20:42:12.926Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/brewers_supplies.webp",
+  "sprite_index": 13,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "kind": "tool",
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ]
+}

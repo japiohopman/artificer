@@ -1,0 +1,12 @@
+{
+  "index": "two_handed",
+  "name": "two_handed",
+  "desc": [
+    "This weapon requires two hands when you attack with it."
+  ],
+  "property_specific": {
+    "required_hands": 2
+  },
+  "url": "/assets/atlas/weapon_properties/json/two_handed.json",
+  "updated_at": "2026-06-14T08:21:17Z"
+}

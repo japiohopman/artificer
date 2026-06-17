@@ -1,0 +1,32 @@
+{
+  "level": 5,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "monk_extra_attack",
+      "name": "Extra Attack",
+      "url": "/assets/atlas/features/json/monk_extra_attack.json"
+    },
+    {
+      "index": "stunning_strike",
+      "name": "Stunning Strike",
+      "url": "/assets/atlas/features/json/stunning_strike.json"
+    }
+  ],
+  "class_specific": {
+    "martial_arts": {
+      "dice_count": 1,
+      "dice_value": 6
+    },
+    "ki_points": 5,
+    "unarmored_movement": 10
+  },
+  "index": "monk_level_5",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/5/monk_level_5.json"
+}

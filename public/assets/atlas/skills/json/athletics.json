@@ -1,0 +1,15 @@
+{
+  "index": "athletics",
+  "name": "athletics",
+  "desc": [
+    "Your Strength (Athletics) check covers difficult situations you encounter while climbing, jumping, or swimming."
+  ],
+  "ability_score": {
+    "index": "str",
+    "name": "str",
+    "url": "/assets/atlas/ability_scores/json/str.json"
+  },
+  "url": "/assets/atlas/skills/json/athletics.json",
+  "updated_at": "2025-10-24T20:42:14.523Z",
+  "image": "/assets/atlas/skills/json/athletics.webp"
+}

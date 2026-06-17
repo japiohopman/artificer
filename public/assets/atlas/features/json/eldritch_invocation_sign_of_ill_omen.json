@@ -1,0 +1,28 @@
+{
+  "index": "eldritch_invocation_sign_of_ill_omen",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "eldritch invocation: sign of ill omen",
+  "level": 5,
+  "prerequisites": [
+    {
+      "type": "level",
+      "level": 5
+    }
+  ],
+  "desc": [
+    "You can cast bestow curse once using a warlock spell slot. You can't do so again until you finish a long rest."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "/assets/atlas/features/eldritch_invocations.json"
+  },
+  "url": "/assets/atlas/features/json/eldritch_invocation_sign_of_ill_omen.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/eldritch_invocation_sign_of_ill_omen.webp",
+  "feature_specific": {}
+}

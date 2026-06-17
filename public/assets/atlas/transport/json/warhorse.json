@@ -1,0 +1,45 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "warhorse",
+  "name": "warhorse",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "speed": {
+    "land": {
+      "ft_per_round": 60,
+      "mph": 6.82
+    }
+  },
+  "capacity": {
+    "cargo": "540 lb."
+  },
+  "url": "/assets/atlas/transport/json/warhorse.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/enemies/images/warhorse.webp",
+  "sprite_index": 3,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet10.webp",
+  "transport_type": "mount",
+  "transport_specific": {
+    "stat_block": {
+      "index": "warhorse",
+      "name": "warhorse",
+      "url": "/assets/atlas/enemies/json/warhorse.json"
+    },
+    "feed": {
+      "index": "animal_feed_1_day",
+      "name": "animal feed (1 day)",
+      "url": "/assets/atlas/equipment/json/animal_feed_1_day.json"
+    }
+  }
+}

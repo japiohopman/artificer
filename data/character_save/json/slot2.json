@@ -1,0 +1,771 @@
+{
+  "level": 0,
+  "xp": 0,
+  "saveVersion": 2,
+  "gender": "Female",
+  "stats": {
+    "str": 15,
+    "dex": 14,
+    "con": 14,
+    "int": 10,
+    "wis": 8,
+    "cha": 7
+  },
+  "proficiencies": [
+    "Skill: Investigation",
+    "Skill: Persuasion",
+    "Potters Tools",
+    "light armor",
+    "medium armor",
+    "shields",
+    "simple weapons",
+    "saving throw: wis",
+    "saving throw: cha",
+    "Saving Throw: wis",
+    "Saving Throw: cha"
+  ],
+  "traits": [
+    ""
+  ],
+  "features": [
+    {
+      "name": "draconic ancestry",
+      "index": "draconic_ancestry",
+      "desc": "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.",
+      "source": "Species"
+    },
+    {
+      "name": "breath weapon",
+      "index": "breath_weapon",
+      "desc": "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.\nWhen you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.\nAfter you use your breath weapon, you cannot use it again until you complete a short or long rest.",
+      "source": "Species"
+    },
+    {
+      "name": "damage resistance",
+      "index": "damage_resistance",
+      "desc": "You have resistance to the damage type associated with your draconic ancestry.",
+      "source": "Species"
+    },
+    {
+      "index": "spellcasting_cleric",
+      "class": {
+        "index": "cleric",
+        "name": "cleric",
+        "url": "/assets/atlas/class/json/cleric.json"
+      },
+      "name": "spellcasting: cleric",
+      "level": 1,
+      "prerequisites": [],
+      "desc": [
+        "As a conduit for divine power, you can cast cleric spells."
+      ],
+      "reference": "public/assets/atlas/class/json/cleric/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_cleric.json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/spellcasting_cleric.webp",
+      "feature_specific": {
+        "spellcasting_ability": {
+          "index": "wisdom",
+          "name": "wisdom",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
+        }
+      },
+      "source": "Class"
+    },
+    {
+      "index": "divine_domain",
+      "class": {
+        "index": "cleric",
+        "name": "cleric",
+        "url": "/assets/atlas/class/json/cleric.json"
+      },
+      "name": "divine domain",
+      "level": 1,
+      "prerequisites": [],
+      "desc": [
+        "Choose one domain related to your deity, such as Knowledge, Life, Light, Nature, Tempest, Trickery, or War. Only the Life domain is detailed in the Open Game Licensed SRD. Additional Domains are described in the official rulebooks or products from other publishers.",
+        "Your domain grants you domain spells and other features when you choose it at 1st level. It also grants you additional ways to use Channel Divinity when you gain that feature at 2nd level, and additional benefits at 6th, 8th, and 17th levels."
+      ],
+      "url": "/assets/atlas/features/json/divine_domain.json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/divine_domain.webp",
+      "feature_specific": {
+        "subfeature_options": {
+          "choose": 1,
+          "type": "subclass"
+        }
+      },
+      "source": "Class"
+    },
+    {
+      "index": "domain_spells_1",
+      "class": {
+        "index": "cleric",
+        "name": "cleric",
+        "url": "/assets/atlas/class/json/cleric.json"
+      },
+      "name": "domain spells",
+      "level": 1,
+      "prerequisites": [],
+      "desc": [
+        "Each domain has a list of spells--its domain spells--that you gain at the cleric levels noted in the domain description. Once you gain a domain spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day.",
+        "If you have a domain spell that doesn't appear on the cleric spell list, the spell is nonetheless a cleric spell for you."
+      ],
+      "url": "/assets/atlas/features/json/domain_spells_1.0json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/domain_spells_1.0webp",
+      "feature_specific": {
+        "subfeature_options": {
+          "type": "spell"
+        }
+      },
+      "source": "Class"
+    }
+  ],
+  "flaws": [
+    ""
+  ],
+  "ideals": [
+    ""
+  ],
+  "bonds": [
+    ""
+  ],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 10,
+    "pp": 0
+  },
+  "appearance": {
+    "hairColor": "None (Webbed)",
+    "hairStyle": "Short",
+    "bodyType": "Medium",
+    "eyeColor": "Draconic Red",
+    "skinColor": "#ffdbac",
+    "height": "5'10\"",
+    "weight": "160 lbs",
+    "size": "Medium",
+    "specialFeatures": [
+      "Draconic Horns"
+    ]
+  },
+  "items": {
+    "shield_vnub5rcun": {
+      "id": "shield_vnub5rcun",
+      "template": "shield",
+      "quantity": 1,
+      "addedAt": 1781559489417,
+      "kind": "shield"
+    },
+    "mace_sub8xq3rw": {
+      "id": "mace_sub8xq3rw",
+      "template": "mace",
+      "quantity": 1,
+      "addedAt": 1781559503457,
+      "kind": "weapon"
+    },
+    "scale_mail_ku83cxlb0": {
+      "id": "scale_mail_ku83cxlb0",
+      "template": "scale_mail",
+      "quantity": 1,
+      "addedAt": 1781559509021,
+      "kind": "armor"
+    },
+    "sickle_rcwkien50": {
+      "id": "sickle_rcwkien50",
+      "template": "sickle",
+      "quantity": 1,
+      "addedAt": 1781559520087,
+      "kind": "weapon"
+    },
+    "priests_pack_elcx86aub": {
+      "id": "priests_pack_elcx86aub",
+      "template": "priests_pack",
+      "quantity": 1,
+      "addedAt": 1781559529532,
+      "kind": "equipment_pack"
+    },
+    "backpack_rwkbinbxu": {
+      "id": "backpack_rwkbinbxu",
+      "template": "backpack",
+      "quantity": 1,
+      "addedAt": 1781559529900,
+      "kind": "container"
+    },
+    "blanket_c1c2n4fg4": {
+      "id": "blanket_c1c2n4fg4",
+      "template": "blanket",
+      "quantity": 1,
+      "addedAt": 1781559529918,
+      "kind": "adventuring_gear"
+    },
+    "candle_yzoe7s8k7": {
+      "id": "candle_yzoe7s8k7",
+      "template": "candle",
+      "quantity": 10,
+      "addedAt": 1781559529925,
+      "kind": "adventuring_gear"
+    },
+    "tinderbox_exjqemgcs": {
+      "id": "tinderbox_exjqemgcs",
+      "template": "tinderbox",
+      "quantity": 1,
+      "addedAt": 1781559529930,
+      "kind": "adventuring_gear"
+    },
+    "rations_1_day_8k0z3otcu": {
+      "id": "rations_1_day_8k0z3otcu",
+      "template": "rations_1_day",
+      "quantity": 2,
+      "addedAt": 1781559529933,
+      "kind": "consumable"
+    },
+    "waterskin_0crf8qhmh": {
+      "id": "waterskin_0crf8qhmh",
+      "template": "waterskin",
+      "quantity": 1,
+      "addedAt": 1781559529937,
+      "kind": "adventuring_gear"
+    },
+    "alms_box_e58ecy9xg": {
+      "id": "alms_box_e58ecy9xg",
+      "template": "alms_box",
+      "quantity": 1,
+      "addedAt": 1781559529941,
+      "kind": "adventuring_gear"
+    },
+    "block_of_incense_ylrrdmw9n": {
+      "id": "block_of_incense_ylrrdmw9n",
+      "template": "block_of_incense",
+      "quantity": 2,
+      "addedAt": 1781559529944,
+      "kind": "adventuring_gear"
+    },
+    "censer_zramuad9s": {
+      "id": "censer_zramuad9s",
+      "template": "censer",
+      "quantity": 1,
+      "addedAt": 1781559529947,
+      "kind": "adventuring_gear"
+    },
+    "vestments_ns8e1ll9w": {
+      "id": "vestments_ns8e1ll9w",
+      "template": "vestments",
+      "quantity": 1,
+      "addedAt": 1781559529949,
+      "kind": "adventuring_gear"
+    },
+    "amulet_muzvsgylx": {
+      "id": "amulet_muzvsgylx",
+      "template": "amulet",
+      "quantity": 1,
+      "addedAt": 1781559535785,
+      "kind": "trinket"
+    }
+  },
+  "containers": {
+    "backpack_new_character": {
+      "id": "backpack_new_character",
+      "type": "backpack",
+      "ownerId": "new_character",
+      "slots": [
+        {
+          "id": "bag_0",
+          "itemId": "mace_kzpcs1c35"
+        },
+        {
+          "id": "bag_1",
+          "itemId": "scale_mail_3j97tx2mb"
+        },
+        {
+          "id": "bag_2",
+          "itemId": "sickle_rcwkien50"
+        },
+        {
+          "id": "bag_3",
+          "itemId": "sickle_vyle3zm89"
+        },
+        {
+          "id": "bag_4",
+          "itemId": "backpack_rwkbinbxu"
+        },
+        {
+          "id": "bag_5",
+          "itemId": "backpack_rh1luyoes"
+        },
+        {
+          "id": "bag_6",
+          "itemId": "blanket_c1c2n4fg4"
+        },
+        {
+          "id": "bag_7",
+          "itemId": "blanket_rfk8t99na"
+        },
+        {
+          "id": "bag_8",
+          "itemId": "candle_yzoe7s8k7"
+        },
+        {
+          "id": "bag_9",
+          "itemId": "candle_86t0pemwc"
+        },
+        {
+          "id": "bag_10",
+          "itemId": "tinderbox_exjqemgcs"
+        },
+        {
+          "id": "bag_11",
+          "itemId": "tinderbox_wpfzjscq4"
+        },
+        {
+          "id": "bag_12",
+          "itemId": "rations_1_day_8k0z3otcu"
+        },
+        {
+          "id": "bag_13",
+          "itemId": "rations_1_day_88fix3je5"
+        },
+        {
+          "id": "bag_14",
+          "itemId": "waterskin_0crf8qhmh"
+        },
+        {
+          "id": "bag_15",
+          "itemId": "waterskin_eo81jhtej"
+        },
+        {
+          "id": "bag_16",
+          "itemId": "alms_box_e58ecy9xg"
+        },
+        {
+          "id": "bag_17",
+          "itemId": "alms_box_d8g2ettsg"
+        },
+        {
+          "id": "bag_18",
+          "itemId": "block_of_incense_ylrrdmw9n"
+        },
+        {
+          "id": "bag_19",
+          "itemId": "block_of_incense_ptthrobv4"
+        },
+        {
+          "id": "bag_20",
+          "itemId": "censer_zramuad9s"
+        },
+        {
+          "id": "bag_21",
+          "itemId": "censer_0g28j5eue"
+        },
+        {
+          "id": "bag_22",
+          "itemId": "vestments_ns8e1ll9w"
+        },
+        {
+          "id": "bag_23",
+          "itemId": "priests_pack_elcx86aub"
+        }
+      ]
+    }
+  },
+  "equipment": {
+    "containerId": "equipment_slot2",
+    "slots": [
+      {
+        "id": "main_hand",
+        "itemId": "mace_sub8xq3rw"
+      },
+      {
+        "id": "off_hand",
+        "itemId": "shield_vnub5rcun"
+      },
+      {
+        "id": "ranged",
+        "itemId": null
+      },
+      {
+        "id": "ammo",
+        "itemId": null
+      },
+      {
+        "id": "chest",
+        "itemId": "scale_mail_ku83cxlb0"
+      },
+      {
+        "id": "clothes",
+        "itemId": null
+      },
+      {
+        "id": "head",
+        "itemId": null
+      },
+      {
+        "id": "hands",
+        "itemId": null
+      },
+      {
+        "id": "feet",
+        "itemId": null
+      },
+      {
+        "id": "back",
+        "itemId": null
+      },
+      {
+        "id": "neck",
+        "itemId": "amulet_muzvsgylx"
+      },
+      {
+        "id": "belt",
+        "itemId": null
+      },
+      {
+        "id": "ring_1",
+        "itemId": null
+      },
+      {
+        "id": "ring_2",
+        "itemId": null
+      },
+      {
+        "id": "tool_1",
+        "itemId": null
+      },
+      {
+        "id": "tool_2",
+        "itemId": null
+      },
+      {
+        "id": "tool_3",
+        "itemId": null
+      },
+      {
+        "id": "tool_4",
+        "itemId": null
+      },
+      {
+        "id": "tool_5",
+        "itemId": null
+      },
+      {
+        "id": "focus",
+        "itemId": null
+      },
+      {
+        "id": "pouch",
+        "itemId": null
+      },
+      {
+        "id": "acc_1",
+        "itemId": null
+      },
+      {
+        "id": "acc_2",
+        "itemId": null
+      },
+      {
+        "id": "acc_3",
+        "itemId": null
+      },
+      {
+        "id": "acc_4",
+        "itemId": null
+      },
+      {
+        "id": "quick_1",
+        "itemId": null
+      },
+      {
+        "id": "quick_2",
+        "itemId": null
+      },
+      {
+        "id": "quick_3",
+        "itemId": null
+      },
+      {
+        "id": "quick_4",
+        "itemId": null
+      }
+    ]
+  },
+  "backpack": [
+    {
+      "id": "abacus_mg6akjw6w",
+      "index": "abacus",
+      "name": "Abacus",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
+      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-21T14:13:36.560Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/abacus.webp",
+      "sprite_index": 0,
+      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp",
+      "background_type": "land_forest",
+      "last_updated": "21-4-2026",
+      "kind": "adventuring_gear",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "scale_merchants_ftxxn07u5",
+      "index": "scale_merchants",
+      "name": "Scale Merchant'S",
+      "quantity": 1,
+      "weight": 3,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/scale_merchants.json",
+      "image_url": "public/assets/atlas/equipment/images/scale_merchants.webp",
+      "imageUrl": "/assets/atlas/equipment/images/scale_merchants.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "desc": [
+        "A scale includes a small balance, pans, and a suitable assortment of weights up to 2 pounds. With it, you can measure the exact weight of small objects, such as raw precious metals or trade goods, to help determine their worth."
+      ],
+      "updated_at": "2026-05-09T18:38:09.204Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/scale_merchants.webp",
+      "sprite_index": 11,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
+      "background_type": "land_forest",
+      "last_updated": "9-5-2026",
+      "kind": "adventuring_gear",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "gold_28e18ffth",
+      "index": "gold",
+      "name": "Gold",
+      "quantity": 25,
+      "weight": 0.02,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "image_url": "public/assets/atlas/equipment/images/gold.webp",
+      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+      "equipment_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+      },
+      "cost": "",
+      "desc": [
+        "The standard unit of currency in the game."
+      ],
+      "image": "/assets/atlas/equipment/images/gold.webp",
+      "background_type": "land_forest",
+      "category": "Standard Gear",
+      "last_updated": "21-5-2026",
+      "updated_at": "2026-05-21T01:11:21.699Z",
+      "kind": "currency"
+    }
+  ],
+  "inventory": {
+    "clothes": {
+      "id": "clothes_travelers_q50xl9y7w",
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "quantity": 1,
+      "weight": 4,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/clothes_travelers.webp",
+      "sprite_index": 12,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
+      "kind": "clothing",
+      "clothing_type": "traveler",
+      "equipSlots": [
+        "clothes"
+      ],
+      "slot": "clothes",
+      "clothes_slot": "Clothes Traveler'S"
+    }
+  },
+  "knownSpells": [
+    {
+      "index": "guidance",
+      "name": "guidance",
+      "level": 0,
+      "school": "divination",
+      "classes": [
+        "artificer",
+        "cleric",
+        "druid"
+      ],
+      "casting_time": "1 action",
+      "range": "Touch",
+      "duration": "Up to 1 minute",
+      "json_path": "/assets/atlas/spell/json/guidance.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fguidance.webp%3Ft%3D1781559545163"
+    },
+    {
+      "index": "spare_the_dying",
+      "name": "spare the dying",
+      "level": 0,
+      "school": "necromancy",
+      "classes": [
+        "artificer",
+        "cleric"
+      ],
+      "casting_time": "1 action",
+      "range": "Touch",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/spare_the_dying.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fspare-the-dying.webp%3Ft%3D1781559545163"
+    },
+    {
+      "index": "thaumaturgy",
+      "name": "thaumaturgy",
+      "level": 0,
+      "school": "transmutation",
+      "classes": [
+        "cleric"
+      ],
+      "casting_time": "1 action",
+      "range": "30 feet",
+      "duration": "1 minute",
+      "json_path": "/assets/atlas/spell/json/thaumaturgy.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fthaumaturgy.webp%3Ft%3D1781559545163"
+    },
+    {
+      "index": "bless",
+      "name": "bless",
+      "level": 1,
+      "school": "enchantment",
+      "classes": [
+        "cleric",
+        "paladin"
+      ],
+      "casting_time": "1 action",
+      "range": "30 feet",
+      "duration": "Up to 1 minute",
+      "json_path": "/assets/atlas/spell/json/bless.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fbless.webp%3Ft%3D1781559545163"
+    },
+    {
+      "index": "cure_wounds",
+      "name": "cure wounds",
+      "level": 1,
+      "school": "evocation",
+      "classes": [
+        "artificer",
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger"
+      ],
+      "casting_time": "1 action",
+      "range": "Touch",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/cure_wounds.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fcure-wounds.webp%3Ft%3D1781559545163"
+    },
+    {
+      "index": "detect_evil_and_good",
+      "name": "detect evil and good",
+      "level": 1,
+      "school": "divination",
+      "classes": [
+        "cleric",
+        "paladin"
+      ],
+      "casting_time": "1 action",
+      "range": "Self",
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/detect_evil_and_good.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fdetect-evil-and-good.webp%3Ft%3D1781559545163"
+    }
+  ],
+  "languages": [
+    "common",
+    "draconic"
+  ],
+  "preparedSpells": [
+    "guidance",
+    "spare_the_dying",
+    "thaumaturgy",
+    "bless",
+    "cure_wounds",
+    "detect_evil_and_good"
+  ],
+  "spellSlots": {
+    "1": {
+      "current": 0,
+      "max": 0
+    }
+  },
+  "choices": {},
+  "race": "dragonborn",
+  "class": "cleric",
+  "spellcastingAbility": "wis",
+  "background": "artisan",
+  "alignment": "lawful_evil",
+  "name": "dzrg",
+  "id": "slot2",
+  "hp": 6,
+  "maxHp": 6,
+  "lastSaved": "2026-06-15T21:57:59.202Z"
+}

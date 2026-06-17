@@ -1,0 +1,40 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "piton",
+  "name": "piton",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 5,
+    "unit": "cp"
+  },
+  "weight": 0.25,
+  "url": "/assets/atlas/equipment/json/piton.json",
+  "updated_at": "2026-04-30T11:34:53.117Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/piton.webp",
+  "sprite_index": 5,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/equipment/images/piton.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "30-4-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

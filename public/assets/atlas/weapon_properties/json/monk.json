@@ -1,0 +1,12 @@
+{
+  "index": "monk",
+  "name": "monk",
+  "desc": [
+    "Monks gain several benefits while unarmed or wielding only monk weapons while they aren't wearing armor or wielding shields."
+  ],
+  "property_specific": {
+    "monk_weapon": true
+  },
+  "url": "/assets/atlas/weapon_properties/json/monk.json",
+  "updated_at": "2026-06-14T08:21:17Z"
+}

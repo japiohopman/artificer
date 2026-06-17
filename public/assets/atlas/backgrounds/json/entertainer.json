@@ -1,0 +1,99 @@
+{
+  "index": "entertainer",
+  "name": "Entertainer",
+  "description": "You thrive in front of an audience and know how to entrance them.",
+  "ability_scores": [
+    {
+      "index": "str",
+      "name": "strength",
+      "url": "/assets/atlas/ability_scores/json/str.json"
+    },
+    {
+      "index": "dex",
+      "name": "dexterity",
+      "url": "/assets/atlas/ability_scores/json/dex.json"
+    },
+    {
+      "index": "cha",
+      "name": "charisma",
+      "url": "/assets/atlas/ability_scores/json/cha.json"
+    }
+  ],
+  "feat": {
+    "index": "musician",
+    "name": "Musician",
+    "url": "/assets/atlas/feats/json/musician.json"
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_acrobatics",
+      "name": "Skill: Acrobatics",
+      "url": "/assets/atlas/proficiencies/json/skill_acrobatics.json"
+    },
+    {
+      "index": "skill_performance",
+      "name": "Skill: Performance",
+      "url": "/assets/atlas/proficiencies/json/skill_performance.json"
+    },
+    {
+      "index": "lute",
+      "name": "Lute",
+      "url": "/assets/atlas/proficiencies/json/lute.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "clothes_costume",
+        "name": "Clothes Costume",
+        "url": "/assets/atlas/equipment/json/clothes_costume.json"
+      },
+      "quantity": 2
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Clothes Traveler'S",
+        "url": "/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 11
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "Choose this background package or 50 GP",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "gold",
+                  "name": "Gold",
+                  "url": "/assets/atlas/equipment/json/gold.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "url": "/assets/atlas/backgrounds/json/entertainer.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/backgrounds/wiki_image/entertainer.webp"
+}

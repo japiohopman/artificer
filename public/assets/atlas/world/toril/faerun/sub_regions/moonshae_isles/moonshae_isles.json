@@ -1,0 +1,28 @@
+{
+  "id": "moonshae_isles",
+  "name": "Moonshae Isles",
+  "world": "totil",
+  "continent": "fearun",
+  "region": "west_faerun",
+  "sub_region": "moonshae_isles",
+  "title": "The Nordic Archipelago: Moonshae Isles",
+  "description": "These cold, rocky isles form a mystical archipelago to the west of the Sword Coast, where the Ffolk and Northlanders share a tenuous peace under the watchful eye of the Earthmother.",
+  "wiki": "The Moonshaes are a land of mist and magic. Its islands, like Alaron and Gwynneth, are home to ancient druidic traditions and deep-seated conflicts between the native Ffolk and the raiding Northlanders. The islands are teeming with fey spirits and ancient standing stones, making it a sacred place for those who revere nature.",
+  "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+  "tags": [
+    "region",
+    "faerun",
+    "island",
+    "druids",
+    "fey"
+  ],
+  "metadata": {
+    "prominent_islands": [
+      "Alaron",
+      "Gwynneth",
+      "Moray"
+    ],
+    "landscape": "Mist-shrouded hills, dark forests, rugged cliffs",
+    "economy": "Fishing, agriculture, raiding (Northlanders)"
+  }
+}

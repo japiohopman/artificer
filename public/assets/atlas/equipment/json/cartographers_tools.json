@@ -1,0 +1,36 @@
+{
+  "special": [],
+  "index": "cartographers_tools",
+  "name": "cartographer's tools",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Artisan's Tools",
+  "cost": {
+    "quantity": 15,
+    "unit": "gp"
+  },
+  "weight": 6,
+  "desc": [
+    "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+  ],
+  "url": "/assets/atlas/equipment/json/cartographers_tools.json",
+  "updated_at": "2026-04-29T01:08:05.067Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/cartographers_tools.webp",
+  "sprite_index": 23,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/images/cartographers_tools.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "29-4-2026",
+  "kind": "tool",
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ]
+}

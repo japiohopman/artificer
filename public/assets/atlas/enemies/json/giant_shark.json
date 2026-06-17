@@ -1,0 +1,90 @@
+{
+  "index": "giant_shark",
+  "name": "giant shark",
+  "desc": "A giant shark is 30 feet long and normally found in deep oceans. Utterly fearless, it preys on anything that crosses its path, including whales and ships.",
+  "size": "Huge",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 126,
+  "hit_dice": "11d12",
+  "hit_points_roll": "11d12+55",
+  "speed": {
+    "swim": "50 ft."
+  },
+  "strength": 23,
+  "dexterity": 11,
+  "constitution": 21,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 5,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/skills/json/perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "60 ft.",
+    "passive_perception": 13
+  },
+  "languages": "",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [
+    {
+      "name": "blood frenzy",
+      "desc": "The shark has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
+      "damage": []
+    },
+    {
+      "name": "water breathing",
+      "desc": "The shark can breathe only underwater.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 22 (3d10 + 6) piercing damage.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d10+6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/giant_shark.webp",
+  "url": "/assets/atlas/enemies/json/giant_shark.json",
+  "updated_at": "2026-04-03T19:52:44.304Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 9,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.webp",
+  "imageUrl": null,
+  "background_type": "water",
+  "rarity": "Rare",
+  "last_updated": "3-4-2026"
+}

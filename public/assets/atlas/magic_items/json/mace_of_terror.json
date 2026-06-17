@@ -1,0 +1,36 @@
+{
+  "index": "mace_of_terror",
+  "name": "mace of terror",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "rarity": "Rare",
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Weapon (mace), rare (requires attunement)",
+    "This magic weapon has 3 charges. While holding it, you can use an action and expend 1 charge to release a wave of terror. Each creature of your choice in a 30-foot radius extending from you must succeed on a DC 15 Wisdom saving throw or become frightened of you for 1 minute. While it is frightened in this way, a creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If it has nowhere it can move, the creature can use the Dodge action. At the end of each of its turns, a creature can repeat the saving throw, ending the effect on itself on a success.",
+    "The mace regains 1d3 expended charges daily at dawn."
+  ],
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "url": "/assets/atlas/magic_items/json/mace_of_terror.json",
+  "updated_at": "2026-05-04T17:33:18.448Z",
+  "image": "/assets/atlas/magic_items/mace_of_terror.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/mace_of_terror.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "4-5-2026"
+}

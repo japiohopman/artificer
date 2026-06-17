@@ -1,0 +1,699 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "spellcasting_druid",
+        "name": "Spellcasting: Druid",
+        "url": "/assets/atlas/features/json/spellcasting_druid.json"
+      },
+      {
+        "index": "druidic",
+        "name": "Druidic",
+        "url": "/assets/atlas/features/json/druidic.json"
+      }
+    ],
+    "class_specific": {
+      "wild_shape_max_cr": 0,
+      "wild_shape_swim": false,
+      "wild_shape_fly": false
+    },
+    "index": "druid_level_1",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/1/druid_level_1.json",
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spell_slots_level_1": 2,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "wild_shape_cr_1_4_or_below_no_flying_or_swim_speed",
+        "name": "Wild Shape (CR 1/4 or below, no flying or swim speed)",
+        "url": "/assets/atlas/features/json/wild_shape_cr_1_4_or_below_no_flying_or_swim_speed.json"
+      },
+      {
+        "index": "druid_circle",
+        "name": "Druid Circle",
+        "url": "/assets/atlas/features/json/druid_circle.json"
+      }
+    ],
+    "class_specific": {
+      "wild_shape_max_cr": 0.25,
+      "wild_shape_swim": false,
+      "wild_shape_fly": false
+    },
+    "index": "druid_level_2",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/2/druid_level_2.json",
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spell_slots_level_1": 3,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [],
+    "class_specific": {
+      "wild_shape_max_cr": 0.25,
+      "wild_shape_swim": false,
+      "wild_shape_fly": false
+    },
+    "index": "druid_level_3",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/3/druid_level_3.json",
+    "spellcasting": {
+      "cantrips_known": 2,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "wild_shape_cr_1_2_or_below_no_flying_speed",
+        "name": "Wild Shape (CR 1/2 or below, no flying speed)",
+        "url": "/assets/atlas/features/json/wild_shape_cr_1_2_or_below_no_flying_speed.json"
+      },
+      {
+        "index": "druid_ability_score_improvement_1",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/druid_ability_score_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "wild_shape_max_cr": 0.5,
+      "wild_shape_swim": true,
+      "wild_shape_fly": false
+    },
+    "index": "druid_level_4",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/4/druid_level_4.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [],
+    "class_specific": {
+      "wild_shape_max_cr": 0.5,
+      "wild_shape_swim": true,
+      "wild_shape_fly": false
+    },
+    "index": "druid_level_5",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/5/druid_level_5.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "druid_circle_improvement_1",
+        "name": "Druid Circle feature",
+        "url": "/assets/atlas/features/json/druid_circle_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "wild_shape_max_cr": 0.5,
+      "wild_shape_swim": true,
+      "wild_shape_fly": false
+    },
+    "index": "druid_level_6",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/6/druid_level_6.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": false
+    },
+    "index": "druid_level_7",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/7/druid_level_7.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 1,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "wild_shape_cr_1_or_below",
+        "name": "Wild Shape (CR 1 or below)",
+        "url": "/assets/atlas/features/json/wild_shape_cr_1_or_below.json"
+      },
+      {
+        "index": "druid_ability_score_improvement_2",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/druid_ability_score_improvement_2.json"
+      }
+    ],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": true
+    },
+    "index": "druid_level_8",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/8/druid_level_8.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": true
+    },
+    "index": "druid_level_9",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/9/druid_level_9.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 1,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "druid_circle_improvement_2",
+        "name": "Druid Circle feature",
+        "url": "/assets/atlas/features/json/druid_circle_improvement_2.json"
+      }
+    ],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": true
+    },
+    "index": "druid_level_10",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/10/druid_level_10.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": true
+    },
+    "index": "druid_level_11",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/11/druid_level_11.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "druid_ability_score_improvement_3",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/druid_ability_score_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": true
+    },
+    "index": "druid_level_12",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/12/druid_level_12.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": true
+    },
+    "index": "druid_level_13",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/13/druid_level_13.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "druid_circle_improvement_3",
+        "name": "Druid Circle feature",
+        "url": "/assets/atlas/features/json/druid_circle_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": true
+    },
+    "index": "druid_level_14",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/14/druid_level_14.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": true
+    },
+    "index": "druid_level_15",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/15/druid_level_15.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "druid_ability_score_improvement_4",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/druid_ability_score_improvement_4.json"
+      }
+    ],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": true
+    },
+    "index": "druid_level_16",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/16/druid_level_16.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": true
+    },
+    "index": "druid_level_17",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/17/druid_level_17.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "druid_timeless_body",
+        "name": "Timeless Body",
+        "url": "/assets/atlas/features/json/druid_timeless_body.json"
+      },
+      {
+        "index": "beast_spells",
+        "name": "Beast Spells",
+        "url": "/assets/atlas/features/json/beast_spells.json"
+      }
+    ],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": true
+    },
+    "index": "druid_level_18",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/18/druid_level_18.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "druid_ability_score_improvement_5",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/druid_ability_score_improvement_5.json"
+      }
+    ],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": true
+    },
+    "index": "druid_level_19",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/19/druid_level_19.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 2,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "archdruid",
+        "name": "Archdruid",
+        "url": "/assets/atlas/features/json/archdruid.json"
+      }
+    ],
+    "class_specific": {
+      "wild_shape_max_cr": 1,
+      "wild_shape_swim": true,
+      "wild_shape_fly": true
+    },
+    "index": "druid_level_20",
+    "class": {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    "url": "/assets/atlas/class/levels/20/druid_level_20.json",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 2,
+      "spell_slots_level_7": 2,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  }
+]

@@ -1,0 +1,115 @@
+{
+  "index": "noble",
+  "name": "Noble",
+  "description": "You were born into a family of high social standing and privilege.",
+  "ability_scores": [
+    {
+      "index": "str",
+      "name": "strength",
+      "url": "/assets/atlas/ability_scores/json/str.json"
+    },
+    {
+      "index": "int",
+      "name": "intelligence",
+      "url": "/assets/atlas/ability_scores/json/int.json"
+    },
+    {
+      "index": "cha",
+      "name": "charisma",
+      "url": "/assets/atlas/ability_scores/json/cha.json"
+    }
+  ],
+  "feat": {
+    "index": "skilled",
+    "name": "Skilled",
+    "url": "/assets/atlas/feats/json/skilled.json"
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_history",
+      "name": "Skill: History",
+      "url": "/assets/atlas/proficiencies/json/skill_history.json"
+    },
+    {
+      "index": "skill_persuasion",
+      "name": "Skill: Persuasion",
+      "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
+    },
+    {
+      "index": "playing_card_set",
+      "name": "Playing Card Set",
+      "url": "/assets/atlas/proficiencies/json/playing_card_set.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "playing_card_set",
+        "name": "Playing Card Set",
+        "url": "/assets/atlas/equipment/json/playing_card_set.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_fine",
+        "name": "Clothes Fine",
+        "url": "/assets/atlas/equipment/json/clothes_fine.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "perfume_vial",
+        "name": "Perfume Vial",
+        "url": "/assets/atlas/equipment/json/perfume_vial.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "signet_ring",
+        "name": "Signet Ring",
+        "url": "/assets/atlas/equipment/json/signet_ring.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 24
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "Choose this background package or 50 GP",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "gold",
+                  "name": "Gold",
+                  "url": "/assets/atlas/equipment/json/gold.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "url": "/assets/atlas/backgrounds/json/noble.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/backgrounds/wiki_image/noble.webp"
+}

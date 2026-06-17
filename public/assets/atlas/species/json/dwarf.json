@@ -1,0 +1,69 @@
+{
+  "index": "dwarf",
+  "name": "dwarf",
+  "speed": 25,
+  "ability_bonuses": [
+    {
+      "ability_score": {
+        "index": "con",
+        "name": "con",
+        "url": "/assets/atlas/ability_scores/json/con.json"
+      },
+      "bonus": 2
+    }
+  ],
+  "alignment": "Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that everyone deserves to share in the benefits of a just order.",
+  "age": "Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years.",
+  "size": "Medium",
+  "size_description": "Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.",
+  "languages": [
+    {
+      "index": "common",
+      "name": "common",
+      "url": "/assets/atlas/languages/common"
+    },
+    {
+      "index": "dwarvish",
+      "name": "dwarvish",
+      "url": "/assets/atlas/languages/dwarvish"
+    }
+  ],
+  "language_desc": "You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.",
+  "traits": [
+    {
+      "index": "darkvision",
+      "name": "darkvision",
+      "url": "/assets/atlas/traits/darkvision"
+    },
+    {
+      "index": "dwarven_resilience",
+      "name": "dwarven resilience",
+      "url": "/assets/atlas/traits/dwarven_resilience"
+    },
+    {
+      "index": "stonecunning",
+      "name": "stonecunning",
+      "url": "/assets/atlas/traits/stonecunning"
+    },
+    {
+      "index": "dwarven_combat_training",
+      "name": "dwarven combat training",
+      "url": "/assets/atlas/traits/dwarven_combat_training"
+    },
+    {
+      "index": "tool_proficiency",
+      "name": "tool proficiency",
+      "url": "/assets/atlas/traits/tool_proficiency"
+    }
+  ],
+  "subraces": [
+    {
+      "index": "hill_dwarf",
+      "name": "hill dwarf",
+      "url": "/assets/atlas/subraces/hill_dwarf"
+    }
+  ],
+  "url": "/assets/atlas/species/json/dwarf.json",
+  "updated_at": "2025-10-24T20:42:14.212Z",
+  "image": "/assets/atlas/species/dwarf.webp"
+}

@@ -1,0 +1,93 @@
+{
+  "index": "arcane_tradition_improvement_3",
+  "class": {
+    "index": "wizard",
+    "name": "wizard",
+    "url": "/assets/atlas/class/json/wizard.json"
+  },
+  "name": "arcane tradition feature",
+  "level": 14,
+  "prerequisites": [],
+  "desc": [
+    "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of eight schools, such as Evocation.",
+    "Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+  ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "magic_school",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "abjuration",
+              "name": "abjuration",
+              "url": "/assets/atlas/magic_schools/json/abjuration.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "conjuration",
+              "name": "conjuration",
+              "url": "/assets/atlas/magic_schools/json/conjuration.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "divination",
+              "name": "divination",
+              "url": "/assets/atlas/magic_schools/json/divination.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "enchantment",
+              "name": "enchantment",
+              "url": "/assets/atlas/magic_schools/json/enchantment.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "evocation",
+              "name": "evocation",
+              "url": "/assets/atlas/magic_schools/json/evocation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "illusion",
+              "name": "illusion",
+              "url": "/assets/atlas/magic_schools/json/illusion.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "necromancy",
+              "name": "necromancy",
+              "url": "/assets/atlas/magic_schools/json/necromancy.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "transmutation",
+              "name": "transmutation",
+              "url": "/assets/atlas/magic_schools/json/transmutation.json"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "url": "/assets/atlas/features/json/arcane_tradition_improvement_3.json",
+  "updated_at": "2025-10-24T20:42:13.151Z",
+  "image": "/assets/atlas/features/images/arcane_tradition_improvement_3.webp"
+}

@@ -1,0 +1,27 @@
+{
+  "level": 17,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "monastic_tradition_improvement_3",
+      "name": "Monastic Tradition feature",
+      "url": "/assets/atlas/features/json/monastic_tradition_improvement_3.json"
+    }
+  ],
+  "class_specific": {
+    "martial_arts": {
+      "dice_count": 1,
+      "dice_value": 10
+    },
+    "ki_points": 17,
+    "unarmored_movement": 25
+  },
+  "index": "monk_level_17",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/17/monk_level_17.json"
+}

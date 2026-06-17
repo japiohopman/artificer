@@ -1,0 +1,24 @@
+{
+  "level": 20,
+  "ability_score_bonuses": 5,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "primal_champion",
+      "name": "Primal Champion",
+      "url": "/assets/atlas/features/json/primal_champion.json"
+    }
+  ],
+  "class_specific": {
+    "rage_count": 9999,
+    "rage_damage_bonus": 4,
+    "brutal_critical_dice": 3
+  },
+  "index": "barbarian_level_20",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "url": "/assets/atlas/class/levels/20/barbarian_level_20.json"
+}

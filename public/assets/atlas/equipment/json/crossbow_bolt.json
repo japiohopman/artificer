@@ -1,0 +1,42 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "crossbow_bolt",
+  "name": "crossbow bolt",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "ammunition",
+    "name": "ammunition",
+    "url": "/assets/atlas/equipment_categories/ammunition"
+  },
+  "quantity": 20,
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 1.5,
+  "url": "/assets/atlas/equipment/json/crossbow_bolt.json",
+  "updated_at": "2026-05-17T06:33:37.067Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/crossbow_bolt.webp",
+  "sprite_index": 17,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/equipment/images/crossbow_bolt.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Ammunition",
+  "slot": [
+    "ammo"
+  ],
+  "last_updated": "17-5-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

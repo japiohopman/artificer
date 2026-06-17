@@ -1,0 +1,28 @@
+{
+  "id": "bronwyn_caradoon",
+  "name": "Bronwyn Caradoon",
+  "species": "Human",
+  "classJob": "Shopkeeper (Antiquities Dealer), Harper Agent",
+  "gender": "female",
+  "baseMood": "Neutral",
+  "visualTraits": {
+    "skinTone": "#d2b48c",
+    "hairStyle": "Common",
+    "clothingStyle": "Local",
+    "distinguishingFeatures": "None"
+  },
+  "personalityTraits": [],
+  "secrets": [],
+  "goals": [],
+  "locationId": "/assets/atlas/world/toril/faerun/cities/waterdeep.json",
+  "isEssential": false,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "backstory": "Bronwyn Caradoon was the proprietor of an antiquities shop called the Curious Past, a part-time adventurer, and a member of the Harpers. Born in Amn, she was once captured by the Zhentarim and became a skilled counterfeiter before purchasing her freedom and starting her business in Waterdeep. She is known for sharing her extensive knowledge of ancient texts and lore while gathering information on lost or stolen items."
+}

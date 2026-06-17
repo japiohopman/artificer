@@ -1,0 +1,22 @@
+{
+  "index": "carpet_of_flying_6x9",
+  "name": "carpet of flying (6 ft. × 9 ft.)",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "very rare"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Wondrous item, very rare",
+    "You can speak the carpet's command word as an  action to make the carpet hover and fly. It moves according to your spoken directions, provided that you are within 30 feet of it.",
+    "This carpet is 6 feet by 9 feet and has a flying speed of 30 feet. It can carry up to 1600 pounds, but its flying speed becomes 15 feet while carrying over 800 pounds."
+  ],
+  "image": "/assets/atlas/magic_items/carpet_of_flying_6x9.webp",
+  "url": "/assets/atlas/magic_items/json/carpet_of_flying_6x9.json",
+  "updated_at": "2025-10-24T20:42:13.517Z"
+}

@@ -1,0 +1,560 @@
+[
+  {
+    "name": "Akadi",
+    "alignment": {
+      "index": "true_neutral",
+      "name": "True Neutral",
+      "url": "/assets/atlas/alignments/json/true_neutral.json"
+    },
+    "domains": [
+      "Air",
+      "Tempest"
+    ],
+    "portfolio": "Air, movement, speed, flying creatures",
+    "symbol": "White cloud on blue background"
+  },
+  {
+    "name": "Amaunator",
+    "alignment": {
+      "index": "lawful_neutral",
+      "name": "Lawful Neutral",
+      "url": "/assets/atlas/alignments/json/lawful_neutral.json"
+    },
+    "domains": [
+      "Life",
+      "Light"
+    ],
+    "portfolio": "The sun, law, time, bureaucracy",
+    "symbol": "Golden sun with a face"
+  },
+  {
+    "name": "Asmodeus",
+    "alignment": {
+      "index": "lawful_evil",
+      "name": "Lawful Evil",
+      "url": "/assets/atlas/alignments/json/lawful_evil.json"
+    },
+    "domains": [
+      "Knowledge",
+      "Trickery"
+    ],
+    "portfolio": "Indulgence, sin, power, tyranny",
+    "symbol": "Three-pointed star with a ruby"
+  },
+  {
+    "name": "Auril",
+    "alignment": {
+      "index": "neutral_evil",
+      "name": "Neutral Evil",
+      "url": "/assets/atlas/alignments/json/neutral_evil.json"
+    },
+    "domains": [
+      "Nature",
+      "Tempest"
+    ],
+    "portfolio": "Winter, cold",
+    "symbol": "Six-pointed snowflake"
+  },
+  {
+    "name": "Azuth",
+    "alignment": {
+      "index": "lawful_neutral",
+      "name": "Lawful Neutral",
+      "url": "/assets/atlas/alignments/json/lawful_neutral.json"
+    },
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Wizards, mages, spellcasters",
+    "symbol": "Left hand pointing upward outlined in fire"
+  },
+  {
+    "name": "Bane",
+    "alignment": {
+      "index": "lawful_evil",
+      "name": "Lawful Evil",
+      "url": "/assets/atlas/alignments/json/lawful_evil.json"
+    },
+    "domains": [
+      "War"
+    ],
+    "portfolio": "Tyranny, fear, hatred",
+    "symbol": "Upright black right hand, thumb and fingers together"
+  },
+  {
+    "name": "Beshaba",
+    "alignment": {
+      "index": "chaotic_evil",
+      "name": "Chaotic Evil",
+      "url": "/assets/atlas/alignments/json/chaotic_evil.json"
+    },
+    "domains": [
+      "Trickery"
+    ],
+    "portfolio": "Misfortune, bad luck, accidents",
+    "symbol": "Black antlers on a red background"
+  },
+  {
+    "name": "Bhaal",
+    "alignment": {
+      "index": "neutral_evil",
+      "name": "Neutral Evil",
+      "url": "/assets/atlas/alignments/json/neutral_evil.json"
+    },
+    "domains": [
+      "Death"
+    ],
+    "portfolio": "Murder",
+    "symbol": "Skull surrounded by a ring of blood droplets"
+  },
+  {
+    "name": "Chauntea",
+    "alignment": {
+      "index": "neutral_good",
+      "name": "Neutral Good",
+      "url": "/assets/atlas/alignments/json/neutral_good.json"
+    },
+    "domains": [
+      "Life"
+    ],
+    "portfolio": "Agriculture, plants, summer",
+    "symbol": "Sheaf of grain or a blooming rose on grain"
+  },
+  {
+    "name": "Cyric",
+    "alignment": {
+      "index": "chaotic_evil",
+      "name": "Chaotic Evil",
+      "url": "/assets/atlas/alignments/json/chaotic_evil.json"
+    },
+    "domains": [
+      "Trickery"
+    ],
+    "portfolio": "Lies, strife, deception",
+    "symbol": "White jawless skull on a black or purple sunburst"
+  },
+  {
+    "name": "Deneir",
+    "alignment": {
+      "index": "neutral_good",
+      "name": "Neutral Good",
+      "url": "/assets/atlas/alignments/json/neutral_good.json"
+    },
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Writing, glyphs, images, literature",
+    "symbol": "Lit candle above an open eye"
+  },
+  {
+    "name": "Eldath",
+    "alignment": {
+      "index": "neutral_good",
+      "name": "Neutral Good",
+      "url": "/assets/atlas/alignments/json/neutral_good.json"
+    },
+    "domains": [
+      "Life",
+      "Nature"
+    ],
+    "portfolio": "Quiet places, springs, pools, peace",
+    "symbol": "Waterfall plunging into a still pool"
+  },
+  {
+    "name": "Gond",
+    "alignment": {
+      "index": "true_neutral",
+      "name": "True Neutral",
+      "url": "/assets/atlas/alignments/json/true_neutral.json"
+    },
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Craft, construction, smithwork",
+    "symbol": "Toothed cog with four spokes"
+  },
+  {
+    "name": "Grumbar",
+    "alignment": {
+      "index": "true_neutral",
+      "name": "True Neutral",
+      "url": "/assets/atlas/alignments/json/true_neutral.json"
+    },
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Earth, solidity, changelessness",
+    "symbol": "Mountains on a brown background"
+  },
+  {
+    "name": "Gwaeron Windstrom",
+    "alignment": {
+      "index": "neutral_good",
+      "name": "Neutral Good",
+      "url": "/assets/atlas/alignments/json/neutral_good.json"
+    },
+    "domains": [
+      "Nature"
+    ],
+    "portfolio": "Tracking, rangers of the North",
+    "symbol": "Paw print with a star on the palm"
+  },
+  {
+    "name": "Helm",
+    "alignment": {
+      "index": "lawful_neutral",
+      "name": "Lawful Neutral",
+      "url": "/assets/atlas/alignments/json/lawful_neutral.json"
+    },
+    "domains": [
+      "Life",
+      "Light"
+    ],
+    "portfolio": "Protection, vigilance, guardians",
+    "symbol": "Staring eye on an upright left gauntlet"
+  },
+  {
+    "name": "Hoar",
+    "alignment": {
+      "index": "lawful_neutral",
+      "name": "Lawful Neutral",
+      "url": "/assets/atlas/alignments/json/lawful_neutral.json"
+    },
+    "domains": [
+      "War"
+    ],
+    "portfolio": "Revenge, retribution, poetic justice",
+    "symbol": "A coin with a two-faced head"
+  },
+  {
+    "name": "Ilmater",
+    "alignment": {
+      "index": "lawful_good",
+      "name": "Lawful Good",
+      "url": "/assets/atlas/alignments/json/lawful_good.json"
+    },
+    "domains": [
+      "Life"
+    ],
+    "portfolio": "Endurance, suffering, martyrdom, perseverance",
+    "symbol": "Hands bound at the wrist with red cord"
+  },
+  {
+    "name": "Istishia",
+    "alignment": {
+      "index": "true_neutral",
+      "name": "True Neutral",
+      "url": "/assets/atlas/alignments/json/true_neutral.json"
+    },
+    "domains": [
+      "Tempest"
+    ],
+    "portfolio": "Water, purification",
+    "symbol": "A cresting wave"
+  },
+  {
+    "name": "Jergal",
+    "alignment": {
+      "index": "lawful_neutral",
+      "name": "Lawful Neutral",
+      "url": "/assets/atlas/alignments/json/lawful_neutral.json"
+    },
+    "domains": [
+      "Death",
+      "Knowledge"
+    ],
+    "portfolio": "Fatalism, proper burial, guardian of tombs",
+    "symbol": "A skull biting a scroll"
+  },
+  {
+    "name": "Kelemvor",
+    "alignment": {
+      "index": "lawful_neutral",
+      "name": "Lawful Neutral",
+      "url": "/assets/atlas/alignments/json/lawful_neutral.json"
+    },
+    "domains": [
+      "Death"
+    ],
+    "portfolio": "Death, the dead",
+    "symbol": "Upright skeletal arm holding the scales of justice"
+  },
+  {
+    "name": "Kossuth",
+    "alignment": {
+      "index": "true_neutral",
+      "name": "True Neutral",
+      "url": "/assets/atlas/alignments/json/true_neutral.json"
+    },
+    "domains": [
+      "Light"
+    ],
+    "portfolio": "Fire, purification through fire",
+    "symbol": "A flickering flame"
+  },
+  {
+    "name": "Lathander",
+    "alignment": {
+      "index": "neutral_good",
+      "name": "Neutral Good",
+      "url": "/assets/atlas/alignments/json/neutral_good.json"
+    },
+    "domains": [
+      "Life",
+      "Light"
+    ],
+    "portfolio": "Birth, renewal, spring, self-perfection",
+    "symbol": "Road stretching toward a rising sun"
+  },
+  {
+    "name": "Leira",
+    "alignment": {
+      "index": "chaotic_neutral",
+      "name": "Chaotic Neutral",
+      "url": "/assets/atlas/alignments/json/chaotic_neutral.json"
+    },
+    "domains": [
+      "Trickery"
+    ],
+    "portfolio": "Illusion, mist, deception",
+    "symbol": "Point-down triangle containing a swirl of mist"
+  },
+  {
+    "name": "Lliira",
+    "alignment": {
+      "index": "chaotic_good",
+      "name": "Chaotic Good",
+      "url": "/assets/atlas/alignments/json/chaotic_good.json"
+    },
+    "domains": [
+      "Life"
+    ],
+    "portfolio": "Joy, happiness, dance, festivals",
+    "symbol": "Six-pointed star made of five gold coins"
+  },
+  {
+    "name": "Loviatar",
+    "alignment": {
+      "index": "lawful_evil",
+      "name": "Lawful Evil",
+      "url": "/assets/atlas/alignments/json/lawful_evil.json"
+    },
+    "domains": [
+      "Death"
+    ],
+    "portfolio": "Pain, hurt, agony",
+    "symbol": "Nine-tailed barbed scourge"
+  },
+  {
+    "name": "Malar",
+    "alignment": {
+      "index": "chaotic_evil",
+      "name": "Chaotic Evil",
+      "url": "/assets/atlas/alignments/json/chaotic_evil.json"
+    },
+    "domains": [
+      "Nature"
+    ],
+    "portfolio": "The hunt, bloodlust, marauding monsters",
+    "symbol": "Clawed paw"
+  },
+  {
+    "name": "Mask",
+    "alignment": {
+      "index": "chaotic_neutral",
+      "name": "Chaotic Neutral",
+      "url": "/assets/atlas/alignments/json/chaotic_neutral.json"
+    },
+    "domains": [
+      "Trickery"
+    ],
+    "portfolio": "Thieves, thievery, shadows",
+    "symbol": "Black velvet mask tinged with red"
+  },
+  {
+    "name": "Myrkul",
+    "alignment": {
+      "index": "neutral_evil",
+      "name": "Neutral Evil",
+      "url": "/assets/atlas/alignments/json/neutral_evil.json"
+    },
+    "domains": [
+      "Death"
+    ],
+    "portfolio": "Death, decay, old age, exhaustion",
+    "symbol": "White human skull"
+  },
+  {
+    "name": "Mystra",
+    "alignment": {
+      "index": "neutral_good",
+      "name": "Neutral Good",
+      "url": "/assets/atlas/alignments/json/neutral_good.json"
+    },
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Magic, spells, the Weave",
+    "symbol": "Circle of seven stars, or nine stars encircling a mist"
+  },
+  {
+    "name": "Oghma",
+    "alignment": {
+      "index": "true_neutral",
+      "name": "True Neutral",
+      "url": "/assets/atlas/alignments/json/true_neutral.json"
+    },
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Knowledge, invention, inspiration, bards",
+    "symbol": "Blank scroll"
+  },
+  {
+    "name": "Red Knight",
+    "alignment": {
+      "index": "lawful_neutral",
+      "name": "Lawful Neutral",
+      "url": "/assets/atlas/alignments/json/lawful_neutral.json"
+    },
+    "domains": [
+      "War"
+    ],
+    "portfolio": "Strategy, planning, tactics",
+    "symbol": "Red knight chess piece with stars for eyes"
+  },
+  {
+    "name": "Savras",
+    "alignment": {
+      "index": "lawful_neutral",
+      "name": "Lawful Neutral",
+      "url": "/assets/atlas/alignments/json/lawful_neutral.json"
+    },
+    "domains": [
+      "Knowledge"
+    ],
+    "portfolio": "Divination, fate, truth",
+    "symbol": "Crystal ball containing many eyes"
+  },
+  {
+    "name": "Selûne",
+    "alignment": {
+      "index": "chaotic_good",
+      "name": "Chaotic Good",
+      "url": "/assets/atlas/alignments/json/chaotic_good.json"
+    },
+    "domains": [
+      "Knowledge",
+      "Life"
+    ],
+    "portfolio": "The moon, stars, navigation, prophecy",
+    "symbol": "Pair of female eyes surrounded by seven silver stars"
+  },
+  {
+    "name": "Shar",
+    "alignment": {
+      "index": "neutral_evil",
+      "name": "Neutral Evil",
+      "url": "/assets/atlas/alignments/json/neutral_evil.json"
+    },
+    "domains": [
+      "Death",
+      "Trickery"
+    ],
+    "portfolio": "Darkness, night, loss, secrets",
+    "symbol": "Black disk with a purple border"
+  },
+  {
+    "name": "Shaundakul",
+    "alignment": {
+      "index": "chaotic_neutral",
+      "name": "Chaotic Neutral",
+      "url": "/assets/atlas/alignments/json/chaotic_neutral.json"
+    },
+    "domains": [
+      "Nature",
+      "Tempest"
+    ],
+    "portfolio": "Travel, exploration, portals, caravans",
+    "symbol": "Wind-walking bearded man in traveling clothes"
+  },
+  {
+    "name": "Silvanus",
+    "alignment": {
+      "index": "true_neutral",
+      "name": "True Neutral",
+      "url": "/assets/atlas/alignments/json/true_neutral.json"
+    },
+    "domains": [
+      "Nature"
+    ],
+    "portfolio": "Wild nature, druids",
+    "symbol": "Oak leaf"
+  },
+  {
+    "name": "Sune",
+    "alignment": {
+      "index": "chaotic_good",
+      "name": "Chaotic Good",
+      "url": "/assets/atlas/alignments/json/chaotic_good.json"
+    },
+    "domains": [
+      "Life",
+      "Light"
+    ],
+    "portfolio": "Beauty, love, passion",
+    "symbol": "Face of a beautiful red-haired woman"
+  },
+  {
+    "name": "Talona",
+    "alignment": {
+      "index": "chaotic_evil",
+      "name": "Chaotic Evil",
+      "url": "/assets/atlas/alignments/json/chaotic_evil.json"
+    },
+    "domains": [
+      "Death"
+    ],
+    "portfolio": "Disease, poison",
+    "symbol": "Three teardrops on a triangle"
+  },
+  {
+    "name": "Talos",
+    "alignment": {
+      "index": "chaotic_evil",
+      "name": "Chaotic Evil",
+      "url": "/assets/atlas/alignments/json/chaotic_evil.json"
+    },
+    "domains": [
+      "Tempest"
+    ],
+    "portfolio": "Storms, destruction, rebellion",
+    "symbol": "Three lightning bolts radiating from a central point"
+  },
+  {
+    "name": "Tempus",
+    "alignment": {
+      "index": "true_neutral",
+      "name": "True Neutral",
+      "url": "/assets/atlas/alignments/json/true_neutral.json"
+    },
+    "domains": [
+      "War"
+    ],
+    "portfolio": "War, battle, warriors",
+    "symbol": "Upright flaming sword"
+  },
+  {
+    "name": "Torm",
+    "alignment": {
+      "index": "lawful_good",
+      "name": "Lawful Good",
+      "url": "/assets/atlas/alignments/json/lawful_good.json"
+    },
+    "domains": [
+      "War"
+    ],
+    "portfolio": "Duty, loyalty, righteousness",
+    "symbol": "White right-hand gauntlet"
+  }
+]

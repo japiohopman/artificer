@@ -1,0 +1,35 @@
+{
+  "special": [],
+  "index": "playing_card_set",
+  "name": "playing card set",
+  "equipment_category": {
+    "index": "tools",
+    "name": "tools",
+    "url": "/assets/atlas/equipment_categories/tools"
+  },
+  "tool_category": "Gaming Sets",
+  "cost": {
+    "quantity": 28,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "desc": [
+    "Each card in this obsidian deck is a miniature portal, whispering promises of power and madness, and stained with the shadows of those who dared gamble their souls against the deck's infernal whims. The backs are unmarked, and the faces are too terrible to describe.\n"
+  ],
+  "image": "/assets/atlas/equipment/images/tda_card_set.webp",
+  "url": "/assets/atlas/equipment/json/tda_card_set.json",
+  "updated_at": "2026-05-04T20:20:41.359Z",
+  "contents": [],
+  "properties": [],
+  "sprite_index": 17,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/playing_card_set.webp",
+  "_type": "equipment",
+  "category": "Gaming Sets",
+  "last_updated": "4-5-2026",
+  "background_type": "land_forest",
+  "slot": [
+    "tool"
+  ],
+  "rarity": "Rare"
+}

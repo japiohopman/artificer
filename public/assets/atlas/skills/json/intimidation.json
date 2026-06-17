@@ -1,0 +1,15 @@
+{
+  "index": "intimidation",
+  "name": "intimidation",
+  "desc": [
+    "When you attempt to influence someone through overt threats, hostile actions, and physical violence, the GM might ask you to make a Charisma (Intimidation) check. Examples include trying to pry information out of a prisoner, convincing street thugs to back down from a confrontation, or using the edge of a broken bottle to convince a sneering vizier to reconsider a decision."
+  ],
+  "ability_score": {
+    "index": "cha",
+    "name": "cha",
+    "url": "/assets/atlas/ability_scores/json/cha.json"
+  },
+  "url": "/assets/atlas/skills/json/intimidation.json",
+  "updated_at": "2025-10-24T20:42:14.523Z",
+  "image": "/assets/atlas/skills/json/intimidation.webp"
+}

@@ -1,0 +1,628 @@
+{
+  "category": "temples_shrines",
+  "updatedAt": "2026-06-03T05:50:02.274151Z",
+  "location_id": "waterdeep",
+  "sub_locations": [
+    {
+      "id": "323",
+      "name": "House of Inspired Hands",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        762.2611101191,
+        3244.9130188651
+      ],
+      "popup": {
+        "title": "House of Inspired Hands",
+        "description": "The House of Inspired Hands was a temple of [[Gond]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "327",
+      "name": "House of Heroes",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        716.29916934197,
+        2996.7185386686
+      ],
+      "popup": {
+        "title": "House of Heroes",
+        "description": "The House of Heroes was a temple dedicated to the god [[Tempus]], the Lord of Battles. It was one of the biggest temples in Waterdeep.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "328",
+      "name": "House of the Moon",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        799.0306627408,
+        3117.2802448609
+      ],
+      "popup": {
+        "title": "House of the Moon",
+        "description": "The House of the Moon was a temple of [[Sel\u00fbne]]. It was one of the largest temples in the city.",
+        "image": "File:House of the Moon.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "355",
+      "name": "Spires of Morning",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        820.2438661764,
+        2841.1550468075
+      ],
+      "popup": {
+        "title": "Spires of Morning",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "368",
+      "name": "Shrine of Silvanus",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        765.79664402503,
+        3498.4107999204
+      ],
+      "popup": {
+        "title": "Shrine of Silvanus",
+        "description": "The Shrines of Nature was a temple complex in Waterdeep dedicated to the worship of the deities Mielikki and Silvanus, as well as a garden. The shrine dedicated to Silvanus was known by many names, including Seatrees Shrine, the Green Garden, the Quiet Place, and Oakenshade House.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "369",
+      "name": "The Lady's Hands",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        770.03928471215,
+        3462.3483540799
+      ],
+      "popup": {
+        "title": "The Lady's Hands",
+        "description": "The Shrines of Nature was a temple complex in Waterdeep dedicated to the worship of the deities Mielikki and Silvanus, as well as a garden. The shrine dedicated to Mielikki was commonly known as the Lady's Hand.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "375",
+      "name": "Tower of Luck",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        877.16596206191,
+        3376.4348801658
+      ],
+      "popup": {
+        "title": "Tower of Luck",
+        "description": "The Tower of Luck was a temple of [[Tymora]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "377",
+      "name": "Temple of Beauty",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1009.3949301438,
+        3487.4506448121
+      ],
+      "popup": {
+        "title": "Temple of Beauty",
+        "description": "The Temple of Beauty was a temple of [[Sune]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "380",
+      "name": "House of Wonder",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        997.72766825422,
+        3348.1506089183
+      ],
+      "popup": {
+        "title": "House of Wonder",
+        "description": "The House of Wonder was a mage academy and temple of [[Mystra]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "445",
+      "name": "Metal House of Wonders",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1468.6607845245,
+        1677.9643917557
+      ],
+      "popup": {
+        "title": "Metal House of Wonders",
+        "description": "Metal House of Wonders was the guildhall of the [[Splendid Order of Armorers, Locksmiths, and Finesmiths]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "457",
+      "name": "Plinth",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1717.2088181115,
+        1842.3667183815
+      ],
+      "popup": {
+        "title": "Plinth",
+        "description": "The Plinth was a temple for all faiths and was the only temple located in the [[Trades Ward]].",
+        "image": "File:Plinth-Valerie Valusek-VgtW-104.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "655",
+      "name": "Old Temple Lot",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        886.35835021734,
+        1587.4547237638
+      ],
+      "popup": {
+        "title": "Old Temple Lot",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "680",
+      "name": "God Catcher",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1217,
+        2820
+      ],
+      "popup": {
+        "title": "God Catcher",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "718",
+      "name": "Cynosure",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1110.5,
+        2689.5
+      ],
+      "popup": {
+        "title": "Cynosure",
+        "description": "This former \"temple of the Overgod\", which had been erected in veneration of Lord Ao after the Time of Troubles, was converted into a public hall, which could be rented to use for weddings, balls and other special events.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "719",
+      "name": "Halls of Justice",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1016,
+        2646
+      ],
+      "popup": {
+        "title": "Halls of Justice",
+        "description": "The Halls of Justice was a temple of [[Tyr]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "720",
+      "name": "Font of Knowledge",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        950,
+        2646.5
+      ],
+      "popup": {
+        "title": "Font of Knowledge",
+        "description": "The Font of Knowledge was a temple of [[Oghma]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "739",
+      "name": "Pantheon Temple of the Seldarine",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1313.450846054,
+        2232.3361082059
+      ],
+      "popup": {
+        "title": "Pantheon Temple of the Seldarine",
+        "description": "",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "756",
+      "name": "Hospice of St. Laupsenn",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1613.9712280583,
+        2571.7473631755
+      ],
+      "popup": {
+        "title": "Hospice of St. Laupsenn",
+        "description": "The Hospice of St. Laupsenn was a temple of [[Ilmater]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "762",
+      "name": "Monastery of the Sun",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1548.5,
+        2557.75
+      ],
+      "popup": {
+        "title": "Monastery of the Sun",
+        "description": "Monastery of the Sun was a [[monastery]] dedicated to [[Amaunator]]",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "820",
+      "name": "Temple of Good Cheer",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1770.375,
+        1350.625
+      ],
+      "popup": {
+        "title": "Temple of Good Cheer",
+        "description": "The Temple of Good Cheer was a makeshift temple dedicated to [[Lliira]] and [[Milil]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "836",
+      "name": "Helm's Hall",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1757.125,
+        1302.375
+      ],
+      "popup": {
+        "title": "Helm's Hall",
+        "description": "Helm's Hall was a temple dedicated to [[Helm]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "857",
+      "name": " Sailor's Last Request",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1515.625,
+        1117.5
+      ],
+      "popup": {
+        "title": " Sailor's Last Request",
+        "description": "The Sailor's Last Request was a small chapel to [[Valkur]], built in an old and small warehouse.",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    },
+    {
+      "id": "972",
+      "name": "Holyhands House",
+      "categoryId": "temples_shrines",
+      "type": "marker",
+      "position": [
+        1413.5,
+        3177.5
+      ],
+      "popup": {
+        "title": "Holyhands House",
+        "description": "Holyhands House was a temple to all deities.\n\nThis temple was once a villa that belonged to the [[Maernos]] noble family and was a bequeathal by the last of the Maernos line, [[Ultas Maernos]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      }
+    }
+  ]
+}

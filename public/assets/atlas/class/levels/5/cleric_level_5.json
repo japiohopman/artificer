@@ -1,0 +1,40 @@
+{
+  "level": 5,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "domain_spells_3",
+      "name": "Domain Spells",
+      "url": "/assets/atlas/features/json/domain_spells_3.json"
+    },
+    {
+      "index": "destroy_undead_cr_1_2_or_below",
+      "name": "Destroy Undead (CR 1/2 or below)",
+      "url": "/assets/atlas/features/json/destroy_undead_cr_1_2_or_below.json"
+    }
+  ],
+  "class_specific": {
+    "channel_divinity_charges": 1,
+    "destroy_undead_cr": 0.5
+  },
+  "index": "cleric_level_5",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/cleric.json"
+  },
+  "url": "/assets/atlas/class/levels/5/cleric_level_5.json",
+  "spellcasting": {
+    "cantrips_known": 4,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 2,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

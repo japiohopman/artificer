@@ -1,0 +1,52 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "horse_riding",
+  "name": "horse, riding",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 75,
+    "unit": "gp"
+  },
+  "speed": {
+    "land": {
+      "ft_per_round": 60,
+      "mph": 6.82
+    }
+  },
+  "capacity": {
+    "cargo": "480 lb."
+  },
+  "url": "/assets/atlas/transport/json/horse_riding.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/enemies/images/horse_riding.webp",
+  "sprite_index": 9,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "imageUrl": "/assets/atlas/equipment/images/horse_riding.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "16-5-2026",
+  "transport_type": "mount",
+  "transport_specific": {
+    "stat_block": {
+      "index": "riding_horse",
+      "name": "riding horse",
+      "url": "/assets/atlas/enemies/json/riding_horse.json"
+    },
+    "feed": {
+      "index": "animal_feed_1_day",
+      "name": "animal feed (1 day)",
+      "url": "/assets/atlas/equipment/json/animal_feed_1_day.json"
+    }
+  }
+}

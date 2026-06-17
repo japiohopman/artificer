@@ -1,0 +1,29 @@
+{
+  "level": 11,
+  "ability_score_bonuses": 2,
+  "prof_bonus": 4,
+  "features": [
+    {
+      "index": "improved_divine_smite",
+      "name": "Improved Divine Smite",
+      "url": "/assets/atlas/features/json/improved_divine_smite.json"
+    }
+  ],
+  "class_specific": {
+    "aura_range": 10
+  },
+  "index": "paladin_level_11",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/paladin.json"
+  },
+  "url": "/assets/atlas/class/levels/11/paladin_level_11.json",
+  "spellcasting": {
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0
+  }
+}

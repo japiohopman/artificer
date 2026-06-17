@@ -1,0 +1,219 @@
+{
+  "index": "armor",
+  "name": "armor",
+  "equipment": [
+    {
+      "index": "padded_armor",
+      "name": "padded armor",
+      "url": "/assets/atlas/equipment/json/padded_armor.json"
+    },
+    {
+      "index": "leather_armor",
+      "name": "leather armor",
+      "url": "/assets/atlas/equipment/json/leather_armor.json"
+    },
+    {
+      "index": "studded_leather_armor",
+      "name": "studded leather armor",
+      "url": "/assets/atlas/equipment/json/studded_leather_armor.json"
+    },
+    {
+      "index": "hide_armor",
+      "name": "hide armor",
+      "url": "/assets/atlas/equipment/json/hide_armor.json"
+    },
+    {
+      "index": "chain_shirt",
+      "name": "chain shirt",
+      "url": "/assets/atlas/equipment/json/chain_shirt.json"
+    },
+    {
+      "index": "scale_mail",
+      "name": "scale mail",
+      "url": "/assets/atlas/equipment/json/scale_mail.json"
+    },
+    {
+      "index": "breastplate",
+      "name": "breastplate",
+      "url": "/assets/atlas/equipment/json/breastplate.json"
+    },
+    {
+      "index": "half_plate_armor",
+      "name": "half plate armor",
+      "url": "/assets/atlas/equipment/json/half_plate_armor.json"
+    },
+    {
+      "index": "ring_mail",
+      "name": "ring mail",
+      "url": "/assets/atlas/equipment/json/ring_mail.json"
+    },
+    {
+      "index": "chain_mail",
+      "name": "chain mail",
+      "url": "/assets/atlas/equipment/json/chain_mail.json"
+    },
+    {
+      "index": "splint_armor",
+      "name": "splint armor",
+      "url": "/assets/atlas/equipment/json/splint_armor.json"
+    },
+    {
+      "index": "plate_armor",
+      "name": "plate armor",
+      "url": "/assets/atlas/equipment/json/plate_armor.json"
+    },
+    {
+      "index": "shield",
+      "name": "shield",
+      "url": "/assets/atlas/equipment/json/shield.json"
+    },
+    {
+      "index": "adamantine_armor",
+      "name": "adamantine armor",
+      "url": "/assets/atlas/magic_items/json/adamantine_armor.json"
+    },
+    {
+      "index": "animated_shield",
+      "name": "animated shield",
+      "url": "/assets/atlas/magic_items/json/animated_shield.json"
+    },
+    {
+      "index": "armor",
+      "name": "armor, +1, +2, or +3",
+      "url": "/assets/atlas/magic_items/json/armor.json"
+    },
+    {
+      "index": "armor_of_invulnerability",
+      "name": "armor of invulnerability",
+      "url": "/assets/atlas/magic_items/json/armor_of_invulnerability.json"
+    },
+    {
+      "index": "armor_of_resistance",
+      "name": "armor of resistance",
+      "url": "/assets/atlas/magic_items/json/armor_of_resistance.json"
+    },
+    {
+      "index": "armor_of_vulnerability",
+      "name": "armor of vulnerability",
+      "url": "/assets/atlas/magic_items/json/armor_of_vulnerability.json"
+    },
+    {
+      "index": "arrow_catching_shield",
+      "name": "arrow_catching shield",
+      "url": "/assets/atlas/magic_items/json/arrow_catching_shield.json"
+    },
+    {
+      "index": "demon_armor",
+      "name": "demon armor",
+      "url": "/assets/atlas/magic_items/json/demon_armor.json"
+    },
+    {
+      "index": "dragon_scale_mail",
+      "name": "dragon scale mail",
+      "url": "/assets/atlas/magic_items/json/dragon_scale_mail.json"
+    },
+    {
+      "index": "dwarven_plate",
+      "name": "dwarven plate",
+      "url": "/assets/atlas/magic_items/json/dwarven_plate.json"
+    },
+    {
+      "index": "elven_chain",
+      "name": "elven chain",
+      "url": "/assets/atlas/magic_items/json/elven_chain.json"
+    },
+    {
+      "index": "glamoured_studded_leather_armor",
+      "name": "glamoured studded leather armor",
+      "url": "/assets/atlas/magic_items/json/glamoured_studded_leather_armor.json"
+    },
+    {
+      "index": "mithral_armor",
+      "name": "mithral armor",
+      "url": "/assets/atlas/magic_items/json/mithral_armor.json"
+    },
+    {
+      "index": "plate_armor_of_etherealness",
+      "name": "plate armor of etherealness",
+      "url": "/assets/atlas/magic_items/json/plate_armor_of_etherealness.json"
+    },
+    {
+      "index": "shield_of_missile_attraction",
+      "name": "shield of missile attraction",
+      "url": "/assets/atlas/magic_items/json/shield_of_missile_attraction.json"
+    },
+    {
+      "index": "spellguard_shield",
+      "name": "spellguard shield",
+      "url": "/assets/atlas/magic_items/json/spellguard_shield.json"
+    },
+    {
+      "index": "armor_1",
+      "name": "armor, +1",
+      "url": "/assets/atlas/magic_items/json/armor_1.json"
+    },
+    {
+      "index": "armor_2",
+      "name": "armor, +2",
+      "url": "/assets/atlas/magic_items/json/armor_2.json"
+    },
+    {
+      "index": "armor_3",
+      "name": "armor, +3",
+      "url": "/assets/atlas/magic_items/json/armor_3.json"
+    },
+    {
+      "index": "dragon_scale_mail_black",
+      "name": "black dragon scale mail",
+      "url": "/assets/atlas/magic_items/json/dragon_scale_mail_black.json"
+    },
+    {
+      "index": "dragon_scale_mail_blue",
+      "name": "blue dragon scale mail",
+      "url": "/assets/atlas/magic_items/json/dragon_scale_mail_blue.json"
+    },
+    {
+      "index": "dragon_scale_mail_brass",
+      "name": "brass dragon scale mail",
+      "url": "/assets/atlas/magic_items/json/dragon_scale_mail_brass.json"
+    },
+    {
+      "index": "dragon_scale_mail_bronze",
+      "name": "bronze dragon scale mail",
+      "url": "/assets/atlas/magic_items/json/dragon_scale_mail_bronze.json"
+    },
+    {
+      "index": "dragon_scale_mail_copper",
+      "name": "copper dragon scale mail",
+      "url": "/assets/atlas/magic_items/json/dragon_scale_mail_copper.json"
+    },
+    {
+      "index": "dragon_scale_mail_gold",
+      "name": "gold dragon scale mail",
+      "url": "/assets/atlas/magic_items/json/dragon_scale_mail_gold.json"
+    },
+    {
+      "index": "dragon_scale_mail_green",
+      "name": "green dragon scale mail",
+      "url": "/assets/atlas/magic_items/json/dragon_scale_mail_green.json"
+    },
+    {
+      "index": "dragon_scale_mail_red",
+      "name": "red dragon scale mail",
+      "url": "/assets/atlas/magic_items/json/dragon_scale_mail_red.json"
+    },
+    {
+      "index": "dragon_scale_mail_silver",
+      "name": "silver dragon scale mail",
+      "url": "/assets/atlas/magic_items/json/dragon_scale_mail_silver.json"
+    },
+    {
+      "index": "dragon_scale_mail_white",
+      "name": "white dragon scale mail",
+      "url": "/assets/atlas/magic_items/json/dragon_scale_mail_white.json"
+    }
+  ],
+  "url": "/assets/atlas/equipment_categories/json/armor.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "/assets/atlas/equipment_categories/armor.webp"
+}

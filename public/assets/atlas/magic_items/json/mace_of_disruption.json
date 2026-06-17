@@ -1,0 +1,81 @@
+{
+  "index": "mace_of_disruption",
+  "name": "mace of disruption",
+  "kind": "weapon",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "rarity": "Rare",
+  "requires_attunement": true,
+  "attunement_rules": {
+    "index": "attunement",
+    "name": "attunement",
+    "url": "/assets/atlas/mechanic/rule_sections/json/attunement.json"
+  },
+  "desc": [
+    "Weapon (mace), rare (requires attunement)",
+    "When you hit a fiend or an undead with this magic weapon, that creature takes an extra 2d6 radiant damage. If the target has 25 hit points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature becomes frightened of you until the end of your next turn.",
+    "While you hold this weapon, it sheds bright light in a 20-foot radius and dim light for an additional 20 feet."
+  ],
+  "cost": {
+    "quantity": 5000,
+    "unit": "gp"
+  },
+  "weight": 4,
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "effects": [
+    {
+      "type": "damage",
+      "description": "Extra 2d6 radiant damage against fiends and undead.",
+      "details": {
+        "damage_dice": "2d6",
+        "damage_type": "radiant",
+        "conditions": [
+          "fiend",
+          "undead"
+        ]
+      }
+    },
+    {
+      "type": "save",
+      "description": "DC 15 Wisdom save for targets with <= 25 HP or be destroyed.",
+      "details": {
+        "dc": 15,
+        "ability": "Wisdom",
+        "threshold_hp": 25,
+        "failure": "destroyed",
+        "success": "frightened",
+        "conditions": [
+          "fiend",
+          "undead"
+        ]
+      }
+    },
+    {
+      "type": "light",
+      "description": "Sheds 20ft bright light and 20ft dim light.",
+      "details": {
+        "bright": 20,
+        "dim": 20
+      }
+    }
+  ],
+  "url": "/assets/atlas/magic_items/json/mace_of_disruption.json",
+  "updated_at": "2026-06-05T08:00:00.000Z",
+  "image": "/assets/atlas/magic_items/images/mace_of_disruption.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/mace_of_disruption.webp",
+  "_type": "equipment",
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "5-6-2026"
+}

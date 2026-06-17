@@ -1,0 +1,34 @@
+{
+  "index": "hands",
+  "name": "hands",
+  "equipment": [
+    {
+      "index": "bracers_of_archery",
+      "name": "bracers of archery",
+      "url": "/assets/atlas/magic_items/json/bracers_of_archery.json"
+    },
+    {
+      "index": "bracers_of_defense",
+      "name": "bracers of defense",
+      "url": "/assets/atlas/magic_items/json/bracers_of_defense.json"
+    },
+    {
+      "index": "gauntlets_of_ogre_power",
+      "name": "gauntlets of ogre power",
+      "url": "/assets/atlas/magic_items/json/gauntlets_of_ogre_power.json"
+    },
+    {
+      "index": "gloves_of_missile_snaring",
+      "name": "gloves of missile snaring",
+      "url": "/assets/atlas/magic_items/json/gloves_of_missile_snaring.json"
+    },
+    {
+      "index": "gloves_of_swimming_and_climbing",
+      "name": "gloves of swimming and climbing",
+      "url": "/assets/atlas/magic_items/json/gloves_of_swimming_and_climbing.json"
+    }
+  ],
+  "url": "/assets/atlas/equipment_categories/json/hands.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "/assets/atlas/equipment_categories/hands.webp"
+}

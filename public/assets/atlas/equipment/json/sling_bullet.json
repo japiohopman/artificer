@@ -1,0 +1,42 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "sling_bullet",
+  "name": "sling bullet",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "ammunition",
+    "name": "ammunition",
+    "url": "/assets/atlas/equipment_categories/ammunition"
+  },
+  "quantity": 20,
+  "cost": {
+    "quantity": 4,
+    "unit": "cp"
+  },
+  "weight": 1.5,
+  "url": "/assets/atlas/equipment/json/sling_bullet.json",
+  "updated_at": "2026-05-17T03:54:00.517Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/sling_bullet.webp",
+  "sprite_index": 24,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/sling_bullet.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Ammunition",
+  "slot": [
+    "ammo"
+  ],
+  "last_updated": "17-5-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

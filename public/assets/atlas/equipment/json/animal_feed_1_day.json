@@ -1,0 +1,32 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "animal_feed_1_day",
+  "name": "animal feed (1 day)",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 5,
+    "unit": "cp"
+  },
+  "weight": 10,
+  "url": "/assets/atlas/equipment/json/animal_feed_1_day.json",
+  "updated_at": "2026-04-25T19:42:02.793Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/animal_feed_1_day.webp",
+  "sprite_index": 6,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
+  "imageUrl": "/assets/atlas/equipment/images/animal_feed_1_day.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "25-4-2026",
+  "kind": "adventuring_gear"
+}

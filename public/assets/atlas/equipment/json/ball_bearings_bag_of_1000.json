@@ -1,0 +1,44 @@
+{
+  "special": [],
+  "index": "ball_bearings_bag_of_1000",
+  "name": "ball bearings (bag of 1,000)",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "desc": [
+    "As an action, you can spill these tiny metal balls from their pouch to cover a level, square area that is 10 feet on a side.",
+    "A creature moving across the covered area must succeed on a DC 10 Dexterity saving throw or fall prone.",
+    "A creature moving through the area at half speed doesn't need to make the save."
+  ],
+  "image": "/assets/atlas/equipment/images/ball_bearings_bag_of_1000.webp",
+  "url": "/assets/atlas/equipment/json/ball_bearings_bag_of_1000.json",
+  "updated_at": "2026-06-12T06:44:34.910Z",
+  "contents": [],
+  "properties": [],
+  "sprite_index": 11,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
+  "imageUrl": "/assets/atlas/equipment/images/ball_bearings_bag_of_1000.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "tool"
+  ],
+  "last_updated": "12-6-2026",
+  "kind": "trinket",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

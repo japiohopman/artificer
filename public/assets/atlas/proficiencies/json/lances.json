@@ -1,0 +1,18 @@
+{
+  "index": "lances",
+  "type": "weapons",
+  "name": "lances",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/lances.json",
+  "reference": {
+    "index": "lance",
+    "name": "lance",
+    "url": "/assets/atlas/equipment/json/lance.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/lances.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

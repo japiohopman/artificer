@@ -1,0 +1,35 @@
+{
+  "special": [],
+  "index": "saddle_exotic",
+  "name": "saddle, exotic",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 60,
+    "unit": "gp"
+  },
+  "weight": 50,
+  "desc": [
+    "An exotic saddle is required for riding any aquatic or flying mount."
+  ],
+  "url": "/assets/atlas/equipment/json/saddle_exotic.json",
+  "updated_at": "2026-05-18T23:57:24.555Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/saddle_exotic.webp",
+  "sprite_index": 4,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/saddle_exotic.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Mounts and Other Animals",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "19-5-2026",
+  "kind": "adventuring_gear"
+}

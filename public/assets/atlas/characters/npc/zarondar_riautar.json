@@ -1,0 +1,28 @@
+{
+  "id": "zarondar_riautar",
+  "name": "Zarondar Riautar",
+  "species": "Human",
+  "classJob": "Shopkeeper (Weapon Specialist)",
+  "gender": "male",
+  "baseMood": "Neutral",
+  "visualTraits": {
+    "skinTone": "#d2b48c",
+    "hairStyle": "Common",
+    "clothingStyle": "Local",
+    "distinguishingFeatures": "None"
+  },
+  "personalityTraits": [],
+  "secrets": [],
+  "goals": [],
+  "locationId": "/assets/atlas/world/toril/faerun/cities/waterdeep.json",
+  "isEssential": false,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "backstory": "Zarondar Riautar, nicknamed 'the Nimble,' owned Riautar's Weaponry in Waterdeep during the 14th century DR. He was known for his scowling demeanor and wary attitude toward strangers, seldom speaking unless necessary. His shop specialized in various weapons, from mundane blades to the occasional magical variety."
+}

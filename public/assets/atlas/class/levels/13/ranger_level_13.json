@@ -1,0 +1,25 @@
+{
+  "level": 13,
+  "ability_score_bonuses": 3,
+  "prof_bonus": 5,
+  "features": [],
+  "class_specific": {
+    "favored_enemies": 2,
+    "favored_terrain": 3
+  },
+  "index": "ranger_level_13",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "url": "/assets/atlas/class/levels/13/ranger_level_13.json",
+  "spellcasting": {
+    "spells_known": 8,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 1,
+    "spell_slots_level_5": 0
+  }
+}

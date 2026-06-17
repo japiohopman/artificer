@@ -1,0 +1,52 @@
+{
+  "index": "multiattack",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "subclass": {
+    "index": "hunter",
+    "name": "hunter",
+    "url": "/assets/atlas/subclasses/json/hunter.json"
+  },
+  "name": "multiattack",
+  "level": 11,
+  "prerequisites": [],
+  "desc": [
+    "At 11th level, you gain one of the following features of your choice.",
+    "Volley",
+    "Whirlwind Attack"
+  ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "feature",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "multiattack_volley",
+              "name": "multiattack: volley",
+              "url": "/assets/atlas/features/json/multiattack_volley.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "multiattack_whirlwind_attack",
+              "name": "multiattack: whirlwind attack",
+              "url": "/assets/atlas/features/json/multiattack_whirlwind_attack.json"
+            }
+          }
+        ]
+      }
+    },
+    "invocations": []
+  },
+  "url": "/assets/atlas/features/json/multiattack.json",
+  "updated_at": "2025-10-24T20:42:13.150Z",
+  "image": "/assets/atlas/features/images/multiattack.webp"
+}

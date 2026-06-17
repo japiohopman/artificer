@@ -1,0 +1,23 @@
+{
+  "index": "uncanny_dodge",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "name": "uncanny dodge",
+  "level": 5,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 5th level, when an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you."
+  ],
+  "url": "/assets/atlas/features/json/uncanny_dodge.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/uncanny_dodge.webp",
+  "feature_specific": {
+    "special_action": "reaction",
+    "passive_modifiers": {
+      "halve_damage_taken": true
+    }
+  }
+}

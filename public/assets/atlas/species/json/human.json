@@ -1,0 +1,201 @@
+{
+  "index": "human",
+  "name": "human",
+  "speed": 30,
+  "ability_bonuses": [
+    {
+      "ability_score": {
+        "index": "str",
+        "name": "str",
+        "url": "/assets/atlas/ability_scores/json/str.json"
+      },
+      "bonus": 1
+    },
+    {
+      "ability_score": {
+        "index": "dex",
+        "name": "dex",
+        "url": "/assets/atlas/ability_scores/json/dex.json"
+      },
+      "bonus": 1
+    },
+    {
+      "ability_score": {
+        "index": "con",
+        "name": "con",
+        "url": "/assets/atlas/ability_scores/json/con.json"
+      },
+      "bonus": 1
+    },
+    {
+      "ability_score": {
+        "index": "int",
+        "name": "int",
+        "url": "/assets/atlas/ability_scores/json/int.json"
+      },
+      "bonus": 1
+    },
+    {
+      "ability_score": {
+        "index": "wis",
+        "name": "wis",
+        "url": "/assets/atlas/ability_scores/json/wis.json"
+      },
+      "bonus": 1
+    },
+    {
+      "ability_score": {
+        "index": "cha",
+        "name": "cha",
+        "url": "/assets/atlas/ability_scores/json/cha.json"
+      },
+      "bonus": 1
+    }
+  ],
+  "age": "Humans reach adulthood in their late teens and live less than a century.",
+  "alignment": "Humans tend toward no particular alignment. The best and the worst are found among them.",
+  "size": "Medium",
+  "size_description": "Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.",
+  "languages": [
+    {
+      "index": "common",
+      "name": "common",
+      "url": "/assets/atlas/languages/common"
+    }
+  ],
+  "language_options": {
+    "choose": 1,
+    "type": "languages",
+    "from": {
+      "option_set_type": "options_array",
+      "options": [
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "dwarvish",
+            "name": "dwarvish",
+            "url": "/assets/atlas/languages/dwarvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "elvish",
+            "name": "elvish",
+            "url": "/assets/atlas/languages/elvish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "giant",
+            "name": "giant",
+            "url": "/assets/atlas/languages/giant"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "gnomish",
+            "name": "gnomish",
+            "url": "/assets/atlas/languages/gnomish"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "goblin",
+            "name": "goblin",
+            "url": "/assets/atlas/languages/goblin"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "halfling",
+            "name": "halfling",
+            "url": "/assets/atlas/languages/halfling"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "orc",
+            "name": "orc",
+            "url": "/assets/atlas/languages/orc"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "abyssal",
+            "name": "abyssal",
+            "url": "/assets/atlas/languages/abyssal"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "celestial",
+            "name": "celestial",
+            "url": "/assets/atlas/languages/celestial"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "draconic",
+            "name": "draconic",
+            "url": "/assets/atlas/languages/draconic"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "deep_speech",
+            "name": "deep speech",
+            "url": "/assets/atlas/languages/deep_speech"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "infernal",
+            "name": "infernal",
+            "url": "/assets/atlas/languages/infernal"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "primordial",
+            "name": "primordial",
+            "url": "/assets/atlas/languages/primordial"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "sylvan",
+            "name": "sylvan",
+            "url": "/assets/atlas/languages/sylvan"
+          }
+        },
+        {
+          "option_type": "reference",
+          "item": {
+            "index": "undercommon",
+            "name": "undercommon",
+            "url": "/assets/atlas/languages/undercommon"
+          }
+        }
+      ]
+    }
+  },
+  "language_desc": "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.",
+  "traits": [],
+  "subraces": [],
+  "url": "/assets/atlas/species/json/human.json",
+  "updated_at": "2025-10-24T20:42:14.212Z",
+  "image": "/assets/atlas/species/human.webp"
+}

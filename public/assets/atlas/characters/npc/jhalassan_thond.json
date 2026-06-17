@@ -1,0 +1,28 @@
+{
+  "id": "jhalassan_thond",
+  "name": "Jhalassan Thond",
+  "species": "Human",
+  "classJob": "Shopkeeper (Glassblower)",
+  "gender": "male",
+  "baseMood": "Neutral",
+  "visualTraits": {
+    "skinTone": "#d2b48c",
+    "hairStyle": "Common",
+    "clothingStyle": "Local",
+    "distinguishingFeatures": "None"
+  },
+  "personalityTraits": [],
+  "secrets": [],
+  "goals": [],
+  "locationId": "/assets/atlas/world/toril/faerun/cities/waterdeep.json",
+  "isEssential": false,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "backstory": "Jhalassan Thond owned Thond Glass and Glazing in Waterdeep during the 14th century DR. His shop was well-regarded for its fine glasswork and glazing services, catering to the city's construction and decoration needs."
+}

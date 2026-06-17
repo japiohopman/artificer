@@ -1,0 +1,818 @@
+{
+  "level": 0,
+  "xp": 0,
+  "saveVersion": 2,
+  "gender": "Male",
+  "stats": {
+    "str": 17,
+    "dex": 15,
+    "con": 14,
+    "int": 12,
+    "wis": 11,
+    "cha": 9
+  },
+  "proficiencies": [
+    "tinker's tools",
+    "Skill: Investigation",
+    "Skill: Perception",
+    "Calligrapher'S Supplies",
+    "light armor",
+    "simple weapons",
+    "longswords",
+    "rapiers",
+    "shortswords",
+    "hand crossbows",
+    "saving throw: dex",
+    "saving throw: cha",
+    "Saving Throw: dex",
+    "Saving Throw: cha"
+  ],
+  "traits": [
+    "darkvision",
+    "gnome cunning",
+    "artificer's lore",
+    "tinker"
+  ],
+  "features": [
+    {
+      "name": "darkvision",
+      "index": "darkvision",
+      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
+      "source": "Species"
+    },
+    {
+      "name": "gnome cunning",
+      "index": "gnome_cunning",
+      "desc": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
+      "source": "Species"
+    },
+    {
+      "name": "artificer's lore",
+      "index": "artificers_lore",
+      "desc": "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply.",
+      "source": "Species"
+    },
+    {
+      "name": "tinker",
+      "index": "tinker",
+      "desc": "You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time.\nWhen you create a device, choose one of the following options:\nClockwork Toy: This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.\nFire Starter: The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.\nMusic Box: When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed.",
+      "source": "Species"
+    },
+    {
+      "index": "spellcasting_bard",
+      "class": {
+        "index": "bard",
+        "name": "bard",
+        "url": "/assets/atlas/class/json/bard.json"
+      },
+      "name": "spellcasting: bard",
+      "level": 1,
+      "prerequisites": [],
+      "desc": [
+        "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations."
+      ],
+      "reference": "public/assets/atlas/class/json/bard/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_bard.json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/spellcasting_bard.webp",
+      "feature_specific": {
+        "spellcasting_ability": {
+          "index": "charisma",
+          "name": "charisma",
+          "url": "/assets/atlas/ability_scores/json/cha.json"
+        }
+      },
+      "source": "Class"
+    },
+    {
+      "index": "bardic_inspiration_d6",
+      "class": {
+        "index": "bard",
+        "name": "bard",
+        "url": "/assets/atlas/class/json/bard.json"
+      },
+      "name": "bardic inspiration (d6)",
+      "level": 1,
+      "prerequisites": [],
+      "desc": [
+        "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.0 Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the GM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
+        "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. ",
+        "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
+      ],
+      "url": "/assets/atlas/features/json/bardic_inspiration_d6.0json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/bardic_inspiration_d6.0webp",
+      "feature_specific": {
+        "special_action": "bonus_action",
+        "attack_die": "1d6",
+        "usage": {
+          "type": "charisma_modifier",
+          "recovery": "long_rest"
+        }
+      },
+      "source": "Class"
+    }
+  ],
+  "flaws": [],
+  "ideals": [],
+  "bonds": [],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 10,
+    "pp": 0
+  },
+  "appearance": {
+    "hairColor": "Raven Black",
+    "hairStyle": "Short",
+    "bodyType": "Medium",
+    "eyeColor": "Brown",
+    "skinColor": "#ffdbac",
+    "height": "5'10\"",
+    "weight": "160 lbs",
+    "size": "Medium",
+    "specialFeatures": []
+  },
+  "items": {
+    "leather_armor_08rdouk9k": {
+      "id": "leather_armor_08rdouk9k",
+      "template": "leather_armor",
+      "quantity": 1,
+      "addedAt": 1781564100952,
+      "kind": "armor"
+    },
+    "dagger_y41ohptx0": {
+      "id": "dagger_y41ohptx0",
+      "template": "dagger",
+      "quantity": 1,
+      "addedAt": 1781564100952,
+      "kind": "weapon"
+    },
+    "club_5cyvgbuzh": {
+      "id": "club_5cyvgbuzh",
+      "template": "club",
+      "quantity": 1,
+      "addedAt": 1781564109539,
+      "kind": "weapon"
+    },
+    "entertainers_pack_58dausk96": {
+      "id": "entertainers_pack_58dausk96",
+      "template": "entertainers_pack",
+      "quantity": 1,
+      "addedAt": 1781564115700,
+      "kind": "equipment_pack"
+    },
+    "backpack_7drvjzpvr": {
+      "id": "backpack_7drvjzpvr",
+      "template": "backpack",
+      "quantity": 1,
+      "addedAt": 1781564116084,
+      "kind": "container"
+    },
+    "bedroll_szip41zil": {
+      "id": "bedroll_szip41zil",
+      "template": "bedroll",
+      "quantity": 1,
+      "addedAt": 1781564116293,
+      "kind": "adventuring_gear"
+    },
+    "clothes_costume_4v5d8tuvd": {
+      "id": "clothes_costume_4v5d8tuvd",
+      "template": "clothes_costume",
+      "quantity": 2,
+      "addedAt": 1781564118949,
+      "kind": "clothing"
+    },
+    "candle_vegxquyct": {
+      "id": "candle_vegxquyct",
+      "template": "candle",
+      "quantity": 5,
+      "addedAt": 1781564119240,
+      "kind": "adventuring_gear"
+    },
+    "rations_1_day_2ns17hn3d": {
+      "id": "rations_1_day_2ns17hn3d",
+      "template": "rations_1_day",
+      "quantity": 5,
+      "addedAt": 1781564119315,
+      "kind": "consumable"
+    },
+    "waterskin_sghvtce88": {
+      "id": "waterskin_sghvtce88",
+      "template": "waterskin",
+      "quantity": 1,
+      "addedAt": 1781564119491,
+      "kind": "adventuring_gear"
+    },
+    "disguise_kit_0t471sah9": {
+      "id": "disguise_kit_0t471sah9",
+      "template": "disguise_kit",
+      "quantity": 1,
+      "addedAt": 1781564120093,
+      "kind": "adventuring_gear"
+    }
+  },
+  "containers": {
+    "backpack_new_character": {
+      "id": "backpack_new_character",
+      "type": "backpack",
+      "ownerId": "new_character",
+      "slots": [
+        {
+          "id": "bag_0",
+          "itemId": "club_5cyvgbuzh"
+        },
+        {
+          "id": "bag_1",
+          "itemId": "club_qno94lf67"
+        },
+        {
+          "id": "bag_2",
+          "itemId": "backpack_7drvjzpvr"
+        },
+        {
+          "id": "bag_3",
+          "itemId": "backpack_4709n5aln"
+        },
+        {
+          "id": "bag_4",
+          "itemId": "bedroll_szip41zil"
+        },
+        {
+          "id": "bag_5",
+          "itemId": "bedroll_2biolub9a"
+        },
+        {
+          "id": "bag_6",
+          "itemId": "clothes_costume_4v5d8tuvd"
+        },
+        {
+          "id": "bag_7",
+          "itemId": "clothes_costume_gwfqu5gsk"
+        },
+        {
+          "id": "bag_8",
+          "itemId": "candle_vegxquyct"
+        },
+        {
+          "id": "bag_9",
+          "itemId": "candle_x2apdza3k"
+        },
+        {
+          "id": "bag_10",
+          "itemId": "rations_1_day_2ns17hn3d"
+        },
+        {
+          "id": "bag_11",
+          "itemId": "rations_1_day_9cpuyxfvs"
+        },
+        {
+          "id": "bag_12",
+          "itemId": "waterskin_sghvtce88"
+        },
+        {
+          "id": "bag_13",
+          "itemId": "waterskin_8q75t5v6j"
+        },
+        {
+          "id": "bag_14",
+          "itemId": "disguise_kit_0t471sah9"
+        },
+        {
+          "id": "bag_15",
+          "itemId": "entertainers_pack_58dausk96"
+        },
+        {
+          "id": "bag_16",
+          "itemId": "disguise_kit_dimvequwg"
+        },
+        {
+          "id": "bag_17",
+          "itemId": "entertainers_pack_n9m0x6hsw"
+        },
+        {
+          "id": "bag_18",
+          "itemId": null
+        },
+        {
+          "id": "bag_19",
+          "itemId": null
+        },
+        {
+          "id": "bag_20",
+          "itemId": null
+        },
+        {
+          "id": "bag_21",
+          "itemId": null
+        },
+        {
+          "id": "bag_22",
+          "itemId": null
+        },
+        {
+          "id": "bag_23",
+          "itemId": null
+        }
+      ]
+    }
+  },
+  "equipment": {
+    "containerId": "equipment_slot3",
+    "slots": [
+      {
+        "id": "main_hand",
+        "itemId": "dagger_y41ohptx0"
+      },
+      {
+        "id": "off_hand",
+        "itemId": null
+      },
+      {
+        "id": "ranged",
+        "itemId": null
+      },
+      {
+        "id": "ammo",
+        "itemId": null
+      },
+      {
+        "id": "chest",
+        "itemId": "leather_armor_08rdouk9k"
+      },
+      {
+        "id": "clothes",
+        "itemId": null
+      },
+      {
+        "id": "head",
+        "itemId": null
+      },
+      {
+        "id": "hands",
+        "itemId": null
+      },
+      {
+        "id": "feet",
+        "itemId": null
+      },
+      {
+        "id": "back",
+        "itemId": null
+      },
+      {
+        "id": "neck",
+        "itemId": null
+      },
+      {
+        "id": "belt",
+        "itemId": null
+      },
+      {
+        "id": "ring_1",
+        "itemId": null
+      },
+      {
+        "id": "ring_2",
+        "itemId": null
+      },
+      {
+        "id": "tool_1",
+        "itemId": null
+      },
+      {
+        "id": "tool_2",
+        "itemId": null
+      },
+      {
+        "id": "tool_3",
+        "itemId": null
+      },
+      {
+        "id": "tool_4",
+        "itemId": null
+      },
+      {
+        "id": "tool_5",
+        "itemId": null
+      },
+      {
+        "id": "focus",
+        "itemId": null
+      },
+      {
+        "id": "pouch",
+        "itemId": null
+      },
+      {
+        "id": "acc_1",
+        "itemId": null
+      },
+      {
+        "id": "acc_2",
+        "itemId": null
+      },
+      {
+        "id": "acc_3",
+        "itemId": null
+      },
+      {
+        "id": "acc_4",
+        "itemId": null
+      },
+      {
+        "id": "quick_1",
+        "itemId": null
+      },
+      {
+        "id": "quick_2",
+        "itemId": null
+      },
+      {
+        "id": "quick_3",
+        "itemId": null
+      },
+      {
+        "id": "quick_4",
+        "itemId": null
+      }
+    ]
+  },
+  "backpack": [
+    {
+      "id": "calligraphers_supplies_6g3k43v6m",
+      "index": "calligraphers_supplies",
+      "name": "Calligrapher'S Supplies",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
+      "image_url": "public/assets/atlas/equipment/images/calligraphers_supplies.webp",
+      "imageUrl": "/assets/atlas/equipment/images/calligraphers_supplies.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "tools",
+        "name": "tools",
+        "url": "/assets/atlas/equipment_categories/tools"
+      },
+      "tool_category": "Artisan's Tools",
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "desc": [
+        "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+      ],
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/calligraphers_supplies.webp",
+      "sprite_index": 16,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp",
+      "kind": "tool",
+      "equipSlots": [
+        "tool_1",
+        "tool_2",
+        "tool_3"
+      ]
+    },
+    {
+      "id": "abacus_917rsmu36",
+      "index": "abacus",
+      "name": "Abacus",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
+      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-21T14:13:36.560Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/abacus.webp",
+      "sprite_index": 0,
+      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp",
+      "background_type": "land_forest",
+      "last_updated": "21-4-2026",
+      "kind": "adventuring_gear",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "book_kivsoju4v",
+      "index": "book",
+      "name": "Book",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/book.json",
+      "image_url": "public/assets/atlas/equipment/images/book.webp",
+      "imageUrl": "/assets/atlas/equipment/images/book.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "desc": [
+        "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook (described later in this section)."
+      ],
+      "updated_at": "2026-05-01T09:04:11.871Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/book.webp",
+      "sprite_index": 10,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp",
+      "background_type": "land_forest",
+      "last_updated": "1-5-2026",
+      "kind": "adventuring_gear",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "ink_1_ounce_bottle_2npp88372",
+      "index": "ink_1_ounce_bottle",
+      "name": "Ink 1 Ounce Bottle",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
+      "image_url": "public/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
+      "desc": [
+        "This viscous ink, drawn from the pallid veins of a drowned kraken, whispers secrets on the page, but each stroke draws the writer closer to the abyss. It is said that pacts sealed with this ink bind not just the signatory, but their very soul to the unseen horrors that lurk beneath the waves.\n"
+      ],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "updated_at": "2026-04-23T09:40:01.455Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
+      "sprite_index": 12,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp",
+      "background_type": "land_forest",
+      "last_updated": "23-4-2026",
+      "category": "Adventuring Gear",
+      "kind": "adventuring_gear",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "ink_pen_y5ottqt5h",
+      "index": "ink_pen",
+      "name": "Ink Pen",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/ink_pen.json",
+      "image_url": "public/assets/atlas/equipment/images/ink_pen.webp",
+      "imageUrl": "/assets/atlas/equipment/images/ink_pen.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "cp"
+      },
+      "updated_at": "2026-04-21T14:10:12.749Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/ink_pen.webp",
+      "sprite_index": 13,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp",
+      "background_type": "land_forest",
+      "last_updated": "21-4-2026",
+      "kind": "adventuring_gear",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "parchment_one_sheet_v4mxrej97",
+      "index": "parchment_one_sheet",
+      "name": "Parchment (One Sheet)",
+      "quantity": 10,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
+      "image_url": "public/assets/atlas/equipment/images/parchment_one_sheet.webp",
+      "imageUrl": "/assets/atlas/equipment/images/parchment_one_sheet.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "sp"
+      },
+      "updated_at": "2026-04-21T14:20:56.451Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/parchment_one_sheet.webp",
+      "sprite_index": 1,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.0webp",
+      "background_type": "land_forest",
+      "last_updated": "21-4-2026",
+      "kind": "adventuring_gear",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "gold_zmcymsgt8",
+      "index": "gold",
+      "name": "Gold",
+      "quantity": 8,
+      "weight": 0.02,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "image_url": "public/assets/atlas/equipment/images/gold.webp",
+      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+      "equipment_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+      },
+      "cost": "",
+      "desc": [
+        "The standard unit of currency in the game."
+      ],
+      "image": "/assets/atlas/equipment/images/gold.webp",
+      "background_type": "land_forest",
+      "category": "Standard Gear",
+      "last_updated": "21-5-2026",
+      "updated_at": "2026-05-21T01:11:21.699Z",
+      "kind": "currency"
+    }
+  ],
+  "inventory": {
+    "clothes": {
+      "id": "clothes_travelers_64v5fqj0q",
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "quantity": 1,
+      "weight": 4,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2025-10-24T20:42:12.926Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/clothes_travelers.webp",
+      "sprite_index": 12,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
+      "kind": "clothing",
+      "clothing_type": "traveler",
+      "equipSlots": [
+        "clothes"
+      ],
+      "slot": "clothes",
+      "clothes_slot": "Clothes Traveler'S"
+    }
+  },
+  "knownSpells": [
+    {
+      "index": "comprehend_languages",
+      "name": "comprehend languages",
+      "level": 1,
+      "school": "divination",
+      "classes": [
+        "bard",
+        "sorcerer",
+        "warlock",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "Self",
+      "duration": "1 hour",
+      "json_path": "/assets/atlas/spell/json/comprehend_languages.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fcomprehend-languages.webp%3Ft%3D1781564119247"
+    },
+    {
+      "index": "charm_person",
+      "name": "charm person",
+      "level": 1,
+      "school": "enchantment",
+      "classes": [
+        "bard",
+        "druid",
+        "sorcerer",
+        "warlock",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "30 feet",
+      "duration": "1 hour",
+      "json_path": "/assets/atlas/spell/json/charm_person.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fcharm-person.webp%3Ft%3D1781564119247"
+    }
+  ],
+  "languages": [
+    "common",
+    "gnomish"
+  ],
+  "preparedSpells": [
+    "comprehend_languages",
+    "charm_person"
+  ],
+  "spellSlots": {
+    "1": {
+      "current": 0,
+      "max": 0
+    }
+  },
+  "choices": {},
+  "race": "gnome",
+  "subrace": "rock_gnome",
+  "class": "bard",
+  "spellcastingAbility": "cha",
+  "background": "scribe",
+  "backstory": "Deep within the subterranean archives of the gnomish redoubt of Mithral Deep, there once worked a master scribe who knew every secret of the ancient libraries—yet whose own name is now entirely absent from their pages. Gifted with the sharp sight of the deep-dwellers and a keen mind naturally shielded against arcane deceits, they spent decades classifying the forgotten relics of history. They possessed an uncanny knack for tinkering, translating the dry formulas of long-dead artificers into delicate clockwork music boxes that whistled the forgotten anthems of fallen empires. But when they unearthed a heavily redacted chronicle detailing a silent, encroaching shadow destined to swallow the surface world, they made a perilous choice. To protect their kin from the eyes of those who wished this truth buried, the scribe penned a final, self-erasing rune over their own name in the great census scrolls, vanishing into the darkness of the tunnels as a ghost with a blank ledger.\n\nNo longer a mere keeper of books, the nameless gnome realized that ink could be spilled and parchment burned, but a song, once set free, lives forever in the minds of the living. They forged a wondrous lute of brass and elderwood, fitted with intricate, self-winding gears of their own invention that could hum with the resonant, magical frequencies of the cosmos. They became a bard not of cheap tavern-tales, but a chronicler of fate, weaving ancient lore into powerful spells of protection and inspiration. Driven by the absolute necessity to find the missing pieces of this apocalyptic history, they now wander the surface kingdoms. They seek to rally heroes and document their deeds, knowing that in the grand design of the world, even the smallest gear—and the most forgotten scribe—can turn the tides of destiny.",
+  "alignment": "lawful_evil",
+  "name": "samuel",
+  "id": "slot3",
+  "hp": 6,
+  "maxHp": 6,
+  "lastSaved": "2026-06-15T22:58:14.671Z"
+}

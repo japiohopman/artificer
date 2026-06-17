@@ -1,0 +1,29 @@
+{
+  "index": "heavy_armor",
+  "name": "heavy armor",
+  "equipment": [
+    {
+      "index": "ring_mail",
+      "name": "ring mail",
+      "url": "/assets/atlas/equipment/json/ring_mail.json"
+    },
+    {
+      "index": "chain_mail",
+      "name": "chain mail",
+      "url": "/assets/atlas/equipment/json/chain_mail.json"
+    },
+    {
+      "index": "splint_armor",
+      "name": "splint armor",
+      "url": "/assets/atlas/equipment/json/splint_armor.json"
+    },
+    {
+      "index": "plate_armor",
+      "name": "plate armor",
+      "url": "/assets/atlas/equipment/json/plate_armor.json"
+    }
+  ],
+  "url": "/assets/atlas/equipment_categories/json/heavy_armor.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "/assets/atlas/equipment_categories/heavy_armor.webp"
+}

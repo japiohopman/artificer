@@ -1,0 +1,23 @@
+{
+  "id": "underdark",
+  "name": "Underdark",
+  "world": "toril",
+  "continent": "faerun",
+  "region": "underdark",
+  "title": "The Underdark: The Lightless Lands",
+  "description": "The Underdark is a vast subterranean world that stretches beneath the entire continent of [[Faer\u00fbn]].",
+  "wiki": "The Underdark is a place of endless tunnels and massive caverns. It is divided into three layers: the Upperdark, the Middledark, and the Lowerdark. Each layer has its own unique ecosystem and civilizations, ranging from the drow and duergar to the alien mind flayers and beholders.",
+  "image": "underdark.webp",
+  "tags": ["region", "underdark", "subterranean"],
+  "children": ["northwest_underdark", "central_underdark", "eastern_underdark", "southern_underdark"],
+  "lore_file": "public/assets/atlas/world/toril/faerun/underdark/underdark_lore.json",
+  "metadata": {
+    "prominent_cities": ["Menzoberranzan", "Gracklstugh", "Oryndoll", "Mantol-Derith"],
+    "landscape": "Caves, sunless seas, mushroom forests",
+    "economy": "Mining, magic items, slaves"
+  },
+  "coordinates": {
+    "lat": 0,
+    "lng": 0
+  }
+}

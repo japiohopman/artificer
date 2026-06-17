@@ -1,0 +1,57 @@
+{
+  "id": "menzoberranzan",
+  "name": "Menzoberranzan",
+  "type": "settlement",
+  "plain": "Material Plane",
+  "world": "totil",
+  "continent": "fearun",
+  "region": "underdark",
+  "sub_region": "northdark",
+  "parent": "cities",
+  "title": "Menzoberranzan: The City of Spiders",
+  "description": "The '''City of Spiders''', located deep in the [[Underdark]], is the most infamous [[drow]] stronghold.",
+  "wiki": "Menzoberranzan is a large drow city in the Upperdark, famous as the home of Drizzt Do'Urden. It is ruled by eight noble houses in a matriarchal hierarchy dedicated to the spider queen [[lolth]].",
+  "image": "/assets/atlas/world/toril/faerun/cities/menzoberranzan/menzoberranzan.webp",
+  "thumbnail": "/assets/atlas/world/toril/faerun/cities/menzoberranzan/menzoberranzan_thumb.webp",
+  "banner": "/assets/atlas/world/toril/faerun/cities/menzoberranzan/menzoberranzan_banner.webp",
+  "tags": [
+    "city",
+    "settlement",
+    "underdark",
+    "drow"
+  ],
+  "map": "/assets/atlas/world/toril/faerun/cities/menzoberranzan/menzoberranzan_map.webp",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
+  "coordinates": {
+    "lat": 965.9,
+    "lng": 3044.09
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      3000,
+      1994
+    ]
+  ],
+  "origin": "bottom-left",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "Lolth",
+  "trade": "",
+  "metadata": {
+    "government": "Matriarchal Noble Houses",
+    "military": "House Guards",
+    "population": "20,000 drow, 12,000 slaves",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
+}

@@ -1,0 +1,184 @@
+{
+  "index": "priest",
+  "name": "priest",
+  "desc": "Priests bring the teachings of their gods to the common folk. They are the spiritual leaders of temples and shrines and often hold positions of influence in their communities. Evil priests might work openly under a tyrant, or they might be the leaders of religious sects hidden in the shadows of good society, overseeing depraved rites.\n\nA priest typically has one or more acolytes to help with religious ceremonies and other sacred duties.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any alignment",
+  "armor_class": 13,
+  "hit_points": 27,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8+5",
+  "speed": {
+    "walk": "25 ft."
+  },
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 12,
+  "intelligence": 13,
+  "wisdom": 16,
+  "charisma": 13,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill_medicine",
+        "name": "skill: medicine",
+        "url": "/assets/atlas/skills/json/medicine.json"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill_persuasion",
+        "name": "skill: persuasion",
+        "url": "/assets/atlas/skills/json/persuasion.json"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_religion",
+        "name": "skill: religion",
+        "url": "/assets/atlas/skills/json/religion.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any two languages",
+  "challenge_rating": "2",
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "divine eminence",
+      "desc": "As a bonus action, the priest can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 (3d6) radiant damage to a target on a hit. This benefit lasts until the end of the turn. If the priest expends a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each level above 1st.",
+      "damage": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The priest is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). The priest has the following cleric spells prepared:\n\n- Cantrips (at will): light, sacred flame, thaumaturgy\n- 1st level (4 slots): cure wounds, guiding bolt, sanctuary\n- 2nd level (3 slots): lesser restoration, spiritual weapon\n- 3rd level (2 slots): dispel magic, spirit guardians",
+      "spellcasting": {
+        "level": 5,
+        "ability": {
+          "index": "wis",
+          "name": "wis",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
+        },
+        "dc": 13,
+        "modifier": 5,
+        "components_required": [
+          "V",
+          "S",
+          "M"
+        ],
+        "school": "cleric",
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 2
+        },
+        "spells": [
+          {
+            "name": "light",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/light.json"
+          },
+          {
+            "name": "sacred flame",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/sacred_flame.json"
+          },
+          {
+            "name": "thaumaturgy",
+            "level": 0,
+            "url": "/assets/atlas/spell/json/thaumaturgy.json"
+          },
+          {
+            "name": "cure wounds",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/cure_wounds.json"
+          },
+          {
+            "name": "guiding bolt",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/guiding_bolt.json"
+          },
+          {
+            "name": "sanctuary",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/sanctuary.json"
+          },
+          {
+            "name": "lesser restoration",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/lesser_restoration.json"
+          },
+          {
+            "name": "spiritual weapon",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/spiritual_weapon.json"
+          },
+          {
+            "name": "dispel magic",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/dispel_magic.json"
+          },
+          {
+            "name": "spirit guardians",
+            "level": 3,
+            "url": "/assets/atlas/spell/json/spirit_guardians.json"
+          }
+        ]
+      },
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "mace",
+      "desc": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 3 (1d6) bludgeoning damage.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/priest.webp",
+  "url": "/assets/atlas/enemies/json/priest.json",
+  "updated_at": "2026-05-18T10:47:19.924Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.webp",
+  "wikiData": {},
+  "imageUrl": "/assets/atlas/enemies/images/priest.webp",
+  "last_updated": "18-5-2026",
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 12,
+    "int": 13,
+    "wis": 16,
+    "cha": 13
+  },
+  "_type": "enemies",
+  "background_type": "church",
+  "lore": "/assets/atlas/enemies/enemies_wiki/priest.json"
+}

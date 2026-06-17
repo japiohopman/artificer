@@ -1,0 +1,18 @@
+{
+  "index": "chain_mail",
+  "type": "armor",
+  "name": "chain mail",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/chain_mail.json",
+  "reference": {
+    "index": "chain_mail",
+    "name": "chain mail",
+    "url": "/assets/atlas/equipment/json/chain_mail.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/chain_mail.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

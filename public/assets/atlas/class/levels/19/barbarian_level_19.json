@@ -1,0 +1,24 @@
+{
+  "level": 19,
+  "ability_score_bonuses": 5,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "barbarian_ability_score_improvement_5",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/barbarian_ability_score_improvement_5.json"
+    }
+  ],
+  "class_specific": {
+    "rage_count": 6,
+    "rage_damage_bonus": 4,
+    "brutal_critical_dice": 3
+  },
+  "index": "barbarian_level_19",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "url": "/assets/atlas/class/levels/19/barbarian_level_19.json"
+}

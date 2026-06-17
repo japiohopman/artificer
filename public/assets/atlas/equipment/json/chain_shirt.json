@@ -1,0 +1,45 @@
+{
+  "desc": [
+    "Forged from blackened links harvested from the Shadowfell, this chain shirt whispers of forgotten souls ensnared, its protection bought with a price paid in lingering dread. Each ring chills to the touch, a constant reminder of the darkness it holds at bay – and the darkness it invites.\n"
+  ],
+  "special": [],
+  "index": "chain_shirt",
+  "name": "chain shirt",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "armor_category": "Medium",
+  "armor_class": {
+    "base": 13,
+    "dex_bonus": true,
+    "max_bonus": 2
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false,
+  "weight": 20,
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "url": "/assets/atlas/equipment/json/chain_shirt.json",
+  "updated_at": "2026-04-28T13:20:38.932Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/chain_shirt.webp",
+  "sprite_index": 4,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/equipment/images/chain_shirt.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "chest"
+  ],
+  "category": "Medium Armor",
+  "last_updated": "28-4-2026",
+  "kind": "armor",
+  "equipSlots": [
+    "chest"
+  ]
+}

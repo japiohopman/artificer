@@ -1,0 +1,42 @@
+{
+  "special": [],
+  "index": "chain_10_feet",
+  "name": "chain (10 feet)",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 10,
+  "desc": [
+    "A chain has 10 hit points. It can be burst with a successful DC 20 Strength check."
+  ],
+  "url": "/assets/atlas/equipment/json/chain_10_feet.json",
+  "updated_at": "2026-04-24T03:33:11.549Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/chain_10_feet.webp",
+  "sprite_index": 2,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/equipment/images/chain_10_feet.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "24-4-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "level": 15,
+  "ability_score_bonuses": 3,
+  "prof_bonus": 5,
+  "features": [
+    {
+      "index": "persistent_rage",
+      "name": "Persistent Rage",
+      "url": "/assets/atlas/features/json/persistent_rage.json"
+    }
+  ],
+  "class_specific": {
+    "rage_count": 5,
+    "rage_damage_bonus": 3,
+    "brutal_critical_dice": 2
+  },
+  "index": "barbarian_level_15",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "url": "/assets/atlas/class/levels/15/barbarian_level_15.json"
+}

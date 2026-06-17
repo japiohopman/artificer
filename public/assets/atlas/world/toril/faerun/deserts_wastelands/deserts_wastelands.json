@@ -1,0 +1,478 @@
+[
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      3481.47,
+      1308.62
+    ],
+    "popup": {
+      "title": "Black Ash Plain",
+      "description": "A wasteland of black volcanic ash, home to [[brown dragon]]s and [[ash giant]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/black_ash_plain/black_ash_plain.json",
+        "label": "Black Ash Plain"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/black_ash_plain/black_ash_plain.webp"
+    },
+    "id": "black_ash_plain"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      4460.14,
+      1706.09
+    ],
+    "popup": {
+      "title": "Plains of Purple Dust",
+      "description": "A windy desert located east of the [[Dragonsword Mountains]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/plains_of_purple_dust/plains_of_purple_dust.json",
+        "label": "Plains of Purple Dust"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/plains_of_purple_dust/plains_of_purple_dust.webp"
+    },
+    "id": "plains_of_purple_dust"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      4712.99,
+      1378.25
+    ],
+    "popup": {
+      "title": "Raurin",
+      "description": "The '''Dust Desert'' and the '''Desert of Desolation'', once the center of the ancient empire of [[Imaskar]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/raurin/raurin.json",
+        "label": "Raurin"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/raurin/raurin.webp"
+    },
+    "id": "raurin"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      2443.72,
+      535.43
+    ],
+    "popup": {
+      "title": "Bandit Wastes",
+      "description": "An expanse of barrens or badlands between [[Lapaliiya]] and [[Halruaa]], home to monsters, among them were [[giant ants]], which dug a warren of tunnels beneath the barrens.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/bandit_wastes/bandit_wastes.json",
+        "label": "Bandit Wastes"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/bandit_wastes/bandit_wastes.webp"
+    },
+    "id": "bandit_wastes"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1238.49,
+      983.23
+    ],
+    "popup": {
+      "title": "Calim Desert",
+      "description": "The rocky desert on the coast of [[Calimshan]], formed by an epic magical war between two [[genie]]s, the [[djinni]] [[Calim]] and [[efreeti]] [[Memnon]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/calim_desert/calim_desert.json",
+        "label": "Calim Desert"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/calim_desert/calim_desert.webp"
+    },
+    "id": "calim_desert"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1321.93,
+      918.88
+    ],
+    "popup": {
+      "title": "Teshyllal Wastes",
+      "description": "The desert wastelands surrounding the ruins of the ancient city of [[Teshyll]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/teshyllal_wastes/teshyllal_wastes.json",
+        "label": "Teshyllal Wastes"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/teshyllal_wastes/teshyllal_wastes.webp"
+    },
+    "id": "teshyllal_wastes"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      4186.77,
+      2806.5
+    ],
+    "popup": {
+      "title": "Hordelands",
+      "description": "'''The Endless Wastes''' or '''Taan''', the land of  horsemen tribes, most notably the [[Tuigan]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/hordelands/hordelands.json",
+        "label": "Hordelands"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/hordelands/hordelands.webp"
+    },
+    "id": "hordelands"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      3411.43,
+      2207.23
+    ],
+    "popup": {
+      "title": "Singing Sands",
+      "description": "The site of the [[1194 DR]] event known as the [[Battle of the Singing Sands]] between [[Aglarond]] and the [[Red Wizards of Thay]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/singing_sands/singing_sands.json",
+        "label": "Singing Sands"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/singing_sands/singing_sands.webp"
+    },
+    "id": "singing_sands"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1900.75,
+      2349.5
+    ],
+    "popup": {
+      "title": "Stonelands",
+      "description": "A rocky and hilly region of harsh beauty marked by knife-edged ridges, deep ravines, caverns, and overhangs.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/stonelands/stonelands.json",
+        "label": "Stonelands"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/stonelands/stonelands.webp"
+    },
+    "id": "stonelands"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1658.87,
+      2875.8
+    ],
+    "popup": {
+      "title": "Anauroch",
+      "description": "Also known as '''The Great Sand Sea''', a magical desert in [[northern Faerûn]] created my a calamity in [[10 DR]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/anauroch/anauroch.json",
+        "label": "Anauroch"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/anauroch/anauroch.webp"
+    },
+    "id": "anauroch"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      2493.75,
+      2476.5
+    ],
+    "popup": {
+      "title": "The Cold Field",
+      "description": "A flat, treeless moor permanently scarred by [[dragon's breath]] and haunted by [[ghost]]s of long-dead soldiers.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_cold_field/the_cold_field.json",
+        "label": "The Cold Field"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_cold_field/the_cold_field.webp"
+    },
+    "id": "the_cold_field"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1884.75,
+      2389.12
+    ],
+    "popup": {
+      "title": "The Burn",
+      "description": "Once a [[goblin]]-infested forest, incinerated with magic into a stretch of barren land between the [[Shaddan Hills]] to the [[Hunters' Hills]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_burn/the_burn.json",
+        "label": "The Burn"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_burn/the_burn.webp"
+    },
+    "id": "the_burn"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1698,
+      2431.5
+    ],
+    "popup": {
+      "title": "The Quarter of Emptiness",
+      "description": "The last remnant of the [[Anauroch]] in the century after the [[Spellplague]]. The region returned to its former state in the late 15{{th}} century [[DR]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_quarter_of_emptiness/the_quarter_of_emptiness.json",
+        "label": "The Quarter of Emptiness"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_quarter_of_emptiness/the_quarter_of_emptiness.webp"
+    },
+    "id": "the_quarter_of_emptiness"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1811.96,
+      2388.96
+    ],
+    "popup": {
+      "title": "Moander's Footstep",
+      "description": "The region of the dessert that housed a river and a swamp in the century that followed the [[Spellplague]] and reverted to its desert state in the late 15{{th}} century [[DR]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/moanders_footstep/moanders_footstep.json",
+        "label": "Moander's Footstep"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/moanders_footstep/moanders_footstep.webp"
+    },
+    "id": "moanders_footstep"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      2250.72,
+      3056.82
+    ],
+    "popup": {
+      "title": "Tortured Land",
+      "description": "A barren area in the northernmost [[Moonsea]] region, inhabited by [[Ondonti]] [[orc]]s who followed the teachings of of [[Eldath]], the Goddess of Peace and Quiet Places.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/tortured_land/tortured_land.json",
+        "label": "Tortured Land"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/tortured_land/tortured_land.webp"
+    },
+    "id": "tortured_land"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      823.42,
+      533.51
+    ],
+    "popup": {
+      "title": "Nsi Wastes",
+      "description": "A stretch of blighted poisonous jungle and cut down trees.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/nsi_wastes/nsi_wastes.json",
+        "label": "Nsi Wastes"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/nsi_wastes/nsi_wastes.webp"
+    },
+    "id": "nsi_wastes"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1367.19,
+      2714.93
+    ],
+    "popup": {
+      "title": "The Fallen Lands",
+      "description": "A barren area of the [[Savage Frontier]], home to many monsters and even more mysteries. In the mid-to-late 14{{th}} century [[DR]], it was beset with ''[[dead-magic]]'' zones, areas of ''[[wild magic]]'' and random discharges of ''[[witchfire]]''.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_fallen_lands/the_fallen_lands.json",
+        "label": "The Fallen Lands"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_fallen_lands/the_fallen_lands.webp"
+    },
+    "id": "the_fallen_lands"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      765.08,
+      404.81
+    ],
+    "popup": {
+      "title": "Valley of Embers",
+      "description": "A barren lowland covered in lava flows that spewed out of the [[Peaks of Flame]], the sky above was choked with clouds of ash and dotted with blazing cinders.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/valley_of_embers/valley_of_embers.json",
+        "label": "Valley of Embers"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/valley_of_embers/valley_of_embers.webp"
+    },
+    "id": "valley_of_embers"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      576.99,
+      364.86
+    ],
+    "popup": {
+      "title": "Valley of Lost Honor",
+      "description": "Once the last refuge of the [[Eshowe]] tribe before they were wiped out by [[Ras Nsi]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/valley_of_lost_honor/valley_of_lost_honor.json",
+        "label": "Valley of Lost Honor"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/valley_of_lost_honor/valley_of_lost_honor.webp"
+    },
+    "id": "valley_of_lost_honor"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      706.04,
+      297.69
+    ],
+    "popup": {
+      "title": "Land of Ash and Smoke",
+      "description": "The area of the jungle, scorched by volcanic activity, south of the [[Peaks of Flame]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/land_of_ash_and_smoke/land_of_ash_and_smoke.json",
+        "label": "Land of Ash and Smoke"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/land_of_ash_and_smoke/land_of_ash_and_smoke.webp"
+    },
+    "id": "land_of_ash_and_smoke"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      4407.75,
+      1089.65
+    ],
+    "popup": {
+      "title": "Blackfeather Barrens",
+      "description": "The area of the [[Beastlands]] that stretched between the [[Toadsquat Mountains]] and the [[Curna Mountains]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/blackfeather_barrens/blackfeather_barrens.json",
+        "label": "Blackfeather Barrens"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/blackfeather_barrens/blackfeather_barrens.webp"
+    },
+    "id": "blackfeather_barrens"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      2678,
+      2992
+    ],
+    "popup": {
+      "title": "Cinnabar Wastes",
+      "description": "A region of cold and arid badlands in northeast [[Vaasa]] named for the reddish color of the local rock formations.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/cinnabar_wastes/cinnabar_wastes.json",
+        "label": "Cinnabar Wastes"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/cinnabar_wastes/cinnabar_wastes.webp"
+    },
+    "id": "cinnabar_wastes"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1903.75,
+      2804.5
+    ],
+    "popup": {
+      "title": "At'ar's Looking Glass",
+      "description": "A sweltering and uniquely hazardous stretch of desert – a flat \"sea\" of small, multi-color polished stones that absorbed more heat from the sun than any other surface in [[Anauroch]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/atars_looking_glass/atars_looking_glass.json",
+        "label": "At'ar's Looking Glass"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/atars_looking_glass/atars_looking_glass.webp"
+    },
+    "id": "atars_looking_glass"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1984,
+      2578
+    ],
+    "popup": {
+      "title": "Bowl of Loneliness",
+      "description": "A great dune field located in [[the Sword]], between the oases of [[El Rahalat]] and [[El Ma'ra]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/bowl_of_loneliness/bowl_of_loneliness.json",
+        "label": "Bowl of Loneliness"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/bowl_of_loneliness/bowl_of_loneliness.webp"
+    },
+    "id": "bowl_of_loneliness"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1753.5,
+      2491.75
+    ],
+    "popup": {
+      "title": "The Saiyaddar",
+      "description": "A region of [[Anauroch]] used as the \"hunting grounds\" of the [[Bedine]] [[human]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_saiyaddar/the_saiyaddar.json",
+        "label": "The Saiyaddar"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_saiyaddar/the_saiyaddar.webp"
+    },
+    "id": "the_saiyaddar"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1754.75,
+      2413.5
+    ],
+    "popup": {
+      "title": "The Sword",
+      "description": "One of the three major regions of [[Anauroch]] – a hot, sandy region most thought of when someone mentioned the Great Desert.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_sword/the_sword.json",
+        "label": "The Sword"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_sword/the_sword.webp"
+    },
+    "id": "the_sword"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1788.5,
+      2691
+    ],
+    "popup": {
+      "title": "Hills of Scent",
+      "description": "A large grouping of sandy stone hills found in [[the Sword]] region of [[Anauroch]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/hills_of_scent/hills_of_scent.json",
+        "label": "Hills of Scent"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/hills_of_scent/hills_of_scent.webp"
+    },
+    "id": "hills_of_scent"
+  },
+  {
+    "categoryId": "deserts_wastelands",
+    "position": [
+      1803.5,
+      2844
+    ],
+    "popup": {
+      "title": "The Plain of Standing Stones",
+      "description": "The central region of [[Anauroch]] where winds abraded jagged rocks that stood in the middle of a sea of gravel.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_plain_of_standing_stones/the_plain_of_standing_stones.json",
+        "label": "The Plain of Standing Stones"
+      },
+      "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_plain_of_standing_stones/the_plain_of_standing_stones.webp"
+    },
+    "id": "the_plain_of_standing_stones"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "index": "defensive_tactics_escape_the_horde",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "subclass": {
+    "index": "hunter",
+    "name": "hunter",
+    "url": "/assets/atlas/subclasses/json/hunter.json"
+  },
+  "name": "defensive tactics: escape the horde",
+  "level": 7,
+  "prerequisites": [],
+  "desc": [
+    "Opportunity attacks against you are made with disadvantage."
+  ],
+  "parent": {
+    "index": "defensive_tactics",
+    "name": "defensive tactics",
+    "url": "/assets/atlas/features/defensive_tactics.json"
+  },
+  "url": "/assets/atlas/features/json/defensive_tactics_escape_the_horde.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/defensive_tactics_escape_the_horde.webp",
+  "feature_specific": {}
+}

@@ -1,0 +1,64 @@
+{
+  "higher_level": [],
+  "index": "hallucinatory_terrain",
+  "name": "hallucinatory terrain",
+  "desc": [
+    "You make natural terrain in a 150-foot cube in range look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren't changed in appearance.",
+    "The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the illusion. If the difference isn't obvious by touch, a creature carefully examining the illusion can attempt an Intelligence (Investigation) check against your spell save DC to disbelieve it. A creature who discerns the illusion for what it is, sees it as a vague image superimposed on the terrain."
+  ],
+  "range": "300 feet",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A stone, a twig, and a bit of green plant.",
+  "ritual": false,
+  "duration": "24 hours",
+  "concentration": false,
+  "casting_time": "10 minutes",
+  "level": 4,
+  "area_of_effect": {
+    "type": "cube",
+    "size": 150
+  },
+  "school": {
+    "index": "illusion",
+    "name": "illusion",
+    "url": "/assets/atlas/magic_schools/json/illusion.json"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "land",
+      "url": "/assets/atlas/subclasses/json/land.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/hallucinatory_terrain.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/json/images/hallucinatory_terrain.webp",
+  "sprite_index": 24,
+  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet6.webp"
+}

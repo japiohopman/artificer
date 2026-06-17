@@ -1,0 +1,18 @@
+{
+  "index": "skill_athletics",
+  "type": "skills",
+  "name": "skill: athletics",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/skill_athletics.json",
+  "reference": {
+    "index": "athletics",
+    "name": "athletics",
+    "url": "/assets/atlas/skills/json/athletics.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/skills/json/athletics.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
+}

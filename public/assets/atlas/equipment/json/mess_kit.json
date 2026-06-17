@@ -1,0 +1,39 @@
+{
+  "special": [],
+  "index": "mess_kit",
+  "name": "mess kit",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "kits",
+    "name": "kits",
+    "url": "/assets/atlas/equipment_categories/kits"
+  },
+  "cost": {
+    "quantity": 2,
+    "unit": "sp"
+  },
+  "weight": 1,
+  "desc": [
+    "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl."
+  ],
+  "url": "/assets/atlas/equipment/json/mess_kit.json",
+  "updated_at": "2026-04-12T08:02:03.666Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/mess_kit.webp",
+  "sprite_index": 14,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "imageUrl": "/assets/atlas/equipment/images/mess_kit.webp",
+  "_type": "equipment",
+  "category": "Kits",
+  "last_updated": "12-4-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "desc": [
+    "Forged from blackened steel and bound with grave-silk thread, this splint armor whispers of forgotten battlefields and the hollow clang of marching iron in the service of a dead god. Each plate seems to absorb the light, promising oblivion to both the wearer and those who dare stand against them.\n"
+  ],
+  "special": [],
+  "index": "splint_armor",
+  "name": "splint armor",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "armor_category": "Heavy",
+  "armor_class": {
+    "base": 17,
+    "dex_bonus": false
+  },
+  "str_minimum": 15,
+  "stealth_disadvantage": true,
+  "weight": 60,
+  "cost": {
+    "quantity": 200,
+    "unit": "gp"
+  },
+  "url": "/assets/atlas/equipment/json/splint_armor.json",
+  "updated_at": "2026-04-25T09:57:52.935Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/splint_armor.webp",
+  "sprite_index": 7,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/images/splint_armor.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "chest"
+  ],
+  "category": "Heavy Armor",
+  "last_updated": "25-4-2026",
+  "kind": "armor",
+  "equipSlots": [
+    "chest"
+  ]
+}

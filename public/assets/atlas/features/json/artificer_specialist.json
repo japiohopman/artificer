@@ -1,0 +1,23 @@
+{
+  "index": "artificer_specialist",
+  "class": {
+    "index": "artificer",
+    "name": "artificer",
+    "url": "/assets/atlas/class/json/artificer.json"
+  },
+  "name": "artificer specialist",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "At 3rd level, you choose the type of specialist you are: Alchemist, Armorer, Artillerist, or Battle Smith. Your choice grants you features at 5th, 9th, and 15th level."
+  ],
+  "url": "/assets/atlas/features/json/artificer_specialist.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/artificer_specialist.webp",
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "subclass"
+    }
+  }
+}

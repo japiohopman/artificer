@@ -1,0 +1,182 @@
+{
+  "name": "Elementals",
+  "index": "elemental",
+  "monsters": [
+    {
+      "name": "air elemental",
+      "index": "air_elemental",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/air_elemental.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/air_elemental.webp"
+    },
+    {
+      "name": "azer",
+      "index": "azer",
+      "size": "Medium",
+      "type": "elemental",
+      "alignment": "lawful neutral",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/azer.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/azer.webp"
+    },
+    {
+      "name": "djinni",
+      "index": "djinni",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "chaotic good",
+      "xp": 7200,
+      "challenge_rating": 11,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/djinni.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/djinni.webp"
+    },
+    {
+      "name": "dust mephit",
+      "index": "dust_mephit",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "neutral evil",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/dust_mephit.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/dust_mephit.webp"
+    },
+    {
+      "name": "earth elemental",
+      "index": "earth_elemental",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/earth_elemental.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/earth_elemental.webp"
+    },
+    {
+      "name": "efreeti",
+      "index": "efreeti",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "lawful evil",
+      "xp": 7200,
+      "challenge_rating": 11,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/efreeti.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/efreeti.webp"
+    },
+    {
+      "name": "fire elemental",
+      "index": "fire_elemental",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/fire_elemental.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/fire_elemental.webp"
+    },
+    {
+      "name": "gargoyle",
+      "index": "gargoyle",
+      "size": "Medium",
+      "type": "elemental",
+      "alignment": "chaotic evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/gargoyle.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/gargoyle.webp"
+    },
+    {
+      "name": "ice mephit",
+      "index": "ice_mephit",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "neutral evil",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/ice_mephit.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/ice_mephit.webp"
+    },
+    {
+      "name": "invisible stalker",
+      "index": "invisible_stalker",
+      "size": "Medium",
+      "type": "elemental",
+      "alignment": "neutral",
+      "xp": 2300,
+      "challenge_rating": 6,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/invisible_stalker.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/invisible_stalker.webp"
+    },
+    {
+      "name": "magma mephit",
+      "index": "magma_mephit",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "neutral evil",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/magma_mephit.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/magma_mephit.webp"
+    },
+    {
+      "name": "magmin",
+      "index": "magmin",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "chaotic neutral",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/magmin.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/magmin.webp"
+    },
+    {
+      "name": "salamander",
+      "index": "salamander",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "neutral evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/salamander.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/salamander.webp"
+    },
+    {
+      "name": "steam mephit",
+      "index": "steam_mephit",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "neutral evil",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/steam_mephit.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/steam_mephit.webp"
+    },
+    {
+      "name": "water elemental",
+      "index": "water_elemental",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/water_elemental.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/water_elemental.webp"
+    },
+    {
+      "name": "xorn",
+      "index": "xorn",
+      "size": "Medium",
+      "type": "elemental",
+      "alignment": "neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/xorn.json",
+      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/xorn.webp"
+    }
+  ]
+}

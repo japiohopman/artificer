@@ -1,0 +1,79 @@
+{
+  "index": "badger",
+  "name": "badger",
+  "size": "Tiny",
+  "type": "beast",
+  "alignment": "unaligned",
+  "armor_class": 10,
+  "hit_points": 3,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4+1",
+  "speed": {
+    "walk": "20 ft.",
+    "burrow": "5 ft."
+  },
+  "strength": 4,
+  "dexterity": 11,
+  "constitution": 12,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 5,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "30 ft.",
+    "passive_perception": 11
+  },
+  "languages": "",
+  "challenge_rating": "0",
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "keen smell",
+      "desc": "The badger has advantage on Wisdom (Perception) checks that rely on smell.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 1 piercing damage.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/badger.webp",
+  "url": "/assets/atlas/enemies/json/badger.json",
+  "updated_at": "2026-05-10T20:53:19.045Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 9,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet2.webp",
+  "stats": {
+    "str": 4,
+    "dex": 11,
+    "con": 12,
+    "int": 2,
+    "wis": 12,
+    "cha": 5
+  },
+  "imageUrl": "/assets/atlas/enemies/images/badger.webp",
+  "_type": "enemies",
+  "background_type": "water4",
+  "last_updated": "10-5-2026"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mantol_derith",
+  "name": "Mantol Derith",
+  "type": "trading_post",
+  "plain": "Material Plane",
+  "world": "totil",
+  "continent": "fearun",
+  "region": "underdark",
+  "sub_region": "northdark",
+  "parent": "cities",
+  "title": "Mantol-Derith",
+  "description": "A hidden trading post where [[drow]], [[duergar]], [[svirfneblin]], and surface dwellers meet to trade in peace.",
+  "wiki": "Mantol-Derith is a neutral ground in the Northdark, protected by a magical covenant that prevents violence. It is one of the few places where Underdark and surface civilizations interact peacefully.",
+  "image": "/assets/atlas/world/toril/faerun/cities/mantol_derith/mantol_derith.webp",
+  "thumbnail": "/assets/atlas/world/toril/faerun/cities/mantol_derith/mantol_derith_thumb.webp",
+  "banner": "/assets/atlas/world/toril/faerun/cities/mantol_derith/mantol_derith_banner.webp",
+  "tags": [
+    "trading_post",
+    "underdark",
+    "neutral"
+  ],
+  "map": "/assets/atlas/world/toril/faerun/cities/mantol_derith/mantol_derith_map.webp",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
+  "coordinates": {
+    "lat": 0,
+    "lng": 0
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      3000,
+      1994
+    ]
+  ],
+  "origin": "bottom-left",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "General goods, exotics",
+  "metadata": {
+    "government": "The Covenant",
+    "military": "Private Guards",
+    "population": "Varies",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
+}

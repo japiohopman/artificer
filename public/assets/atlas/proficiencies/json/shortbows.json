@@ -1,0 +1,18 @@
+{
+  "index": "shortbows",
+  "type": "weapons",
+  "name": "shortbows",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/shortbows.json",
+  "reference": {
+    "index": "shortbow",
+    "name": "shortbow",
+    "url": "/assets/atlas/equipment/json/shortbow.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/shortbows.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

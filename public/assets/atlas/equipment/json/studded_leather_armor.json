@@ -1,0 +1,44 @@
+{
+  "desc": [
+    "Clotted blood and whispering shadows cling to the darkened studs of this leather armor, each a tiny, obsidian eye reflecting the horrors it has witnessed and the screams it has absorbed. It smells faintly of grave dust and unspoken pacts, promising protection at a cost yet to be revealed.\n"
+  ],
+  "special": [],
+  "index": "studded_leather_armor",
+  "name": "studded leather armor",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/armor"
+  },
+  "armor_category": "Light",
+  "armor_class": {
+    "base": 12,
+    "dex_bonus": true
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false,
+  "weight": 13,
+  "cost": {
+    "quantity": 45,
+    "unit": "gp"
+  },
+  "url": "/assets/atlas/equipment/json/studded_leather_armor.json",
+  "updated_at": "2026-04-19T14:48:57.612Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/studded_leather_armor.webp",
+  "sprite_index": 13,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/images/studded_leather_armor.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Light Armor",
+  "slot": [
+    "chest"
+  ],
+  "last_updated": "19-4-2026",
+  "kind": "armor",
+  "equipSlots": [
+    "chest"
+  ]
+}

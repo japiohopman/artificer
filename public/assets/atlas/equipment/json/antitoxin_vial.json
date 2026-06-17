@@ -1,0 +1,42 @@
+{
+  "special": [],
+  "index": "antitoxin_vial",
+  "name": "antitoxin (vial)",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "desc": [
+    "A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs."
+  ],
+  "url": "/assets/atlas/equipment/json/antitoxin_vial.json",
+  "updated_at": "2026-04-21T14:29:11.375Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/antitoxin_vial.webp",
+  "sprite_index": 7,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
+  "imageUrl": "/assets/atlas/equipment/images/antitoxin_vial.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "21-4-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

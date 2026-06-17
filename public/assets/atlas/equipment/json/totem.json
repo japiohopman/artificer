@@ -1,0 +1,43 @@
+{
+  "special": [],
+  "index": "totem",
+  "name": "totem",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "druidic_foci",
+    "name": "druidic foci",
+    "url": "/assets/atlas/equipment_categories/druidic_foci"
+  },
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "desc": [
+    "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus."
+  ],
+  "url": "/assets/atlas/equipment/json/totem.json",
+  "updated_at": "2026-04-25T09:53:03.107Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/totem.webp",
+  "sprite_index": 19,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet9.webp",
+  "imageUrl": "/assets/atlas/equipment/images/totem.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Druidic Foci",
+  "slot": [
+    "focus"
+  ],
+  "last_updated": "25-4-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

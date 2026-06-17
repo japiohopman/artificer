@@ -1,0 +1,66 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "halberd",
+  "name": "halberd",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 20,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d10",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 6,
+  "properties": [
+    {
+      "index": "heavy",
+      "name": "heavy",
+      "url": "/assets/atlas/weapon_properties/heavy"
+    },
+    {
+      "index": "reach",
+      "name": "reach",
+      "url": "/assets/atlas/weapon_properties/reach"
+    },
+    {
+      "index": "two_handed",
+      "name": "two_handed",
+      "url": "/assets/atlas/weapon_properties/two_handed"
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/halberd.json",
+  "updated_at": "2026-05-04T17:18:46.661Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/halberd.webp",
+  "sprite_index": 23,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/halberd.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Weapon",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "4-5-2026",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

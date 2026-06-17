@@ -1,0 +1,47 @@
+{
+  "level": 2,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "ki",
+      "name": "Ki",
+      "url": "/assets/atlas/features/json/ki.json"
+    },
+    {
+      "index": "flurry_of_blows",
+      "name": "Flurry of Blows",
+      "url": "/assets/atlas/features/json/flurry_of_blows.json"
+    },
+    {
+      "index": "patient_defense",
+      "name": "Patient Defense",
+      "url": "/assets/atlas/features/json/patient_defense.json"
+    },
+    {
+      "index": "step_of_the_wind",
+      "name": "Step of the Wind",
+      "url": "/assets/atlas/features/json/step_of_the_wind.json"
+    },
+    {
+      "index": "unarmored_movement_1",
+      "name": "Unarmored Movement",
+      "url": "/assets/atlas/features/json/unarmored_movement_1.json"
+    }
+  ],
+  "class_specific": {
+    "martial_arts": {
+      "dice_count": 1,
+      "dice_value": 4
+    },
+    "ki_points": 2,
+    "unarmored_movement": 10
+  },
+  "index": "monk_level_2",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/2/monk_level_2.json"
+}

@@ -1,0 +1,36 @@
+{
+  "index": "helm_of_comprehending_languages",
+  "name": "helm of comprehending languages",
+  "equipment_category": {
+    "index": "wondrous_items",
+    "name": "wondrous items",
+    "url": "/assets/atlas/equipment_categories/wondrous_items"
+  },
+  "rarity": {
+    "name": "uncommon"
+  },
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Wondrous item, uncommon",
+    "While wearing this helm, you can use an action to cast the comprehend languages spell from it at will."
+  ],
+  "feature_specific": {
+    "spells": [
+      {
+        "spell": {
+          "index": "comprehend_languages",
+          "name": "comprehend languages",
+          "url": "/assets/atlas/spell/json/comprehend_languages.json"
+        },
+        "usage": {
+          "type": "at_will"
+        },
+        "special_action": "action"
+      }
+    ]
+  },
+  "url": "/assets/atlas/magic_items/json/helm_of_comprehending_languages.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/helm_of_comprehending_languages.webp"
+}

@@ -1,0 +1,124 @@
+{
+  "index": "martial_weapons",
+  "name": "martial weapons",
+  "equipment": [
+    {
+      "index": "battleaxe",
+      "name": "battleaxe",
+      "url": "/assets/atlas/equipment/json/battleaxe.json"
+    },
+    {
+      "index": "flail",
+      "name": "flail",
+      "url": "/assets/atlas/equipment/json/flail.json"
+    },
+    {
+      "index": "glaive",
+      "name": "glaive",
+      "url": "/assets/atlas/equipment/json/glaive.json"
+    },
+    {
+      "index": "greataxe",
+      "name": "greataxe",
+      "url": "/assets/atlas/equipment/json/greataxe.json"
+    },
+    {
+      "index": "greatsword",
+      "name": "greatsword",
+      "url": "/assets/atlas/equipment/json/greatsword.json"
+    },
+    {
+      "index": "halberd",
+      "name": "halberd",
+      "url": "/assets/atlas/equipment/json/halberd.json"
+    },
+    {
+      "index": "lance",
+      "name": "lance",
+      "url": "/assets/atlas/equipment/json/lance.json"
+    },
+    {
+      "index": "longsword",
+      "name": "longsword",
+      "url": "/assets/atlas/equipment/json/longsword.json"
+    },
+    {
+      "index": "maul",
+      "name": "maul",
+      "url": "/assets/atlas/equipment/json/maul.json"
+    },
+    {
+      "index": "morningstar",
+      "name": "morningstar",
+      "url": "/assets/atlas/equipment/json/morningstar.json"
+    },
+    {
+      "index": "pike",
+      "name": "pike",
+      "url": "/assets/atlas/equipment/json/pike.json"
+    },
+    {
+      "index": "rapier",
+      "name": "rapier",
+      "url": "/assets/atlas/equipment/json/rapier.json"
+    },
+    {
+      "index": "scimitar",
+      "name": "scimitar",
+      "url": "/assets/atlas/equipment/json/scimitar.json"
+    },
+    {
+      "index": "shortsword",
+      "name": "shortsword",
+      "url": "/assets/atlas/equipment/json/shortsword.json"
+    },
+    {
+      "index": "trident",
+      "name": "trident",
+      "url": "/assets/atlas/equipment/json/trident.json"
+    },
+    {
+      "index": "war_pick",
+      "name": "war pick",
+      "url": "/assets/atlas/equipment/json/war_pick.json"
+    },
+    {
+      "index": "warhammer",
+      "name": "warhammer",
+      "url": "/assets/atlas/equipment/json/warhammer.json"
+    },
+    {
+      "index": "whip",
+      "name": "whip",
+      "url": "/assets/atlas/equipment/json/whip.json"
+    },
+    {
+      "index": "blowgun",
+      "name": "blowgun",
+      "url": "/assets/atlas/equipment/json/blowgun.json"
+    },
+    {
+      "index": "crossbow_hand",
+      "name": "crossbow, hand",
+      "url": "/assets/atlas/equipment/json/crossbow_hand.json"
+    },
+    {
+      "index": "crossbow_heavy",
+      "name": "crossbow, heavy",
+      "url": "/assets/atlas/equipment/json/crossbow_heavy.json"
+    },
+    {
+      "index": "longbow",
+      "name": "longbow",
+      "url": "/assets/atlas/equipment/json/longbow.json"
+    },
+    {
+      "index": "net",
+      "name": "net",
+      "url": "/assets/atlas/equipment/json/net.json"
+    }
+  ],
+  "url": "/assets/atlas/equipment_categories/json/martial_weapons.json",
+  "updated_at": "2025-10-24T20:42:12.821Z",
+  "image": "/assets/atlas/equipment_categories/martial_weapons.webp"
+}

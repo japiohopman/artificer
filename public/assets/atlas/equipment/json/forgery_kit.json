@@ -1,0 +1,39 @@
+{
+  "special": [],
+  "index": "forgery_kit",
+  "name": "forgery kit",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "kits",
+    "name": "kits",
+    "url": "/assets/atlas/equipment_categories/kits"
+  },
+  "cost": {
+    "quantity": 15,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "desc": [
+    "This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document."
+  ],
+  "url": "/assets/atlas/equipment/json/forgery_kit.json",
+  "updated_at": "2026-04-12T07:57:18.338Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/forgery_kit.webp",
+  "sprite_index": 15,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "imageUrl": "/assets/atlas/equipment/images/forgery_kit.webp",
+  "_type": "equipment",
+  "category": "Kits",
+  "last_updated": "12-4-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

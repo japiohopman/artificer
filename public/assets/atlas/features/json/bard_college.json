@@ -1,0 +1,23 @@
+{
+  "index": "bard_college",
+  "class": {
+    "index": "bard",
+    "name": "bard",
+    "url": "/assets/atlas/class/json/bard.json"
+  },
+  "name": "bard college",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "At 3rd level, you delve into the advanced techniques of a bard college of your choice, such as the College of Lore. Your choice grants you features at 3rd level and again at 6th and 14th level."
+  ],
+  "url": "/assets/atlas/features/json/bard_college.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/bard_college.webp",
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "subclass"
+    }
+  }
+}

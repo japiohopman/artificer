@@ -1,0 +1,45 @@
+{
+  "name": "equipment",
+  "index": "equipment",
+  "desc": "# Equipment\n\nCommon coins come in several different denominations based on the relative worth of the metal from which they are made. The three most common coins are the gold piece (gp), the silver piece (sp), and the copper piece (cp).\n\nWith one gold piece, a character can buy a bedroll, 50 feet of good rope, or a goat. A skilled (but not exceptional) artisan can earn one gold piece a day. The old piece is the standard unit of measure for wealth, even if the coin itself is not commonly used. When merchants discuss deals that involve goods or services worth hundreds or thousands of gold pieces, the transactions don't usually involve the exchange of individual coins. Rather, the gold piece is a standard measure of value, and the actual exchange is in gold bars, letters of credit, or valuable goods.\n\nOne gold piece is worth ten silver pieces, the most prevalent coin among commoners. A silver piece buys a laborer's work for half a day, a flask of lamp oil, or a night's rest in a poor inn.\n\nOne silver piece is worth ten copper pieces, which are common among laborers and beggars. A single copper piece buys a candle, a torch, or a piece of chalk.\n\nIn addition, unusual coins made of other precious metals sometimes appear in treasure hoards. The electrum piece (ep) and the platinum piece (pp) originate from fallen empires and lost kingdoms, and they sometimes arouse suspicion and skepticism when used in transactions. An electrum piece is worth five silver pieces, and a platinum piece is worth ten gold pieces.\n\nA standard coin weighs about a third of an ounce, so fifty coins weigh a pound.\n",
+  "subsections": [
+    {
+      "name": "standard exchange rates",
+      "index": "standard_exchange_rates",
+      "url": "/assets/atlas/mechanic/rule_sections/json/standard_exchange_rates.json"
+    },
+    {
+      "name": "objects",
+      "index": "objects",
+      "url": "/assets/atlas/mechanic/rule_sections/json/objects.json"
+    },
+    {
+      "name": "poisons",
+      "index": "poisons",
+      "url": "/assets/atlas/mechanic/rule_sections/json/poisons.json"
+    },
+    {
+      "name": "attunement",
+      "index": "attunement",
+      "url": "/assets/atlas/mechanic/rule_sections/json/attunement.json"
+    },
+    {
+      "name": "wearing and wielding items",
+      "index": "wearing_and_wielding_items",
+      "url": "/assets/atlas/mechanic/rule_sections/json/wearing_and_wielding_items.json"
+    },
+    {
+      "name": "activating an item",
+      "index": "activating_an_item",
+      "url": "/assets/atlas/mechanic/rule_sections/json/activating_an_item.json"
+    },
+    {
+      "name": "sentient magic items",
+      "index": "sentient_magic_items",
+      "url": "/assets/atlas/mechanic/rule_sections/json/sentient_magic_items.json"
+    }
+  ],
+  "url": "/assets/atlas/mechanic/rules/json/equipment.json",
+  "updated_at": "2025-10-24T20:42:14.409Z",
+  "image": "/assets/atlas/mechanic/rules/equipment.webp"
+}

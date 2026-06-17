@@ -1,0 +1,278 @@
+{
+  "category": "inns",
+  "categoryId": "12",
+  "updatedAt": "2026-06-04T07:02:42.036026Z",
+  "location_id": "baldurs_gate",
+  "sub_locations": [
+    {
+      "id": "49",
+      "name": "Helm and Cloak",
+      "categoryId": "12",
+      "type": "marker",
+      "position": [
+        497.9994806496428,
+        1375.5005046219535
+      ],
+      "popup": {
+        "title": "Helm and Cloak",
+        "description": "A high-end inn, rooming house, and [[festhall]], popular both with travelers and with local residents, who enjoyed its resplendent dining room. It was also home to the majority of the [[Knights of the Unicorn]], who rented most of the upper floor.",
+        "image": "File:Helm and Cloak.jpg"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tavern",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "53",
+      "name": "Three Old Kegs",
+      "categoryId": "12",
+      "type": "marker",
+      "position": [
+        516.8953052572485,
+        1520.9863295106584
+      ],
+      "popup": {
+        "title": "Three Old Kegs",
+        "description": "A well-known inn widely regarded as one of the best establishments in all of [[Faerûn]], and was known for its comfortable furnishings and generally somnific atmosphere.",
+        "image": "File:Three old kegs.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tavern",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "65",
+      "name": "Blade and Stars",
+      "categoryId": "12",
+      "type": "marker",
+      "position": [
+        1148.4996883897857,
+        1365.4994953780465
+      ],
+      "popup": {
+        "title": "Blade and Stars",
+        "description": "A quiet inn known for its high-quality foodstuffs, and a legend of a [[yuan-ti]] being trapped within the inn's walls, imprisoned while fighting a [[wizard]].",
+        "image": "File:AR1300.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tavern",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "100",
+      "name": "Splurging Sturgeon",
+      "categoryId": "12",
+      "type": "marker",
+      "position": [
+        944.3410328274023,
+        1478.5609931042814
+      ],
+      "popup": {
+        "title": "Splurging Sturgeon",
+        "description": "Once a threadbare inn and tavern, turned into a fanciful eatery specializing in seafood, both exotic and local in [[1482 DR]].",
+        "image": "File:SplurgeS.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tavern",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "101",
+      "name": "Purple Wyrm Inn and Tavern",
+      "categoryId": "12",
+      "type": "marker",
+      "position": [
+        340.82441527520814,
+        1207.8405796406719
+      ],
+      "popup": {
+        "title": "Purple Wyrm Inn and Tavern",
+        "description": "A very famous inn and tavern frequented by merchants, business owners, and adventurers.",
+        "image": "File:Purple Wyrm Inn and Tavern.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tavern",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "116",
+      "name": "Ascloakan's Fine Inn",
+      "categoryId": "12",
+      "type": "marker",
+      "position": [
+        1242,
+        1391.5010092439072
+      ],
+      "popup": {
+        "title": "Ascloakan's Fine Inn",
+        "description": "An inn of note at the meeting of [[Hammaskarl's Ride]] and [[Talankar's Lane]].",
+        "image": "File:Ascloakan's Fine Inn.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tavern",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "184",
+      "name": "Drakon Tavern",
+      "categoryId": "12",
+      "type": "marker",
+      "position": [
+        384.31253557488856,
+        1155.7667474926225
+      ],
+      "popup": {
+        "title": "Drakon Tavern",
+        "description": "A relatively small inn and tavern located next door to the [[Gist]] family estate with a small park plaza at the building's back.",
+        "image": "File:Drakon Tavern.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tavern",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "185",
+      "name": "Keexie Tavern",
+      "categoryId": "12",
+      "type": "marker",
+      "position": [
+        1098.8439379638949,
+        1532.301643706867
+      ],
+      "popup": {
+        "title": "Keexie Tavern",
+        "description": "A simple tavern and inn that served as a front for [[Baldur's Gate]]'s thieves guild in the 14 century [[DR]], located across the plaza from [[Sorcerous Sundries]].",
+        "image": "File:Keexie Tavern.png"
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tavern",
+      "equipment_categories": [],
+      "material_categories": []
+    },
+    {
+      "id": "199",
+      "name": "Nortale's Hostel",
+      "categoryId": "12",
+      "type": "marker",
+      "position": [
+        924.8962258652255,
+        1397.2429996246178
+      ],
+      "popup": {
+        "title": "Nortale's Hostel",
+        "description": "Cheap temporary lodgings, used to house refugees during the [[Absolute crisis]] of [[1492 DR]].",
+        "image": ""
+      },
+      "day": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "night": {
+        "ambient": null,
+        "npcs": [],
+        "map": null,
+        "image": null
+      },
+      "archetype": "tavern",
+      "equipment_categories": [],
+      "material_categories": []
+    }
+  ]
+}

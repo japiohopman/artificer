@@ -1,0 +1,15 @@
+{
+  "index": "medicine",
+  "name": "medicine",
+  "desc": [
+    "A Wisdom (Medicine) check lets you try to stabilize a dying companion or diagnose an illness."
+  ],
+  "ability_score": {
+    "index": "wis",
+    "name": "wis",
+    "url": "/assets/atlas/ability_scores/json/wis.json"
+  },
+  "url": "/assets/atlas/skills/json/medicine.json",
+  "updated_at": "2025-10-24T20:42:14.523Z",
+  "image": "/assets/atlas/skills/json/medicine.webp"
+}

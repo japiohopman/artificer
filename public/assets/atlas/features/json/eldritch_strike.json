@@ -1,0 +1,23 @@
+{
+  "index": "eldritch_strike",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "subclass": {
+    "index": "eldritch_knight",
+    "name": "eldritch knight",
+    "url": "/assets/atlas/subclasses/json/eldritch_knight.json"
+  },
+  "name": "eldritch strike",
+  "level": 10,
+  "prerequisites": [],
+  "desc": [
+    "At 10th level, you learn how to make your weapon strikes undercut a creature's resistance to your spells. When you hit a creature with a weapon attack, that creature has disadvantage on the next saving throw it makes against a spell you cast before the end of your next turn."
+  ],
+  "url": "/assets/atlas/features/json/eldritch_strike.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/eldritch_strike.webp",
+  "feature_specific": {}
+}

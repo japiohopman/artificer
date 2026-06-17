@@ -1,0 +1,33 @@
+{
+  "index": "eldritch_invocation_repelling_blast",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "eldritch invocation: repelling blast",
+  "level": 2,
+  "prerequisites": [
+    {
+      "type": "spell",
+      "spell": "public/assets/atlas/spells/eldritch-blast.json"
+    }
+  ],
+  "desc": [
+    "When you hit a creature with eldritch blast, you can push the creature up to 10 feet away from you in a straight line."
+  ],
+  "parent": {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "url": "/assets/atlas/features/eldritch_invocations.json"
+  },
+  "url": "/assets/atlas/features/json/eldritch_invocation_repelling_blast.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/eldritch_invocation_repelling_blast.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "push_on_hit": 10,
+      "condition": "eldritch_blast"
+    }
+  }
+}

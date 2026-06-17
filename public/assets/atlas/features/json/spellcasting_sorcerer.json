@@ -1,0 +1,25 @@
+{
+  "index": "spellcasting_sorcerer",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "/assets/atlas/class/json/sorcerer.json"
+  },
+  "name": "spellcasting: sorcerer",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells."
+  ],
+  "reference": "public/assets/atlas/class/json/sorcerer/spellcasting.json",
+  "url": "/assets/atlas/features/json/spellcasting_sorcerer.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/spellcasting_sorcerer.webp",
+  "feature_specific": {
+    "spellcasting_ability": {
+      "index": "charisma",
+      "name": "charisma",
+      "url": "/assets/atlas/ability_scores/json/cha.json"
+    }
+  }
+}

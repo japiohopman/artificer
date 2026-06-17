@@ -1,0 +1,68 @@
+{
+  "level": 2,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "font_of_magic",
+      "name": "Font of Magic",
+      "url": "/assets/atlas/features/json/font_of_magic.json"
+    },
+    {
+      "index": "flexible_casting_creating_spell_slots",
+      "name": "Flexible Casting: Creating Spell Slots",
+      "url": "/assets/atlas/features/json/flexible_casting_creating_spell_slots.json"
+    },
+    {
+      "index": "flexible_casting_converting_spell_slot",
+      "name": "Flexible Casting: Converting Spell Slot",
+      "url": "/assets/atlas/features/json/flexible_casting_converting_spell_slot.json"
+    }
+  ],
+  "class_specific": {
+    "sorcery_points": 2,
+    "metamagic_known": 0,
+    "creating_spell_slots": [
+      {
+        "spell_slot_level": 1,
+        "sorcery_point_cost": 2
+      },
+      {
+        "spell_slot_level": 2,
+        "sorcery_point_cost": 3
+      },
+      {
+        "spell_slot_level": 3,
+        "sorcery_point_cost": 5
+      },
+      {
+        "spell_slot_level": 4,
+        "sorcery_point_cost": 6
+      },
+      {
+        "spell_slot_level": 5,
+        "sorcery_point_cost": 7
+      }
+    ]
+  },
+  "index": "sorcerer_level_2",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/sorcerer.json"
+  },
+  "url": "/assets/atlas/class/levels/2/sorcerer_level_2.json",
+  "spellcasting": {
+    "cantrips_known": 4,
+    "spells_known": 3,
+    "spell_slots_level_1": 3,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

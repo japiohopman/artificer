@@ -1,0 +1,26 @@
+{
+  "id": "phlegethos",
+  "name": "Phlegethos",
+  "type": "plane_layer",
+  "parent": "nine_hells",
+  "title": "Phlegethos: The Fourth Layer",
+  "description": "Phlegethos is the fourth layer of the Nine Hells, a volcanic wasteland complete with lava rivers and fires that burn even without fuel.",
+  "wiki": "Phlegethos is a place of eternal fire and torture. It is ruled jointly by the Archduchess Fierna and her father, Archduke Belial, from the city of Abriymoch.",
+  "image": "phlegethos.webp",
+  "tags": [
+    "plane_layer",
+    "nine_hells",
+    "phlegethos"
+  ],
+  "metadata": {
+    "rulers": [
+      "Fierna",
+      "Belial"
+    ],
+    "key_locations": [
+      "Abriymoch",
+      "Lake of Fire"
+    ]
+  },
+  "updated_at": "2024-06-19T00:00:00.000Z"
+}

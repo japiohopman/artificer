@@ -1,0 +1,64 @@
+{
+  "id": "suzail",
+  "name": "Suzail",
+  "type": "metropolis",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "Faerûn",
+  "region": "",
+  "sub_region": "",
+  "parent": "cities",
+  "title": "Suzail",
+  "description": "The capital of [[Cormyr]] and the seat of power, named after [[Suzara Obarskyr]], the mother of the first king.<br/><br/>Interactive map can be found [[Map:Suzail – 15th Century DR|here]].",
+  "wiki": "",
+  "image": "/assets/atlas/world/toril/faerun/cities/suzail/suzail.webp",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [
+    "city",
+    "metropolis"
+  ],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [
+    "/assets/atlas/world/toril/faerun/cities/suzail/sublocations/government.json",
+    "/assets/atlas/world/toril/faerun/cities/suzail/sublocations/inns_taverns.json",
+    "/assets/atlas/world/toril/faerun/cities/suzail/sublocations/landmarks.json",
+    "/assets/atlas/world/toril/faerun/cities/suzail/sublocations/estates.json",
+    "/assets/atlas/world/toril/faerun/cities/suzail/sublocations/points_of_interest.json",
+    "/assets/atlas/world/toril/faerun/cities/suzail/sublocations/roads.json",
+    "/assets/atlas/world/toril/faerun/cities/suzail/sublocations/shops.json",
+    "/assets/atlas/world/toril/faerun/cities/suzail/sublocations/temples_shrines.json"
+  ],
+  "coordinates": {
+    "lat": 1900.25,
+    "lng": 2137.75
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "origin": "",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "",
+    "military": "",
+    "population": "",
+    "organizations": "",
+    "trade": ""
+  },
+  "categories": []
+}

@@ -1,0 +1,33 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "horse_draft",
+  "name": "horse, draft",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Mounts and Other Animals",
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "speed": {
+    "quantity": 40,
+    "unit": "ft/round"
+  },
+  "capacity": "540 lb.",
+  "url": "/assets/atlas/equipment/json/horse_draft.json",
+  "updated_at": "2026-04-21T14:06:29.153Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/horse_draft.webp",
+  "sprite_index": 8,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "imageUrl": "/assets/atlas/equipment/images/horse_draft.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "21-4-2026",
+  "kind": "adventuring_gear"
+}

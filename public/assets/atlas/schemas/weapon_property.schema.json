@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/weapon_property.schema.json",
+  "title": "Weapon Property",
+  "description": "Schema for weapon properties in the game atlas.",
+  "type": "object",
+  "required": [
+    "index",
+    "name",
+    "desc",
+    "url",
+    "updated_at",
+    "property_specific"
+  ],
+  "properties": {
+    "index": {
+      "type": "string",
+      "description": "The unique identifier for the weapon property."
+    },
+    "name": {
+      "type": "string",
+      "description": "The human-readable name of the weapon property."
+    },
+    "desc": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "A description of the weapon property."
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^/assets/atlas/weapon_properties/json/.+\\.json$",
+      "description": "The canonical URL to the JSON file."
+    },
+    "image": {
+      "type": "string",
+      "pattern": "^/assets/atlas/weapon_properties/images/.+\\.webp$",
+      "description": "The canonical URL to the image file."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The timestamp of the last update."
+    },
+    "property_specific": {
+      "type": "object",
+      "description": "Machine-readable logic for the weapon property."
+    }
+  }
+}

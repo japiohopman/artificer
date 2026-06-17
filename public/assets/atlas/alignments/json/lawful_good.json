@@ -1,0 +1,22 @@
+{
+  "index": "lawful_good",
+  "name": "Lawful Good",
+  "abbreviation": "LG",
+  "color": "#2563EB",
+  "desc": "Lawful good (LG) creatures can be counted on to do the right thing as expected by society.",
+  "description": "Lawful good (LG) creatures can be counted on to do the right thing as expected by society. Gold dragons, paladins, and most dwarves are lawful good.",
+  "gods": [
+    {
+      "index": "ilmater",
+      "name": "Ilmater",
+      "url": "/assets/atlas/gods/ilmater.json"
+    },
+    {
+      "index": "torm",
+      "name": "Torm",
+      "url": "/assets/atlas/gods/torm.json"
+    }
+  ],
+  "url": "/assets/atlas/alignments/json/lawful_good.json",
+  "updated_at": "2026-06-06T10:34:52.343224Z"
+}

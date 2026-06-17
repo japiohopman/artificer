@@ -1,0 +1,716 @@
+[
+  {
+    "categoryId": "wetlands",
+    "position": [
+      3238.48,
+      1662.52
+    ],
+    "popup": {
+      "title": "Adder Swamp",
+      "description": "A dangerous expanse of [[lycanthrope]]-infested marshland that surrounded the [[Adder River]] delta in [[Chessenta]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/adder_swamp/adder_swamp.json",
+        "label": "Adder Swamp"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/adder_swamp/adder_swamp.webp"
+    },
+    "id": "adder_swamp"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      3999,
+      595.5
+    ],
+    "popup": {
+      "title": "Mortik Swamp",
+      "description": "Also spelled '''Mortick Swamp''', inhabited by monsters, namely [[merrow]] and [[scrag]]s, which often raided nearby lands.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/mortik_swamp/mortik_swamp.json",
+        "label": "Mortik Swamp"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/mortik_swamp/mortik_swamp.webp"
+    },
+    "id": "mortik_swamp"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      3090.74,
+      126.69
+    ],
+    "popup": {
+      "title": "Great Swamp of Rethild",
+      "description": "Also known as the '''Great Swamp''' or ''Rethild'' and ''Kethid,''' a swamp in [[Dambrath]] filled with dangerous creatures and diseases like [[cackle fever]] and [[mindfire]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/great_swamp_of_rethild/great_swamp_of_rethild.json",
+        "label": "Great Swamp of Rethild"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/great_swamp_of_rethild/great_swamp_of_rethild.webp"
+    },
+    "id": "great_swamp_of_rethild"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      2792.33,
+      765.91
+    ],
+    "popup": {
+      "title": "Lhespenbog",
+      "description": "A small wetland of sprawling [[reed]]-fields used in creation of the [[enchanted]] [[staves]] – ''[[Aiedo wither-stick]]s''.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/lhespenbog/lhespenbog.json",
+        "label": "Lhespenbog"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/lhespenbog/lhespenbog.webp"
+    },
+    "id": "lhespenbog"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      2744.28,
+      118.43
+    ],
+    "popup": {
+      "title": "Kilmaruu Swamp",
+      "description": "A stretch of [[undead]]-infested swamp and marshland where a ruined city stood. The swamp was the topic of the infamous [[Halruaa]]n strategic ''[[Kilmaruu Paradox]]''.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/kilmaruu_swamp/kilmaruu_swamp.json",
+        "label": "Kilmaruu Swamp"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/kilmaruu_swamp/kilmaruu_swamp.webp"
+    },
+    "id": "kilmaruu_swamp"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      2411.58,
+      148.84
+    ],
+    "popup": {
+      "title": "Swamp of Akhlaur",
+      "description": "Also known as the '''Swamp of Ghalagar''', was a magically created swamp from a ''[[gate]]'' to the [[Elemental Plane of Water]], closed permanently in [[1373 DR]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/swamp_of_akhlaur/swamp_of_akhlaur.json",
+        "label": "Swamp of Akhlaur"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/swamp_of_akhlaur/swamp_of_akhlaur.webp"
+    },
+    "id": "swamp_of_akhlaur"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      1765.99,
+      877.16
+    ],
+    "popup": {
+      "title": "Spider Swamp",
+      "description": "The fetid swamp, formed by a great [[marid]]'s death in the [[Steam Clashes]] of [[−7687 DR]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/spider_swamp/spider_swamp.json",
+        "label": "Spider Swamp"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/spider_swamp/spider_swamp.webp"
+    },
+    "id": "spider_swamp"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      3574.42,
+      2128.39
+    ],
+    "popup": {
+      "title": "Umber Marsh",
+      "description": "A large patch of boggy land on the border of [[Aglarond]] and [[Thay]], virtually impassible with many small springs and streams running across the wetlands, and eventually daring into [[River Lapendrar]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/umber_marsh/umber_marsh.json",
+        "label": "Umber Marsh"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/umber_marsh/umber_marsh.webp"
+    },
+    "id": "umber_marsh"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      3734.93,
+      2554.42
+    ],
+    "popup": {
+      "title": "Surmarsh",
+      "description": "A dreary, humid swamp with its stench being especially wretched during the summer.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/surmarsh/surmarsh.json",
+        "label": "Surmarsh"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/surmarsh/surmarsh.webp"
+    },
+    "id": "surmarsh"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      1156.47,
+      1604.77
+    ],
+    "popup": {
+      "title": "Zehoarast Floodplains",
+      "description": "The floodplains that encompassed the lowlands between the [[River Esmel]] and the [[Small Teeth]] and west of the [[Trade Way]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/zehoarast_floodplains/zehoarast_floodplains.json",
+        "label": "Zehoarast Floodplains"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/zehoarast_floodplains/zehoarast_floodplains.webp"
+    },
+    "id": "zehoarast_floodplains"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      2221,
+      1714
+    ],
+    "popup": {
+      "title": "Wetwoods",
+      "description": "Also known as the '''Flooded Forest''', a misty bog of [[fungus]]-coated trees.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/wetwoods/wetwoods.json",
+        "label": "Wetwoods"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/wetwoods/wetwoods.webp"
+    },
+    "id": "wetwoods"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      1776,
+      2309.5
+    ],
+    "popup": {
+      "title": "Farsea Marshes",
+      "description": "A wetland that once was home to an ancient civilization lost to time. The remnants of their astonishingly resilient structures were buried beneath the wetlands.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/farsea_marshes/farsea_marshes.json",
+        "label": "Farsea Marshes"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/farsea_marshes/farsea_marshes.webp"
+    },
+    "id": "farsea_marshes"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      2096.25,
+      2180.75
+    ],
+    "popup": {
+      "title": "Vast Swamp",
+      "description": "A dangerous swamp populated by tribes of [[lizardfolk]], [[hobgoblin]]s, and other [[goblinoid]]s, [[orc]]s, [[gnoll]]s, and [[troll]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/vast_swamp/vast_swamp.json",
+        "label": "Vast Swamp"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/vast_swamp/vast_swamp.webp"
+    },
+    "id": "vast_swamp"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      1696.25,
+      2204
+    ],
+    "popup": {
+      "title": "Marsh of Tun",
+      "description": "Also known as the '''Fens of Tun''', a moderate-weather swamp lying in the [[Tunlands]] between the [[Sunset Mountains]] and the [[Stormhorns]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/marsh_of_tun/marsh_of_tun.json",
+        "label": "Marsh of Tun"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/marsh_of_tun/marsh_of_tun.webp"
+    },
+    "id": "marsh_of_tun"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      1820,
+      2047.75
+    ],
+    "popup": {
+      "title": "Gritstone Moorland",
+      "description": "A region of wetlands found on the eastern stretch of the [[Dragon Coast]] in the [[Eastern Heartlands]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/gritstone_moorland/gritstone_moorland.json",
+        "label": "Gritstone Moorland"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/gritstone_moorland/gritstone_moorland.webp"
+    },
+    "id": "gritstone_moorland"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      1883.75,
+      1929.75
+    ],
+    "popup": {
+      "title": "Nameless Swamp",
+      "description": "A wetland of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/nameless_swamp/nameless_swamp.json",
+        "label": "Nameless Swamp"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/nameless_swamp/nameless_swamp.webp"
+    },
+    "id": "nameless_swamp"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      803.62,
+      2395.67
+    ],
+    "popup": {
+      "title": "Lizard Marsh",
+      "description": "A large [[lizardfolk]], giant insect, [[black dragon]]-infested bayou in the delta of the [[Delimbiyr]] river.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/lizard_marsh/lizard_marsh.json",
+        "label": "Lizard Marsh"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/lizard_marsh/lizard_marsh.webp"
+    },
+    "id": "lizard_marsh"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      1140.2,
+      2386.83
+    ],
+    "popup": {
+      "title": "High Moor",
+      "description": "A large, monster-infested, open moorland in [[western Faerûn]], created in about [[-10500 DR]] when the kingdom of [[Miyeritar]] fell.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/high_moor/high_moor.json",
+        "label": "High Moor"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/high_moor/high_moor.webp"
+    },
+    "id": "high_moor"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      1407.5,
+      2427.5
+    ],
+    "popup": {
+      "title": "Marsh of Chelimber",
+      "description": "A marsh or pungent [[sulfur]]ous steam pools inhabited by numerous [[lizardfolk]], [[bullywug]]s, and [[siv]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/marsh_of_chelimber/marsh_of_chelimber.json",
+        "label": "Marsh of Chelimber"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/marsh_of_chelimber/marsh_of_chelimber.webp"
+    },
+    "id": "marsh_of_chelimber"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      786.5,
+      2550.5
+    ],
+    "popup": {
+      "title": "Stump Bog",
+      "description": "A bog to the east of the hamlet of [[Rassalantar]], inhabited by [[giant crab]]s, [[giant crayfish]], [[giant eel]]s, [[giant frog]]s, [[giant leech]]es, [[giant lizard]]s, [[giant wasp]]s, and [[giant slug]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/stump_bog/stump_bog.json",
+        "label": "Stump Bog"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/stump_bog/stump_bog.webp"
+    },
+    "id": "stump_bog"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      2403,
+      2806
+    ],
+    "popup": {
+      "title": "Twilight Marsh",
+      "description": "A coastal swamp typically blanketed with heavy rain and thick fog in the early hours of the morning, fed by the waters of the [[Trank River]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/twilight_marsh/twilight_marsh.json",
+        "label": "Twilight Marsh"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/twilight_marsh/twilight_marsh.webp"
+    },
+    "id": "twilight_marsh"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      2405.57,
+      2846.45
+    ],
+    "popup": {
+      "title": "Glumpen Swamp",
+      "description": "The waters of the swamp amidst barren lands originated from the [[Lake Longreach]] found to the northwest in [[the Ride]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/glumpen_swamp/glumpen_swamp.json",
+        "label": "Glumpen Swamp"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/glumpen_swamp/glumpen_swamp.webp"
+    },
+    "id": "glumpen_swamp"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      2645,
+      2607.75
+    ],
+    "popup": {
+      "title": "Flooded Forest",
+      "description": "A section of the great forest of [[Cormanthor]] that laid beyond the [[River Lis]], flooded and transformed into a swamp home of [[lizardfolk]] and [[black dragon]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/flooded_forest/flooded_forest.json",
+        "label": "Flooded Forest"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/flooded_forest/flooded_forest.webp"
+    },
+    "id": "flooded_forest"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      2301.25,
+      2324
+    ],
+    "popup": {
+      "title": "Glaun Bog",
+      "description": "A swamp of note, to the south of [[Sun Hills]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/glaun_bog/glaun_bog.json",
+        "label": "Glaun Bog"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/glaun_bog/glaun_bog.webp"
+    },
+    "id": "glaun_bog"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      2390.5,
+      2882.25
+    ],
+    "popup": {
+      "title": "Glumpen Swamp",
+      "description": "The swamp fed by the waters of the swamp originated from [[Lake Longreach]] found to the northwest in the [[Ride]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/glumpen_swamp_2/glumpen_swamp_2.json",
+        "label": "Glumpen Swamp"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/glumpen_swamp_2/glumpen_swamp_2.webp"
+    },
+    "id": "glumpen_swamp_2"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      790.75,
+      674.25
+    ],
+    "popup": {
+      "title": "Altispinax Swamp",
+      "description": "A dangerous swamp, homeland of predatory [[altispinax]] [[dinosaur]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/altispinax_swamp/altispinax_swamp.json",
+        "label": "Altispinax Swamp"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/altispinax_swamp/altispinax_swamp.webp"
+    },
+    "id": "altispinax_swamp"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      1447.44,
+      2598.61
+    ],
+    "popup": {
+      "title": "Lonely Moor",
+      "description": "Area of boggy terrain occupied by bands of [[gnoll]]s and [[bugbear]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/lonely_moor/lonely_moor.json",
+        "label": "Lonely Moor"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/lonely_moor/lonely_moor.webp"
+    },
+    "id": "lonely_moor"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      378,
+      3003
+    ],
+    "popup": {
+      "title": "Cold Marshes",
+      "description": "Small frigid marshland adjacent to the [[Fell Woods]], infested with [[spider]]s, [[ettercap]]s, [[wyvern]]s, [[snow troll]]s, and frequented by [[barbarian]]s of the north.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/cold_marshes/cold_marshes.json",
+        "label": "Cold Marshes"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/cold_marshes/cold_marshes.webp"
+    },
+    "id": "cold_marshes"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      2604.62,
+      3068.13
+    ],
+    "popup": {
+      "title": "Bottomless Bogs",
+      "description": "An extensive area of cold swampland, foul mires, and smelly lakes in northwestern [[Vaasa]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/bottomless_bogs/bottomless_bogs.json",
+        "label": "Bottomless Bogs"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/bottomless_bogs/bottomless_bogs.webp"
+    },
+    "id": "bottomless_bogs"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      535.02,
+      2636.88
+    ],
+    "popup": {
+      "title": "Mere of Dead Men",
+      "description": "Also known as '''Merdelain''', meaning \"Slow Marching Court\" in [[Elvish]]; the swamp's sinister name referred to the thousands of [[dwarves]], [[elves]], and [[human]]s of the [[Fallen Kingdom]] who were slain here during the invasion of an [[orc]] army in [[\n615 DR]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/mere_of_dead_men/mere_of_dead_men.json",
+        "label": "Mere of Dead Men"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/mere_of_dead_men/mere_of_dead_men.webp"
+    },
+    "id": "mere_of_dead_men"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      403.22,
+      1726.4
+    ],
+    "popup": {
+      "title": "Codsbay Mire",
+      "description": "A wetland where the [[Codsrun Creek]] delta met the [[Strait of Oman]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/codsbay_mire/codsbay_mire.json",
+        "label": "Codsbay Mire"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/codsbay_mire/codsbay_mire.webp"
+    },
+    "id": "codsbay_mire"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      480.87,
+      2035.62
+    ],
+    "popup": {
+      "title": "Leechhome",
+      "description": "A swamp of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/leechhome/leechhome.json",
+        "label": "Leechhome"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/leechhome/leechhome.webp"
+    },
+    "id": "leechhome"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      486.84,
+      1811.43
+    ],
+    "popup": {
+      "title": "Drowned Forest",
+      "description": "Also known as the '''Browned Forest''', a marshland located in the kingdom of [[Callidyrr]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/drowned_forest/drowned_forest.json",
+        "label": "Drowned Forest"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/drowned_forest/drowned_forest.webp"
+    },
+    "id": "drowned_forest"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      562.85,
+      1817.08
+    ],
+    "popup": {
+      "title": "Tearglade",
+      "description": "A marshland located along the eastern shore on the [[Sea of Swords]] where the [[Swanmay River]] met the sea.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/tearglade/tearglade.json",
+        "label": "Tearglade"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/tearglade/tearglade.webp"
+    },
+    "id": "tearglade"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      490.55,
+      1742.84
+    ],
+    "popup": {
+      "title": "Taeya Bog",
+      "description": "A coastal marshland of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/taeya_bog/taeya_bog.json",
+        "label": "Taeya Bog"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/taeya_bog/taeya_bog.webp"
+    },
+    "id": "taeya_bog"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      751.65,
+      2679.4
+    ],
+    "popup": {
+      "title": "Black Maw Bog",
+      "description": "A small bog with a bridge that allowed the [[Long Road]] to cross over.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/black_maw_bog/black_maw_bog.json",
+        "label": "Black Maw Bog"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/black_maw_bog/black_maw_bog.webp"
+    },
+    "id": "black_maw_bog"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      458.38,
+      1620.15
+    ],
+    "popup": {
+      "title": "Fens of the Fallen",
+      "description": "Wetlands of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/fens_of_the_fallen/fens_of_the_fallen.json",
+        "label": "Fens of the Fallen"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/fens_of_the_fallen/fens_of_the_fallen.webp"
+    },
+    "id": "fens_of_the_fallen"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      403.87,
+      1521.12
+    ],
+    "popup": {
+      "title": "Mere Adammair",
+      "description": "A small marshland of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/mere_adammair/mere_adammair.json",
+        "label": "Mere Adammair"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/mere_adammair/mere_adammair.webp"
+    },
+    "id": "mere_adammair"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      608.12,
+      1655.75
+    ],
+    "popup": {
+      "title": "Maloren Sods",
+      "description": "A large coastal swamp on the island of [[Snowdown]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/maloren_sods/maloren_sods.json",
+        "label": "Maloren Sods"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/maloren_sods/maloren_sods.webp"
+    },
+    "id": "maloren_sods"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      347.18,
+      1618.74
+    ],
+    "popup": {
+      "title": "Meirig Peatlands",
+      "description": "A large peat swamp.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/meirig_peatlands/meirig_peatlands.json",
+        "label": "Meirig Peatlands"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/meirig_peatlands/meirig_peatlands.webp"
+    },
+    "id": "meirig_peatlands"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      272,
+      1666.5
+    ],
+    "popup": {
+      "title": "Breasal Marsh",
+      "description": "A peat-rich marshland inhabited by various tribes of [[lizardfolk]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/breasal_marsh/breasal_marsh.json",
+        "label": "Breasal Marsh"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/breasal_marsh/breasal_marsh.webp"
+    },
+    "id": "breasal_marsh"
+  },
+  {
+    "categoryId": "wetlands",
+    "position": [
+      237,
+      1900.25
+    ],
+    "popup": {
+      "title": "The Frostfenn",
+      "description": "A large marshland of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/wetlands/the_frostfenn/the_frostfenn.json",
+        "label": "The Frostfenn"
+      },
+      "image": "/assets/atlas/world/toril/faerun/wetlands/the_frostfenn/the_frostfenn.webp"
+    },
+    "id": "the_frostfenn"
+  }
+]

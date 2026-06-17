@@ -1,0 +1,39 @@
+{
+  "special": [],
+  "index": "climbers_kit",
+  "name": "climber's kit",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "kits",
+    "name": "kits",
+    "url": "/assets/atlas/equipment_categories/kits"
+  },
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 12,
+  "desc": [
+    "A climber's kit includes special pitons, boot tips, gloves, and a harness. You can use the climber's kit as an action to anchor yourself; when you do, you can't fall more than 25 feet from the point where you anchored yourself, and you can't climb more than 25 feet away from that point without undoing the anchor."
+  ],
+  "url": "/assets/atlas/equipment/json/climbers_kit.json",
+  "updated_at": "2026-04-12T07:55:00.668Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/climbers_kit.webp",
+  "sprite_index": 8,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "imageUrl": "/assets/atlas/equipment/images/climbers_kit.webp",
+  "_type": "equipment",
+  "category": "Kits",
+  "last_updated": "12-4-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

@@ -1,0 +1,988 @@
+[
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2847.01,
+      1612.3
+    ],
+    "popup": {
+      "title": "Fields of Nun",
+      "description": "The open stretch of land running through the northern region of [[Chondath]] and the site of the [[Rotting War]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/fields_of_nun/fields_of_nun.json",
+        "label": "Fields of Nun"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/fields_of_nun/fields_of_nun.webp"
+    },
+    "id": "fields_of_nun"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2661.02,
+      1344.07
+    ],
+    "popup": {
+      "title": "Golden Plains",
+      "description": "The land between the [[Nagaflow]] and [[Arran river]]s that was named for its tall, golden grasses. During the century that followed the [[Spellplague]], it was known as the [[Plaguewrought Land]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/golden_plains/golden_plains.json",
+        "label": "Golden Plains"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/golden_plains/golden_plains.webp"
+    },
+    "id": "golden_plains"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2571.03,
+      1228.95
+    ],
+    "popup": {
+      "title": " Nagalands",
+      "description": "The region bordering the northern parts of the [[Nagawater]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/nagalands/nagalands.json",
+        "label": " Nagalands"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/nagalands/nagalands.webp"
+    },
+    "id": "nagalands"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2498.2,
+      1422.69
+    ],
+    "popup": {
+      "title": "Serpents' Holding",
+      "description": "The grassland located west of the [[Nagawater]], home to a large variety of [[spitting serpent]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/serpents_holding/serpents_holding.json",
+        "label": "Serpents' Holding"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/serpents_holding/serpents_holding.webp"
+    },
+    "id": "serpents_holding"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2473.45,
+      1344.91
+    ],
+    "popup": {
+      "title": "Slithering Plains",
+      "description": "The plot of green land that bordered the [[Nagawater]]'s western shores.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/slithering_plains/slithering_plains.json",
+        "label": "Slithering Plains"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/slithering_plains/slithering_plains.webp"
+    },
+    "id": "slithering_plains"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2632.5,
+      1282.81
+    ],
+    "popup": {
+      "title": "Naga Plains",
+      "description": "The green plains that bordered south-eastern shores of the [[Nagawater]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/naga_plains/naga_plains.json",
+        "label": "Naga Plains"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/naga_plains/naga_plains.webp"
+    },
+    "id": "naga_plains"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      3738,
+      660.99
+    ],
+    "popup": {
+      "title": "Ammathvale",
+      "description": "The small open valley separating the [[Lluirwood]] in the north from the [[Southern Lluirwood]] in [[Luiren]], spanning roughly 100 miles (160,000 meters).",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/ammathvale/ammathvale.json",
+        "label": "Ammathvale"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/ammathvale/ammathvale.webp"
+    },
+    "id": "ammathvale"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      3544.68,
+      1873.15
+    ],
+    "popup": {
+      "title": "Fields of Pryollus",
+      "description": "The stretch of land used by the people of [[Threskel]] and [[Unther]], as a venue for sporting events and grand athletic competitions.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/fields_of_pryollus/fields_of_pryollus.json",
+        "label": "Fields of Pryollus"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/fields_of_pryollus/fields_of_pryollus.webp"
+    },
+    "id": "fields_of_pryollus"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      3676.87,
+      1369.19
+    ],
+    "popup": {
+      "title": "Greenfields",
+      "description": "An overly-fertile land of magically affected soil between the [[River Alamber]] and the [[River Angol]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/greenfields/greenfields.json",
+        "label": "Greenfields"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/greenfields/greenfields.webp"
+    },
+    "id": "greenfields"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      4053.85,
+      1914.89
+    ],
+    "popup": {
+      "title": "Fields of Ganath",
+      "description": "A patch of fertile land in [[Murghôm]] that bordered [[Mulhorand]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/fields_of_ganath/fields_of_ganath.json",
+        "label": "Fields of Ganath"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/fields_of_ganath/fields_of_ganath.webp"
+    },
+    "id": "fields_of_ganath"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      4017.99,
+      1376.99
+    ],
+    "popup": {
+      "title": "Great Vale",
+      "description": "Also known as '''Asanibis''' – the breadbasket of the nation of [[Mulhorand]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/great_vale/great_vale.json",
+        "label": "Great Vale"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/great_vale/great_vale.webp"
+    },
+    "id": "great_vale"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      4124,
+      2132.5
+    ],
+    "popup": {
+      "title": "The High Valley",
+      "description": "A valley in the southern part of the [[Sunrise Mountains]], north of the [[Ganatheood]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/the_high_valley/the_high_valley.json",
+        "label": "The High Valley"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/the_high_valley/the_high_valley.webp"
+    },
+    "id": "the_high_valley"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      4577.45,
+      2230.56
+    ],
+    "popup": {
+      "title": "Ejen Horo",
+      "description": "The '''Valley of the God''', a lush garden-like lake-dotted valley that offered plentiful hunting as many animals were drawn to the bountiful vegetation.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/ejen_horo/ejen_horo.json",
+        "label": "Ejen Horo"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/ejen_horo/ejen_horo.webp"
+    },
+    "id": "ejen_horo"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      3582.29,
+      319.72
+    ],
+    "popup": {
+      "title": "Rialuil Plain",
+      "description": "Also known as the '''Rialuil Range''', it was an open grassland located in the nation of [[Dambrath]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/rialuil_plain/rialuil_plain.json",
+        "label": "Rialuil Plain"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/rialuil_plain/rialuil_plain.webp"
+    },
+    "id": "rialuil_plain"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      3028.49,
+      555.15
+    ],
+    "popup": {
+      "title": "Swagdar",
+      "description": "The '''Outlaw Waste''', a large stretch of rolling grasslands located just northwest of [[Dambrath]] inhabited by several thousand bandits.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/swagdar/swagdar.json",
+        "label": "Swagdar"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/swagdar/swagdar.webp"
+    },
+    "id": "swagdar"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      3136,
+      262.44
+    ],
+    "popup": {
+      "title": "Conaluil Range",
+      "description": "A strip of land located in central [[Dambrath]], home of ranchos located in the northern hills.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/conaluil_range/conaluil_range.json",
+        "label": "Conaluil Range"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/conaluil_range/conaluil_range.webp"
+    },
+    "id": "conaluil_range"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2611.96,
+      786.36
+    ],
+    "popup": {
+      "title": "Shaareach",
+      "description": "A small plain found in the western [[Shaar]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/shaareach/shaareach.json",
+        "label": "Shaareach"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/shaareach/shaareach.webp"
+    },
+    "id": "shaareach"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2772.51,
+      447.64
+    ],
+    "popup": {
+      "title": "Nath",
+      "description": "A large basin used by [[Halruaan]]s to herd livestock at the junction of the [[Nathaghal Mountains]] and [[Muaraghal Mountains]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/nath/nath.json",
+        "label": "Nath"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/nath/nath.webp"
+    },
+    "id": "nath"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1609.24,
+      427.17
+    ],
+    "popup": {
+      "title": "Tashalar Basin",
+      "description": "A fertile stretch of land north of the [[Hazur Mountains]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/tashalar_basin/tashalar_basin.json",
+        "label": "Tashalar Basin"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/tashalar_basin/tashalar_basin.webp"
+    },
+    "id": "tashalar_basin"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1946.5,
+      1237
+    ],
+    "popup": {
+      "title": "Plains of Pehrrifaal",
+      "description": "Plains on the southern edge of [[Erlkazar]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/plains_of_pehrrifaal/plains_of_pehrrifaal.json",
+        "label": "Plains of Pehrrifaal"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/plains_of_pehrrifaal/plains_of_pehrrifaal.webp"
+    },
+    "id": "plains_of_pehrrifaal"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1589.25,
+      927.5
+    ],
+    "popup": {
+      "title": "Schamedar Plains",
+      "description": "The fertile countryside east of the city of [[Schamedar]], consumed by the [[Calim Desert]] during the [[Spellplague]] and before the [[Second Sundering]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/schamedar_plains/schamedar_plains.json",
+        "label": "Schamedar Plains"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/schamedar_plains/schamedar_plains.webp"
+    },
+    "id": "schamedar_plains"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1301.42,
+      1111.39
+    ],
+    "popup": {
+      "title": "Red Rivers Fields",
+      "description": "Grasslands of note, north of [[River Ith]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/red_rivers_fields/red_rivers_fields.json",
+        "label": "Red Rivers Fields"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/red_rivers_fields/red_rivers_fields.webp"
+    },
+    "id": "red_rivers_fields"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      3695.34,
+      929.13
+    ],
+    "popup": {
+      "title": "Daustable's Morrum",
+      "description": "A small valley just off the [[Trader's Way]], bordered on its eastern edge by three large standing stones.{{approx}}",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/daustables_morrum/daustables_morrum.json",
+        "label": "Daustable's Morrum"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/daustables_morrum/daustables_morrum.webp"
+    },
+    "id": "daustables_morrum"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      3402.24,
+      2532.5
+    ],
+    "popup": {
+      "title": "Spearsmouth Dale",
+      "description": "A dale of note in [[Thesk]] on the edge of the [[Forest of Lethyr]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/spearsmouth_dale/spearsmouth_dale.json",
+        "label": "Spearsmouth Dale"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/spearsmouth_dale/spearsmouth_dale.webp"
+    },
+    "id": "spearsmouth_dale"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      3218.5,
+      2119.75
+    ],
+    "popup": {
+      "title": "Halendos",
+      "description": "A large meadow one day's journey from the city of [[Veltalar]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/halendos/halendos.json",
+        "label": "Halendos"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/halendos/halendos.webp"
+    },
+    "id": "halendos"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2235.51,
+      2883.93
+    ],
+    "popup": {
+      "title": "The Ride",
+      "description": "An open cold steppe land situated between the [[Dragonspine Mountains]], the [[Border Forest]], and the [[Gray Land of Thar]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/the_ride/the_ride.json",
+        "label": "The Ride"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/the_ride/the_ride.webp"
+    },
+    "id": "the_ride"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1344.25,
+      1233.5
+    ],
+    "popup": {
+      "title": "Argentwing Dell",
+      "description": "A small valley between [[Hawkwing's Brook]] and the [[Sulduskoon]], roughly shaped like a [[butterfly]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/argentwing_dell/argentwing_dell.json",
+        "label": "Argentwing Dell"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/argentwing_dell/argentwing_dell.webp"
+    },
+    "id": "argentwing_dell"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1398.65,
+      1450.27
+    ],
+    "popup": {
+      "title": "Farmlands",
+      "description": "",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/farmlands/farmlands.json",
+        "label": "Farmlands"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/farmlands/farmlands.webp"
+    },
+    "id": "farmlands"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1810.9,
+      1805.95
+    ],
+    "popup": {
+      "title": "Giant's Plain",
+      "description": "Massive lush plains inhabited by large herds of migratory beasts of the [[Western Heartlands]] and a hunting ground for the [[Sword Coast]] [[dragon]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/giants_plain/giants_plain.json",
+        "label": "Giant's Plain"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/giants_plain/giants_plain.webp"
+    },
+    "id": "giants_plain"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2056.97,
+      1709.07
+    ],
+    "popup": {
+      "title": "Shining Plains",
+      "description": "A portion of the [[Vilhon Reach]], named after the visual effect of sunlight hitting the plains.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/shining_plains/shining_plains.json",
+        "label": "Shining Plains"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/shining_plains/shining_plains.webp"
+    },
+    "id": "shining_plains"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2091.97,
+      1689.63
+    ],
+    "popup": {
+      "title": "Field of Tears",
+      "description": "A plot of land in the [[Shining Plains]] and the cite of a historic battle of [[326 DR]] between [[Ormath]], [[Lheshayl]], and the [[Tenpaw tribe]].{{approx}}",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/field_of_tears/field_of_tears.json",
+        "label": "Field of Tears"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/field_of_tears/field_of_tears.webp"
+    },
+    "id": "field_of_tears"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1763.17,
+      2355.01
+    ],
+    "popup": {
+      "title": "Goblin Marches",
+      "description": "A narrow region north of [[Cormyr]] populated by roving bands of [[goblinoid]] raiders.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/goblin_marches/goblin_marches.json",
+        "label": "Goblin Marches"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/goblin_marches/goblin_marches.webp"
+    },
+    "id": "goblin_marches"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1699.88,
+      2145.71
+    ],
+    "popup": {
+      "title": "Tun Plain",
+      "description": "Or the '''Tunlands''', a region of grassy steppes and wetlands in the [[Western Heartlands]] roughly encompassing the area between the [[Sunset Mountains]] and the [[Storm Horns]] north of [[Proskur]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/tun_plain/tun_plain.json",
+        "label": "Tun Plain"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/tun_plain/tun_plain.webp"
+    },
+    "id": "tun_plain"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      565.33,
+      2684.17
+    ],
+    "popup": {
+      "title": "Triboar Trail Region",
+      "description": "A stretch of foothills and rolling, sparsely-wooded plains extending between the [[Sword Mountains]] to the south and the [[Neverwinter Woods]] to the north.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/triboar_trail_region/triboar_trail_region.json",
+        "label": "Triboar Trail Region"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/triboar_trail_region/triboar_trail_region.webp"
+    },
+    "id": "triboar_trail_region"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1714.02,
+      2007.82
+    ],
+    "popup": {
+      "title": "Lightning Steppes",
+      "description": "A steppe to the southwest of the [[Dragonmere]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/lightning_steppes/lightning_steppes.json",
+        "label": "Lightning Steppes"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/lightning_steppes/lightning_steppes.webp"
+    },
+    "id": "lightning_steppes"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1982.75,
+      1984
+    ],
+    "popup": {
+      "title": "Horse Prairie",
+      "description": "A land area in the [[Dragon Coast]] that ran from the [[Castaway Coast]] on the [[Dragonmere]] in the north, to the [[Giant's Run]] mountains to the south.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/horse_prairie/horse_prairie.json",
+        "label": "Horse Prairie"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/horse_prairie/horse_prairie.webp"
+    },
+    "id": "horse_prairie"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1862.63,
+      2324.89
+    ],
+    "popup": {
+      "title": "High Moors",
+      "description": "A stretch of mist-covered uncultivated land on the frontier of [[Cormyr]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/high_moors/high_moors.json",
+        "label": "High Moors"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/high_moors/high_moors.webp"
+    },
+    "id": "high_moors"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1176,
+      2085.75
+    ],
+    "popup": {
+      "title": "Fields of the Dead",
+      "description": "A stretch of rolling hills east of [[Baldur's Gate]] littered with bones of the dead of many ancient battles.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/fields_of_the_dead/fields_of_the_dead.json",
+        "label": "Fields of the Dead"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/fields_of_the_dead/fields_of_the_dead.webp"
+    },
+    "id": "fields_of_the_dead"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1507.5,
+      2372.5
+    ],
+    "popup": {
+      "title": "Pelleor's Prairie",
+      "description": "A large, a warm, dry, and windy grassland located in the [[Backlands]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/pelleors_prairie/pelleors_prairie.json",
+        "label": "Pelleor's Prairie"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/pelleors_prairie/pelleors_prairie.webp"
+    },
+    "id": "pelleors_prairie"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1435.5,
+      1880.5
+    ],
+    "popup": {
+      "title": "Greenfields",
+      "description": "A geographical region of rolling grasslands in the [[Western Heartlands]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/greenfields_2/greenfields_2.json",
+        "label": "Greenfields"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/greenfields_2/greenfields_2.webp"
+    },
+    "id": "greenfields_2"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      875.39,
+      2370.04
+    ],
+    "popup": {
+      "title": "Wild Pastures",
+      "description": "A plot of lush wildland used as dangerous pastures by the shepherds of [[Liam's Hold]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/wild_pastures/wild_pastures.json",
+        "label": "Wild Pastures"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/wild_pastures/wild_pastures.webp"
+    },
+    "id": "wild_pastures"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2388.96,
+      2814.46
+    ],
+    "popup": {
+      "title": "Scoured Lands",
+      "description": "Farmlands abandoned with [[Plan]]'s ruination and reclaimed by the late 14{{th}} century [[DR]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/scoured_lands/scoured_lands.json",
+        "label": "Scoured Lands"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/scoured_lands/scoured_lands.webp"
+    },
+    "id": "scoured_lands"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2335.5,
+      2803
+    ],
+    "popup": {
+      "title": "Grass Sea",
+      "description": "A stretch of plains covered thickly with tall grass with occasional ruins breaking the sea of green.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/grass_sea/grass_sea.json",
+        "label": "Grass Sea"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/grass_sea/grass_sea.webp"
+    },
+    "id": "grass_sea"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2454.01,
+      3005.2
+    ],
+    "popup": {
+      "title": "Barze",
+      "description": "The remnants of an ancient fallen kingdom ruled by King Barze.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/barze/barze.json",
+        "label": "Barze"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/barze/barze.webp"
+    },
+    "id": "barze"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2102.25,
+      2277
+    ],
+    "popup": {
+      "title": "Black Plain",
+      "description": "A stretch of land located 40 miles east of the [[Hullack Forest]] just south of the [[East Way]], once a site of an [[oak]] forest, destroyed in a failed attempt to turn it into farmlands.{{approx}}",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/black_plain/black_plain.json",
+        "label": "Black Plain"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/black_plain/black_plain.webp"
+    },
+    "id": "black_plain"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2234.81,
+      1354.81
+    ],
+    "popup": {
+      "title": "Vale of the Reaver",
+      "description": "A lush valley named for its occupancy of devout followers of [[Garagos]], the Reaver.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/vale_of_the_reaver/vale_of_the_reaver.json",
+        "label": "Vale of the Reaver"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/vale_of_the_reaver/vale_of_the_reaver.webp"
+    },
+    "id": "vale_of_the_reaver"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      680.23,
+      3072.02
+    ],
+    "popup": {
+      "title": "Valley of Khedrun",
+      "description": "A [[dandelion]] and tall grass-filled valley where the [[River Mirar]] joined with the [[River Khedrun]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/valley_of_khedrun/valley_of_khedrun.json",
+        "label": "Valley of Khedrun"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/valley_of_khedrun/valley_of_khedrun.webp"
+    },
+    "id": "valley_of_khedrun"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2759.5,
+      2508.25
+    ],
+    "popup": {
+      "title": "High Country",
+      "description": "A territory filled with rocky moors and grassy plains and hills, bordered by the [[North Road]] and the [[Earthspur Mountains]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/high_country/high_country.json",
+        "label": "High Country"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/high_country/high_country.webp"
+    },
+    "id": "high_country"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      3682.25,
+      2736.5
+    ],
+    "popup": {
+      "title": "White Rusalka Vale",
+      "description": "A vale that was a ''[[dead-magic]]'' zone on the shores of the [[Lake Ashane]] to all but [[Rashemi]] [[witch]]es.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/white_rusalka_vale/white_rusalka_vale.json",
+        "label": "White Rusalka Vale"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/white_rusalka_vale/white_rusalka_vale.webp"
+    },
+    "id": "white_rusalka_vale"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      3389.51,
+      2591.19
+    ],
+    "popup": {
+      "title": "Mettledale",
+      "description": "A dale of note, surrounded by the [[Forest of Lethyr]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/mettledale/mettledale.json",
+        "label": "Mettledale"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/mettledale/mettledale.webp"
+    },
+    "id": "mettledale"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1607.25,
+      1427.29
+    ],
+    "popup": {
+      "title": "Spulzeer Vale",
+      "description": "The vale where [[Castle Spulzeer]] once stood.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/spulzeer_vale/spulzeer_vale.json",
+        "label": "Spulzeer Vale"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/spulzeer_vale/spulzeer_vale.webp"
+    },
+    "id": "spulzeer_vale"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2613.75,
+      2913.25
+    ],
+    "popup": {
+      "title": "The Bleak Steppes of Haatar-Baen",
+      "description": "The southwestern grasslands of [[Vaasa]] with its soil tainted and everything that grew in the area – inevitably [[poison]]ous.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/the_bleak_steppes_of_haatar_baen/the_bleak_steppes_of_haatar_baen.json",
+        "label": "The Bleak Steppes of Haatar-Baen"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/the_bleak_steppes_of_haatar_baen/the_bleak_steppes_of_haatar_baen.webp"
+    },
+    "id": "the_bleak_steppes_of_haatar_baen"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      2702,
+      2869.5
+    ],
+    "popup": {
+      "title": "Sunderland",
+      "description": "The most desirable region for [[human]] settlers in [[Vaasa]] owing to its combination of soil that could actually support crops and access to mining opportunities in the [[Galena Mountains]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/sunderland/sunderland.json",
+        "label": "Sunderland"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/sunderland/sunderland.webp"
+    },
+    "id": "sunderland"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1239.25,
+      1596.5
+    ],
+    "popup": {
+      "title": "The Dauntir",
+      "description": "A hilly land of rolling fields and busy farmlands between the [[Trade Way]], the [[River Esmel]], and the [[Small Teeth]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/the_dauntir/the_dauntir.json",
+        "label": "The Dauntir"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/the_dauntir/the_dauntir.webp"
+    },
+    "id": "the_dauntir"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      1601.75,
+      1158.87
+    ],
+    "popup": {
+      "title": "Clovis Fields",
+      "description": "Plains of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/clovis_fields/clovis_fields.json",
+        "label": "Clovis Fields"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/clovis_fields/clovis_fields.webp"
+    },
+    "id": "clovis_fields"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      403.87,
+      1546
+    ],
+    "popup": {
+      "title": "Kimball Moor",
+      "description": "A large moor of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/kimball_moor/kimball_moor.json",
+        "label": "Kimball Moor"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/kimball_moor/kimball_moor.webp"
+    },
+    "id": "kimball_moor"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      391.87,
+      1501
+    ],
+    "popup": {
+      "title": "Dwyvach Salt Flats",
+      "description": "A plain located on the island of [[Gwynneth]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/dwyvach_salt_flats/dwyvach_salt_flats.json",
+        "label": "Dwyvach Salt Flats"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/dwyvach_salt_flats/dwyvach_salt_flats.webp"
+    },
+    "id": "dwyvach_salt_flats"
+  },
+  {
+    "categoryId": "plains_grasslands",
+    "position": [
+      379.71,
+      1621.74
+    ],
+    "popup": {
+      "title": "The Shrouded Lands",
+      "description": "A stretch of land wedged between the [[Highlands]] and [[Meirig Peatlands]] in western [[Gwynneth]]. ",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/plains_grasslands/the_shrouded_lands/the_shrouded_lands.json",
+        "label": "The Shrouded Lands"
+      },
+      "image": "/assets/atlas/world/toril/faerun/plains_grasslands/the_shrouded_lands/the_shrouded_lands.webp"
+    },
+    "id": "the_shrouded_lands"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "index": "fighting_style_dueling",
+  "class": {
+    "index": "paladin",
+    "name": "paladin",
+    "url": "/assets/atlas/class/json/paladin.json"
+  },
+  "name": "fighting style: dueling",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
+  ],
+  "parent": {
+    "index": "paladin_fighting_style",
+    "name": "fighting style",
+    "url": "/assets/atlas/features/paladin_fighting_style.json"
+  },
+  "url": "/assets/atlas/features/json/fighting_style_dueling.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/fighting_style_dueling.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "damage_bonus": 2,
+      "condition": "single_one_handed_melee_weapon"
+    }
+  }
+}

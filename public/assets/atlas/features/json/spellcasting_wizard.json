@@ -1,0 +1,25 @@
+{
+  "index": "spellcasting_wizard",
+  "class": {
+    "index": "wizard",
+    "name": "wizard",
+    "url": "/assets/atlas/class/json/wizard.json"
+  },
+  "name": "spellcasting: wizard",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
+  ],
+  "reference": "public/assets/atlas/class/json/wizard/spellcasting.json",
+  "url": "/assets/atlas/features/json/spellcasting_wizard.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/spellcasting_wizard.webp",
+  "feature_specific": {
+    "spellcasting_ability": {
+      "index": "intelligence",
+      "name": "intelligence",
+      "url": "/assets/atlas/ability_scores/json/int.json"
+    }
+  }
+}

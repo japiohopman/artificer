@@ -1,0 +1,43 @@
+{
+  "special": [],
+  "index": "rope_silk_50_feet",
+  "name": "rope, silk (50 feet)",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "desc": [
+    "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check."
+  ],
+  "url": "/assets/atlas/equipment/json/rope_silk_50_feet.json",
+  "updated_at": "2026-05-04T17:12:21.931Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/rope_silk_50_feet.webp",
+  "sprite_index": 1,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/rope_silk_50_feet.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Adventuring Gear",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "4-5-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

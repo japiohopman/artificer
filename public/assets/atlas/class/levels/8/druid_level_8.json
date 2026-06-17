@@ -1,0 +1,41 @@
+{
+  "level": 8,
+  "ability_score_bonuses": 2,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "wild_shape_cr_1_or_below",
+      "name": "Wild Shape (CR 1 or below)",
+      "url": "/assets/atlas/features/json/wild_shape_cr_1_or_below.json"
+    },
+    {
+      "index": "druid_ability_score_improvement_2",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/druid_ability_score_improvement_2.json"
+    }
+  ],
+  "class_specific": {
+    "wild_shape_max_cr": 1,
+    "wild_shape_swim": true,
+    "wild_shape_fly": true
+  },
+  "index": "druid_level_8",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/druid.json"
+  },
+  "url": "/assets/atlas/class/levels/8/druid_level_8.json",
+  "spellcasting": {
+    "cantrips_known": 3,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 2,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

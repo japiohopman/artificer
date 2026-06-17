@@ -1,0 +1,18 @@
+{
+  "index": "drum",
+  "type": "musical_instruments",
+  "name": "drum",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/drum.json",
+  "reference": {
+    "index": "drum",
+    "name": "drum",
+    "url": "/assets/atlas/equipment/json/drum.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/proficiencies/json/drum.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "equipment"
+  }
+}

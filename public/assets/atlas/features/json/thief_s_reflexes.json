@@ -1,0 +1,27 @@
+{
+  "index": "thief_s_reflexes",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "subclass": {
+    "index": "thief",
+    "name": "thief",
+    "url": "/assets/atlas/subclasses/json/thief.json"
+  },
+  "name": "thief's reflexes",
+  "level": 17,
+  "prerequisites": [],
+  "desc": [
+    "When you reach 17th level, you have become adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal initiative and your second turn at your initiative minus 10. You cannot use this feature when you are surprised."
+  ],
+  "url": "/assets/atlas/features/json/thief_s_reflexes.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/thief_s_reflexes.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "two_turns_in_first_round": true
+    }
+  }
+}

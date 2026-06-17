@@ -1,0 +1,42 @@
+{
+  "index": "neutral_good",
+  "name": "Neutral Good",
+  "abbreviation": "NG",
+  "color": "#10B981",
+  "desc": "Neutral good (NG) folk do the best they can to help others according to their needs.",
+  "description": "Neutral good (NG) folk do the best they can to help others according to their needs. Many celestials, some cloud giants, and most gnomes are neutral good.",
+  "gods": [
+    {
+      "index": "chauntea",
+      "name": "Chauntea",
+      "url": "/assets/atlas/gods/chauntea.json"
+    },
+    {
+      "index": "deneir",
+      "name": "Deneir",
+      "url": "/assets/atlas/gods/deneir.json"
+    },
+    {
+      "index": "eldath",
+      "name": "Eldath",
+      "url": "/assets/atlas/gods/eldath.json"
+    },
+    {
+      "index": "gwaeron_windstrom",
+      "name": "Gwaeron Windstrom",
+      "url": "/assets/atlas/gods/gwaeron_windstrom.json"
+    },
+    {
+      "index": "lathander",
+      "name": "Lathander",
+      "url": "/assets/atlas/gods/lathander.json"
+    },
+    {
+      "index": "mystra",
+      "name": "Mystra",
+      "url": "/assets/atlas/gods/mystra.json"
+    }
+  ],
+  "url": "/assets/atlas/alignments/json/neutral_good.json",
+  "updated_at": "2026-06-06T10:34:52.343224Z"
+}

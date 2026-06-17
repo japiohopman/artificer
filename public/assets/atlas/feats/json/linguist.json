@@ -1,0 +1,25 @@
+{
+  "index": "linguist",
+  "name": "linguist",
+  "prerequisites": [
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You have studied languages and codes, gaining the following benefits:",
+    "- Increase your Intelligence score by 1, to a maximum of 20.",
+    "- You learn three languages of your choice.",
+    "- You can ably create written ciphers. Others can't decipher a code you create unless you teach them, they succeed on an Intelligence check (DC equal to your Intelligence score + your proficiency bonus), or they use magic to decipher it."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "intelligence_bonus": 1
+    }
+  },
+  "url": "/assets/atlas/feats/json/linguist.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/linguist.webp"
+}

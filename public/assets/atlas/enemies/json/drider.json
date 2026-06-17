@@ -1,0 +1,286 @@
+{
+  "index": "drider",
+  "name": "drider",
+  "size": "Large",
+  "type": "monstrosity",
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 123,
+  "hit_dice": "13d10",
+  "hit_points_roll": "13d10+52",
+  "speed": {
+    "walk": "30 ft.",
+    "climb": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 16,
+  "constitution": 18,
+  "intelligence": 13,
+  "wisdom": 14,
+  "charisma": 12,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/skills/json/perception.json"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill_stealth",
+        "name": "skill: stealth",
+        "url": "/assets/atlas/skills/json/stealth.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 15
+  },
+  "languages": "Elvish, Undercommon",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [
+    {
+      "name": "fey ancestry",
+      "desc": "The drider has advantage on saving throws against being charmed, and magic can't put the drider to sleep.",
+      "damage": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The drider's innate spellcasting ability is Wisdom (spell save DC 13). The drider can innately cast the following spells, requiring no material components:\nAt will: dancing lights\n1/day each: darkness, faerie fire",
+      "spellcasting": {
+        "ability": {
+          "index": "wis",
+          "name": "wis",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
+        },
+        "dc": 13,
+        "components_required": [
+          "V",
+          "S"
+        ],
+        "spells": [
+          {
+            "name": "dancing lights",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/dancing_lights.json",
+            "usage": {
+              "type": "at will",
+              "rest_types": []
+            }
+          },
+          {
+            "name": "darkness",
+            "level": 2,
+            "url": "/assets/atlas/spell/json/darkness.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          },
+          {
+            "name": "faerie fire",
+            "level": 1,
+            "url": "/assets/atlas/spell/json/faerie_fire.json",
+            "usage": {
+              "type": "per day",
+              "times": 1,
+              "rest_types": []
+            }
+          }
+        ]
+      },
+      "damage": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The drider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "damage": []
+    },
+    {
+      "name": "sunlight sensitivity",
+      "desc": "While in sunlight, the drider has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+      "damage": []
+    },
+    {
+      "name": "web walker",
+      "desc": "The drider ignores movement restrictions caused by webbing.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "action_options",
+      "desc": "The drider makes three attacks, either with its longsword or its longbow. It can replace one of those attacks with a bite attack.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "action",
+              "action_name": "Longsword",
+              "count": 3,
+              "type": "melee"
+            },
+            {
+              "option_type": "action",
+              "action_name": "Longbow",
+              "count": 3,
+              "type": "ranged"
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Longsword",
+                  "count": 2,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Bite",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Longbow",
+                  "count": 2,
+                  "type": "ranged"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Bite",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 2 (1d4) piercing damage plus 9 (2d8) poison damage.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4"
+        },
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "poison",
+            "url": "/assets/atlas/damage_types/json/poison.json"
+          },
+          "damage_dice": "2d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longsword",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "damage_type": {
+                  "index": "slashing",
+                  "name": "slashing",
+                  "url": "/assets/atlas/damage_types/json/slashing.json"
+                },
+                "damage_dice": "1d8+3",
+                "notes": "One handed"
+              },
+              {
+                "option_type": "damage",
+                "damage_type": {
+                  "index": "slashing",
+                  "name": "slashing",
+                  "url": "/assets/atlas/damage_types/json/slashing.json"
+                },
+                "damage_dice": "1d10+3",
+                "notes": "Two handed"
+              }
+            ]
+          }
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longbow",
+      "desc": "Ranged Weapon Attack: +6 to hit, range 150/600 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 4 (1d8) poison damage.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+3"
+        },
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "poison",
+            "url": "/assets/atlas/damage_types/json/poison.json"
+          },
+          "damage_dice": "1d8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/drider.webp",
+  "url": "/assets/atlas/enemies/json/drider.json",
+  "updated_at": "2026-04-04T13:31:48.838Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 11,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet4.webp",
+  "imageUrl": null,
+  "background_type": "underdark",
+  "last_updated": "4-4-2026"
+}

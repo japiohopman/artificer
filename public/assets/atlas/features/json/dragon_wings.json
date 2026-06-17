@@ -1,0 +1,24 @@
+{
+  "index": "dragon_wings",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "/assets/atlas/class/json/sorcerer.json"
+  },
+  "subclass": {
+    "index": "draconic",
+    "name": "draconic",
+    "url": "/assets/atlas/subclasses/json/draconic.json"
+  },
+  "name": "dragon wings",
+  "level": 14,
+  "prerequisites": [],
+  "desc": [
+    "At 14th level, you gain the ability to sprout a pair of dragon wings from your back, gaining a flying speed equal to your current speed. You can create these wings as a bonus action on your turn. They last until you dismiss them as a bonus action on your turn.",
+    "You can't manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them."
+  ],
+  "url": "/assets/atlas/features/json/dragon_wings.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/dragon_wings.webp",
+  "feature_specific": {}
+}

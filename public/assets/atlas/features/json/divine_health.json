@@ -1,0 +1,24 @@
+{
+  "index": "divine_health",
+  "class": {
+    "index": "paladin",
+    "name": "paladin",
+    "url": "/assets/atlas/class/json/paladin.json"
+  },
+  "name": "divine health",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "By 3rd level, the divine magic flowing through you makes you immune to disease."
+  ],
+  "url": "/assets/atlas/features/json/divine_health.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/divine_health.webp",
+  "feature_specific": {
+    "passive_modifiers": {
+      "immunity": [
+        "disease"
+      ]
+    }
+  }
+}

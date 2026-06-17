@@ -1,0 +1,61 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "javelin",
+  "name": "javelin",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "cost": {
+    "quantity": 5,
+    "unit": "sp"
+  },
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 2,
+  "properties": [
+    {
+      "index": "thrown",
+      "name": "thrown",
+      "url": "/assets/atlas/weapon_properties/thrown"
+    },
+    {
+      "index": "monk",
+      "name": "monk",
+      "url": "/assets/atlas/weapon_properties/monk"
+    }
+  ],
+  "throw_range": {
+    "normal": 30,
+    "long": 120
+  },
+  "url": "/assets/atlas/equipment/json/javelin.json",
+  "updated_at": "2026-04-30T10:30:33.833Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/javelin.webp",
+  "sprite_index": 14,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "imageUrl": "/assets/atlas/equipment/images/javelin.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "30-4-2026",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

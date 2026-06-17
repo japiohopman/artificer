@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/alignment.schema.json",
+  "title": "Alignment",
+  "description": "A character alignment in the game atlas.",
+  "type": "object",
+  "required": [
+    "index",
+    "name",
+    "abbreviation",
+    "desc",
+    "description",
+    "color",
+    "url",
+    "gods",
+    "updated_at"
+  ],
+  "properties": {
+    "index": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "abbreviation": {
+      "type": "string",
+      "enum": ["LG", "NG", "CG", "LN", "N", "CN", "LE", "NE", "CE"]
+    },
+    "desc": {
+      "type": "string",
+      "description": "Short description of the alignment."
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the alignment."
+    },
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^/assets/atlas/alignments/json/.+\\.json$"
+    },
+    "gods": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": { "type": "string" },
+          "name": { "type": "string" },
+          "url": { "type": "string", "pattern": "^/assets/atlas/gods/.+\\.json$" }
+        },
+        "required": ["index", "name", "url"]
+      }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

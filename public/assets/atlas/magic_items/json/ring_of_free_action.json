@@ -1,0 +1,27 @@
+{
+  "index": "ring_of_free_action",
+  "name": "ring of free action",
+  "equipment_category": {
+    "index": "ring",
+    "name": "ring",
+    "url": "/assets/atlas/equipment_categories/ring"
+  },
+  "rarity": "Rare",
+  "variants": [],
+  "variant": false,
+  "desc": [
+    "Ring, rare (requires attunement)",
+    "While you wear this ring, difficult terrain doesn't cost you extra movement. In addition, magic can neither reduce your speed nor cause you to be paralyzed or restrained."
+  ],
+  "url": "/assets/atlas/magic_items/json/ring_of_free_action.json",
+  "updated_at": "2026-05-09T18:49:46.337Z",
+  "image": "/assets/atlas/magic_items/ring_of_free_action.webp",
+  "imageUrl": "/assets/atlas/magic_items/images/ring_of_free_action.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "ring-1",
+    "ring-2"
+  ],
+  "last_updated": "9-5-2026"
+}

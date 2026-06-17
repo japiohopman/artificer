@@ -1,0 +1,24 @@
+{
+  "level": 20,
+  "ability_score_bonuses": 7,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "extra_attack_3",
+      "name": "Extra Attack (3)",
+      "url": "/assets/atlas/features/json/extra_attack_3.json"
+    }
+  ],
+  "class_specific": {
+    "action_surges": 2,
+    "indomitable_uses": 3,
+    "extra_attacks": 3
+  },
+  "index": "fighter_level_20",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "url": "/assets/atlas/class/levels/20/fighter_level_20.json"
+}

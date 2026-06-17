@@ -1,0 +1,40 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "bucket",
+  "name": "bucket",
+  "equipment_category": {
+    "index": "adventuring_gear",
+    "name": "adventuring gear",
+    "url": "/assets/atlas/equipment_categories/adventuring_gear"
+  },
+  "gear_category": {
+    "index": "standard_gear",
+    "name": "standard gear",
+    "url": "/assets/atlas/equipment_categories/standard_gear"
+  },
+  "cost": {
+    "quantity": 5,
+    "unit": "cp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/bucket.json",
+  "updated_at": "2026-05-09T18:47:03.513Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/bucket.webp",
+  "sprite_index": 14,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "imageUrl": "/assets/atlas/equipment/images/bucket.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "slot": [
+    "extra"
+  ],
+  "last_updated": "9-5-2026",
+  "kind": "adventuring_gear",
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ]
+}

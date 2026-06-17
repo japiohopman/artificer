@@ -1,0 +1,18 @@
+{
+  "index": "skill_intimidation",
+  "type": "skills",
+  "name": "skill: intimidation",
+  "classes": [],
+  "url": "/assets/atlas/proficiencies/json/skill_intimidation.json",
+  "reference": {
+    "index": "intimidation",
+    "name": "intimidation",
+    "url": "/assets/atlas/skills/json/intelligenceimidation.json"
+  },
+  "updated_at": "2026-06-01T09:48:51.000Z",
+  "image": "/assets/atlas/skills/json/intimidation.webp",
+  "species": [],
+  "proficiency_specific": {
+    "reference_category": "skills"
+  }
+}

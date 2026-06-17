@@ -1,0 +1,21 @@
+{
+  "index": "potion_of_healing_supreme",
+  "name": "potion of supreme healing",
+  "equipment_category": {
+    "index": "potion",
+    "name": "potion",
+    "url": "/assets/atlas/equipment_categories/potion"
+  },
+  "rarity": {
+    "name": "very rare"
+  },
+  "variants": [],
+  "variant": true,
+  "desc": [
+    "Potion, very rare",
+    "You regain 10d4 + 20 hit points when you drink this potion. The potion's red liquid glimmers when agitated."
+  ],
+  "url": "/assets/atlas/magic_items/json/potion_of_healing_supreme.json",
+  "updated_at": "2025-10-24T20:42:13.517Z",
+  "image": "/assets/atlas/magic_items/potion_of_healing_supreme.webp"
+}

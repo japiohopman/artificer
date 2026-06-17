@@ -1,0 +1,68 @@
+{
+  "desc": [
+    "Forged in the shadow of a dying god, the shortsword whispers promises of swift, brutal ends, its blackened steel stained with the echoes of forgotten sacrifices. Each swing leaves a trail of phantom agony in the air, a chilling testament to the countless souls claimed by its razor-sharp edge.\n"
+  ],
+  "special": [],
+  "index": "shortsword",
+  "name": "shortsword",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/weapon"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 5
+  },
+  "weight": 2,
+  "properties": [
+    {
+      "index": "finesse",
+      "name": "finesse",
+      "url": "/assets/atlas/weapon_properties/finesse"
+    },
+    {
+      "index": "light",
+      "name": "light",
+      "url": "/assets/atlas/weapon_properties/light"
+    },
+    {
+      "index": "monk",
+      "name": "monk",
+      "url": "/assets/atlas/weapon_properties/monk"
+    }
+  ],
+  "url": "/assets/atlas/equipment/json/shortsword.json",
+  "updated_at": "2026-04-19T14:46:32.723Z",
+  "contents": [],
+  "image": "/assets/atlas/equipment/images/shortsword.webp",
+  "sprite_index": 18,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+  "imageUrl": "/assets/atlas/equipment/images/shortsword.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "category": "Simple Melee Weapons",
+  "slot": [
+    "main-hand"
+  ],
+  "last_updated": "19-4-2026",
+  "kind": "weapon",
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ]
+}

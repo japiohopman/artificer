@@ -1,0 +1,23 @@
+{
+  "index": "step_of_the_wind",
+  "class": {
+    "index": "monk",
+    "name": "monk",
+    "url": "/assets/atlas/class/json/monk.json"
+  },
+  "name": "step of the wind",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "You can spend 1 ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn."
+  ],
+  "url": "/assets/atlas/features/json/step_of_the_wind.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/step_of_the_wind.webp",
+  "feature_specific": {
+    "special_action": "bonus_action",
+    "cost": {
+      "ki": 1
+    }
+  }
+}

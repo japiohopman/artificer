@@ -1,0 +1,192 @@
+{
+  "index": "life",
+  "class": {
+    "index": "cleric",
+    "name": "cleric",
+    "url": "/assets/atlas/class/json/cleric.json"
+  },
+  "name": "life",
+  "subclass_flavor": "Divine Domain",
+  "desc": [
+    "The Life domain focuses on the vibrant positive energy--one of the fundamental forces of the universe--that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities, sun gods, gods of healing or endurance, and gods of home and community."
+  ],
+  "features": [
+    {
+      "index": "bonus_proficiency",
+      "name": "Bonus Proficiency",
+      "level": 1,
+      "url": "/assets/atlas/features/json/bonus_proficiency.json"
+    },
+    {
+      "index": "disciple_of_life",
+      "name": "Disciple of Life",
+      "level": 1,
+      "url": "/assets/atlas/features/json/disciple_of_life.json"
+    },
+    {
+      "index": "channel_divinity_preserve_life",
+      "name": "Channel Divinity: Preserve Life",
+      "level": 2,
+      "url": "/assets/atlas/features/json/channel_divinity_preserve_life.json"
+    },
+    {
+      "index": "blessed_healer",
+      "name": "Blessed Healer",
+      "level": 6,
+      "url": "/assets/atlas/features/json/blessed_healer.json"
+    },
+    {
+      "index": "divine_strike",
+      "name": "Divine Strike",
+      "level": 8,
+      "url": "/assets/atlas/features/json/divine_strike.json"
+    },
+    {
+      "index": "supreme_healing",
+      "name": "Supreme Healing",
+      "level": 17,
+      "url": "/assets/atlas/features/json/supreme_healing.json"
+    }
+  ],
+  "spells": [
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_1",
+          "type": "level",
+          "name": "cleric 1",
+          "url": "/assets/atlas/classes/cleric/levels/1"
+        }
+      ],
+      "spell": {
+        "index": "bless",
+        "name": "bless",
+        "url": "/assets/atlas/spell/json/bless.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_1",
+          "type": "level",
+          "name": "cleric 1",
+          "url": "/assets/atlas/classes/cleric/levels/1"
+        }
+      ],
+      "spell": {
+        "index": "cure_wounds",
+        "name": "cure wounds",
+        "url": "/assets/atlas/spell/json/cure_wounds.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_3",
+          "type": "level",
+          "name": "cleric 3",
+          "url": "/assets/atlas/classes/cleric/levels/3"
+        }
+      ],
+      "spell": {
+        "index": "lesser_restoration",
+        "name": "lesser restoration",
+        "url": "/assets/atlas/spell/json/lesser_restoration.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_3",
+          "type": "level",
+          "name": "cleric 3",
+          "url": "/assets/atlas/classes/cleric/levels/3"
+        }
+      ],
+      "spell": {
+        "index": "spiritual_weapon",
+        "name": "spiritual weapon",
+        "url": "/assets/atlas/spell/json/spiritual_weapon.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_5",
+          "type": "level",
+          "name": "cleric 5",
+          "url": "/assets/atlas/classes/cleric/levels/5"
+        }
+      ],
+      "spell": {
+        "index": "beacon_of_hope",
+        "name": "beacon of hope",
+        "url": "/assets/atlas/spell/json/beacon_of_hope.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_5",
+          "type": "level",
+          "name": "cleric 5",
+          "url": "/assets/atlas/classes/cleric/levels/5"
+        }
+      ],
+      "spell": {
+        "index": "revivify",
+        "name": "revivify",
+        "url": "/assets/atlas/spell/json/revivify.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_7",
+          "type": "level",
+          "name": "cleric 7",
+          "url": "/assets/atlas/classes/cleric/levels/7"
+        }
+      ],
+      "spell": {
+        "index": "death_ward",
+        "name": "death ward",
+        "url": "/assets/atlas/spell/json/death_ward.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_9",
+          "type": "level",
+          "name": "cleric 9",
+          "url": "/assets/atlas/classes/cleric/levels/9"
+        }
+      ],
+      "spell": {
+        "index": "mass_cure_wounds",
+        "name": "mass cure wounds",
+        "url": "/assets/atlas/spell/json/mass_cure_wounds.json"
+      }
+    },
+    {
+      "prerequisites": [
+        {
+          "index": "cleric_9",
+          "type": "level",
+          "name": "cleric 9",
+          "url": "/assets/atlas/classes/cleric/levels/9"
+        }
+      ],
+      "spell": {
+        "index": "raise_dead",
+        "name": "raise dead",
+        "url": "/assets/atlas/spell/json/raise_dead.json"
+      }
+    }
+  ],
+  "subclass_levels": "public/assets/atlas/subclasses/life/levels",
+  "url": "/assets/atlas/subclasses/json/life.json",
+  "updated_at": "2025-10-24T20:42:14.748Z",
+  "image": "/assets/atlas/subclasses/life.webp"
+}

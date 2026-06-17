@@ -1,0 +1,29 @@
+{
+  "level": 10,
+  "ability_score_bonuses": 2,
+  "prof_bonus": 4,
+  "features": [
+    {
+      "index": "aura_of_courage",
+      "name": "Aura of Courage",
+      "url": "/assets/atlas/features/json/aura_of_courage.json"
+    }
+  ],
+  "class_specific": {
+    "aura_range": 10
+  },
+  "index": "paladin_level_10",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/paladin.json"
+  },
+  "url": "/assets/atlas/class/levels/10/paladin_level_10.json",
+  "spellcasting": {
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 2,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0
+  }
+}

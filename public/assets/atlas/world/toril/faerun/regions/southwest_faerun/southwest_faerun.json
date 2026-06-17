@@ -1,0 +1,18 @@
+
+{
+  "id": "southwest_faerun",
+  "name": "Southwest Faer\u00fbn",
+  "world": "totil",
+  "continent": "fearun",
+  "region": "southwest_faerun",
+  "title": "Southwest Faerûn: Lands of Adventure",
+  "description": "Southwest Faerûn is a region of ancient empires, lush jungles, and treacherous coastlines. It includes the merchant-ruled lands of Amn, the war-torn kingdom of Tethyr, and the exotic Chultan Peninsula.",
+  "wiki": "Southwest Faerûn is dominated by several distinct sub-regions. The Lands of Intrigue (Amn, Tethyr, Calimshan) are known for their wealth and political maneuvering. Further south lies Chult, a primal wilderness filled with dinosaurs and abandoned cities of gold. The region is a hotspot for explorers and fortune-seekers.",
+  "image": "https://images.unsplash.com/photo-1534346501103-625ca4e50257?auto=format&fit=crop&w=800&q=80",
+  "tags": ["region", "faerun", "southwest", "intrigue", "jungle"],
+  "metadata": {
+    "prominent_nations": ["Amn", "Tethyr", "Calimshan"],
+    "landscape": "Deserts, jungles, coastal plains",
+    "economy": "Mercantilism, gems, spices"
+  }
+}

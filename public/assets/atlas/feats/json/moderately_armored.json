@@ -1,0 +1,39 @@
+{
+  "index": "moderately_armored",
+  "name": "moderately armored",
+  "prerequisites": [
+    {
+      "stat": "feature",
+      "operator": "==",
+      "value": true,
+      "desc": "Proficiency with light armor"
+    },
+    {
+      "stat": "level",
+      "operator": ">=",
+      "value": 4
+    }
+  ],
+  "desc": [
+    "You have trained to master the use of medium armor and shields, gaining the following benefits:",
+    "- Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "- You gain proficiency with medium armor and shields."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "choice": [
+        {
+          "name": "Strength or Dexterity bonus",
+          "options": [
+            "strength_bonus",
+            "dexterity_bonus"
+          ],
+          "amount": 1
+        }
+      ]
+    }
+  },
+  "url": "/assets/atlas/feats/json/moderately_armored.json",
+  "updated_at": "2024-06-19T00:00:00.000Z",
+  "image": "/assets/atlas/feats/moderately_armored.webp"
+}

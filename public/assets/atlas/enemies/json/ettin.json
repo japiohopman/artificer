@@ -1,0 +1,124 @@
+{
+  "index": "ettin",
+  "name": "ettin",
+  "size": "Large",
+  "type": "giant",
+  "alignment": "chaotic evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 85,
+  "hit_dice": "10d10",
+  "hit_points_roll": "10d10+30",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 21,
+  "dexterity": 8,
+  "constitution": 17,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 8,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill_perception",
+        "name": "skill: perception",
+        "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "languages": "Giant, Orc",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [
+    {
+      "name": "two heads",
+      "desc": "The ettin has advantage on Wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, frightened, stunned, and knocked unconscious.",
+      "damage": []
+    },
+    {
+      "name": "wakeful",
+      "desc": "When one of the ettin's heads is asleep, its other head is awake.",
+      "damage": []
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "multiattack",
+      "multiattack_type": "actions",
+      "desc": "The ettin makes two attacks: one with its battleaxe and one with its morningstar.",
+      "actions": [
+        {
+          "action_name": "Battleaxe",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Morningstar",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "battleaxe",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "morningstar",
+      "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) piercing damage.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+5"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/assets/atlas/enemies/images/ettin.webp",
+  "url": "/assets/atlas/enemies/json/ettin.json",
+  "updated_at": "2026-04-16T12:22:53.552Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "sprite_index": 24,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet4.webp",
+  "wikiData": null,
+  "imageUrl": "/assets/atlas/enemies/ettin.webp",
+  "last_updated": "16-4-2026",
+  "_type": "enemies",
+  "background_type": "land_forest3"
+}

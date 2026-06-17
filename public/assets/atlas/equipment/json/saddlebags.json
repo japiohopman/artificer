@@ -1,0 +1,29 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "saddlebags",
+  "name": "saddlebags",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 4,
+    "unit": "gp"
+  },
+  "weight": 8,
+  "url": "/assets/atlas/equipment/json/saddlebags.json",
+  "updated_at": "2026-06-13T20:53:40.072Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/saddlebags.webp",
+  "sprite_index": 8,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
+  "kind": "adventuring_gear",
+  "imageUrl": "/assets/atlas/equipment/images/saddlebags.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "13-6-2026"
+}

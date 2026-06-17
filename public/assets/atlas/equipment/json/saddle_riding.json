@@ -1,0 +1,29 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "saddle_riding",
+  "name": "saddle, riding",
+  "equipment_category": {
+    "index": "mounts_and_vehicles",
+    "name": "mounts and vehicles",
+    "url": "/assets/atlas/equipment_categories/mounts_and_vehicles"
+  },
+  "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 25,
+  "url": "/assets/atlas/equipment/json/saddle_riding.json",
+  "updated_at": "2026-06-13T21:01:20.232Z",
+  "contents": [],
+  "properties": [],
+  "image": "/assets/atlas/equipment/images/saddle_riding.webp",
+  "sprite_index": 7,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
+  "kind": "adventuring_gear",
+  "imageUrl": "/assets/atlas/equipment/images/saddle_riding.webp",
+  "_type": "equipment",
+  "background_type": "land_forest",
+  "last_updated": "13-6-2026"
+}

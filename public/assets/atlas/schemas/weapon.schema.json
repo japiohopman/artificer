@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/weapon.schema.json",
+  "title": "Weapon",
+  "description": "Schema for weapon equipment items.",
+  "allOf": [
+    { "$ref": "equipment.schema.json" },
+    {
+      "type": "object",
+      "required": [
+        "weapon_category",
+        "weapon_range",
+        "category_range",
+        "damage",
+        "range"
+      ],
+      "properties": {
+        "weapon_category": { "type": "string" },
+        "weapon_range": { "type": "string", "enum": ["Melee", "Ranged"] },
+        "category_range": { "type": "string" },
+        "damage": {
+          "type": "object",
+          "properties": {
+            "damage_dice": { "type": "string" },
+            "damage_type": {
+              "type": "object",
+              "properties": {
+                "index": { "type": "string" },
+                "name": { "type": "string" },
+                "url": { "type": "string" }
+              },
+              "required": ["index", "name", "url"]
+            }
+          },
+          "required": ["damage_dice", "damage_type"]
+        },
+        "range": {
+          "type": "object",
+          "properties": {
+            "normal": { "type": "integer" },
+            "long": { "type": "integer" }
+          },
+          "required": ["normal"]
+        },
+        "two_handed_damage": {
+          "type": "object",
+          "properties": {
+            "damage_dice": { "type": "string" },
+            "damage_type": {
+              "type": "object",
+              "properties": {
+                "index": { "type": "string" },
+                "name": { "type": "string" },
+                "url": { "type": "string" }
+              },
+              "required": ["index", "name", "url"]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
