@@ -63,7 +63,7 @@ export const Nav: React.FC = () => {
   const leftActions: NavAction[] = [
     {
       id: 'chat-toggle',
-      icon: chatExpanded ? 'minimize' : 'maximize',
+      icon: chatExpanded ? 'chevron_down' : 'chevron_up',
       label: chatExpanded ? 'Map Focus' : 'Interaction',
       onClick: () => setChatExpanded(!chatExpanded),
       isActive: chatExpanded,

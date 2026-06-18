@@ -4,7 +4,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 import fs from "fs/promises";
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 dotenv.config();
 
@@ -365,7 +365,7 @@ async function startServer() {
     }
 
     try {
-      const genAI = new GoogleGenAI(apiKey);
+      const genAI = new GoogleGenerativeAI(apiKey);
       const genModel = genAI.getGenerativeModel({ model, generationConfig: config });
       
       // The SDK expects { contents: [...] } or just the array depending on how it's called.
@@ -395,7 +395,7 @@ async function startServer() {
     }
 
     try {
-      const genAI = new GoogleGenAI(apiKey);
+      const genAI = new GoogleGenerativeAI(apiKey);
       const genModel = genAI.getGenerativeModel({ model, generationConfig: config });
       
       const formattedContents = Array.isArray(contents) ? contents : [{ parts: [{ text: contents }] }];

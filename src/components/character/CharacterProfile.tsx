@@ -86,7 +86,6 @@ export const CharacterProfile: React.FC = () => {
     setFocusedItem,
     inspectingItem,
     setInspectingItem,
-    setViewMode,
     rollDice3D,
     setIsCharacterSpellbookOpen
   } = useStore();
