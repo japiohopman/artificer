@@ -13,7 +13,6 @@ export const ActionView: React.FC = () => {
     isEditingSubMap, 
     activeCards, 
     clearPreview, 
-    setViewMode, 
     removeFromPreview 
   } = useStore();
 
@@ -45,12 +44,6 @@ export const ActionView: React.FC = () => {
           <div className="w-full h-full flex flex-col items-center justify-center text-parchment-400 space-y-4">
             <GameIcon name="panel" size={64} className="opacity-10" />
             <p className="font-header text-2xl uppercase tracking-widest">The board is empty</p>
-            <button 
-              onClick={() => setViewMode('collection')}
-              className="px-6 py-2 bg-dragon-red text-white rounded-lg font-bold uppercase text-xs shadow-lg hover:bg-red-700"
-            >
-              Go to Collection
-            </button>
           </div>
         )}
 

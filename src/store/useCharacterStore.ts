@@ -6,6 +6,7 @@ export type Emotion = 'Neutral' | 'Curious' | 'Skeptical' | 'Happy' | 'Greedy' |
 export interface Character {
   id: string;
   saveVersion?: number;
+  lastSaved?: string;
   name: string;
   class: string;
   race: string;

@@ -13,7 +13,6 @@ export interface LogEntry {
 
 interface AppState {
   // Navigation
-  viewMode: 'combat' | 'collection';
   currentView: string;
   explorerTab: ExplorerTab;
   isDevKitOpen: boolean;
@@ -64,7 +63,6 @@ interface AppState {
   setIsGameStarted: (started: boolean) => void;
 
   // Actions
-  setViewMode: (mode: 'combat' | 'collection') => void;
   setCurrentView: (view: string) => void;
   setExplorerTab: (tab: ExplorerTab) => void;
   setIsDevKitOpen: (isOpen: boolean) => void;
@@ -105,7 +103,6 @@ interface AppState {
 }
 
 export const useStore = create<AppState>((set, get) => ({
-  viewMode: 'collection',
   currentView: 'world',
   explorerTab: 'enemies',
   isDevKitOpen: false,
@@ -139,7 +136,6 @@ export const useStore = create<AppState>((set, get) => ({
   isDiceReady: false,
   recentRolls: [],
 
-  setViewMode: (viewMode) => set({ viewMode }),
   setCurrentView: (currentView) => set({ currentView }),
   setExplorerTab: (explorerTab) => {
     set({ explorerTab });
@@ -226,8 +222,7 @@ export const useStore = create<AppState>((set, get) => ({
   clearLogs: () => set({ logs: [] }),
 
   addToPreview: (item) => set((state) => ({ 
-    activeCards: [...state.activeCards, { ...item }],
-    viewMode: 'combat'
+    activeCards: [...state.activeCards, { ...item }]
   })),
 
   removeFromPreview: (index) => set((state) => ({
