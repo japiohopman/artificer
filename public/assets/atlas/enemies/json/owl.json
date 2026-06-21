@@ -4,12 +4,7 @@
   "size": "Tiny",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 11
-    }
-  ],
+  "armor_class": 11,
   "hit_points": 1,
   "hit_dice": "1d4",
   "hit_points_roll": "1d4-1",
@@ -50,7 +45,7 @@
     "passive_perception": 13
   },
   "languages": "",
-  "challenge_rating": 0,
+  "challenge_rating": "0",
   "proficiency_bonus": 2,
   "xp": 10,
   "special_abilities": [
@@ -85,10 +80,22 @@
   ],
   "image": "/assets/atlas/enemies/images/owl.webp",
   "url": "/assets/atlas/enemies/json/owl.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-21T08:35:31.792Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 14,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.0webp",
+  "stats": {
+    "str": 3,
+    "dex": 13,
+    "con": 8,
+    "int": 2,
+    "wis": 12,
+    "cha": 7
+  },
+  "imageUrl": "/assets/atlas/enemies/images/owl.webp",
+  "_type": "enemies",
+  "background_type": "land_forest4",
+  "last_updated": "21-6-2026"
 }
