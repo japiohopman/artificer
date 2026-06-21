@@ -5,12 +5,7 @@
   "type": "humanoid",
   "subtype": "sahuagin",
   "alignment": "lawful evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 12
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 22,
   "hit_dice": "4d8",
   "hit_points_roll": "4d8+4",
@@ -43,7 +38,7 @@
     "passive_perception": 15
   },
   "languages": "Sahuagin",
-  "challenge_rating": 0.5,
+  "challenge_rating": "0.5",
   "proficiency_bonus": 2,
   "xp": 100,
   "special_abilities": [
@@ -186,10 +181,22 @@
   ],
   "image": "/assets/atlas/enemies/sahuagin.webp",
   "url": "/assets/atlas/enemies/json/sahuagin.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-21T08:29:18.202Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 18,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.0webp",
+  "stats": {
+    "str": 13,
+    "dex": 11,
+    "con": 12,
+    "int": 12,
+    "wis": 13,
+    "cha": 9
+  },
+  "imageUrl": "/assets/atlas/enemies/images/sahuagin.webp",
+  "_type": "enemies",
+  "background_type": "land_urban3",
+  "last_updated": "21-6-2026"
 }
