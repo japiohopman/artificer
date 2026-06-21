@@ -4,12 +4,7 @@
   "size": "Huge",
   "type": "construct",
   "alignment": "lawful neutral",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 195,
   "hit_dice": "17d12+85",
   "hit_points_roll": "17d12+85",
@@ -78,7 +73,7 @@
     "passive_perception": 19
   },
   "languages": "understand Netherese and Common but can't speak; telepathy 60 ft.",
-  "challenge_rating": 10,
+  "challenge_rating": "10",
   "proficiency_bonus": 4,
   "xp": 5900,
   "special_abilities": [
@@ -150,11 +145,11 @@
   ],
   "image": "/assets/atlas/enemies/images/tomb_tapper.webp",
   "url": "/assets/atlas/enemies/json/tomb_tapper.json",
-  "updated_at": "2024-06-04T12:00:00.000Z",
+  "updated_at": "2026-06-21T08:20:46.640Z",
   "sprite_index": 0,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.0webp",
   "rarity": "Rare",
-  "background_type": "underdark",
+  "background_type": "underdark2",
   "item_drops": [
     {
       "name": "adamantine maul",
@@ -166,5 +161,16 @@
   "tags": [
     "living_stone",
     "magic_hunter"
-  ]
+  ],
+  "stats": {
+    "str": 20,
+    "dex": 10,
+    "con": 20,
+    "int": 10,
+    "wis": 14,
+    "cha": 1
+  },
+  "imageUrl": "/assets/atlas/enemies/images/tomb_tapper.webp",
+  "_type": "enemies",
+  "last_updated": "21-6-2026"
 }
