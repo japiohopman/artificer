@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "ooze",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 8
-    }
-  ],
+  "armor_class": 8,
   "hit_points": 45,
   "hit_dice": "6d10",
   "hit_points_roll": "6d10+12",
@@ -69,7 +64,7 @@
     "passive_perception": 8
   },
   "languages": "",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -118,9 +113,21 @@
   ],
   "image": "/assets/atlas/enemies/images/ochre_jelly.webp",
   "url": "/assets/atlas/enemies/json/ochre_jelly.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-21T08:33:56.107Z",
   "forms": [],
   "legendary_actions": [],
   "sprite_index": 7,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.0webp",
+  "stats": {
+    "str": 15,
+    "dex": 6,
+    "con": 14,
+    "int": 2,
+    "wis": 6,
+    "cha": 1
+  },
+  "imageUrl": "/assets/atlas/enemies/images/ochre_jelly.webp",
+  "_type": "enemies",
+  "background_type": "ethereal4",
+  "last_updated": "21-6-2026"
 }
