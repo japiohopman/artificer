@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "dragon",
   "alignment": "lawful good",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 45,
   "hit_dice": "6d8",
   "hit_points_roll": "6d8+18",
@@ -85,7 +80,7 @@
     "passive_perception": 14
   },
   "languages": "Draconic",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "actions": [
@@ -164,11 +159,23 @@
   ],
   "image": "/assets/atlas/enemies/silver_dragon_wyrmling.webp",
   "url": "/assets/atlas/enemies/json/silver_dragon_wyrmling.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-21T08:31:06.128Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 4,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet11.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet11.0webp",
+  "stats": {
+    "str": 19,
+    "dex": 10,
+    "con": 17,
+    "int": 12,
+    "wis": 11,
+    "cha": 15
+  },
+  "imageUrl": "/assets/atlas/enemies/images/silver_dragon_wyrmling.webp",
+  "_type": "enemies",
+  "background_type": "land_mountains2",
+  "last_updated": "21-6-2026"
 }
