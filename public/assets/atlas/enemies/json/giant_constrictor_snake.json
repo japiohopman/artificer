@@ -4,12 +4,7 @@
   "size": "Huge",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 12
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 60,
   "hit_dice": "8d12",
   "hit_points_roll": "8d12+8",
@@ -42,7 +37,7 @@
     "passive_perception": 12
   },
   "languages": "",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "actions": [
@@ -81,11 +76,23 @@
   ],
   "image": "/assets/atlas/enemies/images/giant_constrictor_snake.webp",
   "url": "/assets/atlas/enemies/json/giant_constrictor_snake.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-21T08:37:52.492Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 17,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet5.0webp",
+  "stats": {
+    "str": 19,
+    "dex": 14,
+    "con": 12,
+    "int": 1,
+    "wis": 10,
+    "cha": 3
+  },
+  "imageUrl": "/assets/atlas/enemies/images/giant_constrictor_snake.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "21-6-2026"
 }
