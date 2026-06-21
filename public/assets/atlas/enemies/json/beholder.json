@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "aberration",
   "alignment": "lawful evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 18
-    }
-  ],
+  "armor_class": 18,
   "hit_points": 180,
   "hit_dice": "19d10+76",
   "hit_points_roll": "19d10+76",
@@ -72,7 +67,7 @@
     "passive_perception": 22
   },
   "languages": "Deep Speech, Undercommon",
-  "challenge_rating": 13,
+  "challenge_rating": "13",
   "proficiency_bonus": 5,
   "xp": 10000,
   "special_abilities": [
@@ -114,9 +109,9 @@
   ],
   "image": "/assets/atlas/enemies/images/beholder.webp",
   "url": "/assets/atlas/enemies/json/beholder.json",
-  "updated_at": "2024-06-04T12:00:00.000Z",
+  "updated_at": "2026-06-21T08:18:53.482Z",
   "sprite_index": 0,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.0webp",
   "rarity": "Legendary",
   "background_type": "underdark",
   "item_drops": [
@@ -131,5 +126,18 @@
     "living",
     "hovering",
     "xenophobic"
-  ]
+  ],
+  "stats": {
+    "str": 10,
+    "dex": 14,
+    "con": 18,
+    "int": 17,
+    "wis": 15,
+    "cha": 17
+  },
+  "imageUrl": "/assets/atlas/enemies/images/beholder.webp",
+  "_type": "enemies",
+  "lore": "/assets/atlas/enemies/enemies_wiki/beholder.json",
+  "wikiData": {},
+  "last_updated": "21-6-2026"
 }
