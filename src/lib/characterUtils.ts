@@ -89,6 +89,33 @@ export async function processLevelUp(character: Character): Promise<{ updatedCha
       hp: workingCharacter.hp + finalIncrease,
       features: [...workingCharacter.features, ...levelFeatures]
     };
+
+    // Apply HP bonuses from all features possessed at this level
+    workingCharacter.features.forEach(feat => {
+        const hpBonus = feat.feature_specific?.passive_modifiers?.hp_bonus_per_level;
+        if (hpBonus) {
+            const isNewlyGained = levelFeatures.some(f => f.index === feat.index);
+            if (isNewlyGained) {
+                // Initial retroactive bonus (e.g. Tough: 2 HP per level)
+                workingCharacter.maxHp += (hpBonus * lvl);
+                workingCharacter.hp += (hpBonus * lvl);
+            } else {
+                // Ongoing per-level bonus
+                workingCharacter.maxHp += hpBonus;
+                workingCharacter.hp += hpBonus;
+            }
+        }
+    });
+
+    // Apply HP bonuses from traits
+    workingCharacter.traits?.forEach(trait => {
+        const hpBonus = trait.trait_specific?.passive_modifiers?.hp_bonus_per_level;
+        if (hpBonus) {
+            // Traits are usually inherent from level 1
+            workingCharacter.maxHp += hpBonus;
+            workingCharacter.hp += hpBonus;
+        }
+    });
   }
 
   return {

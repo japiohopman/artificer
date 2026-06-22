@@ -28,8 +28,8 @@ export interface Character {
     cha: number;
   };
   proficiencies: string[];
-  traits: string[];
-  features: { name: string; index: string; desc: string; source: string }[];
+  traits: { name: string; index: string; desc: string; trait_specific?: any }[];
+  features: { name: string; index: string; desc: string; source: string; feature_specific?: any }[];
   flaws: string[];
   ideals: string[];
   bonds: string[];

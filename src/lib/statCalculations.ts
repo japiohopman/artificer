@@ -63,6 +63,47 @@ export function getEffectiveStats(character: Character | undefined): Character['
     if (mods.charisma_set) sets.cha = Math.max(sets.cha, safeNum(mods.charisma_set));
   });
 
+  // Process Passive Modifiers from Traits
+  character.traits?.forEach(trait => {
+    const mods = trait.trait_specific?.passive_modifiers;
+    if (!mods) return;
+
+    if (mods.strength_bonus) bonuses.str += safeNum(mods.strength_bonus);
+    if (mods.dexterity_bonus) bonuses.dex += safeNum(mods.dexterity_bonus);
+    if (mods.constitution_bonus) bonuses.con += safeNum(mods.constitution_bonus);
+    if (mods.intelligence_bonus) bonuses.int += safeNum(mods.intelligence_bonus);
+    if (mods.wisdom_bonus) bonuses.wis += safeNum(mods.wisdom_bonus);
+    if (mods.charisma_bonus) bonuses.cha += safeNum(mods.charisma_bonus);
+
+    if (mods.strength_set) sets.str = Math.max(sets.str, safeNum(mods.strength_set));
+    if (mods.dexterity_set) sets.dex = Math.max(sets.dex, safeNum(mods.dexterity_set));
+    if (mods.constitution_set) sets.con = Math.max(sets.con, safeNum(mods.constitution_set));
+    if (mods.intelligence_set) sets.int = Math.max(sets.int, safeNum(mods.intelligence_set));
+    if (mods.wisdom_set) sets.wis = Math.max(sets.wis, safeNum(mods.wisdom_set));
+    if (mods.charisma_set) sets.cha = Math.max(sets.cha, safeNum(mods.charisma_set));
+    if (mods.speed_set) (effectiveStats as any)._speedSet = Math.max((effectiveStats as any)._speedSet || 0, safeNum(mods.speed_set));
+  });
+
+  // Process Passive Modifiers from Features/Feats
+  character.features?.forEach(feat => {
+    const mods = feat.feature_specific?.passive_modifiers;
+    if (!mods) return;
+
+    if (mods.strength_bonus) bonuses.str += safeNum(mods.strength_bonus);
+    if (mods.dexterity_bonus) bonuses.dex += safeNum(mods.dexterity_bonus);
+    if (mods.constitution_bonus) bonuses.con += safeNum(mods.constitution_bonus);
+    if (mods.intelligence_bonus) bonuses.int += safeNum(mods.intelligence_bonus);
+    if (mods.wisdom_bonus) bonuses.wis += safeNum(mods.wisdom_bonus);
+    if (mods.charisma_bonus) bonuses.cha += safeNum(mods.charisma_bonus);
+
+    if (mods.strength_set) sets.str = Math.max(sets.str, safeNum(mods.strength_set));
+    if (mods.dexterity_set) sets.dex = Math.max(sets.dex, safeNum(mods.dexterity_set));
+    if (mods.constitution_set) sets.con = Math.max(sets.con, safeNum(mods.constitution_set));
+    if (mods.intelligence_set) sets.int = Math.max(sets.int, safeNum(mods.intelligence_set));
+    if (mods.wisdom_set) sets.wis = Math.max(sets.wis, safeNum(mods.wisdom_set));
+    if (mods.charisma_set) sets.cha = Math.max(sets.cha, safeNum(mods.charisma_set));
+  });
+
   const statsKeys: (keyof Character['stats'])[] = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
   statsKeys.forEach(s => {
     // Add bonuses first
@@ -182,6 +223,18 @@ export function calculateDerivedStats(character: Character | undefined): Derived
     }
   });
 
+  // Process Passive Modifiers from Features/Feats for AC and Speed
+  character.features?.forEach(feat => {
+    const mods = feat.feature_specific?.passive_modifiers;
+    if (!mods) return;
+
+    if (mods.ac_bonus) acBonus += safeNum(mods.ac_bonus);
+    if (mods.speed_bonus) speed += safeNum(mods.speed_bonus);
+    if (mods.hp_bonus_per_level) {
+        // This is handled in maxHp calculation, but for derived stats we might show it
+    }
+  });
+
   const ac = baseAC + acBonus;
   
   // 1.1 Feature AC Bonuses (e.g. Defense Fighting Style)
@@ -199,11 +252,20 @@ export function calculateDerivedStats(character: Character | undefined): Derived
   const initiative = dexMod;
 
   // 3. Speed
-  let speed = 30; // Default
-  const race = (character.race || "").toLowerCase();
-  if (race.includes('gnome') || race.includes('halfling') || race.includes('dwarf')) {
-    speed = 25;
+  let speed = (effectiveStats as any)._speedSet || 30; // Default or set by trait
+  if (!(effectiveStats as any)._speedSet) {
+    const race = (character.race || "").toLowerCase();
+    if (race.includes('gnome') || race.includes('halfling') || race.includes('dwarf')) {
+      speed = 25;
+    }
   }
+
+  // Process speed modifiers from traits and features
+  character.traits?.forEach(t => {
+      if (t.trait_specific?.passive_modifiers?.speed_bonus) {
+          speed += safeNum(t.trait_specific.passive_modifiers.speed_bonus);
+      }
+  });
   // Could add more speed logic based on class features/equipment
 
   // 4. Attack Bonuses
