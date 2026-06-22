@@ -88,42 +88,71 @@ export const PartyLogistics: React.FC = () => {
        <AnimatePresence>
          {isOpen && (
            <>
-             <div className="fixed inset-0 z-[2900]" onClick={() => setIsOpen(false)} />
+             <div className="fixed inset-0 z-[6000] bg-black/40 backdrop-blur-sm" onClick={() => setIsOpen(false)} />
              <motion.div
-               initial={{ opacity: 0, y: 10, scale: 0.95 }}
-               animate={{ opacity: 1, y: 0, scale: 1 }}
-               exit={{ opacity: 0, y: 10, scale: 0.95 }}
-               className="absolute top-full right-0 mt-2 w-80 bg-parchment-50 border-2 border-dragon-red rounded-xl shadow-2xl overflow-hidden z-[3000]"
+               initial={{ opacity: 0, scale: 0.9, y: 20 }}
+               animate={{ opacity: 1, scale: 1, y: 0 }}
+               exit={{ opacity: 0, scale: 0.9, y: 20 }}
+               className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-xl bg-parchment-100 rounded-lg shadow-2xl border-[8px] border-dragon-darkRed overflow-hidden z-[7000] flex flex-col"
+               style={{
+                 backgroundImage: `url('https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1776054260573-old_paper.webp')`,
+                 backgroundSize: 'cover'
+               }}
              >
-                <div className="bg-dragon-darkRed p-4 text-white">
-                   <h3 className="font-header text-lg uppercase tracking-widest">Party Manifest</h3>
-                   <p className="text-[10px] text-white/60 uppercase font-bold tracking-tighter">Unified Logistics Readout</p>
+                <div className="bg-dragon-red p-4 text-white flex items-center justify-between border-b-2 border-dragon-gold/30">
+                   <div>
+                      <h3 className="font-header text-xl uppercase tracking-widest">Logistics Manifest</h3>
+                      <p className="text-[10px] text-dragon-gold font-bold tracking-[0.3em] uppercase">Unified Strategic Readout</p>
+                   </div>
+                   <button
+                     onClick={() => setIsOpen(false)}
+                     className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
+                   >
+                     <GameIcon name="close" size={16} color="#FFFFFF" />
+                   </button>
                 </div>
 
-                <div className="p-4 space-y-6">
-                   {/* Summary Stats */}
-                   <div className="grid grid-cols-2 gap-4">
-                      <StatItem label="Personnel" value={`${memberCount} Active`} icon="users" />
-                      <StatItem label="Transport" value={`${partyVehicles.length} Registered`} icon="horse" />
-                   </div>
+                <div className="p-6 space-y-8 overflow-y-auto max-h-[70vh] custom-scrollbar">
+                   {/* Summary & Capacity Section */}
+                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="space-y-4">
+                        <label className="text-[10px] font-black text-dragon-red uppercase tracking-widest flex items-center gap-2">
+                           <GameIcon name="party_stats" size={14} /> Personnel & Status
+                        </label>
+                        <div className="grid grid-cols-1 gap-3">
+                           <StatItem label="Personnel" value={`${memberCount} Active Members`} icon="users" />
+                           <StatItem label="Transport" value={`${partyVehicles.length} Active Vehicles`} icon="horse" />
+                        </div>
+                      </div>
 
-                   {/* Capacity Breakdown */}
-                   <div className="space-y-3">
-                      <div className="flex justify-between items-end">
-                         <span className="text-[10px] font-black text-dragon-red uppercase tracking-widest">Load Capacity</span>
-                         <span className="text-[9px] font-mono text-parchment-400">{totalWeight.toFixed(1)} / {totalCapacity} lbs</span>
-                      </div>
-                      <div className="h-2 bg-black/5 rounded-full overflow-hidden border border-black/5">
-                         <motion.div 
-                           initial={{ width: 0 }}
-                           animate={{ width: `${weightPercentage}%` }}
-                           className={cn("h-full", isOverburdened ? "bg-red-500" : "bg-dragon-red")}
-                         />
-                      </div>
-                      <div className="grid grid-cols-3 gap-2">
-                         <CapBadge label="Base" value={`${memberCount * partyStats.baseCapacityPerMember}`} />
-                         <CapBadge label="Vehicles" value={`+${vehicleBonusFromAssets}`} color="gold" />
-                         <CapBadge label="Bonus" value={`+${partyStats.vehicleCapacityBonus}`} color="gold" />
+                      <div className="space-y-4">
+                        <label className="text-[10px] font-black text-dragon-red uppercase tracking-widest flex items-center gap-2">
+                           <GameIcon name="package" size={14} /> Total Carry Weight
+                        </label>
+                        <div className="bg-white/40 p-4 rounded-lg border-2 border-dragon-gold/20 shadow-inner">
+                           <div className="flex justify-between items-end mb-2">
+                              <span className="text-[14px] font-bold text-parchment-900">{totalWeight.toFixed(1)} <span className="text-[10px] text-parchment-400 font-normal">LBS</span></span>
+                              <span className="text-[11px] font-mono text-dragon-red font-black">/ {totalCapacity} LBS</span>
+                           </div>
+                           <div className="h-4 bg-black/10 rounded-full overflow-hidden border-2 border-black/5 p-0.5">
+                              <motion.div
+                                 initial={{ width: 0 }}
+                                 animate={{ width: `${weightPercentage}%` }}
+                                 className={cn("h-full rounded-full transition-all duration-1000", isOverburdened ? "bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]" : "bg-dragon-red")}
+                              />
+                           </div>
+                           <div className="mt-4 grid grid-cols-3 gap-2">
+                              <CapBadge label="Personnel" value={`${memberCount * partyStats.baseCapacityPerMember}`} />
+                              <CapBadge label="Vehicles" value={`+${vehicleBonusFromAssets}`} color="gold" />
+                              <CapBadge label="Utility" value={`+${partyStats.vehicleCapacityBonus}`} color="gold" />
+                           </div>
+                           {isOverburdened && (
+                              <div className="mt-3 flex items-center gap-2 text-red-600 animate-pulse">
+                                 <GameIcon name="warning" size={12} />
+                                 <span className="text-[9px] font-black uppercase tracking-widest">Movement Speed Reduced</span>
+                              </div>
+                           )}
+                        </div>
                       </div>
                    </div>
 
@@ -169,8 +198,9 @@ export const PartyLogistics: React.FC = () => {
                    </div>
                 </div>
 
-                <div className="bg-parchment-200 p-2 text-[8px] text-parchment-400 font-mono text-center border-t border-parchment-300">
-                   LOG_SYS_v2.0_ENABLED
+                <div className="bg-dragon-darkRed p-3 text-[9px] text-parchment-400 font-mono flex justify-between items-center px-6">
+                   <span>LOGISTICS_SUBSYSTEM_v2.0.4</span>
+                   <span className="text-dragon-gold/40 italic">STRATEGIC_SURPLUS_READOUT</span>
                 </div>
              </motion.div>
            </>
