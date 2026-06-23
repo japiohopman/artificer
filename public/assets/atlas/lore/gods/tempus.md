@@ -31,4 +31,9 @@ often on the lips of soldiers. His priests are tacticians,
 often skilled in the art of war. Many of his ordained
 don't serve in temples, but as battlefield chaplains with
 armies and mercenary companies, encouraging their
-fellow soldiers with both word and blade. Priests of 
+fellow soldiers with both word and blade. Priests of Tempus teach that war conducted properly is fair in
+that it oppresses all sides equally, and that in any given
+battle,a mortal might be slain or might become a great
+leader among his or her companions. Mortals shouldn't
+fear war but should see it as a natural force, the storm
+that civilization brings about by its very existence. 
