@@ -1,5 +1,6 @@
 [
   {
+    "index": "akadi",
     "name": "Akadi",
     "alignment": {
       "index": "true_neutral",
@@ -11,9 +12,11 @@
       "Tempest"
     ],
     "portfolio": "Air, movement, speed, flying creatures",
-    "symbol": "White cloud on blue background"
+    "symbol": "White cloud on blue background",
+    "lore": "public/assets/atlas/lore/gods/akadi.md"
   },
   {
+    "index": "amaunator",
     "name": "Amaunator",
     "alignment": {
       "index": "lawful_neutral",
@@ -25,9 +28,11 @@
       "Light"
     ],
     "portfolio": "The sun, law, time, bureaucracy",
-    "symbol": "Golden sun with a face"
+    "symbol": "Golden sun with a face",
+    "lore": "public/assets/atlas/lore/gods/amaunator.md"
   },
   {
+    "index": "asmodeus",
     "name": "Asmodeus",
     "alignment": {
       "index": "lawful_evil",
@@ -39,9 +44,11 @@
       "Trickery"
     ],
     "portfolio": "Indulgence, sin, power, tyranny",
-    "symbol": "Three-pointed star with a ruby"
+    "symbol": "Three-pointed star with a ruby",
+    "lore": "public/assets/atlas/lore/gods/asmodeus.md"
   },
   {
+    "index": "auril",
     "name": "Auril",
     "alignment": {
       "index": "neutral_evil",
@@ -53,9 +60,11 @@
       "Tempest"
     ],
     "portfolio": "Winter, cold",
-    "symbol": "Six-pointed snowflake"
+    "symbol": "Six-pointed snowflake",
+    "lore": "public/assets/atlas/lore/gods/auril.md"
   },
   {
+    "index": "azuth",
     "name": "Azuth",
     "alignment": {
       "index": "lawful_neutral",
@@ -66,9 +75,11 @@
       "Knowledge"
     ],
     "portfolio": "Wizards, mages, spellcasters",
-    "symbol": "Left hand pointing upward outlined in fire"
+    "symbol": "Left hand pointing upward outlined in fire",
+    "lore": "public/assets/atlas/lore/gods/azuth.md"
   },
   {
+    "index": "bane",
     "name": "Bane",
     "alignment": {
       "index": "lawful_evil",
@@ -79,9 +90,11 @@
       "War"
     ],
     "portfolio": "Tyranny, fear, hatred",
-    "symbol": "Upright black right hand, thumb and fingers together"
+    "symbol": "Upright black right hand, thumb and fingers together",
+    "lore": "public/assets/atlas/lore/gods/bane.md"
   },
   {
+    "index": "beshaba",
     "name": "Beshaba",
     "alignment": {
       "index": "chaotic_evil",
@@ -92,9 +105,11 @@
       "Trickery"
     ],
     "portfolio": "Misfortune, bad luck, accidents",
-    "symbol": "Black antlers on a red background"
+    "symbol": "Black antlers on a red background",
+    "lore": "public/assets/atlas/lore/gods/beshaba.md"
   },
   {
+    "index": "bhaal",
     "name": "Bhaal",
     "alignment": {
       "index": "neutral_evil",
@@ -105,9 +120,11 @@
       "Death"
     ],
     "portfolio": "Murder",
-    "symbol": "Skull surrounded by a ring of blood droplets"
+    "symbol": "Skull surrounded by a ring of blood droplets",
+    "lore": "public/assets/atlas/lore/gods/bhaal.md"
   },
   {
+    "index": "chauntea",
     "name": "Chauntea",
     "alignment": {
       "index": "neutral_good",
@@ -118,9 +135,11 @@
       "Life"
     ],
     "portfolio": "Agriculture, plants, summer",
-    "symbol": "Sheaf of grain or a blooming rose on grain"
+    "symbol": "Sheaf of grain or a blooming rose on grain",
+    "lore": "public/assets/atlas/lore/gods/chauntea.md"
   },
   {
+    "index": "cyric",
     "name": "Cyric",
     "alignment": {
       "index": "chaotic_evil",
@@ -131,9 +150,11 @@
       "Trickery"
     ],
     "portfolio": "Lies, strife, deception",
-    "symbol": "White jawless skull on a black or purple sunburst"
+    "symbol": "White jawless skull on a black or purple sunburst",
+    "lore": "public/assets/atlas/lore/gods/cyric.md"
   },
   {
+    "index": "deneir",
     "name": "Deneir",
     "alignment": {
       "index": "neutral_good",
@@ -144,9 +165,11 @@
       "Knowledge"
     ],
     "portfolio": "Writing, glyphs, images, literature",
-    "symbol": "Lit candle above an open eye"
+    "symbol": "Lit candle above an open eye",
+    "lore": "public/assets/atlas/lore/gods/deneir.md"
   },
   {
+    "index": "eldath",
     "name": "Eldath",
     "alignment": {
       "index": "neutral_good",
@@ -158,9 +181,11 @@
       "Nature"
     ],
     "portfolio": "Quiet places, springs, pools, peace",
-    "symbol": "Waterfall plunging into a still pool"
+    "symbol": "Waterfall plunging into a still pool",
+    "lore": "public/assets/atlas/lore/gods/eldath.md"
   },
   {
+    "index": "gond",
     "name": "Gond",
     "alignment": {
       "index": "true_neutral",
@@ -171,9 +196,11 @@
       "Knowledge"
     ],
     "portfolio": "Craft, construction, smithwork",
-    "symbol": "Toothed cog with four spokes"
+    "symbol": "Toothed cog with four spokes",
+    "lore": "public/assets/atlas/lore/gods/gond.md"
   },
   {
+    "index": "grumbar",
     "name": "Grumbar",
     "alignment": {
       "index": "true_neutral",
@@ -184,9 +211,11 @@
       "Knowledge"
     ],
     "portfolio": "Earth, solidity, changelessness",
-    "symbol": "Mountains on a brown background"
+    "symbol": "Mountains on a brown background",
+    "lore": "public/assets/atlas/lore/gods/grumbar.md"
   },
   {
+    "index": "gwaeron_windstrom",
     "name": "Gwaeron Windstrom",
     "alignment": {
       "index": "neutral_good",
@@ -197,9 +226,11 @@
       "Nature"
     ],
     "portfolio": "Tracking, rangers of the North",
-    "symbol": "Paw print with a star on the palm"
+    "symbol": "Paw print with a star on the palm",
+    "lore": "public/assets/atlas/lore/gods/gwaeron_windstrom.md"
   },
   {
+    "index": "helm",
     "name": "Helm",
     "alignment": {
       "index": "lawful_neutral",
@@ -211,9 +242,11 @@
       "Light"
     ],
     "portfolio": "Protection, vigilance, guardians",
-    "symbol": "Staring eye on an upright left gauntlet"
+    "symbol": "Staring eye on an upright left gauntlet",
+    "lore": "public/assets/atlas/lore/gods/helm.md"
   },
   {
+    "index": "hoar",
     "name": "Hoar",
     "alignment": {
       "index": "lawful_neutral",
@@ -224,9 +257,11 @@
       "War"
     ],
     "portfolio": "Revenge, retribution, poetic justice",
-    "symbol": "A coin with a two-faced head"
+    "symbol": "A coin with a two-faced head",
+    "lore": "public/assets/atlas/lore/gods/hoar.md"
   },
   {
+    "index": "ilmater",
     "name": "Ilmater",
     "alignment": {
       "index": "lawful_good",
@@ -237,9 +272,11 @@
       "Life"
     ],
     "portfolio": "Endurance, suffering, martyrdom, perseverance",
-    "symbol": "Hands bound at the wrist with red cord"
+    "symbol": "Hands bound at the wrist with red cord",
+    "lore": "public/assets/atlas/lore/gods/ilmater.md"
   },
   {
+    "index": "istishia",
     "name": "Istishia",
     "alignment": {
       "index": "true_neutral",
@@ -250,9 +287,11 @@
       "Tempest"
     ],
     "portfolio": "Water, purification",
-    "symbol": "A cresting wave"
+    "symbol": "A cresting wave",
+    "lore": "public/assets/atlas/lore/gods/istishia.md"
   },
   {
+    "index": "jergal",
     "name": "Jergal",
     "alignment": {
       "index": "lawful_neutral",
@@ -264,9 +303,11 @@
       "Knowledge"
     ],
     "portfolio": "Fatalism, proper burial, guardian of tombs",
-    "symbol": "A skull biting a scroll"
+    "symbol": "A skull biting a scroll",
+    "lore": "public/assets/atlas/lore/gods/jergal.md"
   },
   {
+    "index": "kelemvor",
     "name": "Kelemvor",
     "alignment": {
       "index": "lawful_neutral",
@@ -277,9 +318,11 @@
       "Death"
     ],
     "portfolio": "Death, the dead",
-    "symbol": "Upright skeletal arm holding the scales of justice"
+    "symbol": "Upright skeletal arm holding the scales of justice",
+    "lore": "public/assets/atlas/lore/gods/kelemvor.md"
   },
   {
+    "index": "kossuth",
     "name": "Kossuth",
     "alignment": {
       "index": "true_neutral",
@@ -290,9 +333,11 @@
       "Light"
     ],
     "portfolio": "Fire, purification through fire",
-    "symbol": "A flickering flame"
+    "symbol": "A flickering flame",
+    "lore": "public/assets/atlas/lore/gods/kossuth.md"
   },
   {
+    "index": "lathander",
     "name": "Lathander",
     "alignment": {
       "index": "neutral_good",
@@ -304,9 +349,11 @@
       "Light"
     ],
     "portfolio": "Birth, renewal, spring, self-perfection",
-    "symbol": "Road stretching toward a rising sun"
+    "symbol": "Road stretching toward a rising sun",
+    "lore": "public/assets/atlas/lore/gods/lathander.md"
   },
   {
+    "index": "leira",
     "name": "Leira",
     "alignment": {
       "index": "chaotic_neutral",
@@ -317,9 +364,11 @@
       "Trickery"
     ],
     "portfolio": "Illusion, mist, deception",
-    "symbol": "Point-down triangle containing a swirl of mist"
+    "symbol": "Point-down triangle containing a swirl of mist",
+    "lore": "public/assets/atlas/lore/gods/leira.md"
   },
   {
+    "index": "lliira",
     "name": "Lliira",
     "alignment": {
       "index": "chaotic_good",
@@ -330,9 +379,11 @@
       "Life"
     ],
     "portfolio": "Joy, happiness, dance, festivals",
-    "symbol": "Six-pointed star made of five gold coins"
+    "symbol": "Six-pointed star made of five gold coins",
+    "lore": "public/assets/atlas/lore/gods/lliira.md"
   },
   {
+    "index": "loviatar",
     "name": "Loviatar",
     "alignment": {
       "index": "lawful_evil",
@@ -343,9 +394,11 @@
       "Death"
     ],
     "portfolio": "Pain, hurt, agony",
-    "symbol": "Nine-tailed barbed scourge"
+    "symbol": "Nine-tailed barbed scourge",
+    "lore": "public/assets/atlas/lore/gods/loviatar.md"
   },
   {
+    "index": "malar",
     "name": "Malar",
     "alignment": {
       "index": "chaotic_evil",
@@ -356,9 +409,11 @@
       "Nature"
     ],
     "portfolio": "The hunt, bloodlust, marauding monsters",
-    "symbol": "Clawed paw"
+    "symbol": "Clawed paw",
+    "lore": "public/assets/atlas/lore/gods/malar.md"
   },
   {
+    "index": "mask",
     "name": "Mask",
     "alignment": {
       "index": "chaotic_neutral",
@@ -369,9 +424,11 @@
       "Trickery"
     ],
     "portfolio": "Thieves, thievery, shadows",
-    "symbol": "Black velvet mask tinged with red"
+    "symbol": "Black velvet mask tinged with red",
+    "lore": "public/assets/atlas/lore/gods/mask.md"
   },
   {
+    "index": "myrkul",
     "name": "Myrkul",
     "alignment": {
       "index": "neutral_evil",
@@ -382,9 +439,11 @@
       "Death"
     ],
     "portfolio": "Death, decay, old age, exhaustion",
-    "symbol": "White human skull"
+    "symbol": "White human skull",
+    "lore": "public/assets/atlas/lore/gods/myrkul.md"
   },
   {
+    "index": "mystra",
     "name": "Mystra",
     "alignment": {
       "index": "neutral_good",
@@ -395,9 +454,11 @@
       "Knowledge"
     ],
     "portfolio": "Magic, spells, the Weave",
-    "symbol": "Circle of seven stars, or nine stars encircling a mist"
+    "symbol": "Circle of seven stars, or nine stars encircling a mist",
+    "lore": "public/assets/atlas/lore/gods/mystra.md"
   },
   {
+    "index": "oghma",
     "name": "Oghma",
     "alignment": {
       "index": "true_neutral",
@@ -408,9 +469,11 @@
       "Knowledge"
     ],
     "portfolio": "Knowledge, invention, inspiration, bards",
-    "symbol": "Blank scroll"
+    "symbol": "Blank scroll",
+    "lore": "public/assets/atlas/lore/gods/oghma.md"
   },
   {
+    "index": "red_knight",
     "name": "Red Knight",
     "alignment": {
       "index": "lawful_neutral",
@@ -421,9 +484,11 @@
       "War"
     ],
     "portfolio": "Strategy, planning, tactics",
-    "symbol": "Red knight chess piece with stars for eyes"
+    "symbol": "Red knight chess piece with stars for eyes",
+    "lore": "public/assets/atlas/lore/gods/red_knight.md"
   },
   {
+    "index": "savras",
     "name": "Savras",
     "alignment": {
       "index": "lawful_neutral",
@@ -434,10 +499,12 @@
       "Knowledge"
     ],
     "portfolio": "Divination, fate, truth",
-    "symbol": "Crystal ball containing many eyes"
+    "symbol": "Crystal ball containing many eyes",
+    "lore": "public/assets/atlas/lore/gods/savras.md"
   },
   {
-    "name": "Selûne",
+    "index": "sel\u00fbne",
+    "name": "Sel\u00fbne",
     "alignment": {
       "index": "chaotic_good",
       "name": "Chaotic Good",
@@ -448,9 +515,11 @@
       "Life"
     ],
     "portfolio": "The moon, stars, navigation, prophecy",
-    "symbol": "Pair of female eyes surrounded by seven silver stars"
+    "symbol": "Pair of female eyes surrounded by seven silver stars",
+    "lore": "public/assets/atlas/lore/gods/sel\u00fbne.md"
   },
   {
+    "index": "shar",
     "name": "Shar",
     "alignment": {
       "index": "neutral_evil",
@@ -462,9 +531,11 @@
       "Trickery"
     ],
     "portfolio": "Darkness, night, loss, secrets",
-    "symbol": "Black disk with a purple border"
+    "symbol": "Black disk with a purple border",
+    "lore": "public/assets/atlas/lore/gods/shar.md"
   },
   {
+    "index": "shaundakul",
     "name": "Shaundakul",
     "alignment": {
       "index": "chaotic_neutral",
@@ -476,9 +547,11 @@
       "Tempest"
     ],
     "portfolio": "Travel, exploration, portals, caravans",
-    "symbol": "Wind-walking bearded man in traveling clothes"
+    "symbol": "Wind-walking bearded man in traveling clothes",
+    "lore": "public/assets/atlas/lore/gods/shaundakul.md"
   },
   {
+    "index": "silvanus",
     "name": "Silvanus",
     "alignment": {
       "index": "true_neutral",
@@ -489,9 +562,11 @@
       "Nature"
     ],
     "portfolio": "Wild nature, druids",
-    "symbol": "Oak leaf"
+    "symbol": "Oak leaf",
+    "lore": "public/assets/atlas/lore/gods/silvanus.md"
   },
   {
+    "index": "sune",
     "name": "Sune",
     "alignment": {
       "index": "chaotic_good",
@@ -503,9 +578,11 @@
       "Light"
     ],
     "portfolio": "Beauty, love, passion",
-    "symbol": "Face of a beautiful red-haired woman"
+    "symbol": "Face of a beautiful red-haired woman",
+    "lore": "public/assets/atlas/lore/gods/sune.md"
   },
   {
+    "index": "talona",
     "name": "Talona",
     "alignment": {
       "index": "chaotic_evil",
@@ -516,9 +593,11 @@
       "Death"
     ],
     "portfolio": "Disease, poison",
-    "symbol": "Three teardrops on a triangle"
+    "symbol": "Three teardrops on a triangle",
+    "lore": "public/assets/atlas/lore/gods/talona.md"
   },
   {
+    "index": "talos",
     "name": "Talos",
     "alignment": {
       "index": "chaotic_evil",
@@ -529,9 +608,11 @@
       "Tempest"
     ],
     "portfolio": "Storms, destruction, rebellion",
-    "symbol": "Three lightning bolts radiating from a central point"
+    "symbol": "Three lightning bolts radiating from a central point",
+    "lore": "public/assets/atlas/lore/gods/talos.md"
   },
   {
+    "index": "tempus",
     "name": "Tempus",
     "alignment": {
       "index": "true_neutral",
@@ -542,9 +623,11 @@
       "War"
     ],
     "portfolio": "War, battle, warriors",
-    "symbol": "Upright flaming sword"
+    "symbol": "Upright flaming sword",
+    "lore": "public/assets/atlas/lore/gods/tempus.md"
   },
   {
+    "index": "torm",
     "name": "Torm",
     "alignment": {
       "index": "lawful_good",
@@ -555,6 +638,7 @@
       "War"
     ],
     "portfolio": "Duty, loyalty, righteousness",
-    "symbol": "White right-hand gauntlet"
+    "symbol": "White right-hand gauntlet",
+    "lore": "public/assets/atlas/lore/gods/torm.md"
   }
 ]

@@ -1,4 +1,5 @@
 {
+  "index": "eldath",
   "name": "Eldath",
   "alignment": {
     "index": "neutral_good",
@@ -10,5 +11,6 @@
     "Nature"
   ],
   "portfolio": "Quiet places, springs, pools, peace",
-  "symbol": "Waterfall plunging into a still pool"
+  "symbol": "Waterfall plunging into a still pool",
+  "lore": "public/assets/atlas/lore/gods/eldath.md"
 }

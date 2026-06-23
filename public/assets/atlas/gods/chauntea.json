@@ -1,4 +1,5 @@
 {
+  "index": "chauntea",
   "name": "Chauntea",
   "alignment": {
     "index": "neutral_good",
@@ -9,5 +10,6 @@
     "Life"
   ],
   "portfolio": "Agriculture, plants, summer",
-  "symbol": "Sheaf of grain or a blooming rose on grain"
+  "symbol": "Sheaf of grain or a blooming rose on grain",
+  "lore": "public/assets/atlas/lore/gods/chauntea.md"
 }

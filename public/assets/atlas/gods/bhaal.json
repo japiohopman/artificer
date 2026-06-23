@@ -1,4 +1,5 @@
 {
+  "index": "bhaal",
   "name": "Bhaal",
   "alignment": {
     "index": "neutral_evil",
@@ -9,5 +10,6 @@
     "Death"
   ],
   "portfolio": "Murder",
-  "symbol": "Skull surrounded by a ring of blood droplets"
+  "symbol": "Skull surrounded by a ring of blood droplets",
+  "lore": "public/assets/atlas/lore/gods/bhaal.md"
 }

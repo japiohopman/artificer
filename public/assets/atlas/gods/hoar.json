@@ -1,4 +1,5 @@
 {
+  "index": "hoar",
   "name": "Hoar",
   "alignment": {
     "index": "lawful_neutral",
@@ -9,5 +10,6 @@
     "War"
   ],
   "portfolio": "Revenge, retribution, poetic justice",
-  "symbol": "A coin with a two-faced head"
+  "symbol": "A coin with a two-faced head",
+  "lore": "public/assets/atlas/lore/gods/hoar.md"
 }

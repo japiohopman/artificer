@@ -1,4 +1,5 @@
 {
+  "index": "kelemvor",
   "name": "Kelemvor",
   "alignment": {
     "index": "lawful_neutral",
@@ -9,5 +10,6 @@
     "Death"
   ],
   "portfolio": "Death, the dead",
-  "symbol": "Upright skeletal arm holding the scales of justice"
+  "symbol": "Upright skeletal arm holding the scales of justice",
+  "lore": "public/assets/atlas/lore/gods/kelemvor.md"
 }

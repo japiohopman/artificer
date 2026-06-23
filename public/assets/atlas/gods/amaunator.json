@@ -1,15 +1,16 @@
 {
+  "index": "amaunator",
   "name": "Amaunator",
   "alignment": {
     "index": "lawful_neutral",
     "name": "Lawful Neutral",
-    "url": "/assets/atlas/alignments/json/lawful_neutral.json",
-    "url_symbol": "assets/atlas/gods/images/symbols/amaunator.webp"
+    "url": "/assets/atlas/alignments/json/lawful_neutral.json"
   },
   "domains": [
     "Life",
     "Light"
   ],
   "portfolio": "The sun, law, time, bureaucracy",
-  "symbol": "Wax Seel of a golden sun"
+  "symbol": "Golden sun with a face",
+  "lore": "public/assets/atlas/lore/gods/amaunator.md"
 }

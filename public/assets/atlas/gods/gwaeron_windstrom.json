@@ -1,4 +1,5 @@
 {
+  "index": "gwaeron_windstrom",
   "name": "Gwaeron Windstrom",
   "alignment": {
     "index": "neutral_good",
@@ -9,5 +10,6 @@
     "Nature"
   ],
   "portfolio": "Tracking, rangers of the North",
-  "symbol": "Paw print with a star on the palm"
+  "symbol": "Paw print with a star on the palm",
+  "lore": "public/assets/atlas/lore/gods/gwaeron_windstrom.md"
 }

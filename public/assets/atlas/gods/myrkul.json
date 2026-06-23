@@ -1,4 +1,5 @@
 {
+  "index": "myrkul",
   "name": "Myrkul",
   "alignment": {
     "index": "neutral_evil",
@@ -9,5 +10,6 @@
     "Death"
   ],
   "portfolio": "Death, decay, old age, exhaustion",
-  "symbol": "White human skull"
+  "symbol": "White human skull",
+  "lore": "public/assets/atlas/lore/gods/myrkul.md"
 }

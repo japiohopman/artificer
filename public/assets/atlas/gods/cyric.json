@@ -1,4 +1,5 @@
 {
+  "index": "cyric",
   "name": "Cyric",
   "alignment": {
     "index": "chaotic_evil",
@@ -9,5 +10,6 @@
     "Trickery"
   ],
   "portfolio": "Lies, strife, deception",
-  "symbol": "White jawless skull on a black or purple sunburst"
+  "symbol": "White jawless skull on a black or purple sunburst",
+  "lore": "public/assets/atlas/lore/gods/cyric.md"
 }

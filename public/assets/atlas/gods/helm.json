@@ -1,4 +1,5 @@
 {
+  "index": "helm",
   "name": "Helm",
   "alignment": {
     "index": "lawful_neutral",
@@ -10,5 +11,6 @@
     "Light"
   ],
   "portfolio": "Protection, vigilance, guardians",
-  "symbol": "Staring eye on an upright left gauntlet"
+  "symbol": "Staring eye on an upright left gauntlet",
+  "lore": "public/assets/atlas/lore/gods/helm.md"
 }

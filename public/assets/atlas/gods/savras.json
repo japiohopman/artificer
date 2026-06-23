@@ -1,4 +1,5 @@
 {
+  "index": "savras",
   "name": "Savras",
   "alignment": {
     "index": "lawful_neutral",
@@ -9,5 +10,6 @@
     "Knowledge"
   ],
   "portfolio": "Divination, fate, truth",
-  "symbol": "Crystal ball containing many eyes"
+  "symbol": "Crystal ball containing many eyes",
+  "lore": "public/assets/atlas/lore/gods/savras.md"
 }

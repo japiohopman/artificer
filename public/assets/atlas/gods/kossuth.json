@@ -1,4 +1,5 @@
 {
+  "index": "kossuth",
   "name": "Kossuth",
   "alignment": {
     "index": "true_neutral",
@@ -9,5 +10,6 @@
     "Light"
   ],
   "portfolio": "Fire, purification through fire",
-  "symbol": "A flickering flame"
+  "symbol": "A flickering flame",
+  "lore": "public/assets/atlas/lore/gods/kossuth.md"
 }

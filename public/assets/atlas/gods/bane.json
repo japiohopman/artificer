@@ -1,4 +1,5 @@
 {
+  "index": "bane",
   "name": "Bane",
   "alignment": {
     "index": "lawful_evil",
@@ -9,5 +10,6 @@
     "War"
   ],
   "portfolio": "Tyranny, fear, hatred",
-  "symbol": "Upright black right hand, thumb and fingers together"
+  "symbol": "Upright black right hand, thumb and fingers together",
+  "lore": "public/assets/atlas/lore/gods/bane.md"
 }

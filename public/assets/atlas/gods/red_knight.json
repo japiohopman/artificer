@@ -1,4 +1,5 @@
 {
+  "index": "red_knight",
   "name": "Red Knight",
   "alignment": {
     "index": "lawful_neutral",
@@ -9,5 +10,6 @@
     "War"
   ],
   "portfolio": "Strategy, planning, tactics",
-  "symbol": "Red knight chess piece with stars for eyes"
+  "symbol": "Red knight chess piece with stars for eyes",
+  "lore": "public/assets/atlas/lore/gods/red_knight.md"
 }

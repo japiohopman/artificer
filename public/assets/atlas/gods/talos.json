@@ -1,4 +1,5 @@
 {
+  "index": "talos",
   "name": "Talos",
   "alignment": {
     "index": "chaotic_evil",
@@ -9,5 +10,6 @@
     "Tempest"
   ],
   "portfolio": "Storms, destruction, rebellion",
-  "symbol": "Three lightning bolts radiating from a central point"
+  "symbol": "Three lightning bolts radiating from a central point",
+  "lore": "public/assets/atlas/lore/gods/talos.md"
 }

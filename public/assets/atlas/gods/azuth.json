@@ -1,4 +1,5 @@
 {
+  "index": "azuth",
   "name": "Azuth",
   "alignment": {
     "index": "lawful_neutral",
@@ -9,5 +10,6 @@
     "Knowledge"
   ],
   "portfolio": "Wizards, mages, spellcasters",
-  "symbol": "Left hand pointing upward outlined in fire"
+  "symbol": "Left hand pointing upward outlined in fire",
+  "lore": "public/assets/atlas/lore/gods/azuth.md"
 }

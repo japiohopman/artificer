@@ -1,4 +1,5 @@
 {
+  "index": "mystra",
   "name": "Mystra",
   "alignment": {
     "index": "neutral_good",
@@ -9,5 +10,6 @@
     "Knowledge"
   ],
   "portfolio": "Magic, spells, the Weave",
-  "symbol": "Circle of seven stars, or nine stars encircling a mist"
+  "symbol": "Circle of seven stars, or nine stars encircling a mist",
+  "lore": "public/assets/atlas/lore/gods/mystra.md"
 }

@@ -1,4 +1,5 @@
 {
+  "index": "lathander",
   "name": "Lathander",
   "alignment": {
     "index": "neutral_good",
@@ -10,5 +11,6 @@
     "Light"
   ],
   "portfolio": "Birth, renewal, spring, self-perfection",
-  "symbol": "Road stretching toward a rising sun"
+  "symbol": "Road stretching toward a rising sun",
+  "lore": "public/assets/atlas/lore/gods/lathander.md"
 }

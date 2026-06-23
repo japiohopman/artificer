@@ -1,4 +1,5 @@
 {
+  "index": "asmodeus",
   "name": "Asmodeus",
   "alignment": {
     "index": "lawful_evil",
@@ -10,5 +11,6 @@
     "Trickery"
   ],
   "portfolio": "Indulgence, sin, power, tyranny",
-  "symbol": "Three-pointed star with a ruby"
+  "symbol": "Three-pointed star with a ruby",
+  "lore": "public/assets/atlas/lore/gods/asmodeus.md"
 }

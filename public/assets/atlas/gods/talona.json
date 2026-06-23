@@ -1,4 +1,5 @@
 {
+  "index": "talona",
   "name": "Talona",
   "alignment": {
     "index": "chaotic_evil",
@@ -9,5 +10,6 @@
     "Death"
   ],
   "portfolio": "Disease, poison",
-  "symbol": "Three teardrops on a triangle"
+  "symbol": "Three teardrops on a triangle",
+  "lore": "public/assets/atlas/lore/gods/talona.md"
 }

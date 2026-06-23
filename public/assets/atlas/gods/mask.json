@@ -1,4 +1,5 @@
 {
+  "index": "mask",
   "name": "Mask",
   "alignment": {
     "index": "chaotic_neutral",
@@ -9,5 +10,6 @@
     "Trickery"
   ],
   "portfolio": "Thieves, thievery, shadows",
-  "symbol": "Black velvet mask tinged with red"
+  "symbol": "Black velvet mask tinged with red",
+  "lore": "public/assets/atlas/lore/gods/mask.md"
 }
