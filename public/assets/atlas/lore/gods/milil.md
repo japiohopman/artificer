@@ -31,4 +31,6 @@ Like Deneir, Milil is sometimes thought of as being
 in service to Oghma. In these portrayals of the deity,
 Milil is the god's left hand, also referred to as the One
 True Hand. This expression isn't meant to denigrate
-the right hand (Deneir); rather, it stems from the fact 
+the right hand (Deneir); rather, it stems from the fact that left-handedness is more often associated with great
+artistic ability and the belief that the greatest a rt comes
+from the accaptance of truth. 
