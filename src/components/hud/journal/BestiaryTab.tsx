@@ -34,8 +34,8 @@ export const BestiaryTab: React.FC = () => {
     return (
       <div className="flex flex-col items-center justify-center h-full text-parchment-600 italic space-y-4">
         <GameIcon name="sword" size={48} className="opacity-20" />
-        <p>Geen vijanden in het bestiarium.</p>
-        <p className="text-sm">Verslagen of ontmoette wezens verschijnen hier.</p>
+        <p>No enemies in the bestiary.</p>
+        <p className="text-sm">Defeated or encountered creatures will appear here.</p>
       </div>
     );
   }

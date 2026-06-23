@@ -20,9 +20,9 @@ export const Journal: React.FC = () => {
   if (!isJournalOpen) return null;
 
   const tabs: { id: JournalTab; label: string; icon: any }[] = [
-    { id: 'diary', label: 'Dagboek', icon: 'book' },
+    { id: 'diary', label: 'Diary', icon: 'book' },
     { id: 'quests', label: 'Quest Log', icon: 'key' },
-    { id: 'bestiary', label: 'Bestiarium', icon: 'sword' },
+    { id: 'bestiary', label: 'Bestiary', icon: 'sword' },
     { id: 'lore', label: 'Lore Codex', icon: 'lore' }
   ];
 
@@ -50,8 +50,8 @@ export const Journal: React.FC = () => {
                   <GameIcon name="lore" size={24} color="#FFFFFF" />
                 </div>
                 <div>
-                  <h1 className="font-header text-2xl text-white tracking-widest uppercase">Campagne Codex</h1>
-                  <p className="text-[10px] text-dragon-gold font-bold tracking-[0.3em] uppercase">Het Eeuwige Geheugen</p>
+                  <h1 className="font-header text-2xl text-white tracking-widest uppercase">Campaign Codex</h1>
+                  <p className="text-[10px] text-dragon-gold font-bold tracking-[0.3em] uppercase">The Eternal Memory</p>
                 </div>
               </div>
 
@@ -123,10 +123,10 @@ export const Journal: React.FC = () => {
 
             {/* Footer / Status bar */}
             <footer className="h-8 bg-dragon-darkRed/90 border-t border-white/5 flex items-center px-4 justify-between text-[9px] text-parchment-400 uppercase tracking-widest">
-               <span>Versie 2.0.4 - Campaign Persistence Engine</span>
+               <span>Version 2.0.4 - Campaign Persistence Engine</span>
                <div className="flex gap-4">
                   <span>Context Cache: 94%</span>
-                  <span>AI Narrator: Gekoppeld</span>
+                  <span>AI Narrator: Linked</span>
                </div>
             </footer>
 

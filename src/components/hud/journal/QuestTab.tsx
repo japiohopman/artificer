@@ -8,9 +8,9 @@ export const QuestTab: React.FC = () => {
   const { quests } = useJournalStore();
 
   const categories: { id: string; label: string; icon: any }[] = [
-    { id: 'Main', label: 'Hoofdmissies', icon: 'key' },
-    { id: 'Side', label: 'Zijmissies', icon: 'lore' },
-    { id: 'Task', label: 'Taken', icon: 'package' }
+    { id: 'Main', label: 'Main Quests', icon: 'key' },
+    { id: 'Side', label: 'Side Quests', icon: 'lore' },
+    { id: 'Task', label: 'Tasks', icon: 'package' }
   ];
 
   const getStatusColor = (status: string) => {
@@ -27,7 +27,7 @@ export const QuestTab: React.FC = () => {
     return (
       <div className="flex flex-col items-center justify-center h-full text-parchment-600 italic space-y-4">
         <GameIcon name="lore" size={48} className="opacity-20" />
-        <p>Geen actieve missies in het logboek.</p>
+        <p>No active quests in the logbook.</p>
       </div>
     );
   }
@@ -70,19 +70,19 @@ export const QuestTab: React.FC = () => {
                     {quest.involvedNPCs.length > 0 && (
                       <div className="flex items-center gap-1.5">
                         <GameIcon name="hp" size={12} className="opacity-50" />
-                        <span className="font-bold text-dragon-darkRed/70 uppercase">Betrokken:</span>
+                        <span className="font-bold text-dragon-darkRed/70 uppercase">Involved:</span>
                         <span>{quest.involvedNPCs.join(', ')}</span>
                       </div>
                     )}
                     {quest.rewards.length > 0 && (
                       <div className="flex items-center gap-1.5">
                         <GameIcon name="coins" size={12} className="text-dragon-gold" />
-                        <span className="font-bold text-dragon-darkRed/70 uppercase">Beloning:</span>
+                        <span className="font-bold text-dragon-darkRed/70 uppercase">Reward:</span>
                         <span>{quest.rewards.join(', ')}</span>
                       </div>
                     )}
                     <div className="ml-auto text-parchment-500 italic">
-                      Laatste update: {new Date(quest.lastUpdate).toLocaleDateString()}
+                      Last update: {new Date(quest.lastUpdate).toLocaleDateString()}
                     </div>
                   </div>
                 </div>
