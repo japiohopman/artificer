@@ -22,3 +22,12 @@ break the will of their victims. She is favored by sadists
 and masochists, and some of her followers form cultish
 cells of secret adherents. Each of these groups is led by
 someone who takes pleasure in administering pain and 
+dominating others, supported and backed up by a number of submissive sycophants.
+Worshipers of Loviatar rarely gather in numbers except in the more populous cities. When small cadres of
+faithful operate quietly in such places, few citizens take
+notice or raise a fuss if they do witness cult activity. The
+sufferers who endure the lash, however, aren't always
+willing participants, and Lovatar's cults sometimes operate secret slavery rings, which can draw the attention
+of the authorities. The open worship of Loviatar and
+temples clearly dedicated to her are rarely seen except
+in lands where slavery is an accepted practice. 
