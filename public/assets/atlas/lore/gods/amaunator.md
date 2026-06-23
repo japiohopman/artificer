@@ -1,7 +1,7 @@
-# Amaunator
+## Amaunator
 
-The Keeper of the Eternal Sun, the Light of Law, the
-Yellow God
+*The Keeper of the Eternal Sun, the Light of Law, the
+Yellow God*
 
 The rule of law and the glory of the sun are both in Amaunator's dominion. His priests help establish bureaucracies and lawful order in communities. They often witness contracts and signed agreements, stamping such
 documents with the sun-symbol of Amaunator to signify
