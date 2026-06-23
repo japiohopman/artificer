@@ -1141,11 +1141,16 @@ export const CharacterProfile: React.FC = () => {
                           </div>
                           <div className="grid grid-cols-1 gap-2">
                             <div className="flex flex-wrap gap-2 mb-4">
-                              {character.traits?.map((trait, i) => (
-                                <div key={`trait-${i}`} className="bg-white/40 p-3 rounded border border-dragon-red/5 shadow-sm italic text-[10px]">
-                                  <GameIcon name={getTraitIcon(trait)} size={12} color="#8B0000" fallbackName="award" /> "{trait}"
-                                </div>
-                              ))}
+                              {character.traits?.map((trait, i) => {
+                                const name = typeof trait === 'string' ? trait : trait.name;
+                                const index = typeof trait === 'string' ? trait : trait.index;
+
+                                return (
+                                  <div key={`trait-${i}`} className="bg-white/40 p-3 rounded border border-dragon-red/5 shadow-sm italic text-[10px]">
+                                    <GameIcon name={getTraitIcon(index)} size={12} color="#8B0000" fallbackName="award" /> "{name}"
+                                  </div>
+                                );
+                              })}
                             </div>
                           </div>
                         </div>

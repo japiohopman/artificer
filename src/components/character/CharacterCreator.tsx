@@ -34,7 +34,6 @@ type CreationStep =
   | 'welcome'
   | 'slot'
   | 'species'
-  | 'subrace'
   | 'class'
   | 'choices'
   | 'equipment'
@@ -53,7 +52,6 @@ const STEPS: { id: CreationStep; label: string; icon: any }[] = [
   { id: 'welcome', label: 'Welcome', icon: 'devkit' },
   { id: 'slot', label: 'Save Slot', icon: 'save_data' },
   { id: 'species', label: 'Species', icon: 'ancestry' },
-  { id: 'subrace', label: 'Heritage', icon: 'ancestry' },
   { id: 'class', label: 'Class', icon: 'weapon' },
   { id: 'choices', label: 'Choices', icon: 'book' },
   { id: 'equipment', label: 'Gear', icon: 'shield' },
@@ -150,7 +148,7 @@ export const CharacterCreator: React.FC = () => {
     if (!newChar.race && !newChar.class && !newChar.subrace && !newChar.background) return;
 
     const syncMetadata = async () => {
-        let traits: string[] = [];
+        let traits: any[] = [];
         let profs: string[] = [];
         let features: any[] = [];
         let langs: string[] = ['common'];
@@ -165,25 +163,23 @@ export const CharacterCreator: React.FC = () => {
                 
                 const traitData = await atlasService.loadTrait(traitIndex);
                 if (traitData) {
-                    if (traitData.name && !traits.includes(traitData.name)) {
-                        traits.push(traitData.name);
+                    if (traitData.name && !traits.some(t => t.index === traitData.index)) {
+                        traits.push({
+                            name: traitData.name,
+                            index: traitData.index,
+                            desc: Array.isArray(traitData.desc) ? traitData.desc.join('\n') : (traitData.desc || ""),
+                            trait_specific: traitData.trait_specific
+                        });
                     }
                     if (traitData.proficiencies) {
                         for (const p of traitData.proficiencies) {
                             profs.push(p.name || p.index || p);
                         }
                     }
-                    // Some traits are actually features
-                    features.push({
-                        name: traitData.name,
-                        index: traitData.index,
-                        desc: Array.isArray(traitData.desc) ? traitData.desc.join('\n') : traitData.desc,
-                        source: 'Species'
-                    });
                 } else if (typeof traitRef === 'string') {
-                    traits.push(traitRef);
+                    traits.push({ name: traitRef, index: traitRef, desc: "" });
                 } else if (traitRef.name) {
-                    traits.push(traitRef.name);
+                    traits.push({ name: traitRef.name, index: traitRef.index || traitRef.name, desc: "" });
                 }
             };
 
@@ -285,7 +281,7 @@ export const CharacterCreator: React.FC = () => {
             const currentLangs = newChar.languages || [];
             const currentFeatures = newChar.features || [];
             
-            const newTraits = Array.from(new Set(traits));
+            const newTraits = Array.from(new Set(traits.map(t => JSON.stringify(t)))).map(s => JSON.parse(s));
             const newProfs = Array.from(new Set(profs));
             const newLangs = Array.from(new Set(langs));
             const newFeatures = Array.from(new Set(features.map(f => JSON.stringify(f)))).map(s => JSON.parse(s));
@@ -437,16 +433,6 @@ export const CharacterCreator: React.FC = () => {
         case 'welcome': return true;
         case 'slot': return !!selectedSlot;
         case 'species': return !!newChar.race;
-        case 'subrace': {
-            const hasSubraces = availableSubraces.some(s => {
-                if (newChar.race === 'elf') return s.index.includes('elf');
-                if (newChar.race === 'dwarf') return s.index.includes('dwarf');
-                if (newChar.race === 'halfling') return s.index.includes('halfling');
-                if (newChar.race === 'gnome') return s.index.includes('gnome');
-                return false;
-            });
-            return !hasSubraces || !!newChar.subrace;
-        }
         case 'class': return !!newChar.class;
         case 'choices': return true;
         case 'equipment': return true;
@@ -530,6 +516,22 @@ export const CharacterCreator: React.FC = () => {
                     finalHp += Math.floor(cData.hit_die / 2) + 1 + conMod;
                 }
             }
+
+            // Apply HP bonuses from traits (e.g. Dwarven Toughness)
+            newChar.traits?.forEach(trait => {
+                const hpBonus = trait.trait_specific?.passive_modifiers?.hp_bonus_per_level;
+                if (hpBonus) {
+                    finalHp += (hpBonus * Math.max(1, level));
+                }
+            });
+
+            // Apply HP bonuses from features/feats (e.g. Tough)
+            newChar.features?.forEach(feat => {
+                const hpBonus = feat.feature_specific?.passive_modifiers?.hp_bonus_per_level;
+                if (hpBonus) {
+                    finalHp += (hpBonus * Math.max(1, level));
+                }
+            });
         }
 
         const charId = selectedSlot ? `slot${selectedSlot}` : `char-${Date.now()}`;
@@ -787,47 +789,40 @@ const StepContent: React.FC<{
    switch (step) {
      case 'welcome': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><WelcomeStep /></div>;
      case 'slot': return <SlotStep selectedSlot={selectedSlot} onSelect={setSelectedSlot} />;
-     case 'species': return <SelectionStep 
-         title="Select Species" 
-         desc="Your species defines your biological traits and natural talents."
-         items={available.species}
-         selected={newChar.race}
-         onSelect={(val) => {
-            setNewChar({...newChar, race: val, subrace: undefined});
-         }}
-         category="species"
-      />;
-     case 'subrace': {
-        const speciesSubraces = available.subraces.filter((s: any) => {
-            const idx = s.index.toLowerCase();
-            if (newChar.race === 'elf') return idx.includes('elf') || idx.includes('drow');
-            if (newChar.race === 'dwarf') return idx.includes('dwarf');
-            if (newChar.race === 'halfling') return idx.includes('halfling');
-            if (newChar.race === 'gnome') return idx.includes('gnome');
-            return false;
+     case 'species': {
+        const speciesWithSubraces = available.species.flatMap(s => {
+            const speciesSubraces = available.subraces.filter((sub: any) => {
+                const idx = sub.index.toLowerCase();
+                if (s.index === 'elf') return idx.includes('elf') || idx.includes('drow');
+                if (s.index === 'dwarf') return idx.includes('dwarf');
+                if (s.index === 'halfling') return idx.includes('halfling');
+                if (s.index === 'gnome') return idx.includes('gnome');
+                return false;
+            });
+
+            if (speciesSubraces.length > 0) {
+                return speciesSubraces.map((sub: any) => ({
+                    index: `${s.index}:${sub.index}`,
+                    name: `${sub.name}`
+                }));
+            }
+            return [s];
         });
-        
-        if (speciesSubraces.length === 0) {
-            return (
-                <div className="flex flex-col items-center justify-center h-full text-center space-y-6">
-                    <div className="p-8 bg-dragon-red/5 rounded-full border-2 border-dragon-red/10 text-dragon-red/20">
-                        <GameIcon name="ancestry" size={80} color="currentColor" />
-                    </div>
-                    <div className="space-y-2">
-                        <h3 className="text-2xl font-header font-black text-dragon-darkRed uppercase">Pure Lineage</h3>
-                        <p className="text-parchment-500 font-medium max-w-md">The selected species does not have diverging heritages. You represent the core ancestral line.</p>
-                    </div>
-                </div>
-            );
-        }
-        
+
         return <SelectionStep 
-            title="Select Heritage" 
-            desc="Further define your ancestry through cultural or biological divergence."
-            items={speciesSubraces}
-            selected={newChar.subrace}
-            onSelect={(val) => setNewChar({...newChar, subrace: val})}
-            category="subrace"
+            title="Select Species & Heritage"
+            desc="Your species defines your biological traits and natural talents."
+            items={speciesWithSubraces}
+            selected={newChar.subrace ? `${newChar.race}:${newChar.subrace}` : newChar.race}
+            onSelect={(val) => {
+                if (val.includes(':')) {
+                    const [race, subrace] = val.split(':');
+                    setNewChar({...newChar, race, subrace});
+                } else {
+                    setNewChar({...newChar, race: val, subrace: undefined});
+                }
+            }}
+            category="species"
         />;
      }
      case 'class': return <SelectionStep 

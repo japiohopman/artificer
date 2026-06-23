@@ -273,9 +273,11 @@ export const ReviewStep: React.FC<{
                         </h4>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {['Class', 'Species', 'Background', 'General'].map(source => {
+                            {['Class', 'Species', 'Background', 'Innate', 'General'].map(source => {
                                 const sourceFeatures = (newChar.features || []).filter((f: any) => (f.source || 'General') === source);
-                                if (sourceFeatures.length === 0) return null;
+                                const sourceTraits = source === 'Innate' ? (newChar.traits || []) : [];
+
+                                if (sourceFeatures.length === 0 && sourceTraits.length === 0) return null;
 
                                 return (
                                     <div key={source} className="space-y-3">
@@ -288,7 +290,7 @@ export const ReviewStep: React.FC<{
                                         </div>
                                         <div className="grid grid-cols-1 gap-2">
                                             {sourceFeatures.map((f: any, i) => (
-                                                <div key={i} className="p-3 bg-white/40 border-l-2 border-l-dragon-gold/30 border border-dragon-gold/10 rounded shadow-sm group hover:border-dragon-gold/30 transition-all">
+                                                <div key={`feat-${i}`} className="p-3 bg-white/40 border-l-2 border-l-dragon-gold/30 border border-dragon-gold/10 rounded shadow-sm group hover:border-dragon-gold/30 transition-all">
                                                     <div className="flex items-center justify-between mb-1">
                                                         <span className="text-[10px] font-black text-dragon-darkRed uppercase tracking-tight">{f.name}</span>
                                                     </div>
@@ -297,6 +299,20 @@ export const ReviewStep: React.FC<{
                                                     </p>
                                                 </div>
                                             ))}
+                                            {sourceTraits.map((t: any, i) => {
+                                                const name = typeof t === 'string' ? t : t.name;
+                                                const desc = typeof t === 'string' ? '' : (Array.isArray(t.desc) ? t.desc.join('\n') : (t.desc || ''));
+                                                return (
+                                                    <div key={`trait-${i}`} className="p-3 bg-white/40 border-l-2 border-l-dragon-red/30 border border-dragon-gold/10 rounded shadow-sm group hover:border-dragon-gold/30 transition-all">
+                                                        <div className="flex items-center justify-between mb-1">
+                                                            <span className="text-[10px] font-black text-dragon-darkRed uppercase tracking-tight">{name}</span>
+                                                        </div>
+                                                        <p className="text-[10px] text-parchment-700 leading-relaxed italic border-t border-dragon-gold/5 pt-1 mt-1">
+                                                            {desc || 'An inherent ancestral capability.'}
+                                                        </p>
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
                                     </div>
                                 );
@@ -357,7 +373,7 @@ export const ReviewStep: React.FC<{
                             <div className="space-y-4">
                                 <h4 className="text-[10px] font-black text-dragon-gold uppercase tracking-[0.4em] border-b border-dragon-gold/20 pb-2">Persona & Ethos</h4>
                                 <div className="space-y-3">
-                                    <TraitReview label="Personality" value={newChar.traits?.[0]} icon={<GameIcon name="citation" size={10} color="currentColor" />} />
+                                    <TraitReview label="Personality" value={typeof newChar.traits?.[0] === 'string' ? newChar.traits[0] : newChar.traits?.[0]?.name} icon={<GameIcon name="citation" size={10} color="currentColor" />} />
                                     <TraitReview label="Ideal" value={newChar.ideals?.[0]} icon={<GameIcon name="range" size={10} color="currentColor" />} />
                                     <TraitReview label="Bond" value={newChar.bonds?.[0]} icon={<GameIcon name="heart" size={10} color="currentColor" />} />
                                     <TraitReview label="Flaw" value={newChar.flaws?.[0]} icon={<GameIcon name="alert" size={10} color="currentColor" />} />
