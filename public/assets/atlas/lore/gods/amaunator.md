@@ -1,4 +1,4 @@
-## Amaunator
+# Amaunator
 
 *The Keeper of the Eternal Sun, the Light of Law, the
 Yellow God*
