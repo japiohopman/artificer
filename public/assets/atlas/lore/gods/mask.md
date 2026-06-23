@@ -8,5 +8,21 @@ whenever stealth is required or intrigue is afoot. Courtiers and diplomats invok
 smooth negotiation.
 Those who favor Mask usually pursue thievery and
 other forms of acquisition of what belongs to others,
-such as pickpocketing, burglary, mugging, and con 
+such as pickpocketing, burglary, mugging, and con games. Ordinary folk pray to him to avert his eyes from
+their valuables, but the cautious sometimes employ
+"Mask's purse," a small, cheap cloth pouch worn in plain
+sight (thus easily cut or lifted) containing a small offering of coin. By convention, a pickpocket pilfers Mask's
+purse when encountering another person wearing one,
+and considers the gain a gift from the god, while the one
+who lost the purse is grateful to the Lord of Shadows for
+accepting a respectful sacrifice of a small portion of his
+goods. Of course, nothing prevents another pickpocket
+from targeting someone who has lost Mask's purse, but
+anyone with the ill luck to attract multiple pickpockets in
+a single outing has probably earned Mask's ire anyway.
+Priests of Mask are usually thieves by profession, and
+often serve as higher-ups in the local underworld or
+criminal syndicate. They go by the title of demarche or
+demarchess, and wear veil-masks when acting in their
+priestly capacity. 
 
