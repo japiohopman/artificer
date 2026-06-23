@@ -20,4 +20,14 @@ opportunity for the wilderness to grow up and make
 the land fertile again, which in turn provides new challenges for those who would return to tame it.
 The creed of Silvanus dictates that nature's glory must
 be preserved not merely because nature is beautiful, but
-because wild nature is the true state of the world. Its expanses refresh and revitalize the mortal soul, and give 
+because wild nature is the true state of the world. Its expanses refresh and revitalize the mortal soul, and give breath to all the world. Many of his faithful oppose the
+expansion of settlements into wild places, and consider
+excessive consumption of natural resources to be not
+only wasteful but blasphemous.
+Silvanus often receives veneration from travelers in
+wild lands, explorers, and residents of rural communities far from the protection of a local lord or a great city.
+The oak leaf is Silvanus's symbol, and a grove of oak
+trees within a village or on its outskirts is often dedicated as a shrine to him. In rural places where oak trees
+don't grow, an oak leaf etched into the bark of another
+kind of tree signifies a sacred site. 
+
