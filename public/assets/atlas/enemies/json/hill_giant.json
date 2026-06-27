@@ -4,12 +4,7 @@
   "size": "Huge",
   "type": "giant",
   "alignment": "chaotic evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 105,
   "hit_dice": "10d12",
   "hit_points_roll": "10d12+40",
@@ -40,7 +35,7 @@
     "passive_perception": 12
   },
   "languages": "Giant",
-  "challenge_rating": 5,
+  "challenge_rating": "5",
   "proficiency_bonus": 3,
   "xp": 1800,
   "actions": [
@@ -92,11 +87,23 @@
   ],
   "image": "/assets/atlas/enemies/images/hill_giant.webp",
   "url": "/assets/atlas/enemies/json/hill_giant.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-27T21:02:00.255Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 13,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.0webp",
+  "stats": {
+    "str": 21,
+    "dex": 8,
+    "con": 19,
+    "int": 5,
+    "wis": 9,
+    "cha": 6
+  },
+  "imageUrl": "/assets/atlas/enemies/images/hill_giant.webp",
+  "_type": "enemies",
+  "background_type": "land_plains3",
+  "last_updated": "27-6-2026"
 }
