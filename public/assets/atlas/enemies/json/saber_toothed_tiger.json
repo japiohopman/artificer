@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 12
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 52,
   "hit_dice": "7d10",
   "hit_points_roll": "7d10+14",
@@ -48,7 +43,7 @@
     "passive_perception": 13
   },
   "languages": "",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -108,10 +103,22 @@
   ],
   "image": "/assets/atlas/enemies/saber_toothed_tiger.webp",
   "url": "/assets/atlas/enemies/json/saber_toothed_tiger.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-27T20:59:09.938Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 17,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.0webp",
+  "stats": {
+    "str": 18,
+    "dex": 14,
+    "con": 15,
+    "int": 3,
+    "wis": 12,
+    "cha": 8
+  },
+  "imageUrl": "/assets/atlas/enemies/images/saber_toothed_tiger.webp",
+  "_type": "enemies",
+  "background_type": "snowy2",
+  "last_updated": "27-6-2026"
 }
