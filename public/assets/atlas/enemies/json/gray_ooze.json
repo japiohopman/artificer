@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "ooze",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 8
-    }
-  ],
+  "armor_class": 8,
   "hit_points": 22,
   "hit_dice": "3d8",
   "hit_points_roll": "3d8+9",
@@ -77,7 +72,7 @@
     "passive_perception": 8
   },
   "languages": "",
-  "challenge_rating": 0.5,
+  "challenge_rating": "0.5",
   "proficiency_bonus": 2,
   "xp": 100,
   "special_abilities": [
@@ -100,7 +95,7 @@
   "actions": [
     {
       "name": "pseudopod",
-      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage plus 7 (2d6) acid damage, and if the target is wearing nonmagical metal armor, its armor is partly corroded and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.",
+      "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage plus 7 (2d6) acid damage, and if the target is wearing nonmagical metal armor, its armor is partly corroded and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.0",
       "attack_bonus": 3,
       "damage": [
         {
@@ -125,10 +120,22 @@
   ],
   "image": "/assets/atlas/enemies/images/gray_ooze.webp",
   "url": "/assets/atlas/enemies/json/gray_ooze.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-27T20:03:16.763Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 24,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.0webp",
+  "stats": {
+    "str": 12,
+    "dex": 6,
+    "con": 16,
+    "int": 1,
+    "wis": 6,
+    "cha": 2
+  },
+  "imageUrl": "/assets/atlas/enemies/images/gray_ooze.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "27-6-2026"
 }
