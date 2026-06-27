@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "undead",
   "alignment": "neutral evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 15
-    }
-  ],
+  "armor_class": 15,
   "hit_points": 82,
   "hit_dice": "11d8",
   "hit_points_roll": "11d8+33",
@@ -68,7 +63,7 @@
     "passive_perception": 13
   },
   "languages": "the languages it knew in life",
-  "challenge_rating": 5,
+  "challenge_rating": "5",
   "proficiency_bonus": 3,
   "xp": 1800,
   "special_abilities": [
@@ -130,7 +125,7 @@
     },
     {
       "name": "bite",
-      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one willing creature, or a creature that is grappled by the vampire, incapacitated, or restrained. Hit: 6 (1d6 + 3) piercing damage plus 7 (2d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.",
+      "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one willing creature, or a creature that is grappled by the vampire, incapacitated, or restrained. Hit: 6 (1d6 + 3) piercing damage plus 7 (2d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.0",
       "attack_bonus": 6,
       "damage": [
         {
@@ -171,15 +166,23 @@
   ],
   "image": "/assets/atlas/enemies/vampire_spawn.webp",
   "url": "/assets/atlas/enemies/json/vampire_spawn.json",
-  "updated_at": "2026-04-18T04:08:16.423Z",
+  "updated_at": "2026-06-27T20:04:43.236Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 14,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet12.webp",
-  "imageUrl": "/assets/atlas/enemies/vampire_spawn.webp",
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet12.0webp",
+  "imageUrl": "/assets/atlas/enemies/images/vampire_spawn.webp",
   "_type": "enemies",
   "background_type": "castle",
   "rarity": "Rare",
-  "last_updated": "18-4-2026"
+  "last_updated": "27-6-2026",
+  "stats": {
+    "str": 16,
+    "dex": 16,
+    "con": 16,
+    "int": 11,
+    "wis": 10,
+    "cha": 12
+  }
 }
