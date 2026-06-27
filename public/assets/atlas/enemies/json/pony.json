@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 10
-    }
-  ],
+  "armor_class": 10,
   "hit_points": 11,
   "hit_dice": "2d8",
   "hit_points_roll": "2d8+2",
@@ -31,7 +26,7 @@
     "passive_perception": 10
   },
   "languages": "",
-  "challenge_rating": 0.125,
+  "challenge_rating": "0.125",
   "proficiency_bonus": 2,
   "xp": 25,
   "actions": [
@@ -54,11 +49,23 @@
   ],
   "image": "/assets/atlas/enemies/pony.webp",
   "url": "/assets/atlas/enemies/json/pony.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-27T20:08:25.605Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 24,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.0webp",
+  "stats": {
+    "str": 15,
+    "dex": 10,
+    "con": 13,
+    "int": 2,
+    "wis": 11,
+    "cha": 7
+  },
+  "imageUrl": "/assets/atlas/enemies/images/pony.webp",
+  "_type": "enemies",
+  "background_type": "land_plains2",
+  "last_updated": "27-6-2026"
 }
