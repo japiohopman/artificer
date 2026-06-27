@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 15
-    }
-  ],
+  "armor_class": 15,
   "hit_points": 52,
   "hit_dice": "7d10",
   "hit_points_roll": "7d10+14",
@@ -32,7 +27,7 @@
     "passive_perception": 9
   },
   "languages": "",
-  "challenge_rating": 3,
+  "challenge_rating": "3",
   "proficiency_bonus": 2,
   "xp": 700,
   "actions": [
@@ -89,11 +84,23 @@
   ],
   "image": "/assets/atlas/enemies/images/giant_scorpion.webp",
   "url": "/assets/atlas/enemies/json/giant_scorpion.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-27T19:55:00.217Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 7,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.0webp",
+  "stats": {
+    "str": 15,
+    "dex": 13,
+    "con": 15,
+    "int": 1,
+    "wis": 9,
+    "cha": 3
+  },
+  "imageUrl": "/assets/atlas/enemies/images/giant_scorpion.webp",
+  "_type": "enemies",
+  "background_type": "desert4",
+  "last_updated": "27-6-2026"
 }
