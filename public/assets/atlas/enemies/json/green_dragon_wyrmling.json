@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "dragon",
   "alignment": "lawful evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 38,
   "hit_dice": "7d8",
   "hit_points_roll": "7d8+7",
@@ -92,7 +87,7 @@
     "passive_perception": 14
   },
   "languages": "Draconic",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -159,10 +154,22 @@
   ],
   "image": "/assets/atlas/enemies/images/green_dragon_wyrmling.webp",
   "url": "/assets/atlas/enemies/json/green_dragon_wyrmling.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-27T19:39:17.605Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 0,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.0webp",
+  "stats": {
+    "str": 15,
+    "dex": 12,
+    "con": 13,
+    "int": 14,
+    "wis": 11,
+    "cha": 13
+  },
+  "imageUrl": "/assets/atlas/enemies/images/green_dragon_wyrmling.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "27-6-2026"
 }
