@@ -6,7 +6,10 @@ export interface SavedLocation {
   id: string;
   name: string;
   category: string;
-  coordinates?: { x: number; y: number };
+  description?: string;
+  image?: string | null;
+  region?: string;
+  coordinates?: { x?: number; y?: number; lat?: number; lng?: number };
   overlayMapUrl?: string;
   subLocations?: any[];
 }
@@ -32,7 +35,8 @@ export interface WorldState {
   region: string;
 
   // Location State
-  currentLocation: any | null;
+  currentLocation: SavedLocation | null;
+  inspectedLocation: SavedLocation | null;
   currentSubLocation: any | null;
   currentShop: any | null;
   partyLocation: any | null;
@@ -48,10 +52,12 @@ export interface WorldState {
   setRegion: (region: string) => void;
   setPartyLocation: (location: any) => void;
   setPartySubLocation: (location: any) => void;
-  setCurrentLocation: (location: any) => void;
+  setCurrentLocation: (location: SavedLocation) => void;
+  setInspectedLocation: (location: SavedLocation | null) => void;
   setCurrentSubLocation: (location: any) => void;
   setCurrentShop: (shop: any) => void;
   setWorldFlag: (flag: string, value: any) => void;
+  setSavedLocations: (locations: SavedLocation[]) => void;
   isNight: () => boolean;
   getActiveBackground: () => string;
 }
@@ -66,6 +72,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   region: 'Sword Coast',
 
   currentLocation: null,
+  inspectedLocation: null,
   currentSubLocation: null,
   currentShop: null,
   partyLocation: null,
@@ -112,11 +119,13 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   setPartyLocation: (partyLocation) => set({ partyLocation }),
   setPartySubLocation: (partySubLocation) => set({ partySubLocation }),
   setCurrentLocation: (currentLocation) => set({ currentLocation }),
+  setInspectedLocation: (inspectedLocation) => set({ inspectedLocation }),
   setCurrentSubLocation: (currentSubLocation) => set({ currentSubLocation }),
   setCurrentShop: (currentShop) => set({ currentShop }),
   setWorldFlag: (flag, value) => set((state) => ({
     worldFlags: { ...state.worldFlags, [flag]: value }
   })),
+  setSavedLocations: (savedLocations) => set({ savedLocations }),
 
   isNight: () => {
     const time = get().gameTime;

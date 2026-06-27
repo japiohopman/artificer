@@ -63,8 +63,8 @@
 - [ ] **NPC Memory Module**
   - [ ] Affinity System (-10 to +10 scale).
   - [ ] Interaction Log & Memory Index.
-- [ ] **Atlas Map Module**
-  - [ ] Interactive spatial interface (Leaflet-like).
+- [x] **Atlas Map Module**
+  - [x] Interactive spatial interface (Leaflet-like).
   - [ ] Dynamic Markers and Fog of War.
 - [ ] **Tactical Combat Engine**
   - [ ] Grid-Based Movement & Collision.

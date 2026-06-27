@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useStore } from '../../store/useStore';
@@ -35,6 +35,16 @@ const ChangeView = ({ center, zoom }: { center: [number, number], zoom: number }
   return null;
 };
 
+const MapClickHandler = () => {
+  const { setInspectedLocation } = useWorldStore();
+  useMapEvents({
+    click: () => {
+      setInspectedLocation(null);
+    },
+  });
+  return null;
+};
+
 const MapInvalidator = () => {
   const map = useMap();
   const { isWorldPanelOpen, isCharacterPanelOpen } = useStore();
@@ -61,7 +71,12 @@ const MapInvalidator = () => {
 };
 
 export const WorldMap: React.FC = () => {
-  const { partyLocation } = useWorldStore();
+  const { 
+    partyLocation, 
+    savedLocations, 
+    setInspectedLocation 
+  } = useWorldStore();
+  const { setIsWorldPanelOpen } = useStore();
   
   // Default center (can be derived from partyLocation or currentSubLocation)
   const defaultCenter: [number, number] = [51.505, -0.09];
@@ -83,17 +98,43 @@ export const WorldMap: React.FC = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <ChangeView center={center} zoom={zoom} />
+        <MapClickHandler />
         
         {partyLocation && (
-          <Marker position={center}>
-            <Popup>
-              <div className="p-2 font-header text-dragon-red">
-                <p className="font-bold">Party Position</p>
-                <p className="text-[10px] uppercase font-black tracking-widest text-parchment-500">Active Campaign</p>
-              </div>
-            </Popup>
-          </Marker>
+          <Marker 
+            position={center}
+            eventHandlers={{
+              click: () => {
+                setInspectedLocation({
+                  id: 'party-pos',
+                  name: "Party Position",
+                  category: "Active Campaign",
+                  description: "Your group is currently located here, navigating the vast reaches of the world.",
+                  image: null
+                });
+                setIsWorldPanelOpen(true);
+              }
+            }}
+          />
         )}
+
+        {savedLocations.map((loc) => (
+          loc.coordinates && (
+            <Marker 
+              key={loc.id}
+              position={[
+                loc.coordinates.lat ?? loc.coordinates.x ?? 0, 
+                loc.coordinates.lng ?? loc.coordinates.y ?? 0
+              ]}
+              eventHandlers={{
+                click: () => {
+                  setInspectedLocation(loc);
+                  setIsWorldPanelOpen(true);
+                }
+              }}
+            />
+          )
+        ))}
       </MapContainer>
       
       {/* Map Overlay Vignette */}

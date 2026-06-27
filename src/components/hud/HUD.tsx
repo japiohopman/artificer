@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStore } from '../../store/useStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
+import { useWorldStore } from '../../store/useWorldStore';
 import { WorldPanel } from './WorldPanel';
 import { GameScreen } from './GameScreen';
 import { CharacterPanel } from '../character/CharacterPanel';
@@ -23,6 +24,27 @@ export const HUD: React.FC = () => {
     isInventoryOpen,
     setIsInventoryOpen
   } = useInventoryStore();
+
+  const { setSavedLocations } = useWorldStore();
+
+  React.useEffect(() => {
+    fetch('/assets/atlas/world/toril/faerun/wetlands/wetlands.json')
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data)) {
+          const mapped = data.map(item => ({
+            id: item.id,
+            name: item.popup.title,
+            category: item.categoryId,
+            coordinates: item.position ? { x: item.position[0], y: item.position[1] } : undefined,
+            description: item.popup.description,
+            image: item.popup.image
+          }));
+          setSavedLocations(mapped);
+        }
+      })
+      .catch(err => console.error("Failed to load map data:", err));
+  }, []);
 
   return (
     <div className="h-screen w-full flex flex-col overflow-hidden bg-parchment-100 text-parchment-900 font-body relative bg-paper-texture">

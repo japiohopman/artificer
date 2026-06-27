@@ -13,10 +13,13 @@ export const WorldPanel: React.FC = () => {
 
   const {
     currentLocation,
+    inspectedLocation,
     savedLocations,
     gameTime,
     gameDay
   } = useWorldStore();
+
+  const displayLocation = inspectedLocation || currentLocation;
 
   const formatTime = (minutes: number) => {
     const hours = Math.floor(minutes / 60) % 24;
@@ -75,16 +78,29 @@ export const WorldPanel: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent via-dragon-red/20 to-dragon-red/20" />
               <div className="flex items-center gap-2">
-                <GameIcon name="map" size={14} color="#8B0000" />
-                <h3 className="text-[10px] font-black uppercase text-dragon-red tracking-[0.3em]">Active_Domain</h3>
+                <GameIcon name={inspectedLocation ? "search" : "map"} size={14} color="#8B0000" />
+                <h3 className="text-[10px] font-black uppercase text-dragon-red tracking-[0.3em]">
+                  {inspectedLocation ? 'Inspecting_Landmark' : 'Active_Domain'}
+                </h3>
+                {inspectedLocation && (
+                  <button 
+                    onClick={() => useWorldStore.getState().setInspectedLocation(null)}
+                    className="ml-2 text-[8px] bg-dragon-red/10 hover:bg-dragon-red/20 text-dragon-red px-2 py-0.5 rounded-full transition-colors font-black uppercase tracking-tighter"
+                  >
+                    Clear
+                  </button>
+                )}
               </div>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent via-dragon-red/20 to-dragon-red/20" />
             </div>
 
-            <div className="bg-white/30 border border-dragon-red/10 rounded overflow-hidden shadow-md hover:shadow-xl transition-all duration-500">
+            <div className={cn(
+              "bg-white/30 border rounded overflow-hidden shadow-md hover:shadow-xl transition-all duration-500",
+              inspectedLocation ? "border-blue-500/50 shadow-blue-500/10" : "border-dragon-red/10"
+            )}>
                <div className="h-40 bg-parchment-300 relative group">
-                  {currentLocation?.image ? (
-                    <img src={currentLocation.image} className="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-[2000ms]" alt="" />
+                  {displayLocation?.image ? (
+                    <img src={displayLocation.image} className="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-[2000ms]" alt="" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-parchment-200 to-parchment-400">
                       <GameIcon name="city" size={64} className="opacity-10" />
@@ -92,22 +108,28 @@ export const WorldPanel: React.FC = () => {
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-4">
-                    <p className="text-white font-header text-xl font-black leading-tight uppercase tracking-wide drop-shadow-lg">{currentLocation?.name || 'The Wilds'}</p>
+                    <p className="text-white font-header text-xl font-black leading-tight uppercase tracking-wide drop-shadow-lg">{displayLocation?.name || 'The Wilds'}</p>
                     <div className="flex items-center gap-2 mt-1">
-                       <div className="w-1.5 h-1.5 rounded-full bg-dragon-gold animate-pulse" />
-                       <p className="text-dragon-gold text-[9px] uppercase font-black tracking-widest">{currentLocation?.category || 'Uncharted Territory'}</p>
+                       <div className={cn(
+                         "w-1.5 h-1.5 rounded-full animate-pulse",
+                         inspectedLocation ? "bg-blue-400" : "bg-dragon-gold"
+                       )} />
+                       <p className={cn(
+                         "text-[9px] uppercase font-black tracking-widest",
+                         inspectedLocation ? "text-blue-400" : "text-dragon-gold"
+                       )}>{displayLocation?.category || 'Uncharted Territory'}</p>
                     </div>
                   </div>
                </div>
                <div className="p-4 bg-white/40 backdrop-blur-sm border-t border-dragon-red/5">
                  <p className="text-xs text-parchment-800 italic leading-relaxed font-serif">
-                   {currentLocation?.description || 'The horizon stretches infinitely, a canvas of primal forces awaiting the touch of a pathfinder.'}
+                   {displayLocation?.description || 'The horizon stretches infinitely, a canvas of primal forces awaiting the touch of a pathfinder.'}
                  </p>
                  
-                 {currentLocation?.region && (
+                 {displayLocation?.region && (
                    <div className="mt-4 pt-4 border-t border-dragon-red/5 flex items-center justify-between">
                       <span className="text-[8px] font-black text-parchment-400 uppercase tracking-widest">Regional Cluster</span>
-                      <span className="text-[10px] font-bold text-dragon-red uppercase">{currentLocation.region}</span>
+                      <span className="text-[10px] font-bold text-dragon-red uppercase">{displayLocation.region}</span>
                    </div>
                  )}
                </div>
@@ -129,6 +151,7 @@ export const WorldPanel: React.FC = () => {
               {savedLocations.length > 0 ? savedLocations.map(loc => (
                 <button 
                   key={loc.id}
+                  onClick={() => useWorldStore.getState().setInspectedLocation(loc)}
                   className="group flex items-center gap-4 p-3 bg-white/20 hover:bg-dragon-red/5 border border-dragon-red/5 hover:border-dragon-red/20 rounded transition-all text-left shadow-sm hover:shadow-md active:scale-[0.98]"
                 >
                   <div className="w-10 h-10 rounded bg-parchment-100 flex items-center justify-center border border-dragon-red/10 group-hover:bg-dragon-red group-hover:border-dragon-gold transition-all duration-300 shadow-inner">
