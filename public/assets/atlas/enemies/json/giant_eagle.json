@@ -101,7 +101,7 @@
   ],
   "image": "/assets/atlas/enemies/images/giant_eagle.webp",
   "url": "/assets/atlas/enemies/json/giant_eagle.json",
-  "updated_at": "2026-06-08T13:46:28.125Z",
+  "updated_at": "2026-06-27T19:38:09.568Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
@@ -116,5 +116,7 @@
     "cha": 10
   },
   "imageUrl": "/assets/atlas/enemies/images/giant_eagle.webp",
-  "last_updated": "8-6-2026"
+  "last_updated": "27-6-2026",
+  "_type": "enemies",
+  "background_type": "air3"
 }
