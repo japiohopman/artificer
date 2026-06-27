@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "dragon",
   "alignment": "chaotic good",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 16
-    }
-  ],
+  "armor_class": 16,
   "hit_points": 22,
   "hit_dice": "4d8",
   "hit_points_roll": "4d8+4",
@@ -86,7 +81,7 @@
     "passive_perception": 14
   },
   "languages": "Draconic",
-  "challenge_rating": 1,
+  "challenge_rating": "1",
   "proficiency_bonus": 2,
   "xp": 200,
   "actions": [
@@ -165,11 +160,23 @@
   ],
   "image": "/assets/atlas/enemies/images/copper_dragon_wyrmling.webp",
   "url": "/assets/atlas/enemies/json/copper_dragon_wyrmling.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-27T19:41:12.601Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 19,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet3.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet3.0webp",
+  "stats": {
+    "str": 15,
+    "dex": 12,
+    "con": 13,
+    "int": 14,
+    "wis": 11,
+    "cha": 13
+  },
+  "imageUrl": "/assets/atlas/enemies/images/copper_dragon_wyrmling.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "27-6-2026"
 }
