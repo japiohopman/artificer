@@ -5,12 +5,7 @@
   "size": "Large",
   "type": "beast",
   "alignment": "neutral evil",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 10
-    }
-  ],
+  "armor_class": 10,
   "hit_points": 22,
   "hit_dice": "3d10",
   "hit_points_roll": "3d10+6",
@@ -42,7 +37,7 @@
     "passive_perception": 13
   },
   "languages": "understands Common but can't speak",
-  "challenge_rating": 1,
+  "challenge_rating": "1",
   "proficiency_bonus": 2,
   "xp": 200,
   "special_abilities": [
@@ -111,10 +106,22 @@
   ],
   "image": "/assets/atlas/enemies/images/giant_vulture.webp",
   "url": "/assets/atlas/enemies/json/giant_vulture.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-27T19:52:23.054Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 12,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.0webp",
+  "stats": {
+    "str": 15,
+    "dex": 10,
+    "con": 15,
+    "int": 6,
+    "wis": 12,
+    "cha": 7
+  },
+  "imageUrl": "/assets/atlas/enemies/images/giant_vulture.webp",
+  "_type": "enemies",
+  "background_type": "air2",
+  "last_updated": "27-6-2026"
 }
