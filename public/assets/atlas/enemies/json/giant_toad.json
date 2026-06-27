@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 11
-    }
-  ],
+  "armor_class": 11,
   "hit_points": 39,
   "hit_dice": "6d10",
   "hit_points_roll": "6d10+6",
@@ -33,7 +28,7 @@
     "passive_perception": 10
   },
   "languages": "",
-  "challenge_rating": 1,
+  "challenge_rating": "1",
   "proficiency_bonus": 2,
   "xp": 200,
   "special_abilities": [
@@ -82,10 +77,22 @@
   ],
   "image": "/assets/atlas/enemies/images/giant_toad.webp",
   "url": "/assets/atlas/enemies/json/giant_toad.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-27T19:26:59.901Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 11,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.0webp",
+  "stats": {
+    "str": 15,
+    "dex": 13,
+    "con": 13,
+    "int": 2,
+    "wis": 10,
+    "cha": 3
+  },
+  "imageUrl": "/assets/atlas/enemies/images/giant_toad.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "27-6-2026"
 }
