@@ -6,24 +6,7 @@
   "type": "humanoid",
   "subtype": "any race",
   "alignment": "any alignment",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 16,
-      "armor": [
-        {
-          "index": "chain_shirt",
-          "name": "chain shirt",
-          "url": "/assets/atlas/equipment/json/chain_shirt.json"
-        },
-        {
-          "index": "shield",
-          "name": "shield",
-          "url": "/assets/atlas/equipment/json/shield.json"
-        }
-      ]
-    }
-  ],
+  "armor_class": 16,
   "hit_points": 11,
   "hit_dice": "2d8",
   "hit_points_roll": "2d8+2",
@@ -54,7 +37,7 @@
     "passive_perception": 12
   },
   "languages": "any one language (usually Common)",
-  "challenge_rating": 0.125,
+  "challenge_rating": "0.125",
   "proficiency_bonus": 2,
   "xp": 25,
   "actions": [
@@ -98,14 +81,23 @@
   ],
   "image": "/assets/atlas/enemies/images/guard.webp",
   "url": "/assets/atlas/enemies/json/guard.json",
-  "updated_at": "2026-04-04T03:37:04.896Z",
+  "updated_at": "2026-06-27T21:04:06.764Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 5,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.webp",
-  "imageUrl": "/assets/atlas/enemies/guard.webp",
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.0webp",
+  "imageUrl": "/assets/atlas/enemies/images/guard.webp",
   "background_type": "land_urban",
-  "last_updated": "4-4-2026"
+  "last_updated": "27-6-2026",
+  "stats": {
+    "str": 13,
+    "dex": 12,
+    "con": 12,
+    "int": 10,
+    "wis": 11,
+    "cha": 10
+  },
+  "_type": "enemies"
 }
