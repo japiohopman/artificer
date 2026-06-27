@@ -4,12 +4,7 @@
   "size": "Tiny",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 10
-    }
-  ],
+  "armor_class": 10,
   "hit_points": 1,
   "hit_dice": "1d4",
   "hit_points_roll": "1d4-1",
@@ -32,7 +27,7 @@
     "passive_perception": 10
   },
   "languages": "",
-  "challenge_rating": 0,
+  "challenge_rating": "0",
   "proficiency_bonus": 2,
   "xp": 10,
   "special_abilities": [
@@ -62,10 +57,22 @@
   ],
   "image": "/assets/atlas/enemies/rat.webp",
   "url": "/assets/atlas/enemies/json/rat.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-27T20:06:15.242Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 6,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.0webp",
+  "stats": {
+    "str": 2,
+    "dex": 11,
+    "con": 9,
+    "int": 2,
+    "wis": 10,
+    "cha": 4
+  },
+  "imageUrl": "/assets/atlas/enemies/images/rat.webp",
+  "_type": "enemies",
+  "background_type": "castle4",
+  "last_updated": "27-6-2026"
 }
