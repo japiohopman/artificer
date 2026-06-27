@@ -5,12 +5,7 @@
   "size": "Small",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 4,
   "hit_dice": "1d6",
   "hit_points_roll": "1d6+1",
@@ -33,7 +28,7 @@
     "passive_perception": 8
   },
   "languages": "",
-  "challenge_rating": 0,
+  "challenge_rating": "0",
   "proficiency_bonus": 2,
   "xp": 10,
   "special_abilities": [
@@ -63,10 +58,22 @@
   ],
   "image": "/assets/atlas/enemies/images/giant_fire_beetle.webp",
   "url": "/assets/atlas/enemies/json/giant_fire_beetle.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-27T19:23:24.756Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 22,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet5.0webp",
+  "stats": {
+    "str": 8,
+    "dex": 10,
+    "con": 12,
+    "int": 1,
+    "wis": 7,
+    "cha": 3
+  },
+  "imageUrl": "/assets/atlas/enemies/images/giant_fire_beetle.webp",
+  "_type": "enemies",
+  "background_type": "land_mountains4",
+  "last_updated": "27-6-2026"
 }
