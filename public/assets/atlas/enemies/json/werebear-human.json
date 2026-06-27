@@ -39,10 +39,28 @@
       "desc": "The werebear has advantage on Wisdom (Perception) checks that rely on smell."
     }
   ],
-  "tags": ["shapechanger", "werebear", "good"],
+  "tags": [
+    "shapechanger",
+    "werebear",
+    "good"
+  ],
   "forms": [
-    { "name": "Human Form", "index": "werebear-human" },
-    { "name": "Bear Form", "index": "werebear-bear" },
-    { "name": "Hybrid Form", "index": "werebear-hybrid" }
-  ]
+    {
+      "name": "Human Form",
+      "index": "werebear-human"
+    },
+    {
+      "name": "Bear Form",
+      "index": "werebear-bear"
+    },
+    {
+      "name": "Hybrid Form",
+      "index": "werebear-hybrid"
+    }
+  ],
+  "imageUrl": "/assets/atlas/enemies/images/werebear-human.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "27-6-2026",
+  "updated_at": "2026-06-27T20:00:29.703Z"
 }
