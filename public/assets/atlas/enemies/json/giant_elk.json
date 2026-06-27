@@ -5,12 +5,7 @@
   "size": "Huge",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 14
-    }
-  ],
+  "armor_class": 14,
   "hit_points": 42,
   "hit_dice": "5d12",
   "hit_points_roll": "5d12+10",
@@ -41,7 +36,7 @@
     "passive_perception": 14
   },
   "languages": "Giant Elk, understands Common, Elvish, and Sylvan but can't speak",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -87,10 +82,22 @@
   ],
   "image": "/assets/atlas/enemies/images/giant_elk.webp",
   "url": "/assets/atlas/enemies/json/giant_elk.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-27T19:35:35.370Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 21,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet5.0webp",
+  "stats": {
+    "str": 19,
+    "dex": 16,
+    "con": 14,
+    "int": 7,
+    "wis": 14,
+    "cha": 10
+  },
+  "imageUrl": "/assets/atlas/enemies/images/giant_elk.webp",
+  "_type": "enemies",
+  "background_type": "air2",
+  "last_updated": "27-6-2026"
 }
