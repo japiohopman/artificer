@@ -62,9 +62,18 @@ export const HUD: React.FC = () => {
         image: item.popup?.image || item.image
       }));
       
-      // Filter out invalid coordinates
+      // Filter out invalid coordinates and deduplicate by id
       const validLocations = allMapped.filter(loc => loc.coordinates);
-      setSavedLocations(validLocations);
+      const uniqueLocations = Array.from(
+        validLocations.reduce((acc, loc) => {
+          if (loc.id && !acc.has(loc.id)) {
+            acc.set(loc.id, loc);
+          }
+          return acc;
+        }, new Map())
+        .values()
+      );
+      setSavedLocations(uniqueLocations);
     });
   }, []);
 

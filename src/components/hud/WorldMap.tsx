@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapContainer, ImageOverlay, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, useMap, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useStore } from '../../store/useStore';
@@ -29,26 +29,34 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 });
 
-const FAERUN_IMAGE_URL = encodeURI('/assets/atlas/world/maps/Sword_Coast_Map _faerun.png');
+const FAERUN_TILE_URL = '/tiles/faerun/{z}/{x}/{y}.png';
 const FAERUN_IMAGE_WIDTH = 21620;
 const FAERUN_IMAGE_HEIGHT = 14461;
 const FAERUN_BOUNDS: [[number, number], [number, number]] = [[0, 0], [FAERUN_IMAGE_HEIGHT, FAERUN_IMAGE_WIDTH]];
+const FAERUN_CENTER: [number, number] = [FAERUN_IMAGE_HEIGHT / 2, FAERUN_IMAGE_WIDTH / 2];
+const FAERUN_MIN_ZOOM = 0;
+const FAERUN_MAX_ZOOM = 7;
 
 const translateCoordinates = (coords: any): [number, number] | null => {
   if (!coords) return null;
 
   if (Array.isArray(coords) && coords.length >= 2) {
-    return [coords[0], coords[1]];
+    // Faerûn JSON coordinates are typically [x, y]; Leaflet expects [lat, lng] => [y, x].
+    return [coords[1], coords[0]];
   }
 
   const maybeCoords = coords.coordinates || coords.coords || coords;
   if (!maybeCoords || typeof maybeCoords !== 'object') return null;
 
-  const lat = maybeCoords.lat ?? maybeCoords.y;
-  const lng = maybeCoords.lng ?? maybeCoords.x;
+  const hasLatLng = maybeCoords.lat != null || maybeCoords.lng != null;
+  const hasXY = maybeCoords.x != null || maybeCoords.y != null;
 
-  if (lat != null && lng != null) {
-    return [lat, lng];
+  if (hasLatLng) {
+    return [maybeCoords.lat ?? maybeCoords.y, maybeCoords.lng ?? maybeCoords.x];
+  }
+
+  if (hasXY) {
+    return [maybeCoords.y, maybeCoords.x];
   }
 
   return null;
@@ -56,7 +64,12 @@ const translateCoordinates = (coords: any): [number, number] | null => {
 
 const ChangeView = ({ center, zoom }: { center: [number, number], zoom: number }) => {
   const map = useMap();
-  map.setView(center, zoom);
+
+  React.useEffect(() => {
+    if (!center || center.some((value) => Number.isNaN(value))) return;
+    map.setView(center, zoom);
+  }, [map, center, zoom]);
+
   return null;
 };
 
@@ -106,35 +119,36 @@ export const WorldMap: React.FC = () => {
   } = useWorldStore();
   const { setIsWorldPanelOpen } = useStore();
   
-  // Faerun Map configuration
-  const mapUrl = '/assets/atlas/world/maps/Faerun_day.webp';
-  // Standard bounds for the Faerun high-res map
-  const bounds: L.LatLngBoundsExpression = [[0, 0], [5000, 5000]];
-  
-  // Default center (can be derived from partyLocation or currentSubLocation)
-  const defaultCenter: [number, number] = [2500, 2500];
-  const center: [number, number] = partyLocation?.coords || defaultCenter;
-  const zoom = partyLocation?.zoom || 0;
+  const bounds = FAERUN_BOUNDS;
+  const defaultCenter: [number, number] = FAERUN_CENTER;
+  const partyCoords = translateCoordinates(partyLocation?.coords ?? partyLocation?.coordinates ?? partyLocation);
+  const center: [number, number] = partyCoords || defaultCenter;
+  const zoom = partyLocation?.zoom ?? FAERUN_MIN_ZOOM;
 
   return (
     <div className="w-full h-full bg-slate-900 overflow-hidden relative">
       <MapContainer 
-        center={center} 
-        zoom={zoom} 
+        center={center}
+        zoom={zoom}
         crs={L.CRS.Simple}
-        minZoom={-2}
-        maxZoom={4}
+        bounds={bounds}
         scrollWheelZoom={true}
-        minZoom={-4}
-        maxZoom={4}
-        maxBounds={FAERUN_BOUNDS}
+        minZoom={FAERUN_MIN_ZOOM}
+        maxZoom={FAERUN_MAX_ZOOM}
+        maxBounds={bounds}
         className="w-full h-full grayscale-[0.5] contrast-[1.1] brightness-[0.8]"
+        style={{ height: '100%', width: '100%' }}
         zoomControl={false}
       >
         <MapInvalidator />
-        <ImageOverlay
-          url={mapUrl}
-          bounds={bounds}
+        <TileLayer
+          url={FAERUN_TILE_URL}
+          tileSize={256}
+          maxNativeZoom={FAERUN_MAX_ZOOM}
+          minNativeZoom={FAERUN_MIN_ZOOM}
+          tms={true}
+          noWrap={true}
+          attribution=""
         />
         <ChangeView center={center} zoom={zoom} />
         <MapClickHandler />
@@ -157,18 +171,13 @@ export const WorldMap: React.FC = () => {
           />
         )}
 
-        {savedLocations.map((loc) => {
-          if (!loc.coordinates) return null;
-          
-          // Map coordinates correctly for CRS.Simple: [y, x]
-          const position: [number, number] = [
-            loc.coordinates.y ?? loc.coordinates.lat ?? 0,
-            loc.coordinates.x ?? loc.coordinates.lng ?? 0
-          ];
+        {savedLocations.map((loc, index) => {
+          const position = getLocationPosition(loc);
+          if (!position) return null;
 
           return (
             <Marker
-              key={loc.id}
+              key={`${loc.id}-${index}`}
               position={position}
               eventHandlers={{
                 click: () => {

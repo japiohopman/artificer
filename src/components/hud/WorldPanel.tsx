@@ -148,9 +148,9 @@ export const WorldPanel: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 gap-3">
-              {savedLocations.length > 0 ? savedLocations.map(loc => (
+              {savedLocations.length > 0 ? savedLocations.map((loc, index) => (
                 <button 
-                  key={loc.id}
+                  key={`${loc.id}-${index}`}
                   onClick={() => useWorldStore.getState().setInspectedLocation(loc)}
                   className="group flex items-center gap-4 p-3 bg-white/20 hover:bg-dragon-red/5 border border-dragon-red/5 hover:border-dragon-red/20 rounded transition-all text-left shadow-sm hover:shadow-md active:scale-[0.98]"
                 >
