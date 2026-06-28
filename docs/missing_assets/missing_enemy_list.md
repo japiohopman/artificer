@@ -1,4 +1,3 @@
-
 basilisk.webp
 behir.webp
 berserker.webp
@@ -19,9 +18,6 @@ goat.webp
 gray_ooze.webp
 grick.webp
 grimlock.webp
-guard.webp
-hill_giant.webp
-hobgoblin.webp
 horned_devil.webp
 hunter_shark.webp
 hydra.webp
@@ -35,8 +31,6 @@ mammoth.webp
 manticore.webp
 ochre_jelly.webp
 owl.webp
-owlbear.webp
-phase_spider.webp
 plesiosaurus.webp
 raven.webp
 red_dragon_wyrmling.webp
@@ -46,9 +40,6 @@ rhinoceros.webp
 riding_horse.webp
 roper.webp
 rust_monster.webp
-saber_toothed_tiger.webp
-sahuagin.webp
-scorpion.webp
 scout.webp
 severin.webp
 shambling_mound.webp
