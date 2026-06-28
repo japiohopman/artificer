@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, ImageOverlay, useMap, useMapEvents } from 'react-leaflet';
+import { MapContainer, ImageOverlay, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useStore } from '../../store/useStore';
@@ -105,19 +105,25 @@ export const WorldMap: React.FC = () => {
     setInspectedLocation
   } = useWorldStore();
   const { setIsWorldPanelOpen } = useStore();
-
-  const defaultCenter: [number, number] = [FAERUN_IMAGE_HEIGHT / 2, FAERUN_IMAGE_WIDTH / 2];
-  const partyCoords = translateCoordinates(partyLocation?.coords ?? partyLocation?.coordinates ?? partyLocation);
-  const center: [number, number] = partyCoords || defaultCenter;
-  const zoom = partyLocation?.zoom ?? 1;
+  
+  // Faerun Map configuration
+  const mapUrl = '/assets/atlas/world/maps/Faerun_day.webp';
+  // Standard bounds for the Faerun high-res map
+  const bounds: L.LatLngBoundsExpression = [[0, 0], [5000, 5000]];
+  
+  // Default center (can be derived from partyLocation or currentSubLocation)
+  const defaultCenter: [number, number] = [2500, 2500];
+  const center: [number, number] = partyLocation?.coords || defaultCenter;
+  const zoom = partyLocation?.zoom || 0;
 
   return (
     <div className="w-full h-full bg-slate-900 overflow-hidden relative">
-      <MapContainer
+      <MapContainer 
+        center={center} 
+        zoom={zoom} 
         crs={L.CRS.Simple}
-        bounds={FAERUN_BOUNDS}
-        center={center}
-        zoom={zoom}
+        minZoom={-2}
+        maxZoom={4}
         scrollWheelZoom={true}
         minZoom={-4}
         maxZoom={4}
@@ -126,7 +132,10 @@ export const WorldMap: React.FC = () => {
         zoomControl={false}
       >
         <MapInvalidator />
-        <ImageOverlay url={FAERUN_IMAGE_URL} bounds={FAERUN_BOUNDS} />
+        <ImageOverlay
+          url={mapUrl}
+          bounds={bounds}
+        />
         <ChangeView center={center} zoom={zoom} />
         <MapClickHandler />
 
@@ -149,8 +158,13 @@ export const WorldMap: React.FC = () => {
         )}
 
         {savedLocations.map((loc) => {
-          const position = getLocationPosition(loc);
-          if (!position) return null;
+          if (!loc.coordinates) return null;
+          
+          // Map coordinates correctly for CRS.Simple: [y, x]
+          const position: [number, number] = [
+            loc.coordinates.y ?? loc.coordinates.lat ?? 0,
+            loc.coordinates.x ?? loc.coordinates.lng ?? 0
+          ];
 
           return (
             <Marker

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStore } from '../../store/useStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
+import { useWorldStore } from '../../store/useWorldStore';
 import { WorldPanel } from './WorldPanel';
 import { GameScreen } from './GameScreen';
 import { CharacterPanel } from '../character/CharacterPanel';
@@ -24,13 +25,56 @@ export const HUD: React.FC = () => {
     setIsInventoryOpen
   } = useInventoryStore();
 
+  const { setSavedLocations, addSavedLocations } = useWorldStore();
+
+  React.useEffect(() => {
+    // Clear existing locations first to avoid duplicates on re-render
+    setSavedLocations([]);
+
+    const categories = [
+      'cities/cities.json',
+      'towns_settlements/towns_settlements.json',
+      'forest/forest.json',
+      'wetlands/wetlands.json',
+      'mountains/mountain.json',
+      'plains_grasslands/plains_grasslands.json',
+      'poi/poi.json',
+      'ruins/ruins.json',
+      'fortresses_keeps/fortresses_keeps.json',
+      'underdark/underdark.json'
+    ];
+
+    const basePath = '/assets/atlas/world/toril/faerun/';
+
+    Promise.all(
+      categories.map(cat => 
+        fetch(`${basePath}${cat}`)
+          .then(res => res.ok ? res.json() : [])
+          .catch(() => [])
+      )
+    ).then(results => {
+      const allMapped = results.flat().map(item => ({
+        id: item.id,
+        name: item.popup?.title || item.name,
+        category: item.categoryId || item.type,
+        coordinates: item.position ? { x: item.position[0], y: item.position[1] } : (item.coordinates ? { x: item.coordinates.lng, y: item.coordinates.lat } : undefined),
+        description: item.popup?.description || item.description,
+        image: item.popup?.image || item.image
+      }));
+      
+      // Filter out invalid coordinates
+      const validLocations = allMapped.filter(loc => loc.coordinates);
+      setSavedLocations(validLocations);
+    });
+  }, []);
+
   return (
     <div className="h-screen w-full flex flex-col overflow-hidden bg-parchment-100 text-parchment-900 font-body relative bg-paper-texture">
       {/* Journal Modal */}
       <Journal />
 
       {/* 1. Fixed Top Header / Navigation (Above sidebars) */}
-      <div className="w-full z-[2000] p-4 pointer-events-none">
+      <div className="w-full z-[5000] p-4 pointer-events-none">
         <Nav />
       </div>
 
