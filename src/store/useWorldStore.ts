@@ -58,6 +58,7 @@ export interface WorldState {
   setCurrentShop: (shop: any) => void;
   setWorldFlag: (flag: string, value: any) => void;
   setSavedLocations: (locations: SavedLocation[]) => void;
+  addSavedLocations: (locations: SavedLocation[]) => void;
   isNight: () => boolean;
   getActiveBackground: () => string;
 }
@@ -126,6 +127,9 @@ export const useWorldStore = create<WorldState>((set, get) => ({
     worldFlags: { ...state.worldFlags, [flag]: value }
   })),
   setSavedLocations: (savedLocations) => set({ savedLocations }),
+  addSavedLocations: (newLocations) => set((state) => ({
+    savedLocations: [...state.savedLocations, ...newLocations]
+  })),
 
   isNight: () => {
     const time = get().gameTime;

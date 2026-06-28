@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
+import { MapContainer, ImageOverlay, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useStore } from '../../store/useStore';
@@ -78,24 +78,32 @@ export const WorldMap: React.FC = () => {
   } = useWorldStore();
   const { setIsWorldPanelOpen } = useStore();
   
+  // Faerun Map configuration
+  const mapUrl = '/assets/atlas/world/maps/Faerun_day.webp';
+  // Standard bounds for the Faerun high-res map
+  const bounds: L.LatLngBoundsExpression = [[0, 0], [5000, 5000]];
+  
   // Default center (can be derived from partyLocation or currentSubLocation)
-  const defaultCenter: [number, number] = [51.505, -0.09];
+  const defaultCenter: [number, number] = [2500, 2500];
   const center: [number, number] = partyLocation?.coords || defaultCenter;
-  const zoom = partyLocation?.zoom || 13;
+  const zoom = partyLocation?.zoom || 0;
 
   return (
     <div className="w-full h-full bg-slate-900 overflow-hidden relative">
       <MapContainer 
         center={center} 
         zoom={zoom} 
+        crs={L.CRS.Simple}
+        minZoom={-2}
+        maxZoom={4}
         scrollWheelZoom={true}
         className="w-full h-full grayscale-[0.5] contrast-[1.1] brightness-[0.8]"
         zoomControl={false}
       >
         <MapInvalidator />
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        <ImageOverlay
+          url={mapUrl}
+          bounds={bounds}
         />
         <ChangeView center={center} zoom={zoom} />
         <MapClickHandler />
@@ -118,14 +126,19 @@ export const WorldMap: React.FC = () => {
           />
         )}
 
-        {savedLocations.map((loc) => (
-          loc.coordinates && (
+        {savedLocations.map((loc) => {
+          if (!loc.coordinates) return null;
+          
+          // Map coordinates correctly for CRS.Simple: [y, x]
+          const position: [number, number] = [
+            loc.coordinates.y ?? loc.coordinates.lat ?? 0,
+            loc.coordinates.x ?? loc.coordinates.lng ?? 0
+          ];
+
+          return (
             <Marker 
               key={loc.id}
-              position={[
-                loc.coordinates.lat ?? loc.coordinates.x ?? 0, 
-                loc.coordinates.lng ?? loc.coordinates.y ?? 0
-              ]}
+              position={position}
               eventHandlers={{
                 click: () => {
                   setInspectedLocation(loc);
@@ -133,8 +146,8 @@ export const WorldMap: React.FC = () => {
                 }
               }}
             />
-          )
-        ))}
+          );
+        })}
       </MapContainer>
       
       {/* Map Overlay Vignette */}
