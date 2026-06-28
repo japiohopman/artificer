@@ -10,7 +10,7 @@ export const DiaryTab: React.FC = () => {
       <div className="flex flex-col items-center justify-center h-full text-parchment-600 italic font-quintessential space-y-4">
         <GameIcon name="book" size={48} className="opacity-20" />
         <p>The pages are still empty...</p>
-        <p className="text-sm">A new summary appears after the first Long Rest.</p>
+        <p className="text-sm">A new summary will appear after the first Long Rest.</p>
       </div>
     );
   }
@@ -50,7 +50,7 @@ export const DiaryTab: React.FC = () => {
                   </h3>
                   <ul className="list-disc list-inside space-y-1 text-sm">
                     {summary.locationsDiscovered.map((loc, i) => <li key={i}>{loc}</li>)}
-                    {summary.newNPCs.map((npc, i) => <li key={i}>Meeting with {npc}</li>)}
+                    {summary.newNPCs.map((npc, i) => <li key={i}>With {npc}</li>)}
                   </ul>
                </section>
 

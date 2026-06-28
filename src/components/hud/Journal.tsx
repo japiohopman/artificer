@@ -36,7 +36,7 @@ export const Journal: React.FC = () => {
           className="fixed inset-0 z-[60] flex items-center justify-center p-4 md:p-8 bg-black/60 backdrop-blur-md"
         >
           {/* Main Journal Container */}
-          <div
+          <div 
             className="w-full max-w-6xl h-[85vh] bg-parchment-100 rounded-lg shadow-2xl border-[12px] border-dragon-darkRed flex flex-col relative overflow-hidden"
             style={{
               backgroundImage: `url('https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1776054260573-old_paper.webp')`,
@@ -56,7 +56,7 @@ export const Journal: React.FC = () => {
               </div>
 
               {/* Close Button */}
-              <button
+              <button 
                 onClick={() => {
                   setIsJournalOpen(false);
                   playModalCloseSound();
@@ -79,22 +79,22 @@ export const Journal: React.FC = () => {
                     }}
                     className={cn(
                       "flex flex-col md:flex-row items-center gap-3 px-4 py-6 md:py-4 transition-all relative group",
-                      activeTab === tab.id
-                        ? "bg-parchment-100 text-dragon-red"
+                      activeTab === tab.id 
+                        ? "bg-parchment-100 text-dragon-red" 
                         : "text-parchment-400 hover:text-white"
                     )}
                   >
-                    <GameIcon
-                      name={tab.icon}
-                      size={24}
-                      color={activeTab === tab.id ? "#8B0000" : "currentColor"}
+                    <GameIcon 
+                      name={tab.icon} 
+                      size={24} 
+                      color={activeTab === tab.id ? "#8B0000" : "currentColor"} 
                     />
                     <span className="hidden md:block font-header text-sm tracking-widest uppercase">{tab.label}</span>
-
+                    
                     {activeTab === tab.id && (
-                      <motion.div
+                      <motion.div 
                         layoutId="activeJournalTab"
-                        className="absolute right-0 top-0 bottom-0 w-1 bg-dragon-gold md:hidden"
+                        className="absolute right-0 top-0 bottom-0 w-1 bg-dragon-gold md:hidden" 
                       />
                     )}
                   </button>

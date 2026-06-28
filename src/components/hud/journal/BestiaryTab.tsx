@@ -56,10 +56,10 @@ export const BestiaryTab: React.FC = () => {
               onClick={() => setSelectedEnemy(data)}
               className="group cursor-pointer aspect-[2/3] bg-parchment-200 rounded-lg overflow-hidden border-2 border-dragon-gold/20 shadow-sm hover:border-dragon-red/50 hover:shadow-md transition-all relative"
             >
-               <img
-                 src={data.imageUrl}
-                 alt={data.name}
-                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+               <img 
+                 src={data.imageUrl} 
+                 alt={data.name} 
+                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
                />
                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-3">
                   <span className="text-white font-header text-sm tracking-tight leading-tight">{data.name}</span>
@@ -72,14 +72,14 @@ export const BestiaryTab: React.FC = () => {
 
       <AnimatePresence>
         {selectedEnemy && (
-          <motion.div
+          <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
             onClick={() => setSelectedEnemy(null)}
           >
-            <motion.div
+            <motion.div 
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}

@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/schemas/quest.schema.json",
+  "title": "Quest",
+  "type": "object",
+  "required": ["index", "title", "category", "stages"],
+  "properties": {
+    "index": { "type": "string" },
+    "title": { "type": "string" },
+    "category": { "enum": ["Main", "Side", "Task"] },
+    "giver": { "type": "string" },
+    "requirements": {
+      "type": "object",
+      "properties": {
+        "level": { "type": "integer" },
+        "location": { "type": "string" },
+        "quests": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "description"],
+        "properties": {
+          "id": { "type": "string" },
+          "description": { "type": "string" },
+          "status": { "enum": ["Incomplete", "Active", "Completed", "Failed"] }
+        }
+      }
+    },
+    "rewards": {
+      "type": "object",
+      "properties": {
+        "xp": { "type": "integer" },
+        "gp": { "type": "integer" },
+        "items": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

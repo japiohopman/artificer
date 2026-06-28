@@ -23,7 +23,7 @@ export const LoreTab: React.FC = () => {
         setLoreContent(text);
       } catch (e) {
         console.error("Failed to fetch lore:", e);
-        setLoreContent("Kon de lore-bestanden niet laden.");
+        setLoreContent("Could not load lore files.");
       } finally {
         setIsLoading(false);
       }
@@ -40,8 +40,8 @@ export const LoreTab: React.FC = () => {
     return (
       <div className="flex flex-col items-center justify-center h-full text-parchment-600 italic space-y-4">
         <GameIcon name="lore" size={48} className="opacity-20" />
-        <p>Er zijn nog geen lore-geheimen ontdekt.</p>
-        <p className="text-sm">Blijf de wereld verkennen om bibliotheken en archieven te ontsluiten.</p>
+        <p>No lore secrets have been discovered yet.</p>
+        <p className="text-sm">Keep exploring the world to unlock libraries and archives.</p>
       </div>
     );
   }
@@ -50,15 +50,15 @@ export const LoreTab: React.FC = () => {
     <div className="flex h-full gap-6 py-4 overflow-hidden">
       {/* Sidebar List */}
       <div className="w-1/3 flex flex-col gap-2 overflow-y-auto custom-scrollbar pr-2 border-r border-dragon-gold/10">
-        <h3 className="font-header text-sm text-dragon-darkRed uppercase tracking-widest mb-2">Archief</h3>
+        <h3 className="font-header text-sm text-dragon-darkRed uppercase tracking-widest mb-2">Archive</h3>
         {unlockedLore.map(path => (
           <button
             key={path}
             onClick={() => setSelectedLore(path)}
             className={cn(
               "text-left p-3 rounded text-sm transition-all border border-transparent font-header tracking-tight",
-              selectedLore === path
-                ? "bg-dragon-red/10 border-dragon-red/30 text-dragon-red"
+              selectedLore === path 
+                ? "bg-dragon-red/10 border-dragon-red/30 text-dragon-red" 
                 : "hover:bg-parchment-200 text-parchment-800"
             )}
           >
@@ -87,7 +87,7 @@ export const LoreTab: React.FC = () => {
         ) : (
           <div className="flex flex-col items-center justify-center h-full text-parchment-500 opacity-40">
             <GameIcon name="book" size={64} />
-            <p className="font-quintessential mt-4">Selecteer een document uit de lijst</p>
+            <p className="font-quintessential mt-4">Select a document from the list</p>
           </div>
         )}
       </div>

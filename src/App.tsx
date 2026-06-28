@@ -7,7 +7,6 @@ import { HUD } from './components/hud/HUD';
 import { TitleScreen } from './components/core/TitleScreen';
 import { DevKit } from './components/devkit/DevKit';
 import { useStore } from './store/useStore';
-import { useAtlasStore } from './store/useAtlasStore';
 import { useCharacterStore } from './store/useCharacterStore';
 import { useEffect } from 'react';
 import { playModalOpenSound, playModalCloseSound } from './services/storageService';
@@ -29,11 +28,9 @@ import { useBookStore } from './store/useBookStore';
 
 export default function App() {
   const { 
-    isGameStarted, isDevKitOpen, setIsDevKitOpen, explorerTab,
-    isCharacterSpellbookOpen, setIsCharacterSpellbookOpen, isProfileMenuOpen
+    isGameStarted, isDevKitOpen, setIsDevKitOpen, updateSelectedItem, selectedItem, explorerTab,
+    isCharacterSpellbookOpen, setIsCharacterSpellbookOpen, isProfileMenuOpen, isJournalOpen, setIsJournalOpen
   } = useStore();
-
-  const { updateSelectedItem, selectedItem, loadAllLists } = useAtlasStore();
 
   const {
     books: registeredBooks,
@@ -46,15 +43,30 @@ export default function App() {
 
   useEffect(() => {
     // Initial data load
+    const { loadAllLists } = useStore.getState();
     const { loadCharacters } = useCharacterStore.getState();
     loadCharacters();
     loadAllLists();
 
     const handleKeyDown = (e: KeyboardEvent) => {
+      // Don't trigger shortcuts if user is typing in an input or textarea
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable) {
+        return;
+      }
+
       if (e.shiftKey && e.key.toLowerCase() === 'd') {
         e.preventDefault();
         const nextState = !isDevKitOpen;
         setIsDevKitOpen(nextState);
+        if (nextState) playModalOpenSound();
+        else playModalCloseSound();
+      }
+
+      if (e.altKey && e.key.toLowerCase() === 'j') {
+        e.preventDefault();
+        const nextState = !isJournalOpen;
+        setIsJournalOpen(nextState);
         if (nextState) playModalOpenSound();
         else playModalCloseSound();
       }

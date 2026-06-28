@@ -11,11 +11,10 @@ Welcome to the central documentation index for the Artificer project. This file 
 - **[Sound System](./docs/modules/soundService.md)** - Documentation for the audio engine.
 - **[Audio Registry](./docs/systems/AUDIO_REGISTRY.md)** - Index of all sound assets.
 - **[Crafting System](./docs/systems/CRAFTING_SYSTEM.md)** - ⚒️ **Material and Recipe Architecture.**
+- **[Quest System](./docs/systems/QUEST_SYSTEM.md)** - ⚔️ **Quest and Mission Architecture.**
 - **[AI Orchestration](./docs/systems/AI_ORCHESTRATION.md)** - 🎭 **Narrator vs. Engine Architecture.**
-- **[UI Architecture](./docs/systems/UI_ARCHITECTURE.md)** - 🖥️ **Chat-First & Map-Underlay Layout Design.**
 - **[Dice & Chat](./docs/modules/dice_system.md)** - 3D Dice and AI Chat documentation.
 - **[Icon System](./docs/modules/icons.md)** - 🎨 **Custom Icon Mapping and Architecture.**
-- **[Journal Module](./docs/modules/journal.md)** - 📜 **Campaign Journal & Codex.**
 - **[Deep Dive Report](./docs/reports/DEEP_DIVE_RAPPORT.md)** - Analysis of Classes, Leveling, and Character Creation.
 - **[Optimization Strategy](./docs/reports/OPTIMALISATIE_ADVIES.md)** - Evaluation of system optimality and scaling advice.
 - **[Future Modules](./docs/FUTURE_MODULES.md)** - Blueprint for missing core systems and AI memory architecture.

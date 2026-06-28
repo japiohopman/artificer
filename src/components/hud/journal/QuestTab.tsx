@@ -47,11 +47,11 @@ export const QuestTab: React.FC = () => {
 
             <div className="grid grid-cols-1 gap-4">
               {filtered.map(quest => (
-                <div
-                  key={quest.id}
+                <div 
+                  key={quest.id} 
                   className={cn(
                     "bg-parchment-200/40 border-l-4 p-4 rounded shadow-sm hover:shadow-md transition-shadow",
-                    quest.status === 'Active' ? "border-dragon-gold" :
+                    quest.status === 'Active' ? "border-dragon-gold" : 
                     quest.status === 'Completed' ? "border-green-600" : "border-gray-400"
                   )}
                 >
@@ -61,7 +61,7 @@ export const QuestTab: React.FC = () => {
                       {quest.status}
                     </span>
                   </div>
-
+                  
                   <p className="text-sm text-parchment-800 mb-4 font-body leading-relaxed">
                     {quest.description}
                   </p>
