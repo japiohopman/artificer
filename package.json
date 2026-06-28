@@ -30,12 +30,15 @@
     "@fortawesome/free-brands-svg-icons": "^7.2.0",
     "@fortawesome/react-fontawesome": "^3.3.1",
     "@google/genai": "^1.29.0",
+    "@google/generative-ai": "^0.24.1",
     "@tailwindcss/vite": "^4.1.14",
     "@types/leaflet": "^1.9.21",
     "@vitejs/plugin-react": "^5.0.4",
     "clsx": "^2.1.1",
-    "dotenv": "^17.2.3",
-    "express": "^4.21.2",
+    "cors": "^2.8.6",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2",
+    "express": "^4.22.2",
     "firebase": "^12.12.1",
     "framer-motion": "^12.38.0",
     "leaflet": "^1.9.4",
@@ -48,7 +51,6 @@
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
     "tailwind-merge": "^3.5.0",
-    "vite": "^6.2.0",
     "zustand": "^5.0.12"
   },
   "devDependencies": {
@@ -61,6 +63,6 @@
     "tailwindcss": "^4.1.14",
     "tsx": "^4.22.4",
     "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "vite": "^6.4.3"
   }
 }

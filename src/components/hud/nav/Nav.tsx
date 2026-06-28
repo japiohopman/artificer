@@ -3,7 +3,6 @@ import { useWorldStore } from '../../../store/useWorldStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useInventoryStore } from '../../../store/useInventoryStore';
 import { useStore } from '../../../store/useStore';
-import { PartyLogistics } from '../../ui/PartyLogistics';
 import { GameIcon, GameIconName } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
@@ -28,6 +27,8 @@ export const Nav: React.FC = () => {
     setIsJournalOpen,
     isProfileMenuOpen,
     setIsProfileMenuOpen,
+    activeCharacterTab,
+    setActiveCharacterTab,
     dynamicNavButtons,
   } = useStore();
 
@@ -83,14 +84,35 @@ export const Nav: React.FC = () => {
       shortcut: 'P'
     },
     {
+      id: 'logistics-panel',
+      icon: 'package',
+      label: 'Logistics',
+      onClick: () => {
+        if (isCharacterPanelOpen && activeCharacterTab === 'logistics') {
+          setIsCharacterPanelOpen(false);
+        } else {
+          setActiveCharacterTab('logistics');
+          setIsCharacterPanelOpen(true);
+          setIsInventoryOpen(true); // CharacterPanel visibility is tied to isInventoryOpen in CharacterPanel.tsx
+        }
+      },
+      isActive: isCharacterPanelOpen && activeCharacterTab === 'logistics',
+      shortcut: 'L'
+    },
+    {
       id: 'character-panel',
       icon: 'party_stats',
       label: 'Hero',
       onClick: () => {
-        // Now Hero also toggles the full stats view by default
-        setIsProfileMenuOpen(!isProfileMenuOpen);
+        if (isCharacterPanelOpen && activeCharacterTab === 'equipment') {
+          setIsCharacterPanelOpen(false);
+        } else {
+          setActiveCharacterTab('equipment');
+          setIsCharacterPanelOpen(true);
+          setIsInventoryOpen(true);
+        }
       },
-      isActive: isProfileMenuOpen || isCharacterPanelOpen,
+      isActive: isCharacterPanelOpen && activeCharacterTab !== 'logistics',
       shortcut: 'C'
     }
   ];
@@ -205,11 +227,11 @@ export const Nav: React.FC = () => {
         )}
 
         <div className="flex items-center gap-2">
-          <PartyLogistics />
           <div className="h-8 w-px bg-dragon-gold/20 mx-1" />
           {rightActions.map(action => (
             <button 
               key={action.id}
+              id={action.id}
               onClick={action.onClick}
               className={cn(
                 "w-10 h-10 rounded border-2 transition-all flex items-center justify-center relative group shadow-sm",

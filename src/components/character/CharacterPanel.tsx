@@ -6,11 +6,12 @@ import { useInventoryStore } from '../../store/useInventoryStore';
 import { EquipmentDoll } from './EquipmentDoll';
 import { Inventory } from './Inventory';
 import { CharacterStats } from './CharacterStats';
-import { X, Shield, Package, BarChart3, Info, Truck, ChevronLeft, ChevronRight } from 'lucide-react';
+import { LogisticsManifest } from '../ui/PartyLogistics';
+import { X, Shield, Package, BarChart3, Info, Truck, ChevronLeft, ChevronRight, Archive } from 'lucide-react';
 import { EquipmentSlotId } from '../../lib/equipmentConstants';
 import { cn } from '../../lib/utils';
 
-type CharacterTab = 'equipment' | 'inventory' | 'stats' | 'vehicle';
+type CharacterTab = 'equipment' | 'inventory' | 'stats' | 'logistics';
 
 export const CharacterPanel: React.FC = () => {
   const { 
@@ -28,10 +29,19 @@ export const CharacterPanel: React.FC = () => {
     isInventoryOpen,
     setIsInventoryOpen,
     equipItem,
-    unequipItem
+    unequipItem,
+    addVehicle
   } = useInventoryStore();
 
-  const [activeTab, setActiveTab] = useState<CharacterTab>('equipment');
+  const {
+    activeCharacterTab,
+    setActiveCharacterTab,
+    setIsTransportProfileOpen
+  } = useStore();
+
+  // Use the store's tab as the source of truth
+  const activeTab = activeCharacterTab;
+  const setActiveTab = setActiveCharacterTab;
 
   const activeCharacter = characters.find(c => c.id === activeCharacterId) || characters[0];
   
@@ -70,7 +80,7 @@ export const CharacterPanel: React.FC = () => {
     { id: 'equipment', icon: Shield, label: 'Equipment' },
     { id: 'inventory', icon: Package, label: 'Inventory' },
     { id: 'stats', icon: BarChart3, label: 'Stats' },
-    { id: 'vehicle', icon: Truck, label: 'Vehicle' }
+    { id: 'logistics', icon: Archive, label: 'Logistics' }
   ];
 
   const activeTabLabel = tabs.find(t => t.id === activeTab)?.label;
@@ -194,11 +204,12 @@ export const CharacterPanel: React.FC = () => {
                 />
               )}
               {activeTab === 'stats' && <CharacterStats />}
-              {activeTab === 'vehicle' && (
-                <div className="h-full flex flex-col items-center justify-center text-parchment-400 gap-4 opacity-50">
-                  <Truck size={48} />
-                  <p className="text-[10px] font-bold uppercase tracking-widest">Vehicle Systems Offline</p>
-                </div>
+              {activeTab === 'logistics' && (
+                <LogisticsManifest 
+                  onTransportRequest={() => {
+                    setIsTransportProfileOpen(true);
+                  }}
+                />
               )}
             </motion.div>
           </AnimatePresence>

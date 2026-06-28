@@ -42,6 +42,7 @@ interface AppState {
   isJournalOpen: boolean;
   isWorldPanelOpen: boolean;
   isCharacterPanelOpen: boolean;
+  activeCharacterTab: 'equipment' | 'inventory' | 'stats' | 'logistics';
   dynamicNavButtons: any[]; 
   isAdvancedRollerOpen: boolean;
   chatExpanded: boolean;
@@ -147,6 +148,7 @@ interface AppState {
   setIsJournalOpen: (isOpen: boolean) => void;
   setIsWorldPanelOpen: (isOpen: boolean) => void;
   setIsCharacterPanelOpen: (isOpen: boolean) => void;
+  setActiveCharacterTab: (tab: 'equipment' | 'inventory' | 'stats' | 'logistics') => void;
   setDynamicNavButtons: (buttons: any[]) => void;
   setIsAdvancedRollerOpen: (isOpen: boolean) => void;
   setChatExpanded: (expanded: boolean) => void;
@@ -195,6 +197,7 @@ export const useStore = create<AppState>((set, get) => ({
   isJournalOpen: false,
   isWorldPanelOpen: false,
   isCharacterPanelOpen: false,
+  activeCharacterTab: 'equipment',
   dynamicNavButtons: [],
   isAdvancedRollerOpen: false,
   chatExpanded: false,
@@ -307,6 +310,7 @@ export const useStore = create<AppState>((set, get) => ({
   setIsJournalOpen: (isJournalOpen) => set({ isJournalOpen }),
   setIsWorldPanelOpen: (isWorldPanelOpen) => set({ isWorldPanelOpen }),
   setIsCharacterPanelOpen: (isCharacterPanelOpen) => set({ isCharacterPanelOpen }),
+  setActiveCharacterTab: (activeCharacterTab) => set({ activeCharacterTab }),
   setDynamicNavButtons: (dynamicNavButtons) => set({ dynamicNavButtons }),
   setIsAdvancedRollerOpen: (isAdvancedRollerOpen) => set({ isAdvancedRollerOpen }),
   setChatExpanded: (chatExpanded) => set({ chatExpanded }),

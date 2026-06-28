@@ -7,8 +7,147 @@ import { GameIcon } from '../../game_icons';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../../lib/utils';
 
-export const PartyLogistics: React.FC = () => {
+export const LogisticsManifest: React.FC<{ onTransportRequest?: () => void }> = ({ onTransportRequest }) => {
   const { partyStats, updatePartyStats, partyInventory, partyVehicles, addVehicle, removeVehicle } = useInventoryStore();
+  const { characters } = useCharacterStore();
+
+  const memberCount = Math.max(partyStats.memberCount, characters.length, 1);
+  const vehicleBonusFromAssets = partyVehicles.reduce((acc, v) => acc + (v.capacity || 0), 0);
+  const totalCapacity = (memberCount * partyStats.baseCapacityPerMember) + partyStats.vehicleCapacityBonus + vehicleBonusFromAssets;
+  
+  const totalWeight = React.useMemo(() => {
+    const parseWeight = (weight: any): number => {
+      if (!weight) return 0;
+      if (typeof weight === 'number') return weight;
+      const weightMatch = String(weight).match(/(\d+(\.\d+)?)/);
+      return weightMatch ? parseFloat(weightMatch[0]) : 0;
+    };
+
+    const calculateItemWeight = (item: any): number => {
+      if (!item) return 0;
+      return parseWeight(item.weight) * (item.quantity || 1);
+    };
+
+    const sharedWeight = partyInventory.reduce((acc, item) => acc + calculateItemWeight(item), 0);
+    
+    const characterWeights = characters.reduce((acc, char) => {
+       let personalWeight = 0;
+
+       if (char.saveVersion === 2 && char.items) {
+          personalWeight = Object.values(char.items).reduce((cAcc, item) => {
+             return cAcc + calculateItemWeight(item);
+          }, 0);
+       } else {
+          const equippedWeight = Object.values(char.inventory || {}).reduce((cAcc, item) => cAcc + calculateItemWeight(item), 0);
+          const backpackWeight = (char.backpack || []).reduce((cAcc, item) => cAcc + calculateItemWeight(item), 0);
+          personalWeight = equippedWeight + backpackWeight;
+       }
+
+       const money = char.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 };
+       const totalCoins = (money.cp || 0) + (money.sp || 0) + (money.ep || 0) + (money.gp || 0) + (money.pp || 0);
+       const moneyWeight = totalCoins * (partyStats.currencyWeightPerCoin || 0.02);
+
+       return acc + personalWeight + moneyWeight;
+    }, 0);
+
+    return sharedWeight + characterWeights;
+  }, [partyInventory, characters, partyStats]);
+
+  const weightPercentage = Math.min((totalWeight / totalCapacity) * 100, 100);
+  const isOverburdened = totalWeight > totalCapacity;
+
+  return (
+    <div className="space-y-8 py-2">
+       {/* Summary & Capacity Section */}
+       <div className="grid grid-cols-1 gap-6">
+          <div className="space-y-4">
+            <label className="text-[10px] font-black text-dragon-red uppercase tracking-widest flex items-center gap-2">
+               <GameIcon name="party_stats" size={14} /> Personnel & Status
+            </label>
+            <div className="grid grid-cols-1 gap-3">
+               <StatItem label="Personnel" value={`${memberCount} Active Members`} icon="users" />
+               <StatItem label="Transport" value={`${partyVehicles.length} Active Vehicles`} icon="horse" />
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <label className="text-[10px] font-black text-dragon-red uppercase tracking-widest flex items-center gap-2">
+               <GameIcon name="package" size={14} /> Total Carry Weight
+            </label>
+            <div className="bg-white/40 p-4 rounded-lg border-2 border-dragon-gold/20 shadow-inner">
+               <div className="flex justify-between items-end mb-2">
+                  <span className="text-[14px] font-bold text-parchment-900">{totalWeight.toFixed(1)} <span className="text-[10px] text-parchment-400 font-normal">LBS</span></span>
+                  <span className="text-[11px] font-mono text-dragon-red font-black">/ {totalCapacity} LBS</span>
+               </div>
+               <div className="h-4 bg-black/10 rounded-full overflow-hidden border-2 border-black/5 p-0.5">
+                  <motion.div
+                     initial={{ width: 0 }}
+                     animate={{ width: `${weightPercentage}%` }}
+                     className={cn("h-full rounded-full transition-all duration-1000", isOverburdened ? "bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]" : "bg-dragon-red")}
+                  />
+               </div>
+               <div className="mt-4 grid grid-cols-3 gap-2">
+                  <CapBadge label="Personnel" value={`${memberCount * partyStats.baseCapacityPerMember}`} />
+                  <CapBadge label="Vehicles" value={`+${vehicleBonusFromAssets}`} color="gold" />
+                  <CapBadge label="Utility" value={`+${partyStats.vehicleCapacityBonus}`} color="gold" />
+               </div>
+               {isOverburdened && (
+                  <div className="mt-3 flex items-center gap-2 text-red-600 animate-pulse">
+                     <GameIcon name="warning" size={12} />
+                     <span className="text-[9px] font-black uppercase tracking-widest">Movement Speed Reduced</span>
+                  </div>
+               )}
+            </div>
+          </div>
+       </div>
+
+       {/* Vehicles List */}
+       <div className="space-y-3 pt-4 border-t border-dragon-red/10">
+          <div className="flex justify-between items-center">
+             <span className="text-[10px] font-black text-dragon-red uppercase tracking-widest">Vehicle Hangar</span>
+             <button 
+               onClick={onTransportRequest}
+               className="text-[8px] font-black bg-dragon-red text-white px-2 py-1 rounded uppercase tracking-widest hover:bg-dragon-darkRed transition-colors"
+             >
+                Add Transport
+             </button>
+          </div>
+          <div className="space-y-2">
+             {partyVehicles.map((v, i) => (
+               <div key={i} className="flex items-center justify-between p-2 bg-white/40 border border-dragon-red/5 rounded group hover:bg-white transition-colors">
+                  <div className="flex items-center gap-3">
+                     <GameIcon name="horse" size={14} color="#8B0000" />
+                     <div className="flex flex-col">
+                        <span className="text-[10px] font-bold text-parchment-900 uppercase leading-none">{v.name}</span>
+                        <span className="text-[8px] text-parchment-400 uppercase tracking-tighter">+{v.capacity} lbs Capacity</span>
+                     </div>
+                  </div>
+                  <button 
+                    onClick={() => removeVehicle(i)}
+                    className="opacity-0 group-hover:opacity-100 p-1 hover:text-dragon-red transition-all"
+                  >
+                     <GameIcon name="trash" size={10} />
+                  </button>
+               </div>
+             ))}
+             {partyVehicles.length === 0 && (
+                <div className="text-center py-4 border border-dashed border-dragon-red/10 rounded opacity-30">
+                   <span className="text-[8px] font-black uppercase tracking-widest">No Transports Active</span>
+                </div>
+             )}
+          </div>
+       </div>
+
+       <div className="bg-dragon-darkRed p-3 text-[9px] text-parchment-400 font-mono flex justify-between items-center -mx-4">
+          <span className="ml-4">LOGISTICS_v2.0.4</span>
+          <span className="mr-4 text-dragon-gold/40 italic">STRATEGIC_SURPLUS</span>
+       </div>
+    </div>
+  );
+};
+
+export const PartyLogistics: React.FC = () => {
+  const { partyStats, partyVehicles, partyInventory } = useInventoryStore();
   const { characters } = useCharacterStore();
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -35,14 +174,10 @@ export const PartyLogistics: React.FC = () => {
        let personalWeight = 0;
 
        if (char.saveVersion === 2 && char.items) {
-          // Inventory V2: Sum all items in the registry
           personalWeight = Object.values(char.items).reduce((cAcc, item) => {
-             // For V2, we might need to resolve the template for the weight if it's not cached
-             // But usually it should be in the item instance if cached, or we assume calculateItemWeight handles it
              return cAcc + calculateItemWeight(item);
           }, 0);
        } else {
-          // Inventory V1: Sum legacy fields
           const equippedWeight = Object.values(char.inventory || {}).reduce((cAcc, item) => cAcc + calculateItemWeight(item), 0);
           const backpackWeight = (char.backpack || []).reduce((cAcc, item) => cAcc + calculateItemWeight(item), 0);
           personalWeight = equippedWeight + backpackWeight;
@@ -112,95 +247,14 @@ export const PartyLogistics: React.FC = () => {
                    </button>
                 </div>
 
-                <div className="p-6 space-y-8 overflow-y-auto max-h-[70vh] custom-scrollbar">
-                   {/* Summary & Capacity Section */}
-                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="space-y-4">
-                        <label className="text-[10px] font-black text-dragon-red uppercase tracking-widest flex items-center gap-2">
-                           <GameIcon name="party_stats" size={14} /> Personnel & Status
-                        </label>
-                        <div className="grid grid-cols-1 gap-3">
-                           <StatItem label="Personnel" value={`${memberCount} Active Members`} icon="users" />
-                           <StatItem label="Transport" value={`${partyVehicles.length} Active Vehicles`} icon="horse" />
-                        </div>
-                      </div>
-
-                      <div className="space-y-4">
-                        <label className="text-[10px] font-black text-dragon-red uppercase tracking-widest flex items-center gap-2">
-                           <GameIcon name="package" size={14} /> Total Carry Weight
-                        </label>
-                        <div className="bg-white/40 p-4 rounded-lg border-2 border-dragon-gold/20 shadow-inner">
-                           <div className="flex justify-between items-end mb-2">
-                              <span className="text-[14px] font-bold text-parchment-900">{totalWeight.toFixed(1)} <span className="text-[10px] text-parchment-400 font-normal">LBS</span></span>
-                              <span className="text-[11px] font-mono text-dragon-red font-black">/ {totalCapacity} LBS</span>
-                           </div>
-                           <div className="h-4 bg-black/10 rounded-full overflow-hidden border-2 border-black/5 p-0.5">
-                              <motion.div
-                                 initial={{ width: 0 }}
-                                 animate={{ width: `${weightPercentage}%` }}
-                                 className={cn("h-full rounded-full transition-all duration-1000", isOverburdened ? "bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]" : "bg-dragon-red")}
-                              />
-                           </div>
-                           <div className="mt-4 grid grid-cols-3 gap-2">
-                              <CapBadge label="Personnel" value={`${memberCount * partyStats.baseCapacityPerMember}`} />
-                              <CapBadge label="Vehicles" value={`+${vehicleBonusFromAssets}`} color="gold" />
-                              <CapBadge label="Utility" value={`+${partyStats.vehicleCapacityBonus}`} color="gold" />
-                           </div>
-                           {isOverburdened && (
-                              <div className="mt-3 flex items-center gap-2 text-red-600 animate-pulse">
-                                 <GameIcon name="warning" size={12} />
-                                 <span className="text-[9px] font-black uppercase tracking-widest">Movement Speed Reduced</span>
-                              </div>
-                           )}
-                        </div>
-                      </div>
-                   </div>
-
-                   {/* Vehicles List */}
-                   <div className="space-y-3 pt-4 border-t border-dragon-red/10">
-                      <div className="flex justify-between items-center">
-                         <span className="text-[10px] font-black text-dragon-red uppercase tracking-widest">Vehicle Hangar</span>
-                         <button 
-                           onClick={() => {
-                              const { setIsTransportProfileOpen } = useStore.getState();
-                              const { selectItem } = useAtlasStore.getState();
-                              setIsOpen(false);
-                           }}
-                           className="text-[8px] font-black bg-dragon-red text-white px-2 py-1 rounded uppercase tracking-widest hover:bg-dragon-darkRed transition-colors"
-                         >
-                            Add Transport
-                         </button>
-                      </div>
-                      <div className="space-y-2">
-                         {partyVehicles.map((v, i) => (
-                           <div key={i} className="flex items-center justify-between p-2 bg-white/40 border border-dragon-red/5 rounded group hover:bg-white transition-colors">
-                              <div className="flex items-center gap-3">
-                                 <GameIcon name="horse" size={14} color="#8B0000" />
-                                 <div className="flex flex-col">
-                                    <span className="text-[10px] font-bold text-parchment-900 uppercase leading-none">{v.name}</span>
-                                    <span className="text-[8px] text-parchment-400 uppercase tracking-tighter">+{v.capacity} lbs Capacity</span>
-                                 </div>
-                              </div>
-                              <button 
-                                onClick={() => removeVehicle(i)}
-                                className="opacity-0 group-hover:opacity-100 p-1 hover:text-dragon-red transition-all"
-                              >
-                                 <GameIcon name="trash" size={10} />
-                              </button>
-                           </div>
-                         ))}
-                         {partyVehicles.length === 0 && (
-                            <div className="text-center py-4 border border-dashed border-dragon-red/10 rounded opacity-30">
-                               <span className="text-[8px] font-black uppercase tracking-widest">No Transports Active</span>
-                            </div>
-                         )}
-                      </div>
-                   </div>
-                </div>
-
-                <div className="bg-dragon-darkRed p-3 text-[9px] text-parchment-400 font-mono flex justify-between items-center px-6">
-                   <span>LOGISTICS_SUBSYSTEM_v2.0.4</span>
-                   <span className="text-dragon-gold/40 italic">STRATEGIC_SURPLUS_READOUT</span>
+                <div className="p-6 overflow-y-auto max-h-[70vh] custom-scrollbar">
+                   <LogisticsManifest 
+                     onTransportRequest={() => {
+                        const { setIsTransportProfileOpen } = useStore.getState();
+                        const { selectItem } = useAtlasStore.getState();
+                        setIsOpen(false);
+                     }} 
+                   />
                 </div>
              </motion.div>
            </>
