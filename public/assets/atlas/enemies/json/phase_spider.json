@@ -5,12 +5,7 @@
   "size": "Large",
   "type": "monstrosity",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 32,
   "hit_dice": "5d10",
   "hit_points_roll": "5d10+5",
@@ -43,7 +38,7 @@
     "passive_perception": 10
   },
   "languages": "",
-  "challenge_rating": 3,
+  "challenge_rating": "3",
   "proficiency_bonus": 2,
   "xp": 700,
   "special_abilities": [
@@ -83,10 +78,22 @@
   ],
   "image": "/assets/atlas/enemies/phase_spider.webp",
   "url": "/assets/atlas/enemies/json/phase_spider.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-28T05:07:15.595Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 18,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet9.0webp",
+  "stats": {
+    "str": 15,
+    "dex": 15,
+    "con": 12,
+    "int": 6,
+    "wis": 10,
+    "cha": 6
+  },
+  "imageUrl": "/assets/atlas/enemies/images/phase_spider.webp",
+  "_type": "enemies",
+  "background_type": "cave2",
+  "last_updated": "28-6-2026"
 }
