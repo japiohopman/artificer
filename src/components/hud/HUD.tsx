@@ -41,7 +41,13 @@ export const HUD: React.FC = () => {
       'poi/poi.json',
       'ruins/ruins.json',
       'fortresses_keeps/fortresses_keeps.json',
-      'underdark/underdark.json'
+      'underdark/underdark.json',
+      'deserts_wastelands/deserts_wastelands.json',
+      'glaciers_tundras/glaciers_tundras.json',
+      'islands/islands.json',
+      'oases/oases.json',
+      'waters/waters.json',
+      'roads_trails/roads_trails.json'
     ];
 
     const basePath = '/assets/atlas/world/toril/faerun/';
@@ -53,27 +59,29 @@ export const HUD: React.FC = () => {
           .catch(() => [])
       )
     ).then(results => {
-      const allMapped = results.flat().map(item => ({
-        id: item.id,
-        name: item.popup?.title || item.name,
-        category: item.categoryId || item.type,
-        coordinates: item.position ? { x: item.position[0], y: item.position[1] } : (item.coordinates ? { x: item.coordinates.lng, y: item.coordinates.lat } : undefined),
-        description: item.popup?.description || item.description,
-        image: item.popup?.image || item.image
-      }));
+      const locationMap = new Map();
+
+      results.flat().forEach(item => {
+        if (!item || !item.id) return;
+        
+        // Skip duplicates
+        if (locationMap.has(item.id)) return;
+
+        const mapped = {
+          id: item.id,
+          name: item.popup?.title || item.name,
+          category: item.categoryId || item.type,
+          coordinates: item.position ? { x: item.position[0], y: item.position[1] } : (item.coordinates ? { x: item.coordinates.lng, y: item.coordinates.lat } : undefined),
+          description: item.popup?.description || item.description,
+          image: item.popup?.image || item.image
+        };
+
+        if (mapped.coordinates) {
+          locationMap.set(item.id, mapped);
+        }
+      });
       
-      // Filter out invalid coordinates and deduplicate by id
-      const validLocations = allMapped.filter(loc => loc.coordinates);
-      const uniqueLocations = Array.from(
-        validLocations.reduce((acc, loc) => {
-          if (loc.id && !acc.has(loc.id)) {
-            acc.set(loc.id, loc);
-          }
-          return acc;
-        }, new Map())
-        .values()
-      );
-      setSavedLocations(uniqueLocations);
+      setSavedLocations(Array.from(locationMap.values()));
     });
   }, []);
 
