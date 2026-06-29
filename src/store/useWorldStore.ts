@@ -20,7 +20,11 @@ export const CategoryIcons: Record<string, { icon: string, color: string }> = {
   forest: { icon: 'forest', color: '#228B22' },
   wetlands: { icon: 'waters', color: '#4682B4' },
   mountain: { icon: 'mountains', color: '#A9A9A9' },
-  underdark: { icon: 'death', color: '#4B0082' }
+  underdark: { icon: 'death', color: '#4B0082' },
+  dungeon: { icon: 'dungeon', color: '#8B0000' },
+  castle: { icon: 'castle', color: '#708090' },
+  landmark: { icon: 'landmark', color: '#FFD700' },
+  poi: { icon: 'poi', color: '#FFD700' }
 };
 
 export interface WorldState {
