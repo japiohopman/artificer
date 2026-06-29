@@ -45,7 +45,7 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
     html: `
       <div class="relative group ${isInspected ? 'z-[1000]' : ''}">
         <!-- Glow Effect -->
-        <div class="absolute inset-0 bg-black/60 blur-lg rounded-full transform scale-50 transition-transform ${scaleClass}"></div>
+        <div class="absolute inset-0 bg-black/60 blur-lg rounded-full transform scale-50 transition-transform ${scale}"></div>
 
         <!-- Selection Ring -->
         ${isInspected ? `
@@ -54,9 +54,9 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
         ` : ''}
 
         <!-- Icon SVG -->
-        <svg viewBox="0 0 512 512" width="32" height="32" class="relative transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scaleClass} ${isInspected ? '-translate-y-1' : ''}">
-          <path d="${path}" fill="${color}" stroke="rgba(0,0,0,0.9)" stroke-width="12" />
-          <path d="${path}" fill="${color}" />
+        <svg viewBox="0 0 512 512" width="32" height="32" class="relative transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scale} ${isInspected ? '-translate-y-1' : ''}">
+          <path d="${path}" fill="${config.color}" stroke="rgba(0,0,0,0.9)" stroke-width="12" />
+          <path d="${path}" fill="${config.color}" />
           ${isInspected ? `
             <circle cx="256" cy="256" r="280" fill="none" stroke="#FFD700" stroke-width="15" stroke-dasharray="80 40" class="animate-[spin_12s_linear_infinite]" />
           ` : ''}
@@ -146,6 +146,8 @@ export const WorldMap: React.FC = () => {
 
   const bounds: L.LatLngBoundsExpression = [[0, 0], [height0, width0]];
   
+  const scaleFactor = 128;
+
   // Custom CRS for Faerun to handle tile coordinate system correctly
   const faerunCRS = React.useMemo(() => L.extend({}, L.CRS.Simple, {
     transformation: new L.Transformation(1 / scaleFactor, 0, 1 / scaleFactor, 0),
