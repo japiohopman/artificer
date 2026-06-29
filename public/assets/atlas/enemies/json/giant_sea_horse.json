@@ -5,12 +5,7 @@
   "size": "Large",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 16,
   "hit_dice": "3d10",
   "hit_points_roll": "3d10",
@@ -33,7 +28,7 @@
     "passive_perception": 11
   },
   "languages": "",
-  "challenge_rating": 0.5,
+  "challenge_rating": "0.5",
   "proficiency_bonus": 2,
   "xp": 100,
   "special_abilities": [
@@ -68,10 +63,22 @@
   ],
   "image": "/assets/atlas/enemies/images/giant_sea_horse.webp",
   "url": "/assets/atlas/enemies/json/giant_sea_horse.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-29T10:01:51.418Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 8,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.0webp",
+  "stats": {
+    "str": 12,
+    "dex": 15,
+    "con": 11,
+    "int": 2,
+    "wis": 12,
+    "cha": 5
+  },
+  "imageUrl": "/assets/atlas/enemies/images/giant_sea_horse.webp",
+  "_type": "enemies",
+  "background_type": "water1",
+  "last_updated": "29-6-2026"
 }
