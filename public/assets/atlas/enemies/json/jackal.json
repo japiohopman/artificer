@@ -4,12 +4,7 @@
   "size": "Small",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 12
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 3,
   "hit_dice": "1d6",
   "hit_points_roll": "1d6",
@@ -40,7 +35,7 @@
     "passive_perception": 13
   },
   "languages": "",
-  "challenge_rating": 0,
+  "challenge_rating": "0",
   "proficiency_bonus": 2,
   "xp": 10,
   "special_abilities": [
@@ -75,10 +70,22 @@
   ],
   "image": "/assets/atlas/enemies/images/jackal.webp",
   "url": "/assets/atlas/enemies/json/jackal.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-29T09:00:20.648Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 1,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet8.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet8.0webp",
+  "stats": {
+    "str": 8,
+    "dex": 15,
+    "con": 11,
+    "int": 3,
+    "wis": 12,
+    "cha": 6
+  },
+  "imageUrl": "/assets/atlas/enemies/images/jackal.webp",
+  "_type": "enemies",
+  "background_type": "land_urban2",
+  "last_updated": "29-6-2026"
 }
