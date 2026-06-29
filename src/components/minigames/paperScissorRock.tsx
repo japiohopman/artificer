@@ -123,19 +123,19 @@ export default function PaperScissorRock({ isArena = false }: PaperScissorRockPr
             <div className="absolute bottom-4 flex gap-4 z-30">
                 {status === 'ritual' && (
                     <>
-                        <button onClick={() => setRpsChoice('rock')} className="p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition-colors">
+                        <button onClick={() => setRpsChoice('rock')} className="p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition-colors" title="Select Rock" aria-label="Select Rock">
                             <GameIcon name="rock" size={32} color={travelerSkinColor} />
                         </button>
-                        <button onClick={() => setRpsChoice('paper')} className="p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition-colors">
+                        <button onClick={() => setRpsChoice('paper')} className="p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition-colors" title="Select Paper" aria-label="Select Paper">
                             <GameIcon name="paper" size={32} color={travelerSkinColor} />
                         </button>
-                        <button onClick={() => setRpsChoice('scissors')} className="p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition-colors">
+                        <button onClick={() => setRpsChoice('scissors')} className="p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition-colors" title="Select Scissors" aria-label="Select Scissors">
                             <GameIcon name="scissors" size={32} color={travelerSkinColor} />
                         </button>
                     </>
                 )}
                 {status === 'result' && (
-                    <button onClick={() => startRpsMatch()} className="px-4 py-2 bg-indigo-500/20 hover:bg-indigo-500/40 text-indigo-400 text-[10px] font-bold uppercase tracking-widest rounded-full border border-indigo-500/30 transition-colors">
+                    <button onClick={() => startRpsMatch()} className="px-4 py-2 bg-indigo-500/20 hover:bg-indigo-500/40 text-indigo-400 text-[10px] font-bold uppercase tracking-widest rounded-full border border-indigo-500/30 transition-colors" title="Re-Engage" aria-label="Re-Engage">
                         Re-Engage
                     </button>
                 )}

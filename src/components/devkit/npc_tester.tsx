@@ -137,12 +137,14 @@ export const NPCTester: React.FC = () => {
           <button 
             onClick={handleClearAllNPCs}
             className="px-4 py-2 bg-dragon-red/10 border border-dragon-red/20 rounded-md text-[10px] font-black text-dragon-red hover:bg-dragon-red/20 transition-all uppercase tracking-widest"
+            title="Purge NPC Cache"
           >
             Purge NPC Cache
           </button>
           <button 
             onClick={loadList}
             className="p-2 text-white/40 hover:text-white transition-all bg-white/5 rounded-md border border-white/5"
+            title="Refresh NPC List"
           >
             <GameIcon name="refresh" size={14} className={isLoading ? 'animate-spin' : ''} />
           </button>
@@ -182,7 +184,7 @@ export const NPCTester: React.FC = () => {
                 >
                   <div className="relative z-10 w-12 h-12 rounded-lg bg-black/40 border border-white/10 flex items-center justify-center overflow-hidden shrink-0 shadow-lg">
                     {char?.avatarUrl || char?.imageUrl ? (
-                      <img src={normalizeImageUrl(char.avatarUrl || char.imageUrl, 'npc_character_profiles', char.id)} className="w-full h-full object-cover" />
+                      <img src={normalizeImageUrl(char.avatarUrl || char.imageUrl, 'npc_character_profiles', char.id)} className="w-full h-full object-cover" alt={char.name} />
                     ) : (
                       <GameIcon name="users" size={16} className="text-white/10" />
                     )}
@@ -278,6 +280,7 @@ export const NPCTester: React.FC = () => {
                                 key={slotNum}
                                 onClick={() => handleSwapSlot(npc.index, slotNum - 1)}
                                 className="flex flex-col items-center gap-1 py-2 bg-black/40 border border-white/5 rounded-lg text-[10px] font-black text-white/40 hover:bg-purple-500/20 hover:border-purple-500/50 hover:text-purple-300 transition-all uppercase"
+                                title={`Assign to Slot ${slotNum}`}
                               >
                                 <span>S{slotNum}</span>
                               </button>

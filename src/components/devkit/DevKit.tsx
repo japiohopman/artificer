@@ -815,7 +815,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                     ? 'bg-dragon-red border-dragon-red text-white' 
                     : 'bg-black/30 border-white/5 text-white/40 hover:text-white'
                 }`}
-                title="Audio Mixer"
+                title="Toggle Audio Mixer"
+                aria-label="Toggle Audio Mixer"
               >
                 <GameIcon name="adjust" size={18} />
               </button>
@@ -829,6 +830,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                   playModalCloseSound();
                 }}
                 className="text-white/40 hover:text-white transition-colors"
+                title="Close DevKit"
+                aria-label="Close DevKit"
               >
                 <GameIcon name="close" size={18} />
               </button>
@@ -860,6 +863,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                     ? 'bg-[#1a1a1a] text-white' 
                     : 'text-white/30 hover:bg-white/5 hover:text-white/50'
                 }`}
+                title={`Switch to ${tab.label} tab`}
+                aria-label={tab.label}
               >
                 <tab.icon size={12} className={activeTab === tab.id ? 'text-dragon-red' : 'opacity-50'} />
                 {tab.label}
@@ -925,6 +930,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                             }}
                             className="p-1 px-2 bg-dragon-red/10 border border-dragon-red/30 rounded text-[9px] font-bold text-dragon-red hover:bg-dragon-red hover:text-white transition-all uppercase tracking-tighter"
                             title="Create New Entity Manifestation"
+                            aria-label="Create New Entity"
                           >
                             + NEW
                           </button>
@@ -1222,6 +1228,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                 <div className="space-y-1.5">
                                   <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Atmospheric Lore (Display Summary)</label>
                                   <textarea 
+                                    title="Atmospheric Lore"
                                     value={editingItem.lore || ''}
                                     onChange={(e) => updateField('lore', e.target.value)}
                                     rows={4}
@@ -1245,11 +1252,13 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                                 updateField('wikiData', newData);
                                               }}
                                               className="text-white/20 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"
+                                              title={`Remove ${key} section`}
                                             >
                                               <GameIcon name="trash" size={12} color="currentColor" />
                                             </button>
                                           </div>
                                           <textarea 
+                                            title={`${key} content`}
                                             value={typeof val === 'string' ? val : JSON.stringify(val)}
                                             onChange={(e) => {
                                               const newData = { ...editingItem.wikiData, [key]: e.target.value };
@@ -1309,21 +1318,21 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                               <div className="space-y-1">
                                 <label className="text-[8px] font-bold text-white/20 uppercase">Armor Class</label>
                                 <div className="flex gap-1">
-                                  <input type="number" value={editingItem.armor_class || 0} onChange={(e) => updateField('armor_class', parseInt(e.target.value))} className="w-16 bg-white/5 border border-white/10 p-2 text-xs text-white rounded" />
-                                  <input type="text" value={editingItem.armor_desc || ''} onChange={(e) => updateField('armor_desc', e.target.value)} className="flex-1 bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="natural armor" />
+                                  <input title="Armor Class Value" type="number" value={editingItem.armor_class || 0} onChange={(e) => updateField('armor_class', parseInt(e.target.value))} className="w-16 bg-white/5 border border-white/10 p-2 text-xs text-white rounded" />
+                                  <input title="Armor Class Description" type="text" value={editingItem.armor_desc || ''} onChange={(e) => updateField('armor_desc', e.target.value)} className="flex-1 bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="natural armor" />
                                 </div>
                               </div>
                               <div className="space-y-1">
                                 <label className="text-[8px] font-bold text-white/20 uppercase">Hit Points</label>
-                                <input type="number" value={editingItem.hit_points || 0} onChange={(e) => updateField('hit_points', parseInt(e.target.value))} className="w-full bg-white/5 border border-white/10 p-2 text-xs text-white rounded" />
+                                <input title="Hit Points" type="number" value={editingItem.hit_points || 0} onChange={(e) => updateField('hit_points', parseInt(e.target.value))} className="w-full bg-white/5 border border-white/10 p-2 text-xs text-white rounded" />
                               </div>
                               <div className="space-y-1">
                                 <label className="text-[8px] font-bold text-white/20 uppercase">HP Dice</label>
-                                <input type="text" value={editingItem.hit_dice || ''} onChange={(e) => updateField('hit_dice', e.target.value)} className="w-full bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="1d6" />
+                                <input title="HP Dice" type="text" value={editingItem.hit_dice || ''} onChange={(e) => updateField('hit_dice', e.target.value)} className="w-full bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="1d6" />
                               </div>
                               <div className="space-y-1">
                                 <label className="text-[8px] font-bold text-white/20 uppercase">CR</label>
-                                <input type="text" value={editingItem.challenge_rating || '0'} onChange={(e) => updateField('challenge_rating', e.target.value)} className="w-full bg-white/5 border border-white/10 p-2 text-xs text-white rounded" />
+                                <input title="Challenge Rating" type="text" value={editingItem.challenge_rating || '0'} onChange={(e) => updateField('challenge_rating', e.target.value)} className="w-full bg-white/5 border border-white/10 p-2 text-xs text-white rounded" />
                               </div>
                             </div>
 
@@ -1532,6 +1541,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                           <div className="space-y-1.5">
                             <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Asset Rarity</label>
                             <select 
+                              title="Asset Rarity"
                               value={editingItem.rarity || 'Common'}
                               onChange={(e) => updateField('rarity', e.target.value)}
                               className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white/80 rounded focus:outline-none focus:border-dragon-red/50 transition-colors cursor-pointer"
@@ -1546,6 +1556,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                             <div className="space-y-1.5">
                               <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Target Category</label>
                               <select 
+                                title="Target Category"
                                 value={selectedMonsterCategory}
                                 onChange={(e) => setSelectedMonsterCategory(e.target.value)}
                                 className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white/80 rounded focus:outline-none focus:border-dragon-red/50 transition-colors cursor-pointer"
@@ -1620,6 +1631,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                               <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Material_Cost</label>
                               <div className="flex items-center bg-white/5 border border-white/10 rounded overflow-hidden">
                                 <input 
+                                  title="Material Cost"
                                   type="text"
                                   value={formatCost(editingItem.cost)}
                                   onChange={(e) => updateField('cost', parseCost(e.target.value))}
@@ -1633,6 +1645,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                           <div className="space-y-1.5">
                             <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Habitat Map</label>
                             <select 
+                              title="Habitat Map"
                               value={editingItem.background_type || 'land_forest'}
                               onChange={(e) => updateField('background_type', e.target.value)}
                               className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white/80 rounded focus:outline-none focus:border-dragon-red/50 transition-all cursor-pointer"
@@ -1669,6 +1682,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                 {editingItem.item_drops?.filter(d => d.type === 'material').map((drop, i) => (
                                   <div key={i} className="flex gap-2 items-center bg-white/5 p-2 rounded border border-white/5 group/drop">
                                     <input 
+                                      title="Component Identifier"
                                       type="text"
                                       list="materials-datalist"
                                       value={drop.name}
@@ -1682,6 +1696,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                       placeholder="Component identifier..."
                                     />
                                     <input 
+                                      title="Quantity"
                                       type="text"
                                       value={drop.quantity}
                                       onChange={(e) => {
@@ -1699,6 +1714,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                         updateField('item_drops', newDrops);
                                       }}
                                       className="text-white/20 hover:text-dragon-red opacity-0 group-hover/drop:opacity-100 transition-all"
+                                      title="Remove Harvest Node"
                                     >
                                       <GameIcon name="trash" size={12} />
                                     </button>
@@ -1740,6 +1756,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                 {editingItem.item_drops?.filter(d => d.type !== 'material').map((drop, i) => (
                                   <div key={i} className="flex gap-2 items-center bg-white/5 p-2 rounded border border-white/5 group/drop">
                                     <select 
+                                      title="Loot Type"
                                       value={drop.type || 'currency'}
                                       onChange={(e) => {
                                         const newDrops = [...(editingItem.item_drops || [])];
@@ -1753,6 +1770,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                       <option value="equipment">EQP</option>
                                     </select>
                                     <input 
+                                      title="Asset SKU"
                                       type="text"
                                       list={drop.type === 'equipment' ? 'equipment-datalist' : undefined}
                                       value={drop.name}
@@ -1766,6 +1784,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                       placeholder="Asset SKU..."
                                     />
                                     <input 
+                                      title="Quantity"
                                       type="text"
                                       value={drop.quantity}
                                       onChange={(e) => {
@@ -1783,6 +1802,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                         updateField('item_drops', newDrops);
                                       }}
                                       className="text-white/20 hover:text-dragon-red opacity-0 group-hover/drop:opacity-100 transition-all"
+                                      title="Remove Loot Resource"
                                     >
                                       <GameIcon name="trash" size={12} />
                                     </button>
@@ -1799,6 +1819,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                   <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">ITEM_WEIGHT</label>
                                   <div className="flex items-center bg-white/5 border border-white/10 rounded overflow-hidden">
                                     <input 
+                                      title="Item Weight"
                                       type="text"
                                       value={editingItem.weight || ''}
                                       onChange={(e) => updateField('weight', e.target.value)}
@@ -1811,6 +1832,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                 <div className="space-y-1.5">
                                   <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Asset Group</label>
                                   <select 
+                                    title="Asset Group"
                                     value={editingItem.category || ''}
                                     onChange={(e) => updateField('category', e.target.value)}
                                     className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white/80 rounded focus:outline-none focus:border-dragon-red/50 transition-colors"
@@ -2004,6 +2026,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                             <div className="space-y-1.5">
                               <label className="text-[9px] font-bold text-blue-400/60 uppercase tracking-widest">Select_Region</label>
                               <select 
+                                title="Select Region"
                                 value={selectedBgType}
                                 onChange={(e) => {
                                   setSelectedBgType(e.target.value);

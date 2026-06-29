@@ -62,6 +62,8 @@ export const Journal: React.FC = () => {
                   playModalCloseSound();
                 }}
                 className="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
+                title="Close Journal"
+                aria-label="Close Journal"
               >
                 <GameIcon name="close" size={20} color="#FFFFFF" />
               </button>
@@ -83,6 +85,8 @@ export const Journal: React.FC = () => {
                         ? "bg-parchment-100 text-dragon-red" 
                         : "text-parchment-400 hover:text-white"
                     )}
+                    title={`Open ${tab.label}`}
+                    aria-label={tab.label}
                   >
                     <GameIcon 
                       name={tab.icon} 

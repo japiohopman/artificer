@@ -52,10 +52,10 @@ export const AssetExplorer: React.FC = () => {
         </div>
         <div className="flex flex-wrap p-2 gap-1 border-b border-white/10">
           {[
-            { id: 'enemies', icon: 'bestiary' },
-            { id: 'materials', icon: 'materials' },
-            { id: 'spells', icon: 'spells' },
-            { id: 'equipment', icon: 'package' }
+            { id: 'enemies', icon: 'bestiary', label: 'Bestiary' },
+            { id: 'materials', icon: 'materials', label: 'Materials' },
+            { id: 'spells', icon: 'spells', label: 'Spells' },
+            { id: 'equipment', icon: 'package', label: 'Equipment' }
           ].map(tab => (
             <button
               key={tab.id}
@@ -68,6 +68,8 @@ export const AssetExplorer: React.FC = () => {
                 "p-2 rounded transition-all",
                 explorerTab === tab.id ? "bg-dragon-red text-white" : "bg-white/5 text-white/40 hover:bg-white/10"
               )}
+              title={tab.label}
+              aria-label={tab.label}
             >
               <GameIcon name={tab.icon as GameIconName} size={16} />
             </button>

@@ -88,6 +88,8 @@ export const FocusView: React.FC = () => {
           <button 
             className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-[110]"
             onClick={() => setFocusedItem(null)}
+            title="Close Focus View"
+            aria-label="Close Focus View"
           >
             <GameIcon name="close" size={40} />
           </button>

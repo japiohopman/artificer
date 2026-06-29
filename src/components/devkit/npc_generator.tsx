@@ -655,6 +655,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
               setNpcImages(null);
             }}
             className="p-1 px-2 bg-purple-500/10 border border-purple-500/20 text-purple-400 rounded text-[8px] font-black uppercase hover:bg-purple-500/20 transition-all"
+            title="Create New Entity"
           >
             New_Entity
           </button>
@@ -668,7 +669,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                 setEditingCharId(char.id);
                 setNpcData({
                   ...char,
-                  traits: char.traits?.map(t => typeof t === 'string' ? t : t.name) || []
+                  traits: Array.isArray(char.traits) ? char.traits.map(t => typeof t === 'string' ? t : t.name) : []
                 } as any);
                 setNpcImages(null);
                 playClickSound();
@@ -693,6 +694,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                   }
                 }}
                 className="opacity-0 group-hover:opacity-100 p-1.5 text-white/20 hover:text-dragon-red transition-all"
+                title="Delete Entity"
               >
                 <GameIcon name="trash" size={12} color="currentColor" />
               </button>
@@ -717,6 +719,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
              <button 
                onClick={handleQuickRandomize}
                className="flex items-center gap-2 bg-zinc-700 hover:bg-zinc-600 text-white px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase transition-all shadow-md border border-white/10"
+               title="Quickly randomize stats and background"
              >
                <GameIcon name="refresh" size={12} color="currentColor" />
                Quick_Random
@@ -725,6 +728,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                onClick={handleGenerateNpc}
                disabled={isGeneratingNpc}
                className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase transition-all disabled:opacity-50 shadow-md border border-indigo-400/30"
+               title="Full AI data generation"
              >
                <GameIcon name="loading" size={14} color="currentColor" className={isGeneratingNpc ? 'animate-spin' : ''} />
                {isGeneratingNpc ? 'GEN_DATA...' : 'Full_AI_Gen'}
@@ -734,6 +738,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                onClick={handleGenerateNpcImages}
                disabled={isGeneratingNpcImages || !npcData.name}
                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-1.5 rounded-lg text-[11px] font-bold uppercase transition-all disabled:opacity-50 shadow-lg border border-blue-400/30"
+               title="Generate NPC Images"
              >
                <GameIcon name="award" size={14} color="currentColor" className={isGeneratingNpcImages ? 'animate-spin' : ''} />
                {isGeneratingNpcImages ? 'GENERATING...' : 'GEN_NPC_ASSETS'}
@@ -742,6 +747,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                onClick={handleSaveNpc}
                disabled={isChecking}
                className="flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white px-4 py-1.5 rounded-lg text-[11px] font-bold uppercase transition-all disabled:opacity-50 shadow-lg border border-purple-400/30"
+               title="Commit NPC to repository"
              >
                <GameIcon name="save_data" size={14} color="currentColor" />
                {isChecking ? 'SYNCHRONIZING...' : 'COMMIT_NPC_TO_REPO'}
@@ -770,19 +776,19 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                    <div className="grid grid-cols-12 gap-4">
                       {/* Portrait */}
                       <div className="col-span-3 aspect-[9/16] bg-black/40 rounded-xl overflow-hidden border border-white/10 relative group/img">
-                         <img src={npcImages?.profileUrl || normalizeImageUrl(npcData.imageUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" />
+                         <img src={npcImages?.profileUrl || normalizeImageUrl(npcData.imageUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" alt="Hero Portrait Vertical" />
                          <div className="absolute inset-x-0 bottom-0 p-2 bg-black/60 backdrop-blur-sm text-[8px] font-bold text-white/60 uppercase text-center">Hero_Portrait_Vertical</div>
                       </div>
                       {/* Avatar */}
                       <div className="col-span-2 space-y-4">
                          <div className="aspect-square bg-black/40 rounded-xl overflow-hidden border border-white/10 relative group/img">
-                            <img src={npcImages?.avatarUrl || normalizeImageUrl(npcData.avatarUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" />
+                            <img src={npcImages?.avatarUrl || normalizeImageUrl(npcData.avatarUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" alt="Neural Avatar" />
                             <div className="absolute inset-x-0 bottom-0 p-2 bg-black/60 backdrop-blur-sm text-[8px] font-bold text-white/60 uppercase text-center">Neural_Avatar</div>
                          </div>
                       </div>
                       {/* Matrix */}
                       <div className="col-span-7 aspect-[3/2] bg-black/40 rounded-xl overflow-hidden border border-white/10 relative group/img">
-                         <img src={npcImages?.matrixUrl || normalizeImageUrl(npcData.matrixUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" />
+                         <img src={npcImages?.matrixUrl || normalizeImageUrl(npcData.matrixUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" alt="NPC Portrait Matrix" />
                          <div className="absolute inset-x-0 bottom-0 p-2 bg-black/60 backdrop-blur-sm text-[8px] font-bold text-white/60 uppercase text-center">NPC_Portrait_Matrix_Forge [3x3 Emotion Grid]</div>
                       </div>
                    </div>
@@ -794,6 +800,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                   <div className="col-span-8">
                     <input 
                       type="text"
+                      title="Entity Name"
                       value={npcData.name}
                       onChange={(e) => setNpcData({ ...npcData, name: e.target.value })}
                       className="bg-transparent text-5xl font-black text-white placeholder:text-white/10 focus:outline-none w-full tracking-tighter uppercase"
@@ -811,6 +818,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                               ? 'bg-purple-500 text-white shadow-[0_0_15px_rgba(168,85,247,0.4)]' 
                               : 'text-white/30 hover:bg-white/5'
                           }`}
+                          title={`Select ${g} gender`}
                         >
                           {g}
                         </button>
@@ -866,6 +874,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                <div className="w-2 h-2 rounded-full bg-blue-400/40 border border-blue-400/20" />
                                <span className="text-white/40">Eyes:</span> 
                                <select 
+                                 title="Eye Color"
                                  value={npcData.appearance?.eyeColor || 'Deep Brown'}
                                  onChange={(e) => setNpcData(prev => ({ 
                                    ...prev, 
@@ -882,6 +891,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                <div className="w-2 h-2 rounded-full bg-yellow-400/40 border border-yellow-400/20" />
                                <span className="text-white/40">Hair:</span> 
                                <select 
+                                 title="Hair Color"
                                  value={npcData.appearance?.hairColor || 'Raven Black'}
                                  onChange={(e) => setNpcData(prev => ({ 
                                    ...prev, 
@@ -955,6 +965,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                         <div className="flex gap-4 text-[10px] text-white/70 font-bold uppercase tracking-tight">
                            <input 
                              type="text" 
+                             title="Body Type"
                              value={npcData.appearance?.bodyType || 'Medium'}
                              onChange={(e) => setNpcData(prev => ({ 
                                ...prev, 
@@ -964,6 +975,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                              className="bg-transparent border-none focus:outline-none text-[10px] text-white/60 w-20 font-bold"
                            />
                            <select 
+                             title="Hair Style"
                              value={npcData.appearance?.hairStyle || 'Short'}
                              onChange={(e) => setNpcData(prev => ({ 
                                ...prev, 
@@ -977,6 +989,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                            </select>
                            <input 
                              type="text" 
+                             title="Height"
                              value={npcData.appearance?.height || '5\'10"'}
                              onChange={(e) => setNpcData(prev => ({ 
                                ...prev, 
@@ -987,6 +1000,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                            />
                            <input 
                              type="text" 
+                             title="Weight"
                              value={npcData.appearance?.weight || '160 lbs'}
                              onChange={(e) => setNpcData(prev => ({ 
                                ...prev, 
@@ -1273,6 +1287,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                   onClick={handleAutoResolvedEquipment}
                                   disabled={isApplyingGear}
                                   className="px-3 py-1 bg-white/5 border border-white/10 text-white/50 rounded text-[9px] font-black uppercase hover:bg-white/10 transition-all disabled:opacity-50"
+                                  title="Auto-resolve equipment choices"
                                 >
                                   Auto_Resolve
                                 </button>
@@ -1280,6 +1295,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                   onClick={applyChoices}
                                   disabled={isApplyingGear}
                                   className="px-3 py-1 bg-purple-500 text-white rounded text-[9px] font-black uppercase hover:bg-purple-400 transition-all shadow-lg disabled:opacity-50"
+                                  title="Apply selected equipment choices"
                                 >
                                   {isApplyingGear ? "PROVISIONING..." : "Apply_Gear"}
                                 </button>
@@ -1441,7 +1457,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                  className="flex items-center gap-3 p-2 bg-white/5 border border-white/5 hover:border-purple-500/50 hover:bg-purple-500/5 rounded-xl transition-all group/item text-left"
                                >
                                  <div className="w-8 h-8 rounded bg-black/40 border border-white/5 shrink-0 overflow-hidden group-hover/item:border-purple-500/20 transition-all flex items-center justify-center">
-                                    <img src={item.imageUrl || `/assets/atlas/equipment/images/${item.index.toLowerCase().replace(/[\s-]/g, '_')}.webp`} className="h-[90%] w-auto object-contain mx-auto" />
+                                    <img src={item.imageUrl || `/assets/atlas/equipment/images/${item.index.toLowerCase().replace(/[\s-]/g, '_')}.webp`} className="h-[90%] w-auto object-contain mx-auto" alt={item.name} />
                                  </div>
                                  <div className="flex flex-col min-w-0">
                                     <span className="text-[9px] font-black text-white/60 uppercase truncate group-hover/item:text-purple-300 transition-colors">{item.name}</span>
@@ -1467,6 +1483,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                        setNpcData({ ...npcData, backpack: next });
                                      }}
                                      className="absolute top-1 right-1 text-white/10 hover:text-dragon-red transition-all opacity-0 group-hover:opacity-100"
+                                     title="Remove from backpack"
                                    >
                                      <GameIcon name="close" size={10} />
                                    </button>

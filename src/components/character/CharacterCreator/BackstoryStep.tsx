@@ -65,10 +65,10 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
         Class: ${newChar.class}
         Background: ${newChar.background}
         
-        Personality Traits: ${newChar.traits?.join(', ')}
-        Ideals: ${newChar.ideals?.join(', ')}
-        Bonds: ${newChar.bonds?.join(', ')}
-        Flaws: ${newChar.flaws?.join(', ')}
+        Personality Traits: ${((newChar.traits as any[]) || []).map(t => typeof t === "string" ? t : t.name).join(', ')}
+        Ideals: ${((newChar.ideals as any[]) || []).map(t => typeof t === "string" ? t : t.name).join(', ')}
+        Bonds: ${((newChar.bonds as any[]) || []).map(t => typeof t === "string" ? t : t.name).join(', ')}
+        Flaws: ${((newChar.flaws as any[]) || []).map(t => typeof t === "string" ? t : t.name).join(', ')}
         
         The backstory should be around 2-3 paragraphs. 
         Focus on their origins, why they chose their class, and what drives them to adventure.
@@ -123,25 +123,25 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
           <div className="space-y-4">
             <TraitBox 
                label="Personality Trait" 
-               value={(typeof newChar.traits?.[0] === 'string' ? newChar.traits?.[0] : newChar.traits?.[0]?.name) || 'Unselected'} 
+               value={typeof newChar.traits?.[0] === 'object' ? (newChar.traits[0] as any).name : (newChar.traits?.[0] || 'Unselected')} 
                icon={<GameIcon name="citation" size={16} color="currentColor" />} 
                color="text-dragon-red"
             />
             <TraitBox 
                label="Ideal" 
-               value={newChar.ideals?.[0] || 'Unselected'} 
+               value={typeof newChar.ideals?.[0] === 'object' ? (newChar.ideals[0] as any).name : (newChar.ideals?.[0] || 'Unselected')} 
                icon={<GameIcon name="range" size={16} color="currentColor" />} 
                color="text-blue-600"
             />
             <TraitBox 
                label="Bond" 
-               value={newChar.bonds?.[0] || 'Unselected'} 
+               value={typeof newChar.bonds?.[0] === 'object' ? (newChar.bonds[0] as any).name : (newChar.bonds?.[0] || 'Unselected')} 
                icon={<GameIcon name="heart" size={16} color="currentColor" />} 
                color="text-emerald-600"
             />
             <TraitBox 
                label="Flaw" 
-               value={newChar.flaws?.[0] || 'Unselected'} 
+               value={typeof newChar.flaws?.[0] === 'object' ? (newChar.flaws[0] as any).name : (newChar.flaws?.[0] || 'Unselected')} 
                icon={<GameIcon name="alert" size={16} color="currentColor" />} 
                color="text-amber-600"
             />

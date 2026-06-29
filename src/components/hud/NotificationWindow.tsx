@@ -127,6 +127,8 @@ export const NotificationWindow: React.FC = () => {
               <button 
                 className="text-white/10 hover:text-white/60 transition-colors p-2 shrink-0 pointer-events-auto hover:bg-white/5 rounded-full"
                 onClick={() => clearLogs()}
+                title="Clear Logs"
+                aria-label="Clear Logs"
               >
                 <GameIcon name="close" size={12} />
               </button>

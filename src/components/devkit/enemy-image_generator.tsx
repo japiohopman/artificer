@@ -144,6 +144,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
           onClick={handleGenerate}
           disabled={isGenerating}
           className="px-4 py-2 bg-dragon-red text-parchment-light rounded hover:bg-red-700 disabled:opacity-50 flex items-center gap-2 transition-colors shadow-md"
+          title="Generate Art"
         >
           {isGenerating ? <GameIcon name="loading" size={18} color="#FFFFFF" className="animate-spin" /> : <GameIcon name="magic_effect" size={18} color="#FFFFFF" />}
           {isGenerating ? 'Forging...' : 'Generate Art'}
@@ -192,6 +193,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
             <GameIcon name="globe" size={10} color="currentColor" /> Preview Habitat
           </label>
           <select 
+            title="Preview Habitat"
             value={selectedHabitat}
             onChange={(e) => setSelectedHabitat(e.target.value)}
             className="w-full bg-white/50 border border-dragon-red/10 p-1.5 text-[10px] text-parchment-900 rounded focus:outline-none focus:border-dragon-red transition-colors"
@@ -211,6 +213,8 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
                 key={v}
                 onClick={() => setSelectedVariation(v)}
                 className={`flex-1 py-1 text-[9px] rounded border transition-all ${selectedVariation === v ? 'bg-dragon-red text-white border-dragon-red' : 'bg-white/50 text-parchment-600 border-dragon-red/10 hover:border-dragon-red/30'}`}
+                title={`Variation ${v === 0 ? 'Main' : v === 4 ? '4 (Macro)' : v}`}
+                aria-label={`Variation ${v === 0 ? 'Main' : v === 4 ? '4 (Macro)' : v}`}
               >
                 {v === 0 ? 'M' : v === 4 ? '4 (Macro)' : v}
               </button>

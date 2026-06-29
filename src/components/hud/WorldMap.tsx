@@ -109,7 +109,10 @@ const MapEvents = ({
 
   React.useEffect(() => {
     onMapInstance(map);
-  }, [map, onMapInstance]);
+    if (map) {
+      onBoundsChange(map.getBounds());
+    }
+  }, [map, onMapInstance, onBoundsChange]);
 
   useMapEvents({
     click: () => {
@@ -117,6 +120,10 @@ const MapEvents = ({
     },
     zoomend: (e) => {
       onZoomChange(e.target.getZoom());
+      onBoundsChange(e.target.getBounds());
+    },
+    moveend: (e) => {
+      onBoundsChange(e.target.getBounds());
     }
   });
   return null;
@@ -158,6 +165,7 @@ export const WorldMap: React.FC = () => {
   } = useWorldStore();
   const { setIsWorldPanelOpen } = useStore();
   const [hoveredRegion, setHoveredRegion] = React.useState<string | null>(null);
+  const [currentBounds, setCurrentBounds] = React.useState<L.LatLngBounds | null>(null);
   
   // Faerun Tile configuration (from metadata.json)
   const mapWidth = 21620;
@@ -343,7 +351,7 @@ export const WorldMap: React.FC = () => {
         <ChangeView center={center} zoom={initialZoom} />
         <MapEvents
           onZoomChange={setCurrentZoom}
-          onBoundsChange={() => {}}
+          onBoundsChange={setCurrentBounds}
           onMapInstance={(map) => mapRef.current = map}
         />
         

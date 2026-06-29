@@ -519,7 +519,7 @@ export const CharacterCreator: React.FC = () => {
 
             // Apply HP bonuses from traits (e.g. Dwarven Toughness)
             newChar.traits?.forEach(trait => {
-                const hpBonus = trait.trait_specific?.passive_modifiers?.hp_bonus_per_level;
+                const hpBonus = (trait as any).trait_specific?.passive_modifiers?.hp_bonus_per_level;
                 if (hpBonus) {
                     finalHp += (hpBonus * Math.max(1, level));
                 }

@@ -65,7 +65,7 @@ export const CombatGrid: React.FC = () => {
            >
               <div className="w-24 h-24 rounded-full border-4 border-blue-500 shadow-[0_0_30px_rgba(59,130,246,0.5)] bg-blue-900/50 flex items-center justify-center overflow-hidden">
                 {activeChar?.avatarUrl ? (
-                  <img src={activeChar.avatarUrl} className="w-full h-full object-cover" />
+                  <img src={activeChar.avatarUrl} className="w-full h-full object-cover" alt={activeChar?.name || 'Player'} />
                 ) : (
                   <GameIcon name="user" size={48} color="#FFF" />
                 )}
