@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 11
-    }
-  ],
+  "armor_class": 11,
   "hit_points": 45,
   "hit_dice": "6d10",
   "hit_points_roll": "6d10+12",
@@ -31,7 +26,7 @@
     "passive_perception": 11
   },
   "languages": "",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -61,10 +56,22 @@
   ],
   "image": "/assets/atlas/enemies/rhinoceros.webp",
   "url": "/assets/atlas/enemies/json/rhinoceros.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-29T09:16:45.383Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 11,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.0webp",
+  "stats": {
+    "str": 21,
+    "dex": 8,
+    "con": 15,
+    "int": 2,
+    "wis": 12,
+    "cha": 6
+  },
+  "imageUrl": "/assets/atlas/enemies/images/rhinoceros.webp",
+  "_type": "enemies",
+  "background_type": "land_plains2",
+  "last_updated": "29-6-2026"
 }
