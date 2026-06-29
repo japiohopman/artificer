@@ -64,6 +64,7 @@ export const WorldPanel: React.FC = () => {
            {/* Close Button */}
            <button 
              onClick={() => setIsWorldPanelOpen(false)}
+             title="Close Panel"
              className="absolute top-4 right-4 p-2 bg-black/40 hover:bg-dragon-red text-white rounded-full backdrop-blur-md border border-white/20 transition-all z-20"
            >
              <GameIcon name="chevron_left" size={16} color="currentColor" />
