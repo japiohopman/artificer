@@ -8,11 +8,11 @@ import { WORLD_ATLAS_ICONS } from '../../assets/icons/world_atlas';
 import { MapLegend } from './game/MapLegend';
 
 const CATEGORY_TIERS = [
-  { zoom: 0, categories: ['cities'] },
-  { zoom: 2, categories: ['towns_settlements'] },
-  { zoom: 4, categories: ['fortresses_keeps', 'mountains'] },
-  { zoom: 5.5, categories: ['poi', 'ruins', 'forest', 'waters', 'islands'] },
-  { zoom: 6.5, categories: ['roads_trails', 'wetlands', 'plains_grasslands'] }
+  { zoom: 0, categories: ['waters', 'regions'] },
+  { zoom: 2, categories: ['mountains', 'forests', 'plains_grasslands'] },
+  { zoom: 5.5, categories: ['cities', 'towns_settlements'] },
+  { zoom: 6.6, categories: ['poi', 'ruins'] },
+  { zoom: 7, categories: ['roads_trails', 'wetlands', 'islands'] }
 ];
 
 // Helper to create custom markers using World Atlas Icons
@@ -48,13 +48,13 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
 
   const path = WORLD_ATLAS_ICONS[iconKey] || WORLD_ATLAS_ICONS.landmark || WORLD_ATLAS_ICONS.city;
   
-  const scale = isInspected ? 'scale-125' : 'group-hover:scale-110';
+  const scaleClass = isInspected ? 'scale-125' : 'group-hover:scale-110';
 
   return L.divIcon({
     html: `
       <div class="relative group ${isInspected ? 'z-[1000]' : ''}">
         <!-- Glow Effect -->
-        <div class="absolute inset-0 bg-black/60 blur-lg rounded-full transform scale-50 transition-transform ${scale}"></div>
+        <div class="absolute inset-0 bg-black/60 blur-lg rounded-full transform scale-50 transition-transform ${scaleClass}"></div>
 
         <!-- Selection Ring -->
         ${isInspected ? `
@@ -63,7 +63,7 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
         ` : ''}
 
         <!-- Icon SVG -->
-        <svg viewBox="0 0 512 512" width="32" height="32" class="relative transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scale} ${isInspected ? '-translate-y-1' : ''}">
+        <svg viewBox="0 0 512 512" width="32" height="32" class="relative transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scaleClass} ${isInspected ? '-translate-y-1' : ''}">
           <path d="${path}" fill="${config.color}" stroke="rgba(0,0,0,0.9)" stroke-width="12" />
           <path d="${path}" fill="${config.color}" />
           ${isInspected ? `
@@ -94,16 +94,34 @@ const ChangeView = ({ center, zoom }: { center: [number, number], zoom: number }
   return null;
 };
 
-const MapEvents = ({ onZoomChange }: { onZoomChange: (zoom: number) => void }) => {
+const MapEvents = ({ 
+  onZoomChange, 
+  onBoundsChange 
+}: { 
+  onZoomChange: (zoom: number) => void,
+  onBoundsChange: (bounds: L.LatLngBounds) => void
+}) => {
   const { setInspectedLocation } = useWorldStore();
+  const map = useMap();
+
   useMapEvents({
     click: () => {
       setInspectedLocation(null);
     },
     zoomend: (e) => {
       onZoomChange(e.target.getZoom());
+      onBoundsChange(e.target.getBounds());
+    },
+    moveend: (e) => {
+      onBoundsChange(e.target.getBounds());
     }
   });
+
+  // Initial bounds
+  React.useEffect(() => {
+    onBoundsChange(map.getBounds());
+  }, [map, onBoundsChange]);
+
   return null;
 };
 
@@ -112,7 +130,6 @@ const MapInvalidator = () => {
   const { isWorldPanelOpen, isCharacterPanelOpen } = useStore();
 
   React.useEffect(() => {
-    // During sidebar animation (approx 350-500ms), invalidate multiple times for smoothness
     const interval = setInterval(() => {
       map.invalidateSize({ animate: false });
     }, 50);
@@ -143,32 +160,24 @@ export const WorldMap: React.FC = () => {
   } = useWorldStore();
   const { setIsWorldPanelOpen } = useStore();
   
-  // Faerun Tile configuration (from metadata.json)
   const mapWidth = 21620;
   const mapHeight = 14461;
   const maxZoom = 7;
 
-  // Prototype coordinate system was approx 4763 x 3185
   const protoWidth = 4763;
   const protoHeight = 3185;
   
-  // Define full bounds in pixel space
   const bounds: L.LatLngBoundsExpression = [[0, 0], [mapHeight, mapWidth]];
-  
-  const scaleFactor = 128;
+  const scaleFactorValue = 128;
 
-  // Custom CRS for Faerun to handle tile coordinate system correctly
   const faerunCRS = React.useMemo(() => L.extend({}, L.CRS.Simple, {
-    transformation: new L.Transformation(1 / scaleFactor, 0, 1 / scaleFactor, 0),
-  }), [scaleFactor]);
+    transformation: new L.Transformation(1 / scaleFactorValue, 0, 1 / scaleFactorValue, 0),
+  }), [scaleFactorValue]);
 
-  // Legacy coordinate mapping:
-  // Prototype X range [0, 4763] -> High-res X range [0, 21620]
-  // Prototype Y range [0, 3185] -> High-res Y range [0, 14461]
-  // Note: Prototype X increases West, Image X increases East.
-  // Note: Prototype Y increases South, and with our Transformation(1/128, 0, 1/128, 0), 
-  // Leaflet Lat Y also increases South.
-  const rescaleX = React.useCallback((x: number) => (1 - (x / protoWidth)) * mapWidth, [mapWidth, protoWidth]);
+  // coordinate mapping:
+  // Prototype X range [0, 4763] -> High-res X range [0, 21620] (West to East)
+  // Prototype Y range [0, 3185] -> High-res Y range [0, 14461] (Bottom to Top)
+  const rescaleX = React.useCallback((x: number) => (x / protoWidth) * mapWidth, [mapWidth, protoWidth]);
   const rescaleY = React.useCallback((y: number) => (y / protoHeight) * mapHeight, [mapHeight, protoHeight]);
 
   const getPosition = React.useCallback((loc: any): [number, number] | null => {
@@ -176,30 +185,22 @@ export const WorldMap: React.FC = () => {
     let x = loc.coordinates?.x ?? loc.coordinates?.lng;
     let y = loc.coordinates?.y ?? loc.coordinates?.lat;
 
-    // If loc.position exists (direct from cities.json), it is [y, x]
     if (loc.position && Array.isArray(loc.position)) {
-      y = loc.position[0];
-      x = loc.position[1];
+      // Prototype stored position as [x, y] but intended for [lat, lng] in their CRS.Simple
+      // Based on FAERUN_DATA analysis: position[0] is X, position[1] is Y
+      x = loc.position[0];
+      y = loc.position[1];
     }
 
     if (x === undefined || y === undefined) return null;
 
     // Convert to high-res pixel space
     const px = rescaleX(x);
-    const py = rescaleY(y);
+    // Invert Y because high-res pixels start 0 at top, but prototype Y=0 is bottom
+    const py = mapHeight - rescaleY(y);
 
-    // Return scaled pixel coordinates.
-    // Leaflet's L.CRS.Simple with our transformation expects coordinates to be in the untransformed space.
-    // Actually, L.Transformation(a, b, c, d) means x' = ax + b, y' = cy + d.
-    // Our transformation is 1/128, which means pixel 128 becomes coordinate 1.
-    // But Leaflet markers take LatLng. In Simple CRS, LatLng = [y, x].
-    // If we want a marker at pixel (px, py), we should pass [py, px] if CRS handles scaling,
-    // OR we should pass [py/128, px/128] if it doesn't.
-    // Given the transformation is 1/128, Leaflet will scale whatever we pass by 1/128.
-    // So if we pass [py, px], it becomes [py/128, px/128] in CRS units.
-    // This matches the TileLayer which also uses this CRS.
-    return [py, px];
-  }, [rescaleX, rescaleY]);
+    return [py, px]; // [lat, lng]
+  }, [rescaleX, rescaleY, mapHeight]);
 
   const center = React.useMemo((): [number, number] => 
     partyLocation ? getPosition(partyLocation) || [mapHeight/2, mapWidth/2] : [mapHeight/2, mapWidth/2]
@@ -207,6 +208,7 @@ export const WorldMap: React.FC = () => {
   
   const initialZoom = partyLocation?.zoom || 1;
   const [currentZoom, setCurrentZoom] = React.useState(initialZoom);
+  const [currentBounds, setCurrentBounds] = React.useState<L.LatLngBounds | null>(null);
 
   // Progressive Data Loading
   React.useEffect(() => {
@@ -241,35 +243,40 @@ export const WorldMap: React.FC = () => {
     loadTiers();
   }, [currentZoom, isCategoryLoaded, addSavedLocations, addLoadedCategory]);
 
-  // Filtering logic for zoom levels to reduce clutter
-  const visibleLocations = React.useMemo(() => savedLocations.filter(loc => {
-    const cat = loc.category?.toLowerCase() || '';
-    
-    // Always show major cities
-    if (cat.includes('city') || cat.includes('cities')) return true;
-    
-    // Zoom 2+: Show towns and large settlements
-    if (currentZoom >= 2) {
-      if (cat.includes('town') || cat.includes('settlement') || cat.includes('village')) return true;
+  const visibleLocations = React.useMemo(() => {
+    let filtered = savedLocations.filter(loc => {
+      const cat = (loc.category || '').toLowerCase();
+      
+      if (cat.includes('water') || cat.includes('region')) return true;
+
+      if (currentZoom >= 2) {
+        if (cat.includes('mountain') || cat.includes('peak') || cat.includes('forest') || cat.includes('wood') || cat.includes('plain') || cat.includes('grassland')) return true;
+      }
+
+      if (currentZoom >= 5.5) {
+        if (cat.includes('city') || cat.includes('metropolis') || cat.includes('town') || cat.includes('settlement') || cat.includes('village')) return true;
+      }
+
+      if (currentZoom >= 6.6) {
+        if (cat.includes('poi') || cat.includes('dungeon') || cat.includes('cave') || cat.includes('ruin')) return true;
+      }
+
+      if (currentZoom >= 7) return true;
+      
+      return false;
+    });
+
+    // Viewport Filtering
+    if (currentBounds) {
+      filtered = filtered.filter(loc => {
+        const pos = getPosition(loc);
+        return pos && currentBounds.contains(pos);
+      });
     }
-    
-    // Zoom 4+: Show fortresses, keeps, and prominent landmarks
-    if (currentZoom >= 4) {
-      if (cat.includes('fortress') || cat.includes('keep') || cat.includes('castle') || cat.includes('tower')) return true;
-      if (cat.includes('mountain') || cat.includes('peaks')) return true;
-    }
-    
-    // Zoom 5+: Show points of interest, ruins, and geographic features
-    if (currentZoom >= 5) {
-      if (cat.includes('poi') || cat.includes('ruin') || cat.includes('dungeon') || cat.includes('cave') || cat.includes('temple')) return true;
-      if (cat.includes('mountain') || cat.includes('forest') || cat.includes('lake') || cat.includes('island')) return true;
-    }
-    
-    // Zoom 6+: Show everything else
-    if (currentZoom >= 6) return true;
-    
-    return false;
-  }), [savedLocations, currentZoom]);
+
+    // Performance Cap
+    return filtered.slice(0, 150);
+  }, [savedLocations, currentZoom, currentBounds, getPosition]);
 
   return (
     <div className="w-full h-full bg-[#0F1115] overflow-hidden relative font-body">
@@ -294,7 +301,7 @@ export const WorldMap: React.FC = () => {
           bounds={bounds}
         />
         <ChangeView center={center} zoom={initialZoom} />
-        <MapEvents onZoomChange={setCurrentZoom} />
+        <MapEvents onZoomChange={setCurrentZoom} onBoundsChange={setCurrentBounds} />
         
         {partyLocation && (
           <Marker 
@@ -367,19 +374,16 @@ export const WorldMap: React.FC = () => {
         })}
       </MapContainer>
       
-      {/* Map Overlay Vignette */}
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] z-[400]" />
       
-      {/* Map Legend */}
       <div className="absolute top-6 left-1/2 -translate-x-1/2 z-[1000] max-w-[90%]">
         <MapLegend currentZoom={currentZoom} />
       </div>
       
-      {/* Zoom Controls */}
       <div className="absolute bottom-6 right-6 z-[1000] flex flex-col gap-2">
         <div className="bg-parchment-100/90 border-2 border-dragon-gold/50 p-1 rounded-md shadow-lg flex flex-col">
           <div className="text-[9px] text-center font-bold text-dragon-red border-b border-dragon-gold/20 mb-1 pb-1 uppercase">Zoom</div>
-          <div className="text-center font-header font-bold text-lg text-dragon-red">{Math.round(currentZoom)}</div>
+          <div className="text-center font-header font-bold text-lg text-dragon-red">{currentZoom.toFixed(1)}</div>
         </div>
       </div>
     </div>

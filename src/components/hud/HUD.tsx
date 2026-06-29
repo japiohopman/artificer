@@ -16,6 +16,7 @@ export const HUD: React.FC = () => {
     isCharacterPanelOpen, 
     setIsWorldPanelOpen,
     setIsCharacterPanelOpen,
+    gameMode,
   } = useStore();
 
   const {
@@ -103,7 +104,7 @@ export const HUD: React.FC = () => {
 
         {/* 4. Right Aside: Character Panel */}
         <motion.aside
-          animate={{ width: (isCharacterPanelOpen || isInventoryOpen) ? 320 : 0 }}
+          animate={{ width: (isCharacterPanelOpen || isInventoryOpen || gameMode === 'combat') ? 320 : 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
           className="h-full bg-parchment-50 border-l-2 border-dragon-red z-[1000] relative flex flex-col shrink-0 shadow-xl overflow-hidden"
         >
@@ -113,7 +114,7 @@ export const HUD: React.FC = () => {
           
           {/* Panel Close Tab (Right) */}
           <AnimatePresence>
-            {(isCharacterPanelOpen || isInventoryOpen) && (
+            {(isCharacterPanelOpen || isInventoryOpen || gameMode === 'combat') && (
               <motion.button 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

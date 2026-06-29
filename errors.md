@@ -1,643 +1,110 @@
 client:851 [vite] connecting...
 client:955 [vite] connected.
-storageService.ts:28 safeJson: Malformed JSON detected, returning null. SyntaxError: Expected ',' or ']' after array element in JSON at position 151 (line 9 column 5)
-    at JSON.parse (<anonymous>)
-    at safeJson (storageService.ts:26:19)
-    at async storageService.ts:52:18
-    at async Promise.all (:3000/index 4)
-    at async fetchMonsterCategories (storageService.ts:46:24)
-    at async Promise.all (:3000/index 1)
-    at async loadAllLists (useStore.ts:594:11)
-overrideMethod @ hook.js:608
-safeJson @ storageService.ts:28
-await in safeJson
-(anonymous) @ storageService.ts:52
-await in (anonymous)
-(anonymous) @ storageService.ts:49
-await in (anonymous)
-(anonymous) @ useStore.ts:596
-(anonymous) @ App.tsx:49
-react_stack_bottom_frame @ react-dom-client.development.js:25989
-runWithFiberInDEV @ react-dom-client.development.js:871
-commitHookEffectListMount @ react-dom-client.development.js:13249
-commitHookPassiveMountEffects @ react-dom-client.development.js:13336
-commitPassiveMountOnFiber @ react-dom-client.development.js:15484
-recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:15439
-commitPassiveMountOnFiber @ react-dom-client.development.js:15476
-recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:15439
-commitPassiveMountOnFiber @ react-dom-client.development.js:15718
-recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:15439
-commitPassiveMountOnFiber @ react-dom-client.development.js:15519
-flushPassiveEffects @ react-dom-client.development.js:18432
-(anonymous) @ react-dom-client.development.js:17923
-performWorkUntilDeadline @ scheduler.development.js:45
-<App>
-(anonymous) @ react-jsx-dev-runtime.development.js:335
-(anonymous) @ main.tsx:10
-storageService.ts:28 safeJson: Malformed JSON detected, returning null. SyntaxError: Expected ',' or ']' after array element in JSON at position 151 (line 9 column 5)
-    at JSON.parse (<anonymous>)
-    at safeJson (storageService.ts:26:19)
-    at async storageService.ts:80:26
-    at async Promise.all (:3000/index 4)
-    at async fetchMonsterCategoryMapping (storageService.ts:92:5)
-    at async Promise.all (:3000/index 2)
-    at async loadAllLists (useStore.ts:594:11)
-overrideMethod @ hook.js:608
-safeJson @ storageService.ts:28
-await in safeJson
-(anonymous) @ storageService.ts:80
-await in (anonymous)
-(anonymous) @ storageService.ts:75
-await in (anonymous)
-(anonymous) @ useStore.ts:597
-(anonymous) @ App.tsx:49
-react_stack_bottom_frame @ react-dom-client.development.js:25989
-runWithFiberInDEV @ react-dom-client.development.js:871
-commitHookEffectListMount @ react-dom-client.development.js:13249
-commitHookPassiveMountEffects @ react-dom-client.development.js:13336
-commitPassiveMountOnFiber @ react-dom-client.development.js:15484
-recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:15439
-commitPassiveMountOnFiber @ react-dom-client.development.js:15476
-recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:15439
-commitPassiveMountOnFiber @ react-dom-client.development.js:15718
-recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:15439
-commitPassiveMountOnFiber @ react-dom-client.development.js:15519
-flushPassiveEffects @ react-dom-client.development.js:18432
-(anonymous) @ react-dom-client.development.js:17923
-performWorkUntilDeadline @ scheduler.development.js:45
-<App>
-(anonymous) @ react-jsx-dev-runtime.development.js:335
-(anonymous) @ main.tsx:10
-storageService.ts:28 safeJson: Malformed JSON detected, returning null. SyntaxError: Expected ',' or ']' after array element in JSON at position 151 (line 9 column 5)
-    at JSON.parse (<anonymous>)
-    at safeJson (storageService.ts:26:19)
-    at async storageService.ts:52:18
-    at async Promise.all (:3000/index 4)
-    at async fetchMonsterCategories (storageService.ts:46:24)
-    at async Promise.all (:3000/index 1)
-    at async loadAllLists (useStore.ts:594:11)
-overrideMethod @ hook.js:608
-safeJson @ storageService.ts:28
-await in safeJson
-(anonymous) @ storageService.ts:52
-await in (anonymous)
-(anonymous) @ storageService.ts:49
-await in (anonymous)
-(anonymous) @ useStore.ts:596
-(anonymous) @ App.tsx:49
-react_stack_bottom_frame @ react-dom-client.development.js:25989
-runWithFiberInDEV @ react-dom-client.development.js:871
-commitHookEffectListMount @ react-dom-client.development.js:13249
-commitHookPassiveMountEffects @ react-dom-client.development.js:13336
-reconnectPassiveEffects @ react-dom-client.development.js:15832
-recursivelyTraverseReconnectPassiveEffects @ react-dom-client.development.js:15784
-reconnectPassiveEffects @ react-dom-client.development.js:15824
-recursivelyTraverseReconnectPassiveEffects @ react-dom-client.development.js:15784
-reconnectPassiveEffects @ react-dom-client.development.js:15885
-doubleInvokeEffectsOnFiber @ react-dom-client.development.js:18703
-runWithFiberInDEV @ react-dom-client.development.js:871
-recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom-client.development.js:18667
-commitDoubleInvokeEffectsInDEV @ react-dom-client.development.js:18712
-flushPassiveEffects @ react-dom-client.development.js:18439
-(anonymous) @ react-dom-client.development.js:17923
-performWorkUntilDeadline @ scheduler.development.js:45
-<App>
-(anonymous) @ react-jsx-dev-runtime.development.js:335
-(anonymous) @ main.tsx:10
-storageService.ts:28 safeJson: Malformed JSON detected, returning null. SyntaxError: Expected ',' or ']' after array element in JSON at position 151 (line 9 column 5)
-    at JSON.parse (<anonymous>)
-    at safeJson (storageService.ts:26:19)
-    at async storageService.ts:80:26
-    at async Promise.all (:3000/index 4)
-    at async fetchMonsterCategoryMapping (storageService.ts:92:5)
-    at async Promise.all (:3000/index 2)
-    at async loadAllLists (useStore.ts:594:11)
-overrideMethod @ hook.js:608
-safeJson @ storageService.ts:28
-await in safeJson
-(anonymous) @ storageService.ts:80
-await in (anonymous)
-(anonymous) @ storageService.ts:75
-await in (anonymous)
-(anonymous) @ useStore.ts:597
-(anonymous) @ App.tsx:49
-react_stack_bottom_frame @ react-dom-client.development.js:25989
-runWithFiberInDEV @ react-dom-client.development.js:871
-commitHookEffectListMount @ react-dom-client.development.js:13249
-commitHookPassiveMountEffects @ react-dom-client.development.js:13336
-reconnectPassiveEffects @ react-dom-client.development.js:15832
-recursivelyTraverseReconnectPassiveEffects @ react-dom-client.development.js:15784
-reconnectPassiveEffects @ react-dom-client.development.js:15824
-recursivelyTraverseReconnectPassiveEffects @ react-dom-client.development.js:15784
-reconnectPassiveEffects @ react-dom-client.development.js:15885
-doubleInvokeEffectsOnFiber @ react-dom-client.development.js:18703
-runWithFiberInDEV @ react-dom-client.development.js:871
-recursivelyTraverseAndDoubleInvokeEffectsInDEV @ react-dom-client.development.js:18667
-commitDoubleInvokeEffectsInDEV @ react-dom-client.development.js:18712
-flushPassiveEffects @ react-dom-client.development.js:18439
-(anonymous) @ react-dom-client.development.js:17923
-performWorkUntilDeadline @ scheduler.development.js:45
-<App>
-(anonymous) @ react-jsx-dev-runtime.development.js:335
-(anonymous) @ main.tsx:10
-WorldMap.tsx:152 Uncaught ReferenceError: scaleFactor is not defined
-    at WorldMap (WorldMap.tsx:152:8)
-    at Object.react_stack_bottom_frame (react-dom-client.development.js:25904:20)
-    at renderWithHooks (react-dom-client.development.js:7662:22)
-    at updateFunctionComponent (react-dom-client.development.js:10166:19)
-    at beginWork (react-dom-client.development.js:11778:18)
-    at runWithFiberInDEV (react-dom-client.development.js:871:30)
-    at performUnitOfWork (react-dom-client.development.js:17641:22)
-    at workLoopSync (react-dom-client.development.js:17469:41)
-    at renderRootSync (react-dom-client.development.js:17450:11)
-    at performWorkOnRoot (react-dom-client.development.js:16583:35)
-(anonymous) @ WorldMap.tsx:152
-react_stack_bottom_frame @ react-dom-client.development.js:25904
-renderWithHooks @ react-dom-client.development.js:7662
-updateFunctionComponent @ react-dom-client.development.js:10166
-beginWork @ react-dom-client.development.js:11778
-runWithFiberInDEV @ react-dom-client.development.js:871
-performUnitOfWork @ react-dom-client.development.js:17641
-workLoopSync @ react-dom-client.development.js:17469
-renderRootSync @ react-dom-client.development.js:17450
-performWorkOnRoot @ react-dom-client.development.js:16583
-performSyncWorkOnRoot @ react-dom-client.development.js:18972
-flushSyncWorkAcrossRoots_impl @ react-dom-client.development.js:18814
-processRootScheduleInMicrotask @ react-dom-client.development.js:18853
-(anonymous) @ react-dom-client.development.js:18991
-<WorldMap>
-(anonymous) @ react-jsx-dev-runtime.development.js:335
-(anonymous) @ GameScreen.tsx:42
-react_stack_bottom_frame @ react-dom-client.development.js:25904
-renderWithHooksAgain @ react-dom-client.development.js:7762
-renderWithHooks @ react-dom-client.development.js:7674
-updateFunctionComponent @ react-dom-client.development.js:10166
-beginWork @ react-dom-client.development.js:11778
-runWithFiberInDEV @ react-dom-client.development.js:871
-performUnitOfWork @ react-dom-client.development.js:17641
-workLoopSync @ react-dom-client.development.js:17469
-renderRootSync @ react-dom-client.development.js:17450
-performWorkOnRoot @ react-dom-client.development.js:16583
-performSyncWorkOnRoot @ react-dom-client.development.js:18972
-flushSyncWorkAcrossRoots_impl @ react-dom-client.development.js:18814
-processRootScheduleInMicrotask @ react-dom-client.development.js:18853
-(anonymous) @ react-dom-client.development.js:18991
-<GameScreen>
-(anonymous) @ react-jsx-dev-runtime.development.js:335
-(anonymous) @ HUD.tsx:67
-react_stack_bottom_frame @ react-dom-client.development.js:25904
-renderWithHooksAgain @ react-dom-client.development.js:7762
-renderWithHooks @ react-dom-client.development.js:7674
-updateFunctionComponent @ react-dom-client.development.js:10166
-beginWork @ react-dom-client.development.js:11778
-runWithFiberInDEV @ react-dom-client.development.js:871
-performUnitOfWork @ react-dom-client.development.js:17641
-workLoopSync @ react-dom-client.development.js:17469
-renderRootSync @ react-dom-client.development.js:17450
-performWorkOnRoot @ react-dom-client.development.js:16583
-performSyncWorkOnRoot @ react-dom-client.development.js:18972
-flushSyncWorkAcrossRoots_impl @ react-dom-client.development.js:18814
-processRootScheduleInMicrotask @ react-dom-client.development.js:18853
-(anonymous) @ react-dom-client.development.js:18991
-<HUD>
-(anonymous) @ react-jsx-dev-runtime.development.js:335
-(anonymous) @ App.tsx:85
-react_stack_bottom_frame @ react-dom-client.development.js:25904
-renderWithHooksAgain @ react-dom-client.development.js:7762
-renderWithHooks @ react-dom-client.development.js:7674
-updateFunctionComponent @ react-dom-client.development.js:10166
-beginWork @ react-dom-client.development.js:11778
-runWithFiberInDEV @ react-dom-client.development.js:871
-performUnitOfWork @ react-dom-client.development.js:17641
-workLoopSync @ react-dom-client.development.js:17469
-renderRootSync @ react-dom-client.development.js:17450
-performWorkOnRoot @ react-dom-client.development.js:16583
-performSyncWorkOnRoot @ react-dom-client.development.js:18972
-flushSyncWorkAcrossRoots_impl @ react-dom-client.development.js:18814
-processRootScheduleInMicrotask @ react-dom-client.development.js:18853
-(anonymous) @ react-dom-client.development.js:18991
-<App>
-(anonymous) @ react-jsx-dev-runtime.development.js:335
-(anonymous) @ main.tsx:10
-GameScreen.tsx:42 An error occurred in the <WorldMap> component.
+WorldExplorer.tsx:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+The deferred DOM Node could not be resolved to a valid node.
+favicon.ico:1  GET http://localhost:3000/favicon.ico 404 (Not Found)
 
-Consider adding an error boundary to your tree to customize error handling behavior.
-Visit https://react.dev/link/error-boundaries to learn more about error boundaries.
 
-overrideMethod @ hook.js:608
-defaultOnUncaughtError @ react-dom-client.development.js:9362
-logUncaughtError @ react-dom-client.development.js:9431
-runWithFiberInDEV @ react-dom-client.development.js:871
-(anonymous) @ react-dom-client.development.js:9461
-callCallback @ react-dom-client.development.js:7423
-commitCallbacks @ react-dom-client.development.js:7443
-runWithFiberInDEV @ react-dom-client.development.js:874
-commitLayoutEffectOnFiber @ react-dom-client.development.js:14047
-flushLayoutEffects @ react-dom-client.development.js:18138
-commitRoot @ react-dom-client.development.js:17954
-commitRootWhenReady @ react-dom-client.development.js:16824
-performWorkOnRoot @ react-dom-client.development.js:16722
-performSyncWorkOnRoot @ react-dom-client.development.js:18972
-flushSyncWorkAcrossRoots_impl @ react-dom-client.development.js:18814
-processRootScheduleInMicrotask @ react-dom-client.development.js:18853
-(anonymous) @ react-dom-client.development.js:18991
-<WorldMap>
-(anonymous) @ react-jsx-dev-runtime.development.js:335
-(anonymous) @ GameScreen.tsx:42
-react_stack_bottom_frame @ react-dom-client.development.js:25904
-renderWithHooksAgain @ react-dom-client.development.js:7762
-renderWithHooks @ react-dom-client.development.js:7674
-updateFunctionComponent @ react-dom-client.development.js:10166
-beginWork @ react-dom-client.development.js:11778
-runWithFiberInDEV @ react-dom-client.development.js:871
-performUnitOfWork @ react-dom-client.development.js:17641
-workLoopSync @ react-dom-client.development.js:17469
-renderRootSync @ react-dom-client.development.js:17450
-performWorkOnRoot @ react-dom-client.development.js:16583
-performSyncWorkOnRoot @ react-dom-client.development.js:18972
-flushSyncWorkAcrossRoots_impl @ react-dom-client.development.js:18814
-processRootScheduleInMicrotask @ react-dom-client.development.js:18853
-(anonymous) @ react-dom-client.development.js:18991
-<GameScreen>
-(anonymous) @ react-jsx-dev-runtime.development.js:335
-(anonymous) @ HUD.tsx:67
-react_stack_bottom_frame @ react-dom-client.development.js:25904
-renderWithHooksAgain @ react-dom-client.development.js:7762
-renderWithHooks @ react-dom-client.development.js:7674
-updateFunctionComponent @ react-dom-client.development.js:10166
-beginWork @ react-dom-client.development.js:11778
-runWithFiberInDEV @ react-dom-client.development.js:871
-performUnitOfWork @ react-dom-client.development.js:17641
-workLoopSync @ react-dom-client.development.js:17469
-renderRootSync @ react-dom-client.development.js:17450
-performWorkOnRoot @ react-dom-client.development.js:16583
-performSyncWorkOnRoot @ react-dom-client.development.js:18972
-flushSyncWorkAcrossRoots_impl @ react-dom-client.development.js:18814
-processRootScheduleInMicrotask @ react-dom-client.development.js:18853
-(anonymous) @ react-dom-client.development.js:18991
-<HUD>
-(anonymous) @ react-jsx-dev-runtime.development.js:335
-(anonymous) @ App.tsx:85
-react_stack_bottom_frame @ react-dom-client.development.js:25904
-renderWithHooksAgain @ react-dom-client.development.js:7762
-renderWithHooks @ react-dom-client.development.js:7674
-updateFunctionComponent @ react-dom-client.development.js:10166
-beginWork @ react-dom-client.development.js:11778
-runWithFiberInDEV @ react-dom-client.development.js:871
-performUnitOfWork @ react-dom-client.development.js:17641
-workLoopSync @ react-dom-client.development.js:17469
-renderRootSync @ react-dom-client.development.js:17450
-performWorkOnRoot @ react-dom-client.development.js:16583
-performSyncWorkOnRoot @ react-dom-client.development.js:18972
-flushSyncWorkAcrossRoots_impl @ react-dom-client.development.js:18814
-processRootScheduleInMicrotask @ react-dom-client.development.js:18853
-(anonymous) @ react-dom-client.development.js:18991
-<App>
-(anonymous) @ react-jsx-dev-runtime.development.js:335
-(anonymous) @ main.tsx:10
+PowerShell Extension v2025.4.0
+Copyright (c) Microsoft Corporation.
 
-[{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2304",
-	"severity": 8,
-	"message": "Cannot find name 'scaleClass'.",
-	"source": "ts",
-	"startLineNumber": 48,
-	"startColumn": 113,
-	"endLineNumber": 48,
-	"endColumn": 123,
-	"modelVersionId": 8,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2304",
-	"severity": 8,
-	"message": "Cannot find name 'scaleClass'.",
-	"source": "ts",
-	"startLineNumber": 57,
-	"startColumn": 132,
-	"endLineNumber": 57,
-	"endColumn": 142,
-	"modelVersionId": 8,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2304",
-	"severity": 8,
-	"message": "Cannot find name 'color'.",
-	"source": "ts",
-	"startLineNumber": 58,
-	"startColumn": 37,
-	"endLineNumber": 58,
-	"endColumn": 42,
-	"modelVersionId": 8,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2304",
-	"severity": 8,
-	"message": "Cannot find name 'color'.",
-	"source": "ts",
-	"startLineNumber": 59,
-	"startColumn": 37,
-	"endLineNumber": 59,
-	"endColumn": 42,
-	"modelVersionId": 8,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2304",
-	"severity": 8,
-	"message": "Cannot find name 'scaleFactor'.",
-	"source": "ts",
-	"startLineNumber": 151,
-	"startColumn": 46,
-	"endLineNumber": 151,
-	"endColumn": 57,
-	"modelVersionId": 8,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2304",
-	"severity": 8,
-	"message": "Cannot find name 'scaleFactor'.",
-	"source": "ts",
-	"startLineNumber": 151,
-	"startColumn": 66,
-	"endLineNumber": 151,
-	"endColumn": 77,
-	"modelVersionId": 8,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2304",
-	"severity": 8,
-	"message": "Cannot find name 'scaleFactor'.",
-	"source": "ts",
-	"startLineNumber": 152,
-	"startColumn": 8,
-	"endLineNumber": 152,
-	"endColumn": 19,
-	"modelVersionId": 8,
-	"origin": "extHost1"
-}]
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
 
-[{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldPanel.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 42,
-	"startColumn": 12,
-	"endLineNumber": 42,
-	"endColumn": 18,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}][{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldPanel.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 42,
-	"startColumn": 12,
-	"endLineNumber": 42,
-	"endColumn": 18,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
+PS C:\Users\japie\OneDrive\Documents\GitHub\artificer> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& c:\Users\japie\OneDrive\Documents\GitHub\artificer\.venv\Scripts\Activate.ps1)
+(.venv) PS C:\Users\japie\OneDrive\Documents\GitHub\artificer> npm run dev
 
-[{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/Journal.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 59,
-	"startColumn": 16,
-	"endLineNumber": 59,
-	"endColumn": 22,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
+> react-example@0.0.0 dev
+> tsx server.ts
 
-[{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/NotificationWindow.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 117,
-	"startColumn": 12,
-	"endLineNumber": 117,
-	"endColumn": 18,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
+[dotenv@17.3.1] injecting env (5) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+Server running on http://localhost:3000
+18:44:06 [vite] (client) Pre-transform error: Transform failed with 1 error:
 
-[{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/paperScissorRock.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 126,
-	"startColumn": 26,
-	"endLineNumber": 126,
-	"endColumn": 32,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/paperScissorRock.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 129,
-	"startColumn": 26,
-	"endLineNumber": 129,
-	"endColumn": 32,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/paperScissorRock.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 132,
-	"startColumn": 26,
-	"endLineNumber": 132,
-	"endColumn": 32,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
+[PARSE_ERROR] Encountered diff marker
+    ╭─[ src/components/devkit/WorldExplorer.tsx:15:1 ]
+    │
+ 15 │ <<<<<<< Updated upstream
+    │ ───┬───  
+    │    ╰───── between this marker and `=======` is the code that we're merging into
+    │ 
+ 17 │ =======
+    │ ───┬───  
+    │    ╰───── between this marker and `>>>>>>>` is the incoming code
+    │ 
+ 19 │ >>>>>>> Stashed changes
+    │ ───┬───  
+    │    ╰───── this marker concludes the conflict region
+    │ 
+    │ Help: Conflict markers indicate that a merge was started but could not be completed due to merge conflicts.
+    │       To resolve a conflict, keep only the code you want and then delete the lines containing conflict markers.
+    │       If you're having merge conflicts after pulling new code, the top section is the code you already had and the bottom section is the remote code.
+    │       If you're in the middle of a rebase, the top section is the code being rebased onto and the bottom section is the code coming from the current commit being rebased.
+    │       If you have nested conflicts, resolve the outermost conflict first.
+────╯
 
-[{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/ui/FocusView.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 88,
-	"startColumn": 12,
-	"endLineNumber": 88,
-	"endColumn": 18,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
+  Plugin: vite:oxc
+  File: C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/WorldExplorer.tsx
+18:44:07 [vite] Internal server error: Transform failed with 1 error:
 
-[{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/ui/PartyLogistics.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 125,
-	"startColumn": 20,
-	"endLineNumber": 125,
-	"endColumn": 26,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/ui/PartyLogistics.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 242,
-	"startColumn": 21,
-	"endLineNumber": 242,
-	"endColumn": 27,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/ui/PartyLogistics.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "no-inline-styles",
-		"target": {
-			"$mid": 1,
-			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
-			"scheme": "https",
-			"authority": "webhint.io"
-		}
-	},
-	"severity": 4,
-	"message": "CSS inline styles should not be used, move styles to an external CSS file",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 216,
-	"startColumn": 15,
-	"endLineNumber": 216,
-	"endColumn": 18,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
+[PARSE_ERROR] Encountered diff marker
+    ╭─[ src/components/devkit/WorldExplorer.tsx:15:1 ]
+    │
+ 15 │ <<<<<<< Updated upstream
+    │ ───┬───  
+    │    ╰───── between this marker and `=======` is the code that we're merging into
+    │ 
+ 17 │ =======
+    │ ───┬───  
+    │    ╰───── between this marker and `>>>>>>>` is the incoming code
+    │ 
+ 19 │ >>>>>>> Stashed changes
+    │ ───┬───  
+    │    ╰───── this marker concludes the conflict region
+    │ 
+    │ Help: Conflict markers indicate that a merge was started but could not be completed due to merge conflicts.
+    │       To resolve a conflict, keep only the code you want and then delete the lines containing conflict markers.
+    │       If you're having merge conflicts after pulling new code, the top section is the code you already had and the bottom section is the remote code.
+    │       If you're in the middle of a rebase, the top section is the code being rebased onto and the bottom section is the code coming from the current commit being rebased.
+    │       If you have nested conflicts, resolve the outermost conflict first.
+────╯
+
+  Plugin: vite:oxc
+  File: C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/WorldExplorer.tsx
+      at transformWithOxc (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:3344:19)
+      at TransformPluginContext.transform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:3415:26)
+      at EnvironmentPluginContainer.transform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:30387:51)
+      at async loadAndTransform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24646:26)
+      at async viteTransformMiddleware (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24440:20)
+18:45:01 [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Encountered diff marker
+    ╭─[ src/components/devkit/WorldExplorer.tsx:15:1 ]
+    │
+ 15 │ <<<<<<< Updated upstream
+    │ ───┬───  
+    │    ╰───── between this marker and `=======` is the code that we're merging into
+    │ 
+ 17 │ =======
+    │ ───┬───  
+    │    ╰───── between this marker and `>>>>>>>` is the incoming code
+    │ 
+ 19 │ >>>>>>> Stashed changes
+    │ ───┬───  
+    │    ╰───── this marker concludes the conflict region
+    │ 
+    │ Help: Conflict markers indicate that a merge was started but could not be completed due to merge conflicts.
+    │       To resolve a conflict, keep only the code you want and then delete the lines containing conflict markers.
+    │       If you're having merge conflicts after pulling new code, the top section is the code you already had and the bottom section is the remote code.
+    │       If you're in the middle of a rebase, the top section is the code being rebased onto and the bottom section is the code coming from the current commit being rebased.
+    │       If you have nested conflicts, resolve the outermost conflict first.
+────╯
+
+  Plugin: vite:oxc
+  File: C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/WorldExplorer.tsx
+      at transformWithOxc (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:3344:19)
+      at TransformPluginContext.transform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:3415:26)
+      at EnvironmentPluginContainer.transform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:30387:51)
+      at async loadAndTransform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24646:26)
+      at async viteTransformMiddleware (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24440:20) (x2)
+

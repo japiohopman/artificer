@@ -12,7 +12,11 @@ export const WorldExplorer: React.FC = () => {
   const handleRegionClick = (regionId: string) => {
     playClickSound();
     setSelectedRegion(regionId === selectedRegion ? null : regionId);
+<<<<<<< Updated upstream
 
+=======
+    
+>>>>>>> Stashed changes
     const meta = REGION_METADATA[regionId];
     if (meta && meta.focalPoint) {
       // Create a virtual location for the region to center the map
@@ -55,10 +59,17 @@ export const WorldExplorer: React.FC = () => {
                    <GameIcon name="location" size={12} className={selectedRegion === id ? "text-white" : "text-dragon-red/50"} />
                    {meta.name}
                 </div>
+<<<<<<< Updated upstream
                 <GameIcon
                   name="chevron_right"
                   size={10}
                   className={`transition-transform ${selectedRegion === id ? "rotate-90" : "opacity-20"}`}
+=======
+                <GameIcon 
+                  name="chevron_right" 
+                  size={10} 
+                  className={`transition-transform ${selectedRegion === id ? "rotate-90" : "opacity-20"}`} 
+>>>>>>> Stashed changes
                 />
               </button>
 
@@ -116,7 +127,11 @@ export const WorldExplorer: React.FC = () => {
 
            {/* Selected Region Info Overlay */}
            {selectedRegion && (
+<<<<<<< Updated upstream
              <motion.div
+=======
+             <motion.div 
+>>>>>>> Stashed changes
                initial={{ opacity: 0, y: 20 }}
                animate={{ opacity: 1, y: 0 }}
                className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent"

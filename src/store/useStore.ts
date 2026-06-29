@@ -34,6 +34,8 @@ export interface UserProfile {
 
 interface AppState {
   // Navigation
+  gameMode: 'exploration' | 'combat';
+  activeBottomHub: 'chat' | 'legend' | 'actions';
   viewMode: 'combat' | 'collection';
   currentView: string;
   explorerTab: ExplorerTab;
@@ -43,6 +45,7 @@ interface AppState {
   isWorldPanelOpen: boolean;
   isCharacterPanelOpen: boolean;
   activeCharacterTab: 'equipment' | 'inventory' | 'stats' | 'logistics';
+  isInventoryMenuOpen: boolean;
   dynamicNavButtons: any[]; 
   isAdvancedRollerOpen: boolean;
   chatExpanded: boolean;
@@ -140,12 +143,15 @@ interface AppState {
   setAuthReady: (isReady: boolean) => void;
 
   // Actions
+  setGameMode: (mode: 'exploration' | 'combat') => void;
+  setActiveBottomHub: (hub: 'chat' | 'legend' | 'actions') => void;
   setViewMode: (mode: 'combat' | 'collection') => void;
   setCurrentView: (view: string) => void;
   setExplorerTab: (tab: ExplorerTab) => void;
   setIsDevKitOpen: (isOpen: boolean) => void;
   setIsExplorerOpen: (isOpen: boolean) => void;
   setIsJournalOpen: (isOpen: boolean) => void;
+  setIsInventoryMenuOpen: (isOpen: boolean) => void;
   setIsWorldPanelOpen: (isOpen: boolean) => void;
   setIsCharacterPanelOpen: (isOpen: boolean) => void;
   setActiveCharacterTab: (tab: 'equipment' | 'inventory' | 'stats' | 'logistics') => void;
@@ -189,12 +195,15 @@ interface AppState {
 }
 
 export const useStore = create<AppState>((set, get) => ({
+  gameMode: 'exploration',
+  activeBottomHub: 'chat',
   viewMode: 'collection',
   currentView: 'world',
   explorerTab: 'enemies',
   isDevKitOpen: false,
   isExplorerOpen: true,
   isJournalOpen: false,
+  isInventoryMenuOpen: false,
   isWorldPanelOpen: false,
   isCharacterPanelOpen: false,
   activeCharacterTab: 'equipment',
@@ -299,6 +308,8 @@ export const useStore = create<AppState>((set, get) => ({
   isDiceReady: false,
   recentRolls: [],
 
+  setGameMode: (gameMode) => set({ gameMode }),
+  setActiveBottomHub: (activeBottomHub) => set({ activeBottomHub }),
   setViewMode: (viewMode) => set({ viewMode }),
   setCurrentView: (currentView) => set({ currentView }),
   setExplorerTab: (explorerTab) => {
@@ -308,6 +319,7 @@ export const useStore = create<AppState>((set, get) => ({
   setIsDevKitOpen: (isDevKitOpen) => set({ isDevKitOpen }),
   setIsExplorerOpen: (isExplorerOpen) => set({ isExplorerOpen }),
   setIsJournalOpen: (isJournalOpen) => set({ isJournalOpen }),
+  setIsInventoryMenuOpen: (isInventoryMenuOpen) => set({ isInventoryMenuOpen }),
   setIsWorldPanelOpen: (isWorldPanelOpen) => set({ isWorldPanelOpen }),
   setIsCharacterPanelOpen: (isCharacterPanelOpen) => set({ isCharacterPanelOpen }),
   setActiveCharacterTab: (activeCharacterTab) => set({ activeCharacterTab }),
