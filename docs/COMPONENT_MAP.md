@@ -42,6 +42,8 @@ Heads-Up Display components for the active game session.
 - **`chat/`**: AI Chat interface and history.
 - **`game/`**: Game-state specific views like `ActionView` and `Rest`.
 - **`view/`**: World visualization components like `FirstPersonView` and `NPCDisplay`.
+- **`WorldMap.tsx`**: Interactive high-resolution tiled map system for Faerûn and Toril.
+- **`journal/`**: Components for the Campaign Journal, Quest Log, and Bestiary.
 
 ## 📁 `bookreader/`
 Components for the in-game document/lore reading system.

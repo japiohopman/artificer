@@ -65,7 +65,9 @@
   - [ ] Interaction Log & Memory Index.
 - [x] **Atlas Map Module**
   - [x] Interactive spatial interface (Leaflet-like).
-  - [ ] Dynamic Markers and Fog of War.
+  - [x] High-resolution Pyramid Tile system (`/tiles/faerun`).
+  - [x] Dynamic Icons & Zoom-dependent visibility.
+  - [ ] Fog of War (Pathing persistence).
 - [ ] **Tactical Combat Engine**
   - [ ] Grid-Based Movement & Collision.
   - [ ] Initiative Tracker & AI Combat Logic.
