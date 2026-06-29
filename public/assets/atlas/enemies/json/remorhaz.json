@@ -4,12 +4,7 @@
   "size": "Huge",
   "type": "monstrosity",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 195,
   "hit_dice": "17d12",
   "hit_points_roll": "17d12+85",
@@ -37,7 +32,7 @@
     "passive_perception": 10
   },
   "languages": "",
-  "challenge_rating": 11,
+  "challenge_rating": "11",
   "proficiency_bonus": 4,
   "xp": 7200,
   "special_abilities": [
@@ -90,10 +85,22 @@
   ],
   "image": "/assets/atlas/enemies/remorhaz.webp",
   "url": "/assets/atlas/enemies/json/remorhaz.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-29T09:56:28.638Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 10,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.0webp",
+  "stats": {
+    "str": 24,
+    "dex": 13,
+    "con": 21,
+    "int": 4,
+    "wis": 10,
+    "cha": 5
+  },
+  "imageUrl": "/assets/atlas/enemies/images/remorhaz.webp",
+  "_type": "enemies",
+  "background_type": "cave3",
+  "last_updated": "29-6-2026"
 }
