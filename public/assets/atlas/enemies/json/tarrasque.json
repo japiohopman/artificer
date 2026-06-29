@@ -5,12 +5,7 @@
   "type": "monstrosity",
   "subtype": "titan",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 25
-    }
-  ],
+  "armor_class": 25,
   "hit_points": 676,
   "hit_dice": "33d20",
   "hit_points_roll": "33d20+330",
@@ -83,7 +78,7 @@
     "passive_perception": 10
   },
   "languages": "",
-  "challenge_rating": 30,
+  "challenge_rating": "30",
   "proficiency_bonus": 9,
   "xp": 155000,
   "special_abilities": [
@@ -104,7 +99,7 @@
     },
     {
       "name": "reflective carapace",
-      "desc": "Any time the tarrasque is targeted by a magic missile spell, a line spell, or a spell that requires a ranged attack roll, roll a d6. On a 1 to 5, the tarrasque is unaffected. On a 6, the tarrasque is unaffected, and the effect is reflected back at the caster as though it originated from the tarrasque, turning the caster into the target.",
+      "desc": "Any time the tarrasque is targeted by a magic missile spell, a line spell, or a spell that requires a ranged attack roll, roll a d6.0 On a 1 to 5, the tarrasque is unaffected. On a 6, the tarrasque is unaffected, and the effect is reflected back at the caster as though it originated from the tarrasque, turning the caster into the target.",
       "damage": []
     },
     {
@@ -306,9 +301,21 @@
   ],
   "image": "/assets/atlas/enemies/tarrasque.webp",
   "url": "/assets/atlas/enemies/json/tarrasque.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-29T09:24:03.128Z",
   "forms": [],
   "reactions": [],
   "sprite_index": 3,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet12.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet12.0webp",
+  "stats": {
+    "str": 30,
+    "dex": 11,
+    "con": 30,
+    "int": 3,
+    "wis": 11,
+    "cha": 11
+  },
+  "imageUrl": "/assets/atlas/enemies/images/tarrasque.webp",
+  "_type": "enemies",
+  "background_type": "void1",
+  "last_updated": "29-6-2026"
 }

@@ -5,12 +5,7 @@
   "size": "Medium",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 12
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 22,
   "hit_dice": "4d8",
   "hit_points_roll": "4d8+4",
@@ -42,7 +37,7 @@
     "passive_perception": 12
   },
   "languages": "",
-  "challenge_rating": 0.5,
+  "challenge_rating": "0.5",
   "proficiency_bonus": 2,
   "xp": 100,
   "special_abilities": [
@@ -77,10 +72,22 @@
   ],
   "image": "/assets/atlas/enemies/reef_shark.webp",
   "url": "/assets/atlas/enemies/json/reef_shark.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-29T09:15:01.376Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 9,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.0webp",
+  "stats": {
+    "str": 14,
+    "dex": 13,
+    "con": 13,
+    "int": 1,
+    "wis": 10,
+    "cha": 4
+  },
+  "imageUrl": "/assets/atlas/enemies/images/reef_shark.webp",
+  "_type": "enemies",
+  "background_type": "water3",
+  "last_updated": "29-6-2026"
 }
