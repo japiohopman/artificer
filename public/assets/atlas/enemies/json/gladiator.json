@@ -6,24 +6,7 @@
   "type": "humanoid",
   "subtype": "any race",
   "alignment": "any alignment",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 16,
-      "armor": [
-        {
-          "index": "studded_leather_armor",
-          "name": "studded leather armor",
-          "url": "/assets/atlas/equipment/json/studded_leather_armor.json"
-        },
-        {
-          "index": "shield",
-          "name": "shield",
-          "url": "/assets/atlas/equipment/json/shield.json"
-        }
-      ]
-    }
-  ],
+  "armor_class": 16,
   "hit_points": 112,
   "hit_dice": "15d8",
   "hit_points_roll": "15d8+45",
@@ -86,7 +69,7 @@
     "passive_perception": 11
   },
   "languages": "any one language (usually Common)",
-  "challenge_rating": 5,
+  "challenge_rating": "5",
   "proficiency_bonus": 3,
   "xp": 1800,
   "special_abilities": [
@@ -232,9 +215,21 @@
   ],
   "image": "/assets/atlas/enemies/images/gladiator.webp",
   "url": "/assets/atlas/enemies/json/gladiator.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-29T09:59:17.422Z",
   "forms": [],
   "legendary_actions": [],
   "sprite_index": 18,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.0webp",
+  "stats": {
+    "str": 18,
+    "dex": 15,
+    "con": 16,
+    "int": 10,
+    "wis": 12,
+    "cha": 15
+  },
+  "imageUrl": "/assets/atlas/enemies/images/gladiator.webp",
+  "_type": "enemies",
+  "background_type": "land_urban2",
+  "last_updated": "29-6-2026"
 }

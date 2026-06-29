@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 11
-    }
-  ],
+  "armor_class": 11,
   "hit_points": 19,
   "hit_dice": "3d10",
   "hit_points_roll": "3d10+3",
@@ -31,7 +26,7 @@
     "passive_perception": 11
   },
   "languages": "",
-  "challenge_rating": 0.5,
+  "challenge_rating": "0.5",
   "proficiency_bonus": 2,
   "xp": 100,
   "special_abilities": [
@@ -66,10 +61,22 @@
   ],
   "image": "/assets/atlas/enemies/images/giant_goat.webp",
   "url": "/assets/atlas/enemies/json/giant_goat.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-29T10:04:39.133Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 24,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet5.0webp",
+  "stats": {
+    "str": 17,
+    "dex": 11,
+    "con": 12,
+    "int": 3,
+    "wis": 12,
+    "cha": 6
+  },
+  "imageUrl": "/assets/atlas/enemies/images/giant_goat.webp",
+  "_type": "enemies",
+  "background_type": "land_mountains4",
+  "last_updated": "29-6-2026"
 }
