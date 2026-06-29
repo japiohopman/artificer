@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents, SVGOverlay } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useStore } from '../../store/useStore';
@@ -94,16 +94,19 @@ const ChangeView = ({ center, zoom }: { center: [number, number], zoom: number }
   return null;
 };
 
-const MapEvents = ({ 
-  onZoomChange, 
-  onBoundsChange 
-}: { 
-  onZoomChange: (zoom: number) => void,
-  onBoundsChange: (bounds: L.LatLngBounds) => void
+const MapEvents = ({
+  onZoomChange,
+  onMapInstance
+}: {
+  onZoomChange: (zoom: number) => void;
+  onMapInstance: (map: L.Map) => void;
 }) => {
   const { setInspectedLocation } = useWorldStore();
   const map = useMap();
 
+  React.useEffect(() => {
+    onMapInstance(map);
+  }, [map, onMapInstance]);
   useMapEvents({
     click: () => {
       setInspectedLocation(null);
@@ -159,6 +162,7 @@ export const WorldMap: React.FC = () => {
     addLoadedCategory
   } = useWorldStore();
   const { setIsWorldPanelOpen } = useStore();
+  const [hoveredRegion, setHoveredRegion] = React.useState<string | null>(null);
   
   const mapWidth = 21620;
   const mapHeight = 14461;
@@ -179,6 +183,8 @@ export const WorldMap: React.FC = () => {
   // Prototype Y range [0, 3185] -> High-res Y range [0, 14461] (Bottom to Top)
   const rescaleX = React.useCallback((x: number) => (x / protoWidth) * mapWidth, [mapWidth, protoWidth]);
   const rescaleY = React.useCallback((y: number) => (y / protoHeight) * mapHeight, [mapHeight, protoHeight]);
+
+  const mapRef = React.useRef<L.Map | null>(null);
 
   const getPosition = React.useCallback((loc: any): [number, number] | null => {
     if (!loc) return null;
@@ -300,8 +306,40 @@ export const WorldMap: React.FC = () => {
           noWrap={true}
           bounds={bounds}
         />
+
+        {/* Regional SVG Overlay - Only visible at high level overview */}
+        {currentZoom < 3 && (
+          <SVGOverlay bounds={bounds} attributes={{ viewBox: "0 0 1600 1070", style: { pointerEvents: 'none' } }}>
+            {Object.entries(REGION_PATH_REGISTRY).map(([id, path]) => (
+              <path
+                key={id}
+                d={path}
+                onMouseEnter={() => setHoveredRegion(id)}
+                onMouseLeave={() => setHoveredRegion(null)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  const meta = REGION_METADATA[id];
+                  if (meta && meta.focalPoint && mapRef.current) {
+                    mapRef.current.setView(
+                      [meta.focalPoint[0], meta.focalPoint[1]],
+                      meta.zoom || 4,
+                      { animate: true, duration: 1.5 }
+                    );
+                  }
+                }}
+                className={`transition-all duration-500 cursor-pointer pointer-events-auto ${
+                  hoveredRegion === id ? 'fill-dragon-red/20 stroke-dragon-red/40 stroke-[2px]' : 'fill-transparent stroke-white/5 stroke-[1px]'
+                }`}
+              />
+            ))}
+          </SVGOverlay>
+        )}
+
         <ChangeView center={center} zoom={initialZoom} />
-        <MapEvents onZoomChange={setCurrentZoom} onBoundsChange={setCurrentBounds} />
+        <MapEvents
+          onZoomChange={setCurrentZoom}
+          onMapInstance={(map) => mapRef.current = map}
+        />
         
         {partyLocation && (
           <Marker 
