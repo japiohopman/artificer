@@ -36,9 +36,11 @@ The **Atlas Map** uses Leaflet to provide a spatial representation of Toril and 
 The map uses `L.CRS.Simple` with a custom transformation to align logical coordinates with physical tiles.
 
 ### Scaling Logic
-Coordinates from the legacy prototype (4763 x 3185) are rescaled to the high-resolution tile space (21620 x 14461):
-- **X Scaling**: `(x / 4763) * width_at_z0`
-- **Y Scaling**: `(1 - (y / 3185)) * height_at_z0` (Y-axis is inverted to match Leaflet standards).
+Coordinates from the legacy prototype (4763 x 3185) are rescaled to the high-resolution pixel space (21620 x 14461):
+- **X Scaling**: `(x / 4763) * 21620`
+- **Y Scaling**: `(y / 3185) * 14461`
+
+The map uses a Top-Down coordinate system (0,0 is Top-Left) to match the standard tile generation output. This is achieved via `L.Transformation(1/128, 0, 1/128, 0)`, which scales the high-resolution pixels to the 256px tile space at Zoom 0.
 
 ### Invalidation & Layout
 The map automatically calls `invalidateSize()` during sidebar/panel transitions (Character Panel, Inventory, World Panel) to ensure the viewport remains accurate when the UI layout changes.
