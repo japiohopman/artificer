@@ -3,8 +3,17 @@ import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents }
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useStore } from '../../store/useStore';
-import { useWorldStore, CategoryIcons } from '../../store/useWorldStore';
+import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorldStore';
 import { WORLD_ATLAS_ICONS } from '../../assets/icons/world_atlas';
+import { MapLegend } from './game/MapLegend';
+
+const CATEGORY_TIERS = [
+  { zoom: 0, categories: ['cities'] },
+  { zoom: 2, categories: ['towns_settlements'] },
+  { zoom: 4, categories: ['fortresses_keeps', 'mountains'] },
+  { zoom: 5.5, categories: ['poi', 'ruins', 'forest', 'waters', 'islands'] },
+  { zoom: 6.5, categories: ['roads_trails', 'wetlands', 'plains_grasslands'] }
+];
 
 // Helper to create custom markers using World Atlas Icons
 const createCustomIcon = (category: string, isInspected: boolean = false) => {
@@ -127,7 +136,10 @@ export const WorldMap: React.FC = () => {
     partyLocation, 
     savedLocations, 
     inspectedLocation,
-    setInspectedLocation 
+    setInspectedLocation,
+    addSavedLocations,
+    isCategoryLoaded,
+    addLoadedCategory
   } = useWorldStore();
   const { setIsWorldPanelOpen } = useStore();
   
@@ -140,11 +152,8 @@ export const WorldMap: React.FC = () => {
   const protoWidth = 4763;
   const protoHeight = 3185;
   
-  // At zoom 0, the map is contained in a 256x256 space in Leaflet L.CRS.Simple.
-  const width0 = mapWidth / Math.pow(2, maxZoom);   // 168.90625
-  const height0 = mapHeight / Math.pow(2, maxZoom); // 112.9765625
-
-  const bounds: L.LatLngBoundsExpression = [[0, 0], [height0, width0]];
+  // Define full bounds in pixel space
+  const bounds: L.LatLngBoundsExpression = [[0, 0], [mapHeight, mapWidth]];
   
   const scaleFactor = 128;
 
@@ -156,7 +165,10 @@ export const WorldMap: React.FC = () => {
   // Legacy coordinate mapping:
   // Prototype X range [0, 4763] -> High-res X range [0, 21620]
   // Prototype Y range [0, 3185] -> High-res Y range [0, 14461]
-  const rescaleX = React.useCallback((x: number) => (x / protoWidth) * mapWidth, [mapWidth, protoWidth]);
+  // Note: Prototype X increases West, Image X increases East.
+  // Note: Prototype Y increases South, and with our Transformation(1/128, 0, 1/128, 0), 
+  // Leaflet Lat Y also increases South.
+  const rescaleX = React.useCallback((x: number) => (1 - (x / protoWidth)) * mapWidth, [mapWidth, protoWidth]);
   const rescaleY = React.useCallback((y: number) => (y / protoHeight) * mapHeight, [mapHeight, protoHeight]);
 
   const getPosition = React.useCallback((loc: any): [number, number] | null => {
@@ -176,17 +188,58 @@ export const WorldMap: React.FC = () => {
     const px = rescaleX(x);
     const py = rescaleY(y);
 
-    // Return unscaled pixel coordinates.
-    // The faerunCRS transformation will handle scaling them to CRS units during projection.
+    // Return scaled pixel coordinates.
+    // Leaflet's L.CRS.Simple with our transformation expects coordinates to be in the untransformed space.
+    // Actually, L.Transformation(a, b, c, d) means x' = ax + b, y' = cy + d.
+    // Our transformation is 1/128, which means pixel 128 becomes coordinate 1.
+    // But Leaflet markers take LatLng. In Simple CRS, LatLng = [y, x].
+    // If we want a marker at pixel (px, py), we should pass [py, px] if CRS handles scaling,
+    // OR we should pass [py/128, px/128] if it doesn't.
+    // Given the transformation is 1/128, Leaflet will scale whatever we pass by 1/128.
+    // So if we pass [py, px], it becomes [py/128, px/128] in CRS units.
+    // This matches the TileLayer which also uses this CRS.
     return [py, px];
   }, [rescaleX, rescaleY]);
 
   const center = React.useMemo((): [number, number] => 
-    partyLocation ? getPosition(partyLocation) || [height0/2, width0/2] : [height0/2, width0/2]
-  , [partyLocation, getPosition, height0, width0]);
+    partyLocation ? getPosition(partyLocation) || [mapHeight/2, mapWidth/2] : [mapHeight/2, mapWidth/2]
+  , [partyLocation, getPosition, mapHeight, mapWidth]);
   
   const initialZoom = partyLocation?.zoom || 1;
   const [currentZoom, setCurrentZoom] = React.useState(initialZoom);
+
+  // Progressive Data Loading
+  React.useEffect(() => {
+    const loadTiers = async () => {
+      for (const tier of CATEGORY_TIERS) {
+        if (currentZoom >= tier.zoom) {
+          for (const category of tier.categories) {
+            if (!isCategoryLoaded(category)) {
+              try {
+                const response = await fetch(`/assets/atlas/world/toril/faerun/${category}/${category}.json`);
+                if (response.ok) {
+                  const data = await response.json();
+                  const rawLocations = data.locations || data || [];
+                  if (Array.isArray(rawLocations)) {
+                    const normalized = rawLocations.map((l: any) => ({
+                      ...l,
+                      category: l.category || l.categoryId || category,
+                      id: l.id || l.name?.toLowerCase().replace(/\s+/g, '_')
+                    }));
+                    addSavedLocations(normalized as SavedLocation[]);
+                  }
+                }
+              } catch (e) {
+                console.warn(`Failed to load category: ${category}`, e);
+              }
+              addLoadedCategory(category);
+            }
+          }
+        }
+      }
+    };
+    loadTiers();
+  }, [currentZoom, isCategoryLoaded, addSavedLocations, addLoadedCategory]);
 
   // Filtering logic for zoom levels to reduce clutter
   const visibleLocations = React.useMemo(() => savedLocations.filter(loc => {
@@ -316,6 +369,11 @@ export const WorldMap: React.FC = () => {
       
       {/* Map Overlay Vignette */}
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] z-[400]" />
+      
+      {/* Map Legend */}
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-[1000] max-w-[90%]">
+        <MapLegend currentZoom={currentZoom} />
+      </div>
       
       {/* Zoom Controls */}
       <div className="absolute bottom-6 right-6 z-[1000] flex flex-col gap-2">

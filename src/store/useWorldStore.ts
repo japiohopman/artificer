@@ -46,6 +46,7 @@ export interface WorldState {
   partyLocation: any | null;
   partySubLocation: any | null;
   savedLocations: SavedLocation[];
+  loadedCategories: string[];
 
   // Global State / Faction Flags
   worldFlags: Record<string, any>;
@@ -63,6 +64,8 @@ export interface WorldState {
   setWorldFlag: (flag: string, value: any) => void;
   setSavedLocations: (locations: SavedLocation[]) => void;
   addSavedLocations: (locations: SavedLocation[]) => void;
+  addLoadedCategory: (category: string) => void;
+  isCategoryLoaded: (category: string) => boolean;
   isNight: () => boolean;
   getActiveBackground: () => string;
 }
@@ -83,6 +86,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   partyLocation: null,
   partySubLocation: null,
   savedLocations: [],
+  loadedCategories: [],
 
   worldFlags: {},
 
@@ -131,9 +135,19 @@ export const useWorldStore = create<WorldState>((set, get) => ({
     worldFlags: { ...state.worldFlags, [flag]: value }
   })),
   setSavedLocations: (savedLocations) => set({ savedLocations }),
-  addSavedLocations: (newLocations) => set((state) => ({
-    savedLocations: [...state.savedLocations, ...newLocations]
+  addSavedLocations: (newLocations) => set((state) => {
+    const existingIds = new Set(state.savedLocations.map(l => l.id));
+    const uniqueNew = newLocations.filter(l => !existingIds.has(l.id));
+    return {
+      savedLocations: [...state.savedLocations, ...uniqueNew]
+    };
+  }),
+
+  addLoadedCategory: (category) => set((state) => ({
+    loadedCategories: [...state.loadedCategories, category]
   })),
+
+  isCategoryLoaded: (category) => get().loadedCategories.includes(category),
 
   isNight: () => {
     const time = get().gameTime;
