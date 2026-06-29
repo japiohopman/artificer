@@ -19,14 +19,20 @@ async function safeJson(res: Response): Promise<any> {
     }
 
     try {
-      // Robust cleaning for common JSON issues like trailing dots in numbers
-      let cleaned = text.trim()
-        .replace(/(\d+)\.(?=[^\d])/g, '$1.0') // 15. -> 15.0
-        .replace(/(?<=[^\d])\.(\d+)/g, '0.$1'); // .5 -> 0.5
-      return JSON.parse(cleaned);
+      // Attempt standard parse first to avoid unnecessary (and potentially corruptive) regex cleaning
+      return JSON.parse(text);
     } catch (e) {
-      console.warn("safeJson: Malformed JSON detected, returning null.", e);
-      return null;
+      try {
+        // Fallback cleaning for common JSON issues like trailing dots or missing leading zeros
+        const cleaned = text.trim()
+          .replace(/(\d+)\.(?!\d)/g, '$1.0')  // 15. -> 15.0
+          .replace(/(?<!\d)\.(\d+)/g, '0.$1') // .5 -> 0.5
+          .replace(/,\s*([}\]])/g, '$1');     // Trailing commas
+        return JSON.parse(cleaned);
+      } catch (e2) {
+        console.warn("safeJson: Malformed JSON detected, returning null.", e2);
+        return null;
+      }
     }
   } catch (e) {
     console.error("Failed to parse JSON response:", e);

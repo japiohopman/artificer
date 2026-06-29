@@ -1,5 +1,5 @@
 {
-  "name": "Dragon",
+  "name": "Dragons",
   "index": "dragon",
   "monsters": [
     {
@@ -236,17 +236,6 @@
       "challenge_rating": 2,
       "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/black_dragon_wyrmling.json",
       "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/black_dragon_wyrmling.webp"
-    },
-    {
-      "name": "blue dragon wyrmling",
-      "index": "blue_dragon_wyrmling",
-      "size": "Medium",
-      "type": "dragon",
-      "alignment": "lawful evil",
-      "xp": 700,
-      "challenge_rating": 3,
-      "json_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/json/blue_dragon_wyrmling.json",
-      "image_url": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/enemies/blue_dragon_wyrmling.webp"
     },
     {
       "name": "brass dragon wyrmling",
