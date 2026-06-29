@@ -24,12 +24,7 @@ export const CategoryIcons: Record<string, { icon: string, color: string }> = {
   dungeon: { icon: 'dungeon', color: '#8B0000' },
   castle: { icon: 'castle', color: '#708090' },
   landmark: { icon: 'landmark', color: '#FFD700' },
-  poi: { icon: 'poi', color: '#FFD700' },
-  desert: { icon: 'deserts', color: '#EDC9AF' },
-  glacier: { icon: 'glaciers_tundras', color: '#E0FFFF' },
-  island: { icon: 'islands', color: '#FFEFD5' },
-  plains: { icon: 'plains', color: '#90EE90' },
-  road: { icon: 'roads', color: '#D2B48C' }
+  poi: { icon: 'poi', color: '#FFD700' }
 };
 
 export interface WorldState {
@@ -51,7 +46,6 @@ export interface WorldState {
   partyLocation: any | null;
   partySubLocation: any | null;
   savedLocations: SavedLocation[];
-  loadedCategories: string[];
 
   // Global State / Faction Flags
   worldFlags: Record<string, any>;
@@ -69,8 +63,6 @@ export interface WorldState {
   setWorldFlag: (flag: string, value: any) => void;
   setSavedLocations: (locations: SavedLocation[]) => void;
   addSavedLocations: (locations: SavedLocation[]) => void;
-  addLoadedCategory: (category: string) => void;
-  isCategoryLoaded: (category: string) => boolean;
   isNight: () => boolean;
   getActiveBackground: () => string;
 }
@@ -91,7 +83,6 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   partyLocation: null,
   partySubLocation: null,
   savedLocations: [],
-  loadedCategories: [],
 
   worldFlags: {},
 
@@ -140,20 +131,9 @@ export const useWorldStore = create<WorldState>((set, get) => ({
     worldFlags: { ...state.worldFlags, [flag]: value }
   })),
   setSavedLocations: (savedLocations) => set({ savedLocations }),
-  addSavedLocations: (newLocations) => set((state) => {
-    const existingIds = new Set(state.savedLocations.map(l => l.id));
-    const uniqueNew = newLocations.filter(l => !existingIds.has(l.id));
-    if (uniqueNew.length === 0) return state;
-    return {
-      savedLocations: [...state.savedLocations, ...uniqueNew]
-    };
-  }),
-  addLoadedCategory: (category) => set((state) => ({
-    loadedCategories: state.loadedCategories.includes(category) 
-      ? state.loadedCategories 
-      : [...state.loadedCategories, category]
+  addSavedLocations: (newLocations) => set((state) => ({
+    savedLocations: [...state.savedLocations, ...newLocations]
   })),
-  isCategoryLoaded: (category) => get().loadedCategories.includes(category),
 
   isNight: () => {
     const time = get().gameTime;
