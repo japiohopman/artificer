@@ -66,6 +66,7 @@ export interface WorldState {
   addSavedLocations: (locations: SavedLocation[]) => void;
   addLoadedCategory: (category: string) => void;
   isCategoryLoaded: (category: string) => boolean;
+  getCalendarDate: () => string;
   isNight: () => boolean;
   getCalendarDate: () => string;
   getActiveBackground: () => string;
@@ -149,6 +150,24 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   })),
 
   isCategoryLoaded: (category) => get().loadedCategories.includes(category),
+
+  getCalendarDate: () => {
+    const state = get();
+    const months = [
+      'Hammer', 'Alturiak', 'Ches', 'Tarsakh', 'Mirtul', 'Kythorn',
+      'Flamerule', 'Eleasias', 'Eleint', 'Marpenoth', 'Uktar', 'Nightal'
+    ];
+    const month = months[state.gameMonth - 1] || 'Hammer';
+
+    // Day suffix
+    let suffix = 'th';
+    const day = state.gameDay;
+    if (day === 1 || day === 21) suffix = 'st';
+    else if (day === 2 || day === 22) suffix = 'nd';
+    else if (day === 3 || day === 23) suffix = 'rd';
+
+    return `${day}${suffix} of ${month}, ${state.gameYear} DR`;
+  },
 
   isNight: () => {
     const time = get().gameTime;
