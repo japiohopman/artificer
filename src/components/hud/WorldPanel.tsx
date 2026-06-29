@@ -13,15 +13,13 @@ export const WorldPanel: React.FC = () => {
     gameMode
   } = useStore();
 
-  const {
-    currentLocation,
-    inspectedLocation,
-    savedLocations,
-    gameTime,
-    gameDay,
-    getCalendarDate,
-    weather
-  } = useWorldStore();
+  const currentLocation = useWorldStore(state => state.currentLocation);
+  const inspectedLocation = useWorldStore(state => state.inspectedLocation);
+  const savedLocations = useWorldStore(state => state.savedLocations);
+  const gameTime = useWorldStore(state => state.gameTime);
+  const gameDay = useWorldStore(state => state.gameDay);
+  const weather = useWorldStore(state => state.weather);
+  const getCalendarDate = useWorldStore(state => state.getCalendarDate);
 
   const { characters } = useCharacterStore();
 
@@ -65,6 +63,7 @@ export const WorldPanel: React.FC = () => {
            <button 
              onClick={() => setIsWorldPanelOpen(false)}
              title="Close Panel"
+             aria-label="Close World Panel"
              className="absolute top-4 right-4 p-2 bg-black/40 hover:bg-dragon-red text-white rounded-full backdrop-blur-md border border-white/20 transition-all z-20"
            >
              <GameIcon name="chevron_left" size={16} color="currentColor" />
@@ -108,7 +107,9 @@ export const WorldPanel: React.FC = () => {
                 {/* Calendar Banner */}
                 <div className="bg-dragon-red/5 border border-dragon-red/10 rounded-lg p-4 flex flex-col items-center text-center shadow-inner">
                    <span className="text-[8px] font-black text-dragon-red/60 uppercase tracking-[0.3em] mb-1">Chronicle Registry</span>
-                   <span className="text-sm font-header font-black text-dragon-darkRed uppercase tracking-widest">{getCalendarDate()}</span>
+                   <span className="text-sm font-header font-black text-dragon-darkRed uppercase tracking-widest">
+                     {typeof getCalendarDate === 'function' ? getCalendarDate() : 'Loading Date...'}
+                   </span>
                 </div>
 
                 {/* Description */}
