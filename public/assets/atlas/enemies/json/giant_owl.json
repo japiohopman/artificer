@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "beast",
   "alignment": "neutral",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 12
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 19,
   "hit_dice": "3d10",
   "hit_points_roll": "3d10+3",
@@ -50,7 +45,7 @@
     "passive_perception": 15
   },
   "languages": "Giant Owl, understands Common, Elvish, and Sylvan but can't speak",
-  "challenge_rating": 0.25,
+  "challenge_rating": "0.25",
   "proficiency_bonus": 2,
   "xp": 50,
   "special_abilities": [
@@ -85,10 +80,22 @@
   ],
   "image": "/assets/atlas/enemies/images/giant_owl.webp",
   "url": "/assets/atlas/enemies/json/giant_owl.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-29T10:00:31.814Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 3,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.0webp",
+  "stats": {
+    "str": 13,
+    "dex": 15,
+    "con": 12,
+    "int": 8,
+    "wis": 13,
+    "cha": 10
+  },
+  "imageUrl": "/assets/atlas/enemies/images/giant_owl.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "29-6-2026"
 }
