@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "elemental",
   "alignment": "chaotic evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 15
-    }
-  ],
+  "armor_class": 15,
   "hit_points": 52,
   "hit_dice": "7d8",
   "hit_points_roll": "7d8+21",
@@ -53,7 +48,7 @@
     "passive_perception": 10
   },
   "languages": "Terran",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -117,10 +112,22 @@
   ],
   "image": "/assets/atlas/enemies/images/gargoyle.webp",
   "url": "/assets/atlas/enemies/json/gargoyle.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-29T10:05:53.514Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 7,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet5.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet5.0webp",
+  "stats": {
+    "str": 15,
+    "dex": 11,
+    "con": 16,
+    "int": 6,
+    "wis": 11,
+    "cha": 7
+  },
+  "imageUrl": "/assets/atlas/enemies/images/gargoyle.webp",
+  "_type": "enemies",
+  "background_type": "land_urban3",
+  "last_updated": "29-6-2026"
 }
