@@ -1,7 +1,6 @@
 basilisk.webp
 behir.webp
 berserker.webp
-blue_dragon_wyrmling.webp
 darkmantle.webp
 death_dog.webp
 dust_mephit.webp
@@ -14,8 +13,6 @@ giant_owl.webpS
 giant_sea_horse.webp
 gladiator.webp
 gnoll.webp
-goat.webp
-gray_ooze.webp
 grick.webp
 grimlock.webp
 horned_devil.webp
