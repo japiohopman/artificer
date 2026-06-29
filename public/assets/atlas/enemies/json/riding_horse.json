@@ -4,12 +4,7 @@
   "size": "Large",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 10
-    }
-  ],
+  "armor_class": 10,
   "hit_points": 13,
   "hit_dice": "2d10",
   "hit_points_roll": "2d10+2",
@@ -31,7 +26,7 @@
     "passive_perception": 10
   },
   "languages": "",
-  "challenge_rating": 0.25,
+  "challenge_rating": "0.25",
   "proficiency_bonus": 2,
   "xp": 25,
   "actions": [
@@ -54,11 +49,23 @@
   ],
   "image": "/assets/atlas/enemies/riding_horse.webp",
   "url": "/assets/atlas/enemies/json/riding_horse.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-29T09:17:39.108Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 12,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.0webp",
+  "stats": {
+    "str": 16,
+    "dex": 10,
+    "con": 12,
+    "int": 2,
+    "wis": 11,
+    "cha": 7
+  },
+  "imageUrl": "/assets/atlas/enemies/images/riding_horse.webp",
+  "_type": "enemies",
+  "background_type": "land_plains1",
+  "last_updated": "29-6-2026"
 }
