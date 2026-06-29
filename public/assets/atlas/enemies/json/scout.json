@@ -6,19 +6,7 @@
   "type": "humanoid",
   "subtype": "any race",
   "alignment": "any alignment",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 13,
-      "armor": [
-        {
-          "index": "leather_armor",
-          "name": "leather armor",
-          "url": "/assets/atlas/equipment/leather_armor"
-        }
-      ]
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 16,
   "hit_dice": "3d8",
   "hit_points_roll": "3d8+3",
@@ -73,7 +61,7 @@
     "passive_perception": 15
   },
   "languages": "any one language (usually Common)",
-  "challenge_rating": 0.5,
+  "challenge_rating": "0.5",
   "proficiency_bonus": 2,
   "xp": 100,
   "special_abilities": [
@@ -147,10 +135,22 @@
   ],
   "image": "/assets/atlas/enemies/scout.webp",
   "url": "/assets/atlas/enemies/json/scout.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-29T09:57:59.459Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 22,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.0webp",
+  "stats": {
+    "str": 11,
+    "dex": 14,
+    "con": 12,
+    "int": 11,
+    "wis": 13,
+    "cha": 11
+  },
+  "imageUrl": "/assets/atlas/enemies/images/scout.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "29-6-2026"
 }
