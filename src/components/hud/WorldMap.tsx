@@ -6,6 +6,7 @@ import { useStore } from '../../store/useStore';
 import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorldStore';
 import { WORLD_ATLAS_ICONS } from '../../assets/icons/world_atlas';
 import { MapLegend } from './game/MapLegend';
+import { REGION_METADATA, REGION_PATH_REGISTRY } from '../../data/regions';
 
 const CATEGORY_TIERS = [
   { zoom: 0, categories: ['waters', 'regions'] },
@@ -96,9 +97,11 @@ const ChangeView = ({ center, zoom }: { center: [number, number], zoom: number }
 
 const MapEvents = ({
   onZoomChange,
+  onBoundsChange,
   onMapInstance
 }: {
   onZoomChange: (zoom: number) => void;
+  onBoundsChange: (bounds: L.LatLngBounds) => void;
   onMapInstance: (map: L.Map) => void;
 }) => {
   const { setInspectedLocation } = useWorldStore();
@@ -309,7 +312,7 @@ export const WorldMap: React.FC = () => {
 
         {/* Regional SVG Overlay - Only visible at high level overview */}
         {currentZoom < 3 && (
-          <SVGOverlay bounds={bounds} attributes={{ viewBox: "0 0 1600 1070", style: { pointerEvents: 'none' } }}>
+          <SVGOverlay bounds={bounds} attributes={{ viewBox: "0 0 1600 1070" }}>
             {Object.entries(REGION_PATH_REGISTRY).map(([id, path]) => (
               <path
                 key={id}
@@ -338,6 +341,7 @@ export const WorldMap: React.FC = () => {
         <ChangeView center={center} zoom={initialZoom} />
         <MapEvents
           onZoomChange={setCurrentZoom}
+          onBoundsChange={setCurrentBounds}
           onMapInstance={(map) => mapRef.current = map}
         />
         
