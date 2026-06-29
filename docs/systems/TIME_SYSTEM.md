@@ -20,7 +20,7 @@ The **Time System** is the heartbeat of Artificer, ensuring mechanical consisten
 - **Resting**: Short Rest (1 hour), Long Rest (8 hours).
 
 ## 🌑 Day/Night Cycle
-- **Logic**: `isNight()` utility in the store.
+- **Logic**: `isNight()` utility in `useWorldStore.ts`.
     - Default: Night = `gameTime < 360` (6 AM) or `gameTime > 1200` (8 PM).
 - **Impacts**:
     - Shop availability (most shops close at night).

@@ -343,7 +343,7 @@ export const WorldMap: React.FC = () => {
         <ChangeView center={center} zoom={initialZoom} />
         <MapEvents
           onZoomChange={setCurrentZoom}
-          onBoundsChange={setCurrentBounds}
+          onBoundsChange={() => {}}
           onMapInstance={(map) => mapRef.current = map}
         />
         

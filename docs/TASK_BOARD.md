@@ -47,17 +47,22 @@
   - [x] Define Party State & World State schemas.
   - [x] Design Travel, Time, and Weather systems.
   - [x] Blueprint World Panel Architecture & Data Flow.
-- [ ] **Store Slicing (Infrastructure)**
-  - [ ] Refactor `useStore.ts` into specialized slices (`useCharacterStore`, `useInventoryStore`, `useWorldStore`).
-  - [ ] Migrate global state to appropriate slices.
-- [ ] **World State Module**
-  - [ ] Implement Temporal Progression (`gameYear`, `gameMonth`, `gameDay`, `gameTime`).
-  - [ ] Create Environmental Engine for dynamic weather.
-  - [ ] Setup Faction & World Flags system.
-- [ ] **Journal & Persistence**
+- [/] **Store Slicing (Infrastructure)**
+  - [x] Refactor `useStore.ts` into specialized slices (`useCharacterStore`, `useInventoryStore`, `useWorldStore`).
+  - [/] Migrate global state to appropriate slices.
+- [x] **World State Module**
+  - [x] Implement Temporal Progression (`gameYear`, `gameMonth`, `gameDay`, `gameTime`).
+  - [x] Create Environmental Engine for dynamic weather.
+  - [x] Setup Faction & World Flags system.
+- [x] **Journal & Persistence**
   - [x] Document Journal specifications (`docs/modules/journal.md`).
-  - [ ] Implement `Journal.tsx` component.
-  - [ ] Setup Session Summaries and Quest Tracker logic.
+  - [x] Implement `Journal.tsx` component.
+  - [x] Setup Session Summaries and Quest Tracker logic.
+- [ ] **Tactical Foundations (Next Up)**
+  - [x] Define Tactical Combat Engine specification (`TACTICAL_COMBAT_ENGINE.md`).
+  - [ ] Implement Grid-Based Movement system (5ft = 1 unit).
+  - [ ] Setup Initiative Tracker and Turn Management.
+  - [ ] Integrate Tactical Maps with the Atlas.
 
 ## Future Modules (Roadmap)
 - [ ] **NPC Memory Module**

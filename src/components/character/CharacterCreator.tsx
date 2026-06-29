@@ -168,7 +168,7 @@ export const CharacterCreator: React.FC = () => {
                             name: traitData.name,
                             index: traitData.index,
                             desc: Array.isArray(traitData.desc) ? traitData.desc.join('\n') : (traitData.desc || ""),
-                            trait_specific: traitData.trait_specific
+                            trait_specific: (traitData as any).trait_specific
                         });
                     }
                     if (traitData.proficiencies) {

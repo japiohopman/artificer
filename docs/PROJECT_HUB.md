@@ -19,7 +19,7 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [Save System](./modules/saveService.md) - GitHub & Firebase persistence.
 - [Inventory V2](./modules/inventory_v2.md) - Registry/Slot pattern.
 - [Dice & Chat](./modules/dice_system.md) - 3D Dice and AI Chat.
-- [Journal](./modules/journal.md) - Campaign Journal & Codex.
+- [Journal](./modules/journal.md) - Campaign Journal & Codex. [IMPLEMENTED]
 
 ## 🤖 Agents
 - [Jimmy (Sandbox)](../jimmy_instructions.md) - Core systems and mechanics.
@@ -41,7 +41,7 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [Weather System](./systems/WEATHER_SYSTEM.md)
 - [Rest & Sleep System](./systems/REST_SLEEP_SYSTEM.md)
 - [World Panel Architecture](./systems/WORLD_PANEL_ARCHITECTURE.md)
-- [Leaflet Map Integration](./systems/LEAFLET_MAP_INTEGRATION.md)
+- [Leaflet Map Integration](./systems/LEAFLET_MAP_INTEGRATION.md) [IMPLEMENTED]
 - [Data Flow](./systems/DATA_FLOW.md)
 
 ## 📂 Directories

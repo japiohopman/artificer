@@ -1328,7 +1328,7 @@
 }]
 
 [{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/chat/ChatInput.tsx",
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_tester.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
 	"code": {
 		"value": "axe/name-role-value",
@@ -1343,55 +1343,32 @@
 	"severity": 8,
 	"message": "Buttons must have discernible text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 40,
+	"startLineNumber": 143,
 	"startColumn": 12,
-	"endLineNumber": 40,
+	"endLineNumber": 143,
 	"endColumn": 18,
 	"modelVersionId": 1,
 	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/game/ActionView.tsx",
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_tester.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
 	"code": {
-		"value": "axe/name-role-value",
+		"value": "axe/text-alternatives",
 		"target": {
 			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
+			"path": "/rules/axe/4.10/image-alt",
 			"scheme": "https",
 			"authority": "dequeuniversity.com",
 			"query": "application=axeAPI"
 		}
 	},
 	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
+	"message": "Images must have alternative text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 59,
-	"startColumn": 14,
-	"endLineNumber": 59,
-	"endColumn": 20,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/game/ActionView.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "no-inline-styles",
-		"target": {
-			"$mid": 1,
-			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
-			"scheme": "https",
-			"authority": "webhint.io"
-		}
-	},
-	"severity": 4,
-	"message": "CSS inline styles should not be used, move styles to an external CSS file",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 59,
-	"startColumn": 14,
-	"endLineNumber": 59,
-	"endColumn": 20,
+	"startLineNumber": 185,
+	"startColumn": 24,
+	"endLineNumber": 185,
+	"endColumn": 27,
 	"modelVersionId": 1,
 	"origin": "extHost1"
 }]
@@ -1513,242 +1490,15 @@
 [{
 	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
 	"owner": "typescript",
-	"code": "2304",
+	"code": "2882",
 	"severity": 8,
-	"message": "Cannot find name 'onBoundsChange'.",
+	"message": "Cannot find module or type declarations for side-effect import of 'leaflet/dist/leaflet.css'.",
 	"source": "ts",
-	"startLineNumber": 116,
-	"startColumn": 7,
-	"endLineNumber": 116,
-	"endColumn": 21,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2304",
-	"severity": 8,
-	"message": "Cannot find name 'onBoundsChange'.",
-	"source": "ts",
-	"startLineNumber": 119,
-	"startColumn": 7,
-	"endLineNumber": 119,
-	"endColumn": 21,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2304",
-	"severity": 8,
-	"message": "Cannot find name 'onBoundsChange'.",
-	"source": "ts",
-	"startLineNumber": 125,
-	"startColumn": 5,
-	"endLineNumber": 125,
-	"endColumn": 19,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2304",
-	"severity": 8,
-	"message": "Cannot find name 'onBoundsChange'.",
-	"source": "ts",
-	"startLineNumber": 126,
-	"startColumn": 12,
-	"endLineNumber": 126,
-	"endColumn": 26,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2322",
-	"severity": 8,
-	"message": "Type '{ pointerEvents: string; }' is not assignable to type 'string'.",
-	"source": "ts",
-	"startLineNumber": 312,
-	"startColumn": 79,
-	"endLineNumber": 312,
-	"endColumn": 84,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2304",
-	"severity": 8,
-	"message": "Cannot find name 'REGION_PATH_REGISTRY'.",
-	"source": "ts",
-	"startLineNumber": 313,
-	"startColumn": 29,
-	"endLineNumber": 313,
-	"endColumn": 49,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2322",
-	"severity": 8,
-	"message": "Type 'unknown' is not assignable to type 'string | undefined'.",
-	"source": "ts",
-	"startLineNumber": 316,
-	"startColumn": 17,
-	"endLineNumber": 316,
-	"endColumn": 18,
-	"relatedInformation": [
-		{
-			"startLineNumber": 3673,
-			"startColumn": 9,
-			"endLineNumber": 3673,
-			"endColumn": 10,
-			"message": "The expected type comes from property 'd' which is declared here on type 'SVGProps<SVGPathElement>'",
-			"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/node_modules/@types/react/index.d.ts"
-		}
-	],
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2304",
-	"severity": 8,
-	"message": "Cannot find name 'REGION_METADATA'.",
-	"source": "ts",
-	"startLineNumber": 321,
-	"startColumn": 32,
-	"endLineNumber": 321,
-	"endColumn": 47,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldPanel.tsx",
-	"owner": "typescript",
-	"code": "2339",
-	"severity": 8,
-	"message": "Property 'getCalendarDate' does not exist on type 'WorldState'.",
-	"source": "ts",
-	"startLineNumber": 22,
-	"startColumn": 5,
-	"endLineNumber": 22,
-	"endColumn": 20,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldPanel.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 65,
-	"startColumn": 13,
-	"endLineNumber": 65,
-	"endColumn": 19,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldPanel.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "no-inline-styles",
-		"target": {
-			"$mid": 1,
-			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
-			"scheme": "https",
-			"authority": "webhint.io"
-		}
-	},
-	"severity": 4,
-	"message": "CSS inline styles should not be used, move styles to an external CSS file",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 203,
-	"startColumn": 30,
-	"endLineNumber": 203,
-	"endColumn": 33,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/paperScissorRock.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 126,
-	"startColumn": 26,
-	"endLineNumber": 126,
-	"endColumn": 32,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/paperScissorRock.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 129,
-	"startColumn": 26,
-	"endLineNumber": 129,
-	"endColumn": 32,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/paperScissorRock.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 132,
-	"startColumn": 26,
-	"endLineNumber": 132,
-	"endColumn": 32,
-	"modelVersionId": 1,
+	"startLineNumber": 3,
+	"startColumn": 8,
+	"endLineNumber": 3,
+	"endColumn": 34,
+	"modelVersionId": 7,
 	"origin": "extHost1"
 }]
 
@@ -1797,160 +1547,70 @@
 	"origin": "extHost1"
 }]
 
-(.venv) PS C:\Users\japie\OneDrive\Documents\GitHub\artificer> npm run dev
+[{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/ui/PartyLogistics.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/name-role-value",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/button-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Buttons must have discernible text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 125,
+	"startColumn": 20,
+	"endLineNumber": 125,
+	"endColumn": 26,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/ui/PartyLogistics.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/name-role-value",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/button-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Buttons must have discernible text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 242,
+	"startColumn": 21,
+	"endLineNumber": 242,
+	"endColumn": 27,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/ui/PartyLogistics.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 216,
+	"startColumn": 15,
+	"endLineNumber": 216,
+	"endColumn": 18,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+}]
 
-> react-example@0.0.0 dev
-> tsx server.ts
-
-[dotenv@17.3.1] injecting env (5) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
-Server running on http://localhost:3000
-20:07:55 [vite] (client) Pre-transform error: Transform failed with 1 error:
-
-[PARSE_ERROR] Encountered diff marker
-    ╭─[ src/components/devkit/WorldExplorer.tsx:15:1 ]
-    │
- 15 │ <<<<<<< Updated upstream
-    │ ───┬───  
-    │    ╰───── between this marker and `=======` is the code that we're merging into
-    │ 
- 17 │ =======
-    │ ───┬───  
-    │    ╰───── between this marker and `>>>>>>>` is the incoming code
-    │ 
- 19 │ >>>>>>> Stashed changes
-    │ ───┬───  
-    │    ╰───── this marker concludes the conflict region
-    │ 
-    │ Help: Conflict markers indicate that a merge was started but could not be completed due to merge conflicts.
-    │       To resolve a conflict, keep only the code you want and then delete the lines containing conflict markers.
-    │       If you're having merge conflicts after pulling new code, the top section is the code you already had and the bottom section is the remote code.
-    │       If you're in the middle of a rebase, the top section is the code being rebased onto and the bottom section is the code coming from the current commit being rebased.
-    │       If you have nested conflicts, resolve the outermost conflict first.
-────╯
-
-  Plugin: vite:oxc
-  File: C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/WorldExplorer.tsx
-20:08:08 [vite] Internal server error: Transform failed with 1 error:
-
-[PARSE_ERROR] Encountered diff marker
-    ╭─[ src/components/devkit/WorldExplorer.tsx:15:1 ]
-    │
- 15 │ <<<<<<< Updated upstream
-    │ ───┬───  
-    │    ╰───── between this marker and `=======` is the code that we're merging into
-    │ 
- 17 │ =======
-    │ ───┬───  
-    │    ╰───── between this marker and `>>>>>>>` is the incoming code
-    │ 
- 19 │ >>>>>>> Stashed changes
-    │ ───┬───  
-    │    ╰───── this marker concludes the conflict region
-    │ 
-    │ Help: Conflict markers indicate that a merge was started but could not be completed due to merge conflicts.
-    │       To resolve a conflict, keep only the code you want and then delete the lines containing conflict markers.
-    │       If you're having merge conflicts after pulling new code, the top section is the code you already had and the bottom section is the remote code.
-    │       If you're in the middle of a rebase, the top section is the code being rebased onto and the bottom section is the code coming from the current commit being rebased.
-    │       If you have nested conflicts, resolve the outermost conflict first.
-────╯
-
-  Plugin: vite:oxc
-  File: C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/WorldExplorer.tsx
-      at transformWithOxc (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:3344:19)
-      at TransformPluginContext.transform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:3415:26)
-      at EnvironmentPluginContainer.transform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:30387:51)
-      at async loadAndTransform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24646:26)
-      at async viteTransformMiddleware (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24440:20)
-20:09:53 [vite] Internal server error: Transform failed with 1 error:
-
-[PARSE_ERROR] Encountered diff marker
-    ╭─[ src/components/devkit/WorldExplorer.tsx:15:1 ]
-    │
- 15 │ <<<<<<< Updated upstream
-    │ ───┬───  
-    │    ╰───── between this marker and `=======` is the code that we're merging into
-    │ 
- 17 │ =======
-    │ ───┬───  
-    │    ╰───── between this marker and `>>>>>>>` is the incoming code
-    │ 
- 19 │ >>>>>>> Stashed changes
-    │ ───┬───  
-    │    ╰───── this marker concludes the conflict region
-    │ 
-    │ Help: Conflict markers indicate that a merge was started but could not be completed due to merge conflicts.
-    │       To resolve a conflict, keep only the code you want and then delete the lines containing conflict markers.
-    │       If you're having merge conflicts after pulling new code, the top section is the code you already had and the bottom section is the remote code.
-    │       If you're in the middle of a rebase, the top section is the code being rebased onto and the bottom section is the code coming from the current commit being rebased.
-    │       If you have nested conflicts, resolve the outermost conflict first.
-────╯
-
-  Plugin: vite:oxc
-  File: C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/WorldExplorer.tsx
-      at transformWithOxc (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:3344:19)
-      at TransformPluginContext.transform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:3415:26)
-      at EnvironmentPluginContainer.transform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:30387:51)
-      at async loadAndTransform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24646:26)
-      at async viteTransformMiddleware (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24440:20) (x2)
-20:16:37 [vite] Internal server error: Transform failed with 1 error:
-
-[PARSE_ERROR] Encountered diff marker
-    ╭─[ src/components/devkit/WorldExplorer.tsx:15:1 ]
-    │
- 15 │ <<<<<<< Updated upstream
-    │ ───┬───  
-    │    ╰───── between this marker and `=======` is the code that we're merging into
-    │ 
- 17 │ =======
-    │ ───┬───  
-    │    ╰───── between this marker and `>>>>>>>` is the incoming code
-    │ 
- 19 │ >>>>>>> Stashed changes
-    │ ───┬───  
-    │    ╰───── this marker concludes the conflict region
-    │ 
-    │ Help: Conflict markers indicate that a merge was started but could not be completed due to merge conflicts.
-    │       To resolve a conflict, keep only the code you want and then delete the lines containing conflict markers.
-    │       If you're having merge conflicts after pulling new code, the top section is the code you already had and the bottom section is the remote code.
-    │       If you're in the middle of a rebase, the top section is the code being rebased onto and the bottom section is the code coming from the current commit being rebased.
-    │       If you have nested conflicts, resolve the outermost conflict first.
-────╯
-
-  Plugin: vite:oxc
-  File: C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/WorldExplorer.tsx
-      at transformWithOxc (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:3344:19)
-      at TransformPluginContext.transform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:3415:26)
-      at EnvironmentPluginContainer.transform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:30387:51)
-      at async loadAndTransform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24646:26)
-      at async viteTransformMiddleware (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24440:20) (x3)
-20:16:37 [vite] Internal server error: Transform failed with 1 error:
-
-[PARSE_ERROR] Encountered diff marker
-    ╭─[ src/components/devkit/WorldExplorer.tsx:15:1 ]
-    │
- 15 │ <<<<<<< Updated upstream
-    │ ───┬───  
-    │    ╰───── between this marker and `=======` is the code that we're merging into
-    │ 
- 17 │ =======
-    │ ───┬───  
-    │    ╰───── between this marker and `>>>>>>>` is the incoming code
-    │ 
- 19 │ >>>>>>> Stashed changes
-    │ ───┬───  
-    │    ╰───── this marker concludes the conflict region
-    │ 
-    │ Help: Conflict markers indicate that a merge was started but could not be completed due to merge conflicts.
-    │       To resolve a conflict, keep only the code you want and then delete the lines containing conflict markers.
-    │       If you're having merge conflicts after pulling new code, the top section is the code you already had and the bottom section is the remote code.
-    │       If you're in the middle of a rebase, the top section is the code being rebased onto and the bottom section is the code coming from the current commit being rebased.
-    │       If you have nested conflicts, resolve the outermost conflict first.
-────╯
-
-  Plugin: vite:oxc
-  File: C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/WorldExplorer.tsx
-      at transformWithOxc (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:3344:19)
-      at TransformPluginContext.transform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:3415:26)
-      at EnvironmentPluginContainer.transform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:30387:51)
-      at async loadAndTransform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24646:26)
-      at async viteTransformMiddleware (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24440:20) (x4)

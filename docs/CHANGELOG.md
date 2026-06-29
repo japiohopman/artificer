@@ -5,7 +5,18 @@ All notable changes to the Artificer project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - 2025-02-21
+## [Unreleased] - 2025-03-04
+### Added
+- **Campaign Journal**: New multi-tab interface (`Journal.tsx`) for Diary, Quests, Bestiary, and Lore.
+- **World Map Evolution**: Full Leaflet integration with pyramid tiles, regional focal points, and zoom-dependent visibility.
+- **World State Engine**: Implementation of `useWorldStore.ts` managing temporal progression (minutes/days/months/years), weather patterns, and global flags.
+- **Store Slicing**: Decoupled state into specialized slices for World, Character, and Inventory.
+
+### Changed
+- Documentation overhaul to align with Phase 2 architecture.
+- Re-styled World Panel and Character Profile for better immersion.
+
+## [0.1.2] - 2025-02-21
 ### Added
 - Integrated sound effects for 3D dice rolls via `soundService`.
 - Added customizable dice colors in the `AdvancedRoller` panel.

@@ -67,6 +67,7 @@ export interface WorldState {
   addLoadedCategory: (category: string) => void;
   isCategoryLoaded: (category: string) => boolean;
   isNight: () => boolean;
+  getCalendarDate: () => string;
   getActiveBackground: () => string;
 }
 
@@ -152,6 +153,15 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   isNight: () => {
     const time = get().gameTime;
     return time < 360 || time > 1200; // Night between 8 PM and 6 AM
+  },
+
+  getCalendarDate: () => {
+    const { gameDay, gameMonth, gameYear } = get();
+    const months = [
+      "Hammer", "Alturiak", "Ches", "Tarsakh", "Mirtul", "Kythorn",
+      "Flamerule", "Eleasis", "Eleint", "Marpenoth", "Uktar", "Nightal"
+    ];
+    return `${gameDay} ${months[gameMonth - 1]}, ${gameYear} DR`;
   },
 
   getActiveBackground: () => {

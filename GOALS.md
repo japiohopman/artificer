@@ -42,7 +42,7 @@ The AI DM must operate with full contextual awareness of:
 ## 8. Combat System Requirements
 Transition from "Card Simulator" to a **Tactical Battle Interface**:
 *   **Grid-Based Movement**: Top-down maps with token management and collision.
-*   **Automation**: AI-assisted turn management, initiative tracking, and NPC combat logic.
+*   **Automation**: turn management, initiative tracking, and NPC combat logic.
 *   **Spatial Analysis**: Line-of-sight calculations and AOE targeting (cones, spheres, lines).
 
 ## 9. Dice System Requirements
@@ -76,10 +76,10 @@ The AI DM is prohibited from altering game state directly through text. It must 
 *   **Contextual UI**: Menus and overlays (like `FocusView`) should only appear when relevant to the current interaction.
 
 ## 15. Future Roadmap
-1.  **Phase 1: Inventory Unification**: Complete the migration to Inventory V2.
-2.  **Phase 2: Tactical Foundations**: Implement basic grid movement and initiative.
+1.  **Phase 1: Inventory Unification**: Complete (Migration to Inventory V2).
+2.  **Phase 2: World State & Tactical Foundations**: In Progress (World State, Map, Journal complete; Grid/Initiative pending).
 3.  **Phase 3: AI DM Integration**: Connect the LLM to the system's tool-calls.
-4.  **Phase 4: World Simulation**: Roll out the temporal and faction systems.
+4.  **Phase 4: Global Simulation**: Roll out faction systems and economic simulation.
 
 ## 16. Technical Debt & Refactoring Recommendations
 *   **Inventory Cleanup**: Remove all "v1" logic from `useStore.ts` and `ArcaneCodex.tsx`.
@@ -91,7 +91,7 @@ The AI DM is prohibited from altering game state directly through text. It must 
 *   **Soundscape Engine**: `soundService.ts` is robust but needs better integration with AI narration (e.g., AI requesting background music shifts).
 
 ## 18. Success Criteria
-*   The AI DM can run a 30-minute session without human mechanical intervention.
+*   The AI DM can run a 300-minute session without human mechanical intervention.
 *   A new character can be created, leveled to 20, and equipped without schema violations.
 *   The system can automatically generate a "Post-Session Summary" that accurately reflects all game state changes.
 

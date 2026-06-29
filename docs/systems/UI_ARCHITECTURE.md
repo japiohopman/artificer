@@ -47,4 +47,4 @@ Controlled by the `chatExpanded` state in `useStore`:
 - **Respect `pointer-events`**: The main staging area uses `pointer-events-none` to allow map interaction through the layers, while individual interactive components use `pointer-events-auto`.
 
 ## Historical Context
-In June 2026, the "Interaction Shard" (a consolidated flex column) was abandoned in favor of this layered approach to resolve animation choppiness and restore the sense of depth between the game world (Map) and the narrative scene (ActionView).
+In the Phase 2 refactor, the "Interaction Shard" (a consolidated flex column) was abandoned in favor of this layered approach to resolve animation choppiness and restore the sense of depth between the game world (Map) and the narrative scene (ActionView).

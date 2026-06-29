@@ -123,7 +123,7 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
           <div className="space-y-4">
             <TraitBox 
                label="Personality Trait" 
-               value={newChar.traits?.[0] || 'Unselected'} 
+               value={(typeof newChar.traits?.[0] === 'string' ? newChar.traits?.[0] : newChar.traits?.[0]?.name) || 'Unselected'} 
                icon={<GameIcon name="citation" size={16} color="currentColor" />} 
                color="text-dragon-red"
             />

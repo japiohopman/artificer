@@ -666,7 +666,10 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
               className={`group flex items-center justify-between p-3 border-b border-white/5 hover:bg-white/5 transition-all cursor-pointer ${editingCharId === char.id ? 'bg-purple-500/10 border-r-2 border-r-purple-500' : ''}`}
               onClick={() => {
                 setEditingCharId(char.id);
-                setNpcData(char);
+                setNpcData({
+                  ...char,
+                  traits: char.traits?.map(t => typeof t === 'string' ? t : t.name) || []
+                } as any);
                 setNpcImages(null);
                 playClickSound();
               }}

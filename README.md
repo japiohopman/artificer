@@ -23,8 +23,10 @@ Arcane Codex is forged and maintained by a specialized collective of AI agents, 
 ## ✨ Key Features
 
 - **🛡️ Character Creator & Vault**: A guided pipeline for forging legendary heroes, complete with attribute rolling, visual manifestation, and secure storage via Firebase.
-- **🐉 Dynamic Bestiary & Atlas**: A comprehensive repository of monsters, materials, and locations, powered by a resilient "Atlas Service" that ensures data availability across local and remote sources.
+- **🗺️ Interactive World Atlas**: A high-resolution, Leaflet-powered spatial interface for Faerûn, featuring 7 zoom levels, dynamic visibility tiers, and regional exploration.
 - **🎒 Inventory v2 (Registry-Based)**: A sophisticated inventory system utilizing a Registry/Slot pattern. It supports complex equipment rules, containers (backpacks, chests), and drag-and-drop logistics via `dnd-kit`.
+- **📜 Campaign Journal**: A central repository for the party's journey, including a diary, quest log (Main/Side/Tasks), bestiary, and lore codex.
+- **🐉 Dynamic Bestiary & Atlas**: A comprehensive repository of monsters, materials, and locations, powered by a resilient "Atlas Service" that ensures data availability across local and remote sources.
 - **🔮 AI Lore Synthesis**: Integrated with **Google Gemini 1.5 Flash** to generate atmospheric lore, parse unstructured monster data into typed entities, and assist in creative world-building.
 - **🎲 Digital Dice & Mechanics**: Real-time dice rolling with modifiers, action economy tracking, and automated level-up rewards.
 - **🎵 Atmospheric Soundscape**: A multi-layered audio mixer that reacts to game events and environment changes.

@@ -9,10 +9,10 @@ The **World State** manages the autonomous and environmental aspects of Faerûn 
 - `gameMonth`: Month of the year (1-12, following the Calendar of Harptos).
 - `gameDay`: Day of the month.
 - `gameTime`: Current minute of the day (0-1439).
-- `solarCycle`: Calculated state (Dawn, Midday, Dusk, Deep Night).
+- `isNight()`: Utility function checking if `gameTime` is between 8 PM and 6 AM.
 
 ### 2. Environmental Engine
-- `weather`: Current localized weather (Sunny, Rain, Storm, etc.).
+- `weather`: Current localized weather (Sunny, Rainy, Cloudy, Stormy, Snowy, Foggy).
 - `temperature`: Regional modifiers (Freezing, Temperate, Scorching).
 - `season`: Affects daylight duration and weather probability.
 
@@ -26,4 +26,4 @@ The **World State** manages the autonomous and environmental aspects of Faerûn 
 
 ## 🤖 AI Interaction
 - **World Pulse**: A compressed status code (e.g., `W:Rain,T:1420,F:Z:3`) sent to the LLM to provide environmental context without high token cost.
-- **Tool Calls**: The AI uses `updateWorldFlag()` or `advanceTime()` to mutate this state.
+- **Tool Calls**: The AI uses `setWorldFlag()` or `advanceTime()` to mutate this state.

@@ -10,14 +10,14 @@ export interface LegendCategory {
 }
 
 export const ATLAS_CATEGORIES: LegendCategory[] = [
-  { id: 'city', label: 'Cities', icon: 'cities', color: '#D4AF37' },
-  { id: 'village', label: 'Towns & Villages', icon: 'towns', color: '#C0C0C0' },
-  { id: 'castle', label: 'Forts & Castles', icon: 'shield', color: '#A9A9A9' },
+  { id: 'city', label: 'Cities', icon: 'city', color: '#D4AF37' },
+  { id: 'village', label: 'Towns & Villages', icon: 'village', color: '#C0C0C0' },
+  { id: 'castle', label: 'Forts & Castles', icon: 'castle', color: '#A9A9A9' },
   { id: 'ruins', label: 'Ruins', icon: 'ruins', color: '#8B4513' },
-  { id: 'poi', label: 'Points of Interest', icon: 'points_of_interest', color: '#4169E1' },
-  { id: 'mountains', label: 'Hills & Mountains', icon: 'hills_mountains', color: '#2F4F4F' },
-  { id: 'forest', label: 'Forests', icon: 'forests', color: '#228B22' },
-  { id: 'waters', label: 'Water Features', icon: 'water', color: '#1E90FF' },
+  { id: 'poi', label: 'Points of Interest', icon: 'poi', color: '#4169E1' },
+  { id: 'mountains', label: 'Hills & Mountains', icon: 'mountains', color: '#2F4F4F' },
+  { id: 'forest', label: 'Forests', icon: 'forest', color: '#228B22' },
+  { id: 'waters', label: 'Water Features', icon: 'waters', color: '#1E90FF' },
   { id: 'islands', label: 'Islands', icon: 'islands', color: '#FFD700' },
   { id: 'roads', label: 'Roads & Trails', icon: 'roads', color: '#696969' },
 ];
