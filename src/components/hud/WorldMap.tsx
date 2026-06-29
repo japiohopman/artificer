@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents }
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useStore } from '../../store/useStore';
-import { useInventoryStore } from '../../store/useInventoryStore';
 import { useWorldStore, CategoryIcons } from '../../store/useWorldStore';
 import { WORLD_ATLAS_ICONS } from '../../assets/icons/world_atlas';
 
@@ -12,14 +11,14 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
   let catKey = category?.toLowerCase() || '';
   
   // Advanced normalization for diverse atlas data
-  if (catKey.includes('city')) catKey = 'city';
+  if (catKey.includes('city') || catKey.includes('metropolis')) catKey = 'city';
   else if (catKey.includes('town') || catKey.includes('settlement') || catKey.includes('village')) catKey = 'village';
   else if (catKey.includes('ruin')) catKey = 'ruins';
   else if (catKey.includes('dungeon') || catKey.includes('cave')) catKey = 'dungeon';
   else if (catKey.includes('fortress') || catKey.includes('castle') || catKey.includes('keep')) catKey = 'castle';
   else if (catKey.includes('forest') || catKey.includes('wood')) catKey = 'forest';
-  else if (catKey.includes('mountain') || catKey.includes('peak')) catKey = 'mountains';
-  else if (catKey.includes('lake') || catKey.includes('water') || catKey.includes('sea') || catKey.includes('wetland')) catKey = 'waters';
+  else if (catKey.includes('mountain') || catKey.includes('peak') || catKey.includes('hill')) catKey = 'mountains';
+  else if (catKey.includes('lake') || catKey.includes('water') || catKey.includes('sea') || catKey.includes('wetland') || catKey.includes('river')) catKey = 'waters';
   else if (catKey.includes('island')) catKey = 'islands';
   else if (catKey.includes('temple') || catKey.includes('shrine')) catKey = 'temples';
   
@@ -27,13 +26,16 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
   
   // Use mapping to WORLD_ATLAS_ICONS
   let iconKey = config.icon as keyof typeof WORLD_ATLAS_ICONS;
+
+  // Direct overrides for known keys in WORLD_ATLAS_ICONS
   if (catKey === 'village') iconKey = 'village';
-  if (catKey === 'ruins') iconKey = 'ruins';
-  if (catKey === 'mountains') iconKey = 'mountains';
-  if (catKey === 'waters') iconKey = 'waters';
-  if (catKey === 'temples') iconKey = 'temples';
-  if (catKey === 'castle') iconKey = 'castle';
-  if (catKey === 'forest') iconKey = 'forest';
+  else if (catKey === 'ruins') iconKey = 'ruins';
+  else if (catKey === 'mountains') iconKey = 'mountains';
+  else if (catKey === 'waters') iconKey = 'waters';
+  else if (catKey === 'temples') iconKey = 'temples';
+  else if (catKey === 'castle') iconKey = 'castle';
+  else if (catKey === 'forest') iconKey = 'forest';
+  else if (catKey === 'dungeon') iconKey = 'dungeon';
 
   const path = WORLD_ATLAS_ICONS[iconKey] || WORLD_ATLAS_ICONS.landmark || WORLD_ATLAS_ICONS.city;
   
@@ -42,18 +44,29 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
   return L.divIcon({
     html: `
       <div class="relative group ${isInspected ? 'z-[1000]' : ''}">
-        <div class="absolute inset-0 bg-black/60 blur-lg rounded-full transform scale-50 transition-transform ${scale}"></div>
-        <svg viewBox="0 0 512 512" width="28" height="28" class="relative transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] ${scale} ${isInspected ? '-translate-y-1' : ''}">
-          <path d="${path}" fill="${config.color}" stroke="rgba(0,0,0,0.9)" stroke-width="16" />
-          <path d="${path}" fill="${config.color}" />
-          ${isInspected ? `<circle cx="256" cy="256" r="280" fill="none" stroke="#D4AF37" stroke-width="20" stroke-dasharray="80 40" class="animate-[spin_8s_linear_infinite]" />` : ''}
+        <!-- Glow Effect -->
+        <div class="absolute inset-0 bg-black/60 blur-lg rounded-full transform scale-50 transition-transform ${scaleClass}"></div>
+
+        <!-- Selection Ring -->
+        ${isInspected ? `
+          <div class="absolute inset-[-12px] border-2 border-dragon-gold/40 rounded-full animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
+          <div class="absolute inset-[-6px] border border-dragon-gold/60 rounded-full"></div>
+        ` : ''}
+
+        <!-- Icon SVG -->
+        <svg viewBox="0 0 512 512" width="32" height="32" class="relative transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scaleClass} ${isInspected ? '-translate-y-1' : ''}">
+          <path d="${path}" fill="${color}" stroke="rgba(0,0,0,0.9)" stroke-width="12" />
+          <path d="${path}" fill="${color}" />
+          ${isInspected ? `
+            <circle cx="256" cy="256" r="280" fill="none" stroke="#FFD700" stroke-width="15" stroke-dasharray="80 40" class="animate-[spin_12s_linear_infinite]" />
+          ` : ''}
         </svg>
       </div>
     `,
     className: 'custom-map-marker',
-    iconSize: [28, 28],
-    iconAnchor: [14, 14],
-    popupAnchor: [0, -14]
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16]
   });
 };
 
@@ -88,7 +101,6 @@ const MapEvents = ({ onZoomChange }: { onZoomChange: (zoom: number) => void }) =
 const MapInvalidator = () => {
   const map = useMap();
   const { isWorldPanelOpen, isCharacterPanelOpen } = useStore();
-  const { isInventoryOpen } = useInventoryStore();
 
   React.useEffect(() => {
     // During sidebar animation (approx 350-500ms), invalidate multiple times for smoothness
@@ -105,7 +117,7 @@ const MapInvalidator = () => {
       clearInterval(interval);
       clearTimeout(timer);
     };
-  }, [map, isWorldPanelOpen, isCharacterPanelOpen, isInventoryOpen]);
+  }, [map, isWorldPanelOpen, isCharacterPanelOpen]);
 
   return null;
 };
@@ -136,18 +148,35 @@ export const WorldMap: React.FC = () => {
   
   // Custom CRS for Faerun to handle tile coordinate system correctly
   const faerunCRS = React.useMemo(() => L.extend({}, L.CRS.Simple, {
-    transformation: new L.Transformation(1, 0, 1, 0)
-  }), []);
+    transformation: new L.Transformation(1 / scaleFactor, 0, 1 / scaleFactor, 0),
+  }), [scaleFactor]);
 
-  const rescaleX = React.useCallback((x: number) => (x / protoWidth) * width0, [width0, protoWidth]);
-  const rescaleY = React.useCallback((y: number) => (1 - (y / protoHeight)) * height0, [height0, protoHeight]);
+  // Legacy coordinate mapping:
+  // Prototype X range [0, 4763] -> High-res X range [0, 21620]
+  // Prototype Y range [0, 3185] -> High-res Y range [0, 14461]
+  const rescaleX = React.useCallback((x: number) => (x / protoWidth) * mapWidth, [mapWidth, protoWidth]);
+  const rescaleY = React.useCallback((y: number) => (y / protoHeight) * mapHeight, [mapHeight, protoHeight]);
 
   const getPosition = React.useCallback((loc: any): [number, number] | null => {
     if (!loc) return null;
-    const x = loc.coordinates?.x ?? loc.coordinates?.lng;
-    const y = loc.coordinates?.y ?? loc.coordinates?.lat;
+    let x = loc.coordinates?.x ?? loc.coordinates?.lng;
+    let y = loc.coordinates?.y ?? loc.coordinates?.lat;
+
+    // If loc.position exists (direct from cities.json), it is [y, x]
+    if (loc.position && Array.isArray(loc.position)) {
+      y = loc.position[0];
+      x = loc.position[1];
+    }
+
     if (x === undefined || y === undefined) return null;
-    return [rescaleY(y), rescaleX(x)];
+
+    // Convert to high-res pixel space
+    const px = rescaleX(x);
+    const py = rescaleY(y);
+
+    // Return unscaled pixel coordinates.
+    // The faerunCRS transformation will handle scaling them to CRS units during projection.
+    return [py, px];
   }, [rescaleX, rescaleY]);
 
   const center = React.useMemo((): [number, number] => 
@@ -157,7 +186,7 @@ export const WorldMap: React.FC = () => {
   const initialZoom = partyLocation?.zoom || 1;
   const [currentZoom, setCurrentZoom] = React.useState(initialZoom);
 
-  // Filtering logic for zoom levels
+  // Filtering logic for zoom levels to reduce clutter
   const visibleLocations = React.useMemo(() => savedLocations.filter(loc => {
     const cat = loc.category?.toLowerCase() || '';
     
@@ -172,6 +201,7 @@ export const WorldMap: React.FC = () => {
     // Zoom 4+: Show fortresses, keeps, and prominent landmarks
     if (currentZoom >= 4) {
       if (cat.includes('fortress') || cat.includes('keep') || cat.includes('castle') || cat.includes('tower')) return true;
+      if (cat.includes('mountain') || cat.includes('peaks')) return true;
     }
     
     // Zoom 5+: Show points of interest, ruins, and geographic features
