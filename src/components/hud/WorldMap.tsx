@@ -10,6 +10,7 @@ import { WORLD_ATLAS_ICONS } from '../../assets/icons/world_atlas';
 // Helper to create custom markers using World Atlas Icons
 const createCustomIcon = (category: string, isInspected: boolean = false) => {
   let catKey = category?.toLowerCase() || '';
+<<<<<<< Updated upstream
 
   // Advanced normalization for diverse atlas data
   if (catKey.includes('city')) catKey = 'city';
@@ -39,6 +40,37 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
 
   const scale = isInspected ? 'scale-125' : 'group-hover:scale-110';
 
+=======
+  
+  // Advanced normalization for diverse atlas data
+  if (catKey.includes('city')) catKey = 'city';
+  else if (catKey.includes('town') || catKey.includes('settlement') || catKey.includes('village')) catKey = 'village';
+  else if (catKey.includes('ruin')) catKey = 'ruins';
+  else if (catKey.includes('dungeon') || catKey.includes('cave')) catKey = 'dungeon';
+  else if (catKey.includes('fortress') || catKey.includes('castle') || catKey.includes('keep')) catKey = 'castle';
+  else if (catKey.includes('forest') || catKey.includes('wood')) catKey = 'forest';
+  else if (catKey.includes('mountain') || catKey.includes('peak')) catKey = 'mountains';
+  else if (catKey.includes('lake') || catKey.includes('water') || catKey.includes('sea') || catKey.includes('wetland')) catKey = 'waters';
+  else if (catKey.includes('island')) catKey = 'islands';
+  else if (catKey.includes('temple') || catKey.includes('shrine')) catKey = 'temples';
+  
+  const config = CategoryIcons[catKey] || CategoryIcons[catKey.replace(/s$/, '')] || { icon: 'landmark', color: '#D4AF37' };
+  
+  // Use mapping to WORLD_ATLAS_ICONS
+  let iconKey = config.icon as keyof typeof WORLD_ATLAS_ICONS;
+  if (catKey === 'village') iconKey = 'village';
+  if (catKey === 'ruins') iconKey = 'ruins';
+  if (catKey === 'mountains') iconKey = 'mountains';
+  if (catKey === 'waters') iconKey = 'waters';
+  if (catKey === 'temples') iconKey = 'temples';
+  if (catKey === 'castle') iconKey = 'castle';
+  if (catKey === 'forest') iconKey = 'forest';
+
+  const path = WORLD_ATLAS_ICONS[iconKey] || WORLD_ATLAS_ICONS.landmark || WORLD_ATLAS_ICONS.city;
+  
+  const scale = isInspected ? 'scale-125' : 'group-hover:scale-110';
+
+>>>>>>> Stashed changes
   return L.divIcon({
     html: `
       <div class="relative group ${isInspected ? 'z-[1000]' : ''}">
@@ -127,13 +159,21 @@ export const WorldMap: React.FC = () => {
   // Prototype coordinate system was approx 4763 x 3185
   const protoWidth = 4763;
   const protoHeight = 3185;
+<<<<<<< Updated upstream
 
+=======
+  
+>>>>>>> Stashed changes
   // At zoom 0, the map is contained in a 256x256 space in Leaflet L.CRS.Simple.
   const width0 = mapWidth / Math.pow(2, maxZoom);   // 168.90625
   const height0 = mapHeight / Math.pow(2, maxZoom); // 112.9765625
 
   const bounds: L.LatLngBoundsExpression = [[0, 0], [height0, width0]];
+<<<<<<< Updated upstream
 
+=======
+  
+>>>>>>> Stashed changes
   // Custom CRS for Faerun to handle tile coordinate system correctly
   const faerunCRS = React.useMemo(() => L.extend({}, L.CRS.Simple, {
     transformation: new L.Transformation(1, 0, 1, 0)
@@ -150,47 +190,81 @@ export const WorldMap: React.FC = () => {
     return [rescaleY(y), rescaleX(x)];
   }, [rescaleX, rescaleY]);
 
+<<<<<<< Updated upstream
   const center = React.useMemo((): [number, number] =>
     partyLocation ? getPosition(partyLocation) || [height0/2, width0/2] : [height0/2, width0/2]
   , [partyLocation, getPosition, height0, width0]);
 
+=======
+  const center = React.useMemo((): [number, number] => 
+    partyLocation ? getPosition(partyLocation) || [height0/2, width0/2] : [height0/2, width0/2]
+  , [partyLocation, getPosition, height0, width0]);
+  
+>>>>>>> Stashed changes
   const initialZoom = partyLocation?.zoom || 1;
   const [currentZoom, setCurrentZoom] = React.useState(initialZoom);
 
   // Filtering logic for zoom levels
   const visibleLocations = React.useMemo(() => savedLocations.filter(loc => {
     const cat = loc.category?.toLowerCase() || '';
+<<<<<<< Updated upstream
 
     // Always show major cities
     if (cat.includes('city') || cat.includes('cities')) return true;
 
+=======
+    
+    // Always show major cities
+    if (cat.includes('city') || cat.includes('cities')) return true;
+    
+>>>>>>> Stashed changes
     // Zoom 2+: Show towns and large settlements
     if (currentZoom >= 2) {
       if (cat.includes('town') || cat.includes('settlement') || cat.includes('village')) return true;
     }
+<<<<<<< Updated upstream
 
+=======
+    
+>>>>>>> Stashed changes
     // Zoom 4+: Show fortresses, keeps, and prominent landmarks
     if (currentZoom >= 4) {
       if (cat.includes('fortress') || cat.includes('keep') || cat.includes('castle') || cat.includes('tower')) return true;
     }
+<<<<<<< Updated upstream
 
+=======
+    
+>>>>>>> Stashed changes
     // Zoom 5+: Show points of interest, ruins, and geographic features
     if (currentZoom >= 5) {
       if (cat.includes('poi') || cat.includes('ruin') || cat.includes('dungeon') || cat.includes('cave') || cat.includes('temple')) return true;
       if (cat.includes('mountain') || cat.includes('forest') || cat.includes('lake') || cat.includes('island')) return true;
     }
+<<<<<<< Updated upstream
 
     // Zoom 6+: Show everything else
     if (currentZoom >= 6) return true;
 
+=======
+    
+    // Zoom 6+: Show everything else
+    if (currentZoom >= 6) return true;
+    
+>>>>>>> Stashed changes
     return false;
   }), [savedLocations, currentZoom]);
 
   return (
     <div className="w-full h-full bg-[#0F1115] overflow-hidden relative font-body">
       <MapContainer 
+<<<<<<< Updated upstream
         center={center as L.LatLngExpression}
         zoom={initialZoom}
+=======
+        center={center as L.LatLngExpression} 
+        zoom={initialZoom} 
+>>>>>>> Stashed changes
         crs={faerunCRS}
         minZoom={0}
         maxZoom={maxZoom}
@@ -258,10 +332,17 @@ export const WorldMap: React.FC = () => {
                 }
               }}
             >
+<<<<<<< Updated upstream
                <Tooltip
                  direction="top"
                  offset={[0, -15]}
                  opacity={1}
+=======
+               <Tooltip 
+                 direction="top" 
+                 offset={[0, -15]} 
+                 opacity={1} 
+>>>>>>> Stashed changes
                  className="map-tooltip"
                >
                  <span className="font-header font-bold text-[10px] uppercase tracking-tight">{loc.name}</span>
@@ -284,7 +365,11 @@ export const WorldMap: React.FC = () => {
       
       {/* Map Overlay Vignette */}
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] z-[400]" />
+<<<<<<< Updated upstream
 
+=======
+      
+>>>>>>> Stashed changes
       {/* Zoom Controls */}
       <div className="absolute bottom-6 right-6 z-[1000] flex flex-col gap-2">
         <div className="bg-parchment-100/90 border-2 border-dragon-gold/50 p-1 rounded-md shadow-lg flex flex-col">
