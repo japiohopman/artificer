@@ -57,7 +57,7 @@
   ],
   "image": "/assets/atlas/enemies/images/berserker.webp",
   "url": "/assets/atlas/enemies/json/berserker.json",
-  "updated_at": "2026-06-09T07:51:24.498Z",
+  "updated_at": "2026-06-30T10:06:06.212Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
@@ -72,5 +72,7 @@
     "cha": 9
   },
   "imageUrl": "/assets/atlas/enemies/images/berserker.webp",
-  "last_updated": "9-6-2026"
+  "last_updated": "30-6-2026",
+  "_type": "enemies",
+  "background_type": "land_forest"
 }
