@@ -4,12 +4,7 @@
   "size": "Medium",
   "type": "monstrosity",
   "alignment": "neutral",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 14
-    }
-  ],
+  "armor_class": 14,
   "hit_points": 27,
   "hit_dice": "6d8",
   "hit_points_roll": "6d8",
@@ -35,7 +30,7 @@
     "passive_perception": 12
   },
   "languages": "",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [
@@ -99,10 +94,22 @@
   ],
   "image": "/assets/atlas/enemies/images/grick.webp",
   "url": "/assets/atlas/enemies/json/grick.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-30T10:02:19.110Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 2,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.0webp",
+  "stats": {
+    "str": 14,
+    "dex": 14,
+    "con": 11,
+    "int": 3,
+    "wis": 14,
+    "cha": 5
+  },
+  "imageUrl": "/assets/atlas/enemies/images/grick.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "30-6-2026"
 }
