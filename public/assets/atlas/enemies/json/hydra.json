@@ -4,12 +4,7 @@
   "size": "Huge",
   "type": "monstrosity",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 15
-    }
-  ],
+  "armor_class": 15,
   "hit_points": 172,
   "hit_dice": "15d12",
   "hit_points_roll": "15d12+75",
@@ -42,7 +37,7 @@
     "passive_perception": 16
   },
   "languages": "",
-  "challenge_rating": 8,
+  "challenge_rating": "8",
   "proficiency_bonus": 3,
   "xp": 3900,
   "special_abilities": [
@@ -100,10 +95,22 @@
   ],
   "image": "/assets/atlas/enemies/images/hydra.webp",
   "url": "/assets/atlas/enemies/json/hydra.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-30T09:57:50.716Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 19,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.0webp",
+  "stats": {
+    "str": 20,
+    "dex": 12,
+    "con": 20,
+    "int": 2,
+    "wis": 10,
+    "cha": 7
+  },
+  "imageUrl": "/assets/atlas/enemies/images/hydra.webp",
+  "_type": "enemies",
+  "background_type": "castle3",
+  "last_updated": "30-6-2026"
 }
