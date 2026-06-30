@@ -4,12 +4,7 @@
   "size": "Huge",
   "type": "monstrosity",
   "alignment": "neutral evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 168,
   "hit_dice": "16d12",
   "hit_points_roll": "16d12+64",
@@ -52,7 +47,7 @@
     "passive_perception": 16
   },
   "languages": "Draconic",
-  "challenge_rating": 11,
+  "challenge_rating": "11",
   "proficiency_bonus": 4,
   "xp": 7200,
   "actions": [
@@ -161,11 +156,23 @@
   ],
   "image": "/assets/atlas/enemies/images/behir.webp",
   "url": "/assets/atlas/enemies/json/behir.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-30T09:42:43.616Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 17,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet2.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet2.0webp",
+  "stats": {
+    "str": 23,
+    "dex": 16,
+    "con": 18,
+    "int": 7,
+    "wis": 14,
+    "cha": 12
+  },
+  "imageUrl": "/assets/atlas/enemies/images/behir.webp",
+  "_type": "enemies",
+  "background_type": "land_mountains1",
+  "last_updated": "30-6-2026"
 }
