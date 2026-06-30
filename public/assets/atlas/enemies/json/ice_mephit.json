@@ -4,12 +4,7 @@
   "size": "Small",
   "type": "elemental",
   "alignment": "neutral evil",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 11
-    }
-  ],
+  "armor_class": 11,
   "hit_points": 21,
   "hit_dice": "6d6",
   "hit_points_roll": "6d6",
@@ -62,7 +57,7 @@
     "passive_perception": 12
   },
   "languages": "Aquan, Auran",
-  "challenge_rating": 0.5,
+  "challenge_rating": "0.5",
   "proficiency_bonus": 2,
   "xp": 100,
   "special_abilities": [
@@ -180,10 +175,22 @@
   ],
   "image": "/assets/atlas/enemies/images/ice_mephit.webp",
   "url": "/assets/atlas/enemies/json/ice_mephit.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-30T09:50:30.470Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 22,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.0webp",
+  "stats": {
+    "str": 7,
+    "dex": 13,
+    "con": 10,
+    "int": 9,
+    "wis": 11,
+    "cha": 12
+  },
+  "imageUrl": "/assets/atlas/enemies/images/ice_mephit.webp",
+  "_type": "enemies",
+  "background_type": "snowy3",
+  "last_updated": "30-6-2026"
 }
