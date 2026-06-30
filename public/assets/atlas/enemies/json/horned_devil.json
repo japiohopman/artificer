@@ -5,12 +5,7 @@
   "type": "fiend",
   "subtype": "devil",
   "alignment": "lawful evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 18
-    }
-  ],
+  "armor_class": 18,
   "hit_points": 178,
   "hit_dice": "17d10",
   "hit_points_roll": "17d10+85",
@@ -79,7 +74,7 @@
     "passive_perception": 13
   },
   "languages": "Infernal, telepathy 120 ft.",
-  "challenge_rating": 11,
+  "challenge_rating": "11",
   "proficiency_bonus": 4,
   "xp": 7200,
   "special_abilities": [
@@ -219,10 +214,22 @@
   ],
   "image": "/assets/atlas/enemies/images/horned_devil.webp",
   "url": "/assets/atlas/enemies/json/horned_devil.json",
-  "updated_at": "2025-10-24T20:42:13.742Z",
+  "updated_at": "2026-06-30T09:58:55.560Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 17,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.0webp",
+  "stats": {
+    "str": 22,
+    "dex": 17,
+    "con": 21,
+    "int": 12,
+    "wis": 16,
+    "cha": 17
+  },
+  "imageUrl": "/assets/atlas/enemies/images/horned_devil.webp",
+  "_type": "enemies",
+  "background_type": "volcano",
+  "last_updated": "30-6-2026"
 }
