@@ -5,12 +5,7 @@
   "type": "humanoid",
   "subtype": "grimlock",
   "alignment": "neutral evil",
-  "armor_class": [
-    {
-      "type": "dex",
-      "value": 11
-    }
-  ],
+  "armor_class": 11,
   "hit_points": 11,
   "hit_dice": "2d8",
   "hit_points_roll": "2d8+2",
@@ -64,7 +59,7 @@
     "passive_perception": 13
   },
   "languages": "Undercommon",
-  "challenge_rating": 0.25,
+  "challenge_rating": "0.25",
   "proficiency_bonus": 2,
   "xp": 50,
   "special_abilities": [
@@ -112,10 +107,22 @@
   ],
   "image": "/assets/atlas/enemies/images/grimlock.webp",
   "url": "/assets/atlas/enemies/json/grimlock.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-30T09:55:00.070Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 4,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet7.0webp",
+  "stats": {
+    "str": 16,
+    "dex": 12,
+    "con": 12,
+    "int": 9,
+    "wis": 8,
+    "cha": 6
+  },
+  "imageUrl": "/assets/atlas/enemies/images/grimlock.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "30-6-2026"
 }
