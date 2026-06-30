@@ -25,6 +25,14 @@
         "lng": { "type": "number" }
       }
     },
+    "focal_point": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Recommended [y, x] focal point for map navigation"
+    },
+    "zoom": { "type": "number" },
     "trade": { "$ref": "trade.schema.json" },
     "metadata": { "type": "object", "additionalProperties": true }
   }

@@ -31,13 +31,23 @@ export const MapLegend: React.FC<MapLegendProps> = ({ currentZoom }) => {
   return (
     <div className="flex flex-row items-center gap-2 overflow-x-auto no-scrollbar py-2 px-3 bg-black/40 backdrop-blur-md rounded-lg border border-white/10 shadow-2xl">
       {ATLAS_CATEGORIES.map((cat) => {
-        // Determine if this category is visible at current zoom (simplified logic for UI feedback)
+        // Synchronized with WorldMap.tsx tiers
         let isVisible = false;
-        if (cat.id === 'city') isVisible = true;
-        else if (cat.id === 'village' && currentZoom >= 2) isVisible = true;
-        else if (cat.id === 'castle' && currentZoom >= 4) isVisible = true;
-        else if (cat.id === 'mountains' && currentZoom >= 4) isVisible = true;
-        else if (currentZoom >= 5.5) isVisible = true;
+        let zoomReq = 0;
+
+        if (cat.id === 'city') {
+          isVisible = true;
+          zoomReq = 0;
+        } else if (['mountains', 'forest', 'waters', 'islands', 'roads'].includes(cat.id)) {
+          isVisible = currentZoom >= 4;
+          zoomReq = 4;
+        } else if (['village', 'castle'].includes(cat.id)) {
+          isVisible = currentZoom >= 5; // T3 in WorldMap is Zoom 5+ for settlements
+          zoomReq = 5;
+        } else if (['ruins', 'poi', 'graveyard'].includes(cat.id)) {
+          isVisible = currentZoom >= 6;
+          zoomReq = 6;
+        }
 
         return (
           <div key={cat.id} className="relative group">
@@ -45,19 +55,19 @@ export const MapLegend: React.FC<MapLegendProps> = ({ currentZoom }) => {
               whileHover={{ scale: 1.1 }}
               className={`
                 h-8 w-8 rounded bg-parchment-100/10 border flex items-center justify-center transition-all duration-300
-                ${isVisible ? 'border-dragon-gold/40 opacity-100' : 'border-white/5 opacity-30'}
+                ${isVisible ? 'border-dragon-gold/40 opacity-100 shadow-[0_0_8px_rgba(212,175,55,0.2)]' : 'border-white/5 opacity-20'}
               `}
             >
               <GameIcon 
                 name={cat.icon} 
                 size={16} 
-                color={isVisible ? cat.color : '#94a3b8'}
+                color={isVisible ? cat.color : '#475569'}
               />
             </motion.div>
             
             {/* Tooltip */}
-            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-parchment-900 text-parchment-100 text-[9px] font-bold uppercase tracking-widest rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-[2000]">
-              {cat.label} {!isVisible && `(Zoom ${cat.id === 'village' ? '2' : cat.id === 'castle' ? '4' : '5.5'}+)`}
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-parchment-900 text-parchment-100 text-[9px] font-bold uppercase tracking-widest rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-[2000] border border-dragon-gold/30 shadow-xl">
+              {cat.label} {!isVisible && `(Requires Zoom ${zoomReq})`}
             </div>
           </div>
         );

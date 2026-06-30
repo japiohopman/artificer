@@ -9,11 +9,10 @@ import { MapLegend } from './game/MapLegend';
 import { REGION_METADATA, REGION_PATH_REGISTRY } from '../../data/regions';
 
 const CATEGORY_TIERS = [
-  { zoom: 0, categories: ['cities'] },
-  { zoom: 2, categories: ['towns_settlements'] },
-  { zoom: 4, categories: ['fortresses_keeps', 'mountains'] },
-  { zoom: 5.5, categories: ['poi', 'ruins', 'forest', 'waters', 'islands'] },
-  { zoom: 6.5, categories: ['roads_trails', 'wetlands', 'plains_grasslands'] }
+  { zoom: 0, categories: ['cities', 'fortresses_keeps'] },
+  { zoom: 3, categories: ['mountains', 'forest', 'waters', 'islands', 'roads_trails', 'wetlands', 'plains_grasslands'] },
+  { zoom: 4, categories: ['towns_settlements', 'ruins'] },
+  { zoom: 5, categories: ['poi'] }
 ];
 
 // Helper to create custom markers using World Atlas Icons
@@ -155,16 +154,15 @@ const MapInvalidator = () => {
 };
 
 export const WorldMap: React.FC = () => {
-  const { 
-    partyLocation, 
-    savedLocations, 
-    inspectedLocation,
-    setInspectedLocation,
-    addSavedLocations,
-    isCategoryLoaded,
-    addLoadedCategory
-  } = useWorldStore();
-  const { setIsWorldPanelOpen } = useStore();
+  const partyLocation = useWorldStore(state => state.partyLocation);
+  const savedLocations = useWorldStore(state => state.savedLocations);
+  const inspectedLocation = useWorldStore(state => state.inspectedLocation);
+  const setInspectedLocation = useWorldStore(state => state.setInspectedLocation);
+  const addSavedLocations = useWorldStore(state => state.addSavedLocations);
+  const isCategoryLoaded = useWorldStore(state => state.isCategoryLoaded);
+  const addLoadedCategory = useWorldStore(state => state.addLoadedCategory);
+  
+  const setIsWorldPanelOpen = useStore(state => state.setIsWorldPanelOpen);
   const [hoveredRegion, setHoveredRegion] = React.useState<string | null>(null);
   const [currentBounds, setCurrentBounds] = React.useState<L.LatLngBounds | null>(null);
   
@@ -183,18 +181,16 @@ export const WorldMap: React.FC = () => {
   const scaleFactorValue = 128;
 
   // Custom CRS for Faerun to handle tile coordinate system correctly
+  // We use a negative Y coefficient to make Latitude increase North (UP), matching the prototype
   const faerunCRS = React.useMemo(() => L.extend({}, L.CRS.Simple, {
-    transformation: new L.Transformation(1 / scaleFactorValue, 0, 1 / scaleFactorValue, 0),
-  }), [scaleFactorValue]);
+    transformation: new L.Transformation(1 / scaleFactorValue, 0, -1 / scaleFactorValue, mapHeight / scaleFactorValue),
+  }), [scaleFactorValue, mapHeight]);
 
   // Legacy coordinate mapping:
   // Prototype X range [0, 4763] -> High-res X range [0, 21620]
   // Prototype Y range [0, 3185] -> High-res Y range [0, 14461]
-  // Note: Prototype X increases West, Image X increases East.
-  // Note: Prototype Y increases South, and with our Transformation(1/128, 0, 1/128, 0), 
-  // Leaflet Lat Y also increases South.
   const rescaleX = React.useCallback((x: number) => (x / protoWidth) * mapWidth, [mapWidth, protoWidth]);
-  const rescaleY = React.useCallback((y: number) => (1 - (y / protoHeight)) * mapHeight, [mapHeight, protoHeight]);
+  const rescaleY = React.useCallback((y: number) => (y / protoHeight) * mapHeight, [mapHeight, protoHeight]);
 
   const mapRef = React.useRef<L.Map | null>(null);
 
@@ -215,16 +211,6 @@ export const WorldMap: React.FC = () => {
     const px = rescaleX(x);
     const py = rescaleY(y);
 
-    // Return scaled pixel coordinates.
-    // Leaflet's L.CRS.Simple with our transformation expects coordinates to be in the untransformed space.
-    // Actually, L.Transformation(a, b, c, d) means x' = ax + b, y' = cy + d.
-    // Our transformation is 1/128, which means pixel 128 becomes coordinate 1.
-    // But Leaflet markers take LatLng. In Simple CRS, LatLng = [y, x].
-    // If we want a marker at pixel (px, py), we should pass [py, px] if CRS handles scaling,
-    // OR we should pass [py/128, px/128] if it doesn't.
-    // Given the transformation is 1/128, Leaflet will scale whatever we pass by 1/128.
-    // So if we pass [py, px], it becomes [py/128, px/128] in CRS units.
-    // This matches the TileLayer which also uses this CRS.
     return [py, px];
   }, [rescaleX, rescaleY]);
 
@@ -237,21 +223,25 @@ export const WorldMap: React.FC = () => {
 
   // Progressive Data Loading
   React.useEffect(() => {
+    let isMounted = true;
     const loadTiers = async () => {
       for (const tier of CATEGORY_TIERS) {
         if (currentZoom >= tier.zoom) {
           for (const category of tier.categories) {
             if (!isCategoryLoaded(category)) {
+              // Mark as loaded immediately to prevent parallel duplicate loads
+              addLoadedCategory(category);
               try {
                 const response = await fetch(`/assets/atlas/world/toril/faerun/${category}/${category}.json`);
-                if (response.ok) {
+                if (response.ok && isMounted) {
                   const data = await response.json();
                   const rawLocations = data.locations || data || [];
                   if (Array.isArray(rawLocations)) {
                     const normalized = rawLocations.map((l: any) => ({
                       ...l,
+                      name: l.name || l.popup?.title || l.id?.replace(/_/g, ' '),
                       category: l.category || l.categoryId || category,
-                      id: l.id || l.name?.toLowerCase().replace(/\s+/g, '_')
+                      id: l.id || (l.name || l.popup?.title)?.toLowerCase().replace(/\s+/g, '_')
                     }));
                     addSavedLocations(normalized as SavedLocation[]);
                   }
@@ -259,48 +249,76 @@ export const WorldMap: React.FC = () => {
               } catch (e) {
                 console.warn(`Failed to load category: ${category}`, e);
               }
-              addLoadedCategory(category);
             }
           }
         }
       }
     };
     loadTiers();
-  }, [currentZoom, isCategoryLoaded, addSavedLocations, addLoadedCategory]);
+    return () => { isMounted = false; };
+  }, [currentZoom]); // Removed function deps to prevent excessive re-runs
 
-  // Filtering logic for zoom levels to reduce clutter
-  const visibleLocations = React.useMemo(() => savedLocations.filter(loc => {
-    const cat = loc.category?.toLowerCase() || '';
-    
-    // Always show major cities
-    if (cat.includes('city') || cat.includes('cities')) {
-      if (currentZoom >= 1) return true;
-      const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
-      return majorCities.includes(loc.name?.toLowerCase());
+  // Filtering logic for zoom levels to reduce clutter and optimize performance
+  const visibleLocations = React.useMemo(() => {
+    const MAX_MARKERS = 150;
+    const filtered: SavedLocation[] = [];
+
+    for (const loc of savedLocations) {
+      if (filtered.length >= MAX_MARKERS) break;
+
+      const position = getPosition(loc);
+      if (!position) continue;
+      
+      // Viewport filtering - IMPORTANT: Scale by 1/128 to match currentBounds units
+      if (currentBounds && !currentBounds.contains(L.latLng(position[0] / scaleFactorValue, position[1] / scaleFactorValue))) {
+        continue;
+      }
+
+      const cat = loc.category?.toLowerCase() || '';
+      const name = loc.name?.toLowerCase() || '';
+      let isVisible = false;
+
+      // Layer 1: Water & Geography (Zoom 3+)
+      if (currentZoom >= 3) {
+        if (cat.includes('water') || cat.includes('lake') || cat.includes('sea') || cat.includes('island')) {
+          isVisible = true;
+        }
+      }
+
+      // Layer 2: Major Cities, Keeps & Other Geography (Zoom 4+)
+      if (currentZoom >= 4) {
+        if (cat.includes('mountain') || cat.includes('peaks') || cat.includes('forest') || 
+            cat.includes('road') || cat.includes('trail') ||
+            cat.includes('swamp') || cat.includes('wetland') || cat.includes('plains') || cat.includes('grassland') ||
+            cat.includes('city') || cat.includes('cities') || 
+            cat.includes('fortress') || cat.includes('keep') || cat.includes('castle') || cat.includes('tower')) {
+          isVisible = true;
+        }
+      } else {
+        // At low zoom, still show major cities
+        const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
+        if (majorCities.includes(name) && (cat.includes('city') || cat.includes('cities'))) isVisible = true;
+      }
+
+      // Layer 3: Settlements, Forts, Ruins (Zoom 5+)
+      if (currentZoom >= 5) {
+        if (cat.includes('town') || cat.includes('settlement') || cat.includes('village') ||
+            cat.includes('ruin')) {
+          isVisible = true;
+        }
+      }
+
+      // Layer 4: POIs & Landmarks (Zoom 6+)
+      if (currentZoom >= 6) {
+        isVisible = true;
+      }
+
+      if (isVisible) {
+        filtered.push(loc);
+      }
     }
-    
-    // Zoom 2+: Show towns and large settlements
-    if (currentZoom >= 2) {
-      if (cat.includes('town') || cat.includes('settlement') || cat.includes('village')) return true;
-    }
-    
-    // Zoom 4+: Show fortresses, keeps, and prominent landmarks
-    if (currentZoom >= 4) {
-      if (cat.includes('fortress') || cat.includes('keep') || cat.includes('castle') || cat.includes('tower')) return true;
-      if (cat.includes('mountain') || cat.includes('peaks')) return true;
-    }
-    
-    // Zoom 5+: Show points of interest, ruins, and geographic features
-    if (currentZoom >= 5) {
-      if (cat.includes('poi') || cat.includes('ruin') || cat.includes('dungeon') || cat.includes('cave') || cat.includes('temple') || cat.includes('graveyard')) return true;
-      if (cat.includes('mountain') || cat.includes('forest') || cat.includes('lake') || cat.includes('island') || cat.includes('water')) return true;
-    }
-    
-    // Zoom 6+: Show everything else
-    if (currentZoom >= 6) return true;
-    
-    return false;
-  }), [savedLocations, currentZoom]);
+    return filtered;
+  }, [savedLocations, currentZoom, currentBounds, getPosition]);
 
   return (
     <div className="w-full h-full bg-[#0F1115] overflow-hidden relative font-body">
@@ -339,16 +357,16 @@ export const WorldMap: React.FC = () => {
                   const meta = REGION_METADATA[id];
                   if (meta && meta.focalPoint && mapRef.current) {
                     // Focal points are [y, x] in high-res pixels, where Y increases North.
-                    // We need to invert Y for Leaflet [y, x] where Y increases South.
+                    // Since our CRS now has Lat increasing North, we can pass it directly.
                     mapRef.current.setView(
-                      [mapHeight - meta.focalPoint[0], meta.focalPoint[1]],
+                      [meta.focalPoint[0], meta.focalPoint[1]],
                       meta.zoom || 4,
                       { animate: true, duration: 1.5 }
                     );
                   }
                 }}
                 className={`transition-all duration-500 cursor-pointer pointer-events-auto ${
-                  hoveredRegion === id ? 'fill-dragon-red/20 stroke-dragon-red/40 stroke-[2px]' : 'fill-transparent stroke-white/5 stroke-[1px]'
+                  hoveredRegion === id ? 'fill-dragon-red/30 stroke-dragon-red/60 stroke-[2px]' : 'fill-transparent stroke-dragon-gold/20 stroke-[1px]'
                 }`}
               />
             ))}
@@ -357,14 +375,15 @@ export const WorldMap: React.FC = () => {
 
         <ChangeView center={center} zoom={initialZoom} />
         <MapEvents
-          onZoomChange={setCurrentZoom}
-          onBoundsChange={setCurrentBounds}
-          onMapInstance={(map) => mapRef.current = map}
+          onZoomChange={React.useCallback((z: number) => setCurrentZoom(z), [])}
+          onBoundsChange={React.useCallback((b: L.LatLngBounds) => setCurrentBounds(b), [])}
+          onMapInstance={React.useCallback((map: L.Map) => { mapRef.current = map; }, [])}
         />
         
         {partyLocation && (
           <Marker 
             position={getPosition(partyLocation) || center as L.LatLngExpression}
+            zIndexOffset={2000}
             icon={L.divIcon({
               html: `
                 <div class="relative">
