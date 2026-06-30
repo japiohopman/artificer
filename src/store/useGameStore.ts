@@ -38,12 +38,12 @@ interface GameState {
   // Logs
   logs: LogEntry[];
 
-  // Dice Rolls
-  isDiceReady: boolean;
-  recentRolls: any[];
-
   // Simulator
   activeCards: any[];
+
+  // Dice History
+  isDiceReady: boolean;
+  recentRolls: any[];
 
   // Game flow
   isGameStarted: boolean;
@@ -91,9 +91,9 @@ export const useGameStore = create<GameState>((set, get) => ({
   characters: [],
   activeCharacterId: '',
   logs: [],
+  activeCards: [],
   isDiceReady: false,
   recentRolls: [],
-  activeCards: [],
   isGameStarted: false,
 
   rpsState: {

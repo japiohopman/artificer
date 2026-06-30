@@ -4,6 +4,8 @@ export type ExplorerTab = 'enemies' | 'materials' | 'equipment' | 'key' | 'books
 
 interface UIState {
   // Navigation
+  gameMode: 'exploration' | 'combat';
+  activeBottomHub: 'chat' | 'legend' | 'actions';
   viewMode: 'combat' | 'collection';
   currentView: string;
   explorerTab: ExplorerTab;
@@ -58,6 +60,8 @@ interface UIState {
   setSelectedDiceColor: (color: string) => void;
   
   setSearchQuery: (query: string) => void;
+  setGameMode: (mode: 'exploration' | 'combat') => void;
+  setActiveBottomHub: (hub: 'chat' | 'legend' | 'actions') => void;
   setFocusedItem: (item: any | null) => void;
   setInspectingItem: (data: { item: any; sourceId: string; index?: number; itemId?: string; slot?: string; } | null) => void;
   setIsProfileMenuOpen: (isOpen: boolean) => void;
@@ -68,6 +72,8 @@ interface UIState {
 }
 
 export const useUIStore = create<UIState>((set) => ({
+  gameMode: 'exploration',
+  activeBottomHub: 'chat',
   viewMode: 'collection',
   currentView: 'world',
   explorerTab: 'enemies',
@@ -96,6 +102,8 @@ export const useUIStore = create<UIState>((set) => ({
   inspectingItem: null,
 
   setViewMode: (viewMode) => set({ viewMode }),
+  setGameMode: (gameMode) => set({ gameMode }),
+  setActiveBottomHub: (activeBottomHub) => set({ activeBottomHub }),
   setCurrentView: (currentView) => set({ currentView }),
   setExplorerTab: (explorerTab) => {
     set({ explorerTab });

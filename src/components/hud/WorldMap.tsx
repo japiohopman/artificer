@@ -2,7 +2,7 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents, SVGOverlay } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
 import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorldStore';
 import { WORLD_ATLAS_ICONS } from '../../assets/icons/world_atlas';
 import { MapLegend } from './game/MapLegend';
@@ -131,7 +131,7 @@ const MapEvents = ({
 
 const MapInvalidator = () => {
   const map = useMap();
-  const { isWorldPanelOpen, isCharacterPanelOpen } = useStore();
+  const { isWorldPanelOpen, isCharacterPanelOpen } = useUIStore();
 
   React.useEffect(() => {
     // During sidebar animation (approx 350-500ms), invalidate multiple times for smoothness
@@ -162,7 +162,7 @@ export const WorldMap: React.FC = () => {
   const isCategoryLoaded = useWorldStore(state => state.isCategoryLoaded);
   const addLoadedCategory = useWorldStore(state => state.addLoadedCategory);
   
-  const setIsWorldPanelOpen = useStore(state => state.setIsWorldPanelOpen);
+  const setIsWorldPanelOpen = useUIStore(state => state.setIsWorldPanelOpen);
   const [hoveredRegion, setHoveredRegion] = React.useState<string | null>(null);
   const [currentBounds, setCurrentBounds] = React.useState<L.LatLngBounds | null>(null);
   

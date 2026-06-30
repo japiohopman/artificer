@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { GameIcon } from '../../game_icons';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
+import { useGameStore } from '../../store/useGameStore';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { useAtlasStore } from '../../store/useAtlasStore';
 import { fetchMonsterData, playSuccessSound, playClickSound, normalizeImageUrl } from '../../services/storageService';
@@ -10,9 +11,13 @@ import { motion, AnimatePresence } from 'motion/react';
 export const CombatTester: React.FC = () => {
   const { 
     gameMode, setGameMode, 
+    setIsDevKitOpen
+  } = useUIStore();
+
+  const {
     activeCards, addToPreview, removeFromPreview, clearPreview,
-    addLog, setIsDevKitOpen
-  } = useStore();
+    addLog
+  } = useGameStore();
   
   const { characters, restoreSlots, restoreActionEconomy, updateCharacter } = useCharacterStore();
   const { monstersList, loadAllLists } = useAtlasStore();

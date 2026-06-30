@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 
 export const EnemyStats: React.FC = () => {
-  const { focusedItem: enemy } = useStore();
+  const { focusedItem: enemy } = useUIStore();
 
   if (!enemy || enemy._type !== 'enemies') {
     return (

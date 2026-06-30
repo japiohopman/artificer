@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStore } from '../../../store/useStore';
+import { useUIStore } from '../../../store/useUIStore';
 import { GameIcon, GameIconName } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { motion } from 'motion/react';
@@ -13,7 +13,7 @@ interface CombatAction {
 }
 
 export const ActionPanel: React.FC = () => {
-  const { setGameMode } = useStore();
+  const { setGameMode } = useUIStore();
 
   const actions: CombatAction[] = [
     { id: 'attack', label: 'Attack', icon: 'melee', color: 'bg-dragon-red', description: 'Strike with your equipped weapon.' },

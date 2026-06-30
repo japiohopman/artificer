@@ -31,8 +31,10 @@ interface AtlasState {
   isLoadingList: boolean;
   selectedItem: any | null;
   isLoadingItem: boolean;
+  searchQuery: string;
 
   // Actions
+  setSearchQuery: (query: string) => void;
   loadList: (tab: ExplorerTab) => Promise<void>;
   loadAllLists: () => Promise<void>;
   selectItem: (index: string, tab: ExplorerTab) => Promise<void>;
@@ -60,6 +62,9 @@ export const useAtlasStore = create<AtlasState>((set, get) => ({
   isLoadingList: false,
   selectedItem: null,
   isLoadingItem: false,
+  searchQuery: '',
+
+  setSearchQuery: (searchQuery) => set({ searchQuery }),
 
   loadList: async (tab) => {
     set({ isLoadingList: true });
