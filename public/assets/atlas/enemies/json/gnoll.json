@@ -5,24 +5,7 @@
   "type": "humanoid",
   "subtype": "gnoll",
   "alignment": "chaotic evil",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 15,
-      "armor": [
-        {
-          "index": "hide_armor",
-          "name": "hide armor",
-          "url": "/assets/atlas/equipment/json/hide_armor.json"
-        },
-        {
-          "index": "shield",
-          "name": "shield",
-          "url": "/assets/atlas/equipment/json/shield.json"
-        }
-      ]
-    }
-  ],
+  "armor_class": 15,
   "hit_points": 22,
   "hit_dice": "5d8",
   "hit_points_roll": "5d8",
@@ -45,7 +28,7 @@
     "passive_perception": 10
   },
   "languages": "Gnoll",
-  "challenge_rating": 0.5,
+  "challenge_rating": "0.5",
   "proficiency_bonus": 2,
   "xp": 100,
   "special_abilities": [
@@ -128,10 +111,22 @@
   ],
   "image": "/assets/atlas/enemies/images/gnoll.webp",
   "url": "/assets/atlas/enemies/json/gnoll.json",
-  "updated_at": "2025-10-24T20:42:13.741Z",
+  "updated_at": "2026-06-30T09:43:36.769Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "sprite_index": 19,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.webp"
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet6.0webp",
+  "stats": {
+    "str": 14,
+    "dex": 12,
+    "con": 11,
+    "int": 6,
+    "wis": 10,
+    "cha": 7
+  },
+  "imageUrl": "/assets/atlas/enemies/images/gnoll.webp",
+  "_type": "enemies",
+  "background_type": "land_forest",
+  "last_updated": "30-6-2026"
 }
