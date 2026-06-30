@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents, SVGOverlay } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents, SVGOverlay, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useUIStore } from '../../store/useUIStore';
@@ -161,6 +161,8 @@ export const WorldMap: React.FC = () => {
   const addSavedLocations = useWorldStore(state => state.addSavedLocations);
   const isCategoryLoaded = useWorldStore(state => state.isCategoryLoaded);
   const addLoadedCategory = useWorldStore(state => state.addLoadedCategory);
+  const isTraveling = useWorldStore(state => state.isTraveling);
+  const destination = useWorldStore(state => state.destination);
   
   const setIsWorldPanelOpen = useUIStore(state => state.setIsWorldPanelOpen);
   const [hoveredRegion, setHoveredRegion] = React.useState<string | null>(null);
@@ -385,6 +387,20 @@ export const WorldMap: React.FC = () => {
           onBoundsChange={React.useCallback((b: L.LatLngBounds) => setCurrentBounds(b), [])}
           onMapInstance={React.useCallback((map: L.Map) => { mapRef.current = map; }, [])}
         />
+
+        {/* Travel Path */}
+        {isTraveling && destination && partyLocation && (
+          <Polyline
+            positions={[
+              getPosition(partyLocation)!,
+              getPosition(destination)!
+            ]}
+            color="#FFD700"
+            weight={2}
+            dashArray="10, 10"
+            opacity={0.6}
+          />
+        )}
         
         {partyLocation && (
           <Marker 
@@ -393,9 +409,15 @@ export const WorldMap: React.FC = () => {
             icon={L.divIcon({
               html: `
                 <div class="relative">
-                  <div class="absolute inset-0 bg-blue-500/40 blur-md rounded-full animate-pulse scale-150"></div>
-                  <div class="relative bg-blue-600 border-2 border-white w-4 h-4 rounded-full shadow-lg"></div>
-                  <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-blue-900 text-white text-[9px] px-1.5 py-0.5 rounded border border-blue-400 whitespace-nowrap font-bold uppercase tracking-tighter">Party</div>
+                  <div class="absolute inset-0 ${isTraveling ? 'bg-dragon-gold/40' : 'bg-blue-500/40'} blur-md rounded-full animate-pulse scale-150"></div>
+                  <div class="relative ${isTraveling ? 'bg-dragon-gold' : 'bg-blue-600'} border-2 border-white w-4 h-4 rounded-full shadow-lg transition-colors duration-1000">
+                    ${isTraveling ? `
+                      <div class="absolute inset-0 animate-ping bg-dragon-gold rounded-full opacity-75"></div>
+                    ` : ''}
+                  </div>
+                  <div class="absolute -top-8 left-1/2 -translate-x-1/2 ${isTraveling ? 'bg-dragon-darkRed border-dragon-gold' : 'bg-blue-900 border-blue-400'} text-white text-[9px] px-1.5 py-0.5 rounded border whitespace-nowrap font-bold uppercase tracking-tighter shadow-md">
+                    ${isTraveling ? 'Traveling...' : 'Party'}
+                  </div>
                 </div>
               `,
               className: 'party-marker',
