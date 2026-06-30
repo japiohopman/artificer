@@ -9,10 +9,10 @@ import { MapLegend } from './game/MapLegend';
 import { REGION_METADATA, REGION_PATH_REGISTRY } from '../../data/regions';
 
 const CATEGORY_TIERS = [
-  { zoom: 0, categories: ['cities', 'fortresses_keeps'] },
-  { zoom: 3, categories: ['mountains', 'forest', 'waters', 'islands', 'roads_trails', 'wetlands', 'plains_grasslands'] },
-  { zoom: 4, categories: ['towns_settlements', 'ruins'] },
-  { zoom: 5, categories: ['poi'] }
+  { zoom: 0, categories: ['cities', 'waters'] },
+  { zoom: 2.5, categories: ['mountains', 'forest', 'islands', 'wetlands', 'plains_grasslands'] },
+  { zoom: 3.5, categories: ['fortresses_keeps', 'roads_trails', 'towns_settlements'] },
+  { zoom: 5, categories: ['ruins', 'poi'] }
 ];
 
 // Helper to create custom markers using World Atlas Icons
@@ -181,10 +181,11 @@ export const WorldMap: React.FC = () => {
   const scaleFactorValue = 128;
 
   // Custom CRS for Faerun to handle tile coordinate system correctly
-  // We use a negative Y coefficient to make Latitude increase North (UP), matching the prototype
+  // Transformation parameters: a=1/128, b=0, c=1/128, d=0
+  // Standard simple transformation for Top-Left [0,0] origin
   const faerunCRS = React.useMemo(() => L.extend({}, L.CRS.Simple, {
-    transformation: new L.Transformation(1 / scaleFactorValue, 0, -1 / scaleFactorValue, mapHeight / scaleFactorValue),
-  }), [scaleFactorValue, mapHeight]);
+    transformation: new L.Transformation(1 / scaleFactorValue, 0, 1 / scaleFactorValue, 0),
+  }), [scaleFactorValue]);
 
   // Legacy coordinate mapping:
   // Prototype X range [0, 4763] -> High-res X range [0, 21620]
@@ -208,8 +209,10 @@ export const WorldMap: React.FC = () => {
     if (x === undefined || y === undefined) return null;
 
     // Convert to high-res pixel space
+    // px is distance from West (Left)
+    // py is distance from North (Top)
     const px = rescaleX(x);
-    const py = rescaleY(y);
+    const py = (1 - (y / protoHeight)) * mapHeight;
 
     return [py, px];
   }, [rescaleX, rescaleY]);
@@ -218,7 +221,7 @@ export const WorldMap: React.FC = () => {
     partyLocation ? getPosition(partyLocation) || [mapHeight/2, mapWidth/2] : [mapHeight/2, mapWidth/2]
   , [partyLocation, getPosition, mapHeight, mapWidth]);
   
-  const initialZoom = partyLocation?.zoom || 1;
+  const initialZoom = partyLocation?.zoom || 2;
   const [currentZoom, setCurrentZoom] = React.useState(initialZoom);
 
   // Progressive Data Loading
@@ -260,65 +263,68 @@ export const WorldMap: React.FC = () => {
 
   // Filtering logic for zoom levels to reduce clutter and optimize performance
   const visibleLocations = React.useMemo(() => {
-    const MAX_MARKERS = 150;
-    const filtered: SavedLocation[] = [];
-
-    for (const loc of savedLocations) {
-      if (filtered.length >= MAX_MARKERS) break;
-
+    return savedLocations.filter(loc => {
       const position = getPosition(loc);
-      if (!position) continue;
+      if (!position) return false;
       
-      // Viewport filtering - IMPORTANT: Scale by 1/128 to match currentBounds units
-      if (currentBounds && !currentBounds.contains(L.latLng(position[0] / scaleFactorValue, position[1] / scaleFactorValue))) {
-        continue;
+      // Viewport filtering
+      if (currentBounds && !currentBounds.contains(L.latLng(position[0], position[1]))) {
+        return false;
       }
 
       const cat = loc.category?.toLowerCase() || '';
-      const name = loc.name?.toLowerCase() || '';
-      let isVisible = false;
+      const name = (loc.name || loc.popup?.title || '').toLowerCase();
 
-      // Layer 1: Water & Geography (Zoom 3+)
-      if (currentZoom >= 3) {
+      // Tier 0: Major Cities (Always visible at any zoom)
+      const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
+      if (majorCities.includes(name) && (cat.includes('city') || cat.includes('cities'))) return true;
+
+      // Tier 1 (Nature/Water) - Zoom 2.5+ (Documentation suggests water icons appear deep zoom, but let's show them early-ish)
+      if (currentZoom >= 2.5) {
         if (cat.includes('water') || cat.includes('lake') || cat.includes('sea') || cat.includes('island')) {
-          isVisible = true;
+          return true;
         }
       }
 
-      // Layer 2: Major Cities, Keeps & Other Geography (Zoom 4+)
-      if (currentZoom >= 4) {
+      // Tier 2 (Terrain/Geography) - Zoom 3.5+
+      if (currentZoom >= 3.5) {
         if (cat.includes('mountain') || cat.includes('peaks') || cat.includes('forest') || 
+            cat.includes('swamp') || cat.includes('wetland') || cat.includes('plains') || cat.includes('grassland')) {
+          return true;
+        }
+      }
+
+      // Tier 3 (Civilization - Cities, Keeps, Settlements, Roads) - Zoom 4.5+
+      if (currentZoom >= 4.5) {
+        if (cat.includes('city') || cat.includes('cities') || 
+            cat.includes('fortress') || cat.includes('keep') || cat.includes('castle') || cat.includes('tower') ||
             cat.includes('road') || cat.includes('trail') ||
-            cat.includes('swamp') || cat.includes('wetland') || cat.includes('plains') || cat.includes('grassland') ||
-            cat.includes('city') || cat.includes('cities') || 
-            cat.includes('fortress') || cat.includes('keep') || cat.includes('castle') || cat.includes('tower')) {
-          isVisible = true;
-        }
-      } else {
-        // At low zoom, still show major cities
-        const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
-        if (majorCities.includes(name) && (cat.includes('city') || cat.includes('cities'))) isVisible = true;
-      }
-
-      // Layer 3: Settlements, Forts, Ruins (Zoom 5+)
-      if (currentZoom >= 5) {
-        if (cat.includes('town') || cat.includes('settlement') || cat.includes('village') ||
-            cat.includes('ruin')) {
-          isVisible = true;
+            cat.includes('town') || cat.includes('settlement') || cat.includes('village')) {
+          return true;
         }
       }
 
-      // Layer 4: POIs & Landmarks (Zoom 6+)
-      if (currentZoom >= 6) {
-        isVisible = true;
+      // Tier 4 (Ruins & POIs) - Zoom 5.5+
+      if (currentZoom >= 5.5) {
+        if (cat.includes('ruin') || cat.includes('poi') || cat.includes('landmark') || cat.includes('temple') || cat.includes('shrine') || cat.includes('graveyard')) {
+          return true;
+        }
       }
 
-      if (isVisible) {
-        filtered.push(loc);
-      }
-    }
-    return filtered;
+      // Tier 5 (Everything else) - Zoom 6.5+
+      if (currentZoom >= 6.5) return true;
+
+      return false;
+    }).slice(0, 150);
   }, [savedLocations, currentZoom, currentBounds, getPosition]);
+
+  // Debug count
+  React.useEffect(() => {
+    if (savedLocations.length > 0) {
+      const pos = getPosition(savedLocations[0]);
+      console.log(`Z: ${currentZoom}, Total: ${savedLocations.length}, Visible: ${visibleLocations.length}, Bounds: ${currentBounds?.toBBoxString()}, SamplePos: ${pos}`);
+    }
+  }, [visibleLocations.length, currentZoom, savedLocations, currentBounds, getPosition]);
 
   return (
     <div className="w-full h-full bg-[#0F1115] overflow-hidden relative font-body">
@@ -340,7 +346,7 @@ export const WorldMap: React.FC = () => {
           minZoom={0}
           maxZoom={maxZoom}
           noWrap={true}
-          bounds={bounds}
+          tileSize={256}
         />
 
         {/* Regional SVG Overlay - Only visible at high level overview */}
@@ -357,9 +363,9 @@ export const WorldMap: React.FC = () => {
                   const meta = REGION_METADATA[id];
                   if (meta && meta.focalPoint && mapRef.current) {
                     // Focal points are [y, x] in high-res pixels, where Y increases North.
-                    // Since our CRS now has Lat increasing North, we can pass it directly.
+                    // Our CRS is Top-Left [0,0], so we must invert Y: (mapHeight - y)
                     mapRef.current.setView(
-                      [meta.focalPoint[0], meta.focalPoint[1]],
+                      [mapHeight - meta.focalPoint[0], meta.focalPoint[1]],
                       meta.zoom || 4,
                       { animate: true, duration: 1.5 }
                     );
