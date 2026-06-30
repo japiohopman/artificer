@@ -5,7 +5,8 @@ import { faDAndD } from '@fortawesome/free-brands-svg-icons';
 import { playClickSound, playSuccessSound, REPO, BRANCH } from '../../services/storageService';
 import { soundService } from '../../services/soundService';
 import { useCharacterStore } from '../../store/useCharacterStore';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
+import { useGameStore } from '../../store/useGameStore';
 import { useAudioStore } from '../../store/useAudioStore';
 import { GameIcon } from '../../game_icons';
 
@@ -21,8 +22,9 @@ export const TitleScreen: React.FC = () => {
 
   const {
     setIsCharacterCreatorOpen,
-    setIsGameStarted,
-  } = useStore();
+  } = useUIStore();
+
+  const { setIsGameStarted } = useGameStore();
 
   const { isMusicPlaying } = useAudioStore();
 

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { useStore } from '../../../store/useStore';
+import { useUIStore } from '../../../store/useUIStore';
+import { useGameStore } from '../../../store/useGameStore';
 import { useWorldStore } from '../../../store/useWorldStore';
 import { useCharacterStore, Emotion } from '../../../store/useCharacterStore';
 import { ChatHistory } from './ChatHistory';
 import { ChatInput } from './ChatInput';
-import { ActionPanel } from '../game/ActionPanel';
-import { MapLegend } from '../MapLegend';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface ChatMessage {
@@ -18,28 +17,11 @@ interface ChatPanelProps {
   isCollapsed?: boolean;
 }
 
-export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed: propCollapsed }) => {
-  const { 
-    addLog, 
-    chatExpanded,
-    setChatExpanded,
-    gameMode,
-    activeBottomHub
-  } = useStore();
+export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => {
+  const { getActiveBackground, isNight } = useWorldStore();
+  const { currentNPC, setEmotion, setTestAnimalInteraction, testAnimalInteraction } = useCharacterStore();
+  const { addLog, rollDice3D } = useGameStore();
 
-  const {
-    getActiveBackground,
-    isNight
-  } = useWorldStore();
-
-  const {
-    currentNPC,
-    setEmotion,
-    setTestAnimalInteraction,
-    testAnimalInteraction
-  } = useCharacterStore();
-
-  const isCollapsed = propCollapsed !== undefined ? propCollapsed : !chatExpanded;
   const bgUrl = getActiveBackground();
   
   // Use isNight() logic from store
@@ -93,7 +75,6 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed: propCollapsed
     if (lowerMessage.startsWith('/roll ')) {
       const notation = lowerMessage.substring(6).trim();
       if (notation) {
-        const { rollDice3D } = useStore.getState();
         rollDice3D(notation, "Chat Roll");
         return;
       }
@@ -195,84 +176,54 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed: propCollapsed
 
   return (
     <div className="flex flex-col w-full rounded-xl overflow-hidden relative transition-all duration-500 bg-parchment-100/90 border-2 border-dragon-gold shadow-2xl pointer-events-none bg-paper-texture">
-      {gameMode === 'exploration' ? (
-        <>
-          {/* Dynamic Background Layer - only for history area */}
-          <AnimatePresence>
-            {bgUrl && !isCollapsed && activeBottomHub === 'chat' && (
-              <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 0.2 }}
-                exit={{ opacity: 0 }}
-                className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-t-xl"
-              >
-                <div 
-                  className="absolute inset-0 scale-110 transition-all duration-1000"
-                  style={{
-                    backgroundImage: `url(${bgUrl})`,
-                    backgroundSize: '100% 200%',
-                    backgroundPosition: `center ${yPos}`,
-                    backgroundRepeat: 'no-repeat'
-                  }}
-                />
-                <div className="absolute inset-0 bg-parchment-100/40" />
-              </motion.div>
-            )}
-          </AnimatePresence>
+      {/* Dynamic Background Layer - only for history area */}
+      <AnimatePresence>
+        {bgUrl && !isCollapsed && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.2 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-t-xl"
+          >
+            <div 
+              className="absolute inset-0 scale-110 transition-all duration-1000"
+              style={{
+                backgroundImage: `url(${bgUrl})`,
+                backgroundSize: '100% 200%',
+                backgroundPosition: `center ${yPos}`,
+                backgroundRepeat: 'no-repeat'
+              }}
+            />
+            <div className="absolute inset-0 bg-parchment-100/40" />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-          <div className="flex flex-col relative z-10 justify-end pointer-events-none min-h-[64px]">
-            <AnimatePresence mode="wait">
-              {activeBottomHub === 'chat' ? (
-                <div key="chat-hub" className="flex flex-col w-full">
-                  <AnimatePresence mode="popLayout">
-                    {!isCollapsed && (
-                      <motion.div 
-                        key="chat-history"
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: '30vh', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ type: 'spring', damping: 30, stiffness: 180 }}
-                        className="overflow-hidden pointer-events-auto bg-transparent border-b border-dragon-gold/20"
-                      >
-                        <ChatHistory history={history} />
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                  
-                  <div className="shrink-0 p-3 bg-parchment-100/95 backdrop-blur-xl border-t border-dragon-gold/30 pointer-events-auto rounded-b-xl shadow-inner">
-                    <ChatInput 
-                      message={message} 
-                      setMessage={setMessage} 
-                      onSend={handleSend} 
-                      placeholder={testAnimalInteraction?.active ? "Commune with the beast..." : `Speak to ${currentNPC?.name || 'NPC'}...`}
-                    />
-                  </div>
-                </div>
-              ) : (
-                <motion.div 
-                  key="legend-hub"
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: '40vh', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  className="w-full pointer-events-auto"
-                >
-                  <MapLegend />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </>
-      ) : (
-        <div className="flex flex-col relative z-10 justify-end pointer-events-none">
-           <motion.div 
-             initial={{ y: 100, opacity: 0 }}
-             animate={{ y: 0, opacity: 1 }}
-             className="w-full pointer-events-auto"
-           >
-              <ActionPanel />
-           </motion.div>
+      <div className="flex flex-col relative z-10 justify-end pointer-events-none">
+        <AnimatePresence mode="popLayout">
+          {!isCollapsed && (
+            <motion.div 
+              key="chat-history"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: '30vh', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ type: 'spring', damping: 30, stiffness: 180 }}
+              className="overflow-hidden pointer-events-auto bg-transparent border-b border-dragon-gold/20"
+            >
+              <ChatHistory history={history} />
+            </motion.div>
+          )}
+        </AnimatePresence>
+        
+        <div className="shrink-0 p-3 bg-parchment-100/95 backdrop-blur-xl border-t border-dragon-gold/30 pointer-events-auto rounded-b-xl shadow-inner">
+          <ChatInput 
+            message={message} 
+            setMessage={setMessage} 
+            onSend={handleSend} 
+            placeholder={testAnimalInteraction?.active ? "Commune with the beast..." : `Speak to ${currentNPC?.name || 'NPC'}...`}
+          />
         </div>
-      )}
+      </div>
     </div>
   );
 };

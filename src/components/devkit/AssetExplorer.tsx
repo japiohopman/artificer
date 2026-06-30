@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
 import { useAtlasStore, ExplorerTab } from '../../store/useAtlasStore';
 import { GameIcon, GameIconName } from '../../game_icons';
 import { cn } from '../../lib/utils';
@@ -13,7 +13,7 @@ export const AssetExplorer: React.FC = () => {
   const {
     explorerTab, setExplorerTab,
     searchQuery, setSearchQuery,
-  } = useStore();
+  } = useUIStore();
 
   const {
     monsterCategories, materialCategories, equipmentCategories, transportList, spellsList, spellCategories, keyItemsList, booksList,
@@ -52,10 +52,10 @@ export const AssetExplorer: React.FC = () => {
         </div>
         <div className="flex flex-wrap p-2 gap-1 border-b border-white/10">
           {[
-            { id: 'enemies', icon: 'bestiary', label: 'Bestiary' },
-            { id: 'materials', icon: 'materials', label: 'Materials' },
-            { id: 'spells', icon: 'spells', label: 'Spells' },
-            { id: 'equipment', icon: 'package', label: 'Equipment' }
+            { id: 'enemies', icon: 'bestiary' },
+            { id: 'materials', icon: 'materials' },
+            { id: 'spells', icon: 'spells' },
+            { id: 'equipment', icon: 'package' }
           ].map(tab => (
             <button
               key={tab.id}
@@ -68,8 +68,6 @@ export const AssetExplorer: React.FC = () => {
                 "p-2 rounded transition-all",
                 explorerTab === tab.id ? "bg-dragon-red text-white" : "bg-white/5 text-white/40 hover:bg-white/10"
               )}
-              title={tab.label}
-              aria-label={tab.label}
             >
               <GameIcon name={tab.icon as GameIconName} size={16} />
             </button>

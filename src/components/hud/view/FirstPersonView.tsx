@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { useStore } from '../../../store/useStore';
+import { useUIStore } from '../../../store/useUIStore';
 import { useWorldStore } from '../../../store/useWorldStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { NPCDisplay } from './NPCDisplay';

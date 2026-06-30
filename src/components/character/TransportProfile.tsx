@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
 import { useAtlasStore } from '../../store/useAtlasStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { GameIcon } from '../../game_icons';
@@ -15,7 +15,7 @@ export const TransportProfile: React.FC = () => {
   const { 
     isTransportProfileOpen, 
     setIsTransportProfileOpen, 
-  } = useStore();
+  } = useUIStore();
 
   const {
     selectedItem: transport

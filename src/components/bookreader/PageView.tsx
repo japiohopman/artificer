@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { Book, BookType } from '../../types';
 import { cn } from '../../lib/utils';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
 import { fetchLanguageData, REPO, BRANCH } from '../../services/storageService';
 import { injectFontFace, getLanguageFontFamily } from '../../lib/fontLoader';
 import { useCharacterStore } from '../../store/useCharacterStore';

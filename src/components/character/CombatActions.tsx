@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCharacterStore } from '../../store/useCharacterStore';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
+import { useGameStore } from '../../store/useGameStore';
 import { calculateDerivedStats, getEffectiveStats } from '../../lib/statCalculations';
 import { GameIcon, GameIconName } from '../../game_icons';
 import { motion } from 'motion/react';
@@ -89,7 +90,7 @@ const CombatActionCard: React.FC<CombatActionProps> = ({
 };
 
 export const CombatActions: React.FC = () => {
-  const { rollDice3D } = useStore();
+  const { rollDice3D } = useGameStore();
   const { characters, activeCharacterId } = useCharacterStore();
   const activeCharacter = characters.find(c => c.id === activeCharacterId) || characters[0];
   

@@ -12,7 +12,7 @@ import { isMagicUser, generateNpcSpells, inferSpellClass } from '../../services/
 import { BookReader } from '../bookreader/BookReader';
 import { SpellCard } from './SpellCard';
 import { EquipmentCard } from './EquipmentCard';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
 import { normalizeImageUrl, playClickSound } from '../../services/storageService';
 
 interface MonsterCardProps {
@@ -80,7 +80,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
   const [isBookOpen, setIsBookOpen] = useState(false);
   const [inspectingItem, setInspectingItem] = useState<any>(null);
   
-  const { setIsMonsterProfileOpen } = useStore();
+  const { setIsMonsterProfileOpen } = useUIStore();
 
   // Generate spells if magic user
   const npcSpells = useMemo(() => {
@@ -237,7 +237,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
       {(monster.lore || (monster.wikiData && Object.keys(monster.wikiData).length > 0)) && (
         <button 
           onClick={() => {
-            useStore.getState().setFocusedItem(monster as any);
+            useUIStore.getState().setFocusedItem(monster as any);
             setIsMonsterProfileOpen(true);
             playClickSound();
           }}
@@ -562,7 +562,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
                       key={i} 
                       onClick={() => {
                         if (isBookLike(drop)) {
-                          useStore.getState().setFocusedItem(drop);
+                          useUIStore.getState().setFocusedItem(drop);
                         } else {
                           setInspectingItem(drop);
                         }

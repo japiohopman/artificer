@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
+import { useGameStore } from '../../store/useGameStore';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { WorldMap } from './WorldMap';
 import { NPCDisplay } from './NPCDisplay';
 import { ChatPanel } from './chat/ChatPanel';
 import { NotificationWindow } from './NotificationWindow';
-import { CombatGrid } from './game/CombatGrid';
 import { Rest } from './game/Rest';
 import { DraggableCard } from '../atlas/DraggableCard';
 import { ErrorBoundary } from '../core/ErrorBoundary';
@@ -19,51 +19,32 @@ export const GameScreen: React.FC = () => {
   const { 
     chatExpanded,
     setChatExpanded,
+    isEditingSubMap
+  } = useUIStore();
+
+  const {
     activeCards,
-    removeFromPreview,
-    isEditingSubMap,
-    gameMode,
-    activeBottomHub,
-    setActiveBottomHub
-  } = useStore();
+    removeFromPreview
+  } = useGameStore();
 
   const { currentNPC, emotion } = useCharacterStore();
 
   return (
     <div className="flex-1 relative flex flex-col overflow-hidden">
-      {/* 1. Background Map/Combat Layer */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <AnimatePresence mode="wait">
-          {gameMode === 'exploration' ? (
-            <motion.div 
-              key="world-map"
-              initial={{ opacity: 0 }}
-              animate={{ 
-                opacity: (chatExpanded && activeBottomHub === 'chat') ? 0.4 : 1,
-                scale: (chatExpanded && activeBottomHub === 'chat') ? 1.05 : 1
-              }}
-              exit={{ opacity: 0, scale: 1.1 }}
-              transition={{ duration: 0.5 }}
-              className={cn(
-                "absolute inset-0",
-                (chatExpanded && activeBottomHub === 'chat') ? "pointer-events-none" : "pointer-events-auto"
-              )}
-            >
-              <WorldMap />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="combat-grid"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.1 }}
-              className="absolute inset-0 pointer-events-auto"
-            >
-              <CombatGrid />
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+      {/* 1. Background Map Layer (Leaflet) */}
+      <motion.div 
+        animate={{ 
+          opacity: chatExpanded ? 0.4 : 1,
+          scale: chatExpanded ? 1.05 : 1
+        }}
+        transition={{ duration: 0.5 }}
+        className={cn(
+          "absolute inset-0 z-0",
+          chatExpanded ? "pointer-events-none" : "pointer-events-auto"
+        )}
+      >
+        <WorldMap />
+      </motion.div>
 
       {/* 2. Main Game View (ActionView/Simulator/FirstPerson) - Slides up when chat is closed */}
       <motion.div 
@@ -114,34 +95,19 @@ export const GameScreen: React.FC = () => {
         </AnimatePresence>
       </div>
 
-      {/* 4. Hub Panel Layer (Bottom) */}
+      {/* 4. Chat Panel Layer (Bottom) */}
       <div className="absolute inset-x-0 bottom-0 z-40 flex flex-col items-center pointer-events-none">
-        <div className={cn(
-          "w-full px-4 pb-4 pointer-events-auto relative transition-all duration-500",
-          gameMode === 'combat' ? "max-w-none" : "max-w-5xl"
-        )}>
-           {/* Toggle Buttons */}
-           <div className="absolute -top-12 right-6 z-50 flex items-center gap-3 pointer-events-none">
-            {gameMode === 'exploration' && (
-              <button 
-                onClick={() => setActiveBottomHub(activeBottomHub === 'chat' ? 'legend' : 'chat')}
-                className="pointer-events-auto px-4 h-10 flex items-center gap-2 bg-dragon-gold hover:brightness-110 text-stone-900 rounded-full border-2 border-white/20 transition-all shadow-xl cursor-pointer font-black uppercase text-[10px] tracking-widest active:scale-95"
-              >
-                <GameIcon name={activeBottomHub === 'chat' ? 'map' : 'chat'} size={14} />
-                {activeBottomHub === 'chat' ? 'Legend' : 'Chat'}
-              </button>
-            )}
-
+        <div className="w-full max-w-5xl px-4 pb-4 pointer-events-auto relative">
+           {/* Toggle Icon */}
+           <div className="absolute -top-10 right-6 z-50 pointer-events-none">
             <button 
               onClick={() => setChatExpanded(!chatExpanded)}
-              className={cn(
-                "pointer-events-auto w-10 h-10 flex items-center justify-center rounded-full border-2 border-dragon-gold transition-all shadow-xl cursor-pointer group active:scale-90",
-                gameMode === 'combat' ? "bg-stone-900 text-white border-white/20" : "bg-dragon-red text-white hover:bg-dragon-darkRed"
-              )}
-              title={chatExpanded ? "Collapse Hub" : "Expand Hub"}
+              className="pointer-events-auto w-10 h-10 flex items-center justify-center bg-dragon-red hover:bg-dragon-darkRed text-white rounded-full border-2 border-dragon-gold transition-all shadow-xl cursor-pointer group active:scale-90"
+              title={chatExpanded ? "Collapse Chat" : "Expand Chat"}
+              aria-label={chatExpanded ? "Collapse Chat" : "Expand Chat"}
             >
               <div className="transition-transform duration-300">
-                {chatExpanded ? <GameIcon name="chevron_down" size={16} /> : <GameIcon name="chevron_up" size={16} className={cn(gameMode !== 'combat' && "animate-bounce")} />}
+                {chatExpanded ? <GameIcon name="chevron_down" size={16} /> : <GameIcon name="chevron_up" size={16} className="animate-bounce" />}
               </div>
             </button>
           </div>

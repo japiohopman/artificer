@@ -2,7 +2,7 @@ import React from 'react';
 import { useWorldStore } from '../../../store/useWorldStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useInventoryStore } from '../../../store/useInventoryStore';
-import { useStore } from '../../../store/useStore';
+import { useUIStore } from '../../../store/useUIStore';
 import { GameIcon, GameIconName } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
@@ -30,7 +30,7 @@ export const Nav: React.FC = () => {
     activeCharacterTab,
     setActiveCharacterTab,
     dynamicNavButtons,
-  } = useStore();
+  } = useUIStore();
 
   const {
     currentLocation,

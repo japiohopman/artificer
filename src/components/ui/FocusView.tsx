@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
 import { useBookStore } from '../../store/useBookStore';
 import { ChromaKeyImage } from './ChromaKeyImage';
 import { DiceText } from '../dice/DiceText';
@@ -13,7 +13,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 export const FocusView: React.FC = () => {
-  const { focusedItem, setFocusedItem } = useStore();
+  const { focusedItem, setFocusedItem } = useUIStore();
   const { registerBook, openBook } = useBookStore();
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
   const cardRef = useRef<HTMLDivElement>(null);
@@ -88,8 +88,6 @@ export const FocusView: React.FC = () => {
           <button 
             className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-[110]"
             onClick={() => setFocusedItem(null)}
-            title="Close Focus View"
-            aria-label="Close Focus View"
           >
             <GameIcon name="close" size={40} />
           </button>

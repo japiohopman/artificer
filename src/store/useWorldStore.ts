@@ -66,9 +66,7 @@ export interface WorldState {
   addSavedLocations: (locations: SavedLocation[]) => void;
   addLoadedCategory: (category: string) => void;
   isCategoryLoaded: (category: string) => boolean;
-  getCalendarDate: () => string;
   isNight: () => boolean;
-  getCalendarDate: () => string;
   getActiveBackground: () => string;
 }
 
@@ -138,10 +136,11 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   })),
   setSavedLocations: (savedLocations) => set({ savedLocations }),
   addSavedLocations: (newLocations) => set((state) => {
+    // Filter out duplicates by ID
     const existingIds = new Set(state.savedLocations.map(l => l.id));
-    const uniqueNew = newLocations.filter(l => !existingIds.has(l.id));
+    const filtered = newLocations.filter(l => !existingIds.has(l.id));
     return {
-      savedLocations: [...state.savedLocations, ...uniqueNew]
+      savedLocations: [...state.savedLocations, ...filtered]
     };
   }),
 
@@ -151,36 +150,9 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
   isCategoryLoaded: (category) => get().loadedCategories.includes(category),
 
-  getCalendarDate: () => {
-    const state = get();
-    const months = [
-      'Hammer', 'Alturiak', 'Ches', 'Tarsakh', 'Mirtul', 'Kythorn',
-      'Flamerule', 'Eleasias', 'Eleint', 'Marpenoth', 'Uktar', 'Nightal'
-    ];
-    const month = months[state.gameMonth - 1] || 'Hammer';
-
-    // Day suffix
-    let suffix = 'th';
-    const day = state.gameDay;
-    if (day === 1 || day === 21) suffix = 'st';
-    else if (day === 2 || day === 22) suffix = 'nd';
-    else if (day === 3 || day === 23) suffix = 'rd';
-
-    return `${day}${suffix} of ${month}, ${state.gameYear} DR`;
-  },
-
   isNight: () => {
     const time = get().gameTime;
     return time < 360 || time > 1200; // Night between 8 PM and 6 AM
-  },
-
-  getCalendarDate: () => {
-    const { gameDay, gameMonth, gameYear } = get();
-    const months = [
-      "Hammer", "Alturiak", "Ches", "Tarsakh", "Mirtul", "Kythorn",
-      "Flamerule", "Eleasis", "Eleint", "Marpenoth", "Uktar", "Nightal"
-    ];
-    return `${gameDay} ${months[gameMonth - 1]}, ${gameYear} DR`;
   },
 
   getActiveBackground: () => {

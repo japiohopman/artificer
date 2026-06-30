@@ -1,5 +1,6 @@
 import React from 'react';
-import { useStore } from '../../../store/useStore';
+import { useUIStore } from '../../../store/useUIStore';
+import { useGameStore } from '../../../store/useGameStore';
 import { GameIcon } from '../../../game_icons';
 
 interface ChatInputProps {
@@ -10,7 +11,8 @@ interface ChatInputProps {
 }
 
 export const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, onSend, placeholder }) => {
-  const { isDiceReady, isAdvancedRollerOpen, setIsAdvancedRollerOpen, chatExpanded, setChatExpanded } = useStore();
+  const { isAdvancedRollerOpen, setIsAdvancedRollerOpen, chatExpanded, setChatExpanded } = useUIStore();
+  const { isDiceReady } = useGameStore();
 
   return (
     <div className="p-3 bg-parchment-100/40 border-t border-dragon-gold/10 backdrop-blur-xl">
@@ -41,8 +43,6 @@ export const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, onSen
             onClick={onSend}
             disabled={!message.trim()}
             className="absolute right-1.5 p-2 bg-dragon-red hover:bg-dragon-darkRed disabled:opacity-50 disabled:hover:bg-dragon-red text-white rounded-full transition-all shadow-lg shadow-dragon-red/40 active:scale-95"
-            title="Send Message"
-            aria-label="Send Message"
           >
             <GameIcon name="send" size={14} />
           </button>

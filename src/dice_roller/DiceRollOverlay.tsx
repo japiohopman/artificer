@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useStore } from '../store/useStore';
+import { useUIStore } from '../store/useUIStore';
+import { useGameStore } from '../store/useGameStore';
 import { GameIcon } from '../game_icons';
 import { cn } from '../lib/utils';
 
 export const DiceRollOverlay: React.FC = () => {
-  const { recentRolls } = useStore();
+  const { recentRolls } = useGameStore();
 
   return (
     <div className="fixed bottom-6 right-6 z-[20000] flex flex-col gap-2 items-end pointer-events-none">
@@ -19,7 +20,7 @@ export const DiceRollOverlay: React.FC = () => {
 };
 
 const RollNotification: React.FC<{ roll: any }> = ({ roll }) => {
-  const { removeRoll } = useStore();
+  const { removeRoll } = useGameStore();
 
   useEffect(() => {
     const timer = setTimeout(() => {

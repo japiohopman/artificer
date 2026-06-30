@@ -1,11 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import { diceService } from './diceService';
-import { useStore } from '../store/useStore';
+import { useUIStore } from '../store/useUIStore';
+import { useGameStore } from '../store/useGameStore';
 import { useInventoryStore } from '../store/useInventoryStore';
 
 export const DiceBoxCanvas: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { setIsDiceReady, isWorldPanelOpen, isCharacterPanelOpen } = useStore();
+  const { isWorldPanelOpen, isCharacterPanelOpen } = useUIStore();
+  const { setIsDiceReady } = useGameStore();
   const { isInventoryOpen } = useInventoryStore();
 
   useEffect(() => {

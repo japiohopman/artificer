@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useStore } from '../../../store/useStore';
+import { useUIStore } from '../../../store/useUIStore';
 import { useCharacterStore, Character } from '../../../store/useCharacterStore';
 import { cn } from '../../../lib/utils';
 import { GameIcon, GameIconName } from '../../../game_icons';

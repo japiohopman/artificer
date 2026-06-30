@@ -12,7 +12,8 @@ import {
 import { CSS } from '@dnd-kit/utilities';
 import { X, Shield, Package, BarChart3, Info, Truck, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useCharacterStore, SKILL_LIST } from '../../store/useCharacterStore';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
+import { useGameStore } from '../../store/useGameStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { Inventory } from './Inventory';
 import { EquipmentDoll } from './EquipmentDoll';
@@ -86,9 +87,10 @@ export const CharacterProfile: React.FC = () => {
     setFocusedItem,
     inspectingItem,
     setInspectingItem,
-    rollDice3D,
     setIsCharacterSpellbookOpen
-  } = useStore();
+  } = useUIStore();
+
+  const { rollDice3D } = useGameStore();
 
   const {
     characters,

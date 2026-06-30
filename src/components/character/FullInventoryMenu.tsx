@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useCharacterStore } from '../../store/useCharacterStore';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { Inventory } from './Inventory';
 import { PartyInventory } from './PartyInventory';
@@ -13,7 +13,7 @@ export const FullInventoryMenu: React.FC = () => {
   const { 
     isInventoryMenuOpen, 
     setIsInventoryMenuOpen
-  } = useStore();
+  } = useInventoryStore();
 
   const {
     characters,

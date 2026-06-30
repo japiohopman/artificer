@@ -1,12 +1,14 @@
 import React from 'react';
 import { useStore } from '../../store/useStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
+import { useWorldStore } from '../../store/useWorldStore';
 import { WorldPanel } from './WorldPanel';
 import { GameScreen } from './GameScreen';
 import { CharacterPanel } from '../character/CharacterPanel';
 import { Journal } from './Journal';
 import { motion, AnimatePresence } from 'motion/react';
 import { GameIcon } from '../../game_icons';
+import { cn } from '../../lib/utils';
 
 import { Nav } from './nav/Nav';
 
@@ -16,7 +18,6 @@ export const HUD: React.FC = () => {
     isCharacterPanelOpen, 
     setIsWorldPanelOpen,
     setIsCharacterPanelOpen,
-    gameMode,
   } = useStore();
 
   const {
@@ -24,6 +25,12 @@ export const HUD: React.FC = () => {
     setIsInventoryOpen
   } = useInventoryStore();
 
+  const { setSavedLocations } = useWorldStore();
+
+  React.useEffect(() => {
+    // Initial cleanup if needed
+    setSavedLocations([]);
+  }, [setSavedLocations]);
 
   return (
     <div className="h-screen w-full flex flex-col overflow-hidden bg-parchment-100 text-parchment-900 font-body relative bg-paper-texture">
@@ -104,7 +111,7 @@ export const HUD: React.FC = () => {
 
         {/* 4. Right Aside: Character Panel */}
         <motion.aside
-          animate={{ width: (isCharacterPanelOpen || isInventoryOpen || gameMode === 'combat') ? 320 : 0 }}
+          animate={{ width: (isCharacterPanelOpen || isInventoryOpen) ? 320 : 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
           className="h-full bg-parchment-50 border-l-2 border-dragon-red z-[1000] relative flex flex-col shrink-0 shadow-xl overflow-hidden"
         >
@@ -114,7 +121,7 @@ export const HUD: React.FC = () => {
           
           {/* Panel Close Tab (Right) */}
           <AnimatePresence>
-            {(isCharacterPanelOpen || isInventoryOpen || gameMode === 'combat') && (
+            {(isCharacterPanelOpen || isInventoryOpen) && (
               <motion.button 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

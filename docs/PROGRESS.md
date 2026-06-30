@@ -23,15 +23,11 @@ We have completed the core of Phase 1 and are now transitioning to **Phase 2: Wo
   - [x] Sound Asset Reorganization - *Completed*
   - [x] Icon System Consolidation - *Completed*
 
-### Phase 2: World State & Tactical Foundations
-- [x] **World Map Integration**: High-resolution pyramid tile system with zoom-dependent visibility and dynamic markers.
-- [x] **Journal & Campaign Persistence**: LLM-driven session summaries and structured quest tracking.
-- [x] **Temporal & Environmental Engine**: 24-hour clock, DR calendar, and dynamic weather system.
-- [ ] **Tactical Foundations**:
-  - [x] **Combat Engine Specification**: Defined grid mechanics, AOE, and turn resolution (`TACTICAL_COMBAT_ENGINE.md`).
-  - [ ] **Grid-Based Movement**: Top-down tactical combat map system with token collision.
-  - [ ] **Initiative Tracking**: Combat state management and queue visualization.
-  - [ ] **Spatial Analysis**: Line-of-sight and AOE calculations.
+### Phase 2: Tactical Foundations
+- [x] **World Map Migration**: Integrated pyramid tile map system with zoom-dependent visibility and dynamic markers.
+- [ ] **Grid-Based Movement**: Top-down tactical combat map system.
+- [ ] **Initiative Tracking**: Combat state management.
+- [ ] **Spatial Analysis**: Line-of-sight and AOE calculations.
 
 ### Phase 3: AI DM Integration
 - [ ] **Tool-Call Connectivity**: Linking the LLM to game state mutations.
@@ -46,9 +42,7 @@ We have completed the core of Phase 1 and are now transitioning to **Phase 2: Wo
 ---
 
 ## 🏆 Recent Milestones
-- **2025-03-04**: Documentation overhaul. Reconciled `docs/` with current implementation state (World Map, Journal, World State).
 - **2025-02-26**: Completed World Map Migration. Implemented high-resolution pyramid tiles, custom coordinate scaling, and zoom-based marker visibility system.
-- **2025-02-25**: Implemented Campaign Journal (`Journal.tsx`) and `useJournalStore.ts`, integrating diary, quest tracking, and lore codex.
 - **2025-02-24**: Transitioned to Phase 2. Initiated Store Slicing with `useWorldStore.ts`. Updated Task Board with Future Module roadmap.
 - **2025-02-21**: Integrated 3D dice sound effects and custom colors. Refactored World Panel and Character Profile icon systems. Enhanced `atlasUtils` for robust feature and subclass icon resolution.
 - **2025-02-17**: Established comprehensive documentation system including `PROGRESS.md`, `STYLE_GUIDE.md`, and deep-dive reports.
@@ -57,8 +51,8 @@ We have completed the core of Phase 1 and are now transitioning to **Phase 2: Wo
 ---
 
 ## 🎯 Current Focus
-1. **Tactical Combat**: Implementing grid-based movement and initiative tracking.
-2. **Store Migration**: Finalizing the transition of collection state from `useStore.ts` to specialized slices.
-3. **AI DM Integration**: Connecting the LLM to game state mutations via tool-calls.
+1. **Store Slicing**: Refactoring `useStore.ts` into `useWorldStore`, `useCharacterStore`, and `useInventoryStore`.
+2. **World Simulation**: Implementing Temporal Progression and Environmental engines.
+3. **Data Integrity**: Maintaining Atlas reliability via validation scripts.
 
-*Last Updated: 2025-03-04*
+*Last Updated: 2025-02-26*

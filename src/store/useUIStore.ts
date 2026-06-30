@@ -1,0 +1,126 @@
+import { create } from 'zustand';
+
+export type ExplorerTab = 'enemies' | 'materials' | 'equipment' | 'key' | 'books' | 'spells' | 'transport';
+
+interface UIState {
+  // Navigation
+  viewMode: 'combat' | 'collection';
+  currentView: string;
+  explorerTab: ExplorerTab;
+  isDevKitOpen: boolean;
+  isExplorerOpen: boolean;
+  isJournalOpen: boolean;
+  isWorldPanelOpen: boolean;
+  isCharacterPanelOpen: boolean;
+  activeCharacterTab: 'equipment' | 'inventory' | 'stats' | 'logistics';
+  dynamicNavButtons: any[]; 
+  isAdvancedRollerOpen: boolean;
+  chatExpanded: boolean;
+  isEditingSubMap: boolean;
+  isInsideSubMap: boolean;
+  selectedDiceTheme: string;
+  selectedDiceColor: string;
+  
+  // App UI State
+  isProfileMenuOpen: boolean;
+  isMonsterProfileOpen: boolean;
+  isTransportProfileOpen: boolean;
+  isCharacterCreatorOpen: boolean;
+  isCharacterSpellbookOpen: boolean;
+  searchQuery: string;
+  
+  // Focus View
+  focusedItem: any | null;
+  inspectingItem: { 
+    item: any; 
+    sourceId: string; 
+    index?: number; 
+    itemId?: string;
+    slot?: string;
+  } | null;
+
+  // Actions
+  setViewMode: (mode: 'combat' | 'collection') => void;
+  setCurrentView: (view: string) => void;
+  setExplorerTab: (tab: ExplorerTab) => void;
+  setIsDevKitOpen: (isOpen: boolean) => void;
+  setIsExplorerOpen: (isOpen: boolean) => void;
+  setIsJournalOpen: (isOpen: boolean) => void;
+  setIsWorldPanelOpen: (isOpen: boolean) => void;
+  setIsCharacterPanelOpen: (isOpen: boolean) => void;
+  setActiveCharacterTab: (tab: 'equipment' | 'inventory' | 'stats' | 'logistics') => void;
+  setDynamicNavButtons: (buttons: any[]) => void;
+  setIsAdvancedRollerOpen: (isOpen: boolean) => void;
+  setChatExpanded: (expanded: boolean) => void;
+  setIsEditingSubMap: (isEditing: boolean) => void;
+  setIsInsideSubMap: (isInside: boolean) => void;
+  setSelectedDiceTheme: (theme: string) => void;
+  setSelectedDiceColor: (color: string) => void;
+  
+  setSearchQuery: (query: string) => void;
+  setFocusedItem: (item: any | null) => void;
+  setInspectingItem: (data: { item: any; sourceId: string; index?: number; itemId?: string; slot?: string; } | null) => void;
+  setIsProfileMenuOpen: (isOpen: boolean) => void;
+  setIsMonsterProfileOpen: (isOpen: boolean) => void;
+  setIsTransportProfileOpen: (isOpen: boolean) => void;
+  setIsCharacterCreatorOpen: (isOpen: boolean) => void;
+  setIsCharacterSpellbookOpen: (isOpen: boolean) => void;
+}
+
+export const useUIStore = create<UIState>((set) => ({
+  viewMode: 'collection',
+  currentView: 'world',
+  explorerTab: 'enemies',
+  isDevKitOpen: false,
+  isExplorerOpen: true,
+  isJournalOpen: false,
+  isWorldPanelOpen: false,
+  isCharacterPanelOpen: false,
+  activeCharacterTab: 'equipment',
+  dynamicNavButtons: [],
+  isAdvancedRollerOpen: false,
+  chatExpanded: false,
+  isEditingSubMap: false,
+  isInsideSubMap: false,
+  selectedDiceTheme: 'default',
+  selectedDiceColor: '#8b0000',
+
+  isProfileMenuOpen: false,
+  isMonsterProfileOpen: false,
+  isTransportProfileOpen: false,
+  isCharacterCreatorOpen: false,
+  isCharacterSpellbookOpen: false,
+  searchQuery: '',
+  
+  focusedItem: null,
+  inspectingItem: null,
+
+  setViewMode: (viewMode) => set({ viewMode }),
+  setCurrentView: (currentView) => set({ currentView }),
+  setExplorerTab: (explorerTab) => {
+    set({ explorerTab });
+    // Note: loadList should be called from useAtlasStore if needed, or by the component
+  },
+  setIsDevKitOpen: (isDevKitOpen) => set({ isDevKitOpen }),
+  setIsExplorerOpen: (isExplorerOpen) => set({ isExplorerOpen }),
+  setIsJournalOpen: (isJournalOpen) => set({ isJournalOpen }),
+  setIsWorldPanelOpen: (isWorldPanelOpen) => set({ isWorldPanelOpen }),
+  setIsCharacterPanelOpen: (isCharacterPanelOpen) => set({ isCharacterPanelOpen }),
+  setActiveCharacterTab: (activeCharacterTab) => set({ activeCharacterTab }),
+  setDynamicNavButtons: (dynamicNavButtons) => set({ dynamicNavButtons }),
+  setIsAdvancedRollerOpen: (isAdvancedRollerOpen) => set({ isAdvancedRollerOpen }),
+  setChatExpanded: (chatExpanded) => set({ chatExpanded }),
+  setIsEditingSubMap: (isEditingSubMap) => set({ isEditingSubMap }),
+  setIsInsideSubMap: (isInsideSubMap) => set({ isInsideSubMap }),
+  setSelectedDiceTheme: (selectedDiceTheme) => set({ selectedDiceTheme }),
+  setSelectedDiceColor: (selectedDiceColor) => set({ selectedDiceColor }),
+
+  setSearchQuery: (searchQuery) => set({ searchQuery }),
+  setFocusedItem: (focusedItem) => set({ focusedItem }),
+  setInspectingItem: (inspectingItem) => set({ inspectingItem }),
+  setIsProfileMenuOpen: (isProfileMenuOpen) => set({ isProfileMenuOpen }),
+  setIsMonsterProfileOpen: (isMonsterProfileOpen) => set({ isMonsterProfileOpen }),
+  setIsTransportProfileOpen: (isTransportProfileOpen) => set({ isTransportProfileOpen }),
+  setIsCharacterCreatorOpen: (isCharacterCreatorOpen) => set({ isCharacterCreatorOpen }),
+  setIsCharacterSpellbookOpen: (isCharacterSpellbookOpen) => set({ isCharacterSpellbookOpen }),
+}));

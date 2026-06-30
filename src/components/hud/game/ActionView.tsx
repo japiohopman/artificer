@@ -1,5 +1,6 @@
 import React from 'react';
-import { useStore } from '../../../store/useStore';
+import { useUIStore } from '../../../store/useUIStore';
+import { useGameStore } from '../../../store/useGameStore';
 import { FirstPersonView } from '../view/FirstPersonView';
 import { GameIcon } from '../../../game_icons';
 import { motion, AnimatePresence } from 'motion/react';
@@ -11,10 +12,13 @@ export const ActionView: React.FC = () => {
   const { 
     currentView, 
     isEditingSubMap, 
+  } = useUIStore();
+
+  const {
     activeCards, 
     clearPreview, 
     removeFromPreview 
-  } = useStore();
+  } = useGameStore();
 
   if (currentView === 'campfire') {
     return <Rest />;
@@ -33,7 +37,6 @@ export const ActionView: React.FC = () => {
               <button 
                 onClick={() => clearPreview()}
                 className="px-3 py-1.5 bg-parchment-200 text-parchment-700 rounded text-[10px] font-bold uppercase hover:bg-parchment-300"
-                title="Clear Board"
               >
                 Clear Board
               </button>
@@ -61,8 +64,6 @@ export const ActionView: React.FC = () => {
               onClick={() => removeFromPreview(idx)}
               className="absolute top-0 right-0 z-[60] bg-red-500 text-white p-1 rounded-full shadow-lg hover:bg-red-600 transition-colors"
               style={{ transform: `translate(${100 + (idx * 40) + 360}px, ${100 + (idx * 40) - 10}px)` }}
-              title="Remove Card"
-              aria-label="Remove Card"
             >
               <GameIcon name="close" size={12} color="currentColor" />
             </button>

@@ -1,16 +1,14 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { useStore } from '../../store/useStore';
-import { useAudioStore } from '../../store/useAudioStore.ts';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useUIStore } from '../../store/useUIStore';
+import { useGameStore } from '../../store/useGameStore';
+import { useAudioStore } from '../../store/useAudioStore';
 import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorldStore';
 import { GameIcon } from '../../game_icons';
-import { cn } from '../../lib/utils';
 
 export const NotificationWindow: React.FC = () => {
-  const { 
-    logs, clearLogs, setIsInsideSubMap,
-    addLog, gameMode
-  } = useStore();
+  const { setIsInsideSubMap } = useUIStore();
+  const { logs, clearLogs, addLog } = useGameStore();
   const { playSound } = useAudioStore();
 
   const {
@@ -73,116 +71,62 @@ export const NotificationWindow: React.FC = () => {
   );
 
   return (
-    <div className={cn(
-      "w-full flex flex-col overflow-hidden relative rounded-xl border border-white/10 transition-all bg-stone-950/80 backdrop-blur-xl shadow-2xl pointer-events-none",
-      gameMode === 'combat' ? "h-24" : "h-12"
-    )}>
-      <div className="absolute left-0 top-0 bottom-0 w-1 bg-red-600 shadow-[0_0_15px_rgba(220,38,38,0.8)]" />
+    <div className="w-full h-10 flex items-center justify-between px-4 overflow-hidden relative rounded-md border border-white/10 transition-all bg-stone-950/80 backdrop-blur-xl shadow-lg pointer-events-none">
+      <div className="absolute left-0 top-2 bottom-2 w-1 bg-red-600 rounded-full shadow-[0_0_10px_rgba(220,38,38,0.5)]" />
       
-      {/* Header Row: Location & Status */}
-      <div className="flex-1 flex items-center justify-between px-6 border-b border-white/5">
-        <div className="relative z-10 flex items-center gap-6 w-full pointer-events-none">
-          {/* Primary Location Navigation Info */}
-          <div className="shrink-0 flex items-center pointer-events-auto">
-            {locationDisplay}
-          </div>
-
-          {/* Vertical Divider */}
-          <div className="w-px h-4 bg-white/10" />
-
-          {/* System Message Stream */}
-          <div className="flex-1 flex items-center overflow-hidden pointer-events-none">
-            <AnimatePresence mode="wait">
-              {recentLogs && (
-                <motion.div
-                  key={recentLogs.id}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="flex items-center gap-3 w-full pointer-events-auto"
-                >
-                  <div className={`shrink-0 p-1 rounded bg-white/5 ${
-                    recentLogs.type === 'error' ? 'text-red-400 border border-red-400/20' :
-                    recentLogs.type === 'success' ? 'text-emerald-400 border border-emerald-400/20' :
-                    recentLogs.type === 'warning' ? 'text-amber-400 border border-amber-400/20' : 'text-cyan-400 border border-cyan-400/20'
-                  }`}>
-                    {recentLogs.type === 'error' ? <GameIcon name="shield_alert" size={14} /> :
-                     recentLogs.type === 'success' ? <GameIcon name="magic_effect" size={14} /> :
-                     recentLogs.type === 'warning' ? <GameIcon name="bell" size={14} /> : <GameIcon name="info" size={14} />}
-                  </div>
-                  
-                  <div className="flex flex-col">
-                    <p className="text-[10px] font-mono uppercase tracking-[0.1em] text-white font-black leading-tight drop-shadow-sm">
-                      {recentLogs.message}
-                    </p>
-                    <p className="text-[7px] font-bold text-white/30 uppercase tracking-[0.2em] mt-0.5">System Protocol Active</p>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-          
-          <div className="flex items-center gap-4">
-            {recentLogs && (
-              <button 
-                className="text-white/10 hover:text-white/60 transition-colors p-2 shrink-0 pointer-events-auto hover:bg-white/5 rounded-full"
-                onClick={() => clearLogs()}
-                title="Clear Logs"
-                aria-label="Clear Logs"
-              >
-                <GameIcon name="close" size={12} />
-              </button>
-            )}
-          </div>
+      <div className="relative z-10 flex items-center gap-4 w-full pointer-events-none">
+        {/* Primary Location Navigation Info */}
+        <div className="shrink-0 flex items-center pointer-events-auto">
+          {locationDisplay}
         </div>
-      </div>
 
-      {/* Combat/Detailed Row (Visible only in larger mode) */}
-      <AnimatePresence>
-        {gameMode === 'combat' && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="px-6 py-2 bg-black/40 flex items-center justify-between pointer-events-none"
+        {/* Vertical Divider */}
+        <div className="w-px h-3 bg-white/5" />
+
+        {/* System Message Stream */}
+        <div className="flex-1 flex items-center overflow-hidden pointer-events-none">
+          <AnimatePresence mode="wait">
+            {recentLogs && (
+              <motion.div
+                key={recentLogs.id}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 10 }}
+                className="flex items-center gap-2 w-full pointer-events-auto"
+              >
+                <div className={`shrink-0 ${
+                  recentLogs.type === 'error' ? 'text-red-400' :
+                  recentLogs.type === 'success' ? 'text-emerald-400' :
+                  recentLogs.type === 'warning' ? 'text-amber-400' : 'text-cyan-400'
+                }`}>
+                  {recentLogs.type === 'error' ? <GameIcon name="shield_alert" size={12} /> :
+                   recentLogs.type === 'success' ? <GameIcon name="magic_effect" size={12} /> :
+                   recentLogs.type === 'warning' ? <GameIcon name="bell" size={12} /> : <GameIcon name="info" size={12} />}
+                </div>
+                
+                <p className="text-[11px] font-mono uppercase tracking-[0.05em] text-white/90 font-medium leading-tight pt-0.5 drop-shadow-sm">
+                  {recentLogs.message}
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+        
+        {recentLogs && (
+          <button 
+            className="text-white/5 hover:text-white/40 transition-colors p-1 shrink-0 pointer-events-auto"
+            onClick={() => clearLogs()}
           >
-             <div className="flex items-center gap-8">
-                <div className="flex flex-col">
-                   <span className="text-[7px] font-black text-dragon-gold uppercase tracking-[0.2em] mb-0.5">Tactical Log</span>
-                   <div className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10B981]" />
-                      <span className="text-[9px] font-bold text-white/60 uppercase">No immediate threats identified</span>
-                   </div>
-                </div>
-                
-                <div className="w-px h-6 bg-white/5" />
-                
-                <div className="flex items-center gap-6">
-                   <div className="flex flex-col">
-                      <span className="text-[7px] font-black text-white/30 uppercase tracking-[0.2em] mb-0.5">Quest Update</span>
-                      <span className="text-[9px] font-bold text-white/80 uppercase truncate max-w-[200px]">The Whispering Shadows (Active)</span>
-                   </div>
-                   <div className="flex flex-col">
-                      <span className="text-[7px] font-black text-white/30 uppercase tracking-[0.2em] mb-0.5">Discovery</span>
-                      <span className="text-[9px] font-bold text-dragon-gold uppercase">Ancient Relic Found</span>
-                   </div>
-                </div>
-             </div>
-
-             <div className="flex gap-2">
-                <div className="px-3 py-1 rounded bg-dragon-red/10 border border-dragon-red/20">
-                   <span className="text-[8px] font-black text-dragon-red uppercase tracking-widest">Combat Phase: 01</span>
-                </div>
-             </div>
-          </motion.div>
+            <GameIcon name="x" size={10} />
+          </button>
         )}
-      </AnimatePresence>
+      </div>
 
       {/* Subtle Atmospheric Scanning Line */}
       <motion.div 
         animate={{ left: ['-30%', '130%'] }}
         transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-        className="absolute top-0 bottom-0 w-64 bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none"
+        className="absolute top-0 bottom-0 w-48 bg-gradient-to-r from-transparent via-white-[0.02] to-transparent pointer-events-none"
       />
     </div>
   );

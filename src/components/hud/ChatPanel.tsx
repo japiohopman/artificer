@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
+import { useGameStore } from '../../store/useGameStore';
 import { useWorldStore } from '../../store/useWorldStore';
 import { useCharacterStore, Emotion } from '../../store/useCharacterStore';
 import { ChatHistory } from './chat/ChatHistory';
@@ -18,10 +19,11 @@ interface ChatPanelProps {
 
 export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed: propCollapsed }) => {
   const { 
-    addLog, 
     chatExpanded,
     setChatExpanded
-  } = useStore();
+  } = useUIStore();
+
+  const { addLog, rollDice3D } = useGameStore();
 
   const {
     getActiveBackground,
@@ -89,7 +91,6 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed: propCollapsed
     if (lowerMessage.startsWith('/roll ')) {
       const notation = lowerMessage.substring(6).trim();
       if (notation) {
-        const { rollDice3D } = useStore.getState();
         rollDice3D(notation, "Chat Roll");
         return;
       }

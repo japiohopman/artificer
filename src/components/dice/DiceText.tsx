@@ -1,7 +1,8 @@
 import React from 'react';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
+import { useGameStore } from '../../store/useGameStore';
 
 interface DiceTextProps {
   children: React.ReactNode;
@@ -26,7 +27,7 @@ const DAMAGE_TYPE_CONFIG: Record<string, { color: string; name: string }> = {
 };
 
 export const DiceText: React.FC<DiceTextProps> = ({ children, iconSize = 10, className }) => {
-  const { rollDice3D } = useStore();
+  const { rollDice3D } = useGameStore();
 
   const processString = (text: string) => {
     // Regex matches dice patterns (including modifiers like +5, kh1, etc) OR any of our damage types

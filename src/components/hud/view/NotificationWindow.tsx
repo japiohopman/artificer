@@ -1,16 +1,14 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useStore } from '../../../store/useStore';
-import { useAudioStore } from '../../../store/useAudioStore.ts';
+import { useUIStore } from '../../../store/useUIStore';
+import { useGameStore } from '../../../store/useGameStore';
+import { useAudioStore } from '../../../store/useAudioStore';
 import { useWorldStore, CategoryIcons, SavedLocation } from '../../../store/useWorldStore';
 import { GameIcon } from '../../../game_icons';
 
 export const NotificationWindow: React.FC = () => {
-  const { 
-    logs, clearLogs,
-    setIsInsideSubMap,
-    addLog
-  } = useStore();
+  const { setIsInsideSubMap } = useUIStore();
+  const { logs, clearLogs, addLog } = useGameStore();
   const { playSound } = useAudioStore();
 
   const {

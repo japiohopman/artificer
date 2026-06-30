@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { GameIcon } from '../../game_icons';
@@ -8,7 +8,7 @@ import { SpellCard } from '../atlas/SpellCard';
 import { calculateMaxSpellSlots } from '../../lib/statCalculations';
 
 export const SpellInventory: React.FC = () => {
-  const { setFocusedItem, isCharacterSpellbookOpen, setIsCharacterSpellbookOpen } = useStore();
+  const { setFocusedItem, isCharacterSpellbookOpen, setIsCharacterSpellbookOpen } = useUIStore();
   const { characters, activeCharacterId, castSpell, restoreSlots } = useCharacterStore();
 
   const character = characters.find(c => c.id === activeCharacterId) || characters[0];

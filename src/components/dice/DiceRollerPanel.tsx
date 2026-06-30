@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
+import { useGameStore } from '../../store/useGameStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
 import { diceService } from '../../dice_roller/diceService';
 
 export const AdvancedRoller: React.FC = () => {
-  const { rollDice3D, isAdvancedRollerOpen, setIsAdvancedRollerOpen, selectedDiceTheme, setSelectedDiceTheme, selectedDiceColor, setSelectedDiceColor } = useStore();
+  const { isAdvancedRollerOpen, setIsAdvancedRollerOpen, selectedDiceTheme, setSelectedDiceTheme, selectedDiceColor, setSelectedDiceColor } = useUIStore();
+  const { rollDice3D } = useGameStore();
   const [notation, setNotation] = useState('');
   const [advantage, setAdvantage] = useState<'none' | 'adv' | 'dis'>('none');
 

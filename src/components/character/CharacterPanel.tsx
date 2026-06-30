@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useCharacterStore } from '../../store/useCharacterStore';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { EquipmentDoll } from './EquipmentDoll';
 import { Inventory } from './Inventory';
 import { CharacterStats } from './CharacterStats';
-import { EnemyStats } from './EnemyStats';
 import { LogisticsManifest } from '../ui/PartyLogistics';
 import { X, Shield, Package, BarChart3, Info, Truck, ChevronLeft, ChevronRight, Archive } from 'lucide-react';
 import { EquipmentSlotId } from '../../lib/equipmentConstants';
@@ -17,9 +16,8 @@ type CharacterTab = 'equipment' | 'inventory' | 'stats' | 'logistics';
 export const CharacterPanel: React.FC = () => {
   const { 
     focusedItem,
-    setFocusedItem,
-    gameMode
-  } = useStore();
+    setFocusedItem
+  } = useUIStore();
 
   const {
     characters,
@@ -39,7 +37,7 @@ export const CharacterPanel: React.FC = () => {
     activeCharacterTab,
     setActiveCharacterTab,
     setIsTransportProfileOpen
-  } = useStore();
+  } = useUIStore();
 
   // Use the store's tab as the source of truth
   const activeTab = activeCharacterTab;
@@ -89,7 +87,7 @@ export const CharacterPanel: React.FC = () => {
 
   return (
     <AnimatePresence>
-      {(isInventoryOpen || gameMode === 'combat') && (
+      {isInventoryOpen && (
         <motion.div
           initial={{ x: 400, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -97,163 +95,125 @@ export const CharacterPanel: React.FC = () => {
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
           className="w-80 bg-parchment-50/50 border-l border-parchment-300 flex flex-col z-10"
         >
+          {/* Tabs */}
+          <div className="flex border-b border-parchment-300 bg-parchment-100/50">
+            {tabs.map(tab => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id as CharacterTab)}
+                className={cn(
+                  "flex-1 flex flex-col items-center py-3 px-1 transition-all relative border-r border-parchment-300 last:border-r-0",
+                  activeTab === tab.id ? "bg-dragon-red text-white" : "text-parchment-600 hover:bg-parchment-200"
+                )}
+              >
+                <tab.icon size={18} />
+              </button>
+            ))}
+          </div>
+
+          {/* Common Name Box with Character Switcher */}
+          <div className="bg-white/40 border-b border-parchment-300 py-2 px-2 flex items-center justify-between">
+            <button 
+              onClick={prevCharacter}
+              className="p-1 hover:bg-parchment-200 rounded-full text-dragon-red transition-colors"
+            >
+              <ChevronLeft size={16} />
+            </button>
+            
+            <div className="text-center flex-1">
+              <p className="text-[8px] font-bold text-parchment-400 uppercase tracking-widest mb-0.5">
+                {activeTabLabel}
+              </p>
+              <h2 className="text-[10px] font-bold text-dragon-red uppercase tracking-wider font-header truncate px-2">
+                {activeCharacter.name}
+              </h2>
+            </div>
+
+            <button 
+              onClick={nextCharacter}
+              className="p-1 hover:bg-parchment-200 rounded-full text-dragon-red transition-colors"
+            >
+              <ChevronRight size={16} />
+            </button>
+          </div>
+
+        <div className="flex-1 overflow-y-auto p-4 custom-scrollbar">
           <AnimatePresence mode="wait">
-            {gameMode === 'exploration' ? (
-              <motion.div key="exploration" className="flex flex-col h-full">
-                {/* Tabs */}
-                <div className="flex border-b border-parchment-300 bg-parchment-100/50">
-                  {tabs.map(tab => (
-                    <button
-                      key={tab.id}
-                      onClick={() => setActiveTab(tab.id as CharacterTab)}
-                      className={cn(
-                        "flex-1 flex flex-col items-center py-3 px-1 transition-all relative border-r border-parchment-300 last:border-r-0",
-                        activeTab === tab.id ? "bg-dragon-red text-white" : "text-parchment-600 hover:bg-parchment-200"
-                      )}
-                    >
-                      <tab.icon size={18} />
-                    </button>
-                  ))}
-                </div>
-
-                {/* Common Name Box with Character Switcher */}
-                <div className="bg-white/40 border-b border-parchment-300 py-2 px-2 flex items-center justify-between">
-                  <button 
-                    onClick={prevCharacter}
-                    className="p-1 hover:bg-parchment-200 rounded-full text-dragon-red transition-colors"
-                  >
-                    <ChevronLeft size={16} />
-                  </button>
-                  
-                  <div className="text-center flex-1">
-                    <p className="text-[8px] font-bold text-parchment-400 uppercase tracking-widest mb-0.5">
-                      {activeTabLabel}
-                    </p>
-                    <h2 className="text-[10px] font-bold text-dragon-red uppercase tracking-wider font-header truncate px-2">
-                      {activeCharacter.name}
-                    </h2>
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="h-full"
+            >
+              {activeTab === 'equipment' && (
+                <div className="space-y-6">
+                  <div className="flex justify-center">
+                    <EquipmentDoll 
+                      equippedItems={inventory}
+                      onSlotClick={(slot) => {
+                        if (inventory[slot]) {
+                          unequipItem(slot);
+                        } else {
+                          handleEquip(slot);
+                        }
+                      }}
+                      activeSlots={
+                        focusedItem?._type === 'equipment' 
+                          ? (Array.isArray(focusedItem.slot) ? focusedItem.slot : (focusedItem.slot ? [focusedItem.slot as EquipmentSlotId] : []))
+                          : []
+                      }
+                    />
                   </div>
-
-                  <button 
-                    onClick={nextCharacter}
-                    className="p-1 hover:bg-parchment-200 rounded-full text-dragon-red transition-colors"
-                  >
-                    <ChevronRight size={16} />
-                  </button>
+                  
+                  <div className="bg-dragon-red/5 p-3 rounded-lg border border-dragon-red/10 text-center space-y-2">
+                    <div className="flex items-center justify-center gap-2 text-dragon-red">
+                      <Info size={12} />
+                      <p className="text-[9px] font-bold uppercase tracking-wider">
+                        {focusedItem?._type === 'equipment' 
+                          ? `Equip ${focusedItem.name}`
+                          : 'Select equipment to manage'}
+                      </p>
+                    </div>
+                    <p className="text-[8px] text-parchment-500 italic leading-relaxed">
+                      Click an active slot on the doll to equip the focused item.
+                    </p>
+                  </div>
                 </div>
+              )}
 
-                <div className="flex-1 overflow-y-auto p-4 custom-scrollbar">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={activeTab}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.2 }}
-                      className="h-full"
-                    >
-                      {activeTab === 'equipment' && (
-                        <div className="space-y-6">
-                          <div className="flex justify-center">
-                            <EquipmentDoll 
-                              equippedItems={inventory}
-                              onSlotClick={(slot) => {
-                                if (inventory[slot]) {
-                                  unequipItem(slot);
-                                } else {
-                                  handleEquip(slot);
-                                }
-                              }}
-                              activeSlots={
-                                focusedItem?._type === 'equipment' 
-                                  ? (Array.isArray(focusedItem.slot) ? focusedItem.slot : (focusedItem.slot ? [focusedItem.slot as EquipmentSlotId] : []))
-                                  : []
-                              }
-                            />
-                          </div>
-                          
-                          <div className="bg-dragon-red/5 p-3 rounded-lg border border-dragon-red/10 text-center space-y-2">
-                            <div className="flex items-center justify-center gap-2 text-dragon-red">
-                              <Info size={12} />
-                              <p className="text-[9px] font-bold uppercase tracking-wider">
-                                {focusedItem?._type === 'equipment' 
-                                  ? `Equip ${focusedItem.name}`
-                                  : 'Select equipment to manage'}
-                              </p>
-                            </div>
-                            <p className="text-[8px] text-parchment-500 italic leading-relaxed">
-                              Click an active slot on the doll to equip the focused item.
-                            </p>
-                          </div>
-                        </div>
-                      )}
-
-                      {activeTab === 'inventory' && (
-                        <Inventory 
-                          onEquipRequest={(item) => {
-                            const slots = Array.isArray(item.slot) ? item.slot : (item.slot ? [item.slot as EquipmentSlotId] : []);
-                            // Find first empty slot among allowed slots, or default to first
-                            const targetSlot = slots.find(s => !inventory[s]) || slots[0];
-                            
-                            if (targetSlot) {
-                              equipItem(item, targetSlot);
-                              setFocusedItem(item);
-                              setActiveTab('equipment');
-                            } else if (item.slot) {
-                              // If it's a single slot item but not in an array
-                              equipItem(item, item.slot);
-                              setFocusedItem(item);
-                              setActiveTab('equipment');
-                            }
-                          }} 
-                        />
-                      )}
-                      {activeTab === 'stats' && <CharacterStats />}
-                      {activeTab === 'logistics' && (
-                        <LogisticsManifest 
-                          onTransportRequest={() => {
-                            setIsTransportProfileOpen(true);
-                          }}
-                        />
-                      )}
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-              </motion.div>
-            ) : (
-              <motion.div key="combat" className="flex flex-col h-full bg-stone-950 text-parchment-100 overflow-hidden">
-                <div className="p-4 border-b border-white/10 bg-black/40">
-                   <div className="flex items-center justify-between mb-4">
-                      <div className="flex flex-col">
-                        <span className="text-[8px] font-black text-dragon-gold uppercase tracking-[0.3em] mb-1">Combat Intel</span>
-                        <h2 className="text-lg font-header font-black text-white uppercase tracking-widest leading-none">Tactical View</h2>
-                      </div>
-                      <div className="p-2 rounded-full bg-white/5 border border-white/10">
-                         <Shield size={16} className="text-dragon-gold" />
-                      </div>
-                   </div>
-                   
-                   {/* Compact Hero Stats at top in Combat Mode */}
-                   <div className="bg-white/5 rounded-lg p-3 border border-white/5 mb-2">
-                      <div className="flex items-center gap-3 mb-3">
-                         <div className="w-10 h-10 rounded border border-dragon-gold/30 overflow-hidden bg-stone-900">
-                            <img src={activeCharacter.avatarUrl || 'https://picsum.photos/seed/char/100/100'} className="w-full h-full object-cover" alt="" />
-                         </div>
-                         <div className="flex-1 min-w-0">
-                            <div className="text-[10px] font-black text-white uppercase truncate">{activeCharacter.name}</div>
-                            <div className="text-[7px] text-white/40 uppercase font-bold tracking-widest mt-0.5">Active Unit</div>
-                         </div>
-                      </div>
-                      <CharacterStats compact />
-                   </div>
-                </div>
-
-                <div className="flex-1 overflow-y-auto p-4 custom-scrollbar">
-                   <EnemyStats />
-                </div>
-              </motion.div>
-            )}
+              {activeTab === 'inventory' && (
+                <Inventory 
+                  onEquipRequest={(item) => {
+                    const slots = Array.isArray(item.slot) ? item.slot : (item.slot ? [item.slot as EquipmentSlotId] : []);
+                    // Find first empty slot among allowed slots, or default to first
+                    const targetSlot = slots.find(s => !inventory[s]) || slots[0];
+                    
+                    if (targetSlot) {
+                      equipItem(item, targetSlot);
+                      setFocusedItem(item);
+                      setActiveTab('equipment');
+                    } else if (item.slot) {
+                      // If it's a single slot item but not in an array
+                      equipItem(item, item.slot);
+                      setFocusedItem(item);
+                      setActiveTab('equipment');
+                    }
+                  }} 
+                />
+              )}
+              {activeTab === 'stats' && <CharacterStats />}
+              {activeTab === 'logistics' && (
+                <LogisticsManifest 
+                  onTransportRequest={() => {
+                    setIsTransportProfileOpen(true);
+                  }}
+                />
+              )}
+            </motion.div>
           </AnimatePresence>
+        </div>
 
           {/* Footer */}
           <div className="bg-parchment-200 p-2 text-[8px] text-parchment-500 font-mono flex justify-between border-t border-parchment-300">

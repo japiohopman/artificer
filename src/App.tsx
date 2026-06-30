@@ -6,7 +6,9 @@
 import { HUD } from './components/hud/HUD';
 import { TitleScreen } from './components/core/TitleScreen';
 import { DevKit } from './components/devkit/DevKit';
-import { useStore } from './store/useStore';
+import { useUIStore } from './store/useUIStore';
+import { useAtlasStore } from './store/useAtlasStore';
+import { useGameStore } from './store/useGameStore';
 import { useCharacterStore } from './store/useCharacterStore';
 import { useEffect } from 'react';
 import { playModalOpenSound, playModalCloseSound } from './services/storageService';
@@ -28,9 +30,11 @@ import { useBookStore } from './store/useBookStore';
 
 export default function App() {
   const { 
-    isGameStarted, isDevKitOpen, setIsDevKitOpen, updateSelectedItem, selectedItem, explorerTab,
+    isDevKitOpen, setIsDevKitOpen, explorerTab,
     isCharacterSpellbookOpen, setIsCharacterSpellbookOpen, isProfileMenuOpen, isJournalOpen, setIsJournalOpen
-  } = useStore();
+  } = useUIStore();
+  const { isGameStarted } = useGameStore();
+  const { updateSelectedItem, selectedItem } = useAtlasStore();
 
   const {
     books: registeredBooks,
@@ -43,7 +47,7 @@ export default function App() {
 
   useEffect(() => {
     // Initial data load
-    const { loadAllLists } = useStore.getState();
+    const { loadAllLists } = useAtlasStore.getState();
     const { loadCharacters } = useCharacterStore.getState();
     loadCharacters();
     loadAllLists();

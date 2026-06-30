@@ -2,9 +2,9 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { useAudioStore } from '../../store/useAudioStore';
-import { AudioLayer, LAYER_NAMES } from '../../types/audio.ts';
+import { AudioLayer, LAYER_NAMES } from '../../types/audio';
 import { GameIcon } from '../../game_icons.tsx';
-import { soundService } from '../../services/soundService.ts';
+import { soundService } from '../../services/soundService';
 
 const LAYER_ICONS: Record<AudioLayer, React.ReactNode> = {
   1: <GameIcon name="music" size={16} />,

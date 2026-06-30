@@ -21,12 +21,32 @@ export interface CoinFlipState {
   };
 }
 
+export interface LogEntry {
+  id: string;
+  message: string;
+  type: 'info' | 'success' | 'warning' | 'error';
+  timestamp: number;
+}
+
 interface GameState {
   // Common
   currentNPC: any | null;
   emotion: string;
   characters: any[]; // For compatibility with minigame components
   activeCharacterId: string;
+  
+  // Logs
+  logs: LogEntry[];
+
+  // Dice Rolls
+  isDiceReady: boolean;
+  recentRolls: any[];
+
+  // Simulator
+  activeCards: any[];
+
+  // Game flow
+  isGameStarted: boolean;
 
   // Rock Paper Scissors
   rpsState: RpsState;
@@ -37,7 +57,24 @@ interface GameState {
   // Actions
   setCurrentNPC: (npc: any | null) => void;
   setEmotion: (emotion: string) => void;
+  setIsGameStarted: (started: boolean) => void;
   
+  // Logs Actions
+  addLog: (message: string, type?: LogEntry['type']) => void;
+  clearLogs: () => void;
+
+  // Dice Actions
+  rollDice: (label: string, modifier: number, dieType?: number) => void;
+  rollDice3D: (notation: string, label: string, theme?: string, color?: string) => Promise<void>;
+  removeRoll: (id: string) => void;
+  clearRoll: () => void;
+  setIsDiceReady: (isReady: boolean) => void;
+
+  // Simulator Actions
+  addToPreview: (item: any) => void;
+  removeFromPreview: (index: number) => void;
+  clearPreview: () => void;
+
   // RPS Actions
   startRpsMatch: () => void;
   setRpsChoice: (choice: 'rock' | 'paper' | 'scissors') => void;
@@ -53,6 +90,11 @@ export const useGameStore = create<GameState>((set, get) => ({
   emotion: 'Neutral',
   characters: [],
   activeCharacterId: '',
+  logs: [],
+  isDiceReady: false,
+  recentRolls: [],
+  activeCards: [],
+  isGameStarted: false,
 
   rpsState: {
     status: 'ritual',
@@ -167,5 +209,77 @@ export const useGameStore = create<GameState>((set, get) => ({
           prediction: null,
           result: null
       }
-  }))
+  })),
+
+  setIsGameStarted: (isGameStarted) => set({ isGameStarted }),
+
+  addLog: (message, type = 'info') => set((state) => ({
+    logs: [{
+      id: crypto.randomUUID(),
+      message,
+      type,
+      timestamp: Date.now()
+    }, ...state.logs].slice(0, 50)
+  })),
+
+  clearLogs: () => set({ logs: [] }),
+
+  rollDice: (label, modifier, dieType = 20) => {
+    import('../dice_roller/diceService').then(({ diceService }) => {
+      const notation = `1d${dieType}${modifier >= 0 ? '+' : ''}${modifier !== 0 ? modifier : ''}`;
+      const result = diceService.rollBackground(notation, label);
+      set((state) => ({ 
+        recentRolls: [result, ...state.recentRolls].slice(0, 5) 
+      }));
+    });
+  },
+
+  rollDice3D: async (notation, label, theme, color) => {
+    const { diceService } = await import('../dice_roller/diceService');
+    // For theme/color, we might need a reference to useUIStore but can pass defaults for now
+    const selectedDiceTheme = 'default';
+    const selectedDiceColor = '#8b0000';
+    
+    try {
+      const result = await diceService.roll3D(notation, label, theme || selectedDiceTheme, color || selectedDiceColor);
+      set((state) => ({ 
+        recentRolls: [result, ...state.recentRolls].slice(0, 5) 
+      }));
+      
+      // Auto-clear 3D dice after a delay
+      setTimeout(() => {
+        diceService.clear();
+      }, 5000);
+    } catch (error) {
+      console.error("3D Roll failed, falling back to background", error);
+      const result = diceService.rollBackground(notation, label);
+      set((state) => ({ 
+        recentRolls: [result, ...state.recentRolls].slice(0, 5) 
+      }));
+    }
+  },
+
+  removeRoll: (id) => set((state) => ({
+    recentRolls: state.recentRolls.filter(r => r.id !== id)
+  })),
+
+  clearRoll: () => {
+    set({ recentRolls: [] });
+    import('../dice_roller/diceService').then(({ diceService }) => {
+      diceService.clear();
+    });
+  },
+
+  setIsDiceReady: (isDiceReady) => set({ isDiceReady }),
+
+  addToPreview: (item) => set((state) => ({ 
+    activeCards: [...state.activeCards, { ...item }]
+    // viewMode should be handled by useUIStore
+  })),
+
+  removeFromPreview: (index) => set((state) => ({
+    activeCards: state.activeCards.filter((_, i) => i !== index)
+  })),
+
+  clearPreview: () => set({ activeCards: [] }),
 }));

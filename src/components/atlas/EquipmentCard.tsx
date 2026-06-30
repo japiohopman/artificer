@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm';
 import { cn } from '../../lib/utils';
 import { isBookLike } from '../../lib/bookUtils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
 import { useBookStore } from '../../store/useBookStore';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
@@ -27,7 +27,7 @@ interface EquipmentCardProps {
 }
 
 export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, className, isModal, onClose }) => {
-  const { setFocusedItem, explorerTab } = useStore();
+  const { setFocusedItem, explorerTab } = useUIStore();
   const { activeCharacterId } = useCharacterStore();
   const { equipItem, unequipItem, transferItem } = useInventoryStore();
   const { registerBook, openBook } = useBookStore();
@@ -426,7 +426,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
                 {isBookLike(currentItem) && (
                     <button 
                         onClick={() => {
-                          useStore.getState().setFocusedItem(currentItem);
+                          useUIStore.getState().setFocusedItem(currentItem);
                           onClose?.();
                         }}
                         className="px-3 py-1 bg-amber-600 text-white rounded text-[9px] font-black uppercase tracking-widest hover:bg-amber-700 transition-colors shadow-sm flex items-center gap-1.5"
@@ -446,7 +446,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
                 {(currentItem.vehicle_category || (currentItem as any).transport_type) && (
                     <button 
                         onClick={() => {
-                          const { setIsTransportProfileOpen, setFocusedItem } = useStore.getState();
+                          const { setIsTransportProfileOpen, setFocusedItem } = useUIStore.getState();
                           setIsTransportProfileOpen(true);
                           setFocusedItem(currentItem);
                           onClose?.();

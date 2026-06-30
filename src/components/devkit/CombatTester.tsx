@@ -11,7 +11,7 @@ export const CombatTester: React.FC = () => {
   const { 
     gameMode, setGameMode, 
     activeCards, addToPreview, removeFromPreview, clearPreview,
-    addLog
+    addLog, setIsDevKitOpen
   } = useStore();
   
   const { characters, restoreSlots, restoreActionEconomy, updateCharacter } = useCharacterStore();
@@ -57,6 +57,13 @@ export const CombatTester: React.FC = () => {
     restoreSlots(true);
     
     addLog("Party fully restored and actions reset", "success");
+    playSuccessSound();
+  };
+
+  const handleLaunchCombat = () => {
+    setGameMode('combat');
+    setIsDevKitOpen(false);
+    addLog("Tactical Combat Matrix Initialized", "info");
     playSuccessSound();
   };
 
@@ -109,6 +116,13 @@ export const CombatTester: React.FC = () => {
           >
             <GameIcon name="vitality" size={12} />
             Full Party Restore
+          </button>
+          <button 
+            onClick={handleLaunchCombat}
+            className="px-6 py-2 bg-dragon-red border border-dragon-gold/30 rounded-md text-[10px] font-black text-white hover:brightness-110 transition-all uppercase tracking-[0.2em] flex items-center gap-2 shadow-[0_0_20px_rgba(139,0,0,0.3)] animate-pulse"
+          >
+            <GameIcon name="dice" size={14} />
+            Launch Tactical Combat
           </button>
         </div>
       </div>

@@ -69,14 +69,15 @@ const STEPS: { id: CreationStep; label: string; icon: any }[] = [
 
 const PLAYABLE_SPECIES = ['dragonborn', 'dwarf', 'elf', 'gnome', 'half-elf', 'half-orc', 'halfling', 'human', 'tiefling'];
 
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
+import { useGameStore } from '../../store/useGameStore';
 
 export const CharacterCreator: React.FC = () => {
   const { 
     isCharacterCreatorOpen, 
     setIsCharacterCreatorOpen, 
-    setIsGameStarted
-  } = useStore();
+  } = useUIStore();
+  const { setIsGameStarted } = useGameStore();
 
   const {
     characters,
@@ -168,7 +169,7 @@ export const CharacterCreator: React.FC = () => {
                             name: traitData.name,
                             index: traitData.index,
                             desc: Array.isArray(traitData.desc) ? traitData.desc.join('\n') : (traitData.desc || ""),
-                            trait_specific: (traitData as any).trait_specific
+                            trait_specific: traitData.trait_specific
                         });
                     }
                     if (traitData.proficiencies) {
@@ -519,7 +520,7 @@ export const CharacterCreator: React.FC = () => {
 
             // Apply HP bonuses from traits (e.g. Dwarven Toughness)
             newChar.traits?.forEach(trait => {
-                const hpBonus = (trait as any).trait_specific?.passive_modifiers?.hp_bonus_per_level;
+                const hpBonus = trait.trait_specific?.passive_modifiers?.hp_bonus_per_level;
                 if (hpBonus) {
                     finalHp += (hpBonus * Math.max(1, level));
                 }

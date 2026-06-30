@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
@@ -22,7 +22,7 @@ interface DraggableInventoryItemProps {
 export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({ 
   item, index, sourceId, slot, compact = false, gridMode = false, onRemove, onEquip, id
 }) => {
-  const { setInspectingItem } = useStore();
+  const { setInspectingItem } = useUIStore();
   const {
     attributes,
     listeners,

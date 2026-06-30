@@ -1,8 +1,8 @@
 import React from 'react';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
-import { useStore } from '../../store/useStore';
-import { useAtlasStore } from '../../store/useAtlasStore.ts';
+import { useUIStore } from '../../store/useUIStore';
+import { useAtlasStore } from '../../store/useAtlasStore';
 import { GameIcon } from '../../game_icons';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../../lib/utils';
@@ -250,7 +250,7 @@ export const PartyLogistics: React.FC = () => {
                 <div className="p-6 overflow-y-auto max-h-[70vh] custom-scrollbar">
                    <LogisticsManifest 
                      onTransportRequest={() => {
-                        const { setIsTransportProfileOpen } = useStore.getState();
+                        const { setIsTransportProfileOpen } = useUIStore.getState();
                         const { selectItem } = useAtlasStore.getState();
                         setIsOpen(false);
                      }} 

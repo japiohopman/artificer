@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { useStore } from '../../../store/useStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon } from '../../../game_icons';
@@ -9,6 +9,8 @@ export const CombatGrid: React.FC = () => {
   const { characters, activeCharacterId } = useCharacterStore();
   
   const activeChar = characters.find(c => c.id === activeCharacterId);
+
+  const monsters = activeCards.filter(c => c.challenge_rating !== undefined || c.type);
 
   return (
     <div className="w-full h-full relative bg-stone-900 overflow-hidden flex items-center justify-center">
@@ -57,7 +59,8 @@ export const CombatGrid: React.FC = () => {
         </div>
 
         {/* Placeholder for Character/Enemy Tokens */}
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center gap-12">
+           {/* Player Token */}
            <motion.div 
              initial={{ scale: 0 }}
              animate={{ scale: 1 }}
@@ -65,7 +68,7 @@ export const CombatGrid: React.FC = () => {
            >
               <div className="w-24 h-24 rounded-full border-4 border-blue-500 shadow-[0_0_30px_rgba(59,130,246,0.5)] bg-blue-900/50 flex items-center justify-center overflow-hidden">
                 {activeChar?.avatarUrl ? (
-                  <img src={activeChar.avatarUrl} className="w-full h-full object-cover" alt={activeChar?.name || 'Player'} />
+                  <img src={activeChar.avatarUrl} className="w-full h-full object-cover" />
                 ) : (
                   <GameIcon name="user" size={48} color="#FFF" />
                 )}
@@ -74,6 +77,31 @@ export const CombatGrid: React.FC = () => {
                 {activeChar?.name || 'Player'}
               </div>
            </motion.div>
+
+           {/* Monster Tokens */}
+           <AnimatePresence>
+             {monsters.map((monster, idx) => (
+               <motion.div 
+                key={`${monster.index}-${idx}`}
+                initial={{ scale: 0, x: 50, opacity: 0 }}
+                animate={{ scale: 1, x: 0, opacity: 1 }}
+                exit={{ scale: 0, opacity: 0 }}
+                transition={{ delay: idx * 0.1 }}
+                className="relative"
+               >
+                  <div className="w-24 h-24 rounded-full border-4 border-dragon-red shadow-[0_0_30px_rgba(220,38,38,0.5)] bg-red-900/50 flex items-center justify-center overflow-hidden">
+                    {monster.imageUrl ? (
+                      <img src={monster.imageUrl} className="w-full h-full object-cover" />
+                    ) : (
+                      <GameIcon name="identity" size={48} color="#FFF" />
+                    )}
+                  </div>
+                  <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-dragon-red text-white text-[10px] font-black px-3 py-0.5 rounded-full border-2 border-white uppercase whitespace-nowrap">
+                    {monster.name}
+                  </div>
+               </motion.div>
+             ))}
+           </AnimatePresence>
         </div>
       </div>
       

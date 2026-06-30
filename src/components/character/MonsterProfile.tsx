@@ -10,15 +10,16 @@ import remarkGfm from 'remark-gfm';
 import { DiceText } from '../dice/DiceText';
 import { normalizeImageUrl } from '../../services/storageService';
 
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
+import { useGameStore } from '../../store/useGameStore';
 
 export const MonsterProfile: React.FC = () => {
   const { 
     isMonsterProfileOpen, 
     setIsMonsterProfileOpen, 
     focusedItem: monster,
-    rollDice3D
-  } = useStore();
+  } = useUIStore();
+  const { rollDice3D } = useGameStore();
 
   const formatName = (name: string) => {
     if (!name) return "";
