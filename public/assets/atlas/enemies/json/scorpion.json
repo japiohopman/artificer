@@ -4,12 +4,7 @@
   "size": "Tiny",
   "type": "beast",
   "alignment": "unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 11
-    }
-  ],
+  "armor_class": 11,
   "hit_points": 1,
   "hit_dice": "1d4",
   "hit_points_roll": "1d4-1",
@@ -32,7 +27,7 @@
     "passive_perception": 9
   },
   "languages": "",
-  "challenge_rating": 0,
+  "challenge_rating": "0",
   "proficiency_bonus": 2,
   "xp": 10,
   "actions": [
@@ -55,15 +50,23 @@
   ],
   "image": "/assets/atlas/enemies/scorpion.webp",
   "url": "/assets/atlas/enemies/json/scorpion.json",
-  "updated_at": "2026-04-16T08:38:43.149Z",
+  "updated_at": "2026-06-30T00:13:23.841Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 21,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.webp",
-  "imageUrl": "/assets/atlas/enemies/scorpion.webp",
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.0webp",
+  "imageUrl": "/assets/atlas/enemies/images/scorpion.webp",
   "_type": "enemies",
   "background_type": "desert4",
-  "last_updated": "16-4-2026"
+  "last_updated": "30-6-2026",
+  "stats": {
+    "str": 2,
+    "dex": 11,
+    "con": 8,
+    "int": 1,
+    "wis": 8,
+    "cha": 2
+  }
 }
