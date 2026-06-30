@@ -66,6 +66,10 @@ export interface WorldState {
   currentShop: any | null;
   partyLocation: any | null;
   partySubLocation: any | null;
+  travelOrigin: any | null;
+  destination: any | null;
+  isTraveling: boolean;
+  travelProgress: number; // 0 to 1
   savedLocations: SavedLocation[];
   loadedCategories: string[];
 
@@ -83,6 +87,8 @@ export interface WorldState {
   setCurrentSubLocation: (location: any) => void;
   setCurrentShop: (shop: any) => void;
   setWorldFlag: (flag: string, value: any) => void;
+  startTravel: (destination: any) => void;
+  stopTravel: () => void;
   setSavedLocations: (locations: SavedLocation[]) => void;
   addSavedLocations: (locations: SavedLocation[]) => void;
   addLoadedCategory: (category: string) => void;
@@ -106,12 +112,35 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   inspectedLocation: null,
   currentSubLocation: null,
   currentShop: null,
-  partyLocation: null,
+  partyLocation: {
+    id: 'baldurs_gate',
+    name: "Baldur's Gate",
+    category: 'city',
+    coordinates: { x: 955, y: 1592 }, // Initial starting position in proto units
+    zoom: 4
+  },
   partySubLocation: null,
+  travelOrigin: null,
+  destination: null,
+  isTraveling: false,
+  travelProgress: 0,
   savedLocations: [],
   loadedCategories: [],
 
   worldFlags: {},
+
+  startTravel: (destination) => set((state) => ({
+    travelOrigin: state.partyLocation,
+    destination,
+    isTraveling: true,
+    travelProgress: 0
+  })),
+
+  stopTravel: () => set({
+    isTraveling: false,
+    destination: null,
+    travelProgress: 0
+  }),
 
   advanceTime: (minutes) => set((state) => {
     let newTime = state.gameTime + minutes;
@@ -179,6 +208,39 @@ export const useWorldStore = create<WorldState>((set, get) => ({
       const weathers: WeatherType[] = ['Sunny', 'Rainy', 'Cloudy', 'Stormy', 'Snowy', 'Foggy'];
       const newWeather = weathers[Math.floor(Math.random() * weathers.length)];
       set({ weather: newWeather });
+    }
+
+    // Handle Movement
+    if (state.isTraveling && state.destination && state.travelOrigin) {
+      const step = 0.05; // 5% progress per tick (approx 3.5 mins in-game per tick if tick is 10s)
+      const newProgress = Math.min(1, state.travelProgress + step);
+
+      if (newProgress >= 1) {
+        set({
+          partyLocation: state.destination,
+          isTraveling: false,
+          destination: null,
+          travelOrigin: null,
+          travelProgress: 0
+        });
+      } else {
+        // Interpolate coordinates
+        const x1 = state.travelOrigin.coordinates?.x ?? state.travelOrigin.position?.[0] ?? 0;
+        const y1 = state.travelOrigin.coordinates?.y ?? state.travelOrigin.position?.[1] ?? 0;
+        const x2 = state.destination.coordinates?.x ?? state.destination.position?.[0] ?? 0;
+        const y2 = state.destination.coordinates?.y ?? state.destination.position?.[1] ?? 0;
+
+        const currentX = x1 + (x2 - x1) * newProgress;
+        const currentY = y1 + (y2 - y1) * newProgress;
+
+        set({
+          travelProgress: newProgress,
+          partyLocation: {
+            ...state.partyLocation,
+            coordinates: { x: currentX, y: currentY }
+          }
+        });
+      }
     }
   },
 

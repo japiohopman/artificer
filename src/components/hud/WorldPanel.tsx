@@ -16,7 +16,13 @@ export const WorldPanel: React.FC = () => {
     inspectedLocation,
     savedLocations,
     gameTime,
-    gameDay
+    gameDay,
+    partyLocation,
+    isTraveling,
+    destination,
+    travelProgress,
+    startTravel,
+    stopTravel
   } = useWorldStore();
 
   const displayLocation = inspectedLocation || currentLocation;
@@ -132,9 +138,64 @@ export const WorldPanel: React.FC = () => {
                       <span className="text-[10px] font-bold text-dragon-red uppercase">{displayLocation.region}</span>
                    </div>
                  )}
+
+                 {/* Travel Button */}
+                 {displayLocation && displayLocation.id !== partyLocation?.id && (
+                   <div className="mt-6">
+                      {!isTraveling ? (
+                        <button
+                          onClick={() => startTravel(displayLocation)}
+                          className="w-full py-3 bg-dragon-red hover:bg-dragon-darkRed text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-dragon-gold/30"
+                        >
+                          <GameIcon name="compass" size={14} color="#FFFFFF" />
+                          Set Course
+                        </button>
+                      ) : destination?.id === displayLocation.id ? (
+                        <button
+                          onClick={() => stopTravel()}
+                          className="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-white/20"
+                        >
+                          <GameIcon name="close" size={14} color="#FFFFFF" />
+                          Abort Travel
+                        </button>
+                      ) : null}
+                   </div>
+                 )}
                </div>
             </div>
           </div>
+
+          {/* Travel Status Widget */}
+          {isTraveling && destination && (
+            <div className="bg-dragon-darkRed text-white p-4 rounded border-2 border-dragon-gold shadow-xl space-y-3 animate-in fade-in slide-in-from-top-2">
+               <div className="flex items-center justify-between">
+                  <span className="text-[9px] font-black uppercase tracking-[0.2em] text-dragon-gold">Expedition Progress</span>
+                  <div className="flex items-center gap-2">
+                     <div className="w-2 h-2 rounded-full bg-dragon-gold animate-ping" />
+                     <span className="text-[9px] font-black uppercase tracking-widest">En_Route</span>
+                  </div>
+               </div>
+
+               <div className="space-y-1">
+                  <div className="flex justify-between text-[10px] font-header uppercase">
+                     <span className="opacity-60">To:</span>
+                     <span className="font-bold text-dragon-gold">{destination.name}</span>
+                  </div>
+                  <div className="w-full h-2 bg-black/40 rounded-full overflow-hidden border border-white/5">
+                     <motion.div
+                        initial={false}
+                        animate={{ width: `${travelProgress * 100}%` }}
+                        className="h-full bg-dragon-gold shadow-[0_0_10px_rgba(212,175,55,0.5)]"
+                     />
+                  </div>
+                  <div className="flex justify-between text-[8px] font-black uppercase tracking-tighter opacity-40">
+                     <span>Origin</span>
+                     <span>{Math.round(travelProgress * 100)}% Complete</span>
+                     <span>Arrival</span>
+                  </div>
+               </div>
+            </div>
+          )}
 
           {/* Points of Interest / Sublocations */}
           <div className="space-y-4">
