@@ -17,7 +17,9 @@ export const useJournalStore = create<JournalStore>((set) => ({
   encounteredEnemies: [],
 
   addSummary: (summary) => set((state) => ({
-    summaries: [summary, ...state.summaries]
+    summaries: state.summaries.some(s => s.day === summary.day)
+      ? state.summaries.map(s => s.day === summary.day ? summary : s)
+      : [summary, ...state.summaries]
   })),
 
   addQuest: (quest) => set((state) => ({

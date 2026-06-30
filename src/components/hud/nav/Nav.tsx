@@ -6,6 +6,7 @@ import { useUIStore } from '../../../store/useUIStore';
 import { GameIcon, GameIconName } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
+import { TemporalWidget } from '../TemporalWidget';
 
 export interface NavAction {
   id: string;
@@ -158,47 +159,37 @@ export const Nav: React.FC = () => {
         </div>
       </div>
 
-      {/* Middle Section: Command Display */}
-      <div className="absolute left-1/2 -translate-x-1/2 h-full flex items-center z-10">
-        <div className="flex items-center gap-6 bg-parchment-200/50 backdrop-blur-md px-6 py-1.5 rounded-full border-2 border-dragon-gold/30 shadow-inner">
-           <div className="flex flex-col items-center">
-              <span className="text-[7px] font-black text-dragon-darkRed/40 uppercase tracking-[0.2em] mb-0.5">Timeline</span>
-              <div className="flex items-center gap-2">
-                 <GameIcon name={isNight() ? "moon" : "eye"} size={10} className="text-dragon-red/50" />
-                 <span className="text-xs font-mono text-dragon-darkRed tracking-[0.1em] font-black">
-                    {formatTime(gameTime)}
-                 </span>
-              </div>
-           </div>
+      {/* Middle Section: Temporal Widget & Dynamic Actions */}
+      <div className="absolute left-1/2 -translate-x-1/2 h-full flex items-center z-10 gap-4">
+        <TemporalWidget />
 
-           <div className="w-px h-6 bg-dragon-gold/20" />
-
-           <div className="flex items-center gap-4">
-              <AnimatePresence mode="popLayout">
-                {dynamicNavButtons.map((action: NavAction) => (
-                  <motion.button
-                    key={action.id}
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.8, opacity: 0 }}
-                    onClick={action.onClick}
-                    className={cn(
-                      "flex flex-col items-center group gap-1",
-                      action.isActive ? "text-dragon-red" : "text-dragon-red/40 hover:text-dragon-red"
-                    )}
-                  >
-                    <div className={cn(
-                      "p-1.5 rounded-lg transition-all",
-                      action.isActive ? "bg-dragon-red/10 border-2 border-dragon-red/30 shadow-inner" : "group-hover:bg-dragon-red/5"
-                    )}>
-                      <GameIcon name={action.icon} size={14} />
-                    </div>
-                    <span className="text-[7px] font-black uppercase tracking-tighter">{action.label}</span>
-                  </motion.button>
-                ))}
-              </AnimatePresence>
-           </div>
-        </div>
+        {dynamicNavButtons.length > 0 && (
+          <div className="flex items-center gap-4 bg-parchment-200/50 backdrop-blur-md px-4 py-1.5 rounded-full border-2 border-dragon-gold/30 shadow-inner">
+            <AnimatePresence mode="popLayout">
+              {dynamicNavButtons.map((action: NavAction) => (
+                <motion.button
+                  key={action.id}
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.8, opacity: 0 }}
+                  onClick={action.onClick}
+                  className={cn(
+                    "flex flex-col items-center group gap-1",
+                    action.isActive ? "text-dragon-red" : "text-dragon-red/40 hover:text-dragon-red"
+                  )}
+                >
+                  <div className={cn(
+                    "p-1.5 rounded-lg transition-all",
+                    action.isActive ? "bg-dragon-red/10 border-2 border-dragon-red/30 shadow-inner" : "group-hover:bg-dragon-red/5"
+                  )}>
+                    <GameIcon name={action.icon} size={14} />
+                  </div>
+                  <span className="text-[7px] font-black uppercase tracking-tighter">{action.label}</span>
+                </motion.button>
+              ))}
+            </AnimatePresence>
+          </div>
+        )}
       </div>
 
       {/* Right Section: Hero Status + Stats */}

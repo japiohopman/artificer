@@ -47,17 +47,17 @@
   - [x] Define Party State & World State schemas.
   - [x] Design Travel, Time, and Weather systems.
   - [x] Blueprint World Panel Architecture & Data Flow.
-- [ ] **Store Slicing (Infrastructure)**
-  - [ ] Refactor `useStore.ts` into specialized slices (`useCharacterStore`, `useInventoryStore`, `useWorldStore`).
-  - [ ] Migrate global state to appropriate slices.
+- [x] **Store Slicing (Infrastructure)**
+  - [x] Refactor `useStore.ts` into specialized slices (`useUIStore`, `useAtlasStore`, `useGameStore`).
+  - [x] Migrate global state to appropriate slices.
 - [ ] **World State Module**
   - [ ] Implement Temporal Progression (`gameYear`, `gameMonth`, `gameDay`, `gameTime`).
   - [ ] Create Environmental Engine for dynamic weather.
   - [ ] Setup Faction & World Flags system.
-- [ ] **Journal & Persistence**
+- [x] **Journal & Persistence**
   - [x] Document Journal specifications (`docs/modules/journal.md`).
-  - [ ] Implement `Journal.tsx` component.
-  - [ ] Setup Session Summaries and Quest Tracker logic.
+  - [x] Implement `Journal.tsx` component.
+  - [x] Setup Session Summaries and Quest Tracker logic (UI/Store implementation).
 
 ## Future Modules (Roadmap)
 - [ ] **NPC Memory Module**
