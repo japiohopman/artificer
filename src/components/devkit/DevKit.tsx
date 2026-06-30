@@ -20,7 +20,6 @@ import {
 } from '../../lib/npcGeneratorUtils';
 import { atlasService, AtlasClass, AtlasSpecies, AtlasBackground } from '../../services/atlasService';
 import { motion, AnimatePresence } from 'motion/react';
-import { useStore } from '../../store/useStore';
 import { useAtlasStore } from '../../store/useAtlasStore';
 import { useCharacterStore, SKILL_LIST } from '../../store/useCharacterStore';
 import { EquipmentDoll } from '../character/EquipmentDoll';

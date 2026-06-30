@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStore } from '../../store/useStore';
+import { useUIStore } from '../../store/useUIStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { useWorldStore } from '../../store/useWorldStore';
 import { WorldPanel } from './WorldPanel';
@@ -18,7 +18,7 @@ export const HUD: React.FC = () => {
     isCharacterPanelOpen, 
     setIsWorldPanelOpen,
     setIsCharacterPanelOpen,
-  } = useStore();
+  } = useUIStore();
 
   const {
     isInventoryOpen,

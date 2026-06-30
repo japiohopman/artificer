@@ -12,6 +12,8 @@ export interface SavedLocation {
   coordinates?: { x?: number; y?: number; lat?: number; lng?: number };
   overlayMapUrl?: string;
   subLocations?: any[];
+  popup?: { title: string };
+  categoryId?: string;
 }
 
 export const CategoryIcons: Record<string, { icon: string, color: string }> = {

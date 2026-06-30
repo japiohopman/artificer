@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useStore } from '../../../store/useStore';
+import { useGameStore } from '../../../store/useGameStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon } from '../../../game_icons';
 
 export const CombatGrid: React.FC = () => {
-  const { activeCards } = useStore();
+  const { activeCards } = useGameStore();
   const { characters, activeCharacterId } = useCharacterStore();
   
   const activeChar = characters.find(c => c.id === activeCharacterId);
