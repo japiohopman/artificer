@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { useUIStore } from '../../store/useUIStore';
 import { useGameStore } from '../../store/useGameStore';
 import { useAudioStore } from '../../store/useAudioStore';
@@ -116,6 +116,8 @@ export const NotificationWindow: React.FC = () => {
           <button 
             className="text-white/5 hover:text-white/40 transition-colors p-1 shrink-0 pointer-events-auto"
             onClick={() => clearLogs()}
+            title="Clear Logs"
+            aria-label="Clear Logs"
           >
             <GameIcon name="x" size={10} />
           </button>
