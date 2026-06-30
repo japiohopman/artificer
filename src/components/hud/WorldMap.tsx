@@ -1,104 +1,73 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents, SVGOverlay } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useStore } from '../../store/useStore';
 import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorldStore';
 import { WORLD_ATLAS_ICONS } from '../../assets/icons/world_atlas';
-import { GameIcon } from '../../game_icons';
+import { MapLegend } from './game/MapLegend';
+import { REGION_METADATA, REGION_PATH_REGISTRY } from '../../data/regions';
 
-// Define visibility tiers for categories
 const CATEGORY_TIERS = [
-  { 
-    threshold: 0, 
-    files: ['cities/cities.json'], 
-    categories: ['cities', 'metropolis', 'city'] 
-  },
-  { 
-    threshold: 2, 
-    files: ['towns_settlements/towns_settlements.json'], 
-    categories: ['settlement', 'town', 'village'] 
-  },
-  { 
-    threshold: 4, 
-    files: [
-      'fortresses_keeps/fortresses_keeps.json',
-      'mountains/mountain.json'
-    ], 
-    categories: ['castle', 'fortress', 'keep', 'tower', 'mountain', 'peaks'] 
-  },
-  { 
-    threshold: 5.5, 
-    files: [
-      'poi/poi.json',
-      'ruins/ruins.json',
-      'forest/forest.json',
-      'wetlands/wetlands.json',
-      'waters/waters.json',
-      'islands/islands.json',
-      'temples_shrines/temples_shrines.json'
-    ], 
-    categories: ['poi', 'ruin', 'dungeon', 'cave', 'temple', 'shrine', 'forest', 'lake', 'island', 'water'] 
-  },
-  { 
-    threshold: 6.5, 
-    files: [
-      'roads_trails/roads_trails.json',
-      'plains_grasslands/plains_grasslands.json',
-      'deserts_wastelands/deserts_wastelands.json',
-      'glaciers_tundras/glaciers_tundras.json',
-      'oases/oases.json',
-      'underdark/underdark.json'
-    ], 
-    categories: ['road', 'trail', 'grassland', 'plain', 'desert', 'glacier', 'tundra', 'oasis', 'underdark'] 
-  }
+  { zoom: 0, categories: ['cities'] },
+  { zoom: 2, categories: ['towns_settlements'] },
+  { zoom: 4, categories: ['fortresses_keeps', 'mountains'] },
+  { zoom: 5.5, categories: ['poi', 'ruins', 'forest', 'waters', 'islands'] },
+  { zoom: 6.5, categories: ['roads_trails', 'wetlands', 'plains_grasslands'] }
 ];
 
 // Helper to create custom markers using World Atlas Icons
 const createCustomIcon = (category: string, isInspected: boolean = false) => {
-  let catKey = category?.toLowerCase() || '';
+  const cat = category?.toLowerCase() || '';
+  let catKey = cat;
   
   // Advanced normalization for diverse atlas data
-  if (catKey.includes('city') || catKey.includes('metropolis')) catKey = 'city';
-  else if (catKey.includes('town') || catKey.includes('settlement') || catKey.includes('village')) catKey = 'village';
-  else if (catKey.includes('ruin')) catKey = 'ruins';
-  else if (catKey.includes('dungeon') || catKey.includes('cave')) catKey = 'dungeon';
-  else if (catKey.includes('fortress') || catKey.includes('castle') || catKey.includes('keep')) catKey = 'castle';
-  else if (catKey.includes('forest') || catKey.includes('wood')) catKey = 'forest';
-  else if (catKey.includes('mountain') || catKey.includes('peak') || catKey.includes('hill')) catKey = 'mountains';
-  else if (catKey.includes('lake') || catKey.includes('water') || catKey.includes('sea') || catKey.includes('wetland') || catKey.includes('river')) catKey = 'waters';
-  else if (catKey.includes('island')) catKey = 'islands';
-  else if (catKey.includes('temple') || catKey.includes('shrine')) catKey = 'temples';
-  else if (catKey.includes('poi')) catKey = 'poi';
+  if (cat.includes('city') || cat.includes('metropolis')) catKey = 'city';
+  else if (cat.includes('town') || cat.includes('settlement') || cat.includes('village')) catKey = 'village';
+  else if (cat.includes('ruin')) catKey = 'ruins';
+  else if (cat.includes('graveyard') || cat.includes('cemetery')) catKey = 'graveyard';
+  else if (cat.includes('dungeon') || cat.includes('cave')) catKey = 'dungeon';
+  else if (cat.includes('fortress') || cat.includes('castle') || cat.includes('keep')) catKey = 'castle';
+  else if (cat.includes('forest') || cat.includes('wood')) catKey = 'forest';
+  else if (cat.includes('mountain') || cat.includes('peak') || cat.includes('hill')) catKey = 'mountains';
+  else if (cat.includes('lake') || cat.includes('water') || cat.includes('sea') || cat.includes('wetland') || cat.includes('river')) catKey = 'waters';
+  else if (cat.includes('island')) catKey = 'islands';
+  else if (cat.includes('temple') || cat.includes('shrine')) catKey = 'temples';
+  else if (cat.includes('road') || cat.includes('trail')) catKey = 'roads';
+  else if (cat.includes('poi') || cat.includes('point_of_interest')) catKey = 'poi';
+  else if (cat.includes('swamp') || cat.includes('marsh') || cat.includes('wetland')) catKey = 'wetlands';
+  else if (cat.includes('grassland') || cat.includes('plains') || cat.includes('field') || cat.includes('grass')) catKey = 'grassland';
+  else if (cat.includes('desert') || cat.includes('oasis') || cat.includes('waste')) catKey = 'desert';
+  else if (cat.includes('arctic') || cat.includes('glacier') || cat.includes('tundra')) catKey = 'arctic';
+  else if (cat.includes('coast') || cat.includes('beach') || cat.includes('bay') || cat.includes('port')) catKey = 'waters';
   
-  const config = CategoryIcons[catKey] || CategoryIcons[catKey.replace(/s$/, '')] || { icon: 'landmark', color: '#D4AF37' };
+  const config = CategoryIcons[catKey] || 
+                 CategoryIcons[catKey.replace(/s$/, '')] || 
+                 CategoryIcons[catKey + 's'] ||
+                 { icon: 'landmark', color: '#D4AF37' };
   
-  let iconKey = config.icon as keyof typeof WORLD_ATLAS_ICONS;
+  // Use mapping to WORLD_ATLAS_ICONS
+  const iconKey = config.icon as keyof typeof WORLD_ATLAS_ICONS;
+  const path = WORLD_ATLAS_ICONS[iconKey] || WORLD_ATLAS_ICONS.landmark || WORLD_ATLAS_ICONS.city;
   
-  if (catKey === 'village') iconKey = 'village';
-  else if (catKey === 'ruins') iconKey = 'ruins';
-  else if (catKey === 'mountains') iconKey = 'mountains';
-  else if (catKey === 'waters') iconKey = 'waters';
-  else if (catKey === 'temples') iconKey = 'temples';
-  else if (catKey === 'castle') iconKey = 'castle';
-  else if (catKey === 'forest') iconKey = 'forest';
-  else if (catKey === 'dungeon') iconKey = 'dungeon';
-
-  const path = WORLD_ATLAS_ICONS[iconKey] || WORLD_ATLAS_ICONS.city;
   const scaleClass = isInspected ? 'scale-125' : 'group-hover:scale-110';
-  const color = isInspected ? '#FFD700' : config.color;
 
   return L.divIcon({
     html: `
       <div class="relative group ${isInspected ? 'z-[1000]' : ''}">
+        <!-- Glow Effect -->
         <div class="absolute inset-0 bg-black/60 blur-lg rounded-full transform scale-50 transition-transform ${scaleClass}"></div>
+
+        <!-- Selection Ring -->
         ${isInspected ? `
           <div class="absolute inset-[-12px] border-2 border-dragon-gold/40 rounded-full animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
           <div class="absolute inset-[-6px] border border-dragon-gold/60 rounded-full"></div>
         ` : ''}
-        <svg viewBox="0 0 512 512" width="32" height="32" class="relative transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scaleClass} ${isInspected ? '-translate-y-1' : ''}">
-          <path d="${path}" fill="${color}" stroke="rgba(0,0,0,0.9)" stroke-width="12" />
-          <path d="${path}" fill="${color}" />
+
+        <!-- Icon SVG -->
+        <svg viewBox="0 0 512 512" width="32" height="32" overflow="visible" class="relative transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scaleClass} ${isInspected ? '-translate-y-1' : ''}">
+          <path d="${path}" fill="${config.color}" stroke="rgba(0,0,0,0.9)" stroke-width="12" />
+          <path d="${path}" fill="${config.color}" />
           ${isInspected ? `
             <circle cx="256" cy="256" r="280" fill="none" stroke="#FFD700" stroke-width="15" stroke-dasharray="80 40" class="animate-[spin_12s_linear_infinite]" />
           ` : ''}
@@ -127,14 +96,35 @@ const ChangeView = ({ center, zoom }: { center: [number, number], zoom: number }
   return null;
 };
 
-const MapEvents = ({ onZoomChange }: { onZoomChange: (zoom: number) => void }) => {
+const MapEvents = ({
+  onZoomChange,
+  onBoundsChange,
+  onMapInstance
+}: {
+  onZoomChange: (zoom: number) => void;
+  onBoundsChange: (bounds: L.LatLngBounds) => void;
+  onMapInstance: (map: L.Map) => void;
+}) => {
   const { setInspectedLocation } = useWorldStore();
+  const map = useMap();
+
+  React.useEffect(() => {
+    onMapInstance(map);
+    if (map) {
+      onBoundsChange(map.getBounds());
+    }
+  }, [map, onMapInstance, onBoundsChange]);
+
   useMapEvents({
     click: () => {
       setInspectedLocation(null);
     },
     zoomend: (e) => {
       onZoomChange(e.target.getZoom());
+      onBoundsChange(e.target.getBounds());
+    },
+    moveend: (e) => {
+      onBoundsChange(e.target.getBounds());
     }
   });
   return null;
@@ -145,13 +135,16 @@ const MapInvalidator = () => {
   const { isWorldPanelOpen, isCharacterPanelOpen } = useStore();
 
   React.useEffect(() => {
+    // During sidebar animation (approx 350-500ms), invalidate multiple times for smoothness
     const interval = setInterval(() => {
       map.invalidateSize({ animate: false });
     }, 50);
+
     const timer = setTimeout(() => {
       clearInterval(interval);
       map.invalidateSize({ animate: true });
     }, 600);
+
     return () => {
       clearInterval(interval);
       clearTimeout(timer);
@@ -168,96 +161,145 @@ export const WorldMap: React.FC = () => {
     inspectedLocation,
     setInspectedLocation,
     addSavedLocations,
-    addLoadedCategory,
-    isCategoryLoaded
+    isCategoryLoaded,
+    addLoadedCategory
   } = useWorldStore();
   const { setIsWorldPanelOpen } = useStore();
+  const [hoveredRegion, setHoveredRegion] = React.useState<string | null>(null);
+  const [currentBounds, setCurrentBounds] = React.useState<L.LatLngBounds | null>(null);
   
+  // Faerun Tile configuration (from metadata.json)
   const mapWidth = 21620;
   const mapHeight = 14461;
   const maxZoom = 7;
-  // Leaflet TileLayer {z}/{x}/{y} expects y axis to be inverted if using standard CMS,
-  // but with CRS.Simple and L.Transformation(1/scale, 0, 1/scale, 0), 
-  // it maps (0,0) to top-left and (height, width) to bottom-right in pixel space.
-  const scaleFactor = Math.pow(2, maxZoom); // 128
 
+  // Prototype coordinate system was approx 4763 x 3185
+  const protoWidth = 4763;
+  const protoHeight = 3185;
+  
+  // Define full bounds in pixel space
   const bounds: L.LatLngBoundsExpression = [[0, 0], [mapHeight, mapWidth]];
   
+  const scaleFactorValue = 128;
+
+  // Custom CRS for Faerun to handle tile coordinate system correctly
   const faerunCRS = React.useMemo(() => L.extend({}, L.CRS.Simple, {
-    transformation: new L.Transformation(1 / scaleFactor, 0, 1 / scaleFactor, 0),
-  }), [scaleFactor]);
+    transformation: new L.Transformation(1 / scaleFactorValue, 0, 1 / scaleFactorValue, 0),
+  }), [scaleFactorValue]);
+
+  // Legacy coordinate mapping:
+  // Prototype X range [0, 4763] -> High-res X range [0, 21620]
+  // Prototype Y range [0, 3185] -> High-res Y range [0, 14461]
+  // Note: Prototype X increases West, Image X increases East.
+  // Note: Prototype Y increases South, and with our Transformation(1/128, 0, 1/128, 0), 
+  // Leaflet Lat Y also increases South.
+  const rescaleX = React.useCallback((x: number) => (x / protoWidth) * mapWidth, [mapWidth, protoWidth]);
+  const rescaleY = React.useCallback((y: number) => (1 - (y / protoHeight)) * mapHeight, [mapHeight, protoHeight]);
+
+  const mapRef = React.useRef<L.Map | null>(null);
 
   const getPosition = React.useCallback((loc: any): [number, number] | null => {
     if (!loc) return null;
-    let x, y;
-    
+    let x = loc.coordinates?.x ?? loc.coordinates?.lng;
+    let y = loc.coordinates?.y ?? loc.coordinates?.lat;
+
+    // If loc.position exists (direct from cities.json), it is [x, y]
     if (loc.position && Array.isArray(loc.position)) {
-      // Data follows [y, x] where y is North-South (pixel space)
-      y = loc.position[0];
-      x = loc.position[1];
-    } else if (loc.coordinates) {
-       x = loc.coordinates.x ?? loc.coordinates.lng;
-       y = loc.coordinates.y ?? loc.coordinates.lat;
+      x = loc.position[0];
+      y = loc.position[1];
     }
 
     if (x === undefined || y === undefined) return null;
-    // Leaflet LatLng in CRS.Simple: [y, x]
-    return [y, x];
-  }, []);
 
-  const center = React.useMemo((): [number, number] => {
-    const pos = getPosition(partyLocation);
-    return pos || [mapHeight/2, mapWidth/2];
-  }, [partyLocation, getPosition, mapHeight, mapWidth]);
+    // Convert to high-res pixel space
+    const px = rescaleX(x);
+    const py = rescaleY(y);
+
+    // Return scaled pixel coordinates.
+    // Leaflet's L.CRS.Simple with our transformation expects coordinates to be in the untransformed space.
+    // Actually, L.Transformation(a, b, c, d) means x' = ax + b, y' = cy + d.
+    // Our transformation is 1/128, which means pixel 128 becomes coordinate 1.
+    // But Leaflet markers take LatLng. In Simple CRS, LatLng = [y, x].
+    // If we want a marker at pixel (px, py), we should pass [py, px] if CRS handles scaling,
+    // OR we should pass [py/128, px/128] if it doesn't.
+    // Given the transformation is 1/128, Leaflet will scale whatever we pass by 1/128.
+    // So if we pass [py, px], it becomes [py/128, px/128] in CRS units.
+    // This matches the TileLayer which also uses this CRS.
+    return [py, px];
+  }, [rescaleX, rescaleY]);
+
+  const center = React.useMemo((): [number, number] => 
+    partyLocation ? getPosition(partyLocation) || [mapHeight/2, mapWidth/2] : [mapHeight/2, mapWidth/2]
+  , [partyLocation, getPosition, mapHeight, mapWidth]);
   
   const initialZoom = partyLocation?.zoom || 1;
   const [currentZoom, setCurrentZoom] = React.useState(initialZoom);
 
-  // Progressive Loading Logic
+  // Progressive Data Loading
   React.useEffect(() => {
-    const basePath = '/assets/atlas/world/toril/faerun/';
-    
-    const loadTier = async (tierFiles: string[]) => {
-      const results = await Promise.all(
-        tierFiles.map(async (file) => {
-          if (isCategoryLoaded(file)) return [];
-          try {
-            const res = await fetch(`${basePath}${file}`);
-            if (!res.ok) return [];
-            const data = await res.json();
-            addLoadedCategory(file);
-            return data;
-          } catch (e) {
-            return [];
+    const loadTiers = async () => {
+      for (const tier of CATEGORY_TIERS) {
+        if (currentZoom >= tier.zoom) {
+          for (const category of tier.categories) {
+            if (!isCategoryLoaded(category)) {
+              try {
+                const response = await fetch(`/assets/atlas/world/toril/faerun/${category}/${category}.json`);
+                if (response.ok) {
+                  const data = await response.json();
+                  const rawLocations = data.locations || data || [];
+                  if (Array.isArray(rawLocations)) {
+                    const normalized = rawLocations.map((l: any) => ({
+                      ...l,
+                      category: l.category || l.categoryId || category,
+                      id: l.id || l.name?.toLowerCase().replace(/\s+/g, '_')
+                    }));
+                    addSavedLocations(normalized as SavedLocation[]);
+                  }
+                }
+              } catch (e) {
+                console.warn(`Failed to load category: ${category}`, e);
+              }
+              addLoadedCategory(category);
+            }
           }
-        })
-      );
-
-      const flat = results.flat();
-      const mapped: SavedLocation[] = flat.map((item: any) => ({
-        id: item.id || Math.random().toString(36).substr(2, 9),
-        name: item.popup?.title || item.name,
-        category: item.categoryId || item.type,
-        coordinates: item.position ? { lat: item.position[0], lng: item.position[1] } : (item.coordinates ? { lat: item.coordinates.lat, lng: item.coordinates.lng } : undefined),
-        description: item.popup?.description || item.description,
-        image: item.popup?.image || item.image
-      })).filter(l => l.name && l.coordinates);
-
-      addSavedLocations(mapped);
-    };
-
-    CATEGORY_TIERS.forEach(tier => {
-      if (currentZoom >= tier.threshold) {
-        loadTier(tier.files);
+        }
       }
-    });
-  }, [currentZoom, addSavedLocations, addLoadedCategory, isCategoryLoaded]);
+    };
+    loadTiers();
+  }, [currentZoom, isCategoryLoaded, addSavedLocations, addLoadedCategory]);
 
-  // Filtering logic for zoom levels
+  // Filtering logic for zoom levels to reduce clutter
   const visibleLocations = React.useMemo(() => savedLocations.filter(loc => {
     const cat = loc.category?.toLowerCase() || '';
-    const tier = CATEGORY_TIERS.find(t => t.categories.some(c => cat.includes(c)));
-    return tier ? currentZoom >= tier.threshold : currentZoom >= 6.5;
+    
+    // Always show major cities
+    if (cat.includes('city') || cat.includes('cities')) {
+      if (currentZoom >= 1) return true;
+      const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
+      return majorCities.includes(loc.name?.toLowerCase());
+    }
+    
+    // Zoom 2+: Show towns and large settlements
+    if (currentZoom >= 2) {
+      if (cat.includes('town') || cat.includes('settlement') || cat.includes('village')) return true;
+    }
+    
+    // Zoom 4+: Show fortresses, keeps, and prominent landmarks
+    if (currentZoom >= 4) {
+      if (cat.includes('fortress') || cat.includes('keep') || cat.includes('castle') || cat.includes('tower')) return true;
+      if (cat.includes('mountain') || cat.includes('peaks')) return true;
+    }
+    
+    // Zoom 5+: Show points of interest, ruins, and geographic features
+    if (currentZoom >= 5) {
+      if (cat.includes('poi') || cat.includes('ruin') || cat.includes('dungeon') || cat.includes('cave') || cat.includes('temple') || cat.includes('graveyard')) return true;
+      if (cat.includes('mountain') || cat.includes('forest') || cat.includes('lake') || cat.includes('island') || cat.includes('water')) return true;
+    }
+    
+    // Zoom 6+: Show everything else
+    if (currentZoom >= 6) return true;
+    
+    return false;
   }), [savedLocations, currentZoom]);
 
   return (
@@ -282,8 +324,43 @@ export const WorldMap: React.FC = () => {
           noWrap={true}
           bounds={bounds}
         />
+
+        {/* Regional SVG Overlay - Only visible at high level overview */}
+        {currentZoom < 3 && (
+          <SVGOverlay bounds={bounds} attributes={{ viewBox: "0 0 1600 1070" }}>
+            {Object.entries(REGION_PATH_REGISTRY).map(([id, path]) => (
+              <path
+                key={id}
+                d={path}
+                onMouseEnter={() => setHoveredRegion(id)}
+                onMouseLeave={() => setHoveredRegion(null)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  const meta = REGION_METADATA[id];
+                  if (meta && meta.focalPoint && mapRef.current) {
+                    // Focal points are [y, x] in high-res pixels, where Y increases North.
+                    // We need to invert Y for Leaflet [y, x] where Y increases South.
+                    mapRef.current.setView(
+                      [mapHeight - meta.focalPoint[0], meta.focalPoint[1]],
+                      meta.zoom || 4,
+                      { animate: true, duration: 1.5 }
+                    );
+                  }
+                }}
+                className={`transition-all duration-500 cursor-pointer pointer-events-auto ${
+                  hoveredRegion === id ? 'fill-dragon-red/20 stroke-dragon-red/40 stroke-[2px]' : 'fill-transparent stroke-white/5 stroke-[1px]'
+                }`}
+              />
+            ))}
+          </SVGOverlay>
+        )}
+
         <ChangeView center={center} zoom={initialZoom} />
-        <MapEvents onZoomChange={setCurrentZoom} />
+        <MapEvents
+          onZoomChange={setCurrentZoom}
+          onBoundsChange={setCurrentBounds}
+          onMapInstance={(map) => mapRef.current = map}
+        />
         
         {partyLocation && (
           <Marker 
@@ -356,42 +433,21 @@ export const WorldMap: React.FC = () => {
         })}
       </MapContainer>
       
-      {/* Map Legend */}
-      <div className="absolute top-20 left-6 z-[1000] pointer-events-none">
-         <div className="bg-parchment-100/90 border-2 border-dragon-gold/50 p-3 rounded-md shadow-2xl flex flex-col gap-2 pointer-events-auto backdrop-blur-sm min-w-[140px]">
-            <div className="text-[10px] font-bold text-dragon-red border-b border-dragon-gold/20 pb-1 mb-1 uppercase tracking-widest flex items-center gap-2">
-               <GameIcon name="city" size={12} />
-               <span>Atlas Legend</span>
-            </div>
-            {CATEGORY_TIERS.map((tier, idx) => (
-               <div key={idx} className={cn(
-                 "flex items-center gap-2 transition-opacity",
-                 currentZoom < tier.threshold ? "opacity-30" : "opacity-100"
-               )}>
-                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: CategoryIcons[tier.categories[0]]?.color || '#D4AF37' }} />
-                  <span className="text-[9px] font-bold uppercase tracking-tighter text-slate-700">
-                    {tier.categories[0]}
-                  </span>
-                  {currentZoom < tier.threshold && (
-                    <div className="ml-auto text-[8px] text-slate-400 font-serif italic">Z{tier.threshold}</div>
-                  )}
-               </div>
-            ))}
-         </div>
-      </div>
-
+      {/* Map Overlay Vignette */}
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] z-[400]" />
       
+      {/* Map Legend */}
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-[1000] max-w-[90%]">
+        <MapLegend currentZoom={currentZoom} />
+      </div>
+      
+      {/* Zoom Controls */}
       <div className="absolute bottom-6 right-6 z-[1000] flex flex-col gap-2">
         <div className="bg-parchment-100/90 border-2 border-dragon-gold/50 p-1 rounded-md shadow-lg flex flex-col">
           <div className="text-[9px] text-center font-bold text-dragon-red border-b border-dragon-gold/20 mb-1 pb-1 uppercase">Zoom</div>
-          <div className="text-center font-header font-bold text-lg text-dragon-red">{Math.round(currentZoom * 10) / 10}</div>
+          <div className="text-center font-header font-bold text-lg text-dragon-red">{Math.round(currentZoom)}</div>
         </div>
       </div>
     </div>
   );
 };
-
-function cn(...classes: any[]) {
-  return classes.filter(Boolean).join(' ');
-}

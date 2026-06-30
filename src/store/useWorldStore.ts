@@ -16,15 +16,34 @@ export interface SavedLocation {
 
 export const CategoryIcons: Record<string, { icon: string, color: string }> = {
   city: { icon: 'city', color: '#D4AF37' },
-  village: { icon: 'village', color: '#D4AF37' },
+  village: { icon: 'village', color: '#C0C0C0' },
   forest: { icon: 'forest', color: '#228B22' },
-  wetlands: { icon: 'waters', color: '#4682B4' },
-  mountain: { icon: 'mountains', color: '#A9A9A9' },
-  underdark: { icon: 'death', color: '#4B0082' },
+  wetlands: { icon: 'wetlands', color: '#1E90FF' },
+  mountain: { icon: 'mountains', color: '#2F4F4F' },
+  mountains: { icon: 'mountains', color: '#2F4F4F' },
+  underdark: { icon: 'dungeon', color: '#4B0082' },
   dungeon: { icon: 'dungeon', color: '#8B0000' },
-  castle: { icon: 'castle', color: '#708090' },
-  landmark: { icon: 'landmark', color: '#FFD700' },
-  poi: { icon: 'poi', color: '#FFD700' }
+  castle: { icon: 'castle', color: '#A9A9A9' },
+  fortresses_keeps: { icon: 'fortresses_keeps', color: '#A9A9A9' },
+  landmark: { icon: 'landmark', color: '#4169E1' },
+  poi: { icon: 'poi', color: '#4169E1' },
+  points_of_interest: { icon: 'points_of_interest', color: '#4169E1' },
+  ruins: { icon: 'ruins', color: '#8B4513' },
+  waters: { icon: 'waters', color: '#1E90FF' },
+  lake: { icon: 'lake', color: '#1E90FF' },
+  sea: { icon: 'sea', color: '#1E90FF' },
+  islands: { icon: 'islands', color: '#FFD700' },
+  roads: { icon: 'roads', color: '#696969' },
+  trails: { icon: 'trails', color: '#696969' },
+  temples: { icon: 'temples', color: '#4169E1' },
+  shrines: { icon: 'shrines', color: '#4169E1' },
+  graveyard: { icon: 'graveyard', color: '#696969' },
+  desert: { icon: 'desert', color: '#EDC9AF' },
+  deserts: { icon: 'deserts', color: '#EDC9AF' },
+  grassland: { icon: 'grassland', color: '#7CFC00' },
+  plains: { icon: 'plains', color: '#7CFC00' },
+  arctic: { icon: 'arctic', color: '#F0FFFF' },
+  glaciers_tundras: { icon: 'glaciers_tundras', color: '#F0FFFF' }
 };
 
 export interface WorldState {
@@ -66,6 +85,7 @@ export interface WorldState {
   addSavedLocations: (locations: SavedLocation[]) => void;
   addLoadedCategory: (category: string) => void;
   isCategoryLoaded: (category: string) => boolean;
+  getCalendarDate: () => string;
   isNight: () => boolean;
   getActiveBackground: () => string;
 }
@@ -136,11 +156,10 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   })),
   setSavedLocations: (savedLocations) => set({ savedLocations }),
   addSavedLocations: (newLocations) => set((state) => {
-    // Filter out duplicates by ID
     const existingIds = new Set(state.savedLocations.map(l => l.id));
-    const filtered = newLocations.filter(l => !existingIds.has(l.id));
+    const uniqueNew = newLocations.filter(l => !existingIds.has(l.id));
     return {
-      savedLocations: [...state.savedLocations, ...filtered]
+      savedLocations: [...state.savedLocations, ...uniqueNew]
     };
   }),
 
@@ -149,6 +168,24 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   })),
 
   isCategoryLoaded: (category) => get().loadedCategories.includes(category),
+
+  getCalendarDate: () => {
+    const state = get();
+    const months = [
+      'Hammer', 'Alturiak', 'Ches', 'Tarsakh', 'Mirtul', 'Kythorn',
+      'Flamerule', 'Eleasis', 'Eleint', 'Marpenoth', 'Uktar', 'Nightal'
+    ];
+    const month = months[state.gameMonth - 1] || 'Hammer';
+
+    // Day suffix
+    let suffix = 'th';
+    const day = state.gameDay;
+    if (day === 1 || day === 21) suffix = 'st';
+    else if (day === 2 || day === 22) suffix = 'nd';
+    else if (day === 3 || day === 23) suffix = 'rd';
+
+    return `${day}${suffix} of ${month}, ${state.gameYear} DR`;
+  },
 
   isNight: () => {
     const time = get().gameTime;

@@ -14,12 +14,13 @@ export const ATLAS_CATEGORIES: LegendCategory[] = [
   { id: 'village', label: 'Towns & Villages', icon: 'village', color: '#C0C0C0' },
   { id: 'castle', label: 'Forts & Castles', icon: 'castle', color: '#A9A9A9' },
   { id: 'ruins', label: 'Ruins', icon: 'ruins', color: '#8B4513' },
-  { id: 'poi', label: 'Points of Interest', icon: 'landmark', color: '#4169E1' },
+  { id: 'poi', label: 'Points of Interest', icon: 'poi', color: '#4169E1' },
   { id: 'mountains', label: 'Hills & Mountains', icon: 'mountains', color: '#2F4F4F' },
   { id: 'forest', label: 'Forests', icon: 'forest', color: '#228B22' },
   { id: 'waters', label: 'Water Features', icon: 'waters', color: '#1E90FF' },
   { id: 'islands', label: 'Islands', icon: 'islands', color: '#FFD700' },
   { id: 'roads', label: 'Roads & Trails', icon: 'roads', color: '#696969' },
+  { id: 'graveyard', label: 'Cemeteries', icon: 'graveyard', color: '#696969' },
 ];
 
 interface MapLegendProps {

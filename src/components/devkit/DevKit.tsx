@@ -20,7 +20,7 @@ import {
 } from '../../lib/npcGeneratorUtils';
 import { atlasService, AtlasClass, AtlasSpecies, AtlasBackground } from '../../services/atlasService';
 import { motion, AnimatePresence } from 'motion/react';
-import { useUIStore } from '../../store/useUIStore';
+import { useStore } from '../../store/useStore';
 import { useAtlasStore } from '../../store/useAtlasStore';
 import { useCharacterStore, SKILL_LIST } from '../../store/useCharacterStore';
 import { EquipmentDoll } from '../character/EquipmentDoll';
@@ -28,11 +28,13 @@ import { GameIcon } from '../../game_icons';
 
 import { NPCGenerator } from './npc_generator';
 import { NPCTester } from './npc_tester';
+import { CombatTester } from './CombatTester';
 import { Simulator } from './Simulator';
 import { Jane } from './Jane';
 
 import { Mixer } from '../audio/Mixer';
 import { AssetExplorer } from './AssetExplorer';
+import { WorldExplorer } from './WorldExplorer';
 
 interface DevKitProps {
   isOpen: boolean;
@@ -64,7 +66,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     addCharacter
   } = useCharacterStore();
 
-  const [activeTab, setActiveTab] = useState<'monsters' | 'materials' | 'equipment' | 'backgrounds' | 'npcs' | 'test' | 'simulator' | 'jane' | 'codex'>('monsters');
+  const [activeTab, setActiveTab] = useState<'monsters' | 'materials' | 'equipment' | 'backgrounds' | 'npcs' | 'test' | 'combat' | 'simulator' | 'jane' | 'codex' | 'world'>('monsters');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [editingItem, setEditingItem] = useState<any | null>(initialMonster || null);
   const [editingCharId, setEditingCharId] = useState<string | null>(null);
@@ -842,8 +844,10 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               { id: 'equipment', icon: (props: any) => <GameIcon name="package" {...props} />, label: 'EQUIPMENT' },
               { id: 'npcs', icon: (props: any) => <GameIcon name="avatar" {...props} />, label: 'NPCS' },
               { id: 'test', icon: (props: any) => <GameIcon name="users" {...props} />, label: 'TESTER' },
+              { id: 'combat', icon: (props: any) => <GameIcon name="attack" {...props} />, label: 'COMBAT' },
               { id: 'simulator', icon: (props: any) => <GameIcon name="magic_effect" {...props} />, label: 'SIMULATOR' },
               { id: 'jane', icon: (props: any) => <GameIcon name="map" {...props} />, label: 'JANE' },
+              { id: 'world', icon: (props: any) => <GameIcon name="location" {...props} />, label: 'WORLD' },
               { id: 'codex', icon: (props: any) => <GameIcon name="save_data" {...props} />, label: 'CODEX' },
               { id: 'backgrounds', icon: (props: any) => <GameIcon name="image" {...props} />, label: 'HABITATS' }
             ].map(tab => (
@@ -874,12 +878,16 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               <NPCGenerator onSave={() => loadAllLists()} />
             ) : activeTab === 'test' ? (
               <NPCTester />
+            ) : activeTab === 'combat' ? (
+              <CombatTester />
             ) : activeTab === 'simulator' ? (
               <Simulator />
             ) : activeTab === 'jane' ? (
               <Jane />
             ) : activeTab === 'codex' ? (
               <AssetExplorer />
+            ) : activeTab === 'world' ? (
+              <WorldExplorer />
             ) : activeTab !== 'backgrounds' ? (
               <>
                 {/* Left Drawer: Hierarchy & Checklist */}
