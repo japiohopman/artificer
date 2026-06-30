@@ -87,6 +87,7 @@ export interface WorldState {
   addSavedLocations: (locations: SavedLocation[]) => void;
   addLoadedCategory: (category: string) => void;
   isCategoryLoaded: (category: string) => boolean;
+  updateEnvironment: () => void;
   getCalendarDate: () => string;
   isNight: () => boolean;
   getActiveBackground: () => string;
@@ -170,6 +171,16 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   })),
 
   isCategoryLoaded: (category) => get().loadedCategories.includes(category),
+
+  updateEnvironment: () => {
+    const state = get();
+    // 1% chance every tick to change weather
+    if (Math.random() < 0.01) {
+      const weathers: WeatherType[] = ['Sunny', 'Rainy', 'Cloudy', 'Stormy', 'Snowy', 'Foggy'];
+      const newWeather = weathers[Math.floor(Math.random() * weathers.length)];
+      set({ weather: newWeather });
+    }
+  },
 
   getCalendarDate: () => {
     const state = get();
