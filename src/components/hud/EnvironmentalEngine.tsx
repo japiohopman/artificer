@@ -28,6 +28,23 @@ export const EnvironmentalEngine: React.FC = () => {
   // Visual Overlays based on state
   return (
     <div className="fixed inset-0 pointer-events-none z-[9999]">
+      {/* Fast Forward Indicator */}
+      {isFastForwarding && (
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 z-[10000] flex flex-col items-center gap-2">
+          <div className="flex items-center gap-2 px-4 py-2 bg-dragon-red/80 backdrop-blur-md border-2 border-dragon-gold rounded-full shadow-2xl animate-pulse">
+            <div className="flex gap-0.5">
+              <div className="w-1 h-4 bg-white rounded-full animate-[bounce_1s_infinite_0ms]" />
+              <div className="w-1 h-4 bg-white rounded-full animate-[bounce_1s_infinite_200ms]" />
+              <div className="w-1 h-4 bg-white rounded-full animate-[bounce_1s_infinite_400ms]" />
+            </div>
+            <span className="text-[10px] font-black text-white uppercase tracking-[0.3em]">Temporal_Acceleration_Active</span>
+          </div>
+          <div className="text-[8px] font-bold text-dragon-gold uppercase tracking-widest bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">
+            50x Time Compression
+          </div>
+        </div>
+      )}
+
       {/* Day/Night Overlay */}
       <div 
         className="absolute inset-0 transition-colors duration-[5000ms]" 

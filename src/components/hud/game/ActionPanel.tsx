@@ -15,8 +15,15 @@ interface CombatAction {
 }
 
 export const ActionPanel: React.FC = () => {
-  const { setGameMode, setIsAdvancedRollerOpen } = useUIStore();
-  const { addLog, rollDice3D, nextTurn } = useGameStore();
+  const {
+    setGameMode,
+    setIsAdvancedRollerOpen,
+    setIsTargeting,
+    setTargetingAction,
+    isTargeting,
+    targetingAction
+  } = useUIStore();
+  const { addLog, nextTurn } = useGameStore();
   const { activeCharacterId, characters } = useCharacterStore();
 
   const activeChar = characters.find(c => c.id === activeCharacterId);
@@ -49,32 +56,77 @@ export const ActionPanel: React.FC = () => {
       <div className="p-4 flex gap-4">
         {/* Main Actions Grid */}
         <div className="flex-1 grid grid-cols-3 md:grid-cols-6 gap-3">
-          {actions.map((action) => (
-            <motion.button
-              key={action.id}
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                addLog(`Action selected: ${action.label}`, 'info');
-                if (action.id === 'attack') {
-                  rollDice3D('1d20+5', 'Attack Roll');
-                } else if (action.id === 'move') {
-                  addLog("Movement grid initialized. Select a destination.", 'info');
-                } else if (action.id === 'spells') {
-                  setIsAdvancedRollerOpen(true);
-                }
-              }}
-              className="flex flex-col items-center group"
-            >
-              <div className={cn(
-                "w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center border-2 border-white/10 transition-all shadow-lg group-hover:border-white/30",
-                action.color
-              )}>
-                <GameIcon name={action.icon} size={24} color="#FFF" />
-              </div>
-              <span className="mt-2 text-[10px] font-black uppercase tracking-widest text-white/60 group-hover:text-white transition-colors">{action.label}</span>
-            </motion.button>
-          ))}
+          {actions.map((action) => {
+            const isActive = targetingAction?.id === action.id;
+
+            return (
+              <motion.button
+                key={action.id}
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  if (isActive) {
+                    setIsTargeting(false);
+                    setTargetingAction(null);
+                    addLog(`Action cancelled: ${action.label}`, 'warning');
+                    return;
+                  }
+
+                  addLog(`Action selected: ${action.label}`, 'info');
+                  if (action.id === 'attack') {
+                    setIsTargeting(true);
+                    setTargetingAction({
+                      ...action,
+                      name: 'Standard Attack',
+                      attack_bonus: 5,
+                      damage: [{ damage_dice: '1d8+3', damage_type: { name: 'slashing' } }]
+                    });
+                    addLog("Select a target on the grid.", 'info');
+                  } else if (action.id === 'move') {
+                    setIsTargeting(true);
+                    setTargetingAction({ ...action, name: 'Move' });
+                    addLog("Select destination on the grid.", 'info');
+                  } else if (action.id === 'spells') {
+                    setIsAdvancedRollerOpen(true);
+                  } else if (action.id === 'defend') {
+                    // Normalize player ID to 'player' to match initiative order and AI targeting
+                    const actorId = 'player';
+                    useGameStore.setState(state => ({
+                      combatState: {
+                        ...state.combatState,
+                        activeConditions: {
+                          ...state.combatState.activeConditions,
+                          [actorId]: [...(state.combatState.activeConditions[actorId] || []), 'defending']
+                        }
+                      }
+                    }));
+                    addLog(`${activeChar?.name || 'Player'} adopts a defensive stance! (+2 AC until next turn)`, 'success');
+                    nextTurn();
+                  } else if (action.id === 'items') {
+                    setIsTargeting(true);
+                    setTargetingAction({ ...action, name: 'Use Item' });
+                    addLog("Select an item or a target for item use.", 'info');
+                  } else if (action.id === 'skills') {
+                    addLog("Class skills matrix opening...", 'info');
+                    // Future: Open skills submenu
+                  }
+                }}
+                className="flex flex-col items-center group"
+              >
+                <div className={cn(
+                  "w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center border-2 transition-all shadow-lg group-hover:border-white/30",
+                  action.color,
+                  isActive ? "border-dragon-gold ring-4 ring-dragon-gold/20 scale-110" : "border-white/10"
+                )}>
+                  <GameIcon name={action.icon} size={24} color="#FFF" />
+                </div>
+                <span className={cn(
+                  "mt-2 text-[10px] font-black uppercase tracking-widest transition-colors",
+                  isActive ? "text-dragon-gold" : "text-white/60 group-hover:text-white"
+                )}>{action.label}</span>
+              </motion.button>
+            );
+          })}
         </div>
 
         {/* Turn Controls */}
@@ -96,10 +148,19 @@ export const ActionPanel: React.FC = () => {
       </div>
 
       {/* Action Details Tray */}
-      <div className="px-4 py-1.5 bg-black/40 border-t border-white/5">
-        <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest italic">
-          Select an action to view range and tactical implications.
-        </p>
+      <div className="px-4 py-1.5 bg-black/40 border-t border-white/5 min-h-[24px]">
+        {isTargeting ? (
+          <div className="flex items-center gap-2">
+            <span className="text-[8px] font-black text-dragon-gold uppercase animate-pulse">Targeting Mode:</span>
+            <span className="text-[8px] font-bold text-white/60 uppercase tracking-widest italic">
+              {targetingAction?.description || "Select a target on the grid."}
+            </span>
+          </div>
+        ) : (
+          <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest italic">
+            Select an action to view range and tactical implications.
+          </p>
+        )}
       </div>
     </div>
   );
