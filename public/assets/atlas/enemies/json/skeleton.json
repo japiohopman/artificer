@@ -4,13 +4,7 @@
   "size": "Medium",
   "type": "undead",
   "alignment": "lawful evil",
-  "armor_class": [
-    {
-      "type": "armor",
-      "value": 13,
-      "desc": "armor scraps"
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 13,
   "hit_dice": "2d8",
   "hit_points_roll": "2d8+4",
@@ -48,7 +42,7 @@
     "passive_perception": 9
   },
   "languages": "understands all languages it spoke in life but can't speak",
-  "challenge_rating": 0.25,
+  "challenge_rating": "0.25",
   "proficiency_bonus": 2,
   "xp": 50,
   "actions": [
@@ -87,16 +81,24 @@
   ],
   "image": "/assets/atlas/enemies/skeleton.webp",
   "url": "/assets/atlas/enemies/json/skeleton.json",
-  "updated_at": "2026-04-18T04:02:41.381Z",
+  "updated_at": "2026-06-30T18:13:02.465Z",
   "forms": [],
   "legendary_actions": [],
   "reactions": [],
   "special_abilities": [],
   "sprite_index": 5,
-  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet11.webp",
-  "imageUrl": "/assets/atlas/enemies/skeleton.webp",
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet11.0webp",
+  "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fimages%2Fskeleton.webp%3Ft%3D1782843161175",
   "_type": "enemies",
-  "background_type": "fort",
+  "background_type": "castle3",
   "rarity": "Uncommon",
-  "last_updated": "18-4-2026"
+  "last_updated": "30-6-2026",
+  "stats": {
+    "str": 10,
+    "dex": 14,
+    "con": 15,
+    "int": 6,
+    "wis": 8,
+    "cha": 5
+  }
 }

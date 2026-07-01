@@ -34,6 +34,7 @@ import { Jane } from './Jane';
 import { Mixer } from '../audio/Mixer';
 import { AssetExplorer } from './AssetExplorer';
 import { WorldExplorer } from './WorldExplorer';
+import { FlagManager } from './FlagManager';
 
 interface DevKitProps {
   isOpen: boolean;
@@ -65,7 +66,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     addCharacter
   } = useCharacterStore();
 
-  const [activeTab, setActiveTab] = useState<'monsters' | 'materials' | 'equipment' | 'backgrounds' | 'npcs' | 'test' | 'combat' | 'simulator' | 'jane' | 'codex' | 'world'>('monsters');
+  const [activeTab, setActiveTab] = useState<'monsters' | 'materials' | 'equipment' | 'backgrounds' | 'npcs' | 'test' | 'combat' | 'simulator' | 'jane' | 'codex' | 'world' | 'flags'>('monsters');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [editingItem, setEditingItem] = useState<any | null>(initialMonster || null);
   const [editingCharId, setEditingCharId] = useState<string | null>(null);
@@ -848,6 +849,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               { id: 'jane', icon: (props: any) => <GameIcon name="map" {...props} />, label: 'JANE' },
               { id: 'world', icon: (props: any) => <GameIcon name="location" {...props} />, label: 'WORLD' },
               { id: 'codex', icon: (props: any) => <GameIcon name="save_data" {...props} />, label: 'CODEX' },
+              { id: 'flags', icon: (props: any) => <GameIcon name="save_data" {...props} />, label: 'FLAGS' },
               { id: 'backgrounds', icon: (props: any) => <GameIcon name="image" {...props} />, label: 'HABITATS' }
             ].map(tab => (
               <button 
@@ -887,6 +889,12 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               <AssetExplorer />
             ) : activeTab === 'world' ? (
               <WorldExplorer />
+            ) : activeTab === 'flags' ? (
+              <div className="flex-1 p-8">
+                 <div className="max-w-2xl mx-auto h-full">
+                    <FlagManager />
+                 </div>
+              </div>
             ) : activeTab !== 'backgrounds' ? (
               <>
                 {/* Left Drawer: Hierarchy & Checklist */}
