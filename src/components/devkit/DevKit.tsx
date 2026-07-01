@@ -774,7 +774,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
   };
 
   const updateField = (field: string, value: any) => {
-    setEditingItem(prev => prev ? { ...prev, [field]: value } : null);
+    setEditingItem((prev: any) => prev ? { ...prev, [field]: value } : null);
   };
 
   if (!isOpen) return null;
@@ -1705,7 +1705,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                 </button>
                               </div>
                               <div className="space-y-2 max-h-[180px] overflow-y-auto pr-1 custom-scrollbar">
-                                {editingItem.item_drops?.filter(d => d.type === 'material').map((drop, i) => (
+                                {editingItem.item_drops?.filter((d: any) => d.type === 'material').map((drop: any, i: number) => (
                                   <div key={i} className="flex gap-2 items-center bg-white/5 p-2 rounded border border-white/5 group/drop">
                                     <input 
                                       type="text"
@@ -1736,7 +1736,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                     />
                                     <button 
                                       onClick={() => {
-                                        const newDrops = (editingItem.item_drops || []).filter(d => d !== drop);
+                                        const newDrops = (editingItem.item_drops || []).filter((d: any) => d !== drop);
                                         updateField('item_drops', newDrops);
                                       }}
                                       className="text-white/20 hover:text-dragon-red opacity-0 group-hover/drop:opacity-100 transition-all"
@@ -1781,7 +1781,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                 </div>
                               </div>
                               <div className="space-y-2 max-h-[180px] overflow-y-auto pr-1 custom-scrollbar">
-                                {editingItem.item_drops?.filter(d => d.type !== 'material').map((drop, i) => (
+                                {editingItem.item_drops?.filter((d: any) => d.type !== 'material').map((drop: any, i: number) => (
                                   <div key={i} className="flex gap-2 items-center bg-white/5 p-2 rounded border border-white/5 group/drop">
                                     <select 
                                       title="Loot Type Select"
@@ -1826,7 +1826,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                     />
                                     <button 
                                       onClick={() => {
-                                        const newDrops = (editingItem.item_drops || []).filter(d => d !== drop);
+                                        const newDrops = (editingItem.item_drops || []).filter((d: any) => d !== drop);
                                         updateField('item_drops', newDrops);
                                       }}
                                       className="text-white/20 hover:text-dragon-red opacity-0 group-hover/drop:opacity-100 transition-all"

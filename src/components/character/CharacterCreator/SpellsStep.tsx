@@ -100,7 +100,7 @@ export const SpellsStep: React.FC<{
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                             {cantrips.map(spell => {
-                                const active = newChar.knownSpells?.some(s => s.index === spell.index);
+                                const active = !!newChar.knownSpells?.some(s => s.index === spell.index);
                                 return (
                                     <SpellCard key={spell.index} spell={spell} active={active} onClick={() => toggleSpell(spell)} />
                                 );
@@ -118,7 +118,7 @@ export const SpellsStep: React.FC<{
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                             {level1Spells.map(spell => {
-                                const active = newChar.knownSpells?.some(s => s.index === spell.index);
+                                const active = !!newChar.knownSpells?.some(s => s.index === spell.index);
                                 return (
                                     <SpellCard key={spell.index} spell={spell} active={active} onClick={() => toggleSpell(spell)} />
                                 );

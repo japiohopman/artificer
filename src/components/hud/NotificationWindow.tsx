@@ -19,6 +19,8 @@ export const NotificationWindow: React.FC = () => {
   // Check if we are currently AT a location with a submap
   const locationWithSubMap = savedLocations.find(l => 
     l.coordinates && 
+    l.coordinates.x !== undefined &&
+    l.coordinates.y !== undefined &&
     partyLocation &&
     Math.abs(l.coordinates.x - partyLocation.x) < 15 && 
     Math.abs(l.coordinates.y - partyLocation.y) < 15 &&

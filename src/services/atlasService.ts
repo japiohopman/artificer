@@ -77,6 +77,7 @@ export interface AtlasTrait {
   desc: string[];
   race?: { index: string; name: string; url: string };
   proficiencies?: any[];
+  trait_specific?: any;
 }
 
 export interface AtlasTransport {

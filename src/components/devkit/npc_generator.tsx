@@ -490,8 +490,8 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
         {option.from.option_set_type === 'equipment_category' ? (
            <EquipmentCategoryChoice 
              category={option.from.equipment_category} 
-             onSelect={(item) => setSelectedChoices(prev => ({ ...prev, [index]: { option_type: 'reference', item } }))}
-             isSelected={(item) => selectedChoices[index]?.item?.index === item.index}
+             onSelect={(item: any) => setSelectedChoices(prev => ({ ...prev, [index]: { option_type: 'reference', item } }))}
+             isSelected={(item: any) => selectedChoices[index]?.item?.index === item.index}
            />
         ) : (
           <div className="flex flex-wrap gap-2">
@@ -666,7 +666,12 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
               className={`group flex items-center justify-between p-3 border-b border-white/5 hover:bg-white/5 transition-all cursor-pointer ${editingCharId === char.id ? 'bg-purple-500/10 border-r-2 border-r-purple-500' : ''}`}
               onClick={() => {
                 setEditingCharId(char.id);
-                setNpcData(char);
+                // Convert Character to NPCProfile compatible format
+                const compatibleNpc: Partial<NPCProfile> = {
+                  ...char,
+                  traits: Array.isArray(char.traits) ? char.traits.map(t => typeof t === 'string' ? t : t.name) : []
+                } as any;
+                setNpcData(compatibleNpc);
                 setNpcImages(null);
                 playClickSound();
               }}
@@ -939,6 +944,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                   ...prev, 
                                   appearance: { ...prev.appearance!, skinColor: e.target.value } 
                                 }))}
+                                title="Skin Color Hex"
                                 className="bg-transparent border-none focus:outline-none text-[9px] font-mono text-white/30 w-14"
                               />
                             </span>
@@ -950,7 +956,6 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                 title="Voice Profile"
                                 value={npcData.voiceProfile || ''}
                                 onChange={(e) => setNpcData(prev => ({ ...prev, voiceProfile: e.target.value }))}
-                                title="Voice Profile"
                                 className="bg-transparent border-none focus:outline-none text-[10px] text-white/80 w-32 truncate placeholder:text-white/10"
                                 placeholder="SYNTH_PROFILE_01"
                               />

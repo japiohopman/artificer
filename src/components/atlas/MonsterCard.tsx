@@ -224,8 +224,8 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
         onClose={() => setIsBookOpen(false)}
         book={{
           id: `book-${monster.index}`,
-          title: `${monster.name}'s Spellbook`,
-          author: monster.name,
+          title: `${monster.name || 'Unknown'}'s Spellbook`,
+          author: monster.name || 'Unknown',
           pages: bookPages,
           type: 'spellbook',
           coverIndex: 0,
@@ -293,7 +293,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
             textShadow: `-1px -1px 0 #8B0000, 1px -1px 0 #8B0000, -1px 1px 0 #8B0000, 1px 1px 0 #8B0000, 0 2px 4px rgba(0,0,0,0.3)` 
           }}
         >
-          {formatName(monster.name) || 'Unknown Entity'}
+          {formatName(monster.name || 'Unknown Entity')}
         </h3>
         
         {/* Yellow stretching HR */}
