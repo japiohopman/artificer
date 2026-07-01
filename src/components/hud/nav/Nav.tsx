@@ -1,5 +1,6 @@
 import React from 'react';
 import { useWorldStore } from '../../../store/useWorldStore';
+import { REGION_NAMES } from '../../../data/regions';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useInventoryStore } from '../../../store/useInventoryStore';
 import { useUIStore } from '../../../store/useUIStore';
@@ -154,7 +155,7 @@ export const Nav: React.FC = () => {
              <span className="text-[9px] font-black uppercase text-dragon-darkRed/60 tracking-[0.3em]">Position_Verified</span>
           </div>
           <span className="text-sm font-header font-black text-dragon-red uppercase tracking-widest mt-0.5 truncate">
-             {currentLocation?.name || 'Unknown Region'}
+             {currentLocation?.name || REGION_NAMES[useWorldStore.getState().currentRegion] || 'Unknown Region'}
           </span>
         </div>
       </div>

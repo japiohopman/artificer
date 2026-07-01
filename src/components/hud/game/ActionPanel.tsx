@@ -1,5 +1,7 @@
 import React from 'react';
 import { useUIStore } from '../../../store/useUIStore';
+import { useGameStore } from '../../../store/useGameStore';
+import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon, GameIconName } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { motion } from 'motion/react';
@@ -13,7 +15,11 @@ interface CombatAction {
 }
 
 export const ActionPanel: React.FC = () => {
-  const { setGameMode } = useUIStore();
+  const { setGameMode, setIsAdvancedRollerOpen } = useUIStore();
+  const { addLog, rollDice3D } = useGameStore();
+  const { activeCharacterId, characters } = useCharacterStore();
+
+  const activeChar = characters.find(c => c.id === activeCharacterId);
 
   const actions: CombatAction[] = [
     { id: 'attack', label: 'Attack', icon: 'melee', color: 'bg-dragon-red', description: 'Strike with your equipped weapon.' },
@@ -48,6 +54,16 @@ export const ActionPanel: React.FC = () => {
               key={action.id}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                addLog(`Action selected: ${action.label}`, 'info');
+                if (action.id === 'attack') {
+                  rollDice3D('1d20+5', 'Attack Roll');
+                } else if (action.id === 'move') {
+                  addLog("Movement grid initialized. Select a destination.", 'info');
+                } else if (action.id === 'spells') {
+                  setIsAdvancedRollerOpen(true);
+                }
+              }}
               className="flex flex-col items-center group"
             >
               <div className={cn(
@@ -68,6 +84,9 @@ export const ActionPanel: React.FC = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              addLog(`${activeChar?.name || 'Player'} has ended their turn.`, 'success');
+            }}
             className="px-6 py-3 bg-dragon-gold text-stone-900 rounded-xl font-header font-black uppercase tracking-[0.2em] text-xs shadow-lg shadow-dragon-gold/20 hover:brightness-110 transition-all border-2 border-white/20"
           >
             End Turn

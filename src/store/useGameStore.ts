@@ -21,6 +21,20 @@ export interface CoinFlipState {
   };
 }
 
+export interface CombatState {
+  playerPos: { x: number; y: number };
+  monsters: Array<{
+    id: string;
+    name: string;
+    type: string;
+    hp: number;
+    maxHp: number;
+    x: number;
+    y: number;
+    imageUrl?: string;
+  }>;
+}
+
 export interface LogEntry {
   id: string;
   message: string;
@@ -53,6 +67,9 @@ interface GameState {
   
   // Coin Flip
   coinFlipState: CoinFlipState;
+
+  // Combat
+  combatState: CombatState;
 
   // Actions
   setCurrentNPC: (npc: any | null) => void;
@@ -109,6 +126,14 @@ export const useGameStore = create<GameState>((set, get) => ({
     prediction: null,
     result: null,
     score: { user: 0, cpu: 0 }
+  },
+
+  combatState: {
+    playerPos: { x: 2, y: 2 },
+    monsters: [
+      { id: 'm1', name: 'Goblin Scout', type: 'goblin', hp: 7, maxHp: 7, x: 5, y: 3 },
+      { id: 'm2', name: 'Worg', type: 'worg', hp: 26, maxHp: 26, x: 6, y: 5 }
+    ]
   },
 
   setCurrentNPC: (currentNPC) => set({ currentNPC }),

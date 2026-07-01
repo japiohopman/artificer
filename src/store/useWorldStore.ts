@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { useInventoryStore } from './useInventoryStore';
 import { useCharacterStore } from './useCharacterStore';
+import { getRegionAt } from '../lib/mapUtils';
 
 export type WeatherType = 'Sunny' | 'Rainy' | 'Cloudy' | 'Stormy' | 'Snowy' | 'Foggy';
 
@@ -59,7 +60,9 @@ export interface WorldState {
 
   // Environmental Engine
   weather: WeatherType;
-  region: string;
+  region: string; // The active region name (friendly)
+  currentRegion: string; // The region ID from SVG detection
+  isFastForwarding: boolean;
 
   // Location State
   currentLocation: SavedLocation | null;
@@ -78,11 +81,14 @@ export interface WorldState {
 
   // Global State / Faction Flags
   worldFlags: Record<string, any>;
+  lastProcessedCoords: { x: number; y: number } | null;
 
   // Actions
   advanceTime: (minutes: number) => void;
   setWeather: (weather: WeatherType) => void;
   setRegion: (region: string) => void;
+  setFastForwarding: (isFastForwarding: boolean) => void;
+  interruptTravel: () => void;
   setPartyLocation: (location: any) => void;
   setPartySubLocation: (location: any) => void;
   setCurrentLocation: (location: SavedLocation) => void;
@@ -111,6 +117,8 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
   weather: 'Sunny',
   region: 'Sword Coast',
+  currentRegion: 'west_faerun',
+  isFastForwarding: false,
 
   currentLocation: null,
   inspectedLocation: null,
@@ -135,19 +143,26 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   ],
 
   worldFlags: {},
+  lastProcessedCoords: null,
 
   startTravel: (destination) => set((state) => ({ 
     travelOrigin: state.partyLocation,
     destination, 
     isTraveling: true, 
-    travelProgress: 0 
+    travelProgress: 0,
+    isFastForwarding: true // Auto-enable FF when starting travel
   })),
 
   stopTravel: () => set({ 
     isTraveling: false, 
     destination: null, 
-    travelProgress: 0 
+    travelProgress: 0,
+    isFastForwarding: false
   }),
+
+  setFastForwarding: (isFastForwarding) => set({ isFastForwarding }),
+
+  interruptTravel: () => set({ isFastForwarding: false }),
 
   advanceTime: (minutes) => set((state) => {
     let newTime = state.gameTime + minutes;
@@ -184,7 +199,12 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
   setWeather: (weather) => set({ weather }),
   setRegion: (region) => set({ region }),
-  setPartyLocation: (partyLocation) => set({ partyLocation }),
+  setPartyLocation: (partyLocation) => {
+    const x = partyLocation.coordinates?.x ?? partyLocation.position?.[0] ?? 0;
+    const y = partyLocation.coordinates?.y ?? partyLocation.position?.[1] ?? 0;
+    const currentRegion = getRegionAt(x, y);
+    set({ partyLocation, currentRegion });
+  },
   setPartySubLocation: (partySubLocation) => set({ partySubLocation }),
   setCurrentLocation: (currentLocation) => set({ currentLocation }),
   setInspectedLocation: (inspectedLocation) => set({ inspectedLocation }),
@@ -223,6 +243,22 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   updateEnvironment: (minutesPassed = 1) => {
     const state = get();
     
+    // Update current region based on party location
+    const px = state.partyLocation?.coordinates?.x ?? state.partyLocation?.position?.[0] ?? 0;
+    const py = state.partyLocation?.coordinates?.y ?? state.partyLocation?.position?.[1] ?? 0;
+
+    const hasMoved = !state.lastProcessedCoords ||
+                     state.lastProcessedCoords.x !== px ||
+                     state.lastProcessedCoords.y !== py;
+
+    if (hasMoved) {
+      const newRegionId = getRegionAt(px, py);
+      set({
+        currentRegion: newRegionId,
+        lastProcessedCoords: { x: px, y: py }
+      });
+    }
+
     // 1% chance per game hour to change weather (approx 0.016% per minute)
     if (Math.random() < (0.01 * (minutesPassed / 60))) {
       const weathers: WeatherType[] = ['Sunny', 'Rainy', 'Cloudy', 'Stormy', 'Snowy', 'Foggy'];
@@ -272,7 +308,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
         const characterWeights = characters.reduce((acc: number, char: any) => {
           let personalWeight = 0;
           if (char.saveVersion === 2 && char.items) {
-            personalWeight = Object.values(char.items).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0);
+            personalWeight = Object.values(char.items).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0) as number;
           } else {
             const equippedWeight = Object.values(char.inventory || {}).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0);
             const backpackWeight = (char.backpack || []).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0);
