@@ -5,21 +5,31 @@ import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon } from '../../../game_icons';
 
 export const CombatGrid: React.FC = () => {
-  const { activeCards } = useGameStore();
+  const { combatState } = useGameStore();
   const { characters, activeCharacterId } = useCharacterStore();
   
   const activeChar = characters.find(c => c.id === activeCharacterId);
+  const { playerPos, monsters } = combatState;
 
-  const monsters = activeCards.filter(c => c.challenge_rating !== undefined || c.type);
+  // Grid constants
+  const cellSize = 60; // 60px = 5ft
+  const gridWidth = 12;
+  const gridHeight = 8;
 
   return (
-    <div className="w-full h-full relative bg-stone-900 overflow-hidden flex items-center justify-center">
-      {/* Background Grid Pattern */}
-      <div className="absolute inset-0 opacity-20" 
-           style={{ 
-             backgroundImage: 'radial-gradient(circle, #333 1px, transparent 1px)', 
-             backgroundSize: '40px 40px' 
-           }} 
+    <div className="w-full h-full relative bg-stone-950 overflow-hidden flex items-center justify-center font-body">
+      {/* Tactical Background Grid */}
+      <div
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, #444 1px, transparent 1px),
+            linear-gradient(to bottom, #444 1px, transparent 1px)
+          `,
+          backgroundSize: `${cellSize}px ${cellSize}px`,
+          width: '100%',
+          height: '100%'
+        }}
       />
       
       {/* Placeholder content for the tactical overlay */}
@@ -58,22 +68,36 @@ export const CombatGrid: React.FC = () => {
           </div>
         </div>
 
-        {/* Placeholder for Character/Enemy Tokens */}
-        <div className="absolute inset-0 flex items-center justify-center gap-12">
+        {/* Unit Tokens Container */}
+        <div
+          className="relative border-2 border-white/5 shadow-2xl"
+          style={{
+            width: gridWidth * cellSize,
+            height: gridHeight * cellSize,
+            backgroundImage: 'radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 100%)'
+          }}
+        >
            {/* Player Token */}
            <motion.div 
              initial={{ scale: 0 }}
-             animate={{ scale: 1 }}
-             className="relative"
+             animate={{
+               scale: 1,
+               x: playerPos.x * cellSize,
+               y: playerPos.y * cellSize
+             }}
+             className="absolute p-2"
+             style={{ width: cellSize, height: cellSize }}
            >
-              <div className="w-24 h-24 rounded-full border-4 border-blue-500 shadow-[0_0_30px_rgba(59,130,246,0.5)] bg-blue-900/50 flex items-center justify-center overflow-hidden">
+              <div className="w-full h-full rounded-full border-2 border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)] bg-blue-900/80 flex items-center justify-center overflow-hidden group cursor-pointer hover:scale-110 transition-transform">
                 {activeChar?.avatarUrl ? (
                   <img src={activeChar.avatarUrl} className="w-full h-full object-cover" alt={activeChar.name} />
                 ) : (
-                  <GameIcon name="user" size={48} color="#FFF" />
+                  <GameIcon name="user" size={24} color="#FFF" />
                 )}
+                {/* Movement Range Pulse */}
+                <div className="absolute inset-0 border border-blue-400/30 rounded-full animate-ping pointer-events-none" />
               </div>
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] font-black px-3 py-0.5 rounded-full border-2 border-white uppercase whitespace-nowrap">
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-blue-900/90 text-white text-[7px] font-black px-1.5 py-0.5 rounded border border-blue-400 uppercase whitespace-nowrap z-20">
                 {activeChar?.name || 'Player'}
               </div>
            </motion.div>
@@ -82,21 +106,27 @@ export const CombatGrid: React.FC = () => {
            <AnimatePresence>
              {monsters.map((monster, idx) => (
                <motion.div 
-                key={`${monster.index}-${idx}`}
-                initial={{ scale: 0, x: 50, opacity: 0 }}
-                animate={{ scale: 1, x: 0, opacity: 1 }}
+                key={monster.id}
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{
+                  scale: 1,
+                  opacity: 1,
+                  x: monster.x * cellSize,
+                  y: monster.y * cellSize
+                }}
                 exit={{ scale: 0, opacity: 0 }}
                 transition={{ delay: idx * 0.1 }}
-                className="relative"
+                className="absolute p-2"
+                style={{ width: cellSize, height: cellSize }}
                >
-                  <div className="w-24 h-24 rounded-full border-4 border-dragon-red shadow-[0_0_30px_rgba(220,38,38,0.5)] bg-red-900/50 flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full rounded-full border-2 border-dragon-red shadow-[0_0_15px_rgba(220,38,38,0.5)] bg-red-900/80 flex items-center justify-center overflow-hidden group cursor-pointer hover:scale-110 transition-transform">
                     {monster.imageUrl ? (
                       <img src={monster.imageUrl} className="w-full h-full object-cover" alt={monster.name} />
                     ) : (
-                      <GameIcon name="identity" size={48} color="#FFF" />
+                      <GameIcon name="identity" size={24} color="#FFF" />
                     )}
                   </div>
-                  <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-dragon-red text-white text-[10px] font-black px-3 py-0.5 rounded-full border-2 border-white uppercase whitespace-nowrap">
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-dragon-darkRed/90 text-white text-[7px] font-black px-1.5 py-0.5 rounded border border-dragon-red/50 uppercase whitespace-nowrap z-20">
                     {monster.name}
                   </div>
                </motion.div>

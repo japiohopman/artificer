@@ -2,18 +2,28 @@ import React, { useEffect } from 'react';
 import { useWorldStore } from '../../store/useWorldStore';
 
 export const EnvironmentalEngine: React.FC = () => {
-  const { advanceTime, updateEnvironment, isNight, weather } = useWorldStore();
+  const {
+    advanceTime,
+    updateEnvironment,
+    isNight,
+    weather,
+    isTraveling,
+    isFastForwarding
+  } = useWorldStore();
 
   useEffect(() => {
     // Standard game tick: 1 minute every 10 seconds
+    // Fast forward: 10 minutes every 2 seconds
+    const tickRate = (isTraveling && isFastForwarding) ? 2000 : 10000;
+    const minutesPerTick = (isTraveling && isFastForwarding) ? 10 : 1;
+
     const interval = setInterval(() => {
-      const minutesPassed = 1;
-      advanceTime(minutesPassed);
-      updateEnvironment(minutesPassed);
-    }, 10000);
+      advanceTime(minutesPerTick);
+      updateEnvironment(minutesPerTick);
+    }, tickRate);
 
     return () => clearInterval(interval);
-  }, [advanceTime, updateEnvironment]);
+  }, [advanceTime, updateEnvironment, isTraveling, isFastForwarding]);
 
   // Visual Overlays based on state
   return (
