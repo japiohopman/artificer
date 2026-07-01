@@ -55,10 +55,7 @@
   - [x] Create Environmental Engine for dynamic weather.
   - [ ] Setup Faction & World Flags system.
 - [x] **Journal & Persistence**
-- [x] **Journal & Persistence**
   - [x] Document Journal specifications (`docs/modules/journal.md`).
-  - [x] Implement `Journal.tsx` component.
-  - [x] Setup Session Summaries and Quest Tracker logic (UI/Store implementation).
   - [x] Implement `Journal.tsx` component.
   - [x] Setup Session Summaries and Quest Tracker logic (UI/Store implementation).
 

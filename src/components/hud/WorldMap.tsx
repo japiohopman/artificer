@@ -1,6 +1,5 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents, SVGOverlay, Polyline } from 'react-leaflet';
-import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents, SVGOverlay, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { motion, AnimatePresence } from 'motion/react';
@@ -458,7 +457,7 @@ export const WorldMap: React.FC = () => {
 
         {/* Travel Path */}
         {isTraveling && destination && partyLocation && (
-          <Polyline
+          <Polyline 
             positions={[
               getPosition(partyLocation)!,
               getPosition(destination)!
@@ -470,42 +469,7 @@ export const WorldMap: React.FC = () => {
           />
         )}
         
-        {partyLocation && (
-          <Marker 
-            position={getPosition(partyLocation) || center as L.LatLngExpression}
-            zIndexOffset={2000}
-            icon={L.divIcon({
-              html: `
-                <div class="relative">
-                  <div class="absolute inset-0 ${isTraveling ? 'bg-dragon-gold/40' : 'bg-blue-500/40'} blur-md rounded-full animate-pulse scale-150"></div>
-                  <div class="relative ${isTraveling ? 'bg-dragon-gold' : 'bg-blue-600'} border-2 border-white w-4 h-4 rounded-full shadow-lg transition-colors duration-1000">
-                    ${isTraveling ? `
-                      <div class="absolute inset-0 animate-ping bg-dragon-gold rounded-full opacity-75"></div>
-                    ` : ''}
-                  </div>
-                  <div class="absolute -top-8 left-1/2 -translate-x-1/2 ${isTraveling ? 'bg-dragon-darkRed border-dragon-gold' : 'bg-blue-900 border-blue-400'} text-white text-[9px] px-1.5 py-0.5 rounded border whitespace-nowrap font-bold uppercase tracking-tighter shadow-md">
-                    ${isTraveling ? 'Traveling...' : 'Party'}
-                  </div>
-                </div>
-              `,
-              className: 'party-marker',
-              iconSize: [16, 16],
-              iconAnchor: [8, 8]
-            })}
-            eventHandlers={{
-              click: () => {
-                setInspectedLocation({
-                  id: 'party-pos',
-                  name: "Party Position",
-                  category: "Active Campaign",
-                  description: "Your group is currently located here, navigating the vast reaches of the Sword Coast.",
-                  image: null
-                });
-                setIsWorldPanelOpen(true);
-              }
-            }}
-          />
-        )}
+        <PartyMarker getPosition={getPosition} center={center} />
 
         {visibleLocations.map((loc) => {
           const position = getPosition(loc);

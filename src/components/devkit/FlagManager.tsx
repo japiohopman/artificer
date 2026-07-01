@@ -30,8 +30,8 @@ export const FlagManager: React.FC = () => {
         <div className="grid grid-cols-2 gap-3">
           <div className="space-y-1">
             <label className="text-[8px] font-bold text-white/20 uppercase">Flag Key</label>
-            <input
-              type="text"
+            <input 
+              type="text" 
               value={newFlagKey}
               onChange={(e) => setNewFlagKey(e.target.value)}
               placeholder="e.g. dragon_slain"
@@ -40,8 +40,8 @@ export const FlagManager: React.FC = () => {
           </div>
           <div className="space-y-1">
             <label className="text-[8px] font-bold text-white/20 uppercase">Initial Value</label>
-            <input
-              type="text"
+            <input 
+              type="text" 
               value={newFlagValue}
               onChange={(e) => setNewFlagValue(e.target.value)}
               placeholder="true, 10, 'friendly'"
@@ -49,7 +49,7 @@ export const FlagManager: React.FC = () => {
             />
           </div>
         </div>
-        <button
+        <button 
           onClick={handleAddFlag}
           className="w-full py-2 bg-dragon-red/10 border border-dragon-red/30 text-dragon-red text-[10px] font-bold uppercase hover:bg-dragon-red hover:text-white transition-all rounded"
         >
@@ -63,14 +63,14 @@ export const FlagManager: React.FC = () => {
             <div key={key} className="flex items-center gap-3 p-2 bg-white/5 border border-white/5 rounded group hover:border-white/10">
               <div className="flex-1 min-w-0">
                 <div className="text-[9px] font-bold text-dragon-red/80 uppercase truncate">{key}</div>
-                <input
-                  type="text"
+                <input 
+                  type="text" 
                   value={String(value)}
                   onChange={(e) => setWorldFlag(key, e.target.value)}
                   className="w-full bg-transparent border-none p-0 text-[11px] text-white/60 focus:outline-none"
                 />
               </div>
-              <button
+              <button 
                 onClick={() => {
                   const newFlags = { ...worldFlags };
                   delete newFlags[key];

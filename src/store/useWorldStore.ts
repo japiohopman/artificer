@@ -96,7 +96,8 @@ export interface WorldState {
   addSavedLocations: (locations: SavedLocation[]) => void;
   addLoadedCategory: (category: string) => void;
   isCategoryLoaded: (category: string) => boolean;
-  updateEnvironment: () => void;
+  exploreArea: (x: number, y: number, radius: number) => void;
+  updateEnvironment: (minutesPassed?: number) => void;
   getCalendarDate: () => string;
   isNight: () => boolean;
   getActiveBackground: () => string;
@@ -135,17 +136,17 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
   worldFlags: {},
 
-  startTravel: (destination) => set((state) => ({
+  startTravel: (destination) => set((state) => ({ 
     travelOrigin: state.partyLocation,
-    destination,
-    isTraveling: true,
-    travelProgress: 0
+    destination, 
+    isTraveling: true, 
+    travelProgress: 0 
   })),
 
-  stopTravel: () => set({
-    isTraveling: false,
-    destination: null,
-    travelProgress: 0
+  stopTravel: () => set({ 
+    isTraveling: false, 
+    destination: null, 
+    travelProgress: 0 
   }),
 
   advanceTime: (minutes) => set((state) => {
@@ -207,10 +208,23 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
   isCategoryLoaded: (category) => get().loadedCategories.includes(category),
 
-  updateEnvironment: () => {
+  exploreArea: (x, y, radius) => set((state) => {
+    // Check if we already have a point very close to this to avoid array bloating
+    const isAlreadyExplored = state.exploredAreas.some(area => 
+      Math.abs(area.x - x) < 20 && Math.abs(area.y - y) < 20 && area.radius >= radius
+    );
+    if (isAlreadyExplored) return state;
+
+    return {
+      exploredAreas: [...state.exploredAreas, { x, y, radius }]
+    };
+  }),
+
+  updateEnvironment: (minutesPassed = 1) => {
     const state = get();
-    // 1% chance every tick to change weather
-    if (Math.random() < 0.01) {
+    
+    // 1% chance per game hour to change weather (approx 0.016% per minute)
+    if (Math.random() < (0.01 * (minutesPassed / 60))) {
       const weathers: WeatherType[] = ['Sunny', 'Rainy', 'Cloudy', 'Stormy', 'Snowy', 'Foggy'];
       const newWeather = weathers[Math.floor(Math.random() * weathers.length)];
       set({ weather: newWeather });
@@ -218,11 +232,89 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
     // Handle Movement
     if (state.isTraveling && state.destination && state.travelOrigin) {
-      const step = 0.05; // 5% progress per tick (approx 3.5 mins in-game per tick if tick is 10s)
-      const newProgress = Math.min(1, state.travelProgress + step);
+      // 1. Calculate distance in "Proto Units" (0 to 4763)
+      const x1 = state.travelOrigin.coordinates?.x ?? state.travelOrigin.position?.[0] ?? 0;
+      const y1 = state.travelOrigin.coordinates?.y ?? state.travelOrigin.position?.[1] ?? 0;
+      const x2 = state.destination.coordinates?.x ?? state.destination.position?.[0] ?? 0;
+      const y2 = state.destination.coordinates?.y ?? state.destination.position?.[1] ?? 0;
+      
+      const dx = x2 - x1;
+      const dy = y2 - y1;
+      const totalDistProto = Math.sqrt(dx * dx + dy * dy);
+      
+      // 4000 miles width = 4763 proto units
+      const PROTO_UNITS_PER_MILE = 4763 / 4000;
+      const totalDistMiles = totalDistProto / PROTO_UNITS_PER_MILE;
+
+      // 2. Calculate Speed (MPH)
+      // Base speed: 3.0 mph (D&D Normal Pace)
+      let currentSpeedMph = 3.0;
+
+      // Dynamic Modifiers (Pulling from Inventory Store)
+      try {
+        const invState = useInventoryStore.getState();
+        const { characters } = useCharacterStore.getState();
+        
+        // Calculate Weight Penalty
+        const parseWeight = (weight: any): number => {
+          if (!weight) return 0;
+          if (typeof weight === 'number') return weight;
+          const weightMatch = String(weight).match(/(\d+(\.\d+)?)/);
+          return weightMatch ? parseFloat(weightMatch[0]) : 0;
+        };
+
+        const calculateItemWeight = (item: any): number => {
+          if (!item) return 0;
+          return parseWeight(item.weight) * (item.quantity || 1);
+        };
+
+        const sharedWeight = (invState.partyInventory || []).reduce((acc: number, item: any) => acc + calculateItemWeight(item), 0);
+        const characterWeights = characters.reduce((acc: number, char: any) => {
+          let personalWeight = 0;
+          if (char.saveVersion === 2 && char.items) {
+            personalWeight = Object.values(char.items).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0);
+          } else {
+            const equippedWeight = Object.values(char.inventory || {}).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0);
+            const backpackWeight = (char.backpack || []).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0);
+            personalWeight = equippedWeight + backpackWeight;
+          }
+          const money = char.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 };
+          const totalCoins = (money.cp || 0) + (money.sp || 0) + (money.ep || 0) + (money.gp || 0) + (money.pp || 0);
+          const moneyWeight = totalCoins * (invState.partyStats?.currencyWeightPerCoin || 0.02);
+          return acc + personalWeight + moneyWeight;
+        }, 0);
+
+        const totalWeight = sharedWeight + characterWeights;
+        const memberCount = Math.max(invState.partyStats?.memberCount || 0, characters.length, 1);
+        const vehicleBonusCapacity = (invState.partyVehicles || []).reduce((acc: number, v: any) => acc + (v.capacity || 0), 0);
+        const totalCapacity = (memberCount * (invState.partyStats?.baseCapacityPerMember || 150)) + (invState.partyStats?.vehicleCapacityBonus || 0) + vehicleBonusCapacity;
+
+        // Weight Penalty: Overburdened reduces speed by 50%
+        if (totalWeight > totalCapacity) {
+          currentSpeedMph *= 0.5;
+        }
+
+        // Vehicle Speed Bonus: If we have at least one horse/vehicle, increase base speed
+        // D&D Riding Horse speed is approx 2x human
+        if (invState.partyVehicles && invState.partyVehicles.length > 0) {
+          currentSpeedMph *= 1.5; // +50% speed for having mounts/carts
+        }
+      } catch (err) {
+        console.warn("Failed to calculate travel modifiers, using base speed", err);
+      }
+
+      // 3. Calculate Progress
+      // Miles traveled in this step
+      const milesTraveledThisStep = (currentSpeedMph / 60) * minutesPassed;
+      const protoTraveledThisStep = milesTraveledThisStep * PROTO_UNITS_PER_MILE;
+      
+      // Update progress
+      const currentDistProto = state.travelProgress * totalDistProto;
+      const nextDistProto = currentDistProto + protoTraveledThisStep;
+      const newProgress = Math.min(1, nextDistProto / totalDistProto);
 
       if (newProgress >= 1) {
-        set({
+        set({ 
           partyLocation: state.destination,
           isTraveling: false,
           destination: null,
@@ -230,22 +322,19 @@ export const useWorldStore = create<WorldState>((set, get) => ({
           travelProgress: 0
         });
       } else {
-        // Interpolate coordinates
-        const x1 = state.travelOrigin.coordinates?.x ?? state.travelOrigin.position?.[0] ?? 0;
-        const y1 = state.travelOrigin.coordinates?.y ?? state.travelOrigin.position?.[1] ?? 0;
-        const x2 = state.destination.coordinates?.x ?? state.destination.position?.[0] ?? 0;
-        const y2 = state.destination.coordinates?.y ?? state.destination.position?.[1] ?? 0;
-
         const currentX = x1 + (x2 - x1) * newProgress;
         const currentY = y1 + (y2 - y1) * newProgress;
 
-        set({
+        set({ 
           travelProgress: newProgress,
           partyLocation: {
             ...state.partyLocation,
             coordinates: { x: currentX, y: currentY }
           }
         });
+
+        // Trigger discovery during travel
+        state.exploreArea(currentX, currentY, 200);
       }
     }
   },

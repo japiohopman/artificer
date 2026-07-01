@@ -190,37 +190,6 @@ export const Nav: React.FC = () => {
             </AnimatePresence>
           </div>
         )}
-      {/* Middle Section: Temporal Widget & Dynamic Actions */}
-      <div className="absolute left-1/2 -translate-x-1/2 h-full flex items-center z-10 gap-4">
-        <TemporalWidget />
-
-        {dynamicNavButtons.length > 0 && (
-          <div className="flex items-center gap-4 bg-parchment-200/50 backdrop-blur-md px-4 py-1.5 rounded-full border-2 border-dragon-gold/30 shadow-inner">
-            <AnimatePresence mode="popLayout">
-              {dynamicNavButtons.map((action: NavAction) => (
-                <motion.button
-                  key={action.id}
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 0.8, opacity: 0 }}
-                  onClick={action.onClick}
-                  className={cn(
-                    "flex flex-col items-center group gap-1",
-                    action.isActive ? "text-dragon-red" : "text-dragon-red/40 hover:text-dragon-red"
-                  )}
-                >
-                  <div className={cn(
-                    "p-1.5 rounded-lg transition-all",
-                    action.isActive ? "bg-dragon-red/10 border-2 border-dragon-red/30 shadow-inner" : "group-hover:bg-dragon-red/5"
-                  )}>
-                    <GameIcon name={action.icon} size={14} />
-                  </div>
-                  <span className="text-[7px] font-black uppercase tracking-tighter">{action.label}</span>
-                </motion.button>
-              ))}
-            </AnimatePresence>
-          </div>
-        )}
       </div>
 
       {/* Right Section: Hero Status + Stats */}

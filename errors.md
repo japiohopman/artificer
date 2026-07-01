@@ -1,3 +1,6 @@
+let's do something about this errors 
+
+
 [{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/AssetExplorer.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
@@ -24,6 +27,19 @@
 
 [{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
+	"owner": "typescript",
+	"code": "7006",
+	"severity": 8,
+	"message": "Parameter 'prev' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 776,
+	"startColumn": 20,
+	"endLineNumber": 776,
+	"endColumn": 24,
+	"modelVersionId": 9,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
 	"code": {
 		"value": "axe/name-role-value",
@@ -42,7 +58,7 @@
 	"startColumn": 16,
 	"endLineNumber": 826,
 	"endColumn": 22,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -60,11 +76,11 @@
 	"severity": 8,
 	"message": "Buttons must have discernible text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1241,
+	"startLineNumber": 1244,
 	"startColumn": 46,
-	"endLineNumber": 1241,
+	"endLineNumber": 1244,
 	"endColumn": 52,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -82,11 +98,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1252,
+	"startLineNumber": 1255,
 	"startColumn": 44,
-	"endLineNumber": 1252,
+	"endLineNumber": 1255,
 	"endColumn": 52,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -104,11 +120,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1285,
+	"startLineNumber": 1288,
 	"startColumn": 34,
-	"endLineNumber": 1285,
+	"endLineNumber": 1288,
 	"endColumn": 42,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -126,11 +142,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1312,
+	"startLineNumber": 1315,
 	"startColumn": 36,
-	"endLineNumber": 1312,
+	"endLineNumber": 1315,
 	"endColumn": 41,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -148,11 +164,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1318,
+	"startLineNumber": 1321,
 	"startColumn": 34,
-	"endLineNumber": 1318,
+	"endLineNumber": 1321,
 	"endColumn": 39,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -170,11 +186,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1326,
+	"startLineNumber": 1329,
 	"startColumn": 34,
-	"endLineNumber": 1326,
+	"endLineNumber": 1329,
 	"endColumn": 39,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -192,11 +208,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1336,
+	"startLineNumber": 1339,
 	"startColumn": 38,
-	"endLineNumber": 1336,
+	"endLineNumber": 1339,
 	"endColumn": 43,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -214,11 +230,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1361,
+	"startLineNumber": 1364,
 	"startColumn": 38,
-	"endLineNumber": 1361,
+	"endLineNumber": 1364,
 	"endColumn": 43,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -236,11 +252,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1401,
+	"startLineNumber": 1404,
 	"startColumn": 44,
-	"endLineNumber": 1401,
+	"endLineNumber": 1404,
 	"endColumn": 49,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -258,11 +274,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1406,
+	"startLineNumber": 1409,
 	"startColumn": 44,
-	"endLineNumber": 1406,
+	"endLineNumber": 1409,
 	"endColumn": 52,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -280,11 +296,11 @@
 	"severity": 8,
 	"message": "Buttons must have discernible text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1411,
+	"startLineNumber": 1414,
 	"startColumn": 44,
-	"endLineNumber": 1411,
+	"endLineNumber": 1414,
 	"endColumn": 50,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -302,11 +318,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1428,
+	"startLineNumber": 1431,
 	"startColumn": 44,
-	"endLineNumber": 1428,
+	"endLineNumber": 1431,
 	"endColumn": 49,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -324,11 +340,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1433,
+	"startLineNumber": 1436,
 	"startColumn": 44,
-	"endLineNumber": 1433,
+	"endLineNumber": 1436,
 	"endColumn": 52,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -346,11 +362,11 @@
 	"severity": 8,
 	"message": "Buttons must have discernible text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1438,
+	"startLineNumber": 1441,
 	"startColumn": 44,
-	"endLineNumber": 1438,
+	"endLineNumber": 1441,
 	"endColumn": 50,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -368,11 +384,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1455,
+	"startLineNumber": 1458,
 	"startColumn": 44,
-	"endLineNumber": 1455,
+	"endLineNumber": 1458,
 	"endColumn": 49,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -390,11 +406,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1460,
+	"startLineNumber": 1463,
 	"startColumn": 44,
-	"endLineNumber": 1460,
+	"endLineNumber": 1463,
 	"endColumn": 52,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -412,11 +428,11 @@
 	"severity": 8,
 	"message": "Buttons must have discernible text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1465,
+	"startLineNumber": 1468,
 	"startColumn": 44,
-	"endLineNumber": 1465,
+	"endLineNumber": 1468,
 	"endColumn": 50,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -434,11 +450,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1482,
+	"startLineNumber": 1485,
 	"startColumn": 44,
-	"endLineNumber": 1482,
+	"endLineNumber": 1485,
 	"endColumn": 49,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -456,11 +472,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1487,
+	"startLineNumber": 1490,
 	"startColumn": 44,
-	"endLineNumber": 1487,
+	"endLineNumber": 1490,
 	"endColumn": 52,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -478,11 +494,11 @@
 	"severity": 8,
 	"message": "Buttons must have discernible text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1492,
+	"startLineNumber": 1495,
 	"startColumn": 44,
-	"endLineNumber": 1492,
+	"endLineNumber": 1495,
 	"endColumn": 50,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -500,11 +516,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1509,
+	"startLineNumber": 1512,
 	"startColumn": 44,
-	"endLineNumber": 1509,
+	"endLineNumber": 1512,
 	"endColumn": 49,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -522,11 +538,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1514,
+	"startLineNumber": 1517,
 	"startColumn": 44,
-	"endLineNumber": 1514,
+	"endLineNumber": 1517,
 	"endColumn": 52,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -544,11 +560,11 @@
 	"severity": 8,
 	"message": "Buttons must have discernible text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1519,
+	"startLineNumber": 1522,
 	"startColumn": 44,
-	"endLineNumber": 1519,
+	"endLineNumber": 1522,
 	"endColumn": 50,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -566,11 +582,11 @@
 	"severity": 8,
 	"message": "Select element must have an accessible name: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1534,
+	"startLineNumber": 1537,
 	"startColumn": 30,
-	"endLineNumber": 1534,
+	"endLineNumber": 1537,
 	"endColumn": 36,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -588,11 +604,11 @@
 	"severity": 8,
 	"message": "Select element must have an accessible name: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1548,
+	"startLineNumber": 1551,
 	"startColumn": 32,
-	"endLineNumber": 1548,
+	"endLineNumber": 1551,
 	"endColumn": 38,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -610,11 +626,11 @@
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1607,
+	"startLineNumber": 1610,
 	"startColumn": 34,
-	"endLineNumber": 1607,
+	"endLineNumber": 1610,
 	"endColumn": 39,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -632,11 +648,50 @@
 	"severity": 8,
 	"message": "Select element must have an accessible name: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1635,
+	"startLineNumber": 1638,
 	"startColumn": 30,
-	"endLineNumber": 1635,
+	"endLineNumber": 1638,
 	"endColumn": 36,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
+	"owner": "typescript",
+	"code": "7006",
+	"severity": 8,
+	"message": "Parameter 'd' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 1672,
+	"startColumn": 65,
+	"endLineNumber": 1672,
+	"endColumn": 66,
+	"modelVersionId": 9,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
+	"owner": "typescript",
+	"code": "7006",
+	"severity": 8,
+	"message": "Parameter 'drop' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 1672,
+	"startColumn": 98,
+	"endLineNumber": 1672,
+	"endColumn": 102,
+	"modelVersionId": 9,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
+	"owner": "typescript",
+	"code": "7006",
+	"severity": 8,
+	"message": "Parameter 'i' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 1672,
+	"startColumn": 104,
+	"endLineNumber": 1672,
+	"endColumn": 105,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -654,11 +709,63 @@
 	"severity": 8,
 	"message": "Buttons must have discernible text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1696,
+	"startLineNumber": 1699,
 	"startColumn": 38,
-	"endLineNumber": 1696,
+	"endLineNumber": 1699,
 	"endColumn": 44,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
+	"owner": "typescript",
+	"code": "7006",
+	"severity": 8,
+	"message": "Parameter 'd' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 1701,
+	"startColumn": 96,
+	"endLineNumber": 1701,
+	"endColumn": 97,
+	"modelVersionId": 9,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
+	"owner": "typescript",
+	"code": "7006",
+	"severity": 8,
+	"message": "Parameter 'd' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 1743,
+	"startColumn": 65,
+	"endLineNumber": 1743,
+	"endColumn": 66,
+	"modelVersionId": 9,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
+	"owner": "typescript",
+	"code": "7006",
+	"severity": 8,
+	"message": "Parameter 'drop' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 1743,
+	"startColumn": 98,
+	"endLineNumber": 1743,
+	"endColumn": 102,
+	"modelVersionId": 9,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
+	"owner": "typescript",
+	"code": "7006",
+	"severity": 8,
+	"message": "Parameter 'i' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 1743,
+	"startColumn": 104,
+	"endLineNumber": 1743,
+	"endColumn": 105,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -676,11 +783,11 @@
 	"severity": 8,
 	"message": "Select element must have an accessible name: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1742,
+	"startLineNumber": 1745,
 	"startColumn": 38,
-	"endLineNumber": 1742,
+	"endLineNumber": 1745,
 	"endColumn": 44,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -698,11 +805,24 @@
 	"severity": 8,
 	"message": "Buttons must have discernible text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1780,
+	"startLineNumber": 1783,
 	"startColumn": 38,
-	"endLineNumber": 1780,
+	"endLineNumber": 1783,
 	"endColumn": 44,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
+	"owner": "typescript",
+	"code": "7006",
+	"severity": 8,
+	"message": "Parameter 'd' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 1785,
+	"startColumn": 96,
+	"endLineNumber": 1785,
+	"endColumn": 97,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -720,11 +840,11 @@
 	"severity": 8,
 	"message": "Select element must have an accessible name: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1813,
+	"startLineNumber": 1816,
 	"startColumn": 36,
-	"endLineNumber": 1813,
+	"endLineNumber": 1816,
 	"endColumn": 42,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -742,13 +862,14 @@
 	"severity": 8,
 	"message": "Select element must have an accessible name: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 2006,
+	"startLineNumber": 2009,
 	"startColumn": 32,
-	"endLineNumber": 2006,
+	"endLineNumber": 2009,
 	"endColumn": 38,
-	"modelVersionId": 1,
+	"modelVersionId": 9,
 	"origin": "extHost1"
 }]
+
 
 [{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/enemy-image_generator.tsx",
@@ -792,6 +913,74 @@
 	"startColumn": 12,
 	"endLineNumber": 194,
 	"endColumn": 18,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+}]
+
+[{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/Jane.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/select-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Select element must have an accessible name: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 167,
+	"startColumn": 20,
+	"endLineNumber": 167,
+	"endColumn": 26,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/Jane.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 207,
+	"startColumn": 22,
+	"endLineNumber": 207,
+	"endColumn": 27,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/Jane.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/forms",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/label",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 216,
+	"startColumn": 22,
+	"endLineNumber": 216,
+	"endColumn": 27,
 	"modelVersionId": 1,
 	"origin": "extHost1"
 }]
@@ -1282,7 +1471,7 @@
 }]
 
 [{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_tester.tsx",
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/chat/ChatInput.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
 	"code": {
 		"value": "axe/name-role-value",
@@ -1297,78 +1486,10 @@
 	"severity": 8,
 	"message": "Buttons must have discernible text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 143,
+	"startLineNumber": 40,
 	"startColumn": 12,
-	"endLineNumber": 143,
+	"endLineNumber": 40,
 	"endColumn": 18,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_tester.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/text-alternatives",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/image-alt",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Images must have alternative text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 185,
-	"startColumn": 24,
-	"endLineNumber": 185,
-	"endColumn": 27,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_tester.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 143,
-	"startColumn": 12,
-	"endLineNumber": 143,
-	"endColumn": 18,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_tester.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/text-alternatives",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/image-alt",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Images must have alternative text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 185,
-	"startColumn": 24,
-	"endLineNumber": 185,
-	"endColumn": 27,
 	"modelVersionId": 1,
 	"origin": "extHost1"
 }]
@@ -1498,52 +1619,7 @@
 	"startColumn": 8,
 	"endLineNumber": 3,
 	"endColumn": 34,
-	"modelVersionId": 7,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/ui/FocusView.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 88,
-	"startColumn": 12,
-	"endLineNumber": 88,
-	"endColumn": 18,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/ui/FocusView.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "no-inline-styles",
-		"target": {
-			"$mid": 1,
-			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
-			"scheme": "https",
-			"authority": "webhint.io"
-		}
-	},
-	"severity": 4,
-	"message": "CSS inline styles should not be used, move styles to an external CSS file",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 134,
-	"startColumn": 22,
-	"endLineNumber": 134,
-	"endColumn": 25,
-	"modelVersionId": 1,
+	"modelVersionId": 55,
 	"origin": "extHost1"
 }]
 
@@ -1614,3 +1690,46 @@
 	"origin": "extHost1"
 }]
 
+[{
+	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/tsconfig.json",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "typescript-config/strict",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-typescript-config/strict/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 8,
+	"message": "The compiler option \"strict\" should be enabled to reduce type errors.",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 2,
+	"startColumn": 4,
+	"endLineNumber": 2,
+	"endColumn": 19,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+},{
+	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/tsconfig.json",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "typescript-config/consistent-casing",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-typescript-config/consistent-casing/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "The compiler option \"forceConsistentCasingInFileNames\" should be enabled to reduce issues when working with different OSes.",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 2,
+	"startColumn": 4,
+	"endLineNumber": 2,
+	"endColumn": 19,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+}]
