@@ -53,6 +53,7 @@
 - [x] **World State Module**
   - [x] Implement Temporal Progression (`gameYear`, `gameMonth`, `gameDay`, `gameTime`).
   - [x] Create Environmental Engine for dynamic weather.
+  - [x] Setup Location Awareness (SVG Region detection).
   - [ ] Setup Faction & World Flags system.
 - [x] **Journal & Persistence**
   - [x] Document Journal specifications (`docs/modules/journal.md`).
@@ -67,11 +68,13 @@
   - [x] Interactive spatial interface (Leaflet-like).
   - [x] High-resolution Pyramid Tile system (`/tiles/faerun`).
   - [x] Dynamic Icons & Zoom-dependent visibility.
-  - [x] Party Travel & Movement Interpolation.
+  - [x] Party Travel & Movement Interpolation (Fast-forward mode).
   - [ ] Fog of War (Pathing persistence).
-- [ ] **Tactical Combat Engine**
-  - [ ] Grid-Based Movement & Collision.
-  - [ ] Initiative Tracker & AI Combat Logic.
+- [/] Tactical Combat Engine
+  - [x] Grid-Based Movement & Interactive Actions.
+  - [x] Initiative Tracker & Turn Sequencing.
+  - [ ] Combat Resolution Logic (To-Hit/Damage).
+  - [ ] AI Combat Logic.
 - [ ] **Economic & Trade Module**
   - [ ] Regional Pricing & Merchant Inventory rotation.
 - [ ] **Soundscape Orchestrator**
