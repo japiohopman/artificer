@@ -76,9 +76,7 @@ interface GameState {
   coinFlipState: CoinFlipState;
 
   // Combat
-  combatState: CombatState & {
-    activeConditions: Record<string, string[]>; // id -> list of conditions
-  };
+  combatState: CombatState;
 
   // Actions
   setCurrentNPC: (npc: any | null) => void;
@@ -117,7 +115,6 @@ interface GameState {
   removeMonsterFromCombat: (id: string) => void;
   nextTurn: () => void;
   startCombat: () => void;
-  resolveCombatAction: (actor: any, target: any, action: any) => Promise<void>;
 }
 
 export const useGameStore = create<GameState>((set, get) => ({
@@ -157,8 +154,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       { id: 'm2', name: 'Worg', value: 15 },
       { id: 'm1', name: 'Goblin Scout', value: 12 }
     ],
-    activeTurnIndex: 0,
-    activeConditions: {}
+    activeTurnIndex: 0
   },
 
   setCurrentNPC: (currentNPC) => set({ currentNPC }),
@@ -312,67 +308,12 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
   })),
 
-  nextTurn: () => {
-    const { combatState, addLog, resolveCombatAction } = get();
-    const nextIndex = (combatState.activeTurnIndex + 1) % combatState.initiativeOrder.length;
-    const nextActor = combatState.initiativeOrder[nextIndex];
-
-    set((state) => {
-      const newConditions = { ...state.combatState.activeConditions };
-      // Clear conditions for the actor starting their turn
-      if (newConditions[nextActor.id]) {
-        delete newConditions[nextActor.id];
-      }
-
-      return {
-        combatState: {
-          ...state.combatState,
-          activeTurnIndex: nextIndex,
-          activeConditions: newConditions
-        }
-      };
-    });
-
-    // Basic Monster AI
-    if (!nextActor.isPlayer) {
-      setTimeout(async () => {
-        const currentMonster = get().combatState.monsters.find(m => m.id === nextActor.id);
-        if (!currentMonster) {
-          get().nextTurn();
-          return;
-        }
-
-        const playerPos = get().combatState.playerPos;
-        const dx = Math.abs(currentMonster.x - playerPos.x);
-        const dy = Math.abs(currentMonster.y - playerPos.y);
-        const dist = Math.max(dx, dy);
-
-        if (dist <= 1) {
-          // Attack player
-          await resolveCombatAction(
-            currentMonster,
-            { id: 'player', name: 'Hero' },
-            { name: 'Claw/Bite', attack_bonus: 4, damage: [{ damage_dice: '1d6+2', damage_type: { name: 'piercing' } }] }
-          );
-        } else {
-          // Move toward player
-          const moveX = currentMonster.x + (playerPos.x > currentMonster.x ? 1 : playerPos.x < currentMonster.x ? -1 : 0);
-          const moveY = currentMonster.y + (playerPos.y > currentMonster.y ? 1 : playerPos.y < currentMonster.y ? -1 : 0);
-
-          set(state => ({
-            combatState: {
-              ...state.combatState,
-              monsters: state.combatState.monsters.map(m => m.id === nextActor.id ? { ...m, x: moveX, y: moveY } : m)
-            }
-          }));
-          addLog(`${currentMonster.name} moves closer!`, 'info');
-        }
-
-        // Brief delay before ending monster turn
-        setTimeout(() => get().nextTurn(), 1000);
-      }, 1000);
+  nextTurn: () => set((state) => ({
+    combatState: {
+      ...state.combatState,
+      activeTurnIndex: (state.combatState.activeTurnIndex + 1) % state.combatState.initiativeOrder.length
     }
-  },
+  })),
 
   startCombat: () => {
     const { combatState } = get();
@@ -392,83 +333,6 @@ export const useGameStore = create<GameState>((set, get) => ({
         activeTurnIndex: 0
       }
     }));
-  },
-
-  resolveCombatAction: async (actor, target, action) => {
-    const { addLog, rollDice3D, updateMonsterHp, removeMonsterFromCombat, activeCharacterId } = get();
-    const { useCharacterStore } = await import('./useCharacterStore');
-    const { modifyHp } = useCharacterStore.getState();
-
-    // 1. Roll to Hit
-    const attackBonus = action.attack_bonus || 0;
-    const toHitNotation = `1d20+${attackBonus}`;
-
-    addLog(`${actor.name} attacks ${target.name} with ${action.name}...`, 'info');
-
-    // We'll use a simulated 3D roll for the hit
-    await rollDice3D(toHitNotation, `Attack: ${action.name}`);
-
-    const d20 = Math.floor(Math.random() * 20) + 1;
-    const totalHit = d20 + attackBonus;
-
-    // Get target AC
-    let targetAC = 10;
-    const { combatState } = get();
-
-    if (target.id === 'player') {
-       // Ideally we'd get this from useCharacterStore, but for now use default + condition
-       targetAC = 15;
-    } else if (Array.isArray(target.armor_class)) {
-      targetAC = target.armor_class[0]?.value || 10;
-    } else if (typeof target.armor_class === 'number') {
-      targetAC = target.armor_class;
-    } else if (target.armor_class?.base) {
-      targetAC = target.armor_class.base;
-    }
-
-    // Apply conditions (e.g., Defending +2 AC)
-    if (combatState.activeConditions[target.id]?.includes('defending')) {
-      targetAC += 2;
-      addLog(`${target.name} is defending! AC is now ${targetAC}.`, 'info');
-    }
-
-    const isCrit = d20 === 20;
-    const isHit = isCrit || totalHit >= targetAC;
-
-    if (isHit) {
-      addLog(`${isCrit ? 'CRITICAL HIT!' : 'HIT!'} (${totalHit} vs AC ${targetAC})`, isCrit ? 'success' : 'info');
-
-      // 2. Roll Damage
-      const damageInfo = action.damage?.[0];
-      const damageDice = damageInfo?.damage_dice || '1d6';
-      const damageType = damageInfo?.damage_type?.name || 'slashing';
-
-      // Double dice for crits (simplified)
-      const finalDice = isCrit ? damageDice.replace(/(\d+)d/, (match: string, num: string) => `${parseInt(num) * 2}d`) : damageDice;
-
-      // We'll use rollBackground for damage to not overlap 3D dice too much
-      const { diceService } = await import('../dice_roller/diceService');
-      const damageRoll = diceService.rollBackground(finalDice, 'Damage');
-
-      addLog(`${target.name} takes ${damageRoll.total} ${damageType} damage.`, 'error');
-
-      // 3. Update HP
-      if (target.id === 'player' || target.id === 'slot1') {
-        const targetId = target.id === 'player' ? activeCharacterId : target.id;
-        modifyHp(targetId, -damageRoll.total);
-      } else {
-        const currentHp = target.hp !== undefined ? target.hp : target.hit_points;
-        const newHp = currentHp - damageRoll.total;
-        updateMonsterHp(target.id, newHp);
-        if (newHp <= 0) {
-          addLog(`${target.name} has been defeated!`, 'success');
-          // Delay removal for visual feedback
-          setTimeout(() => removeMonsterFromCombat(target.id), 1000);
-        }
-      }
-    } else {
-      addLog(`MISS! (${totalHit} vs AC ${targetAC})`, 'warning');
-    }
   },
 
   setIsGameStarted: (isGameStarted) => set({ isGameStarted }),

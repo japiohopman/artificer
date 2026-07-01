@@ -8,7 +8,7 @@ import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorl
 import { WORLD_ATLAS_ICONS } from '../../assets/icons/world_atlas';
 import { MapLegend } from './game/MapLegend';
 import { FogOfWar } from './game/FogOfWar';
-import { REGION_METADATA, REGION_PATH_REGISTRY, REGION_NAMES } from '../../data/regions';
+import { REGION_METADATA, REGION_PATH_REGISTRY } from '../../data/regions';
 
 const CATEGORY_TIERS = [
   { zoom: 0, categories: ['cities', 'waters'] },
@@ -485,7 +485,7 @@ export const WorldMap: React.FC = () => {
                     ` : ''}
                   </div>
                   <div class="absolute -top-8 left-1/2 -translate-x-1/2 ${currentRegion === 'water' ? 'bg-cyan-900 border-cyan-400' : (isTraveling ? 'bg-dragon-darkRed border-dragon-gold' : 'bg-blue-900 border-blue-400')} text-white text-[9px] px-1.5 py-0.5 rounded border whitespace-nowrap font-bold uppercase tracking-tighter shadow-md">
-                    ${isTraveling ? (currentRegion === 'water' ? 'Sailing...' : 'Traveling...') : (REGION_NAMES[currentRegion as keyof typeof REGION_NAMES] || 'Party')}
+                    ${isTraveling ? (currentRegion === 'water' ? 'Sailing...' : 'Traveling...') : 'Party'}
                   </div>
                 </div>
               `,
