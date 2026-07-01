@@ -154,18 +154,18 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
         const newInventory = { ...char.inventory };
         const itemSlots = Array.isArray(item.slot) ? item.slot : [slotId];
         
-        itemSlots.forEach(s => {
+        itemSlots.forEach((s: any) => {
           const existingItem = newInventory[s];
           if (existingItem) {
             const existingSlots = Array.isArray(existingItem.slot) ? existingItem.slot : [s];
-            existingSlots.forEach(es => delete newInventory[es]);
+            existingSlots.forEach((es: any) => delete newInventory[es]);
             if (!newBackpack.find(i => i.id === existingItem.id)) {
               newBackpack.push(existingItem);
             }
           }
         });
 
-        itemSlots.forEach(s => {
+        itemSlots.forEach((s: any) => {
           newInventory[s] = item;
         });
 
@@ -212,7 +212,7 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
         if (char.id !== activeCharacterId) return char;
         const newInventory = { ...char.inventory };
         const itemSlots = Array.isArray(item.slot) ? item.slot : [slotId];
-        itemSlots.forEach(s => delete newInventory[s]);
+        itemSlots.forEach((s: any) => delete newInventory[s]);
         return { ...char, inventory: newInventory, backpack: [...char.backpack, item] };
       });
       useCharacterStore.setState({ characters: newCharacters });

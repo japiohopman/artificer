@@ -934,7 +934,7 @@ export async function fetchCharacterList(): Promise<{ name: string; index: strin
     return files
       .filter((f: any) => f.name.endsWith('.json'))
       .map((f: any) => ({
-        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
         index: f.name.replace('.json', '')
       }));
   } catch (e) {
@@ -998,7 +998,7 @@ export async function fetchSpeciesList(): Promise<{ name: string; index: string 
     return files
       .filter((f: any) => f.name.endsWith('.json'))
       .map((f: any) => ({
-        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
         index: f.name.replace('.json', '')
       }));
   } catch (e) {
@@ -1045,7 +1045,7 @@ export async function fetchClassesList(): Promise<{ name: string; index: string 
     return files
       .filter((f: any) => f.name.endsWith('.json'))
       .map((f: any) => ({
-        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
         index: f.name.replace('.json', '')
       }));
   } catch (e) {
@@ -1093,7 +1093,7 @@ export async function fetchBackgroundsList(): Promise<{ name: string; index: str
     return files
       .filter((f: any) => f.name.endsWith('.json'))
       .map((f: any) => ({
-        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
         index: f.name.replace('.json', '')
       }));
   } catch (e) {
@@ -1144,7 +1144,7 @@ export async function fetchSubraceList(): Promise<{ name: string; index: string 
     return files
       .filter((f: any) => f.name.endsWith('.json'))
       .map((f: any) => ({
-        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
         index: f.name.replace('.json', '')
       }));
   } catch (e) {
@@ -1221,7 +1221,7 @@ export async function fetchAlignmentsList(): Promise<{ name: string; index: stri
     return files
       .filter((f: any) => f.name.endsWith('.json'))
       .map((f: any) => ({
-        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
         index: f.name.replace('.json', '')
       }));
   } catch (e) {
@@ -1261,7 +1261,7 @@ export async function fetchLanguagesList(): Promise<{ name: string; index: strin
     return files
       .filter((f: any) => f.name.endsWith('.json'))
       .map((f: any) => ({
-        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
         index: f.name.replace('.json', '')
       }));
   } catch (e) {

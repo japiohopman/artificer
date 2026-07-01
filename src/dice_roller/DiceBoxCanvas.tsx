@@ -23,7 +23,7 @@ export const DiceBoxCanvas: React.FC = () => {
           }
         };
         handleResize();
-      }).catch(err => {
+      }).catch((err: any) => {
         console.error("[DiceBoxCanvas] Init failed:", err);
       });
     }

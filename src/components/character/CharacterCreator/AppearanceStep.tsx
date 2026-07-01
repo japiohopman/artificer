@@ -218,7 +218,7 @@ export const AppearanceStep: React.FC<{
                             <div className="space-y-3">
                                 <label className="text-[10px] font-black uppercase tracking-[0.2em] text-parchment-400">Hair Tone</label>
                                 <div className="grid grid-cols-1 gap-1.5 max-h-[180px] overflow-y-auto custom-scrollbar pr-2">
-                                    {palette.hair.map(c => (
+                                    {palette.hair.map((c: any) => (
                                         <button 
                                             key={c}
                                             onClick={() => updateAppearance('hairColor', c)}
@@ -243,7 +243,7 @@ export const AppearanceStep: React.FC<{
                             <div className="space-y-3">
                                 <label className="text-[10px] font-black uppercase tracking-[0.2em] text-parchment-400">Eye Pigment</label>
                                 <div className="grid grid-cols-1 gap-1.5 max-h-[180px] overflow-y-auto custom-scrollbar pr-2">
-                                    {palette.eyes.map(e => (
+                                    {palette.eyes.map((e: any) => (
                                         <button 
                                             key={e}
                                             onClick={() => updateAppearance('eyeColor', e)}
@@ -308,7 +308,7 @@ export const AppearanceStep: React.FC<{
                     <div className="space-y-4 pt-4 border-t border-dragon-gold/10">
                         <label className="text-[10px] font-black uppercase tracking-[0.2em] text-parchment-400">Dermal Hue (Skin Color)</label>
                         <div className="grid grid-cols-6 sm:grid-cols-9 gap-3 p-5 bg-white/30 border border-dragon-gold/10 rounded-sm">
-                            {palette.skin.map(s => (
+                            {palette.skin.map((s: any) => (
                                 <button 
                                     key={s} 
                                     onClick={() => updateAppearance('skinColor', s)} 

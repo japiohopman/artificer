@@ -188,7 +188,7 @@ export const CharacterPanel: React.FC = () => {
                   onEquipRequest={(item) => {
                     const slots = Array.isArray(item.slot) ? item.slot : (item.slot ? [item.slot as EquipmentSlotId] : []);
                     // Find first empty slot among allowed slots, or default to first
-                    const targetSlot = slots.find(s => !inventory[s]) || slots[0];
+                    const targetSlot = slots.find((s: any) => !inventory[s]) || slots[0];
                     
                     if (targetSlot) {
                       equipItem(item, targetSlot);

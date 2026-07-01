@@ -791,7 +791,7 @@ const StepContent: React.FC<{
      case 'welcome': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><WelcomeStep /></div>;
      case 'slot': return <SlotStep selectedSlot={selectedSlot} onSelect={setSelectedSlot} />;
      case 'species': {
-        const speciesWithSubraces = available.species.flatMap(s => {
+        const speciesWithSubraces = available.species.flatMap((s: any) => {
             const speciesSubraces = available.subraces.filter((sub: any) => {
                 const idx = sub.index.toLowerCase();
                 if (s.index === 'elf') return idx.includes('elf') || idx.includes('drow');

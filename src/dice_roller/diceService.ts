@@ -26,11 +26,11 @@ class DiceService {
     this.roller = new DiceRoller();
   }
 
-  async init(containerArg: string | HTMLElement) {
+  async init(containerArg: string | HTMLElement): Promise<void> {
     if (this.initialized) return;
     if (this.initPromise) return this.initPromise;
 
-    this.initPromise = (async () => {
+    this.initPromise = (async (): Promise<void> => {
       try {
         const selector = typeof containerArg === 'string' ? containerArg : `#${containerArg.id || 'dice-box-container'}`;
         console.log("[DiceService] Initializing DiceBox with selector:", selector);
@@ -182,7 +182,7 @@ class DiceService {
     return rolls;
   }
 
-  rollBackground(notation, label = "Roll"): DiceResult {
+  rollBackground(notation: string, label = "Roll"): DiceResult {
     try {
       const parsedResult = this.roller.roll(notation);
       const allRolls = this.extractRolls(parsedResult);
