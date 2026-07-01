@@ -157,7 +157,6 @@ interface CharacterState {
   consumeMovement: (characterId: string, amount: number) => void;
   restoreActionEconomy: (characterId: string, isLongRest?: boolean) => void;
   useActionSurge: (characterId: string) => void;
-  modifyHp: (characterId: string, amount: number) => void;
   
   addCharacter: (char: Character) => void;
   updateCharacter: (id: string, updates: Partial<Character>) => void;
@@ -214,7 +213,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
         characters: state.characters.map(c => c.id === id ? levelUpData.updatedCharacter : c),
         levelUpQueue: [
           ...state.levelUpQueue,
-          ...levelUpData.results.map((r: any) => ({
+          ...levelUpData.results.map(r => ({
             characterId: id,
             newLevel: r.newLevel,
             features: r.newFeatures,
@@ -406,14 +405,6 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
           actions: { ...char.actionEconomy.actions, current: char.actionEconomy.actions.current + 1 }
         }
       };
-    })
-  })),
-
-  modifyHp: (characterId, amount) => set((state) => ({
-    characters: state.characters.map(char => {
-      if (char.id !== characterId) return char;
-      const newHp = Math.min(char.maxHp, Math.max(0, char.hp + amount));
-      return { ...char, hp: newHp };
     })
   })),
 

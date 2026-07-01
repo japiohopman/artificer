@@ -2,36 +2,33 @@
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
-  "gender": "Male",
+  "gender": "Female",
   "stats": {
-    "str": 17,
-    "dex": 15,
+    "str": 15,
+    "dex": 14,
     "con": 14,
     "int": 12,
     "wis": 11,
-    "cha": 9
+    "cha": 10
   },
   "proficiencies": [
-    "tinker's tools",
     "Skill: Investigation",
     "Skill: Perception",
     "Calligrapher'S Supplies",
-    "light armor",
-    "simple weapons",
-    "longswords",
-    "rapiers",
-    "shortswords",
-    "hand crossbows",
-    "saving throw: dex",
-    "saving throw: cha",
-    "Saving Throw: dex",
-    "Saving Throw: cha"
+    "daggers",
+    "darts",
+    "slings",
+    "quarterstaffs",
+    "crossbows, light",
+    "saving throw: int",
+    "saving throw: wis",
+    "Saving Throw: int",
+    "Saving Throw: wis"
   ],
   "traits": [
     "darkvision",
-    "gnome cunning",
-    "artificer's lore",
-    "tinker"
+    "hellish resistance",
+    "infernal legacy"
   ],
   "features": [
     {
@@ -41,73 +38,70 @@
       "source": "Species"
     },
     {
-      "name": "gnome cunning",
-      "index": "gnome_cunning",
-      "desc": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
+      "name": "hellish resistance",
+      "index": "hellish_resistance",
+      "desc": "You have resistance to fire damage.",
       "source": "Species"
     },
     {
-      "name": "artificer's lore",
-      "index": "artificers_lore",
-      "desc": "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply.",
+      "name": "infernal legacy",
+      "index": "infernal_legacy",
+      "desc": "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
       "source": "Species"
     },
     {
-      "name": "tinker",
-      "index": "tinker",
-      "desc": "You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time.\nWhen you create a device, choose one of the following options:\nClockwork Toy: This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.\nFire Starter: The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.\nMusic Box: When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed.",
-      "source": "Species"
+      "index": "skilled",
+      "name": "Skilled",
+      "url": "/assets/atlas/feats/json/skilled.json",
+      "source": "Background"
     },
     {
-      "index": "spellcasting_bard",
+      "index": "spellcasting_wizard",
       "class": {
-        "index": "bard",
-        "name": "bard",
-        "url": "/assets/atlas/class/json/bard.json"
+        "index": "wizard",
+        "name": "wizard",
+        "url": "/assets/atlas/class/json/wizard.json"
       },
-      "name": "spellcasting: bard",
+      "name": "spellcasting: wizard",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations."
+        "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
       ],
-      "reference": "public/assets/atlas/class/json/bard/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_bard.json",
+      "reference": "public/assets/atlas/class/json/wizard/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_wizard.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_bard.webp",
+      "image": "/assets/atlas/features/images/spellcasting_wizard.webp",
       "feature_specific": {
         "spellcasting_ability": {
-          "index": "charisma",
-          "name": "charisma",
-          "url": "/assets/atlas/ability_scores/json/cha.json"
+          "index": "intelligence",
+          "name": "intelligence",
+          "url": "/assets/atlas/ability_scores/json/intelligence.json"
         }
       },
       "source": "Class"
     },
     {
-      "index": "bardic_inspiration_d6",
+      "index": "arcane_recovery",
       "class": {
-        "index": "bard",
-        "name": "bard",
-        "url": "/assets/atlas/class/json/bard.json"
+        "index": "wizard",
+        "name": "wizard",
+        "url": "/assets/atlas/class/json/wizard.json"
       },
-      "name": "bardic inspiration (d6)",
+      "name": "arcane recovery",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.0 Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the GM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
-        "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. ",
-        "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
+        "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
+        "For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots."
       ],
-      "url": "/assets/atlas/features/json/bardic_inspiration_d6.0json",
+      "url": "/assets/atlas/features/json/arcane_recovery.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/bardic_inspiration_d6.0webp",
+      "image": "/assets/atlas/features/images/arcane_recovery.webp",
       "feature_specific": {
-        "special_action": "bonus_action",
-        "attack_die": "1d6",
         "usage": {
-          "type": "charisma_modifier",
-          "recovery": "long_rest"
+          "times": 1,
+          "type": "long_rest"
         }
       },
       "source": "Class"
@@ -120,7 +114,7 @@
     "cp": 0,
     "sp": 0,
     "ep": 0,
-    "gp": 10,
+    "gp": 18,
     "pp": 0
   },
   "appearance": {
@@ -135,82 +129,12 @@
     "specialFeatures": []
   },
   "items": {
-    "leather_armor_08rdouk9k": {
-      "id": "leather_armor_08rdouk9k",
-      "template": "leather_armor",
+    "spellbook_xkot6tp7o": {
+      "id": "spellbook_xkot6tp7o",
+      "template": "spellbook",
       "quantity": 1,
-      "addedAt": 1781564100952,
-      "kind": "armor"
-    },
-    "dagger_y41ohptx0": {
-      "id": "dagger_y41ohptx0",
-      "template": "dagger",
-      "quantity": 1,
-      "addedAt": 1781564100952,
-      "kind": "weapon"
-    },
-    "club_5cyvgbuzh": {
-      "id": "club_5cyvgbuzh",
-      "template": "club",
-      "quantity": 1,
-      "addedAt": 1781564109539,
-      "kind": "weapon"
-    },
-    "entertainers_pack_58dausk96": {
-      "id": "entertainers_pack_58dausk96",
-      "template": "entertainers_pack",
-      "quantity": 1,
-      "addedAt": 1781564115700,
-      "kind": "equipment_pack"
-    },
-    "backpack_7drvjzpvr": {
-      "id": "backpack_7drvjzpvr",
-      "template": "backpack",
-      "quantity": 1,
-      "addedAt": 1781564116084,
-      "kind": "container"
-    },
-    "bedroll_szip41zil": {
-      "id": "bedroll_szip41zil",
-      "template": "bedroll",
-      "quantity": 1,
-      "addedAt": 1781564116293,
-      "kind": "adventuring_gear"
-    },
-    "clothes_costume_4v5d8tuvd": {
-      "id": "clothes_costume_4v5d8tuvd",
-      "template": "clothes_costume",
-      "quantity": 2,
-      "addedAt": 1781564118949,
-      "kind": "clothing"
-    },
-    "candle_vegxquyct": {
-      "id": "candle_vegxquyct",
-      "template": "candle",
-      "quantity": 5,
-      "addedAt": 1781564119240,
-      "kind": "adventuring_gear"
-    },
-    "rations_1_day_2ns17hn3d": {
-      "id": "rations_1_day_2ns17hn3d",
-      "template": "rations_1_day",
-      "quantity": 5,
-      "addedAt": 1781564119315,
-      "kind": "consumable"
-    },
-    "waterskin_sghvtce88": {
-      "id": "waterskin_sghvtce88",
-      "template": "waterskin",
-      "quantity": 1,
-      "addedAt": 1781564119491,
-      "kind": "adventuring_gear"
-    },
-    "disguise_kit_0t471sah9": {
-      "id": "disguise_kit_0t471sah9",
-      "template": "disguise_kit",
-      "quantity": 1,
-      "addedAt": 1781564120093,
-      "kind": "adventuring_gear"
+      "addedAt": 1780758288013,
+      "kind": "focus"
     }
   },
   "containers": {
@@ -221,75 +145,75 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "club_5cyvgbuzh"
+          "itemId": "spellbook_xkot6tp7o"
         },
         {
           "id": "bag_1",
-          "itemId": "club_qno94lf67"
+          "itemId": null
         },
         {
           "id": "bag_2",
-          "itemId": "backpack_7drvjzpvr"
+          "itemId": null
         },
         {
           "id": "bag_3",
-          "itemId": "backpack_4709n5aln"
+          "itemId": null
         },
         {
           "id": "bag_4",
-          "itemId": "bedroll_szip41zil"
+          "itemId": null
         },
         {
           "id": "bag_5",
-          "itemId": "bedroll_2biolub9a"
+          "itemId": null
         },
         {
           "id": "bag_6",
-          "itemId": "clothes_costume_4v5d8tuvd"
+          "itemId": null
         },
         {
           "id": "bag_7",
-          "itemId": "clothes_costume_gwfqu5gsk"
+          "itemId": null
         },
         {
           "id": "bag_8",
-          "itemId": "candle_vegxquyct"
+          "itemId": null
         },
         {
           "id": "bag_9",
-          "itemId": "candle_x2apdza3k"
+          "itemId": null
         },
         {
           "id": "bag_10",
-          "itemId": "rations_1_day_2ns17hn3d"
+          "itemId": null
         },
         {
           "id": "bag_11",
-          "itemId": "rations_1_day_9cpuyxfvs"
+          "itemId": null
         },
         {
           "id": "bag_12",
-          "itemId": "waterskin_sghvtce88"
+          "itemId": null
         },
         {
           "id": "bag_13",
-          "itemId": "waterskin_8q75t5v6j"
+          "itemId": null
         },
         {
           "id": "bag_14",
-          "itemId": "disguise_kit_0t471sah9"
+          "itemId": null
         },
         {
           "id": "bag_15",
-          "itemId": "entertainers_pack_58dausk96"
+          "itemId": null
         },
         {
           "id": "bag_16",
-          "itemId": "disguise_kit_dimvequwg"
+          "itemId": null
         },
         {
           "id": "bag_17",
-          "itemId": "entertainers_pack_n9m0x6hsw"
+          "itemId": null
         },
         {
           "id": "bag_18",
@@ -323,7 +247,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dagger_y41ohptx0"
+        "itemId": null
       },
       {
         "id": "off_hand",
@@ -339,7 +263,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_08rdouk9k"
+        "itemId": null
       },
       {
         "id": "clothes",
@@ -390,35 +314,11 @@
         "itemId": null
       },
       {
-        "id": "tool_4",
-        "itemId": null
-      },
-      {
-        "id": "tool_5",
-        "itemId": null
-      },
-      {
         "id": "focus",
         "itemId": null
       },
       {
         "id": "pouch",
-        "itemId": null
-      },
-      {
-        "id": "acc_1",
-        "itemId": null
-      },
-      {
-        "id": "acc_2",
-        "itemId": null
-      },
-      {
-        "id": "acc_3",
-        "itemId": null
-      },
-      {
-        "id": "acc_4",
         "itemId": null
       },
       {
@@ -441,7 +341,7 @@
   },
   "backpack": [
     {
-      "id": "calligraphers_supplies_6g3k43v6m",
+      "id": "calligraphers_supplies_4v0cd3izr",
       "index": "calligraphers_supplies",
       "name": "Calligrapher'S Supplies",
       "quantity": 1,
@@ -478,7 +378,7 @@
       ]
     },
     {
-      "id": "abacus_917rsmu36",
+      "id": "abacus_4k5d82guh",
       "index": "abacus",
       "name": "Abacus",
       "quantity": 1,
@@ -511,14 +411,14 @@
       "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp",
       "background_type": "land_forest",
       "last_updated": "21-4-2026",
-      "kind": "adventuring_gear",
+      "kind": "ring",
       "equipSlots": [
         "ring_1",
         "ring_2"
       ]
     },
     {
-      "id": "book_kivsoju4v",
+      "id": "book_039z4n9sb",
       "index": "book",
       "name": "Book",
       "quantity": 1,
@@ -553,14 +453,14 @@
       "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp",
       "background_type": "land_forest",
       "last_updated": "1-5-2026",
-      "kind": "adventuring_gear",
+      "kind": "ring",
       "equipSlots": [
         "ring_1",
         "ring_2"
       ]
     },
     {
-      "id": "ink_1_ounce_bottle_2npp88372",
+      "id": "ink_1_ounce_bottle_b62ekkusp",
       "index": "ink_1_ounce_bottle",
       "name": "Ink 1 Ounce Bottle",
       "quantity": 1,
@@ -596,14 +496,14 @@
       "background_type": "land_forest",
       "last_updated": "23-4-2026",
       "category": "Adventuring Gear",
-      "kind": "adventuring_gear",
+      "kind": "ring",
       "equipSlots": [
         "ring_1",
         "ring_2"
       ]
     },
     {
-      "id": "ink_pen_y5ottqt5h",
+      "id": "ink_pen_ck9oqg7gk",
       "index": "ink_pen",
       "name": "Ink Pen",
       "quantity": 1,
@@ -636,14 +536,14 @@
       "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp",
       "background_type": "land_forest",
       "last_updated": "21-4-2026",
-      "kind": "adventuring_gear",
+      "kind": "ring",
       "equipSlots": [
         "ring_1",
         "ring_2"
       ]
     },
     {
-      "id": "parchment_one_sheet_v4mxrej97",
+      "id": "parchment_one_sheet_1wco6ux9h",
       "index": "parchment_one_sheet",
       "name": "Parchment (One Sheet)",
       "quantity": 10,
@@ -676,42 +576,16 @@
       "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.0webp",
       "background_type": "land_forest",
       "last_updated": "21-4-2026",
-      "kind": "adventuring_gear",
+      "kind": "ring",
       "equipSlots": [
         "ring_1",
         "ring_2"
       ]
-    },
-    {
-      "id": "gold_zmcymsgt8",
-      "index": "gold",
-      "name": "Gold",
-      "quantity": 8,
-      "weight": 0.02,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "equipment_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
-      },
-      "cost": "",
-      "desc": [
-        "The standard unit of currency in the game."
-      ],
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "background_type": "land_forest",
-      "category": "Standard Gear",
-      "last_updated": "21-5-2026",
-      "updated_at": "2026-05-21T01:11:21.699Z",
-      "kind": "currency"
     }
   ],
   "inventory": {
     "clothes": {
-      "id": "clothes_travelers_64v5fqj0q",
+      "id": "clothes_travelers_x77gzzr4v",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "quantity": 1,
@@ -742,10 +616,10 @@
       "image": "/assets/atlas/equipment/images/clothes_travelers.webp",
       "sprite_index": 12,
       "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
-      "kind": "clothing",
-      "clothing_type": "traveler",
+      "kind": "ring",
       "equipSlots": [
-        "clothes"
+        "ring_1",
+        "ring_2"
       ],
       "slot": "clothes",
       "clothes_slot": "Clothes Traveler'S"
@@ -753,48 +627,357 @@
   },
   "knownSpells": [
     {
-      "index": "comprehend_languages",
-      "name": "comprehend languages",
-      "level": 1,
-      "school": "divination",
-      "classes": [
-        "bard",
-        "sorcerer",
-        "warlock",
-        "wizard"
+      "higher_level": [],
+      "index": "mage_hand",
+      "name": "mage hand",
+      "desc": [
+        "A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again.",
+        "You can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You can move the hand up to 30 feet each time you use it.",
+        "The hand can't attack, activate magic items, or carry more than 10 pounds."
       ],
+      "range": "30 feet",
+      "components": [
+        "V",
+        "S"
+      ],
+      "ritual": false,
+      "duration": "1 minute",
+      "concentration": false,
       "casting_time": "1 action",
-      "range": "Self",
-      "duration": "1 hour",
-      "json_path": "/assets/atlas/spell/json/comprehend_languages.json",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fcomprehend-languages.webp%3Ft%3D1781564119247"
+      "level": 0,
+      "school": {
+        "index": "conjuration",
+        "name": "conjuration",
+        "url": "/assets/atlas/magic_schools/json/conjuration.json"
+      },
+      "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "/assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "bard",
+          "name": "bard",
+          "url": "/assets/atlas/class/json/bard.json"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "/assets/atlas/class/json/sorcerer.json"
+        },
+        {
+          "index": "warlock",
+          "name": "warlock",
+          "url": "/assets/atlas/class/json/warlock.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "/assets/atlas/subclasses/json/lore.json"
+        }
+      ],
+      "url": "/assets/atlas/spell/json/mage_hand.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "/assets/atlas/spell/json/images/mage_hand.webp",
+      "sprite_index": 11,
+      "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet8.0webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fjson%2Fimages%2Fmage_hand.webp%3Ft%3D1780758311571"
     },
     {
-      "index": "charm_person",
-      "name": "charm person",
-      "level": 1,
-      "school": "enchantment",
-      "classes": [
-        "bard",
-        "druid",
-        "sorcerer",
-        "warlock",
-        "wizard"
+      "higher_level": [],
+      "index": "message",
+      "name": "message",
+      "desc": [
+        "You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.",
+        "You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn't have to follow a straight line and can travel freely around corners or through openings."
       ],
+      "range": "120 feet",
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "material": "A short piece of copper wire.",
+      "ritual": false,
+      "duration": "1 round",
+      "concentration": false,
       "casting_time": "1 action",
-      "range": "30 feet",
-      "duration": "1 hour",
-      "json_path": "/assets/atlas/spell/json/charm_person.json",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fcharm-person.webp%3Ft%3D1781564119247"
+      "level": 0,
+      "school": {
+        "index": "transmutation",
+        "name": "transmutation",
+        "url": "/assets/atlas/magic_schools/json/transmutation.json"
+      },
+      "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "/assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "bard",
+          "name": "bard",
+          "url": "/assets/atlas/class/json/bard.json"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "/assets/atlas/class/json/sorcerer.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "/assets/atlas/subclasses/json/lore.json"
+        }
+      ],
+      "url": "/assets/atlas/spell/json/message.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "/assets/atlas/spell/json/images/message.webp",
+      "sprite_index": 1,
+      "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet9.0webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fjson%2Fimages%2Fmessage.webp%3Ft%3D1780758311714"
+    },
+    {
+      "higher_level": [],
+      "index": "ray_of_frost",
+      "name": "ray of frost",
+      "desc": [
+        "A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn.",
+        "The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+      ],
+      "range": "60 feet",
+      "components": [
+        "V",
+        "S"
+      ],
+      "ritual": false,
+      "duration": "Instantaneous",
+      "concentration": false,
+      "casting_time": "1 action",
+      "level": 0,
+      "attack_type": "ranged",
+      "damage": {
+        "damage_type": {
+          "index": "cold",
+          "name": "cold",
+          "url": "/assets/atlas/damage_types/json/cold.json"
+        },
+        "damage_at_character_level": {
+          "1": "1d8",
+          "5": "2d8",
+          "11": "3d8",
+          "17": "4d8"
+        }
+      },
+      "school": {
+        "index": "evocation",
+        "name": "evocation",
+        "url": "/assets/atlas/magic_schools/json/evocation.json"
+      },
+      "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "/assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "/assets/atlas/class/json/sorcerer.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "/assets/atlas/subclasses/json/lore.json"
+        }
+      ],
+      "url": "/assets/atlas/spell/json/ray_of_frost.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "image": "/assets/atlas/spell/json/images/ray_of_frost.webp",
+      "sprite_index": 14,
+      "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet10.0webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fjson%2Fimages%2Fray_of_frost.webp%3Ft%3D1780758311788"
+    },
+    {
+      "index": "catapult",
+      "name": "catapult",
+      "desc": [
+        "Choose one object weighing between 1 and 5 pounds within range that isn't being worn or carried. The object flies in a straight line up to 90 feet in a direction you choose before falling to the ground, stopping early if it impacts against a solid surface. If the object would strike a creature, that creature must make a Dexterity saving throw. On a failed save, the object strikes the target and stops moving. In either case, both the object and the creature or solid surface take 3d8 bludgeoning damage."
+      ],
+      "higher_level": [
+        "When you cast this spell using a spell slot of 2nd level or higher, the maximum weight of an object that you can target increases by 5 pounds, and the damage increases by 1d8, for each slot level above 1st."
+      ],
+      "range": "60 feet",
+      "components": [
+        "S"
+      ],
+      "ritual": false,
+      "duration": "Instantaneous",
+      "concentration": false,
+      "casting_time": "1 action",
+      "level": 1,
+      "damage": {
+        "damage_type": {
+          "index": "bludgeoning",
+          "name": "bludgeoning",
+          "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+        },
+        "damage_at_slot_level": {
+          "1": "3d8"
+        }
+      },
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "/assets/atlas/ability_scores/json/dexterity.json"
+        },
+        "dc_success": "none"
+      },
+      "school": {
+        "index": "transmutation",
+        "name": "transmutation",
+        "url": "/assets/atlas/magic_schools/json/transmutation.json"
+      },
+      "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "/assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "/assets/atlas/class/json/sorcerer.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "subclasses": [],
+      "url": "/assets/atlas/spell/json/catapult.json",
+      "updated_at": "2026-06-01T06:56:15.190Z",
+      "image": "/assets/atlas/spell/json/images/catapult.webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fjson%2Fimages%2Fcatapult.webp%3Ft%3D1780758311335"
+    },
+    {
+      "higher_level": [],
+      "index": "detect_magic",
+      "name": "detect magic",
+      "desc": [
+        "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.",
+        "The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt."
+      ],
+      "range": "Self",
+      "components": [
+        "V",
+        "S"
+      ],
+      "ritual": true,
+      "duration": "Up to 10 minutes",
+      "concentration": true,
+      "casting_time": "1 action",
+      "level": 1,
+      "area_of_effect": {
+        "type": "sphere",
+        "size": 30
+      },
+      "school": {
+        "index": "divination",
+        "name": "divination",
+        "url": "/assets/atlas/magic_schools/json/divination.json"
+      },
+      "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "/assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "bard",
+          "name": "bard",
+          "url": "/assets/atlas/class/json/bard.json"
+        },
+        {
+          "index": "cleric",
+          "name": "cleric",
+          "url": "/assets/atlas/class/json/cleric.json"
+        },
+        {
+          "index": "druid",
+          "name": "druid",
+          "url": "/assets/atlas/class/json/druid.json"
+        },
+        {
+          "index": "paladin",
+          "name": "paladin",
+          "url": "/assets/atlas/class/json/paladin.json"
+        },
+        {
+          "index": "ranger",
+          "name": "ranger",
+          "url": "/assets/atlas/class/json/ranger.json"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "/assets/atlas/class/json/sorcerer.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "/assets/atlas/subclasses/json/lore.json"
+        }
+      ],
+      "url": "/assets/atlas/spell/json/detect_magic.json",
+      "updated_at": "2026-06-01T06:56:15.190Z",
+      "image": "/assets/atlas/spell/json/images/detect_magic.webp",
+      "sprite_index": 3,
+      "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet4.0webp",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fjson%2Fimages%2Fdetect_magic.webp%3Ft%3D1780758311335"
     }
   ],
   "languages": [
     "common",
-    "gnomish"
+    "infernal"
   ],
   "preparedSpells": [
-    "comprehend_languages",
-    "charm_person"
+    "mage_hand",
+    "message",
+    "ray_of_frost",
+    "catapult",
+    "detect_magic"
   ],
   "spellSlots": {
     "1": {
@@ -802,17 +985,29 @@
       "max": 0
     }
   },
-  "choices": {},
-  "race": "gnome",
-  "subrace": "rock_gnome",
-  "class": "bard",
-  "spellcastingAbility": "cha",
+  "choices": {
+    "background_ability_options": [
+      "dex",
+      "int",
+      "wis"
+    ],
+    "background_proficiencies": [
+      "Skill: Investigation",
+      "Skill: Perception",
+      "Calligrapher'S Supplies"
+    ],
+    "background_bonus_selections": [
+      "{\"dex\":2,\"wis\":1}"
+    ]
+  },
+  "race": "tiefling",
+  "class": "wizard",
+  "spellcastingAbility": "int",
   "background": "scribe",
-  "backstory": "Deep within the subterranean archives of the gnomish redoubt of Mithral Deep, there once worked a master scribe who knew every secret of the ancient libraries—yet whose own name is now entirely absent from their pages. Gifted with the sharp sight of the deep-dwellers and a keen mind naturally shielded against arcane deceits, they spent decades classifying the forgotten relics of history. They possessed an uncanny knack for tinkering, translating the dry formulas of long-dead artificers into delicate clockwork music boxes that whistled the forgotten anthems of fallen empires. But when they unearthed a heavily redacted chronicle detailing a silent, encroaching shadow destined to swallow the surface world, they made a perilous choice. To protect their kin from the eyes of those who wished this truth buried, the scribe penned a final, self-erasing rune over their own name in the great census scrolls, vanishing into the darkness of the tunnels as a ghost with a blank ledger.\n\nNo longer a mere keeper of books, the nameless gnome realized that ink could be spilled and parchment burned, but a song, once set free, lives forever in the minds of the living. They forged a wondrous lute of brass and elderwood, fitted with intricate, self-winding gears of their own invention that could hum with the resonant, magical frequencies of the cosmos. They became a bard not of cheap tavern-tales, but a chronicler of fate, weaving ancient lore into powerful spells of protection and inspiration. Driven by the absolute necessity to find the missing pieces of this apocalyptic history, they now wander the surface kingdoms. They seek to rally heroes and document their deeds, knowing that in the grand design of the world, even the smallest gear—and the most forgotten scribe—can turn the tides of destiny.",
-  "alignment": "lawful_evil",
-  "name": "samuel",
+  "alignment": "lawful-good",
+  "name": "jon",
   "id": "slot3",
-  "hp": 6,
-  "maxHp": 6,
-  "lastSaved": "2026-06-15T22:58:14.671Z"
+  "hp": 5,
+  "maxHp": 5,
+  "lastSaved": "2026-06-06T15:07:41.019Z"
 }
