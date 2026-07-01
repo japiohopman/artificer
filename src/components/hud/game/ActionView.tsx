@@ -2,6 +2,7 @@ import React from 'react';
 import { useUIStore } from '../../../store/useUIStore';
 import { useGameStore } from '../../../store/useGameStore';
 import { FirstPersonView } from '../view/FirstPersonView';
+import { CombatGrid } from './CombatGrid';
 import { GameIcon } from '../../../game_icons';
 import { motion, AnimatePresence } from 'motion/react';
 import { DraggableCard } from '../../atlas/DraggableCard';
@@ -11,6 +12,7 @@ import { Rest } from './Rest';
 export const ActionView: React.FC = () => {
   const { 
     currentView, 
+    gameMode,
     isEditingSubMap, 
   } = useUIStore();
 
@@ -19,6 +21,10 @@ export const ActionView: React.FC = () => {
     clearPreview, 
     removeFromPreview 
   } = useGameStore();
+
+  if (gameMode === 'combat') {
+    return <CombatGrid />;
+  }
 
   if (currentView === 'campfire') {
     return <Rest />;

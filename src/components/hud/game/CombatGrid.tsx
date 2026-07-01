@@ -3,18 +3,33 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useGameStore } from '../../../store/useGameStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon } from '../../../game_icons';
+import { cn } from '../../../lib/utils';
 
 export const CombatGrid: React.FC = () => {
-  const { combatState } = useGameStore();
+  const { combatState, setPlayerPos, addLog, nextTurn, startCombat } = useGameStore();
   const { characters, activeCharacterId } = useCharacterStore();
   
   const activeChar = characters.find(c => c.id === activeCharacterId);
-  const { playerPos, monsters } = combatState;
+  const { playerPos, monsters, initiativeOrder, activeTurnIndex } = combatState;
 
   // Grid constants
   const cellSize = 60; // 60px = 5ft
   const gridWidth = 12;
   const gridHeight = 8;
+
+  const handleCellClick = (x: number, y: number) => {
+    // Basic movement logic: check if distance is within range (e.g., 6 cells = 30ft)
+    const dx = Math.abs(x - playerPos.x);
+    const dy = Math.abs(y - playerPos.y);
+    const distance = Math.max(dx, dy); // Chebyshev distance for grid movement
+
+    if (distance > 0 && distance <= 6) {
+      setPlayerPos(x, y);
+      addLog(`Moved to position (${x}, ${y})`, 'info');
+    } else if (distance > 6) {
+      addLog("That position is out of your movement range!", 'warning');
+    }
+  };
 
   return (
     <div className="w-full h-full relative bg-stone-950 overflow-hidden flex items-center justify-center font-body">
@@ -43,19 +58,49 @@ export const CombatGrid: React.FC = () => {
           <p className="text-[10px] font-black text-white/40 uppercase tracking-[0.2em]">Combat Matrix Initialized - Waiting for Turn Sequence</p>
         </div>
 
-        {/* Initiative Tracker Mockup */}
-        <div className="absolute top-24 right-8 flex flex-col gap-3">
+        {/* Initiative Tracker */}
+        <div className="absolute top-24 right-8 flex flex-col gap-3 z-30">
            <div className="text-[9px] font-black text-dragon-gold uppercase tracking-widest text-right mb-1">Initiative Order</div>
-           {[1, 2, 3].map(i => (
-             <div key={i} className="flex items-center gap-3 bg-black/40 backdrop-blur-md p-2 rounded border border-white/10 group hover:border-dragon-gold/50 transition-all cursor-pointer">
-                <div className="w-8 h-8 rounded-full bg-stone-800 border-2 border-white/20 overflow-hidden flex items-center justify-center">
-                   <GameIcon name="user" size={14} color="#666" />
-                </div>
-                <div className="w-6 h-6 rounded bg-dragon-red/20 flex items-center justify-center text-[10px] font-black text-dragon-red border border-dragon-red/30">
-                  {24 - (i * 4)}
-                </div>
-             </div>
-           ))}
+           {initiativeOrder.map((entry, idx) => {
+             const isActive = idx === activeTurnIndex;
+             return (
+               <motion.div
+                key={entry.id}
+                animate={{ scale: isActive ? 1.1 : 1, x: isActive ? -10 : 0 }}
+                className={cn(
+                  "flex items-center gap-3 bg-black/60 backdrop-blur-md p-2 rounded border transition-all cursor-pointer",
+                  isActive ? "border-dragon-gold shadow-[0_0_15px_rgba(212,175,55,0.3)]" : "border-white/10 opacity-60"
+                )}
+               >
+                  <div className={cn(
+                    "w-8 h-8 rounded-full border-2 overflow-hidden flex items-center justify-center",
+                    entry.isPlayer ? "border-blue-500 bg-blue-900/40" : "border-dragon-red bg-red-900/40"
+                  )}>
+                     <GameIcon name={entry.isPlayer ? "user" : "identity"} size={14} color="currentColor" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-[10px] font-black text-white uppercase truncate w-24">{entry.name}</span>
+                    <span className="text-[8px] font-bold text-dragon-gold uppercase tracking-tighter">Initiative: {entry.value}</span>
+                  </div>
+                  {isActive && (
+                    <div className="w-2 h-2 rounded-full bg-dragon-gold animate-pulse shadow-[0_0_8px_#D4AF37]" />
+                  )}
+               </motion.div>
+             );
+           })}
+
+           <button
+             onClick={nextTurn}
+             className="mt-4 px-4 py-2 bg-dragon-red text-white text-[10px] font-black uppercase rounded shadow-lg hover:bg-dragon-darkRed transition-all"
+           >
+             End Turn
+           </button>
+           <button
+             onClick={startCombat}
+             className="px-4 py-2 bg-stone-800 text-parchment-400 text-[8px] font-black uppercase rounded border border-white/10 hover:bg-stone-700 transition-all"
+           >
+             Reroll Initiative
+           </button>
         </div>
 
         <div className="flex flex-col items-center gap-6 opacity-40">
@@ -70,13 +115,34 @@ export const CombatGrid: React.FC = () => {
 
         {/* Unit Tokens Container */}
         <div
-          className="relative border-2 border-white/5 shadow-2xl"
+          className="relative border-2 border-white/5 shadow-2xl z-10"
           style={{
             width: gridWidth * cellSize,
             height: gridHeight * cellSize,
             backgroundImage: 'radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 100%)'
           }}
         >
+          {/* Interactive Grid Overlay - Now perfectly aligned with token container */}
+          <div
+            className="absolute inset-0 z-20"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: `repeat(${gridWidth}, ${cellSize}px)`,
+              gridTemplateRows: `repeat(${gridHeight}, ${cellSize}px)`,
+            }}
+          >
+            {Array.from({ length: gridWidth * gridHeight }).map((_, i) => {
+              const x = i % gridWidth;
+              const y = Math.floor(i / gridWidth);
+              return (
+                <div
+                  key={i}
+                  onClick={() => handleCellClick(x, y)}
+                  className="w-full h-full hover:bg-white/5 cursor-crosshair transition-colors border border-white/5"
+                />
+              );
+            })}
+          </div>
            {/* Player Token */}
            <motion.div 
              initial={{ scale: 0 }}
