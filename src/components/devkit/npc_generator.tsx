@@ -673,7 +673,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
             >
               <div className="flex items-center gap-3 min-w-0">
                 <div className="w-8 h-8 rounded shrink-0 overflow-hidden bg-black/40 border border-white/5 shadow-sm">
-                  <img src={normalizeImageUrl(char.avatarUrl || char.imageUrl, 'npc_character_profiles', char.id)} className="w-full h-full object-cover" />
+                  <img src={normalizeImageUrl(char.avatarUrl || char.imageUrl, 'npc_character_profiles', char.id)} className="w-full h-full object-cover" alt={char.name} />
                 </div>
                 <div className="flex flex-col min-w-0">
                   <span className="text-[10px] font-black text-white/80 uppercase truncate">{char.name}</span>
@@ -690,6 +690,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                   }
                 }}
                 className="opacity-0 group-hover:opacity-100 p-1.5 text-white/20 hover:text-dragon-red transition-all"
+                title={`Delete entity: ${char.name}`}
               >
                 <GameIcon name="trash" size={12} color="currentColor" />
               </button>
@@ -714,6 +715,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
              <button 
                onClick={handleQuickRandomize}
                className="flex items-center gap-2 bg-zinc-700 hover:bg-zinc-600 text-white px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase transition-all shadow-md border border-white/10"
+               title="Quick Randomize NPC"
              >
                <GameIcon name="refresh" size={12} color="currentColor" />
                Quick_Random
@@ -722,6 +724,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                onClick={handleGenerateNpc}
                disabled={isGeneratingNpc}
                className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase transition-all disabled:opacity-50 shadow-md border border-indigo-400/30"
+               title="Full AI NPC Generation"
              >
                <GameIcon name="loading" size={14} color="currentColor" className={isGeneratingNpc ? 'animate-spin' : ''} />
                {isGeneratingNpc ? 'GEN_DATA...' : 'Full_AI_Gen'}
@@ -731,6 +734,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                onClick={handleGenerateNpcImages}
                disabled={isGeneratingNpcImages || !npcData.name}
                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-1.5 rounded-lg text-[11px] font-bold uppercase transition-all disabled:opacity-50 shadow-lg border border-blue-400/30"
+               title="Generate NPC Assets (Images)"
              >
                <GameIcon name="award" size={14} color="currentColor" className={isGeneratingNpcImages ? 'animate-spin' : ''} />
                {isGeneratingNpcImages ? 'GENERATING...' : 'GEN_NPC_ASSETS'}
@@ -739,6 +743,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                onClick={handleSaveNpc}
                disabled={isChecking}
                className="flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white px-4 py-1.5 rounded-lg text-[11px] font-bold uppercase transition-all disabled:opacity-50 shadow-lg border border-purple-400/30"
+               title="Commit NPC to Repository"
              >
                <GameIcon name="save_data" size={14} color="currentColor" />
                {isChecking ? 'SYNCHRONIZING...' : 'COMMIT_NPC_TO_REPO'}
@@ -767,19 +772,19 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                    <div className="grid grid-cols-12 gap-4">
                       {/* Portrait */}
                       <div className="col-span-3 aspect-[9/16] bg-black/40 rounded-xl overflow-hidden border border-white/10 relative group/img">
-                         <img src={npcImages?.profileUrl || normalizeImageUrl(npcData.imageUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" />
+                         <img src={npcImages?.profileUrl || normalizeImageUrl(npcData.imageUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" alt="Hero Portrait" />
                          <div className="absolute inset-x-0 bottom-0 p-2 bg-black/60 backdrop-blur-sm text-[8px] font-bold text-white/60 uppercase text-center">Hero_Portrait_Vertical</div>
                       </div>
                       {/* Avatar */}
                       <div className="col-span-2 space-y-4">
                          <div className="aspect-square bg-black/40 rounded-xl overflow-hidden border border-white/10 relative group/img">
-                            <img src={npcImages?.avatarUrl || normalizeImageUrl(npcData.avatarUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" />
+                            <img src={npcImages?.avatarUrl || normalizeImageUrl(npcData.avatarUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" alt="Neural Avatar" />
                             <div className="absolute inset-x-0 bottom-0 p-2 bg-black/60 backdrop-blur-sm text-[8px] font-bold text-white/60 uppercase text-center">Neural_Avatar</div>
                          </div>
                       </div>
                       {/* Matrix */}
                       <div className="col-span-7 aspect-[3/2] bg-black/40 rounded-xl overflow-hidden border border-white/10 relative group/img">
-                         <img src={npcImages?.matrixUrl || normalizeImageUrl(npcData.matrixUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" />
+                         <img src={npcImages?.matrixUrl || normalizeImageUrl(npcData.matrixUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" alt="NPC Portrait Matrix" />
                          <div className="absolute inset-x-0 bottom-0 p-2 bg-black/60 backdrop-blur-sm text-[8px] font-bold text-white/60 uppercase text-center">NPC_Portrait_Matrix_Forge [3x3 Emotion Grid]</div>
                       </div>
                    </div>
@@ -791,6 +796,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                   <div className="col-span-8">
                     <input 
                       type="text"
+                      title="Entity Name"
                       value={npcData.name}
                       onChange={(e) => setNpcData({ ...npcData, name: e.target.value })}
                       className="bg-transparent text-5xl font-black text-white placeholder:text-white/10 focus:outline-none w-full tracking-tighter uppercase"
@@ -802,6 +808,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                       {(['Male', 'Female'] as const).map(g => (
                         <button
                           key={g}
+                          title={`Set gender to ${g}`}
                           onClick={() => setNpcData(prev => ({ ...prev, gender: g }))}
                           className={`px-4 py-2 rounded-lg text-[10px] font-black uppercase transition-all ${
                             npcData.gender === g 
@@ -938,6 +945,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                               <span className="text-white/40">Voice:</span>
                               <input 
                                 type="text"
+                                title="Voice Profile"
                                 value={npcData.voiceProfile || ''}
                                 onChange={(e) => setNpcData(prev => ({ ...prev, voiceProfile: e.target.value }))}
                                 className="bg-transparent border-none focus:outline-none text-[10px] text-white/80 w-32 truncate placeholder:text-white/10"
@@ -952,6 +960,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                         <div className="flex gap-4 text-[10px] text-white/70 font-bold uppercase tracking-tight">
                            <input 
                              type="text" 
+                             title="Build / Body Type"
                              value={npcData.appearance?.bodyType || 'Medium'}
                              onChange={(e) => setNpcData(prev => ({ 
                                ...prev, 
@@ -961,6 +970,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                              className="bg-transparent border-none focus:outline-none text-[10px] text-white/60 w-20 font-bold"
                            />
                            <select 
+                             title="Hair Style"
                              value={npcData.appearance?.hairStyle || 'Short'}
                              onChange={(e) => setNpcData(prev => ({ 
                                ...prev, 
@@ -974,6 +984,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                            </select>
                            <input 
                              type="text" 
+                             title="Height"
                              value={npcData.appearance?.height || '5\'10"'}
                              onChange={(e) => setNpcData(prev => ({ 
                                ...prev, 
@@ -984,6 +995,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                            />
                            <input 
                              type="text" 
+                             title="Weight"
                              value={npcData.appearance?.weight || '160 lbs'}
                              onChange={(e) => setNpcData(prev => ({ 
                                ...prev, 
@@ -1009,52 +1021,56 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                       <span className="text-[8px] text-white/30 uppercase block font-bold">Class</span>
                       <div className="relative group">
                         <select 
+                          title="Class Selection"
                           value={npcData.class}
                           onChange={(e) => setNpcData({ ...npcData, class: e.target.value })}
                           className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white rounded appearance-none font-bold"
                         >
                           {DND_CLASSES.map(c => <option key={c} value={c} className="bg-[#1a1a1a]">{c}</option>)}
                         </select>
-                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('class', DND_CLASSES)} />
+                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('class', DND_CLASSES)} title="Randomize Class" />
                       </div>
                     </div>
                     <div className="space-y-1">
                       <span className="text-[8px] text-white/30 uppercase block font-bold">Race</span>
                       <div className="relative group">
                         <select 
+                          title="Race Selection"
                           value={npcData.race}
                           onChange={(e) => setNpcData({ ...npcData, race: e.target.value })}
                           className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white rounded appearance-none font-bold"
                         >
                           {DND_RACES.map(r => <option key={r} value={r} className="bg-[#1a1a1a]">{r}</option>)}
                         </select>
-                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('race', DND_RACES)} />
+                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('race', DND_RACES)} title="Randomize Race" />
                       </div>
                     </div>
                     <div className="space-y-1">
                       <span className="text-[8px] text-white/30 uppercase block font-bold">Background</span>
                       <div className="relative group">
                         <select 
+                          title="Background Selection"
                           value={npcData.background}
                           onChange={(e) => setNpcData({ ...npcData, background: e.target.value })}
                           className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white rounded appearance-none font-bold"
                         >
                           {DND_BACKGROUNDS.map(b => <option key={b} value={b} className="bg-[#1a1a1a]">{b}</option>)}
                         </select>
-                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('background', DND_BACKGROUNDS)} />
+                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('background', DND_BACKGROUNDS)} title="Randomize Background" />
                       </div>
                     </div>
                     <div className="space-y-1">
                       <span className="text-[8px] text-white/30 uppercase block font-bold">Alignment</span>
                       <div className="relative group">
                         <select 
+                          title="Alignment Selection"
                           value={npcData.alignment}
                           onChange={(e) => setNpcData({ ...npcData, alignment: e.target.value })}
                           className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white rounded appearance-none font-bold"
                         >
                           {DND_ALIGNMENTS.map(a => <option key={a} value={a} className="bg-[#1a1a1a]">{a}</option>)}
                         </select>
-                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('alignment', DND_ALIGNMENTS)} />
+                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('alignment', DND_ALIGNMENTS)} title="Randomize Alignment" />
                       </div>
                     </div>
                   </div>
@@ -1065,6 +1081,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                     <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Ability_Scores</label>
                     <div className="flex items-center gap-3">
                         <select 
+                          title="Stat Generation Method"
                           value={statGenMethod}
                           onChange={(e) => setStatGenMethod(e.target.value as any)}
                           className="bg-transparent border-none text-[9px] text-purple-400 font-bold uppercase focus:outline-none cursor-pointer"
@@ -1073,7 +1090,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                            <option value="Standard Array" className="bg-[#1a1a1a]">Standard Array</option>
                            <option value="Point Buy" className="bg-[#1a1a1a]">Point Buy</option>
                         </select>
-                        <GameIcon name="dice_roll" size={12} className="text-white/20 hover:text-purple-400 cursor-pointer transition-colors" onClick={randomizeStats} />
+                        <GameIcon name="dice_roll" size={12} className="text-white/20 hover:text-purple-400 cursor-pointer transition-colors" onClick={randomizeStats} title="Randomize Stats" />
                      </div>
                   </div>
                   <div className="grid grid-cols-3 gap-2">
@@ -1082,6 +1099,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                         <span className="text-[8px] text-white/30 uppercase block">{stat}</span>
                         <input 
                           type="number"
+                          title={`${stat.toUpperCase()} Score`}
                           value={val}
                           onChange={(e) => setNpcData({ ...npcData, stats: { ...npcData.stats!, [stat]: parseInt(e.target.value) } })}
                           className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white text-center rounded"
@@ -1149,6 +1167,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                 }
                               }}
                               className="text-[8px] text-purple-400/50 hover:text-purple-400 transition-colors"
+                              title="Randomize Traits"
                             >
                               <GameIcon name="refresh" size={10} />
                             </button>
@@ -1160,6 +1179,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                 <button 
                                   onClick={() => setNpcData(prev => ({ ...prev, traits: prev.traits?.filter((_, idx) => idx !== i) }))}
                                   className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 text-white/20 hover:text-red-400"
+                                  title="Remove trait"
                                 >
                                   <GameIcon name="close" size={10} />
                                 </button>
@@ -1173,6 +1193,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                   }
                                 }}
                                 className="w-full py-2 border border-dashed border-white/10 rounded text-[9px] text-white/20 hover:text-white/40 hover:border-white/20 transition-all uppercase font-bold"
+                                title="Generate Trait"
                               >
                                 + Generate_Trait
                               </button>
@@ -1194,6 +1215,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                       }
                                     }}
                                     className="text-[8px] text-purple-400/50 hover:text-purple-400 transition-colors"
+                                    title={`Randomize ${category}`}
                                   >
                                     <GameIcon name="refresh" size={10} />
                                   </button>
@@ -1205,6 +1227,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                       <button 
                                         onClick={() => setNpcData(prev => ({ ...prev, [category]: (prev as any)[category]?.filter((_: any, idx: number) => idx !== i) }))}
                                         className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 text-white/20 hover:text-red-400"
+                                        title={`Remove ${category.slice(0, -1)}`}
                                       >
                                         <GameIcon name="close" size={10} />
                                       </button>
@@ -1219,6 +1242,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                          }
                                        }}
                                        className="w-full py-1.5 border border-dashed border-white/5 rounded text-[8px] text-white/20 hover:text-white/40 transition-all uppercase font-bold"
+                                       title={`Generate ${category.slice(0, -1)}`}
                                      >
                                        + Gen_{category.slice(0, -1)}
                                      </button>
@@ -1418,6 +1442,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                               <GameIcon name="search" size={10} className="text-white/20" />
                               <input 
                                 type="text"
+                                title="Equipment Search"
                                 value={equipmentSearch}
                                 onChange={(e) => setEquipmentSearch(e.target.value)}
                                 placeholder="SEARCH_DATABASE..."
@@ -1431,6 +1456,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                              {filteredEquipment.map(item => (
                                <button 
                                  key={item.index}
+                                 title={`Add ${item.name} to backpack`}
                                  onClick={() => {
                                    addItemToNpc(item);
                                    setEquipmentSearch('');
@@ -1438,7 +1464,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                  className="flex items-center gap-3 p-2 bg-white/5 border border-white/5 hover:border-purple-500/50 hover:bg-purple-500/5 rounded-xl transition-all group/item text-left"
                                >
                                  <div className="w-8 h-8 rounded bg-black/40 border border-white/5 shrink-0 overflow-hidden group-hover/item:border-purple-500/20 transition-all flex items-center justify-center">
-                                    <img src={item.imageUrl || `/assets/atlas/equipment/images/${item.index.toLowerCase().replace(/[\s-]/g, '_')}.webp`} className="h-[90%] w-auto object-contain mx-auto" />
+                                    <img src={item.imageUrl || `/assets/atlas/equipment/images/${item.index.toLowerCase().replace(/[\s-]/g, '_')}.webp`} className="h-[90%] w-auto object-contain mx-auto" alt={item.name} />
                                  </div>
                                  <div className="flex flex-col min-w-0">
                                     <span className="text-[9px] font-black text-white/60 uppercase truncate group-hover/item:text-purple-300 transition-colors">{item.name}</span>
@@ -1464,6 +1490,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                        setNpcData({ ...npcData, backpack: next });
                                      }}
                                      className="absolute top-1 right-1 text-white/10 hover:text-dragon-red transition-all opacity-0 group-hover:opacity-100"
+                                     title={`Remove ${it?.name} from backpack`}
                                    >
                                      <GameIcon name="close" size={10} />
                                    </button>
@@ -1479,6 +1506,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                      <button 
                                        onClick={() => equipItemToNpc(it)}
                                        className="h-5 px-2 bg-dragon-red/10 border border-dragon-red/40 rounded text-[7px] font-black italic text-dragon-red hover:bg-dragon-red/20 transition-all uppercase tracking-tighter"
+                                       title={`Equip ${it?.name}`}
                                      >
                                        EQUIP
                                      </button>

@@ -197,3 +197,7 @@
 .party-marker-smooth {
   transition: transform 10s linear !important;
 }
+
+.leaflet-bottom.leaflet-left {
+  display: none !important;
+}
