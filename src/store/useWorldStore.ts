@@ -357,7 +357,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
           currentSpeedMph *= 0.5;
         }
 
-        // Terrain Penalty: Water reduces speed significantly unless we have a boat
+        // Terrain Penalty
         if (state.currentRegion === 'water') {
            const hasBoat = (invState.partyVehicles || []).some((v: any) =>
              v.type?.toLowerCase().includes('boat') ||
@@ -367,6 +367,16 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
            if (!hasBoat) {
              currentSpeedMph *= 0.1; // 10% speed (swimming/wading)
+           } else {
+             currentSpeedMph *= 1.2; // Boats are faster than walking
+           }
+        } else {
+           // Regional Land Penalties
+           const region = state.currentRegion?.toLowerCase() || '';
+           if (region.includes('mountain') || region.includes('high_forest')) {
+             currentSpeedMph *= 0.5; // Difficult terrain
+           } else if (region.includes('marsh') || region.includes('swamp') || region.includes('wood')) {
+             currentSpeedMph *= 0.7; // Moderate difficulty
            }
         }
 
@@ -395,7 +405,8 @@ export const useWorldStore = create<WorldState>((set, get) => ({
           isTraveling: false,
           destination: null,
           travelOrigin: null,
-          travelProgress: 0
+          travelProgress: 0,
+          isFastForwarding: false
         });
       } else {
         const currentX = x1 + (x2 - x1) * newProgress;
