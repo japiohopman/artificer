@@ -12,12 +12,28 @@ The **Tactical Combat Engine** provides a grid-based interface for resolving enc
     - **Players**: Circular tokens with avatar images or user icons, highlighted with a blue border and movement pulse.
     - **Monsters**: Circular tokens with monster images or identity icons, highlighted with a "Dragon Red" border.
 
-### 2. Movement
-- **Range**: Standard movement is limited to **6 cells** (30ft) per turn.
-- **Calculation**: Uses Chebyshev distance (max difference between X or Y coordinates) to allow for diagonal movement.
-- **Interaction**: Clicking an empty cell within range updates the `playerPos` in the state.
+### 2. Movement & Pathfinding
+- **Range**: Standard movement is limited to **6 cells** (30ft) per turn, or governed by the unit's `speed` stat.
+- **Pathfinding**: Uses the **A* Algorithm** to calculate optimal paths around obstacles (walls and closed doors).
+- **Collision**: Movement is blocked by `wall` types and `door` types where `isOpen` is false.
+- **Interaction**: Clicking a valid, reachable cell updates the `playerPos`.
 
-### 3. Initiative System
+### 3. Exploration & Interactivity
+- **Environment**: The grid supports multiple rooms defined by `wall` and `door` cells.
+- **Doors**: Interactive elements that can be toggled (`open`/`close`) when a player is adjacent (Distance <= 1.5).
+- **Line of Sight (LoS)**: Uses **Bresenham's Line Algorithm** to determine visibility between points.
+- **Fog of War**: Cells and entities not in the player's direct LoS are rendered with reduced visibility or hidden entirely.
+
+### 4. AI Awareness & Perception
+Monsters operate on a state machine driven by spatial awareness:
+- **Awareness States**:
+    - `idle`: Standard patrol/waiting.
+    - `alert`: Searching for the player (usually triggered by sound or moving to the `lastKnownPlayerPos`).
+    - `combat`: Actively engaging the player.
+- **View Cones**: Monsters have a 90-degree field of vision based on their `viewDirection` (N, E, S, W).
+- **Detection**: Entering a monster's view cone while in LoS triggers immediate combat. High proximity may trigger an `alert` state even outside the view cone.
+
+### 5. Initiative System
 Combatants are organized into an **Initiative Queue**.
 - **Roll**: `1d20 + Initiative Modifier`.
 - **Turn Sequence**: The `activeTurnIndex` tracks which unit's turn it is.

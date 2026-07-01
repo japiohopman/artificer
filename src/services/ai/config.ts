@@ -15,7 +15,8 @@ export const ai = {
           model,
           // Normalize contents to array if it's a string or single object
           contents: Array.isArray(contents) ? contents : (typeof contents === 'string' ? [{ parts: [{ text: contents }] }] : [contents]),
-          config
+          config,
+          tools: config?.tools
         })
       });
 

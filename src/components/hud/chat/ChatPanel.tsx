@@ -3,6 +3,8 @@ import { useUIStore } from '../../../store/useUIStore';
 import { useGameStore } from '../../../store/useGameStore';
 import { useWorldStore } from '../../../store/useWorldStore';
 import { useCharacterStore, Emotion } from '../../../store/useCharacterStore';
+import { useChatStore } from '../../../store/useChatStore';
+import { narratorService } from '../../../services/narratorService';
 import { ChatHistory } from './ChatHistory';
 import { ChatInput } from './ChatInput';
 import { motion, AnimatePresence } from 'motion/react';
@@ -25,6 +27,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
   const { currentNPC, setEmotion, setTestAnimalInteraction, testAnimalInteraction } = useCharacterStore();
   const { addLog, rollDice3D } = useGameStore();
   const { setChatExpanded, gameMode } = useUIStore();
+  const { messages: history, isThinking } = useChatStore();
 
   const bgUrl = getActiveBackground();
   
@@ -32,13 +35,6 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
   const yPos = isNight() ? '100.1%' : '0%';
 
   const [message, setMessage] = useState('');
-  const [history, setHistory] = useState<ChatMessage[]>([
-    { 
-      role: 'npc', 
-      text: `Welcome to my shop, traveler. I am ${currentNPC?.name || 'the Innkeeper'}. What can I do for you today?`,
-      timestamp: Date.now() 
-    }
-  ]);
 
   const detectEmotion = (text: string): Emotion | null => {
     const lowerText = text.toLowerCase();
@@ -61,107 +57,17 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
     return null;
   };
 
-  const handleSend = () => {
-    if (!message.trim()) return;
+  const handleSend = async () => {
+    if (!message.trim() || isThinking) return;
 
-    const userMsg: ChatMessage = { 
-      role: 'user', 
-      text: message, 
-      timestamp: Date.now() 
-    };
-    
-    setHistory(prev => [...prev, userMsg]);
+    const userMsg = message;
     setMessage('');
 
-    const lowerMessage = message.toLowerCase().trim();
-
-    // Check for /roll command
-    if (lowerMessage.startsWith('/roll ')) {
-      const notation = lowerMessage.substring(6).trim();
-      if (notation) {
-        rollDice3D(notation, "Chat Roll");
-        return;
-      }
+    try {
+      await narratorService.generateResponse(userMsg);
+    } catch (err) {
+      console.error("Chat Error:", err);
     }
-    
-    // Animal Test Trigger
-    const animalTriggers = ['talk to', 'speak to', 'commune with', 'interact with'];
-    const matchedTrigger = animalTriggers.find(t => lowerMessage.includes(t));
-
-    if (matchedTrigger) {
-      const { beastRegistry } = useCharacterStore.getState();
-      
-      let target = lowerMessage.split(matchedTrigger)[1]?.trim() || '';
-      if (target.startsWith('the ')) {
-        target = target.replace('the ', '');
-      }
-      target = target.split(' ')[0]; // First word
-
-      const beastEntry = beastRegistry[target.toLowerCase()];
-      
-      setTimeout(() => {
-        addLog(`Initiating animal interaction test for: ${target}`, 'info');
-        if (beastEntry) {
-          addLog(`Registry match found: Row ${beastEntry.row} on ${beastEntry.url.split('/').pop()}`, 'success');
-        } else {
-          addLog(`No registry entry for "${target}". Using default beast matrix.`, 'warning');
-        }
-
-        setTestAnimalInteraction({
-          active: true,
-          animals: beastEntry ? [target] : [target, 'Dire Wolf', 'Giant Raven'],
-          currentAnimalIndex: beastEntry ? beastEntry.row : 0,
-          frameIndex: 0,
-          url: beastEntry ? beastEntry.url : 'https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/animals/images/bat_black_bear_boar_matrix.webp'
-        });
-
-        const systemMsg: ChatMessage = {
-          role: 'system',
-          text: `You focus your attention on the ${target}. A primitive psychic link is established.`,
-          timestamp: Date.now()
-        };
-        
-        const animalMsg: ChatMessage = {
-          role: 'npc',
-          text: beastEntry 
-            ? `*The ${target} perceives your intent. Its rhythmic movements synchronize with your psychic frequency.*`
-            : `*The ${target} looks at you with ancient, knowing eyes, its mouth moving in a subtle, rhythmic sequence.*`,
-          timestamp: Date.now()
-        };
-        
-        setHistory(prev => [...prev, systemMsg, animalMsg]);
-      }, 600);
-      return;
-    }
-
-    const triggeredEmotion = detectEmotion(message);
-    
-    setTimeout(() => {
-      if (triggeredEmotion) {
-        setEmotion(triggeredEmotion);
-        addLog(`NPC emotion changed to ${triggeredEmotion} via chat trigger.`, 'info');
-        
-        const systemMsg: ChatMessage = {
-          role: 'system',
-          text: `${currentNPC?.name || 'The NPC'} is now feeling ${triggeredEmotion.toLowerCase()}.`,
-          timestamp: Date.now()
-        };
-        
-        const npcResponse: ChatMessage = {
-          role: 'npc',
-          text: getEmotionResponse(triggeredEmotion),
-          timestamp: Date.now()
-        };
-        
-        setHistory(prev => [...prev, systemMsg, npcResponse]);
-      } else {
-        setHistory(prev => [...prev, { 
-          role: 'npc', 
-          text: "I'm listening, but I'm not sure I understand your intent, traveler.",
-          timestamp: Date.now()
-        }]);
-      }
-    }, 600);
   };
 
   const getEmotionResponse = (emo: Emotion): string => {

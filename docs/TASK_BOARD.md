@@ -72,9 +72,11 @@
   - [x] Party Travel & Movement Interpolation.
   - [x] Fog of War (Pathing persistence/Explored areas).
 - [x] **Tactical Combat Engine**
-  - [x] Grid-Based Movement & Collision.
+  - [x] Grid-Based Movement & Collision (A* Pathfinding).
   - [x] Initiative Tracker & Turn Sequence UI.
-  - [ ] AI Combat Logic (Tool calls).
+  - [x] Exploration Mechanics (Interactive Doors, LoS, Fog of War).
+  - [x] AI Awareness State Machine (View Cones, Perception, Search).
+  - [ ] AI Combat Logic (Tool calls for Narrator integration).
 - [ ] **Economic & Trade Module**
   - [ ] Regional Pricing & Merchant Inventory rotation.
 - [ ] **Soundscape Orchestrator**

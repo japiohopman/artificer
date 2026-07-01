@@ -130,7 +130,8 @@ interface GameState {
   // Combat Actions
   setPlayerPos: (x: number, y: number) => void;
   updateMonsterHp: (id: string, hp: number) => void;
-  addMonsterToCombat: (monster: any) => void;
+  addMonsterToCombat: (monster: any, x?: number, y?: number) => void;
+  spawnMonster: (index: string, x?: number, y?: number) => Promise<void>;
   removeMonsterFromCombat: (id: string) => void;
   toggleDoor: (x: number, y: number) => void;
   completeCombat: (victory: boolean) => Promise<void>;
@@ -310,14 +311,19 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
   })),
 
-  addMonsterToCombat: (monster) => set((state) => {
+  addMonsterToCombat: (monster, targetX, targetY) => set((state) => {
     const id = `m-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
-    // Find an empty spot
-    const occupiedPositions = new Set(state.combatState.monsters.map(m => `${m.x},${m.y}`));
-    let x = 8, y = 2;
-    while (occupiedPositions.has(`${x},${y}`)) {
-      y++;
-      if (y > 6) { y = 2; x++; }
+
+    let x = targetX ?? 8;
+    let y = targetY ?? 2;
+
+    if (targetX === undefined || targetY === undefined) {
+      // Find an empty spot
+      const occupiedPositions = new Set(state.combatState.monsters.map(m => `${m.x},${m.y}`));
+      while (occupiedPositions.has(`${x},${y}`)) {
+        y++;
+        if (y > 6) { y = 2; x++; }
+      }
     }
 
     const newMonster: CombatMonster = {
@@ -342,6 +348,15 @@ export const useGameStore = create<GameState>((set, get) => ({
       }
     };
   }),
+
+  spawnMonster: async (index, x, y) => {
+    const { atlasService } = await import('../services/atlasService');
+    const monsterData = await atlasService.loadEnemy(index);
+    if (monsterData) {
+      get().addMonsterToCombat(monsterData, x, y);
+      get().addLog(`A ${monsterData.name} appears!`, 'warning');
+    }
+  },
 
   removeMonsterFromCombat: (id) => set((state) => ({
     combatState: {
