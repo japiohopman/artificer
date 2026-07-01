@@ -106,6 +106,19 @@ Style: Immersive, skeuomorphic, reminiscent of Baldur's Gate 3.
                     },
                     required: ["x", "y"]
                   }
+                },
+                {
+                  name: "spawnMonster",
+                  description: "Spawns a monster onto the tactical grid from the atlas registry.",
+                  parameters: {
+                    type: "OBJECT",
+                    properties: {
+                      index: { type: "STRING", description: "The index/slug of the monster, e.g., 'goblin' or 'worg'" },
+                      x: { type: "NUMBER", description: "The X coordinate (0-11)" },
+                      y: { type: "NUMBER", description: "The Y coordinate (0-7)" }
+                    },
+                    required: ["index"]
+                  }
                 }
               ]
             }
@@ -128,6 +141,9 @@ Style: Immersive, skeuomorphic, reminiscent of Baldur's Gate 3.
             break;
           case 'toggleDoor':
             gameStore.toggleDoor(args.x, args.y);
+            break;
+          case 'spawnMonster':
+            await gameStore.spawnMonster(args.index, args.x, args.y);
             break;
         }
 
