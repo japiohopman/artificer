@@ -1,6 +1,8 @@
 import { create } from 'zustand';
 import { useInventoryStore } from './useInventoryStore';
 import { useCharacterStore } from './useCharacterStore';
+import { useGameStore } from './useGameStore';
+import { useUIStore } from './useUIStore';
 import { getRegionAt } from '../lib/mapUtils';
 
 export type WeatherType = 'Sunny' | 'Rainy' | 'Cloudy' | 'Stormy' | 'Snowy' | 'Foggy';
@@ -264,10 +266,22 @@ export const useWorldStore = create<WorldState>((set, get) => ({
         if (Math.random() < 0.005) {
           set({
             isFastForwarding: false,
-            // Optionally add a log message
           });
-          // We could also call addLog from useGameStore if we had access
-          console.log("Travel interrupted by a random encounter!");
+
+          const gameStore = useGameStore.getState();
+          const uiStore = useUIStore.getState();
+
+          gameStore.addLog("Travel interrupted by a potential encounter!", "warning");
+          uiStore.setChatExpanded(true);
+
+          // Sound effect trigger (placeholder for sound orchestrator)
+          // useAudioStore.getState().playSound('encounter_alert');
+
+          // If on land, maybe trigger a small chance of immediate combat
+          if (state.currentRegion !== 'water' && Math.random() < 0.3) {
+             uiStore.setGameMode('combat');
+             gameStore.addLog("Ambush! Roll for initiative!", "error");
+          }
         }
       }
     }
@@ -341,6 +355,19 @@ export const useWorldStore = create<WorldState>((set, get) => ({
         // Weight Penalty: Overburdened reduces speed by 50%
         if (totalWeight > totalCapacity) {
           currentSpeedMph *= 0.5;
+        }
+
+        // Terrain Penalty: Water reduces speed significantly unless we have a boat
+        if (state.currentRegion === 'water') {
+           const hasBoat = (invState.partyVehicles || []).some((v: any) =>
+             v.type?.toLowerCase().includes('boat') ||
+             v.type?.toLowerCase().includes('ship') ||
+             v.name?.toLowerCase().includes('boat')
+           );
+
+           if (!hasBoat) {
+             currentSpeedMph *= 0.1; // 10% speed (swimming/wading)
+           }
         }
 
         // Vehicle Speed Bonus: If we have at least one horse/vehicle, increase base speed

@@ -121,7 +121,7 @@ export const Nav: React.FC = () => {
   ];
 
   return (
-    <nav className="h-16 w-full px-6 flex items-center justify-between relative overflow-hidden pointer-events-auto bg-parchment-100/80 backdrop-blur-md rounded-xl border-2 border-dragon-gold shadow-lg bg-paper-texture">
+    <nav className="h-16 w-full px-6 flex items-center justify-between relative overflow-hidden pointer-events-auto bg-parchment-100 border-b-2 border-dragon-gold shadow-lg bg-paper-texture">
       {/* Visual Accents */}
       <div className="absolute inset-x-0 bottom-0 h-1 bg-dragon-red/20" />
       <div className="absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t from-dragon-red/5 to-transparent pointer-events-none" />
@@ -152,12 +152,22 @@ export const Nav: React.FC = () => {
 
         <div className="flex flex-col">
           <div className="flex items-center gap-2">
-             <div className="w-1.5 h-1.5 rounded-full bg-dragon-red shadow-[0_0_8px_rgba(139,0,0,0.8)]" />
-             <span className="text-[9px] font-black uppercase text-dragon-darkRed/60 tracking-[0.3em]">Position_Verified</span>
+             <div className={cn(
+               "w-1.5 h-1.5 rounded-full shadow-[0_0_8px_rgba(139,0,0,0.8)]",
+               currentRegion === 'water' ? "bg-blue-500" : "bg-dragon-red"
+             )} />
+             <span className="text-[9px] font-black uppercase text-dragon-darkRed/60 tracking-[0.3em]">
+               {currentRegion === 'water' ? 'Offshore_Tracking' : 'Position_Verified'}
+             </span>
           </div>
-          <span className="text-sm font-header font-black text-dragon-red uppercase tracking-widest mt-0.5 truncate">
-             {currentLocation?.name || REGION_NAMES[currentRegion] || 'Unknown Region'}
-          </span>
+          <div className="flex items-baseline gap-2">
+            <span className="text-sm font-header font-black text-dragon-red uppercase tracking-widest mt-0.5 truncate">
+               {currentLocation?.name || REGION_NAMES[currentRegion] || 'Unknown Region'}
+            </span>
+            {currentRegion === 'water' && (
+              <span className="text-[8px] font-black text-blue-600 uppercase tracking-tighter">[High Seas]</span>
+            )}
+          </div>
         </div>
       </div>
 

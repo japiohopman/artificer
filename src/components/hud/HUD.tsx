@@ -40,7 +40,7 @@ export const HUD: React.FC = () => {
       <Journal />
 
       {/* 1. Fixed Top Header / Navigation (Above sidebars) */}
-      <div className="w-full z-[5000] p-4 pointer-events-none">
+      <div className="w-full z-[5000] pointer-events-none">
         <Nav />
       </div>
 
@@ -49,7 +49,7 @@ export const HUD: React.FC = () => {
         <motion.aside
           animate={{ width: isWorldPanelOpen ? 320 : 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="h-full bg-parchment-50 border-r-2 border-dragon-red z-[1000] relative flex flex-col shrink-0 shadow-xl overflow-hidden"
+          className="h-full bg-parchment-50 border-r-2 border-dragon-gold z-[1000] relative flex flex-col shrink-0 shadow-xl overflow-hidden"
         >
           <div className="w-80 h-full flex flex-col">
             <WorldPanel />
@@ -115,7 +115,7 @@ export const HUD: React.FC = () => {
         <motion.aside
           animate={{ width: (isCharacterPanelOpen || isInventoryOpen) ? 320 : 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="h-full bg-parchment-50 border-l-2 border-dragon-red z-[1000] relative flex flex-col shrink-0 shadow-xl overflow-hidden"
+          className="h-full bg-parchment-50 border-l-2 border-dragon-gold z-[1000] relative flex flex-col shrink-0 shadow-xl overflow-hidden"
         >
           <div className="w-80 h-full flex flex-col overflow-hidden">
              <CharacterPanel />
