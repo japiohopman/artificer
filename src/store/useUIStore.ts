@@ -14,7 +14,7 @@ interface UIState {
   isJournalOpen: boolean;
   isWorldPanelOpen: boolean;
   isCharacterPanelOpen: boolean;
-  activeCharacterTab: 'equipment' | 'inventory' | 'stats' | 'logistics';
+  activeCharacterTab: 'equipment' | 'inventory' | 'stats' | 'logistics' | 'party';
   dynamicNavButtons: any[]; 
   isAdvancedRollerOpen: boolean;
   chatExpanded: boolean;
@@ -50,7 +50,7 @@ interface UIState {
   setIsJournalOpen: (isOpen: boolean) => void;
   setIsWorldPanelOpen: (isOpen: boolean) => void;
   setIsCharacterPanelOpen: (isOpen: boolean) => void;
-  setActiveCharacterTab: (tab: 'equipment' | 'inventory' | 'stats' | 'logistics') => void;
+  setActiveCharacterTab: (tab: 'equipment' | 'inventory' | 'stats' | 'logistics' | 'party') => void;
   setDynamicNavButtons: (buttons: any[]) => void;
   setIsAdvancedRollerOpen: (isOpen: boolean) => void;
   setChatExpanded: (expanded: boolean) => void;

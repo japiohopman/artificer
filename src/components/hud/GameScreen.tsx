@@ -19,12 +19,14 @@ export const GameScreen: React.FC = () => {
   const { 
     chatExpanded,
     setChatExpanded,
-    isEditingSubMap
+    isEditingSubMap,
+    gameMode
   } = useUIStore();
 
   const {
     activeCards,
-    removeFromPreview
+    removeFromPreview,
+    combatState
   } = useGameStore();
 
   const { currentNPC, emotion } = useCharacterStore();
@@ -118,7 +120,13 @@ export const GameScreen: React.FC = () => {
 
       {/* 5. Simulator Cards Layer - Highest Priority interactive content */}
       <div className="absolute inset-0 z-[100] pointer-events-none">
-        {activeCards.map((monster: any, idx: number) => (
+        {activeCards.filter(card => {
+          // If in combat mode, don't show cards for monsters that are already in the combat state
+          if (gameMode === 'combat') {
+            return !combatState.monsters.some(m => m.id === card.id || m.name === card.name);
+          }
+          return true;
+        }).map((monster: any, idx: number) => (
           <div key={`${monster.index || idx}-${idx}`} className="relative pointer-events-auto">
             <ErrorBoundary name="SimCard" fallback={<div className="w-[380px] h-[500px] bg-red-100/50 border-2 border-red-200 rounded-xl flex items-center justify-center italic text-red-500">Entity Distorted</div>}>
               <DraggableCard 

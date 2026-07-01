@@ -33,32 +33,6 @@ export const CombatGrid: React.FC = () => {
 
   return (
     <div className="w-full h-full relative bg-stone-950 overflow-hidden flex items-center justify-center font-body">
-      {/* Interactive Grid Overlay */}
-      <div
-        className="absolute inset-0 z-20"
-        style={{
-          display: 'grid',
-          gridTemplateColumns: `repeat(${gridWidth + 4}, ${cellSize}px)`,
-          gridTemplateRows: `repeat(${gridHeight + 4}, ${cellSize}px)`,
-          width: (gridWidth + 4) * cellSize,
-          height: (gridHeight + 4) * cellSize,
-          marginLeft: 'calc(50% - ' + ((gridWidth * cellSize) / 2) + 'px)',
-          marginTop: 'calc(50% - ' + ((gridHeight * cellSize) / 2) + 'px)',
-        }}
-      >
-        {Array.from({ length: (gridWidth + 4) * (gridHeight + 4) }).map((_, i) => {
-          const x = i % (gridWidth + 4);
-          const y = Math.floor(i / (gridWidth + 4));
-          return (
-            <div
-              key={i}
-              onClick={() => handleCellClick(x, y)}
-              className="w-full h-full hover:bg-white/5 cursor-crosshair transition-colors border border-white/5"
-            />
-          );
-        })}
-      </div>
-
       {/* Tactical Background Grid */}
       <div
         className="absolute inset-0 opacity-20 pointer-events-none"
@@ -148,6 +122,27 @@ export const CombatGrid: React.FC = () => {
             backgroundImage: 'radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 100%)'
           }}
         >
+          {/* Interactive Grid Overlay - Now perfectly aligned with token container */}
+          <div
+            className="absolute inset-0 z-20"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: `repeat(${gridWidth}, ${cellSize}px)`,
+              gridTemplateRows: `repeat(${gridHeight}, ${cellSize}px)`,
+            }}
+          >
+            {Array.from({ length: gridWidth * gridHeight }).map((_, i) => {
+              const x = i % gridWidth;
+              const y = Math.floor(i / gridWidth);
+              return (
+                <div
+                  key={i}
+                  onClick={() => handleCellClick(x, y)}
+                  className="w-full h-full hover:bg-white/5 cursor-crosshair transition-colors border border-white/5"
+                />
+              );
+            })}
+          </div>
            {/* Player Token */}
            <motion.div 
              initial={{ scale: 0 }}

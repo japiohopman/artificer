@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useUIStore } from '../../store/useUIStore';
 import { useWorldStore } from '../../store/useWorldStore';
+import { useGameStore } from '../../store/useGameStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { GameIcon } from '../../game_icons';
@@ -11,6 +12,9 @@ export const WorldPanel: React.FC = () => {
   const { 
     isWorldPanelOpen, 
     setIsWorldPanelOpen,
+    gameMode,
+    setIsMonsterProfileOpen,
+    setFocusedItem
   } = useUIStore();
 
   const {
@@ -37,6 +41,7 @@ export const WorldPanel: React.FC = () => {
 
   const { partyVehicles, partyInventory, partyStats } = useInventoryStore();
   const { characters } = useCharacterStore();
+  const { combatState } = useGameStore();
 
   const travelStats = React.useMemo(() => {
     if (!isTraveling || !destination || !partyLocation) return null;
@@ -101,6 +106,53 @@ export const WorldPanel: React.FC = () => {
         </div>
 
         <div className="flex-1 overflow-y-auto p-6 space-y-8 custom-scrollbar">
+          {/* Active Combat Monsters */}
+          {gameMode === 'combat' && combatState.monsters.length > 0 && (
+            <div className="space-y-4 animate-in fade-in slide-in-from-left-4">
+              <div className="flex items-center gap-3">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-dragon-red/20 to-dragon-red/20" />
+                <div className="flex items-center gap-2">
+                  <GameIcon name="identity" size={14} color="#8B0000" />
+                  <h3 className="text-[10px] font-black uppercase text-dragon-red tracking-[0.3em]">Active_Threats</h3>
+                </div>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent via-dragon-red/20 to-dragon-red/20" />
+              </div>
+
+              <div className="grid grid-cols-1 gap-3">
+                {combatState.monsters.map((monster) => (
+                  <button
+                    key={monster.id}
+                    onClick={() => {
+                      setFocusedItem(monster);
+                      setIsMonsterProfileOpen(true);
+                    }}
+                    className="group flex items-center gap-4 p-3 bg-red-50/50 hover:bg-red-100/50 border border-dragon-red/10 hover:border-dragon-red/30 rounded transition-all text-left shadow-sm hover:shadow-md active:scale-[0.98]"
+                  >
+                    <div className="w-10 h-10 rounded border-2 border-dragon-red/20 overflow-hidden bg-white flex items-center justify-center shrink-0 group-hover:border-dragon-red transition-colors">
+                      {monster.imageUrl ? (
+                        <img src={monster.imageUrl} className="w-full h-full object-cover" alt={monster.name} />
+                      ) : (
+                        <GameIcon name="identity" size={20} color="#8B0000" />
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex justify-between items-center mb-1">
+                        <p className="text-[11px] font-black text-parchment-900 uppercase tracking-tight truncate group-hover:text-dragon-darkRed transition-colors">{monster.name}</p>
+                        <span className="text-[9px] font-bold text-dragon-red/60 uppercase">{monster.hp}/{monster.maxHp} HP</span>
+                      </div>
+                      <div className="w-full h-1 bg-parchment-200 rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-dragon-red transition-all duration-500"
+                          style={{ width: `${(monster.hp / monster.maxHp) * 100}%` }}
+                        />
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Time & Date */}
           <div className="bg-white/40 border border-dragon-gold/20 rounded shadow-inner p-5 relative overflow-hidden group">
             <div className="absolute top-0 right-0 p-2 opacity-5 group-hover:opacity-10 transition-opacity">
