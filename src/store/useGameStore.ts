@@ -1,4 +1,6 @@
 import { create } from 'zustand';
+import { useUIStore } from './useUIStore';
+import * as combatUtils from '../lib/combatUtils';
 
 export interface RpsState {
   status: 'ritual' | 'result';
@@ -21,18 +23,33 @@ export interface CoinFlipState {
   };
 }
 
+export interface TacticalCell {
+  x: number;
+  y: number;
+  type: 'floor' | 'wall' | 'door';
+  isOpen?: boolean;
+  explored?: boolean;
+}
+
+export interface CombatMonster {
+  id: string;
+  name: string;
+  type: string;
+  hp: number;
+  maxHp: number;
+  x: number;
+  y: number;
+  imageUrl?: string;
+  awareness: 'idle' | 'alert' | 'combat';
+  viewDirection: number; // 0:N, 1:E, 2:S, 3:W
+  perception: number;
+  speed: number; // in cells
+  lastKnownPlayerPos?: { x: number; y: number };
+}
+
 export interface CombatState {
   playerPos: { x: number; y: number };
-  monsters: Array<{
-    id: string;
-    name: string;
-    type: string;
-    hp: number;
-    maxHp: number;
-    x: number;
-    y: number;
-    imageUrl?: string;
-  }>;
+  monsters: CombatMonster[];
   initiativeOrder: Array<{
     id: string;
     name: string;
@@ -40,6 +57,8 @@ export interface CombatState {
     isPlayer?: boolean;
   }>;
   activeTurnIndex: number;
+  grid: TacticalCell[][];
+  victoryXp: number;
 }
 
 export interface LogEntry {
@@ -115,10 +134,30 @@ interface GameState {
   updateMonsterHp: (id: string, hp: number) => void;
   addMonsterToCombat: (monster: any) => void;
   removeMonsterFromCombat: (id: string) => void;
+  toggleDoor: (x: number, y: number) => void;
+  completeCombat: (victory: boolean) => Promise<void>;
   nextTurn: () => void;
-  startCombat: () => void;
+  startCombat: () => Promise<void>;
   resolveCombatAction: (actor: any, target: any, action: any) => Promise<void>;
 }
+
+const initializeGrid = (width: number, height: number): TacticalCell[][] => {
+  const grid: TacticalCell[][] = [];
+  for (let y = 0; y < height; y++) {
+    const row: TacticalCell[] = [];
+    for (let x = 0; x < width; x++) {
+      let type: 'floor' | 'wall' | 'door' = 'floor';
+
+      // Simple room layout
+      if (x === 5 && y !== 3) type = 'wall';
+      if (x === 5 && y === 3) type = 'door';
+
+      row.push({ x, y, type, isOpen: type === 'door' ? false : undefined, explored: false });
+    }
+    grid.push(row);
+  }
+  return grid;
+};
 
 export const useGameStore = create<GameState>((set, get) => ({
   currentNPC: null,
@@ -149,8 +188,8 @@ export const useGameStore = create<GameState>((set, get) => ({
   combatState: {
     playerPos: { x: 2, y: 2 },
     monsters: [
-      { id: 'm1', name: 'Goblin Scout', type: 'goblin', hp: 7, maxHp: 7, x: 5, y: 3 },
-      { id: 'm2', name: 'Worg', type: 'worg', hp: 26, maxHp: 26, x: 6, y: 5 }
+      { id: 'm1', name: 'Goblin Scout', type: 'goblin', hp: 7, maxHp: 7, x: 8, y: 3, awareness: 'idle', viewDirection: 3, perception: 10, speed: 6 },
+      { id: 'm2', name: 'Worg', type: 'worg', hp: 26, maxHp: 26, x: 9, y: 5, awareness: 'idle', viewDirection: 3, perception: 12, speed: 10 }
     ],
     initiativeOrder: [
       { id: 'player', name: 'Hero', value: 20, isPlayer: true },
@@ -158,6 +197,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       { id: 'm1', name: 'Goblin Scout', value: 12 }
     ],
     activeTurnIndex: 0,
+    grid: initializeGrid(12, 8),
+    victoryXp: 500,
     activeConditions: {}
   },
 
@@ -285,7 +326,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       if (y > 6) { y = 2; x++; }
     }
 
-    const newMonster = {
+    const newMonster: CombatMonster = {
       id,
       name: monster.name,
       type: monster.type || 'monster',
@@ -293,7 +334,11 @@ export const useGameStore = create<GameState>((set, get) => ({
       maxHp: monster.hit_points || 10,
       x,
       y,
-      imageUrl: monster.imageUrl
+      imageUrl: monster.imageUrl,
+      awareness: 'idle',
+      viewDirection: 3,
+      perception: 10,
+      speed: monster.speed?.walk ? parseInt(monster.speed.walk) / 5 : 6
     };
 
     return {
@@ -311,6 +356,39 @@ export const useGameStore = create<GameState>((set, get) => ({
       initiativeOrder: state.combatState.initiativeOrder.filter(i => i.id !== id)
     }
   })),
+
+  toggleDoor: (x, y) => set((state) => {
+    const newGrid = [...state.combatState.grid];
+    if (newGrid[y]?.[x] && newGrid[y][x].type === 'door') {
+      newGrid[y] = [...newGrid[y]];
+      newGrid[y][x] = { ...newGrid[y][x], isOpen: !newGrid[y][x].isOpen };
+    }
+    return {
+      combatState: {
+        ...state.combatState,
+        grid: newGrid
+      }
+    };
+  }),
+
+  completeCombat: async (victory) => {
+    const { combatState, addLog } = get();
+    const { useCharacterStore } = await import('./useCharacterStore');
+    const { characters, addXp } = useCharacterStore.getState();
+
+    if (victory) {
+      addLog(`Victory! The party earns ${combatState.victoryXp} XP.`, 'success');
+      for (const char of characters) {
+        if (!char.isNpc) {
+          await addXp(char.id, combatState.victoryXp);
+        }
+      }
+    } else {
+      addLog("The party has been defeated...", 'error');
+    }
+
+    useUIStore.getState().setGameMode('exploration');
+  },
 
   nextTurn: () => {
     const { combatState, addLog, resolveCombatAction } = get();
@@ -333,51 +411,114 @@ export const useGameStore = create<GameState>((set, get) => ({
       };
     });
 
-    // Basic Monster AI
+    // Advanced Monster AI
     if (!nextActor.isPlayer) {
       setTimeout(async () => {
-        const currentMonster = get().combatState.monsters.find(m => m.id === nextActor.id);
+        const { combatState: currentCombatState } = get();
+        const currentMonster = currentCombatState.monsters.find(m => m.id === nextActor.id);
         if (!currentMonster) {
           get().nextTurn();
           return;
         }
 
-        const playerPos = get().combatState.playerPos;
-        const dx = Math.abs(currentMonster.x - playerPos.x);
-        const dy = Math.abs(currentMonster.y - playerPos.y);
-        const dist = Math.max(dx, dy);
+        const { checkLoS, isInViewCone, findPath, getDistance } = combatUtils;
+        const playerPos = currentCombatState.playerPos;
 
-        if (dist <= 1) {
-          // Attack player
-          await resolveCombatAction(
-            currentMonster,
-            { id: 'player', name: 'Hero' },
-            { name: 'Claw/Bite', attack_bonus: 4, damage: [{ damage_dice: '1d6+2', damage_type: { name: 'piercing' } }] }
-          );
+        let updatedMonster = { ...currentMonster };
+        let stateChanged = false;
+
+        // 1. Awareness Check
+        if (updatedMonster.awareness !== 'combat') {
+          const hasLoS = checkLoS(updatedMonster, playerPos, currentCombatState.grid);
+          const inCone = isInViewCone(updatedMonster, playerPos);
+
+          if (hasLoS && inCone) {
+            updatedMonster.awareness = 'combat';
+            addLog(`${updatedMonster.name} spotted you!`, 'warning');
+            stateChanged = true;
+          } else if (hasLoS && getDistance(updatedMonster, playerPos) <= 3) {
+             // Passive perception check (simplified: close proximity = alert)
+             updatedMonster.awareness = 'alert';
+             updatedMonster.lastKnownPlayerPos = { ...playerPos };
+             stateChanged = true;
+          }
+        }
+
+        // 2. State-based Action
+        const monsterSpeed = updatedMonster.speed || 6;
+        if (updatedMonster.awareness === 'combat') {
+          const dist = getDistance(updatedMonster, playerPos);
+          if (dist <= 1) {
+            await resolveCombatAction(
+              updatedMonster,
+              { id: 'player', name: 'Hero' },
+              { name: 'Claw/Bite', attack_bonus: 4, damage: [{ damage_dice: '1d6+2', damage_type: { name: 'piercing' } }] }
+            );
+          } else {
+            const path = findPath(updatedMonster, playerPos, currentCombatState.grid);
+            if (path && path.length > 1) {
+              // Move up to speed, but stop before overlapping the player
+              const moveSteps = Math.min(path.length - 1, monsterSpeed);
+              const moveTarget = path[moveSteps - 1];
+
+              updatedMonster.x = moveTarget.x;
+              updatedMonster.y = moveTarget.y;
+
+              // Update view direction based on movement
+              const firstStep = path[0];
+              if (firstStep.x > currentMonster.x) updatedMonster.viewDirection = 1;
+              else if (firstStep.x < currentMonster.x) updatedMonster.viewDirection = 3;
+              else if (firstStep.y > currentMonster.y) updatedMonster.viewDirection = 2;
+              else if (firstStep.y < currentMonster.y) updatedMonster.viewDirection = 0;
+              stateChanged = true;
+            }
+          }
+        } else if (updatedMonster.awareness === 'alert' && updatedMonster.lastKnownPlayerPos) {
+          const path = findPath(updatedMonster, updatedMonster.lastKnownPlayerPos, currentCombatState.grid);
+          if (path && path.length > 0) {
+            const moveSteps = Math.min(path.length, monsterSpeed);
+            const moveTarget = path[moveSteps - 1];
+            updatedMonster.x = moveTarget.x;
+            updatedMonster.y = moveTarget.y;
+            stateChanged = true;
+            if (updatedMonster.x === updatedMonster.lastKnownPlayerPos.x && updatedMonster.y === updatedMonster.lastKnownPlayerPos.y) {
+               updatedMonster.awareness = 'idle';
+               updatedMonster.lastKnownPlayerPos = undefined;
+            }
+          }
         } else {
-          // Move toward player
-          const moveX = currentMonster.x + (playerPos.x > currentMonster.x ? 1 : playerPos.x < currentMonster.x ? -1 : 0);
-          const moveY = currentMonster.y + (playerPos.y > currentMonster.y ? 1 : playerPos.y < currentMonster.y ? -1 : 0);
+          // Idle patrol (very simple: rotate)
+          updatedMonster.viewDirection = (updatedMonster.viewDirection + 1) % 4;
+          stateChanged = true;
+        }
 
+        if (stateChanged) {
           set(state => ({
             combatState: {
               ...state.combatState,
-              monsters: state.combatState.monsters.map(m => m.id === nextActor.id ? { ...m, x: moveX, y: moveY } : m)
+              monsters: state.combatState.monsters.map(m => m.id === nextActor.id ? updatedMonster : m)
             }
           }));
-          addLog(`${currentMonster.name} moves closer!`, 'info');
         }
 
-        // Brief delay before ending monster turn
         setTimeout(() => get().nextTurn(), 1000);
       }, 1000);
     }
   },
 
-  startCombat: () => {
+  startCombat: async () => {
     const { combatState } = get();
+    const { useCharacterStore } = await import('./useCharacterStore');
+    const { characters } = useCharacterStore.getState();
+    const activeParty = characters.filter((c: any) => !c.isNpc || c.isRecruitable);
+
     const order = [
-      { id: 'player', name: 'Hero', value: Math.floor(Math.random() * 20) + 1 + 3, isPlayer: true },
+      ...activeParty.map((c: any) => ({
+        id: c.id,
+        name: c.name,
+        value: Math.floor(Math.random() * 20) + 1 + (Math.floor((c.stats.dex - 10) / 2) || 0),
+        isPlayer: true
+      })),
       ...combatState.monsters.map(m => ({
         id: m.id,
         name: m.name,
@@ -463,7 +604,13 @@ export const useGameStore = create<GameState>((set, get) => ({
         if (newHp <= 0) {
           addLog(`${target.name} has been defeated!`, 'success');
           // Delay removal for visual feedback
-          setTimeout(() => removeMonsterFromCombat(target.id), 1000);
+          setTimeout(() => {
+            removeMonsterFromCombat(target.id);
+            const { combatState: latestState } = get();
+            if (latestState.monsters.length === 0) {
+              get().completeCombat(true);
+            }
+          }, 1000);
         }
       }
     } else {

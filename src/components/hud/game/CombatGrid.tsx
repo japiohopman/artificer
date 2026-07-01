@@ -1,19 +1,19 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useGameStore } from '../../../store/useGameStore';
 import { useUIStore } from '../../../store/useUIStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
-import { REGION_NAMES } from '../../../data/regions';
+import { checkLoS, findPath, getDistance } from '../../../lib/combatUtils';
 
 export const CombatGrid: React.FC = () => {
-  const { combatState, setPlayerPos, addLog, startCombat, resolveCombatAction } = useGameStore();
+  const { combatState, setPlayerPos, addLog, startCombat, resolveCombatAction, toggleDoor } = useGameStore();
   const { characters, activeCharacterId } = useCharacterStore();
   const { isTargeting, targetingAction, setIsTargeting, setTargetingAction } = useUIStore();
   
   const activeChar = characters.find(c => c.id === activeCharacterId);
-  const { playerPos, monsters, initiativeOrder, activeTurnIndex } = combatState;
+  const { playerPos, monsters, initiativeOrder, activeTurnIndex, grid } = combatState;
 
   // Grid constants
   const cellSize = 60; // 60px = 5ft
@@ -21,17 +21,37 @@ export const CombatGrid: React.FC = () => {
   const gridHeight = 8;
 
   const handleCellClick = (x: number, y: number) => {
+    const cell = grid[y][x];
+
+    // Interaction check for doors
+    if (cell.type === 'door') {
+      const dist = getDistance(playerPos, { x, y });
+      if (dist <= 1) {
+        toggleDoor(x, y);
+        addLog(`${cell.isOpen ? 'Closed' : 'Opened'} the door.`, 'info');
+        const { consumeAction } = useCharacterStore.getState();
+        consumeAction(activeCharacterId, 'objectInteractions');
+      } else {
+        addLog("You are too far away to interact with that door!", 'warning');
+      }
+      return;
+    }
+
     if (isTargeting) {
       if (targetingAction?.id === 'move') {
-        const dx = Math.abs(x - playerPos.x);
-        const dy = Math.abs(y - playerPos.y);
-        const distance = Math.max(dx, dy);
+        const path = findPath(playerPos, { x, y }, grid);
 
-        if (distance <= 6) {
+        if (path && path.length <= 6) {
           setPlayerPos(x, y);
           addLog(`Moved to position (${x}, ${y})`, 'info');
+
+          const { consumeMovement } = useCharacterStore.getState();
+          consumeMovement(activeCharacterId, path.length * 5); // 5ft per cell
+
           setIsTargeting(false);
           setTargetingAction(null);
+        } else if (!path) {
+          addLog("You cannot reach that position!", 'warning');
         } else {
           addLog("That position is out of your movement range!", 'warning');
         }
@@ -44,13 +64,14 @@ export const CombatGrid: React.FC = () => {
     }
 
     // Default movement if not explicitly targeting
-    const dx = Math.abs(x - playerPos.x);
-    const dy = Math.abs(y - playerPos.y);
-    const distance = Math.max(dx, dy);
-
-    if (distance > 0 && distance <= 6) {
+    const path = findPath(playerPos, { x, y }, grid);
+    if (path && path.length > 0 && path.length <= 6) {
       setPlayerPos(x, y);
       addLog(`Moved to position (${x}, ${y})`, 'info');
+      const { consumeMovement } = useCharacterStore.getState();
+      consumeMovement(activeCharacterId, path.length * 5);
+    } else if (path && path.length > 6) {
+      addLog("That position is too far!", 'warning');
     }
   };
 
@@ -63,6 +84,10 @@ export const CombatGrid: React.FC = () => {
 
         if (distance <= 1) { // Melee range
           resolveCombatAction({ name: activeChar?.name || 'Player', id: 'player' }, monster, targetingAction);
+
+          const { consumeAction } = useCharacterStore.getState();
+          consumeAction(activeCharacterId, 'actions');
+
           setIsTargeting(false);
           setTargetingAction(null);
         } else {
@@ -76,6 +101,18 @@ export const CombatGrid: React.FC = () => {
     }
   };
 
+  const visibleCells = useMemo(() => {
+    const visible = new Set<string>();
+    for (let y = 0; y < gridHeight; y++) {
+      for (let x = 0; x < gridWidth; x++) {
+        if (checkLoS(playerPos, { x, y }, grid)) {
+          visible.add(`${x},${y}`);
+        }
+      }
+    }
+    return visible;
+  }, [playerPos, grid]);
+
   const validTargetCells = useMemo(() => {
     if (!isTargeting || !targetingAction) return new Set<string>();
 
@@ -85,12 +122,16 @@ export const CombatGrid: React.FC = () => {
     for (let x = playerPos.x - range; x <= playerPos.x + range; x++) {
       for (let y = playerPos.y - range; y <= playerPos.y + range; y++) {
         if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
+          if (targetingAction.id === 'move') {
+            const path = findPath(playerPos, { x, y }, grid);
+            if (!path || path.length > 6) continue;
+          }
           cells.add(`${x},${y}`);
         }
       }
     }
     return cells;
-  }, [isTargeting, targetingAction, playerPos]);
+  }, [isTargeting, targetingAction, playerPos, grid]);
 
   return (
     <div className="w-full h-full relative bg-stone-950 overflow-hidden flex items-center justify-center font-body">
@@ -177,21 +218,34 @@ export const CombatGrid: React.FC = () => {
               gridTemplateRows: `repeat(${gridHeight}, ${cellSize}px)`,
             }}
           >
-            {Array.from({ length: gridWidth * gridHeight }).map((_, i) => {
-              const x = i % gridWidth;
-              const y = Math.floor(i / gridWidth);
+            {grid.flat().map((cell, i) => {
+              const { x, y, type, isOpen } = cell;
               const inRange = validTargetCells.has(`${x},${y}`);
+              const isVisible = visibleCells.has(`${x},${y}`);
 
               return (
                 <div
-                  key={i}
+                  key={`${x}-${y}`}
                   onClick={() => handleCellClick(x, y)}
                   className={cn(
-                    "w-full h-full cursor-crosshair transition-all border border-white/5",
-                    isTargeting && inRange ? "bg-blue-500/10 hover:bg-blue-500/20" : "hover:bg-white/5",
-                    isTargeting && !inRange ? "opacity-30" : "opacity-100"
+                    "w-full h-full cursor-crosshair transition-all border border-white/5 flex items-center justify-center relative",
+                    !isVisible && "brightness-[0.2] saturate-50",
+                    isTargeting && inRange ? "bg-blue-500/20 hover:bg-blue-500/40" : "hover:bg-white/5",
+                    type === 'wall' && "bg-stone-800",
+                    type === 'door' && "bg-amber-900/40"
                   )}
-                />
+                >
+                  {type === 'door' && (
+                    <GameIcon
+                      name={isOpen ? "package" : "lock"}
+                      size={24}
+                      color={isOpen ? "#D4AF37" : "#8B0000"}
+                    />
+                  )}
+                  {type === 'wall' && isVisible && (
+                    <div className="absolute inset-1 border border-white/10 opacity-20" />
+                  )}
+                </div>
               );
             })}
           </div>
@@ -223,6 +277,9 @@ export const CombatGrid: React.FC = () => {
            {/* Monster Tokens */}
            <AnimatePresence>
              {monsters.map((monster, idx) => {
+               const isVisible = visibleCells.has(`${monster.x},${monster.y}`);
+               if (!isVisible) return null;
+
                const canTarget = isTargeting && (
                  (targetingAction?.id === 'attack' && Math.max(Math.abs(monster.x - playerPos.x), Math.abs(monster.y - playerPos.y)) <= 1) ||
                  (targetingAction?.id === 'items' && Math.max(Math.abs(monster.x - playerPos.x), Math.abs(monster.y - playerPos.y)) <= 4)
@@ -247,9 +304,21 @@ export const CombatGrid: React.FC = () => {
                     handleMonsterClick(monster);
                   }}
                  >
+                    {/* View Cone indicator for non-combat monsters */}
+                    {monster.awareness !== 'combat' && (
+                      <div
+                        className="absolute inset-0 bg-dragon-red/10 rounded-full animate-pulse pointer-events-none"
+                        style={{
+                          transform: `rotate(${monster.viewDirection * 90}deg) scaleY(2) translateY(-25%)`,
+                          opacity: 0.3
+                        }}
+                      />
+                    )}
+
                     <div className={cn(
                       "w-full h-full rounded-full border-2 shadow-[0_0_15px_rgba(220,38,38,0.5)] bg-red-900/80 flex items-center justify-center overflow-hidden group cursor-pointer hover:scale-110 transition-transform",
-                      canTarget ? "border-dragon-gold ring-4 ring-dragon-gold/40 animate-pulse" : "border-dragon-red"
+                      canTarget ? "border-dragon-gold ring-4 ring-dragon-gold/40 animate-pulse" : "border-dragon-red",
+                      monster.awareness === 'idle' ? "opacity-60" : "opacity-100"
                     )}>
                       {monster.imageUrl ? (
                         <img src={monster.imageUrl} className="w-full h-full object-cover" alt={monster.name} />
