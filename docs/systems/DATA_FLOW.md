@@ -4,37 +4,41 @@ This document describes the flow of information between the UI, Stores, Services
 
 ## 🧩 State Orchestration
 
-### 1. The Store Slices (Zustand)
-- **`useCharacterStore`**: Individual character data (Stats, HP, Spells).
-- **`useInventoryStore`**: Item Registry and Container slots.
-- **`useWorldStore`**: Environment, Time, Weather.
-- **`usePartyStore`**: Group resources, location, travel status.
+### 1. Specialized Store Slices (Zustand)
+To ensure scalability and performance, the global state is partitioned into specialized stores:
+
+- **`useUIStore`**: Manages global UI visibility (menus, panels), navigation state, and search queries.
+- **`useWorldStore`**: Orchestrates temporal progression, weather cycles, travel mechanics, and environmental data.
+- **`useCharacterStore`**: Contains character statistics, features, spellcasting state, and relationship levels with NPCs.
+- **`useInventoryStore`**: Manages the V2 item registry, container slots, party resources, and vehicles.
+- **`useGameStore`**: Handles transient session state such as combat grids, logs, dice history, and minigame states.
+- **`useAtlasStore`**: Provides access to the "Reality" database, managing the loading and indexing of JSON entities.
+- **`useJournalStore`**: Persistent storage for player notes, quest logs, and discovered bestiary entries.
+- **`useAudioStore`**: Controls the multi-layered sound engine and mood-based transitions.
+- **`useBookStore`**: Manages the state of the in-game reading system and page progression.
+- **`useAuthStore`**: Handles user authentication and session status.
 
 ### 2. Services (The "Heavy Lifters")
-- **`atlasService.ts`**: Resolves JSON data from the "Reality" database.
-- **`soundService.ts`**: Manages the reactive audio layers.
-- **`aiService.ts`**: Handles Gemini 1.5 interaction and tool-calling.
+- **`atlasService.ts`**: Resolves JSON data from the physical asset directory.
+- **`saveService.ts`**: Handles persistence logic via GitHub Proxy and Firebase.
+- **`diceService.ts`**: Integrates with the 3D physics engine and reconciles results with logical state.
 
 ## 🔄 Flow Patterns
 
-### User Action (e.g., "Start Travel")
-1.  User clicks "Travel" in `TravelStatus.tsx`.
-2.  Component calls `startTravel(destination)` action in `usePartyStore`.
-3.  Store updates `travelStatus`.
-4.  `useWorldStore` begins advancing `gameTime` in a loop.
-5.  `atlas_map.tsx` (Leaflet) detects the state change and animates the party marker.
+### Travel Execution
+1.  **Input**: User selects a destination on the `WorldMap`.
+2.  **Action**: `startTravel(destination)` is dispatched to `useWorldStore`.
+3.  **Simulation**: The `EnvironmentalEngine` (running in a 10s tick) advances time and calculates movement.
+4.  **Reaction**: `WorldMap` listens to `partyLocation` and animates the marker.
 
-### AI Event (e.g., "AI declares an ambush")
-1.  Gemini sends a tool call: `triggerEncounter(encounterId)`. 
-    - *Note: The AI never modifies state directly; it triggers a system function.*
-2.  `aiService` processes the call and updates `usePartyStore` with `activeEncounter`.
-3.  UI switches to `combat` mode.
-4.  `soundService` transitions the music layer to `tension_high`.
+### Combat Resolution
+1.  **Trigger**: AI tool call or random encounter interrupts travel.
+2.  **Mode Shift**: `useUIStore.setGameMode('combat')` switches the central viewport.
+3.  **Initialization**: `useGameStore.startCombat()` rolls initiative and populates the grid.
+4.  **Interaction**: User clicks on `CombatGrid` to move; actions are logged and state is updated.
 
-## 🛡️ Mechanical Integrity & Validation
-The LLM acts as a **facilitator**. It can request actions, but it cannot override the underlying game rules.
-- **State as Truth**: The stores (`useCharacterStore`, etc.) are the source of truth. If the LLM narrates a health change but doesn't call a tool, the UI will not reflect it.
-- **Rule Enforcement**: Tools and stores validate all incoming data. For example, `addItem` will fail if the inventory is full, regardless of LLM narration.
-
-### Persistence
-- Every significant state change triggers a background save to the proxy, which syncs with GitHub/Firebase.
+## 🛡️ Mechanical Integrity
+The application follows a "State-First" philosophy:
+- **UI as a Projection**: Components only reflect what is in the stores.
+- **Validation**: Stores enforce game rules (e.g., movement range, spell slot availability) before committing changes.
+- **AI as an Actor**: The LLM acts through tool calls that are subject to the same validation as user clicks.

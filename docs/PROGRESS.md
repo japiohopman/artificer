@@ -3,7 +3,7 @@
 This document tracks the high-level progress of the Artificer project, mapping current status against the goals defined in `GOALS.md`.
 
 ## 📊 Overall Status: Phase 2 (World State & Tactical Foundations)
-We have completed the core of Phase 1 and are now transitioning to **Phase 2: World State & Tactical Foundations**. This involves slicing the global state for scalability and implementing the systems that make Faerûn a "living" environment.
+We have completed the core infrastructure of Phase 2 and are now refining the simulation systems. The monolithic state has been successfully sliced, and the world now possesses temporal and environmental persistence.
 
 ---
 
@@ -11,23 +11,20 @@ We have completed the core of Phase 1 and are now transitioning to **Phase 2: Wo
 
 ### Phase 1: Inventory Unification & Core Infrastructure
 - [x] **Inventory V2 Migration**: Transitioning characters to registry/slot-based system.
-  - [x] Character Save Migration (SaveVersion: 2) - *Completed (Automatic migration on load)*
-  - [x] UI Unification (Inventory.tsx supports V2) - *Completed*
-  - [ ] Equipment Normalization (Sub-schemas for weapons, armor, etc.) - *In Progress*
 - [x] **Documentation & Orchestration**: Centralizing project knowledge.
-  - [x] Project Hub, Task Board, and Progress Tracking established.
-  - [x] Style Guide and Asset Registry defined.
 - [x] **Infrastructure Hardening**:
-  - [x] Asset Validation Script - *Completed*
-  - [ ] Store Slicing (useStore.ts refactor) - *Active*
-  - [x] Sound Asset Reorganization - *Completed*
-  - [x] Icon System Consolidation - *Completed*
+  - [x] Asset Validation Script.
+  - [x] Store Slicing (Monolith to Slices).
+  - [x] Sound Asset Reorganization.
+  - [x] Icon System Consolidation.
 
-### Phase 2: Tactical Foundations
+### Phase 2: Tactical Foundations & World State
 - [x] **World Map Migration**: Integrated pyramid tile map system with zoom-dependent visibility and dynamic markers.
-- [ ] **Grid-Based Movement**: Top-down tactical combat map system.
-- [ ] **Initiative Tracking**: Combat state management.
-- [ ] **Spatial Analysis**: Line-of-sight and AOE calculations.
+- [x] **Temporal Engine**: Implemented Calendar of Harptos and 24-hour clock.
+- [x] **Environmental Engine**: Dynamic weather cycles and region-aware movement penalties.
+- [x] **Travel System**: Automated pathing, speed calculation, and discovery logic.
+- [x] **Tactical Combat (v1)**: Grid-based movement (12x8), initiative tracking, and monster spawning.
+- [x] **Journal Module**: Campaign diary, quest log, and bestiary implementation.
 
 ### Phase 3: AI DM Integration
 - [ ] **Tool-Call Connectivity**: Linking the LLM to game state mutations.
@@ -35,24 +32,21 @@ We have completed the core of Phase 1 and are now transitioning to **Phase 2: Wo
 - [ ] **Autonomous Generation**: Adventure and NPC generation tools.
 
 ### Phase 4: World Simulation
-- [ ] **Temporal Progression**: In-game clock and calendar.
 - [ ] **Faction & Reputation**: Dynamic world perception.
 - [ ] **Economic Simulation**: Regional pricing and supply.
 
 ---
 
 ## 🏆 Recent Milestones
+- **2025-03-10**: Documentation Refresh. Synchronized all system docs with Phase 2 implementation. Documented Minigames and Store Slicing architecture.
 - **2025-02-26**: Completed World Map Migration. Implemented high-resolution pyramid tiles, custom coordinate scaling, and zoom-based marker visibility system.
-- **2025-02-24**: Transitioned to Phase 2. Initiated Store Slicing with `useWorldStore.ts`. Updated Task Board with Future Module roadmap.
-- **2025-02-21**: Integrated 3D dice sound effects and custom colors. Refactored World Panel and Character Profile icon systems. Enhanced `atlasUtils` for robust feature and subclass icon resolution.
-- **2025-02-17**: Established comprehensive documentation system including `PROGRESS.md`, `STYLE_GUIDE.md`, and deep-dive reports.
-- **2025-01-24**: Initial documentation architecture (`PROJECT_HUB.md`, `TASK_BOARD.md`) and sound hierarchy restructuring.
+- **2025-02-24**: Transitioned to Phase 2. Initiated Store Slicing with `useWorldStore.ts`.
 
 ---
 
 ## 🎯 Current Focus
-1. **Store Slicing**: Refactoring `useStore.ts` into `useWorldStore`, `useCharacterStore`, and `useInventoryStore`.
-2. **World Simulation**: Implementing Temporal Progression and Environmental engines.
-3. **Data Integrity**: Maintaining Atlas reliability via validation scripts.
+1. **AI Integration**: Refining tool definitions for the DM to interact with the new World State and Combat systems.
+2. **NPC Memory**: Implementing the relationship and interaction history system.
+3. **Soundscape**: Orchestrating mood-based audio transitions based on the environment.
 
-*Last Updated: 2025-02-26*
+*Last Updated: 2025-03-10*
