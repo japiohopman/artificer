@@ -1,4 +1,6 @@
 import { create } from 'zustand';
+import { useUIStore } from './useUIStore';
+import * as combatUtils from '../lib/combatUtils';
 
 export interface RpsState {
   status: 'ritual' | 'result';
@@ -21,18 +23,33 @@ export interface CoinFlipState {
   };
 }
 
+export interface TacticalCell {
+  x: number;
+  y: number;
+  type: 'floor' | 'wall' | 'door';
+  isOpen?: boolean;
+  explored?: boolean;
+}
+
+export interface CombatMonster {
+  id: string;
+  name: string;
+  type: string;
+  hp: number;
+  maxHp: number;
+  x: number;
+  y: number;
+  imageUrl?: string;
+  awareness: 'idle' | 'alert' | 'combat';
+  viewDirection: number; // 0:N, 1:E, 2:S, 3:W
+  perception: number;
+  speed: number; // in cells
+  lastKnownPlayerPos?: { x: number; y: number };
+}
+
 export interface CombatState {
   playerPos: { x: number; y: number };
-  monsters: Array<{
-    id: string;
-    name: string;
-    type: string;
-    hp: number;
-    maxHp: number;
-    x: number;
-    y: number;
-    imageUrl?: string;
-  }>;
+  monsters: CombatMonster[];
   initiativeOrder: Array<{
     id: string;
     name: string;
@@ -40,6 +57,8 @@ export interface CombatState {
     isPlayer?: boolean;
   }>;
   activeTurnIndex: number;
+  grid: TacticalCell[][];
+  victoryXp: number;
 }
 
 export interface LogEntry {
@@ -113,9 +132,29 @@ interface GameState {
   updateMonsterHp: (id: string, hp: number) => void;
   addMonsterToCombat: (monster: any) => void;
   removeMonsterFromCombat: (id: string) => void;
+  toggleDoor: (x: number, y: number) => void;
+  completeCombat: (victory: boolean) => Promise<void>;
   nextTurn: () => void;
   startCombat: () => void;
 }
+
+const initializeGrid = (width: number, height: number): TacticalCell[][] => {
+  const grid: TacticalCell[][] = [];
+  for (let y = 0; y < height; y++) {
+    const row: TacticalCell[] = [];
+    for (let x = 0; x < width; x++) {
+      let type: 'floor' | 'wall' | 'door' = 'floor';
+
+      // Simple room layout
+      if (x === 5 && y !== 3) type = 'wall';
+      if (x === 5 && y === 3) type = 'door';
+
+      row.push({ x, y, type, isOpen: type === 'door' ? false : undefined, explored: false });
+    }
+    grid.push(row);
+  }
+  return grid;
+};
 
 export const useGameStore = create<GameState>((set, get) => ({
   currentNPC: null,
@@ -146,8 +185,8 @@ export const useGameStore = create<GameState>((set, get) => ({
   combatState: {
     playerPos: { x: 2, y: 2 },
     monsters: [
-      { id: 'm1', name: 'Goblin Scout', type: 'goblin', hp: 7, maxHp: 7, x: 5, y: 3 },
-      { id: 'm2', name: 'Worg', type: 'worg', hp: 26, maxHp: 26, x: 6, y: 5 }
+      { id: 'm1', name: 'Goblin Scout', type: 'goblin', hp: 7, maxHp: 7, x: 8, y: 3, awareness: 'idle', viewDirection: 3, perception: 10, speed: 6 },
+      { id: 'm2', name: 'Worg', type: 'worg', hp: 26, maxHp: 26, x: 9, y: 5, awareness: 'idle', viewDirection: 3, perception: 12, speed: 10 }
     ],
     initiativeOrder: [
       { id: 'player', name: 'Hero', value: 20, isPlayer: true },
@@ -281,7 +320,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       if (y > 6) { y = 2; x++; }
     }
 
-    const newMonster = {
+    const newMonster: CombatMonster = {
       id,
       name: monster.name,
       type: monster.type || 'monster',
@@ -289,7 +328,11 @@ export const useGameStore = create<GameState>((set, get) => ({
       maxHp: monster.hit_points || 10,
       x,
       y,
-      imageUrl: monster.imageUrl
+      imageUrl: monster.imageUrl,
+      awareness: 'idle',
+      viewDirection: 3,
+      perception: 10,
+      speed: monster.speed?.walk ? parseInt(monster.speed.walk) / 5 : 6
     };
 
     return {
@@ -315,10 +358,19 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
   })),
 
-  startCombat: () => {
+  startCombat: async () => {
     const { combatState } = get();
+    const { useCharacterStore } = await import('./useCharacterStore');
+    const { characters } = useCharacterStore.getState();
+    const activeParty = characters.filter((c: any) => !c.isNpc || c.isRecruitable);
+
     const order = [
-      { id: 'player', name: 'Hero', value: Math.floor(Math.random() * 20) + 1 + 3, isPlayer: true },
+      ...activeParty.map((c: any) => ({
+        id: c.id,
+        name: c.name,
+        value: Math.floor(Math.random() * 20) + 1 + (Math.floor((c.stats.dex - 10) / 2) || 0),
+        isPlayer: true
+      })),
       ...combatState.monsters.map(m => ({
         id: m.id,
         name: m.name,

@@ -10,7 +10,7 @@ export const CombatGrid: React.FC = () => {
   const { characters, activeCharacterId } = useCharacterStore();
   
   const activeChar = characters.find(c => c.id === activeCharacterId);
-  const { playerPos, monsters, initiativeOrder, activeTurnIndex } = combatState;
+  const { playerPos, monsters, initiativeOrder, activeTurnIndex, grid } = combatState;
 
   // Grid constants
   const cellSize = 60; // 60px = 5ft
@@ -121,7 +121,7 @@ export const CombatGrid: React.FC = () => {
               const y = Math.floor(i / gridWidth);
               return (
                 <div
-                  key={i}
+                  key={`${x}-${y}`}
                   onClick={() => handleCellClick(x, y)}
                   className="w-full h-full hover:bg-white/5 cursor-crosshair transition-colors border border-white/5"
                 />
