@@ -68,6 +68,7 @@ export const AssetExplorer: React.FC = () => {
                 "p-2 rounded transition-all",
                 explorerTab === tab.id ? "bg-dragon-red text-white" : "bg-white/5 text-white/40 hover:bg-white/10"
               )}
+              title={tab.id}
             >
               <GameIcon name={tab.icon as GameIconName} size={16} />
             </button>

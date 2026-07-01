@@ -23,9 +23,10 @@ interface GameIconProps extends React.SVGAttributes<SVGElement> {
   height?: number;
   color?: string;
   fallbackName?: GameIconName | string;
+  title?: string;
 }
 
-export const GameIcon: React.FC<GameIconProps> = ({ name, path: directPath, className, size, width, height, color = "currentColor", fallbackName, ...props }) => {
+export const GameIcon: React.FC<GameIconProps> = ({ name, path: directPath, className, size, width, height, color = "currentColor", fallbackName, title, ...props }) => {
   let path = directPath || (name ? GAME_ICONS[name as GameIconName] : undefined);
   
   if (!path && fallbackName) {
@@ -49,6 +50,7 @@ export const GameIcon: React.FC<GameIconProps> = ({ name, path: directPath, clas
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      {title && <title>{title}</title>}
       <path d={path} />
     </svg>
   );

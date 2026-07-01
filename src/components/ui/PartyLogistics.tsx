@@ -107,6 +107,8 @@ export const LogisticsManifest: React.FC<{ onTransportRequest?: () => void }> = 
              <span className="text-[10px] font-black text-dragon-red uppercase tracking-widest">Vehicle Hangar</span>
              <button 
                onClick={onTransportRequest}
+               title="Add Transport"
+               aria-label="Add Transport"
                className="text-[8px] font-black bg-dragon-red text-white px-2 py-1 rounded uppercase tracking-widest hover:bg-dragon-darkRed transition-colors"
              >
                 Add Transport
@@ -124,6 +126,8 @@ export const LogisticsManifest: React.FC<{ onTransportRequest?: () => void }> = 
                   </div>
                   <button 
                     onClick={() => removeVehicle(i)}
+                    title={`Remove ${v.name}`}
+                    aria-label={`Remove ${v.name}`}
                     className="opacity-0 group-hover:opacity-100 p-1 hover:text-dragon-red transition-all"
                   >
                      <GameIcon name="trash" size={10} />

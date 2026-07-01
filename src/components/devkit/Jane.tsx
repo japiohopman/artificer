@@ -159,6 +159,7 @@ export const Jane: React.FC = () => {
                     value={location.id}
                     onChange={(e) => setLocation({ ...location, id: e.target.value.toLowerCase().replace(/\s+/g, '_') })}
                     placeholder="waterdeep_north_district"
+                    title="Location ID"
                     className="w-full bg-white/5 border border-white/10 p-3 text-sm text-white rounded-xl focus:border-dragon-red/50 outline-none transition-all font-mono"
                   />
                 </div>
@@ -167,6 +168,7 @@ export const Jane: React.FC = () => {
                   <select
                     value={location.type}
                     onChange={(e) => setLocation({ ...location, type: e.target.value })}
+                    title="Location Type"
                     className="w-full bg-white/5 border border-white/10 p-3 text-sm text-white rounded-xl focus:border-dragon-red/50 outline-none transition-all"
                   >
                     <option value="city">City</option>
@@ -185,6 +187,7 @@ export const Jane: React.FC = () => {
                   value={location.name}
                   onChange={(e) => setLocation({ ...location, name: e.target.value })}
                   placeholder="Waterdeep"
+                  title="Location Name"
                   className="w-full bg-white/5 border border-white/10 p-4 text-2xl font-black text-white rounded-xl focus:border-dragon-red/50 outline-none transition-all uppercase"
                 />
               </div>
@@ -196,6 +199,7 @@ export const Jane: React.FC = () => {
                   value={location.title}
                   onChange={(e) => setLocation({ ...location, title: e.target.value })}
                   placeholder="City of Splendors"
+                  title="Formal Title"
                   className="w-full bg-white/5 border border-white/10 p-3 text-sm text-white rounded-xl italic"
                 />
               </div>
@@ -208,6 +212,7 @@ export const Jane: React.FC = () => {
                       type="number"
                       value={location.coordinates?.lat}
                       onChange={(e) => setLocation({ ...location, coordinates: { ...location.coordinates!, lat: parseFloat(e.target.value) } })}
+                      title="Latitude"
                       className="w-full bg-black/40 border border-white/5 p-2 text-sm text-white rounded font-mono"
                     />
                  </div>
@@ -217,6 +222,7 @@ export const Jane: React.FC = () => {
                       type="number"
                       value={location.coordinates?.lng}
                       onChange={(e) => setLocation({ ...location, coordinates: { ...location.coordinates!, lng: parseFloat(e.target.value) } })}
+                      title="Longitude"
                       className="w-full bg-black/40 border border-white/5 p-2 text-sm text-white rounded font-mono"
                     />
                  </div>
@@ -229,6 +235,7 @@ export const Jane: React.FC = () => {
                   onChange={(e) => setLocation({ ...location, description: e.target.value })}
                   rows={6}
                   placeholder="Describe the atmosphere, architecture, and mood..."
+                  title="Location Description"
                   className="w-full bg-white/5 border border-white/10 p-4 text-sm text-white rounded-xl focus:border-dragon-red/50 outline-none transition-all resize-none leading-relaxed"
                 />
               </div>

@@ -1,9 +1,6 @@
-
-berserker.webp
 darkmantle.webp
 dust_mephit.webp
 ineffable_horror.webp
-invisible_stalker.webp
 magma_mephit.webp
 severin.webp
 shambling_mound.webp

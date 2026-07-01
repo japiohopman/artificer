@@ -35,6 +35,7 @@ export const FlagManager: React.FC = () => {
               value={newFlagKey}
               onChange={(e) => setNewFlagKey(e.target.value)}
               placeholder="e.g. dragon_slain"
+              title="Flag Key"
               className="w-full bg-black/40 border border-white/10 p-2 text-xs text-white rounded focus:border-dragon-red/50 outline-none"
             />
           </div>
@@ -45,12 +46,14 @@ export const FlagManager: React.FC = () => {
               value={newFlagValue}
               onChange={(e) => setNewFlagValue(e.target.value)}
               placeholder="true, 10, 'friendly'"
+              title="Initial Value"
               className="w-full bg-black/40 border border-white/10 p-2 text-xs text-white rounded focus:border-dragon-red/50 outline-none"
             />
           </div>
         </div>
         <button 
           onClick={handleAddFlag}
+          title="Initialize Flag"
           className="w-full py-2 bg-dragon-red/10 border border-dragon-red/30 text-dragon-red text-[10px] font-bold uppercase hover:bg-dragon-red hover:text-white transition-all rounded"
         >
           Initialize Flag
@@ -68,6 +71,8 @@ export const FlagManager: React.FC = () => {
                   value={String(value)}
                   onChange={(e) => setWorldFlag(key, e.target.value)}
                   className="w-full bg-transparent border-none p-0 text-[11px] text-white/60 focus:outline-none"
+                  title={`Value for ${key}`}
+                  placeholder="Flag value"
                 />
               </div>
               <button 
@@ -77,6 +82,7 @@ export const FlagManager: React.FC = () => {
                   useWorldStore.setState({ worldFlags: newFlags });
                 }}
                 className="opacity-0 group-hover:opacity-100 text-white/20 hover:text-red-500 transition-all"
+                title={`Delete flag: ${key}`}
               >
                 <GameIcon name="trash" size={12} />
               </button>

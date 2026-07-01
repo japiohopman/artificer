@@ -875,6 +875,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                    ...prev, 
                                    appearance: { ...prev.appearance!, eyeColor: e.target.value } 
                                  }))}
+                             title="Eye Color"
                                  className="bg-transparent border-none focus:outline-none text-[10px] text-blue-300 w-24 font-bold cursor-pointer"
                                >
                                  {["Emerald Green", "Sapphire Blue", "Amber", "Deep Brown", "Steel Grey", "Violet", "Glowing Gold", "Blood Red", "Cloudy White", "Icy Blue"].map(c => (
@@ -891,6 +892,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                    ...prev, 
                                    appearance: { ...prev.appearance!, hairColor: e.target.value } 
                                  }))}
+                             title="Hair Color"
                                  className="bg-transparent border-none focus:outline-none text-[10px] text-yellow-300 w-28 font-bold cursor-pointer"
                                >
                                  {["Raven Black", "Platinum Blonde", "Chestnut Brown", "Crimson Red", "Silver White", "Midnight Blue", "Forest Green", "Royal Purple", "Ash Grey", "Golden Blonde"].map(c => (
@@ -948,6 +950,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                 title="Voice Profile"
                                 value={npcData.voiceProfile || ''}
                                 onChange={(e) => setNpcData(prev => ({ ...prev, voiceProfile: e.target.value }))}
+                                title="Voice Profile"
                                 className="bg-transparent border-none focus:outline-none text-[10px] text-white/80 w-32 truncate placeholder:text-white/10"
                                 placeholder="SYNTH_PROFILE_01"
                               />

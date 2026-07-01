@@ -43,6 +43,8 @@ export const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, onSen
             onClick={onSend}
             disabled={!message.trim()}
             className="absolute right-1.5 p-2 bg-dragon-red hover:bg-dragon-darkRed disabled:opacity-50 disabled:hover:bg-dragon-red text-white rounded-full transition-all shadow-lg shadow-dragon-red/40 active:scale-95"
+            title="Send Message"
+            aria-label="Send Message"
           >
             <GameIcon name="send" size={14} />
           </button>

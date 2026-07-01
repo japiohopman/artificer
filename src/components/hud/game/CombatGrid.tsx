@@ -68,7 +68,7 @@ export const CombatGrid: React.FC = () => {
            >
               <div className="w-24 h-24 rounded-full border-4 border-blue-500 shadow-[0_0_30px_rgba(59,130,246,0.5)] bg-blue-900/50 flex items-center justify-center overflow-hidden">
                 {activeChar?.avatarUrl ? (
-                  <img src={activeChar.avatarUrl} className="w-full h-full object-cover" />
+                  <img src={activeChar.avatarUrl} className="w-full h-full object-cover" alt={activeChar.name} />
                 ) : (
                   <GameIcon name="user" size={48} color="#FFF" />
                 )}
@@ -91,7 +91,7 @@ export const CombatGrid: React.FC = () => {
                >
                   <div className="w-24 h-24 rounded-full border-4 border-dragon-red shadow-[0_0_30px_rgba(220,38,38,0.5)] bg-red-900/50 flex items-center justify-center overflow-hidden">
                     {monster.imageUrl ? (
-                      <img src={monster.imageUrl} className="w-full h-full object-cover" />
+                      <img src={monster.imageUrl} className="w-full h-full object-cover" alt={monster.name} />
                     ) : (
                       <GameIcon name="identity" size={48} color="#FFF" />
                     )}

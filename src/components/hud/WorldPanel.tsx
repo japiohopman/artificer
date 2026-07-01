@@ -93,6 +93,8 @@ export const WorldPanel: React.FC = () => {
           <button 
             onClick={() => setIsWorldPanelOpen(false)}
             className="p-2 hover:bg-dragon-red/10 rounded-full transition-all active:scale-95 group"
+            title="Close World Panel"
+            aria-label="Close World Panel"
           >
             <GameIcon name="chevron_left" size={24} color="#8B0000" className="group-hover:-translate-x-1 transition-transform" />
           </button>
