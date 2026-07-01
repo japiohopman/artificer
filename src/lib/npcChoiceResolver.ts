@@ -280,11 +280,11 @@ export class NPCChoiceResolver {
       const slot = await CharacterPipeline.resolveEquipmentSlot(item.index);
       const v2SlotId = SLOT_MAP[slot] || slot;
       
-      const targetSlot = equipment.slots.find(s => s.id === v2SlotId && s.itemId === null);
+      const targetSlot = (equipment.slots as any[]).find(s => s.id === v2SlotId && s.itemId === null);
       if (targetSlot) {
         targetSlot.itemId = id;
       } else {
-        const bagSlot = backpack.slots.find(s => s.itemId === null);
+        const bagSlot = (backpack.slots as any[]).find(s => s.itemId === null);
         if (bagSlot) bagSlot.itemId = id;
       }
     }

@@ -440,14 +440,14 @@ export function generateNPC(partial: any): any {
 
     if (slotHint) {
       const v2SlotId = SLOT_MAP[slotHint] || slotHint;
-      const slot = v2Equipment.slots.find(s => s.id === v2SlotId);
+      const slot = (v2Equipment.slots as any[]).find(s => s.id === v2SlotId);
       if (slot && !slot.itemId) {
         slot.itemId = id;
         return;
       }
     }
 
-    const bagSlot = v2Backpack.slots.find(s => s.itemId === null);
+    const bagSlot = (v2Backpack.slots as any[]).find(s => s.itemId === null);
     if (bagSlot) bagSlot.itemId = id;
   };
 
@@ -457,7 +457,7 @@ export function generateNPC(partial: any): any {
 
   const createItem = (item: any) => ({
     id: `${item.index}-${Math.random().toString(36).substr(2, 9)}`,
-    name: (item.name || item.index).replace(/[_-]/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+    name: (item.name || item.index).replace(/[_-]/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
     index: item.index,
     _type: item.type === 'book' || item.index === 'spellbook' ? 'books' : 'equipment',
     weight: item.weight || 1,
