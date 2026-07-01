@@ -11,7 +11,6 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [Project Progress](./PROGRESS.md)
 - [Changelog](./CHANGELOG.md)
 - [Error Reports](./ERROR_REPORTS.md)
-- [Health Check](./HEALTH_CHECK.md)
 
 ## 🧩 Modules
 - [Atlas Service](./modules/atlasService.md) - Data fetching and resiliency.
@@ -19,7 +18,8 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [Save System](./modules/saveService.md) - GitHub & Firebase persistence.
 - [Inventory V2](./modules/inventory_v2.md) - Registry/Slot pattern.
 - [Dice & Chat](./modules/dice_system.md) - 3D Dice and AI Chat.
-- [Journal](./modules/journal.md) - Campaign Journal & Codex. [IMPLEMENTED]
+- [Journal](./modules/journal.md) - Campaign Journal & Codex.
+- [Minigames](./modules/minigames.md) - Interactive social mechanics.
 
 ## 🤖 Agents
 - [Jimmy (Sandbox)](../jimmy_instructions.md) - Core systems and mechanics.
@@ -41,7 +41,8 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [Weather System](./systems/WEATHER_SYSTEM.md)
 - [Rest & Sleep System](./systems/REST_SLEEP_SYSTEM.md)
 - [World Panel Architecture](./systems/WORLD_PANEL_ARCHITECTURE.md)
-- [Leaflet Map Integration](./systems/LEAFLET_MAP_INTEGRATION.md) [IMPLEMENTED]
+- [Leaflet Map Integration](./systems/LEAFLET_MAP_INTEGRATION.md)
+- [Tactical Combat Engine](./systems/TACTICAL_COMBAT_ENGINE.md)
 - [Data Flow](./systems/DATA_FLOW.md)
 
 ## 📂 Directories

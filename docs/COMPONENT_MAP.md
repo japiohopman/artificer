@@ -41,9 +41,15 @@ Components related to character management and the save system.
 Heads-Up Display components for the active game session.
 - **`chat/`**: AI Chat interface and history.
 - **`game/`**: Game-state specific views like `ActionView` and `Rest`.
+- **`game/CombatGrid.tsx`**: Tactical grid overlay for turn-based combat.
 - **`view/`**: World visualization components like `FirstPersonView` and `NPCDisplay`.
 - **`WorldMap.tsx`**: Interactive high-resolution tiled map system for Faerûn and Toril.
 - **`journal/`**: Components for the Campaign Journal, Quest Log, and Bestiary.
+
+## 📁 `minigames/`
+Interactive social and chance-based mechanics.
+- **`CoinFlip.tsx`**: 3D-rotating coin toss simulation.
+- **`paperScissorRock.tsx`**: Dynamic Rock Paper Scissors arena with NPC skin-tone matching.
 
 ## 📁 `bookreader/`
 Components for the in-game document/lore reading system.
