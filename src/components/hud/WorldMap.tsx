@@ -1,11 +1,13 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents, SVGOverlay } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents, SVGOverlay, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import { motion, AnimatePresence } from 'motion/react';
 import { useUIStore } from '../../store/useUIStore';
 import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorldStore';
 import { WORLD_ATLAS_ICONS } from '../../assets/icons/world_atlas';
 import { MapLegend } from './game/MapLegend';
+import { FogOfWar } from './game/FogOfWar';
 import { REGION_METADATA, REGION_PATH_REGISTRY } from '../../data/regions';
 
 const CATEGORY_TIERS = [
@@ -129,6 +131,64 @@ const MapEvents = ({
   return null;
 };
 
+const PartyMarker = ({ 
+  getPosition, 
+  center 
+}: { 
+  getPosition: (loc: any) => [number, number] | null,
+  center: [number, number]
+}) => {
+  const map = useMap();
+  const partyLocation = useWorldStore(state => state.partyLocation);
+  const isTraveling = useWorldStore(state => state.isTraveling);
+  const setInspectedLocation = useWorldStore(state => state.setInspectedLocation);
+  const setIsWorldPanelOpen = useUIStore(state => state.setIsWorldPanelOpen);
+
+  const pos = React.useMemo(() => getPosition(partyLocation) || center, [partyLocation, getPosition, center]);
+  
+  // We use a standard Marker but we'll add a CSS transition to its icon container
+  // via a global style or by targeting the specific class.
+  // However, for TRULY smooth movement that survives Leaflet's zoom/pan, 
+  // we can use a custom Leaflet component or just a really good transition.
+
+  return (
+    <Marker 
+      position={pos as L.LatLngExpression}
+      zIndexOffset={2000}
+      icon={L.divIcon({
+        html: `
+          <div class="relative party-token-container">
+            <div class="absolute inset-0 ${isTraveling ? 'bg-dragon-gold/40' : 'bg-blue-500/40'} blur-md rounded-full animate-pulse scale-150"></div>
+            <div class="relative ${isTraveling ? 'bg-dragon-gold' : 'bg-blue-600'} border-2 border-white w-4 h-4 rounded-full shadow-lg transition-colors duration-1000">
+              ${isTraveling ? `
+                <div class="absolute inset-0 animate-ping bg-dragon-gold rounded-full opacity-75"></div>
+              ` : ''}
+            </div>
+            <div class="absolute -top-8 left-1/2 -translate-x-1/2 ${isTraveling ? 'bg-dragon-darkRed border-dragon-gold' : 'bg-blue-900 border-blue-400'} text-white text-[9px] px-1.5 py-0.5 rounded border whitespace-nowrap font-bold uppercase tracking-tighter shadow-md">
+              ${isTraveling ? 'Traveling...' : 'Party'}
+            </div>
+          </div>
+        `,
+        className: 'party-marker-smooth',
+        iconSize: [16, 16],
+        iconAnchor: [8, 8]
+      })}
+      eventHandlers={{
+        click: () => {
+          setInspectedLocation({
+            id: 'party-pos',
+            name: "Party Position",
+            category: "Active Campaign",
+            description: "Your group is currently located here, navigating the vast reaches of the Sword Coast.",
+            image: null
+          });
+          setIsWorldPanelOpen(true);
+        }
+      }}
+    />
+  );
+};
+
 const MapInvalidator = () => {
   const map = useMap();
   const { isWorldPanelOpen, isCharacterPanelOpen } = useUIStore();
@@ -161,6 +221,8 @@ export const WorldMap: React.FC = () => {
   const addSavedLocations = useWorldStore(state => state.addSavedLocations);
   const isCategoryLoaded = useWorldStore(state => state.isCategoryLoaded);
   const addLoadedCategory = useWorldStore(state => state.addLoadedCategory);
+  const isTraveling = useWorldStore(state => state.isTraveling);
+  const destination = useWorldStore(state => state.destination);
   
   const setIsWorldPanelOpen = useUIStore(state => state.setIsWorldPanelOpen);
   const [hoveredRegion, setHoveredRegion] = React.useState<string | null>(null);
@@ -349,6 +411,13 @@ export const WorldMap: React.FC = () => {
           tileSize={256}
         />
 
+        <FogOfWar 
+          mapHeight={mapHeight} 
+          mapWidth={mapWidth} 
+          protoHeight={protoHeight} 
+          protoWidth={protoWidth} 
+        />
+
         {/* Regional SVG Overlay - Only visible at high level overview */}
         {currentZoom < 3 && (
           <SVGOverlay bounds={bounds} attributes={{ viewBox: "0 0 1600 1070" }}>
@@ -385,37 +454,22 @@ export const WorldMap: React.FC = () => {
           onBoundsChange={React.useCallback((b: L.LatLngBounds) => setCurrentBounds(b), [])}
           onMapInstance={React.useCallback((map: L.Map) => { mapRef.current = map; }, [])}
         />
-        
-        {partyLocation && (
-          <Marker 
-            position={getPosition(partyLocation) || center as L.LatLngExpression}
-            zIndexOffset={2000}
-            icon={L.divIcon({
-              html: `
-                <div class="relative">
-                  <div class="absolute inset-0 bg-blue-500/40 blur-md rounded-full animate-pulse scale-150"></div>
-                  <div class="relative bg-blue-600 border-2 border-white w-4 h-4 rounded-full shadow-lg"></div>
-                  <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-blue-900 text-white text-[9px] px-1.5 py-0.5 rounded border border-blue-400 whitespace-nowrap font-bold uppercase tracking-tighter">Party</div>
-                </div>
-              `,
-              className: 'party-marker',
-              iconSize: [16, 16],
-              iconAnchor: [8, 8]
-            })}
-            eventHandlers={{
-              click: () => {
-                setInspectedLocation({
-                  id: 'party-pos',
-                  name: "Party Position",
-                  category: "Active Campaign",
-                  description: "Your group is currently located here, navigating the vast reaches of the Sword Coast.",
-                  image: null
-                });
-                setIsWorldPanelOpen(true);
-              }
-            }}
+
+        {/* Travel Path */}
+        {isTraveling && destination && partyLocation && (
+          <Polyline 
+            positions={[
+              getPosition(partyLocation)!,
+              getPosition(destination)!
+            ]}
+            color="#FFD700"
+            weight={2}
+            dashArray="10, 10"
+            opacity={0.6}
           />
         )}
+        
+        <PartyMarker getPosition={getPosition} center={center} />
 
         {visibleLocations.map((loc) => {
           const position = getPosition(loc);

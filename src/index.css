@@ -193,3 +193,7 @@
     @apply italic;
   }
 }
+
+.party-marker-smooth {
+  transition: transform 10s linear !important;
+}

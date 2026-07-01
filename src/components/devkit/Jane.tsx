@@ -149,7 +149,7 @@ export const Jane: React.FC = () => {
         {/* Content Area */}
         <div className="flex-1 overflow-y-auto p-8 custom-scrollbar">
           {activeTab === 'editor' && (
-            <div className="max-w-4xl mx-auto space-y-8">
+            <div className="space-y-8">
               {/* Core Identity */}
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -236,7 +236,7 @@ export const Jane: React.FC = () => {
           )}
 
           {activeTab === 'preview' && (
-            <div className="max-w-3xl mx-auto bg-[#f9f4e8] text-[#523b23] p-12 rounded-lg shadow-2xl border border-[#d4af37]/20 min-h-[600px] font-serif">
+            <div className="bg-[#f9f4e8] text-[#523b23] p-12 rounded-lg shadow-2xl border border-[#d4af37]/20 min-h-[600px] font-serif">
                <div className="text-center space-y-2 mb-8">
                   <div className="text-[10px] font-black uppercase tracking-[0.4em] opacity-40">Location_Record</div>
                   <h1 className="text-5xl font-black uppercase tracking-tighter font-display text-dragon-red">{location.name || 'Unknown Location'}</h1>
@@ -258,7 +258,7 @@ export const Jane: React.FC = () => {
           )}
 
           {activeTab === 'json' && (
-            <div className="max-w-4xl mx-auto">
+            <div>
                <pre className="bg-black/40 p-6 rounded-2xl border border-white/10 text-xs text-blue-300 font-mono overflow-x-auto shadow-inner">
                   {JSON.stringify(location, null, 2)}
                </pre>

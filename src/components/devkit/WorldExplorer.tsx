@@ -99,7 +99,7 @@ export const WorldExplorer: React.FC = () => {
            <div className="h-px w-24 bg-gradient-to-r from-transparent via-dragon-red/50 to-transparent mx-auto" />
         </div>
 
-        <div className="relative w-full max-w-2xl aspect-square flex items-center justify-center">
+        <div className="relative w-full aspect-square flex items-center justify-center">
            {/* SVG Map of Faerun Regions */}
            <svg viewBox="0 0 1600 1070" className="w-full h-full drop-shadow-[0_0_30px_rgba(0,0,0,0.5)]">
               {Object.entries(REGION_PATH_REGISTRY).map(([id, path]) => (
@@ -124,7 +124,7 @@ export const WorldExplorer: React.FC = () => {
                <h3 className="text-xl font-bold text-dragon-red uppercase tracking-tighter mb-2">
                  {REGION_METADATA[selectedRegion].name}
                </h3>
-               <p className="text-[11px] text-white/50 leading-relaxed font-sans italic max-w-xl">
+               <p className="text-[11px] text-white/50 leading-relaxed font-sans italic">
                  {REGION_METADATA[selectedRegion].description.split('\n')[0]}
                </p>
                <div className="mt-4 flex gap-4">

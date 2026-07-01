@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useUIStore } from '../../store/useUIStore';
 import { useWorldStore } from '../../store/useWorldStore';
+import { useInventoryStore } from '../../store/useInventoryStore';
+import { useCharacterStore } from '../../store/useCharacterStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 
@@ -16,7 +18,13 @@ export const WorldPanel: React.FC = () => {
     inspectedLocation,
     savedLocations,
     gameTime,
-    gameDay
+    gameDay,
+    partyLocation,
+    isTraveling,
+    destination,
+    travelProgress,
+    startTravel,
+    stopTravel
   } = useWorldStore();
 
   const displayLocation = inspectedLocation || currentLocation;
@@ -26,6 +34,51 @@ export const WorldPanel: React.FC = () => {
     const mins = minutes % 60;
     return `${hours.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}`;
   };
+
+  const { partyVehicles, partyInventory, partyStats } = useInventoryStore();
+  const { characters } = useCharacterStore();
+
+  const travelStats = React.useMemo(() => {
+    if (!isTraveling || !destination || !partyLocation) return null;
+
+    const x1 = partyLocation.coordinates?.x ?? partyLocation.position?.[0] ?? 0;
+    const y1 = partyLocation.coordinates?.y ?? partyLocation.position?.[1] ?? 0;
+    const x2 = destination.coordinates?.x ?? destination.position?.[0] ?? 0;
+    const y2 = destination.coordinates?.y ?? destination.position?.[1] ?? 0;
+    
+    const dx = x2 - x1;
+    const dy = y2 - y1;
+    const distProto = Math.sqrt(dx * dx + dy * dy);
+    const milesRemaining = distProto / (4763 / 4000);
+
+    let speedMph = 3.0;
+    
+    // Weight Penalty Check
+    const parseWeight = (weight: any): number => {
+      if (!weight) return 0;
+      if (typeof weight === 'number') return weight;
+      const weightMatch = String(weight).match(/(\d+(\.\d+)?)/);
+      return weightMatch ? parseFloat(weightMatch[0]) : 0;
+    };
+    const calculateItemWeight = (item: any): number => parseWeight(item.weight) * (item.quantity || 1);
+    const totalWeight = (partyInventory || []).reduce((acc, item) => acc + calculateItemWeight(item), 0) + 
+                       characters.reduce((acc, char) => acc + (char.backpack || []).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0), 0);
+    const totalCapacity = (Math.max(partyStats.memberCount, characters.length, 1) * partyStats.baseCapacityPerMember) + 
+                          partyStats.vehicleCapacityBonus + (partyVehicles || []).reduce((acc, v) => acc + (v.capacity || 0), 0);
+
+    if (totalWeight > totalCapacity) speedMph *= 0.5;
+    if (partyVehicles && partyVehicles.length > 0) speedMph *= 1.5;
+
+    const hoursRemaining = milesRemaining / speedMph;
+    const minsRemaining = Math.round(hoursRemaining * 60);
+
+    return {
+      speed: speedMph,
+      miles: milesRemaining,
+      eta: minsRemaining,
+      isOverburdened: totalWeight > totalCapacity
+    };
+  }, [isTraveling, destination, partyLocation, partyInventory, characters, partyStats, partyVehicles]);
 
   return (
     <motion.aside
@@ -132,9 +185,87 @@ export const WorldPanel: React.FC = () => {
                       <span className="text-[10px] font-bold text-dragon-red uppercase">{displayLocation.region}</span>
                    </div>
                  )}
+
+                 {/* Travel Button */}
+                 {displayLocation && displayLocation.id !== partyLocation?.id && (
+                   <div className="mt-6">
+                      {!isTraveling ? (
+                        <button 
+                          onClick={() => startTravel(displayLocation)}
+                          className="w-full py-3 bg-dragon-red hover:bg-dragon-darkRed text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-dragon-gold/30"
+                        >
+                          <GameIcon name="compass" size={14} color="#FFFFFF" />
+                          Set Course
+                        </button>
+                      ) : destination?.id === displayLocation.id ? (
+                        <button 
+                          onClick={() => stopTravel()}
+                          className="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-white/20"
+                        >
+                          <GameIcon name="close" size={14} color="#FFFFFF" />
+                          Abort Travel
+                        </button>
+                      ) : null}
+                   </div>
+                 )}
                </div>
             </div>
           </div>
+
+          {/* Travel Status Widget */}
+          {isTraveling && destination && travelStats && (
+            <div className="bg-dragon-darkRed text-white p-4 rounded border-2 border-dragon-gold shadow-xl space-y-3 animate-in fade-in slide-in-from-top-2">
+               <div className="flex items-center justify-between">
+                  <span className="text-[9px] font-black uppercase tracking-[0.2em] text-dragon-gold">Expedition Progress</span>
+                  <div className="flex items-center gap-2">
+                     <div className="w-2 h-2 rounded-full bg-dragon-gold animate-ping" />
+                     <span className="text-[9px] font-black uppercase tracking-widest">En_Route</span>
+                  </div>
+               </div>
+               
+               <div className="space-y-1">
+                  <div className="flex justify-between text-[10px] font-header uppercase">
+                     <span className="opacity-60">To:</span>
+                     <span className="font-bold text-dragon-gold">{destination.name}</span>
+                  </div>
+                  <div className="w-full h-2 bg-black/40 rounded-full overflow-hidden border border-white/5">
+                     <motion.div 
+                        initial={false}
+                        animate={{ width: `${travelProgress * 100}%` }}
+                        className="h-full bg-dragon-gold shadow-[0_0_10px_rgba(212,175,55,0.5)]" 
+                     />
+                  </div>
+                  <div className="flex justify-between text-[8px] font-black uppercase tracking-tighter opacity-40">
+                     <span>Origin</span>
+                     <span>{Math.round(travelProgress * 100)}% Complete</span>
+                     <span>Arrival</span>
+                  </div>
+               </div>
+
+               <div className="grid grid-cols-2 gap-2 pt-2 border-t border-white/10">
+                  <div className="flex flex-col">
+                    <span className="text-[7px] uppercase font-black text-white/40">Speed</span>
+                    <span className={cn("text-[10px] font-bold", travelStats.isOverburdened ? "text-red-400" : "text-white")}>
+                      {travelStats.speed.toFixed(1)} mph
+                    </span>
+                  </div>
+                  <div className="flex flex-col items-end">
+                    <span className="text-[7px] uppercase font-black text-white/40">Est. Arrival</span>
+                    <span className="text-[10px] font-bold text-dragon-gold">
+                      {travelStats.eta > 60 
+                        ? `${Math.floor(travelStats.eta / 60)}h ${travelStats.eta % 60}m` 
+                        : `${travelStats.eta}m`}
+                    </span>
+                  </div>
+               </div>
+               
+               <div className="flex justify-center pt-1">
+                  <span className="text-[8px] font-black text-white/30 uppercase tracking-[0.2em]">
+                    {travelStats.miles.toFixed(1)} Miles Remaining
+                  </span>
+               </div>
+            </div>
+          )}
 
           {/* Points of Interest / Sublocations */}
           <div className="space-y-4">

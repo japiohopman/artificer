@@ -784,12 +784,12 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+        className="fixed inset-0 z-[20000] flex items-center justify-center"
       >
         <motion.div 
-          initial={{ scale: 0.95, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          className="bg-[#1a1a1a] w-full max-w-6xl h-[90vh] rounded-lg border border-white/10 shadow-2xl overflow-hidden flex flex-col font-mono selection:bg-dragon-red/30"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-[#1a1a1a] w-screen h-screen border-t border-white/10 shadow-2xl overflow-hidden flex flex-col font-mono selection:bg-dragon-red/30"
         >
           {/* Top Bar / Window Header */}
           <div className="bg-[#252525] px-4 py-2 flex items-center justify-between border-b border-white/5 select-none">
@@ -1997,7 +1997,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                 </div>
 
                 <div className="flex-1 overflow-y-auto p-8 custom-scrollbar">
-                  <div className="max-w-4xl mx-auto space-y-10">
+                  <div className="w-full space-y-10">
                     <div className="grid grid-cols-12 gap-10">
                       {/* Configuration Panel */}
                       <div className="col-span-12 lg:col-span-5 space-y-8">

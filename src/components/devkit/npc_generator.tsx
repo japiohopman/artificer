@@ -747,7 +747,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
         </div>
 
         <div className="flex-1 overflow-y-auto p-8 custom-scrollbar">
-          <div className="max-w-6xl mx-auto space-y-10">
+          <div className="w-full space-y-10">
             {/* Header / Name */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 relative overflow-hidden group shadow-2xl">
               <div className="absolute top-0 right-0 p-4">

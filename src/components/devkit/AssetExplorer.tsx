@@ -119,7 +119,7 @@ export const AssetExplorer: React.FC = () => {
 
       {/* Preview Area */}
       <div className="flex-1 overflow-y-auto p-12 flex justify-center bg-[#0a0a0a]">
-        <div className="max-w-md w-full scale-110 origin-top">
+        <div className="w-full scale-110 origin-top">
           {selectedItem ? (
              <div className="space-y-8">
                <div className="bg-dragon-red/10 border border-dragon-red/30 p-2 rounded text-center">

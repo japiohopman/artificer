@@ -11,6 +11,7 @@ import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 
 import { Nav } from './nav/Nav';
+import { EnvironmentalEngine } from './EnvironmentalEngine';
 
 export const HUD: React.FC = () => {
   const { 
@@ -34,6 +35,7 @@ export const HUD: React.FC = () => {
 
   return (
     <div className="h-screen w-full flex flex-col overflow-hidden bg-parchment-100 text-parchment-900 font-body relative bg-paper-texture">
+      <EnvironmentalEngine />
       {/* Journal Modal */}
       <Journal />
 
