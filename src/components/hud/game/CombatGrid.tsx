@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useGameStore } from '../../../store/useGameStore';
+import { useUIStore } from '../../../store/useUIStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
+import { checkLoS, findPath, getDistance } from '../../../lib/combatUtils';
 
 export const CombatGrid: React.FC = () => {
-  const { combatState, setPlayerPos, addLog, nextTurn, startCombat } = useGameStore();
+  const { combatState, setPlayerPos, addLog, startCombat, resolveCombatAction, toggleDoor } = useGameStore();
   const { characters, activeCharacterId } = useCharacterStore();
+  const { isTargeting, targetingAction, setIsTargeting, setTargetingAction } = useUIStore();
   
   const activeChar = characters.find(c => c.id === activeCharacterId);
   const { playerPos, monsters, initiativeOrder, activeTurnIndex, grid } = combatState;
@@ -18,18 +21,117 @@ export const CombatGrid: React.FC = () => {
   const gridHeight = 8;
 
   const handleCellClick = (x: number, y: number) => {
-    // Basic movement logic: check if distance is within range (e.g., 6 cells = 30ft)
-    const dx = Math.abs(x - playerPos.x);
-    const dy = Math.abs(y - playerPos.y);
-    const distance = Math.max(dx, dy); // Chebyshev distance for grid movement
+    const cell = grid[y][x];
 
-    if (distance > 0 && distance <= 6) {
+    // Interaction check for doors
+    if (cell.type === 'door') {
+      const dist = getDistance(playerPos, { x, y });
+      if (dist <= 1) {
+        toggleDoor(x, y);
+        addLog(`${cell.isOpen ? 'Closed' : 'Opened'} the door.`, 'info');
+        const { consumeAction } = useCharacterStore.getState();
+        consumeAction(activeCharacterId, 'objectInteractions');
+      } else {
+        addLog("You are too far away to interact with that door!", 'warning');
+      }
+      return;
+    }
+
+    if (isTargeting) {
+      if (targetingAction?.id === 'move') {
+        const path = findPath(playerPos, { x, y }, grid);
+
+        if (path && path.length <= 6) {
+          setPlayerPos(x, y);
+          addLog(`Moved to position (${x}, ${y})`, 'info');
+
+          const { consumeMovement } = useCharacterStore.getState();
+          consumeMovement(activeCharacterId, path.length * 5); // 5ft per cell
+
+          setIsTargeting(false);
+          setTargetingAction(null);
+        } else if (!path) {
+          addLog("You cannot reach that position!", 'warning');
+        } else {
+          addLog("That position is out of your movement range!", 'warning');
+        }
+      } else if (targetingAction?.id === 'items') {
+        addLog(`Used item at position (${x}, ${y})`, 'success');
+        setIsTargeting(false);
+        setTargetingAction(null);
+      }
+      return;
+    }
+
+    // Default movement if not explicitly targeting
+    const path = findPath(playerPos, { x, y }, grid);
+    if (path && path.length > 0 && path.length <= 6) {
       setPlayerPos(x, y);
       addLog(`Moved to position (${x}, ${y})`, 'info');
-    } else if (distance > 6) {
-      addLog("That position is out of your movement range!", 'warning');
+      const { consumeMovement } = useCharacterStore.getState();
+      consumeMovement(activeCharacterId, path.length * 5);
+    } else if (path && path.length > 6) {
+      addLog("That position is too far!", 'warning');
     }
   };
+
+  const handleMonsterClick = (monster: any) => {
+    if (isTargeting) {
+      if (targetingAction?.id === 'attack') {
+        const dx = Math.abs(monster.x - playerPos.x);
+        const dy = Math.abs(monster.y - playerPos.y);
+        const distance = Math.max(dx, dy);
+
+        if (distance <= 1) { // Melee range
+          resolveCombatAction({ name: activeChar?.name || 'Player', id: 'player' }, monster, targetingAction);
+
+          const { consumeAction } = useCharacterStore.getState();
+          consumeAction(activeCharacterId, 'actions');
+
+          setIsTargeting(false);
+          setTargetingAction(null);
+        } else {
+          addLog("Target is out of range!", 'warning');
+        }
+      } else if (targetingAction?.id === 'items') {
+        addLog(`Used item on ${monster.name}`, 'success');
+        setIsTargeting(false);
+        setTargetingAction(null);
+      }
+    }
+  };
+
+  const visibleCells = useMemo(() => {
+    const visible = new Set<string>();
+    for (let y = 0; y < gridHeight; y++) {
+      for (let x = 0; x < gridWidth; x++) {
+        if (checkLoS(playerPos, { x, y }, grid)) {
+          visible.add(`${x},${y}`);
+        }
+      }
+    }
+    return visible;
+  }, [playerPos, grid]);
+
+  const validTargetCells = useMemo(() => {
+    if (!isTargeting || !targetingAction) return new Set<string>();
+
+    const cells = new Set<string>();
+    const range = targetingAction.id === 'move' ? 6 : (targetingAction.id === 'attack' ? 1 : (targetingAction.id === 'items' ? 4 : 0));
+
+    for (let x = playerPos.x - range; x <= playerPos.x + range; x++) {
+      for (let y = playerPos.y - range; y <= playerPos.y + range; y++) {
+        if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
+          if (targetingAction.id === 'move') {
+            const path = findPath(playerPos, { x, y }, grid);
+            if (!path || path.length > 6) continue;
+          }
+          cells.add(`${x},${y}`);
+        }
+      }
+    }
+    return cells;
+  }, [isTargeting, targetingAction, playerPos, grid]);
 
   return (
     <div className="w-full h-full relative bg-stone-950 overflow-hidden flex items-center justify-center font-body">
@@ -116,15 +218,34 @@ export const CombatGrid: React.FC = () => {
               gridTemplateRows: `repeat(${gridHeight}, ${cellSize}px)`,
             }}
           >
-            {Array.from({ length: gridWidth * gridHeight }).map((_, i) => {
-              const x = i % gridWidth;
-              const y = Math.floor(i / gridWidth);
+            {grid.flat().map((cell, i) => {
+              const { x, y, type, isOpen } = cell;
+              const inRange = validTargetCells.has(`${x},${y}`);
+              const isVisible = visibleCells.has(`${x},${y}`);
+
               return (
                 <div
                   key={`${x}-${y}`}
                   onClick={() => handleCellClick(x, y)}
-                  className="w-full h-full hover:bg-white/5 cursor-crosshair transition-colors border border-white/5"
-                />
+                  className={cn(
+                    "w-full h-full cursor-crosshair transition-all border border-white/5 flex items-center justify-center relative",
+                    !isVisible && "brightness-[0.2] saturate-50",
+                    isTargeting && inRange ? "bg-blue-500/20 hover:bg-blue-500/40" : "hover:bg-white/5",
+                    type === 'wall' && "bg-stone-800",
+                    type === 'door' && "bg-amber-900/40"
+                  )}
+                >
+                  {type === 'door' && (
+                    <GameIcon
+                      name={isOpen ? "package" : "lock"}
+                      size={24}
+                      color={isOpen ? "#D4AF37" : "#8B0000"}
+                    />
+                  )}
+                  {type === 'wall' && isVisible && (
+                    <div className="absolute inset-1 border border-white/10 opacity-20" />
+                  )}
+                </div>
               );
             })}
           </div>
@@ -155,33 +276,70 @@ export const CombatGrid: React.FC = () => {
 
            {/* Monster Tokens */}
            <AnimatePresence>
-             {monsters.map((monster, idx) => (
-               <motion.div
-                key={monster.id}
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{
-                  scale: 1,
-                  opacity: 1,
-                  x: monster.x * cellSize,
-                  y: monster.y * cellSize
-                }}
-                exit={{ scale: 0, opacity: 0 }}
-                transition={{ delay: idx * 0.1 }}
-                className="absolute p-2"
-                style={{ width: cellSize, height: cellSize }}
-               >
-                  <div className="w-full h-full rounded-full border-2 border-dragon-red shadow-[0_0_15px_rgba(220,38,38,0.5)] bg-red-900/80 flex items-center justify-center overflow-hidden group cursor-pointer hover:scale-110 transition-transform">
-                    {monster.imageUrl ? (
-                      <img src={monster.imageUrl} className="w-full h-full object-cover" alt={monster.name} />
-                    ) : (
-                      <GameIcon name="identity" size={24} color="#FFF" />
+             {monsters.map((monster, idx) => {
+               const isVisible = visibleCells.has(`${monster.x},${monster.y}`);
+               if (!isVisible) return null;
+
+               const canTarget = isTargeting && (
+                 (targetingAction?.id === 'attack' && Math.max(Math.abs(monster.x - playerPos.x), Math.abs(monster.y - playerPos.y)) <= 1) ||
+                 (targetingAction?.id === 'items' && Math.max(Math.abs(monster.x - playerPos.x), Math.abs(monster.y - playerPos.y)) <= 4)
+               );
+
+               return (
+                 <motion.div
+                  key={monster.id}
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{
+                    scale: 1,
+                    opacity: 1,
+                    x: monster.x * cellSize,
+                    y: monster.y * cellSize
+                  }}
+                  exit={{ scale: 0, opacity: 0 }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="absolute p-2 z-30"
+                  style={{ width: cellSize, height: cellSize }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleMonsterClick(monster);
+                  }}
+                 >
+                    {/* View Cone indicator for non-combat monsters */}
+                    {monster.awareness !== 'combat' && (
+                      <div
+                        className="absolute inset-0 bg-dragon-red/10 rounded-full animate-pulse pointer-events-none"
+                        style={{
+                          transform: `rotate(${monster.viewDirection * 90}deg) scaleY(2) translateY(-25%)`,
+                          opacity: 0.3
+                        }}
+                      />
                     )}
-                  </div>
-                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-dragon-darkRed/90 text-white text-[7px] font-black px-1.5 py-0.5 rounded border border-dragon-red/50 uppercase whitespace-nowrap z-20">
-                    {monster.name}
-                  </div>
-               </motion.div>
-             ))}
+
+                    <div className={cn(
+                      "w-full h-full rounded-full border-2 shadow-[0_0_15px_rgba(220,38,38,0.5)] bg-red-900/80 flex items-center justify-center overflow-hidden group cursor-pointer hover:scale-110 transition-transform",
+                      canTarget ? "border-dragon-gold ring-4 ring-dragon-gold/40 animate-pulse" : "border-dragon-red",
+                      monster.awareness === 'idle' ? "opacity-60" : "opacity-100"
+                    )}>
+                      {monster.imageUrl ? (
+                        <img src={monster.imageUrl} className="w-full h-full object-cover" alt={monster.name} />
+                      ) : (
+                        <GameIcon name="identity" size={24} color="#FFF" />
+                      )}
+
+                      {/* Health Bar Overlay */}
+                      <div className="absolute top-0 left-0 w-full h-1 bg-black/60">
+                        <div
+                          className="h-full bg-dragon-red transition-all duration-300"
+                          style={{ width: `${(monster.hp / monster.maxHp) * 100}%` }}
+                        />
+                      </div>
+                    </div>
+                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-dragon-darkRed/90 text-white text-[7px] font-black px-1.5 py-0.5 rounded border border-dragon-red/50 uppercase whitespace-nowrap z-20">
+                      {monster.name} ({monster.hp}/{monster.maxHp})
+                    </div>
+                 </motion.div>
+               );
+             })}
            </AnimatePresence>
         </div>
       </div>

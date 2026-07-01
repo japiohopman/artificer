@@ -10,20 +10,24 @@ interface ChatHistoryProps {
   history: ChatMessage[];
 }
 
+import { useChatStore } from '../../../store/useChatStore';
+
 export const ChatHistory: React.FC<ChatHistoryProps> = ({ history }) => {
   const { currentNPC } = useCharacterStore();
+  const { isThinking } = useChatStore();
   const scrollRef = useRef<HTMLDivElement>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    if (bottomRef.current) {
+      bottomRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [history]);
+  }, [history, isThinking]);
 
   return (
     <div 
       ref={scrollRef}
-      className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar bg-gradient-to-b from-transparent to-parchment-200/20 pointer-events-none"
+      className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar bg-gradient-to-b from-transparent to-parchment-200/20 pointer-events-auto"
     >
       <AnimatePresence initial={false}>
         {history.map((msg, i) => (
@@ -58,6 +62,23 @@ export const ChatHistory: React.FC<ChatHistoryProps> = ({ history }) => {
           </motion.div>
         ))}
       </AnimatePresence>
+
+      {isThinking && (
+        <motion.div
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex justify-start items-center gap-2 p-3 bg-parchment-50/50 rounded-xl border border-dragon-gold/20 w-fit"
+        >
+          <div className="flex gap-1">
+             <div className="w-1.5 h-1.5 rounded-full bg-dragon-red/60 animate-bounce [animation-delay:-0.3s]" />
+             <div className="w-1.5 h-1.5 rounded-full bg-dragon-red/60 animate-bounce [animation-delay:-0.15s]" />
+             <div className="w-1.5 h-1.5 rounded-full bg-dragon-red/60 animate-bounce" />
+          </div>
+          <span className="text-[9px] font-mono uppercase tracking-widest text-dragon-darkRed/40 font-black">Narrator is weaving...</span>
+        </motion.div>
+      )}
+
+      <div ref={bottomRef} className="h-1" />
     </div>
   );
 };

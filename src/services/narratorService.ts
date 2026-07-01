@@ -14,6 +14,7 @@ export const narratorService = {
     const uiStore = useUIStore.getState();
 
     chatStore.setThinking(true);
+    chatStore.addMessage({ role: 'user', content: userPrompt });
 
     try {
       // 1. Construct "Reality Snapshot" (Efficiently condensed state)
@@ -157,8 +158,9 @@ Style: Immersive, skeuomorphic, reminiscent of Baldur's Gate 3.
       const responseText = result.text;
 
       // 5. Update Store
-      chatStore.addMessage({ role: 'user', content: userPrompt });
-      chatStore.addMessage({ role: 'assistant', content: responseText });
+      if (responseText) {
+        chatStore.addMessage({ role: 'assistant', content: responseText });
+      }
 
       return responseText;
     } catch (error) {
