@@ -257,6 +257,19 @@ export const useWorldStore = create<WorldState>((set, get) => ({
         currentRegion: newRegionId,
         lastProcessedCoords: { x: px, y: py }
       });
+
+      // Handle Random Encounters during movement
+      if (state.isTraveling && state.isFastForwarding) {
+        // 0.5% chance per movement update to trigger an encounter
+        if (Math.random() < 0.005) {
+          set({
+            isFastForwarding: false,
+            // Optionally add a log message
+          });
+          // We could also call addLog from useGameStore if we had access
+          console.log("Travel interrupted by a random encounter!");
+        }
+      }
     }
 
     // 1% chance per game hour to change weather (approx 0.016% per minute)

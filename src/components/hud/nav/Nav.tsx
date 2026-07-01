@@ -37,7 +37,8 @@ export const Nav: React.FC = () => {
   const {
     currentLocation,
     gameTime,
-    isNight
+    isNight,
+    currentRegion
   } = useWorldStore();
 
   const {
@@ -155,7 +156,7 @@ export const Nav: React.FC = () => {
              <span className="text-[9px] font-black uppercase text-dragon-darkRed/60 tracking-[0.3em]">Position_Verified</span>
           </div>
           <span className="text-sm font-header font-black text-dragon-red uppercase tracking-widest mt-0.5 truncate">
-             {currentLocation?.name || REGION_NAMES[useWorldStore.getState().currentRegion] || 'Unknown Region'}
+             {currentLocation?.name || REGION_NAMES[currentRegion] || 'Unknown Region'}
           </span>
         </div>
       </div>

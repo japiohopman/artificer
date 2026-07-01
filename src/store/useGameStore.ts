@@ -33,6 +33,13 @@ export interface CombatState {
     y: number;
     imageUrl?: string;
   }>;
+  initiativeOrder: Array<{
+    id: string;
+    name: string;
+    value: number;
+    isPlayer?: boolean;
+  }>;
+  activeTurnIndex: number;
 }
 
 export interface LogEntry {
@@ -100,6 +107,12 @@ interface GameState {
   // Coin Flip Actions
   startCoinFlip: (prediction: 'heads' | 'tails') => void;
   resetCoinFlip: () => void;
+
+  // Combat Actions
+  setPlayerPos: (x: number, y: number) => void;
+  updateMonsterHp: (id: string, hp: number) => void;
+  nextTurn: () => void;
+  startCombat: () => void;
 }
 
 export const useGameStore = create<GameState>((set, get) => ({
@@ -133,7 +146,13 @@ export const useGameStore = create<GameState>((set, get) => ({
     monsters: [
       { id: 'm1', name: 'Goblin Scout', type: 'goblin', hp: 7, maxHp: 7, x: 5, y: 3 },
       { id: 'm2', name: 'Worg', type: 'worg', hp: 26, maxHp: 26, x: 6, y: 5 }
-    ]
+    ],
+    initiativeOrder: [
+      { id: 'player', name: 'Hero', value: 20, isPlayer: true },
+      { id: 'm2', name: 'Worg', value: 15 },
+      { id: 'm1', name: 'Goblin Scout', value: 12 }
+    ],
+    activeTurnIndex: 0
   },
 
   setCurrentNPC: (currentNPC) => set({ currentNPC }),
@@ -235,6 +254,47 @@ export const useGameStore = create<GameState>((set, get) => ({
           result: null
       }
   })),
+
+  setPlayerPos: (x, y) => set((state) => ({
+    combatState: {
+      ...state.combatState,
+      playerPos: { x, y }
+    }
+  })),
+
+  updateMonsterHp: (id, hp) => set((state) => ({
+    combatState: {
+      ...state.combatState,
+      monsters: state.combatState.monsters.map(m => m.id === id ? { ...m, hp: Math.max(0, hp) } : m)
+    }
+  })),
+
+  nextTurn: () => set((state) => ({
+    combatState: {
+      ...state.combatState,
+      activeTurnIndex: (state.combatState.activeTurnIndex + 1) % state.combatState.initiativeOrder.length
+    }
+  })),
+
+  startCombat: () => {
+    const { combatState } = get();
+    const order = [
+      { id: 'player', name: 'Hero', value: Math.floor(Math.random() * 20) + 1 + 3, isPlayer: true },
+      ...combatState.monsters.map(m => ({
+        id: m.id,
+        name: m.name,
+        value: Math.floor(Math.random() * 20) + 1 + 1
+      }))
+    ].sort((a, b) => b.value - a.value);
+
+    set((state) => ({
+      combatState: {
+        ...state.combatState,
+        initiativeOrder: order,
+        activeTurnIndex: 0
+      }
+    }));
+  },
 
   setIsGameStarted: (isGameStarted) => set({ isGameStarted }),
 
