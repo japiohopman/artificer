@@ -4,11 +4,7 @@ import { useUIStore } from '../../../store/useUIStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon } from '../../../game_icons';
 
-interface ChatMessage {
-  role: 'user' | 'npc' | 'system';
-  text: string;
-  timestamp: number;
-}
+import { ChatMessage } from '../../../store/useChatStore';
 
 interface ChatHistoryProps {
   history: ChatMessage[];
@@ -40,14 +36,14 @@ export const ChatHistory: React.FC<ChatHistoryProps> = ({ history }) => {
             {msg.role === 'system' ? (
               <div className="px-3 py-1 bg-parchment-200/50 border border-dragon-gold/20 rounded-full flex items-center gap-2 shadow-sm">
                 <GameIcon name="magic_effect" size={8} className="text-dragon-red/60" />
-                <span className="text-[8px] font-mono uppercase tracking-[0.15em] text-dragon-darkRed/60 italic font-black">{msg.text}</span>
+                <span className="text-[8px] font-mono uppercase tracking-[0.15em] text-dragon-darkRed/60 italic font-black">{msg.content}</span>
               </div>
             ) : (
               <div className={`flex flex-col gap-1 max-w-[90%] ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
                 <div className="flex items-center gap-1.5 px-1 opacity-60">
                   {msg.role === 'user' ? <GameIcon name="user" size={8} color="#8B0000" /> : <GameIcon name="identity" size={8} color="#8B0000" />}
                   <span className="text-[7px] font-mono uppercase tracking-widest font-black text-dragon-darkRed">
-                    {msg.role === 'user' ? 'Traveler' : currentNPC?.name || 'Unknown'}
+                    {msg.role === 'user' ? 'Traveler' : (msg.role === 'assistant' ? (currentNPC?.name || 'Narrator') : 'System')}
                   </span>
                 </div>
                 <div className={`p-3 rounded-xl text-[11px] font-serif leading-relaxed transition-all shadow-sm ${
@@ -55,7 +51,7 @@ export const ChatHistory: React.FC<ChatHistoryProps> = ({ history }) => {
                     ? 'bg-dragon-red text-parchment-50 rounded-tr-none border border-dragon-gold shadow-dragon-red/10' 
                     : 'bg-parchment-50 text-dragon-darkRed border border-dragon-gold/30 rounded-tl-none'
                 }`}>
-                  {msg.text}
+                  {msg.content}
                 </div>
               </div>
             )}
