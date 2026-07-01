@@ -90,12 +90,6 @@ export const CombatGrid: React.FC = () => {
            })}
 
            <button
-             onClick={nextTurn}
-             className="mt-4 px-4 py-2 bg-dragon-red text-white text-[10px] font-black uppercase rounded shadow-lg hover:bg-dragon-darkRed transition-all"
-           >
-             End Turn
-           </button>
-           <button
              onClick={startCombat}
              className="px-4 py-2 bg-stone-800 text-parchment-400 text-[8px] font-black uppercase rounded border border-white/10 hover:bg-stone-700 transition-all"
            >
@@ -103,15 +97,6 @@ export const CombatGrid: React.FC = () => {
            </button>
         </div>
 
-        <div className="flex flex-col items-center gap-6 opacity-40">
-          <GameIcon name="dice" size={128} color="#D4AF37" className="animate-pulse" />
-          <div className="max-w-md text-center">
-             <p className="font-header text-xl text-parchment-200 uppercase tracking-widest mb-4">Grid-Based Movement & Collision Pending</p>
-             <p className="text-[11px] text-parchment-400 italic leading-relaxed">
-               The tactical engine is synchronizing with character positions. Token movement, targeting, and environmental highlights will be rendered within this coordinate space.
-             </p>
-          </div>
-        </div>
 
         {/* Unit Tokens Container */}
         <div

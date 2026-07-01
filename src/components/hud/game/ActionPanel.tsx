@@ -16,7 +16,7 @@ interface CombatAction {
 
 export const ActionPanel: React.FC = () => {
   const { setGameMode, setIsAdvancedRollerOpen } = useUIStore();
-  const { addLog, rollDice3D } = useGameStore();
+  const { addLog, rollDice3D, nextTurn } = useGameStore();
   const { activeCharacterId, characters } = useCharacterStore();
 
   const activeChar = characters.find(c => c.id === activeCharacterId);
@@ -31,7 +31,7 @@ export const ActionPanel: React.FC = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col bg-stone-950/90 backdrop-blur-xl border border-white/10 rounded-t-xl overflow-hidden shadow-2xl">
+    <div className="w-full flex flex-col bg-stone-950 border-t-2 border-dragon-gold overflow-hidden shadow-2xl">
       {/* Header / Info bar */}
       <div className="px-4 py-2 bg-white/5 border-b border-white/5 flex items-center justify-between">
         <div className="flex items-center gap-2">
@@ -86,6 +86,7 @@ export const ActionPanel: React.FC = () => {
             whileTap={{ scale: 0.95 }}
             onClick={() => {
               addLog(`${activeChar?.name || 'Player'} has ended their turn.`, 'success');
+              nextTurn();
             }}
             className="px-6 py-3 bg-dragon-gold text-stone-900 rounded-xl font-header font-black uppercase tracking-[0.2em] text-xs shadow-lg shadow-dragon-gold/20 hover:brightness-110 transition-all border-2 border-white/20"
           >

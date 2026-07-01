@@ -111,6 +111,8 @@ interface GameState {
   // Combat Actions
   setPlayerPos: (x: number, y: number) => void;
   updateMonsterHp: (id: string, hp: number) => void;
+  addMonsterToCombat: (monster: any) => void;
+  removeMonsterFromCombat: (id: string) => void;
   nextTurn: () => void;
   startCombat: () => void;
 }
@@ -266,6 +268,43 @@ export const useGameStore = create<GameState>((set, get) => ({
     combatState: {
       ...state.combatState,
       monsters: state.combatState.monsters.map(m => m.id === id ? { ...m, hp: Math.max(0, hp) } : m)
+    }
+  })),
+
+  addMonsterToCombat: (monster) => set((state) => {
+    const id = `m-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
+    // Find an empty spot
+    const occupiedPositions = new Set(state.combatState.monsters.map(m => `${m.x},${m.y}`));
+    let x = 8, y = 2;
+    while (occupiedPositions.has(`${x},${y}`)) {
+      y++;
+      if (y > 6) { y = 2; x++; }
+    }
+
+    const newMonster = {
+      id,
+      name: monster.name,
+      type: monster.type || 'monster',
+      hp: monster.hit_points || 10,
+      maxHp: monster.hit_points || 10,
+      x,
+      y,
+      imageUrl: monster.imageUrl
+    };
+
+    return {
+      combatState: {
+        ...state.combatState,
+        monsters: [...state.combatState.monsters, newMonster]
+      }
+    };
+  }),
+
+  removeMonsterFromCombat: (id) => set((state) => ({
+    combatState: {
+      ...state.combatState,
+      monsters: state.combatState.monsters.filter(m => m.id !== id),
+      initiativeOrder: state.combatState.initiativeOrder.filter(i => i.id !== id)
     }
   })),
 
