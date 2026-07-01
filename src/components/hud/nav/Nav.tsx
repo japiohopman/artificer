@@ -157,12 +157,12 @@ export const Nav: React.FC = () => {
                currentRegion === 'water' ? "bg-blue-500" : "bg-dragon-red"
              )} />
              <span className="text-[9px] font-black uppercase text-dragon-darkRed/60 tracking-[0.3em]">
-               {currentRegion === 'water' ? 'Offshore_Tracking' : 'Position_Verified'}
+               {currentRegion === 'water' ? 'Sea' : 'Land'} Region
              </span>
           </div>
           <div className="flex items-baseline gap-2">
             <span className="text-sm font-header font-black text-dragon-red uppercase tracking-widest mt-0.5 truncate">
-               {currentLocation?.name || REGION_NAMES[currentRegion] || 'Unknown Region'}
+               {currentLocation?.name || REGION_NAMES[currentRegion as keyof typeof REGION_NAMES] || 'Unknown Region'}
             </span>
             {currentRegion === 'water' && (
               <span className="text-[8px] font-black text-blue-600 uppercase tracking-tighter">[High Seas]</span>

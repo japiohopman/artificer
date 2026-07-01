@@ -70,6 +70,11 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
     }
   };
 
+  const handleClearHistory = () => {
+    useChatStore.getState().clearHistory();
+    addLog("Chat history cleared.", 'info');
+  };
+
   const getEmotionResponse = (emo: Emotion): string => {
     switch (emo) {
       case 'Happy': return "It's a fine day for business, isn't it?";
@@ -140,6 +145,13 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
                       </div>
 
                       <div className="flex items-center gap-2">
+                        <button
+                          onClick={handleClearHistory}
+                          className="bg-parchment-200 hover:bg-parchment-300 border-2 border-dragon-gold/20 rounded px-3 py-1 text-[8px] font-black uppercase text-dragon-red transition-all"
+                          title="Clear History"
+                        >
+                          Clear
+                        </button>
                         <div className="relative group">
                           <input
                             type="text"
